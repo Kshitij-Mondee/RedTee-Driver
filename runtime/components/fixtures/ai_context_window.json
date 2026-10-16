@@ -1,0 +1,137 @@
+{
+ "cases": [
+  {
+   "label": "a 128k limit with 5 segments",
+   "params": {
+    "limit": 128000,
+    "unit": "tokens",
+    "totalLabel": "{n} of {limit} {unit} used",
+    "segments": [
+     {
+      "label": "System prompt",
+      "tokens": 2400
+     },
+     {
+      "label": "Instructions",
+      "tokens": 1800
+     },
+     {
+      "label": "Conversation history",
+      "tokens": 38000,
+      "history": true
+     },
+     {
+      "label": "Retrieved documents",
+      "tokens": 52000
+     },
+     {
+      "label": "Answer reserve",
+      "tokens": 8000
+     }
+    ],
+    "at": 0.3
+   },
+   "opts": {
+    "x": 160,
+    "y": 380
+   }
+  },
+  {
+   "label": "an overflow with truncation",
+   "params": {
+    "limit": 32000,
+    "unit": "tokens",
+    "segments": [
+     {
+      "label": "System prompt",
+      "tokens": 1200
+     },
+     {
+      "label": "History",
+      "tokens": 21000,
+      "history": true
+     },
+     {
+      "label": "Pasted contract",
+      "tokens": 13500
+     },
+     {
+      "label": "Reply reserve",
+      "tokens": 2000
+     }
+    ],
+    "steps": [
+     {
+      "do": "overflow",
+      "at": 0.6
+     },
+     {
+      "do": "truncate",
+      "n": 6000,
+      "at": 1.8
+     }
+    ]
+   },
+   "opts": {
+    "x": 160,
+    "y": 380
+   }
+  },
+  {
+   "label": "maximum: a tiny 4k limit, many narrow segments",
+   "params": {
+    "limit": 4096,
+    "unit": "tokens",
+    "compact": false,
+    "totalLabel": "{n} of {limit} {unit} in the window",
+    "segments": [
+     {
+      "label": "System prompt",
+      "tokens": 350
+     },
+     {
+      "label": "Tool definitions",
+      "tokens": 610
+     },
+     {
+      "label": "Earlier turns",
+      "tokens": 1400,
+      "history": true
+     },
+     {
+      "label": "Customer's latest question",
+      "tokens": 180
+     },
+     {
+      "label": "Order record",
+      "tokens": 420
+     },
+     {
+      "label": "Returns policy excerpt",
+      "tokens": 760
+     },
+     {
+      "label": "Answer reserve",
+      "tokens": 512
+     }
+    ],
+    "w": 1720,
+    "at": 0.2,
+    "steps": [
+     {
+      "do": "add",
+      "seg": {
+       "label": "Shipping note",
+       "tokens": 300
+      },
+      "at": 4.2
+     }
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 330
+   }
+  }
+ ]
+}

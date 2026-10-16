@@ -1,0 +1,5 @@
+{"cases": [
+  {"label": "99.9 over 30 days, 20 percent used", "params": {"title": "Checkout availability", "target": "99.9%", "window": "30 days", "budget": {"total": 43.2, "used": 8.6}, "unit": "min", "leftLabel": "{n} {unit} left", "usedLabel": "{p}% used", "at": 0.3}, "opts": {"x": 410, "y": 380}},
+  {"label": "100 percent used, with a freeze", "params": {"title": "Search API latency under 300 ms", "target": "99.5%", "window": "28 days", "budget": {"total": 201.6, "used": 201.6}, "unit": "min", "rate": "burning 4.2x the sustainable rate", "freezeLabel": "Release freeze", "w": 1200}, "opts": {"x": 360, "y": 360}},
+  {"label": "maximum: 99.99 with a fast burn to empty", "params": {"title": "Payments authorisation success rate for card transactions in every region", "target": "99.99%", "window": "rolling 90 days", "budget": {"total": 12.96, "used": 4.1}, "unit": "minutes", "rate": "burning 14x: the budget runs out in 2 days", "leftLabel": "{n} {unit} of budget left", "usedLabel": "{p}% of the budget spent", "freezeLabel": "Feature releases frozen", "w": 1500, "steps": [{"do": "burn", "used": 12.96, "at": 1.2, "dur": 2.0}]}, "opts": {"x": 210, "y": 360}}
+]}

@@ -1,0 +1,464 @@
+{
+ "cases": [
+  {
+   "label": "3 nodes and 6 pods",
+   "params": {
+    "controlPlane": "control plane",
+    "nodes": [
+     {
+      "id": "a",
+      "label": "node-a",
+      "cpu": 0.42,
+      "mem": 0.55
+     },
+     {
+      "id": "b",
+      "label": "node-b",
+      "cpu": 0.61,
+      "mem": 0.48
+     },
+     {
+      "id": "c",
+      "label": "node-c",
+      "cpu": 0.3,
+      "mem": 0.35
+     }
+    ],
+    "pods": [
+     {
+      "id": "w1",
+      "svc": "web",
+      "node": "a",
+      "state": "running"
+     },
+     {
+      "id": "w2",
+      "svc": "web",
+      "node": "b",
+      "state": "running"
+     },
+     {
+      "id": "a1",
+      "svc": "api",
+      "node": "a",
+      "state": "running"
+     },
+     {
+      "id": "a2",
+      "svc": "api",
+      "node": "c",
+      "state": "pending"
+     },
+     {
+      "id": "q1",
+      "svc": "queue",
+      "node": "b",
+      "state": "running"
+     },
+     {
+      "id": "c1",
+      "svc": "cache",
+      "node": "c",
+      "state": "running"
+     }
+    ],
+    "w": 1500,
+    "h": 620,
+    "at": 0.3
+   },
+   "opts": {
+    "x": 210,
+    "y": 370
+   }
+  },
+  {
+   "label": "a node failure with rescheduling",
+   "params": {
+    "title": "prod-eu",
+    "controlPlane": "control plane",
+    "nodes": [
+     {
+      "id": "a",
+      "label": "worker-1",
+      "cpu": 0.5
+     },
+     {
+      "id": "b",
+      "label": "worker-2",
+      "cpu": 0.8
+     },
+     {
+      "id": "c",
+      "label": "worker-3",
+      "cpu": 0.35
+     }
+    ],
+    "pods": [
+     {
+      "id": "p1",
+      "svc": "checkout",
+      "node": "a"
+     },
+     {
+      "id": "p2",
+      "svc": "checkout",
+      "node": "b"
+     },
+     {
+      "id": "p3",
+      "svc": "search",
+      "node": "b"
+     },
+     {
+      "id": "p4",
+      "svc": "search",
+      "node": "c"
+     },
+     {
+      "id": "p5",
+      "svc": "payments",
+      "node": "b"
+     },
+     {
+      "id": "p6",
+      "svc": "payments",
+      "node": "a"
+     }
+    ],
+    "steps": [
+     {
+      "do": "fail",
+      "node": "b",
+      "at": 0.8
+     },
+     {
+      "do": "reschedule",
+      "map": {
+       "p2": "a",
+       "p3": "c",
+       "p5": "c"
+      },
+      "at": 2.0
+     },
+     {
+      "do": "scale",
+      "svc": "search",
+      "n": 3,
+      "at": 4.0
+     }
+    ],
+    "w": 1500,
+    "h": 640
+   },
+   "opts": {
+    "x": 210,
+    "y": 330
+   }
+  },
+  {
+   "label": "maximum: 8 nodes and 40 pods",
+   "params": {
+    "title": "retail-production-cluster",
+    "controlPlane": "managed control plane",
+    "nodes": [
+     {
+      "id": "n0",
+      "label": "pool-b-node-01",
+      "cpu": 0.2,
+      "mem": 0.75
+     },
+     {
+      "id": "n1",
+      "label": "pool-b-node-02",
+      "cpu": 0.29,
+      "mem": 0.69
+     },
+     {
+      "id": "n2",
+      "label": "pool-b-node-03",
+      "cpu": 0.38,
+      "mem": 0.63
+     },
+     {
+      "id": "n3",
+      "label": "pool-b-node-04",
+      "cpu": 0.47,
+      "mem": 0.57
+     },
+     {
+      "id": "n4",
+      "label": "pool-b-node-05",
+      "cpu": 0.56,
+      "mem": 0.51
+     },
+     {
+      "id": "n5",
+      "label": "pool-b-node-06",
+      "cpu": 0.65,
+      "mem": 0.45
+     },
+     {
+      "id": "n6",
+      "label": "pool-b-node-07",
+      "cpu": 0.74,
+      "mem": 0.39
+     },
+     {
+      "id": "n7",
+      "label": "pool-b-node-08",
+      "cpu": 0.83,
+      "mem": 0.33
+     }
+    ],
+    "pods": [
+     {
+      "id": "q0",
+      "svc": "storefront",
+      "node": "n0",
+      "state": "running"
+     },
+     {
+      "id": "q1",
+      "svc": "inventory",
+      "node": "n1",
+      "state": "running"
+     },
+     {
+      "id": "q2",
+      "svc": "notifications",
+      "node": "n2",
+      "state": "running"
+     },
+     {
+      "id": "q3",
+      "svc": "recommendations",
+      "node": "n3",
+      "state": "running"
+     },
+     {
+      "id": "q4",
+      "svc": "billing",
+      "node": "n4",
+      "state": "running"
+     },
+     {
+      "id": "q5",
+      "svc": "auth",
+      "node": "n5",
+      "state": "running"
+     },
+     {
+      "id": "q6",
+      "svc": "storefront",
+      "node": "n6",
+      "state": "running"
+     },
+     {
+      "id": "q7",
+      "svc": "inventory",
+      "node": "n7",
+      "state": "pending"
+     },
+     {
+      "id": "q8",
+      "svc": "notifications",
+      "node": "n0",
+      "state": "failed"
+     },
+     {
+      "id": "q9",
+      "svc": "recommendations",
+      "node": "n1",
+      "state": "terminating"
+     },
+     {
+      "id": "q10",
+      "svc": "billing",
+      "node": "n2",
+      "state": "running"
+     },
+     {
+      "id": "q11",
+      "svc": "auth",
+      "node": "n3",
+      "state": "running"
+     },
+     {
+      "id": "q12",
+      "svc": "storefront",
+      "node": "n4",
+      "state": "running"
+     },
+     {
+      "id": "q13",
+      "svc": "inventory",
+      "node": "n5",
+      "state": "running"
+     },
+     {
+      "id": "q14",
+      "svc": "notifications",
+      "node": "n6",
+      "state": "running"
+     },
+     {
+      "id": "q15",
+      "svc": "recommendations",
+      "node": "n7",
+      "state": "running"
+     },
+     {
+      "id": "q16",
+      "svc": "billing",
+      "node": "n0",
+      "state": "running"
+     },
+     {
+      "id": "q17",
+      "svc": "auth",
+      "node": "n1",
+      "state": "pending"
+     },
+     {
+      "id": "q18",
+      "svc": "storefront",
+      "node": "n2",
+      "state": "failed"
+     },
+     {
+      "id": "q19",
+      "svc": "inventory",
+      "node": "n3",
+      "state": "terminating"
+     },
+     {
+      "id": "q20",
+      "svc": "notifications",
+      "node": "n4",
+      "state": "running"
+     },
+     {
+      "id": "q21",
+      "svc": "recommendations",
+      "node": "n5",
+      "state": "running"
+     },
+     {
+      "id": "q22",
+      "svc": "billing",
+      "node": "n6",
+      "state": "running"
+     },
+     {
+      "id": "q23",
+      "svc": "auth",
+      "node": "n7",
+      "state": "running"
+     },
+     {
+      "id": "q24",
+      "svc": "storefront",
+      "node": "n0",
+      "state": "running"
+     },
+     {
+      "id": "q25",
+      "svc": "inventory",
+      "node": "n1",
+      "state": "running"
+     },
+     {
+      "id": "q26",
+      "svc": "notifications",
+      "node": "n2",
+      "state": "running"
+     },
+     {
+      "id": "q27",
+      "svc": "recommendations",
+      "node": "n3",
+      "state": "pending"
+     },
+     {
+      "id": "q28",
+      "svc": "billing",
+      "node": "n4",
+      "state": "failed"
+     },
+     {
+      "id": "q29",
+      "svc": "auth",
+      "node": "n5",
+      "state": "terminating"
+     },
+     {
+      "id": "q30",
+      "svc": "storefront",
+      "node": "n6",
+      "state": "running"
+     },
+     {
+      "id": "q31",
+      "svc": "inventory",
+      "node": "n7",
+      "state": "running"
+     },
+     {
+      "id": "q32",
+      "svc": "notifications",
+      "node": "n0",
+      "state": "running"
+     },
+     {
+      "id": "q33",
+      "svc": "recommendations",
+      "node": "n1",
+      "state": "running"
+     },
+     {
+      "id": "q34",
+      "svc": "billing",
+      "node": "n2",
+      "state": "running"
+     },
+     {
+      "id": "q35",
+      "svc": "auth",
+      "node": "n3",
+      "state": "running"
+     },
+     {
+      "id": "q36",
+      "svc": "storefront",
+      "node": "n4",
+      "state": "running"
+     },
+     {
+      "id": "q37",
+      "svc": "inventory",
+      "node": "n5",
+      "state": "pending"
+     },
+     {
+      "id": "q38",
+      "svc": "notifications",
+      "node": "n6",
+      "state": "failed"
+     },
+     {
+      "id": "q39",
+      "svc": "recommendations",
+      "node": "n7",
+      "state": "terminating"
+     }
+    ],
+    "w": 1720,
+    "h": 1000
+   },
+   "opts": {
+    "x": 100,
+    "y": 50
+   }
+  }
+ ]
+}

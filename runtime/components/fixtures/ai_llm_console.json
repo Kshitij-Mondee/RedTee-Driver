@@ -1,0 +1,129 @@
+{
+ "cases": [
+  {
+   "label": "a system, user and assistant exchange",
+   "params": {
+    "title": "chat completion",
+    "turns": [
+     {
+      "role": "system",
+      "text": "You are the travel desk assistant. Answer from the travel policy only."
+     },
+     {
+      "role": "user",
+      "text": "Can I book business class for a 4 hour flight?"
+     },
+     {
+      "role": "assistant",
+      "text": "Not for a 4 hour flight. The travel policy allows business class only for flights longer than 6 hours, or with a director's written approval."
+     }
+    ],
+    "usage": {
+     "in": 1284,
+     "out": 41
+    },
+    "stop": "end_turn",
+    "at": 0.3,
+    "cps": 60,
+    "rows": 9
+   },
+   "opts": {
+    "x": 310,
+    "y": 140
+   }
+  },
+  {
+   "label": "a tool call round trip",
+   "params": {
+    "title": "tool use",
+    "turns": [
+     {
+      "role": "user",
+      "text": "Is order 55821 shipped yet?"
+     },
+     {
+      "role": "assistant",
+      "text": "Let me check the order system.",
+      "tool": {
+       "name": "get_order_status",
+       "args": "{\"order_id\": \"55821\"}"
+      }
+     },
+     {
+      "role": "tool",
+      "text": "",
+      "tool": {
+       "name": "get_order_status",
+       "result": "{\"status\": \"shipped\", \"carrier_ref\": \"PX-4471\", \"eta\": \"Thursday\"}"
+      }
+     },
+     {
+      "role": "assistant",
+      "text": "Yes. It shipped and should arrive on Thursday."
+     }
+    ],
+    "usage": {
+     "in": 2210,
+     "out": 64
+    },
+    "stop": "end_turn",
+    "rows": 13,
+    "steps": [
+     {
+      "do": "focus",
+      "i": 2,
+      "at": 1.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 310,
+    "y": 110
+   }
+  },
+  {
+   "label": "maximum: a long answer that scrolls, with redaction",
+   "params": {
+    "title": "summarise the incident report for the weekly operations review",
+    "turns": [
+     {
+      "role": "system",
+      "text": "Summarise incident reports in plain English for an operations review. Never include customer names or email addresses."
+     },
+     {
+      "role": "user",
+      "text": "Summarise this report:\n[attached incident report, 4 pages]"
+     },
+     {
+      "role": "assistant",
+      "text": "Here is a summary of the incident report. The payment service started failing at 14:02 when a configuration change reduced the connection pool from 50 to 5. Requests queued, timeouts rose, and the checkout error rate reached 4 percent. The on-call engineer rolled the change back at 14:29 and errors returned to normal by 14:57. Three actions follow: review configuration changes before release, alert on pool saturation, and add a load test for the checkout path. The customer contact for the escalation was Dana Whitfield at dana.whitfield@example.com."
+     }
+    ],
+    "usage": {
+     "in": 6830,
+     "out": 187
+    },
+    "stop": "max_tokens",
+    "w": 1500,
+    "rows": 9,
+    "at": 0.2,
+    "cps": 200,
+    "steps": [
+     {
+      "do": "redact",
+      "i": 2,
+      "spans": [
+       "Dana Whitfield",
+       "dana.whitfield@example.com"
+      ],
+      "at": 4.8
+     }
+    ]
+   },
+   "opts": {
+    "x": 210,
+    "y": 120
+   }
+  }
+ ]
+}
