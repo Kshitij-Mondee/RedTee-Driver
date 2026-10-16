@@ -74,20 +74,53 @@ def read_wav(path: Path) -> tuple[np.ndarray, int]:
     return data, sr
 
 
+# the voice speed by kind of video (D-196). Kshitij, on the speed tests: "1 sounds a bit too fast ... Teaching - 0.8 sounds
+# good, explainer - 0.9, product explainer - 0.9 or .95 and onboarding - 0.85 to 1". Policy and soft-skills are lessons:
+# policy as teaching, soft-skills between teaching and explainer (the agent's call, said in D-196). A speed the request
+# names wins; "auto" (the default now) takes the kind's.
+KIND_SPEED = {"teaching": 0.8, "explainer": 0.9, "product": 0.92, "onboarding": 0.9, "policy": 0.8, "soft-skills": 0.85}
+DEFAULT_SPEED = 0.85
+
+
+def kind_speed(project) -> float:
+    from ..genre import of
+    return KIND_SPEED.get(of(project), DEFAULT_SPEED)
+
+
+def _resolve_speed(project) -> None:
+    """`voice.speed: "auto"` (or none) becomes the kind's speed, written into the request once (so a rerun says the same
+    and the person sees what was used)."""
+    voice = dict(project.request.get("voice") or {})
+    sp = voice.get("speed")
+    if sp not in (None, "", "auto"):
+        return
+    cfg = project.cfg
+    v = cfg["request"].setdefault("voice", {})
+    v["speed"] = kind_speed(project)
+    from ..genre import of
+    v["speed_by"] = f"kind ({of(project)}), D-196"
+    project.save_cfg(cfg)
+
+
 def narrate(project, force: bool = False, calibrate: bool = True) -> dict:
-    """Synthesise, measure the speaking rate, and (once) re-synthesise at a calibrated speed so the
-    lesson lands on the script's wpm_target (TTS voices differ a lot in natural pace)."""
+    """Synthesise at the voice speed of the kind of video (D-196), unless the request names one. The old automatic
+    calibration (re-synthesise until the script's wpm_target is met) is opt-in now (`voice.calibrate: true`): it measured
+    the rate over speech time only, every pause removed, against a target that includes the pauses, so it slowed every
+    Kokoro voice to its 0.7 floor and the films played at about 114 words a minute (docs/research/2026-10-16-narration/
+    SPEED_FINDING.md)."""
+    _resolve_speed(project)
     out = _narrate(project, force)
     script = read_json(project.path("plan/script.json"))
     target = float(script.get("wpm_target") or 150)
     voice = dict(project.request.get("voice") or {})
     # once means once (L-161): speed and measured rate are not proportional, so a second pass can miss again and
-    # every later run would re-synthesise the whole lesson. The pass records `calibrated`; `calibrate: false` opts out.
-    if voice.get("calibrated") or voice.get("calibrate") is False:
+    # every later run would re-synthesise the whole lesson. The pass records `calibrated`. Opt-in only (D-196).
+    if voice.get("calibrated") or voice.get("calibrate") is not True:
         return out
     if calibrate and voice.get("provider", "kokoro") in ("kokoro", "openai") and abs(out["words_per_minute"] - target) / target > 0.08:
         sp = float(voice.get("speed") or 1.0)
-        new = round(max(0.7, min(1.25, sp * target / out["words_per_minute"])), 3)
+        # never under 0.8 (the slowest kind's speed): below it a Kokoro voice stretches and goes flat (D-196)
+        new = round(max(0.8, min(1.25, sp * target / out["words_per_minute"])), 3)
         if abs(new - sp) > 0.01:
             info(f"narration: {out['words_per_minute']} wpm vs target {target}: re-synthesising at speed {new}")
             cfg = project.cfg
