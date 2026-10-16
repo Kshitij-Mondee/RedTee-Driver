@@ -3,6 +3,20 @@
 Newest first. Each run links to where its full trail lives. Never delete a run; add a correction below
 it if something here turns out wrong.
 
+## R-68 (2026-10-16): hologram v2 and screencast v2 (Claude Code; no paid API)
+- **Asked:** Kshitij: the hologram rack and next-word frames looked "basic and AI like"; screencast should depict real
+  references accurately, with a smooth walkthrough; "first improve the hologram and screencast", then four 3-minute
+  lessons.
+- **Done:**
+  - hologram 3D heroes as light, plus SVG v2;
+  - screencast page capture, screenshot shells and a smooth walkthrough;
+  - the hero proved inside a composed HyperFrames render;
+  - 34 more hand-off items;
+  - the preset `opus-plan-sol-code`.
+  Full suite: 544 passed and 2 failed; both pass alone (a render timeout under load, and the test count, since
+  updated).
+- **Not done / unverified:** the four test lessons (waiting for Kshitij's topics); page regions inside a composed lesson.
+
 ## R-67 (2026-10-16): the four style engines fixed, the wow passes, before and after (Claude Code; no paid API)
 - **Asked:** Kshitij: "Fix the engine findings for all four styles, screencast first, then hologram, blueprint and
   isometric"; then the wow for hologram and blueprint.

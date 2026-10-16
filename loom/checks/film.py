@@ -547,6 +547,9 @@ def short_cues(manifest: dict, style: dict | None = None) -> tuple[dict[str, lis
     # the tail past the last word is owed only where the voice pauses (D-180, Kshitij 2026-10-15: "Merge + tail at
     # pauses"): in running speech the next words start sooner, and a caption that waited would lag the voice
     firsts = [float((g.get("words") or [{}])[0].get("s", 0)) for g in groups if g.get("words")]
+    # a cue is shown for whole frames: a shortfall under one frame is not on screen (st-sc-2fa, 2026-10-16: 1.78 s of
+    # 1.80 s stopped a lesson for a person over 20 ms)
+    frame = 1.0 / float(manifest.get("fps") or 30)
     k = 0
     for g in groups:
         ws = g.get("words") or []
@@ -558,11 +561,11 @@ def short_cues(manifest: dict, style: dict | None = None) -> tuple[dict[str, lis
         room = (firsts[k] - 0.06 - float(ws[-1]["e"])) if k < len(firsts) else T["caption_tail_s"]
         need = max(T["caption_min_s"], spoken + max(0.0, min(T["caption_tail_s"], room)))
         holds.append(hold)
-        if hold < need - 1e-6:
+        if hold < need - frame + 1e-6:
             text = " ".join(w["w"] for w in ws)
             out.setdefault(beat_of(float(ws[0]["s"])), []).append(
                 {"t": round(float(g["t0"]), 2), "hold": round(hold, 2), "need": round(need, 2), "spoken": round(spoken, 2),
-                 "under_min": hold < T["caption_min_s"] - 1e-6, "text": text})
+                 "under_min": hold < T["caption_min_s"] - frame + 1e-6, "text": text})
     n = sum(len(v) for v in out.values())
     return out, {"enabled": cap.get("enabled", True) is not False, "cues": len(holds), "short": n,
                  "under_min": sum(1 for v in out.values() for c in v if c["under_min"]),

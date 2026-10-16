@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-10-16 - The asset maker's package
+- `docs/assets/HANDOFF_TEMPLATE_LIBRARY.md`: 184 items; set-up steps; where each family's work goes (components,
+  `assets/models3d/`, Claude Design); the five style engines; screencast's native code, terminal and chart regions in
+  "what Loom already has".
+- `handoff/Video-Engine-asset-maker.zip` (not in git: archives are ignored). It holds the engine folder without
+  lessons, caches, renders, secrets or research images: 4,283 files, 83 MB.
+
+## 2026-10-16 - Hologram v2 (3D heroes as light, SVG pushed) and screencast v2 (real pages, screenshot shells, smooth walkthrough) (D-188, L-473)
+- Hologram:
+  - `runtime/three/holo.js` and `runtime/three/presets/holo_hero.js`; models `bicycle` and `earth`; `server_rack`
+    units;
+  - `loom/three_bridge.py` `hero_cached`, `hero_assets` and `hero_lab_strip`;
+  - `loom/compose.py` and `loom/lab.py` embed `hero3d`;
+  - `runtime/engines/hologram.js` `H.hero3d`, `H.plane`, `H.reading`, `H.tokens`, `H.arcs`, `H.dist`, `H.trace`.
+- Screencast:
+  - `tools/page_capture.py`, `tools/node/page_capture.mjs` and `tools/screenshot_theme.py`;
+  - `kind: "page"` with `A.scrollTo`, `A.webClass` and `A.webSet`;
+  - `theme` and `layout` on shells; the spring camera, the pointer settle, inertia, cadence and ripple; `sc_jump`;
+  - `loom/compose.py` loads `projects/<id>/assets/pages/*.page.js`.
+- Preset `opus-plan-sol-code` in `loom/shuttle/config.json`. Hand-off sheet section 7b: 34 more items. Catalog
+  regenerated.
+
+## 2026-10-16 - Pushed to GitHub (RedTee-Driver, private)
+- `.gitignore`: no video, audio, archives, lesson images, render folders, session stream logs, secrets, reference bundles or blind-test keys; lessons as plans only. First commit 149e9fa, 6,652 files, checked on GitHub. docs/prompts/2026-10-16-push-to-redtee-driver.md.
+
 ## 2026-10-16 - Four style engines fixed; the wow back in hologram and blueprint (D-187, L-472)
 - `runtime/engines/screencast.js`: `kind: "code"` (mono, syntax colour, indentation, diff markers, `A.codeType` with a
   caret), `kind: "terminal"` (`A.run`, `A.out`), `kind: "chart"` (`A.series`), `A.card` counts, `sc_overlays_crowded`,

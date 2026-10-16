@@ -2355,6 +2355,39 @@ He chose: feedback that lands, and spot and report phishing; one plain lesson (`
 
 ---
 
+## Run 83: hologram v2 and screencast v2 (2026-10-16, D-188, R-68)
+
+- **L-473 A hologram drawn as tidy UI reads as "AI made"; it has to behave like light.** (engine, D-188) Kshitij on the
+  wow-pass rack and the next-word frame: "very basic and AI like. Not something a real hologram would look like". The
+  research note (`docs/research/2026-10-16-hologram-v2.md`) names 10 tells, among them:
+  - corner brackets on every box, one uniform cyan, a generic hex grid and mono caps everywhere;
+  - equal-weight panels;
+  - no light behaviour and no imperfection;
+  - invented-looking data;
+  - grids drawn on boxes.
+  **DONE:**
+  - **3D heroes:** objects that read better in 3D render through Three.js (reopened for hologram heroes only) with a
+    hologram material: Fresnel rims, scan bands, interlace, a seeded flicker, depth fog, a hot edge, real bloom and a
+    fringe. They are laid on the field as light, not a black box. New models `bicycle` and `earth`; `server_rack` names
+    its units.
+  - **SVG pushed further:** `H.hero3d`, `H.plane`, `H.reading`, `H.tokens`, `H.arcs`, `H.dist`, `H.trace`; translucent
+    planes in perspective, weighted arcs, measured data, and filters on line art only.
+  - **Real lessons:** compose renders a beat's `hero3d` through the clip store (66 s once, 0.2 s after) and plays it in
+    a HyperFrames render, proved from the MP4.
+  - **Screencast v2:**
+    - `tools/page_capture.py` captures real pages, with approval per off-machine site, and they play as `kind: "page"`
+      regions;
+    - `tools/screenshot_theme.py` reads screenshots into theme and layout overrides for the shells;
+    - a spring camera, a pointer settle, scroll inertia, a human typing cadence and a click ripple, with `sc_jump`
+      measuring jumps (the camera's worst per-frame change fell from 1966 to 460 px/s on sc_lesson);
+    - compose loads `assets/pages/*.page.js`.
+  Gates: the hologram composed-lesson test, the compose page-loading test, and the screencast smoothness test (each
+  with a control).
+- OPEN:
+  - the earth's beam has hard sides;
+  - page regions are not yet rendered inside a composed lesson;
+  - the four test lessons (topics from Kshitij).
+
 ## Run 82: four style engines fixed and the wow brought back (2026-10-16, D-187, R-67)
 
 - **L-472 A style built only to pass checks loses its first impression, and a lab strip can hide a style's light.** (engine,

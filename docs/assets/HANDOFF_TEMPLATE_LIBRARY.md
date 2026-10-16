@@ -8,26 +8,36 @@ code inside every time ... corporate, engineering, development, tech and non tec
 explaining topic videos as well."
 
 **What is inside:**
-- 150 items in 11 families, each a paste-ready prompt;
+- 184 items: 150 in 11 families (section 7) and 34 more in section 7b (added 2026-10-16 after the style stress tests),
+  each a paste-ready prompt;
 - the context a maker needs, the two contracts (code and drawn art), and the naming and labelling rules;
 - what Loom already has, so nothing is made twice.
 
-**Mostly code:** 136 items are code templates (Claude Code) and 14 are drawn art (Claude Design).
+**Mostly code:** 162 items are code (Claude Code) and 22 are drawn art (Claude Design).
 
 ---
 
 ## 0. How to work through this sheet
 
-1. **Get the engine folder.** Kshitij shares a copy of `Video-Engine`. Work only in `runtime/components/` and
-   `runtime/components/fixtures/` (code), or in a Claude Design project (art). Never edit anything else: the rest
-   of the engine is maintained by other sessions.
+1. **Get the engine folder.** Kshitij shares a copy of `Video-Engine` (the zip `Video-Engine-asset-maker.zip`, or the
+   private repository). **Working in Claude Code on the web?** Follow `docs/assets/HANDOFF_CLOUD_START.md` instead of
+   this step: setup with `bash tools/cloud_setup.sh`, one branch per batch, and the start prompt. Set it up once: Python 3.12 and Node 22 or newer, then in the folder `py -m pip install -r requirements.txt`, `npm ci` and
+   `py -m loom doctor` (it says what is missing). Work only where your item's family says:
+   - section 7 families (T-001 to T-136) and Family M (T-149 to T-162): `runtime/components/` and
+     `runtime/components/fixtures/`;
+   - Family L (T-137 to T-148, hologram hero models): new files in `assets/models3d/`, following the contract of the
+     models already there; prove them with `py -m loom models sheet <id>`;
+   - drawn art (Family K, Family N and A-15 to A-22): a Claude Design project, delivered through
+     `py tools/asset_intake.py <export.zip> --batch <name>`.
+
+   Never edit anything else. The rest of the engine is maintained by Kshitij's own sessions.
 2. **One Claude Code session per batch** of 5 to 8 items from one family. Paste the MASTER PROMPT (section 3) once,
    then the items' blocks. For drawn art, paste the ART MASTER PROMPT (section 4), then the item.
 3. **Prove each item.**
    ```
    py -m loom library accept <id>
    ```
-   It must pass. It renders every fixture case in every one of the 14 style packs and refuses invented words,
+   It must pass. It renders every fixture case in every style pack (17 today) and refuses invented words,
    colours written as hex, randomness, the clock and overflowing text. Then **look at** `library/sheets/<id>.jpg`. A
    pass that looks wrong is a fail.
 4. **Deliver a zip per batch:**
@@ -50,15 +60,20 @@ organisation's documents or a topic.
 continuous "world" canvas, animated on one paused GSAP timeline, rendered by headless Chrome. A frame is a pure function
 of time: no `Math.random`, no clock, no timers, no network. The same lesson renders the same frames every time.
 
-**Styles are data.** A lesson picks a style pack (14 today, from corporate-clean to whiteboard and blueprint). The pack
+**Styles are data.** A lesson picks a style pack (17 today, from corporate-clean to whiteboard and blueprint). The pack
 holds the palette as tokens, the fonts and type roles, the shape language and the motion personality. Code never
 writes a colour or a font: it asks the pack. That is how one lesson restyles with no model calls, and why every
 template must work in every pack.
 
-**Some styles have an engine** (`runtime/engines/<style>.js`). The engine is the working code for the style's
-medium: whiteboard (a hand writes with a marker) and blueprint (a technical drawing drafted live) exist today.
-Living screencast, sci-fi hologram and isometric infographic are planned next. A scene reaches its style's engine as
-`ctx.engine`.
+**Some styles have an engine** (`runtime/engines/<style>.js`). The engine is the working code for the style's medium.
+Five exist:
+- whiteboard: one hand writes with a marker;
+- blueprint: a technical drawing drafted live on cyanotype paper;
+- screencast: real software, with code, terminal, chart and captured-page regions;
+- hologram: light projected over a dark stage, with 3D hero objects;
+- isometric: a diorama world.
+A scene reaches its style's engine as `ctx.engine`. Read `docs/styles/engines/<style>.md` before building anything
+for a style; `docs/styles/demos/lab/` shows each style's look.
 
 **Why templates matter (the cost).** An AI author writes each beat's scene code. Writing scenes is 69 to 81 percent
 of a lesson's cost (measured on 2026-10-14), and most of it goes on the author looking at its own frames and fixing
@@ -269,12 +284,16 @@ what is new.
 | objects and 3D models | phone, laptop, monitor, server rack, GPU server, padlock, key, envelope, folder, document, credit card, ID badge, globe, cloud, gear, clock, coin stack, balance scale, lightbulb, building, meeting room, office floor and more | `runtime/objects.js`, `assets/models3d/` |
 | element forms (37, from lessons) | verdict stamp, speech bubble, progress track, clock dial, checklist card, owner chip, labelled axes and more | `library/FORMS.md` |
 | RedTee blueprints (150, imported) | concept.* (funnel, iceberg, matrix 2x2, pyramid, onion, fishbone, RAG grounding, next-token loop, prefill/decode), explain.* (checklist, dos and donts, prompt anatomy, token split, truth check, kpi tiles, feature matrix, doc redline, chat exchange), fin.*, gen.*, math.*, stats.*, agent.*, product.* | `RedTee_V1_Video/common/blueprints/` |
-| style engines | whiteboard (board, draw, write, heading), blueprint (sheet, part, letter, dim, balloon, card, connect, cloud, overlay, titleBlock, notes, explode, extrude, step) | `runtime/engines/` |
+| style engines (5) | whiteboard (board, draw, write, heading, icon: any Lucide icon drawn by the hand); blueprint (sheet, part, letter, dim, balloon, card, connect, cloud, overlay, titleBlock, notes, explode, extrude, step, mechanism, icon, hero, camera); screencast (apps from regions: nav, table, cards, form, toggles, and since 2026-10-16 `code` (a real editor), `terminal`, `chart`, `page` (a captured web page), themed shells); hologram (panels, globe, mesh, bars, flow, gauges, and 3D heroes: `H.hero3d` on Three.js, `H.object` in SVG); isometric (board, put, route, flow, track, tally, stack, screen, facade, widen) | `runtime/engines/`, `docs/styles/engines/<style>.md` |
 | designed sets | office world (meeting room and 8 more places), prompts for 17 other worlds | `assets/sets/`, `docs/assets/world_prompts/` |
 
 **The terminal case.** A terminal exists as a page clip: a sealed picture. Inside it the engine cannot hold a line into
 the next beat, the layout checks cannot read its words, a restyle needs a re-render, and the camera can only move the
 rectangle. The component (T-001) is the native version, and the same holds for the other "native" items below.
+
+**Since 2026-10-16, in the screencast style:** the engine itself has a native code editor, terminal and chart. A `dev_`
+or `ui_` component used in a screencast lesson must build on those regions (read `docs/styles/engines/screencast.md`),
+not draw a second one. In every other style it draws its own.
 
 ---
 

@@ -27,3 +27,14 @@ none busy here, and STATE has no MEASURED RUN IN FLIGHT line).
 Steps: `git init`; extend `.gitignore` with the rules above; `git add -A`; list the staged files and their sizes; scan them
 for secrets (API key shapes, tokens, emails) and for any media or reference frames that slipped in; one commit; add the
 remote; push `main`. Report what went in and what was left out.
+
+## Done (2026-10-16 13:5x)
+- No session busy (ListAgents: both peers idle; STATE has no in-flight line). `.gitignore` extended with the rules above
+  (plus `.claude/settings.local.json`, `*.zip` and the blind-test answer keys `*blind_KEY*`, which would reveal the unrated
+  layout trial pair).
+- Staged 6,652 files, about 256 MB; none over 10 MB; secrets scan of every staged text file (Anthropic, OpenAI, Google,
+  GitHub, Slack and AWS key shapes, private keys, bearer tokens, key assignments): no hit; emails present are lesson
+  examples only.
+- One commit (149e9fa) on `main`, pushed to https://github.com/Kshitij-Mondee/RedTee-Driver (private). Checked on GitHub's
+  own tree: 6,652 files, none a video, audio, archive, blind key, secret, render folder or lesson image.
+- From now on the folder is a git repository; later work is not pushed until asked.

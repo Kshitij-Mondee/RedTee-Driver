@@ -101,3 +101,18 @@ def check_caption_timing_merges_short_cues_and_holds_into_pauses():
         a["t1"] = min(a["t1"], b["t0"])
     assert F.caption_hold_checks({"captions": {"enabled": True, "groups": old}, "beats": tm["beats"]}, None, lesson="x")[0], "control"
     return f"{len(cues)} cues, shortest {S['min_hold_s']} s, none short; the old timing fails"
+
+
+def check_caption_hold_forgives_less_than_one_frame():
+    """A cue is shown for whole frames, so a shortfall under one frame is not on screen (st-sc-2fa, 2026-10-16: a 1.78 s
+    cue of 1.80 s stopped a lesson for a person). At 30 fps: 1.78 s of 1.80 s is quiet; 1.74 s (two frames short) is
+    still a short cue; at 60 fps, 1.78 s is short again (more than one frame there)."""
+    from loom.checks.film import short_cues
+    words = [("and", 10.0, 10.2), ("click", 10.2, 10.6), ("Generate:", 10.6, 11.2)]
+    near = _manifest([_cue(9.96, 9.96 + 1.78, words)])
+    far = _manifest([_cue(9.96, 9.96 + 1.74, words)])
+    assert not short_cues(near)[0], f"under one frame short is not on screen: {short_cues(near)[0]}"
+    assert sum(len(v) for v in short_cues(far)[0].values()) == 1, "two frames short is still short"
+    fast = dict(near, fps=60)
+    assert sum(len(v) for v in short_cues(fast)[0].values()) == 1, "at 60 fps the same 20 ms is more than a frame"
+    return "1.78 of 1.80 s quiet at 30 fps; 1.74 s short; 1.78 s short at 60 fps"
