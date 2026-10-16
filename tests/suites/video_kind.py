@@ -122,3 +122,47 @@ def check_video_kind_gates_refuse_quizzes_in_an_explainer_and_demand_recall_in_t
         E, _ = check_brief(p)
         assert any("check or practice role" in e for e in E), E
     return "explainer quiz, recall, viewer prompts, too many questions and a check role refused; teaching recall demanded; controls pass"
+
+
+PRODUCT_TOPICS = {
+    "Product demo of our invoice matching app for finance teams": "product",
+    "Introducing the new scheduling feature in our booking platform": "product",
+    "Homepage explainer video for our travel booking site": "product",
+    "Feature launch: offline mode in the field app": "product",
+    "Rolling out the new expense app to employees": "product",
+}
+
+
+def check_video_kind_product_is_its_own_kind_led_by_the_product_skill():
+    """Kshitij 2026-10-16: "a proper product explainer skill for sites/software ... separate from teaching or explainer".
+    The `product` kind: read from the topic, led by skills/product/product-explainer in pedagogy, script and storyboard,
+    no quiz or recall or check role, and the ask ("try it free") is allowed where an explainer refuses it."""
+    bad = {t: G.infer(t)[0] for t, want in PRODUCT_TOPICS.items() if G.infer(t)[0] != want}
+    assert not bad, f"product topics misread: {bad}"
+    bad = {t: (G.infer(t)[0], want) for t, want in TOPICS.items() if G.infer(t)[0] != want}
+    assert not bad, f"control: the other kinds still read right: {bad}"
+    from loom.stages import BY_NAME, reading_list
+    for st in ("pedagogy", "script", "storyboard"):
+        first = reading_list(BY_NAME[st], None, "product")[0]
+        assert first == "skills/product/product-explainer/SKILL.md", f"{st} reading list leads with {first}"
+        assert (ROOT / first).exists()
+    from loom.agents.tools import _skill_path
+    assert _skill_path("product-explainer") == ROOT / "skills/product/product-explainer/SKILL.md"
+    assert _skill_path("product-explainer/reference/worked-example").exists()
+    assert G.craft_file("product"), "packs/genres/product.md is the genre's craft file"
+    quiz = {"kind": "quiz", "after_section": "s1", "answer": "a", "tempting_wrong": "b"}
+    with _lesson("Product demo of our invoice matching app", genre="product") as p:
+        assert "VIDEO KIND: product" in G.block(p, "storyboard") and "product-explainer" in G.block(p, "storyboard")
+        assert G.plan_errors(p, _plan([quiz])), "a product plan with a quiz passed"
+        assert not G.plan_errors(p, _plan([])), "control: a product plan with no recall must pass"
+        cta = G.script_errors(p, _script(["Month end. Two thousand lines to tick.", "Try it free for 14 days."]))
+        assert not cta, f"the ask must pass in a product film: {cta}"
+        qz = G.script_errors(p, _script(["Which one matches?"], recall=quiz, job="check"))
+        assert qz, "a quiz beat in a product film passed"
+    from loom.checks.gates import check_brief
+    arc = [{"role": r, "what": f"the {r} of the invoice matching film"} for r in ("hook", "status quo", "the shift", "show it working", "check", "ask")]
+    with _lesson("Product demo of our invoice matching app", genre="product", brief={"genre": "product", "arc_plan": arc}) as p:
+        E, _ = check_brief(p)
+        assert any("check or practice role" in e for e in E), E
+    return (f"{len(PRODUCT_TOPICS)} product topics read as product, the others unchanged; its skill leads 3 stages; "
+            "quiz, recall and check refused; the ask allowed")

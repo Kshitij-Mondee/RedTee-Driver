@@ -44,6 +44,8 @@ STORY_FORM = {
     "onboarding": "a place to find your way around, with the new starter as the character",
     "soft-skills": "people doing the thing: a small cast, a scenario with a turn, reactions on the key moment",
     "explainer": "a governing metaphor or a mechanism shown running, with one depth or 3D moment where there is a place",
+    "product": "the viewer as the hero with the product as their tool: one running example (one customer, one task) the film "
+               "follows from the status quo to the result held on the product's own screen",
 }
 
 

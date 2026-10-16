@@ -61,6 +61,18 @@ PROFILES = {
         "says": "a soft-skills video: the moment it goes wrong, the model, the model applied, then the viewer's turn "
                 "(practice is the point here).",
     },
+    # a product video (2026-10-16): introduce a product, site or feature, sell it honestly, make it make sense. Its own
+    # skill (skills/product/product-explainer), not teaching or explainer craft. The viewer is addressed directly and the
+    # film ends on one ask ("try it free"), so prompts are allowed; nothing is tested, so no quiz or recall.
+    "product": {
+        "recall": "none", "quiz": False, "prompts": True, "questions_max": 2, "gagne": ("attention", "present", "guidance"),
+        "lead": {"pedagogy": "product-explainer", "script": "product-explainer", "storyboard": "product-explainer"},
+        "says": "a product video: it introduces a product, site or feature, sells it honestly and makes it make sense. "
+                "The viewer is the hero and the product their tool. Hook in the first 3 seconds (readable muted), the "
+                "status quo, the shift, 2 or 3 value moments (benefit said, feature shown, result held; the aha first), "
+                "proof from the proof inventory, then ONE ask and the end card. No quiz, no recall, no feature tour; every "
+                "claim, number, quote, logo and badge traces to the product's own material.",
+    },
 }
 
 # direct asks of the viewer: refused where the kind takes no prompts
@@ -75,6 +87,11 @@ def known() -> list[str]:
 
 # ---------------------------------------------------------------- reading the kind from the request
 _RULES = (
+    # a product video first: "explainer video for our site" and "walkthrough of our app" are product films, not lessons
+    ("product", r"\bproduct (demo|tour|video|explainer|launch|overview|walkthrough)s?\b|\bdemo video\b|\bfeature (launch|tour|announcement|release)\b|"
+                r"\blaunch (video|film|teaser)\b|\bintroducing (the|our|a)\b|\bhomepage (video|explainer|hero)\b|\b(hero|landing page|sales|promo|pitch) video\b|"
+                r"\bsales follow-?up\b|\brolling out the new\b|\broll-?out of (the|our) new\b|"
+                r"\b(explainer|video) for (our|the) (site|website|app|platform|product|software|tool|saas)\b"),
     ("explainer", r"\bexplain(er|ing)?\b|\bhow (an?|the)? ?[\w' -]{2,40}\b(works?|work)\b|\bwhat happens (when|inside|between)\b|"
                   r"\bbehind the scenes\b|\bunder the hood\b"),
     ("policy", r"\bpolic(y|ies)\b|\bcompliance\b|\bregulat|\bcode of conduct\b|\bgdpr\b|\banti-?bribery\b"),

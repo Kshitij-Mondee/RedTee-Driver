@@ -14,6 +14,25 @@ scenes, review), **tweak** (Haiku sub-agents via `loom tweak`).
 
 ---
 
+## Narration and the product kind (2026-10-16, D-195)
+- **L-481 The narration is choppy by contract, and the persona's rhythm is never checked.** (script, narrate) Across
+  85 saved scripts the mean is 6.5 words a sentence and 42 % of sentences are 5 words or fewer (st-holo-ai: 5.7, sd
+  2.2), while its persona asks for a mean of 11 and an sd of at least 5. `grep sentence_words_mean loom` finds nothing.
+  - Why: the script contract makes a phrase (aim 9 words, fail over 14) both the breath and the TTS unit, so writers
+    make every phrase a sentence. `loom/narrate` then synthesises each phrase alone and joins them with fixed silences,
+    so the voice restarts about every 2.3 s (median phrase 2.1 to 2.6 s on the four test lessons). The beat's
+    `delivery` never reaches any provider.
+  - OPEN (proposal, needs Kshitij's go-ahead): `docs/strategy/2026-10-16-narration-review.md` covers TTS per
+    sentence with alignment, the persona rhythm as a gate, a "for the ear" pass, delivery per provider, and silence by
+    meaning. A/B audio is in `docs/research/2026-10-16-narration/`.
+  - UPDATE (later 2026-10-16): Kshitij says the voice and narration are taken care of; the speed work is D-196 and
+    D-197. The rest of the proposal stays a reference.
+- **L-482 A line-ending diff in the sandbox is not a change.** (orchestrator) Seven small edits showed as 2,700
+  changed lines in the sandbox's `git diff`, because the Windows file tools write CRLF. Many working files are
+  already CRLF (gates.py, essence.py, direction.py), and HEAD is LF, so the Windows checkout converts on commit and
+  the sandbox git, with no `core.autocrlf`, shows every CRLF file as rewritten. Nothing was wrong; the edited files
+  were normalised to LF anyway. Prevention: measure a diff from the sandbox with `git diff --ignore-cr-at-eol`.
+
 ## The new styles in Chrome (2026-10-16, Kshitij's first lab runs)
 - **L-471 `tight_inset` measures all four sides, so a short tag fails on its height.** (hologram and screencast engines)
   Kshitij's Chrome runs reported 3 problems on `holo_lesson` (WARN tags 3.5 px from their edge) and 12 on `sc_lesson`

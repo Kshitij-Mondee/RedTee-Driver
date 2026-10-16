@@ -93,7 +93,7 @@ def _skill_path(skill: str) -> Path | None:
     skill = skill.strip().replace("\\", "/").strip("/").removesuffix(".md")
     if skill in DOC_ALIASES:
         return ENGINE_ROOT / DOC_ALIASES[skill]
-    for base in ("skills/lnd", "skills/loom"):
+    for base in ("skills/lnd", "skills/product", "skills/loom"):
         if "/" in skill:              # a skill's reference file: lnd-learning-pedagogy/reference/teaching-plan
             p = ENGINE_ROOT / base / f"{skill}.md"
         else:
@@ -113,7 +113,7 @@ def _skill_path(skill: str) -> Path | None:
 
 
 def _no_doc(skill: str) -> str:
-    return (f"no skill or guide '{skill}' (skills live in skills/lnd and skills/loom; guides: {', '.join(DOC_ALIASES)}; a style's guide "
+    return (f"no skill or guide '{skill}' (skills live in skills/lnd, skills/product and skills/loom; guides: {', '.join(DOC_ALIASES)}; a style's guide "
             f"by its id, e.g. 'story-cartoon'; get_style_pack also returns the lesson's style guide as guide_text)")
 
 

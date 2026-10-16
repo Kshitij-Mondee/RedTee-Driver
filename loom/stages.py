@@ -25,6 +25,7 @@ class Stage:
 
 
 LND = "skills/lnd"
+SKILL_DIRS = (LND, "skills/product", "skills/loom")   # where a skill named by id is looked for, in this order
 STAGES: list[Stage] = [
     Stage("ingest", "code", "source/dossier.json", only_mode="source",
           desc="Parse source documents into page-anchored chunks (LLM-free)."),
@@ -93,8 +94,9 @@ def reading_list(stage: Stage, style: str | None = None, kind: str | None = None
         from .genre import PROFILES
         from .util import ENGINE_ROOT
         lead = (PROFILES.get(kind) or {}).get("lead", {}).get(stage.name)
-        f = f"{LND}/{lead}/SKILL.md" if lead else None
-        if f and (ENGINE_ROOT / f).exists():
+        # the lead skill lives in skills/lnd, or skills/product for the product kind (its own craft, not L&D)
+        f = next((c for c in (f"{d}/{lead}/SKILL.md" for d in SKILL_DIRS) if (ENGINE_ROOT / c).exists()), None) if lead else None
+        if f:
             out = [f] + [x for x in out if x != f]
     return out + ([g] if g and g not in out else [])
 

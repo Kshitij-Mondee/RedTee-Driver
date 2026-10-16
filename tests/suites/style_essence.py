@@ -27,7 +27,8 @@ from loom import essence as S  # noqa: E402
 from loom.project import Project  # noqa: E402
 from loom.util import write_json  # noqa: E402
 
-KINDS = ("explainer", "teaching", "onboarding", "policy", "soft-skills")
+from loom.genre import known as _known_kinds  # noqa: E402
+KINDS = tuple(_known_kinds())   # every kind the engine plans for (the product kind joined 2026-10-16); was a hand list
 
 
 @contextmanager

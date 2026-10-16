@@ -17,6 +17,22 @@
   again (empty when no whole word fits) for the shells that call it, `fitWordsOrNull` for the text helper. The friend's
   branch was built on f18c870, so its files were brought onto this main by hand (its notes: docs/assets/batches/batch-02.md).
 
+## 2026-10-16 - The product kind of video and its own skill; style and narration reviews (D-195, L-481, L-482)
+- New kind `product` (`loom/genre.py`): no quiz, recall or check role; the viewer may be addressed and asked to act
+  once. Read from topics like "product demo", "feature launch", "homepage explainer video for our site", "rolling out
+  the new". Its craft leads pedagogy, script and storyboard: `skills/product/product-explainer` (truth sheet,
+  formats, arcs, showing software, honest claims, sound off and cutdowns, voice, rubric; worked example in
+  `reference/`). Genre file `packs/genres/product.md`; `STORY_FORM["product"]`; `--genre product` in the CLI help.
+- Skills are looked for in `skills/lnd`, `skills/product`, `skills/loom` (`stages.reading_list`,
+  `agents/tools._skill_path`).
+- Every essence has a `product` fit; `tests/suites/style_essence.py` reads the kinds from `genre.known()` instead of a
+  hand list. Screencast card: a product line, and the owner's own product may carry its brand.
+- Test: `check_video_kind_product_is_its_own_kind_led_by_the_product_skill` (red before the profile: all five product
+  topics read as teaching or explainer).
+- Reviews: `docs/strategy/2026-10-16-style-adaptation-assessment.md`, `docs/strategy/2026-10-16-narration-review.md`
+  (with A/B audio in `docs/research/2026-10-16-narration/`); research `docs/research/2026-10-16-product-explainer.md`.
+  The skill is also saved to the Cowork account.
+
 ## 2026-10-16 - The holograms first; nothing promised left undone (D-194)
 - Storyboard gate: `holo_heroes_few`, `holo_hero_model`, `holo_ui_templates` (`loom/direction.py` `storyboard_errors`).
 - Hologram engine audit: `holo_hero_unplaced`, `holo_hero_not_drawn`, `holo_ui_heavy`; `holo_hero_missing` an error.

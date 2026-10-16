@@ -27,7 +27,7 @@ def main(argv=None) -> int:
 
     a = sub.add_parser("new", help="create a project")
     a.add_argument("id"); a.add_argument("--topic"); a.add_argument("--source", nargs="*")
-    a.add_argument("--audience"); a.add_argument("--genre", default="auto", help="teaching, explainer, onboarding, policy, soft-skills, or auto (read from the topic)"); a.add_argument("--length", type=float, default=4)
+    a.add_argument("--audience"); a.add_argument("--genre", default="auto", help="teaching, explainer, onboarding, policy, soft-skills, product, or auto (read from the topic)"); a.add_argument("--length", type=float, default=4)
     a.add_argument("--style", default="flat-cosmos"); a.add_argument("--voice", default="af_heart"); a.add_argument("--voice-provider", default="kokoro")
     a.add_argument("--persona"); a.add_argument("--notes", default=""); a.add_argument("--no-captions", action="store_true")
     a.add_argument("--avatar", default="presenter", help="presenter | file | heygen | none")
