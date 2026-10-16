@@ -125,7 +125,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 - **Template skins (2026-10-16, D-198):** the catalog templates are drawn each engine style's own way (whiteboard hand,
   blueprint nib, hologram light, isometric blocks A or wall B, screencast product page), proven on the template sheet
   (`py -m loom library sheet --template all --skin style --styles <s>`); on for new engine lessons, classic kept, finished
-  lessons untouched. Open: a within-style film comparison per style; isometric A against B (Kshitij to judge); skins for
+  lessons untouched. Open: a within-style film comparison per style; isometric A is the default, B a variant (D-199); skins for
   the non-engine styles (flat-cosmos, glow-flat, story-cartoon, cinematic) in their own proposal.
 - **Narration speed by kind of video (2026-10-16, D-196):** a range per kind (teaching 0.75 to 0.85, explainer
   0.85 to 0.95, product 0.9 to 0.95, onboarding 0.85 to 1.0), decided per lesson by the script or the narration's density
