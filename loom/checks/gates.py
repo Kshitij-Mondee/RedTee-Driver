@@ -38,6 +38,13 @@ def _catalog_ids() -> set[str]:
 
 
 # ------------------------------------------------------------------ brief
+def _kind_legacy(project) -> bool:
+    """A lesson planned before the kind-of-video rules (D-191): its project.json has no `kind_rules` stamp (a lesson made
+    before them, or a clone of one, which shares its plan exactly). It keeps the rules it was made and approved under."""
+    cfg = getattr(project, "cfg", None) or {}
+    return not cfg.get("kind_rules")
+
+
 def check_brief(project):
     b = read_json(project.path("plan/brief.json"))
     E = _schema(b, "brief"); W = []
@@ -72,7 +79,7 @@ def check_brief(project):
         E.append(f"brief.genre '{b.get('genre')}' is not a kind of video the engine plans for ({', '.join(sorted(_KINDS))})")
     elif rq in _KINDS and bg != rq:
         E.append(f"brief.genre '{bg}' but the request names '{rq}': the person's choice stands")
-    elif _KINDS[bg]["recall"] == "none":
+    elif _KINDS[bg]["recall"] == "none" and not _kind_legacy(project):
         roles = [str(seg.get("role") or "") for seg in b["arc_plan"]]
         if any(r in ("check", "practice", "your turn", "quiz") for r in roles):
             E.append(f"the arc of a {bg} has a check or practice role ({', '.join(roles)}): an explainer asks the viewer nothing")
@@ -173,9 +180,15 @@ def check_pedagogy(project):
     cap = 1 if dur <= 360 else 2 if dur <= 600 else 3 if dur <= 900 else 5 if dur <= 1500 else 6
     if len(stops) > cap:
         E.append(f"{len(stops)} stopping checks for {dur:.0f}s; the budget is {cap}")
-    # the kind of video decides the recall moments (D-191): a teaching film needs one, an explainer has none
+    # the kind of video decides the recall moments (D-191): a teaching film needs one, an explainer has none. A lesson
+    # made before the rule keeps the one it was approved under (every film one recall moment, every Gagne event)
     from ..genre import plan_errors as _kind_plan, gagne_required as _kind_gagne
-    E += _kind_plan(project, p)
+    if _kind_legacy(project):
+        if not p["pacing"]["recall_moments"]:
+            E.append("no recall moment at all")
+        _kind_gagne = lambda _p: ("attention", "recall_prior", "present", "guidance", "practice", "transfer")   # noqa: E731
+    else:
+        E += _kind_plan(project, p)
     for r in p["pacing"]["recall_moments"]:
         if r.get("after_section") not in ids:
             E.append(f"recall moment tied to unknown section {r.get('after_section')}")
@@ -321,9 +334,14 @@ def check_script(project):
                   "merge or cut beats")
     fe, fw = _ratchet(project, "script", fe)
     E += fe; W += fw
-    # the kind of video decides recall, quiz beats and questions put to the viewer (D-191)
-    from ..genre import script_errors as _kind_script
-    E += _kind_script(project, s)
+    # the kind of video decides recall, quiz beats and questions put to the viewer (D-191); a lesson made before the rule
+    # keeps the one it was approved under
+    if _kind_legacy(project):
+        if not any(b.get("recall") for b in s["beats"]):
+            E.append("no recall moment in the script")
+    else:
+        from ..genre import script_errors as _kind_script
+        E += _kind_script(project, s)
     return E, W
 
 

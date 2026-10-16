@@ -62,6 +62,9 @@ class Project:
         cfg = {
             "id": pid,
             "created": _dt.datetime.now().isoformat(timespec="seconds"),
+            # planned under the kind-of-video rules (D-191): a lesson without this stamp (made before them, or a clone of
+            # one) keeps the rules it was made and approved under (loom/checks/gates.py _kind_legacy)
+            "kind_rules": 1,
             "engine": "loom",
             "mode": "source" if sources else "topic",
             "topic": topic or "",

@@ -32,7 +32,7 @@ from loom.util import write_json  # noqa: E402
 def _lesson(topic: str, genre: str = "auto", notes: str = "", brief: dict | None = None):
     d = Path(tempfile.mkdtemp(prefix="loom_kind_"))
     try:
-        write_json(d / "project.json", {"id": "kind-test", "topic": topic, "mode": "topic",
+        write_json(d / "project.json", {"id": "kind-test", "topic": topic, "mode": "topic", "kind_rules": 1,
                                         "request": {"style": "flat-cosmos", "genre": genre, "notes": notes, "length_min": 3}})
         # a finished lesson's plan files, read only, so every stage's task message can be built (the tests change the kind,
         # never the lesson)
