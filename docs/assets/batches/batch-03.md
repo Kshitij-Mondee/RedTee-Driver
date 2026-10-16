@@ -197,3 +197,45 @@ Fixed after looking, though the gate had passed:
    - the editor's minimap when `rows` is far below the file length: it compresses to 3 px a line.
 5. **Not in this batch: the Family A P2 and P3 items** (T-005, T-007 to T-009, T-011, T-013 to T-018), by the cloud
    plan's order.
+
+## The quality pass (assets/batch-03 e117237, taken in 2026-10-17)
+
+The seven batch 03 items were looked at again at full size, case by case, after the requester's ask for clean,
+perfectly crafted templates. Fixed:
+- **terminal:** the window frame's body corners (`DK.frame` draws a rounded-bottom path) and the warning tone (now
+  `DK.warnTok`), both in the shared kit;
+- **code editor:** the status line's items (split at two or more spaces in the param) are measured and set apart one by
+  one, as an editor's status bar; function names that came out faded in some packs now fall back to the text colour
+  (`DK.syntax`, low-saturation defaults);
+- **diff view:** the first case's view now shows 13 rows (it was 11), so its hunk is not cut at the view's edge;
+- **git graph:** two lanes could share a tone; lanes now take distinct tones (`DK.tones`);
+- **CI pipeline:**
+  - the stage icon and name margins were evened out;
+  - a job name that fit its box exactly lost its last word to the one-line drawer's margin ("fetch..." in
+    presenter-pop). The line count is now measured 6 px narrower than the box, so such a name wraps instead;
+- **HTTP exchange:** side by side, each card is as tall as its own content (the short request card had been stretched
+  to the response's height, half empty);
+- **db table:**
+  - names starting with letters that hang left ("T", "Y") sat a few pixels right of the column's edge. `DK.textL` now
+    keeps the word's origin on the column edge;
+  - a filter slid the count up with the rows, leaving an empty band under it. The count now stays at the foot;
+  - in whiteboard the hand has no bold, so the header names looked like their types; there they are a size larger.
+
+Batch 03's gate results after the pass:
+
+`python3 -m loom library accept <id>`, final runs after the last change to each file (exit 0 for each; the sheet paths are
+shortened from absolute):
+
+```
+component dev_terminal (commissioned): accepted; sheet library/sheets/dev_terminal.jpg
+component dev_code_editor (commissioned): accepted; sheet library/sheets/dev_code_editor.jpg
+component dev_diff_view (commissioned): accepted; sheet library/sheets/dev_diff_view.jpg
+component dev_git_graph (commissioned): accepted; sheet library/sheets/dev_git_graph.jpg
+component dev_ci_pipeline (commissioned): accepted; sheet library/sheets/dev_ci_pipeline.jpg
+component dev_http_exchange (commissioned): accepted; sheet library/sheets/dev_http_exchange.jpg
+component dev_db_table (commissioned): accepted; sheet library/sheets/dev_db_table.jpg
+```
+
+All seven also pass `check_component` in their 9 or 10 styles with 0 errors, and their 63 engine strips (below in
+part 3) were rendered again: 0 errors, the same expected screencast warnings as before.
+

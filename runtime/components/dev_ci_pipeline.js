@@ -62,7 +62,7 @@ Loom.component("dev_ci_pipeline", {
     // ---- stage names, job rows
     L.stages.forEach((s, si) => {
       const b = L.boxes[si], st = parts.stages[si];
-      st.name = DK.word(ctx, wordG, s.name, { x: b.x + 18, y: b.y, w: b.w - 18 - 50, h: L.headH, size: Z.fs, weight: 700, at: animated ? t0 + si * 0.06 : -1, eng, pen, name: `stage_${si}`, kind: "label" });
+      st.name = DK.word(ctx, wordG, s.name, { x: b.x + 14, y: b.y, w: b.w - 14 - 44, h: L.headH, size: Z.fs, weight: 700, at: animated ? t0 + si * 0.06 : -1, eng, pen, name: `stage_${si}`, kind: "label" });
       const ig = svg("g", {}, wordG);
       st.iconG = ig; st.icons = {};
       parts.jobs.push(s.jobs.map((j, ji) => {
@@ -80,7 +80,7 @@ Loom.component("dev_ci_pipeline", {
       const agg = (arr) => (arr.some((x) => x === "failed" || x === "error") ? "failed" : arr.some((x) => x === "running") ? "running" : arr.every((x) => x === "skipped") ? "skipped"
         : arr.every((x) => x === "blocked") ? "blocked" : arr.every((x) => x === "pending") ? "pending" : arr.some((x) => x === "pending" || x === "blocked") ? "running" : arr.some((x) => x === "warning") ? "warning" : "passed");
       st.agg = () => agg(nowState[si]);
-      st.iconFor = (state) => { if (!st.icons[state]) { st.icons[state] = DK.stateIcon(ig, state, b.x + b.w - 30, b.y + L.headH / 2, 30); st.icons[state].setAttribute("opacity", 0); } return st.icons[state]; };
+      st.iconFor = (state) => { if (!st.icons[state]) { st.icons[state] = DK.stateIcon(ig, state, b.x + b.w - 24, b.y + L.headH / 2, 28); st.icons[state].setAttribute("opacity", 0); } return st.icons[state]; };
       st.shown = st.agg(); st.iconFor(st.shown).setAttribute("opacity", 1);
       if (animated) AK.show(ig, t0 + si * 0.06, 0.25);
     });
@@ -201,7 +201,10 @@ Loom.devKit.ciLayout = function (p) {
     const b = boxes[si], x = b.x + 12, y = b.y + headH + 10 + ji * rowH, w = b.w - 24;
     const R = { x, y, w, nameW: w - 40, durX: x + 38, durY: y, durW: w - 40, durH: rowH, durAlign: "right" };
     if (two) {
-      const nl = 38 + nameWOf(stages[si].jobs[ji]) > w - 4 ? nameLines : 1, nh = nl > 1 ? Math.ceil((nl - 1) * Z.fs * 1.36 + lh) : lh;
+      // the lines this name really takes, measured with the wrap that draws it (in the engine styles, the hand is wider)
+      const nl = Math.min(nameLines, AK.clampText(stages[si].jobs[ji].name, { role: "caption", size: Z.fs, w: (w - 42 - 6) / engK, maxLines: nameLines }).n), nh = nl > 1 ? Math.ceil((nl - 1) * Z.fs * 1.36 + lh) : lh;
+      // the line count is measured 6 px narrower than the box: a one-line name drawn at exactly its box's width had lost
+      // its last word to the one-line drawer's own margin ("fetch..." in presenter-pop, 2026-10-16 review)
       R.nameW = w - 42; R.durY = y + 6 + nh; R.durH = lhS; R.durAlign = "left"; R.durX = x + 38; R.lines = nl; R.nameH0 = nh;
     }
     else { const dj = stages[si].jobs[ji], dw = durWOf(dj); R.nameW = w - 40 - (dw ? dw + 8 : 0); R.durX = x + w - dw - 4; R.durW = dw; }

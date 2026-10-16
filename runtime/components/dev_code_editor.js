@@ -123,7 +123,16 @@ Loom.component("dev_code_editor", {
     if (p.status) {
       const sg = svg("g", {}, g), sy = H - stH;
       svg("rect", { x: 2, y: sy, width: W - 4, height: 1.5, fill: SC.rule }, sg);
-      parts.status = AK.T(sg, p.status, { x: 20, y: sy, w: W - 40, h: stH - 2, size: Z.small, color: "muted" });
+      // the status line's items (separated by two or more spaces in the param) set apart, as an editor's status bar
+      const items = String(p.status).split(/\s{2,}/).filter(Boolean);
+      let sx = 20;
+      parts.status = items.map((it) => {
+        const iw = Math.min(W - 20 - sx, AK.measure(it, "caption", Z.small, 400) + 6);
+        if (iw < 30) return null;
+        const t1 = AK.T(sg, it, { x: sx, y: sy, w: iw, h: stH - 2, size: Z.small, color: "muted" });
+        sx += iw + 34;
+        return t1;
+      }).filter(Boolean);
       if (animated) AK.show(sg, F.end, 0.3);
     }
 

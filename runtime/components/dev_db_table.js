@@ -62,7 +62,7 @@ Loom.component("dev_db_table", {
     svg("rect", { x: 1, y: f1(y0 + L.headH - 1), width: p.w - 2, height: 1.5, fill: SC.rule }, hg);
     L.cols.forEach((c, ci) => {
       const cg = svg("g", {}, hg);
-      const nm = (c.num ? AK.T : DK.textL)(cg, c.name, { x: c.x + 12, y: y0 + 8, w: c.w - 24, h: L.lh, size: Z.fs, weight: 700, align: c.num ? "right" : "left" });
+      const nm = (c.num ? AK.T : DK.textL)(cg, c.name, { x: c.x + 12, y: y0 + 8, w: c.w - 24, h: L.lh, size: L.nameSize, weight: 700, align: c.num ? "right" : "left" });
       const ty = c.type ? AK.mono(cg, [[c.type, SC.muted]], { x: c.num ? c.x + c.w - 12 - c.type.length * AK.monoW(Z.small) : c.x + 12, y: y0 + 8 + L.lh, h: L.lhS, size: Z.small, w: c.w - 24 }) : null;
       parts.header.push({ g: cg, name: nm, type: ty });
     });
@@ -114,7 +114,8 @@ Loom.component("dev_db_table", {
         if (off) { R.dy = -off; AK.shift(R.wrap, 0, -off, at + 0.25, 0.35); }
         if (!R.kept) off += L.rowH;
       });
-      if (off) AK.shift(fg, 0, -off, at + 0.25, 0.35);
+      // the count stays at the pane's foot: a filtered result is the same pane with fewer rows (it had slid up with them and
+      // left an empty frame below it, 2026-10-16 review)
       if (parts.count && p.countLabel) {
         const n = parts.rowsG.filter((R) => R.kept).length;
         const nt = AK.T(fg, fill(p.countLabel, n), { x: p.w * 0.6, y: fy, w: p.w * 0.4 - 22, h: L.footH, size: Z.fs, color: "muted", align: "right", weight: 600 });
@@ -174,18 +175,22 @@ Loom.devKit.dbLayout = function (p) {
   // the query wraps to at most 4 rows at the bar's width, tokenized as one line so its colours carry
   const qCols = DK.cols(p.w - 66 - 28, CS);
   const qRows = p.query ? DK.wrapRuns(p.query, "sql", { plain: "plain", keyword: "keyword", string: "string", number: "number", comment: "comment", fn: "fn", punct: "punct", type: "type", key: "key", flag: "flag" }, qCols).slice(0, 4) : [];
-  const lh = AK.lineH(Z.fs, "caption", 700), lhS = AK.lineH(Z.small, "mono");
+  // the column names lead their mono types: where the caption face has no bold (whiteboard's hand), a size up instead
+  const S = Loom.style, capF = S.font("caption"), capMax = ((S.pack.type || {}).caption || [0, Z.fs])[1];
+  const boldless = S.loadedWeight && S.loadedWeight(capF.family, 700) < 600;
+  const nameSize = boldless ? Math.max(Z.fs, Math.min(capMax, Math.round(Z.fs * 1.14))) : Z.fs;
+  const lh = AK.lineH(nameSize, "caption", 700), lhC = AK.lineH(Z.fs, "caption", 700), lhS = AK.lineH(Z.small, "mono");
   const qH = p.query ? 12 + 24 + qRows.length * qLH + 12 : (p.title ? lh + 22 : 12);
   const hasTypes = cols0.some((c) => c.type);
-  const headH = 8 + lh + (hasTypes ? lhS : 0) + 10, rowH = Math.max(lh + 18, 52), footH = Math.max(lh + 16, 50);
+  const headH = 8 + lh + (hasTypes ? lhS : 0) + 10, rowH = Math.max(lhC + 18, 52), footH = Math.max(lhC + 16, 50);
   // column widths: as wide as their widest word (sampled rows and the header), scaled to fit w
   const num = cols0.map((_, ci) => rows.slice(0, nShow).every((r) => r[ci] == null || r[ci] === "" || /^[-+]?[\d.,]+%?$/.test(String(r[ci]))));
-  const want = cols0.map((c, ci) => Math.max(90, AK.measure(c.name, "caption", Z.fs, 700) + 42 + (num[ci] ? 0 : 24), c.type ? c.type.length * AK.monoW(Z.small) + 30 : 0,
+  const want = cols0.map((c, ci) => Math.max(90, AK.measure(c.name, "caption", nameSize, 700) + 42 + (num[ci] ? 0 : 24), c.type ? c.type.length * AK.monoW(Z.small) + 30 : 0,
     ...rows.slice(0, nShow).map((r) => (r[ci] == null ? 0 : Math.min(420, AK.measure(String(r[ci]), "caption", Z.fs, 400) + 30)))));
   const avail = p.w - 24, sum = want.reduce((a, b) => a + b, 0) || 1, k = Math.min(1.6, avail / sum);
   let x = 12;
   const cols = cols0.map((c, ci) => { const w = Math.floor(want[ci] * k); const C = Object.assign({}, c, { x, w, num: num[ci] }); x += w; return C; });
   const top = qH + 6;
   const h = top + headH + nShow * rowH + ((total > nShow) || p.countLabel ? footH : 12) + 4;
-  return { Z, CS, qLH, qRows, qH, lh, lhS, headH, rowH, footH, cols, rows, nShow, total, top, size: { w: p.w, h } };
+  return { Z, CS, qLH, qRows, qH, lh, lhS, nameSize, headH, rowH, footH, cols, rows, nShow, total, top, size: { w: p.w, h } };
 };

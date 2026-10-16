@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-17 - Batch-03 quality pass: the seven developer components looked at again
+- From the friend's `assets/batch-03` (e117237): `_dev_kit.js` (rounded-bottom window bodies, `DK.warnTok`, `DK.tones`,
+  `DK.textL`, `DK.para`, low-saturation syntax colours fall back to the text colour); the CI pipeline wraps a name that
+  fit its box exactly; the HTTP cards hug their content side by side; the db table keeps its count at the foot; the git
+  graph's lanes take distinct tones; two fixtures. All seven accepted again here; the notes in batch-03.md.
+
 ## 2026-10-17 - Batch-03 of the asset hand-off: seven developer components (D-193)
 - T-001 `dev_terminal`, T-002 `dev_code_editor`, T-003 `dev_diff_view`, T-004 `dev_git_graph`, T-006 `dev_ci_pipeline`,
   T-010 `dev_http_exchange`, T-012 `dev_db_table`, with the shared `_dev_kit.js`; made for the styles that show software as
