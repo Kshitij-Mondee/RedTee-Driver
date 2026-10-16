@@ -260,6 +260,7 @@ def task_message(project, role: str, extra: dict) -> str:
     req = {"topic": project.cfg.get("topic"), "mode": project.mode, **{k: v for k, v in project.request.items()}}
     from ..genre import block as _kind     # what kind of video this is, and what that changes in this stage (D-191)
     from ..essence import block as _essence   # the style's own way of explaining and showing (D-192)
+    from ..narrate import speed_block as _speed   # the narrator's speed, chosen in the kind's range (D-197)
     if role == "brief":
         parts = ["Write the Production Brief for this request.", "REQUEST:\n" + _j(req), _kind(project, "brief")]
         if project.mode == "source":
@@ -308,7 +309,7 @@ def task_message(project, role: str, extra: dict) -> str:
                  "THE FILM'S LOOK (write each visual_intent for this style and for the brief's visual direction; one world the "
                  "story stays in where it can):\n" + _j({"style": _style_summary(project), "mix": req.get("mix"),
                                                          "visual_direction": (_read(project, "plan/brief.json", {}) or {}).get("visual_direction")}),
-                 _kind(project, "script"), _essence(project, "script")]
+                 _kind(project, "script"), _essence(project, "script"), _speed(project)]
         if project.mode == "topic":
             parts.append("KNOWLEDGE SHEET (the only facts and numbers you may use):\n" + _j(_read(project, "plan/knowledge.json")))
         return SEP.join(parts)

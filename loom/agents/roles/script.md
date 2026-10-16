@@ -36,6 +36,7 @@ decide the words and what each beat must show; the plan already made every pedag
 7. **Length:** words / wpm x 60 + 0.8 s per beat within about 20 % of the plan's target (under 0.6x or over 1.35x
    fails).
 8. No em or en dashes in narration, on_screen or visual_intent.
+9. **Voice speed** (D-197): `voice_speed: {value, why}` inside the kind's range the task gives; slower for dense or new material.
 9. `change_over_time` is true only when the taught thing itself changes (then `animate_score` >= 0.4). Definitions,
    lists and structures are false and low: a static composition with signalling is correct, not second best. In a
    story lesson the story IS the taught thing: a person doing the behaviour, the reaction to it, the consequence

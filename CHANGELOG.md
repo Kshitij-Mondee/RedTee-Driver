@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-16 - Narration speed: a range per kind, decided per lesson (D-197)
+- `loom/narrate`: `KIND_RANGE`, `suggest_speed` (density), `speed_block`; the script's `voice_speed` (schema, gate);
+  the VOICE SPEED instruction in Relay's script task and Shuttle's P4. Voice: af_heart.
+
 ## 2026-10-16 - Narration speed by kind of video (D-196)
 - `loom/narrate`: `voice.speed: "auto"` is the kind's speed (teaching 0.8, explainer 0.9, product 0.92, onboarding 0.9,
   policy 0.8, soft-skills 0.85); the wpm calibration is opt-in and never under 0.8. Voice samples for comparison in

@@ -605,6 +605,10 @@ def start_message(project, group: tuple, notes: dict, retry: str | None = None, 
         if _overlaps(group, lo, lo):
             parts.append(_kind(project, stage))
             break
+    # the narrator's speed, chosen by the script writer inside the kind's range (D-197)
+    if _overlaps(group, "P4", "P4"):
+        from ..narrate import speed_block as _speed
+        parts.append(_speed(project))
     # the style's essence (D-192): how this style explains and shows, for the script, the storyboard and the critic
     from ..essence import block as _essence
     for lo, stage in (("P4", "script"), ("P5", "storyboard"), ("P10", "critic")):
