@@ -27,7 +27,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 | Compose + render | `loom/compose.py`, `loom/render.py` | HyperFrames project; resumable segmented render; `verify_render` checks the MP4 against the preview |
 | Canvas runtime (JS) | `runtime/*.js` | world, camera, joins, kit, motion vocabulary, captions, presenter, components registry |
 | Library of templates | `runtime/templates/`, `runtime/blueprints/` | 17 templates and 5 blueprints live (`runtime/catalog.md`) |
-| Element components | `runtime/components/` | 5 components (none has earned promotion yet) |
+| Element components | `runtime/components/` | 10 components (none has earned promotion yet) |
 | Element and design library | `loom/library.py`, `library/` | counting, assessment, promotion, blind selection, proofs |
 | Style packs | `packs/styles/` | 17 style packs: flat-cosmos, editorial-paper, whiteboard, corporate-clean, dark-technical, engineering, blueprint (D-178), line-art, cinematic-noir, cinematic-dawn, from the visual study (D-74) story-cartoon, presenter-pop, chalk-lab, glow-flat (D-78, Kurzgesagt-inspired), and isometric, hologram and screencast (D-185, each with an engine) |
 | Bridges | `loom/manim_bridge.py`, `loom/redtee_bridge.py` | Manim clips; RedTee SVG blueprints, **read-only** |

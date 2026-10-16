@@ -70,7 +70,7 @@ Loom.component("app_chat_workspace", {
         let badgeW = 0, badge = null;
         if (c.mention) {
           const s = String(c.mention);
-          badge = AK.pill(rg, x + w - 8, y + (rowH - PH) / 2, s, { size: Z.small, fill: "neg", color: Loom.style.pickTokenOn("neg"), weight: 700, align: "right", h: PH });
+          badge = AK.pill(rg, x + w - 8, y + (rowH - PH) / 2, s, { size: Z.small, fill: AK.solid("neg").fill, stroke: AK.solid("neg").stroke, sw: AK.solid("neg").sw, color: AK.solid("neg").fg, weight: 700, align: "right", h: PH });
           badgeW = badge.w + 10;
         }
         const bold = !!(c.unread || c.mention) && i !== active;

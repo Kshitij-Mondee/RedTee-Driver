@@ -1,0 +1,335 @@
+{
+ "cases": [
+  {
+   "label": "employee: request leave",
+   "params": {
+    "title": "People",
+    "company": "Harbour Health",
+    "employee": {
+     "name": "Lena Fischer",
+     "title": "Staff nurse",
+     "department": "Ward 7",
+     "location": "Leeds General",
+     "fields": [
+      [
+       "Employee ID",
+       "40213"
+      ],
+      [
+       "Manager",
+       "Priya Shah"
+      ],
+      [
+       "Start date",
+       "4 March 2021"
+      ],
+      [
+       "Contract",
+       "Full time"
+      ]
+     ]
+    },
+    "nav": [
+     {
+      "id": "profile",
+      "label": "My profile"
+     },
+     {
+      "id": "timeoff",
+      "label": "Time off"
+     },
+     {
+      "id": "team",
+      "label": "My team"
+     },
+     {
+      "id": "approvals",
+      "label": "Approvals"
+     }
+    ],
+    "balances": [
+     {
+      "label": "Annual leave left",
+      "value": 18,
+      "unit": "days"
+     },
+     {
+      "label": "Sick days taken",
+      "value": 2,
+      "unit": "days"
+     }
+    ],
+    "requests": [
+     {
+      "type": "Annual leave",
+      "dates": "12 Aug - 16 Aug",
+      "days": 5,
+      "status": "Approved",
+      "tone": "pos"
+     },
+     {
+      "type": "Study leave",
+      "dates": "2 Jun",
+      "days": 1,
+      "status": "Declined",
+      "tone": "neg"
+     }
+    ],
+    "labels": {
+     "type": "Leave type",
+     "from": "First day",
+     "to": "Last day",
+     "submit": "Send request",
+     "pending": "Pending",
+     "sent": "Request sent to Priya Shah",
+     "days": "days"
+    },
+    "view": "timeoff",
+    "cps": 24,
+    "steps": [
+     {
+      "do": "requestLeave",
+      "request": {
+       "type": "Annual leave",
+       "from": "3 Nov",
+       "to": "7 Nov",
+       "days": 5
+      },
+      "at": 0.5
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "manager: approve, then the team",
+   "params": {
+    "company": "Northwind Logistics",
+    "employee": {
+     "name": "Priya Shah",
+     "title": "Ward manager",
+     "department": "Ward 7"
+    },
+    "nav": [
+     {
+      "id": "profile",
+      "label": "Profile"
+     },
+     {
+      "id": "team",
+      "label": "Team"
+     },
+     {
+      "id": "approvals",
+      "label": "To approve"
+     }
+    ],
+    "team": {
+     "manager": {
+      "name": "Dana Okafor",
+      "title": "Head of nursing"
+     },
+     "peers": [
+      {
+       "name": "Tom Becker",
+       "title": "Ward manager"
+      }
+     ],
+     "reports": [
+      {
+       "name": "Lena Fischer",
+       "title": "Staff nurse"
+      },
+      {
+       "name": "Sam Lee",
+       "title": "Healthcare assistant"
+      },
+      {
+       "name": "Ana Silva",
+       "title": "Staff nurse"
+      }
+     ]
+    },
+    "approvals": [
+     {
+      "name": "Lena Fischer",
+      "type": "Annual leave",
+      "dates": "3 Nov - 7 Nov",
+      "days": 5
+     },
+     {
+      "name": "Sam Lee",
+      "type": "Training day",
+      "dates": "14 Nov",
+      "days": 1
+     }
+    ],
+    "labels": {
+     "approve": "Approve",
+     "decline": "Decline",
+     "approved": "Approved",
+     "declined": "Declined",
+     "decided": "Lena Fischer has been told",
+     "days": "days"
+    },
+    "view": "approvals",
+    "steps": [
+     {
+      "do": "approve",
+      "i": 0,
+      "at": 0.7
+     },
+     {
+      "do": "viewTeam",
+      "at": 3.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "max: long names, many fields and rows",
+   "params": {
+    "title": "Human Resources Information and Workforce Management Platform",
+    "company": "International Programme Delivery Office",
+    "employee": {
+     "name": "Maximiliane Oyelaran-Whitford",
+     "title": "Principal programme manager for regulatory transformation",
+     "department": "Enterprise Change and Governance",
+     "location": "Regional headquarters, level fourteen, east wing",
+     "fields": [
+      [
+       "Employee identification number",
+       "EMP-0004021387"
+      ],
+      [
+       "Line manager",
+       "Bartholomew Featherstonehaugh"
+      ],
+      [
+       "Continuous service date",
+       "17 September 2009"
+      ],
+      [
+       "Contracted working pattern",
+       "Compressed hours, four days a week"
+      ],
+      [
+       "Cost centre",
+       "CC-77120 Transformation"
+      ],
+      [
+       "Notice period",
+       "Three months"
+      ],
+      [
+       "Emergency contact",
+       "Oluwaseun Abernathy-Krishnamurthy"
+      ],
+      [
+       "Payroll group",
+       "Monthly salaried staff"
+      ]
+     ]
+    },
+    "nav": [
+     {
+      "id": "profile",
+      "label": "Personal profile and employment details"
+     },
+     {
+      "id": "timeoff",
+      "label": "Absence and leave requests"
+     },
+     {
+      "id": "team",
+      "label": "Organisation chart"
+     },
+     {
+      "id": "approvals",
+      "label": "Requests awaiting my decision"
+     }
+    ],
+    "balances": [
+     {
+      "label": "Annual leave entitlement remaining this year",
+      "value": 27,
+      "unit": "days"
+     },
+     {
+      "label": "Carried over from the previous year",
+      "value": 5,
+      "unit": "days"
+     },
+     {
+      "label": "Volunteering days",
+      "value": 2,
+      "unit": "days"
+     }
+    ],
+    "requests": [
+     {
+      "type": "Annual leave",
+      "dates": "12 Aug - 30 Aug",
+      "days": 15,
+      "status": "Approved",
+      "tone": "pos"
+     }
+    ],
+    "view": "profile"
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: accent3, compact, loading",
+   "params": {
+    "employee": {
+     "name": "Lena Fischer",
+     "title": "Staff nurse"
+    },
+    "state": "loading",
+    "theme": {
+     "accent": "accent3",
+     "sidebar": "field2",
+     "radius": 4,
+     "density": 0.88
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: accent4, roomy, error",
+   "params": {
+    "employee": {
+     "name": "Lena Fischer",
+     "title": "Staff nurse"
+    },
+    "company": "Harbour Health",
+    "state": "error",
+    "notice": "Your leave balance could not be loaded. Try again in a few minutes.",
+    "theme": {
+     "accent": "accent4",
+     "radius": 16,
+     "density": 1.2,
+     "text": 1.1
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  }
+ ]
+}

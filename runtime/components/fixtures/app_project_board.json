@@ -1,0 +1,435 @@
+{
+ "cases": [
+  {
+   "label": "sprint board: assign from the issue drawer",
+   "params": {
+    "title": "Tracker",
+    "project": "Checkout revamp",
+    "columns": [
+     {
+      "id": "todo",
+      "name": "To do"
+     },
+     {
+      "id": "doing",
+      "name": "In progress",
+      "wip": 2
+     },
+     {
+      "id": "review",
+      "name": "In review",
+      "wip": 2
+     },
+     {
+      "id": "done",
+      "name": "Done"
+     }
+    ],
+    "issues": [
+     {
+      "id": "c1",
+      "key": "CHK-101",
+      "title": "Show delivery dates on the basket page",
+      "col": "todo",
+      "type": "story",
+      "priority": "high",
+      "points": 5,
+      "subtasks": [
+       {
+        "title": "Design the date badge",
+        "done": true
+       },
+       {
+        "title": "Read dates from the carrier service"
+       }
+      ],
+      "description": "Customers asked to see when items arrive before they pay."
+     },
+     {
+      "id": "c2",
+      "key": "CHK-104",
+      "title": "Card form rejects valid postcodes",
+      "col": "todo",
+      "type": "bug",
+      "priority": "high",
+      "points": 2
+     },
+     {
+      "id": "c3",
+      "key": "CHK-097",
+      "title": "Save the basket between sessions",
+      "col": "doing",
+      "type": "story",
+      "priority": "medium",
+      "points": 8,
+      "assignee": "Dana Okafor"
+     },
+     {
+      "id": "c4",
+      "key": "CHK-099",
+      "title": "Update payment error messages",
+      "col": "doing",
+      "type": "task",
+      "priority": "low",
+      "points": 1,
+      "assignee": "Tom Becker"
+     },
+     {
+      "id": "c5",
+      "key": "CHK-090",
+      "title": "Accessibility audit fixes",
+      "col": "review",
+      "type": "task",
+      "points": 3,
+      "assignee": "Ana Silva"
+     },
+     {
+      "id": "c6",
+      "key": "CHK-088",
+      "title": "Remove the old coupon field",
+      "col": "done",
+      "type": "task",
+      "points": 1,
+      "assignee": "Sam Lee"
+     }
+    ],
+    "people": [
+     "Dana Okafor",
+     "Tom Becker",
+     "Ana Silva",
+     "Sam Lee"
+    ],
+    "labels": {
+     "board": "Board",
+     "backlog": "Backlog",
+     "create": "Create",
+     "close": "Mark done",
+     "assignee": "Assignee",
+     "subtasks": "Sub-tasks",
+     "unassigned": "Unassigned"
+    },
+    "steps": [
+     {
+      "do": "assign",
+      "id": "c1",
+      "name": "Ana Silva",
+      "at": 0.5
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "content team: create, close, backlog view",
+   "params": {
+    "project": "Spring campaign",
+    "columns": [
+     {
+      "id": "ideas",
+      "name": "Ideas"
+     },
+     {
+      "id": "writing",
+      "name": "Writing",
+      "wip": 3
+     },
+     {
+      "id": "live",
+      "name": "Published"
+     }
+    ],
+    "issues": [
+     {
+      "id": "a",
+      "key": "MKT-12",
+      "title": "Customer story: the Leeds depot",
+      "col": "writing",
+      "type": "story",
+      "assignee": "Priya Shah"
+     },
+     {
+      "id": "b",
+      "key": "MKT-15",
+      "title": "Spring newsletter",
+      "col": "ideas",
+      "type": "task"
+     }
+    ],
+    "labels": {
+     "create": "New card",
+     "close": "Publish",
+     "closed": "Moved to Published"
+    },
+    "steps": [
+     {
+      "do": "create",
+      "issue": {
+       "title": "Webinar recap post",
+       "col": "ideas"
+      },
+      "at": 0.5
+     },
+     {
+      "do": "close",
+      "id": "a",
+      "at": 2.6
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "max: long titles, many cards, over a limit, drag",
+   "params": {
+    "title": "Programme Delivery Tracker for Regulated Change",
+    "project": "Regulatory reporting transformation programme",
+    "columns": [
+     {
+      "id": "b",
+      "name": "Ready for refinement"
+     },
+     {
+      "id": "p",
+      "name": "In progress",
+      "wip": 2
+     },
+     {
+      "id": "v",
+      "name": "Awaiting second-line validation",
+      "wip": 1
+     },
+     {
+      "id": "d",
+      "name": "Accepted"
+     }
+    ],
+    "issues": [
+     {
+      "key": "REG-2041",
+      "title": "Reconcile counterparty exposure between the trading ledger and the regulatory return before submission",
+      "col": "b",
+      "type": "story",
+      "priority": "high",
+      "points": 13,
+      "assignee": "Maximiliane Oyelaran-Whitford",
+      "id": "r0"
+     },
+     {
+      "key": "REG-2042",
+      "title": "Automate the liquidity coverage ratio calculation for the overseas branches",
+      "col": "b",
+      "type": "story",
+      "priority": "medium",
+      "points": 8,
+      "id": "r1"
+     },
+     {
+      "key": "REG-2043",
+      "title": "Data lineage for every field in schedule seven",
+      "col": "b",
+      "type": "task",
+      "priority": "low",
+      "points": 5,
+      "id": "r2"
+     },
+     {
+      "key": "REG-2044",
+      "title": "Fix rounding of negative balances in the export",
+      "col": "b",
+      "type": "bug",
+      "priority": "high",
+      "points": 2,
+      "id": "r3"
+     },
+     {
+      "key": "REG-2045",
+      "title": "Archive superseded mapping tables",
+      "col": "b",
+      "type": "task",
+      "points": 1,
+      "id": "r4"
+     },
+     {
+      "key": "REG-2030",
+      "title": "Migrate the submission scheduler to the new platform with dual running for one quarter",
+      "col": "p",
+      "type": "story",
+      "priority": "high",
+      "points": 21,
+      "assignee": "Bartholomew Featherstonehaugh",
+      "id": "r5"
+     },
+     {
+      "key": "REG-2031",
+      "title": "Validation rules for the credit risk templates",
+      "col": "p",
+      "type": "task",
+      "priority": "medium",
+      "points": 8,
+      "assignee": "Oluwaseun Abernathy-Krishnamurthy",
+      "id": "r6"
+     },
+     {
+      "key": "REG-2032",
+      "title": "Duplicate rows in the counterparty extract",
+      "col": "p",
+      "type": "bug",
+      "priority": "high",
+      "points": 3,
+      "assignee": "Ana Silva",
+      "id": "r7"
+     },
+     {
+      "key": "REG-2020",
+      "title": "Second-line sign-off for the stress testing templates",
+      "col": "v",
+      "type": "story",
+      "priority": "medium",
+      "points": 5,
+      "assignee": "Dana Okafor",
+      "id": "r8"
+     },
+     {
+      "key": "REG-2021",
+      "title": "Evidence pack for the audit of manual adjustments",
+      "col": "v",
+      "type": "task",
+      "priority": "high",
+      "points": 3,
+      "assignee": "Lena Fischer",
+      "id": "r9"
+     },
+     {
+      "key": "REG-2001",
+      "title": "Glossary of reporting terms published",
+      "col": "d",
+      "type": "task",
+      "points": 2,
+      "assignee": "Sam Lee",
+      "id": "r10"
+     }
+    ],
+    "labels": {
+     "board": "Delivery board",
+     "backlog": "Complete backlog",
+     "create": "Create a new issue"
+    },
+    "steps": [
+     {
+      "do": "drag",
+      "id": "r1",
+      "col": "d",
+      "at": 0.5
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: accent3, compact, loading",
+   "params": {
+    "project": "Checkout revamp",
+    "columns": [
+     {
+      "id": "todo",
+      "name": "To do"
+     },
+     {
+      "id": "doing",
+      "name": "In progress"
+     },
+     {
+      "id": "done",
+      "name": "Done"
+     }
+    ],
+    "issues": [
+     {
+      "key": "CHK-101",
+      "title": "Show delivery dates",
+      "col": "todo"
+     }
+    ],
+    "state": "loading",
+    "theme": {
+     "accent": "accent3",
+     "page": "surface2",
+     "radius": 4,
+     "density": 0.88
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: accent4, roomy, backlog",
+   "params": {
+    "project": "Checkout revamp",
+    "view": "backlog",
+    "columns": [
+     {
+      "id": "todo",
+      "name": "To do"
+     },
+     {
+      "id": "doing",
+      "name": "In progress"
+     },
+     {
+      "id": "done",
+      "name": "Done"
+     }
+    ],
+    "issues": [
+     {
+      "key": "CHK-101",
+      "title": "Show delivery dates on the basket page",
+      "col": "todo",
+      "type": "story",
+      "points": 5
+     },
+     {
+      "key": "CHK-104",
+      "title": "Card form rejects valid postcodes",
+      "col": "doing",
+      "type": "bug",
+      "assignee": "Tom Becker",
+      "points": 2
+     },
+     {
+      "key": "CHK-088",
+      "title": "Remove the old coupon field",
+      "col": "done",
+      "type": "task",
+      "points": 1
+     }
+    ],
+    "labels": {
+     "board": "Board",
+     "backlog": "Backlog"
+    },
+    "theme": {
+     "accent": "accent4",
+     "radius": 16,
+     "density": 1.2,
+     "text": 1.1
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  }
+ ]
+}

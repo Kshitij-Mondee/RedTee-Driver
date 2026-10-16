@@ -70,8 +70,9 @@ Loom.component("app_calendar", {
       let y = tbH + pad;
       for (const c of p.calendars) {
         if (y + Z.row > BH) break;
-        AK.box(side, pad, y + (Z.row - 24) / 2, 24, 24, { r: 6, fill: c.tone || T.accent });
-        AK.icon(side, "check", pad + 12, y + Z.row / 2, 18, Loom.style.pickTokenOn(c.tone || T.accent));
+        const SD = AK.solid(c.tone || T.accent);
+        AK.box(side, pad, y + (Z.row - 24) / 2, 24, 24, { r: 6, fill: SD.fill, stroke: SD.stroke, sw: SD.sw });
+        AK.icon(side, "check", pad + 12, y + Z.row / 2, 18, SD.fg);
         AK.T(side, c.label, { x: pad + 38, y, w: SW - pad * 2 - 40, h: Z.row, size: Z.fs });
         y += Z.row;
       }

@@ -46,8 +46,9 @@ Loom.component("app_docs_editor", {
     const topH = Math.round(Math.max(Z.lhH + 24, Z.ctl + 18));
     const top = svg("g", {}, root);
     AK.box(top, 0, 0, BW, topH, { r: 0, fill: tones.card });
-    AK.box(top, pad, (topH - 40) / 2, 40, 40, { r: 8, fill: T.accent });
-    AK.icon(top, "file-text", pad + 20, topH / 2, 24, Loom.style.pickTokenOn(T.accent));
+    const brand = AK.solid(T.accent);
+    AK.box(top, pad, (topH - 40) / 2, 40, 40, { r: 8, fill: brand.fill, stroke: brand.stroke, sw: brand.sw });
+    AK.icon(top, "file-text", pad + 20, topH / 2, 24, brand.fg);
     const shareB = AK.button(top, BW - pad, (topH - Z.ctl) / 2, { label: L.share, icon: "share-2", kind: "primary", T, Z, align: "right" });
     const histB = AK.button(top, shareB.x - 10, (topH - Z.ctl) / 2, { label: L.history, icon: "history", kind: "ghost", T, Z, align: "right" });
     let ax = histB.x - 16;

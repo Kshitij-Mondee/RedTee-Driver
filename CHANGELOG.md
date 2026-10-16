@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-16 - Batch-02 of the asset hand-off taken in (D-193)
+- Five more app shells (T-154 `app_hris`, T-157 `app_cloud_console`, T-158 `app_analytics`, T-159 `app_project_board`,
+  T-162 `app_ide_workspace`), scoped like batch-01 to screencast, corporate-clean, engineering, line-art, editorial-paper
+  and presenter-pop, all ten accepted here. Their `_app_kit.js` changes (outlined solid marks, mono text for code and
+  terminals) merged three-way with this main's (no word cut to letters, the pack's text floor); `fitWords` returns a string
+  again (empty when no whole word fits) for the shells that call it, `fitWordsOrNull` for the text helper. The friend's
+  branch was built on f18c870, so its files were brought onto this main by hand (its notes: docs/assets/batches/batch-02.md).
+
 ## 2026-10-16 - The holograms first; nothing promised left undone (D-194)
 - Storyboard gate: `holo_heroes_few`, `holo_hero_model`, `holo_ui_templates` (`loom/direction.py` `storyboard_errors`).
 - Hologram engine audit: `holo_hero_unplaced`, `holo_hero_not_drawn`, `holo_ui_heavy`; `holo_hero_missing` an error.

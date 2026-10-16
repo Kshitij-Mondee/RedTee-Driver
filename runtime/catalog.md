@@ -442,6 +442,38 @@ Props (any other key is an error):
 Reuse these inside `scenes/<beat>.js` instead of redrawing them. The idea and outline are fixed;
 params, slots and the returned parts are yours to adjust. Content params never have defaults.
 
+### `app_analytics`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-158))
+
+An analytics workspace: a dashboard's filters, headline numbers, a grid of charts and a table under them, walked through by a pointer that changes a filter so every number answers, drills into one bar so the table narrows to it, and exports the view.
+
+Family: viz. Tags: analytics, dashboard, business intelligence, bi, report, filter, drill down, kpi, data, export
+
+Outline: window (or the screencast engine's app window) -> header: dashboard title and an export button -> filter bar: chips of label and value, a menu of options -> headline cards: label, value, change -> chart grid: line or bar charts with titles -> drill-down table with a breadcrumb -> export menu and toast -> pointer
+
+Params:
+- `dashboard`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `charts`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `filters`: list
+- `kpis`: list
+- `table`: obj
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/empty/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `header`, `chips`, `cards`, `charts`, `table`, `rows`, `breadcrumb`, `states`, `filter(i, value, at)`, `drillDown(chart, index, at)`, `export(at, {format})`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_analytics", { dashboard: "Support queue", kpis: [{ label: "Open tickets", value: "128" }], charts: [{ title: "Tickets a day", type: "bar", labels: ["Mon", "Tue", "Wed"], series: [{ values: [40, 52, 36] }] }], table: { columns: ["Day", "Tickets"], rows: [["Mon", "40"], ["Tue", "52"], ["Wed", "36"]], key: 0 }, steps: [{ do: "drillDown", chart: 0, index: 1, at: ctx.cue("Tuesday was the peak") }] }, { x: 96, y: 78, name: "bi" })
+```
+
 ### `app_calendar`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-151))
 
 A calendar at work in week view: days across, hours down, events placed by their times, the guests' free and busy times in a booking form, walked through by a pointer that creates an event, drags one to reschedule it, opens one and invites a colleague.
@@ -510,6 +542,41 @@ Example:
 ctx.use("app_chat_workspace", { workspace: "Riverside Clinic", me: "Sam Lee", channels: [{ id: "rota", label: "night-rota", topic: "Shift swaps and cover", messages: [{ author: "Jo Park", time: "18:02", text: "@Sam Lee can you cover Thursday?" }] }], labels: { composer: "Message night-rota" }, steps: [{ do: "post", text: "Yes, I can cover it.", at: ctx.cue("reply in the channel") }] }, { x: 96, y: 78, name: "chat" })
 ```
 
+### `app_cloud_console`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-157))
+
+A cloud provider's console: services in a sidebar, the project and region, a list of resources with their status, and one resource's detail with its settings, metrics, access roles and logs, walked through by a pointer that creates a resource, scales it, attaches a role and reads its logs.
+
+Family: ops. Tags: cloud console, cloud, virtual machine, iam, permissions, scaling, logs, devops, infrastructure, aws-like
+
+Outline: window (or the screencast engine's app window) -> sidebar: services -> top bar: project and region -> resource list: name, type, region, status, size; a create button -> resource detail: name and status, tabs for overview, metrics, permissions and logs -> create panel, scale dialog, role form (opened by actions) -> toast -> pointer
+
+Params:
+- `resources`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `nav`: list
+- `active`: str
+- `project`: str
+- `region`: str
+- `columns`: list
+- `open`: str
+- `heading`: str
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/empty/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `sidebar`, `topbar`, `table`, `rows`, `details`, `states`, `open(id, at)`, `back(at)`, `tab(name, at)`, `create({name, type, region, size}, at)`, `scale(id, n, at)`, `attachRole(id, {member, role}, at)`, `viewLogs(id, at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_cloud_console", { project: "payments-prod", region: "eu-west", resources: [{ id: "api", name: "payments-api", type: "Container service", status: "Running", tone: "pos", instances: 2, logs: ["GET /health 200"] }], labels: { scale: "Scale", instances: "Instances" }, steps: [{ do: "scale", id: "api", n: 4, at: ctx.cue("scale it to four") }] }, { x: 96, y: 78, name: "console" })
+```
+
 ### `app_docs_editor`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-152))
 
 A shared document editor: a page of headings, paragraphs and lists, suggested edits shown inline, comments in the margin, and a version history, walked through by a pointer that types, comments on a phrase, accepts a suggestion and restores an earlier version.
@@ -576,6 +643,77 @@ Example:
 ctx.use("app_email", { title: "Mail", folders: [{ id: "in", label: "Inbox", icon: "inbox", count: 3 }, { id: "fin", label: "Finance", icon: "folder" }], messages: [{ id: "m1", from: "Payroll Team", time: "09:12", subject: "Your payslip is ready", preview: "Sign in to view your March payslip", unread: true }], labels: { search: "Search mail", reply: "Reply" }, steps: [{ do: "open", i: 0, at: ctx.cue("open the message") }] }, { x: 96, y: 78, name: "mail" })
 ```
 
+### `app_hris`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-154))
+
+An HR system an employee and a manager use: the employee's profile with leave balances, a time off request form with past requests, the team's org chart and a manager's approvals queue, walked through by a pointer that requests leave, approves or declines a request and views the team.
+
+Family: ui. Tags: hr system, hris, time off, leave request, annual leave, approvals, org chart, employee profile, people management, onboarding
+
+Outline: window (or the screencast engine's app window) -> sidebar: the company, navigation to profile, time off, team and approvals -> profile: avatar, name, title, details, leave balances -> time off: a request form, balances, past requests with status -> team: org chart of manager, the employee and peers, and reports -> approvals: pending requests with approve and decline -> toast -> pointer
+
+Params:
+- `employee`: obj, CONTENT (on-screen words: always pass it; never defaulted)
+- `nav`: list
+- `balances`: list
+- `requests`: list
+- `team`: obj
+- `approvals`: list
+- `company`: str
+- `view`: enum, one of profile/timeoff/team/approvals, default "profile"
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `sidebar`, `navItems`, `views`, `profile`, `balanceCards`, `form`, `requestRows`, `orgNodes`, `approvalRows`, `states`, `go(view, at)`, `requestLeave({type, from, to, note, days}, at)`, `approve(i, at)`, `decline(i, at)`, `viewTeam(at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_hris", { company: "Harbour Health", employee: { name: "Lena Fischer", title: "Staff nurse", department: "Ward 7" }, balances: [{ label: "Annual leave", value: 18, unit: "days" }], nav: [{ id: "profile", label: "Me" }, { id: "timeoff", label: "Time off" }], labels: { submit: "Send request", type: "Leave type" }, steps: [{ do: "requestLeave", request: { type: "Annual leave", from: "3 Nov", to: "7 Nov", days: 5 }, at: ctx.cue("request the week off") }] }, { x: 96, y: 78, name: "hr" })
+```
+
+### `app_ide_workspace`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-162))
+
+A developer's workspace: a file tree, editor tabs, code with syntax colour and line numbers, a terminal and a problems list, a source control panel and a debug toolbar, walked through by a pointer that opens a file, runs a command, steps through code in the debugger and commits a change.
+
+Family: dev. Tags: ide, code editor, developer, terminal, debugger, git, source control, vs code-like, programming, devops
+
+Outline: window (or the screencast engine's app window) -> activity bar: files, search, source control with a count, debug -> side panel: the file tree with change marks (or the source control panel) -> editor tabs -> code editor: line numbers, breakpoints, syntax colour, the current line -> bottom panel: terminal and problems -> status bar: branch and problem counts -> debug toolbar (while debugging) -> pointer
+
+Params:
+- `files`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `open`: list
+- `active`: str
+- `terminal`: list
+- `problems`: list
+- `breakpoints`: list
+- `branch`: str
+- `prompt`: str
+- `panel`: enum, one of terminal/problems, default "terminal"
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `app (the engine app, in the screencast style)`, `activity`, `tree`, `tabs`, `editors`, `terminal`, `problems`, `status`, `debugBar`, `gitPanel`, `states`, `openFile(id, at)`, `run(cmd, output, at)`, `debug(lines, at)`, `commit(message, at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_ide_workspace", { files: [{ id: "cfg", path: "deploy/values.yaml", lang: "yaml", lines: ["replicas: 2", "image: shop-api:1.4"] }], terminal: [{ cmd: "kubectl get pods" }], branch: "main", steps: [{ do: "run", cmd: "kubectl apply -f deploy/", output: ["deployment configured"], at: ctx.cue("apply the change") }] }, { x: 96, y: 78, name: "ide" })
+```
+
 ### `app_lms_course`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-153))
 
 An online course on a learning platform: the outline of modules and lessons with what is done, a lesson player, a quiz with feedback, the learner's progress and a certificate, walked through by a pointer that starts a lesson, answers, submits and completes the course.
@@ -609,4 +747,37 @@ Parts returned: `host`, `outline`, `lessonRows`, `progressBar`, `header`, `playe
 Example:
 ```js
 ctx.use("app_lms_course", { course: "Food safety basics", modules: [{ title: "Module 1", lessons: [{ id: "l1", title: "Washing hands", kind: "video", duration: "3 min", done: true }, { id: "q1", title: "Check your understanding", kind: "quiz" }] }], quiz: { question: "How long should you wash your hands?", options: ["5 seconds", "20 seconds"], correct: 1, right: "Correct: at least 20 seconds." }, labels: { submit: "Submit" }, steps: [{ do: "start", id: "q1", at: ctx.cue("take the quiz") }, { do: "answer", i: 1 }, { do: "submit" }] }, { x: 96, y: 78, name: "lms" })
+```
+
+### `app_project_board`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-159))
+
+A project tracker a team works in: a board of columns with work-in-progress limits and issue cards, a backlog list, and an issue's detail with its assignee and sub-tasks, walked through by a pointer that creates an issue, drags a card to another column, assigns it and closes it.
+
+Family: biz. Tags: project tracker, kanban, scrum, backlog, issue tracker, agile, sprint, work in progress, jira-like, task board
+
+Outline: window (or the screencast engine's app window) -> top bar: project name, board and backlog tabs, a create button -> board: columns with names and counts against their limits; cards with key, type, title, priority, points and assignee -> backlog: one row an issue with its status -> issue detail drawer: key, title, status, assignee, sub-tasks, description -> toast -> pointer
+
+Params:
+- `project`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `columns`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `issues`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `people`: list
+- `doneCol`: str
+- `view`: enum, one of board/backlog, default "board"
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/empty/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `topbar`, `tabs`, `columns`, `cards`, `backlogRows`, `drawer`, `states`, `create({title, type, col}, at)`, `drag(id, col, at)`, `open(id, at)`, `assign(id, name, at)`, `close(id, at)`, `closePanel(at)`, `show(view, at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_project_board", { project: "Website relaunch", columns: [{ id: "todo", name: "To do" }, { id: "doing", name: "In progress", wip: 2 }, { id: "done", name: "Done" }], issues: [{ id: "w1", key: "WEB-12", title: "Write the cookie banner copy", col: "todo", type: "task" }], steps: [{ do: "drag", id: "w1", col: "doing", at: ctx.cue("pick it up") }] }, { x: 96, y: 78, name: "board" })
 ```

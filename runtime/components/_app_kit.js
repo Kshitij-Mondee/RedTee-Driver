@@ -77,6 +77,13 @@
     const pal = S().pack.palette;
     return ["ink", "field", "surface", "onAccent"].filter((t) => t in pal).sort((a, b) => S().contrast(hex, pal[b]) - S().contrast(hex, pal[a]))[0];
   };
+  /** the token that reads best on a SOLID fill this kit drew. Loom.style.pickTokenOn answers "ink" in outlined styles
+   * (it expects a sparse sketch fill), which is wrong on a solid status bar or badge: white on bright cyan in hologram. */
+  AK.on = (tok) => AK.onHex(S().c(tok));
+  /** a solid mark (status bar, badge, brand tile, avatar) and the colour of what sits on it. In the outlined styles
+   * (line, sketch: hologram, blueprint, line-art, whiteboard) kit text turns knockout colours back to ink, so a solid
+   * accent there would carry light ink on a light fill: the mark is drawn as line art instead, its glyphs in the accent. */
+  AK.solid = (tok) => (S().outlined() ? { fill: "surface", stroke: tok, sw: 2, fg: tok } : { fill: tok, stroke: null, sw: 0, fg: AK.on(tok) });
   /** sizes from the pack's roles: UI text (caption), small text (the caption floor), headings (label), titles (lead) */
   AK.sizes = function (T) {
     const ty = S().pack.type, cap = ty.caption || [20, 24], lab = ty.label || [24, 30], lead = ty.lead || [32, 40];
@@ -94,7 +101,7 @@
   // ------------------------------------------------------------------ text
   /** str cut at a word boundary (with an ellipsis) to fit w at this size; a first word wider than w keeps its letters
    *  that fit (rare: give the box room) */
-  AK.fitWords = function (str, role, size, weight, w) {
+  AK.fitWordsOrNull = function (str, role, size, weight, w) {
     str = String(str == null ? "" : str);
     if (AK.measure(str, role, size, weight) <= w) return str;
     const words = str.split(/\s+/).filter(Boolean);
@@ -110,6 +117,8 @@
     // word no param supplied: batch-01's app_email drew "Escalatio..." in the hologram pack on Windows (2026-10-16)
     return null;
   };
+  /** fitWordsOrNull for callers that need a string: an empty one when no whole word fits (never a word cut to letters) */
+  AK.fitWords = function (str, role, size, weight, w) { const s = AK.fitWordsOrNull(str, role, size, weight, w); return s == null ? "" : s; };
   /** the height a one-line box needs so its words keep the inset the checks ask (max(6, 0.2 x size) above and below) */
   AK.boxH = function (size, role, weight, minH) {
     const v = K().vmetrics(role || "caption", size, weight || 400);
@@ -122,12 +131,12 @@
     const role = o.role || "caption", w = Math.max(10, o.w || 400);
     let size = o.size || S().size(role, 21);
     o = Object.assign({}, o, { weight: o.weight || 400 });
-    let s = AK.fitWords(str, role, size, o.weight, w - 2);
+    let s = AK.fitWordsOrNull(str, role, size, o.weight, w - 2);
     // the first word alone does not fit: a size or two smaller (never under the pack's floor for the role), else nothing
     const floor = Math.max(20, ((S().pack.type || {})[role] || [20])[0]);
     for (const k of [0.92, 0.85]) {
       if (s != null || size * k < floor) break;
-      const s2 = AK.fitWords(str, role, size * k, o.weight, w - 2);
+      const s2 = AK.fitWordsOrNull(str, role, size * k, o.weight, w - 2);
       if (s2 != null) { s = s2; size = size * k; }
     }
     // still nothing fits: `whole` callers get null as before; the rest an empty line (the node stays for their states)
@@ -265,9 +274,10 @@
     const sz = clamp(Math.round(r * 0.85), S().pack.type.caption[0], 40);
     // never below the caption floor: a small avatar grows to hold its initials
     if (ini) r = Math.max(r, (AK.measure(ini, "caption", sz, 700) + 12) / 2, AK.lineH(sz, "caption", 700) / 2);
-    svg("circle", { cx: f1(cx), cy: f1(cy), r: f1(r), fill: S().c(tn) }, gg);
+    const SD = AK.solid(tn);
+    svg("circle", Object.assign({ cx: f1(cx), cy: f1(cy), r: f1(r), fill: S().c(SD.fill) }, SD.stroke ? { stroke: S().c(SD.stroke), "stroke-width": SD.sw } : {}), gg);
     if (ini) {
-      K().text(gg, ini, { role: "caption", size: sz, x: cx - r, y: cy - r, w: 2 * r, h: 2 * r, maxLines: 1, valign: "middle", align: "center", weight: 700, color: Loom.style.pickTokenOn(tn) });
+      K().text(gg, ini, { role: "caption", size: sz, x: cx - r, y: cy - r, w: 2 * r, h: 2 * r, maxLines: 1, valign: "middle", align: "center", weight: 700, color: SD.fg });
     }
     gg.__r = r;
     return gg;
@@ -343,6 +353,8 @@
     Loom.drive((k) => node.setAttribute("transform", `translate(${f1(a.x + (b.x - a.x) * k)} ${f1(a.y + (b.y - a.y) * k)})`), t, dur == null ? 0.35 : dur, e, meta("travel", "app"));
     return t + (dur == null ? 0.35 : dur);
   };
+  /** record where a group already is (after a drive moved it), so the next AK.shift starts from there */
+  AK.setShift = function (node, dx, dy) { OFF.set(node, { x: dx, y: dy }); };
   /** a set of alternative layers (a state machine): only one shown at a time. set(name, t) cross-fades. */
   AK.states = function (layers, initial) {
     const cur = { name: initial };
@@ -551,6 +563,152 @@
     H.toast = function (str, at, to) { to = to || {}; return A.toast(str, { at, tone: to.tone, icon: to.icon, until: to.until }); };
     return H;
   }
+
+  // ------------------------------------------------------------------ mono text (batch 02: logs, code, a terminal)
+  // Packs have no "mono" type role, so code is drawn as the screencast engine draws it: the pack's mono face
+  // (Loom.style.font("mono")), each run of non-space characters at its own column (indentation kept), measured with the
+  // face's real advance, and reported to Loom.report.texts so the vocabulary audit reads it like any other words.
+  AK.monoW = (size) => K().measure("0000000000", "mono", size, 400) / 10;
+  AK.monoFam = () => ((S().font && S().font("mono")) || {}).family || "monospace";
+  /** true when the pack's mono role is a proportional face (a pack with no mono face, e.g. isometric, maps it to its body
+   *  face): then a line flows as text, its indentation kept, instead of sitting on columns */
+  AK.monoProp = (size) => Math.abs(K().measure("iiiiiiiiii", "mono", size, 400) - K().measure("MMMMMMMMMM", "mono", size, 400)) > 1;
+  /** one line of code at (x, y) top, in a line box h: segs [[text, fill (computed), weight]] or a string with o.fill.
+   *  o.w cuts the line at a word boundary to fit. Returns {t, spans, cols, w} */
+  AK.mono = function (g, segs, o) {
+    o = o || {};
+    const size = o.size || 22, h = o.h || AK.lineH(size, "mono"), cw = AK.monoW(size);
+    if (typeof segs === "string") segs = [[segs, o.fill || S().c("ink"), o.weight]];
+    let str = segs.map((q) => q[0]).join("");
+    if (o.w && str.replace(/\s+$/, "").length * cw > o.w) {
+      const cut = AK.fitWords(str.replace(/\s+$/, ""), "mono", size, 400, o.w);
+      const keep = cut.replace(/…$/, "").length;
+      let left = keep; segs = segs.map(([t0, f, wt]) => { const t1 = t0.slice(0, Math.max(0, left)); left -= t0.length; return [t1, f, wt]; }).filter((q) => q[0].length);
+      if (cut.endsWith("…")) segs.push(["…", segs.length ? segs[segs.length - 1][1] : o.fill, 400]);
+      str = segs.map((q) => q[0]).join("");
+    }
+    const v = K().vmetrics("mono", size, 400), base = (o.y || 0) + (h - (v.ascent + v.descent)) / 2 + v.ascent;
+    if (AK.monoProp(size)) {
+      // a proportional face: the indentation as space widths, then the runs flow (spaces kept), measured as drawn
+      const lead = str.match(/^\s*/)[0].length, sp = K().measure("a a", "mono", size, 400) - K().measure("aa", "mono", size, 400);
+      const x0 = (o.x || 0) + lead * sp, body = str.slice(lead);
+      const t = svg("text", { x: f1(x0), y: f1(base), "font-family": AK.monoFam(), "font-size": size, "font-weight": 400, style: "white-space:pre" }, g);
+      const spans = []; let col = 0;
+      for (const [s0, fill, wt] of segs) {
+        const a = Math.max(0, lead - col), piece = s0.slice(a);
+        if (piece) { const node = svg("tspan", { fill: fill || S().c("ink"), "font-weight": wt }, t); node.textContent = piece; spans.push({ node, col: col + a, s: piece, wt: wt || 400 }); }
+        col += s0.length;
+      }
+      // each run measured at its own weight (a bold prompt is wider than the same letters at 400)
+      const upTo = (k) => spans.reduce((a, sp1) => a + (k > sp1.col ? K().measure(sp1.s.slice(0, k - sp1.col), "mono", size, sp1.wt) : 0), 0);
+      const w = lead * sp + upTo(col);
+      if (str.trim()) Loom.report.texts.push({ beat: Loom.ctxBeat && Loom.ctxBeat.id, role: "mono", size, lines: 1, text: str.slice(0, 400), w, h, floor: size, box: { x: o.x || 0, y: o.y || 0, w: o.w || w, h } });
+      const colX = (k) => x0 + upTo(k);
+      return { t, spans, cols: col, w, base, cw, size, colX };
+    }
+    const t = svg("text", { x: f1(o.x || 0), y: f1(base), "font-family": AK.monoFam(), "font-size": size, "font-weight": 400 }, g);
+    const spans = []; let col = 0;
+    for (const [s0, fill, wt] of segs) {
+      const re = /\S+/g; let m;
+      while ((m = re.exec(s0))) {
+        const node = svg("tspan", { x: f1((o.x || 0) + (col + m.index) * cw), fill: fill || S().c("ink"), "font-weight": wt }, t);
+        node.textContent = m[0];
+        spans.push({ node, col: col + m.index, s: m[0] });
+      }
+      col += s0.length;
+    }
+    if (str.trim()) Loom.report.texts.push({ beat: Loom.ctxBeat && Loom.ctxBeat.id, role: "mono", size, lines: 1, text: str.slice(0, 400), w: col * cw, h, floor: size, box: { x: o.x || 0, y: o.y || 0, w: o.w || col * cw, h } });
+    return { t, spans, cols: col, w: col * cw, base, cw, size, colX: (k) => (o.x || 0) + k * cw };
+  };
+  AK.monoReveal = (spans, k) => { for (const sp of spans) sp.node.textContent = sp.s.slice(0, Math.max(0, k - sp.col)); };
+  /** typing into a mono line made by AK.mono: empty until `at`, characters at cps, a block caret. Returns the end. */
+  AK.typeMono = function (M, at, o) {
+    o = o || {};
+    const n = M.cols, cps = o.cps || 14, dur = Math.max(0.25, n / cps), x0 = M.colX(0);
+    const caret = o.caret ? svg("rect", { x: f1(x0), y: f1(M.base - M.size * 0.82), width: f1(M.cw), height: f1(M.size * 1.02), fill: o.color || S().c("ink"), opacity: 0 }, o.caret) : null;
+    Loom.drive((e, raw) => {
+      const now = at + raw * (dur + 0.4), k = clamp(Math.floor(((now - at) / dur) * n + 1e-6), 0, n);
+      AK.monoReveal(M.spans, k);
+      if (caret) { caret.setAttribute("x", f1(M.colX(k))); caret.setAttribute("opacity", raw <= 0 || raw >= 1 ? 0 : now <= at + dur || Math.floor((now - at) / 0.5) % 2 === 0 ? 0.85 : 0); }
+    }, at, dur + 0.4, "linear", { kind: "typewriter", content: true, beat: Loom.ctxBeat && Loom.ctxBeat.id });
+    for (let i = 0; i < n; i += 3) Loom.sfx && Loom.sfx("key", at + (i / n) * dur, { i, g: 0.35 });
+    return at + dur;
+  };
+
+  // ------------------------------------------------------------------ a chart (batch 02: the cloud console's metrics, analytics)
+  /** a line or bar chart on a quiet grid of round steps, drawn from values (null: no point); the values can change on the
+   *  timeline (update), a pure function of time. o: {type: "line"|"bar", labels, series: [{name, values, tone}], unit, min,
+   *  max, decimals, T, Z, legend}. Returns {g, plot: {x, y, w, h}, col(i), update(si, values, t, dur), set(all, t, dur)} */
+  AK.chart = function (g, x, y, w, h, o) {
+    const T = o.T, Z = o.Z, tones = AK.tones(T), cg = svg("g", {}, g);
+    const labels = o.labels || [], series = (o.series || []).map((q) => (Array.isArray(q) ? { values: q } : q));
+    const n = Math.max(1, labels.length, ...series.map((q) => (q.values || []).length));
+    const all = series.flatMap((q) => q.values || []).concat(...(o.alt || [])).filter((v) => v != null);
+    const nice = (v) => { if (!(v > 0)) return 1; const p10 = Math.pow(10, Math.floor(Math.log10(v))); for (const m of [1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]) if (m * p10 >= v - 1e-9) return m * p10; return 10 * p10; };
+    const min = o.min || 0, max = o.max != null ? o.max : nice(Math.max(0, ...all) * 1.12);
+    const span = (max - min) || 1, p10 = Math.pow(10, Math.floor(Math.log10(span / 5)));
+    const step = [1, 2, 2.5, 5, 10, 20, 25, 50].map((m) => m * p10).find((st) => span / st <= 5 + 1e-9) || span / 4;
+    const ticks = []; for (let v = min; v <= max + step * 1e-6; v += step) ticks.push(+v.toFixed(10));
+    const dec = o.decimals != null ? o.decimals : (String(+step.toFixed(10)).split(".")[1] || "").length;
+    const fmt = (v) => `${(+v).toFixed(dec)}${o.unit || ""}`;
+    const sz = Z.small, lh = Z.lhS;
+    const ylw = Math.max(...ticks.map((v) => AK.measure(fmt(v), "caption", sz))) + 12;
+    const legendH = series.length > 1 || o.legend ? lh + 8 : 0;
+    const px = x + ylw + 8, py = y + legendH + lh / 2, pw = w - ylw - 16, ph = h - legendH - lh / 2 - lh - 8;
+    const Y = (v) => py + ph - (clamp(v, min, max) - min) / ((max - min) || 1) * ph, X = (i) => px + (i + 0.5) * pw / n;
+    ticks.forEach((v) => {
+      svg("rect", { x: f1(px), y: f1(Y(v) - 0.5), width: f1(pw), height: 1, fill: v === min ? tones.hair2 : tones.hair }, cg);
+      K().text(cg, fmt(v), { role: "caption", size: sz, x: x, y: Y(v) - lh / 2, w: ylw, h: lh, maxLines: 1, valign: "middle", align: "right", color: "muted", weight: 400 });
+    });
+    const lw = Math.max(1, ...labels.map((l) => AK.measure(String(l), "caption", sz))) + 14, every = Math.max(1, Math.ceil(n / Math.max(1, Math.floor(pw / lw))));
+    labels.forEach((l, i) => { if (i % every === 0) K().text(cg, String(l), { role: "caption", size: sz, x: X(i) - Math.max(lw, pw / n) / 2, y: py + ph + 6, w: Math.max(lw, pw / n), h: lh, maxLines: 1, valign: "middle", align: "center", color: "muted", weight: 400 }); });
+    const TN = [T.accent, "accent3", "pos", "accent4"];
+    const S0 = series.map((q, si) => ({ tone: AK.c(q.tone || TN[si % TN.length]), name: q.name, cur: Array.from({ length: n }, (_, i) => ((q.values || [])[i] == null ? null : +(q.values || [])[i])) }));
+    if (legendH) {
+      let lx = x + w;
+      S0.slice().reverse().forEach((q) => {
+        if (!q.name) return;
+        const tw = AK.measure(q.name, "caption", sz) + 6; lx -= tw;
+        K().text(cg, q.name, { role: "caption", size: sz, x: lx, y, w: tw, h: lh, maxLines: 1, valign: "middle", color: "muted", weight: 400 });
+        lx -= 24; svg("rect", { x: f1(lx), y: f1(y + lh / 2 - 7), width: 14, height: 14, rx: 3, fill: q.tone }, cg); lx -= 18;
+      });
+    }
+    const type = o.type || "line", sg = svg("g", {}, cg), base = Y(min);
+    S0.forEach((q, si) => {
+      const g1 = svg("g", {}, sg);
+      if (type === "bar") {
+        const slot = pw / n, bw = (slot * 0.62) / S0.length;
+        q.nodes = q.cur.map((_, i) => svg("rect", { x: f1(X(i) - slot * 0.31 + si * bw), y: f1(base), width: f1(Math.max(1, bw - 4)), height: 0.01, rx: Math.min(4, bw / 4), fill: q.tone }, g1));
+      } else {
+        q.area = S0.length === 1 ? svg("path", { d: "", fill: Loom.style.mix(q.tone, AK.c("surface"), 0.84) }, g1) : null;
+        q.line = svg("path", { d: "", fill: "none", stroke: q.tone, "stroke-width": 4, "stroke-linejoin": "round", "stroke-linecap": "round" }, g1);
+        q.dots = q.cur.map(() => svg("circle", { r: 5.5, fill: q.tone, stroke: AK.c("surface"), "stroke-width": 2, opacity: 0 }, g1));
+      }
+    });
+    function draw(si, v) {
+      const q = S0[si];
+      if (type === "bar") { q.nodes.forEach((nd, i) => { const yy = v[i] == null ? base : Y(v[i]); nd.setAttribute("y", f1(yy)); nd.setAttribute("height", f1(Math.max(0.01, base - yy))); }); return; }
+      let d = "", first = -1, last = -1;
+      v.forEach((qv, i) => { if (qv == null) return; d += (d && last === i - 1 ? " L" : d ? " M" : "M") + `${f1(X(i))} ${f1(Y(qv))}`; if (first < 0) first = i; last = i; });
+      q.line.setAttribute("d", d);
+      if (q.area) q.area.setAttribute("d", first >= 0 && last > first ? `M${f1(X(first))} ${f1(base)} L` + d.replace(/^M/, "").replace(/ M/g, " L") + ` L${f1(X(last))} ${f1(base)} Z` : "");
+      q.dots.forEach((nd, i) => { nd.setAttribute("opacity", v[i] == null ? 0 : 1); if (v[i] != null) { nd.setAttribute("cx", f1(X(i))); nd.setAttribute("cy", f1(Y(v[i]))); } });
+    }
+    S0.forEach((q, si) => draw(si, q.cur));
+    const C = { g: cg, plot: { x: px, y: py, w: pw, h: ph }, n, X, Y, series: S0, type };
+    C.col = (i) => ({ x: X(i) - pw / n / 2, y: py, w: pw / n, h: ph });
+    C.bar = (si, i) => { const q = S0[si], v = q.cur[i] == null ? min : q.cur[i], slot = pw / n, bw = (slot * 0.62) / S0.length; return { x: X(i) - slot * 0.31 + si * bw, y: Y(v), w: bw - 4, h: Math.max(4, base - Y(v)) }; };
+    /** series si moves to new values over dur (null stays null) */
+    C.update = function (si, values, t, dur) {
+      const q = S0[si]; if (!q) return t;
+      const a = q.cur.slice(), b = Array.from({ length: n }, (_, i) => (values[i] == null ? null : +values[i]));
+      Loom.drive((e) => draw(si, a.map((av, i) => (av == null || b[i] == null ? b[i] : av + (b[i] - av) * e))), t, dur == null ? 0.6 : dur, "move", meta("count", "app.chart"));
+      q.cur = b;
+      return t + (dur == null ? 0.6 : dur);
+    };
+    C.set = (list, t, dur) => { let e = t; (list || []).forEach((q, si) => { e = Math.max(e, C.update(si, Array.isArray(q) ? q : q.values || [], t, dur)); }); return e; };
+    return C;
+  };
 
   // ------------------------------------------------------------------ the shell's frame: reveal, steps, parts
   /** the shell appears at `at` (or is drawn complete and still at -1) */

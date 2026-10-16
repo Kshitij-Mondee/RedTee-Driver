@@ -126,11 +126,16 @@ One line each on WHEN to use it. Details: `get_api_section(<section>)`; template
 
 - **components** (runtime/components.js; section: ctx): a small library element (a card, a chip) reused instead of redrawn; see catalog_search(query, "component"). Call: `ctx.use(id, params, {x, y, name})`
 - **component_list** (runtime/catalog.json; section: ctx): promoted small elements. Call: `ctx.use(id, params)`
+  - `app_analytics`: An analytics workspace: a dashboard's filters, headline numbers, a grid of charts and a table under them, walked through by a pointer that changes a filter so every number answers, drills into one bar so the table narrows to it, and exports the view.
   - `app_calendar`: A calendar at work in week view: days across, hours down, events placed by their times, the guests' free and busy times in a booking form, walked through by a pointer that creates an event, drags one to reschedule it, opens one and invites a colleague.
   - `app_chat_workspace`: A team chat workspace: channels and direct messages, a channel's conversation with mentions, reactions, file cards and threads, and a composer, walked through by a pointer that opens a channel, posts, reacts and opens a thread.
+  - `app_cloud_console`: A cloud provider's console: services in a sidebar, the project and region, a list of resources with their status, and one resource's detail with its settings, metrics, access roles and logs, walked through by a pointer that creates a resource, scales it, attaches a role and reads its logs.
   - `app_docs_editor`: A shared document editor: a page of headings, paragraphs and lists, suggested edits shown inline, comments in the margin, and a version history, walked through by a pointer that types, comments on a phrase, accepts a suggestion and restores an earlier version.
   - `app_email`: An email client at work: folders, a thread list with unread and flagged mail, the open message in a reading pane, and a compose window, walked through by a pointer that opens, replies, flags, moves and searches.
+  - `app_hris`: An HR system an employee and a manager use: the employee's profile with leave balances, a time off request form with past requests, the team's org chart and a manager's approvals queue, walked through by a pointer that requests leave, approves or declines a request and views the team.
+  - `app_ide_workspace`: A developer's workspace: a file tree, editor tabs, code with syntax colour and line numbers, a terminal and a problems list, a source control panel and a debug toolbar, walked through by a pointer that opens a file, runs a command, steps through code in the debugger and commits a change.
   - `app_lms_course`: An online course on a learning platform: the outline of modules and lessons with what is done, a lesson player, a quiz with feedback, the learner's progress and a certificate, walked through by a pointer that starts a lesson, answers, submits and completes the course.
+  - `app_project_board`: A project tracker a team works in: a board of columns with work-in-progress limits and issue cards, a backlog list, and an issue's detail with its assignee and sub-tasks, walked through by a pointer that creates an issue, drags a card to another column, assigns it and closes it.
 
 ## media
 

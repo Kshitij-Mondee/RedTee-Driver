@@ -1,0 +1,376 @@
+{
+ "cases": [
+  {
+   "label": "scale a service and read its logs",
+   "params": {
+    "title": "Console",
+    "project": "payments-prod",
+    "region": "eu-west-2",
+    "nav": [
+     {
+      "id": "compute",
+      "label": "Compute",
+      "icon": "server"
+     },
+     {
+      "id": "storage",
+      "label": "Storage",
+      "icon": "database"
+     },
+     {
+      "id": "iam",
+      "label": "Access",
+      "icon": "shield-check"
+     },
+     {
+      "id": "logs",
+      "label": "Logging",
+      "icon": "scroll-text"
+     }
+    ],
+    "active": "compute",
+    "heading": "Compute",
+    "columns": [
+     "Name",
+     "Type",
+     "Region",
+     "Status",
+     "Size"
+    ],
+    "resources": [
+     {
+      "id": "api",
+      "name": "payments-api",
+      "type": "Container service",
+      "region": "eu-west-2",
+      "status": "Running",
+      "tone": "pos",
+      "size": "2 vCPU",
+      "instances": 2,
+      "detail": [
+       [
+        "Image",
+        "payments-api:4.18"
+       ],
+       [
+        "Endpoint",
+        "api.internal.example"
+       ],
+       [
+        "Health check",
+        "/health every 10 s"
+       ]
+      ],
+      "metrics": [
+       {
+        "label": "CPU use",
+        "unit": "%",
+        "labels": [
+         "10:00",
+         "10:05",
+         "10:10",
+         "10:15",
+         "10:20",
+         "10:25"
+        ],
+        "values": [
+         42,
+         55,
+         71,
+         84,
+         88,
+         86
+        ],
+        "after": [
+         42,
+         55,
+         71,
+         84,
+         52,
+         44
+        ]
+       }
+      ],
+      "roles": [
+       {
+        "member": "Dana Okafor",
+        "role": "Owner"
+       }
+      ],
+      "logs": [
+       "10:24:01 GET /health 200 3 ms",
+       "10:24:07 POST /payments 201 41 ms",
+       "10:24:09 WARN queue depth 120",
+       "10:24:12 POST /payments 201 38 ms"
+      ]
+     },
+     {
+      "id": "db",
+      "name": "ledger-db",
+      "type": "Managed database",
+      "region": "eu-west-2",
+      "status": "Running",
+      "tone": "pos",
+      "size": "8 GB"
+     },
+     {
+      "id": "jobs",
+      "name": "nightly-reports",
+      "type": "Scheduled job",
+      "region": "eu-west-1",
+      "status": "Stopped",
+      "tone": "neg",
+      "size": "1 vCPU"
+     }
+    ],
+    "labels": {
+     "create": "Create",
+     "scale": "Scale",
+     "save": "Save",
+     "instances": "Instances",
+     "overview": "Overview",
+     "metrics": "Metrics",
+     "permissions": "Permissions",
+     "logs": "Logs",
+     "scaled": "Scaled to 3 instances"
+    },
+    "steps": [
+     {
+      "do": "scale",
+      "id": "api",
+      "n": 3,
+      "at": 0.4
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "create a bucket: provisioning, then active",
+   "params": {
+    "project": "marketing-site",
+    "region": "us-east-1",
+    "nav": [
+     {
+      "id": "storage",
+      "icon": "database"
+     },
+     {
+      "id": "cdn",
+      "icon": "globe"
+     }
+    ],
+    "active": "storage",
+    "heading": "Storage",
+    "resources": [
+     {
+      "id": "assets",
+      "name": "site-assets",
+      "type": "Object bucket",
+      "region": "us-east-1",
+      "status": "Active",
+      "tone": "pos",
+      "size": "12 GB",
+      "roles": [
+       {
+        "member": "Ana Silva",
+        "role": "Writer"
+       }
+      ],
+      "detail": [
+       [
+        "Versioning",
+        "On"
+       ],
+       [
+        "Public access",
+        "Blocked"
+       ]
+      ]
+     }
+    ],
+    "labels": {
+     "create": "New bucket",
+     "save": "Create",
+     "name": "Bucket name",
+     "region": "Region",
+     "provisioning": "Creating",
+     "running": "Active",
+     "attach": "Grant access",
+     "member": "Person or group",
+     "permissions": "Access"
+    },
+    "steps": [
+     {
+      "do": "create",
+      "resource": {
+       "name": "campaign-images",
+       "region": "us-east-1"
+      },
+      "at": 0.4
+     }
+    ],
+    "cps": 30
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "max: long names, many rows, logs",
+   "params": {
+    "title": "Cloud Management Console for Regulated Workloads",
+    "project": "regulatory-reporting-production-environment",
+    "region": "europe-west-central-2",
+    "nav": [
+     {
+      "id": "a",
+      "label": "Compute and container services",
+      "icon": "server"
+     },
+     {
+      "id": "b",
+      "label": "Managed databases and caches",
+      "icon": "database"
+     },
+     {
+      "id": "c",
+      "label": "Identity and access management",
+      "icon": "shield-check"
+     }
+    ],
+    "active": "a",
+    "heading": "Compute and container services across every region",
+    "open": "w0",
+    "columns": [
+     "Resource name",
+     "Resource type",
+     "Region",
+     "Current status",
+     "Machine size"
+    ],
+    "resources": [
+     {
+      "id": "w0",
+      "name": "regulatory-submission-scheduler-primary",
+      "type": "Container service with autoscaling",
+      "region": "europe-west-central-2",
+      "status": "Degraded performance",
+      "tone": "warn",
+      "size": "16 vCPU, 64 GB",
+      "logs": [
+       "2026-10-16T10:24:01Z INFO submission batch 4471 started for the counterparty exposure return",
+       "2026-10-16T10:24:07Z WARN validation rule CR-118 returned 12 exceptions for schedule seven",
+       "2026-10-16T10:24:09Z ERROR connection to the ledger replica failed, retrying in 5 seconds",
+       "2026-10-16T10:24:15Z INFO retry succeeded",
+       "2026-10-16T10:24:20Z INFO batch 4471 finished"
+      ],
+      "detail": [
+       [
+        "Container image",
+        "registry.internal.example/regulatory/scheduler:2026.10.3"
+       ]
+      ],
+      "metrics": [
+       {
+        "label": "Request latency",
+        "unit": " ms",
+        "labels": [
+         "10:00",
+         "10:05",
+         "10:10"
+        ],
+        "values": [
+         120,
+         340,
+         910
+        ]
+       }
+      ]
+     },
+     {
+      "id": "w1",
+      "name": "counterparty-exposure-calculator",
+      "type": "Batch job",
+      "region": "europe-west-central-2",
+      "status": "Running",
+      "tone": "pos",
+      "size": "8 vCPU"
+     }
+    ],
+    "labels": {
+     "overview": "Overview",
+     "metrics": "Metrics and alerts",
+     "permissions": "Access control",
+     "logs": "Application logs",
+     "scale": "Change capacity"
+    },
+    "steps": [
+     {
+      "do": "viewLogs",
+      "id": "w0",
+      "at": 0.5
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: accent3, compact, loading",
+   "params": {
+    "project": "payments-prod",
+    "resources": [
+     {
+      "name": "payments-api",
+      "status": "Running",
+      "tone": "pos"
+     }
+    ],
+    "state": "loading",
+    "theme": {
+     "accent": "accent3",
+     "sidebar": "field2",
+     "radius": 4,
+     "density": 0.88
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: accent4, roomy, error",
+   "params": {
+    "project": "payments-prod",
+    "region": "eu-west-2",
+    "resources": [
+     {
+      "name": "payments-api",
+      "status": "Running",
+      "tone": "pos"
+     }
+    ],
+    "state": "error",
+    "notice": "You do not have permission to list resources in this project.",
+    "theme": {
+     "accent": "accent4",
+     "radius": 16,
+     "density": 1.2,
+     "text": 1.1
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  }
+ ]
+}
