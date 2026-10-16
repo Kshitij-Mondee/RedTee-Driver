@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-17 - Concepts and examples for hologram and isometric; taste in the whiteboard skin (D-201)
+- Essences (hologram, isometric): a concept shown working, then one example; `text-heavy beats` avoided;
+  `screen_words: 14`, said in the essence block and warned at the storyboard (`text_heavy`, `loom/essence.py`); the
+  teaching fit lowered to 0.45 (isometric onboarding too). Direction cards: a use-and-words section, templates rare.
+- Whiteboard skin: no corner brackets. A speech bubble is one hand stroke with its tail; a card with no time for its
+  outline is left unboxed, with its siblings.
+- scenario.dialogue: each bubble above its own speaker; they overlapped by 280 px in every style.
+- Tests: `check_hologram_and_isometric_keep_words_to_labels`, `check_whiteboard_never_draws_a_half_frame`.
+
 ## 2026-10-16 - Template skins: each engine style draws the catalog templates its own way (D-198)
 - `runtime/skins.js` (new): `Loom.skins.define` / `build` / `schedule`. A template build under a skin records its parts
   and entrances, then the style performs them in time order; templates unchanged. Built at `world.js`'s one template site

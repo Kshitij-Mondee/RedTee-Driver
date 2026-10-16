@@ -692,11 +692,21 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
       const [dx, dy] = S.offset(E, p);
       return S.add(E, { kind: "marks", marks: moved(marks, dx, dy), light: o.light ? moved(o.light, dx, dy) : null, pen: o.pen || "ink", circle: !!o.circle });
     }
-    // corner brackets: a frame drawn in two short strokes when the window is too short for the whole outline
-    const corners = (x, y, w, h) => {
-      const a = Math.min(60, w * 0.18, h * 0.35);
-      return [].concat(V.path([x, y + a, x, y, x + a, y], { smooth: 1 }), V.path([x + w - a, y + h, x + w, y + h, x + w, y + h - a], { smooth: 1 }));
-    };
+    // a speech bubble is ONE stroke of the hand: its outline with the tail drawn into it (Kshitij, 2026-10-17, on two
+    // corner brackets standing in for a dialogue box: "absolutely horrible"). `tail`: [base, tip, base] on its lower edge
+    function bubbleOutline(x, y, w, h, r, tail) {
+      r = Math.min(r, w / 2, h / 2);
+      const p = [], arc = (cx, cy, a0) => { for (let i = 0; i <= 8; i++) { const a = a0 + i / 8 * Math.PI / 2; p.push(cx + Math.cos(a) * r, cy + Math.sin(a) * r); } };
+      p.push(x + r, y);
+      arc(x + w - r, y + r, -Math.PI / 2); arc(x + w - r, y + h - r, 0);
+      if (tail) {
+        const b0 = Math.min(tail[0][0], tail[2][0]), b1 = Math.max(tail[0][0], tail[2][0]);
+        p.push(Math.min(b1, x + w - r), y + h, tail[1][0], tail[1][1], Math.max(b0, x + r), y + h);
+      }
+      arc(x + r, y + h - r, Math.PI / 2); arc(x + r, y + r, Math.PI);
+      p.push(x + r + 18, y);
+      return [mark(p, { wav: 300, smooth: 1 })];
+    }
     function box(S, p, x, y, w, h, o, r) {
       o = o || {};
       const E = S.owner(p);
@@ -709,7 +719,7 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
       if (thin <= 14 || (thin <= 40 && long >= thin * 3)) {        // a thin shape is a stroke (a desk top, a leg, a rule)
         // a strip that may hold words (a calendar's day row) is its lower edge, never a line through what it holds
         const pen = coloured(fill) ? fill : penOf(o.stroke), lw = Math.max(markerW(), Math.min(thin, thin <= 14 ? 10 : 5));
-        const yy = thin <= 14 ? y + h / 2 : y + h, xx = thin <= 14 ? x + w / 2 : x + w;
+        const yy = thin <= 14 ? y + h / 2 : y + h + 6, xx = thin <= 14 ? x + w / 2 : x + w;   // a little below its words
         shape(S, p, h <= w ? V.line(x, yy, x + w, yy, { w: lw }) : V.line(xx, y, xx, y + h, { w: lw }), { pen });
         return stub(p);
       }
@@ -729,7 +739,17 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
       }
       const pen = o.stroke && o.stroke !== "none" ? penOf(o.stroke) : coloured(fill) ? fill : "ink";
       const rr = r != null ? r : (o.r != null ? o.r : ((S_().pack.shape || {}).radius || 14));
-      const part = shape(S, p, V.roundRect(x, y, w, h, Math.min(rr, Math.max(14, h / 2))), { pen, light: corners(x, y, w, h) });
+      if (E.kind === "bubble") {                                    // drawn whole, its tail added when the template gives it
+        const part = shape(S, p, bubbleOutline(x, y, w, h, Math.min(rr, 40), null), { pen });
+        if (part) {
+          const [dx, dy] = S.offset(E, p);
+          (S.data.bubble = S.data.bubble || new Map()).set(E, { part, geo: [x + dx, y + dy, w, h, Math.min(rr, 40)], pen });
+          part.knock = [x + dx, y + dy, w, h, Math.min(rr, Math.max(14, h / 2))];
+        }
+        return stub(p);
+      }
+      // a card with no time for its outline is not boxed at all (and neither are its siblings): never a half frame
+      const part = shape(S, p, V.roundRect(x, y, w, h, Math.min(rr, Math.max(14, h / 2))), { pen, light: [] });
       if (part) {
         part.box = true;
         // a speech bubble covers what is under it in the board's colour (two bubbles of a dialogue overlap, and a board has
@@ -815,9 +835,13 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
           const E = S.owner(p);
           if (!E || !pts || pts.length < 2) return S.baseK.polygon(p, pts, o);
           const P = pts.map((q) => (Array.isArray(q) ? q : [q.x, q.y]));
-          const open = E.kind === "bubble" && P.length === 3;          // a speech tail: its two sides, joined to the bubble
-          const flat = [].concat(...(open ? P : P.concat([P[0]])));
-          shape(S, p, V.path(flat, { smooth: 0 }), { pen: coloured(o.fill) ? o.fill : penOf(o.stroke) });
+          const bub = E.kind === "bubble" && P.length === 3 && S.data.bubble && S.data.bubble.get(E);
+          if (bub) {                                                   // the tail goes into the bubble's own stroke
+            const [dx, dy] = S.offset(E, p), [bx, by, bw, bh, br] = bub.geo;
+            bub.part.marks = bubbleOutline(bx, by, bw, bh, br, P.map(([a, b]) => [a + dx, b + dy]));
+            return stub(p);
+          }
+          shape(S, p, V.path([].concat(...P.concat([P[0]])), { smooth: 0 }), { pen: coloured(o.fill) ? o.fill : penOf(o.stroke) });
           return stub(p);
         },
         sketch(S, p, kind, args, o) {

@@ -223,7 +223,9 @@
       p.lines.forEach((ln, i) => {
         const side = ln.who; const P = people[side];
         const t = H.when(ctx, ln.say, 0.1 + (0.8 * i) / p.lines.length, "line " + (i + 1)); times.push(t);
-        const bw = 560, bx = side === "left" ? P.x + 120 : P.x - 120 - bw, by = 150 + (i % 2) * 20;
+        // each bubble above its own speaker: beside them, toward the middle, the two bubbles overlapped by 280 px and the
+        // words of one sat under the other (Kshitij on the whiteboard sheet, 2026-10-17: "have some taste")
+        const bw = 560, bx = side === "left" ? P.x - 80 : P.x + 80 - bw, by = 150 + (i % 2) * 20;
         const bub = ctx.el("line_" + (i + 1), { x: bx, y: by, w: bw, h: 170, kind: "bubble", exit: "recede" });
         kit.rect(bub.inner, 0, 0, bw, 150, { fill: side === "left" ? "ink" : "accent2", r: 34, shadow: false });
         const tail = side === "left" ? [[70, 140], [40, 200], [130, 140]] : [[bw - 130, 140], [bw - 40, 200], [bw - 70, 140]];

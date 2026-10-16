@@ -195,3 +195,45 @@ def check_a_template_the_style_refuses_is_said_at_the_storyboard():
     assert len(W) == 1 and W[0].startswith("template_not_this_style: b01 uses calendar.plan"), W
     assert storyboard_warnings(P_("whiteboard"), sb("whiteboard")) == []
     assert storyboard_warnings(P_("hologram", "off"), sb("hologram")) == []
+
+
+def check_hologram_and_isometric_keep_words_to_labels():
+    """hologram and isometric explain a concept by showing it and one example (Kshitij, 2026-10-17: "No need to make them
+    text heavy at all"): their essences carry a word budget and say so to the planners, and the storyboard check warns
+    `text_heavy` on a template beat past it (the title and the anchors do not count). Control: a beat within the budget,
+    and a style with no budget, say nothing."""
+    from loom import essence as ES
+    for st in ("hologram", "isometric"):
+        e = ES.load(st)
+        assert e.get("screen_words") == 14 and any("text-heavy" in a for a in e["avoid"]), st
+
+        class P_:
+            request = {"style": st}
+
+        assert "Words on screen" in ES.block(P_(), "storyboard")
+        long = {"beat": "b01", "kind": "template", "template": "definition", "props": {"term": "Attention", "say_term": "attention",
+                "definition": "Each earlier token gets a weight for the next piece, which is weighing and not understanding at all", "say_definition": "each"}}
+        short = {"beat": "b02", "kind": "template", "template": "list.steps", "props": {"title": "A long title is not counted at all here", "items": [{"text": "Read it", "say": "read"}]}}
+        W = ES.storyboard_warnings(P_(), {"style": st, "scenes": [long, short]})
+        assert len(W) == 1 and W[0].startswith("text_heavy: b01 (19 words)"), W
+
+    class C_:
+        request = {"style": "corporate-clean"}
+
+    assert not ES.storyboard_warnings(C_(), {"style": "corporate-clean", "scenes": [long]}), "control: no budget, no warning"
+
+
+def check_whiteboard_never_draws_a_half_frame():
+    """taste (Kshitij, 2026-10-17, on corner brackets standing in for dialogue boxes: "absolutely horrible"): the
+    whiteboard skin has no bracket form; a speech bubble is one stroke with its tail drawn into it; a card with no time for
+    its outline is left unboxed. Checked on the source and on the dialogue sheet (each bubble one drawn part).
+    Control: the bubble outline helper is there and used."""
+    src = (ROOT / "runtime/engines/whiteboard.js").read_text(encoding="utf-8")
+    sec = src[src.find("the template skin (D-198)"):src.find('Loom.skins.define("whiteboard"')]
+    assert "corners(" not in sec and "bubbleOutline(" in sec and "light: []" in sec
+    if not browser():
+        return SKIP
+    rep = _sheet("scenario.dialogue", "whiteboard", "style")["styles"]["whiteboard"]
+    assert not rep["errors"], rep["errors"][:3]
+    bubbles = [e for e in rep["skins"][0]["elements"] if e["kind"] == "bubble"]
+    assert len(bubbles) == 2 and all(e["made"] == "drawn" and not e["light"] for e in bubbles), bubbles

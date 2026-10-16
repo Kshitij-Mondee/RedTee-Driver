@@ -71,6 +71,9 @@ def block(project, stage: str) -> str:
         out.append("Its vocabulary: " + ", ".join(e["vocabulary"]) + ".")
     if e.get("avoid"):
         out.append("Never in this style: " + ", ".join(e["avoid"]) + ".")
+    if e.get("screen_words"):
+        out.append(f"Words on screen: labels, readings and counts, at most about {e['screen_words']} in a beat besides its title; "
+                   "the narration says the rest.")
     if e.get("tier") == "distinct":
         out.append("This is a distinct style: what makes it worth choosing is its own way of showing. A beat that could be any "
                    "style's slide in these colours is a beat lost.")
@@ -115,14 +118,36 @@ def storyboard_warnings(project, sb: dict) -> list[str]:
     catalog templates, blueprints or components restyled. A note for the planner and the critic, never an error."""
     e = load(sb.get("style") or (getattr(project, "request", None) or {}).get("style"))
     scenes = [s for s in sb.get("scenes") or [] if s.get("beat")]
-    if not e or e.get("tier") != "distinct" or len(scenes) < 6:
+    if not e or e.get("tier") != "distinct":
         return []
+    W = []
+    # a style that explains by showing keeps its words to labels (Kshitij, 2026-10-17: hologram and isometric "will be
+    # mostly used to explain concepts and give examples ... No need to make them text heavy at all"): `screen_words` is
+    # the most words a beat's template puts on screen besides its title (anchors and keys are not words on screen)
+    budget = e.get("screen_words")
+    if budget:
+        def words(v, key=""):
+            if isinstance(v, str):
+                return 0 if key.startswith("say") or key in ("title", "kicker", "icon", "member", "who", "valence", "verdict", "stance", "mode", "kind", "setting", "marker", "tone", "cast", "align", "side", "variant", "emotion") else len(v.split())
+            if isinstance(v, dict):
+                return sum(words(x, k) for k, x in v.items())
+            if isinstance(v, list):
+                return sum(words(x, key) for x in v)
+            return 0
+        heavy = [(s["beat"], words(s.get("props") or {})) for s in scenes if s.get("kind") == "template"]
+        heavy = [(b, n) for b, n in heavy if n > budget]
+        if heavy:
+            W.append(f"text_heavy: {', '.join(f'{b} ({n} words)' for b, n in heavy)} put more than {budget} words on screen besides "
+                     f"the title. {e['id']} explains by showing a concept working and one example; its words are labels and "
+                     f"readings: say the rest, and show it (packs/essence/{e['id']}.json)")
+    if len(scenes) < 6:
+        return W
     shared = [s["beat"] for s in scenes if s.get("kind") in ("template", "blueprint")]
     share = len(shared) / len(scenes)
     if share <= TEMPLATE_SHARE:
-        return []
+        return W
     names = ", ".join(t["name"] for t in (e.get("techniques") or [])[:4])
-    return [f"style_borrowed: {len(shared)} of {len(scenes)} beats ({share:.0%}) are shared templates restyled in {e['id']}, a "
+    return W + [f"style_borrowed: {len(shared)} of {len(scenes)} beats ({share:.0%}) are shared templates restyled in {e['id']}, a "
             f"distinct style whose worth is its own way of showing ({names}). Stage them with its techniques "
             f"(packs/essence/{e['id']}.json), or say in the beat why a template is the better picture"]
 

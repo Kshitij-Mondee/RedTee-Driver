@@ -14,6 +14,21 @@ scenes, review), **tweak** (Haiku sub-agents via `loom tweak`).
 
 ---
 
+## Taste and use (2026-10-17, D-201)
+
+- **L-490 Taste is a gate too: a light form that saves time can look broken.** (orchestrator, template skins)
+  - **What happened:** the whiteboard skin drew two corner brackets instead of a dialogue box when the hand had little
+    time; Kshitij: "absolutely horrible". The two bubbles also overlapped, in every style.
+  - **Root cause:** the light form was chosen for drawing time, not for how it reads. The overlap was in the template's
+    own layout, hidden in classic by an opaque bubble.
+  - **Action:**
+    - a bubble is drawn whole, its tail in its stroke;
+    - a card with no time is unboxed, never half framed;
+    - each bubble sits above its speaker;
+    - hologram and isometric were turned toward concepts and examples (D-201).
+  - **Prevention:** DONE (`check_whiteboard_never_draws_a_half_frame`, `check_hologram_and_isometric_keep_words_to_labels`).
+    Before a skin or a template ships, look at its mid-build frame as a viewer would, not only its timing.
+
 ## Template skins built (2026-10-16, D-198)
 
 - **L-484 A second tween on a node does not hide it before its start.** (orchestrator, runtime/skins.js)

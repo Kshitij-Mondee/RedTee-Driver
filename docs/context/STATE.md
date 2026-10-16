@@ -54,7 +54,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 | Palette study (research) | `tools/palette_study.py`, `docs/research/palettes/` | the colours a video uses by role, accent pairs, per-shot palettes; scored against a known palette |
 | Video-note screening (research) | `tools/check_video_notes.py` | flags filler or mislabelled AI-written video notes before use (D-72) |
 | Video study (research) | `tools/video_study.py`, `tools/transcribe_videos.py`, `docs/research/*/` | cuts, motion, holds, audio gaps, palette, contact sheets, speech numbers; studies of 5 channels (D-73, D-76); `tools/explain_study.py` (explanation cues, word-aligned strips, `moments` for the animation worth a 0.5 s strip, L-134) and `tools/style_fingerprint.py` (what a look is made of, for references and Loom alike) (D-74) |
-| Tests | `tests/run_tests.py` | 591 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
+| Tests | `tests/run_tests.py` | 593 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
 | Context | `docs/context/`, `tools/context_check.py`, `tools/engine_hash.py` | this layer |
 
 ## Lessons made
@@ -127,6 +127,8 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
   (`py -m loom library sheet --template all --skin style --styles <s>`); on for new engine lessons, classic kept, finished
   lessons untouched. Open: a within-style film comparison per style; isometric A is the default, B a variant (D-199); skins for
   the non-engine styles (flat-cosmos, glow-flat, story-cartoon, cinematic) in their own proposal.
+- **Hologram and isometric explain by showing (2026-10-17, D-201):** a concept shown working, then one example;
+  words are labels (`screen_words: 14`, `text_heavy`). The whiteboard skin never half-frames a box.
 - **Narration speed by kind of video (2026-10-16, D-196):** a range per kind (teaching 0.75 to 0.85, explainer
   0.85 to 0.95, product 0.9 to 0.95, onboarding 0.85 to 1.0), decided per lesson by the script or the narration's density
   (D-197); voice af_heart (Kshitij's choice); the calibration that slowed every voice to 0.7 is opt-in.

@@ -9,6 +9,7 @@
   },
   "essence": "The invisible system, reporting itself in light. A calm operations console where AI, data, networks and security become things you can watch working.",
   "explains_by": [
+    "Explain by showing it work: one concept, then one concrete example run on the console; the words on screen are labels and readings, never sentences.",
     "Make the unseen visible: what normally happens inside a machine is drawn as light on a console.",
     "The system reports itself: readings, traces and states carry the explanation, the narrator interprets them.",
     "Brief, lean in, come back: a calm overview, one dive into the part that matters, back out with a verdict.",
@@ -60,7 +61,8 @@
     "stock icons in circles",
     "cards with pointer pills",
     "people drawn on the console",
-    "a beat of console UI alone"
+    "a beat of console UI alone",
+    "text-heavy beats (paragraphs, bullet lists, definitions spelled out on screen)"
   ],
   "fits": {
     "topics": [
@@ -73,7 +75,7 @@
     ],
     "kinds": {
       "explainer": 0.95,
-      "teaching": 0.6,
+      "teaching": 0.45,
       "onboarding": 0.2,
       "policy": 0.3,
       "soft-skills": 0.05,
@@ -99,5 +101,6 @@
   "calls": [
     "ctx.engine",
     "H."
-  ]
+  ],
+  "screen_words": 14
 }

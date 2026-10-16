@@ -37,14 +37,11 @@ Most of the lesson briefs calmly; the moment that makes it worth watching is the
 - A moving thing is a signal on a path (`H.trace`, `H.arcs`), one at a time; the frame holds while the light works.
 - Joins: hold the stage (`H.stage`) across a section and change what is on it; a copy redrawn from nothing replays the beat.
 
-## By kind of video
-- Explainer: the hero mechanism runs end to end, then replays at the end in one move. No quiz panel.
-- Teaching: lock one part per step (`H.lock`), and the check is a real decision on the console.
+## Its use, and words (2026-10-17)
+- Mostly a concept and one example: shown working, then a concrete case run on the console. Teaching: the same,
+  a lock (`H.lock`) per step. Words: labels and readings, about 14 a beat; the narrator says the rest.
 
 ## The checks
 The storyboard gate refuses (D-194) `holo_heroes_few` (fewer than one hero beat per 8), `holo_hero_model` and
 `holo_ui_templates`; the engine audit refuses `holo_hero_unplaced`, `holo_hero_missing`, `holo_hero_not_drawn` and
 `holo_ui_heavy` (under 75 % of beats showing a hologram).
-
-## Templates (D-198)
-- A template becomes light planes. No people or calendar template.

@@ -9,6 +9,7 @@
   },
   "essence": "A working miniature of the whole system. An isometric board where a process can be followed from end to end, with every place on one map.",
   "explains_by": [
+    "Explain by showing it work: one concept, then one concrete example followed across the board; the words on screen are labels, pins and counts, never sentences.",
     "Show the whole system as one map, then follow one thing through it.",
     "Place is meaning: each station is a stage of the process, the route between them is the order.",
     "Height and count are amounts: stacks, bars and tallies on the board are the numbers.",
@@ -58,7 +59,8 @@
     "flat cards floating over the board",
     "icons flying across the map",
     "slide templates",
-    "isometric decoration with no process"
+    "isometric decoration with no process",
+    "text-heavy beats (paragraphs, bullet lists, definitions spelled out on screen)"
   ],
   "fits": {
     "topics": [
@@ -71,8 +73,8 @@
     ],
     "kinds": {
       "explainer": 0.9,
-      "teaching": 0.6,
-      "onboarding": 0.6,
+      "teaching": 0.45,
+      "onboarding": 0.45,
       "policy": 0.3,
       "soft-skills": 0.05,
       "product": 0.85
@@ -95,5 +97,6 @@
   "calls": [
     "ctx.engine",
     "B."
-  ]
+  ],
+  "screen_words": 14
 }

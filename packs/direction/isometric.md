@@ -33,9 +33,8 @@ a cloud region. One board is its grammar: hold it, and let the camera and the bo
 - The camera holds a station while it works and moves between stations; a framing at a beat's start is a cut
   (`B.camera` with dur 0).
 
-## By kind of video
-- Explainer: one order (or parcel) followed station to station, then the scale reveal (`B.reveal`) as the replay.
-- Teaching: one station per step, the decision made at the station, the check a fault on the board.
-
-## Templates (D-198)
-- A template stands on the board as blocks on plinths. No people or quote template.
+## Its use, and words (2026-10-17)
+- Mostly explaining a concept and giving an example: one order (or parcel) followed station to station, then the scale
+  reveal (`B.reveal`) as the replay. Teaching uses the same, one station per step.
+- Words are labels, pins and counts, about 14 a beat besides a title; the narrator says the rest. Templates are rare,
+  and stand on the board as blocks (`text_heavy` warns past the budget).
