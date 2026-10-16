@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-17 - Batch-05 of the asset hand-off: three hologram hero models
+- `assets/models3d/holo_laptop.js` (T-137: base, keyboard deck, keys, trackpad, hinge, lid, screen, ports; lid and
+  explode keys), `holo_gpu.js` (T-138: shroud, fans, heatsink, pcb, power, bracket, backplate; spin and explode) and
+  `holo_building.js` (T-146: ten named floors `floor1` to `floor10`, core, structure, facade sides, lobby, roof plant;
+  `plates: false` for the hologram). From the friend's `assets/batch-05` (a575b98); the models alone, batch 04 not taken.
+- Turntable sheets made here (corporate-clean, hologram, dark-technical); each also rendered through `H.hero3d` in the
+  hologram engine with a part lit, a reading on it and the explode (0 problems). The notes in docs/assets/batches/batch-05.md.
+
 ## 2026-10-17 - Batch-03 quality pass: the seven developer components looked at again
 - From the friend's `assets/batch-03` (e117237): `_dev_kit.js` (rounded-bottom window bodies, `DK.warnTok`, `DK.tones`,
   `DK.textL`, `DK.para`, low-saturation syntax colours fall back to the text colour); the CI pipeline wraps a name that
