@@ -482,6 +482,12 @@
             "type": "string",
             "pattern": "^[a-z0-9-]+/beat/[a-z0-9_]+$",
             "description": "reuse or build (D-163, bespoke scenes): the id of a kept beat of this lesson's style; it becomes the scene author's starting code (the drawing kept, the words and timings this lesson's); leave it out to build the beat"
+          },
+          "skin": {
+            "enum": [
+              "classic"
+            ],
+            "description": "D-198: this template beat keeps the classic template look even when the lesson's templates take the style's skin."
           }
         }
       }
@@ -699,6 +705,13 @@
     "ambient": {
       "type": "object",
       "description": "the ambient field for this lesson, merged over the style pack's `ambient` (runtime/world.js): kind (none|dots|paper|grid|stars), density, wash"
+    },
+    "template_skin": {
+      "enum": [
+        "style",
+        "classic"
+      ],
+      "description": "D-198: catalog templates drawn the style's own way (style: the whiteboard hand, the blueprint nib, a hologram scan, an isometric board, a screencast page; only for a style with an engine) or the classic way. Default: style for a lesson planned with skins."
     }
   }
 }

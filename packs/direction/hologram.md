@@ -45,3 +45,6 @@ Most of the lesson briefs calmly; the moment that makes it worth watching is the
 The storyboard gate refuses (D-194) `holo_heroes_few` (fewer than one hero beat per 8), `holo_hero_model` and
 `holo_ui_templates`; the engine audit refuses `holo_hero_unplaced`, `holo_hero_missing`, `holo_hero_not_drawn` and
 `holo_ui_heavy` (under 75 % of beats showing a hologram).
+
+## Templates (D-198)
+- A template becomes light planes. No people or calendar template.

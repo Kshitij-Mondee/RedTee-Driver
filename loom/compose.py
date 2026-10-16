@@ -30,7 +30,7 @@ def vendor_scripts(src: str) -> list:
 
 
 RUNTIME_ORDER_EXTRA = ["physics.js", "brush.js", "orbs.js", "recipes_physics.js", "recipes_brush.js", "recipes_orb.js"]   # library wrappers (2026-10-08); inert unless a scene calls them
-RUNTIME_ORDER = ["core.js", "style.js", "kit.js", "layout.js", "motion.js", "expressive.js", "interaction.js", "ui_artefacts.js", "lottie.js", "rig.js", "iso.js", "depth.js", "scenery.js", "glow.js", "treat.js", "objects.js", "places.js", "sets.js", "art.js", "data.js", "geo.js", "hold.js", "stepped.js", "morph.js", "slot.js", "magnify.js", "material.js", "footage.js", "hands.js", "grid.js", "engines.js"] + RUNTIME_ORDER_EXTRA + ["world.js", "overlay.js", "components.js", "fx.js", "boot.js"]
+RUNTIME_ORDER = ["core.js", "style.js", "kit.js", "layout.js", "motion.js", "expressive.js", "interaction.js", "ui_artefacts.js", "lottie.js", "rig.js", "iso.js", "depth.js", "scenery.js", "glow.js", "treat.js", "objects.js", "places.js", "sets.js", "art.js", "data.js", "geo.js", "hold.js", "stepped.js", "morph.js", "slot.js", "magnify.js", "material.js", "footage.js", "hands.js", "grid.js", "engines.js", "skins.js"] + RUNTIME_ORDER_EXTRA + ["world.js", "overlay.js", "components.js", "fx.js", "boot.js"]
 # the join tables, join resolution and captions live in loom/timing.py (the timing grid, D-173); re-exported here for the
 # modules and tests that import them from compose
 from .timing import (JOIN_DUR, MEANING_JOIN, MOVE_JOINS, SCREEN_JOINS, SEAM_JOINS, captions_from,  # noqa: F401
@@ -52,6 +52,19 @@ def _captions_on(project, brand) -> bool:
     if rule in ("on", "off"):
         return rule == "on"          # a brand rule wins over the lesson's own setting
     return bool(project.request.get("captions", True))
+
+
+def template_skin(project, sb: dict | None, engine_on: bool) -> str:
+    """D-198: are this lesson's catalog templates drawn the style's way ("style") or the classic way ("classic")?
+    Only a style whose engine is in the build has a skin. The storyboard's `template_skin` wins, then the request's; else a
+    lesson planned with skins (project.json `template_skins`, stamped by Project.create) gets them, and a lesson made before
+    them (or a clone of one) keeps the classic templates it was approved with."""
+    if not engine_on:
+        return "classic"
+    for src in ((sb or {}).get("template_skin"), (getattr(project, "request", None) or {}).get("template_skin")):
+        if src in ("style", "classic"):
+            return src
+    return "style" if (getattr(project, "cfg", None) or {}).get("template_skins") else "classic"
 
 
 def load_style(name: str) -> dict:
@@ -384,6 +397,9 @@ def compose(project, strict: bool = True) -> dict:
     if (sb.get("story") or {}).get("cast"):
         # one person, one look (RC18): templates resolve a person prop that names a cast member from here
         manifest["cast"] = sb["story"]["cast"]
+    if template_skin(project, sb, bool(eng)) == "style":
+        # D-198: the templates are drawn by the style's skin; absent, they are classic (a classic build's manifest is as before)
+        manifest["template_skin"] = "style"
     if sb.get("icon_objects"):
         manifest["icon_objects"] = True   # D-100: drawn objects may stand in for hero icons (opt-in; one family otherwise)
     if draft_media:

@@ -37,7 +37,7 @@ try {
       shots.push({ i, t, file: f, bbox });
     }
   }
-  const rep = await p.evaluate(() => ({ errors: (window.Loom && window.Loom.report.errors) || [], warnings: (window.Loom && window.Loom.report.warnings) || [], components: (window.Loom && window.Loom.report.components) || [], texts: (window.Loom && window.Loom.report.texts) || [], sfx: (window.Loom && window.Loom.report.sfx) || [], treatments: (window.Loom && window.Loom.report.treatments) || [], objects: (window.Loom && window.Loom.report.objects) || [], figures: (window.Loom && window.Loom.report.figures) || [], tweens: ((window.Loom && window.Loom.report.tweens) || []).filter((t) => t.kind === "exit" || t.kind === "camera"), case_texts: window.__case_texts || [] }));
+  const rep = await p.evaluate(() => ({ errors: (window.Loom && window.Loom.report.errors) || [], warnings: (window.Loom && window.Loom.report.warnings) || [], components: (window.Loom && window.Loom.report.components) || [], texts: (window.Loom && window.Loom.report.texts) || [], sfx: (window.Loom && window.Loom.report.sfx) || [], treatments: (window.Loom && window.Loom.report.treatments) || [], objects: (window.Loom && window.Loom.report.objects) || [], figures: (window.Loom && window.Loom.report.figures) || [], tweens: ((window.Loom && window.Loom.report.tweens) || []).filter((t) => t.kind === "exit" || t.kind === "camera"), case_texts: window.__case_texts || [], skins: (window.Loom && window.Loom.report.skins) || [] }));
   rep.console = logs; rep.shots = shots; rep.cases = n;
   fs.writeFileSync(path.join(outDir, "report.json"), JSON.stringify(rep, null, 1));
   console.log(`sheet: cases=${n} shots=${shots.length} errors=${rep.errors.length} page_errors=${logs.length}`);

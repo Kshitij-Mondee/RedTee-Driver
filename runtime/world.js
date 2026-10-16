@@ -424,7 +424,8 @@
       if (def.kind === "template") {
         const T = Loom.templates[def.template];
         if (!T) Loom.error("unknown_template", def.template, { beat: beat.id });
-        else T.build(ctx, Object.assign({}, T.defaults || {}, def.props || {}));
+        // under the style's template skin when the lesson has one (D-198), else exactly as before
+        else Loom.skins.build(ctx, T, Object.assign({}, T.defaults || {}, def.props || {}), def, def.template);
       } else if (def.kind === "blueprint") {
         const B = Loom.blueprints[def.blueprint];
         if (!B) Loom.error("unknown_blueprint", def.blueprint, { beat: beat.id });

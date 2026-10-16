@@ -36,3 +36,6 @@ a cloud region. One board is its grammar: hold it, and let the camera and the bo
 ## By kind of video
 - Explainer: one order (or parcel) followed station to station, then the scale reveal (`B.reveal`) as the replay.
 - Teaching: one station per step, the decision made at the station, the check a fault on the board.
+
+## Templates (D-198)
+- A template stands on the board as blocks on plinths. No people or quote template.

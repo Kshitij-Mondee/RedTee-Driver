@@ -88,6 +88,20 @@ def enabled_for(project, style_id: str | None) -> bool:
     return bool(engine_file(style_id)) and str((getattr(project, "request", None) or {}).get("engine", "on")).lower() != "off"
 
 
+def skin_refuses(style_id: str | None) -> list[str]:
+    """D-198: the catalog templates a style's skin refuses (forms its essence avoids: people on a hologram console, a
+    quote on an isometric map), read from the `refuse: [...]` of the skin in runtime/engines/<style>.js, the one place the
+    list is kept. [] for a style with no engine or no skin."""
+    import re
+    f = engine_file(style_id)
+    if not f:
+        return []
+    src = f.read_text(encoding="utf-8")
+    i, j = src.find("the template skin (D-198)"), src.find("Loom.skins.define(")
+    m = re.search(r"refuse: \[([^\]]*)\]", src[i:j]) if i >= 0 and j > i else None
+    return re.findall(r'"([a-z.]+)"', m.group(1)) if m else []
+
+
 ENGINE_GUIDES = ENGINE_ROOT / "docs" / "styles" / "engines"
 
 

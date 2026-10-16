@@ -42,3 +42,6 @@ Its strength is that the screen IS the procedure; choose the region that shows t
 - Teaching (most software lessons): steps with pills, the finished state held 2 s, a real check in the product.
 - Explainer: a tour of how it works (`A.name`), no clicking along, no quiz.
 - Product: 2 or 3 value moments, each the benefit said, one action shown, the result held; `A.spotlight` on the aha.
+
+## Templates (D-198)
+- A template is a page of the product that loads on its words. No people template.

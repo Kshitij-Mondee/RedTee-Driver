@@ -531,6 +531,8 @@ _SHEET_JS = r"""
 (function () {
   const Loom = window.Loom, M = window.__SHEET;
   Loom.assets = M.assets;
+  // D-198: a template sheet in a style's skin reads the switch from the manifest, as a composed lesson does
+  Loom.manifest = Object.assign(Loom.manifest || {}, M.skin === "style" ? { template_skin: "style" } : {}, M.variant ? { template_skin_variant: M.variant } : {});
   Loom.style.install(M.style, "fonts");
   const root = document.getElementById("root");
   const cases = [], caseTexts = (window.__case_texts = []);
@@ -542,16 +544,23 @@ _SHEET_JS = r"""
       const svg = Loom.svg("svg", { width: 1920, height: 1080, viewBox: "0 0 1920 1080", style: "position:absolute;left:0;top:0;visibility:hidden" }, root);
       const g = Loom.svg("g", {}, svg);
       const beat = { id: "sheet" + i, start: 0, end: M.dur, speech_start: 0.3, speech_end: M.dur - 0.6, phrases: [] };
-      let next = 0.6; const cues = Object.assign({}, cs.cues || {});
+      let next = 0.6; const cues = Object.assign({}, cs.cues || {}), gap = M.cueGap || 0.7;
       const ctx = { beat, def: {}, props: {}, g, box: Object.assign({}, Loom.kit.SAFE), kit: Loom.kit, m: Loom.motion, style: Loom.style,
         c: (t) => Loom.style.c(t), start: 0, end: M.dur, speechStart: 0.3, speechEnd: M.dur - 0.6,
-        cue(a) { const k = String(a); if (!(k in cues)) { cues[k] = next; next += 0.7; } return cues[k]; }, has() { return true; },
+        cue(a) { const k = String(a); if (!(k in cues)) { cues[k] = next; next += gap; } return cues[k]; }, has() { return true; },
         at(f) { return 0.3 + f * (M.dur - 0.9); }, el(name, o) { return Loom.kit.element((o && o.parent) || g, name, o); },
         held() { return null; }, phrase() { return { text: "", words: [] }; }, word() { return { w: "", s: 0, e: 0 }; },
         motif(name, o) { return Loom.kit.element(g, name, o); },
         group() { return Loom.svg("g", { class: "lm-block" }, g); }, shift(grp, dx, dy) { grp.setAttribute("transform", `translate(${dx} ${dy})`); } };
       ctx.use = (ref, p, o) => Loom.useComponent(ctx, ref, p, o);
+      // the style's engine, as world.js gives a scene (only when the sheet loaded it: a skinned sheet)
+      Object.defineProperty(ctx, "engine", { enumerable: false, get() { const e = Loom.engines && Loom.engines.current(); return e ? e.api : undefined; } });
       Loom.ctxBeat = beat;
+      // a scene record of its own, as world.js gives a scene (templates that look up their earlier elements read it)
+      Loom.ctxScene = { els: [], def: {}, register(E) { E.order = this.els.length; this.els.push(E); } };
+      // each case is its own frame on the one timeline: a style's performer (the hand, the nib) starts free for it
+      const eng = Loom.engines && Loom.engines.current();
+      if (eng && typeof eng.api.fresh === "function") eng.api.fresh();
       Loom.text_label = Loom.svg("text", { x: 40, y: 1050, "font-size": 26, fill: Loom.style.c("muted"), "font-family": "sans-serif" }, svg, `${M.id}: ${cs.label || "case " + i}  [${M.style.id}]`);
       ctx.def = { kind: M.kind, props: cs.params || {} }; ctx.props = cs.params || {};
       const nText = Loom.report.texts.length;
@@ -560,11 +569,12 @@ _SHEET_JS = r"""
         else {
           const T = (M.kind === "template" ? Loom.templates : Loom.blueprints)[M.id];
           if (!T) Loom.error("sheet_unknown", `${M.kind} ${M.id} is not registered`);
+          else if (M.kind === "template" && Loom.skins) Loom.skins.build(ctx, T, Object.assign({}, T.defaults || {}, cs.params || {}), {}, M.id);
           else T.build(ctx, Object.assign({}, T.defaults || {}, cs.params || {}));
         }
       }
       catch (e) { Loom.error("component_threw", `${cs.label || i}: ${e && e.message}`); }
-      Loom.ctxBeat = null;
+      Loom.ctxBeat = null; Loom.ctxScene = null;
       caseTexts.push(Loom.report.texts.slice(nText).map((t) => t.text));
       cases.push([svg, g]);
     });
@@ -573,6 +583,15 @@ _SHEET_JS = r"""
       const pos = { "top-right": `right:96px;top:${Math.round((84 - h) / 2)}px`, "top-left": `left:96px;top:${Math.round((84 - h) / 2)}px`, "bottom-right": `right:64px;bottom:28px`, "bottom-left": `left:64px;bottom:28px` }[lg.placement];
       const plate = lg.plate ? "background:#FFFFFF;padding:5px 9px;border-radius:8px;box-sizing:content-box;" : "";
       Loom.html("img", { src: lg.src, style: `position:absolute;${pos};height:${lg.plate ? h - 10 : h}px;width:${lg.plate ? Math.round((h - 10) * (lg.aspect || 3)) : w}px;${plate}z-index:5` }, root);
+    }
+    // a skinned sheet holds its words to the style's own lettering rules (the whiteboard's two faces, D-182, D-198)
+    const engNow = Loom.engines && Loom.engines.current();
+    if (M.skin === "style" && engNow && typeof engNow.api.audit === "function") engNow.api.audit({ force: true });
+    // the film clock, as world.js runs it for a lesson: the performers an engine poses per frame (the hand, the nib)
+    const Wd = Loom.world;
+    if (Wd && Wd.clocks && Wd.clocks.length) {
+      const proxy = { t: 0 };
+      Loom.tl.fromTo(proxy, { t: 0 }, { t: M.dur, duration: M.dur, ease: "none", onUpdate: () => { for (const f of Wd.clocks) f(proxy.t); } }, 0);
     }
     Loom.tl.set({}, {}, M.dur);
     window.__cases = cases.length; window.__times = M.times;
@@ -600,9 +619,14 @@ def _crop(im, bb):
 
 def render_sheet(fid: str, styles: list[str] | None = None, dur: float = 6.0, kind: str = "component",
                  cases: list[dict] | None = None, sheet_name: str | None = None, brand: dict | None = None,
-                 out_dir: Path | None = None) -> dict:
+                 out_dir: Path | None = None, skin: str = "classic", frames: list[float] | None = None, cue_gap: float = 0.7,
+                 variant: str | None = None) -> dict:
     """Render every fixture case of a component (or a template/blueprint) in every style pack, audit the
-    text each case drew against its params (sample-text detector), and write library/sheets/<name>.jpg."""
+    text each case drew against its params (sample-text detector), and write library/sheets/<name>.jpg.
+
+    D-198: `skin="style"` draws a template in each style's skin (the style's engine and its assets are loaded, the
+    manifest switch is on); `frames` keeps a shot at each of those times per case (default: the end frame only), so a
+    sheet shows a template being made, not only made. The report then carries Loom.report.skins per style."""
     from .checks.text_audit import leaks_for
     from PIL import Image, ImageDraw
     from .compose import RUNTIME_ORDER
@@ -614,7 +638,8 @@ def render_sheet(fid: str, styles: list[str] | None = None, dur: float = 6.0, ki
     lucide = read_json(ENGINE_ROOT / "assets/icons/lucide.json")["icons"]
     peeps = read_json(ENGINE_ROOT / "assets/peeps/peeps.json")["peeps"]
     nm = ENGINE_ROOT / "node_modules"
-    times = [round(dur * 0.4, 2), round(dur - 0.1, 2)]
+    times = sorted(set([round(dur * 0.4, 2), round(dur - 0.1, 2)] + [round(float(t), 2) for t in (frames or [])]))
+    keep_t = [round(float(t), 2) for t in frames] if frames else [times[-1]]
     out = {"styles": {}, "sheet": None}
     rows = []
     for st in styles:
@@ -632,12 +657,19 @@ def render_sheet(fid: str, styles: list[str] | None = None, dur: float = 6.0, ki
                 scripts += sorted((p for p in (ENGINE_ROOT / "runtime" / sub).glob("*.js") if p.name != "_helpers.js"),
                                   key=lambda p: (not p.name.startswith("_"), p.name))
         scripts += sorted((COMP).glob("*.js"))
+        engine_assets_ = {}
+        if skin == "style":
+            from .engines import engine_file, engine_assets
+            ef = engine_file(style.get("id") or st)
+            if ef:
+                scripts.append(ef)
+                engine_assets_ = engine_assets(style.get("id") or st)
         tags = []
         for i, s in enumerate(scripts):
             shutil.copy2(s, tmp / "rt" / f"{i:02d}_{s.name}")
             tags.append(f'<script src="rt/{i:02d}_{s.name}"></script>')
         M = {"id": fid, "kind": kind, "style": style, "logo": logo_payload(brand, style) if brand else None, "cases": fixtures["cases"], "dur": dur, "times": times,
-             "assets": {"icons": lucide, "peeps": peeps}}
+             "skin": skin, "cueGap": cue_gap, "variant": variant, "assets": {"icons": lucide, "peeps": peeps, **engine_assets_}}
         html = ("<!doctype html><html><head><meta charset='utf-8'><style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden}"
                 "#root{position:relative;width:1920px;height:1080px}</style></head><body><div id='root'></div>"
                 + "".join(tags) + f"<script>window.__SHEET={json.dumps(M)};</script><script>{_SHEET_JS}</script></body></html>")
@@ -648,10 +680,11 @@ def render_sheet(fid: str, styles: list[str] | None = None, dur: float = 6.0, ki
         for i, txts in enumerate(rep.get("case_texts") or []):
             for lk in leaks_for([{"text": t} for t in txts], fixtures["cases"][i].get("params") or {}, entry):
                 leaks.append({"case": fixtures["cases"][i].get("label") or i, **lk})
-        out["styles"][st] = {"errors": rep["errors"], "warnings": rep.get("warnings", []), "console": rep["console"], "cases": rep["cases"], "leaks": leaks}
+        out["styles"][st] = {"errors": rep["errors"], "warnings": rep.get("warnings", []), "console": rep["console"], "cases": rep["cases"], "leaks": leaks,
+                             "skins": rep.get("skins", [])}
         # components are cropped to the element; templates are whole frames (layout and brand logo matter)
         row = [(_crop(Image.open(s["file"]).convert("RGB"), s.get("bbox")) if kind == "component" else Image.open(s["file"]).convert("RGB").resize((480, 270)))
-               for s in rep["shots"] if s["t"] == times[-1]]
+               for s in rep["shots"] if round(s["t"], 2) in keep_t]
         rows.append((st, row))
         shutil.rmtree(tmp, ignore_errors=True)
     if rows:
@@ -668,6 +701,29 @@ def render_sheet(fid: str, styles: list[str] | None = None, dur: float = 6.0, ki
         sh.save(p, quality=86)
         out["sheet"] = str(p)
     return out
+
+
+# ------------------------------------------------------------------ the template sheet, classic and skinned (D-198)
+TEMPLATE_FIXTURES = LIB / "template_fixtures.json"
+ENGINE_STYLES = ["whiteboard", "blueprint", "hologram", "isometric", "screencast"]
+
+
+def template_fixture_ids() -> list[str]:
+    return sorted((read_json(TEMPLATE_FIXTURES, {}) or {}).get("cases", {}))
+
+
+def template_sheet(tid: str, styles: list[str] | None = None, skin: str = "classic", frames: list[float] | None = None,
+                   dur: float = 10.0, out_dir: Path | None = None, cue_gap: float = 1.6, variant: str | None = None) -> dict:
+    """A catalog template's cases (library/template_fixtures.json) in each style: classic, or in the style's skin. Three
+    frames per case by default (the first parts being made, mid-build, the end), so the sheet shows HOW it arrives. The
+    anchors are spoken `cue_gap` seconds apart (about a short clause each, as narration paces them; the library's own
+    sheet keeps its 0.7 s stress spacing)."""
+    cases = ((read_json(TEMPLATE_FIXTURES, {}) or {}).get("cases") or {}).get(tid)
+    if not cases:
+        raise LoomError(f"no fixture cases for template {tid} in {TEMPLATE_FIXTURES}")
+    styles = styles or (ENGINE_STYLES if skin == "style" else None)
+    return render_sheet(tid, styles=styles, dur=dur, kind="template", cases=cases, sheet_name=f"{tid}.{skin}" + (f".{styles[0]}" if styles and len(styles) == 1 else "") + (f".{variant}" if variant else ""),
+                        out_dir=out_dir or (LIB / "sheets" / "skins"), skin=skin, frames=frames or [1.4, 4.0, dur - 0.1], cue_gap=cue_gap, variant=variant)
 
 
 # ------------------------------------------------------------------ beat designs -> templates

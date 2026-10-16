@@ -44,3 +44,6 @@ A drawing set has many sheets, each a different view; a lesson that stays on one
 
 ## The soft check
 The storyboard gate warns `bp_one_layout` when one station carries more than 60 % of the narration (6 beats or more).
+
+## Templates (D-198)
+- A catalog template is drafted by the nib; long sentences print beside it. No people template.

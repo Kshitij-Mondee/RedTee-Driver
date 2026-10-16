@@ -2170,6 +2170,193 @@
     }
   }
 
+
+  // ---------------------------------------------------------------- the template skin (D-198)
+  // A catalog template on the board never floats as a flat card (the essence's first avoid). Two versions, compared
+  // within isometric (D-122 allows versions within one style; Kshitij chose A with B tested against it):
+  //   A (default): every card is a block standing on its own plinth: its front face is the card (frontal, so its words
+  //     read as words), its top and right faces recede up and to the right in the three tones of its colour, no outlines
+  //     on solids. A disc is a token, a bar is an iso bar, a row is words on the board. Each block rises out of its plinth
+  //     on its word and its words print once it has landed.
+  //   B (manifest.template_skin_variant "B"): the whole template is printed on ONE true isometric wall (the 30 degree
+  //     face) that stands on a board slab, scaled to fit; the same parts, the same timing.
+  // Lines are the infographic's thin ink (routes, leaders, rules). A word marked when spoken gets a map pin.
+  const SK_PLAIN = new Set(["surface", "surface2", "field", "field2", "line", "shadow", "none", "ink", "muted"]);
+  const skColoured = (t) => !!t && typeof t === "string" && !SK_PLAIN.has(t) && !t.startsWith("#");
+  const DV = [C30, -0.5];                                    // the receding axis on screen: up and to the right
+  function skinOf() {
+    const slot = (p) => svg("g", { "data-skin": "slot" }, p);
+    function add(S, p, part) {
+      const E = S.owner(p);
+      if (!E) return null;
+      part.g = slot(p);
+      return S.add(E, part);
+    }
+    function box(S, p, x, y, w, h, o, r) {
+      o = o || {};
+      const E = S.owner(p);
+      if (!E || (o.fill === "none" && !o.stroke)) return S.baseK.rect(p, x, y, w, h, o);
+      const fill = o.fill || "surface", thin = Math.min(w, h), long = Math.max(w, h);
+      const bb = S.data.bandBox && S.data.bandBox.get(E);
+      if (bb && fill === bb[4] && y >= bb[1] - 1 && y + h <= bb[1] + bb[3] + 2) return slot(p);
+      if (thin <= 14 || (thin <= 40 && long >= thin * 3)) {        // a thin rule is the infographic's ink
+        const yy = thin <= 14 ? y + h / 2 : y + h;
+        add(S, p, { kind: "line", d: h <= w ? `M${f1(x)} ${f1(yy)} H${f1(x + w)}` : `M${f1(x + w / 2)} ${f1(y)} V${f1(y + h)}`, tone: skColoured(fill) ? fill : "line" });
+        return slot(p);
+      }
+      const band = y <= 1 && h <= 140 && E.w && w >= E.w * 0.8 && h < (E.h || 1e9) * 0.5;
+      if (band) {                                                   // a coloured band: the block's lid takes its colour
+        (S.data.bandBox = S.data.bandBox || new Map()).set(E, [x, y, w, h, fill]);
+        (S.data.lid = S.data.lid || new Map()).set(E, fill);
+        add(S, p, { kind: "face", x, y, w, h, tone: fill });
+        return slot(p);
+      }
+      if (["row", "structure", "instrument"].includes(E.kind)) return slot(p);   // words and marks on the board itself
+      add(S, p, { kind: "block", x, y, w, h, tone: fill, bar: E.kind === "bar", r: r != null ? Math.min(r, 14) : 0 });
+      return slot(p);
+    }
+    return {
+      version: "1",
+      summary: "a template stood on the board: cards as blocks on plinths in three tones (A, frontal faces) or the whole template on one true isometric wall (B), tokens for discs, iso bars, thin ink for lines, blocks rising out of the board on their words, a map pin for a spoken word",
+      refuse: ["scenario.dialogue", "quote"],
+      classic: ["peep", "mark", "sketch", "polygon", "icon", "kicker", "path"],
+      kit: {
+        rect: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o),
+        card: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, Object.assign({ fill: "surface" }, o)),
+        pill: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o, h / 2),
+        disc(S, p, cx, cy, r, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.disc(p, cx, cy, r, o);
+          add(S, p, { kind: "token", cx, cy, r: r <= 14 ? Math.max(6, r * 0.8) : r, tone: o.fill && o.fill !== "none" ? o.fill : "surface", cube: r <= 14 });
+          return slot(p);
+        },
+        line(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.line(p, x1, y1, x2, y2, o);
+          add(S, p, { kind: "line", d: `M${f1(x1)} ${f1(y1)} L${f1(x2)} ${f1(y2)}`, tone: o.stroke && o.stroke !== "line" ? o.stroke : "line", dash: o.dash ? "8 8" : null });
+          return slot(p);
+        },
+        arrow(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.arrow(p, x1, y1, x2, y2, o);
+          const a = Math.atan2(y2 - y1, x2 - x1), hl = 14;
+          add(S, p, { kind: "line", d: `M${f1(x1)} ${f1(y1)} L${f1(x2)} ${f1(y2)} M${f1(x2 + Math.cos(a + 2.6) * hl)} ${f1(y2 + Math.sin(a + 2.6) * hl)} L${f1(x2)} ${f1(y2)} L${f1(x2 + Math.cos(a - 2.6) * hl)} ${f1(y2 + Math.sin(a - 2.6) * hl)}`, tone: "ink" });
+          const g = slot(p);
+          return { g, path: g, head: g, __skinE: E };
+        },
+        text(S, p, str, o) {
+          o = o || {};
+          const tn = S.baseK.text(p, str, o), E = S.owner(p);
+          if (E) { tn.setAttribute("data-skin", "content"); S.add(E, { kind: "words", node: tn }); }
+          return tn;
+        },
+      },
+      // a map pin drops onto the spoken words
+      emphasis(S, textEl, t, o) {
+        const f = textEl && textEl.__fit, E = S.owner(textEl);
+        if (!f || !E) return S.baseM.highlight(textEl, t, o);
+        if (S.data.lid && S.data.lid.has(E)) return null;
+        S.item(E, t - 0.05, [{ kind: "pin", parent: textEl.parentNode, x: f.x + Math.min(f.width, (o.w || f.width)) / 2, y: f.y - 6 }], "emphasis");
+        return null;
+      },
+      perform(S, items) {
+        const ctx = S.ctx, beat = ctx.beat, variant = (((Loom.manifest || {}).template_skin_variant) || "A").toUpperCase();
+        const meta = (E, k) => ({ kind: k || "reveal", beat: beat.id, name: E.name, content: true });
+        const poly = (pts, fill, parent, op) => svg("polygon", { points: pts.map((q) => f1(q[0]) + "," + f1(q[1])).join(" "), fill, opacity: op }, parent);
+        const depthOf = (w, h) => clamp(Math.min(w, h) * 0.22, 14, 40);
+        function block(q, parent) {
+          const T = tones(q.tone), d = depthOf(q.w, q.h), vx = DV[0] * d, vy = DV[1] * d, { x, y, w, h } = q;
+          const g = svg("g", {}, parent);
+          if (!q.bar) {                                             // the plinth: a thin slab under the block's foot
+            const P = tones("field2"), px = 18, ph = 9, x0 = x - px, x1 = x + w + px, y0 = y + h, dd = d + 2 * px, wx = DV[0] * dd, wy = DV[1] * dd;
+            poly([[x0, y0], [x1, y0], [x1 + wx, y0 + wy], [x0 + wx, y0 + wy]], P.top, g);
+            svg("rect", { x: f1(x0), y: f1(y0), width: f1(x1 - x0), height: ph, fill: P.left }, g);
+            poly([[x1, y0], [x1 + wx, y0 + wy], [x1 + wx, y0 + wy + ph], [x1, y0 + ph]], P.right, g);
+          }
+          const lid = q.lid ? tones(q.lid) : T;
+          poly([[x, y], [x + w, y], [x + w + vx, y + vy], [x + vx, y + vy]], lid.top, g);
+          poly([[x + w, y], [x + w + vx, y + vy], [x + w + vx, y + h + vy], [x + w, y + h]], T.right, g);
+          svg("rect", { x: f1(x), y: f1(y), width: f1(w), height: f1(h), fill: T.left === T.base ? T.base : T.left }, g);
+          return g;
+        }
+        function token(q, parent) {
+          const T = tones(q.tone), g = svg("g", {}, parent);
+          if (q.cube) {                                             // a small cube for a bullet
+            const s = q.r, vx = DV[0] * s, vy = DV[1] * s;
+            poly([[q.cx - s, q.cy - s], [q.cx + s, q.cy - s], [q.cx + s + vx, q.cy - s + vy], [q.cx - s + vx, q.cy - s + vy]], T.top, g);
+            poly([[q.cx + s, q.cy - s], [q.cx + s + vx, q.cy - s + vy], [q.cx + s + vx, q.cy + s + vy], [q.cx + s, q.cy + s]], T.right, g);
+            svg("rect", { x: f1(q.cx - s), y: f1(q.cy - s), width: f1(2 * s), height: f1(2 * s), fill: T.left }, g);
+            return g;
+          }
+          const d = clamp(q.r * 0.28, 8, 22), vx = DV[0] * d, vy = DV[1] * d;
+          svg("circle", { cx: f1(q.cx + vx), cy: f1(q.cy + vy), r: f1(q.r), fill: T.right }, g);
+          const a = Math.atan2(vy, vx) + Math.PI / 2, ox = Math.cos(a) * q.r, oy = Math.sin(a) * q.r;
+          poly([[q.cx + ox, q.cy + oy], [q.cx + ox + vx, q.cy + oy + vy], [q.cx - ox + vx, q.cy - oy + vy], [q.cx - ox, q.cy - oy]], T.right, g);
+          svg("circle", { cx: f1(q.cx), cy: f1(q.cy), r: f1(q.r), fill: T.top }, g);
+          return g;
+        }
+        // B: one wall for the whole template, standing on a board slab, everything printed on its 30 degree face
+        if (variant === "B" && items.length) {
+          const els = (S.added || []).filter((n) => n.parentNode === ctx.g);
+          const k = 0.6, cx = 960, cy = 470;
+          const wallE = ctx.el("skin_wall", { x: 0, y: 0, w: 1920, h: 1080, kind: "scenery", exit: "recede" });
+          ctx.g.insertBefore(wallE.outer, ctx.g.firstChild);
+          const face = svg("g", { transform: `translate(${cx} ${cy}) matrix(${f1(C30 * k * 1000 / 1000)} ${0.5 * k} 0 ${k} 0 0) translate(${-cx} ${-cy})` }, ctx.g);
+          for (const n of els) face.appendChild(n);
+          const T = tones("surface"), P = tones("field2"), L = 96, R = 1824, Tp = 84, Bt = 930, d = 70, vx = DV[0] * d, vy = DV[1] * d;
+          const sk = (x, y) => [cx + (x - cx) * C30 * k, cy + (y - cy) * k + (x - cx) * 0.5 * k];
+          const g = wallE.inner, a = sk(L, Tp), b = sk(R, Tp), c = sk(R, Bt), e = sk(L, Bt);
+          const sl = 60, s0 = [e[0] - sl, e[1] + 10], s1 = [c[0] + sl, c[1] + 10 + sl * 0.5];
+          poly([s0, s1, [s1[0] + DV[0] * 160, s1[1] + DV[1] * 160], [s0[0] + DV[0] * 160, s0[1] + DV[1] * 160]], P.top, g);
+          poly([s0, s1, [s1[0], s1[1] + 16], [s0[0], s0[1] + 16]], P.left, g);
+          poly([a, b, [b[0] + vx, b[1] + vy], [a[0] + vx, a[1] + vy]], T.top, g);
+          poly([b, [b[0] + vx, b[1] + vy], [c[0] + vx, c[1] + vy], c], T.right, g);
+          poly([a, b, c, e], T.left === T.base ? S_().c("surface") : T.left, g);
+          const t0 = Math.max(ctx.start || 0, 0, Math.min(...items.map((it) => it.t)) - 0.4);
+          Loom.tween(g, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.5, ease: Loom.ease.enter, immediateRender: true }, t0, meta(wallE, "grow"));
+          wallE.revealT = t0; wallE.revealKind = "isometric";
+        }
+        for (const it of items) {
+          const E = it.E, t = Math.max(it.t, ctx.start || 0, 0);
+          let rise = false;
+          for (const q of it.parts) {
+            if (q.kind === "block" && variant === "A") {
+              if (S.data.lid && S.data.lid.get(E)) q.lid = S.data.lid.get(E);
+              const g = block(q, q.g); rise = true;
+              Loom.tween(g, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: q.bar ? 0.6 : 0.42, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "rise"));
+            } else if (q.kind === "block") {                        // B: the card is a panel printed on the wall
+              const T = tones(q.tone), node = svg("rect", { x: f1(q.x), y: f1(q.y), width: f1(q.w), height: f1(q.h), rx: q.r || 0, fill: T.top }, q.g);
+              Loom.tween(node, { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: true }, t, meta(E, "reveal"));
+              if (q.bar) Loom.tween(q.g, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.6, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "grow"));
+            } else if (q.kind === "face") {
+              const T = tones(q.tone), node = svg("rect", { x: f1(q.x), y: f1(q.y), width: f1(q.w), height: f1(q.h), fill: T.left }, q.g);
+              Loom.tween(node, { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: true }, t + (variant === "A" ? 0.3 : 0), meta(E, "reveal"));
+            } else if (q.kind === "token") {
+              const g = variant === "A" ? token(q, q.g) : svg("circle", { cx: f1(q.cx), cy: f1(q.cy), r: f1(q.r), fill: tones(q.tone).top }, q.g);
+              Loom.tween(g, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.35, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "rise"));
+              rise = true;
+            } else if (q.kind === "line") {
+              const p = svg("path", { d: q.d, fill: "none", stroke: S_().c(q.tone === "line" ? "line" : q.tone), "stroke-width": 2.4, "stroke-linecap": "round", "stroke-dasharray": q.dash || null, opacity: 0 }, q.g);
+              Loom.tween(p, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: true }, t, meta(E, "draw"));
+            } else if (q.kind === "words") {
+              Loom.tween(q.node, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: true }, t + (rise ? 0.38 : 0), meta(E, "reveal"));
+            } else if (q.kind === "pin") {
+              const g = svg("g", { "data-skin": "pin", transform: `translate(${f1(q.x)} ${f1(q.y)})` }, q.parent), c = S_().c("accent");
+              svg("path", { d: "M0 0 C-9 -14 -15 -20 -15 -30 A15 15 0 1 1 15 -30 C15 -20 9 -14 0 0 Z", fill: c }, g);
+              svg("circle", { cx: 0, cy: -30, r: 5.5, fill: S_().c("surface") }, g);
+              Loom.tween(g, { opacity: 0, y: -26 }, { opacity: 1, y: 0, duration: 0.3, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "pin"));
+            }
+          }
+          if (E.revealT == null || t < E.revealT) { E.revealT = t; E.revealKind = "isometric"; }
+          it.at = t; it.by = t + (rise ? 0.6 : 0.3); it.made = variant === "B" ? "on the wall" : "stood";
+        }
+      },
+    };
+  }
+  const S_ = () => Loom.style;
+  if (Loom.skins) Loom.skins.define("isometric", skinOf());
+
   const api = {
     board: boardWithItems,
     audit,

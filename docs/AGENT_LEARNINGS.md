@@ -14,6 +14,58 @@ scenes, review), **tweak** (Haiku sub-agents via `loom tweak`).
 
 ---
 
+## Template skins built (2026-10-16, D-198)
+
+- **L-484 A second tween on a node does not hide it before its start.** (orchestrator, runtime/skins.js)
+  - **What happened:** the hologram skin faded recap's labels in on their words, but they showed from the first frame.
+  - **Root cause:** recap tweens the label's colour first, so `Loom.tween` gave the skin's later opacity tween no start
+    state at load (only the first tween on a target renders its from-state).
+  - **Action:** the skins' own tweens on a node the template may already tween pass `immediateRender: true`. Classic
+    leftovers are wrapped in a group of their own and the wrapper is tweened, never the node.
+  - **Prevention:** PARTLY DONE. The rule is in the hologram, screencast and isometric skins, and the per-style test
+    renders recap. No test fails on an early label yet (OPEN).
+
+- **L-485 Fitting many short marks into a short window cannot work on the blueprint engine.** (orchestrator, blueprint
+  skin)
+  - **What happened:** a bar's section hatching drawn with `D.draw {parallel, dur: 0.5}` was still half drawn at the end
+    of a 10 s sheet.
+  - **Root cause, in part:** the fit keeps a floor of 0.03 s a mark, so 80 hatch lines take at least 2.4 s. Why it ran
+    past 10 s is not known.
+  - **Action:** the skin lays hatching in as one wash, a group that fades in after its outline.
+  - **Prevention:** OPEN. Find the cause in `D.draw`'s parallel fit before another caller relies on it.
+
+- **L-486 The sheet's 0.7 s between anchors is faster than speech, and a drawn template exposed it.** (orchestrator,
+  template sheet)
+  - **What happened:** a hand needs about 4.6 s for a 13-word definition. At 0.7 s a word, every whiteboard part ran
+    late, and the hand ran up to 9 s behind its word on the blueprint chart.
+  - **Action:**
+    - `template_sheet` spaces anchors 1.6 s apart (about one clause each);
+    - long fixtures carry their own cue times (`library/template_fixtures.json`);
+    - the skins measure each part's natural time and fit it to the window before the next part, at most 1.8 x faster.
+      When that is not enough, they warn `skin_squeezed` or `skin_late`.
+  - **Prevention:** DONE (`Loom.skins.schedule`, `skin_part_late` in the `skin_formed` check).
+
+- **L-488 The sheet passed, and the composed lesson still found three things.** (orchestrator, the blameless proof)
+  - **Set-up:** a scratch copy of `blameless-postmortem` with skins on, against a classic copy of the same plan
+    (`docs/research/2026-10-16-template-skins/PROOF.md`).
+  - **What happened:**
+    1. The skin's boards armed the whiteboard face audit for the whole lesson, so 34 old bespoke words failed it.
+    2. A hand needs about a second to put a title on an empty board, so the frame read as empty after the join
+       (`join_blank` at b09, b10).
+    3. A board-colour cover for a card showed as a pale block on the board's texture.
+  - **Action:**
+    1. A skin board does not arm the audit; the skinned sheet runs it itself.
+    2. A drawing performer starts its first part at the end of the join (`schedule {open}`).
+    3. Only a bubble gets a cover, timed to the hand.
+  - **Result:** 2 errors skinned against 4 classic, both on bespoke beats; the hologram copy has the same 7 errors either
+    way.
+  - **Prevention:** DONE for these three (code and the proof note). OPEN: a test that composes a small lesson with skins
+    on. The tests use the sheet, which has no joins.
+
+- **L-487 L-483 is closed by D-198.** The template sheet keeps three frames per case for a skinned style
+  (`--template ... --skin style`), and `skin_formed` fails a skinned lesson's template beat that was built the classic
+  way (`tests/suites/template_skins.py`).
+
 ## Template skins proposed (2026-10-16, docs/strategy/2026-10-16-template-skins.md)
 
 - **L-483 The template sheet shows only the end frame, so "appears fully formed" could never be seen on it.**

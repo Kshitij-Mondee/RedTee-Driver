@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-10-16 - Template skins: each engine style draws the catalog templates its own way (D-198)
+- `runtime/skins.js` (new): `Loom.skins.define` / `build` / `schedule`. A template build under a skin records its parts
+  and entrances, then the style performs them in time order; templates unchanged. Built at `world.js`'s one template site
+  and on the template sheet.
+- Skins in the five engines:
+  - `whiteboard.js`: the one hand draws, with `B.unveil` for display-face headings, an `instant` draw for what a beat
+    restates at its cut, a per-mark pen, and `fresh()`;
+  - `blueprint.js`: the nib drafts, hatching laid in as a wash;
+  - `hologram.js`: light planes, a scan, reticles, typed words, the lock;
+  - `screencast.js`: a product page that loads;
+  - `isometric.js`: A as blocks on plinths, B as one 30 degree wall.
+- The switch:
+  - `compose.template_skin` puts `template_skin: "style"` in the manifest;
+  - `Project.create` stamps `template_skins`;
+  - schema: storyboard `template_skin`, scene `skin: "classic"`;
+  - no stamp, or `engine: off`, means classic.
+- Checks:
+  - `loom/checks/skins.py`: `skin_formed`, run by `check`; the probe reports `skins`;
+  - `direction.storyboard_warnings`: `template_not_this_style`, from `engines.skin_refuses`;
+  - a templates line on each direction card.
+- The template sheet:
+  - `py -m loom library sheet --template <id|all> --skin classic|style --styles ... --frames ... --variant B`;
+  - three frames per case;
+  - the film clock is run;
+  - a scene record;
+  - cases in `library/template_fixtures.json`.
+- Tests: `tests/suites/template_skins.py` (8).
+
 ## 2026-10-16 - Narration speed: a range per kind, decided per lesson (D-197)
 - `loom/narrate`: `KIND_RANGE`, `suggest_speed` (density), `speed_block`; the script's `voice_speed` (schema, gate);
   the VOICE SPEED instruction in Relay's script task and Shuttle's P4. Voice: af_heart.

@@ -31,3 +31,6 @@ Its strength is watching the idea being built on the word; plan what each sectio
 ## By kind of video
 - Explainer: one drawing that builds and is read back at the end. No quiz.
 - Teaching: the framework drawn step by step, the check written as a question the hand answers after the pause.
+
+## Templates (D-198)
+- A catalog template is drawn by the hand in reading order on its words: give its parts time to be drawn.

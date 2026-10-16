@@ -2247,6 +2247,235 @@
         `the style is the subject made of light; give each of them a hologram (a hero, an object, a plane in depth, a globe, a mesh, a trace) and keep panels the minority`, { beat: uiOnly[0] });
   }
 
+
+  // ---------------------------------------------------------------- the template skin (D-198)
+  // A catalog template on the console is projected as light, never a slide restyled cyan (the essence's first avoid):
+  // a card is a plane (a dark plate under its words, a faint hairline, corner brackets and one hot edge) that a scan band
+  // builds top to bottom; a disc is a reticle; a row is a readout on the console itself (no box); a band is a rule in its
+  // status colour; a bar is a column of light; words type on with a caret; lines draw on with their glow. The console has
+  // no performer, so each part comes on its own word. Only the part being spoken has the hot edge: when the next sibling
+  // arrives the last one steps back to idle (the system reports one thing at a time). A word marked when spoken gets the
+  // lock's brackets.
+  const SK_PLAIN = new Set(["surface", "surface2", "field", "field2", "line", "shadow", "none", "ink", "muted"]);
+  const skColoured = (t) => !!t && typeof t === "string" && !SK_PLAIN.has(t) && !t.startsWith("#");
+  const toneOf = (t) => (t === "pos" ? "accent4" : t === "neg" ? "accent3" : skColoured(t) ? t : "accent");
+  function skinOf() {
+    const slot = (S, p) => { const g = svg("g", { "data-skin": "slot" }, p); return g; };
+    function add(S, p, part) {
+      const E = S.owner(p);
+      if (!E) return null;
+      part.g = slot(S, p);
+      return S.add(E, part);
+    }
+    function box(S, p, x, y, w, h, o, r) {
+      o = o || {};
+      const E = S.owner(p);
+      if (!E || (o.fill === "none" && !o.stroke)) return S.baseK.rect(p, x, y, w, h, o);
+      const fill = o.fill || "surface", thin = Math.min(w, h), long = Math.max(w, h);
+      if (thin <= 14 || (thin <= 40 && long >= thin * 3)) {        // a rule of light (a desk top, a progress bar, a strip)
+        const yy = thin <= 14 ? y + h / 2 : y + h;
+        add(S, p, { kind: "line", pts: h <= w ? [[x, yy], [x + w, yy]] : [[x + w / 2, y], [x + w / 2, y + h]], tone: skColoured(fill) ? toneOf(fill) : "line", op: skColoured(fill) ? 0.9 : 0.45 });
+        return slot(S, p);
+      }
+      const band = y <= 1 && h <= 140 && E.w && w >= E.w * 0.8 && h < (E.h || 1e9) * 0.5;
+      if (band) {                                                   // a header band: a status rule under the header
+        add(S, p, { kind: "line", pts: [[x, y + h], [x + w, y + h]], tone: skColoured(fill) ? toneOf(fill) : "accent", op: 0.9 });
+        (S.data.band = S.data.band || new Set()).add(E);
+        return slot(S, p);
+      }
+      if (["row", "structure", "instrument"].includes(E.kind)) return slot(S, p);   // a readout on the console itself
+      if (E.kind === "bar") { add(S, p, { kind: "bar", x, y, w, h, tone: toneOf(fill) }); return slot(S, p); }
+      add(S, p, { kind: "plane", x, y, w, h, tone: skColoured(fill) ? toneOf(fill) : "accent", plane: true });
+      return slot(S, p);
+    }
+    return {
+      version: "1",
+      summary: "a template projected as light on the console: planes built by a scan (plate, hairline, brackets, one hot edge), reticles, readouts without boxes, status rules, columns of light, words typed on, the spoken part locked",
+      refuse: ["scenario.dialogue", "calendar.plan"],
+      classic: ["peep", "sketch"],
+      kit: {
+        rect: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o),
+        card: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, Object.assign({ fill: "surface" }, o)),
+        pill: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o, h / 2),
+        disc(S, p, cx, cy, r, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.disc(p, cx, cy, r, o);
+          const tone = toneOf(o.fill);
+          if (r <= 14) add(S, p, { kind: "dot", cx, cy, r: Math.max(4, r * 0.55), tone });
+          else add(S, p, { kind: "ring", cx, cy, r, tone });
+          return slot(S, p);
+        },
+        line(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.line(p, x1, y1, x2, y2, o);
+          add(S, p, { kind: "line", pts: [[x1, y1], [x2, y2]], tone: o.stroke === "line" || !o.stroke ? "line" : toneOf(o.stroke), op: o.stroke === "line" || !o.stroke ? 0.55 : 0.9, dash: o.dash ? "6 10" : null });
+          return slot(S, p);
+        },
+        arrow(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.arrow(p, x1, y1, x2, y2, o);
+          const a = Math.atan2(y2 - y1, x2 - x1), hl = 16;
+          add(S, p, { kind: "line", pts: [[x1, y1], [x2, y2]], tone: "accent", op: 0.8 });
+          add(S, p, { kind: "line", pts: [[x2 + Math.cos(a + 2.6) * hl, y2 + Math.sin(a + 2.6) * hl], [x2, y2], [x2 + Math.cos(a - 2.6) * hl, y2 + Math.sin(a - 2.6) * hl]], tone: "accent", op: 0.9 });
+          const g = slot(S, p);
+          return { g, path: g, head: g, __skinE: E };
+        },
+        path(S, p, d, o) {
+          o = o || {};
+          const el = S.baseK.path(p, d, o), E = S.owner(p);
+          if (!E || !o.stroke || o.stroke === "none") return el;
+          el.setAttribute("opacity", 0); el.setAttribute("data-skin", "ghost");
+          let L = 0; try { L = el.getTotalLength(); } catch (e) { L = 0; }
+          const pts = [];
+          for (let i = 0, n = Math.max(2, Math.ceil(L / 6)); i <= n; i++) { const q = el.getPointAtLength(L * i / n); pts.push([q.x, q.y]); }
+          if (pts.length > 1) add(S, p, { kind: "line", pts, tone: o.stroke === "line" ? "line" : toneOf(o.stroke), op: o.stroke === "line" ? 0.55 : 0.9, dash: o.dash ? "4 10" : null });
+          return el;
+        },
+        polygon(S, p, pts, o) {
+          o = o || {};
+          if (!S.owner(p) || !pts || pts.length < 2) return S.baseK.polygon(p, pts, o);
+          const P = pts.map((q) => (Array.isArray(q) ? q : [q.x, q.y]));
+          add(S, p, { kind: "line", pts: P.concat([P[0]]), tone: toneOf(o.fill), op: 0.8 });
+          return slot(S, p);
+        },
+        icon(S, p, name, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.icon(p, name, o);
+          const g = S.baseK.icon(p, name, Object.assign({}, o, { color: o.color && skColoured(o.color) ? o.color : "accent" }));
+          g.setAttribute("data-skin", "glyph");
+          add(S, p, { kind: "glyph", node: g });
+          return g;
+        },
+        mark(S, p, kind, cx, cy, size, o) {
+          if (!S.owner(p)) return S.baseK.mark(p, kind, cx, cy, size, o);
+          const s = size || 56;
+          if (kind === "yes") add(S, p, { kind: "line", pts: [[cx - s * 0.3, cy], [cx - s * 0.08, cy + s * 0.24], [cx + s * 0.32, cy - s * 0.24]], tone: "accent4", op: 1 });
+          else { add(S, p, { kind: "line", pts: [[cx - s * 0.26, cy - s * 0.26], [cx + s * 0.26, cy + s * 0.26]], tone: "accent3", op: 1 }); add(S, p, { kind: "line", pts: [[cx + s * 0.26, cy - s * 0.26], [cx - s * 0.26, cy + s * 0.26]], tone: "accent3", op: 1 }); }
+          return slot(S, p);
+        },
+        text(S, p, str, o) {
+          o = o || {};
+          const tn = S.baseK.text(p, str, Object.assign({}, o, { color: o.color && ["field", "onAccent"].includes(o.color) ? "ink" : o.color }));
+          if (S.owner(p)) { tn.setAttribute("data-skin", "words"); S.add(S.owner(p), { kind: "words", node: tn, len: String(str).length }); }
+          return tn;
+        },
+        kicker(S, p, str, o) {
+          const tn = S.baseK.kicker(p, str, Object.assign({}, o || {}, { color: (o && o.color) || "accent" }));
+          if (S.owner(p)) tn.setAttribute("data-skin", "words");
+          if (S.owner(p)) S.add(S.owner(p), { kind: "words", node: tn, len: String(str).length });
+          return tn;
+        },
+      },
+      // the lock: four brackets close on the spoken words and stay
+      emphasis(S, textEl, t, o) {
+        const f = textEl && textEl.__fit, E = S.owner(textEl);
+        if (!f || !E) return S.baseM.highlight(textEl, t, o);
+        if (S.data.band && S.data.band.has(E)) return null;
+        S.item(E, t - 0.05, [{ kind: "lock", parent: textEl.parentNode, box: [f.x - 14, f.y - 8, (o.w || f.width) + 28, f.height + 16] }], "emphasis");
+        return null;
+      },
+      perform(S, items) {
+        const ctx = S.ctx, C = cfg(), beat = ctx.beat;
+        const meta = (E, k) => ({ kind: k || "draw", beat: beat.id, name: E.name, content: true });
+        const sw = () => baseStroke();
+        let blurId = null;
+        if (C.glow && C.blur > 0) {
+          blurId = "lmholo_skin_" + beat.id;
+          let root = ctx.g; while (root.ownerSVGElement) root = root.ownerSVGElement;
+          if (!root.querySelector("#" + blurId)) { const fl = svg("filter", { id: blurId, x: "-10%", y: "-10%", width: "120%", height: "120%" }, svg("defs", {}, root)); svg("feGaussianBlur", { stdDeviation: C.blur }, fl); }
+        }
+        const line = (E, g, pts, t, dur, o) => {
+          const c = col(o.tone), d = dpath(pts, o.closed), L = Math.max(1, plen(pts, o.closed)), w = o.w || sw();
+          if (C.glow && o.halo !== false) {
+            const h = svg("path", { d, fill: "none", stroke: c, "stroke-width": (+w + C.halo_width * 2).toFixed(2), "stroke-linecap": "round", opacity: 0, filter: blurId ? `url(#${blurId})` : null }, g);
+            Loom.tween(h, { opacity: 0 }, { opacity: +(C.halo * (o.op == null ? 1 : o.op)).toFixed(3), duration: dur * 0.8 + 0.1 }, t + dur * 0.2, meta(E));
+          }
+          const p = svg("path", { d, fill: "none", stroke: c, "stroke-width": w, "stroke-linecap": "square", opacity: 0,
+            "stroke-dasharray": o.dash || `${L.toFixed(1)} ${(L + 8).toFixed(1)}`, "stroke-dashoffset": o.dash ? 0 : L.toFixed(1) }, g);
+          Loom.tween(p, { opacity: 0 }, { opacity: o.op == null ? 0.9 : o.op, duration: o.dash ? dur : 0.01, ease: "none" }, t, meta(E));
+          if (!o.dash) Loom.tween(p, { strokeDashoffset: L }, { strokeDashoffset: 0, duration: dur, ease: "none" }, t, meta(E));
+          return p;
+        };
+        const hot = new Map();          // an element kind -> its last plane's hot edge (stepped back when a sibling arrives)
+        for (const it of items) {
+          const E = it.E, t = Math.max(it.t, ctx.start || 0, 0);
+          const hasPlane = it.parts.some((q) => q.plane);
+          let k = 0, end = t;
+          if (hasPlane) {                               // the scan band builds the plane: a clip opens top to bottom under a bright line
+            const b = { x: 0, y: 0, w: E.w || 0, h: E.h || 0 };
+            if (!(b.w > 0 && b.h > 0)) { try { const bb = E.inner.getBBox(); b.x = bb.x; b.y = bb.y; b.w = bb.width; b.h = bb.height; } catch (e) { /* unmeasured */ } }
+            const id = Loom.uid("lmholoscan"), pad = 10;
+            const cp = svg("clipPath", { id, clipPathUnits: "userSpaceOnUse" }, svg("defs", {}, E.outer));
+            const r = svg("rect", { x: f1(b.x - pad), y: f1(b.y - pad), width: f1(b.w + 2 * pad), height: 0 }, cp);
+            E.life.setAttribute("clip-path", `url(#${id})`);
+            const dur = clamp(0.25 + b.h / 1600, 0.3, 0.6);
+            Loom.tween(r, { attr: { height: 0 } }, { attr: { height: b.h + 2 * pad }, duration: dur, ease: Loom.ease.enter }, t, meta(E, "scan"));
+            const band = svg("rect", { x: f1(b.x - 4), y: f1(b.y), width: f1(b.w + 8), height: 2.4, fill: col("accent"), opacity: 0, "data-skin": "scan" }, E.inner);
+            Loom.drive((e, raw) => { band.setAttribute("y", f1(b.y + b.h * e)); band.setAttribute("opacity", raw > 0 && raw < 1 ? (0.85 * (1 - raw * 0.6)).toFixed(3) : "0"); }, t, dur, "enter", { kind: "scan", beat: beat.id, name: E.name + ".scan", content: false });
+            end = t + dur;
+          }
+          for (const q of it.parts) {
+            const tq = t + 0.05 + 0.05 * k++;
+            if (q.kind === "plane") {
+              const g = q.g, c = clamp(Math.min(q.w, q.h) * 0.12, 12, 30);
+              const pl = svg("rect", { x: f1(q.x), y: f1(q.y), width: f1(q.w), height: f1(q.h), fill: S_().c("surface"), opacity: 0, stroke: "none" }, g);
+              Loom.tween(pl, { opacity: 0 }, { opacity: 0.82, duration: 0.3 }, tq, meta(E, "reveal"));
+              line(E, g, [[q.x, q.y], [q.x + q.w, q.y], [q.x + q.w, q.y + q.h], [q.x, q.y + q.h]], tq + 0.05, 0.4, { closed: true, tone: "line", op: 0.35, halo: false, w: Math.max(1, sw() * 0.5) });
+              for (const bk of brackets(q.x, q.y, q.w, q.h, c)) line(E, g, bk, tq, 0.25, { tone: q.tone, op: 1, w: (sw() * 1.15).toFixed(2) });
+              // the hot edge: the top edge in the plane's tone, bright while this is the part being spoken
+              const he = line(E, g, [[q.x + c + 6, q.y], [q.x + q.w - c - 6, q.y]], tq + 0.1, 0.3, { tone: q.tone, op: 0.95, w: (sw() * 1.3).toFixed(2) });
+              const prev = hot.get(E.kind);
+              if (prev && prev.E !== E) Loom.tween(prev.he, { opacity: 0.95 }, { opacity: 0.25, duration: 0.4 }, tq, meta(prev.E, "state"));
+              hot.set(E.kind, { E, he });
+            } else if (q.kind === "line") line(E, q.g, q.pts, tq, clamp(plen(q.pts) / 1800, 0.18, 0.6), { tone: q.tone, op: q.op, dash: q.dash });
+            else if (q.kind === "ring") {
+              const g = q.g, pts = [];
+              for (let i = 0; i <= 48; i++) { const a = -Math.PI / 2 + i / 48 * Math.PI * 2; pts.push([q.cx + Math.cos(a) * q.r, q.cy + Math.sin(a) * q.r]); }
+              const pl = svg("circle", { cx: f1(q.cx), cy: f1(q.cy), r: f1(q.r), fill: S_().c("surface"), opacity: 0 }, g);
+              Loom.tween(pl, { opacity: 0 }, { opacity: 0.8, duration: 0.25 }, tq, meta(E, "reveal"));
+              line(E, g, pts, tq, 0.35, { tone: q.tone, op: 0.95 });
+              for (const a of [0, 90, 180, 270]) {      // the reticle's four ticks
+                const ra = a * Math.PI / 180, r0 = q.r + 4, r1 = q.r + 12;
+                line(E, g, [[q.cx + Math.cos(ra) * r0, q.cy + Math.sin(ra) * r0], [q.cx + Math.cos(ra) * r1, q.cy + Math.sin(ra) * r1]], tq + 0.3, 0.12, { tone: q.tone, op: 0.9, halo: false });
+              }
+            } else if (q.kind === "dot") {
+              const d = svg("rect", { x: f1(q.cx - q.r), y: f1(q.cy - q.r), width: f1(2 * q.r), height: f1(2 * q.r), fill: col(q.tone), opacity: 0, transform: `rotate(45 ${f1(q.cx)} ${f1(q.cy)})` }, q.g);
+              Loom.tween(d, { opacity: 0 }, { opacity: 1, duration: 0.15 }, tq, meta(E, "reveal"));
+            } else if (q.kind === "bar") {
+              const g = q.g, top = svg("g", {}, g);
+              const body = svg("rect", { x: f1(q.x), y: f1(q.y), width: f1(q.w), height: f1(q.h), fill: col(q.tone), opacity: 0.22 }, top);
+              line(E, top, [[q.x, q.y], [q.x + q.w, q.y]], tq, 0.01, { tone: q.tone, op: 1, w: (sw() * 1.5).toFixed(2) });
+              line(E, top, [[q.x, q.y + q.h], [q.x, q.y], [q.x + q.w, q.y], [q.x + q.w, q.y + q.h]], tq, 0.01, { tone: q.tone, op: 0.6, halo: false, w: Math.max(1, sw() * 0.6) });
+              void body;
+              Loom.tween(top, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.7, ease: Loom.ease.enter }, tq, meta(E, "grow"));
+            } else if (q.kind === "words" || q.kind === "glyph") {
+              const n = q.node, dur = q.kind === "glyph" ? 0.25 : clamp(0.12 + q.len * 0.012, 0.15, 0.55);
+              // hidden from load even when the template tweened this node first (recap colours its label: a later tween
+              // would not render its start state, and the label showed before its word)
+              Loom.tween(n, { opacity: 0 }, { opacity: 1, duration: dur, ease: "none", immediateRender: true }, tq + (hasPlane ? 0.15 : 0), meta(E, "reveal"));
+              if (q.kind === "words" && n.__fit && dur > 0.12) {
+                const f = n.__fit, cw = Math.max(2, f.size * 0.08);
+                const cur = svg("rect", { x: f1(f.x), y: f1(f.y + f.height * 0.12), width: f1(cw), height: f1(f.height * 0.76), fill: col("accent"), opacity: 0, "data-skin": "caret" }, n.parentNode);
+                Loom.drive((e, raw) => { cur.setAttribute("opacity", raw > 0 && raw < 1 ? "0.8" : "0"); cur.setAttribute("x", f1(f.x + f.width * e)); }, tq + (hasPlane ? 0.15 : 0), dur, "linear", { kind: "reveal", beat: beat.id, name: E.name + ".type", content: true });
+              }
+              end = Math.max(end, tq + dur);
+            } else if (q.kind === "lock") {
+              const [x, y, w, h] = q.box, c = clamp(Math.min(w, h) * 0.3, 10, 22), g = svg("g", { "data-skin": "lock" }, q.parent);
+              for (const bk of brackets(x, y, w, h, c)) line(E, g, bk, tq, 0.01, { tone: "accent2", op: 1, w: (sw() * 1.2).toFixed(2) });
+              const cx = x + w / 2, cy = y + h / 2;
+              Loom.tween(g, { scale: 1.25, transformOrigin: `${f1(cx)}px ${f1(cy)}px` }, { scale: 1, duration: 0.22, ease: Loom.ease.enter }, tq, meta(E, "lock"));
+            }
+          }
+          if (E.revealT == null || t < E.revealT) { E.revealT = t; E.revealKind = "draw"; }
+          it.at = t; it.by = Math.max(end, t + 0.3); it.made = "projected";
+        }
+      },
+    };
+  }
+  const S_ = () => Loom.style;
+  if (Loom.skins) Loom.skins.define("hologram", skinOf());
+
   Loom.engines.define("hologram", {
     version: "1",
     summary: "a calm operations HUD in light, with a hero moment (a 3D wireframe object in true perspective, scanned onto a projector pad on a dark stage, with HUD chrome and amber data plates): depth layers (far, mid, near) on the place camera with push-through and a 2.5D orbit; frames with corner brackets; panels that assemble rule by rule; briefing cards, a flow diagram that points the way the data moves and filled bars for rankings and odds; readouts that scroll; a radial scanner; target locks that close on any element; a wireframe globe with arcs and traffic; a network mesh with packets; a waveform with an anomaly; hex and dot grids; a timeline scrubber; gauges with thresholds (RED and USE); callouts; boot-up and power-down; status told twice; one clock; a WCAG flash ledger",

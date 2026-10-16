@@ -65,6 +65,9 @@ class Project:
             # planned under the kind-of-video rules (D-191): a lesson without this stamp (made before them, or a clone of
             # one) keeps the rules it was made and approved under (loom/checks/gates.py _kind_legacy)
             "kind_rules": 1,
+            # planned with template skins (D-198): its catalog templates are drawn the style's way when the style has an
+            # engine; a lesson without this stamp keeps the classic templates it was approved with (compose.template_skin)
+            "template_skins": 1,
             "engine": "loom",
             "mode": "source" if sources else "topic",
             "topic": topic or "",

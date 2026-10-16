@@ -781,7 +781,7 @@ try {
   const rep = await p.evaluate(() => {
     const r = window.__loom_report || {};
     const els = (r.elements || []).map((e) => ({ beat: e.beat, name: e.name, kind: e.kind, revealT: e.revealT, exitT: e.exitT, exitKind: e.exitKind || null, ...("lifeT" in e ? { lifeT: e.lifeT } : {}), ...("heldBy" in e ? { heldBy: e.heldBy } : {}) }));
-    return { ready: !!window.__loom_ready, errors: r.errors, warnings: r.warnings, elements: els, tweens: r.tweens, treatments: r.treatments || [], radii: r.radii || {}, cues: r.cues,
+    return { ready: !!window.__loom_ready, errors: r.errors, warnings: r.warnings, elements: els, tweens: r.tweens, treatments: r.treatments || [], skins: r.skins || [], radii: r.radii || {}, cues: r.cues,
              texts: r.texts, scenes: r.scenes, sfx: r.sfx || [], fx: r.fx || null, overlays: r.overlays || [], objects: r.objects || [], figures: r.figures || [], lottie: r.lottie || [], build_ms: r.build_ms, duration: r.duration,
              timeline: window.__timelines && window.__timelines.main ? window.__timelines.main.duration() : null };
   });

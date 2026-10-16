@@ -2735,6 +2735,215 @@
     flush();
   }
 
+
+  // ---------------------------------------------------------------- the template skin (D-198)
+  // A catalog template in a screencast is a page of the product, never a slide over the app (the essence's avoid): a
+  // window opens with the beat (generic chrome, never a real product's), and the page loads the way software does, its
+  // structure first as skeleton bars where the words will be (so the frame is never empty, D-100), then each part fills in
+  // on its word with the product's short fade. A card is an app card (radius, hairline, a soft lift), a header band is a
+  // status strip with its colour on the left edge, a row is a list row with a divider, a number is a badge, a bar is a
+  // flat chart bar. The teaching layer stays imposed on the product in the signal colour (accent2): a word marked when
+  // spoken gets a callout ring, never a hand-drawn mark.
+  const SK_PLAIN = new Set(["surface", "surface2", "field", "field2", "line", "shadow", "none", "ink", "muted"]);
+  const skColoured = (t) => !!t && typeof t === "string" && !SK_PLAIN.has(t) && !t.startsWith("#");
+  const WIN = { x: 56, y: 30, w: 1808, h: 912, bar: 46 };   // around the template's safe box, above the caption band
+  function skinOf() {
+    const slot = (p) => svg("g", { "data-skin": "slot" }, p);
+    // the product never uses the teaching layer's signal colour (accent2): its own parts take the product's accent
+    const rt = (tok) => (tok === "accent2" ? "accent" : tok);
+    const LIGHT = new Set(["field", "field2", "onAccent", "surface", "surface2"]);
+    const solidIn = (S, E) => (S.data.solid = S.data.solid || new Set()).add(E);
+    function add(S, p, part) {
+      const E = S.owner(p);
+      if (!E) return null;
+      part.g = slot(p);
+      return S.add(E, part);
+    }
+    function box(S, p, x, y, w, h, o, r) {
+      o = o || {};
+      const E = S.owner(p);
+      if (!E || (o.fill === "none" && !o.stroke)) return S.baseK.rect(p, x, y, w, h, o);
+      const fill = rt(o.fill || "surface"), thin = Math.min(w, h), long = Math.max(w, h);
+      const bb = S.data.bandBox && S.data.bandBox.get(E);
+      if (bb && fill === bb[4] && y >= bb[1] - 1 && y + h <= bb[1] + bb[3] + 2) return slot(p);
+      if (thin <= 14 || (thin <= 40 && long >= thin * 3)) {        // a rule, a track or a strip: a hairline UI rule
+        add(S, p, { kind: "rect", x, y: h <= w ? y + h / 2 - 1 : y, w: h <= w ? w : 2, h: h <= w ? 2 : h, fill: skColoured(fill) ? C(fill) : TONE().hair2, r: 1, load: true });
+        return slot(p);
+      }
+      const band = y <= 1 && h <= 140 && E.w && w >= E.w * 0.8 && h < (E.h || 1e9) * 0.5;
+      if (band) {                                                   // a status strip: the page tone, its colour on the left edge
+        (S.data.bandBox = S.data.bandBox || new Map()).set(E, [x, y, w, h, fill]);
+        (S.data.band = S.data.band || new Set()).add(E);
+        add(S, p, { kind: "rect", x, y, w, h, fill: TONE().page, r: [CFG().radius, CFG().radius, 0, 0], load: true });
+        add(S, p, { kind: "rect", x, y, w: 5, h, fill: skColoured(fill) ? C(fill) : C("accent"), r: 0, load: true });
+        add(S, p, { kind: "rect", x, y: y + h - 1, w, h: 1.5, fill: TONE().hair2, r: 0, load: true });
+        return slot(p);
+      }
+      if (E.kind === "row") {                                       // a list row: a divider under it
+        add(S, p, { kind: "rect", x, y: y + h - 1, w, h: 1.5, fill: TONE().hair, r: 0, load: true });
+        return slot(p);
+      }
+      if (E.kind === "bar") { add(S, p, { kind: "rect", x, y, w, h, fill: C(skColoured(fill) ? fill : "accent"), r: [6, 6, 0, 0], grow: true }); return slot(p); }
+      if (["structure", "instrument"].includes(E.kind)) {           // a chart's or a calendar's frame: the page itself
+        add(S, p, { kind: "rect", x, y, w, h, fill: C("surface"), stroke: TONE().hair2, r: CFG().radius, load: true });
+        return slot(p);
+      }
+      const solid = r != null && skColoured(fill);                  // a coloured pill is a button or a badge
+      if (solid) solidIn(S, E);
+      add(S, p, { kind: "card", x, y, w, h, r: r != null ? r : CFG().radius, fill: solid ? C(fill) : C("surface"), stroke: solid ? null : TONE().hair2, lift: !solid, load: true });
+      return slot(p);
+    }
+    return {
+      version: "1",
+      summary: "a template as a page of a generic product: a window, a page that loads structure first (skeleton bars) and fills each part in on its word, app cards, status strips, list rows, badges, flat chart bars; the teaching layer's callout ring for a spoken word",
+      refuse: ["scenario.dialogue"],
+      classic: ["peep", "mark", "sketch"],
+      kit: {
+        rect: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o),
+        card: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, Object.assign({ fill: "surface" }, o)),
+        pill: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o, h / 2),
+        disc(S, p, cx, cy, r, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.disc(p, cx, cy, r, o);
+          const fill = rt(o.fill || "surface");
+          if (skColoured(fill)) solidIn(S, S.owner(p));
+          add(S, p, { kind: "circle", cx, cy, r: r <= 14 ? Math.max(5, r * 0.6) : r, fill: skColoured(fill) ? C(fill) : r > 70 ? mix("surface", "accent", 0.1) : C("surface2"), stroke: skColoured(fill) || r > 70 ? null : TONE().hair2 });
+          return slot(p);
+        },
+        line(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.line(p, x1, y1, x2, y2, o);
+          add(S, p, { kind: "path", d: `M${f1(x1)} ${f1(y1)} L${f1(x2)} ${f1(y2)}`, stroke: skColoured(o.stroke) ? C(o.stroke) : TONE().hair2, sw: 2, dash: o.dash ? "6 6" : null });
+          return slot(p);
+        },
+        arrow(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.arrow(p, x1, y1, x2, y2, o);
+          const a = Math.atan2(y2 - y1, x2 - x1), hl = 12;
+          add(S, p, { kind: "path", d: `M${f1(x1)} ${f1(y1)} L${f1(x2)} ${f1(y2)} M${f1(x2 + Math.cos(a + 2.5) * hl)} ${f1(y2 + Math.sin(a + 2.5) * hl)} L${f1(x2)} ${f1(y2)} L${f1(x2 + Math.cos(a - 2.5) * hl)} ${f1(y2 + Math.sin(a - 2.5) * hl)}`, stroke: C("line"), sw: 2 });
+          const g = slot(p);
+          return { g, path: g, head: g, __skinE: E };
+        },
+        path(S, p, d, o) {
+          o = o || {};
+          const el = S.baseK.path(p, d, Object.assign({}, o, { sw: o.sw ? Math.min(o.sw, 3) : 2 }));
+          if (S.owner(p) && o.stroke && o.stroke !== "none") { el.setAttribute("data-skin", "content"); S.add(S.owner(p), { kind: "node", node: el }); }
+          return el;
+        },
+        icon(S, p, name, o) {
+          o = Object.assign({}, o || {}, { color: rt((o || {}).color) });
+          // an icon set light on a coloured disc stays light only where the disc is still solid
+          if (LIGHT.has(o.color) && !(S.data.solid && S.data.solid.has(S.owner(p)))) o.color = "accent";
+          const g = S.baseK.icon(p, name, o);
+          if (S.owner(p) && g) { g.setAttribute("data-skin", "content"); S.add(S.owner(p), { kind: "node", node: g }); }
+          return g;
+        },
+        text(S, p, str, o) {
+          o = Object.assign({}, o || {});
+          const E = S.owner(p);
+          o.color = rt(o.color);
+          // words set light on a colour stay light only on a solid button or badge; on a band, a card or a bubble that is
+          // now the page's light surface they are the page's ink
+          if (LIGHT.has(o.color) && !(E && S.data.solid && S.data.solid.has(E))) o.color = "ink";
+          const tn = S.baseK.text(p, str, o);
+          if (E) { tn.setAttribute("data-skin", "content"); S.add(E, { kind: "words", node: tn, g: slot(p) }); }
+          return tn;
+        },
+        kicker(S, p, str, o) {
+          o = Object.assign({}, o || {});
+          o.color = rt(o.color || Loom.style.role("kicker", "accent2"));
+          const tn = S.baseK.kicker(p, str, o), E = S.owner(p);
+          if (E) { tn.setAttribute("data-skin", "content"); S.add(E, { kind: "words", node: tn, g: slot(p) }); }
+          return tn;
+        },
+        polygon(S, p, pts, o) {
+          o = o || {};
+          if (!S.owner(p) || !pts || pts.length < 2) return S.baseK.polygon(p, pts, o);
+          const P = pts.map((q) => (Array.isArray(q) ? q : [q.x, q.y]));
+          add(S, p, { kind: "path", d: "M" + P.map((q) => f1(q[0]) + " " + f1(q[1])).join(" L") + " Z", stroke: TONE().hair2, sw: 1.5, fill: C("surface") });
+          return slot(p);
+        },
+      },
+      // the teaching layer: a callout ring in the signal colour round the spoken words
+      emphasis(S, textEl, t, o) {
+        const f = textEl && textEl.__fit, E = S.owner(textEl);
+        if (!f || !E) return S.baseM.highlight(textEl, t, o);
+        if (S.data.band && S.data.band.has(E)) return null;
+        S.item(E, t - 0.05, [{ kind: "ring", parent: textEl.parentNode, box: [f.x - 12, f.y - 6, (o.w || f.width) + 24, f.height + 12] }], "emphasis");
+        return null;
+      },
+      perform(S, items) {
+        const ctx = S.ctx, beat = ctx.beat, cfg = CFG(), tone = TONE();
+        const meta = (E, k) => ({ kind: k || "reveal", beat: beat.id, name: E.name, content: true });
+        const load = Math.max(ctx.start || 0, 0, Math.min(...items.map((it) => it.t), ctx.speechStart + 0.6) - 0.35);
+        // the window: generic chrome, on screen as the beat opens (it is the place, not a part)
+        const W = ctx.el("skin_window", { x: 0, y: 0, w: 1920, h: 1080, kind: "scenery", exit: "recede" });
+        if (W.outer.parentNode) W.outer.parentNode.insertBefore(W.outer, W.outer.parentNode.firstChild);
+        shadowRects(W.inner, WIN.x, WIN.y, WIN.w, WIN.h, cfg.radius + 4);
+        rect(W.inner, WIN.x, WIN.y, WIN.w, WIN.h, { r: cfg.radius + 4, fill: C("surface"), stroke: tone.hair2, sw: 1.5 });
+        const R = cfg.radius + 4;
+        svg("path", { d: `M${WIN.x} ${WIN.y + WIN.bar} L${WIN.x} ${WIN.y + R} Q${WIN.x} ${WIN.y} ${WIN.x + R} ${WIN.y} L${WIN.x + WIN.w - R} ${WIN.y} Q${WIN.x + WIN.w} ${WIN.y} ${WIN.x + WIN.w} ${WIN.y + R} L${WIN.x + WIN.w} ${WIN.y + WIN.bar} Z`, fill: tone.chrome }, W.inner);
+        svg("rect", { x: WIN.x, y: WIN.y + WIN.bar - 1, width: WIN.w, height: 1.5, fill: tone.hair2 }, W.inner);
+        [0, 1, 2].forEach((i) => svg("circle", { cx: WIN.x + 26 + i * 22, cy: WIN.y + WIN.bar / 2, r: 6.5, fill: tone.dot }, W.inner));
+        Loom.tween(W.inner, { opacity: 0 }, { opacity: 1, duration: 0.2 }, Math.max(ctx.start || 0, 0), meta(W, "reveal"));
+        W.revealT = Math.max(ctx.start || 0, 0); W.revealKind = "screencast";
+        const rr = (q) => (Array.isArray(q.r) ? q.r : null);
+        const shape = (q, parent) => {
+          if (q.kind === "card") {
+            if (q.lift) shadowRects(parent, q.x, q.y, q.w, q.h, q.r);
+            return rect(parent, q.x, q.y, q.w, q.h, { r: q.r, fill: q.fill, stroke: q.stroke, sw: 1.5 });
+          }
+          if (q.kind === "rect") {
+            const cr = rr(q);
+            if (!cr) return rect(parent, q.x, q.y, q.w, q.h, { r: q.r || 0, fill: q.fill, stroke: q.stroke, sw: 1.5 });
+            const [a, b, c, d] = cr, x = q.x, y = q.y, w = q.w, h = q.h;
+            return svg("path", { d: `M${f1(x + a)} ${f1(y)} H${f1(x + w - b)} Q${f1(x + w)} ${f1(y)} ${f1(x + w)} ${f1(y + b)} V${f1(y + h - c)} Q${f1(x + w)} ${f1(y + h)} ${f1(x + w - c)} ${f1(y + h)} H${f1(x + d)} Q${f1(x)} ${f1(y + h)} ${f1(x)} ${f1(y + h - d)} V${f1(y + a)} Q${f1(x)} ${f1(y)} ${f1(x + a)} ${f1(y)} Z`, fill: q.fill }, parent);
+          }
+          if (q.kind === "circle") return svg("circle", { cx: f1(q.cx), cy: f1(q.cy), r: f1(q.r), fill: q.fill, stroke: q.stroke || "none", "stroke-width": q.stroke ? 1.5 : 0 }, parent);
+          if (q.kind === "path") return svg("path", { d: q.d, fill: q.fill || "none", stroke: q.stroke, "stroke-width": q.sw, "stroke-dasharray": q.dash, "stroke-linecap": "round", "stroke-linejoin": "round" }, parent);
+          return null;
+        };
+        for (const it of items) {
+          const E = it.E, t = Math.max(it.t, ctx.start || 0, 0);
+          let containers = false;
+          for (const q of it.parts) {
+            if (q.kind === "words") {
+              const n = q.node, f = n.__fit;
+              // the skeleton: a muted bar per line where the words will be, on the page from the load
+              if (f && f.width > 4) {
+                const sk = svg("g", { "data-skin": "skeleton" }, q.g), lines = Math.max(1, f.lines.length), lh = f.height / lines;
+                for (let i = 0; i < lines; i++) {
+                  const bw = Math.max(36, (i === lines - 1 && lines > 1 ? 0.6 : 1) * f.width);
+                  rect(sk, f.x, f.y + i * lh + lh * 0.3, bw, Math.max(8, lh * 0.38), { r: Math.max(4, lh * 0.19), fill: tone.hair });
+                }
+                Loom.tween(sk, { opacity: 0 }, { opacity: 1, duration: 0.2 }, load, meta(E, "load"));
+                Loom.tween(sk, { opacity: 1 }, { opacity: 0, duration: 0.16, immediateRender: false }, t, meta(E, "load"));
+              }
+              Loom.tween(n, { opacity: 0, y: 4 }, { opacity: 1, y: 0, duration: 0.18, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "reveal"));
+            } else if (q.kind === "node") {
+              Loom.tween(q.node, { opacity: 0 }, { opacity: 1, duration: 0.18, immediateRender: true }, t, meta(E, "reveal"));
+            } else if (q.kind === "ring") {
+              const [x, y, w, h] = q.box, g = svg("g", { "data-skin": "callout" }, q.parent);
+              rect(g, x, y, w, h, { r: Math.min(14, h / 2), fill: "none", stroke: C("accent2"), sw: 3 });
+              Loom.tween(g, { opacity: 0, scale: 1.04, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "callout"));
+            } else {
+              const node = shape(q, q.g);
+              if (!node) continue;
+              if (q.grow) Loom.tween(q.g, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.5, ease: Loom.ease.enter, immediateRender: true }, t, meta(E, "grow"));
+              else if (q.load) { containers = true; Loom.tween(q.g, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: true }, load, meta(E, "load")); }
+              else Loom.tween(q.g, { opacity: 0 }, { opacity: 1, duration: 0.18, immediateRender: true }, t, meta(E, "reveal"));
+            }
+          }
+          const at = containers ? load : t;
+          if (E.revealT == null || at < E.revealT) { E.revealT = at; E.revealKind = "screencast"; }
+          it.at = t; it.by = t + 0.2; it.made = "rendered";
+        }
+      },
+    };
+  }
+  if (Loom.skins) Loom.skins.define("screencast", skinOf());
+
   Loom.engines.define("screencast", {
     version: "1",
     summary: "a living screencast: a generic app shell built from a compact spec (window or browser chrome, sidebar nav, top bar with search, page header and toolbar, tabs, tables, forms, settings, cards, detail, list, empty state, a code editor (mono, syntax colour, line numbers, diff markers, typing with a caret), a dark terminal (a prompt, commands typed, output streaming), a chart (line or bar series that update); dialogs, menus, toasts, tooltips), every region and control a named part; one performer per app (a pointer at a person's pace with hover, press, ring and click, typing with a caret, and a camera that frames the active region and returns, posed by one clock); system reactions (toggles, ticks, selection, cell and card updates, chart series, validation errors, page changes, scroll, progress); a teaching layer in the signal colour (keystroke HUD, chapter and step pills, callouts with leaders, spotlight freeze, time-lapse tag, region names for the tour, rack focus without blur, chapter cards)",

@@ -398,6 +398,10 @@ def lints(project, probe_rep, manifest) -> tuple[list[str], list[str], dict]:
         (E if c.startswith("pageerror") else W).append(f"browser {c}")
     if not probe_rep.get("ready"):
         E.append("the composition never finished building (see qa/probe.json)")
+    # D-198: a lesson whose templates take its style's skin has them made the style's way (the skin_formed check)
+    from .checks.skins import skin_checks
+    _se, _sw = skin_checks(manifest, probe_rep)
+    E += _se; W += _sw
     iv = _intervals_moving(project, probe_rep, manifest)
     holds = []
     # D-112: a declared rest on a finished frame may hold up to pace.rest_max_s (TED-Ed: 7 to 24 s teaching holds)

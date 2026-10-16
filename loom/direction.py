@@ -73,12 +73,19 @@ def storyboard_warnings(project, sb: dict) -> list[str]:
     of the narration. Only for a lesson that uses the style's engine, of MIN_BEATS beats or more."""
     style = sb.get("style")
     scenes = [s for s in sb.get("scenes") or [] if s.get("beat")]
-    if style not in ("hologram", "blueprint") or len(scenes) < MIN_BEATS:
-        return []
-    from .engines import enabled_for
+    from .engines import enabled_for, skin_refuses
     if not enabled_for(project, style):
         return []
     W = []
+    # D-198: a template whose form the style's essence avoids (its skin refuses it): said, never refused (the person
+    # and the planner may still choose it; it is drawn the style's way as far as it goes)
+    refused = set(skin_refuses(style))
+    for s in scenes:
+        if s.get("kind") == "template" and s.get("template") in refused:
+            W.append(f"template_not_this_style: {s['beat']} uses {s['template']}, a form the {style} style does not use "
+                     f"(packs/essence/{style}.json avoid); stage it the style's own way (packs/direction/{style}.md)")
+    if style not in ("hologram", "blueprint") or len(scenes) < MIN_BEATS:
+        return W
     # hologram's hero check is an error now (storyboard_errors: holo_heroes_few, D-194)
     if style == "blueprint":
         words = _narration_words(project)

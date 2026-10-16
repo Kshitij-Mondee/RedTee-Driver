@@ -1,0 +1,465 @@
+{
+ "about": "D-198: one case per catalog template for the template sheet in every style, classic and skinned (py -m loom library sheet --template <id> --skin style). Original text on one made-up topic (handing over work). Anchors are words the sheet times in the order a template asks for them.",
+ "cases": {
+  "title.card": [
+   {
+    "label": "opener",
+    "params": {
+     "kicker": "Module 2",
+     "title": "Handing over work well",
+     "say_title": "handing",
+     "subtitle": "What the next person needs to finish without asking you",
+     "say_subtitle": "needs",
+     "icon": "clipboard-list",
+     "say_icon": "module"
+    }
+   }
+  ],
+  "definition": [
+   {
+    "label": "term",
+    "params": {
+     "kicker": "Key term",
+     "term": "Handover",
+     "say_term": "handover",
+     "definition": "Passing open work to someone else with everything they need to finish it.",
+     "say_definition": "passing",
+     "example": "A note listing the open tickets, the owner and the deadline.",
+     "say_example": "note",
+     "icon": "clipboard-list"
+    },
+    "cues": {
+     "handover": 0.6,
+     "passing": 1.8,
+     "note": 6.6
+    }
+   }
+  ],
+  "list.steps": [
+   {
+    "label": "steps",
+    "params": {
+     "title": "Before you hand over",
+     "say_title": "before",
+     "items": [
+      {
+       "text": "List every open ticket",
+       "say": "list"
+      },
+      {
+       "text": "Name the new owner",
+       "say": "owner"
+      },
+      {
+       "text": "Agree the deadline",
+       "say": "deadline"
+      },
+      {
+       "text": "Book a ten minute call",
+       "say": "call"
+      }
+     ]
+    }
+   }
+  ],
+  "compare.two": [
+   {
+    "label": "two ways",
+    "params": {
+     "title": "Two ways to hand over",
+     "say_title": "two",
+     "left": {
+      "header": "A quick message",
+      "say": "message",
+      "valence": "neg",
+      "items": [
+       {
+        "text": "Tickets named, owners missing",
+        "say": "missing"
+       },
+       {
+        "text": "No deadline agreed",
+        "say": "agreed"
+       }
+      ]
+     },
+     "right": {
+      "header": "A handover note",
+      "say": "note",
+      "valence": "pos",
+      "items": [
+       {
+        "text": "Every ticket with its owner",
+        "say": "every"
+       },
+       {
+        "text": "A date both people accept",
+        "say": "date"
+       }
+      ]
+     },
+     "verdict": {
+      "text": "Write it down once, then talk it through",
+      "say": "write"
+     }
+    }
+   }
+  ],
+  "process.flow": [
+   {
+    "label": "flow",
+    "params": {
+     "title": "A handover in three moves",
+     "say_title": "three",
+     "steps": [
+      {
+       "label": "Write the note",
+       "sub": "Tickets, owners, dates",
+       "say": "write",
+       "icon": "file-text"
+      },
+      {
+       "label": "Walk it through",
+       "sub": "Ten minutes, one call",
+       "say": "walk",
+       "icon": "phone"
+      },
+      {
+       "label": "Confirm the owner",
+       "sub": "A yes in writing",
+       "say": "confirm",
+       "icon": "check-circle"
+      }
+     ]
+    }
+   }
+  ],
+  "stat.hero": [
+   {
+    "label": "number",
+    "params": {
+     "kicker": "Say a team",
+     "value": 12,
+     "suffix": " tickets",
+     "say": "twelve",
+     "caption": "Imagine twelve open tickets changing hands on a Friday",
+     "say_caption": "imagine"
+    }
+   }
+  ],
+  "document.page": [
+   {
+    "label": "note",
+    "params": {
+     "kind": "notes",
+     "title": "Handover note",
+     "say_title": "note",
+     "lines": [
+      {
+       "text": "Ticket 41: owner Priya, due Tuesday",
+       "say": "forty"
+      },
+      {
+       "text": "Ticket 42: waiting on the client",
+       "say": "waiting"
+      },
+      {
+       "text": "Call booked for Monday at ten",
+       "say": "monday"
+      }
+     ]
+    },
+    "cues": {
+     "note": 0.6,
+     "forty": 1.6,
+     "waiting": 4.4,
+     "monday": 6.8
+    }
+   }
+  ],
+  "calendar.plan": [
+   {
+    "label": "week",
+    "params": {
+     "title": "The handover week",
+     "say_title": "week",
+     "days": [
+      {
+       "label": "Mon"
+      },
+      {
+       "label": "Tue"
+      },
+      {
+       "label": "Wed"
+      },
+      {
+       "label": "Thu"
+      },
+      {
+       "label": "Fri"
+      }
+     ],
+     "entries": [
+      {
+       "day": 0,
+       "label": "Write note",
+       "icon": "file-text",
+       "say": "write"
+      },
+      {
+       "day": 2,
+       "label": "Walkthrough",
+       "icon": "phone",
+       "say": "walk"
+      },
+      {
+       "day": 4,
+       "label": "Last day",
+       "icon": "flag",
+       "say": "last"
+      }
+     ]
+    }
+   }
+  ],
+  "quiz.question": [
+   {
+    "label": "question",
+    "params": {
+     "kicker": "Your call",
+     "question": "Which handover leaves the next person fewest questions?",
+     "say_question": "which",
+     "options": [
+      {
+       "text": "Send a note saying it is done",
+       "say": "message"
+      },
+      {
+       "text": "A note with owners and dates",
+       "say": "owners"
+      },
+      {
+       "text": "A long meeting with no notes",
+       "say": "meeting"
+      }
+     ]
+    }
+   }
+  ],
+  "quiz.answer": [
+   {
+    "label": "answer",
+    "params": {
+     "question": "Which handover leaves the next person fewest questions?",
+     "options": [
+      {
+       "text": "Send a note saying it is done"
+      },
+      {
+       "text": "A note with owners and dates"
+      },
+      {
+       "text": "A long meeting with no notes"
+      }
+     ],
+     "answer": 1,
+     "say_answer": "note",
+     "explanation": "Owners and dates answer the two questions people ask first.",
+     "say_explanation": "owners",
+     "tempting": 2,
+     "why_not": "Talk helps, but nothing is left to check later.",
+     "say_why_not": "talk"
+    },
+    "cues": {
+     "note": 0.9,
+     "owners": 2.4,
+     "talk": 5.6
+    }
+   }
+  ],
+  "chart.bars": [
+   {
+    "label": "bars",
+    "params": {
+     "title": "Questions after a handover, say",
+     "say_title": "questions",
+     "unit": "asks",
+     "series": [
+      {
+       "cat": "Message",
+       "value": 9,
+       "say": "message"
+      },
+      {
+       "cat": "Meeting",
+       "value": 6,
+       "say": "meeting"
+      },
+      {
+       "cat": "Note",
+       "value": 2,
+       "say": "note"
+      }
+     ],
+     "highlight": 2
+    }
+   }
+  ],
+  "scenario.dialogue": [
+   {
+    "label": "dialogue",
+    "params": {
+     "left": {
+      "member": "woman",
+      "name": "Asha"
+     },
+     "right": {
+      "member": "man",
+      "name": "Tom"
+     },
+     "lines": [
+      {
+       "who": "left",
+       "text": "Who owns ticket forty one now?",
+       "say": "who"
+      },
+      {
+       "who": "right",
+       "text": "Priya does. It is in the note.",
+       "say": "priya"
+      }
+     ],
+     "setting": "desk"
+    }
+   }
+  ],
+  "recap": [
+   {
+    "label": "recap",
+    "params": {
+     "title": "What a good handover has",
+     "say_title": "good",
+     "items": [
+      {
+       "label": "Owners",
+       "icon": "user",
+       "say": "owners"
+      },
+      {
+       "label": "Dates",
+       "icon": "calendar",
+       "say": "dates"
+      },
+      {
+       "label": "A call",
+       "icon": "phone",
+       "say": "call"
+      }
+     ],
+     "rule": "Write it once, then talk it through",
+     "say_rule": "write"
+    }
+   }
+  ],
+  "icon.grid": [
+   {
+    "label": "grid",
+    "params": {
+     "title": "What travels with the work",
+     "say_title": "travels",
+     "items": [
+      {
+       "icon": "list-checks",
+       "label": "Tickets",
+       "sub": "Every one, with status",
+       "say": "tickets"
+      },
+      {
+       "icon": "user",
+       "label": "Owners",
+       "sub": "One name each",
+       "say": "owners"
+      },
+      {
+       "icon": "calendar",
+       "label": "Dates",
+       "sub": "Agreed, not guessed",
+       "say": "dates"
+      }
+     ]
+    }
+   }
+  ],
+  "cycle": [
+   {
+    "label": "cycle",
+    "params": {
+     "title": "The handover loop",
+     "say_title": "loop",
+     "nodes": [
+      {
+       "label": "Write",
+       "icon": "file-text",
+       "say": "write"
+      },
+      {
+       "label": "Explain",
+       "icon": "message-circle",
+       "say": "explain"
+      },
+      {
+       "label": "Check",
+       "icon": "check",
+       "say": "check"
+      },
+      {
+       "label": "Update",
+       "icon": "refresh-cw",
+       "say": "update"
+      }
+     ],
+     "center": "Handover",
+     "say_center": "handover"
+    }
+   }
+  ],
+  "timeline": [
+   {
+    "label": "timeline",
+    "params": {
+     "title": "The last week before leave",
+     "say_title": "week",
+     "events": [
+      {
+       "when": "Mon",
+       "label": "Start the note",
+       "say": "monday"
+      },
+      {
+       "when": "Wed",
+       "label": "Walk it through",
+       "say": "wednesday"
+      },
+      {
+       "when": "Fri",
+       "label": "Owner confirms in writing",
+       "say": "friday"
+      }
+     ]
+    }
+   }
+  ],
+  "quote": [
+   {
+    "label": "quote",
+    "params": {
+     "quote": "If the next person has to call you, the handover is not finished.",
+     "say": "next",
+     "attribution": "A team lead, say",
+     "say_attribution": "lead"
+    }
+   }
+  ]
+ }
+}

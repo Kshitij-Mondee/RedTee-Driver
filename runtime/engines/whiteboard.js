@@ -329,13 +329,16 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
     return hi;
   }
   function board(ctx, opts) {
-    BOARDS++;
+    // the face audit is armed by a scene that draws on a board; a template skin's board does not arm it (its own words are
+    // engine words already), so a lesson's other scenes are judged exactly as before skins (D-198)
+    if (!(opts && opts.skin)) BOARDS++;
     const beat = ctx.beat, pens = {}, B = { marker: !(opts && opts.marker === false) };
     const worldOf = (E) => {                        // an element's offset in the scene's station (nested elements add up)
       let x = 0, y = 0;
       for (let n = E.outer; n && n !== ctx.g && n.parentNode; n = n.parentNode) {
         const tr = n.getAttribute && n.getAttribute("transform"), m = tr && /translate\(\s*([-\d.e]+)[ ,]+([-\d.e]+)\s*\)/.exec(tr);
-        if (m && n.classList && n.classList.contains("lm-el")) { x += +m[1]; y += +m[2]; }
+        // an element's place, and a block a template shifted as one (ctx.group + ctx.shift: definition, D-198)
+        if (m && n.classList && (n.classList.contains("lm-el") || n.classList.contains("lm-block"))) { x += +m[1]; y += +m[2]; }
       }
       return [x, y];
     };
@@ -444,6 +447,21 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
       if (!list.length) return o.at || ctx.start;
       const P = pen(o.pen || (list[0] && list[0].pen) || "ink");
       const want = o.at == null ? ctx.speechStart : o.at;
+      // already on the board (`instant`, D-198): what a beat restates at its cut, before a word is said, is not drawn
+      // again stroke by stroke; it is there as the beat opens, and the hand is free for what is said
+      if (o.instant) {
+        const g = svg("g", { opacity: 0 }, E.inner);
+        for (const m of list) {
+          if (m.ghost) continue;
+          const col = m.ink ? pen(m.ink).color : P.color;
+          if (m.len < m.w * 1.4 && m.kind !== "dash") svg("circle", { cx: m.pts[0].toFixed(1), cy: m.pts[1].toFixed(1), r: (m.w * 0.62).toFixed(2), fill: col, opacity: m.alpha }, g);
+          else svg("path", { d: "M" + m.pts.reduce((a, v, j) => a + (j % 2 ? "," : j ? " L" : "") + v.toFixed(1), ""), fill: "none", stroke: col, "stroke-width": m.w.toFixed(2),
+            "stroke-linecap": "round", "stroke-linejoin": "round", opacity: m.alpha }, g);
+        }
+        Loom.tween(g, { opacity: 0 }, { opacity: 1, duration: 0.2 }, want, { kind: "draw", beat: beat.id, name: E.name, content: true });
+        if (E.revealT == null || want < E.revealT) { E.revealT = want; E.revealKind = "draw"; }
+        return want + 0.2;
+      }
       const H = P.h;
       let t = Math.max(want, H.free + 0.05);
       const late = t - want;
@@ -472,10 +490,12 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
         const avail = Math.max(0.05 * list.length, win - G * gs), L = list.reduce((a, m) => a + m.len, 0);
         durs = list.map((m) => avail * m.len / L);
       }
-      const col = P.color;
+      // one hand, several pens in one call: a mark may carry its own pen (`ink`, set by the template skin, D-198) so a
+      // part's circle, number and words are one stroke sequence with no lifts between calls
+      const col0 = P.color, inkOf = (m) => (m.ink ? pen(m.ink).color : col0);
       list.forEach((m, i) => {
         t += gaps[i];
-        const d = durs[i], t0 = t, t1 = t + d;
+        const d = durs[i], t0 = t, t1 = t + d, col = inkOf(m);
         const dpath = "M" + m.pts.reduce((a, v, j) => a + (j % 2 ? "," : j ? " L" : "") + v.toFixed(1), "");
         const w = m.w, Lp = m.len, off0 = Lp + w + 2;
         if (m.ghost) {                               // the hand's path over a heading: nothing drawn, the reveal follows it
@@ -553,6 +573,34 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
         { kind: "draw", beat: beat.id, name: E.name, content: true });
       return sg.t1;
     };
+    // ---- reveal a text node that is already on the page (a template's heading in the display face, D-198) under the
+    // hand, line by line, as B.heading does for its own text: one hand, one order, the same scheduler. `off` is where the
+    // node's parent sits in E's inner group. Returns when the last line is uncovered.
+    B.unveil = function (E, tx, o) {
+      o = o || {};
+      const [ox, oy] = o.off || [0, 0], f = tx.__fit, n = Math.max(1, f ? f.lines.length : 1);
+      let bb; try { bb = tx.getBBox(); } catch (e) { bb = null; }
+      if (!bb || !(bb.width > 0)) return B.draw(E, [], o);
+      const lh = bb.height / n, pad = lh * 0.14, id = `wbh-${beat.id}-${HEAD++}`;
+      const cp = svg("clipPath", { id, clipPathUnits: "userSpaceOnUse" }, svg("defs", {}, tx.parentNode));
+      tx.setAttribute("clip-path", `url(#${id})`);
+      const rects = [], marks = [];
+      for (let i = 0; i < n; i++) {
+        const y0 = bb.y + i * lh;
+        rects.push([svg("rect", { x: (bb.x - pad).toFixed(1), y: (y0 - pad).toFixed(1), width: 0, height: (lh + 2 * pad).toFixed(1) }, cp), bb.width + 2 * pad]);
+        const step = lh * 0.32, pts = []; let up = true;
+        for (let xx = bb.x; xx < bb.x + bb.width; xx += step) { pts.push(xx + ox, y0 + lh * (up ? 0.38 : 0.72) + oy); up = !up; }
+        pts.push(bb.x + bb.width + ox, y0 + lh * 0.55 + oy);
+        const m = mark(pts, { jitter: 0, w: 2 }); m.kind = "text"; m.ghost = true; marks.push(m);
+      }
+      const t1 = B.draw(E, marks, Object.assign({}, o, { sound: false }));
+      marks.forEach((m, i) => {
+        const sg = B._h.segs.find((q) => q.m === m), [r, W] = rects[i];
+        Loom.tween(r, { attr: { width: 0 } }, { attr: { width: W }, duration: Math.max(0.05, sg.t1 - sg.t0), ease: (u) => hand(u) }, sg.t0,
+          { kind: "draw", beat: beat.id, name: E.name, content: true });
+      });
+      return t1;
+    };
     B.pen = (id) => pen(id).id;
     B.free = () => (B._h ? B._h.free : -1);
     return B;
@@ -564,8 +612,10 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
   // in that face). Run by boot (and the lab) after every scene is built. Not the board: captions and the chrome (outside
   // the stations), characters, speech bubbles, devices and screens, ambience.
   const NOT_BOARD = ["character", "bubble", "device", "screen", "media", "ambient"];
-  function audit() {
-    if (!BOARDS) return;             // no scene drew on a board: a lab or a lesson that does not use the engine
+  function audit(o) {
+    // no scene drew on a board: a lab or a lesson that does not use the engine. `force`: the template sheet audits the
+    // words a skin drew (D-198)
+    if (!BOARDS && !(o && o.force)) return;
     const fam = (e) => String(getComputedStyle(e).fontFamily || "").split(",")[0].replace(/["']/g, "").trim().toLowerCase();
     const disp = family("display").split(",")[0].replace(/["']/g, "").trim().toLowerCase();
     const seen = new Set();
@@ -587,6 +637,322 @@ const ROLE_CAP = { title: 0.8, hero: 0.8, display: 0.8, lead: 0.8, body: 0.8, la
     }
   }
 
-  const api = Object.assign({ board, audit }, V);
+
+  // ---------------------------------------------------------------- the template skin (D-198)
+  // A catalog template on a whiteboard engine board is drawn by the same hand, in reading order, on its words: the
+  // frame, then the words, then the mark. Less ink, more board: a row's card is not boxed (the board is the ground), a
+  // coloured band is an underline in its colour and its header is written in that colour, a number sits in a hand
+  // circle, a tick is a tick. Headings stay in the display face, uncovered under the hand; every other word is written
+  // in the marker hand (the "Two faces" rule, D-182), so the face audit holds by construction.
+  const SPEED = 950;
+  const LIGHT_TOK = new Set(["field", "field2", "onAccent", "surface", "surface2", "caption_active"]);
+  const PLAIN = new Set(["surface", "surface2", "field", "field2", "line", "shadow", "none", "ink", "muted"]);
+  const HEADING_ROLES = new Set(["title", "hero", "display"]);
+  const coloured = (t) => !!t && typeof t === "string" && !PLAIN.has(t) && !t.startsWith("#");
+  function natural(list) {
+    let d = 0;
+    list.forEach((m, i) => {
+      if (i) {
+        const a = end(list[i - 1]), b = start(m), dist = Math.hypot(b[0] - a[0], b[1] - a[1]);
+        d += m.kind === "text" && list[i - 1].kind === "text" ? clamp(dist / 2400, 0.012, 0.12) : clamp(dist / 1400, 0.03, 0.25);
+      }
+      d += Math.max(m.kind === "dash" || m.kind === "text" ? 0.03 : m.len < 10 ? 0.05 : 0.08, m.len / (m.kind === "text" ? SPEED * 1.05 : SPEED));
+    });
+    return d;
+  }
+  const moved = (list, dx, dy) => {
+    if (dx || dy) for (const m of list) for (let i = 0; i < m.pts.length; i += 2) { m.pts[i] += dx; m.pts[i + 1] += dy; }
+    return list;
+  };
+  // a node's drawn geometry as strokes (paths with arcs, circles, lines), split where it jumps
+  function strokesOf(el, step) {
+    step = step || 3;
+    let L = 0; try { L = el.getTotalLength(); } catch (e) { return []; }
+    if (!(L > 1)) return [];
+    const n = Math.max(2, Math.ceil(L / step)), out = []; let cur = [], prev = null;
+    for (let i = 0; i <= n; i++) {
+      const q = el.getPointAtLength(L * i / n);
+      if (prev && Math.hypot(q.x - prev[0], q.y - prev[1]) > step * 2.5) { if (cur.length >= 4) out.push(cur); cur = []; }
+      cur.push(q.x, q.y); prev = [q.x, q.y];
+    }
+    if (cur.length >= 4) out.push(cur);
+    return out;
+  }
+  const stub = (p) => svg("g", { "data-skin": "stub" }, p);
+  function skinOf() {
+    const S_ = () => Loom.style;
+    // a header band's colour is its header's ink (the band itself is an underline): words set light-on-colour take it
+    const bandNote = (S, E, tok) => { if (coloured(tok)) (S.data.band = S.data.band || new Map()).set(E, tok); };
+    const inkFor = (S, E, tok) => (!tok ? "ink" : LIGHT_TOK.has(tok) ? ((S.data.band && S.data.band.get(E)) || "ink") : tok === "line" ? "ink" : tok);
+    const fillNote = () => {};
+    const penOf = (tok) => (coloured(tok) ? tok : "ink");
+    function shape(S, p, marks, o) {
+      const E = S.owner(p);
+      if (!E) return null;
+      const [dx, dy] = S.offset(E, p);
+      return S.add(E, { kind: "marks", marks: moved(marks, dx, dy), light: o.light ? moved(o.light, dx, dy) : null, pen: o.pen || "ink", circle: !!o.circle });
+    }
+    // corner brackets: a frame drawn in two short strokes when the window is too short for the whole outline
+    const corners = (x, y, w, h) => {
+      const a = Math.min(60, w * 0.18, h * 0.35);
+      return [].concat(V.path([x, y + a, x, y, x + a, y], { smooth: 1 }), V.path([x + w - a, y + h, x + w, y + h, x + w, y + h - a], { smooth: 1 }));
+    };
+    function box(S, p, x, y, w, h, o, r) {
+      o = o || {};
+      const E = S.owner(p);
+      if (!E || (o.fill === "none" && !o.stroke)) return S.baseK.rect(p, x, y, w, h, o);
+      const fill = o.fill || "surface";
+      const thin = Math.min(w, h), long = Math.max(w, h);
+      // the square filler a template lays under a rounded band (calendar, document: its lower corners) is part of the band
+      const bb = S.data.bandBox && S.data.bandBox.get(E);
+      if (bb && fill === bb[4] && y >= bb[1] - 1 && y + h <= bb[1] + bb[3] + 2) return stub(p);
+      if (thin <= 14 || (thin <= 40 && long >= thin * 3)) {        // a thin shape is a stroke (a desk top, a leg, a rule)
+        // a strip that may hold words (a calendar's day row) is its lower edge, never a line through what it holds
+        const pen = coloured(fill) ? fill : penOf(o.stroke), lw = Math.max(markerW(), Math.min(thin, thin <= 14 ? 10 : 5));
+        const yy = thin <= 14 ? y + h / 2 : y + h, xx = thin <= 14 ? x + w / 2 : x + w;
+        shape(S, p, h <= w ? V.line(x, yy, x + w, yy, { w: lw }) : V.line(xx, y, xx, y + h, { w: lw }), { pen });
+        return stub(p);
+      }
+      fillNote(S, E, fill);
+      const band = y <= 1 && h <= 140 && E.w && w >= E.w * 0.8 && h < (E.h || 1e9) * 0.5;
+      if (band) {                                                   // a header band: the line under the header
+        bandNote(S, E, fill);
+        (S.data.bandBox = S.data.bandBox || new Map()).set(E, [x, y, w, h, fill]);
+        shape(S, p, V.underline(x + 14, x + w - 14, y + h - 4), { pen: coloured(fill) ? fill : "ink" });
+        return stub(p);
+      }
+      // a row, a column, a grid or a chart's frame lives on the board itself: its parts are drawn, not boxed
+      if (["row", "panel", "structure", "instrument"].includes(E.kind)) return stub(p);
+      if (E.kind === "bar") {                                      // a bar of a chart: up, across, down, open at its base
+        shape(S, p, V.path([x, y + h, x, y, x + w, y, x + w, y + h], { smooth: 0 }), { pen: coloured(fill) ? fill : "ink", hatchOf: [x, y, w, h] });
+        return stub(p);
+      }
+      const pen = o.stroke && o.stroke !== "none" ? penOf(o.stroke) : coloured(fill) ? fill : "ink";
+      const rr = r != null ? r : (o.r != null ? o.r : ((S_().pack.shape || {}).radius || 14));
+      const part = shape(S, p, V.roundRect(x, y, w, h, Math.min(rr, Math.max(14, h / 2))), { pen, light: corners(x, y, w, h) });
+      if (part) {
+        part.box = true;
+        // a speech bubble covers what is under it in the board's colour (two bubbles of a dialogue overlap, and a board has
+        // no other occlusion: words over words). Only a bubble: on the board's texture a flat cover shows as a pale block
+        // (a card's cover did, in the blameless proof, 2026-10-16)
+        if (E.kind === "bubble") { const [dx, dy] = S.offset(E, p); part.knock = [x + dx, y + dy, w, h, Math.min(rr, Math.max(14, h / 2))]; }
+      }
+      return stub(p);
+    }
+    function words(S, p, tn, o) {
+      const E = S.owner(p), f = tn && tn.__fit;
+      if (!E || !f) return tn;
+      const role = o.role || "body";
+      const [dx, dy] = S.offset(E, p);
+      if (HEADING_ROLES.has(role)) {                               // a heading: the display face, uncovered by the hand
+        tn.setAttribute("data-skin", "heading"); tn.setAttribute("data-engine-heading", "whiteboard");
+        let w = f.width; try { const b = tn.getBBox(); if (b.width > 0) w = b.width; } catch (e) { /* not laid out */ }
+        S.add(E, { kind: "heading", node: tn, off: [dx, dy], pen: inkFor(S, E, o.color), nat: (w * 1.25 * Math.max(1, f.lines.length)) / (SPEED * 1.05) + 0.05 });
+        return tn;
+      }
+      Loom.skins.ghostText(tn, "data-engine-text");
+      // a one-line hand reads lighter than a font: its caps a little larger than the face's (as the engine's own roleCap)
+      const n = Math.max(1, f.lines.length), lh = f.height / n, cap = Math.min(f.size * 0.78, lh * 0.74), marks = [];
+      // each line in the room the template gave the words (its box), not only the face's measured width: the hand is wider
+      const al = o.align || "left", bx = o.x || 0, bw = o.w || f.width;
+      const x0 = al === "left" ? f.x - 2 : bx, w0 = al === "left" ? bx + bw - f.x + 2 : bw;
+      // one size for all its lines (the longest line decides), so a wrapped sentence keeps one hand
+      const size = Math.min(...f.lines.map((line) => V.text(line, { x: x0, y: 0, w: w0, h: lh, size: cap, minSize: cap * 0.6, maxLines: 1, align: al, seed: 1 }).size));
+      f.lines.forEach((line, i) => {
+        const mk = V.text(line, { x: x0, y: f.y + i * lh + (lh - size) / 2, w: w0, h: lh, size, minSize: size, maxLines: 1, align: al });
+        marks.push(...mk);
+      });
+      S.add(E, { kind: "marks", marks: moved(marks, dx, dy), pen: inkFor(S, E, o.color), node: tn });
+      return tn;
+    }
+    return {
+      version: "1",
+      summary: "a template drawn by the one hand in reading order on its words: frames in marker, rows on the bare board, bands as underlines, headings uncovered in the display face, every other word written in the marker hand",
+      refuse: [],
+      // left classic on purpose: Open Peeps are the whiteboard's people (the essence), placed with their element
+      classic: ["peep"],
+      kit: {
+        rect: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o),
+        card: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, Object.assign({ fill: "surface" }, o)),
+        pill: (S, p, x, y, w, h, o) => box(S, p, x, y, w, h, o, h / 2),
+        disc(S, p, cx, cy, r, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.disc(p, cx, cy, r, o);
+          const fill = o.fill || "surface";
+          fillNote(S, E, fill);
+          if (r <= 14) shape(S, p, [mark([cx - 1.5, cy, cx + 1.5, cy + 0.5], { jitter: 0, w: Math.max(markerW() * 1.6, r * 1.3) })], { pen: coloured(fill) ? fill : "ink" });
+          else shape(S, p, V.circle(cx, cy, r), { pen: coloured(fill) ? fill : penOf(o.stroke), circle: r <= 70 });
+          return stub(p);
+        },
+        line(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          if (!S.owner(p)) return S.baseK.line(p, x1, y1, x2, y2, o);
+          shape(S, p, o.dash ? V.dashed([x1, y1, x2, y2]) : V.line(x1, y1, x2, y2), { pen: penOf(o.stroke) });
+          return stub(p);
+        },
+        arrow(S, p, x1, y1, x2, y2, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.arrow(p, x1, y1, x2, y2, o);
+          shape(S, p, V.arrow(x1, y1, x2, y2, { bend: o.bend }), { pen: penOf(o.stroke) });
+          const g = stub(p);
+          return { g, path: g, head: g, __skinE: E };
+        },
+        path(S, p, d, o) {
+          o = o || {};
+          const el = S.baseK.path(p, d, o), E = S.owner(p);
+          if (!E || !o.stroke || o.stroke === "none") return el;      // a route for a travel, never seen
+          const strokes = strokesOf(el, 3);
+          el.setAttribute("opacity", 0); el.setAttribute("data-skin", "ghost");
+          const marks = [];
+          for (const st of strokes) marks.push(...(o.dash ? V.dashed(st) : V.path(st, { smooth: 0 })));
+          shape(S, p, marks, { pen: penOf(o.stroke) });
+          return el;
+        },
+        polygon(S, p, pts, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E || !pts || pts.length < 2) return S.baseK.polygon(p, pts, o);
+          const P = pts.map((q) => (Array.isArray(q) ? q : [q.x, q.y]));
+          const open = E.kind === "bubble" && P.length === 3;          // a speech tail: its two sides, joined to the bubble
+          const flat = [].concat(...(open ? P : P.concat([P[0]])));
+          shape(S, p, V.path(flat, { smooth: 0 }), { pen: coloured(o.fill) ? o.fill : penOf(o.stroke) });
+          return stub(p);
+        },
+        sketch(S, p, kind, args, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.sketch(p, kind, args, o);
+          if (kind === "rectangle") return box(S, p, args[0], args[1], args[2], args[3], o);
+          if (kind === "circle") return S.kit.disc(p, args[0], args[1], args[2] / 2, o);
+          if (kind === "line") return S.kit.line(p, args[0], args[1], args[2], args[3], o);
+          if (kind === "path") {
+            const el = svg("path", { d: args[0], fill: "none", stroke: "none" }, p);
+            const marks = [];
+            for (const st of strokesOf(el, 3)) marks.push(...V.path(st, { smooth: 0 }));
+            el.remove();
+            const band = coloured(o.fill) ? o.fill : null;
+            if (band) bandNote(S, E, band);
+            shape(S, p, marks, { pen: band || penOf(o.stroke) });
+            return stub(p);
+          }
+          S.fallthrough("kit.sketch." + kind);
+          return S.baseK.sketch(p, kind, args, o);
+        },
+        icon(S, p, name, o) {
+          o = o || {};
+          const E = S.owner(p);
+          if (!E) return S.baseK.icon(p, name, o);
+          const size = o.size || 64;
+          shape(S, p, V.icon(name, (o.x || 0) - size / 2, (o.y || 0) - size / 2, size), { pen: inkFor(S, E, o.color) });
+          return stub(p);
+        },
+        mark(S, p, kind, cx, cy, size, o) {
+          if (!S.owner(p)) return S.baseK.mark(p, kind, cx, cy, size, o);
+          const s = size || 56;
+          if (kind === "yes") shape(S, p, V.tick(cx - s * 0.36, cy + s * 0.04, s * 0.72), { pen: "pos" });
+          else shape(S, p, V.cross(cx - s * 0.3, cy - s * 0.3, s * 0.6), { pen: "neg" });
+          return stub(p);
+        },
+        text(S, p, str, o) { o = o || {}; return words(S, p, S.baseK.text(p, str, o), o); },
+        kicker(S, p, str, o) { o = o || {}; return words(S, p, S.baseK.kicker(p, str, o), Object.assign({ role: "label" }, o)); },
+      },
+      m: {
+        // a figure on a board is written, not counted: the hand writes the final number so it lands ON its word
+        count(S, textEl, t, o) {
+          o = o || {};
+          const tn = Loom.skins.textOf(textEl), E = S.owner(tn), land = t + (o.dur || 0.6);
+          const part = E && S.take(E, (q) => q.node === tn);
+          if (part) {
+            if (o.fmt && o.to != null) { const sp = tn.querySelector("tspan") || tn; sp.textContent = o.fmt(o.to); }
+            S.item(E, Math.max(t, land - (part.nat || 0.5) - 0.05), [part], "count");
+          } else S.baseM.count(textEl, t, o);
+          return land;
+        },
+      },
+      // a word marked when it is spoken: the hand comes back and underlines it
+      emphasis(S, textEl, t, o) {
+        const f = textEl && textEl.__fit, E = S.owner(textEl);
+        if (!f || !E) return S.baseM.highlight(textEl, t, o);
+        if (S.data.band && S.data.band.has(E)) return null;         // a header already underlined by its band: once is enough
+        const lh = f.height / Math.max(1, f.lines.length), line = o.line || 0, x0 = o.x != null ? o.x : f.x, w = o.w || f.width;
+        const [dx, dy] = S.offset(E, textEl.parentNode);
+        const part = { kind: "marks", marks: moved(V.underline(x0, x0 + w, f.y + lh * (line + 1) - lh * 0.06, { tilt: 1 }), dx, dy), pen: o.color || "accent2" };
+        S.item(E, t - 0.05, [part], "emphasis");
+        return null;
+      },
+      perform(S, items) {
+        const ctx = S.ctx, B = board(ctx, { skin: true }), still = board(ctx, { marker: false, skin: true });
+        // an element's parts as runs for the hand: consecutive marks are ONE stroke sequence (each mark with its own pen),
+        // a heading is its own run (it uncovers a face, not strokes)
+        const runs = (it, light) => {
+          const out = [];
+          for (const q of it.parts) {
+            if (q.kind === "heading") { out.push({ heading: q, nat: q.nat }); continue; }
+            const ms = light && q.light ? q.light : q.marks;
+            for (const m of ms) m.ink = q.pen || "ink";
+            const last = out[out.length - 1];
+            if (last && last.marks) last.marks.push(...ms); else out.push({ marks: ms.slice() });
+          }
+          for (const r of out) if (r.marks) r.nat = natural(r.marks);
+          return out;
+        };
+        // a number or a letter in a hand circle marks its item: the card around it is not boxed as well
+        for (const it of items) if (it.parts.some((q) => q.circle) && it.parts.some((q) => q.box)) it.parts = it.parts.filter((q) => !q.box);
+        const knock = (it, t) => {
+          for (const q of it.parts) if (q.knock) {
+            const [x, y, w, h, r] = q.knock, k = svg("rect", { x, y, width: w, height: h, rx: r, fill: S_().c("field"), opacity: 0, "data-skin": "knock" }, it.E.inner);
+            it.E.inner.insertBefore(k, it.E.inner.firstChild);
+            Loom.tween(k, { opacity: 0 }, { opacity: 1, duration: 0.15 }, t, { kind: "draw", beat: ctx.beat.id, name: it.E.name, content: false });
+          }
+        };
+        const hop = 0.1, natOf = (rs) => rs.reduce((a, r) => a + r.nat, 0) + Math.max(0, rs.length - 1) * hop;
+        // restated at the cut, before a word (quiz.answer's question and options): already on the board, not redrawn
+        const carried = items.filter((it) => it.t <= ctx.speechStart + 0.05 && it.verb !== "part");
+        for (const it of carried) {
+          const t0 = Math.max(it.t, ctx.start || 0, 0);
+          for (const r of runs(it, false)) {
+            if (r.heading) { Loom.tween(r.heading.node, { opacity: 0 }, { opacity: 1, duration: 0.2 }, t0, { kind: "draw", beat: ctx.beat.id, name: it.E.name, content: true }); }
+            else still.draw(it.E, r.marks, { at: t0, instant: true });
+          }
+          knock(it, t0);
+          it.at = t0; it.by = t0 + 0.2; it.made = "carried";
+        }
+        items = items.filter((it) => !carried.includes(it));
+        Loom.skins.schedule(S, items, {
+          free: B.free(), open: true,
+          natural: (it) => natOf(runs(it, false)),
+          light: (it) => (it.parts.some((q) => q.light) ? natOf(runs(it, true)) : null),
+        });
+        // one look per kind: when one card of a template had to be drawn light, its siblings are too (never mixed)
+        const lightKinds = new Set(items.filter((it) => it.light).map((it) => it.E.kind));
+        for (const it of items) if (!it.light && lightKinds.has(it.E.kind) && it.parts.some((q) => q.light)) it.light = true;
+        for (const it of items) {
+          const P = it.moving ? still : B;                   // a part that travels later is drawn without the hand
+          const rs = runs(it, it.light), total = rs.reduce((a, r) => a + r.nat, 0) || 1;
+          const span = Math.max(0.05 * rs.length, it.by - it.at - Math.max(0, rs.length - 1) * hop);
+          // at the hand's own pace when the window holds it; fitted (faster) only when it does not, and never below the
+          // scheduler's floor of 0.05 s a stroke (a fit tighter than that would only make it later)
+          const fit = span < total * 0.98;
+          knock(it, Math.max(it.at, P.free() + 0.05));            // when the hand really starts it, not before
+          let t = it.at;
+          rs.forEach((r) => {
+            const d = Math.max(0.05, span * r.nat / total), n = r.marks ? r.marks.length : 1;
+            const o = fit && d >= 0.05 * n ? { at: t, by: t + d } : { at: t };
+            const end = r.heading ? P.unveil(it.E, r.heading.node, Object.assign({ off: r.heading.off, pen: r.heading.pen }, o)) : P.draw(it.E, r.marks, o);
+            t = (fit ? t + d : end) + hop;
+          });
+          it.made = "drawn";
+        }
+      },
+    };
+  }
+  if (Loom.skins) Loom.skins.define("whiteboard", skinOf());
+
+  // a sheet or a lab that builds independent frames on one timeline (the template sheet, D-198): the next board gets a
+  // hand of its own. A lesson never calls it: one hand for the film
+  function fresh() { HAND = null; }
+  const api = Object.assign({ board, audit, fresh }, V);
   Loom.engines.define("whiteboard", { version: "1", summary: "dry-erase marker drawn live: marks, a writing hand of one stroke, pens on the spoken words, a floating marker, stroke sounds; one hand for the film, on top, its arm always from the bottom edge", api });
 })();

@@ -139,6 +139,12 @@ def main(argv=None) -> int:
     s = sub.add_parser("library", help="element library: count forms, assess and promote reusable components")
     s.add_argument("action", choices=["harvest", "status", "tasks", "accept", "sheet", "backfill", "verify-backfill", "check"])
     s.add_argument("form", nargs="?"); s.add_argument("--api", action="store_true")
+    # D-198: the template sheet, classic or in each style's skin, with frames while the template is being made
+    s.add_argument("--template", help="sheet: a catalog template (its cases in library/template_fixtures.json), or 'all'")
+    s.add_argument("--styles", help="sheet: comma-separated style packs (default: the five engine styles for --skin style, else all)")
+    s.add_argument("--skin", choices=["classic", "style"], default="classic", help="sheet: the classic templates, or each style's skin")
+    s.add_argument("--frames", help="sheet: comma-separated times to keep per case (default 1.4,4.0,9.9 with --template)")
+    s.add_argument("--variant", help="sheet: a skin's version to compare within its style (isometric: A or B)")
     s = sub.add_parser("strips", help="film strips: 8 frames per beat and per join from the MP4 or the build (loom/strips.py, D-100)")
     s.add_argument("id"); s.add_argument("--source", default="auto", choices=["auto", "mp4", "build"])
     s.add_argument("--range", help="a-b seconds of the MP4 to extract this call"); s.add_argument("--budget", type=int)
@@ -530,6 +536,20 @@ def _library(args) -> int:
             L.run_api(ts); return 0
         info("\n".join(f"AGENT TASK (library, auto): {x}" for x in ts) or "library: nothing due")
         return 3 if ts else 0
+    if args.action == "sheet" and getattr(args, "template", None):
+        frames = [float(x) for x in args.frames.split(",")] if args.frames else None
+        styles = args.styles.split(",") if args.styles else None
+        ids = L.template_fixture_ids() if args.template == "all" else [args.template]
+        worst = 0
+        for tid in ids:
+            rep = L.template_sheet(tid, styles=styles, skin=args.skin, frames=frames, variant=args.variant)
+            bad = {k: len(v["errors"]) + len(v["console"]) for k, v in rep["styles"].items()}
+            worst = max([worst] + list(bad.values()))
+            info(f"sheet {tid} ({args.skin}): {rep['sheet']}  problems per style: {bad}")
+            for st, rr in rep["styles"].items():
+                for e in rr["errors"][:6] + [{"code": "console", "msg": c} for c in rr["console"][:3]]:
+                    info(f"  [{st}] {e.get('code')}: {str(e.get('msg'))[:200]}")
+        return 2 if worst else 0
     if not args.form:
         raise LoomError(f"library {args.action} needs a form id")
     if args.action == "check":

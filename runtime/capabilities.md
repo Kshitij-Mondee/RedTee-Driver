@@ -177,6 +177,7 @@ One line each on WHEN to use it. Details: `get_api_section(<section>)`; template
 ## style
 
 - **style_engine** (runtime/engines.js; section: The style's engine): call the working code that solves the style's hard part (runtime/engines/<style>.js); whiteboard, blueprint, isometric, hologram and screencast exist (D-179, D-183, D-185). Call: `ctx.engine; Loom.engines.define`
+- **template_skins** (runtime/skins.js; section: The style's engine): a style draws the catalog templates its own way (the hand, the nib, light, the board, the product); templates are unchanged. Call: `Loom.skins.define (in an engine file)`
 
 ## timing
 

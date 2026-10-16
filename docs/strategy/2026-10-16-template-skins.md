@@ -1,6 +1,19 @@
 # Template skins: each style draws the shared templates its own way (2026-10-16)
 
-STATUS: PROPOSAL (2026-10-16, night). Nothing built. Waiting for Kshitij's go-ahead. Follows item 1 of
+STATUS: PROPOSAL (2026-10-16, night). Nothing built. Waiting for Kshitij's go-ahead.
+
+UPDATE (later 2026-10-16, D-198): approved as proposed ("whiteboard first, isometric Version A with B tested against it,
+skins on by default for new engine lessons, classic kept, finished lessons untouched") and built: `runtime/skins.js` and a
+skin in each of the five engines, the switch, `skin_formed`, `template_not_this_style`, the three-frame template sheet
+(`py -m loom library sheet --template all --skin style --styles <s> [--variant B]`) and `tests/suites/template_skins.py`.
+Differences from the text below:
+- The whiteboard and blueprint skins carry what a beat restates at its cut (quiz.answer's question and options)
+  instead of redrawing it.
+- Blueprint hatching is laid in as a wash.
+- Screencast opens its own window every time; rendering inside a held app shell is not built.
+- Hologram has no parallax depth.
+- Isometric B prints the whole template on one wall, scaled to 0.6.
+After-sheets: `docs/research/2026-10-16-template-skins/after-*.jpg`. Follows item 1 of
 `docs/strategy/2026-10-16-style-adaptation-assessment.md` ("Templates per style, drawn by the style"), D-192 (essences)
 and D-193 (components scoped to their styles). Each style is judged against its own purpose, never against another
 style (D-122).
