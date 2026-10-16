@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-16 - Direction cards per style for the planners, and a soft check on the signature moments (D-189, L-475)
+- `packs/direction/` holds one card for each of hologram, blueprint, screencast, isometric and whiteboard: the style's
+  strong calls and when each fits, at most 2,600 bytes.
+- `loom/direction.py`: the loader and `storyboard_warnings`. The card reaches the planners in four places:
+  - Relay's storyboard_outline and storyboard task messages (`loom/agents/conductor.py`);
+  - Shuttle's P5 start message (`loom/shuttle/launch.py`);
+  - `get_style_pack` (`direction_card`, first; the style guide and engine guide now last, so the 64,000-character
+    reply cut no longer drops the engine note and the kept library after them).
+- `loom/schemas/storyboard.schema.json`: `hero3d` on a scene, described and validated (params with a model).
+- `loom/checks/gates.py`: the storyboard gate warns `holo_no_hero` (a hologram lesson with no hero beat) and
+  `bp_one_layout` (a blueprint lesson with one station over 60 % of the narration), from 6 beats.
+- The outline role card and the Shuttle playbook (P5) name the card. The storyboard role card is unchanged: it was 9
+  characters under its 2,000-token cap, so the card reaches that role through its task message only.
+- Test suite `tests/suites/style_direction.py`.
+
 ## 2026-10-16 - The asset maker's package
 - `docs/assets/HANDOFF_TEMPLATE_LIBRARY.md`: 184 items; set-up steps; where each family's work goes (components,
   `assets/models3d/`, Claude Design); the five style engines; screencast's native code, terminal and chart regions in

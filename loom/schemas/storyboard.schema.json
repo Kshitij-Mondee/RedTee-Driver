@@ -378,6 +378,61 @@
               }
             }
           },
+          "hero3d": {
+            "type": "object",
+            "description": "Hologram lessons (D-188, D-189): the beat's 3D hero, the lesson's subject as projected light, for a physical thing that reads better turning in 3D (a bicycle, the earth, a server rack, a phone, a chip). {name: {rect, dur, fps, at, params}}. Compose renders each through the clip store (the holo_hero preset) and the scene places it with H.hero3d(name, ...), locking and reading its parts. A subject that is abstract (a model, tokens, a pipeline) is a pushed-SVG hero instead, declared in design.hero. One or two hero beats a lesson (packs/direction/hologram.md).",
+            "propertyNames": {
+              "pattern": "^[A-Za-z0-9_\\-]+$"
+            },
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "object",
+              "required": [
+                "params"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "rect": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "description": "[x, y, w, h] in the 1920x1080 frame; keep y + h at most 930 (the caption band). Default [410, 90, 1100, 900]"
+                },
+                "dur": {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "description": "seconds of the clip, within the beat (default 8)"
+                },
+                "fps": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 60,
+                  "description": "a lesson hero renders at 30 fps unless this says otherwise"
+                },
+                "at": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "seconds after the beat start the clip's 0 falls on"
+                },
+                "params": {
+                  "type": "object",
+                  "required": [
+                    "model"
+                  ],
+                  "description": "the holo_hero preset's params: model (a library model id, py -m loom models), opts, yaw, turn [t0, t1, radians], build [t0, dur], elevation, zoom, states, hot [{part, t0, t1}], explode, look, geo (coastlines for earth); times are seconds from the beat's start (docs/styles/engines/hologram.md)",
+                  "properties": {
+                    "model": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
           "upgrade_reason": {
             "type": "string",
             "minLength": 12,

@@ -56,7 +56,11 @@ order. A refusal is information, not an obstacle: do the step it names.
 - **P3:** `lnd-learning-pedagogy` (the teaching plan and its rubric).
 - **P4:** `lnd-learning-pedagogy` narration contract, `lnd-visual-design` section 3, `lnd-explainer-craft` (show it
   while you say it). Length: about 8 beats a minute, the script within 1.3 times the request.
-- **P5:** `REFERENCE_FIRST`, `STORYBOARD_GUIDE` (devices, value script, accent_on, joins, kit), `lnd-visual-storyteller`,
+- **P5:** first the style's DIRECTION CARD (in the start message, and `get_style_pack`'s `direction_card`; D-189): the
+  style's strong calls and when each fits. Plan the ones the content calls for in the outline and stage them in the
+  storyboard (a hologram hero beat: `hero3d` on the scene, or `design.hero` for a pushed-SVG hero; a blueprint lesson: a
+  sheet per section, not one plant layout); the gate warns `holo_no_hero` and `bp_one_layout`. Then
+  `REFERENCE_FIRST`, `STORYBOARD_GUIDE` (devices, value script, accent_on, joins, kit), `lnd-visual-storyteller`,
   `lnd-motion-fit`, `lnd-character-design` (people come from kits, one look per person), the style guide
   (`get_style_pack`: guide_text, sections 2, 10, 11 and 13 first), `capabilities()`, the catalogue
   (`catalog_search`, `get_catalog_entry` before you set a template's props).

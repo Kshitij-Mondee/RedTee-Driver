@@ -256,7 +256,11 @@ def t_get_style_pack(ctx):
     pk = read_json(ENGINE_ROOT / "packs/styles" / f"{sid}.json", {})
     keep = ("id", "name", "reads_as", "look_family", "palette", "type", "shape", "motion", "pace", "tone_reference", "characters", "join_default", "fx",
             "roles", "materials", "guide")
-    out = {k: pk[k] for k in keep if k in pk}
+    out = {}
+    from ..direction import card_for as _direction   # first: the style's strong calls and when each fits (D-189)
+    if hasattr(ctx.project, "path") and _direction(ctx.project):
+        out["direction_card"] = _direction(ctx.project)
+    out.update({k: pk[k] for k in keep if k in pk})
     # the style's guide, whole: what each token is for, the polish checklist, the recipes (WS6, 2026-10-08)
     g = pk.get("guide")
     if g and (ENGINE_ROOT / g).exists():
@@ -285,10 +289,13 @@ def t_get_style_pack(ctx):
     lib = _kept_listing(ctx.project) if hasattr(ctx.project, "path") else ""
     if lib:
         out["kept_library"] = lib
-    return out
+    # the two long texts last (D-189): Shuttle cuts a reply at 64,000 characters, and a hologram reply is about 65,000,
+    # so the engine note and the kept library after them were the part that never arrived
+    long = ("guide_text", "engine_text")
+    return {**{k: v for k, v in out.items() if k not in long}, **{k: out[k] for k in long if k in out}}
 
 
-ARTIFACTS = {"brief": "plan/brief.json", "knowledge": "plan/knowledge.json", "teaching_plan": "plan/teaching_plan.json",
+ARTIFACTS ={"brief": "plan/brief.json", "knowledge": "plan/knowledge.json", "teaching_plan": "plan/teaching_plan.json",
              "persona": "plan/persona.json", "script": "plan/script.json", "allocation": "plan/allocation.json",
              "outline": "plan/outline.json", "storyboard": "plan/storyboard.json", "design_seed": "plan/design_seed.json",
              "kit": "scenes/_kit.js", "kit_api": "logs/kit_api.md", "kit_draft": "logs/kit_draft.js", "review": "qa/review.json"}

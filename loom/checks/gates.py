@@ -579,6 +579,8 @@ def check_storyboard(project):
     ke, kw = SB.keep_checks(project, sb, beats)
     fe += ke; W += kw
     W += SB.carry_warnings(project, sb, beats)      # a new section carries little (D-182)
+    from ..direction import storyboard_warnings as _direction_warnings
+    W += _direction_warnings(project, sb)           # the style's strong calls planned for (D-189, L-474): notes, never rules
     ve, vw = SB.variety_checks(sb, beats, alloc)
     fe += ve; W += vw
     we, ww = SB.world_checks(sb, beats)            # one world (R-46)

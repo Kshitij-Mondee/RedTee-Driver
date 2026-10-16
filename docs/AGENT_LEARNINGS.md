@@ -2355,6 +2355,31 @@ He chose: feedback that lands, and spot and report phishing; one plain lesson (`
 
 ---
 
+## Run 85: per-style direction cards for the planners (2026-10-16, D-189)
+
+- **L-475 A planner uses a style's strong calls only when it is told when they fit, early and short.** (planning,
+  D-189) Closes L-474's OPEN. The planners had the style's direction only as a tool call (`get_style_pack`) returning
+  the whole style guide and engine guide, and nothing at the gate noticed a lesson that left the signature moment out.
+  Measured on st-holo-ai: the reply is 65,291 characters, and Shuttle cuts a reply at 64,000. The engine note and the
+  kept library came after the two guides, so they were the part that never arrived; the reply now ends with the guides.
+  - Why: engine capability grew faster than planning guidance; gates checked correctness only.
+  - **DONE:**
+    - a card per engine style, `packs/direction/<style>.md` (at most 2,600 bytes; every call named is in that style's
+      engine guide, tested). It sits in Relay's storyboard_outline and storyboard task messages and in Shuttle's P5
+      start message, and it comes first in `get_style_pack` (`direction_card`; the two long guides now come last). A
+      lesson with the engine off gets none.
+    - the storyboard schema describes and validates `hero3d`. The outline role card and the Shuttle playbook name the
+      card. The storyboard role card was 9 characters under its token cap (`agents_role_cards_..._budget`), so that
+      role gets the card only in its task message.
+    - the soft check warns `holo_no_hero` and `bp_one_layout`. Run on copies of the evidence through the gate:
+      st-holo-ai warns `holo_no_hero`, and st-bp-cooling warns `bp_one_layout` (85 % of its narration on one station).
+      st-iso-order and st-sc-2fa stay quiet (they hold one board or one shell by design).
+  - Gate: `tests/suites/style_direction.py` (4 tests; red with the gate wiring removed, and red with the threshold
+    raised to 0.9).
+  - OPEN: unproven on a new lesson. The test is one new lesson per style, cards against no cards within one style
+    (D-122): its plan, the critic's findings, the cost and Kshitij's rating. The full direction module of
+    `docs/strategy/2026-10-16-style-direction.md` (stage block, engine storyboard lint, critic checklist) is not built.
+
 ## Run 84: the four style test lessons (2026-10-16, R-69)
 
 - **L-474 An engine call nobody plans for never reaches a film.** (planning) The hologram lesson `st-holo-ai` ran

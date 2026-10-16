@@ -1217,7 +1217,7 @@ class Server:
             "catalog_search": "Search templates, blueprints and components by what they do.",
             "get_catalog_entry": "One catalogue entry with its props schema.",
             "capabilities": "Everything the engine can draw, one line each on when to use it; `group` filters.",
-            "get_style_pack": "The lesson's style pack and its whole style guide (guide_text).",
+            "get_style_pack": "The lesson's style pack: its direction card first (direction_card: the style's strong calls and when each fits), then its whole style guide (guide_text).",
             "get_example_scene": "The finished example scene closest to a design or form tag.",
             "get_beat": "One beat: script lines, allocation, timings, storyboard scene.",
             "get_fact": "One knowledge-sheet fact by id.",

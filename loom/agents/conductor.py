@@ -328,6 +328,9 @@ def task_message(project, role: str, extra: dict) -> str:
             # never saw it (bench 2026-10-06: 26 to 54 beats, 5 to 11 minutes)
             parts.insert(1, f"REQUESTED LENGTH: {mins:g} minutes. The film is about {mins * 60:.0f} s: plan it for that, "
                             "not for more beats than the script has.")
+        from ..direction import block as _direction     # the style's strong calls and when each fits (D-189, L-474)
+        if _direction(project):
+            parts.append(_direction(project))
         if role == "storyboard":
             parts.append("APPROVED OUTLINE (follow it; it is yours):\n" + _j(_read(project, "plan/outline.json")))
         from ..kept import listing as _kept_listing     # reuse or build, per style (D-163)

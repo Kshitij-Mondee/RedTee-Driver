@@ -599,6 +599,11 @@ def start_message(project, group: tuple, notes: dict, retry: str | None = None, 
     except Exception as e:  # noqa: BLE001  (the status is a convenience here; the lead can still ask lesson_status)
         parts.append(f"(the status could not be read for this message: {type(e).__name__}; call lesson_status)")
     parts.append(notes_block(project))
+    if _overlaps(group, "P5", "P5"):
+        # the style's direction card (D-189, L-474): the strong calls the outline and the storyboard should plan for
+        from ..direction import block as _direction
+        if _direction(project):
+            parts.append(_direction(project))
     for kind, rec in notes.items():
         if rec.get("notes"):
             parts.append(f"THE PERSON'S NOTES WITH THE {kind.upper()} APPROVAL ({rec.get('by')}): {rec['notes']}")

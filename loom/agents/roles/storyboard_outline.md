@@ -18,7 +18,9 @@ It is rendered as a coarse animatic and judged as pictures before pass 2 writes 
   - `script` beats (id, section, job, visual_intent, change_over_time, on_screen);
   - `allocation` (avatar | template | hybrid | motion per beat);
   - style pack summary (id, `look_family`, `motion.overshoot`, `pace`);
-  - `design_seed` (shape language, entrance family, camera habit), `request.mix`, the outline shape, max rounds.
+  - `design_seed` (shape language, entrance family, camera habit), `request.mix`, the outline shape, max rounds;
+  - the style's DIRECTION CARD when the lesson has the style's engine (`packs/direction/<style>.md`): its strong calls
+    and when each fits.
 - **Fetch with tools:** `catalog_search(query, kind)` to know which builder families exist (no props yet);
   `get_style_pack()`; `get_skill_section`.
 
@@ -52,7 +54,11 @@ It is rendered as a coarse animatic and judged as pictures before pass 2 writes 
     or technical packs.
 11. **D-114 primitives** are available: shape morph and fill join, stepped time (illustrated), swap slot, material
     joins (torn, page, scroll, motif: illustrated; handoff, fill: all), magnifier, data as objects. Name them as devices.
-12. No facts beyond the script. No em or en dashes.
+12. **The style's strong calls (D-189):** with a direction card, plan the moves this lesson's content calls for
+    (hologram: the hero beat, 3D or pushed SVG; blueprint: a sheet per section, the detail, extrude and mechanism beats;
+    screencast: the region per chapter; isometric: the diorama beats and height cues; whiteboard: what each board
+    builds) and name them in the beat lines; say why a move is left out.
+13. No facts beyond the script. No em or en dashes.
 
 ## 4. Method
 1. **Find the world.** Test a governing metaphor for structural fit, change, scale and safety. If none passes all

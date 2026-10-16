@@ -54,7 +54,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 | Palette study (research) | `tools/palette_study.py`, `docs/research/palettes/` | the colours a video uses by role, accent pairs, per-shot palettes; scored against a known palette |
 | Video-note screening (research) | `tools/check_video_notes.py` | flags filler or mislabelled AI-written video notes before use (D-72) |
 | Video study (research) | `tools/video_study.py`, `tools/transcribe_videos.py`, `docs/research/*/` | cuts, motion, holds, audio gaps, palette, contact sheets, speech numbers; studies of 5 channels (D-73, D-76); `tools/explain_study.py` (explanation cues, word-aligned strips, `moments` for the animation worth a 0.5 s strip, L-134) and `tools/style_fingerprint.py` (what a look is made of, for references and Loom alike) (D-74) |
-| Tests | `tests/run_tests.py` | 556 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
+| Tests | `tests/run_tests.py` | 560 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
 | Context | `docs/context/`, `tools/context_check.py`, `tools/engine_hash.py` | this layer |
 
 ## Lessons made
@@ -123,8 +123,9 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 ## Open work
 
 - **Four style test lessons (2026-10-16, R-69, L-474):** done and accepted (st-bp-cooling, st-holo-ai, st-sc-2fa,
-  st-iso-order; $50.22). Open: per-style direction cards in P5 and P6 so planners use each style's strong calls (the
-  hologram film had no `hero3d`), and Kshitij's look at the films.
+  st-iso-order; $50.22). Open: Kshitij's look at the films. The per-style direction cards they called for are built
+  (D-189, L-475: `packs/direction/`, read in P5, warned `holo_no_hero` and `bp_one_layout`); unproven until a new
+  lesson per style is made with them.
 
 - **Style stress test (2026-10-16, R-66; fixed and wow passes R-67, D-187):** the findings below are fixed; what is left is in FINDINGS.md "After the fixes", plus people kits and a composed lesson per style. Originally: blueprint, screencast, hologram and isometric rendered at their hardest
   (`docs/research/2026-10-16-style-stress/FINDINGS.md`). Open, from it:

@@ -6,6 +6,11 @@ each of these style? or do we have like a better way of handling it?" Method: a 
 stress-test, converge), a critique loop on the survivor, and a design critique of the three new lab strips as Chrome
 rendered them.
 
+UPDATE (later 2026-10-16, D-189, L-475): a first slice is built: a short direction card per engine style
+(`packs/direction/<style>.md`) read by the outline and storyboard planners in Relay and Shuttle, the schema's `hero3d`,
+and two soft storyboard warnings (`holo_no_hero`, `bp_one_layout`). Not built: the structured module (registers as
+data, `stage` block, engine storyboard lint, critic checklist, memory), golden storyboards and code directors.
+
 ## 1. How Loom handles it today (read from the code)
 
 - **One director and one storyboard for every style.**
