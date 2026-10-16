@@ -59,3 +59,5 @@ The orchestrator's look at the films (contact sheets every 8 s, `study/`, plus f
   `docs/strategy/2026-10-16-style-direction.md`: the engines can do it, the planners don't know when to.
 
 Not verified: audio by ear; whole films watched in real time (only sampled frames).
+
+Logged as R-69 and L-474.

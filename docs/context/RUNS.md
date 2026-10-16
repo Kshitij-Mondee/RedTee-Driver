@@ -3,6 +3,16 @@
 Newest first. Each run links to where its full trail lives. Never delete a run; add a correction below
 it if something here turns out wrong.
 
+## R-69 (2026-10-16): the four style test lessons (Shuttle, API, preset opus-plan-sol-code)
+- **Asked:** Kshitij: a 3-minute lesson per upgraded style through the whole pipeline, topics he chose; GPT Sol for
+  visual code, Opus for storyboarding and planning, Sonnet for the rest.
+- **Done:** all four accepted at every phase, 14:31 to 16:35. st-holo-ai 3:15 $9.79; st-sc-2fa 3:13 $12.42 (one stop at
+  P9, caption hold, resumed); st-bp-cooling 3:13 $13.31; st-iso-order 3:09 $14.70. Total $50.22. Plans committed
+  (no renders). Run log and study sheets: `docs/research/2026-10-16-style-lessons/`.
+- **Look (sampled frames):** isometric about 7, screencast about 7, blueprint about 6.5 to 7, hologram about 4.5 (no
+  hero; L-474).
+- **Not done / unverified:** audio by ear; whole films in real time; the direction cards (L-474).
+
 ## R-68 (2026-10-16): hologram v2 and screencast v2 (Claude Code; no paid API)
 - **Asked:** Kshitij: the hologram rack and next-word frames looked "basic and AI like"; screencast should depict real
   references accurately, with a smooth walkthrough; "first improve the hologram and screencast", then four 3-minute

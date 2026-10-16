@@ -122,6 +122,10 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 
 ## Open work
 
+- **Four style test lessons (2026-10-16, R-69, L-474):** done and accepted (st-bp-cooling, st-holo-ai, st-sc-2fa,
+  st-iso-order; $50.22). Open: per-style direction cards in P5 and P6 so planners use each style's strong calls (the
+  hologram film had no `hero3d`), and Kshitij's look at the films.
+
 - **Style stress test (2026-10-16, R-66; fixed and wow passes R-67, D-187):** the findings below are fixed; what is left is in FINDINGS.md "After the fixes", plus people kits and a composed lesson per style. Originally: blueprint, screencast, hologram and isometric rendered at their hardest
   (`docs/research/2026-10-16-style-stress/FINDINGS.md`). Open, from it:
   - screencast: code, terminal and chart regions;

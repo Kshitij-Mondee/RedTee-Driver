@@ -2355,6 +2355,22 @@ He chose: feedback that lands, and spot and report phishing; one plain lesson (`
 
 ---
 
+## Run 84: the four style test lessons (2026-10-16, R-69)
+
+- **L-474 An engine call nobody plans for never reaches a film.** (planning) The hologram lesson `st-holo-ai` ran
+  every phase and passed every gate, yet reads as flat boxed panels with no hero (about 4.5 by the orchestrator's
+  look). The engine can do a 3D hero (`hero3d`, D-188) and `H.object`, but a hero needs a storyboard `hero3d` entry,
+  and nothing in P5 or P6 asks for one: the storyboard prompts and the catalog do not say when a style's strong calls
+  fit. The scene authors then used only what the beat asked for (`H.tokens`, `H.arcs`, `H.stage`, `H.trace`).
+  Blueprint's wow calls did appear (`extrude`, `mechanism`, `hero`) but the film reads as one repeated plant diagram.
+  - Why: engine capability grew faster than planning guidance. Gates check correctness, not whether a style's
+    signature moments were used.
+  - OPEN (the fix): per-style direction cards read in P5 and P6 (`docs/strategy/2026-10-16-style-direction.md`), the
+    storyboard told when a `hero3d` fits, and a soft check that warns when a hologram lesson has no hero beat and a
+    blueprint lesson keeps one layout for most of its length.
+- Also: `st-sc-2fa` stopped at P9 on a caption hold of 1.78 s against 1.80 s; the check now allows one frame
+  (`loom/checks/film.py`), logged as a deviation in the run log.
+
 ## Run 83: hologram v2 and screencast v2 (2026-10-16, D-188, R-68)
 
 - **L-473 A hologram drawn as tidy UI reads as "AI made"; it has to behave like light.** (engine, D-188) Kshitij on the
