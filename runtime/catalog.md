@@ -781,3 +781,193 @@ Example:
 ```js
 ctx.use("app_project_board", { project: "Website relaunch", columns: [{ id: "todo", name: "To do" }, { id: "doing", name: "In progress", wip: 2 }, { id: "done", name: "Done" }], issues: [{ id: "w1", key: "WEB-12", title: "Write the cookie banner copy", col: "todo", type: "task" }], steps: [{ do: "drag", id: "w1", col: "doing", at: ctx.cue("pick it up") }] }, { x: 96, y: 78, name: "board" })
 ```
+
+### `dev_ci_pipeline`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-006))
+
+A CI/CD pipeline: stages as cards joined by arrows, each with its jobs, a status icon per job and stage (passed, failed, running, pending, skipped, blocked) and durations; on cue the stages run in order, jobs spin and resolve, and a failed stage stops the flow so the stages after it are skipped.
+
+Family: dev. Tags: ci, cd, pipeline, build, deploy, quality gate, devops, release, shift left, supply chain
+
+Outline: stage cards in a row (or a column) -> per stage: the stage name and its overall status icon -> per job: a status icon, the job name, its duration -> arrows between stages -> a progress sweep under a running job -> a token that travels the arrows
+
+Params:
+- `stages`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `w`: number, default 1600
+- `at`: number, default -1
+- `orientation`: enum, one of h/v, default "h"
+- `pace`: number, default 0.7
+- `steps`: list, default []
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `stages[] ({g, card, name, icon})`, `jobs[][] ({g, icon, name, dur, sweep})`, `edges[]`, `token`, `run(stageIndex, t)`, `set(stageIndex, jobIndex, state, t)`, `flow(t, dur)`
+Example:
+```js
+ctx.use("dev_ci_pipeline", { stages: [{ name: "Build", jobs: [{ name: "compile", state: "passed", dur: "48s" }] }, { name: "Scan", jobs: [{ name: "dependency audit", state: "failed", dur: "12s" }] }, { name: "Release", jobs: [{ name: "publish", state: "skipped" }] }], at: ctx.cue("the scan fails") }, { x: 260, y: 360, name: "pipeline" })
+```
+
+### `dev_code_editor`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-002))
+
+A code editor pane: a tab with the file name and its language, line numbers in a gutter, code in syntax colour, an overview stripe and an optional status line; lines type in on cue, a range can be brought into focus, a span marked with a squiggle and a line replaced.
+
+Family: dev. Tags: code editor, source code, syntax highlighting, programming, function, config file, code review, bug fix, yaml, python
+
+Outline: pane frame -> tab with the file name and the language label -> line-number gutter -> code lines in syntax colour -> overview stripe at the right -> status line (optional) -> a caret while typing
+
+Params:
+- `code`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `file`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `lang`: enum, one of js/ts/py/go/java/sql/yaml/json/bash/html/css/text, default "text"
+- `langLabel`: str
+- `status`: str
+- `w`: number, default 1200
+- `rows`: int, default 16
+- `startLine`: int, default 1
+- `at`: number, default -1
+- `cps`: number, default 18
+- `typeLines`: list, default []
+- `colors`: obj, default {}
+- `focus`: list, default []
+- `minimap`: bool, default true
+- `steps`: list, default []
+- `size`: number, default 24
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `frame`, `tab`, `gutter`, `lines[] ({g, tokens[], num, n})`, `cursor`, `minimap`, `status`, `app (the engine app, in the screencast style)`, `focus(a, b, t)`, `mark(line, tone, t, {col0, col1})`, `replace(line, newText, t)`, `scrollTo(line, t)`
+Example:
+```js
+ctx.use("dev_code_editor", { file: "rate_limit.go", lang: "go", code: "func allow(key string) bool {\n  n := hits.Incr(key)\n  return n <= limit\n}", focus: [2, 3], at: ctx.cue("the counter") }, { x: 360, y: 180, name: "editor" })
+```
+
+### `dev_db_table`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-012))
+
+A database table: an optional SQL query bar, column headers with their types, rows of cells with numbers right aligned, the rows past the limit summed up in one line and a row count; on cue the query types and its rows arrive, a filter collapses the rows that do not match, a cell is marked and a column of personal data is masked.
+
+Family: dev. Tags: database, sql, table, query, rows and columns, join, data quality, pii, redaction, select
+
+Outline: query bar with the SQL in mono (optional) -> header row: column names and their types -> rows of cells -> a line for the rows not shown -> the row count
+
+Params:
+- `columns`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `rows`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `query`: str
+- `title`: str
+- `countLabel`: str
+- `moreLabel`: str
+- `total`: int
+- `redact`: list, default []
+- `w`: number, default 1400
+- `maxRows`: int, default 8
+- `at`: number, default -1
+- `cps`: number, default 24
+- `size`: number, default 22
+- `steps`: list, default []
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `query`, `header[]`, `cells[r][c]`, `rowsG[]`, `more`, `count`, `run(t)`, `filter(keepRows, t)`, `mark(r, c, tone, t)`, `redact(col, t)`
+Example:
+```js
+ctx.use("dev_db_table", { title: "shipments", query: "SELECT id, city, status FROM shipments WHERE status = 'late';", columns: [{ name: "id", type: "int" }, { name: "city", type: "text" }, { name: "status", type: "text" }], rows: [[311, "Lyon", "late"], [318, "Porto", "late"]], countLabel: "{n} rows", at: ctx.cue("only the late ones") }, { x: 260, y: 240, name: "table" })
+```
+
+### `dev_diff_view`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-003))
+
+A code diff: the file's changed hunks with old and new line numbers, removed lines on a faint failure band with a minus, added lines on a faint success band with a plus and context lines plain, unified or side by side; removals then additions reveal on cue and a review comment can open on a row.
+
+Family: dev. Tags: diff, code review, pull request, change, patch, what changed, security fix, config drift, version control, git
+
+Outline: file header with the file name -> per hunk: a muted hunk header -> rows: old line number, new line number, a plus or minus, the code -> split mode: old on the left, new on the right -> review comment balloons on a leader
+
+Params:
+- `hunks`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `file`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `mode`: enum, one of unified/split, default "unified"
+- `w`: number, default 1300
+- `rows`: int, default 18
+- `at`: number, default -1
+- `lang`: enum, one of js/ts/py/go/java/sql/yaml/json/bash/html/css/text, default "text"
+- `wrap`: enum, one of wrap/cut, default "wrap"
+- `steps`: list, default []
+- `size`: number, default 22
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `frame`, `header`, `rows[] ({g, op, hunk, old, new})`, `comments[]`, `app (the engine app, in the screencast style)`, `reveal(op, t)`, `comment(row, text, t)`
+Example:
+```js
+ctx.use("dev_diff_view", { file: "config/session.js", lang: "js", hunks: [{ header: "@@ -8,3 +8,3 @@", lines: [{ op: " ", text: "const session = {" }, { op: "-", text: "  maxAgeDays: 365," }, { op: "+", text: "  maxAgeDays: 14," }, { op: " ", text: "};" }] }], at: ctx.cue("one line changed") }, { x: 300, y: 200, name: "diff" })
+```
+
+### `dev_git_graph`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-004))
+
+A branch and commit graph: one lane per branch with its name at the left, commits as dots in the order they were made, lines from each commit to its parents (curves where branches fork and merge), tags as small flags and a ring for where HEAD points; commits pop in on cue, a merge draws itself and HEAD travels.
+
+Family: dev. Tags: git, branch, merge, commit graph, rebase, release branch, hotfix, trunk based development, version control, gitflow
+
+Outline: branch labels in a column at the left -> a faint guide per lane -> edges from parent to child (straight on a lane, curved between lanes) -> commit dots with short labels above -> tag flags under their commits -> HEAD ring and pointer
+
+Params:
+- `branches`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `commits`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `head`: str
+- `headLabel`: str
+- `w`: number, default 1500
+- `at`: number, default -1
+- `stepX`: number, default 110
+- `gap`: number, default 0.25
+- `steps`: list, default []
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `lanes{id}`, `commits{id}`, `edges[]`, `labels{id}`, `tags{id}`, `head`, `commit(spec, t)`, `merge(fromBranch, intoBranch, t)`, `moveHead(id, t)`, `focus(branchId, t)`
+Example:
+```js
+ctx.use("dev_git_graph", { branches: [{ id: "main", label: "main" }, { id: "fix", label: "hotfix/login" }], commits: [{ id: "a", branch: "main", parents: [] }, { id: "b", branch: "fix", parents: ["a"], label: "fix" }, { id: "c", branch: "main", parents: ["a", "b"], tag: "v2.0.1" }], head: "c", at: ctx.cue("merged back") }, { x: 210, y: 300, name: "graph" })
+```
+
+### `dev_http_exchange`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-010))
+
+An HTTP exchange: a request card with its method, URL, headers and body, and a response card with its status code and reason, headers and body, joined by an arrow with an optional latency; secret header values are masked until revealed, and on cue the request travels and the response arrives.
+
+Family: dev. Tags: http, api, rest, request, response, status code, headers, authorization, rate limit, cors
+
+Outline: request card: method badge and URL, header rows, body -> arrow from request to response, latency on it -> response card: status badge with its reason, header rows, body -> masked secret values
+
+Params:
+- `request`: obj, CONTENT (on-screen words: always pass it; never defaulted)
+- `response`: obj, CONTENT (on-screen words: always pass it; never defaulted)
+- `latency`: str
+- `layout`: enum, one of side/stack, default "side"
+- `w`: number, default 1500
+- `at`: number, default -1
+- `maskSecrets`: bool, default true
+- `size`: number, default 22
+- `steps`: list, default []
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `req`, `res`, `arrow`, `status`, `headers[] ({g, key, side, band, value, mask})`, `send(t)`, `mark(headerKey, tone, t)`, `reveal(headerKey, t)`
+Example:
+```js
+ctx.use("dev_http_exchange", { request: { method: "DELETE", url: "/v2/files/8812", headers: [["Authorization", "Bearer 7f3a91c0"]] }, response: { status: 204, reason: "No Content", headers: [["Date", "Tue, 03 Jun"]] }, latency: "64 ms", at: ctx.cue("delete the file") }, { x: 210, y: 260, name: "http" })
+```
+
+### `dev_terminal`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-001))
+
+A terminal session: a window with a title bar, commands typed after a prompt on cue and their output printed under them, errors and successes in their own tones, a block cursor, and lines that scroll when the window is full.
+
+Family: dev. Tags: terminal, shell, command line, cli, console, bash, git, deployment, devops, kubectl
+
+Outline: window frame -> title bar with three neutral dots and a title -> body of mono lines (commands after a prompt, output, errors, warnings, comments) -> a block cursor
+
+Params:
+- `lines`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `title`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `prompt`: str, default "$"
+- `cwd`: str
+- `w`: number, default 1100
+- `rows`: int, default 12
+- `at`: number, default -1
+- `cps`: number, default 22
+- `scheme`: enum, one of dark/light/pack, default "dark"
+- `accent`: token, default "accent"
+- `highlight`: list, default []
+- `wrap`: enum, one of wrap/cut, default "wrap"
+- `size`: number, default 24
+- `engine`: enum, one of auto/off, default "auto"
+Slots: `header`: redraw the title bar: (g, p, ctx) => void (the bar's box is 0, 0, w, barH)
+Parts returned: `frame`, `bar`, `title`, `body`, `lines[]`, `cursor`, `app (the engine app, in the screencast style)`, `type(i, t)`, `addLine({kind, text}, t)`, `mark(i, tone, t)`, `clear(t)`
+Example:
+```js
+ctx.use("dev_terminal", { title: "release", cwd: "~/shop", lines: [{ kind: "cmd", text: "npm run build" }, { kind: "out", text: "built in 4.2s" }, { kind: "ok", text: "3 bundles written" }], at: ctx.cue("build it") }, { x: 410, y: 210, name: "term" })
+```

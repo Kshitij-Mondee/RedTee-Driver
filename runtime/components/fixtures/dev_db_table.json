@@ -1,0 +1,660 @@
+{
+ "cases": [
+  {
+   "label": "customers, email redacted",
+   "params": {
+    "title": "customers",
+    "columns": [
+     {
+      "name": "id",
+      "type": "int"
+     },
+     {
+      "name": "name",
+      "type": "text"
+     },
+     {
+      "name": "email",
+      "type": "text"
+     },
+     {
+      "name": "city",
+      "type": "text"
+     },
+     {
+      "name": "joined",
+      "type": "date"
+     }
+    ],
+    "rows": [
+     [
+      1001,
+      "Mara Lind",
+      "mara.lind@example.com",
+      "Oslo",
+      "2024-02-11"
+     ],
+     [
+      1002,
+      "Tomas Berg",
+      "t.berg@example.com",
+      "Bergen",
+      "2024-03-02"
+     ],
+     [
+      1003,
+      "Ines Costa",
+      "ines.c@example.com",
+      "Porto",
+      "2024-03-19"
+     ],
+     [
+      1004,
+      "Yuki Arai",
+      "yuki.arai@example.com",
+      "Osaka",
+      "2024-04-07"
+     ],
+     [
+      1005,
+      "Dev Patel",
+      "dev.p@example.com",
+      "Leeds",
+      "2024-04-22"
+     ]
+    ],
+    "countLabel": "{n} rows",
+    "w": 1400,
+    "steps": [
+     {
+      "do": "redact",
+      "col": "email",
+      "at": 1.2
+     }
+    ]
+   },
+   "opts": {
+    "x": 260,
+    "y": 260
+   }
+  },
+  {
+   "label": "orders with a WHERE filter",
+   "params": {
+    "query": "SELECT id, customer_id, status, total FROM orders WHERE status = 'shipped';",
+    "columns": [
+     {
+      "name": "id",
+      "type": "int"
+     },
+     {
+      "name": "customer_id",
+      "type": "int"
+     },
+     {
+      "name": "status",
+      "type": "text"
+     },
+     {
+      "name": "total",
+      "type": "numeric"
+     }
+    ],
+    "rows": [
+     [
+      5521,
+      1003,
+      "shipped",
+      129.9
+     ],
+     [
+      5522,
+      1001,
+      "pending",
+      42.0
+     ],
+     [
+      5523,
+      1004,
+      "shipped",
+      310.5
+     ],
+     [
+      5524,
+      1002,
+      "cancelled",
+      18.75
+     ],
+     [
+      5525,
+      1005,
+      "shipped",
+      77.2
+     ],
+     [
+      5526,
+      1001,
+      "pending",
+      230.0
+     ]
+    ],
+    "countLabel": "{n} rows",
+    "w": 1300,
+    "at": 0.3,
+    "cps": 40,
+    "steps": [
+     {
+      "do": "filter",
+      "keep": [
+       0,
+       2,
+       4
+      ],
+      "at": 4.2
+     },
+     {
+      "do": "mark",
+      "r": 2,
+      "c": 3,
+      "tone": "accent",
+      "at": 5.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 310,
+    "y": 200
+   }
+  },
+  {
+   "label": "maximum: 12 columns by 30 rows, cut with a line for the rest",
+   "params": {
+    "query": "SELECT * FROM inventory_positions WHERE warehouse IN ('North', 'South', 'East') AND qty < reorder_at + reserved ORDER BY updated DESC, sku ASC LIMIT 30;",
+    "title": "inventory_positions",
+    "columns": [
+     {
+      "name": "id",
+      "type": "int"
+     },
+     {
+      "name": "sku",
+      "type": "text"
+     },
+     {
+      "name": "warehouse",
+      "type": "text"
+     },
+     {
+      "name": "aisle",
+      "type": "int"
+     },
+     {
+      "name": "bin",
+      "type": "text"
+     },
+     {
+      "name": "qty",
+      "type": "int"
+     },
+     {
+      "name": "reserved",
+      "type": "int"
+     },
+     {
+      "name": "reorder_at",
+      "type": "int"
+     },
+     {
+      "name": "supplier",
+      "type": "text"
+     },
+     {
+      "name": "unit_cost",
+      "type": "numeric"
+     },
+     {
+      "name": "updated",
+      "type": "date"
+     },
+     {
+      "name": "status",
+      "type": "text"
+     }
+    ],
+    "rows": [
+     [
+      1,
+      "SKU-4100",
+      "North",
+      1,
+      "B00",
+      0,
+      0,
+      25,
+      "Kestrel Supply",
+      3.5,
+      "2025-01-01",
+      "ok"
+     ],
+     [
+      2,
+      "SKU-4101",
+      "South",
+      2,
+      "B07",
+      13,
+      5,
+      25,
+      "Alder Parts",
+      4.35,
+      "2025-01-02",
+      "low"
+     ],
+     [
+      3,
+      "SKU-4102",
+      "East",
+      3,
+      "B14",
+      26,
+      10,
+      25,
+      "Brook Goods",
+      5.2,
+      "2025-01-03",
+      "ok"
+     ],
+     [
+      4,
+      "SKU-4103",
+      "North",
+      4,
+      "B21",
+      39,
+      15,
+      25,
+      "Kestrel Supply",
+      6.05,
+      "2025-01-04",
+      "reorder"
+     ],
+     [
+      5,
+      "SKU-4104",
+      "South",
+      5,
+      "B28",
+      52,
+      0,
+      25,
+      "Alder Parts",
+      6.9,
+      "2025-01-05",
+      "ok"
+     ],
+     [
+      6,
+      "SKU-4105",
+      "East",
+      6,
+      "B35",
+      65,
+      5,
+      25,
+      "Brook Goods",
+      7.75,
+      "2025-01-06",
+      "low"
+     ],
+     [
+      7,
+      "SKU-4106",
+      "North",
+      7,
+      "B02",
+      78,
+      10,
+      25,
+      "Kestrel Supply",
+      8.6,
+      "2025-01-07",
+      "ok"
+     ],
+     [
+      8,
+      "SKU-4107",
+      "South",
+      8,
+      "B09",
+      1,
+      15,
+      25,
+      "Alder Parts",
+      9.45,
+      "2025-01-08",
+      "reorder"
+     ],
+     [
+      9,
+      "SKU-4108",
+      "East",
+      9,
+      "B16",
+      14,
+      0,
+      25,
+      "Brook Goods",
+      10.3,
+      "2025-01-09",
+      "ok"
+     ],
+     [
+      10,
+      "SKU-4109",
+      "North",
+      10,
+      "B23",
+      27,
+      5,
+      25,
+      "Kestrel Supply",
+      11.15,
+      "2025-01-10",
+      "low"
+     ],
+     [
+      11,
+      "SKU-4110",
+      "South",
+      11,
+      "B30",
+      40,
+      10,
+      25,
+      "Alder Parts",
+      12.0,
+      "2025-01-11",
+      "ok"
+     ],
+     [
+      12,
+      "SKU-4111",
+      "East",
+      12,
+      "B37",
+      53,
+      15,
+      25,
+      "Brook Goods",
+      12.85,
+      "2025-01-12",
+      "reorder"
+     ],
+     [
+      13,
+      "SKU-4112",
+      "North",
+      1,
+      "B04",
+      66,
+      0,
+      25,
+      "Kestrel Supply",
+      13.7,
+      "2025-01-13",
+      "ok"
+     ],
+     [
+      14,
+      "SKU-4113",
+      "South",
+      2,
+      "B11",
+      79,
+      5,
+      25,
+      "Alder Parts",
+      14.55,
+      "2025-01-14",
+      "low"
+     ],
+     [
+      15,
+      "SKU-4114",
+      "East",
+      3,
+      "B18",
+      2,
+      10,
+      25,
+      "Brook Goods",
+      15.4,
+      "2025-01-15",
+      "ok"
+     ],
+     [
+      16,
+      "SKU-4115",
+      "North",
+      4,
+      "B25",
+      15,
+      15,
+      25,
+      "Kestrel Supply",
+      16.25,
+      "2025-01-16",
+      "reorder"
+     ],
+     [
+      17,
+      "SKU-4116",
+      "South",
+      5,
+      "B32",
+      28,
+      0,
+      25,
+      "Alder Parts",
+      17.1,
+      "2025-01-17",
+      "ok"
+     ],
+     [
+      18,
+      "SKU-4117",
+      "East",
+      6,
+      "B39",
+      41,
+      5,
+      25,
+      "Brook Goods",
+      17.95,
+      "2025-01-18",
+      "low"
+     ],
+     [
+      19,
+      "SKU-4118",
+      "North",
+      7,
+      "B06",
+      54,
+      10,
+      25,
+      "Kestrel Supply",
+      18.8,
+      "2025-01-19",
+      "ok"
+     ],
+     [
+      20,
+      "SKU-4119",
+      "South",
+      8,
+      "B13",
+      67,
+      15,
+      25,
+      "Alder Parts",
+      19.65,
+      "2025-01-20",
+      "reorder"
+     ],
+     [
+      21,
+      "SKU-4120",
+      "East",
+      9,
+      "B20",
+      80,
+      0,
+      25,
+      "Brook Goods",
+      20.5,
+      "2025-01-21",
+      "ok"
+     ],
+     [
+      22,
+      "SKU-4121",
+      "North",
+      10,
+      "B27",
+      3,
+      5,
+      25,
+      "Kestrel Supply",
+      21.35,
+      "2025-01-22",
+      "low"
+     ],
+     [
+      23,
+      "SKU-4122",
+      "South",
+      11,
+      "B34",
+      16,
+      10,
+      25,
+      "Alder Parts",
+      22.2,
+      "2025-01-23",
+      "ok"
+     ],
+     [
+      24,
+      "SKU-4123",
+      "East",
+      12,
+      "B01",
+      29,
+      15,
+      25,
+      "Brook Goods",
+      23.05,
+      "2025-01-24",
+      "reorder"
+     ],
+     [
+      25,
+      "SKU-4124",
+      "North",
+      1,
+      "B08",
+      42,
+      0,
+      25,
+      "Kestrel Supply",
+      23.9,
+      "2025-01-25",
+      "ok"
+     ],
+     [
+      26,
+      "SKU-4125",
+      "South",
+      2,
+      "B15",
+      55,
+      5,
+      25,
+      "Alder Parts",
+      24.75,
+      "2025-01-26",
+      "low"
+     ],
+     [
+      27,
+      "SKU-4126",
+      "East",
+      3,
+      "B22",
+      68,
+      10,
+      25,
+      "Brook Goods",
+      25.6,
+      "2025-01-27",
+      "ok"
+     ],
+     [
+      28,
+      "SKU-4127",
+      "North",
+      4,
+      "B29",
+      81,
+      15,
+      25,
+      "Kestrel Supply",
+      26.45,
+      "2025-01-28",
+      "reorder"
+     ],
+     [
+      29,
+      "SKU-4128",
+      "South",
+      5,
+      "B36",
+      4,
+      0,
+      25,
+      "Alder Parts",
+      27.3,
+      "2025-01-01",
+      "ok"
+     ],
+     [
+      30,
+      "SKU-4129",
+      "East",
+      6,
+      "B03",
+      17,
+      5,
+      25,
+      "Brook Goods",
+      28.15,
+      "2025-01-02",
+      "low"
+     ]
+    ],
+    "maxRows": 8,
+    "moreLabel": "and {n} more",
+    "countLabel": "{n} rows",
+    "w": 1720,
+    "redact": [
+     "supplier"
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 150
+   }
+  }
+ ]
+}

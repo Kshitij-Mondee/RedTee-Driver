@@ -1,0 +1,272 @@
+{
+ "cases": [
+  {
+   "label": "4 stages, all pass",
+   "params": {
+    "w": 1500,
+    "at": 0.3,
+    "pace": 0.35,
+    "stages": [
+     {
+      "name": "Build",
+      "jobs": [
+       {
+        "name": "compile",
+        "state": "passed",
+        "dur": "48s"
+       }
+      ]
+     },
+     {
+      "name": "Test",
+      "jobs": [
+       {
+        "name": "unit tests",
+        "state": "passed",
+        "dur": "1m 12s"
+       },
+       {
+        "name": "lint",
+        "state": "passed",
+        "dur": "9s"
+       }
+      ]
+     },
+     {
+      "name": "Package",
+      "jobs": [
+       {
+        "name": "container image",
+        "state": "passed",
+        "dur": "36s"
+       }
+      ]
+     },
+     {
+      "name": "Deploy",
+      "jobs": [
+       {
+        "name": "staging",
+        "state": "passed",
+        "dur": "22s"
+       }
+      ]
+     }
+    ]
+   },
+   "opts": {
+    "x": 210,
+    "y": 380
+   }
+  },
+  {
+   "label": "scan fails and blocks deploy",
+   "params": {
+    "w": 1600,
+    "stages": [
+     {
+      "name": "Build",
+      "jobs": [
+       {
+        "name": "compile",
+        "state": "passed",
+        "dur": "51s"
+       }
+      ]
+     },
+     {
+      "name": "Test",
+      "jobs": [
+       {
+        "name": "unit tests",
+        "state": "passed",
+        "dur": "2m 3s"
+       },
+       {
+        "name": "contract tests",
+        "state": "passed",
+        "dur": "40s"
+       }
+      ]
+     },
+     {
+      "name": "Security scan",
+      "jobs": [
+       {
+        "name": "dependency audit",
+        "state": "failed",
+        "dur": "14s"
+       },
+       {
+        "name": "secret scan",
+        "state": "passed",
+        "dur": "6s"
+       }
+      ]
+     },
+     {
+      "name": "Deploy",
+      "jobs": [
+       {
+        "name": "production",
+        "state": "skipped"
+       }
+      ]
+     }
+    ]
+   },
+   "opts": {
+    "x": 160,
+    "y": 380
+   }
+  },
+  {
+   "label": "maximum: 7 stages, 3 parallel jobs each",
+   "params": {
+    "w": 1720,
+    "at": 0.2,
+    "pace": 0.25,
+    "stages": [
+     {
+      "name": "Checkout",
+      "jobs": [
+       {
+        "name": "fetch sources",
+        "state": "passed",
+        "dur": "4s"
+       },
+       {
+        "name": "restore cache",
+        "state": "passed",
+        "dur": "11s"
+       },
+       {
+        "name": "verify signatures",
+        "state": "passed",
+        "dur": "3s"
+       }
+      ]
+     },
+     {
+      "name": "Build",
+      "jobs": [
+       {
+        "name": "web bundle",
+        "state": "passed",
+        "dur": "1m 40s"
+       },
+       {
+        "name": "api binary",
+        "state": "passed",
+        "dur": "58s"
+       },
+       {
+        "name": "worker binary",
+        "state": "passed",
+        "dur": "61s"
+       }
+      ]
+     },
+     {
+      "name": "Unit tests",
+      "jobs": [
+       {
+        "name": "web suite",
+        "state": "passed",
+        "dur": "2m 5s"
+       },
+       {
+        "name": "api suite",
+        "state": "passed",
+        "dur": "1m 2s"
+       },
+       {
+        "name": "worker suite",
+        "state": "passed",
+        "dur": "44s"
+       }
+      ]
+     },
+     {
+      "name": "Integration",
+      "jobs": [
+       {
+        "name": "payments flow",
+        "state": "passed",
+        "dur": "3m 9s"
+       },
+       {
+        "name": "search flow",
+        "state": "warning",
+        "dur": "2m 51s"
+       },
+       {
+        "name": "export flow",
+        "state": "passed",
+        "dur": "2m 2s"
+       }
+      ]
+     },
+     {
+      "name": "Security",
+      "jobs": [
+       {
+        "name": "dependency audit",
+        "state": "failed",
+        "dur": "19s"
+       },
+       {
+        "name": "container scan",
+        "state": "passed",
+        "dur": "1m 7s"
+       },
+       {
+        "name": "licence check",
+        "state": "passed",
+        "dur": "8s"
+       }
+      ]
+     },
+     {
+      "name": "Staging",
+      "jobs": [
+       {
+        "name": "deploy",
+        "state": "pending"
+       },
+       {
+        "name": "smoke tests",
+        "state": "pending"
+       },
+       {
+        "name": "load check",
+        "state": "pending"
+       }
+      ]
+     },
+     {
+      "name": "Production",
+      "jobs": [
+       {
+        "name": "canary 10%",
+        "state": "pending"
+       },
+       {
+        "name": "full rollout",
+        "state": "pending"
+       },
+       {
+        "name": "release notes",
+        "state": "pending"
+       }
+      ]
+     }
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 330
+   }
+  }
+ ]
+}

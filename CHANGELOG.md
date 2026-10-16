@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-17 - Batch-03 of the asset hand-off: seven developer components (D-193)
+- T-001 `dev_terminal`, T-002 `dev_code_editor`, T-003 `dev_diff_view`, T-004 `dev_git_graph`, T-006 `dev_ci_pipeline`,
+  T-010 `dev_http_exchange`, T-012 `dev_db_table`, with the shared `_dev_kit.js`; made for the styles that show software as
+  screens plus dark-technical, whiteboard and blueprint (chalk-lab for the git graph and the pipeline), accepted here. The
+  first batch pushed by the friend's own session (`assets/batch-03`); its notes in docs/assets/batches/batch-03.md. Its
+  sheet images were left out, as for batches 01 and 02 (library/sheets/ is not tracked).
+
 ## 2026-10-17 - Concepts and examples for hologram and isometric; taste in the whiteboard skin (D-201)
 - Essences (hologram, isometric): a concept shown working, then one example; `text-heavy beats` avoided;
   `screen_words: 14`, said in the essence block and warned at the storyboard (`text_heavy`, `loom/essence.py`); the

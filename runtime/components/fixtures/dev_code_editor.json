@@ -1,0 +1,81 @@
+{
+ "cases": [
+  {
+   "label": "python function",
+   "params": {
+    "file": "orders.py",
+    "lang": "py",
+    "langLabel": "Python",
+    "code": "def monthly_total(orders, month):\n    \"\"\"Sum the paid orders of one month.\"\"\"\n    total = 0\n    for order in orders:\n        if order.month != month:\n            continue\n        if order.status == \"paid\":\n            total += order.amount\n    # refunds are booked as negative amounts\n    return round(total, 2)",
+    "w": 1200,
+    "rows": 11,
+    "at": 0.3,
+    "cps": 40,
+    "typeLines": [
+     7
+    ]
+   },
+   "opts": {
+    "x": 360,
+    "y": 200
+   }
+  },
+  {
+   "label": "yaml with focus",
+   "params": {
+    "file": "deployment.yaml",
+    "lang": "yaml",
+    "langLabel": "YAML",
+    "status": "Spaces: 2   UTF-8   Deployment manifest",
+    "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: checkout-web\n  labels:\n    app: checkout-web\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: checkout-web\n  template:\n    spec:\n      containers:\n        - name: web\n          image: registry.example.com/checkout-web:2.8.1\n          resources:\n            limits:\n              memory: \"512Mi\"\n              cpu: \"500m\"",
+    "w": 1240,
+    "rows": 12,
+    "focus": [
+     16,
+     20
+    ],
+    "steps": [
+     {
+      "do": "mark",
+      "line": 17,
+      "tone": "neg",
+      "at": 1.6
+     }
+    ]
+   },
+   "opts": {
+    "x": 340,
+    "y": 170
+   }
+  },
+  {
+   "label": "maximum: 60 lines of TypeScript, replace on line 42",
+   "params": {
+    "file": "src/billing/routes/invoices_dashboard_handlers.ts",
+    "lang": "ts",
+    "langLabel": "TypeScript",
+    "status": "main   Ln 42, Col 3   TypeScript   2 problems",
+    "code": "import { Router, Request, Response } from \"./http\";\nimport { InvoiceStore } from \"./store\";\n\n// route 1: a read-only endpoint for the billing dashboard and its filters\nexport async function handler1(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 1, size: 50, status: req.query.status });\n  res.json(rows);\n// route 2: a read-only endpoint for the billing dashboard and its filters\nexport async function handler2(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 2, size: 50, status: req.query.status });\n  res.json(rows);\n// route 3: a read-only endpoint for the billing dashboard and its filters\nexport async function handler3(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 3, size: 50, status: req.query.status });\n  res.json(rows);\n// route 4: a read-only endpoint for the billing dashboard and its filters\nexport async function handler4(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 4, size: 50, status: req.query.status });\n  res.json(rows);\n// route 5: a read-only endpoint for the billing dashboard and its filters\nexport async function handler5(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 5, size: 50, status: req.query.status });\n  res.json(rows);\n// route 6: a read-only endpoint for the billing dashboard and its filters\nexport async function handler6(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 6, size: 50, status: req.query.status });\n  res.json(rows);\n// route 7: a read-only endpoint for the billing dashboard and its filters\nexport async function handler7(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 7, size: 50, status: req.query.status });\n  res.json(rows);\n// route 8: a read-only endpoint for the billing dashboard and its filters\nexport async function handler8(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 8, size: 50, status: req.query.status });\n  res.json(rows);\n// route 9: a read-only endpoint for the billing dashboard and its filters\nexport async function handler9(req: Request, res: Response): Promise<void> {\n  const rows = await InvoiceStore.list({ page: 9, size: 50, status: req.query.status });\n  res.json(rows);\n// route 10: a read-only endpoint for the billing dashboard and its filters\nexport async function handler10(req: Request, res: Response): Promise<void> {\n  const limit = Number(req.query.limit) || 100; // trusts the caller with no ceiling at all for this list\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();\n}\n  res.status(200).end();",
+    "w": 1600,
+    "rows": 16,
+    "steps": [
+     {
+      "do": "scrollTo",
+      "line": 42,
+      "at": 0.6
+     },
+     {
+      "do": "replace",
+      "line": 42,
+      "text": "  const limit = Math.min(Number(req.query.limit) || 100, 500);",
+      "at": 1.4
+     }
+    ]
+   },
+   "opts": {
+    "x": 160,
+    "y": 110
+   }
+  }
+ ]
+}

@@ -3129,6 +3129,805 @@
       "versions": [
         "app_project_board@1"
       ]
+    },
+    "dev_ci_pipeline": {
+      "version": 1,
+      "idea": "A CI/CD pipeline: stages as cards joined by arrows, each with its jobs, a status icon per job and stage (passed, failed, running, pending, skipped, blocked) and durations; on cue the stages run in order, jobs spin and resolve, and a failed stage stops the flow so the stages after it are skipped.",
+      "outline": [
+        "stage cards in a row (or a column)",
+        "per stage: the stage name and its overall status icon",
+        "per job: a status icon, the job name, its duration",
+        "arrows between stages",
+        "a progress sweep under a running job",
+        "a token that travels the arrows"
+      ],
+      "params": {
+        "stages": {
+          "type": "list",
+          "content": true
+        },
+        "w": {
+          "type": "number",
+          "default": 1600
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "orientation": {
+          "type": "enum",
+          "choices": [
+            "h",
+            "v"
+          ],
+          "default": "h"
+        },
+        "pace": {
+          "type": "number",
+          "default": 0.7
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "stages[] ({g, card, name, icon})",
+        "jobs[][] ({g, icon, name, dur, sweep})",
+        "edges[]",
+        "token",
+        "run(stageIndex, t)",
+        "set(stageIndex, jobIndex, state, t)",
+        "flow(t, dur)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-006)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint",
+        "chalk-lab"
+      ],
+      "family": "dev",
+      "tags": [
+        "ci",
+        "cd",
+        "pipeline",
+        "build",
+        "deploy",
+        "quality gate",
+        "devops",
+        "release",
+        "shift left",
+        "supply chain"
+      ],
+      "example": "ctx.use(\"dev_ci_pipeline\", { stages: [{ name: \"Build\", jobs: [{ name: \"compile\", state: \"passed\", dur: \"48s\" }] }, { name: \"Scan\", jobs: [{ name: \"dependency audit\", state: \"failed\", dur: \"12s\" }] }, { name: \"Release\", jobs: [{ name: \"publish\", state: \"skipped\" }] }], at: ctx.cue(\"the scan fails\") }, { x: 260, y: 360, name: \"pipeline\" })",
+      "versions": [
+        "dev_ci_pipeline@1"
+      ]
+    },
+    "dev_code_editor": {
+      "version": 1,
+      "idea": "A code editor pane: a tab with the file name and its language, line numbers in a gutter, code in syntax colour, an overview stripe and an optional status line; lines type in on cue, a range can be brought into focus, a span marked with a squiggle and a line replaced.",
+      "outline": [
+        "pane frame",
+        "tab with the file name and the language label",
+        "line-number gutter",
+        "code lines in syntax colour",
+        "overview stripe at the right",
+        "status line (optional)",
+        "a caret while typing"
+      ],
+      "params": {
+        "code": {
+          "type": "str",
+          "content": true
+        },
+        "file": {
+          "type": "str",
+          "content": true
+        },
+        "lang": {
+          "type": "enum",
+          "choices": [
+            "js",
+            "ts",
+            "py",
+            "go",
+            "java",
+            "sql",
+            "yaml",
+            "json",
+            "bash",
+            "html",
+            "css",
+            "text"
+          ],
+          "default": "text"
+        },
+        "langLabel": {
+          "type": "str"
+        },
+        "status": {
+          "type": "str"
+        },
+        "w": {
+          "type": "number",
+          "default": 1200
+        },
+        "rows": {
+          "type": "int",
+          "default": 16
+        },
+        "startLine": {
+          "type": "int",
+          "default": 1
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 18
+        },
+        "typeLines": {
+          "type": "list",
+          "default": []
+        },
+        "colors": {
+          "type": "obj",
+          "default": {}
+        },
+        "focus": {
+          "type": "list",
+          "default": []
+        },
+        "minimap": {
+          "type": "bool",
+          "default": true
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "size": {
+          "type": "number",
+          "default": 24
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "frame",
+        "tab",
+        "gutter",
+        "lines[] ({g, tokens[], num, n})",
+        "cursor",
+        "minimap",
+        "status",
+        "app (the engine app, in the screencast style)",
+        "focus(a, b, t)",
+        "mark(line, tone, t, {col0, col1})",
+        "replace(line, newText, t)",
+        "scrollTo(line, t)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-002)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint"
+      ],
+      "family": "dev",
+      "tags": [
+        "code editor",
+        "source code",
+        "syntax highlighting",
+        "programming",
+        "function",
+        "config file",
+        "code review",
+        "bug fix",
+        "yaml",
+        "python"
+      ],
+      "example": "ctx.use(\"dev_code_editor\", { file: \"rate_limit.go\", lang: \"go\", code: \"func allow(key string) bool {\\n  n := hits.Incr(key)\\n  return n <= limit\\n}\", focus: [2, 3], at: ctx.cue(\"the counter\") }, { x: 360, y: 180, name: \"editor\" })",
+      "versions": [
+        "dev_code_editor@1"
+      ]
+    },
+    "dev_db_table": {
+      "version": 1,
+      "idea": "A database table: an optional SQL query bar, column headers with their types, rows of cells with numbers right aligned, the rows past the limit summed up in one line and a row count; on cue the query types and its rows arrive, a filter collapses the rows that do not match, a cell is marked and a column of personal data is masked.",
+      "outline": [
+        "query bar with the SQL in mono (optional)",
+        "header row: column names and their types",
+        "rows of cells",
+        "a line for the rows not shown",
+        "the row count"
+      ],
+      "params": {
+        "columns": {
+          "type": "list",
+          "content": true
+        },
+        "rows": {
+          "type": "list",
+          "content": true
+        },
+        "query": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str"
+        },
+        "countLabel": {
+          "type": "str"
+        },
+        "moreLabel": {
+          "type": "str"
+        },
+        "total": {
+          "type": "int"
+        },
+        "redact": {
+          "type": "list",
+          "default": []
+        },
+        "w": {
+          "type": "number",
+          "default": 1400
+        },
+        "maxRows": {
+          "type": "int",
+          "default": 8
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 24
+        },
+        "size": {
+          "type": "number",
+          "default": 22
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "query",
+        "header[]",
+        "cells[r][c]",
+        "rowsG[]",
+        "more",
+        "count",
+        "run(t)",
+        "filter(keepRows, t)",
+        "mark(r, c, tone, t)",
+        "redact(col, t)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-012)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint"
+      ],
+      "family": "dev",
+      "tags": [
+        "database",
+        "sql",
+        "table",
+        "query",
+        "rows and columns",
+        "join",
+        "data quality",
+        "pii",
+        "redaction",
+        "select"
+      ],
+      "example": "ctx.use(\"dev_db_table\", { title: \"shipments\", query: \"SELECT id, city, status FROM shipments WHERE status = 'late';\", columns: [{ name: \"id\", type: \"int\" }, { name: \"city\", type: \"text\" }, { name: \"status\", type: \"text\" }], rows: [[311, \"Lyon\", \"late\"], [318, \"Porto\", \"late\"]], countLabel: \"{n} rows\", at: ctx.cue(\"only the late ones\") }, { x: 260, y: 240, name: \"table\" })",
+      "versions": [
+        "dev_db_table@1"
+      ]
+    },
+    "dev_diff_view": {
+      "version": 1,
+      "idea": "A code diff: the file's changed hunks with old and new line numbers, removed lines on a faint failure band with a minus, added lines on a faint success band with a plus and context lines plain, unified or side by side; removals then additions reveal on cue and a review comment can open on a row.",
+      "outline": [
+        "file header with the file name",
+        "per hunk: a muted hunk header",
+        "rows: old line number, new line number, a plus or minus, the code",
+        "split mode: old on the left, new on the right",
+        "review comment balloons on a leader"
+      ],
+      "params": {
+        "hunks": {
+          "type": "list",
+          "content": true
+        },
+        "file": {
+          "type": "str",
+          "content": true
+        },
+        "mode": {
+          "type": "enum",
+          "choices": [
+            "unified",
+            "split"
+          ],
+          "default": "unified"
+        },
+        "w": {
+          "type": "number",
+          "default": 1300
+        },
+        "rows": {
+          "type": "int",
+          "default": 18
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "lang": {
+          "type": "enum",
+          "choices": [
+            "js",
+            "ts",
+            "py",
+            "go",
+            "java",
+            "sql",
+            "yaml",
+            "json",
+            "bash",
+            "html",
+            "css",
+            "text"
+          ],
+          "default": "text"
+        },
+        "wrap": {
+          "type": "enum",
+          "choices": [
+            "wrap",
+            "cut"
+          ],
+          "default": "wrap"
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "size": {
+          "type": "number",
+          "default": 22
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "frame",
+        "header",
+        "rows[] ({g, op, hunk, old, new})",
+        "comments[]",
+        "app (the engine app, in the screencast style)",
+        "reveal(op, t)",
+        "comment(row, text, t)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-003)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint"
+      ],
+      "family": "dev",
+      "tags": [
+        "diff",
+        "code review",
+        "pull request",
+        "change",
+        "patch",
+        "what changed",
+        "security fix",
+        "config drift",
+        "version control",
+        "git"
+      ],
+      "example": "ctx.use(\"dev_diff_view\", { file: \"config/session.js\", lang: \"js\", hunks: [{ header: \"@@ -8,3 +8,3 @@\", lines: [{ op: \" \", text: \"const session = {\" }, { op: \"-\", text: \"  maxAgeDays: 365,\" }, { op: \"+\", text: \"  maxAgeDays: 14,\" }, { op: \" \", text: \"};\" }] }], at: ctx.cue(\"one line changed\") }, { x: 300, y: 200, name: \"diff\" })",
+      "versions": [
+        "dev_diff_view@1"
+      ]
+    },
+    "dev_git_graph": {
+      "version": 1,
+      "idea": "A branch and commit graph: one lane per branch with its name at the left, commits as dots in the order they were made, lines from each commit to its parents (curves where branches fork and merge), tags as small flags and a ring for where HEAD points; commits pop in on cue, a merge draws itself and HEAD travels.",
+      "outline": [
+        "branch labels in a column at the left",
+        "a faint guide per lane",
+        "edges from parent to child (straight on a lane, curved between lanes)",
+        "commit dots with short labels above",
+        "tag flags under their commits",
+        "HEAD ring and pointer"
+      ],
+      "params": {
+        "branches": {
+          "type": "list",
+          "content": true
+        },
+        "commits": {
+          "type": "list",
+          "content": true
+        },
+        "head": {
+          "type": "str"
+        },
+        "headLabel": {
+          "type": "str"
+        },
+        "w": {
+          "type": "number",
+          "default": 1500
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "stepX": {
+          "type": "number",
+          "default": 110
+        },
+        "gap": {
+          "type": "number",
+          "default": 0.25
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "lanes{id}",
+        "commits{id}",
+        "edges[]",
+        "labels{id}",
+        "tags{id}",
+        "head",
+        "commit(spec, t)",
+        "merge(fromBranch, intoBranch, t)",
+        "moveHead(id, t)",
+        "focus(branchId, t)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-004)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint",
+        "chalk-lab"
+      ],
+      "family": "dev",
+      "tags": [
+        "git",
+        "branch",
+        "merge",
+        "commit graph",
+        "rebase",
+        "release branch",
+        "hotfix",
+        "trunk based development",
+        "version control",
+        "gitflow"
+      ],
+      "example": "ctx.use(\"dev_git_graph\", { branches: [{ id: \"main\", label: \"main\" }, { id: \"fix\", label: \"hotfix/login\" }], commits: [{ id: \"a\", branch: \"main\", parents: [] }, { id: \"b\", branch: \"fix\", parents: [\"a\"], label: \"fix\" }, { id: \"c\", branch: \"main\", parents: [\"a\", \"b\"], tag: \"v2.0.1\" }], head: \"c\", at: ctx.cue(\"merged back\") }, { x: 210, y: 300, name: \"graph\" })",
+      "versions": [
+        "dev_git_graph@1"
+      ]
+    },
+    "dev_http_exchange": {
+      "version": 1,
+      "idea": "An HTTP exchange: a request card with its method, URL, headers and body, and a response card with its status code and reason, headers and body, joined by an arrow with an optional latency; secret header values are masked until revealed, and on cue the request travels and the response arrives.",
+      "outline": [
+        "request card: method badge and URL, header rows, body",
+        "arrow from request to response, latency on it",
+        "response card: status badge with its reason, header rows, body",
+        "masked secret values"
+      ],
+      "params": {
+        "request": {
+          "type": "obj",
+          "content": true
+        },
+        "response": {
+          "type": "obj",
+          "content": true
+        },
+        "latency": {
+          "type": "str"
+        },
+        "layout": {
+          "type": "enum",
+          "choices": [
+            "side",
+            "stack"
+          ],
+          "default": "side"
+        },
+        "w": {
+          "type": "number",
+          "default": 1500
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "maskSecrets": {
+          "type": "bool",
+          "default": true
+        },
+        "size": {
+          "type": "number",
+          "default": 22
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "req",
+        "res",
+        "arrow",
+        "status",
+        "headers[] ({g, key, side, band, value, mask})",
+        "send(t)",
+        "mark(headerKey, tone, t)",
+        "reveal(headerKey, t)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-010)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint"
+      ],
+      "family": "dev",
+      "tags": [
+        "http",
+        "api",
+        "rest",
+        "request",
+        "response",
+        "status code",
+        "headers",
+        "authorization",
+        "rate limit",
+        "cors"
+      ],
+      "example": "ctx.use(\"dev_http_exchange\", { request: { method: \"DELETE\", url: \"/v2/files/8812\", headers: [[\"Authorization\", \"Bearer 7f3a91c0\"]] }, response: { status: 204, reason: \"No Content\", headers: [[\"Date\", \"Tue, 03 Jun\"]] }, latency: \"64 ms\", at: ctx.cue(\"delete the file\") }, { x: 210, y: 260, name: \"http\" })",
+      "versions": [
+        "dev_http_exchange@1"
+      ]
+    },
+    "dev_terminal": {
+      "version": 1,
+      "idea": "A terminal session: a window with a title bar, commands typed after a prompt on cue and their output printed under them, errors and successes in their own tones, a block cursor, and lines that scroll when the window is full.",
+      "outline": [
+        "window frame",
+        "title bar with three neutral dots and a title",
+        "body of mono lines (commands after a prompt, output, errors, warnings, comments)",
+        "a block cursor"
+      ],
+      "params": {
+        "lines": {
+          "type": "list",
+          "content": true
+        },
+        "title": {
+          "type": "str",
+          "content": true
+        },
+        "prompt": {
+          "type": "str",
+          "default": "$"
+        },
+        "cwd": {
+          "type": "str"
+        },
+        "w": {
+          "type": "number",
+          "default": 1100
+        },
+        "rows": {
+          "type": "int",
+          "default": 12
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 22
+        },
+        "scheme": {
+          "type": "enum",
+          "choices": [
+            "dark",
+            "light",
+            "pack"
+          ],
+          "default": "dark"
+        },
+        "accent": {
+          "type": "token",
+          "default": "accent"
+        },
+        "highlight": {
+          "type": "list",
+          "default": []
+        },
+        "wrap": {
+          "type": "enum",
+          "choices": [
+            "wrap",
+            "cut"
+          ],
+          "default": "wrap"
+        },
+        "size": {
+          "type": "number",
+          "default": 24
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {
+        "header": "redraw the title bar: (g, p, ctx) => void (the bar's box is 0, 0, w, barH)"
+      },
+      "parts": [
+        "frame",
+        "bar",
+        "title",
+        "body",
+        "lines[]",
+        "cursor",
+        "app (the engine app, in the screencast style)",
+        "type(i, t)",
+        "addLine({kind, text}, t)",
+        "mark(i, tone, t)",
+        "clear(t)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-001)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop",
+        "dark-technical",
+        "whiteboard",
+        "blueprint"
+      ],
+      "family": "dev",
+      "tags": [
+        "terminal",
+        "shell",
+        "command line",
+        "cli",
+        "console",
+        "bash",
+        "git",
+        "deployment",
+        "devops",
+        "kubectl"
+      ],
+      "example": "ctx.use(\"dev_terminal\", { title: \"release\", cwd: \"~/shop\", lines: [{ kind: \"cmd\", text: \"npm run build\" }, { kind: \"out\", text: \"built in 4.2s\" }, { kind: \"ok\", text: \"3 bundles written\" }], at: ctx.cue(\"build it\") }, { x: 410, y: 210, name: \"term\" })",
+      "versions": [
+        "dev_terminal@1"
+      ]
     }
   },
   "avatar": {

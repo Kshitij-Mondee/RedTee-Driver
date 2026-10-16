@@ -1,0 +1,161 @@
+{
+ "cases": [
+  {
+   "label": "GET 200 with JSON",
+   "params": {
+    "at": 0.3,
+    "latency": "118 ms",
+    "w": 1500,
+    "request": {
+     "method": "GET",
+     "url": "/api/v1/customers/4821",
+     "headers": [
+      [
+       "Accept",
+       "application/json"
+      ],
+      [
+       "Authorization",
+       "Bearer eyJhbGciOiJIUzI1NiJ9.c2lnbmVk"
+      ]
+     ]
+    },
+    "response": {
+     "status": 200,
+     "reason": "OK",
+     "headers": [
+      [
+       "Content-Type",
+       "application/json"
+      ],
+      [
+       "Cache-Control",
+       "private, max-age=60"
+      ]
+     ],
+     "body": "{\"id\": 4821, \"name\": \"Ana Ruiz\", \"plan\": \"team\", \"active\": true}"
+    }
+   },
+   "opts": {
+    "x": 210,
+    "y": 250
+   }
+  },
+  {
+   "label": "POST 401 with a missing token",
+   "params": {
+    "layout": "stack",
+    "w": 1100,
+    "request": {
+     "method": "POST",
+     "url": "/api/v1/invoices",
+     "headers": [
+      [
+       "Content-Type",
+       "application/json"
+      ]
+     ],
+     "body": "{\"amount\": 129.90, \"currency\": \"EUR\"}"
+    },
+    "response": {
+     "status": 401,
+     "reason": "Unauthorized",
+     "headers": [
+      [
+       "WWW-Authenticate",
+       "Bearer realm=\"billing\""
+      ]
+     ],
+     "body": "{\"error\": \"missing_token\"}"
+    },
+    "steps": [
+     {
+      "do": "mark",
+      "key": "WWW-Authenticate",
+      "tone": "neg",
+      "at": 1.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 410,
+    "y": 120
+   }
+  },
+  {
+   "label": "maximum: 429 with Retry-After, secrets revealed",
+   "params": {
+    "at": 0.2,
+    "latency": "2041 ms",
+    "w": 1720,
+    "request": {
+     "method": "PATCH",
+     "url": "/api/v2/organisations/acme-logistics-europe/members/bulk-update?notify=false&dry_run=false",
+     "headers": [
+      [
+       "Authorization",
+       "Basic c3luYy1ib3Q6c3VwZXItc2VjcmV0"
+      ],
+      [
+       "X-Api-Key",
+       "live_9f8e7d6c5b4a39281706"
+      ],
+      [
+       "Cookie",
+       "session=31f2a0c9d8e7; theme=dark"
+      ],
+      [
+       "Content-Type",
+       "application/json"
+      ],
+      [
+       "User-Agent",
+       "sync-bot/4.2 (nightly member import)"
+      ]
+     ],
+     "body": "{\"members\": [{\"email\": \"lee@example.com\", \"role\": \"admin\"}, {\"email\": \"sam@example.com\", \"role\": \"viewer\"}], \"reason\": \"quarterly access review for the logistics team\"}"
+    },
+    "response": {
+     "status": 429,
+     "reason": "Too Many Requests",
+     "headers": [
+      [
+       "Retry-After",
+       "120"
+      ],
+      [
+       "X-RateLimit-Limit",
+       "600 per hour"
+      ],
+      [
+       "X-RateLimit-Remaining",
+       "0"
+      ],
+      [
+       "Content-Type",
+       "application/problem+json"
+      ]
+     ],
+     "body": "{\"title\": \"Rate limit reached\", \"detail\": \"This key made 600 requests in the last hour. Wait 120 seconds before you try again.\"}"
+    },
+    "steps": [
+     {
+      "do": "reveal",
+      "key": "X-Api-Key",
+      "at": 3.0
+     },
+     {
+      "do": "mark",
+      "key": "Retry-After",
+      "tone": "accent2",
+      "at": 3.4
+     }
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 100
+   }
+  }
+ ]
+}

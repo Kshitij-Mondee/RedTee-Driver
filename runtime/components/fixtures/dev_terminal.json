@@ -1,0 +1,36 @@
+{"cases": [
+  {"label": "git push", "params": {"title": "storefront", "cwd": "~/storefront", "lines": [
+    {"kind": "cmd", "text": "git push origin main"},
+    {"kind": "out", "text": "Enumerating objects: 14, done."},
+    {"kind": "out", "text": "Writing objects: 100% (8/8), 1.24 KiB, done."},
+    {"kind": "out", "text": "To example.com:team/storefront.git"},
+    {"kind": "ok", "text": "   4f1c2e9..a83b7d0  main -> main"}], "w": 1100, "rows": 8, "at": 0.4}, "opts": {"x": 400, "y": 240}},
+  {"label": "crashloop", "params": {"title": "cluster admin", "prompt": "PS>", "scheme": "light", "lines": [
+    {"kind": "comment", "text": "# the payments pods after the release"},
+    {"kind": "cmd", "text": "kubectl get pods -n payments"},
+    {"kind": "out", "text": "NAME                        READY   STATUS             RESTARTS"},
+    {"kind": "out", "text": "payments-api-6d9f7c-2xkpl   1/1     Running            0"},
+    {"kind": "err", "text": "payments-api-6d9f7c-9qwrt   0/1     CrashLoopBackOff   7"},
+    {"kind": "warn", "text": "Warning: 1 pod restarting more than 5 times in 10m"}], "highlight": [4], "w": 1240, "rows": 7}, "opts": {"x": 340, "y": 260}},
+  {"label": "maximum: 20 lines scroll, longest line wraps", "params": {"title": "install and test the data pipeline service on the build agent", "cwd": "/srv/build/pipeline", "prompt": ">", "lines": [
+    {"kind": "cmd", "text": "pip install -r requirements.txt --upgrade --no-cache-dir --index-url https://packages.example.internal/simple"},
+    {"kind": "out", "text": "Collecting pandas==2.2.2"},
+    {"kind": "out", "text": "Collecting pyarrow==16.1.0"},
+    {"kind": "out", "text": "Collecting requests==2.32.3"},
+    {"kind": "out", "text": "Installing collected packages: pyarrow, pandas, requests"},
+    {"kind": "ok", "text": "Successfully installed 3 packages"},
+    {"kind": "cmd", "text": "pytest -q tests/"},
+    {"kind": "out", "text": "........................................ [ 40%]"},
+    {"kind": "out", "text": "........................................ [ 80%]"},
+    {"kind": "err", "text": "F......... [100%]"},
+    {"kind": "err", "text": "FAILED tests/test_load.py::test_schema_matches - KeyError: 'region'"},
+    {"kind": "out", "text": "1 failed, 99 passed in 12.40s"},
+    {"kind": "comment", "text": "# fix the column name, then run the one test again"},
+    {"kind": "cmd", "text": "sed -i 's/regoin/region/' pipeline/load.py"},
+    {"kind": "cmd", "text": "pytest -q tests/test_load.py"},
+    {"kind": "out", "text": "........ [100%]"},
+    {"kind": "ok", "text": "8 passed in 1.02s"},
+    {"kind": "cmd", "text": "git commit -am 'Fix the region column name in the loader'"},
+    {"kind": "out", "text": "[main 7c1d2aa] Fix the region column name in the loader"},
+    {"kind": "warn", "text": "warning: 1 file changed, 1 insertion(+), 1 deletion(-)"}], "w": 1500, "rows": 12, "at": 0.3, "cps": 60, "wrap": "wrap"}, "opts": {"x": 210, "y": 150}}
+]}
