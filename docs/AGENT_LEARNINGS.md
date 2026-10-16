@@ -14,6 +14,20 @@ scenes, review), **tweak** (Haiku sub-agents via `loom tweak`).
 
 ---
 
+## Template skins proposed (2026-10-16, docs/strategy/2026-10-16-template-skins.md)
+
+- **L-483 The template sheet shows only the end frame, so "appears fully formed" could never be seen on it.**
+  (orchestrator, library sheet)
+  - **What happened:** `render_sheet` takes shots at 40 % and at the end, but keeps only the end shot for templates
+    (`loom/library.py`, `rows`). The finished frame of a template looks the same whether it was drawn by the hand or
+    faded in whole. So the sheet passed every style while whiteboard and blueprint templates were never drawn.
+  - **Seen:** a scratch copy that keeps both frames (`docs/research/2026-10-16-template-skins/before_sheet.py`). At
+    mid-build every part of `list.steps`, `definition` and `compare.two` is whole or absent, in all five engine
+    styles.
+  - **Root cause:** the sheet was built to check layout and text, not the build.
+  - **Prevention:** OPEN until the skins are approved and built. The proposal makes the sheet keep three frames for a
+    skinned style and adds the report check `skin_formed`, which is red when a part arrives by settle or pop.
+
 ## Narration and the product kind (2026-10-16, D-195)
 - **L-481 The narration is choppy by contract, and the persona's rhythm is never checked.** (script, narrate) Across
   85 saved scripts the mean is 6.5 words a sentence and 42 % of sentences are 5 words or fewer (st-holo-ai: 5.7, sd
