@@ -1,0 +1,222 @@
+{
+  "topic": "Setting up two-step sign-in and a password manager at work",
+  "scope_note": "Practical, generic guidance for employees on two-step sign-in with an authenticator app, a password manager, backup codes and a lost phone. No brand names, no breach statistics. Company IT policy overrides anything generic here.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Credential stuffing is when attackers take a username and password leaked from one site and try the same pair on many other sites.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "OWASP, Credential Stuffing description; NCSC (UK) password guidance"
+    },
+    {
+      "id": "F2",
+      "statement": "Reusing one password across sites means a leak at one site can open every other account that uses the same password, including a work account.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) password guidance; NIST SP 800-63B"
+    },
+    {
+      "id": "F3",
+      "statement": "Phishing tricks a person into typing their password into a fake sign-in page, so even a strong password can be handed over.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "CISA phishing guidance"
+    },
+    {
+      "id": "F4",
+      "statement": "Passwords from past breaches circulate in lists that attackers try against other accounts, so a password that has appeared in a leak is unsafe to keep using.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "NIST SP 800-63B, which advises checking chosen passwords against lists of compromised passwords"
+    },
+    {
+      "id": "F5",
+      "statement": "Two-step sign-in (two-factor or multi-factor authentication) asks for a second proof besides the password: something you know, the password, plus something you have, such as your phone.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "NIST SP 800-63B, authentication factors; CISA multifactor authentication guidance"
+    },
+    {
+      "id": "F6",
+      "statement": "With two-step sign-in on, a stolen or leaked password alone is no longer enough to get into the account, because the attacker also needs the second factor.",
+      "kind": "finding",
+      "confidence": "established",
+      "reference_hint": "CISA multifactor authentication guidance"
+    },
+    {
+      "id": "F7",
+      "statement": "Two-step sign-in does not make an account unhackable: it removes the easy route, but a user can still be tricked into approving or typing a code on a fake page.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "Say it calmly: it raises the bar a lot, it is not a guarantee.",
+      "reference_hint": "CISA, phishing-resistant MFA fact sheets"
+    },
+    {
+      "id": "F8",
+      "statement": "An authenticator app generates a short one-time code on your phone from a secret key that is shared once, when you scan the QR code at setup.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "RFC 6238 (TOTP)"
+    },
+    {
+      "id": "F9",
+      "statement": "Typical setup steps are: open the account's security settings, turn on two-step sign-in, choose authenticator app, scan the QR code with the app, then type the current 6-digit code to confirm.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [
+        "6"
+      ],
+      "caveat": "Menu names and order differ between services; the narrator should say 'typically' and use generic labels.",
+      "reference_hint": "Common pattern across services; RFC 6238 for the codes"
+    },
+    {
+      "id": "F10",
+      "statement": "The authenticator code is time-based and changes about every 30 seconds, so you type the code currently on screen.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [
+        "30"
+      ],
+      "caveat": "30 seconds is the usual interval recommended by the standard; some services use another interval.",
+      "reference_hint": "RFC 6238 (TOTP), default time step"
+    },
+    {
+      "id": "F11",
+      "statement": "At setup the service usually shows backup or recovery codes, and these are often displayed only once.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Behaviour varies by service; some let you generate a new set later. Say 'usually'.",
+      "reference_hint": "Common service behaviour; CISA account recovery guidance"
+    },
+    {
+      "id": "F12",
+      "statement": "Each backup code can typically be used once, as a stand-in for the app code when you cannot reach your authenticator.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Typical behaviour, not universal.",
+      "reference_hint": "Common service behaviour"
+    },
+    {
+      "id": "F13",
+      "statement": "Backup codes should be stored somewhere safe and separate from the phone alone, for example in the password manager or printed and kept securely, following your company's policy.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Where to store them is a company policy question; point viewers to IT. Do not store them only on the phone that might be lost.",
+      "reference_hint": "NIST SP 800-63B recovery guidance; CISA"
+    },
+    {
+      "id": "F14",
+      "statement": "A password manager stores your logins in an encrypted vault that you unlock with one master password.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) password manager guidance"
+    },
+    {
+      "id": "F15",
+      "statement": "The master password should be a long passphrase that is easy for you to remember but hard for others to guess, since it protects everything in the vault.",
+      "kind": "practice",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) three random words advice; NIST SP 800-63B favours length over complexity rules"
+    },
+    {
+      "id": "F16",
+      "statement": "Password managers can generate long random passwords, so each account can have its own unique password that you never need to remember or type.",
+      "kind": "practice",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) password manager guidance; NIST SP 800-63B"
+    },
+    {
+      "id": "F17",
+      "statement": "You can save an existing login in a password manager by signing in once and accepting the manager's offer to save it, or by adding it by hand, and then replace weak or reused passwords with generated ones.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Exact prompts vary by tool; describe generically.",
+      "reference_hint": "Common password manager behaviour"
+    },
+    {
+      "id": "F18",
+      "statement": "Autofill in a password manager normally fills a login only on the site address saved with it, so it may not fill on a look-alike fake page, which is a warning sign.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "A helpful signal, not a guarantee; browser extensions and settings differ, so do not tell viewers to rely on it alone.",
+      "reference_hint": "NCSC (UK) password manager guidance; NIST SP 800-63B discussion of autofill and paste"
+    },
+    {
+      "id": "F19",
+      "statement": "The password manager vendor usually cannot recover a forgotten master password, so it must be one you will remember, and the company may offer its own recovery route.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Typical for consumer-style designs; business tools may have admin recovery. Point to IT.",
+      "reference_hint": "Common zero-knowledge design; vendor documentation varies"
+    },
+    {
+      "id": "F20",
+      "statement": "Codes sent by text message (SMS) are considered weaker than codes from an authenticator app, because messages can be intercepted or redirected, for example by SIM swapping.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "caveat": "SMS is still better than a password alone. Say 'weaker', not 'useless'.",
+      "reference_hint": "NIST SP 800-63B treats SMS out-of-band as a restricted authenticator; CISA MFA guidance"
+    },
+    {
+      "id": "F21",
+      "statement": "Current NIST guidance favours long passwords and passphrases over forced complexity rules, and advises against forcing regular password changes unless there is evidence of compromise.",
+      "kind": "finding",
+      "confidence": "established",
+      "reference_hint": "NIST SP 800-63B, memorized secrets"
+    },
+    {
+      "id": "F22",
+      "statement": "If your phone is lost, sign in with a backup code, report the loss to IT or the helpdesk promptly, set up the authenticator again on the new phone, then remove the old device and sign out other sessions.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Exact steps and wording vary by service and company; IT's instructions come first.",
+      "reference_hint": "CISA and NCSC (UK) lost-device guidance; typical service behaviour"
+    },
+    {
+      "id": "F23",
+      "statement": "Reporting a lost phone quickly lets IT revoke access and check the account, and it limits the time someone else could use the device.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Process depends on company policy.",
+      "reference_hint": "NCSC (UK) guidance on lost or stolen devices"
+    }
+  ],
+  "terms": [
+    {
+      "term": "two-step sign-in",
+      "meaning": "signing in with your password plus a second proof, such as a code from your phone; also called two-factor or multi-factor authentication"
+    },
+    {
+      "term": "authenticator app",
+      "meaning": "a phone app that shows a short code that changes about every 30 seconds"
+    },
+    {
+      "term": "backup code",
+      "meaning": "a one-time code shown at setup that lets you sign in when you cannot use your authenticator app"
+    },
+    {
+      "term": "master password",
+      "meaning": "the one long passphrase that unlocks your password manager"
+    },
+    {
+      "term": "credential stuffing",
+      "meaning": "trying a leaked username and password on many other sites"
+    }
+  ],
+  "not_claimed": [
+    "Two-step sign-in makes an account unhackable.",
+    "Changing passwords every 30 days is best practice.",
+    "Passwords need symbols, capitals and numbers to be strong: length matters more than forced complexity.",
+    "Any breach statistic or percentage of attacks stopped by two-step sign-in.",
+    "SMS codes are as strong as an authenticator app.",
+    "Password managers cannot be hacked or are risk-free.",
+    "Specific product or brand names or their menu labels.",
+    "A specific company policy on backup code storage or approved apps: that is IT's call."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (style test lessons, 2026-10-16)",
+    "note": ""
+  }
+}

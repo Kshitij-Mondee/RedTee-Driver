@@ -1,0 +1,427 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b10: camera pan between different worlds (model -> loop) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b18: camera pan between different worlds (verdict -> cutoff) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime size_below_floor: body asked for 28px; the floor is 30px, so it starts there",
+    "runtime literal_colour: scene used a literal colour instead of a token: #4FA7BF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #8DB4C4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #8DB4C4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #8DB4C4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #4FA7BF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #8DB4C4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #8DB4C4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #8DB4C4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #4FA7BF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #4FA7BF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #3EE3F2",
+    "runtime literal_colour: scene used a literal colour instead of a token: #3EE3F2",
+    "runtime literal_colour: scene used a literal colour instead of a token: #4FA7BF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #4FA7BF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #E3F6FC",
+    "runtime literal_colour: scene used a literal colour instead of a token: #3EE3F2",
+    "b16: 6.6s static hold from 129.7s",
+    "b14: 8 chunks on screen (draw_marker, fork, reply, sampling_bars, sampling_number_slot, sampling_reply_line, second_draw_bars, second_draw_marker); the budget is ~5-6",
+    "b08: \"Each earlier token gets a weight for the next piec\" is readable for 1.32s but 13 word(s) need 3.90s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b10: \"illustrative\" is readable for 0.63s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b12: \"Likely pieces, one by one\" is readable for 1.13s but 5 word(s) need 1.50s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b18: \"Its built-in knowledge stops at a training cutoff.\" is readable for 1.54s but 14 word(s) need 4.20s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b20: \"Why not A? Glance too: a summary can still misrepo\" is readable for 1.77s but 12 word(s) need 3.60s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b09: new content arrives at 67.00s while b08 is still leaving (until 69.18s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b13: new content arrives at 99.08s while b12 is still leaving (until 99.86s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "variety: one_radius_share = 0.758 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.889 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b04, b05, b06, b07, b09)",
+    "variety: labels_over_objects_share = 0.556 is worse than the worst baseline lesson (0.5): it grew (beats: b03, b04, b05, b07, b09, b10, b11, b13)",
+    "variety: one_world_share = 0.667 is above the baseline median (0.625) (beats: _kit, b01, b02, b10, b11, b13, b14, b15)",
+    "variety: the seed's camera habit is 'pan' but 16 of 18 bespoke beats have no camera move",
+    "lc layout content_overlap @ 16: b01 \"Company assistant\" and ? \"01 Two answers\" overlap at [116, 44, 358, 75] from 16 to 16 s (a passing crossing (under 500 ms)) [chat_panel / div]",
+    "lc layout content_overlap @ 23.5: b03 \"When are expense claims due?\" and b04 \"When\" overlap at [453, 456, 568, 515] from 23.5 to 30.5 s (held, but both texts are seen together only briefly) [question_float / tokens]",
+    "lc layout content_overlap @ 23.5: b03 \"When are expense claims due?\" and b04 \"are\" overlap at [619, 456, 706, 515] from 23.5 to 30.5 s (held, but both texts are seen together only briefly) [question_float / tokens]",
+    "lc layout content_overlap @ 23.5: b03 \"When are expense claims due?\" and b04 \"exp\" overlap at [786, 456, 872, 515] from 23.5 to 30.5 s (held, but both texts are seen together only briefly) [question_float / tokens]",
+    "lc layout content_overlap @ 23.5: b03 \"When are expense claims due?\" and b04 \"ense\" overlap at [866, 456, 981, 515] from 23.5 to 30.5 s (held, but both texts are seen together only briefly) [question_float / tokens]",
+    "lc layout content_overlap @ 23.5: b03 \"When are expense claims due?\" and b04 \"claims\" overlap at [1061, 456, 1234, 515] from 23.5 to 30.5 s (held, but both texts are seen together only briefly) [question_float / tokens]",
+    "lc layout content_overlap @ 30.5: b04 \"When\" and b05 \"When\" overlap at [462, 464, 549, 520] from 30.5 to 30.5 s (a passing crossing (under 500 ms)) [tokens / tokens_b05]",
+    "lc layout content_overlap @ 110: b13 \"Expense\" and b14 \"Expense\" overlap at [236, 500, 347, 539] from 110 to 110 s (a passing crossing (under 500 ms)) [practice_piece_0 / sampling_reply_line]",
+    "lc layout content_overlap @ 110: b13 \"claims\" and b14 \"claims\" overlap at [392, 500, 475, 539] from 110 to 110 s (a passing crossing (under 500 ms)) [practice_piece_1 / sampling_reply_line]",
+    "lc layout content_overlap @ 110: b13 \"are\" and b14 \"are\" overlap at [515, 500, 550, 539] from 110 to 110 s (a passing crossing (under 500 ms)) [practice_piece_2 / sampling_reply_line]",
+    "lc layout content_overlap @ 110: b13 \"due\" and b14 \"due\" overlap at [587, 500, 634, 539] from 110 to 110 s (a passing crossing (under 500 ms)) [practice_piece_3 / sampling_reply_line]",
+    "lc layout content_overlap @ 110: b13 \"within\" and b14 \"within\" overlap at [667, 500, 756, 539] from 110 to 110 s (a passing crossing (under 500 ms)) [practice_piece_4 / sampling_reply_line]",
+    "lc layout content_overlap @ 110: b13 \"30\" and b14 \"30\" overlap at [1022, 373, 1054, 404] from 110 to 110 s (a passing crossing (under 500 ms)) [bars / sampling_bars]",
+    "lc layout content_overlap @ 110: b13 \"60\" and b14 \"60\" overlap at [1022, 484, 1054, 520] from 110 to 110 s (a passing crossing (under 500 ms)) [bars / sampling_bars]",
+    "lc layout content_overlap @ 110: b13 \"the\" and b14 \"the\" overlap at [1022, 596, 1071, 633] from 110 to 110 s (a passing crossing (under 500 ms)) [bars / sampling_bars]",
+    "lc layout text_off_card @ 167: b19 \"Pause and decide\" runs onto another fill of its card (a band or strip) (43 % of it) from 167 to 167 s: give it room or shorten it [pause_ring]",
+    "lc layout line_through_text @ 186: b22 \"Give it the source.\": a line of chat_panel (b21) runs through its letters at [1124, 692, 1579, 758] from 186 to 186 s; give the words room (move or shorten them, or move the line) [rules / chat_panel]",
+    "lc layout line_through_text @ 186: b22 \"Give it the source.\": a line of chat_panel (b21) runs through its letters at [1124, 692, 1579, 758] from 186 to 186 s; give the words room (move or shorten them, or move the line) [rules / chat_panel]",
+    "lc layout line_through_text @ 186: b22 \"Give it the source.\": a line of policy_doc (b21) runs through its letters at [1124, 692, 1579, 758] from 186 to 186 s; give the words room (move or shorten them, or move the line) [rules / policy_doc]",
+    "lc layout line_through_text @ 186: b22 \"Give it the source.\": a line of policy_doc (b21) runs through its letters at [1124, 692, 1579, 758] from 186 to 186 s; give the words room (move or shorten them, or move the line) [rules / policy_doc]",
+    "b01: small text on screen at 6.8s: \"Priya\" 25.4px (< 26 px)",
+    "b02: small text on screen at 14.9s: \"Priya\" 25.4px (< 26 px)",
+    "b09: small text on screen at 74.6s: \"t1\" 24.6px, \"t2\" 24.6px, \"t3\" 24.6px (< 26 px)",
+    "b21: small text on screen at 184.8s: \"context window\" 23.8px, \"question\" 23.8px, \"chat so far\" 23.8px (< 26 px)",
+    "b22: small text on screen at 192.2s: \"OK\" 23.8px, \"Priya\" 25.4px, \"Expense policy\" 25.4px (< 26 px)",
+    "b07: no_entrance_words: element 'attention_question_text' (text) shows \"When\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b09: no_entrance_words: element 'weights_note' (text) shows \"weights illustrative\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'practice_piece_0' (token) shows \"Expense\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'practice_piece_1' (token) shows \"claims\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'practice_piece_2' (token) shows \"are\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'practice_piece_3' (token) shows \"due\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'practice_piece_4' (token) shows \"within\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b01: value script says 'mid' but the frames measure brightness 0.10 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b02: value script says 'mid' but the frames measure brightness 0.10 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b16: value script says 'mid' but the frames measure brightness 0.09 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b17: value script says 'mid' but the frames measure brightness 0.09 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b18: value script says 'mid' but the frames measure brightness 0.09 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b19: value script says 'mid' but the frames measure brightness 0.10 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b20: value script says 'mid' but the frames measure brightness 0.10 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b21: value script says 'light' but the frames measure brightness 0.10 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b22: value script says 'light' but the frames measure brightness 0.10 (band 0.55 to 1.00); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 5,
+    "double_exposures": 2,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 3.59
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 3.24
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.61
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.47
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.7
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.55
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 3.23
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.23
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 2.7
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.83
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.15
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 1.53
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 2.56
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.78
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 1.38
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 6.6
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 2.43
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 1.88
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 3.96
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 4.5
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 1.67
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 1.84
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.457,
+      "motion": 0.415,
+      "hybrid": 0.128,
+      "motion_effective": 0.479
+    },
+    "elements": {
+      "b01": 4,
+      "b02": 3,
+      "b03": 3,
+      "b04": 4,
+      "b05": 22,
+      "b06": 4,
+      "b07": 5,
+      "b08": 5,
+      "b09": 9,
+      "b10": 4,
+      "b11": 14,
+      "b12": 5,
+      "b13": 11,
+      "b14": 12,
+      "b15": 3,
+      "b16": 4,
+      "b17": 2,
+      "b18": 4,
+      "b19": 5,
+      "b20": 5,
+      "b21": 7,
+      "b22": 5
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.004,
+      "wallpaper_share": 0.0,
+      "template_share": 0.227,
+      "classic_share": 0.0,
+      "one_radius_share": 0.758,
+      "still_share": 0.889,
+      "labels_over_objects_share": 0.556,
+      "one_world_share": 0.667,
+      "lines_per_s": 6.6
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 88614,
+      "layout_samples": 390,
+      "texts": 605,
+      "contrast_checked": 656,
+      "errors": 0,
+      "warnings": 20
+    },
+    "nodes": 3643,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 25.4,
+        "b02": 25.4,
+        "b03": 75.4,
+        "b04": 28.7,
+        "b05": 27.9,
+        "b06": 28.7,
+        "b07": 28.7,
+        "b08": 28.7,
+        "b09": 24.6,
+        "b10": 27.9,
+        "b11": 27.9,
+        "b12": 32.8,
+        "b13": 32.8,
+        "b14": 57.4,
+        "b15": 32,
+        "b16": 67.2,
+        "b17": 67.2,
+        "b18": 28.7,
+        "b19": 28.7,
+        "b20": 36.1,
+        "b21": 23.8,
+        "b22": 23.8
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 22,
+      "lines_seen": 159,
+      "blank_beats": [],
+      "blank_measured": 17
+    },
+    "foreign": {
+      "measured_beats": 22,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 140,
+      "without_life": 0,
+      "no_entrance_words": 7
+    },
+    "caption_hold": {
+      "enabled": true,
+      "cues": 67,
+      "short": 0,
+      "under_min": 0,
+      "min_hold_s": 1.82,
+      "baselined": false
+    },
+    "grid": {
+      "checked": true,
+      "planned": 8,
+      "placed": 8,
+      "dropped": 0,
+      "unresolved": 0,
+      "joins_into_speech": 0,
+      "bars": 58,
+      "bpm": [
+        66.952,
+        71.67,
+        73.97,
+        71.308,
+        70.476
+      ]
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0309,
+        "b02": 0.0451,
+        "b03": 0.0422,
+        "b04": 0.0285,
+        "b05": 0.0503,
+        "b06": 0.0476,
+        "b07": 0.0592,
+        "b08": 0.022,
+        "b09": 0.0552,
+        "b10": 0.0261,
+        "b11": 0.0331,
+        "b12": 0.0355,
+        "b13": 0.0343,
+        "b14": 0.0273,
+        "b15": 0.0328,
+        "b16": 0.0306,
+        "b17": 0.0379,
+        "b18": 0.0337,
+        "b19": 0.0526,
+        "b20": 0.0661,
+        "b21": 0.0522,
+        "b22": 0.0751
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.01,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24,
+        "caption_min_s": 1.8,
+        "caption_tail_s": 0.6
+      },
+      "measured_beats": 22,
+      "sharpness": {
+        "b01": 1.202,
+        "b02": 1.062,
+        "b03": 1.019,
+        "b04": 0.896,
+        "b05": 0.866,
+        "b06": 0.976,
+        "b07": 1.087,
+        "b08": 1.049,
+        "b09": 0.975,
+        "b10": 1.126,
+        "b11": 1.2,
+        "b12": 1.146,
+        "b13": 1.2,
+        "b14": 1.033,
+        "b15": 1.093,
+        "b16": 1.009,
+        "b17": 0.98,
+        "b18": 1.076,
+        "b19": 1.045,
+        "b20": 1.072,
+        "b21": 1.165,
+        "b22": 1.018
+      },
+      "blurred_beats": [],
+      "blur_measured": 22
+    },
+    "tone": {
+      "value_script_beats": 22
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-holo-ai\\qa\\sheets\\b22.jpg"
+  ],
+  "build_hash": "366b4b98f049a3b1"
+}

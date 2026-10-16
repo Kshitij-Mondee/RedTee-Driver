@@ -1,0 +1,1735 @@
+{
+  "title": "Keeping the Heat Moving: How a Data Centre Stays Cool",
+  "style": "blueprint",
+  "world": {
+    "stations": [
+      {
+        "id": "section",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "fridge",
+        "x": -2400,
+        "y": 0
+      },
+      {
+        "id": "detail_air",
+        "x": 0,
+        "y": 1400
+      },
+      {
+        "id": "detail_plant",
+        "x": 2400,
+        "y": 1400
+      }
+    ]
+  },
+  "story": {
+    "cast": []
+  },
+  "devices": [
+    {
+      "id": "building_section",
+      "what": "the building section sheet of the example data hall, drafted once and held, parts changing state on the spoken word",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b12",
+        "b14",
+        "b15",
+        "b17",
+        "b18",
+        "b19",
+        "b20",
+        "b21",
+        "b22",
+        "b23",
+        "b24",
+        "b25",
+        "b26"
+      ]
+    },
+    {
+      "id": "moving_heat",
+      "what": "flows as moving parts: cool air as narrow line arrows, heat as amber wavy marks, water as marks travelling along the pipes",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b06",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18",
+        "b20",
+        "b21",
+        "b24",
+        "b25"
+      ]
+    },
+    {
+      "id": "detail_view",
+      "what": "a DETAIL view below the sheet reached by a camera move down: CRAH coil, inlet band, chiller circuit; the fridge as its own sheet",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b11",
+        "b13",
+        "b16"
+      ]
+    },
+    {
+      "id": "heat_chain",
+      "what": "the chain of links lettered along the foot of the sheet: four outlined in b04, seven lit one by one in b18, recalled in b26",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b18",
+        "b26"
+      ]
+    },
+    {
+      "id": "spare_row",
+      "what": "N plus one as a counted row: units bracketed N plus one dashed spare; running, failed (coral), standby (dashed) states",
+      "kind": "data",
+      "beats": [
+        "b19",
+        "b20",
+        "b21",
+        "b23",
+        "b24",
+        "b25"
+      ]
+    },
+    {
+      "id": "camera_over_sheet",
+      "what": "join material: a camera move over the drawing, down into a detail and back up; a cut only to the fridge and at the failure chapter",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b06",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b16",
+        "b17",
+        "b19"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "a quiet hall: the sheet nearly empty"
+    },
+    {
+      "from": "b05",
+      "band": "mid",
+      "why": "the sheet fills link by link"
+    },
+    {
+      "from": "b19",
+      "band": "dark",
+      "why": "the failure chapter: flows dimmed, coral on the failed unit"
+    },
+    {
+      "from": "b23",
+      "band": "mid",
+      "why": "the check"
+    },
+    {
+      "from": "b25",
+      "band": "light",
+      "why": "the lift at the close: every flow running, mint spares"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "hall_section",
+        "what": "the data hall in building section on station 'section' (zone about x 120 to 1220, y 240 to 800): a raised floor plenum (y about 720 to 800) with perforated tiles in front of the racks, two rack rows in section whose fronts face a shared cold aisle in the middle and whose backs face hot aisles at either side, the hall ceiling as a return path. Each rack shows a few server slots. States: still (outlines only), running (slots lit faintly), throttled (slots dimmed, for b22), contained (doors and roof panels closed over the cold aisle, for b12 on). API exposes named anchor points (each rack front and back, the cold aisle, both hot aisles, the tiles, the ceiling return run, the floor plenum run) so flows are drawn by beats onto the same geometry. Supports drawing on in drafting order and placing already drafted (for beats that return to the sheet after a camera move).",
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b12",
+          "b14",
+          "b15",
+          "b17",
+          "b18",
+          "b19",
+          "b20",
+          "b21",
+          "b22",
+          "b23",
+          "b24",
+          "b25",
+          "b26"
+        ]
+      },
+      {
+        "id": "crah_row",
+        "what": "three CRAH cabinets standing at the hall's left edge (tall outlined cabinets, a fan disc in each that can turn, a coil drawn as a zigzag inside), labelled crah 1, crah 2, crah 3. Per unit states: running (fan turning, ink outline), failed (fan stopped, coral outline), standby (dashed hidden outline, fan still), starting (fan spinning up to running, outline turning solid with a mint tick). Default: units 1 and 2 running, unit 3 standby. A bracket helper that marks units 1 and 2 as N and unit 3 as spare.",
+        "beats": [
+          "b06",
+          "b10",
+          "b12",
+          "b14",
+          "b18",
+          "b19",
+          "b20",
+          "b21",
+          "b22",
+          "b25",
+          "b26"
+        ]
+      },
+      {
+        "id": "water_loop",
+        "what": "the chilled water loop: a supply pipe and a return pipe from the CRAH coils down and across to the plant room (zone about x 1300 to 1820, y 420 to 800), two pumps side by side on the loop (pump a duty, pump b standby) each with an impeller that turns, a buffer tank on the loop, and the chiller as an outlined box the loop passes through, a riser from the chiller up to the roof. Pump states: running (impeller turning), stopped (coral outline, impeller still), standby (dashed), starting. Buffer tank state: a level (full, draining slowly). Water flow marks travel along the pipes in the loop direction at a set speed; return water drawn as warm (amber tint on the marks), supply water cool (line tone). Placeable already drafted.",
+        "beats": [
+          "b06",
+          "b14",
+          "b15",
+          "b17",
+          "b18",
+          "b21",
+          "b23",
+          "b24",
+          "b25",
+          "b26"
+        ]
+      },
+      {
+        "id": "roof_cooler",
+        "what": "the heat rejection unit on the roof above the plant room (zone about x 1380 to 1780, y 110 to 260): an outlined cooler with a fan on top, labelled cooling tower or dry cooler; heat marks lift off it into the sky. States: idle, running (fan turning, heat lifting).",
+        "beats": [
+          "b06",
+          "b17",
+          "b18",
+          "b25",
+          "b26"
+        ]
+      },
+      {
+        "id": "flows",
+        "what": "the lesson's shared flow vocabulary, so every beat draws air, heat and water alike: airArrow along a polyline (narrow line tone arrow, travelling dashes while it runs), heatMarks (amber wavy marks rising from a region, gathering under a ceiling when told), warmAir (amber arrows), a colour change along a path from cool line tone to amber for air passing through racks. Start, run and stop on given times; a stopped flow fades; nothing parks on a label.",
+        "beats": [
+          "b02",
+          "b03",
+          "b06",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b18",
+          "b20",
+          "b21",
+          "b22",
+          "b24",
+          "b25"
+        ]
+      },
+      {
+        "id": "heat_chain",
+        "what": "the chain of links along the foot of the sheet (y about 840 to 920, full safe width): link cards joined by short connectors, lettered lower case mono. States: outlined (faint), lit (ink), active (cyan highlight on one link). It can hold four links (server, air, water, outdoors) or seven (server, air, air handler, water, pump, chiller, outdoors), growing from four to seven in place.",
+        "beats": [
+          "b04",
+          "b06",
+          "b18",
+          "b25",
+          "b26"
+        ]
+      },
+      {
+        "id": "monitor_panel",
+        "what": "a small monitoring panel drawn as an outlined screen part with mono rows (crah 1, crah 2, crah 3, pump a, pump b), each row with a status mark; a row can raise an alarm (coral mark and the word alarm) and a leader can point from the panel to the unit on the sheet. Sits in free sheet space above the hall (about x 520 to 980, y 100 to 230).",
+        "beats": [
+          "b21",
+          "b22",
+          "b24"
+        ]
+      },
+      {
+        "id": "temp_readout",
+        "what": "a hall temperature readout as a narrow thermometer gauge with NO numbers: a column that can rise (amber) from a normal mark toward a warning line, and fall back. Sits beside the hall near the racks.",
+        "beats": [
+          "b22"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "hall_section",
+      "intent": "sparse",
+      "design": {
+        "treatment": "teaching register: the hall drafted live and calm: a centre line across the empty sheet, then the raised floor and two rack rows in drafting order",
+        "why_motion": "the drawing building in front of the viewer is the style's way of saying here is the place",
+        "elements": [
+          {
+            "name": "hall_section"
+          },
+          {
+            "name": "title_note"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say this is your data hall",
+            "element": "hall_section",
+            "action": "centre line, floor and rack rows drawn on (state still)",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Rows of servers",
+            "element": "hall_section",
+            "action": "server slots in each rack drafted; a faint cyan highlight on the rows",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "a steady hum",
+            "element": "title_note",
+            "action": "a small mono note: data hall, section",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "everything stays for b02"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "title_note"
+      ],
+      "accent_on": "power_lines",
+      "design": {
+        "treatment": "teaching register: power lines feed in, every rack goes running, and amber heat marks rise from all racks at once",
+        "why_motion": "heat appearing everywhere at once is the claim itself",
+        "elements": [
+          {
+            "name": "power_lines"
+          },
+          {
+            "name": "heat_marks"
+          },
+          {
+            "name": "label_power"
+          },
+          {
+            "name": "label_heat"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "turns its power",
+            "element": "power_lines",
+            "action": "connectors draw into the base of each rack, labelled power in",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "into heat",
+            "element": "heat_marks",
+            "action": "amber wavy marks rise from every rack, labelled heat out; racks to state running",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "all the time",
+            "element": "heat_marks",
+            "action": "marks keep rising steadily",
+            "motion": "loop"
+          }
+        ],
+        "continuity": "hall_section, power_lines and heat_marks continue into b03"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "title_note",
+        "power_lines",
+        "heat_marks"
+      ],
+      "accent_on": "heat_marks",
+      "design": {
+        "treatment": "teaching register: the heat marks gather under the hall ceiling with nowhere to go; a dashed path out is drawn and ends in a question mark",
+        "why_motion": "heat piling up shows why the question matters",
+        "elements": [
+          {
+            "name": "heat_pool"
+          },
+          {
+            "name": "path_unknown"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "where does that heat go",
+            "element": "heat_pool",
+            "action": "heat marks drift up and gather in a band under the ceiling",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "what if it stopped going",
+            "element": "path_unknown",
+            "action": "a dashed hidden line from the pool toward the sheet's right edge, ending in a lettered ?",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "power_lines fade; hall_section and heat_pool stay for b04"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "title_note",
+        "heat_pool"
+      ],
+      "accent_on": "heat_chain",
+      "design": {
+        "treatment": "teaching register: the promise as an object: four outlined links drafted along the foot of the sheet, from rack toward roof",
+        "why_motion": "the chain is the lesson's map, drawn so it can fill in later",
+        "elements": [
+          {
+            "name": "heat_chain"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "follow it out",
+            "element": "heat_chain",
+            "action": "four faint link cards drawn left to right: server, air, water, outdoors",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "link by link",
+            "element": "heat_chain",
+            "action": "a cyan highlight travels along the links once and rests",
+            "motion": "travel"
+          }
+        ],
+        "continuity": "the sheet stays as the cut to the fridge comes"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "fridge",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "back_coil",
+      "design": {
+        "treatment": "detail register: a household fridge in section on its own small sheet: the box, the door, the back coil; heat arrows travel from inside the box through the coil into the room",
+        "why_motion": "the heat visibly leaving the box is the refutation: nothing makes cold",
+        "elements": [
+          {
+            "name": "fridge"
+          },
+          {
+            "name": "back_coil"
+          },
+          {
+            "name": "heat_path"
+          },
+          {
+            "name": "note_moved"
+          },
+          {
+            "name": "fig_label"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Think of a fridge",
+            "element": "fridge",
+            "action": "box, shelves and door drafted in section; FIG label fridge, section",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "doesn't make cold",
+            "element": "fridge",
+            "action": "a dashed hidden note: no cold made",
+            "motion": "letter"
+          },
+          {
+            "t_anchor": "moves heat out",
+            "element": "heat_path",
+            "action": "amber heat marks leave the inside, pass the back coil (cyan) and spread into the room",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "of the box",
+            "element": "note_moved",
+            "action": "note lettered: heat moved, not made cold",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "a sheet of its own; the camera leaves it for the building"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "heat_path_long",
+      "design": {
+        "treatment": "teaching register: back to the building section, now whole: the hall placed already drafted, then crahs, the water loop, the plant room and the roof unit drafted quickly; one long amber heat path runs from the racks up and out through the roof",
+        "why_motion": "the same move as the fridge at building scale",
+        "elements": [
+          {
+            "name": "hall_section"
+          },
+          {
+            "name": "crah_row"
+          },
+          {
+            "name": "water_loop"
+          },
+          {
+            "name": "roof_cooler"
+          },
+          {
+            "name": "heat_chain"
+          },
+          {
+            "name": "heat_path_long"
+          },
+          {
+            "name": "label_outside"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A data hall does the same",
+            "element": "hall_section",
+            "action": "hall and chain placed drafted; crah_row, water_loop and roof_cooler drafted quickly",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "at building scale",
+            "element": "heat_path_long",
+            "action": "one long amber path draws from the racks through the building to the roof",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "carried outside",
+            "element": "label_outside",
+            "action": "label carried outside on a leader at the roof",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "the whole building and the chain continue; the long path fades before b07"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain"
+      ],
+      "accent_on": "rack_fronts",
+      "design": {
+        "treatment": "teaching register: the camera leans into the hall (about 1.6x on the racks); the first chain link 'air' lights; fronts and backs are marked on the racks and the aisles between them outlined",
+        "why_motion": "the orientation of the rows is the idea",
+        "elements": [
+          {
+            "name": "rack_fronts"
+          },
+          {
+            "name": "rack_backs"
+          },
+          {
+            "name": "aisle_marks"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "First link: the air",
+            "element": "heat_chain",
+            "action": "the air link lights; camera leans in on the racks",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "fronts facing fronts",
+            "element": "rack_fronts",
+            "action": "the two inner faces marked fronts in cyan, small arrows toward the shared aisle",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "backs facing backs",
+            "element": "rack_backs",
+            "action": "outer faces marked backs in muted; aisle_marks outline the three aisles",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "camera stays leaned in on the hall for b08 to b10"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "rack_fronts",
+        "rack_backs",
+        "aisle_marks"
+      ],
+      "accent_on": "label_cold_aisle",
+      "design": {
+        "treatment": "teaching register: cool air arrows travel along the floor plenum and rise through the tiles into the aisle the fronts share, which is then labelled cold aisle",
+        "why_motion": "the air's route is the content",
+        "elements": [
+          {
+            "name": "air_supply"
+          },
+          {
+            "name": "label_cold_aisle"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "cool air rises through the floor",
+            "element": "air_supply",
+            "action": "narrow line arrows run under the floor from the crahs and rise through the tiles",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "the aisle the fronts share",
+            "element": "air_supply",
+            "action": "arrows fill the middle aisle",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "the cold aisle",
+            "element": "label_cold_aisle",
+            "action": "label cold aisle in cyan on the middle aisle",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "air_supply keeps running into b09"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "aisle_marks",
+        "air_supply",
+        "label_cold_aisle"
+      ],
+      "accent_on": "label_hot_aisle",
+      "design": {
+        "treatment": "teaching register: the arrows enter the rack fronts, turn from line tone to amber through the servers and leave the backs into the outer aisles, labelled hot aisle",
+        "why_motion": "the change of temperature across the server is the mechanism",
+        "elements": [
+          {
+            "name": "air_through"
+          },
+          {
+            "name": "label_hot_aisle"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "pull it in at the front",
+            "element": "air_through",
+            "action": "arrows enter the fronts",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "blow it out warm",
+            "element": "air_through",
+            "action": "the arrows turn amber as they pass through and leave the backs",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "the hot aisle",
+            "element": "label_hot_aisle",
+            "action": "label hot aisle in cyan on one outer aisle; cold aisle label goes muted",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "flows keep running; rack_fronts and rack_backs marks have faded"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "air_supply",
+        "air_through",
+        "label_cold_aisle",
+        "label_hot_aisle"
+      ],
+      "accent_on": "crah_row",
+      "design": {
+        "treatment": "teaching register: the camera eases left; warm amber arrows rise from the hot aisles and run along the ceiling to the CRAH cabinets at the hall edge; one cabinet is highlighted and named",
+        "why_motion": "the return path closes the air loop",
+        "elements": [
+          {
+            "name": "air_return"
+          },
+          {
+            "name": "label_crah"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "warm air returns",
+            "element": "air_return",
+            "action": "amber arrows along the ceiling return run into the crah tops",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "to a CRAH",
+            "element": "crah_row",
+            "action": "crah 1 gets the cyan highlight",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "computer room air handler",
+            "element": "label_crah",
+            "action": "label CRAH with computer room air handler under it, on a leader to crah 1",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "the camera then goes down to the detail of crah 1"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "detail_air",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "coil",
+      "design": {
+        "treatment": "detail register: DETAIL A: the CRAH cabinet enlarged and cut open: return air enters at the top, passes over a chilled water coil (pipes in section), the heat moves into the coil as amber marks, cool air leaves at the bottom into the floor; the fan turns",
+        "why_motion": "heat crossing from air to water is the hand-off of the chain",
+        "elements": [
+          {
+            "name": "crah_cutaway"
+          },
+          {
+            "name": "coil"
+          },
+          {
+            "name": "fan"
+          },
+          {
+            "name": "air_in"
+          },
+          {
+            "name": "air_out"
+          },
+          {
+            "name": "label_coil"
+          },
+          {
+            "name": "detail_note"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A coil of chilled water",
+            "element": "crah_cutaway",
+            "action": "cabinet outline, fan and coil drafted; DETAIL A note",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "takes the heat",
+            "element": "coil",
+            "action": "amber air arrows pass the coil, amber marks cross into the pipes; label chilled water coil",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "goes back out cool",
+            "element": "air_out",
+            "action": "line tone arrows leave at the base under the floor; fan turning",
+            "motion": "flow"
+          }
+        ],
+        "continuity": "a detail sheet; the camera goes back up for b12"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "containment",
+      "design": {
+        "treatment": "teaching register: back on the hall (parts placed drafted, camera leaned in on the racks): amber arrows curl over the rack tops into the cold aisle and the top servers glow amber, labelled hot spots; then doors and roof panels close over the cold aisle, the curl stops and the flows run separate; labelled containment",
+        "why_motion": "before and after the panels is the whole argument",
+        "elements": [
+          {
+            "name": "hall_section"
+          },
+          {
+            "name": "crah_row"
+          },
+          {
+            "name": "water_loop"
+          },
+          {
+            "name": "roof_cooler"
+          },
+          {
+            "name": "heat_chain"
+          },
+          {
+            "name": "air_supply"
+          },
+          {
+            "name": "air_through"
+          },
+          {
+            "name": "air_return"
+          },
+          {
+            "name": "leak"
+          },
+          {
+            "name": "label_hot_spots"
+          },
+          {
+            "name": "containment"
+          },
+          {
+            "name": "label_containment"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Keep the aisles apart",
+            "element": "air_supply",
+            "action": "sheet and flows placed running",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "Hot air leaking back",
+            "element": "leak",
+            "action": "amber arrows curl over the rack tops into the cold aisle; upper slots glow amber",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "makes hot spots",
+            "element": "label_hot_spots",
+            "action": "label hot spots in coral on the upper slots",
+            "motion": "letter"
+          },
+          {
+            "t_anchor": "Closing one aisle off",
+            "element": "containment",
+            "action": "doors and roof panels drafted over the cold aisle; hall to state contained; leak fades, hot spots fade",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "containment",
+            "element": "label_containment",
+            "action": "label containment in cyan on the panels",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "containment stays drawn for the rest of the lesson"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "detail_air",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "band_dim",
+      "design": {
+        "treatment": "detail register: DETAIL B: one server's front intake enlarged with a thermometer beside it; the recommended band between 18 and 27 marked on the thermometer as a dimension with amber figures; the words recommended and inlet air lettered; a finished still frame after the dimension lands",
+        "why_motion": "a still measure: the dimension draws on to the spoken figures",
+        "elements": [
+          {
+            "name": "server_front"
+          },
+          {
+            "name": "thermometer"
+          },
+          {
+            "name": "band_dim"
+          },
+          {
+            "name": "label_inlet"
+          },
+          {
+            "name": "detail_note"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "ASHRAE recommends inlet air",
+            "element": "server_front",
+            "action": "server front and intake drafted, thermometer drafted, label inlet air on the intake",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "between 18 and 27",
+            "element": "band_dim",
+            "action": "a dimension between the 18 and 27 marks with amber figures",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "degrees Celsius",
+            "element": "band_dim",
+            "action": "the figure lettered 18 to 27 °C recommended",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "a detail sheet; the camera goes back up for b14"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "return_pipe",
+      "design": {
+        "treatment": "teaching register: back on the sheet (placed drafted, flows running quietly); the water link lights in the chain; the camera tracks the return pipe from the crah coil out of the hall, its flow marks amber",
+        "why_motion": "following the water is the signature move: the heat one step further out",
+        "elements": [
+          {
+            "name": "hall_section"
+          },
+          {
+            "name": "crah_row"
+          },
+          {
+            "name": "water_loop"
+          },
+          {
+            "name": "roof_cooler"
+          },
+          {
+            "name": "heat_chain"
+          },
+          {
+            "name": "containment"
+          },
+          {
+            "name": "return_pipe"
+          },
+          {
+            "name": "label_warmer"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Second link: the water",
+            "element": "heat_chain",
+            "action": "the water link lights",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "Leaving the coil",
+            "element": "return_pipe",
+            "action": "cyan highlight on the return pipe; amber marks travel along it out of the hall",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "warmer now",
+            "element": "label_warmer",
+            "action": "label warmer water on a leader to the pipe",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "camera arrives over the plant room for b15"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "return_pipe"
+      ],
+      "accent_on": "pump_a",
+      "design": {
+        "treatment": "detail register: the camera leans in on the plant room: pump a's impeller turns and the water marks circulate the whole loop, return amber, supply line tone; pump b stays dashed as standby",
+        "why_motion": "the pump is what makes the loop move",
+        "elements": [
+          {
+            "name": "pump_a"
+          },
+          {
+            "name": "loop_flow"
+          },
+          {
+            "name": "label_pump"
+          },
+          {
+            "name": "label_loop"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Pumps push it",
+            "element": "pump_a",
+            "action": "impeller starts turning, cyan highlight; label pump",
+            "motion": "rotate"
+          },
+          {
+            "t_anchor": "round a closed loop",
+            "element": "loop_flow",
+            "action": "marks circulate round the whole loop",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "to the plant room and back",
+            "element": "label_loop",
+            "action": "label chilled water loop along the supply pipe",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "loop keeps circulating; camera goes down to the chiller detail"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "detail_plant",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "chiller_cutaway",
+      "design": {
+        "treatment": "detail register: DETAIL C: the chiller enlarged and cut open: warm water enters one side, heat passes into a refrigerant circuit drawn as a closed loop inside, cold water leaves back toward the hall; the circuit's heat leaves at the top toward the roof",
+        "why_motion": "the heat leaving the water like the fridge's is the mechanism",
+        "elements": [
+          {
+            "name": "chiller_cutaway"
+          },
+          {
+            "name": "water_in"
+          },
+          {
+            "name": "refrigerant_circuit"
+          },
+          {
+            "name": "water_out"
+          },
+          {
+            "name": "label_chiller"
+          },
+          {
+            "name": "detail_note"
+          },
+          {
+            "name": "fridge_echo"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the chiller pulls the heat out",
+            "element": "chiller_cutaway",
+            "action": "chiller drafted, amber water enters, heat marks cross into the refrigerant circuit; label chiller",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "like your fridge",
+            "element": "fridge_echo",
+            "action": "a small muted outline of the fridge's back coil beside the circuit as a reminder",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "sends the water back cold",
+            "element": "water_out",
+            "action": "line tone marks leave toward the hall",
+            "motion": "flow"
+          }
+        ],
+        "continuity": "a detail sheet; the camera goes back up for b17"
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "roof_cooler",
+      "design": {
+        "treatment": "teaching register: back on the sheet, camera on the plant room and roof: the outdoors link lights; an amber path climbs the riser from the chiller to the roof unit, its fan turns and heat lifts off into the sky",
+        "why_motion": "the heat finally leaving the building",
+        "elements": [
+          {
+            "name": "hall_section"
+          },
+          {
+            "name": "crah_row"
+          },
+          {
+            "name": "water_loop"
+          },
+          {
+            "name": "roof_cooler"
+          },
+          {
+            "name": "heat_chain"
+          },
+          {
+            "name": "containment"
+          },
+          {
+            "name": "riser_flow"
+          },
+          {
+            "name": "heat_to_sky"
+          },
+          {
+            "name": "label_roof"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Third link: outside",
+            "element": "heat_chain",
+            "action": "the outdoors link lights",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "A cooling tower or dry cooler",
+            "element": "roof_cooler",
+            "action": "cyan highlight on the roof unit; label cooling tower or dry cooler",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "releases the heat into the air",
+            "element": "heat_to_sky",
+            "action": "riser flow climbs, fan turns, amber marks lift off into the sky",
+            "motion": "flow"
+          }
+        ],
+        "continuity": "everything runs into b18; camera pulls back"
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "riser_flow",
+        "heat_to_sky"
+      ],
+      "accent_on": "heat_chain",
+      "intent": "callback",
+      "design": {
+        "treatment": "teaching register: the camera pulls back to the whole sheet; the chain grows from four to seven links and each lights in cyan as it is named while the matching part on the drawing is briefly highlighted and a heat mark passes along",
+        "why_motion": "the recall replays the lesson's own images in order",
+        "elements": [
+          {
+            "name": "chain_pulse"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Server",
+            "element": "heat_chain",
+            "action": "chain grows to seven links; server link lit with the racks",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "air, air handler, water",
+            "element": "heat_chain",
+            "action": "air, air handler, water links lit in turn with their parts",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "pump, chiller, outdoors",
+            "element": "heat_chain",
+            "action": "pump, chiller, outdoors lit in turn",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "Each link hands the heat on",
+            "element": "chain_pulse",
+            "action": "one amber mark travels the chain from left to right and leaves",
+            "motion": "travel"
+          }
+        ],
+        "continuity": "the frame holds a moment for the recall; the chapter cut follows"
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "spare_bracket",
+      "design": {
+        "treatment": "teaching register, the darker chapter: the sheet placed drafted, flows dimmed; the camera leans in on the crah row; crah 1's fan stops and its outline turns coral; then the row is counted: crah 1 and 2 bracketed N, crah 3 dashed and marked spare",
+        "why_motion": "a failure and a count are things happening to the same parts",
+        "elements": [
+          {
+            "name": "hall_section"
+          },
+          {
+            "name": "crah_row"
+          },
+          {
+            "name": "water_loop"
+          },
+          {
+            "name": "roof_cooler"
+          },
+          {
+            "name": "heat_chain"
+          },
+          {
+            "name": "containment"
+          },
+          {
+            "name": "air_dim"
+          },
+          {
+            "name": "fail_mark"
+          },
+          {
+            "name": "spare_bracket"
+          },
+          {
+            "name": "label_n1"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "say one air handler fails",
+            "element": "crah_row",
+            "action": "crah 1 to failed: fan stops, coral outline; its air arrows fade",
+            "motion": "state"
+          },
+          {
+            "t_anchor": "This hall is N plus one",
+            "element": "spare_bracket",
+            "action": "a bracket under crah 1 and 2 lettered N, label N + 1 in cyan",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "plus one spare",
+            "element": "spare_bracket",
+            "action": "crah 3 outlined dashed, lettered one spare",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "the row and the coral unit stay for b20"
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "air_dim",
+        "spare_bracket",
+        "label_n1"
+      ],
+      "accent_on": "crah_row",
+      "design": {
+        "treatment": "detail register: the spare starts: crah 3's fan spins up, its dashed outline draws solid with a mint tick, its air arrows run under the floor into the gap left by crah 1 and the hall flows return to full",
+        "why_motion": "the take-over is a before and after on the same unit",
+        "elements": [
+          {
+            "name": "spare_air"
+          },
+          {
+            "name": "label_takeover"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "In a well designed system",
+            "element": "crah_row",
+            "action": "crah 3 highlighted cyan",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "the spare starts by itself",
+            "element": "crah_row",
+            "action": "crah 3 to starting then running: fan spins up, outline solid, mint tick",
+            "motion": "rotate"
+          },
+          {
+            "t_anchor": "keeps its capacity",
+            "element": "spare_air",
+            "action": "air arrows from crah 3 fill the floor run; flows brighten back to normal; label spare takes over",
+            "motion": "flow"
+          }
+        ],
+        "continuity": "crah 1 stays coral; flows running for b21"
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "spare_air",
+        "label_takeover"
+      ],
+      "accent_on": "monitor_panel",
+      "design": {
+        "treatment": "teaching register: a monitoring panel draws in the free space above the hall; the crah 1 row raises an alarm and a leader points to the coral unit; then the camera eases to the loop where the buffer tank and pipes stay full of cold water, its level easing down slowly as the reserve",
+        "why_motion": "two things buy time at once: someone is told, and stored cold water carries the gap",
+        "elements": [
+          {
+            "name": "monitor_panel"
+          },
+          {
+            "name": "alarm_leader"
+          },
+          {
+            "name": "tank_level"
+          },
+          {
+            "name": "label_ride"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Sensors raise an alarm",
+            "element": "monitor_panel",
+            "action": "panel drafted; crah 1 row turns to alarm in coral; leader to crah 1; label alarm",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "cold water in the pipes buys time",
+            "element": "tank_level",
+            "action": "cyan on the buffer tank; its level eases down slowly while supply marks keep moving",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "That is ride-through",
+            "element": "label_ride",
+            "action": "label ride-through on the tank",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "panel stays for b22; tank level holds"
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "monitor_panel"
+      ],
+      "accent_on": "temp_readout",
+      "design": {
+        "treatment": "teaching register: a what-if drawn as a tracing overlay: flows fade out, the temperature readout climbs with no number toward its warning line, the racks dim to throttled and a few go dark, labelled slow down and shut off; then the overlay lifts, the spare's flows return and the readout falls back",
+        "why_motion": "the consequence and its reversal, on the same racks",
+        "elements": [
+          {
+            "name": "temp_readout"
+          },
+          {
+            "name": "whatif_overlay"
+          },
+          {
+            "name": "label_slow"
+          },
+          {
+            "name": "label_off"
+          },
+          {
+            "name": "flows_back"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Lose cooling for good",
+            "element": "whatif_overlay",
+            "action": "a tracing overlay tagged what if; flows fade",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "the room warms",
+            "element": "temp_readout",
+            "action": "amber column rises toward the warning line, no figures",
+            "motion": "count"
+          },
+          {
+            "t_anchor": "slow down or shut off",
+            "element": "hall_section",
+            "action": "hall to throttled; labels slow down and shut off in coral on the racks",
+            "motion": "state"
+          },
+          {
+            "t_anchor": "Spares keep it from coming to that",
+            "element": "flows_back",
+            "action": "overlay lifts, readout falls, crah 3 flows run again",
+            "motion": "flow"
+          }
+        ],
+        "continuity": "back to the running hall; camera moves to the plant room for b23"
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment"
+      ],
+      "accent_on": "pump_stop",
+      "intent": "hold",
+      "design": {
+        "treatment": "teaching register: the camera leans in on the plant room pumps; everything stops moving; pump a goes coral and still, pump b dashed standby; the question is lettered beside them and held",
+        "why_motion": "a still frame for thinking",
+        "elements": [
+          {
+            "name": "pump_stop"
+          },
+          {
+            "name": "question"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your turn",
+            "element": "water_loop",
+            "action": "camera leans in on the pumps; loop flow stops",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "one pump stops",
+            "element": "pump_stop",
+            "action": "pump a to stopped: coral outline; lettered One pump stops.",
+            "motion": "state"
+          },
+          {
+            "t_anchor": "What happens next",
+            "element": "question",
+            "action": "What happens next? lettered as a title beside the pumps; held through the pause",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "the stopped pump and question stay into b24"
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "pump_stop"
+      ],
+      "accent_on": "pump_b",
+      "design": {
+        "treatment": "teaching register: the answer plays out in three steps on the loop: pump b spins up and goes solid with a mint tick, the monitoring panel's pump a row raises an alarm with an operator marker (Lucide user-round, lettered operator), and water keeps circulating round the loop",
+        "why_motion": "the answer is the same mechanism the learner just learned, now on a pump",
+        "elements": [
+          {
+            "name": "pump_b"
+          },
+          {
+            "name": "monitor_panel"
+          },
+          {
+            "name": "operator_marker"
+          },
+          {
+            "name": "loop_flow"
+          },
+          {
+            "name": "label_standby"
+          },
+          {
+            "name": "label_alarm"
+          },
+          {
+            "name": "label_gap"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The standby pump starts",
+            "element": "pump_b",
+            "action": "pump b to starting then running, mint tick; label standby starts; the question fades",
+            "motion": "rotate"
+          },
+          {
+            "t_anchor": "The alarm calls an operator",
+            "element": "monitor_panel",
+            "action": "panel placed with pump a row in alarm; a connector to the operator marker; label alarm",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Water in the loop covers the gap",
+            "element": "loop_flow",
+            "action": "marks circulate the loop; label water covers the gap",
+            "motion": "flow"
+          }
+        ],
+        "continuity": "the camera pulls back for b25"
+      }
+    },
+    {
+      "beat": "b25",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment"
+      ],
+      "accent_on": "spare_outlines",
+      "design": {
+        "treatment": "teaching register: the camera pulls back to the whole sheet, the opening view again: every flow drawn running (air through the aisles, water round the loop, heat off the roof), the failed units back to running, and the spares (crah 3 and pump b) outlined in mint as standing by",
+        "why_motion": "the payoff is the whole machine moving",
+        "elements": [
+          {
+            "name": "all_flows"
+          },
+          {
+            "name": "spare_outlines"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back in the quiet hall",
+            "element": "hall_section",
+            "action": "camera pulls back to the whole sheet; other labels gone",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "the heat moving out",
+            "element": "all_flows",
+            "action": "air, water and roof flows all running",
+            "motion": "flow"
+          },
+          {
+            "t_anchor": "spares standing by",
+            "element": "spare_outlines",
+            "action": "crah 3 and pump b outlined mint, standby",
+            "motion": "highlight"
+          }
+        ],
+        "continuity": "the running sheet continues behind b26"
+      }
+    },
+    {
+      "beat": "b26",
+      "kind": "bespoke",
+      "station": "section",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "hall_section",
+        "crah_row",
+        "water_loop",
+        "roof_cooler",
+        "heat_chain",
+        "containment",
+        "all_flows",
+        "spare_outlines"
+      ],
+      "accent_on": "questions",
+      "intent": "rest",
+      "design": {
+        "treatment": "teaching register: the two questions lettered as a card in the free sky space beside the drawing, the chain lit at the foot and every flow still running behind",
+        "why_motion": "a calm close; the drawing keeps moving under the take-away",
+        "elements": [
+          {
+            "name": "questions"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next cooling alarm you hear of",
+            "element": "questions",
+            "action": "card drafted",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "which link failed",
+            "element": "questions",
+            "action": "Which link failed? lettered",
+            "motion": "letter"
+          },
+          {
+            "t_anchor": "did its spare take over",
+            "element": "questions",
+            "action": "Did its spare take over? lettered",
+            "motion": "letter"
+          }
+        ],
+        "continuity": "the film ends on this frame"
+      }
+    }
+  ]
+}

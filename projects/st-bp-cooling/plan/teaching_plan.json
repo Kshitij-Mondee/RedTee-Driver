@@ -1,0 +1,225 @@
+{
+  "title": "Keeping the Heat Moving: How a Data Centre Stays Cool",
+  "performance": "given a cooling alarm or a failed part in a data hall, the viewer can trace where the heat goes from server to outdoor air, name what each link does, and predict what happens next and what keeps the room running",
+  "audience": {
+    "level": "beginner",
+    "assumed_prior": "knows computers get warm and data centres hold many servers; has never seen cooling plant",
+    "why": "mixed corporate audience including non-engineers, per the brief",
+    "motivation": "the services they depend on live in these rooms; a cooling incident is something they may hear about and want to understand calmly",
+    "context": "desktop at work, sound on, captions on"
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "one data hall followed from a single rack outward is the clearest way for non-engineers to see a chain of parts; each part is seen working before it is named",
+    "signature_move": "follow the heat one step further out, show the part that carries it, THEN give the part its name"
+  },
+  "misconceptions": [
+    {
+      "belief": "air conditioning makes cold and destroys the heat",
+      "why_tempting": "the air coming out feels cold, so it seems the machine produces cold",
+      "refuted_in": "sec1",
+      "source_anchor": "F3"
+    },
+    {
+      "belief": "if one cooling unit breaks, the servers overheat straight away",
+      "why_tempting": "the cooling seems to be one machine, so losing part of it sounds like losing all of it",
+      "refuted_in": "sec4",
+      "source_anchor": "F15, F17, F20"
+    },
+    {
+      "belief": "blowing more cold air anywhere in the room is enough",
+      "why_tempting": "more cold air sounds like more cooling",
+      "refuted_in": "sec2",
+      "source_anchor": "F9, F10"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "A quiet data hall on a normal day; every server is turning its power into heat right now. Where does all of it go, and what if it stopped going?"
+    },
+    "promise": "by the end you can follow the heat out of the building and say what happens when one link fails",
+    "bridge_from_prior": "sec1 opens from the warm back of a laptop and a fridge that moves heat out of its box",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain that servers turn their power into heat and that cooling moves heat rather than destroying it",
+        "bloom": "understand",
+        "concepts": [
+          "power becomes heat",
+          "heat is moved, not destroyed"
+        ],
+        "facts": [
+          "F1",
+          "F2",
+          "F3"
+        ],
+        "energy": "build",
+        "carrier": "worked example",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can describe the air path from cold aisle through the server to the hot aisle and back to the CRAH",
+        "bloom": "understand",
+        "concepts": [
+          "cold aisle and hot aisle",
+          "front to back airflow",
+          "CRAH",
+          "containment"
+        ],
+        "facts": [
+          "F4",
+          "F5",
+          "F6",
+          "F8",
+          "F9",
+          "F10",
+          "F21"
+        ],
+        "energy": "build",
+        "carrier": "process diagram",
+        "recap_after": false
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can describe what the pumps and the chiller do in the chilled water loop and where the heat leaves the building",
+        "bloom": "understand",
+        "concepts": [
+          "chilled water loop",
+          "pump",
+          "chiller",
+          "cooling tower or dry cooler"
+        ],
+        "facts": [
+          "F11",
+          "F12",
+          "F13"
+        ],
+        "energy": "build",
+        "carrier": "process diagram",
+        "recap_after": true
+      },
+      {
+        "id": "sec4",
+        "goal": "the viewer can use the N+1 rule to predict what happens when one pump or CRAH fails",
+        "bloom": "apply",
+        "concepts": [
+          "N+1",
+          "standby takeover"
+        ],
+        "facts": [
+          "F15",
+          "F17"
+        ],
+        "energy": "peak",
+        "carrier": "before and after",
+        "recap_after": false
+      },
+      {
+        "id": "sec5",
+        "goal": "the viewer can explain what alarms and the water already in the loop do while a spare takes over, and what happens if cooling is not restored",
+        "bloom": "understand",
+        "concepts": [
+          "alarms",
+          "ride-through",
+          "throttling"
+        ],
+        "facts": [
+          "F18",
+          "F19",
+          "F20"
+        ],
+        "energy": "rest",
+        "carrier": "process diagram",
+        "recap_after": true
+      }
+    ],
+    "payoff": "back to the quiet hall, now seen as a moving chain of heat from server to outdoor air, with a spare standing by at each link"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec3",
+      "what": "the heat followed link by link, each part shown working then named"
+    },
+    {
+      "stage": "faded",
+      "where": "sec4",
+      "what": "a CRAH fails; the narrator shows the spare taking over and leaves the viewer to say why nothing overheated"
+    },
+    {
+      "stage": "independent",
+      "where": "check after sec5",
+      "what": "a pump stops; the viewer predicts the next step before it is shown"
+    }
+  ],
+  "pacing": {
+    "requested_s": 180,
+    "target_duration_s": 180,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "chiller",
+      "N+1"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec3",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Name the links in order, from the server to the outdoor air."
+      },
+      {
+        "after_section": "sec5",
+        "kind": "quiz",
+        "prompt_sketch": "One pump in an N+1 loop stops. What happens next?",
+        "answer": "the standby pump starts, usually automatically; the alarm tells operators to fix the failed one; the chilled water in the pipes buys a little time",
+        "tempting_wrong": "the servers overheat at once: the spare and the water already in the loop keep the hall within range"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "the next time you hear of a cooling alarm in a data centre, ask which link failed and whether its spare took over"
+  ],
+  "persona": {
+    "voice": "a calm colleague who knows the building and walks the viewer through it",
+    "delivery_notes": "unhurried on each new part, a beat of pause before naming it; even and reassuring in the failure section; brisk on the recap"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the quiet hall and where its heat goes",
+      "objective": "promise: follow the heat out and know what a failure means",
+      "recall_prior": "sec1 bridge from a laptop and a fridge",
+      "present": "sections follow the heat outward, in order",
+      "guidance": "signature move: show the part, then name it",
+      "practice": "recall prompt after sec3; quiz after sec5",
+      "feedback": "quiz answer explained, including the tempting wrong reading",
+      "assess": "check scenario: one pump stops",
+      "transfer": "transfer task: ask which link failed and whether the spare took over"
+    },
+    "merrill": {
+      "problem_centered": "the one data hall and its heat is the running problem",
+      "activation": "laptop and fridge bridge",
+      "demonstration": "each link shown carrying heat before it is named",
+      "application": "faded CRAH failure, then the pump check",
+      "integration": "payoff and transfer task"
+    },
+    "mayer": {
+      "coherence": "one hall only; no efficiency metrics or cost",
+      "signalling": "slowdowns on chiller and N+1",
+      "redundancy": "screen shows the building and short labels; narration explains",
+      "contiguity": "each part's label appears as it is named",
+      "segmenting": "five short sections, one link or one idea each",
+      "pre_training": "sec1 sets 'heat is moved' before any equipment is named"
+    },
+    "arcs": {
+      "attention": "where the heat goes",
+      "relevance": "the services they use live in these rooms",
+      "confidence": "plain words before technical names",
+      "satisfaction": "the viewer predicts the pump failure correctly"
+    },
+    "bloom_path": "understand -> understand -> understand -> apply -> understand (consolidation)"
+  },
+  "series": null,
+  "flags": []
+}

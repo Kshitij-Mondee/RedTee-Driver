@@ -1,0 +1,61 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b06",
+      "severity": "major",
+      "problem": "orphaned row of numbers flag in b06 arrive",
+      "fix": "b05 exits the flag and draws the token row locally",
+      "status": "fixed",
+      "reason": "fixed by fixer, verified on contact sheet"
+    },
+    {
+      "beat": "b07",
+      "severity": "blocker",
+      "problem": "question tokens invisible, arcs to blank lines",
+      "fix": "b07 draws its own token layer",
+      "status": "fixed",
+      "reason": "critic pass 2 no longer reports it"
+    },
+    {
+      "beat": "b11",
+      "severity": "major",
+      "problem": "b11 blank frames",
+      "fix": "reply card and bars rebuilt locally",
+      "status": "fixed",
+      "reason": "verified on contact sheet"
+    },
+    {
+      "beat": "b12",
+      "severity": "major",
+      "problem": "double exposure on Looked up header",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "It is the deliberate strike-through and mark highlight on the myth card (Looked up = MYTH), a template look with no scene file; meaning reads correctly"
+    },
+    {
+      "beat": "b18",
+      "severity": "major",
+      "problem": "olive highlight behind training cutoff",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "It is the template's accent_on emphasis mark on the key term, legible; template beat with no file, recolouring would need a P5 reopen for cosmetic gain"
+    },
+    {
+      "beat": "b19",
+      "severity": "minor",
+      "problem": "Pause and decide label overflows pill",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Template beat quiz.question, cosmetic, no file to fix"
+    },
+    {
+      "beat": "b22",
+      "severity": "major",
+      "problem": "link near Give it the source text",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "In the settled frame the link runs clear above the rules cards; only the develop moment shows the card entering"
+    }
+  ]
+}

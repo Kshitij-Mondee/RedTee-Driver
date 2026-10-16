@@ -1,0 +1,39 @@
+{
+  "id": "st-holo-ai",
+  "created": "2026-10-16T14:31:31",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How an AI model turns a question into an answer: the question becomes tokens, the model weighs the context, predicts the next word again and again, and why answers can be wrong or vary",
+  "sources": [],
+  "request": {
+    "audience": "corporate employees, non-technical",
+    "genre": "teaching",
+    "length_min": 3.0,
+    "style": "hologram",
+    "persona": null,
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.7,
+      "calibrated": true
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "none",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "Plain language for working adults, no hype. Make the inside of the model visible and grounded; one or two striking moments, calm explanation between them.",
+    "mix_as": "ceiling"
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  },
+  "isolated": true
+}

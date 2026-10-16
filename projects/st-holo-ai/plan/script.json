@@ -1,0 +1,710 @@
+{
+  "title": "From question to answer: what happens inside an AI model",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s0",
+      "title": "Two answers",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Pieces and weights",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "One piece at a time",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "Fluent is not checked",
+      "role": "check"
+    },
+    {
+      "id": "s4",
+      "title": "Back to Priya",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s0",
+      "job": "hook",
+      "narration": [
+        "Say Priya asks the company assistant one question.",
+        "When are expense claims due?"
+      ],
+      "on_screen": [
+        "When are expense claims due?"
+      ],
+      "visual_intent": "Priya at her desk; the question types itself into a glowing chat panel in front of her.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Priya and her question are an illustration",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "light, curious"
+    },
+    {
+      "id": "b02",
+      "section": "s0",
+      "job": "hook",
+      "narration": [
+        "Thirty days, it says.",
+        "She asks again. Sixty days.",
+        "Both sound completely sure."
+      ],
+      "on_screen": [
+        "30 days",
+        "60 days"
+      ],
+      "visual_intent": "Striking open: two replies appear side by side under the same question, equally bright, contradicting each other.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the two replies are an illustration of varying answers",
+          "fact": "F11",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "a small beat before 'Sixty days'"
+    },
+    {
+      "id": "b03",
+      "section": "s0",
+      "job": "orient",
+      "narration": [
+        "So which is right?",
+        "Follow her question inside the model."
+      ],
+      "on_screen": [],
+      "visual_intent": "The camera pushes past the chat panel into the luminous space of the model, the question floating ahead.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "promise of the lesson",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "curious, then settling"
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "First, her sentence breaks into small pieces.",
+        "Short words stay whole.",
+        "Longer ones can split in two."
+      ],
+      "on_screen": [
+        "When",
+        "are",
+        "exp",
+        "ense",
+        "claims",
+        "due",
+        "?"
+      ],
+      "visual_intent": "Striking moment: the typed question shatters into separate glowing pieces; one longer word visibly splits in two. Illustrative split, not a real tokenizer's output.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "concepts": [
+        "token"
+      ],
+      "grounding": [
+        {
+          "claim": "text is split into tokens: whole common words, parts of longer words, punctuation",
+          "fact": "F1"
+        },
+        {
+          "claim": "the exact split shown is illustrative",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "even, let the pieces land"
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "Each piece is called a token.",
+        "Each token becomes a number.",
+        "Then a long row of numbers, learned in training."
+      ],
+      "on_screen": [
+        "token",
+        "number",
+        "row of numbers"
+      ],
+      "visual_intent": "Each piece flips into a number tag, then unfolds into a long column of faint digits.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "concepts": [
+        "token",
+        "token numbers"
+      ],
+      "grounding": [
+        {
+          "claim": "each token maps to an ID from a fixed vocabulary",
+          "fact": "F3"
+        },
+        {
+          "claim": "each ID becomes an embedding, a learned list of numbers",
+          "fact": "F4"
+        }
+      ],
+      "delivery": "calm"
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "relate",
+      "narration": [
+        "The model works only from what is in front of it.",
+        "Her question, the chat, its own reply.",
+        "That space is the context window.",
+        "Her policy is not in it."
+      ],
+      "on_screen": [
+        "context window",
+        "question",
+        "chat so far",
+        "reply"
+      ],
+      "visual_intent": "A bounded frame of light holds three bands: the question, earlier chat, an empty reply line; outside its edge a dim policy document drifts, never entering.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "concepts": [
+        "context window"
+      ],
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the model works only from the context window: prompt, conversation, reply being written; it has a limit",
+          "fact": "F5"
+        },
+        {
+          "claim": "information not put in front of the model is not available beyond training",
+          "fact": "F17"
+        },
+        {
+          "claim": "Priya's policy not being in the window is part of the illustration",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "plain, slower on the last line"
+    },
+    {
+      "id": "b07",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "Here is the tricky part.",
+        "For the next piece, it weighs every earlier token.",
+        "Say expense and due weigh the most."
+      ],
+      "on_screen": [
+        "expense",
+        "due"
+      ],
+      "visual_intent": "Lines of light run from each token to an empty next slot; their thickness varies, the lines from 'expense' and 'due' thickest. Weights illustrative.",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "concepts": [
+        "attention"
+      ],
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "attention gives each earlier token a weight for the next token",
+          "fact": "F6"
+        },
+        {
+          "claim": "which tokens weigh most here is illustrative",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "slow and even; this is the slowdown"
+    },
+    {
+      "id": "b08",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "That weighing is called attention.",
+        "Weighing, not understanding."
+      ],
+      "on_screen": [
+        "attention"
+      ],
+      "visual_intent": "The weight lines hold; the word attention settles above them, quiet.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "concepts": [
+        "attention"
+      ],
+      "grounding": [
+        {
+          "claim": "attention weights are calculated from the text and learned patterns; not a person deciding",
+          "fact": "F7"
+        }
+      ],
+      "delivery": "calm, firm on the last line"
+    },
+    {
+      "id": "b09",
+      "section": "sec1",
+      "job": "consolidate",
+      "narration": [
+        "Still no answer.",
+        "Just pieces, and how much each one matters."
+      ],
+      "on_screen": [],
+      "visual_intent": "Pull back: the tokens and their weight lines float in the model's space; the reply line is still empty.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "recall": {
+        "kind": "recall_prompt",
+        "after_section": "sec1"
+      },
+      "grounding": [
+        {
+          "claim": "the answer has not been generated yet at this point",
+          "fact": "F9"
+        }
+      ],
+      "delivery": "brisk"
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Now it scores every token it knows.",
+        "How likely is each one to come next?"
+      ],
+      "on_screen": [
+        "Expense",
+        "Claims",
+        "You"
+      ],
+      "visual_intent": "A ranked column of candidate first words rises beside the empty reply, bars of different lengths, no numbers. Candidates illustrative.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "concepts": [
+        "next-token probabilities"
+      ],
+      "grounding": [
+        {
+          "claim": "the model produces a probability for every token in its vocabulary, a ranked list",
+          "fact": "F8"
+        },
+        {
+          "claim": "the candidate words shown are illustrative",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "neutral"
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "sequence",
+      "narration": [
+        "One is picked and added.",
+        "Then it all runs again.",
+        "Pick, add, repeat, until an end token."
+      ],
+      "on_screen": [
+        "pick",
+        "add",
+        "repeat"
+      ],
+      "visual_intent": "The chosen word flies from the list into the reply line, the weights redraw, and the loop runs faster: the reply grows word by word until a small end marker closes it.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "concepts": [
+        "one token at a time"
+      ],
+      "grounding": [
+        {
+          "claim": "one token is chosen, appended, and the process repeats with the longer text",
+          "fact": "F9"
+        },
+        {
+          "claim": "generation stops at an end-of-text token or a length limit",
+          "fact": "F10"
+        }
+      ],
+      "delivery": "rhythmic on 'pick, add, repeat'"
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "refute",
+      "narration": [
+        "Here is where people slip.",
+        "It did not look anything up.",
+        "It wrote likely pieces, one by one."
+      ],
+      "on_screen": [
+        "looked up",
+        "written"
+      ],
+      "visual_intent": "A faint search box appears and is struck through; the growing reply line stays lit as the real source of the answer.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "misconception": "the assistant looks the answer up",
+      "grounding": [
+        {
+          "claim": "the model writes likely text rather than looking facts up",
+          "fact": "F15"
+        },
+        {
+          "claim": "training rewards likely next tokens",
+          "fact": "F14"
+        }
+      ],
+      "delivery": "firm, unhurried"
+    },
+    {
+      "id": "b13",
+      "section": "sec2",
+      "job": "practice",
+      "narration": [
+        "Now you.",
+        "Say at the number, thirty and sixty both rank high.",
+        "How did she get both?"
+      ],
+      "on_screen": [
+        "30",
+        "60"
+      ],
+      "visual_intent": "The reply stops at the number slot; the ranked list shows 30 and 60 near the top, close in length. Illustrative ranking.",
+      "change_over_time": false,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "pause_after_s": 2,
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the ranking of the two numbers is part of the illustration",
+          "hypothetical": true
+        },
+        {
+          "claim": "each step has a probability for each candidate token",
+          "fact": "F8"
+        }
+      ],
+      "delivery": "your-turn: set it up, ask, then silence"
+    },
+    {
+      "id": "b14",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "The pick is drawn from the odds.",
+        "Like a weighted dice roll.",
+        "Say one run lands on thirty.",
+        "Another, on sixty."
+      ],
+      "on_screen": [
+        "30 days",
+        "60 days"
+      ],
+      "visual_intent": "Striking moment: the same reply line forks at the number slot into two branches, one ending in 30 days, one in 60 days.",
+      "change_over_time": true,
+      "animate_score": 0.95,
+      "treatment_hint": "motion",
+      "concepts": [
+        "sampling"
+      ],
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the token is usually sampled from the probabilities rather than always the top one, so answers differ between tries",
+          "fact": "F11"
+        },
+        {
+          "claim": "the two outcomes are part of the illustration",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "a pause before the fork, then clear"
+    },
+    {
+      "id": "b15",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "That is called sampling.",
+        "A temperature setting makes it steadier, or more varied."
+      ],
+      "on_screen": [
+        "sampling",
+        "temperature"
+      ],
+      "visual_intent": "The two branches hold; a simple dial labelled temperature turns low and the branches draw closer, turns high and they spread.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "concepts": [
+        "sampling"
+      ],
+      "recall": {
+        "kind": "recap",
+        "after_section": "sec2"
+      },
+      "grounding": [
+        {
+          "claim": "this choosing from probabilities is sampling",
+          "fact": "F11"
+        },
+        {
+          "claim": "temperature: lower is more focused and repeatable, higher more varied",
+          "fact": "F12"
+        }
+      ],
+      "delivery": "brisk recap"
+    },
+    {
+      "id": "b16",
+      "section": "sec3",
+      "job": "refute",
+      "narration": [
+        "So which is true?",
+        "It never saw her policy.",
+        "Both are just likely text, said with equal confidence."
+      ],
+      "on_screen": [
+        "30 days",
+        "60 days"
+      ],
+      "visual_intent": "The two answers sit side by side, equally bright; neither is connected to any document.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "misconception": "a confident answer is probably right",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "a confident fluent tone is not evidence of correctness",
+          "fact": "F16"
+        },
+        {
+          "claim": "the model works only from its context window",
+          "fact": "F5"
+        },
+        {
+          "claim": "Priya's policy was not given to the model",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "calm"
+    },
+    {
+      "id": "b17",
+      "section": "sec3",
+      "job": "define",
+      "narration": [
+        "Training rewards likely text, not checked text.",
+        "A fluent answer that is false has a name.",
+        "A hallucination."
+      ],
+      "on_screen": [
+        "hallucination"
+      ],
+      "visual_intent": "One answer's glow stays steady while a faint crack runs through it; the word hallucination settles below.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "concepts": [
+        "hallucination"
+      ],
+      "grounding": [
+        {
+          "claim": "training rewards likely text and does not by itself check truth",
+          "fact": "F14"
+        },
+        {
+          "claim": "fluent, confident false statements are called hallucination",
+          "fact": "F15"
+        }
+      ],
+      "delivery": "even"
+    },
+    {
+      "id": "b18",
+      "section": "sec3",
+      "job": "relate",
+      "narration": [
+        "Its built-in knowledge stops at a training cutoff.",
+        "Anything newer, it has not seen."
+      ],
+      "on_screen": [
+        "training cutoff"
+      ],
+      "visual_intent": "A line of light ends at a marked cutoff; later items sit beyond it, dim.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "template",
+      "concepts": [
+        "training cutoff"
+      ],
+      "grounding": [
+        {
+          "claim": "built-in knowledge stops at a training cutoff; later information unknown unless put in front of it",
+          "fact": "F17"
+        }
+      ],
+      "delivery": "plain"
+    },
+    {
+      "id": "b19",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "Now you. Two replies.",
+        "One sums up a policy she pasted in.",
+        "One gives a deadline from nothing.",
+        "Which do you check first?"
+      ],
+      "on_screen": [
+        "Summary of the pasted policy",
+        "Deadline, no policy given"
+      ],
+      "visual_intent": "Two reply cards side by side, the first linked by a line to a document inside the window, the second floating unlinked.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "after_section": "sec3"
+      },
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the two replies are an illustration",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "your-turn: setup, question, then silence"
+    },
+    {
+      "id": "b20",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "The deadline. Nothing backed it.",
+        "And sounding sure proves nothing.",
+        "Still, glance at the summary too."
+      ],
+      "on_screen": [
+        "Check first",
+        "Glance too"
+      ],
+      "visual_intent": "The unlinked card gets the check-first mark; the linked card gets a lighter glance mark.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "confidence is not evidence of correctness",
+          "fact": "F16"
+        },
+        {
+          "claim": "even with supplied text the model can misreport it",
+          "fact": "F18"
+        },
+        {
+          "claim": "check important claims, more when stakes are higher",
+          "fact": "F20"
+        }
+      ],
+      "delivery": "plain, practical"
+    },
+    {
+      "id": "b21",
+      "section": "s4",
+      "job": "payoff",
+      "narration": [
+        "So Priya pastes in the policy, and asks again.",
+        "Now it has something real to work from."
+      ],
+      "on_screen": [
+        "When are expense claims due?"
+      ],
+      "visual_intent": "Back at Priya's desk: the policy document slides into the chat panel; inside, its pieces join the context window and the weight lines reach them.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "hybrid",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "clear, specific context with the relevant document gives the model better material",
+          "fact": "F19"
+        },
+        {
+          "claim": "Priya's action is part of the illustration",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "warm"
+    },
+    {
+      "id": "b22",
+      "section": "s4",
+      "job": "payoff",
+      "narration": [
+        "She checks the date against the page before sharing.",
+        "Give it the source.",
+        "Check what matters."
+      ],
+      "on_screen": [
+        "Give it the source.",
+        "Check what matters."
+      ],
+      "visual_intent": "Priya holds the reply next to the policy page, finds the matching line, then sends; the two rules rest on screen.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "hybrid",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "check important claims such as dates and policy details against a reliable source before sharing",
+          "fact": "F20"
+        },
+        {
+          "claim": "good context improves odds but does not guarantee correctness",
+          "fact": "F19"
+        }
+      ],
+      "delivery": "warm, land the pocket rule"
+    }
+  ]
+}

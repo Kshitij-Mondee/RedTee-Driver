@@ -1,0 +1,116 @@
+{
+  "title": "Two-step sign-in and a password manager: set up in ten minutes",
+  "genre": "teaching",
+  "audience": {
+    "who": "corporate employees of any department who sign in to work accounts every day",
+    "knows": "how to sign in with a password and use a smartphone; little or nothing about authenticator apps or password managers",
+    "cares_about": "not being the account that gets broken into, not getting locked out, and not losing time to IT tickets"
+  },
+  "outcome": "After watching, the viewer can turn on two-step sign-in with an authenticator app, save and generate passwords in a password manager, and knows the exact steps to take if their phone is lost.",
+  "through_line": "A password alone is one lock someone else can copy; a second step on your phone plus a manager that makes every password unique means a stolen password stops being enough, and backup codes mean a lost phone does not lock you out.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "a colleague's reused password leaks from another site and someone signs in as them: the recognisable moment where a password alone fails",
+      "source_anchor": "knowledge: why passwords alone fail (reuse, phishing, leaks)"
+    },
+    {
+      "role": "promise",
+      "what": "two settings, a few minutes, and a stolen password is no longer enough",
+      "source_anchor": "knowledge: what two-step sign-in adds"
+    },
+    {
+      "role": "build",
+      "what": "turning on two-step sign-in: open account security settings, scan the code with an authenticator app, enter the six-digit code, save the backup codes; every click explained",
+      "source_anchor": "knowledge: authenticator app setup steps"
+    },
+    {
+      "role": "build",
+      "what": "the password manager: one strong master password, saving an existing login, generating a new unique password and letting the manager fill it",
+      "source_anchor": "knowledge: password manager use"
+    },
+    {
+      "role": "build",
+      "what": "losing the phone: sign in with a backup code, tell IT, move the authenticator to the new phone, remove the old one",
+      "source_anchor": "knowledge: account recovery when a device is lost"
+    },
+    {
+      "role": "check",
+      "what": "a short scenario the viewer decides: what to do first when the phone is gone, or which of two sign-in setups survives a leaked password",
+      "source_anchor": "knowledge: recovery steps and two-step sign-in"
+    },
+    {
+      "role": "payoff",
+      "what": "back to the opening colleague: the same leaked password, now useless without the code on their phone",
+      "source_anchor": "knowledge: what two-step sign-in adds"
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "why a password alone fails: reuse across sites, phishing, and leaked password lists",
+      "from_knowledge": true,
+      "from_user": true
+    },
+    {
+      "what": "what two-step sign-in adds: something you know plus something you have",
+      "from_knowledge": true,
+      "from_user": true
+    },
+    {
+      "what": "setting up an authenticator app step by step: scan the code, confirm the six-digit time-based code",
+      "from_knowledge": true,
+      "from_user": true
+    },
+    {
+      "what": "saving backup or recovery codes somewhere safe at setup time",
+      "from_knowledge": true,
+      "from_user": true
+    },
+    {
+      "what": "a password manager: one strong master password, saving logins, generating unique passwords, autofill",
+      "from_knowledge": true,
+      "from_user": true
+    },
+    {
+      "what": "what to do when the phone is lost: backup code sign-in, report to IT, move or reset the authenticator, remove the old device",
+      "from_knowledge": true,
+      "from_user": true
+    }
+  ],
+  "must_avoid": [
+    "real product, app or brand names; every tool is generic",
+    "statistics or breach numbers without a source",
+    "fear-mongering or blaming the viewer",
+    "a teacher's tone or an agenda slide opening",
+    "SMS codes presented as equal to an authenticator app without the knowledge sheet saying so",
+    "advice that conflicts with a company's own IT policy: point to IT for the policy"
+  ],
+  "example_posture": "one running colleague at a work laptop and phone, the same accounts throughout; generic screens (a company sign-in page, a generic authenticator app, a generic password manager) shown click by click",
+  "visual_direction": "a screencast feel: clean generic software screens, a cursor that moves to each control as it is named, the clicked control highlighted, the phone screen beside the laptop when the code is scanned or typed; a before and after of the leaked password; the recovery steps as a short numbered path",
+  "voice_note": "a calm colleague sitting next to you at your desk, naming each click as it happens; plain words, no jargon without a one-line meaning, never alarmist.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "topic mode: no source document; every arc anchor points at the knowledge sheet the fact-finder will build",
+    "the company's own IT policy (approved apps, where to store backup codes) is unknown; the video points the viewer to IT"
+  ],
+  "provenance": {
+    "from_request": [
+      "audience",
+      "genre",
+      "length 3 minutes",
+      "screencast style",
+      "generic tools, no brand names",
+      "every click explained"
+    ],
+    "inferred": [
+      "title",
+      "through_line",
+      "arc_plan",
+      "example_posture",
+      "visual_direction",
+      "voice_note",
+      "audience.knows",
+      "audience.cares_about"
+    ]
+  }
+}

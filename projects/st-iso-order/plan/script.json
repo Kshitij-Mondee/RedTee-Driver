@@ -1,0 +1,677 @@
+{
+  "title": "One Order, Door to Door",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "Where is my lamp?",
+      "role": "hook"
+    },
+    {
+      "id": "bridge",
+      "title": "A chain of stations",
+      "role": "bridge"
+    },
+    {
+      "id": "sec1",
+      "title": "The order station",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Pick and pack",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "The hub",
+      "role": "build"
+    },
+    {
+      "id": "sec4",
+      "title": "The last mile and the trail",
+      "role": "build"
+    },
+    {
+      "id": "check",
+      "title": "Your turn",
+      "role": "check"
+    },
+    {
+      "id": "payoff",
+      "title": "Back to Thursday",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "hypothetical": true,
+      "narration": [
+        "Say a customer orders a desk lamp on Tuesday.",
+        "The page says, arrives tomorrow.",
+        "It is Thursday.",
+        "No lamp."
+      ],
+      "on_screen": [
+        "Arrives tomorrow"
+      ],
+      "visual_intent": "A customer at home taps order on a phone; 'arrives tomorrow' shows, then a wall calendar flips from Tuesday to Thursday while her doorstep stays empty.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the lamp order and its dates",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "warm; a beat of silence before 'No lamp.'"
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "hook",
+      "hypothetical": true,
+      "narration": [
+        "She asks you where it is.",
+        "Where would you look?"
+      ],
+      "on_screen": [
+        "Where is my order?"
+      ],
+      "visual_intent": "Her message lands on a colleague's screen at an office desk; the colleague looks up at a dim miniature world of stations they cannot yet read.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the customer's question",
+          "hypothetical": true
+        }
+      ],
+      "pause_after_s": 0.8
+    },
+    {
+      "id": "b03",
+      "section": "bridge",
+      "job": "orient",
+      "narration": [
+        "Follow the lamp through one world.",
+        "Each station hands it to the next."
+      ],
+      "on_screen": [],
+      "visual_intent": "The camera pulls back over the whole isometric world: order office, warehouse, hub, depot and the customer's street joined by one road; a token passes from station to station.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "an order passes a chain of stages, each handing to the next",
+          "fact": "F1"
+        }
+      ],
+      "concepts": [
+        "hand-off"
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "bridge",
+      "job": "sequence",
+      "narration": [
+        "Five stations.",
+        "Order, pick, pack, hub, delivery route.",
+        "Real companies split or merge some."
+      ],
+      "on_screen": [
+        "Order",
+        "Pick",
+        "Pack",
+        "Hub",
+        "Delivery route"
+      ],
+      "visual_intent": "The five stations light up one by one along the road as each is named, each with a small label that stays as a quiet map key.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "five stations as a teaching simplification; real companies split or merge steps",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "First, the order station checks payment.",
+        "Usually the bank authorises the amount,",
+        "reserving it."
+      ],
+      "on_screen": [
+        "Payment authorised"
+      ],
+      "visual_intent": "Close on the order station: the lamp's order card arrives, a payment check ticks, and the amount shows as held, not yet taken.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "payment usually authorised by the card issuer, reserving funds",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "Fraud and address checks can hold an order."
+      ],
+      "on_screen": [
+        "Fraud check",
+        "Address check"
+      ],
+      "visual_intent": "Two more checks pass over the lamp's order card and it moves on; a ghost order beside it is flagged and drops into a held tray.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "fraud and address checks; a flagged order can be held",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec1",
+      "job": "sequence",
+      "narration": [
+        "Then stock is set aside,",
+        "and the order drops into the warehouse queue."
+      ],
+      "on_screen": [],
+      "visual_intent": "A lamp in the stock records is tagged with the order, and the order card travels along the road into the warehouse, joining a pick queue.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "stock allocated, order released to the warehouse as work to pick",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "Miss the cut-off,",
+        "and it usually waits for the next cycle."
+      ],
+      "on_screen": [
+        "Cut-off"
+      ],
+      "visual_intent": "A cut-off line across the order station's clock; an order before it joins today's batch, an order after it slides into the next batch.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "orders after the cut-off usually wait for the next cycle; no clock time",
+          "fact": "F6"
+        }
+      ],
+      "concepts": [
+        "cut-off time"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "Here is a slip.",
+        "In stock online is not always on the shelf."
+      ],
+      "on_screen": [
+        "In stock",
+        "Shelf: empty"
+      ],
+      "visual_intent": "The website says 'In stock' while the warehouse shelf it points to stands empty; the mismatch is marked.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "inventory records and shelves can disagree",
+          "fact": "F7"
+        }
+      ],
+      "misconception": "in stock online means it is on a shelf"
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "A picker's scanner shows the lamp's shelf.",
+        "The picker walks over and lifts it.",
+        "That is picking."
+      ],
+      "on_screen": [
+        "Picking"
+      ],
+      "visual_intent": "Inside the isometric warehouse a picker's handheld shows an aisle and shelf; the picker walks the aisle and lifts the lamp box; the word appears only at the end.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "picking collects items from storage guided by a pick list or scanner",
+          "fact": "F8"
+        }
+      ],
+      "concepts": [
+        "picking"
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "At packing, it is scanned, boxed and labelled."
+      ],
+      "on_screen": [
+        "Label"
+      ],
+      "visual_intent": "At a packing bench the lamp is scanned, boxed, sealed, and a label prints and goes on; from here the labelled box is the lamp's look for the rest of the film.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "items checked, often by scanning, boxed and labelled",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "refute",
+      "narration": [
+        "What goes wrong here?",
+        "Someone picks the wrong item.",
+        "A shelf slot is empty.",
+        "Or a backlog builds at peak."
+      ],
+      "on_screen": [
+        "Wrong item",
+        "Empty slot",
+        "Peak backlog"
+      ],
+      "visual_intent": "Three small trouble spots appear in the warehouse in turn as named: a wrong box in a cart, an empty shelf slot, a long queue at packing.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "wrong item picked, item not at location, peak backlog",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec3",
+      "job": "define",
+      "narration": [
+        "Next, a hub, where parcels from many places meet.",
+        "Scanners read the label,",
+        "and sort by destination."
+      ],
+      "on_screen": [
+        "Hub"
+      ],
+      "visual_intent": "The lamp's box rides a truck to a large hub where trucks from other directions also unload; inside, a scanner arch reads its label and a diverter sends it down the lane for her region.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a hub sorts parcels from many origins by destination",
+          "fact": "F12"
+        },
+        {
+          "claim": "parcels go hub then depot near the destination",
+          "fact": "F13"
+        }
+      ],
+      "concepts": [
+        "hub"
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "define",
+      "narration": [
+        "Here is the tricky part.",
+        "The long trips between hubs are known as line haul,",
+        "and they run on a schedule.",
+        "Often overnight."
+      ],
+      "on_screen": [
+        "Linehaul"
+      ],
+      "visual_intent": "Night falls; outbound trucks wait at the hub's doors under a departure board, and the first one pulls out on time.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "linehaul between hubs and depots, often overnight",
+          "fact": "F14"
+        }
+      ],
+      "concepts": [
+        "linehaul"
+      ],
+      "delivery": "slower here"
+    },
+    {
+      "id": "b15",
+      "section": "sec3",
+      "job": "refute",
+      "narration": [
+        "If a parcel misses its truck,",
+        "it usually waits for the next one.",
+        "Nobody was careless."
+      ],
+      "on_screen": [
+        "Next departure"
+      ],
+      "visual_intent": "The lamp's box reaches the dock just as its truck's doors close; the truck leaves and the box sits alone under the board showing the next departure.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a parcel that misses its departure usually waits for the next",
+          "fact": "F15"
+        }
+      ],
+      "misconception": "a late order means someone was careless",
+      "delivery": "slower; let it land"
+    },
+    {
+      "id": "b16",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "An unreadable label, or a wrong sort,",
+        "can hold it up too."
+      ],
+      "on_screen": [
+        "Unreadable label",
+        "Wrong sort"
+      ],
+      "visual_intent": "On the sorter a ghost box with a torn label is kicked to a side lane and another rides the wrong lane.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "unreadable labels and mis-sorts stall parcels",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "At the local depot,",
+        "vans load in route order."
+      ],
+      "on_screen": [],
+      "visual_intent": "At the depot near her street, boxes go into a van in stop order while a route line draws itself across the neighbourhood.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "vans loaded usually in planned route order",
+          "fact": "F17"
+        }
+      ]
+    },
+    {
+      "id": "b18",
+      "section": "sec4",
+      "job": "demonstrate",
+      "narration": [
+        "At the door, the driver records proof.",
+        "A signature, a photo, or a scan."
+      ],
+      "on_screen": [
+        "Signature",
+        "Photo",
+        "Scan"
+      ],
+      "visual_intent": "The van stops at a house; the driver records proof on a handheld, showing signature, photo and scan as each is said.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "proof of delivery: signature, photo or scan",
+          "fact": "F18"
+        }
+      ]
+    },
+    {
+      "id": "b19",
+      "section": "sec4",
+      "job": "refute",
+      "narration": [
+        "This last mile can bite.",
+        "Maybe nobody is home.",
+        "Or it is a wrong address.",
+        "Or a full van.",
+        "Or bad weather."
+      ],
+      "on_screen": [
+        "Nobody home",
+        "Wrong address",
+        "Full van",
+        "Bad weather"
+      ],
+      "visual_intent": "Along the route four small troubles appear as named: a closed door, a house number that does not match, a van with no room, rain over the road.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "nobody home, wrong address, van capacity, weather",
+          "fact": "F19"
+        }
+      ],
+      "concepts": [
+        "last mile"
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "sec4",
+      "job": "refute",
+      "narration": [
+        "One more slip.",
+        "Tracking is not a live map.",
+        "Each status is a scan at a hand-off."
+      ],
+      "on_screen": [
+        "Confirmed",
+        "Dispatched",
+        "At hub",
+        "Out for delivery",
+        "Delivered"
+      ],
+      "visual_intent": "The lamp's journey as a dotted road with no moving dot; a scan mark pops only at each station, and each pop adds its status line to a phone trail.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "each status is a scan at a hand-off, not live location",
+          "fact": "F21"
+        },
+        {
+          "claim": "typical status meanings",
+          "fact": "F22"
+        }
+      ],
+      "misconception": "tracking shows live location the whole way",
+      "delivery": "slower on the scan idea"
+    },
+    {
+      "id": "b21",
+      "section": "check",
+      "job": "check",
+      "hypothetical": true,
+      "narration": [
+        "Now you.",
+        "The lamp's trail stops at the status, at hub.",
+        "Then nothing.",
+        "Where do you look first?"
+      ],
+      "on_screen": [
+        "Confirmed",
+        "Dispatched",
+        "At hub",
+        "?"
+      ],
+      "visual_intent": "The lamp's own trail on the phone stops at 'At hub' with an empty gap below; the world behind is dimmed so the viewer has to choose.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "the lamp's trail",
+          "hypothetical": true
+        },
+        {
+          "claim": "status meanings",
+          "fact": "F22"
+        }
+      ],
+      "pause_after_s": 2.5,
+      "recall": {
+        "kind": "quiz",
+        "prompt": "The trail stops at 'at hub'. Where do you look first?",
+        "answer": "the hub"
+      }
+    },
+    {
+      "id": "b22",
+      "section": "check",
+      "job": "consolidate",
+      "narration": [
+        "Look at the hub first.",
+        "A long gap often means waiting there.",
+        "Maybe it missed its truck,",
+        "or the label could not be read."
+      ],
+      "on_screen": [
+        "Hub"
+      ],
+      "visual_intent": "The world lights again with the hub highlighted; the lamp's box sits on the dock with the two likely causes marked beside it.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a gap between scans often points to waiting at a station",
+          "fact": "F23"
+        },
+        {
+          "claim": "missed departure",
+          "fact": "F15"
+        },
+        {
+          "claim": "unreadable label",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "payoff",
+      "job": "practice",
+      "narration": [
+        "So, read the last status.",
+        "Name the station, and its usual hold-up.",
+        "Then set the expectation."
+      ],
+      "on_screen": [
+        "Last status",
+        "Station",
+        "Usual hold-up",
+        "Expectation"
+      ],
+      "visual_intent": "Back at the colleague's desk, three short steps build beside the message thread as the colleague types a reply.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "the last status names the place to look",
+          "fact": "F23"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "payoff",
+      "job": "payoff",
+      "hypothetical": true,
+      "narration": [
+        "You tell her, it is most likely at the hub,",
+        "waiting for the next truck.",
+        "Give the last scan, the station, and the reason.",
+        "Then make the promise."
+      ],
+      "on_screen": [
+        "Last scan",
+        "Station",
+        "Reason",
+        "Then the promise"
+      ],
+      "visual_intent": "The customer reads the reply at home; the camera rises over the world as a truck pulls away from the hub with the lamp's box toward her street, the pocket rule over the sky.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the lamp's story",
+          "hypothetical": true
+        },
+        {
+          "claim": "a missed departure usually waits for the next",
+          "fact": "F15"
+        }
+      ]
+    }
+  ]
+}

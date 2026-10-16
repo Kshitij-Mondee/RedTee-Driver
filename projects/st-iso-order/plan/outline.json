@@ -1,0 +1,315 @@
+{
+  "concept": "One connected isometric world on one held board: the customer's street, the company office, the warehouse, the hub and the local depot joined by one road. We follow one desk lamp through it as the only vermilion thing; every delay is drawn as the lamp (or a ghost parcel) held at a station, so by the end the stations tell you where to look.",
+  "world": "One Loom station 'world' holding one isometric board (about 22 x 13 units) for the whole film. One road runs back-left to front-right: the company office (blue, with the colleague's desk), the warehouse (concrete hall, shelves and a packing bench inside, cut away in sec2), the hub (large hall facade, sorter with scanner arch and lanes inside, docks with trucks), the local depot (small hall, vans), and the customer's street (a few houses, trees). The in-board camera glides between them; flat cards (phone, chat, notes) sit beside the board in the free corner.",
+  "devices": [
+    {
+      "id": "the_lamp",
+      "kind": "explain",
+      "what": "the subject in the reserved vermilion: the lamp's order card (b05 to b09), then from packing the labelled lamp box (b11 on) with a you-are-here ring; nothing else is ever vermilion",
+      "beats": [
+        "b05",
+        "b06",
+        "b07",
+        "b11",
+        "b13",
+        "b15",
+        "b22",
+        "b24"
+      ]
+    },
+    {
+      "id": "held_spot",
+      "kind": "explain",
+      "what": "a delay drawn as a thing held at a station: a ghost order in a held tray, an empty shelf slot, a box alone on a dock under a departure board, a box kicked to a side lane; a neg mark on the spot, never on a person",
+      "beats": [
+        "b06",
+        "b08",
+        "b09",
+        "b12",
+        "b15",
+        "b16",
+        "b19",
+        "b22"
+      ]
+    },
+    {
+      "id": "station_pins",
+      "kind": "list",
+      "what": "the five station pins on the one board (Order, Pick, Pack, Hub, Delivery route), named in b04 and reused as the places where scans pop in b20 and the place to look in b21 and b22",
+      "beats": [
+        "b04",
+        "b20",
+        "b21",
+        "b22"
+      ]
+    },
+    {
+      "id": "trail_phone",
+      "kind": "data",
+      "what": "the customer's phone as a flat card beside the board: the order page saying Arrives tomorrow (b01), then the tracking trail whose status lines are added one per scan (b20) and stop at At hub (b21), then her reply (b24)",
+      "beats": [
+        "b01",
+        "b20",
+        "b21",
+        "b24"
+      ]
+    },
+    {
+      "id": "chat_thread",
+      "kind": "callback",
+      "what": "the colleague's message thread on a flat card by the office desk: her question lands (b02), the reply builds as the four steps (b23), and is read (b24)",
+      "beats": [
+        "b02",
+        "b23",
+        "b24"
+      ]
+    },
+    {
+      "id": "board_glide",
+      "kind": "join",
+      "what": "the join material: one held isometric board for the whole film; beats continue on it and the in-board camera glides station to station along the road (no cartoon materials in this technical style)",
+      "beats": [
+        "b02",
+        "b03",
+        "b05",
+        "b10",
+        "b13",
+        "b17",
+        "b22",
+        "b24"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "to": "b04",
+      "band": "light",
+      "why": "a pale open: the calm world, the question laid on it; b02 dims the world (the colleague cannot read it yet)"
+    },
+    {
+      "from": "b05",
+      "to": "b13",
+      "band": "mid",
+      "why": "the slightly richer middle: legend hues on, stations working"
+    },
+    {
+      "from": "b14",
+      "to": "b16",
+      "band": "dark",
+      "why": "night at the hub: the linehaul schedule and the missed truck, the key mechanism the payoff rests on"
+    },
+    {
+      "from": "b17",
+      "to": "b19",
+      "band": "mid",
+      "why": "morning on the last mile"
+    },
+    {
+      "from": "b20",
+      "to": "b21",
+      "band": "light",
+      "why": "colour withheld: the world drained to grey so only the scan marks and the trail read; the quiz holds a dimmed world"
+    },
+    {
+      "from": "b22",
+      "to": "b24",
+      "band": "light",
+      "why": "the lift at the close: the hub lights in colour, the reply, the box rolls on toward her street"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "detail register, close on her house then the office desk; flat phone and chat cards beside the board",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Close on her house on the street: the phone card shows the lamp order and Arrives tomorrow; a calendar card flips Tuesday to Thursday; the doorstep stays empty."
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The camera glides along the road to the office: her message lands on the chat card by the desk; the world beyond turns grey, unreadable."
+        }
+      ]
+    },
+    {
+      "id": "bridge",
+      "treatment": "scale reveal of the whole board, then the five station pins as a map key",
+      "beats": [
+        {
+          "beat": "b03",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Scale reveal of the whole board; a vermilion pulse runs the road from office to warehouse to hub to depot to her street, handing off at each."
+        },
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Five station pins rise one by one as named: Order, Pick, Pack, Hub, Delivery route; a dashed bracket notes real companies split or merge some."
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "teaching register close on the office and warehouse door; flat note cards for the checks; held tray and empty shelf as held spots",
+      "beats": [
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Close on the order office plate: the vermilion order card arrives, a payment check ticks, the amount shows as held, not taken."
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Fraud and address checks pass over the lamp's card and it moves on; a grey ghost order is flagged and drops into a held tray."
+        },
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "A lamp on the warehouse records is tagged; the order card rides the road into the warehouse and joins the pick queue."
+        },
+        {
+          "beat": "b08",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "A dashed cut-off line across the queue under a clock: orders before it join today's batch, a late one slides to the next."
+        },
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Split: the web page says In stock while the shelf it points to, in an inset, stands empty; the mismatch is marked."
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "detail register: the warehouse cut away, a picker pictogram, a live inset on the scanner, the packing bench",
+      "beats": [
+        {
+          "beat": "b10",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The warehouse cuts away; a picker pictogram's scanner inset shows aisle and shelf; the picker walks the aisle and lifts the lamp."
+        },
+        {
+          "beat": "b11",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "At the packing bench the lamp is scanned, boxed and sealed; a label prints and goes on: the vermilion lamp box is born."
+        },
+        {
+          "beat": "b12",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Three held spots appear in the warehouse as named: a wrong box in a cart, an empty slot, a long queue of boxes at packing."
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "follow the box on the road to the hub; hub cut away with scanner arch and lanes; night at the docks",
+      "beats": [
+        {
+          "beat": "b13",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Follow the box on a truck to the hub where trucks from other roads unload; inside, a scanner arch reads it and a lane takes it toward her region."
+        },
+        {
+          "beat": "b14",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Night falls on the board; outbound trucks wait at the hub doors under a departure board; the first pulls out on time."
+        },
+        {
+          "beat": "b15",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The lamp box reaches the dock as its truck's doors close; the truck leaves; the box sits alone under the board's next departure row."
+        },
+        {
+          "beat": "b16",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "On the sorter a ghost box with a torn label is kicked to a side lane, another rides the wrong lane; both held."
+        }
+      ]
+    },
+    {
+      "id": "sec4",
+      "treatment": "the depot and her street; a van on its route; the tracking trail as scans at stations",
+      "beats": [
+        {
+          "beat": "b17",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Morning at the depot by her street: boxes go into a teal van in stop order while the route draws across the houses."
+        },
+        {
+          "beat": "b18",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The van stops at a house; the driver pictogram holds a handheld whose inset card swaps signature, photo, scan."
+        },
+        {
+          "beat": "b19",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Four held spots along the route as named: a closed door, a house number that does not match, a full van, rain over the road."
+        },
+        {
+          "beat": "b20",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The world drains to grey; the road is dotted with no moving dot; a scan mark pops at each station pin and adds its status line to the phone trail."
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "treatment": "the trail stops; dimmed world; then the hub lights with the two causes",
+      "beats": [
+        {
+          "beat": "b21",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The lamp's own trail on the phone stops at At hub with an empty gap; the world stays dim; a held pause for the viewer to choose."
+        },
+        {
+          "beat": "b22",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "The hub lights in colour; the lamp box sits on its dock with two held-spot marks beside it: missed truck, unreadable label."
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "back at the desk the reply builds; the camera rises as the truck leaves the hub toward her street",
+      "beats": [
+        {
+          "beat": "b23",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Back at the office desk the chat card builds the reply in four steps: last status, station, usual hold-up, expectation."
+        },
+        {
+          "beat": "b24",
+          "kind": "bespoke",
+          "station": "world",
+          "line": "Her phone shows the reply; the camera rises over the whole world as a truck leaves the hub with the lamp box toward her street."
+        }
+      ]
+    }
+  ]
+}

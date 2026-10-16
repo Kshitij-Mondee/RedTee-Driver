@@ -1,0 +1,710 @@
+{
+  "title": "Two-step sign-in and a password manager: set up in ten minutes",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "Sam's leaked password",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Why a password alone fails",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Turn on two-step sign-in",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "Use a password manager",
+      "role": "build"
+    },
+    {
+      "id": "sec4",
+      "title": "When your phone is lost",
+      "role": "build"
+    },
+    {
+      "id": "check",
+      "title": "Quick check",
+      "role": "check"
+    },
+    {
+      "id": "payoff",
+      "title": "Back to Sam",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "Say your colleague Sam",
+        "uses one password on an old shopping site,",
+        "and the same one at work."
+      ],
+      "on_screen": [],
+      "visual_intent": "Sam at a work laptop; two sign-in screens side by side, a shopping site and the company sign-in, the same masked password typed into both.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Sam reuses one password at work and on a shopping site",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "scenario",
+      "narration": [
+        "The shopping site leaks.",
+        "Someone tries that password at work,",
+        "and Sam's account opens."
+      ],
+      "on_screen": [
+        "Sign in"
+      ],
+      "visual_intent": "The shopping site card cracks and the password slips out; a stranger's cursor types it into the company sign-in page, clicks Sign in, and the inbox opens.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a leaked password tried on another site can open it",
+          "fact": "F1"
+        },
+        {
+          "claim": "reuse lets one leak open a work account",
+          "fact": "F2"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "hook",
+      "job": "orient",
+      "narration": [
+        "Two settings, a few minutes,",
+        "and a leaked password stops being enough."
+      ],
+      "on_screen": [
+        "Two-step sign-in",
+        "Password manager"
+      ],
+      "visual_intent": "The two settings appear as two toggles on a clean settings screen, both switching on.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "with two-step sign-in a leaked password alone is not enough",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "A password alone fails three ways.",
+        "Reuse: one leak opens every account.",
+        "Phishing: a fake page collects it.",
+        "Leaked lists: old passwords get tried everywhere."
+      ],
+      "on_screen": [
+        "Reuse",
+        "Phishing",
+        "Leaked lists"
+      ],
+      "visual_intent": "Three tiles light one by one as named: one key opening several doors, a look-alike sign-in page, a long scrolling list of masked passwords.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "reuse means one leak can open every account using that password",
+          "fact": "F2"
+        },
+        {
+          "claim": "phishing gets people to type passwords into fake pages",
+          "fact": "F3"
+        },
+        {
+          "claim": "breached passwords circulate in lists tried against other accounts",
+          "fact": "F4"
+        }
+      ],
+      "misconception": "a strong password is enough on its own",
+      "concepts": [
+        "password reuse",
+        "phishing",
+        "leaked lists"
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "Two-step sign-in adds a second proof:",
+        "something you know, your password,",
+        "plus something you have, your phone."
+      ],
+      "on_screen": [
+        "Something you know",
+        "Something you have"
+      ],
+      "visual_intent": "The sign-in page gains a second step: the password field on the laptop, then a phone beside it showing a code.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "two-step sign-in is something you know plus something you have",
+          "fact": "F5"
+        }
+      ],
+      "concepts": [
+        "something you know plus something you have"
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "It's not unhackable,",
+        "but a stolen password alone no longer gets in."
+      ],
+      "on_screen": [],
+      "visual_intent": "A stranger's cursor types a stolen password; the page moves to the code step and waits, with no way forward.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "two-step sign-in is not a guarantee",
+          "fact": "F7"
+        },
+        {
+          "claim": "a stolen password alone is no longer enough",
+          "fact": "F6"
+        }
+      ],
+      "misconception": "two-step sign-in makes an account unhackable"
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "On your laptop, open Security settings.",
+        "Find two-step sign-in, and click Turn on."
+      ],
+      "on_screen": [
+        "Security",
+        "Two-step sign-in",
+        "Turn on"
+      ],
+      "visual_intent": "Screencast: the cursor opens the account menu, clicks Security, scrolls to Two-step sign-in and clicks Turn on, each control highlighted as it is named.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "typical steps start in security settings with turning on two-step sign-in",
+          "fact": "F9"
+        }
+      ],
+      "concepts": [
+        "security settings"
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Choose Authenticator app,",
+        "and a QR code appears."
+      ],
+      "on_screen": [
+        "Authenticator app"
+      ],
+      "visual_intent": "Screencast: a method picker; the cursor clicks Authenticator app and a QR code fades in on the laptop screen.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "you choose authenticator app and a QR code is shown",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "On your phone, open the authenticator app,",
+        "tap Add account,",
+        "and point the camera at the code."
+      ],
+      "on_screen": [
+        "Add account"
+      ],
+      "visual_intent": "The phone slides in beside the laptop; a finger taps Add account, the camera view frames the QR code on the laptop screen.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "you scan the QR code with the authenticator app",
+          "fact": "F9"
+        }
+      ],
+      "delivery": "slower",
+      "concepts": [
+        "QR code scan"
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "That scan shares a secret key once.",
+        "Now the app shows a six-digit code,",
+        "new about every thirty seconds."
+      ],
+      "on_screen": [
+        "6-digit code",
+        "30 s"
+      ],
+      "visual_intent": "The account appears in the app with a six-digit code and a small countdown ring that runs out and refreshes to a new code.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the app generates one-time codes from a secret key shared at the QR scan",
+          "fact": "F8"
+        },
+        {
+          "claim": "codes are six digits",
+          "fact": "F9"
+        },
+        {
+          "claim": "codes change about every 30 seconds",
+          "fact": "F10"
+        }
+      ],
+      "concepts": [
+        "6-digit time-based code"
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Type the current code into the laptop,",
+        "and click Verify."
+      ],
+      "on_screen": [
+        "Verify"
+      ],
+      "visual_intent": "Screencast: the six digits are typed into the laptop's code box, matching the phone; the cursor clicks Verify and a confirmation tick appears.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "you type the current code to confirm",
+          "fact": "F9"
+        },
+        {
+          "claim": "you type the code currently on screen",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Next come backup codes, usually shown only once.",
+        "Each works one time, if your phone isn't there."
+      ],
+      "on_screen": [
+        "Backup codes"
+      ],
+      "visual_intent": "Screencast: a panel of short backup codes; one code is highlighted and marked as single use.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "backup codes are usually shown at setup, often only once",
+          "fact": "F11"
+        },
+        {
+          "claim": "each backup code typically works once as a stand-in",
+          "fact": "F12"
+        }
+      ],
+      "delivery": "slower",
+      "concepts": [
+        "backup codes"
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec2",
+      "job": "practice",
+      "narration": [
+        "Keep them off the phone you might lose:",
+        "in your password manager, or where IT says."
+      ],
+      "on_screen": [],
+      "visual_intent": "The backup codes lift off the screen; a crossed-out phone on one side, a password manager vault and an IT note on the other; the codes settle into the vault.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "store backup codes safely and separately from the phone, e.g. in the password manager, per company policy",
+          "fact": "F13"
+        }
+      ],
+      "pause_after_s": 0.8,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Where do your backup codes go?"
+      }
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "define",
+      "narration": [
+        "The password manager is an encrypted vault,",
+        "opened with one master password."
+      ],
+      "on_screen": [
+        "Master password"
+      ],
+      "visual_intent": "Screencast: the password manager's unlock screen, one password field, the vault opening onto a list of saved logins.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a password manager is an encrypted vault unlocked by one master password",
+          "fact": "F14"
+        }
+      ],
+      "concepts": [
+        "master passphrase"
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Make it a long passphrase you'll remember.",
+        "It usually can't be recovered for you."
+      ],
+      "on_screen": [],
+      "visual_intent": "A short password grows into a long phrase of several words in the unlock field; a small strength bar fills.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the master password should be a long memorable passphrase",
+          "fact": "F15"
+        },
+        {
+          "claim": "the vendor usually cannot recover a forgotten master password",
+          "fact": "F19"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Sign in to a site as usual.",
+        "When the manager offers, click Save."
+      ],
+      "on_screen": [
+        "Save"
+      ],
+      "visual_intent": "Screencast: a generic site's sign-in; after sign-in a small manager prompt drops down and the cursor clicks Save; the login appears in the vault list.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "you save a login by accepting the manager's offer after signing in",
+          "fact": "F17"
+        }
+      ],
+      "concepts": [
+        "save login"
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "For a reused password, open Change password",
+        "and click Generate:",
+        "long, random, and unique to this account."
+      ],
+      "on_screen": [
+        "Change password",
+        "Generate"
+      ],
+      "visual_intent": "Screencast: the site's Change password form; the cursor clicks the manager's Generate button and a long random password fills the field.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "managers generate long random unique passwords",
+          "fact": "F16"
+        },
+        {
+          "claim": "replace weak or reused passwords with generated ones",
+          "fact": "F17"
+        }
+      ],
+      "concepts": [
+        "generate password"
+      ]
+    },
+    {
+      "id": "b18",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Save it, and autofill types it for you,",
+        "but only on the address it was saved for."
+      ],
+      "on_screen": [
+        "Save"
+      ],
+      "visual_intent": "Screencast: Save clicked; later the sign-in page opens and the fields fill themselves, the address bar highlighted.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "autofill normally fills only on the saved site address",
+          "fact": "F18"
+        }
+      ],
+      "concepts": [
+        "autofill on the saved site"
+      ]
+    },
+    {
+      "id": "b19",
+      "section": "sec3",
+      "job": "distinguish",
+      "narration": [
+        "A look-alike page that won't fill in by itself",
+        "is a warning sign, not a glitch."
+      ],
+      "on_screen": [],
+      "visual_intent": "Before and after: the real address fills, a look-alike address with one letter changed stays empty and is flagged.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "no autofill on a look-alike page is a warning sign, not a guarantee",
+          "fact": "F18"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "sec4",
+      "job": "scenario",
+      "narration": [
+        "Now your phone is gone.",
+        "What would you do first?"
+      ],
+      "on_screen": [],
+      "visual_intent": "An empty desk spot where the phone was; the laptop shows the code step waiting.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the viewer has lost their phone",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 1.5,
+      "misconception": "if I lose my phone I am locked out for good"
+    },
+    {
+      "id": "b21",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "One, sign in with a backup code.",
+        "Two, tell IT straight away."
+      ],
+      "on_screen": [
+        "1 Sign in with a backup code",
+        "2 Tell IT"
+      ],
+      "visual_intent": "A short numbered path builds: step 1 with a backup code typed into the code box, step 2 with a message to IT.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "sign in with a backup code and report the loss to IT promptly",
+          "fact": "F22"
+        },
+        {
+          "claim": "reporting quickly lets IT revoke access and check the account",
+          "fact": "F23"
+        }
+      ],
+      "concepts": [
+        "backup code sign-in",
+        "report to IT"
+      ]
+    },
+    {
+      "id": "b22",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "Three, set up your new phone.",
+        "Four, remove the old device",
+        "and sign out other sessions."
+      ],
+      "on_screen": [
+        "1 Sign in with a backup code",
+        "2 Tell IT",
+        "3 Set up the new phone",
+        "4 Remove the old device"
+      ],
+      "visual_intent": "The same path continues: step 3 with a new phone scanning a code, step 4 with the old device crossed off a device list.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "set up the authenticator again, remove the old device, sign out other sessions",
+          "fact": "F22"
+        }
+      ],
+      "concepts": [
+        "re-enrol on the new phone",
+        "remove the old device"
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "check",
+      "job": "check",
+      "narration": [
+        "Tempted to turn two-step sign-in off?",
+        "That drops your protection.",
+        "Move it to the new phone instead."
+      ],
+      "on_screen": [],
+      "visual_intent": "The two-step toggle is pulled toward off and marked wrong; then the code moves from the old phone to the new phone, marked right.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the right move is to set up the authenticator on the new phone",
+          "fact": "F22"
+        },
+        {
+          "claim": "without the second step a password alone is enough again",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Back to Sam.",
+        "The same leaked password,",
+        "and this time it stops at the code screen."
+      ],
+      "on_screen": [],
+      "visual_intent": "The hook's stranger cursor types Sam's leaked password into the company sign-in; the page halts on the code step, while Sam's phone holds the code.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a leaked password alone no longer gets in with two-step sign-in",
+          "fact": "F6"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b25",
+      "section": "payoff",
+      "job": "consolidate",
+      "narration": [
+        "Turn it on today,",
+        "store your backup codes,",
+        "and swap one reused password this week."
+      ],
+      "on_screen": [
+        "Turn on two-step sign-in",
+        "Store backup codes",
+        "Swap one reused password"
+      ],
+      "visual_intent": "Three checklist items tick off over the laptop and phone together.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "store backup codes per company policy",
+          "fact": "F13"
+        },
+        {
+          "claim": "replace reused passwords with generated ones",
+          "fact": "F17"
+        }
+      ]
+    }
+  ]
+}

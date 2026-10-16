@@ -1,0 +1,39 @@
+{
+  "id": "st-bp-cooling",
+  "created": "2026-10-16T14:31:31",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How a cooling system keeps a data centre running: where the heat comes from, how cold air reaches the servers and hot air leaves, what the chillers and pumps do, and what happens when one part fails",
+  "sources": [],
+  "request": {
+    "audience": "corporate employees, including non-engineers",
+    "genre": "teaching",
+    "length_min": 3.0,
+    "style": "blueprint",
+    "persona": null,
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.7,
+      "calibrated": true
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "none",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "Practical and clear for working adults. Show how the system is built and how its parts move; explain calmly between the detailed moments.",
+    "mix_as": "ceiling"
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  },
+  "isolated": true
+}

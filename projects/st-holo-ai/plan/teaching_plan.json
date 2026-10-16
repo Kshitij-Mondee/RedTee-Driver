@@ -1,0 +1,187 @@
+{
+  "title": "From question to answer: what happens inside an AI model",
+  "performance": "when an AI assistant gives them an answer at work, the viewer can explain how it was produced (predicted a piece at a time from the text in front of the model) and decide which claims to check before relying on them, and give the assistant the context it needs",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "uses or has seen a chat assistant; knows nothing of tokens, attention or sampling",
+    "why": "brief: non-technical corporate employees; the knowledge sheet explains every term in plain words",
+    "motivation": "wants to trust the tool the right amount and not be embarrassed by a wrong answer passed on",
+    "context": "desk or laptop, with sound, captions on, short workplace learning slot"
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "question_led",
+    "rationale": "the topic has a genuine puzzle at its heart (same question, two confident answers, one wrong) and the knowledge sheet's mechanism (F1-F17) answers it step by step in pipeline order",
+    "signature_move": "ask what happens next to Priya's question, show that step happen on her words, then name it and say what it explains"
+  },
+  "misconceptions": [
+    {
+      "belief": "the assistant looks the answer up somewhere, like a search or a database",
+      "why_tempting": "the reply arrives instantly and reads like a looked-up fact",
+      "refuted_in": "sec2",
+      "source_anchor": "knowledge F14, F15; not_claimed[0]; brief through_line"
+    },
+    {
+      "belief": "an answer that sounds confident and well written is probably right",
+      "why_tempting": "with people, fluency and confidence usually signal knowledge",
+      "refuted_in": "sec3",
+      "source_anchor": "knowledge F16; not_claimed[4]"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Say Priya asks the company assistant when expense claims are due, then asks again. She gets thirty days, then sixty, both said with total confidence."
+    },
+    "promise": "follow Priya's one question through the model and you will know where each answer came from, and which to trust",
+    "bridge_from_prior": "sec1 opens from what the viewer already does: typing a question into a chat box",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain how a typed question becomes tokens that the model weighs against each other",
+        "bloom": "understand",
+        "concepts": [
+          "token",
+          "token numbers",
+          "context window",
+          "attention"
+        ],
+        "energy": "build",
+        "carrier": "process animation",
+        "recap_after": false,
+        "facts": [
+          "F1",
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F7"
+        ]
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can use the predict, pick, append, repeat loop to explain why the same question gave two different answers",
+        "bloom": "apply",
+        "concepts": [
+          "next-token probabilities",
+          "one token at a time",
+          "sampling"
+        ],
+        "energy": "peak",
+        "carrier": "value that visibly changes",
+        "recap_after": true,
+        "facts": [
+          "F8",
+          "F9",
+          "F10",
+          "F11",
+          "F12"
+        ]
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can distinguish an answer the model could ground in text it was given from one that is only a likely-sounding prediction, and say which needs checking",
+        "bloom": "analyze",
+        "concepts": [
+          "hallucination",
+          "training cutoff"
+        ],
+        "energy": "rest",
+        "carrier": "before and after comparison",
+        "recap_after": false,
+        "facts": [
+          "F14",
+          "F15",
+          "F16",
+          "F17",
+          "F19",
+          "F20"
+        ]
+      }
+    ],
+    "payoff": "back to Priya: neither number came from her policy; she pastes the policy in, asks again, and checks the date against the document before sharing it"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "Priya's question traced through tokens, weights and the first predicted words, every step narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "sec2 end",
+      "what": "the ranked list for the deadline number is shown and the viewer is asked which pick explains thirty and which sixty before it is said"
+    },
+    {
+      "stage": "independent",
+      "where": "sec3 quiz and payoff",
+      "what": "the viewer judges which of two replies needs checking, then sees Priya do it"
+    }
+  ],
+  "pacing": {
+    "requested_s": 180,
+    "target_duration_s": 180,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "attention"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec1",
+        "kind": "recall_prompt",
+        "prompt_sketch": "So far the model has no answer, only Priya's pieces and how much each one matters. Keep that in mind."
+      },
+      {
+        "after_section": "sec3",
+        "kind": "quiz",
+        "prompt_sketch": "Two replies: one summarises the policy Priya pasted in; one gives a deadline with no policy in front of the model. Which do you check first?",
+        "answer": "the deadline with no policy in front of it: nothing in the context supported that number, so it is only a likely-sounding prediction",
+        "tempting_wrong": "trusting the one that sounds more certain; confidence is written the same way for true and false statements (F16), and even the summary deserves a glance on key details"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "next time you ask an assistant something at work, paste in the document it should rely on, and check any name, figure, date or policy detail against the source before you pass it on"
+  ],
+  "persona": {
+    "voice": "a calm, capable colleague who explains how the tool works without hype or alarm",
+    "delivery_notes": "curious and light on the hook, slower and even on attention, a beat of pause before the two answers split, plain and practical on the quiz and payoff"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: Priya's two confident deadlines",
+      "objective": "promise: know where each answer came from and which to trust",
+      "recall_prior": "sec1 starts from typing a question in a chat box",
+      "present": "sections in pipeline order: tokens and weights, prediction loop, why it can be wrong",
+      "guidance": "signature move applied to Priya's one question in every section",
+      "practice": "faded prediction at sec2 end; quiz after sec3",
+      "feedback": "quiz answer explained with the tempting wrong reading",
+      "assess": "quiz after sec3",
+      "transfer": "transfer task: paste the source, check figures"
+    },
+    "merrill": {
+      "problem_centered": "Priya's deadline question is the running problem",
+      "activation": "sec1 bridges from the viewer's own chat habit",
+      "demonstration": "each step shown on Priya's words before it is named",
+      "application": "faded prediction in sec2 and the sec3 quiz",
+      "integration": "payoff and transfer task hand the habit back to the viewer's work"
+    },
+    "mayer": {
+      "coherence": "one running example only; no model sizes, vendors or history",
+      "signalling": "one slowdown, on attention",
+      "redundancy": "screen shows the tokens, weights and ranked words; narration explains, captions carry the words",
+      "contiguity": "each token, weight and candidate word appears as it is spoken",
+      "segmenting": "three short sections, one idea each",
+      "pre_training": "token named in sec1 before the loop uses it in sec2"
+    },
+    "arcs": {
+      "attention": "two confident, different answers to one work question",
+      "relevance": "the viewer's own use of assistants at work",
+      "confidence": "every step shown on one familiar example before the quiz",
+      "satisfaction": "the viewer resolves Priya's puzzle and knows what to do"
+    },
+    "bloom_path": "understand -> apply -> analyze"
+  },
+  "series": null,
+  "flags": []
+}

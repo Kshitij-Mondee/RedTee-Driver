@@ -1,0 +1,212 @@
+{
+  "topic": "How an online order reaches a customer's door: order, pick and pack, hub sort, delivery route, and where delays happen",
+  "scope_note": "Generic, process-level chain (retailer or third-party warehouse, then a parcel network). No numbers, no named retailers or carriers. Details vary by company; the five-station model is a teaching simplification.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "An online order passes through a chain of separate stages, each handing the parcel or the order data to the next, rather than being one continuous event.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Standard order-to-delivery / order fulfilment descriptions in logistics and supply chain textbooks"
+    },
+    {
+      "id": "F2",
+      "statement": "The five stations used in this lesson are order, pick, pack, hub sort and delivery route; real companies may split or merge these steps.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "A teaching simplification. Real networks add steps such as receiving at a depot, or a returns loop. Say it as 'the way we will look at it'."
+    },
+    {
+      "id": "F3",
+      "statement": "When an order is placed, the retailer's system checks payment, usually by asking the card issuer to authorise the amount, which reserves the funds rather than moving them at once.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Usually, not always: some businesses capture payment immediately or at dispatch. Keep wording to 'checks or authorises payment'.",
+      "reference_hint": "Card payment authorisation versus capture, as described in payment processor documentation"
+    },
+    {
+      "id": "F4",
+      "statement": "Many retailers also run fraud checks and address checks on a new order, and an order that fails or is flagged can be held until it is resolved.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Not every retailer does each check, and the checks differ in depth."
+    },
+    {
+      "id": "F5",
+      "statement": "The order system allocates stock to the order and then releases it to a warehouse, where it appears as work to be picked.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Order management and warehouse management system descriptions in fulfilment literature"
+    },
+    {
+      "id": "F6",
+      "statement": "Retailers set order cut-off times: an order placed before the cut-off can be handled in the current dispatch cycle, and one placed after it usually waits for the next.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "The actual cut-off time differs by retailer, product and delivery option, so the script must not give a clock time."
+    },
+    {
+      "id": "F7",
+      "statement": "Stock shown as available on a website can turn out not to exist in the warehouse, because the inventory records and the physical shelves can disagree.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "Inventory record accuracy, a standard topic in warehouse and inventory management texts"
+    },
+    {
+      "id": "F8",
+      "statement": "Picking means collecting the ordered items from their storage locations, guided by a pick list or a scanner instruction.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Order picking, standard warehouse operations term"
+    },
+    {
+      "id": "F9",
+      "statement": "Warehouses reduce walking by grouping orders into batches or waves, or by bringing the goods to the picker (goods-to-person) instead of sending the picker to the goods.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Methods vary by site; many small warehouses simply pick order by order.",
+      "reference_hint": "Order picking methods (batch, wave, goods-to-person) in warehouse management texts"
+    },
+    {
+      "id": "F10",
+      "statement": "At the packing station the items are checked, often by scanning, put in a box or bag, and a shipping label is printed and attached.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "The scan-to-verify step is common but not universal."
+    },
+    {
+      "id": "F11",
+      "statement": "Common failure points in the warehouse are a wrong item picked, an item not found at its recorded location, stock found to be missing at pick time, and a backlog when order volume peaks.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "Typical order picking error and capacity issues in warehouse operations literature"
+    },
+    {
+      "id": "F12",
+      "statement": "A hub is a central sorting site where parcels from many origins are scanned and sorted by destination, such as postcode or route, onto outbound vehicles.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Hub-and-spoke network model in transport and parcel logistics texts"
+    },
+    {
+      "id": "F13",
+      "statement": "In a hub-and-spoke network, parcels travel from the origin to a hub, then on to a hub or depot near the destination, instead of going directly between every pair of places.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Hub-and-spoke model, transport network design"
+    },
+    {
+      "id": "F14",
+      "statement": "Linehaul is the long-distance trunk movement between hubs and depots, and parcel networks often run it overnight.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Often overnight, not always; timing differs by network and distance."
+    },
+    {
+      "id": "F15",
+      "statement": "Because linehaul trucks leave on a schedule, a parcel that misses its departure usually waits for the next one.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Depends on the network's departure frequency; say 'usually waits for the next departure'."
+    },
+    {
+      "id": "F16",
+      "statement": "Hub sorting can go wrong when a label is damaged or unreadable so the scanner cannot route the parcel, or when a parcel is sorted onto the wrong route.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "Parcel sortation process descriptions in logistics literature"
+    },
+    {
+      "id": "F17",
+      "statement": "At the local depot, parcels are loaded onto vans, usually in the order of the planned route, and the driver delivers along that route.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Route planning is often done by software; load order often follows the planned stops but practices vary."
+    },
+    {
+      "id": "F18",
+      "statement": "A delivery attempt ends in proof of delivery, such as a signature, a photo or a scan, recorded at the door.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "The form of proof depends on the carrier and service."
+    },
+    {
+      "id": "F19",
+      "statement": "Typical last-mile problems are nobody home or no access at the first attempt, a wrong or incomplete address, a van with too little room, and weather or traffic.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "Last-mile delivery challenges, common in logistics literature"
+    },
+    {
+      "id": "F20",
+      "statement": "The last mile, the final leg to the customer, is commonly described as the most expensive and least efficient part of the delivery chain per parcel.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "caveat": "Widely repeated, but exact shares vary by study and market, so give no figure and say 'commonly described as'.",
+      "reference_hint": "Capgemini Research Institute, The Last-Mile Delivery Challenge (2019), and logistics textbooks; the wording here is not verified against the report"
+    },
+    {
+      "id": "F21",
+      "statement": "Each tracking status in a parcel's history is normally created by a scan or data event at a hand-off point, not by continuous live location of the parcel.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Some carriers show live van position only in the final stretch; most of the journey shows scan events. Do not say tracking is live GPS.",
+      "reference_hint": "Carrier tracking help pages on scan events"
+    },
+    {
+      "id": "F22",
+      "statement": "Typical status meanings: order confirmed means the retailer accepted the order; dispatched means it has left the warehouse; in transit or at hub means it is moving through the network; out for delivery means it is on the van for its route; delivered means proof of delivery was recorded; delivery attempted means the driver tried and did not complete it.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Wording differs between carriers and retailers; explain the meaning, not exact labels."
+    },
+    {
+      "id": "F23",
+      "statement": "A long gap between two scans can mean the parcel is waiting at a station, such as a hub or depot, so the last status names the place to look.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "An inference from how scan tracking works: a gap can also be a missed scan while the parcel moves normally, so say 'often points to'."
+    }
+  ],
+  "terms": [
+    {
+      "term": "pick",
+      "definition": "collecting items from storage locations for an order"
+    },
+    {
+      "term": "hub",
+      "definition": "a central site where parcels are sorted by destination"
+    },
+    {
+      "term": "linehaul",
+      "definition": "long-distance trunk transport between hubs and depots"
+    },
+    {
+      "term": "last mile",
+      "definition": "the final leg from the local depot to the customer's door"
+    },
+    {
+      "term": "cut-off time",
+      "definition": "the time before which an order is handled in the current dispatch cycle"
+    },
+    {
+      "term": "hand-off",
+      "definition": "the point where the order or parcel passes from one stage to the next, usually recorded by a scan"
+    }
+  ],
+  "not_claimed": [
+    "Tracking is live GPS for the whole journey",
+    "Any specific percentage, hours or days for any station",
+    "A specific cut-off clock time that applies everywhere",
+    "Any statistic on how often orders are late or which station causes most delays",
+    "The last mile accounts for a specific share of cost",
+    "Delays are caused by careless individual workers",
+    "Any real retailer or carrier fails more than others",
+    "Every retailer runs identical checks and stations"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (style test lessons, 2026-10-16)",
+    "note": ""
+  }
+}

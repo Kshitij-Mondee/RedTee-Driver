@@ -1,0 +1,115 @@
+{
+  "title": "From question to answer: what happens inside an AI model",
+  "genre": "teaching",
+  "audience": {
+    "who": "Corporate employees in non-technical roles who already use or will soon use AI chat assistants at work",
+    "knows": "How to type a question into a chat tool and read the reply; little or nothing about how the reply is produced",
+    "cares_about": "Whether they can trust an answer, why the same question gives different replies, and how to use the tool well"
+  },
+  "outcome": "After watching, the viewer can explain in plain words how an AI assistant builds its reply one predicted piece at a time, and can decide when an answer needs checking because it sounds sure but may be wrong.",
+  "through_line": "An AI model does not look up an answer; it writes one, a likely next piece at a time, from the words in front of it, so a fluent reply is a prediction, and that is exactly why it can vary and why it can be wrong.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "A colleague asks an AI assistant the same work question twice and gets two different, equally confident answers; one contains a detail that is not true. Puzzle: what is going on inside?",
+      "source_anchor": "request topic statement (from_user)",
+      "from_user": true
+    },
+    {
+      "role": "promise",
+      "what": "Follow that one question through the model, step by step, so the viewer sees where the answer really comes from.",
+      "source_anchor": "request topic statement (from_user)",
+      "from_user": true
+    },
+    {
+      "role": "build",
+      "what": "Section 1: the question is split into tokens, small pieces of text the model works with as numbers.",
+      "source_anchor": "knowledge sheet: tokenisation"
+    },
+    {
+      "role": "build",
+      "what": "Section 2: the model weighs the whole context, deciding which earlier pieces matter most for what comes next.",
+      "source_anchor": "knowledge sheet: attention and context"
+    },
+    {
+      "role": "build",
+      "what": "Section 3: it predicts a likely next token from probabilities, adds it, and repeats until the answer is done; sampling is why replies vary.",
+      "source_anchor": "knowledge sheet: next-token prediction and sampling"
+    },
+    {
+      "role": "build",
+      "what": "Section 4: why answers can be wrong: the model produces likely text, not checked truth, so it can give fluent, confident errors, and its knowledge stops at its training data.",
+      "source_anchor": "knowledge sheet: hallucination and training cutoff"
+    },
+    {
+      "role": "check",
+      "what": "The viewer judges a short scenario: which of two replies needs verification and why, using the predict-not-look-up idea.",
+      "source_anchor": "knowledge sheet: hallucination"
+    },
+    {
+      "role": "payoff",
+      "what": "Return to the colleague's two answers, now explained: variation from sampling, the false detail from prediction without checking; what the colleague does next.",
+      "source_anchor": "request topic statement (from_user)",
+      "from_user": true
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "Text is split into tokens (word pieces) that the model represents as numbers",
+      "from_user": true
+    },
+    {
+      "what": "The model uses the context (the question and the conversation so far) and weighs which parts matter for the next token",
+      "from_user": true
+    },
+    {
+      "what": "The answer is generated one token at a time by predicting a probable next token and repeating",
+      "from_user": true
+    },
+    {
+      "what": "Answers vary because the next token is chosen from probabilities, not fixed",
+      "from_user": true
+    },
+    {
+      "what": "Answers can be wrong: fluent, confident text that is not true, because the model predicts likely text rather than checking facts",
+      "from_user": true
+    },
+    {
+      "what": "What the viewer does about it: check important claims, give clear context in the question",
+      "from_user": true
+    }
+  ],
+  "must_avoid": [
+    "Hype or doom about AI; no claims about AI being conscious or understanding like a person",
+    "Statistics or model sizes without a source on the knowledge sheet",
+    "Vendor or product names presented as endorsement",
+    "Technical jargon left unexplained (vectors, transformers named without a plain meaning)",
+    "Opening by explaining terms first, or with an agenda; 'in this video we will'",
+    "Learning-styles claims and invented attributions to real people"
+  ],
+  "example_posture": "One running example the whole lesson follows: a single ordinary work question an office employee would really ask an assistant (a short request about a policy or a summary). Every section shows that same question at its next stage inside the model; no new examples per section.",
+  "visual_direction": "Make the inside of the model visible as a calm, luminous projected space: the question breaking into pieces, lines of weight connecting the pieces that matter, a short ranked list of candidate next words with their likelihoods, the answer growing word by word. One or two striking moments (the question dissolving into tokens; the same question branching into two different answers), calm uncluttered explanation between them. A person at a desk anchors the start and the end.",
+  "voice_note": "A capable colleague explaining over coffee: plain, precise, no hype and no condescension. Name each idea only after the viewer has seen it happen.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "Topic mode with no source document: every build claim must be grounded in the knowledge sheet the fact-finder produces; segments marked from_user rely on the request's topic statement.",
+    "Whether to mention retrieval or web search tools that let some assistants look things up; kept out unless the knowledge sheet supports a short caveat."
+  ],
+  "provenance": {
+    "inferred": [
+      "audience.knows",
+      "audience.cares_about",
+      "outcome",
+      "example_posture",
+      "arc_plan hook scenario",
+      "must_avoid vendor names"
+    ],
+    "from_request": [
+      "topic",
+      "audience who",
+      "length 3 minutes",
+      "style hologram",
+      "notes: plain language, no hype, inside of the model visible and grounded, one or two striking moments"
+    ]
+  }
+}

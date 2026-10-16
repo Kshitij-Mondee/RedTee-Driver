@@ -1,0 +1,230 @@
+{
+  "topic": "How a cooling system keeps a data centre running: heat source, air path, chilled water loop, heat rejection, and failure with redundancy",
+  "scope_note": "How a typical enterprise or colocation data hall is cooled: heat source, air path, chilled water loop, heat rejection outdoors, failure and redundancy. Qualitative, with one sourced temperature range. Not covered: liquid cooling to the chip, immersion, energy efficiency metrics, cost.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Almost all of the electrical power that servers draw is turned into heat inside the room, and that heat has to be removed continuously.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Conservation of energy; standard in ASHRAE TC 9.9 and Uptime Institute introductory material",
+      "numbers": []
+    },
+    {
+      "id": "F2",
+      "statement": "The heat a data hall produces rises and falls with the electrical load of the IT equipment: more computing work means more power drawn and more heat to carry away.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Say 'roughly follows'; fans, lighting and power equipment add a smaller share of heat.",
+      "numbers": []
+    },
+    {
+      "id": "F3",
+      "statement": "Cooling equipment moves heat from one place to another rather than destroying it or making cold from nothing; the heat ends up outdoors.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Thermodynamics; refrigeration cycle",
+      "numbers": []
+    },
+    {
+      "id": "F4",
+      "statement": "In the hot aisle and cold aisle layout, server racks stand in rows with their fronts facing each other across a cold aisle and their backs facing each other across a hot aisle.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "ASHRAE TC 9.9 thermal guidelines; widely used layout",
+      "numbers": []
+    },
+    {
+      "id": "F5",
+      "statement": "Typical air-cooled servers draw cool air in through the front and blow warmed air out of the back.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Front-to-back airflow is the common convention for rack servers, not universal for every device.",
+      "numbers": []
+    },
+    {
+      "id": "F6",
+      "statement": "A CRAH (computer room air handler) is a unit that blows cold air into the room and takes hot return air back in across a coil filled with chilled water.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Vendor white papers (Schneider Electric, Vertiv); ASHRAE terminology",
+      "numbers": []
+    },
+    {
+      "id": "F7",
+      "statement": "A CRAC (computer room air conditioner) does a similar air-handling job but cools the air with its own compressor and refrigerant instead of a chilled water coil.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": []
+    },
+    {
+      "id": "F8",
+      "statement": "Cold supply air is often delivered through a raised floor, rising through floor tiles in the cold aisle, though some halls supply it from overhead ducts.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Design varies; say 'often' and 'some', not 'always'.",
+      "numbers": []
+    },
+    {
+      "id": "F9",
+      "statement": "Aisle containment, using doors, panels or curtains to close off the hot aisle or the cold aisle, keeps hot exhaust air from mixing with cold supply air.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Containment reduces mixing; it does not remove it entirely.",
+      "reference_hint": "ASHRAE TC 9.9; US DOE / LBNL data centre efficiency guidance",
+      "numbers": []
+    },
+    {
+      "id": "F10",
+      "statement": "When hot exhaust air mixes back into the cold supply air, some servers receive warmer air than intended, which creates hot spots and wastes cooling capacity.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Effect size depends on the layout.",
+      "numbers": []
+    },
+    {
+      "id": "F11",
+      "statement": "In a chilled water system, the water absorbs heat from the air at the CRAH coil and flows on warmer, while pumps keep the water circulating around the loop.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": []
+    },
+    {
+      "id": "F12",
+      "statement": "A chiller removes heat from the returning warm chilled water using a refrigeration cycle and sends the water back cold to the CRAHs.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Vendor white papers (Schneider Electric, Vertiv); ASHRAE handbooks",
+      "numbers": []
+    },
+    {
+      "id": "F13",
+      "statement": "The heat taken from the chilled water is passed to a second loop or to outdoor equipment, such as a cooling tower, a dry cooler or an air-cooled condenser, which releases it to the outdoor air.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Which outdoor equipment is used depends on the site; a cooling tower rejects heat largely by evaporating some of the water, while a dry cooler uses air only.",
+      "numbers": []
+    },
+    {
+      "id": "F14",
+      "statement": "Free cooling, also called an economiser, lets a site reduce or skip the chiller's compressor work when outdoor conditions are cool enough.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Only available part of the year at many sites, depending on climate and design.",
+      "numbers": []
+    },
+    {
+      "id": "F15",
+      "statement": "N+1 redundancy means having the number of units needed to carry the load (N) plus one extra spare, so that one unit can fail or be serviced without losing capacity.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Uptime Institute, Tier Standard topology; vendor white papers",
+      "numbers": [
+        "1"
+      ]
+    },
+    {
+      "id": "F16",
+      "statement": "2N redundancy means a complete duplicate of the whole system, so that one entire side can fail and the other side still carries the full load.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Uptime Institute, Tier Standard topology; vendor white papers",
+      "numbers": [
+        "2"
+      ]
+    },
+    {
+      "id": "F17",
+      "statement": "In a redundant design, when a pump or CRAH fails, a standby unit starts or the remaining units take up the load, usually automatically through the control system.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Depends on the site's design and controls; say 'in a well designed system'.",
+      "numbers": []
+    },
+    {
+      "id": "F18",
+      "statement": "Temperature sensors and the monitoring system raise alarms when temperatures drift past set limits, so operators can respond before servers are affected.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Alarm limits and responses are set by each site.",
+      "numbers": []
+    },
+    {
+      "id": "F19",
+      "statement": "If cooling is lost and not restored, the air temperature in the hall rises, and servers may slow themselves down (throttle) or shut down to protect the hardware.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "How quickly this happens depends on the load and the room, so no time is stated.",
+      "numbers": []
+    },
+    {
+      "id": "F20",
+      "statement": "Thermal ride-through is the time a hall stays within safe temperatures after cooling stops or changes over, helped by the chilled water held in the pipes and in buffer tanks.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Duration is site-specific and limited; no figure is given.",
+      "reference_hint": "Vendor white papers (Schneider Electric, Vertiv)",
+      "numbers": []
+    },
+    {
+      "id": "F21",
+      "statement": "ASHRAE recommends a server inlet air temperature between 18 and 27 degrees Celsius for its main data centre equipment classes.",
+      "kind": "number",
+      "confidence": "mainstream",
+      "caveat": "This is a recommended range for the air entering the servers, not a hard limit; a wider allowable range exists, and newer guidance for some high-density equipment differs. Say 'recommended' and 'inlet'.",
+      "reference_hint": "ASHRAE TC 9.9, Thermal Guidelines for Data Processing Environments (recommended envelope, classes A1 to A4)",
+      "numbers": [
+        "18",
+        "27"
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "term": "CRAH",
+      "plain": "computer room air handler: a large cabinet with fans and a chilled water coil that cools the room's air"
+    },
+    {
+      "term": "chiller",
+      "plain": "a machine that removes heat from water using a refrigeration cycle"
+    },
+    {
+      "term": "chilled water loop",
+      "plain": "a closed pipe circuit carrying cold water to the CRAHs and warm water back to the chiller"
+    },
+    {
+      "term": "cooling tower",
+      "plain": "outdoor equipment that releases heat to the air, largely by evaporating some of the water"
+    },
+    {
+      "term": "N+1",
+      "plain": "enough units for the load plus one spare"
+    },
+    {
+      "term": "2N",
+      "plain": "two complete, independent copies of the system"
+    },
+    {
+      "term": "containment",
+      "plain": "physical barriers that keep hot and cold air apart"
+    },
+    {
+      "term": "inlet temperature",
+      "plain": "the temperature of the air entering the front of a server"
+    }
+  ],
+  "not_claimed": [
+    "Cooling 'creates cold': it moves heat, it does not make coldness.",
+    "Any figure for what share of data centre energy goes to cooling: it varies widely by site and no figure is approved here.",
+    "Any figure for how fast a hall heats up when cooling stops: it depends on load and room, so no time is given.",
+    "That every data centre has chillers, cooling towers or a raised floor: designs differ.",
+    "That redundancy makes failure impossible: it removes single points of failure, but multiple failures or poor maintenance can still cause outages.",
+    "Named incidents or outage statistics: none are approved.",
+    "That the 18 to 27 degrees Celsius range is a hard limit that servers fail outside of."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (style test lessons, 2026-10-16)",
+    "note": ""
+  }
+}

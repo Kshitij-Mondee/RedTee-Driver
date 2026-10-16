@@ -1,0 +1,430 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "runtime literal_colour: scene used a literal colour instead of a token: #C52A2A",
+    "runtime sc_pointer_late: b06: the click on \"signin.action.sign_in\" lands at 48.59 s, 0.50 s after it was asked (the pointer was still busy)",
+    "runtime sc_two_changes: b15: two changes at once in different places (\"page.unlock\" and \"unlock.master\" around 110.88 s): one change at a time, or the second goes unseen",
+    "runtime sc_two_changes: b18: two changes at once in different places (\"page.signin\" and \"login.email\" around 134.79 s): one change at a time, or the second goes unseen",
+    "runtime sc_two_changes: b18: two changes at once in different places (\"page.signin\" and \"login.password\" around 134.79 s): one change at a time, or the second goes unseen",
+    "runtime sc_pointer_late: b22: the click on \"device_list.cell.0.1\" lands at 163.78 s, 0.28 s after it was asked (the pointer was still busy)",
+    "runtime part_drawn_again: b22: draws kit part \"phone\" again as \"newphone\" while it holds \"empty_spot\" (the phone b20 drew, still on screen), elsewhere on screen: a second phone is fine only when the film shows two; to change the held one use ctx.held(\"empty_spot\").handle",
+    "runtime part_drawn_again: b23: draws kit part \"phone\" again as \"oldphone\" while it holds \"newphone\" (the phone b22 drew, still on screen), elsewhere on screen: a second phone is fine only when the film shows two; to change the held one use ctx.held(\"newphone\").handle",
+    "runtime sc_jump: b03: the pointer jumps at 13.08 s: its screen velocity changes by 13865 px/s in one frame (a smooth move stays under 1500)",
+    "runtime sc_jump: b13: the pointer jumps at 52.17 s: its screen velocity changes by 23986 px/s in one frame (a smooth move stays under 1500)",
+    "b04: 13 chunks on screen (captured_dot, chip, failure_title, leaked_sheet, net_dot, phish_net, phish_page, reuse_closed, reuse_open, reuse_signin, tile_lists, tile_phish, tile_reuse); the budget is ~5-6",
+    "b16: \"Password manager\" is readable for 0.33s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b16: \"portal.example\" is readable for 0.33s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b23: \"482619\" is readable for 0.00s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b05: new content arrives at 36.69s while b04 is still leaving (until 37.66s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b14: new content arrives at 104.07s while b13 is still leaving (until 104.32s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b16: new content arrives at 117.56s while b15 is still leaving (until 117.76s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b19: new content arrives at 141.28s while b18 is still leaving (until 141.48s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b20: new content arrives at 148.57s while b19 is still leaving (until 148.77s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "variety: still_share = 0.692 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b04, b05, b06, b07, b10)",
+    "variety: one_radius_share = 0.339 is above the baseline median (0.2)",
+    "variety: one_world_share = 0.808 is above the baseline median (0.625) (beats: _kit, b01, b02, b03, b06, b07, b09, b10)",
+    "variety: the seed's camera habit is 'pan' but 18 of 26 bespoke beats have no camera move",
+    "lc layout content_overlap @ 111: b14 \"Encrypted vault\" and b14 \"Vault\" overlap at [390, 213, 449, 247] from 111 to 111 s (a passing crossing (under 500 ms)) [pm / pm]",
+    "lc layout content_overlap @ 111: b14 \"Password manager\" and b14 \"Saved logins\" overlap at [414, 294, 552, 323] from 111 to 111 s (a passing crossing (under 500 ms)) [pm / pm]",
+    "lc layout content_overlap @ 111: b14 \"Master password\" and b14 \"Company account\" overlap at [460, 358, 581, 367] from 111 to 111 s (a passing crossing (under 500 ms)) [pm / pm]",
+    "lc layout content_overlap @ 160.5: b20 \"6-digit code\" and b22 \"Set up your new phone\" overlap at [584, 369, 719, 393] from 160.5 to 162.5 s (held, but both texts are seen together only briefly) [app / setup]",
+    "lc layout content_overlap @ 163: b20 \"6-digit code\" and b22 \"Devices\" overlap at [584, 369, 694, 393] from 163 to 168 s (held, but both texts are seen together only briefly) [app / devices]",
+    "lc layout line_through_text @ 14: b01 \"Sign in\": a line of work (b01) runs through its letters at [1681, 766, 1750, 791] from 14 to 14 s; give the words room (move or shorten them, or move the line) [work / work]",
+    "lc layout line_through_text @ 96: b13 \"Backup codes\": a line of codes (b12) runs through its letters at [682, 441, 955, 490] from 96 to 96 s; give the words room (move or shorten them, or move the line) [codes_card / codes]",
+    "lc layout line_through_text @ 96: b13 \"Backup codes\": a line of codes (b12) runs through its letters at [682, 441, 955, 490] from 96 to 96 s; give the words room (move or shorten them, or move the line) [codes_card / codes]",
+    "lc layout line_through_text @ 96: b13 \"Backup codes\": a line of codes (b12) runs through its letters at [682, 441, 955, 490] from 96 to 96 s; give the words room (move or shorten them, or move the line) [codes_card / codes]",
+    "lc layout line_through_text @ 96: b13 \"Backup codes\": a line of codes (b12) runs through its letters at [682, 441, 955, 490] from 96 to 96 s; give the words room (move or shorten them, or move the line) [codes_card / codes]",
+    "lc layout line_through_text @ 96: b13 \"where IT says\": a line of codes (b12) runs through its letters at [1174, 536, 1388, 575] from 96 to 96 s; give the words room (move or shorten them, or move the line) [it_note / codes]",
+    "lc layout line_through_text @ 120: b16 \"Sign in\": a line of site (b16) runs through its letters at [1681, 848, 1750, 873] from 120 to 120 s; give the words room (move or shorten them, or move the line) [site / site]",
+    "lc layout line_through_text @ 163: b22 \"Old phone\": a line of app (b20) runs through its letters at [608, 496, 712, 521] from 163 to 163 s; give the words room (move or shorten them, or move the line) [devices / app]",
+    "lc layout line_through_text @ 163: b22 \"Remove\": a line of app (b20) runs through its letters at [1109, 496, 1191, 521] from 163 to 163 s; give the words room (move or shorten them, or move the line) [devices / app]",
+    "lc layout line_through_text @ 168: b20 \"Verify\": a line of devices (b22) runs through its letters at [1305, 754, 1366, 779] from 168 to 168 s; give the words room (move or shorten them, or move the line) [app / devices]",
+    "lc contrast contrast_aa_failure @ 20.958: b01 \"signin.company.ex…\" contrast 1.66:1 (needs 4.5:1), rgb(71,84,103) on rgb(113,117,126), failing at 1 sample(s) [work]",
+    "lc contrast contrast_aa_failure @ 51.439: b05 \"Company account\" contrast 4.04:1 (needs 4.5:1), rgb(71,84,103) on rgb(186,188,192), failing at 1 sample(s) [app]",
+    "lc contrast contrast_aa_failure @ 51.439: b05 \"Security…\" contrast 2.88:1 (needs 4.5:1), rgb(36,86,211) on rgb(170,176,189), failing at 1 sample(s) [app]",
+    "lc contrast contrast_aa_failure @ 183.118: ? \"07 Back to Sam\" contrast 1.48:1 (needs 3:1), rgb(71,84,103) on rgb(104,109,121), failing at 1 sample(s) []",
+    "b01: small text on screen at 7.8s: \"shop.example\" 19.7px, \"Email\" 19.7px, \"Password\" 19.7px (< 20 px)",
+    "b02: small text on screen at 15.3s: \"shop.example\" 19.7px, \"Email\" 19.7px, \"Password\" 19.7px (< 20 px)",
+    "b05: small text on screen at 45.2s: \"Company account\" 19.7px, \"Password\" 19.7px, \"Code\" 19.7px (< 20 px)",
+    "b07: small text on screen at 59.4s: \"Company account\" 19.7px (< 20 px)",
+    "b08: small text on screen at 64.2s: \"Company account\" 19.7px (< 20 px)",
+    "b09: small text on screen at 72.1s: \"Company account\" 19.7px (< 20 px)",
+    "b10: small text on screen at 81.3s: \"Company account\" 19.7px (< 20 px)",
+    "b12: small text on screen at 95.3s: \"Company account\" 19.7px (< 20 px)",
+    "b13: small text on screen at 102.3s: \"Company account\" 19.7px (< 20 px)",
+    "b14: small text on screen at 110.4s: \"Password manager\" 19.7px (< 20 px)",
+    "b15: small text on screen at 116.8s: \"Password manager\" 19.7px, \"Master password\" 19.7px (< 20 px)",
+    "b16: small text on screen at 123.4s: \"portal.example\" 19.7px, \"Email\" 19.7px, \"Password\" 19.7px (< 20 px)",
+    "b17: a held element is off frame at 133.7s: \"portal.example\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b17: a held element is off frame at 133.7s: \"Account\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b18: small text on screen at 140.5s: \"portal.example\" 19.7px, \"Email\" 19.7px, \"Password\" 19.7px (< 20 px)",
+    "b19: small text on screen at 148.0s: \"portal.example\" 19.7px, \"Account\" 19.7px, \"Password\" 19.7px (< 20 px)",
+    "b22: small text on screen at 167.4s: \"Devices\" 19.7px (< 20 px)",
+    "b11: no_entrance_words: element 'codebox' (instrument) shows \"Two-step sign-in\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b07: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.94 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.94 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.95 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b15: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b16: value script says 'mid' but the frames measure brightness 0.95 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b17: value script says 'mid' but the frames measure brightness 0.96 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b18: value script says 'mid' but the frames measure brightness 0.95 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b19: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b20: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b21: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b22: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b23: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 3,
+    "double_exposures": 5,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 2.83
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.15
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.25
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.13
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 2.21
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.71
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.31
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 2.05
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 0.54
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 2.47
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 2.58
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 3.7
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 3.47,
+        "declared": "hold"
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 0.59
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 1.75
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.464,
+      "motion": 0.415,
+      "hybrid": 0.12,
+      "motion_effective": 0.475
+    },
+    "elements": {
+      "b01": 3,
+      "b02": 3,
+      "b03": 1,
+      "b04": 41,
+      "b05": 6,
+      "b06": 3,
+      "b07": 5,
+      "b08": 3,
+      "b09": 2,
+      "b10": 5,
+      "b11": 3,
+      "b12": 4,
+      "b13": 4,
+      "b14": 2,
+      "b15": 1,
+      "b16": 3,
+      "b17": 2,
+      "b19": 5,
+      "b20": 3,
+      "b21": 4,
+      "b22": 6,
+      "b23": 6,
+      "b24": 3,
+      "b25": 7
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.0,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.625,
+      "one_radius_share": 0.339,
+      "still_share": 0.692,
+      "labels_over_objects_share": 0.346,
+      "one_world_share": 0.808,
+      "lines_per_s": 5.85
+    },
+    "sfx_events": 54,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 39591,
+      "layout_samples": 386,
+      "texts": 589,
+      "contrast_checked": 855,
+      "errors": 0,
+      "warnings": 19
+    },
+    "nodes": 4922,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 19.7,
+        "b02": 19.7,
+        "b03": 33.6,
+        "b04": 40.2,
+        "b05": 19.7,
+        "b06": 23.8,
+        "b07": 19.7,
+        "b08": 19.7,
+        "b09": 19.7,
+        "b10": 19.7,
+        "b11": 23.8,
+        "b12": 19.7,
+        "b13": 19.7,
+        "b14": 19.7,
+        "b15": 19.7,
+        "b16": 19.7,
+        "b17": 25.4,
+        "b18": 19.7,
+        "b19": 19.7,
+        "b20": 20.5,
+        "b21": 20.5,
+        "b22": 19.7,
+        "b23": 20.5,
+        "b24": 20.5,
+        "b25": 20.5
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 25,
+      "lines_seen": 242,
+      "blank_beats": [],
+      "blank_measured": 24
+    },
+    "foreign": {
+      "measured_beats": 25,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 125,
+      "without_life": 0,
+      "no_entrance_words": 1
+    },
+    "caption_hold": {
+      "enabled": true,
+      "cues": 64,
+      "short": 0,
+      "under_min": 0,
+      "min_hold_s": 1.78,
+      "baselined": false
+    },
+    "grid": {
+      "checked": true,
+      "planned": 3,
+      "placed": 3,
+      "dropped": 0,
+      "unresolved": 0,
+      "joins_into_speech": 0,
+      "bars": 58,
+      "bpm": [
+        66.565,
+        71.214,
+        74.184,
+        69.575,
+        74.357,
+        85.217,
+        73.059
+      ]
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0904,
+        "b02": 0.0923,
+        "b03": 0.0492,
+        "b04": 0.0943,
+        "b05": 0.0796,
+        "b06": 0.0574,
+        "b07": 0.0623,
+        "b08": 0.0771,
+        "b09": 0.0984,
+        "b10": 0.066,
+        "b11": 0.0597,
+        "b12": 0.0978,
+        "b13": 0.086,
+        "b14": 0.0333,
+        "b15": 0.0709,
+        "b16": 0.0488,
+        "b17": 0.0841,
+        "b18": 0.0705,
+        "b19": 0.0936,
+        "b20": 0.0519,
+        "b21": 0.0655,
+        "b22": 0.0952,
+        "b23": 0.0738,
+        "b24": 0.0593,
+        "b25": 0.0558
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 20,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24,
+        "caption_min_s": 1.8,
+        "caption_tail_s": 0.6
+      },
+      "measured_beats": 25,
+      "sharpness": {
+        "b01": 1.379,
+        "b02": 1.388,
+        "b03": 1.332,
+        "b04": 1.265,
+        "b05": 1.237,
+        "b06": 1.289,
+        "b07": 1.19,
+        "b08": 1.259,
+        "b09": 1.374,
+        "b10": 1.327,
+        "b11": 1.254,
+        "b12": 1.233,
+        "b13": 1.034,
+        "b14": 1.371,
+        "b15": 1.089,
+        "b16": 1.371,
+        "b17": 1.308,
+        "b18": 1.0,
+        "b19": 1.306,
+        "b20": 1.203,
+        "b21": 1.329,
+        "b22": 1.332,
+        "b23": 1.293,
+        "b24": 1.267,
+        "b25": 1.263
+      },
+      "blurred_beats": [],
+      "blur_measured": 25
+    },
+    "tone": {
+      "value_script_beats": 25
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b22.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b23.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b24.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\st-sc-2fa\\qa\\sheets\\b25.jpg"
+  ],
+  "build_hash": "9cc04a76ddda17dc"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "st-iso-order",
+  "created": "2026-10-16T14:31:31",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How an online order reaches a customer's door: the order, the warehouse pick and pack, sorting at a hub, the delivery route, and where delays usually happen",
+  "sources": [],
+  "request": {
+    "audience": "corporate employees",
+    "genre": "teaching",
+    "length_min": 3.0,
+    "style": "isometric",
+    "persona": null,
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.705,
+      "calibrated": true
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "none",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "Show the whole journey as one connected world; follow one order through it; explain what each station does and where it can go wrong.",
+    "mix_as": "ceiling"
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  },
+  "isolated": true
+}

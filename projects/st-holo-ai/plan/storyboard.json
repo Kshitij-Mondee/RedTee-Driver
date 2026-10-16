@@ -1,0 +1,1343 @@
+{
+  "style": "hologram",
+  "concept": "One calm projected console follows Priya's single question from her chat panel into the model's light: it breaks into tokens, the tokens are weighed, the next piece is scored and drawn again and again, and the same reply forks into 30 days and 60 days. Two striking moments (the shatter in b04, the fork in b14), calm briefing frames between them, and the policy sheet that stays outside the window until the payoff.",
+  "story": {
+    "metaphor": "following one question through the model's light, piece by piece",
+    "setting": "a quiet operations console projected in light: Priya's assistant chat, and inside it the model's dark space",
+    "arc": "two equally sure answers; inside the model nothing is looked up, pieces are weighed and drawn; the fork explains the two answers; the payoff gives it the source and checks what matters",
+    "cast": [
+      {
+        "name": "Priya",
+        "role": "office employee asking the company assistant; shown only as her name tag on the chat panel, never drawn (hologram guide s8: no character kit for this style)"
+      }
+    ]
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0,
+        "note": "Priya's chat panel, centred"
+      },
+      {
+        "id": "model",
+        "parent": "desk",
+        "rect": {
+          "x": 560,
+          "y": 280,
+          "w": 800,
+          "h": 450
+        },
+        "note": "inside the chat panel: the model's dark space for sec1"
+      },
+      {
+        "id": "loop",
+        "x": 2400,
+        "y": 0,
+        "note": "the generation loop, sec2"
+      },
+      {
+        "id": "verdict",
+        "x": 4800,
+        "y": 0,
+        "note": "the two answers judged"
+      },
+      {
+        "id": "cutoff",
+        "x": 4800,
+        "y": 1400,
+        "note": "detail below the verdict"
+      },
+      {
+        "id": "quiz",
+        "x": 7200,
+        "y": 0,
+        "note": "the check"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "chat_panel",
+      "what": "Priya's assistant chat as a projected HUD panel (kit part chat_panel): her name tag, the question line, then reply cards; the same panel opens and closes the lesson",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b21",
+        "b22"
+      ]
+    },
+    {
+      "id": "token_row",
+      "what": "the question as indexed glowing pieces on a baseline (H.tokens), held across sec1 while it gains number tags, a window frame and weight arcs",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b09"
+      ]
+    },
+    {
+      "id": "context_window",
+      "what": "a bracketed frame of light holding question, chat so far and an empty reply line (kit part context_window), with the policy sheet (kit part policy_doc) drifting outside it in b06 and pasted inside it in b21",
+      "kind": "explain",
+      "beats": [
+        "b06",
+        "b07",
+        "b09",
+        "b21"
+      ]
+    },
+    {
+      "id": "candidate_bars",
+      "what": "the ranked column of next-piece candidates (H.bars, bars only, no numbers) beside a growing reply line, held through sec2",
+      "kind": "data",
+      "beats": [
+        "b10",
+        "b11",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "reply_cards",
+      "what": "the two answer cards 30 days and 60 days (kit part reply_card), equally bright, returning in new states: side by side, forked, unlinked, cracked, matched",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b22"
+      ]
+    },
+    {
+      "id": "push_through",
+      "what": "join material: the camera pushes through the chat panel into the model (zoom join b03); sections close with a power-down to a line and the next boots from a line (camera b10, cut b16, cut b21)",
+      "kind": "join",
+      "beats": [
+        "b03",
+        "b10",
+        "b16",
+        "b21"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "mid",
+      "why": "the console at the desk, a calm open"
+    },
+    {
+      "from": "b03",
+      "band": "dark",
+      "break": true,
+      "why": "inside the model: a dark stage for the mechanism, light only on tokens, weights and candidates"
+    },
+    {
+      "from": "b16",
+      "band": "mid",
+      "why": "back to the briefing register for judgement"
+    },
+    {
+      "from": "b21",
+      "band": "light",
+      "why": "the lift at the close: the policy arrives, the rules rest"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "chat_panel",
+        "what": "Priya's company assistant chat as a projected hologram panel: a bracketed frame titled 'Company assistant', a small name tag 'Priya' on her side (no person drawn), her question line that types on with a block cursor, two reply slots below it, an input strip at the bottom that can hold an attached document chip",
+        "states": [
+          "empty",
+          "typing",
+          "asked",
+          "two_replies",
+          "policy_attached",
+          "checked"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b21",
+          "b22"
+        ],
+        "size": [
+          900,
+          560
+        ]
+      },
+      {
+        "id": "reply_card",
+        "what": "one assistant reply as a card of light: the reply text large (passed in, e.g. '30 days' or '60 days'), both instances equally bright; a link socket at its left edge; a faint crack that can run through its plate while its glow stays steady; an OK tag for a matched reply",
+        "states": [
+          "plain",
+          "linked",
+          "unlinked",
+          "cracked",
+          "matched"
+        ],
+        "beats": [
+          "b02",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b22"
+        ],
+        "size": [
+          360,
+          150
+        ]
+      },
+      {
+        "id": "policy_doc",
+        "what": "Priya's expense policy as a projected sheet: title 'Expense policy', abstract text lines (no readable invented rules or dates), one line that can be lit as the matching line; dim and out of focus when outside the model's reach",
+        "states": [
+          "outside_dim",
+          "pasting",
+          "inside",
+          "line_lit"
+        ],
+        "beats": [
+          "b06",
+          "b07",
+          "b09",
+          "b16",
+          "b21",
+          "b22"
+        ],
+        "size": [
+          300,
+          400
+        ]
+      },
+      {
+        "id": "context_window",
+        "what": "the context window as a bracketed frame of light with three labelled bands stacked inside: 'question', 'chat so far', 'reply' (the reply band an empty line until written); a label plate 'context window' on its top edge; a fourth band appears for a pasted document",
+        "states": [
+          "empty",
+          "holding",
+          "policy_inside"
+        ],
+        "beats": [
+          "b06",
+          "b07",
+          "b09",
+          "b21"
+        ],
+        "size": [
+          1100,
+          560
+        ]
+      }
+    ],
+    "notes": "No person is drawn anywhere: the hologram guide (s8) has no character kit, so Priya is a name tag on chat_panel. Token rows, weight arcs, bars, the dial are engine pieces (H.tokens, H.arcs, H.bars) in the scenes, not kit parts."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "accent_on": "question_line",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "Open on the one artefact the whole lesson follows: Priya's question typed into the assistant.",
+      "design": {
+        "treatment": "briefing register: the chat panel boots from a line, centred (H.vcenter); Priya is her name tag only",
+        "why_motion": "the question typing on is the hook; it arrives on its words",
+        "elements": [
+          "chat_panel",
+          "name_tag",
+          "question_line"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say Priya",
+            "element": "chat_panel",
+            "action": "boots open from a bright line, title 'Company assistant'",
+            "motion": "H.power up"
+          },
+          {
+            "t_anchor": "Priya asks",
+            "element": "name_tag",
+            "action": "the tag 'Priya' lights on her side of the panel",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "When are expense claims due",
+            "element": "question_line",
+            "action": "the question types on with a block cursor",
+            "motion": "type on"
+          }
+        ],
+        "continuity": "chat_panel, name_tag and question_line are held into b02"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "chat_panel",
+        "name_tag",
+        "question_line"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "accent_on": "reply_60",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "Striking open: the same question, two equally sure replies that contradict each other.",
+      "design": {
+        "treatment": "briefing register: two reply_card instances arrive under the held question, side by side, identical brightness",
+        "why_motion": "the second reply arriving after a pause is the problem the lesson solves",
+        "elements": [
+          "reply_30",
+          "reply_60"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Thirty days",
+            "element": "reply_30",
+            "action": "reply card '30 days' assembles in the first slot",
+            "motion": "brackets draw, text types"
+          },
+          {
+            "t_anchor": "asks again",
+            "element": "question_line",
+            "action": "the question pulses once as re-sent",
+            "motion": "one outline lift"
+          },
+          {
+            "t_anchor": "Sixty days",
+            "element": "reply_60",
+            "action": "reply card '60 days' assembles in the second slot, equal brightness",
+            "motion": "brackets draw, text types"
+          },
+          {
+            "t_anchor": "completely sure",
+            "element": "reply_30",
+            "action": "both cards hold, equal; nothing marks either as right",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "the whole panel stays as b03 zooms through it"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "model",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "question_float",
+      "shot": {
+        "size": "wide"
+      },
+      "rationale": "The zoom through the panel promises the lesson: we follow the question inside.",
+      "design": {
+        "treatment": "analysis stage opens: H.stage dark field, a faint lift; the question floats on one baseline in the model space",
+        "why_motion": "entering the model is the promise; the zoom join carries it",
+        "elements": [
+          "stage",
+          "question_float"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "which is right",
+            "element": "question_float",
+            "action": "the question 'When are expense claims due?' floats ahead on a baseline",
+            "motion": "fade in from the panel's position"
+          },
+          {
+            "t_anchor": "inside the model",
+            "element": "stage",
+            "action": "the dark stage lifts softly behind the question",
+            "motion": "slow lift"
+          }
+        ],
+        "continuity": "question_float and stage held into b04"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "model",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "stage",
+        "question_float"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "split_ense",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "Striking moment 1: the sentence visibly becomes tokens, one word splitting in two.",
+      "design": {
+        "treatment": "analysis register: the floating question shatters into seven pieces laid out by H.tokens (When, are, exp, ense, claims, due, ?), each with its index; a small muted plate 'illustrative split'",
+        "why_motion": "the break into pieces IS the concept of a token",
+        "elements": [
+          "tokens",
+          "split_ense",
+          "illustrative_note"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "breaks into small pieces",
+            "element": "tokens",
+            "action": "the sentence cracks and its pieces separate onto the baseline with gaps",
+            "motion": "pieces drift apart, settle"
+          },
+          {
+            "t_anchor": "Short words stay whole",
+            "element": "tokens",
+            "action": "When, are, claims, due light whole",
+            "motion": "brighten in turn"
+          },
+          {
+            "t_anchor": "split in two",
+            "element": "split_ense",
+            "action": "expense splits into exp and ense with a visible gap",
+            "motion": "split apart"
+          },
+          {
+            "t_anchor": "split in two",
+            "element": "illustrative_note",
+            "action": "the plate 'illustrative split' appears, small and muted",
+            "motion": "fade in"
+          }
+        ],
+        "continuity": "tokens held into b05"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "model",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "stage",
+        "tokens"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "vectors",
+      "shot": {
+        "size": "close"
+      },
+      "upgrade_reason": "The tokens must stay held from b04 while each flips to a number and unfolds into a column; a template would drop the token row the next four beats build on.",
+      "rationale": "Token, then ID, then embedding, shown on the same pieces.",
+      "design": {
+        "treatment": "briefing register on the held token row: a label 'token', number tags under each piece, then faint digit columns",
+        "why_motion": "the same piece changing form is the idea",
+        "elements": [
+          "token_label",
+          "id_tags",
+          "vectors",
+          "row_label"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "called a token",
+            "element": "token_label",
+            "action": "the word 'token' on a plate points at one piece",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "becomes a number",
+            "element": "id_tags",
+            "action": "each piece shows an illustrative number tag beneath it",
+            "motion": "flip"
+          },
+          {
+            "t_anchor": "long row of numbers",
+            "element": "vectors",
+            "action": "each tag unfolds into a faint column of digits",
+            "motion": "unfold downward, stagger"
+          },
+          {
+            "t_anchor": "learned in training",
+            "element": "row_label",
+            "action": "label 'row of numbers' on a plate beside the columns",
+            "motion": "fade in"
+          }
+        ],
+        "continuity": "tokens held into b06; id_tags and vectors leave"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "model",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "stage",
+        "tokens"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "window",
+      "shot": {
+        "size": "wide"
+      },
+      "rationale": "The context window is a bounded frame; the policy outside it is the hidden cause of the two answers.",
+      "design": {
+        "treatment": "briefing register: the kit context_window closes round the token row (now in the question band); bands 'chat so far' and 'reply' (empty); the kit policy_doc drifts outside the right edge, dim",
+        "why_motion": "the frame closing and the policy staying out is the point",
+        "elements": [
+          "window",
+          "policy"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "in front of it",
+            "element": "window",
+            "action": "the frame's brackets draw round the tokens",
+            "motion": "brackets draw"
+          },
+          {
+            "t_anchor": "Her question, the chat, its own reply",
+            "element": "window",
+            "action": "bands 'question', 'chat so far', 'reply' light in turn",
+            "motion": "stagger"
+          },
+          {
+            "t_anchor": "context window",
+            "element": "window",
+            "action": "label plate 'context window' on the top edge",
+            "motion": "type on"
+          },
+          {
+            "t_anchor": "not in it",
+            "element": "policy",
+            "action": "the policy sheet drifts just outside the frame, dim, never crossing",
+            "motion": "slow drift, stops at the edge"
+          }
+        ],
+        "continuity": "window, tokens, policy held into b07"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "model",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "stage",
+        "tokens",
+        "window",
+        "policy"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "arcs",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "The slowdown: attention as visible weights from every token to the next slot.",
+      "design": {
+        "treatment": "analysis register: an empty next slot at the end of the reply band; H.arcs from every token to it, widths varying; exp, ense and due strongest; a small plate 'weights illustrative'",
+        "why_motion": "the weights appearing and two of them thickening IS attention",
+        "elements": [
+          "next_slot",
+          "arcs",
+          "weights_note"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the tricky part",
+            "element": "next_slot",
+            "action": "an empty slot appears in the reply band",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "weighs every earlier token",
+            "element": "arcs",
+            "action": "thin arcs rise from every token to the slot",
+            "motion": "draw, stagger"
+          },
+          {
+            "t_anchor": "expense and due weigh the most",
+            "element": "arcs",
+            "action": "the arcs from exp, ense and due thicken and bloom, the rest dim",
+            "motion": "weight grows"
+          },
+          {
+            "t_anchor": "weigh the most",
+            "element": "weights_note",
+            "action": "plate 'weights illustrative' appears, small and muted",
+            "motion": "fade in"
+          }
+        ],
+        "continuity": "b08 is a definition card; b09 returns to this console"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "station": "model",
+      "template": "definition",
+      "join_in": {
+        "type": "canvas"
+      },
+      "props": {
+        "kicker": "The weighing",
+        "term": "attention",
+        "say_term": "called attention",
+        "definition": "Each earlier token gets a weight for the next piece. Weighing, not understanding.",
+        "say_definition": "Weighing, not understanding"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "term",
+      "rationale": "A quiet term card on the slowdown; the console returns in b09."
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "model",
+      "join_in": {
+        "type": "canvas"
+      },
+      "intent": "callback",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "reply_band",
+      "shot": {
+        "size": "wide"
+      },
+      "upgrade_reason": "A recall beat that replays the token row, the weights and the empty reply band from b07, which no template can draw.",
+      "rationale": "Recall prompt: the whole picture so far, and the answer still missing.",
+      "design": {
+        "treatment": "briefing register: the b07 console redrawn calm (stage, window, tokens, arcs, policy dim outside), seen whole; the reply band empty",
+        "why_motion": "the empty reply band lighting on its words is the recall",
+        "elements": [
+          "stage",
+          "window",
+          "tokens",
+          "arcs",
+          "policy",
+          "reply_band"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Still no answer",
+            "element": "window",
+            "action": "the console is on screen whole: window, tokens, arcs, policy dim outside",
+            "motion": "settled from the start"
+          },
+          {
+            "t_anchor": "Still no answer",
+            "element": "reply_band",
+            "action": "the empty reply band brightens once and holds empty",
+            "motion": "outline lift"
+          },
+          {
+            "t_anchor": "how much each one matters",
+            "element": "arcs",
+            "action": "the arcs brighten by their weights",
+            "motion": "brighten"
+          }
+        ],
+        "continuity": "section ends: the console powers down before the pan to the loop"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "loop",
+      "join_in": {
+        "type": "camera",
+        "dir": "right"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "bars",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "The model scores every candidate for the next piece; bars without numbers.",
+      "design": {
+        "treatment": "briefing register: an empty reply line on a baseline (left), a ranked column of candidates by H.bars on the right (Expense, Claims, You), bars only, no values; a small plate 'illustrative'",
+        "why_motion": "the bars rising as scores is the idea of a ranked list",
+        "elements": [
+          "reply_line",
+          "bars",
+          "illustrative_note"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now it scores",
+            "element": "reply_line",
+            "action": "an empty reply line with a cursor slot boots from a line",
+            "motion": "H.power up"
+          },
+          {
+            "t_anchor": "scores every token it knows",
+            "element": "bars",
+            "action": "rows arrive and their bars grow to different lengths",
+            "motion": "grow, stagger"
+          },
+          {
+            "t_anchor": "How likely",
+            "element": "bars",
+            "action": "the top bar's leading edge glows",
+            "motion": "glow"
+          },
+          {
+            "t_anchor": "come next",
+            "element": "illustrative_note",
+            "action": "plate 'illustrative' appears, small and muted",
+            "motion": "fade in"
+          }
+        ],
+        "continuity": "reply_line and bars held into b11"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "loop",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "reply_line",
+        "bars"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "reply_line",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "The loop: pick, add, repeat, faster each time, until an end marker.",
+      "design": {
+        "treatment": "analysis register: the chosen word flies into the reply line, the bars redraw with new candidates, and a small loop label cycles pick, add, repeat; the reply grows to 'Expense claims are due within 30 days.' and an end marker closes it",
+        "why_motion": "repetition speeding up IS one token at a time",
+        "elements": [
+          "loop_label",
+          "end_marker"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "picked and added",
+            "element": "reply_line",
+            "action": "Expense flies from the top bar into the reply line",
+            "motion": "fly"
+          },
+          {
+            "t_anchor": "runs again",
+            "element": "bars",
+            "action": "the bars redraw with new candidates",
+            "motion": "set"
+          },
+          {
+            "t_anchor": "Pick, add, repeat",
+            "element": "loop_label",
+            "action": "pick, add, repeat light in turn as words keep arriving faster",
+            "motion": "cycle, accelerating"
+          },
+          {
+            "t_anchor": "end token",
+            "element": "end_marker",
+            "action": "a small end marker closes the reply",
+            "motion": "snap in"
+          }
+        ],
+        "continuity": "b12 is a myth and fact card; b13 returns to this set"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "station": "loop",
+      "template": "compare.two",
+      "join_in": {
+        "type": "canvas"
+      },
+      "props": {
+        "left": {
+          "header": "Looked up",
+          "say": "look anything up",
+          "stance": "myth",
+          "items": [
+            {
+              "text": "A search through her policy",
+              "say": "did not look"
+            }
+          ]
+        },
+        "right": {
+          "header": "Written",
+          "say": "wrote likely pieces",
+          "stance": "fact",
+          "items": [
+            {
+              "text": "Likely pieces, one by one",
+              "say": "one by one"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "accent_on": "right",
+      "rationale": "The misconception named and struck: not looked up, written."
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "loop",
+      "join_in": {
+        "type": "canvas"
+      },
+      "intent": "callback",
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "practice",
+      "accent_on": "bars",
+      "shot": {
+        "size": "medium"
+      },
+      "upgrade_reason": "The practice needs the held reply line rewound to the number slot with the candidate bars beside it, the exact set b14 forks; a template cannot carry it.",
+      "rationale": "Your turn: two candidates rank close at the number; the viewer works out how both answers happened.",
+      "design": {
+        "treatment": "briefing register: the b11 set returns, the reply line rewound to 'Expense claims are due within' plus an empty number slot; bars 30, 60 and the, with 30 and 60 close; a plate 'Your turn'; then silence",
+        "why_motion": "the two bars rising to near-equal length sets up the question",
+        "elements": [
+          "reply_line",
+          "number_slot",
+          "bars",
+          "turn_plate",
+          "question_plate"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now you",
+            "element": "reply_line",
+            "action": "the reply line returns as 'Expense claims are due within'",
+            "motion": "settled from the start"
+          },
+          {
+            "t_anchor": "Now you",
+            "element": "turn_plate",
+            "action": "plate 'Your turn' appears",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "at the number",
+            "element": "number_slot",
+            "action": "an empty number slot brightens at the end of the reply line",
+            "motion": "outline lift"
+          },
+          {
+            "t_anchor": "thirty and sixty both rank high",
+            "element": "bars",
+            "action": "the 30 and 60 bars grow to nearly the same length at the top",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "How did she get both",
+            "element": "question_plate",
+            "action": "the question 'How did she get both?' rests on a plate; hold through the pause",
+            "motion": "type on, hold"
+          }
+        ],
+        "continuity": "reply_line, number_slot and bars held into b14"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "loop",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "reply_line",
+        "number_slot",
+        "bars"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "fork",
+      "shot": {
+        "size": "wide"
+      },
+      "rationale": "Striking moment 2: the weighted draw, then the reply forks into the two answers from the hook.",
+      "design": {
+        "treatment": "analysis register: a draw marker sweeps the bars and stops on 30; the reply line branches at the number slot, branch A ending in a reply_card '30 days'; the draw runs again and stops on 60, branch B ends in '60 days'",
+        "why_motion": "the fork IS why the answers vary",
+        "elements": [
+          "draw_marker",
+          "fork",
+          "branch_a",
+          "branch_b",
+          "reply_30",
+          "reply_60"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "drawn from the odds",
+            "element": "draw_marker",
+            "action": "a marker sweeps down the bars, slowing",
+            "motion": "sweep"
+          },
+          {
+            "t_anchor": "weighted dice roll",
+            "element": "draw_marker",
+            "action": "the marker settles; a beat of stillness before the fork",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "lands on thirty",
+            "element": "fork",
+            "action": "the reply line forks at the number slot",
+            "motion": "split"
+          },
+          {
+            "t_anchor": "lands on thirty",
+            "element": "branch_a",
+            "action": "branch A draws to the upper right",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "lands on thirty",
+            "element": "reply_30",
+            "action": "reply card '30 days' assembles at branch A's end",
+            "motion": "assemble"
+          },
+          {
+            "t_anchor": "on sixty",
+            "element": "branch_b",
+            "action": "branch B draws to the lower right",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "on sixty",
+            "element": "reply_60",
+            "action": "reply card '60 days' assembles at branch B's end, equal brightness",
+            "motion": "assemble"
+          }
+        ],
+        "continuity": "reply_line, fork, branches and cards held into b15; bars leave"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "loop",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "reply_line",
+        "fork",
+        "branch_a",
+        "branch_b",
+        "reply_30",
+        "reply_60"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "accent_on": "dial",
+      "shot": {
+        "size": "wide"
+      },
+      "rationale": "Name it sampling; temperature makes the spread narrower or wider.",
+      "design": {
+        "treatment": "briefing register: term plate 'sampling'; a simple dial labelled 'temperature'; turned low the branches draw together, turned high they spread",
+        "why_motion": "the branches moving with the dial is what temperature does",
+        "elements": [
+          "sampling_term",
+          "dial"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "called sampling",
+            "element": "sampling_term",
+            "action": "plate 'sampling' settles above the fork",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "temperature setting",
+            "element": "dial",
+            "action": "the dial labelled 'temperature' appears",
+            "motion": "brackets draw"
+          },
+          {
+            "t_anchor": "steadier",
+            "element": "dial",
+            "action": "dial turns low; the branches draw close together",
+            "motion": "turn, branches converge"
+          },
+          {
+            "t_anchor": "more varied",
+            "element": "dial",
+            "action": "dial turns high; the branches spread apart",
+            "motion": "turn, branches spread"
+          }
+        ],
+        "continuity": "section ends; power down"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "verdict",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "intent": "callback",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "accent_on": "policy",
+      "shot": {
+        "size": "medium"
+      },
+      "upgrade_reason": "The verdict returns the two kit reply cards from the hook with their empty link sockets and the policy sheet far off and unlinked; a template cannot show the missing link.",
+      "rationale": "Neither answer is connected to her policy; equal confidence.",
+      "design": {
+        "treatment": "briefing register: reply cards '30 days' and '60 days' side by side, sockets empty (unlinked); the policy sheet far right, dim, no line to either",
+        "why_motion": "only the policy dimming on its words; otherwise a held verdict",
+        "elements": [
+          "reply_30",
+          "reply_60",
+          "policy"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "which is true",
+            "element": "reply_30",
+            "action": "card '30 days' assembles, socket empty",
+            "motion": "assemble"
+          },
+          {
+            "t_anchor": "which is true",
+            "element": "reply_60",
+            "action": "card '60 days' assembles beside it, equal",
+            "motion": "assemble"
+          },
+          {
+            "t_anchor": "never saw her policy",
+            "element": "policy",
+            "action": "the policy sheet appears far off, dim; the sockets stay empty",
+            "motion": "fade in dim"
+          }
+        ],
+        "continuity": "cards and policy held into b17"
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "verdict",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "reply_30",
+        "reply_60",
+        "policy"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "term",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "A fluent false answer has a name; the glow stays while the crack shows.",
+      "design": {
+        "treatment": "briefing register: a faint crack runs through both card plates (neither is known to be right) while their glow stays steady; term plate 'hallucination' below",
+        "why_motion": "the crack under a steady glow is the definition",
+        "elements": [
+          "crack",
+          "term"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "not checked text",
+            "element": "crack",
+            "action": "a faint crack starts across both cards; glow unchanged",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "has a name",
+            "element": "crack",
+            "action": "the crack completes",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "A hallucination",
+            "element": "term",
+            "action": "plate 'hallucination' settles below the cards",
+            "motion": "type on"
+          }
+        ],
+        "continuity": "camera drops to the cutoff detail"
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "template",
+      "station": "cutoff",
+      "template": "definition",
+      "join_in": {
+        "type": "camera",
+        "dir": "down"
+      },
+      "props": {
+        "kicker": "Built-in knowledge",
+        "term": "training cutoff",
+        "say_term": "training cutoff",
+        "definition": "Its built-in knowledge stops at a training cutoff. Anything newer, it has not seen.",
+        "say_definition": "Anything newer"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "term",
+      "rationale": "A second limit, stated plainly."
+    },
+    {
+      "beat": "b19",
+      "kind": "template",
+      "station": "quiz",
+      "template": "quiz.question",
+      "join_in": {
+        "type": "camera",
+        "dir": "right"
+      },
+      "props": {
+        "kicker": "Your turn",
+        "question": "Which reply do you check first?",
+        "say_question": "Which do you check first",
+        "options": [
+          {
+            "text": "Summary of the pasted policy",
+            "say": "sums up a policy"
+          },
+          {
+            "text": "Deadline, no policy given",
+            "say": "deadline from nothing"
+          }
+        ]
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "options",
+      "rationale": "The check: which claim lacks a source."
+    },
+    {
+      "beat": "b20",
+      "kind": "template",
+      "station": "quiz",
+      "template": "quiz.answer",
+      "join_in": {
+        "type": "continue"
+      },
+      "props": {
+        "question": "Which reply do you check first?",
+        "options": [
+          {
+            "text": "Summary of the pasted policy"
+          },
+          {
+            "text": "Deadline, no policy given"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "The deadline",
+        "explanation": "Check first: nothing backed it, and sounding sure proves nothing.",
+        "say_explanation": "Nothing backed it",
+        "also": 0,
+        "also_why": "Glance too: a summary can still misreport its source.",
+        "say_also_why": "glance at the summary too"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "answer",
+      "rationale": "Feedback is the teaching: the unbacked deadline first, the summary a glance."
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "intent": "callback",
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "accent_on": "policy_doc",
+      "shot": {
+        "size": "medium"
+      },
+      "rationale": "Back at the desk: the policy goes in, and inside it joins the context window.",
+      "design": {
+        "treatment": "briefing register: the chat_panel from b01 (callback), the question line; the policy sheet slides into its input strip (state policy_attached); a small inset of the context_window beside it shows the policy band inside the frame and a few weight arcs reaching it",
+        "why_motion": "the policy crossing into the window is the fix",
+        "elements": [
+          "chat_panel",
+          "name_tag",
+          "question_line",
+          "policy_doc",
+          "window_inset"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So Priya",
+            "element": "chat_panel",
+            "action": "the chat panel from b01 boots back from a line",
+            "motion": "H.power up"
+          },
+          {
+            "t_anchor": "So Priya",
+            "element": "name_tag",
+            "action": "her name tag 'Priya' lights",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "pastes in the policy",
+            "element": "policy_doc",
+            "action": "the policy sheet slides into the panel's input strip",
+            "motion": "slide"
+          },
+          {
+            "t_anchor": "asks again",
+            "element": "question_line",
+            "action": "the question types on again",
+            "motion": "type on"
+          },
+          {
+            "t_anchor": "something real to work from",
+            "element": "window_inset",
+            "action": "the inset window shows the policy band inside; arcs reach it",
+            "motion": "brackets draw, arcs draw"
+          }
+        ],
+        "continuity": "chat_panel, name_tag, question_line and policy_doc held into b22; the inset leaves"
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "chat_panel",
+        "name_tag",
+        "question_line",
+        "policy_doc"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "accent_on": "rules",
+      "shot": {
+        "size": "medium"
+      },
+      "upgrade_reason": "The payoff holds the chat panel and policy from b21 and lights the matching line between the reply and the page before the rules land; a template would lose that held picture.",
+      "rationale": "She checks against the page; the two pocket rules rest.",
+      "design": {
+        "treatment": "briefing register: a reply_card beside the policy page, its text shown as abstract lines (no date stated); the matching policy line lights and a link joins them with an OK tag; two rule plates rest below",
+        "why_motion": "the link lighting is the check; then stillness for the rules",
+        "elements": [
+          "reply_checked",
+          "match_link",
+          "rules"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "She checks",
+            "element": "reply_checked",
+            "action": "a reply card arrives beside the policy page, its text as abstract lines",
+            "motion": "assemble"
+          },
+          {
+            "t_anchor": "against the page",
+            "element": "match_link",
+            "action": "the policy's matching line lights; a link joins it to the reply; OK tag",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Give it the source",
+            "element": "rules",
+            "action": "plate 'Give it the source.' settles",
+            "motion": "fade in"
+          },
+          {
+            "t_anchor": "Check what matters",
+            "element": "rules",
+            "action": "plate 'Check what matters.' settles beneath; the frame rests",
+            "motion": "fade in, hold"
+          }
+        ],
+        "continuity": "the last frame"
+      }
+    }
+  ],
+  "poster": {
+    "beat": "b14"
+  }
+}

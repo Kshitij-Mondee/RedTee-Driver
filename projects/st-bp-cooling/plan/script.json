@@ -1,0 +1,759 @@
+{
+  "title": "Keeping the Heat Moving: How a Data Centre Stays Cool",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "A quiet hall",
+      "role": "hook"
+    },
+    {
+      "id": "promise",
+      "title": "Follow the heat",
+      "role": "promise"
+    },
+    {
+      "id": "sec1",
+      "title": "Power becomes heat",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "The air path",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "The water loop",
+      "role": "build"
+    },
+    {
+      "id": "sec4",
+      "title": "When a part fails",
+      "role": "build"
+    },
+    {
+      "id": "sec5",
+      "title": "What buys time",
+      "role": "build"
+    },
+    {
+      "id": "check",
+      "title": "A pump stops",
+      "role": "check"
+    },
+    {
+      "id": "payoff",
+      "title": "The hall again",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "Say this is your data hall.",
+        "Rows of servers, a steady hum."
+      ],
+      "on_screen": [],
+      "visual_intent": "A blueprint plan of one data hall: rows of racks drawn in line, still and calm, seen from above at an angle.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "an example data hall",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "calm, unhurried"
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "Every server here turns its power into heat.",
+        "Almost all of it, all the time."
+      ],
+      "on_screen": [
+        "power in",
+        "heat out"
+      ],
+      "visual_intent": "The same plan; heat marks rise from every rack at once, power lines feeding in, so the still hall is suddenly visibly busy.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "servers turn almost all the power they draw into heat, continuously",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "So where does that heat go?",
+        "And what if it stopped going?"
+      ],
+      "on_screen": [],
+      "visual_intent": "The heat marks gather above the hall with nowhere to go; the question hangs over the open drawing.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a hypothetical question about lost cooling",
+          "hypothetical": true
+        }
+      ],
+      "pause_after_s": 0.6
+    },
+    {
+      "id": "b04",
+      "section": "promise",
+      "job": "orient",
+      "narration": [
+        "Let's follow it out, link by link."
+      ],
+      "on_screen": [
+        "server",
+        "air",
+        "water",
+        "outdoors"
+      ],
+      "visual_intent": "A faint chain of four links drawn across the building section, from rack to roof, each link only outlined for now.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "heat travels outward through a chain of parts to the outdoors",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "Think of a fridge.",
+        "It doesn't make cold.",
+        "It moves heat out of the box."
+      ],
+      "on_screen": [
+        "heat moved, not made cold"
+      ],
+      "visual_intent": "A fridge in section: heat arrows travel from inside the box, through the back coil, out into the room around it.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "misconception": "cooling makes cold and destroys heat",
+      "grounding": [
+        {
+          "claim": "cooling moves heat rather than making cold",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "relate",
+      "narration": [
+        "A data hall does the same, at building scale.",
+        "The heat is carried outside."
+      ],
+      "on_screen": [
+        "carried outside"
+      ],
+      "visual_intent": "Pull back from the fridge to the whole building section; one long heat path runs from the hall up and out through the roof.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "heat is moved and ends up outdoors",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "First link: the air.",
+        "Racks stand in rows,",
+        "fronts facing fronts, backs facing backs."
+      ],
+      "on_screen": [
+        "fronts",
+        "backs"
+      ],
+      "visual_intent": "Plan view of the hall: rack rows turn to show fronts facing fronts and backs facing backs, the aisles between them marked.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "concepts": [
+        "cold aisle and hot aisle"
+      ],
+      "grounding": [
+        {
+          "claim": "racks face front to front and back to back across aisles",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Here, cool air rises through the floor",
+        "into the aisle the fronts share:",
+        "the cold aisle."
+      ],
+      "on_screen": [
+        "cold aisle"
+      ],
+      "visual_intent": "Section through the hall: cool air arrows travel under the raised floor and rise through perforated tiles into the front aisle, which is then labelled.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "cold air is often delivered through a raised floor",
+          "fact": "F8"
+        },
+        {
+          "claim": "the cold aisle is the one the fronts face",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "sequence",
+      "narration": [
+        "Servers pull it in at the front",
+        "and blow it out warm at the back:",
+        "the hot aisle."
+      ],
+      "on_screen": [
+        "hot aisle"
+      ],
+      "visual_intent": "The same section: cool arrows enter the rack fronts, change colour through the servers, and leave the backs warm into the next aisle.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "servers draw air in the front and exhaust it warm out the back",
+          "fact": "F5"
+        },
+        {
+          "claim": "the backs face the hot aisle",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "The warm air returns to tall cabinets at the hall's edge,",
+        "called computer room air handlers."
+      ],
+      "on_screen": [
+        "CRAH",
+        "computer room air handler"
+      ],
+      "visual_intent": "Warm arrows travel along the ceiling to tall cabinets at the hall's edge; one cabinet is outlined and labelled as it is named.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "concepts": [
+        "CRAH"
+      ],
+      "grounding": [
+        {
+          "claim": "a CRAH takes in hot return air",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "A coil of chilled water takes the heat,",
+        "and the air goes back out cool."
+      ],
+      "on_screen": [
+        "chilled water coil"
+      ],
+      "visual_intent": "Cutaway of the CRAH: warm air passes over a coil of water pipes, the heat moves into the coil, and cool air leaves under the floor.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the CRAH cools air across a chilled water coil and blows cold air back",
+          "fact": "F6"
+        },
+        {
+          "claim": "the water absorbs heat at the coil",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "refute",
+      "narration": [
+        "Keep the aisles apart.",
+        "Hot air leaking back makes hot spots",
+        "and wastes cooling.",
+        "Closing one aisle off is called containment."
+      ],
+      "on_screen": [
+        "hot spots",
+        "containment"
+      ],
+      "visual_intent": "Warm arrows curl over the rack tops into the cold aisle and the upper servers glow; then doors and roof panels close over the aisle and the flows separate cleanly.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "misconception": "more cold air anywhere is enough",
+      "concepts": [
+        "containment"
+      ],
+      "grounding": [
+        {
+          "claim": "mixing hot exhaust into supply air creates hot spots and wastes cooling",
+          "fact": "F10"
+        },
+        {
+          "claim": "containment closes off an aisle to keep hot and cold air apart",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec2",
+      "job": "quantify",
+      "narration": [
+        "ASHRAE recommends inlet air",
+        "between 18 and 27 degrees Celsius."
+      ],
+      "on_screen": [
+        "inlet air",
+        "18 to 27 °C recommended"
+      ],
+      "visual_intent": "A thermometer at one server's front intake with the recommended band marked between 18 and 27.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "ASHRAE recommended server inlet range 18 to 27 degrees Celsius",
+          "fact": "F21"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "transition",
+      "narration": [
+        "Second link: the water.",
+        "Leaving the coil, it is warmer now."
+      ],
+      "on_screen": [
+        "warmer water"
+      ],
+      "visual_intent": "From the CRAH coil, a pipe leaves the hall; the water in it is drawn warmer as it heads away.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the water leaves the coil warmer after absorbing heat",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "sec3",
+      "job": "sequence",
+      "narration": [
+        "Pumps push it round a closed loop",
+        "to the plant room and back."
+      ],
+      "on_screen": [
+        "pump",
+        "chilled water loop"
+      ],
+      "visual_intent": "The building section shows the full pipe loop; a pump's impeller turns and the water visibly circulates round the loop.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "concepts": [
+        "pump",
+        "chilled water loop"
+      ],
+      "grounding": [
+        {
+          "claim": "pumps keep the water circulating around the loop",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "sec3",
+      "job": "define",
+      "narration": [
+        "There, the chiller pulls the heat out,",
+        "like your fridge,",
+        "and sends the water back cold."
+      ],
+      "on_screen": [
+        "chiller"
+      ],
+      "visual_intent": "Cutaway of the chiller: warm water enters, heat is drawn out into its refrigerant circuit, cold water leaves back toward the hall.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "concepts": [
+        "chiller"
+      ],
+      "delivery": "slow down on the chiller",
+      "grounding": [
+        {
+          "claim": "a chiller removes heat from returning water with a refrigeration cycle and returns it cold",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "sec3",
+      "job": "sequence",
+      "narration": [
+        "Third link: outside.",
+        "A cooling tower or dry cooler",
+        "releases the heat into the air."
+      ],
+      "on_screen": [
+        "cooling tower or dry cooler"
+      ],
+      "visual_intent": "The heat path climbs from the chiller to a unit on the roof; heat lifts off it into the open sky.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "concepts": [
+        "cooling tower"
+      ],
+      "grounding": [
+        {
+          "claim": "outdoor equipment such as a cooling tower or dry cooler releases the heat to the outdoor air",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b18",
+      "section": "sec3",
+      "job": "consolidate",
+      "narration": [
+        "Server, air, air handler, water, pump, chiller, outdoors.",
+        "Each link hands the heat on."
+      ],
+      "on_screen": [
+        "server",
+        "air",
+        "air handler",
+        "water",
+        "pump",
+        "chiller",
+        "outdoors"
+      ],
+      "visual_intent": "The whole building section with the chain of links lit one after another as each is named, heat passing along it.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "template",
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Name the links in order, from the server to the outdoor air."
+      },
+      "pause_after_s": 1.0,
+      "grounding": [
+        {
+          "claim": "servers exhaust heat into air",
+          "fact": "F5"
+        },
+        {
+          "claim": "the CRAH passes heat to water",
+          "fact": "F6"
+        },
+        {
+          "claim": "pumps move the water",
+          "fact": "F11"
+        },
+        {
+          "claim": "the chiller takes heat from the water",
+          "fact": "F12"
+        },
+        {
+          "claim": "outdoor equipment releases it",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b19",
+      "section": "sec4",
+      "job": "scenario",
+      "narration": [
+        "Now, say one air handler fails.",
+        "This hall is N plus one:",
+        "enough units for the load, plus one spare."
+      ],
+      "on_screen": [
+        "N + 1",
+        "one spare"
+      ],
+      "visual_intent": "In the hall plan one CRAH's fan stops and it turns to a failed state; the row is counted, the units carrying the load bracketed as N and one more marked as the spare.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "concepts": [
+        "N+1"
+      ],
+      "delivery": "even, reassuring; slow down on N plus one",
+      "grounding": [
+        {
+          "claim": "a hypothetical air handler failure",
+          "hypothetical": true
+        },
+        {
+          "claim": "N+1 means the units needed plus one spare",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "sec4",
+      "job": "demonstrate",
+      "narration": [
+        "In a well designed system,",
+        "the spare starts by itself,",
+        "and the hall keeps its capacity."
+      ],
+      "on_screen": [
+        "spare takes over"
+      ],
+      "visual_intent": "Before and after: the spare unit's fan spins up and its air arrows fill the gap left by the failed one, flows back to normal.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a standby unit starts automatically through the control system",
+          "fact": "F17"
+        },
+        {
+          "claim": "one unit can fail without losing capacity",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "section": "sec5",
+      "job": "sequence",
+      "narration": [
+        "Sensors raise an alarm for repair,",
+        "and cold water in the pipes buys time.",
+        "That is ride-through."
+      ],
+      "on_screen": [
+        "alarm",
+        "ride-through"
+      ],
+      "visual_intent": "A sensor flags the failed unit on a monitoring panel; the pipe loop and a buffer tank stay full of cold water, a reserve draining slowly while the spare takes over.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "concepts": [
+        "alarms",
+        "ride-through"
+      ],
+      "grounding": [
+        {
+          "claim": "sensors and monitoring raise alarms so operators can respond",
+          "fact": "F18"
+        },
+        {
+          "claim": "chilled water in the pipes helps the hall ride through a changeover",
+          "fact": "F20"
+        }
+      ]
+    },
+    {
+      "id": "b22",
+      "section": "sec5",
+      "job": "relate",
+      "narration": [
+        "Lose cooling for good, and the room warms.",
+        "Servers slow down or shut off.",
+        "Spares keep it from coming to that."
+      ],
+      "on_screen": [
+        "slow down",
+        "shut off"
+      ],
+      "visual_intent": "A temperature readout climbs with no number given and servers dim to a throttled state, then the picture returns to the spare running.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "without restored cooling, temperature rises and servers may throttle or shut down",
+          "fact": "F19"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "check",
+      "job": "check",
+      "narration": [
+        "Your turn.",
+        "Say one pump stops.",
+        "What happens next?"
+      ],
+      "on_screen": [
+        "One pump stops.",
+        "What happens next?"
+      ],
+      "visual_intent": "The pipe loop with one pump marked stopped; the question held on screen, nothing else moving.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "recall": {
+        "kind": "quiz",
+        "prompt": "One pump in an N+1 loop stops. What happens next?",
+        "answer": "the standby pump starts; the alarm calls an operator; the water in the loop covers the changeover",
+        "tempting_wrong": "the servers overheat at once"
+      },
+      "pause_after_s": 2.0,
+      "grounding": [
+        {
+          "claim": "a hypothetical pump failure",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "check",
+      "job": "practice",
+      "narration": [
+        "The standby pump starts.",
+        "The alarm calls an operator.",
+        "Water in the loop covers the gap."
+      ],
+      "on_screen": [
+        "standby starts",
+        "alarm",
+        "water covers the gap"
+      ],
+      "visual_intent": "The answer plays out on the loop: the standby pump spins up, the alarm points to the stopped one, water keeps circulating.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a standby pump starts automatically",
+          "fact": "F17"
+        },
+        {
+          "claim": "the alarm prompts operators to respond",
+          "fact": "F18"
+        },
+        {
+          "claim": "water in the loop helps ride through the changeover",
+          "fact": "F20"
+        }
+      ]
+    },
+    {
+      "id": "b25",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Back in the quiet hall,",
+        "you can see the heat moving out,",
+        "with spares standing by."
+      ],
+      "on_screen": [],
+      "visual_intent": "The opening hall plan again, now with every flow drawn running: air through the aisles, water round the loop, heat off the roof, spares outlined.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "heat is carried outdoors through the chain",
+          "fact": "F3"
+        },
+        {
+          "claim": "spare units stand by",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b26",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Next cooling alarm you hear of, ask:",
+        "which link failed,",
+        "and did its spare take over?"
+      ],
+      "on_screen": [
+        "Which link failed?",
+        "Did its spare take over?"
+      ],
+      "visual_intent": "The two questions sit beside the finished building drawing, the chain still running behind them.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "standby units take over when one fails",
+          "fact": "F17"
+        }
+      ]
+    }
+  ]
+}

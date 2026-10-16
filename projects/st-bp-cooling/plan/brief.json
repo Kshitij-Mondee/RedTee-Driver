@@ -1,0 +1,87 @@
+{
+  "title": "Keeping the Heat Moving: How a Data Centre Stays Cool",
+  "genre": "teaching",
+  "audience": {
+    "who": "corporate employees, including non-engineers",
+    "knows": "that data centres hold many servers and that computers get warm; little or nothing about cooling plant",
+    "cares_about": "understanding the building their services depend on, and what a cooling alarm or failure means for uptime"
+  },
+  "outcome": "After watching, a non-engineer can trace how heat leaves a data centre, from the server to the outdoor air, name what each main part of the cooling chain does, and say what happens when one part fails and why the room keeps running.",
+  "through_line": "A data centre is a heat-moving machine: the power the servers use becomes heat, and the cooling system is a chain that carries that heat outside; the chain works only while every link keeps moving, which is why it is built with spares.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "One data hall on a normal day, quiet and cool; the question: where does all the heat go, and what if it stops going there?",
+      "from_user": true
+    },
+    {
+      "role": "promise",
+      "what": "The viewer will follow the heat's journey link by link and know what a failure of each link means.",
+      "from_user": true
+    },
+    {
+      "role": "bridge",
+      "what": "Everyday parallel: a fan or a fridge moves heat rather than destroying it; the data centre does the same at building scale.",
+      "from_user": true
+    },
+    {
+      "role": "build",
+      "what": "1) Where the heat comes from: servers turn electrical power into heat. 2) The air path: cold air to server intakes, hot exhaust back to the cooling units. 3) The water loop: cooling units pass heat to chilled water, pumps move it, chillers and outdoor equipment send it outside. 4) When a part fails: spares, alarms, a rising temperature.",
+      "from_user": true
+    },
+    {
+      "role": "check",
+      "what": "A scenario in the same hall: one pump stops; the viewer predicts what happens next and what keeps the room running.",
+      "from_user": true
+    },
+    {
+      "role": "payoff",
+      "what": "Back to the quiet hall, now seen as a moving chain of heat with spares standing by.",
+      "from_user": true
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "Servers convert the electrical power they use into heat that must be removed",
+      "from_user": true
+    },
+    {
+      "what": "Cold air is delivered to server intakes and hot exhaust air returns to cooling units (cold aisle and hot aisle layout)",
+      "from_user": true
+    },
+    {
+      "what": "What chillers do and what pumps do in the chilled water loop, and how heat finally leaves the building",
+      "from_user": true
+    },
+    {
+      "what": "What happens when one part of the cooling chain fails, and how redundancy keeps the room running",
+      "from_user": true
+    }
+  ],
+  "must_avoid": [
+    "statistics or figures that are not on the approved knowledge sheet",
+    "invented sayings or named incidents presented as real",
+    "technical terms left unexplained for non-engineers",
+    "teacher-like or childish tone",
+    "opening with a dictionary-style explanation or an agenda"
+  ],
+  "example_posture": "One running example: a single mid-sized data hall, followed from one server rack outwards to the roof; the failure scenario happens to that same hall.",
+  "visual_direction": "A cutaway of the building drawn as a technical plan, revealed layer by layer as the heat moves outward; flows that visibly move (air arrows, water in pipes); a temperature value that visibly rises during the failure; a before and after of the hall with and without a spare unit taking over.",
+  "voice_note": "A calm colleague who knows the building, explaining it on a walk-through; plain words first, the technical name second; a steady, unhurried pace between the detailed moments.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "Every arc segment comes from the request (topic mode, no source yet); the knowledge sheet must ground each must_cover item.",
+    "Temperature ranges and how fast a hall warms appear only if the fact sheet has a sourced figure; otherwise the failure is described qualitatively."
+  ],
+  "provenance": {
+    "interview": "request topic and notes (practical, clear, show how the system is built and moves, calm between detailed moments)",
+    "inferred": [
+      "audience.knows",
+      "audience.cares_about",
+      "arc_plan",
+      "example_posture",
+      "visual_direction",
+      "voice_note"
+    ]
+  }
+}

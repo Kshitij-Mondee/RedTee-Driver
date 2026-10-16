@@ -1,0 +1,1376 @@
+{
+  "title": "One Order, Door to Door",
+  "style": "isometric",
+  "story": {
+    "cast": [
+      {
+        "name": "the customer",
+        "role": "never drawn as a person: she is her house on the street and her phone card"
+      },
+      {
+        "name": "the colleague",
+        "role": "you, never drawn as a person: the office desk and the chat card"
+      },
+      {
+        "name": "the picker",
+        "role": "a staff role, the isometric engine's person pictogram in line"
+      },
+      {
+        "name": "the driver",
+        "role": "a staff role, the isometric engine's person pictogram in line"
+      }
+    ]
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "world",
+        "x": 0,
+        "y": 0
+      }
+    ]
+  },
+  "kit": {
+    "parts": [
+      {
+        "id": "world_board",
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b18",
+          "b19",
+          "b20",
+          "b21",
+          "b22",
+          "b23",
+          "b24"
+        ],
+        "what": "the one isometric board of the whole film, built with ctx.engine (held across continue joins, rebuilt identically after a cut at any framing and state): one road back-left to front-right joining, in narration order, the company office (accent2, with the colleague's desk and screen and an order plate in front), the warehouse (concrete hall, two shelf rows, a packing bench with a conveyor, cut-away-able), the hub (large hall facade, a sorter belt with a scanner arch and three outbound lanes inside, three dock doors with trucks, a departure screen with rows), the local depot (small hall, two teal vans) and the customer's street (three houses, trees). It returns handles for every station, item, anchor and route point so beats only add to it, plus a night state (a cool dark wash with lit windows) and a grey state (focus with nothing in colour)."
+      },
+      {
+        "id": "lamp",
+        "beats": [
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b10",
+          "b11",
+          "b13",
+          "b14",
+          "b15",
+          "b22",
+          "b24"
+        ],
+        "what": "the subject, the only vermilion thing on the board: states order card (a small flat card lying on the board), lamp (an unboxed lamp on a shelf deck), box (the labelled lamp box, a crate with a white label decal); a you-are-here ring and a 'Lamp' pin; travels along the board's routes"
+      },
+      {
+        "id": "phone_card",
+        "beats": [
+          "b01",
+          "b20",
+          "b21",
+          "b24"
+        ],
+        "what": "the customer's phone as a flat white card beside the board, every word real: state page (a lamp thumbnail, an Order button, 'Arrives tomorrow'), state trail (status lines added one at a time with a dot each: Confirmed, Dispatched, At hub, Out for delivery, Delivered; it can stop after any line and show an empty gap with a '?'), state reply (her thread with the colleague's answer)"
+      },
+      {
+        "id": "chat_card",
+        "beats": [
+          "b02",
+          "b23",
+          "b24"
+        ],
+        "what": "the colleague's message thread as a flat white card by the office desk: an incoming bubble 'Where is my order?', then a reply that builds line by line (up to four short lines, each with a small step chip)"
+      },
+      {
+        "id": "held_mark",
+        "beats": [
+          "b06",
+          "b08",
+          "b09",
+          "b12",
+          "b15",
+          "b16",
+          "b19",
+          "b22"
+        ],
+        "what": "the held-spot marker: a neg ring laid on the board at a spot where something waits, with a small pause glyph and an optional 1 to 3 word pin; never on a person; several can show at once, each with its own time"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "the_lamp",
+      "kind": "explain",
+      "what": "the subject in the reserved vermilion: the lamp's order card, then from packing the labelled lamp box with a you-are-here ring",
+      "beats": [
+        "b05",
+        "b06",
+        "b07",
+        "b11",
+        "b13",
+        "b15",
+        "b22",
+        "b24"
+      ]
+    },
+    {
+      "id": "held_spot",
+      "kind": "explain",
+      "what": "a delay drawn as a thing held at a station, marked by held_mark",
+      "beats": [
+        "b06",
+        "b08",
+        "b09",
+        "b12",
+        "b15",
+        "b16",
+        "b19",
+        "b22"
+      ]
+    },
+    {
+      "id": "station_pins",
+      "kind": "list",
+      "what": "the five station pins on the board, reused where scans pop and where to look",
+      "beats": [
+        "b04",
+        "b20",
+        "b21",
+        "b22"
+      ]
+    },
+    {
+      "id": "trail_phone",
+      "kind": "data",
+      "what": "the phone card: order page, tracking trail, reply",
+      "beats": [
+        "b01",
+        "b20",
+        "b21",
+        "b24"
+      ]
+    },
+    {
+      "id": "chat_thread",
+      "kind": "callback",
+      "what": "the colleague's thread: question, reply in steps",
+      "beats": [
+        "b02",
+        "b23",
+        "b24"
+      ]
+    },
+    {
+      "id": "board_glide",
+      "kind": "join",
+      "what": "one board; beats continue on it and the in-board camera glides station to station; hard cuts only where place, time or register change (inside the warehouse, night at the hub, the grey tracking map, back at the desk)",
+      "beats": [
+        "b02",
+        "b03",
+        "b05",
+        "b10",
+        "b13",
+        "b14",
+        "b17",
+        "b20",
+        "b22",
+        "b23",
+        "b24"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "to": "b04",
+      "band": "light",
+      "why": "pale open"
+    },
+    {
+      "from": "b05",
+      "to": "b13",
+      "band": "mid",
+      "why": "the working middle"
+    },
+    {
+      "from": "b14",
+      "to": "b16",
+      "band": "dark",
+      "why": "night at the hub: the key mechanism"
+    },
+    {
+      "from": "b17",
+      "to": "b19",
+      "band": "mid",
+      "why": "morning on the last mile"
+    },
+    {
+      "from": "b20",
+      "to": "b21",
+      "band": "light",
+      "why": "colour withheld for the scans and the quiz"
+    },
+    {
+      "from": "b22",
+      "to": "b24",
+      "band": "light",
+      "why": "the lift at the close"
+    }
+  ],
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "phone_card",
+      "design": {
+        "treatment": "detail register, open close on her house on the street (the rest of the board not yet in view)",
+        "why_motion": "days passing while the doorstep stays empty is the hook",
+        "elements": [
+          "board",
+          "phone_card",
+          "calendar"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "desk lamp",
+            "element": "phone_card",
+            "action": "phone card (state page) slides in left of her house; the Order button is pressed",
+            "motion": "enter, press"
+          },
+          {
+            "t_anchor": "arrives tomorrow",
+            "element": "phone_card",
+            "action": "'Arrives tomorrow' appears under the button",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "It is Thursday",
+            "element": "calendar",
+            "action": "a small flat calendar card beside the phone flips Tuesday, Wednesday, Thursday",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "No lamp",
+            "element": "board",
+            "action": "a dashed empty outline on her doorstep, held still",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "board held; phone_card and calendar leave at the end (the phone returns in b20)"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board"
+      ],
+      "accent_on": "chat_card",
+      "design": {
+        "treatment": "the camera glides back along the road to the office desk",
+        "why_motion": "her question travels to you",
+        "elements": [
+          "board",
+          "chat_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "She asks you",
+            "element": "board",
+            "action": "camera glides along the road to the office and leans on the desk",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "where it is",
+            "element": "chat_card",
+            "action": "chat card beside the desk; the bubble 'Where is my order?' lands",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "Where would you look",
+            "element": "board",
+            "action": "the stations beyond the office turn grey (focus on the desk only)",
+            "motion": "focus"
+          }
+        ],
+        "continuity": "board held; chat_card leaves at the end and returns in b23"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board"
+      ],
+      "accent_on": "pulse",
+      "design": {
+        "treatment": "scale reveal of the whole board",
+        "why_motion": "the hand-offs are seen as one relay along one road",
+        "elements": [
+          "board",
+          "pulse"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Follow the lamp",
+            "element": "board",
+            "action": "unfocus and scale reveal: the whole world in colour",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "Each station hands it",
+            "element": "pulse",
+            "action": "a small vermilion pulse runs the road office, warehouse, hub, depot, street, pausing a beat at each door",
+            "motion": "travel"
+          }
+        ],
+        "continuity": "board held at the wide framing for b04; pulse leaves"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board"
+      ],
+      "accent_on": "station_pins",
+      "design": {
+        "treatment": "teaching register on the wide board: five station pins as a map key",
+        "why_motion": "naming the stations in order along the road",
+        "elements": [
+          "board",
+          "station_pins",
+          "note"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Order",
+            "element": "station_pins",
+            "action": "pin 'Order' on the office",
+            "motion": "pin"
+          },
+          {
+            "t_anchor": "pick",
+            "element": "station_pins",
+            "action": "pin 'Pick' on the warehouse shelves end",
+            "motion": "pin"
+          },
+          {
+            "t_anchor": "pack",
+            "element": "station_pins",
+            "action": "pin 'Pack' on the warehouse bench end",
+            "motion": "pin"
+          },
+          {
+            "t_anchor": "hub",
+            "element": "station_pins",
+            "action": "pin 'Hub' on the hub",
+            "motion": "pin"
+          },
+          {
+            "t_anchor": "delivery route",
+            "element": "station_pins",
+            "action": "pin 'Delivery route' on the depot road to her street",
+            "motion": "pin"
+          },
+          {
+            "t_anchor": "split or merge",
+            "element": "note",
+            "action": "a small note card: 'A simplified map'",
+            "motion": "enter"
+          }
+        ],
+        "continuity": "the station pins and note leave before b05's camera move; pins return in b20"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "teaching register close on the office's order plate; a note card for the check",
+        "why_motion": "the order card arriving and being checked",
+        "elements": [
+          "board",
+          "lamp",
+          "check_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "First",
+            "element": "board",
+            "action": "camera leans on the order plate in front of the office",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "order station",
+            "element": "lamp",
+            "action": "the vermilion order card drops onto the plate, ring and 'Lamp' pin",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "checks payment",
+            "element": "check_card",
+            "action": "check card: 'Payment authorised' with a tick",
+            "motion": "enter, tick"
+          },
+          {
+            "t_anchor": "reserving it",
+            "element": "check_card",
+            "action": "a small amount chip under it shows a pause glyph and 'Held, not taken'",
+            "motion": "reveal"
+          }
+        ],
+        "continuity": "lamp and check_card held into b06"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp",
+        "check_card"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "teaching register, same framing; two more checks swap into the card",
+        "why_motion": "the lamp passes while another order is held",
+        "elements": [
+          "board",
+          "lamp",
+          "check_card",
+          "ghost_order",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Fraud",
+            "element": "check_card",
+            "action": "card adds 'Fraud check' ticked",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "address checks",
+            "element": "lamp",
+            "action": "card adds 'Address check' ticked; the lamp card slides on toward the road",
+            "motion": "swap, move"
+          },
+          {
+            "t_anchor": "hold an order",
+            "element": "ghost_order",
+            "action": "a grey ghost order on the plate slides into a held tray; held_mark ring with 'Held'",
+            "motion": "move, ring"
+          }
+        ],
+        "continuity": "check_card, ghost_order and held_mark leave; lamp held"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "teaching register: a calm pan from the office along the road to the warehouse door",
+        "why_motion": "the order handed over as work to pick",
+        "elements": [
+          "board",
+          "lamp",
+          "stock_tag",
+          "pick_queue"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "stock is set aside",
+            "element": "stock_tag",
+            "action": "an inset on a warehouse shelf: one lamp gets a vermilion tag",
+            "motion": "inset"
+          },
+          {
+            "t_anchor": "drops into",
+            "element": "lamp",
+            "action": "the order card travels along the road to the warehouse door; camera follows",
+            "motion": "travel, camera"
+          },
+          {
+            "t_anchor": "warehouse queue",
+            "element": "pick_queue",
+            "action": "it joins a short row of grey order cards at the door, the pick queue",
+            "motion": "drop"
+          }
+        ],
+        "continuity": "lamp and pick_queue held into b08; stock_tag leaves"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp",
+        "pick_queue"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "teaching register at the warehouse door: two batches either side of a cut-off line",
+        "why_motion": "a late order sliding past the line into the next batch",
+        "elements": [
+          "board",
+          "lamp",
+          "pick_queue",
+          "cutoff",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Miss the cut-off",
+            "element": "cutoff",
+            "action": "a dashed cut line draws across the queue with a clock chip and pin 'Cut-off'; the lamp card is inside today's batch",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "next cycle",
+            "element": "pick_queue",
+            "action": "a grey order arriving after the line slides into the next batch; held_mark 'Next batch'",
+            "motion": "move, ring"
+          }
+        ],
+        "continuity": "cutoff, pick_queue and held_mark leave; lamp held"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp"
+      ],
+      "accent_on": "web_card",
+      "design": {
+        "treatment": "teaching register: a flat web card left, the board's shelf in an inset right",
+        "why_motion": "the record and the shelf disagree",
+        "elements": [
+          "board",
+          "lamp",
+          "web_card",
+          "shelf_inset",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Here is a slip",
+            "element": "web_card",
+            "action": "a flat product card with 'In stock' slides in",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "not always on the shelf",
+            "element": "shelf_inset",
+            "action": "a leader from the card to an inset on a shelf slot: empty, pin 'Shelf: empty', held_mark ring; a neg mark between the two",
+            "motion": "inset, ring"
+          }
+        ],
+        "continuity": "everything but the board leaves; b10 cuts inside the warehouse"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "detail register: cut to the warehouse already cut away, close on the aisle; a live inset on the scanner",
+        "why_motion": "walking and lifting is what picking is",
+        "elements": [
+          "board",
+          "lamp",
+          "picker",
+          "scanner_inset"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A picker's scanner",
+            "element": "board",
+            "action": "the board framed close on the cut-away warehouse aisle; the lamp (state lamp) on a shelf deck",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "picker",
+            "element": "picker",
+            "action": "a picker pictogram in line drops in at the aisle end",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "shows the lamp's shelf",
+            "element": "scanner_inset",
+            "action": "a circular inset of the handheld: aisle and shelf, the lamp's slot in vermilion",
+            "motion": "inset"
+          },
+          {
+            "t_anchor": "walks over and lifts it",
+            "element": "lamp",
+            "action": "the picker walks the aisle along one axis and lifts the vermilion lamp from the shelf",
+            "motion": "move"
+          },
+          {
+            "t_anchor": "That is picking",
+            "element": "picker",
+            "action": "pin 'Picking'",
+            "motion": "pin"
+          }
+        ],
+        "continuity": "board stays cut away; lamp and picker held into b11; inset leaves"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp",
+        "picker"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "detail register at the packing bench",
+        "why_motion": "the lamp becomes the labelled box we follow",
+        "elements": [
+          "board",
+          "lamp",
+          "picker",
+          "label"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "At packing",
+            "element": "board",
+            "action": "the camera slides along the cut-away hall to the packing bench",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "scanned",
+            "element": "lamp",
+            "action": "the lamp rides the conveyor to the bench; a scan line passes over it",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "boxed",
+            "element": "lamp",
+            "action": "it becomes the vermilion box, sealed",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "labelled",
+            "element": "label",
+            "action": "a white label decal goes on; pin 'Label'",
+            "motion": "stamp, pin"
+          }
+        ],
+        "continuity": "lamp is the labelled box from here on; picker and label pin leave"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "detail register, the cut-away warehouse framed whole",
+        "why_motion": "three trouble spots appear in turn where they happen",
+        "elements": [
+          "board",
+          "lamp",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "What goes wrong here",
+            "element": "board",
+            "action": "camera pulls back to the whole warehouse; the lamp box waits by the door",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "picks the wrong item",
+            "element": "held_mark",
+            "action": "a grey cart with an odd box; held_mark 'Wrong item'",
+            "motion": "drop, ring"
+          },
+          {
+            "t_anchor": "shelf slot is empty",
+            "element": "held_mark",
+            "action": "an empty shelf slot; held_mark 'Empty slot'",
+            "motion": "ring"
+          },
+          {
+            "t_anchor": "backlog builds at peak",
+            "element": "held_mark",
+            "action": "grey boxes stack up at the bench, faster and faster; held_mark 'Peak backlog'",
+            "motion": "stack, ring"
+          },
+          {
+            "t_anchor": "peak",
+            "element": "lamp",
+            "action": "the lamp box's ring stays on it at the door",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "marks and stack leave; the warehouse skin returns; lamp held"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "follow the subject on the road to the hub, then lean in to the cut-away sorter",
+        "why_motion": "parcels from many roads meet and are sorted by destination",
+        "elements": [
+          "board",
+          "lamp",
+          "hub_trucks",
+          "scanner_arch"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next, a hub",
+            "element": "lamp",
+            "action": "the box rides a teal truck along the road to the hub; camera follows",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "many places meet",
+            "element": "hub_trucks",
+            "action": "two more teal trucks arrive from other roads and unload amber boxes",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Scanners read the label",
+            "element": "scanner_arch",
+            "action": "hub cuts away; the box passes under the scanner arch, a scan flash",
+            "motion": "cut, travel"
+          },
+          {
+            "t_anchor": "sort by destination",
+            "element": "lamp",
+            "action": "a diverter sends the box down one of three lanes; pin 'Hub'",
+            "motion": "move, pin"
+          }
+        ],
+        "continuity": "the end of its lane by the dock is where b14 finds it"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "departure_screen",
+      "design": {
+        "treatment": "cut to night: the board's night state, held framing on the hub docks",
+        "why_motion": "a schedule that leaves on time is the mechanism",
+        "elements": [
+          "board",
+          "lamp",
+          "departure_screen",
+          "outbound_trucks"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "tricky part",
+            "element": "board",
+            "action": "night on the board, windows lit; the lamp box at the end of its lane inside",
+            "motion": "tint"
+          },
+          {
+            "t_anchor": "line haul",
+            "element": "outbound_trucks",
+            "action": "three teal trucks wait at the dock doors; pin 'Linehaul'",
+            "motion": "drop, pin"
+          },
+          {
+            "t_anchor": "run on a schedule",
+            "element": "departure_screen",
+            "action": "the departure screen's rows light, one row per truck",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "Often overnight",
+            "element": "outbound_trucks",
+            "action": "the first truck pulls out on time along the road",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "overnight",
+            "element": "lamp",
+            "action": "the lamp box still riding its lane toward the docks",
+            "motion": "travel"
+          }
+        ],
+        "continuity": "night, departure_screen and the two remaining trucks held into b15"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp",
+        "departure_screen",
+        "outbound_trucks"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "detail register at night, close on one dock door",
+        "why_motion": "arriving a moment too late is the whole delay",
+        "elements": [
+          "board",
+          "lamp",
+          "departure_screen",
+          "outbound_trucks",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "misses its truck",
+            "element": "lamp",
+            "action": "the box reaches the dock edge as its truck's doors close",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "waits for the next",
+            "element": "outbound_trucks",
+            "action": "the truck pulls away; the box sits alone; held_mark ring; the departure screen's next row turns pos, pin 'Next departure'",
+            "motion": "travel, ring"
+          },
+          {
+            "t_anchor": "Nobody was careless",
+            "element": "board",
+            "action": "hold still on the lone box",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "night held; lamp stays on the dock (it is there again in b22)"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "lamp"
+      ],
+      "accent_on": "held_mark",
+      "design": {
+        "treatment": "detail register at night inside the cut-away sorter",
+        "why_motion": "parcels kicked off their path",
+        "elements": [
+          "board",
+          "lamp",
+          "ghost_boxes",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "An unreadable label",
+            "element": "ghost_boxes",
+            "action": "a grey box with a torn label passes the arch, no flash, and is kicked to a side lane; held_mark 'Unreadable label'",
+            "motion": "travel, ring"
+          },
+          {
+            "t_anchor": "a wrong sort",
+            "element": "ghost_boxes",
+            "action": "another grey box rides the wrong lane; held_mark 'Wrong sort'",
+            "motion": "travel, ring"
+          },
+          {
+            "t_anchor": "hold it up too",
+            "element": "lamp",
+            "action": "both held still; the lamp box still on its dock at the frame's edge",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "night lifts at the end; ghost boxes, marks and lamp leave"
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board"
+      ],
+      "accent_on": "route",
+      "design": {
+        "treatment": "morning; camera glides to the depot by her street",
+        "why_motion": "loading order follows the route",
+        "elements": [
+          "board",
+          "van_boxes",
+          "route"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "local depot",
+            "element": "board",
+            "action": "day returns; camera glides to the depot",
+            "motion": "camera"
+          },
+          {
+            "t_anchor": "vans load",
+            "element": "van_boxes",
+            "action": "amber boxes with small stop chips go into a teal van one by one",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "route order",
+            "element": "route",
+            "action": "a dashed route draws through the houses with stop dots matching the order",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "van and route held into b18"
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "route"
+      ],
+      "accent_on": "proof_card",
+      "design": {
+        "treatment": "follow the van to a house; a flat card of the handheld",
+        "why_motion": "proof is recorded at the moment of hand-over",
+        "elements": [
+          "board",
+          "route",
+          "driver",
+          "proof_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "At the door",
+            "element": "driver",
+            "action": "the van travels the route and stops at a house; a driver pictogram in line steps to the door",
+            "motion": "travel, drop"
+          },
+          {
+            "t_anchor": "Signature",
+            "element": "proof_card",
+            "action": "a handheld card beside: 'Signature' with a scribble",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "a photo",
+            "element": "proof_card",
+            "action": "swaps to 'Photo' with a camera frame",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "or a scan",
+            "element": "proof_card",
+            "action": "swaps to 'Scan' with a barcode",
+            "motion": "swap"
+          }
+        ],
+        "continuity": "proof_card and driver leave; route held"
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "route"
+      ],
+      "accent_on": "held_mark",
+      "design": {
+        "treatment": "detail register along her street",
+        "why_motion": "four troubles appear where they happen on the route",
+        "elements": [
+          "board",
+          "route",
+          "held_mark",
+          "rain_cloud"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "nobody is home",
+            "element": "held_mark",
+            "action": "a closed door; held_mark 'Nobody home'",
+            "motion": "ring"
+          },
+          {
+            "t_anchor": "a wrong address",
+            "element": "held_mark",
+            "action": "a house plate that does not match the label; held_mark 'Wrong address'",
+            "motion": "ring"
+          },
+          {
+            "t_anchor": "a full van",
+            "element": "held_mark",
+            "action": "a second van full to its doors; held_mark 'Full van'",
+            "motion": "ring"
+          },
+          {
+            "t_anchor": "bad weather",
+            "element": "rain_cloud",
+            "action": "a cloud with short dashed rain lines over the road; held_mark 'Bad weather'",
+            "motion": "drop, ring"
+          }
+        ],
+        "continuity": "everything leaves; b20 cuts to the grey map"
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "scan_marks",
+      "design": {
+        "treatment": "cut to the wide board drained to grey; phone card on the right",
+        "why_motion": "statuses appear only at scans, never in between",
+        "elements": [
+          "board",
+          "station_pins",
+          "scan_marks",
+          "phone_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "One more slip",
+            "element": "board",
+            "action": "wide framing, the board's grey state; the road is a dotted line with no moving dot",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "not a live map",
+            "element": "phone_card",
+            "action": "the phone card (state trail) slides in on the right, empty",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "Each status",
+            "element": "station_pins",
+            "action": "the station pins rise again, grey",
+            "motion": "pin"
+          },
+          {
+            "t_anchor": "a scan at a hand-off",
+            "element": "scan_marks",
+            "action": "a vermilion scan mark pops at the office, the warehouse door, the hub, the depot and her door in turn, each adding its line: Confirmed, Dispatched, At hub, Out for delivery, Delivered",
+            "motion": "pop, add"
+          }
+        ],
+        "continuity": "board grey, station_pins and phone_card held into b21; scan marks leave"
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "station_pins",
+        "phone_card"
+      ],
+      "accent_on": "phone_card",
+      "intent": "process_hold",
+      "design": {
+        "treatment": "quiz: the lamp's own trail on the phone, the world still dim",
+        "why_motion": "a stopped trail is the question",
+        "elements": [
+          "board",
+          "station_pins",
+          "phone_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now you",
+            "element": "phone_card",
+            "action": "the trail resets to the lamp's: Confirmed, Dispatched, At hub",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "Then nothing",
+            "element": "phone_card",
+            "action": "an empty gap below with a '?'",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "Where do you look first",
+            "element": "station_pins",
+            "action": "hold; the five grey pins wait for the viewer's choice",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "look first",
+            "element": "board",
+            "action": "the grey board holds still",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "phone_card leaves; station_pins held into b22"
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board",
+        "station_pins"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "camera glides to the hub, the only station in colour",
+        "why_motion": "the answer is a place",
+        "elements": [
+          "board",
+          "station_pins",
+          "lamp",
+          "held_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the hub first",
+            "element": "station_pins",
+            "action": "the Hub pin lights, the others fade; the hub turns to colour; camera glides to its dock",
+            "motion": "camera, focus"
+          },
+          {
+            "t_anchor": "waiting there",
+            "element": "lamp",
+            "action": "the lamp box on its dock with its ring",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "missed its truck",
+            "element": "held_mark",
+            "action": "held_mark 'Missed truck' at the empty dock door",
+            "motion": "ring"
+          },
+          {
+            "t_anchor": "could not be read",
+            "element": "held_mark",
+            "action": "held_mark 'Unreadable label' at the side lane",
+            "motion": "ring"
+          }
+        ],
+        "continuity": "everything leaves; b23 cuts to the desk"
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "chat_card",
+      "design": {
+        "treatment": "cut to the office desk on the board in colour; the chat card builds the reply",
+        "why_motion": "the steps are built as the reply is typed",
+        "elements": [
+          "board",
+          "chat_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So, read",
+            "element": "board",
+            "action": "close on the office desk on the board, in colour",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "read the last status",
+            "element": "chat_card",
+            "action": "chat card with her question; reply line 'Last status'",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "Name the station",
+            "element": "chat_card",
+            "action": "adds 'Station'",
+            "motion": "add"
+          },
+          {
+            "t_anchor": "usual hold-up",
+            "element": "chat_card",
+            "action": "adds 'Usual hold-up'",
+            "motion": "add"
+          },
+          {
+            "t_anchor": "set the expectation",
+            "element": "chat_card",
+            "action": "adds 'Expectation'",
+            "motion": "add"
+          }
+        ],
+        "continuity": "board held into b24; chat_card leaves"
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "bespoke",
+      "station": "world",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "board"
+      ],
+      "accent_on": "lamp",
+      "design": {
+        "treatment": "the phone card with the reply, then the scale reveal as the truck leaves the hub",
+        "why_motion": "the lamp moves again toward her door",
+        "elements": [
+          "board",
+          "lamp",
+          "phone_card",
+          "rule_card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "You tell her",
+            "element": "phone_card",
+            "action": "the phone card (state reply) slides in: 'Most likely at the hub, waiting for the next truck'",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "next truck",
+            "element": "lamp",
+            "action": "camera rises to the whole world; a teal truck takes the lamp box from the hub dock and pulls away toward her street",
+            "motion": "travel, reveal"
+          },
+          {
+            "t_anchor": "the last scan",
+            "element": "rule_card",
+            "action": "a flat card in the free sky corner builds 'Last scan', 'Station', 'Reason' as each is said",
+            "motion": "add"
+          },
+          {
+            "t_anchor": "make the promise",
+            "element": "rule_card",
+            "action": "adds 'Then the promise'; hold",
+            "motion": "add"
+          }
+        ],
+        "continuity": "the end"
+      }
+    }
+  ]
+}

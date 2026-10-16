@@ -1,0 +1,223 @@
+{
+  "topic": "How an AI language model turns a question into an answer",
+  "scope_note": "Plain-language mechanism of a chat assistant built on a large language model: tokens, context and attention, next-token prediction, sampling variation, hallucination and training cutoff, and what a user does about it. No model sizes, benchmarks or product comparisons.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "A language model does not read whole words; it first splits text into tokens, which are small pieces of text, often whole common words but also parts of longer or rarer words, punctuation and spaces.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "Sennrich, Haddow and Birch (2016), subword units for neural machine translation; provider tokenizer documentation",
+      "numbers": []
+    },
+    {
+      "id": "F2",
+      "statement": "As a rough rule of thumb for ordinary English text, one token is about four characters, or about three quarters of a word.",
+      "kind": "number",
+      "confidence": "mainstream",
+      "caveat": "A rule of thumb only. It varies by language, by tokenizer and by content such as code or numbers; other languages often need more tokens per word.",
+      "reference_hint": "OpenAI help article 'What are tokens and how to count them'",
+      "numbers": []
+    },
+    {
+      "id": "F3",
+      "statement": "Each token corresponds to an ID, a number from a fixed vocabulary of tokens that the model was built with.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Sennrich et al. (2016); provider tokenizer documentation",
+      "numbers": []
+    },
+    {
+      "id": "F4",
+      "statement": "Each token ID is then turned into an embedding, a long list of numbers that the model learned during training and that it computes with in place of the text.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Vaswani et al. (2017), 'Attention Is All You Need'",
+      "numbers": []
+    },
+    {
+      "id": "F5",
+      "statement": "The model works only from the text in its context window, which holds the current prompt, the conversation so far and the reply being written, and the window has a limit on how many tokens it can hold.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "The size of the limit differs between models and changes over time, so the lesson should give no figure. What happens when the limit is exceeded depends on the product: older text may be cut off or the request refused.",
+      "reference_hint": "Provider documentation on context windows",
+      "numbers": []
+    },
+    {
+      "id": "F6",
+      "statement": "A mechanism called attention lets the model give each earlier token in the context a different weight, a number for how much it matters, when working out the next token.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Vaswani et al. (2017), 'Attention Is All You Need'",
+      "numbers": []
+    },
+    {
+      "id": "F7",
+      "statement": "The attention weights are calculated afresh from the text in front of the model and rely on patterns learned in training; they are not a person deciding what is important.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Attention weights are a useful picture of the idea but researchers caution that they are not a full explanation of why the model produces a given word. Say weighs, not understands.",
+      "reference_hint": "Vaswani et al. (2017)",
+      "numbers": []
+    },
+    {
+      "id": "F8",
+      "statement": "For each step the model produces a probability for every token in its vocabulary, a ranked list of how likely each one is to come next given the context.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Brown et al. (2020), 'Language Models are Few-Shot Learners' (autoregressive language model)",
+      "numbers": []
+    },
+    {
+      "id": "F9",
+      "statement": "One token is chosen from those probabilities and added to the text, then the model repeats the process with the longer text, so the reply is built one token at a time; this is called autoregressive generation.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Brown et al. (2020); Vaswani et al. (2017)",
+      "numbers": []
+    },
+    {
+      "id": "F10",
+      "statement": "Generation stops when the model produces a special end-of-text token or when a length limit on the reply is reached.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Provider API documentation (maximum output length, stop sequences)",
+      "numbers": []
+    },
+    {
+      "id": "F11",
+      "statement": "The chosen token is usually sampled from the probabilities rather than always taking the top one, so the same question can produce different answers on different tries.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Chat products choose their own sampling settings, which users usually cannot see. Saying that the model 'predicts the next word' is a simplification of predicting the next token.",
+      "reference_hint": "Provider API documentation on sampling; Holtzman et al. (2020), 'The Curious Case of Neural Text Degeneration'",
+      "numbers": []
+    },
+    {
+      "id": "F12",
+      "statement": "A setting called temperature controls how adventurous the sampling is: a lower temperature makes the output more focused and repeatable, and a higher temperature makes it more varied.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Even at the lowest setting, hosted services do not always guarantee identical output every time.",
+      "reference_hint": "OpenAI and Anthropic API documentation on temperature",
+      "numbers": []
+    },
+    {
+      "id": "F13",
+      "statement": "Another setting called top-p limits the choice to the smallest group of most likely tokens whose probabilities add up to a chosen share, which cuts off the unlikely options.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Holtzman et al. (2020), nucleus sampling; provider API documentation",
+      "numbers": []
+    },
+    {
+      "id": "F14",
+      "statement": "A language model is first trained on very large amounts of text to predict the next token; that goal rewards likely text and does not by itself check whether a statement is true.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Assistants are usually tuned further after this stage, for example with human feedback, to follow instructions and be more helpful, which does not turn the model into a fact-checker.",
+      "reference_hint": "Brown et al. (2020); Ouyang et al. (2022), 'Training language models to follow instructions with human feedback'",
+      "numbers": []
+    },
+    {
+      "id": "F15",
+      "statement": "Because it writes likely text rather than looking facts up, a model can produce fluent, confident statements that are false, which is called hallucination or confabulation.",
+      "kind": "finding",
+      "confidence": "established",
+      "reference_hint": "Ji et al. (2023), 'Survey of Hallucination in Natural Language Generation', ACM Computing Surveys",
+      "numbers": []
+    },
+    {
+      "id": "F16",
+      "statement": "A confident, well-written tone is not evidence that an answer is correct, because the model writes true and false statements in the same fluent style.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Errors are more likely for obscure details, exact figures, quotes, citations and anything the model was not given, but no type of question is guaranteed safe.",
+      "reference_hint": "Ji et al. (2023)",
+      "numbers": []
+    },
+    {
+      "id": "F17",
+      "statement": "A model's built-in knowledge comes from its training data, which stops at a training cutoff date, so it does not know about later events unless the information is put in front of it.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "Provider model documentation (knowledge cutoff dates)",
+      "numbers": []
+    },
+    {
+      "id": "F18",
+      "statement": "Some assistants can search the web or retrieve documents and place that text into the context, which can reduce errors but does not remove them, since the model can still misread or misreport what it was given.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Keep this to a short aside. Whether a given assistant does this depends on the product and its settings.",
+      "reference_hint": "Lewis et al. (2020), 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks'",
+      "numbers": []
+    },
+    {
+      "id": "F19",
+      "statement": "Because the model works from the words in front of it, a clear, specific question with the relevant background supplied in it, such as the document, the audience and the format wanted, gives it better material to work from.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Good context improves the odds of a useful answer; it does not guarantee a correct one.",
+      "reference_hint": "Provider prompt-writing guidance (OpenAI, Anthropic documentation)",
+      "numbers": []
+    },
+    {
+      "id": "F20",
+      "statement": "A sensible habit is to check important claims, such as names, figures, quotes, citations and policy details, against a reliable source before relying on or sharing them, with more checking the higher the stakes.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "This is professional good practice that follows from F15 and F16, not a measured rule with a fixed threshold.",
+      "reference_hint": "Provider usage guidance and general responsible-use guidance",
+      "numbers": []
+    }
+  ],
+  "terms": [
+    {
+      "term": "token",
+      "plain": "a small piece of text the model works with, often a word or part of a word"
+    },
+    {
+      "term": "embedding",
+      "plain": "the list of numbers that stands for a token inside the model"
+    },
+    {
+      "term": "context window",
+      "plain": "the limited amount of text the model can take in at once: your question, the conversation so far and its own reply"
+    },
+    {
+      "term": "attention",
+      "plain": "the step where the model gives each earlier piece of text a weight for how much it matters to the next piece"
+    },
+    {
+      "term": "temperature",
+      "plain": "a setting for how much the choice of next token varies; lower is steadier"
+    },
+    {
+      "term": "hallucination",
+      "plain": "a fluent, confident statement from the model that is not true"
+    },
+    {
+      "term": "training cutoff",
+      "plain": "the date where the model's training data stops"
+    }
+  ],
+  "not_claimed": [
+    "The model looks up the answer in a database of stored answers or in the internet by default.",
+    "The model understands, thinks, believes or is conscious like a person.",
+    "Any specific percentage of answers that are wrong, or any claim that hallucination has been solved or is unavoidable in every case.",
+    "Any specific context window size, number of parameters, training data size or model comparison.",
+    "A fluent or confident answer is more likely to be true.",
+    "Setting temperature to zero guarantees identical, correct answers.",
+    "Attention weights show exactly how the model reasons.",
+    "Tokens are always whole words; one token always equals one word.",
+    "That the model remembers earlier separate conversations by itself.",
+    "Learning-styles claims, or invented attributions to named researchers."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (style test lessons, 2026-10-16)",
+    "note": ""
+  }
+}

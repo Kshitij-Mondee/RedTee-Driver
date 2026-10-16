@@ -1,0 +1,216 @@
+{
+  "title": "One Order, Door to Door",
+  "performance": "given a late order and its last tracking status, the viewer can name the station the order is stuck at, say what usually goes wrong there, and set a realistic expectation with the customer",
+  "audience": {
+    "level": "beginner",
+    "assumed_prior": "has ordered online and seen tracking updates; has never seen a warehouse, hub or depot from the inside",
+    "why": "audience are employees in sales, service, finance or support whose work touches orders but not operations",
+    "motivation": "wants to answer 'where is my order' without guessing or overpromising",
+    "context": "desktop at work, with sound and captions, short break between tasks"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "concrete_first",
+    "rationale": "the topic is a physical chain that is easy to see when one parcel moves through it; each station's idea lands only once the viewer has watched the order pass it (F1, F2)",
+    "signature_move": "show the order arriving at the station, show what the station does to it, THEN name the station and the one way it can stall there"
+  },
+  "misconceptions": [
+    {
+      "belief": "tracking shows the parcel's live location the whole way",
+      "why_tempting": "apps show a moving map near the end, so people assume it is live throughout",
+      "refuted_in": "sec4",
+      "source_anchor": "F21"
+    },
+    {
+      "belief": "if the website showed it in stock, the item is definitely on a shelf",
+      "why_tempting": "the website and the warehouse feel like one system",
+      "refuted_in": "sec1",
+      "source_anchor": "F7"
+    },
+    {
+      "belief": "a late order means someone was careless",
+      "why_tempting": "a delay feels like a mistake by a person",
+      "refuted_in": "sec3",
+      "source_anchor": "F15, F6"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "An order placed in the evening, expected tomorrow, still not here; a customer asks you where it is. Where would you even look?"
+    },
+    "promise": "follow this one order through one connected world and you will know which station to look at, and why",
+    "bridge_from_prior": "start from what the viewer already sees: a click, a wait and a doorbell; then lift the lid on the stations in between (F1)",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain what the order station checks and two reasons an order is held there",
+        "bloom": "understand",
+        "concepts": [
+          "payment and fraud or address checks",
+          "stock allocation and release",
+          "cut-off time",
+          "stock records versus shelves"
+        ],
+        "energy": "build",
+        "carrier": "worked example",
+        "recap_after": false,
+        "facts": [
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F7"
+        ]
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can describe pick and pack and the warehouse's common failure points",
+        "bloom": "understand",
+        "concepts": [
+          "picking",
+          "packing and label",
+          "mis-pick, missing item, peak backlog"
+        ],
+        "energy": "build",
+        "carrier": "process running",
+        "recap_after": false,
+        "facts": [
+          "F8",
+          "F9",
+          "F10",
+          "F11"
+        ]
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can use the linehaul schedule to work out how much later a parcel arrives when it misses its departure or its label cannot be read",
+        "bloom": "apply",
+        "concepts": [
+          "hub sort by destination",
+          "hub and spoke",
+          "linehaul schedule",
+          "unreadable label, mis-sort"
+        ],
+        "energy": "peak",
+        "carrier": "diagram",
+        "recap_after": true,
+        "facts": [
+          "F12",
+          "F13",
+          "F14",
+          "F15",
+          "F16"
+        ]
+      },
+      {
+        "id": "sec4",
+        "goal": "the viewer can use a tracking status to locate the station a parcel last passed on the last mile",
+        "bloom": "apply",
+        "concepts": [
+          "depot and route loading",
+          "proof of delivery",
+          "failed attempt, wrong address",
+          "status as a scan"
+        ],
+        "energy": "build",
+        "carrier": "process running",
+        "recap_after": true,
+        "facts": [
+          "F17",
+          "F18",
+          "F19",
+          "F20",
+          "F21",
+          "F22",
+          "F23"
+        ]
+      }
+    ],
+    "payoff": "return to the opening order: its last scan names the station it is waiting at, and the viewer can now say where it is and what to tell the customer"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec4",
+      "what": "the one order passes every station, each stall narrated and shown on the map"
+    },
+    {
+      "stage": "faded",
+      "where": "after sec4",
+      "what": "a tracking trail with a long gap after 'at hub'; the viewer names the station before the narrator does"
+    },
+    {
+      "stage": "independent",
+      "where": "payoff",
+      "what": "the opening order's last status is shown; the viewer decides where it is and what to say"
+    }
+  ],
+  "pacing": {
+    "requested_s": 180,
+    "target_duration_s": 180,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "linehaul departure",
+      "status as a scan"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec3",
+        "kind": "recall_prompt",
+        "prompt_sketch": "So far: order, pick, pack, hub. Which hand-off has a fixed departure the parcel can miss?"
+      },
+      {
+        "after_section": "sec4",
+        "kind": "quiz",
+        "prompt_sketch": "The trail shows 'at hub' and then nothing for a long time. Which station do you look at first?",
+        "answer": "the hub: the gap after its scan often points to a parcel waiting there, such as a missed linehaul or an unreadable label (F23, F15, F16)",
+        "tempting_wrong": "'it is lost on the road' - a gap between scans often means waiting at a station, not moving (F21, F23)"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "next time someone asks where an order is, read its last status, name the station it points to, and say what usually holds an order there before giving a date"
+  ],
+  "persona": {
+    "voice": "a capable colleague who knows the operation, calm and practical",
+    "delivery_notes": "brisk on the journey, slower on the linehaul departure and the scan idea, warm on the check"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the late order and the customer's question",
+      "objective": "promise: know which station to look at",
+      "recall_prior": "bridge from click, wait and doorbell",
+      "present": "stations in the order the parcel meets them",
+      "guidance": "signature move at every station",
+      "practice": "recall prompt after sec3; quiz after sec4",
+      "feedback": "quiz answer with the tempting wrong reading explained",
+      "assess": "payoff: the viewer places the opening order",
+      "transfer": "transfer task: read the last status before answering"
+    },
+    "merrill": {
+      "problem_centered": "the late order is the running problem",
+      "activation": "the everyday click to doorbell view",
+      "demonstration": "the order shown at each station before it is named",
+      "application": "the gap-in-the-trail quiz and the payoff",
+      "integration": "transfer task in the viewer's next customer conversation"
+    },
+    "mayer": {
+      "coherence": "one order, one world; no side examples",
+      "signalling": "the stalled station highlighted on the map, one at a time",
+      "redundancy": "on screen only station names and status words; narration explains",
+      "contiguity": "each station lights up as it is named",
+      "segmenting": "four short station sections",
+      "pre_training": "the bridge names hand-off before the stations"
+    },
+    "arcs": {
+      "attention": "a customer asking where their order is",
+      "relevance": "the question every customer-facing role gets",
+      "confidence": "every station shown worked before the quiz",
+      "satisfaction": "the viewer places the opening order"
+    },
+    "bloom_path": "understand -> understand -> apply -> apply"
+  },
+  "series": null,
+  "flags": []
+}

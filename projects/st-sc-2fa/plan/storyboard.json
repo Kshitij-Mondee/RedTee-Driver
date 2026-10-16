@@ -1,0 +1,1337 @@
+{
+  "style": "screencast",
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0
+      }
+    ]
+  },
+  "story": {
+    "cast": [
+      {
+        "name": "Sam"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "shell",
+      "what": "the work laptop's browser app shell (W.app, browser chrome, generic company account site), held across each chapter with W.resume; pages change with A.go, the camera zooms on each named control",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b16",
+        "b17",
+        "b18",
+        "b19",
+        "b20",
+        "b21",
+        "b22",
+        "b23",
+        "b24",
+        "b25"
+      ]
+    },
+    {
+      "id": "phone",
+      "what": "the authenticator phone (kit part phone), standing to the right of the laptop shell; states: app home with Add account, camera framing the QR, account row with a six-digit code and a 30 s ring, missing, crossed out, and a second new phone",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b09",
+        "b10",
+        "b11",
+        "b13",
+        "b20",
+        "b22",
+        "b23",
+        "b24",
+        "b25"
+      ]
+    },
+    {
+      "id": "leaked_chip",
+      "what": "Sam's masked password as a small chip (kit part password_chip): typed in the hook, slips out of the leaked shop, comes back in b04, b06 and the payoff and is stopped at the code step",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b04",
+        "b06",
+        "b24"
+      ]
+    },
+    {
+      "id": "step_path",
+      "what": "the teaching layer in accent2: chapter pills for the four chapters, the step pill per walkthrough step, and the numbered lost-phone path held on the left in b21 and b22",
+      "kind": "list",
+      "beats": [
+        "b07",
+        "b08",
+        "b09",
+        "b11",
+        "b12",
+        "b16",
+        "b17",
+        "b21",
+        "b22",
+        "b25"
+      ]
+    },
+    {
+      "id": "chapter_join",
+      "what": "join material: handoff (the next chapter's window grows in) at b04, b14 and b24; a hard cut at b20 (the lost phone); continue inside a chapter",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b14",
+        "b20",
+        "b24"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "pale open on the quiet desk"
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "why": "slightly richer middle: zoomed walkthroughs, the lost-phone dim and the recovery path"
+    },
+    {
+      "from": "b24",
+      "band": "light",
+      "why": "lift at the close: the stopped attempt in a spotlight, the checklist ticked"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "phone",
+        "what": "A generic smartphone in the screencast look (flat, surface body, field2 hairline, radius 28, soft offset lift, no brand), about 340 x 680 px at scale 1, standing to the right of the laptop window. Its screen is a generic authenticator app (no logo). States, switched on cue: off (dark screen); home (app title, empty list, an Add account button in accent); camera (a viewfinder with corner brackets, framing a QR drawn by qr_code); code (one account row with a six-digit code in large mono digits and a small countdown ring that runs down and refreshes to a new code about every 30 s, the ring time-driven); missing (only a dashed outline where the phone stood); crossed (the phone with a neg cross over it); new (a second instance, tagged as the new phone by position, same look). Must expose: draw at x,y,scale; state(name, t); tap(t) on a named button (a press ripple and an accent2 ring); setCode(digits, t); slide in and out.",
+        "beats": [
+          "b05",
+          "b09",
+          "b10",
+          "b11",
+          "b13",
+          "b20",
+          "b22",
+          "b23",
+          "b24",
+          "b25"
+        ]
+      },
+      {
+        "id": "qr_code",
+        "what": "A deterministic generic QR-like square (three finder squares and a seeded module pattern, ink on surface, never a real scannable payload) that can be drawn at any rect: on the laptop's setup dialog and inside the phone's camera viewfinder; fade in on cue.",
+        "beats": [
+          "b08",
+          "b09",
+          "b22"
+        ]
+      },
+      {
+        "id": "password_chip",
+        "what": "Sam's password as a small pill: a key icon and eight masked dots in ink on surface with a hairline, about 260 x 56 px; can travel along a path, slip out of a window, be typed (dots appear one by one), crack (a split line) and be stopped (a neg outline with a short shake). The same chip in every beat that shows the leaked password.",
+        "beats": [
+          "b01",
+          "b02",
+          "b04",
+          "b06",
+          "b24"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "chip",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the same password going into two places is the whole hook",
+        "elements": [
+          {
+            "name": "shop",
+            "what": "W.app browser window on the left half, a generic shop sign-in (url shop.example), fields Email and Password, button Sign in"
+          },
+          {
+            "name": "work",
+            "what": "W.app browser window on the right half, the company sign-in (url signin.company.example), field Sam, Password, button Sign in"
+          },
+          {
+            "name": "chip",
+            "what": "password_chip, Sam's masked password"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say your colleague Sam",
+            "element": "work",
+            "action": "both windows arrive, the work one with Sam in its user field",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "old shopping site",
+            "element": "shop",
+            "action": "pointer types the masked password into the shop's Password field; the chip appears above it",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "the same one at work",
+            "element": "work",
+            "action": "the same masked dots typed into the work Password field; the chip glides across to sit between both",
+            "motion": "type"
+          }
+        ],
+        "continuity": "shop, work and chip hold into b02"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "shop",
+        "work",
+        "chip"
+      ],
+      "accent_on": "chip",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the leak and the break-in are actions",
+        "elements": [
+          {
+            "name": "crack",
+            "what": "a neg crack across the shop window, which dims"
+          },
+          {
+            "name": "inbox",
+            "what": "the work window's inbox page after Sign in (a generic list of messages)"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The shopping site leaks",
+            "element": "crack",
+            "action": "the shop window cracks and dims; the chip slips out of it",
+            "motion": "crack and drop"
+          },
+          {
+            "t_anchor": "Someone tries that password at work",
+            "element": "work",
+            "action": "a pointer types the chip's dots into the work Password field",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "Sam's account opens",
+            "element": "inbox",
+            "action": "click Sign in; the page changes to Sam's inbox",
+            "motion": "click, page change"
+          }
+        ],
+        "continuity": "work holds into b03 and changes page"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "work"
+      ],
+      "accent_on": "toggles",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "two switches flipping on is the promise",
+        "elements": [
+          {
+            "name": "toggles",
+            "what": "a settings region on the work window: rows Two-step sign-in and Password manager, toggles off"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Two settings",
+            "element": "toggles",
+            "action": "the shop exits; the work window changes page to the settings card with two rows",
+            "motion": "page change"
+          },
+          {
+            "t_anchor": "a few minutes",
+            "element": "toggles",
+            "action": "both toggles switch on, one then the other",
+            "motion": "toggle"
+          },
+          {
+            "t_anchor": "stops being enough",
+            "element": "toggles",
+            "action": "spotlight freeze on the two rows",
+            "motion": "spotlight"
+          }
+        ],
+        "continuity": "everything leaves for the handoff into b04"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "handoff"
+      },
+      "accent_on": "tile_lit",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "each failure is shown happening, not listed",
+        "elements": [
+          {
+            "name": "tile_reuse",
+            "what": "a card titled Reuse: the password chip as one key fanning out to three small sign-in boxes that each open"
+          },
+          {
+            "name": "tile_phish",
+            "what": "a card titled Phishing: a look-alike sign-in page whose field takes the typed dots into a net"
+          },
+          {
+            "name": "tile_lists",
+            "what": "a card titled Leaked lists: a long list of masked passwords scrolling in mono"
+          },
+          {
+            "name": "chip",
+            "what": "password_chip, in the Reuse tile"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "fails three ways",
+            "element": "tile_reuse",
+            "action": "three empty cards arrive on the desk",
+            "motion": "enter staggered"
+          },
+          {
+            "t_anchor": "Reuse",
+            "element": "tile_reuse",
+            "action": "lights; the chip opens all three small sign-ins",
+            "motion": "fan out"
+          },
+          {
+            "t_anchor": "Phishing",
+            "element": "tile_phish",
+            "action": "lights; the dots typed into the fake page are collected",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "Leaked lists",
+            "element": "tile_lists",
+            "action": "lights; the list scrolls",
+            "motion": "scroll"
+          }
+        ],
+        "continuity": "canvas exit into b05"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "canvas"
+      },
+      "accent_on": "have_tag",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the second step appears as a second screen",
+        "elements": [
+          {
+            "name": "app",
+            "what": "W.app browser shell, the company sign-in (frame about x 96, w 1300), held from here to b13"
+          },
+          {
+            "name": "phone",
+            "what": "phone kit part to the right, state code"
+          },
+          {
+            "name": "know_tag",
+            "what": "accent2 callout Something you know on the password field"
+          },
+          {
+            "name": "have_tag",
+            "what": "accent2 callout Something you have on the phone"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "adds a second proof",
+            "element": "app",
+            "action": "the sign-in page shows the password step, then a code step below it",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "something you know",
+            "element": "know_tag",
+            "action": "callout on the password field",
+            "motion": "callout"
+          },
+          {
+            "t_anchor": "something you have",
+            "element": "phone",
+            "action": "the phone arrives showing a code; callout Something you have",
+            "motion": "slide in"
+          }
+        ],
+        "continuity": "app holds into b06; the phone leaves"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app"
+      ],
+      "accent_on": "chip",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the attempt halting is the point",
+        "elements": [
+          {
+            "name": "chip",
+            "what": "password_chip, the stolen password"
+          },
+          {
+            "name": "codestep",
+            "what": "the sign-in page's code step, an empty code box and a disabled Verify"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "It's not unhackable",
+            "element": "chip",
+            "action": "the chip arrives; a pointer types its dots into the password field and clicks Sign in",
+            "motion": "type, click"
+          },
+          {
+            "t_anchor": "no longer gets in",
+            "element": "codestep",
+            "action": "the page moves to the code step and waits; the chip gets a neg outline and a short shake",
+            "motion": "page change, shake"
+          }
+        ],
+        "continuity": "app holds into b07; chip exits"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app"
+      ],
+      "accent_on": "click_ring",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "a click-by-click walkthrough",
+        "elements": [
+          {
+            "name": "chapters",
+            "what": "chapter pills: Why, Two-step sign-in, Password manager, Lost phone; Two-step sign-in active"
+          },
+          {
+            "name": "step",
+            "what": "step pill 1 Turn on two-step sign-in"
+          },
+          {
+            "name": "click_ring",
+            "what": "the accent2 press ring on each click"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "open Security settings",
+            "element": "app",
+            "action": "the account menu opens; click Security; the Security page shows",
+            "motion": "click, zoom"
+          },
+          {
+            "t_anchor": "Find two-step sign-in",
+            "element": "app",
+            "action": "scroll to the Two-step sign-in row; zoom on it",
+            "motion": "scroll, zoom"
+          },
+          {
+            "t_anchor": "click Turn on",
+            "element": "click_ring",
+            "action": "click Turn on",
+            "motion": "click"
+          }
+        ],
+        "continuity": "app holds into b08"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "chapters"
+      ],
+      "accent_on": "click_ring",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "choosing a method and the QR appearing",
+        "elements": [
+          {
+            "name": "picker",
+            "what": "a dialog listing the method Authenticator app"
+          },
+          {
+            "name": "qr",
+            "what": "qr_code inside the dialog"
+          },
+          {
+            "name": "click_ring",
+            "what": "accent2 press ring"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Choose Authenticator app",
+            "element": "picker",
+            "action": "the method dialog opens; click Authenticator app",
+            "motion": "dialog, click"
+          },
+          {
+            "t_anchor": "a QR code appears",
+            "element": "qr",
+            "action": "the QR fades in in the dialog",
+            "motion": "fade in"
+          }
+        ],
+        "continuity": "app with the QR dialog holds into b09"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "chapters",
+        "qr"
+      ],
+      "accent_on": "viewfinder",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the scan links two devices",
+        "elements": [
+          {
+            "name": "phone",
+            "what": "phone kit part, slides in to the right of the laptop"
+          },
+          {
+            "name": "viewfinder",
+            "what": "the phone's camera state framing the QR"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "open the authenticator app",
+            "element": "phone",
+            "action": "the phone slides in on its home state",
+            "motion": "slide in"
+          },
+          {
+            "t_anchor": "tap Add account",
+            "element": "phone",
+            "action": "tap Add account",
+            "motion": "tap"
+          },
+          {
+            "t_anchor": "point the camera at the code",
+            "element": "viewfinder",
+            "action": "the camera state frames the laptop's QR",
+            "motion": "state change"
+          }
+        ],
+        "continuity": "app, qr and phone hold into b10"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "chapters",
+        "qr",
+        "phone"
+      ],
+      "accent_on": "ring",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "a code that renews over time",
+        "elements": [
+          {
+            "name": "keyline",
+            "what": "a short accent2 dashed line from the QR to the phone, drawn once"
+          },
+          {
+            "name": "code",
+            "what": "the phone's code state: account row and six-digit code"
+          },
+          {
+            "name": "ring",
+            "what": "the 30 s countdown ring with an accent2 callout 30 s"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "shares a secret key once",
+            "element": "keyline",
+            "action": "the line draws QR to phone once and fades; the QR fades",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "six-digit code",
+            "element": "code",
+            "action": "the account row appears with its code; callout 6-digit code",
+            "motion": "zoom on phone"
+          },
+          {
+            "t_anchor": "about every thirty seconds",
+            "element": "ring",
+            "action": "the ring runs out and the code refreshes",
+            "motion": "countdown"
+          }
+        ],
+        "continuity": "app and phone hold into b11"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "chapters",
+        "phone"
+      ],
+      "accent_on": "click_ring",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "typing what the phone shows",
+        "elements": [
+          {
+            "name": "codebox",
+            "what": "the laptop's code field and Verify button"
+          },
+          {
+            "name": "click_ring",
+            "what": "accent2 press ring"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Type the current code",
+            "element": "codebox",
+            "action": "zoom framing code box and phone; the same six digits typed",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "click Verify",
+            "element": "click_ring",
+            "action": "click Verify; a pos tick appears",
+            "motion": "click"
+          }
+        ],
+        "continuity": "app and phone hold into b12"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "chapters",
+        "phone"
+      ],
+      "accent_on": "once_callout",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "one code used once",
+        "elements": [
+          {
+            "name": "codes",
+            "what": "a Backup codes panel with eight short mono codes"
+          },
+          {
+            "name": "once_callout",
+            "what": "an accent2 callout on one code"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next come backup codes",
+            "element": "codes",
+            "action": "the page shows the Backup codes panel; zoom in",
+            "motion": "page change, zoom"
+          },
+          {
+            "t_anchor": "Each works one time",
+            "element": "once_callout",
+            "action": "one code highlighted; callout reading one time",
+            "motion": "callout"
+          }
+        ],
+        "continuity": "app, codes and phone hold into b13"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "chapters",
+        "phone",
+        "codes"
+      ],
+      "accent_on": "vault",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "codes moving to a safe place",
+        "elements": [
+          {
+            "name": "codes_card",
+            "what": "the codes lifted as a small card"
+          },
+          {
+            "name": "vault",
+            "what": "a small password manager vault card with a lock icon"
+          },
+          {
+            "name": "it_note",
+            "what": "a small note card with an IT icon"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Keep them off the phone",
+            "element": "phone",
+            "action": "the codes card lifts; the phone gets a neg cross",
+            "motion": "lift, cross"
+          },
+          {
+            "t_anchor": "in your password manager",
+            "element": "vault",
+            "action": "the codes card settles into the vault",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "where IT says",
+            "element": "it_note",
+            "action": "the IT note arrives beside the vault",
+            "motion": "enter"
+          }
+        ],
+        "intent": "rest",
+        "continuity": "the vault card leads the handoff into b14"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "handoff"
+      },
+      "accent_on": "master_field",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the vault opening",
+        "elements": [
+          {
+            "name": "pm",
+            "what": "W.app window titled Password manager: an unlock page with one Master password field, then a vault page listing saved logins"
+          },
+          {
+            "name": "master_field",
+            "what": "the Master password field"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "an encrypted vault",
+            "element": "pm",
+            "action": "the manager window grows in, locked",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "one master password",
+            "element": "master_field",
+            "action": "zoom on the field; dots typed; unlock; the vault list shows",
+            "motion": "type, page change"
+          }
+        ],
+        "continuity": "pm holds into b15"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "pm"
+      ],
+      "accent_on": "strength",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the field growing is the advice",
+        "elements": [
+          {
+            "name": "passphrase",
+            "what": "the unlock field: a short password growing into a phrase of several words"
+          },
+          {
+            "name": "strength",
+            "what": "a strength bar under the field"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a long passphrase",
+            "element": "passphrase",
+            "action": "zoom on the unlock page; the field grows word by word; the bar fills",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "can't be recovered",
+            "element": "strength",
+            "action": "an accent2 callout reading Can't be recovered",
+            "motion": "callout"
+          }
+        ],
+        "continuity": "canvas into b16"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "canvas"
+      },
+      "accent_on": "click_ring",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "saving a login click by click",
+        "elements": [
+          {
+            "name": "site",
+            "what": "W.app browser on a generic site's sign-in (url portal.example), held to b18"
+          },
+          {
+            "name": "prompt",
+            "what": "the manager's Save prompt, a small dialog under the toolbar with a Save button"
+          },
+          {
+            "name": "click_ring",
+            "what": "accent2 press ring"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Sign in to a site as usual",
+            "element": "site",
+            "action": "the pointer types and signs in",
+            "motion": "type, click"
+          },
+          {
+            "t_anchor": "click Save",
+            "element": "prompt",
+            "action": "the prompt drops down; click Save; a small saved row slides into a vault list tag",
+            "motion": "dialog, click"
+          }
+        ],
+        "continuity": "site holds into b17"
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "site"
+      ],
+      "accent_on": "click_ring",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "generating replaces a reused password",
+        "elements": [
+          {
+            "name": "change",
+            "what": "the site's Change password page with a New password field and the manager's Generate button"
+          },
+          {
+            "name": "click_ring",
+            "what": "accent2 press ring"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "open Change password",
+            "element": "change",
+            "action": "click Change password; the form shows",
+            "motion": "click, page change"
+          },
+          {
+            "t_anchor": "click Generate",
+            "element": "click_ring",
+            "action": "zoom; click Generate; a long random string fills the field",
+            "motion": "click, fill"
+          },
+          {
+            "t_anchor": "unique to this account",
+            "element": "change",
+            "action": "callout on the filled field",
+            "motion": "callout"
+          }
+        ],
+        "continuity": "site holds into b18"
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "site"
+      ],
+      "accent_on": "url_callout",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "autofill happening on its own",
+        "elements": [
+          {
+            "name": "url_callout",
+            "what": "accent2 callout on the address bar"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Save it",
+            "element": "site",
+            "action": "click Save",
+            "motion": "click"
+          },
+          {
+            "t_anchor": "autofill types it for you",
+            "element": "site",
+            "action": "the sign-in page again; both fields fill by themselves",
+            "motion": "page change, fill"
+          },
+          {
+            "t_anchor": "only on the address",
+            "element": "url_callout",
+            "action": "zoom to the address bar; callout",
+            "motion": "zoom, callout"
+          }
+        ],
+        "continuity": "canvas into b19"
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "canvas"
+      },
+      "accent_on": "flag",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "a side by side difference",
+        "elements": [
+          {
+            "name": "real",
+            "what": "browser window left, url portal.example, fields filled"
+          },
+          {
+            "name": "fake",
+            "what": "browser window right, url p0rtal.example, fields empty"
+          },
+          {
+            "name": "flag",
+            "what": "accent2 ring on the changed letter and an accent4 warning mark on the empty fields"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A look-alike page",
+            "element": "fake",
+            "action": "both windows; the real one fills, the look-alike stays empty",
+            "motion": "enter, fill"
+          },
+          {
+            "t_anchor": "a warning sign",
+            "element": "flag",
+            "action": "zoom on the look-alike address; ring the changed letter; warning mark",
+            "motion": "zoom, mark"
+          }
+        ],
+        "continuity": "cut into b20"
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "empty_spot",
+      "intent": "hold",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "an absence held for the question",
+        "elements": [
+          {
+            "name": "app",
+            "what": "W.app company sign-in at the code step, the window centre (about x 520, w 920), held to b23"
+          },
+          {
+            "name": "empty_spot",
+            "what": "phone kit part, state missing, at the right"
+          },
+          {
+            "name": "chapters",
+            "what": "chapter pills, Lost phone active"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now your phone is gone",
+            "element": "empty_spot",
+            "action": "the dashed outline where the phone stood; the code step waits",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "What would you do first",
+            "element": "app",
+            "action": "the frame holds still through the pause",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "app, empty_spot and chapters hold into b21"
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "empty_spot",
+        "chapters"
+      ],
+      "accent_on": "path",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "each step shown done on the screen",
+        "elements": [
+          {
+            "name": "path",
+            "what": "a numbered path on the left (x 96 to 480), accent2 badges: 1 Sign in with a backup code, 2 Tell IT"
+          },
+          {
+            "name": "it_msg",
+            "what": "a dialog on the app: a message to IT being sent"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "One, sign in with a backup code",
+            "element": "path",
+            "action": "step 1 arrives; a backup code typed into the code box",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "Two, tell IT",
+            "element": "it_msg",
+            "action": "step 2 arrives; a message dialog to IT, sent",
+            "motion": "dialog, click"
+          }
+        ],
+        "continuity": "path steps 1 and 2 and app hold into b22"
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "path",
+        "chapters",
+        "empty_spot"
+      ],
+      "accent_on": "path",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the path completes on the screen",
+        "elements": [
+          {
+            "name": "newphone",
+            "what": "phone kit part, the new phone in the empty spot, scanning a QR"
+          },
+          {
+            "name": "devices",
+            "what": "a Devices table on the app with the old phone row and a Remove button, and a Sign out other sessions button"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Three, set up your new phone",
+            "element": "newphone",
+            "action": "step 3; the new phone fills the spot and scans a QR",
+            "motion": "slide in, scan"
+          },
+          {
+            "t_anchor": "Four, remove the old device",
+            "element": "devices",
+            "action": "step 4; click Remove on the old phone row",
+            "motion": "click"
+          },
+          {
+            "t_anchor": "sign out other sessions",
+            "element": "devices",
+            "action": "click Sign out other sessions",
+            "motion": "click"
+          }
+        ],
+        "continuity": "app and newphone hold into b23; path exits"
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "newphone",
+        "chapters"
+      ],
+      "accent_on": "marks",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the tempting wrong move then the right one",
+        "elements": [
+          {
+            "name": "toggle",
+            "what": "the Two-step sign-in row on the app's Security page"
+          },
+          {
+            "name": "oldphone",
+            "what": "phone kit part, crossed, at the left of the new phone"
+          },
+          {
+            "name": "marks",
+            "what": "a neg cross on the toggle pull, a pos tick on the move"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Tempted to turn two-step sign-in off",
+            "element": "toggle",
+            "action": "the pointer drags the toggle toward off",
+            "motion": "press"
+          },
+          {
+            "t_anchor": "That drops your protection",
+            "element": "marks",
+            "action": "the toggle snaps back on; a cross marks the move",
+            "motion": "mark"
+          },
+          {
+            "t_anchor": "Move it to the new phone instead",
+            "element": "oldphone",
+            "action": "the code travels from the old phone to the new; a tick",
+            "motion": "travel, mark"
+          }
+        ],
+        "continuity": "handoff into b24"
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "handoff"
+      },
+      "accent_on": "chip",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the hook replayed with the new ending",
+        "elements": [
+          {
+            "name": "app",
+            "what": "W.app company sign-in as in b02 (url signin.company.example, user Sam), held into b25"
+          },
+          {
+            "name": "chip",
+            "what": "password_chip, the leaked password"
+          },
+          {
+            "name": "phone",
+            "what": "phone kit part to the right, state code, Sam's"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back to Sam",
+            "element": "chip",
+            "action": "the window and the chip arrive",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "The same leaked password",
+            "element": "app",
+            "action": "the pointer types the chip's dots and clicks Sign in",
+            "motion": "type, click"
+          },
+          {
+            "t_anchor": "stops at the code screen",
+            "element": "chip",
+            "action": "code step; the chip stopped with a shake; spotlight on the code step; Sam's phone shows the code",
+            "motion": "shake, spotlight"
+          }
+        ],
+        "continuity": "app and phone hold into b25"
+      }
+    },
+    {
+      "beat": "b25",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "app",
+        "phone"
+      ],
+      "accent_on": "ticks",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "three actions ticked",
+        "elements": [
+          {
+            "name": "checklist",
+            "what": "a checklist card over the laptop: Turn on two-step sign-in, Store backup codes, Swap one reused password"
+          },
+          {
+            "name": "ticks",
+            "what": "pos ticks arriving per item"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Turn it on today",
+            "element": "checklist",
+            "action": "item 1 ticks",
+            "motion": "tick"
+          },
+          {
+            "t_anchor": "store your backup codes",
+            "element": "checklist",
+            "action": "item 2 ticks",
+            "motion": "tick"
+          },
+          {
+            "t_anchor": "swap one reused password",
+            "element": "ticks",
+            "action": "item 3 ticks; hold",
+            "motion": "tick"
+          }
+        ],
+        "intent": "rest",
+        "continuity": "the film ends on the ticked list"
+      }
+    }
+  ]
+}

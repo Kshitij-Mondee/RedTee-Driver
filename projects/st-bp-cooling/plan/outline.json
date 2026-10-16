@@ -1,0 +1,426 @@
+{
+  "concept": "One technical drawing of one data hall that grows as the heat is followed outward: the building section is drafted calm, heat rises from the racks, then each link of the cooling chain is drawn, named and set moving (air, air handler, water, pump, chiller, roof), with the camera leaning into detail views and back. The same sheet then shows a failure: a unit goes coral, the dashed spare starts and the flows resume. The close is the whole sheet running, spares outlined, and two questions to carry.",
+  "world": "One cyanotype drafting sheet: the building section of the example data hall at station 'section' (0,0): the hall with raised floor and rack rows on the left two thirds, the plant room with pumps and chiller below right, the roof cooler above. Detail views sit below their parent, reached by a camera move down: 'detail_air' (0,1400) for the CRAH coil and the inlet band, 'detail_plant' (2400,1400) for the chiller. The fridge is its own small sheet far left, 'fridge' (-2400,0), reached by a cut.",
+  "devices": [
+    {
+      "id": "building_section",
+      "what": "the building section sheet: one technical drawing of the example data hall that grows across the lesson (raised floor with perforated tiles, rack rows in section with fronts and backs, a CRAH row at the hall edge, the chilled water loop down to the plant room with two pumps and the chiller, a riser to the roof cooler), drafted once and held with ctx.held while the camera leans in and out; parts change state (running, failed, standby) on the spoken word",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b12",
+        "b14",
+        "b15",
+        "b17",
+        "b18",
+        "b19",
+        "b20",
+        "b21",
+        "b22",
+        "b23",
+        "b24",
+        "b25",
+        "b26"
+      ]
+    },
+    {
+      "id": "moving_heat",
+      "what": "the flows as the lesson's moving parts: cool air as narrow line arrows, heat as amber wavy marks (amber = temperature, the lesson's one measure), water travelling as marks along the pipes; each flow draws on when its link is named and keeps running quietly after",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b06",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18",
+        "b20",
+        "b21",
+        "b24",
+        "b25"
+      ]
+    },
+    {
+      "id": "detail_view",
+      "what": "a DETAIL view below the sheet, reached by a camera move down (DETAIL note, framed enlarged view): the CRAH coil, the inlet thermometer band, the chiller circuit; the fridge in section is its own sheet",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b11",
+        "b13",
+        "b16"
+      ]
+    },
+    {
+      "id": "heat_chain",
+      "what": "the chain of links lettered along the foot of the sheet: four outlined links in b04 (server, air, water, outdoors), filled out to seven and lit one by one in b18, recalled beside the two closing questions in b26",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b18",
+        "b26"
+      ]
+    },
+    {
+      "id": "spare_row",
+      "what": "N plus one as a counted row: identical units bracketed N with one more marked spare; states read as running (ink, mint tick), failed (coral outline), standby (dashed hidden outline until it starts); used for the CRAHs and then the pumps",
+      "kind": "data",
+      "beats": [
+        "b19",
+        "b20",
+        "b21",
+        "b23",
+        "b24",
+        "b25"
+      ]
+    },
+    {
+      "id": "camera_over_sheet",
+      "what": "the join material: a camera move over the drawing (down into a detail view, back up to the sheet), a cut only to the fridge and at the failure chapter",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b06",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b16",
+        "b17",
+        "b19"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "a quiet hall before the heat is seen: the sheet nearly empty, few lines"
+    },
+    {
+      "from": "b05",
+      "band": "mid",
+      "why": "the build sections fill the sheet link by link, flows running"
+    },
+    {
+      "from": "b19",
+      "band": "dark",
+      "why": "the failure chapter, the key mechanism: flows dimmed, coral on the failed unit"
+    },
+    {
+      "from": "b23",
+      "band": "mid",
+      "why": "the check: a question held, then the loop moving again"
+    },
+    {
+      "from": "b25",
+      "band": "light",
+      "why": "the lift at the close: every flow running, mint on the spares"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "teaching register on the section sheet",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "cut"
+          },
+          "line": "the hall section drafted calm: raised floor, rack rows, a centre line across the empty sheet first"
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "power lines feed every rack and amber heat marks rise from all of them at once"
+        },
+        {
+          "beat": "b03",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the heat marks gather under the hall ceiling, a dashed question of where they go"
+        }
+      ]
+    },
+    {
+      "id": "promise",
+      "treatment": "teaching: the four-link chain outlined",
+      "beats": [
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "four outlined links lettered along the foot of the sheet: server, air, water, outdoors"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "detail sheet of a fridge, then back to the building",
+      "beats": [
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "fridge",
+          "join_in": {
+            "type": "cut"
+          },
+          "line": "a fridge in section: heat arrows leave the box through the back coil into the room"
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "back to the building section, now with plant room and roof drafted, one long heat path out through the roof"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "teaching on the hall section with two detail views",
+      "beats": [
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the camera leans into the hall: rack fronts face fronts, backs face backs, aisles marked"
+        },
+        {
+          "beat": "b08",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "cool air travels under the raised floor and rises through tiles into the front aisle, labelled cold aisle"
+        },
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the air passes through the racks and leaves the backs as amber heat into the hot aisle"
+        },
+        {
+          "beat": "b10",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "warm air runs along the ceiling to the CRAH at the hall edge, outlined in cyan as it is named"
+        },
+        {
+          "beat": "b11",
+          "kind": "bespoke",
+          "station": "detail_air",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "DETAIL A: the CRAH cut open, warm air over the chilled water coil, cool air leaving under the floor"
+        },
+        {
+          "beat": "b12",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "hot air curls over the rack tops into the cold aisle, then containment panels close and the flows separate"
+        },
+        {
+          "beat": "b13",
+          "kind": "bespoke",
+          "station": "detail_air",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "DETAIL B: a server intake with a thermometer and the recommended 18 to 27 band dimensioned in amber"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "track the water loop; pump and chiller detail; recall",
+      "beats": [
+        {
+          "beat": "b14",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "the camera tracks the pipe from the CRAH coil out of the hall, the water drawn warmer"
+        },
+        {
+          "beat": "b15",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the full loop to the plant room; the pump impeller turns and water circulates round"
+        },
+        {
+          "beat": "b16",
+          "kind": "bespoke",
+          "station": "detail_plant",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "DETAIL C: the chiller cut open, warm water in, heat into its refrigerant circuit, cold water out"
+        },
+        {
+          "beat": "b17",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "the heat path climbs to the roof cooler and heat lifts off into the sky"
+        },
+        {
+          "beat": "b18",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the whole sheet; the chain at its foot grows to seven links, each lit as it is named"
+        }
+      ]
+    },
+    {
+      "id": "sec4",
+      "treatment": "teaching, darker: failure and the spare",
+      "beats": [
+        {
+          "beat": "b19",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "cut"
+          },
+          "line": "the CRAH row counted: one unit stops in coral, the units bracketed N and one dashed spare"
+        },
+        {
+          "beat": "b20",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the spare's fan spins up, its outline turns solid with a mint tick, the air flows fill the gap"
+        }
+      ]
+    },
+    {
+      "id": "sec5",
+      "treatment": "teaching: alarm, ride-through, without a spare",
+      "beats": [
+        {
+          "beat": "b21",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "a monitoring panel flags the failed unit; the cold water in the loop and buffer tank drains slowly as reserve"
+        },
+        {
+          "beat": "b22",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "a temperature readout climbs with no number and racks dim to throttled, then the picture returns to the spare running"
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "treatment": "the loop held with a question, then the answer",
+      "beats": [
+        {
+          "beat": "b23",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the plant room pumps held, one marked stopped in coral, the question lettered beside it, nothing moving"
+        },
+        {
+          "beat": "b24",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the standby pump spins up, the alarm points to the stopped one with an operator marker, water keeps circulating"
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "the whole sheet running, two questions",
+      "beats": [
+        {
+          "beat": "b25",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the camera pulls back to the whole sheet: air, water and roof heat all running, spares outlined"
+        },
+        {
+          "beat": "b26",
+          "kind": "bespoke",
+          "station": "section",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "the two questions lettered beside the drawing, the chain still running behind them"
+        }
+      ]
+    }
+  ]
+}

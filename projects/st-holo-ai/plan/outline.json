@@ -1,0 +1,217 @@
+{
+  "concept": "One calm projected console follows Priya's single question from her chat panel into the model's light: it breaks into tokens, the tokens are weighed, the next piece is scored and drawn again and again, and the same reply forks into 30 days and 60 days. Two striking moments (the shatter in b04, the fork in b14), calm briefing frames between them, and the policy sheet that stays outside the window until the payoff.",
+  "world": "Hologram console on a deep blue-teal field. Stations: desk (0,0) Priya's chat panel; model, nested inside the chat panel (zoom join in b03), the luminous model space for sec1; loop (2400,0) the generation loop for sec2, reached by a camera pan; verdict (4800,0) the two answers judged; cutoff (4800,1400) below it, the training cutoff as a detail; quiz (7200,0) the two reply cards; then a cut back to desk for the payoff.",
+  "devices": [
+    {
+      "id": "chat_panel",
+      "what": "Priya's assistant chat as a projected HUD panel (kit part chat_panel): her name tag, the question line, then reply cards; the same panel opens and closes the lesson",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b21",
+        "b22"
+      ]
+    },
+    {
+      "id": "token_row",
+      "what": "the question as indexed glowing pieces on a baseline (H.tokens), held across sec1 while it gains number tags, a window frame and weight arcs",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09"
+      ]
+    },
+    {
+      "id": "context_window",
+      "what": "a bracketed frame of light holding question, chat so far and an empty reply line, with the policy sheet (kit part policy_doc) drifting outside it in b06 and pasted inside it in b21",
+      "kind": "explain",
+      "beats": [
+        "b06",
+        "b09",
+        "b21"
+      ]
+    },
+    {
+      "id": "candidate_bars",
+      "what": "the ranked column of next-piece candidates (H.bars, bars only, no numbers) beside a growing reply line, held through sec2",
+      "kind": "data",
+      "beats": [
+        "b10",
+        "b11",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "reply_cards",
+      "what": "the two answer cards 30 days and 60 days (kit part reply_card), equally bright, returning in new states: side by side, forked, unlinked, cracked, marked check first",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b14",
+        "b16",
+        "b17",
+        "b19",
+        "b20"
+      ]
+    },
+    {
+      "id": "push_through",
+      "what": "join material: the camera pushes through the chat panel's near layer into the model (zoom join b03); a section closes with a power-down to a line and the next boots from a line (camera b10, canvas b16)",
+      "kind": "join",
+      "beats": [
+        "b03",
+        "b10",
+        "b16"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "mid",
+      "why": "the console at the desk, a calm open"
+    },
+    {
+      "from": "b03",
+      "band": "dark",
+      "why": "inside the model: a dark stage for the mechanism, light only on tokens, weights and candidates"
+    },
+    {
+      "from": "b16",
+      "band": "mid",
+      "why": "back to the briefing register for judgement"
+    },
+    {
+      "from": "b21",
+      "band": "light",
+      "why": "the lift at the close: the policy arrives, the rules rest"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s0",
+      "treatment": "briefing register at the desk station: the chat panel, the question, two equally sure replies; b03 zooms through the panel into the model",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Priya's chat panel boots from a line; her question types into it on 'When are expense claims due?'"
+        },
+        {
+          "beat": "b02",
+          "line": "Two reply cards arrive under the same question, 30 days then 60 days, equally bright"
+        },
+        {
+          "beat": "b03",
+          "line": "Zoom through the chat panel into the dark model space; the question floats ahead on one baseline"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "one held console at the model station: the question becomes tokens, numbers, a window and weights; analysis register for the shatter (b04) and the weighing (b07), briefing otherwise",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "Striking: the floating question shatters into seven glowing tokens; 'expense' visibly splits into exp and ense"
+        },
+        {
+          "beat": "b05",
+          "line": "Each token flips into a number tag, then unfolds into a faint column of digits beneath it"
+        },
+        {
+          "beat": "b06",
+          "line": "A bracketed frame closes round question, chat so far and an empty reply line; the dim policy sheet drifts outside, never entering"
+        },
+        {
+          "beat": "b07",
+          "line": "Weighted arcs run from every token to an empty next slot; the arcs from exp ense and due are thickest"
+        },
+        {
+          "beat": "b08",
+          "line": "The arcs hold; the word attention settles above them on a plate"
+        },
+        {
+          "beat": "b09",
+          "line": "Slow pull back: tokens, arcs and window float together; the reply line is still empty"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "the generation loop at the loop station, one held set from b10 to b15: reply line, candidate bars, the fork; analysis register for the loop (b11) and the fork (b14)",
+      "beats": [
+        {
+          "beat": "b10",
+          "line": "Camera pans to the loop: a ranked column of candidate first words rises beside the empty reply line, bars only"
+        },
+        {
+          "beat": "b11",
+          "line": "The top candidate flies into the reply line, the bars redraw, and the loop runs faster until an end marker closes the reply"
+        },
+        {
+          "beat": "b12",
+          "line": "A faint search box appears and is struck through; the reply line stays lit as the written source"
+        },
+        {
+          "beat": "b13",
+          "line": "The reply stops at the number slot; 30 and 60 sit at the top of the bars, close in length; silence"
+        },
+        {
+          "beat": "b14",
+          "line": "Striking: a weighted draw, then the reply line forks at the number slot into two branches ending 30 days and 60 days"
+        },
+        {
+          "beat": "b15",
+          "line": "The branches hold; a temperature dial turns low and the branches draw together, turns high and they spread; the word sampling"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "briefing register for judgement: the two cards unlinked, a hallucination, the cutoff as a detail below, then the quiz pair",
+      "beats": [
+        {
+          "beat": "b16",
+          "line": "The two answer cards side by side, equally bright, no line to any document"
+        },
+        {
+          "beat": "b17",
+          "line": "A faint crack runs through one card while its glow stays steady; hallucination settles below"
+        },
+        {
+          "beat": "b18",
+          "line": "Camera drops to a line of light that ends at a marked training cutoff; later items sit dim beyond it"
+        },
+        {
+          "beat": "b19",
+          "line": "Two reply cards: one linked by a line to a pasted policy inside a window, one floating unlinked; silence for the answer"
+        },
+        {
+          "beat": "b20",
+          "line": "The unlinked card takes the Check first tag; the linked card a lighter Glance too tag"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "treatment": "cut back to the desk: the same chat panel, the policy pasted in, the two rules resting",
+      "beats": [
+        {
+          "beat": "b21",
+          "line": "The policy sheet slides into the chat panel; a small inset of the context window shows its pieces inside the frame"
+        },
+        {
+          "beat": "b22",
+          "line": "The reply sits beside the policy page, the matching line lit; the two rules rest on plates"
+        }
+      ]
+    }
+  ]
+}

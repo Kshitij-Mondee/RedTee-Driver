@@ -1,0 +1,189 @@
+{
+  "title": "Two-step sign-in and a password manager: set up in ten minutes",
+  "performance": "at their own work account, the viewer can turn on two-step sign-in with an authenticator app, save its backup codes, save and generate a unique password in a password manager, and follow the four lost-phone steps",
+  "audience": {
+    "level": "beginner",
+    "assumed_prior": "signs in with passwords every day and uses a smartphone; has never set up an authenticator app or a password manager",
+    "why": "the brief's audience: corporate employees of any department, not IT staff",
+    "motivation": "does not want to be the account that gets broken into or locked out; mild impatience with security chores",
+    "context": "work laptop, sound on, may follow along with the phone in hand"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "a software procedure is learned by watching it done once, click by click, on one running case, then naming why each step matters",
+    "signature_move": "show the click on screen while naming it, then say in one line what that step protects"
+  },
+  "misconceptions": [
+    {
+      "belief": "a strong password is enough on its own",
+      "why_tempting": "strength is what password rules have always asked for",
+      "refuted_in": "sec1",
+      "source_anchor": "F2, F3, F4"
+    },
+    {
+      "belief": "two-step sign-in makes an account unhackable",
+      "why_tempting": "it feels like a second lock that cannot be picked",
+      "refuted_in": "sec1",
+      "source_anchor": "F7"
+    },
+    {
+      "belief": "if I lose my phone I am locked out for good",
+      "why_tempting": "the codes live on the phone",
+      "refuted_in": "sec4",
+      "source_anchor": "F11, F12, F22"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Sam's password from an old shopping site leaks; the same password opens Sam's work account. A password alone was one lock someone else could copy."
+    },
+    "promise": "two settings, a few minutes, and a leaked password stops being enough",
+    "bridge_from_prior": "sec1 starts from the sign-in page the viewer already uses every morning",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain why a password alone fails and what a second step adds",
+        "bloom": "understand",
+        "concepts": [
+          "password reuse",
+          "phishing",
+          "leaked lists",
+          "something you know plus something you have"
+        ],
+        "energy": "build",
+        "carrier": "before and after on the sign-in page",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can use an authenticator app to turn on two-step sign-in and save the backup codes",
+        "bloom": "apply",
+        "concepts": [
+          "security settings",
+          "QR code scan",
+          "6-digit time-based code",
+          "backup codes"
+        ],
+        "energy": "peak",
+        "carrier": "screencast walkthrough: laptop screen with the phone beside it",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can use a password manager to save a login and generate a unique password",
+        "bloom": "apply",
+        "concepts": [
+          "master passphrase",
+          "save login",
+          "generate password",
+          "autofill on the saved site"
+        ],
+        "energy": "build",
+        "carrier": "screencast walkthrough of a generic password manager",
+        "recap_after": false
+      },
+      {
+        "id": "sec4",
+        "goal": "the viewer can apply the lost-phone steps in order to get back in safely",
+        "bloom": "apply",
+        "concepts": [
+          "backup code sign-in",
+          "report to IT",
+          "re-enrol on the new phone",
+          "remove the old device"
+        ],
+        "energy": "rest",
+        "carrier": "a short numbered path",
+        "recap_after": true
+      }
+    ],
+    "payoff": "back to Sam: the same leaked password is typed by someone else and stops at the code screen"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec2-sec3",
+      "what": "Sam's setup, every click narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "sec4",
+      "what": "the lost-phone path: the viewer is asked for the first step before it appears"
+    },
+    {
+      "stage": "independent",
+      "where": "transfer",
+      "what": "the viewer sets it up on their own work account today"
+    }
+  ],
+  "pacing": {
+    "requested_s": 180,
+    "target_duration_s": 180,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "QR code scan",
+      "backup codes"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Where do your backup codes go? Not only on the phone."
+      },
+      {
+        "after_section": "sec4",
+        "kind": "quiz",
+        "prompt_sketch": "Your phone is gone. What is the first thing you do to get back in?",
+        "answer": "sign in with a backup code, then tell IT",
+        "tempting_wrong": "turning two-step sign-in off: that removes the protection instead of moving it to the new phone"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "turn on two-step sign-in on your work account today and store the backup codes the way IT says",
+    "replace one reused password with a generated one this week"
+  ],
+  "persona": {
+    "voice": "a calm colleague at the next desk, showing you on their own screen",
+    "delivery_notes": "steady and unhurried on clicks, slower on the QR scan and backup codes, brisk on the recap"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: Sam's leaked password opens the work account",
+      "objective": "promise: a leaked password stops being enough",
+      "recall_prior": "sec1 starts from the familiar sign-in page",
+      "present": "sections in the order you would do them",
+      "guidance": "signature move: click, then what it protects",
+      "practice": "recall prompt after sec2, quiz after sec4",
+      "feedback": "quiz answer explained with the tempting wrong move",
+      "assess": "lost-phone quiz",
+      "transfer": "set it up today on your own account"
+    },
+    "merrill": {
+      "problem_centered": "Sam's account is the running problem",
+      "activation": "the everyday sign-in page",
+      "demonstration": "click-by-click walkthroughs in sec2 and sec3",
+      "application": "faded lost-phone path and the quiz",
+      "integration": "payoff and transfer tasks"
+    },
+    "mayer": {
+      "coherence": "one person, one set of screens; no side stories",
+      "signalling": "the clicked control highlighted as it is named",
+      "redundancy": "screens show the interface and labels only; narration explains",
+      "contiguity": "each click happens as it is spoken",
+      "segmenting": "four short sections, one task each",
+      "pre_training": "sec1 names the second factor before the setup shows it"
+    },
+    "arcs": {
+      "attention": "a leak the viewer recognises",
+      "relevance": "their own work account",
+      "confidence": "every click shown before anything is asked",
+      "satisfaction": "the payoff: the attacker stops at the code screen"
+    },
+    "bloom_path": "understand -> apply -> apply -> apply"
+  },
+  "series": null,
+  "flags": []
+}

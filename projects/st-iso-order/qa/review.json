@@ -1,0 +1,12 @@
+{
+  "findings": [
+    {
+      "beat": "b14",
+      "file": "scenes/b14.js",
+      "fix": "In scenes/b14.js, move the departure_screen label up to y=510 so its baseline and leader clear the top edge of the departure screen.",
+      "severity": "minor",
+      "problem": "At b14 settled (101.47s), the text label 'run on a schedule' touches and crosses the top frame of the departure screen."
+    }
+  ],
+  "verdict": "ship"
+}

@@ -30,3 +30,32 @@ Setup:
   (1.74 s is still short; at 60 fps 1.78 s is short). Deviation from operator-only: logged here and with `loom note`.
 - The other three runs were not stopped. They meet the relaxed rule the same as before or better.
 - Resumed with `py -m loom shuttle resume st-sc-2fa --budget 30 --approve-as ...`.
+
+## 2026-10-16 16:35: all four finished (every phase accepted)
+Each run took between 1 h 24 min and 2 h 4 min of wall clock.
+
+| lesson | finished | length | cost | calls |
+| --- | --- | --- | --- | --- |
+| st-holo-ai | 15:55 | 3:15 | $9.79 | 415 |
+| st-sc-2fa | 16:13 (after the caption-hold stop and resume) | 3:13 | $12.42 | 682 |
+| st-bp-cooling | 16:15 | 3:13 | $13.31 | 478 |
+| st-iso-order | 16:35 | 3:09 | $14.70 | 654 |
+
+Total: $50.22.
+
+The orchestrator's look at the films (contact sheets every 8 s, `study/`, plus full-size frames):
+- **isometric** (about 7): rich, readable dioramas (order station, warehouse cutaway, hub, depot), and one order
+  followed through. Flaws: the lamp prop is as big as a shelf; a building corner covers the chapter label at 1:08;
+  some wide shots shrink labels.
+- **screencast** (about 7): a real walkthrough (browser, QR code, a phone authenticator with a 30 s timer, backup
+  codes, password manager, generate and save) that teaches clearly. Flaws: empty space in the browser panes; a
+  truncated "Security..." nav item; small UI text in whole-screen shots. No code, terminal or page regions were needed.
+- **blueprint** (about 6.5 to 7): the cyanotype sheet and the drafting look work; the plant diagram builds link by
+  link, with detail sheets. Flaws: the plant layout repeats for most of the film; labels in the wide shots are tiny;
+  the wow calls appear (`extrude`, `mechanism`, `hero`, `icon` in 5 scenes) but the film reads as one diagram.
+- **hologram** (about 4.5): it fell back to flat boxed panels with brackets on a dark field, much empty space and no
+  hero moment. It used `H.tokens`, `H.arcs`, `H.stage` and `H.trace`, but no `hero3d` and no `H.object`: a hero needs a
+  storyboard `hero3d` entry, and nothing in planning asks for one. This is the direction gap of
+  `docs/strategy/2026-10-16-style-direction.md`: the engines can do it, the planners don't know when to.
+
+Not verified: audio by ear; whole films watched in real time (only sampled frames).
