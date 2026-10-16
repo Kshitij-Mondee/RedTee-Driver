@@ -1,0 +1,238 @@
+{
+  "topic": "Where the heat goes: how AI data centres keep servers cool (airflow, hot and cold aisles, liquid cooling, PUE)",
+  "scope_note": "Sources fetched and read on 2026-10-08: ENERGY STAR (US EPA) data centre pages 'Move to a Hot Aisle/Cold Aisle Layout', 'Manage Airflow for Cooling Efficiency' and 'Utilize Containment/Enclosures'; Wikipedia 'Power usage effectiveness' (which cites The Green Grid's PUE white paper and ISO/IEC 30134-2:2016). For the coolant distribution unit, only vendor product pages were reachable in a web search (nVent, Motivair, Vertiv, Airedale); they agree on the two-loop design, so it is carried as mainstream with a caveat, and ASHRAE TC 9.9's liquid-cooling guidance was NOT read in this session. Physics facts (energy becomes heat; liquids carry more heat than air per volume) are textbook and carry no web source. Deliberately no rack wattages, temperatures, savings percentages or company PUE figures: the ones found are dated, vendor-sourced or site-specific.",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Almost all of the electricity a server uses ends up as heat, and that heat has to be carried away for the server to keep running.",
+      "terms": [
+        "heat load"
+      ],
+      "reference_hint": "Conservation of energy; standard data centre engineering texts"
+    },
+    {
+      "id": "F2",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Typical rack servers pull cool air in through the front and push warm exhaust air out of the back.",
+      "terms": [
+        "intake",
+        "exhaust"
+      ],
+      "reference_hint": "ENERGY STAR, Move to a Hot Aisle/Cold Aisle Layout (fronts are the cold air intakes, backs are the hot air exhausts)",
+      "caveat": "Some network gear breathes side to side; the lesson speaks of typical servers."
+    },
+    {
+      "id": "F3",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "In a hot aisle and cold aisle layout, rows of racks alternate so that server fronts face each other across a cold aisle and server backs face each other across a hot aisle.",
+      "terms": [
+        "hot aisle",
+        "cold aisle"
+      ],
+      "reference_hint": "ENERGY STAR, Move to a Hot Aisle/Cold Aisle Layout"
+    },
+    {
+      "id": "F4",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Cooling units deliver cool air to the cold aisle, take in the warm air rising from the hot aisle, remove its heat and send it back out cool.",
+      "terms": [
+        "cooling unit",
+        "CRAC",
+        "supply air",
+        "return air"
+      ],
+      "reference_hint": "ENERGY STAR, Move to a Hot Aisle/Cold Aisle Layout (CRAC supply through floor tiles, hot exhaust returns to CRAC intakes)"
+    },
+    {
+      "id": "F5",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "The heat collected by the cooling system is finally released outside the building, usually through a water loop and outdoor equipment.",
+      "terms": [
+        "heat rejection"
+      ],
+      "reference_hint": "Standard building services practice; ENERGY STAR containment page mentions chilled water and economizers",
+      "caveat": "The outdoor equipment varies by site (chillers, cooling towers, dry coolers); the lesson names none as the rule."
+    },
+    {
+      "id": "F6",
+      "kind": "definition",
+      "confidence": "established",
+      "statement": "Recirculation is warm exhaust air mixing back into the cool air that IT equipment draws in at its front.",
+      "terms": [
+        "recirculation"
+      ],
+      "reference_hint": "ENERGY STAR, Manage Airflow for Cooling Efficiency ('the mixing of hot exhaust air with the cold intake of the IT equipment')"
+    },
+    {
+      "id": "F7",
+      "kind": "caution",
+      "confidence": "established",
+      "statement": "If every row faces the same way, each row breathes in the exhaust of the row in front of it, so inlet air gets warmer row by row and the room ends up over-cooled to compensate, which wastes energy.",
+      "reference_hint": "ENERGY STAR, Move to a Hot Aisle/Cold Aisle Layout ('What happens if you don't')"
+    },
+    {
+      "id": "F8",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "Blanking panels cover empty slots in a rack so that cool air goes through the equipment instead of around it, which keeps server inlet air cooler.",
+      "terms": [
+        "blanking panel"
+      ],
+      "reference_hint": "ENERGY STAR, Manage Airflow for Cooling Efficiency (blanking panels)",
+      "caveat": "State the direction only; the savings figures on that page come from secondary or vendor sources and are not carried."
+    },
+    {
+      "id": "F9",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Even with hot and cold aisles, warm exhaust can still spill over the tops and around the ends of rows into the cold aisle.",
+      "reference_hint": "ENERGY STAR, Utilize Containment/Enclosures ('Good, but you can do better')"
+    },
+    {
+      "id": "F10",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "Containment adds physical barriers such as doors, roof panels or curtains that enclose either the cold aisle or the hot aisle, so supply air and exhaust air cannot mix.",
+      "terms": [
+        "containment",
+        "hot aisle containment",
+        "cold aisle containment"
+      ],
+      "reference_hint": "ENERGY STAR, Utilize Containment/Enclosures"
+    },
+    {
+      "id": "F11",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "statement": "Racks of AI accelerator servers draw far more power than racks of typical servers, so each rack gives off far more heat for the cooling to remove.",
+      "terms": [
+        "accelerator",
+        "GPU",
+        "rack density"
+      ],
+      "reference_hint": "ENERGY STAR, Manage Airflow for Cooling Efficiency (high-density racks draw many times the power of earlier racks)",
+      "caveat": "Say it qualitatively. Per-rack figures vary widely by hardware and date and none is approved here; the cited page speaks of high-density racks in general."
+    },
+    {
+      "id": "F12",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Water and water-based coolants carry far more heat for the same volume than air does, which is why liquid can cool parts that air struggles to.",
+      "reference_hint": "Thermophysical properties of water and air (heat capacity per volume); engineering textbooks"
+    },
+    {
+      "id": "F13",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "In direct-to-chip liquid cooling, a cold plate, a metal block with channels for coolant, sits on top of the processor, and coolant flowing through it carries the chip's heat away.",
+      "terms": [
+        "direct-to-chip",
+        "cold plate",
+        "coolant"
+      ],
+      "reference_hint": "Wikipedia, Computer cooling (water-cooled cold plates in direct contact with chip packages); consistent with CDU vendor pages"
+    },
+    {
+      "id": "F14",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "statement": "Cold plates take heat from the hottest chips, but the other parts of a server are usually still cooled by air, so a liquid-cooled room still needs some airflow.",
+      "reference_hint": "General description of direct-to-chip systems in vendor and industry material",
+      "caveat": "How much heat goes to liquid versus air depends on the server design; give no share."
+    },
+    {
+      "id": "F15",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "statement": "A coolant distribution unit, or CDU, pumps coolant around the loop that serves the racks and keeps that loop separate from the facility water loop, passing heat between them through a heat exchanger without the two liquids ever mixing.",
+      "terms": [
+        "coolant distribution unit",
+        "CDU",
+        "heat exchanger",
+        "technology cooling loop",
+        "facility water loop"
+      ],
+      "reference_hint": "Vendor product descriptions found 2026-10-08 (nVent, Motivair, Vertiv, Airedale); loop terms follow ASHRAE TC 9.9 usage (not read this session)",
+      "caveat": "Designs vary: a CDU may sit in a rack or a row, and some reject heat to room air instead of facility water. Describe the common liquid-to-liquid arrangement as typical, not universal."
+    },
+    {
+      "id": "F16",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "statement": "The separate rack loop lets the CDU keep the coolant that reaches the cold plates clean and at a controlled flow and temperature.",
+      "reference_hint": "Vendor product descriptions (filtration, flow and temperature control), 2026-10-08",
+      "caveat": "A design purpose described by suppliers; keep it general."
+    },
+    {
+      "id": "F17",
+      "kind": "definition",
+      "confidence": "established",
+      "statement": "Power usage effectiveness, or PUE, is the total energy a data centre facility uses divided by the energy that reaches its IT equipment.",
+      "terms": [
+        "PUE",
+        "power usage effectiveness",
+        "IT equipment energy"
+      ],
+      "reference_hint": "The Green Grid, PUE and DCiE white paper; ISO/IEC 30134-2:2016; read via Wikipedia, Power usage effectiveness"
+    },
+    {
+      "id": "F18",
+      "kind": "definition",
+      "confidence": "established",
+      "statement": "A PUE of 1.0 is the ideal floor: every unit of energy would go to IT equipment and none to cooling, lighting or power losses, so real facilities score above it.",
+      "numbers": [
+        "1.0"
+      ],
+      "reference_hint": "Wikipedia, Power usage effectiveness ('An ideal PUE is 1.0'), following The Green Grid definition"
+    },
+    {
+      "id": "F19",
+      "kind": "history",
+      "confidence": "established",
+      "statement": "PUE was developed and promoted by The Green Grid, an industry consortium, and was later published as an international ISO/IEC standard.",
+      "terms": [
+        "The Green Grid"
+      ],
+      "reference_hint": "Wikipedia, Power usage effectiveness; ISO/IEC 30134-2:2016"
+    },
+    {
+      "id": "F20",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "statement": "PUE measures the overhead around the IT equipment, not how useful or efficient the computing itself is, and it does not account for the local climate.",
+      "reference_hint": "Wikipedia, Power usage effectiveness (criticisms; Brady et al. 2013; Yuventi and Mehdizadeh 2013)",
+      "caveat": "Use it to stop PUE being read as a green score; do not dwell on the critique."
+    },
+    {
+      "id": "F21",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "statement": "Cooling is usually the largest single part of the energy a data centre uses on top of its IT equipment.",
+      "reference_hint": "Wikipedia, Power usage effectiveness (citing Yuventi and Mehdizadeh 2013)",
+      "caveat": "Varies by climate and design; give no share or percentage."
+    }
+  ],
+  "not_claimed": [
+    "any kilowatts-per-rack figure for AI or ordinary racks (dated and vendor-sourced; F11 stays qualitative)",
+    "any data centre temperature or recommended inlet temperature range",
+    "savings percentages for blanking panels, aisle layouts or containment",
+    "any company's or site's PUE figure, or an industry-average PUE",
+    "shares of world or national electricity used by data centres or by AI",
+    "that liquid cooling uses no energy or no water, or that it removes the need for air cooling",
+    "that PUE measures carbon, greenness or how efficient the computing is",
+    "that data centres are kept freezing cold",
+    "that immersion cooling is standard in AI data centres",
+    "that hot aisle containment is always better than cold aisle containment"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (go ahead, 2026-10-08)",
+    "note": ""
+  }
+}

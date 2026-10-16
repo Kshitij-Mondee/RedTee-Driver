@@ -1,0 +1,12 @@
+OK  check_a_snapshot_compose_never_counts_as_the_compose
+    mutation (a snapshot compose marks compose done): FAIL AssertionError: ('done', False)
+    restored: PASS a snapshot compose leaves compose pending (no mix); the full compose marks it done and writes audio/mix.wav
+OK  check_a_seam_between_worlds_takes_the_styles_join
+    mutation (the seam is always a fade (R-49)): FAIL AssertionError: 
+    restored: PASS 12 seam substitution(s) take flat-cosmos's wipe; cinematic fades, corporate cuts; the storyboard's dip stays
+OK  check_a_timeout_ends_the_call_even_when_a_grandchild_holds_the_pipe
+    mutation (plain subprocess.run): FAIL AssertionError: the timeout surfaced after 20.1 s
+    restored: PASS timeout at 2 s surfaced after 2.1 s (the grandchild would have held it 20 s); a normal call returns
+--  primitive_runtime_joins_never_hold_a_blank_frame: red on a runtime copy with the old cover curve and lead (LOOM_TEST_RUNTIME): dip opacity 0.9996, 1, 1, 1 at 0.40 to 0.50; first element after a cut at 10.9 s
+
+3 of 3 red with the mutation and green restored

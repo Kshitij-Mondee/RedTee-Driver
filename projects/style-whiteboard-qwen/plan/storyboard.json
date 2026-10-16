@@ -1,0 +1,1093 @@
+{
+  "title": "Meetings that end with decisions",
+  "style": "whiteboard",
+  "concept": "One long trainer's whiteboard. Sam's meeting is drawn and redrawn as the three moves are applied: a checklist (Before, During, Close) in the top-right corner of every board fills with ticks as each move lands, and the payoff returns to the same table where the hook began.",
+  "story": {
+    "cast": [
+      {
+        "name": "Sam",
+        "member": "man",
+        "skin": 1,
+        "cloth": "accent2",
+        "role": "runs the weekly project meeting; the running character"
+      },
+      {
+        "name": "Priya",
+        "member": "elder_woman",
+        "skin": 2,
+        "cloth": "surface",
+        "role": "the decision owner"
+      },
+      {
+        "name": "Dev",
+        "member": "elder_man",
+        "skin": 0,
+        "cloth": "surface",
+        "role": "teammate"
+      },
+      {
+        "name": "Lena",
+        "member": "woman",
+        "skin": 3,
+        "cloth": "surface",
+        "role": "teammate; picks up the parked item"
+      }
+    ]
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "table",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "presenter",
+        "x": 0,
+        "y": 1400
+      },
+      {
+        "id": "invite",
+        "x": 2400,
+        "y": 0
+      },
+      {
+        "id": "meeting",
+        "x": 4800,
+        "y": 0
+      },
+      {
+        "id": "close",
+        "x": 7200,
+        "y": 0
+      },
+      {
+        "id": "quiz",
+        "x": 7200,
+        "y": 1400
+      },
+      {
+        "id": "apply",
+        "x": 9600,
+        "y": 0
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "step_list",
+      "what": "the three-step checklist Before / During / Close in the top-right corner of every board, a rough tick box per step, the current step in ink and the others muted, each box ticked by hand as its move lands (kit part step_list)",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "invite_card",
+      "what": "Sam's meeting invite drawn as a rough card: its topic line struck through and rewritten as a question, its guest row trimmed; returns blank as the learner's agenda (kit part invite_card)",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b14"
+      ]
+    },
+    {
+      "id": "team_bubbles",
+      "what": "the team at the table with speech bubbles: different answers in b02, one shared line after the summary is sent in b12 (kit part team_table)",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "decision_line",
+      "what": "the written decision in three parts (what, who, by when), each underlined as it is read back; folded into the email and written on the payoff table (kit part decision_line)",
+      "kind": "explain",
+      "beats": [
+        "b09",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "board_pan",
+      "what": "one long board: a calm camera pan to the next part of the board within a section, a field2 wipe at a section turn",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b07",
+        "b09",
+        "b12",
+        "b14"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "an open board: ink only, the accent only on the question marks"
+    },
+    {
+      "from": "b04",
+      "band": "light",
+      "why": "the board fills as each move is drawn; one marker colour per board on the stressed thing; ticks in ink"
+    },
+    {
+      "from": "b12",
+      "band": "light",
+      "why": "the turn: the bubbles become one; in b13 the last tick lands in green (pos), the only green of the film"
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "why": "a clean board for the learner's own agenda"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "step_list",
+        "what": "The trainer's three-step checklist, about 380 x 300 px, for the top-right corner of a board (x 1420 to 1800, y 96 to 400). Three rows: a rough tick box (about 56 px) then the word Before / During / Close in Patrick Hand lead. Opts: current (0,1,2 or -1: that row's word in ink, the others muted), ticked (array of three booleans: drawn already ticked). Methods: draw(t) draws boxes then writes words in order; appear() shows it complete at once (for a board the camera pans onto); tick(i, t, {tone}) draws a hand tick in the box (ink by default, 'pos' only in b13); setCurrent(i, t) moves the ink from one word to the next (muted to ink fade).",
+        "beats": [
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "invite_card",
+        "what": "Sam's meeting invite as a rough hand-drawn card, about 900 x 600 px: a small calendar icon and the header word 'Invite' (or 'Agenda' in blank mode), a title line, and below it a guest row of six Lucide user pictograms at marker weight. Methods: draw(t); setTitle(text, t) writes the title line; strike(t) draws an ink strike-through across the title; rewrite(text, t) writes the replacement in Caveat title size just under the struck line; guests(t) draws the six pictograms one after another; markGuest(i, label, t) writes a label under one pictogram; crossGuest(i, t) draws an ink cross over one; envelope(t) draws a Lucide mail icon to the right of the card with a hand arrow from the crossed guests to it; blank mode draws empty ruled lines with a '?' slot on the first line. No accent inside the part: scenes add their one accent mark.",
+        "beats": [
+          "b04",
+          "b05",
+          "b06",
+          "b14"
+        ]
+      },
+      {
+        "id": "team_table",
+        "what": "The meeting table seen from the front: one long hand line for the table top and four chair backs, with the cast seated behind it as Open Peeps busts by cast look (Sam, Priya, Dev, Lena, left to right, about 300 px each, bust bottoms ON the table line, kit.peep with the cast's member, skin and cloth). Methods: draw(t) draws table and chairs; arrive(t) fades the four people in (stagger); leave(t) fades them out leaving empty chairs; nameTag(i, text, t) writes a name under a person; bubble(i, content, t) draws a rough speech bubble above one person with short text (or a scribble when content is null); clearBubbles(t); emotion per person on call (neutral, happy, explaining). People are never drawn from shapes.",
+        "beats": [
+          "b01",
+          "b02",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "decision_line",
+        "what": "One written decision in three parts on one line: 'Pilot ships in June' | 'Priya' | 'by Friday', Patrick Hand lead, ink, about 1100 px wide (a compact size about 700 px for the email and the table). Methods: write(t) writes the parts left to right; underline(i, t) draws a hand underline under part i; label(i, text, t) writes a muted label under part i (What, Who, By when); fold(t) shrinks it (for the email).",
+        "beats": [
+          "b09",
+          "b12",
+          "b13"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "section": "hook",
+      "kind": "bespoke",
+      "station": "table",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "question_marks",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "the meeting table",
+      "design": {
+        "treatment": "the meeting drawn as it happens, then emptied: the absence is the hook",
+        "why_motion": "people leaving the table and question marks appearing over the empty chairs is the problem itself",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js (draw on the word, one accent)"
+        ],
+        "elements": [
+          {
+            "name": "table",
+            "what": "kit team_table: table line, four chairs, the four cast busts, two scribble bubbles"
+          },
+          {
+            "name": "decided_word",
+            "what": "'Decided?' written over the left of the table"
+          },
+          {
+            "name": "who_word",
+            "what": "'Who?' written over the right of the table"
+          },
+          {
+            "name": "question_marks",
+            "what": "two large accent question marks over the empty chairs"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "An hour of good discussion",
+            "element": "table",
+            "action": "table line and chairs drawn, the four people fade in, two scribble bubbles appear",
+            "motion": "draw, reveal"
+          },
+          {
+            "t_anchor": "everyone leaves",
+            "element": "table",
+            "action": "the people fade out, bubbles go, chairs stay empty",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "What was decided",
+            "element": "decided_word",
+            "action": "'Decided?' written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Who does what",
+            "element": "who_word",
+            "action": "'Who?' written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Nobody can say",
+            "element": "question_marks",
+            "action": "two large question marks drawn in accent over the empty chairs",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "b02 keeps the table element (table and chairs)"
+      }
+    },
+    {
+      "beat": "b02",
+      "section": "hook",
+      "kind": "bespoke",
+      "station": "table",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "table"
+      ],
+      "accent_on": "sam_tag",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "Sam's team at the table",
+      "design": {
+        "treatment": "rewind to Sam's meeting: the same table fills again, then each person remembers something different",
+        "why_motion": "bubbles appearing one by one with different answers shows the mismatch",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js"
+        ],
+        "elements": [
+          {
+            "name": "table",
+            "what": "held from b01; the four people fade in again"
+          },
+          {
+            "name": "sam_tag",
+            "what": "'Sam' written under Sam with an accent underline"
+          },
+          {
+            "name": "bubbles",
+            "what": "four speech bubbles: 'May', 'June', '?', a scribble"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Sam's weekly project meeting",
+            "element": "sam_tag",
+            "action": "the four people fade in again; 'Sam' written under Sam with an accent underline",
+            "motion": "reveal, unmask"
+          },
+          {
+            "t_anchor": "Ask around after",
+            "element": "bubbles",
+            "action": "a bubble above each person, one after another",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "remembers it differently",
+            "element": "bubbles",
+            "action": "board rests on four different bubbles",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "takes table from b01; b01's words and question marks leave first"
+      }
+    },
+    {
+      "beat": "b03",
+      "section": "promise",
+      "kind": "avatar",
+      "station": "presenter",
+      "join_in": {
+        "type": "cut"
+      },
+      "props": {
+        "title": "Three moves fix it",
+        "card": [
+          "Before",
+          "During",
+          "Close"
+        ]
+      }
+    },
+    {
+      "beat": "b04",
+      "section": "S1",
+      "kind": "bespoke",
+      "station": "invite",
+      "join_in": {
+        "type": "wipe",
+        "dir": "right"
+      },
+      "accent_on": "subject_circle",
+      "shot": {
+        "size": "medium"
+      },
+      "subject": "Sam's meeting invite",
+      "design": {
+        "treatment": "Sam's invite drawn as a card with only a topic line; the checklist starts on the board",
+        "why_motion": "the card is drawn as named so the eye lands on its one weak line",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "kit step_list, top right, Before current"
+          },
+          {
+            "name": "invite",
+            "what": "kit invite_card with title 'Pilot update'"
+          },
+          {
+            "name": "subject_circle",
+            "what": "accent circle round 'Pilot update'"
+          },
+          {
+            "name": "subject_note",
+            "what": "muted note 'a subject' beside it"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Before",
+            "element": "steps",
+            "action": "the checklist drawn top right, Before in ink, During and Close muted",
+            "motion": "draw, unmask"
+          },
+          {
+            "t_anchor": "Sam's invite says",
+            "element": "invite",
+            "action": "the invite card outline, calendar icon and header drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Pilot update",
+            "element": "invite",
+            "action": "title line 'Pilot update' written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "That's a subject",
+            "element": "subject_circle",
+            "action": "accent circle around 'Pilot update'",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "not a decision",
+            "element": "subject_note",
+            "action": "muted note 'a subject' written beside it",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "b05 keeps steps and invite"
+      }
+    },
+    {
+      "beat": "b05",
+      "section": "S1",
+      "kind": "bespoke",
+      "station": "invite",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "steps",
+        "invite"
+      ],
+      "accent_on": "question_underline",
+      "shot": {
+        "size": "medium"
+      },
+      "subject": "the invite's title line",
+      "design": {
+        "treatment": "the correction is a strike-through and a rewrite, never an erase",
+        "why_motion": "watching the topic struck and the question written is the move",
+        "references": [
+          "docs/styles/guides/whiteboard.md s6 (corrections are struck, never erased)"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "held"
+          },
+          {
+            "name": "invite",
+            "what": "held; strike, rewrite 'May or June?', guest row of six pictograms"
+          },
+          {
+            "name": "question_underline",
+            "what": "accent underline under 'May or June?'"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Write the decision as a question",
+            "element": "invite",
+            "action": "ink strike through 'Pilot update'",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "May or June",
+            "element": "invite",
+            "action": "'May or June?' written in Caveat under the struck line",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "May or June",
+            "element": "question_underline",
+            "action": "accent underline under it",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "people come ready to answer",
+            "element": "invite",
+            "action": "the guest row of six pictograms drawn on the card",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "b04's circle and note leave; b06 keeps steps and invite"
+      }
+    },
+    {
+      "beat": "b06",
+      "section": "S1",
+      "kind": "bespoke",
+      "station": "invite",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "steps",
+        "invite"
+      ],
+      "accent_on": "owner_circle",
+      "shot": {
+        "size": "medium"
+      },
+      "subject": "the invite's guest row",
+      "design": {
+        "treatment": "the guest row trimmed to who the decision needs",
+        "why_motion": "labels, crosses and an arrow to the envelope show who stays and who gets the notes",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "held; Before gets its ink tick"
+          },
+          {
+            "name": "invite",
+            "what": "held; labels, crosses, envelope"
+          },
+          {
+            "name": "owner_circle",
+            "what": "accent circle round the first pictogram"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "whoever owns that decision",
+            "element": "owner_circle",
+            "action": "accent circle round the first pictogram, 'Owner' written under it",
+            "motion": "draw, unmask"
+          },
+          {
+            "t_anchor": "can't be made without",
+            "element": "invite",
+            "action": "'Needed input' written under the second pictogram",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Everyone else gets the notes",
+            "element": "invite",
+            "action": "the other four crossed in ink, a hand arrow to an envelope icon beside the card",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "the notes",
+            "element": "steps",
+            "action": "Before ticked in ink",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "the camera pans on to the meeting"
+      }
+    },
+    {
+      "beat": "b07",
+      "section": "S2",
+      "kind": "bespoke",
+      "station": "meeting",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "parked_name",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "Sam at the meeting board",
+      "design": {
+        "treatment": "inside Sam's meeting: Sam at the board with the question written, a side topic parked in a corner box",
+        "why_motion": "the side topic drifting in and being written into the corner shows steering",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js (person over a desk line)"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "kit step_list shown complete with Before ticked; During turns ink"
+          },
+          {
+            "name": "sam",
+            "what": "Sam's bust (explaining), left third"
+          },
+          {
+            "name": "desk",
+            "what": "a hand desk line under Sam"
+          },
+          {
+            "name": "question",
+            "what": "'May or June?' in Caveat across the top centre"
+          },
+          {
+            "name": "side_bubble",
+            "what": "a bubble with 'side topic'"
+          },
+          {
+            "name": "parking_lot",
+            "what": "a box bottom right headed 'Parking lot' with 'side topic' inside"
+          },
+          {
+            "name": "parked_name",
+            "what": "'Lena' in accent beside the parked item"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "During",
+            "element": "steps",
+            "action": "During turns ink",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "Open by saying",
+            "element": "sam",
+            "action": "Sam fades in over the desk line",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "the question again",
+            "element": "question",
+            "action": "'May or June?' written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "A side topic comes up",
+            "element": "side_bubble",
+            "action": "bubble drawn near the question",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "in a corner of the board",
+            "element": "parking_lot",
+            "action": "box drawn bottom right, 'Parking lot' and 'side topic' written; the bubble leaves",
+            "motion": "draw, unmask"
+          },
+          {
+            "t_anchor": "with a name",
+            "element": "parked_name",
+            "action": "'Lena' written in accent",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "b08 keeps steps, sam, desk, question, parking_lot"
+      }
+    },
+    {
+      "beat": "b08",
+      "section": "S2",
+      "kind": "bespoke",
+      "station": "meeting",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "steps",
+        "sam",
+        "desk",
+        "question",
+        "parking_lot"
+      ],
+      "accent_on": "priya_circle",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "Priya as the one who decides",
+      "design": {
+        "treatment": "the decision rule made visible: the group's arrows point to one person",
+        "why_motion": "arrows converging on Priya and the circle around her are the rule",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js (circle the one that matters)"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "held; During ticked"
+          },
+          {
+            "name": "sam",
+            "what": "held"
+          },
+          {
+            "name": "desk",
+            "what": "held"
+          },
+          {
+            "name": "question",
+            "what": "held"
+          },
+          {
+            "name": "parking_lot",
+            "what": "held (with its name)"
+          },
+          {
+            "name": "group",
+            "what": "three small user pictograms and hand arrows to Priya"
+          },
+          {
+            "name": "priya",
+            "what": "Priya's bust centre right on the desk line"
+          },
+          {
+            "name": "priya_circle",
+            "what": "accent circle round Priya"
+          },
+          {
+            "name": "priya_words",
+            "what": "'Priya decides' written under her"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "say how it's decided",
+            "element": "group",
+            "action": "three small user pictograms drawn under the question",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "who calls it",
+            "element": "priya",
+            "action": "Priya fades in centre right on the desk line",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "after hearing the group",
+            "element": "group",
+            "action": "hand arrows from the pictograms to Priya",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Priya decides",
+            "element": "priya_circle",
+            "action": "accent circle round Priya",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Priya decides",
+            "element": "priya_words",
+            "action": "'Priya decides' written under her",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "the group",
+            "element": "steps",
+            "action": "During ticked in ink",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "the camera pans on to the close board"
+      }
+    },
+    {
+      "beat": "b09",
+      "section": "S3",
+      "kind": "bespoke",
+      "station": "close",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "underlines",
+      "shot": {
+        "size": "medium"
+      },
+      "subject": "the decision line being read back",
+      "design": {
+        "treatment": "the read-back as the decision line underlined part by part as Sam speaks",
+        "why_motion": "each underline lands on its spoken word: What, Who, By when",
+        "references": [
+          "scenes_examples/style_whiteboard_handover.js"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "kit step_list complete with two ticks; Close turns ink"
+          },
+          {
+            "name": "sam",
+            "what": "Sam's bust left over a desk line"
+          },
+          {
+            "name": "desk",
+            "what": "desk line"
+          },
+          {
+            "name": "decision",
+            "what": "kit decision_line written centre"
+          },
+          {
+            "name": "underlines",
+            "what": "three accent underlines with labels What, Who, By when"
+          },
+          {
+            "name": "correct_note",
+            "what": "muted note 'correct it now' with a short hand arrow"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "At the close",
+            "element": "steps",
+            "action": "Close turns ink",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "read each decision back",
+            "element": "decision",
+            "action": "Sam fades in; the decision line written",
+            "motion": "reveal, unmask"
+          },
+          {
+            "t_anchor": "What",
+            "element": "underlines",
+            "action": "underline under 'Pilot ships in June', label 'What'",
+            "motion": "draw, unmask"
+          },
+          {
+            "t_anchor": "who owns it",
+            "element": "underlines",
+            "action": "underline under 'Priya', label 'Who'",
+            "motion": "draw, unmask"
+          },
+          {
+            "t_anchor": "by when",
+            "element": "underlines",
+            "action": "underline under 'by Friday', label 'By when'",
+            "motion": "draw, unmask"
+          },
+          {
+            "t_anchor": "correct it in the room",
+            "element": "correct_note",
+            "action": "muted note with a short hand arrow to the line",
+            "motion": "unmask, draw"
+          }
+        ],
+        "continuity": "the camera pans down to the check"
+      }
+    },
+    {
+      "beat": "b10",
+      "section": "S3",
+      "kind": "template",
+      "station": "quiz",
+      "join_in": {
+        "type": "camera"
+      },
+      "template": "quiz.question",
+      "props": {
+        "kicker": "Quick check",
+        "question": "Which line is a decision?",
+        "say_question": "Which line is a decision?",
+        "options": [
+          {
+            "text": "Discussed pilot timeline",
+            "say": "Discussed the pilot timeline"
+          },
+          {
+            "text": "June. Priya. Friday.",
+            "say": "pilot ships in June"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b11",
+      "section": "S3",
+      "kind": "template",
+      "station": "quiz",
+      "join_in": {
+        "type": "continue"
+      },
+      "template": "quiz.answer",
+      "props": {
+        "question": "Which line is a decision?",
+        "options": [
+          {
+            "text": "Discussed pilot timeline"
+          },
+          {
+            "text": "June. Priya. Friday."
+          }
+        ],
+        "answer": 1,
+        "say_answer": "The second",
+        "tempting": 0,
+        "why_not": "It only names a topic",
+        "say_why_not": "The first only names a topic",
+        "explanation": "A decision says what, who, and by when.",
+        "say_explanation": "A decision says what"
+      }
+    },
+    {
+      "beat": "b12",
+      "section": "S3",
+      "kind": "bespoke",
+      "station": "table",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "sent_today",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "the written summary reaching the team",
+      "design": {
+        "treatment": "callback to b02: the written summary reaches everyone and the four bubbles become one",
+        "why_motion": "the email travelling to each person and the bubbles changing to the same line is the outcome",
+        "references": [
+          "b02 of this lesson (callback)"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "kit step_list complete with two ticks, Close in ink"
+          },
+          {
+            "name": "table",
+            "what": "kit team_table with the four people seated, as in b02"
+          },
+          {
+            "name": "email",
+            "what": "the decision line folded into a hand-drawn envelope above the table, and four hand arrows to the people"
+          },
+          {
+            "name": "sent_today",
+            "what": "'Sent today' written beside the envelope with an accent underline"
+          },
+          {
+            "name": "bubbles",
+            "what": "four bubbles, all 'June. Priya. Friday.'"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Then send it",
+            "element": "table",
+            "action": "the team seated; checklist top right",
+            "motion": "draw, reveal"
+          },
+          {
+            "t_anchor": "in writing",
+            "element": "email",
+            "action": "the decision line written above the table folds into an envelope",
+            "motion": "unmask, fold"
+          },
+          {
+            "t_anchor": "the same day",
+            "element": "sent_today",
+            "action": "'Sent today' written, accent underline",
+            "motion": "unmask, draw"
+          },
+          {
+            "t_anchor": "everyone there and anyone affected",
+            "element": "email",
+            "action": "four hand arrows from the envelope to each person",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "One version of the meeting",
+            "element": "bubbles",
+            "action": "one bubble per person, all the same line",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "b13 keeps steps and table"
+      }
+    },
+    {
+      "beat": "b13",
+      "section": "payoff",
+      "kind": "bespoke",
+      "station": "table",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "steps",
+        "table"
+      ],
+      "accent_on": "close_tick",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "the same table, now with a written decision",
+      "design": {
+        "treatment": "the same table as the hook, now ending with a written decision and a complete checklist",
+        "why_motion": "the contrast with b01's empty chairs and question marks is the payoff",
+        "references": [
+          "b01 of this lesson (callback)"
+        ],
+        "elements": [
+          {
+            "name": "steps",
+            "what": "held"
+          },
+          {
+            "name": "table",
+            "what": "held; people turn happy"
+          },
+          {
+            "name": "decision_list",
+            "what": "two written lines on the table front: 'Pilot ships in June, Priya, by Friday' and 'Parked: side topic, Lena'"
+          },
+          {
+            "name": "close_tick",
+            "what": "the Close tick in pos green"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Same team, same hour",
+            "element": "table",
+            "action": "the bubbles and envelope leave; the people turn happy",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "decisions, owners and dates",
+            "element": "decision_list",
+            "action": "the two lines written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "read back and sent",
+            "element": "close_tick",
+            "action": "Close ticked in green (pos), the only green of the film",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "the board is wiped for the learner's own agenda"
+      }
+    },
+    {
+      "beat": "b14",
+      "section": "apply",
+      "kind": "bespoke",
+      "station": "apply",
+      "join_in": {
+        "type": "wipe",
+        "dir": "right"
+      },
+      "accent_on": "first_line_q",
+      "intent": "rest",
+      "shot": {
+        "size": "medium"
+      },
+      "subject": "the learner's blank agenda",
+      "design": {
+        "treatment": "the learner's blank agenda: the first line waits for a question",
+        "why_motion": "the blank card with a '?' hands the move to the viewer; the rule is written as the pocket summary",
+        "references": [
+          "b04 of this lesson (the invite card, now blank)"
+        ],
+        "elements": [
+          {
+            "name": "agenda",
+            "what": "kit invite_card in blank mode, header 'Agenda'"
+          },
+          {
+            "name": "first_line_q",
+            "what": "a large accent '?' on the first line"
+          },
+          {
+            "name": "rule",
+            "what": "'Name it, steer it, read it back' in Caveat under the card"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Before your next meeting",
+            "element": "agenda",
+            "action": "a blank agenda card drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "as a question",
+            "element": "first_line_q",
+            "action": "a large '?' written in accent on the first line",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Name it",
+            "element": "rule",
+            "action": "'Name it, steer it, read it back' written phrase by phrase",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "last beat, rests on the rule"
+      }
+    }
+  ]
+}

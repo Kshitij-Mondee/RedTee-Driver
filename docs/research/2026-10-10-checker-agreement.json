@@ -1,0 +1,507 @@
+{
+ "note": "Loom's checker against HyperFrames' gating errors on every lesson whose check matches its build (2026-10-10, D-154); text_redrawn a warning; every disagreement judged on frames in docs/research/2026-10-10-loom-checker-reliability.md",
+ "totals": {
+  "hf_errors": 25,
+  "found_as_error": 12,
+  "missed": 13,
+  "ours_errors": 42,
+  "extra": 21
+ },
+ "lessons": [
+  {
+   "lesson": "_ss_base",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "_ss_story",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "bench-20261006-151439-budget",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "bench-20261006-151439-budget-fix1007",
+   "nodes": 86663,
+   "layout_ms": 258846,
+   "contrast_ms": 71751,
+   "hf_errors": 3,
+   "found_as_error": 2,
+   "missed": [
+    {
+     "code": "content_overlap",
+     "time": 49.304,
+     "text": "RECORD",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    }
+   ],
+   "ours_errors": 9,
+   "extra": [
+    {
+     "code": "text_covered",
+     "time": 50,
+     "text": "Corrective feedback",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.67,
+     "beat": "b04"
+    },
+    {
+     "code": "text_covered",
+     "time": 192,
+     "text": "AGREED HABIT",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.14,
+     "beat": "b14"
+    },
+    {
+     "code": "text_covered",
+     "time": 363,
+     "text": "Solutions",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.86,
+     "beat": "b25"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 152.909,
+     "text": "Jordan",
+     "a": null,
+     "b": null,
+     "ratio": 2.62,
+     "share": null,
+     "beat": "b11"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 198.913,
+     "text": "Evaluate replacement behaviours",
+     "a": null,
+     "b": null,
+     "ratio": 3.51,
+     "share": null,
+     "beat": "b14"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 260.274,
+     "text": "A",
+     "a": null,
+     "b": null,
+     "ratio": 1.86,
+     "share": null,
+     "beat": "b17"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 266.99,
+     "text": "Superficial compliments",
+     "a": null,
+     "b": null,
+     "ratio": 3.9,
+     "share": null,
+     "beat": "b18"
+    }
+   ],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "bench-20261006-151439-claude-balanced",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "bench-20261006-151439-claude-balanced-fix1007",
+   "nodes": 8350,
+   "layout_ms": 149358,
+   "contrast_ms": 211851,
+   "hf_errors": 1,
+   "found_as_error": 1,
+   "missed": [],
+   "ours_errors": 12,
+   "extra": [
+    {
+     "code": "text_covered",
+     "time": 20,
+     "text": "you need to be more professional",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.14,
+     "beat": "b02"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 69.76,
+     "text": "01 Kind but vague",
+     "a": null,
+     "b": null,
+     "ratio": 2.7,
+     "share": null,
+     "beat": null
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 143.862,
+     "text": "SLOT ONE",
+     "a": null,
+     "b": null,
+     "ratio": 1.02,
+     "share": null,
+     "beat": "b17"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 143.862,
+     "text": "In today's meeting,",
+     "a": null,
+     "b": null,
+     "ratio": 1.07,
+     "share": null,
+     "beat": "b17"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 143.862,
+     "text": "you interrupted Sam twice,",
+     "a": null,
+     "b": null,
+     "ratio": 1.06,
+     "share": null,
+     "beat": "b17"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 185.999,
+     "text": "03 What it did",
+     "a": null,
+     "b": null,
+     "ratio": 2.44,
+     "share": null,
+     "beat": null
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 354.978,
+     "text": "06 Your sentence",
+     "a": null,
+     "b": null,
+     "ratio": 2.7,
+     "share": null,
+     "beat": null
+    }
+   ],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "bench-20261006-151439-gemini-balanced",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "bench-20261006-151439-gemini-balanced-fix1007",
+   "nodes": 3069,
+   "layout_ms": 95548,
+   "contrast_ms": 121156,
+   "hf_errors": 4,
+   "found_as_error": 4,
+   "missed": [],
+   "ours_errors": 3,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "bench-20261006-151439-openai-balanced",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "bench-20261006-151439-openai-balanced-fix1007",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "blameless-postmortem",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "dc-cooling",
+   "nodes": 103506,
+   "layout_ms": 155102,
+   "contrast_ms": 100925,
+   "hf_errors": 0,
+   "found_as_error": 0,
+   "missed": [],
+   "ours_errors": 0,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-relay-sb",
+   "nodes": 13482,
+   "layout_ms": 35116,
+   "contrast_ms": 10114,
+   "hf_errors": 6,
+   "found_as_error": 0,
+   "missed": [
+    {
+     "code": "content_overlap",
+     "time": 124.357,
+     "text": "Next week",
+     "selector": "g.lm-in > g:nth-of-type(1) > g:nth-of-type(1) > g:nth-of-typ"
+    },
+    {
+     "code": "content_overlap",
+     "time": 128.042,
+     "text": "Read the slides aloud",
+     "selector": "#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 128.042,
+     "text": "Read the slides aloud",
+     "selector": "#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 128.042,
+     "text": "Read the slides aloud",
+     "selector": "#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 128.042,
+     "text": "Read the slides aloud",
+     "selector": "#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 128.042,
+     "text": "Read the slides aloud",
+     "selector": "#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-"
+    }
+   ],
+   "ours_errors": 0,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-relay-v2",
+   "nodes": 4658,
+   "layout_ms": 25528,
+   "contrast_ms": 12748,
+   "hf_errors": 0,
+   "found_as_error": 0,
+   "missed": [],
+   "ours_errors": 1,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-shuttle-opus",
+   "nodes": 3074,
+   "layout_ms": 21614,
+   "contrast_ms": 9892,
+   "hf_errors": 0,
+   "found_as_error": 0,
+   "missed": [],
+   "ours_errors": 0,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-shuttle-s1",
+   "nodes": 1824,
+   "layout_ms": 23518,
+   "contrast_ms": 12260,
+   "hf_errors": 6,
+   "found_as_error": 0,
+   "missed": [
+    {
+     "code": "content_overlap",
+     "time": 39.099,
+     "text": "A behaviour",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 39.099,
+     "text": "A behaviour",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 43.839,
+     "text": "A behaviour",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 43.839,
+     "text": "A behaviour",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 43.839,
+     "text": "A behaviour",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    },
+    {
+     "code": "content_overlap",
+     "time": 43.839,
+     "text": "A behaviour",
+     "selector": "#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-"
+    }
+   ],
+   "ours_errors": 0,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-shuttle-v2",
+   "nodes": 4144,
+   "layout_ms": 51688,
+   "contrast_ms": 16119,
+   "hf_errors": 0,
+   "found_as_error": 0,
+   "missed": [],
+   "ours_errors": 0,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-shuttle-v3",
+   "nodes": 4405,
+   "layout_ms": 48240,
+   "contrast_ms": 24557,
+   "hf_errors": 0,
+   "found_as_error": 0,
+   "missed": [],
+   "ours_errors": 0,
+   "extra": [],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "feedback-that-lands",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "https-private",
+   "nodes": 99034,
+   "layout_ms": 242530,
+   "contrast_ms": 128812,
+   "hf_errors": 0,
+   "found_as_error": 0,
+   "missed": [],
+   "ours_errors": 1,
+   "extra": [
+    {
+     "code": "text_covered",
+     "time": 128,
+     "text": "Shared wifi",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.33,
+     "beat": "b17"
+    }
+   ],
+   "redrawn_warnings": []
+  },
+  {
+   "lesson": "mfa-explained",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "mfa-story",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "phishing-report",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "spacing-sticks",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "stress-signal",
+   "skipped": "the build changed since its check"
+  },
+  {
+   "lesson": "bench-20261006-151439-mixed-value-fix1007",
+   "nodes": 88437,
+   "layout_ms": 356461,
+   "contrast_ms": 235418,
+   "hf_errors": 5,
+   "found_as_error": 5,
+   "missed": [],
+   "ours_errors": 16,
+   "extra": [
+    {
+     "code": "text_covered",
+     "time": 86,
+     "text": "Feedback draft",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.67,
+     "beat": "b09"
+    },
+    {
+     "code": "text_covered",
+     "time": 93,
+     "text": "Delivery date: not noted",
+     "a": null,
+     "b": null,
+     "ratio": null,
+     "share": 0.29,
+     "beat": "b09"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 90.135,
+     "text": "noted.",
+     "a": null,
+     "b": null,
+     "ratio": 2.95,
+     "share": null,
+     "beat": "b09"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 134.03,
+     "text": "SITUATION",
+     "a": null,
+     "b": null,
+     "ratio": 2.78,
+     "share": null,
+     "beat": "b13"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 233.904,
+     "text": "JUDGE",
+     "a": null,
+     "b": null,
+     "ratio": 2.99,
+     "share": null,
+     "beat": "b23"
+    },
+    {
+     "code": "contrast_aa_failure",
+     "time": 233.904,
+     "text": "04 Judge The Wording",
+     "a": null,
+     "b": null,
+     "ratio": 2.74,
+     "share": null,
+     "beat": null
+    }
+   ],
+   "redrawn_warnings": []
+  }
+ ]
+}

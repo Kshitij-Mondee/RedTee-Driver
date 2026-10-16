@@ -1,0 +1,157 @@
+{
+  "title": "Meetings that end with decisions",
+  "performance": "the viewer runs their next meeting so it ends with each decision read back and sent in writing with an owner and a date",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "knows how meetings run; has sat through many that ended without a clear outcome",
+    "why": "the brief's audience runs or attends recurring team and project meetings",
+    "motivation": "wants less time lost and to know what was agreed and who does what next",
+    "context": "busy working adults, watching between tasks, with sound and captions"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "the knowledge sheet is a procedure in time order (before, during, close: F1 to F13); one meeting run through those steps shows the whole method before each step is named",
+    "signature_move": "run the step in Sam's meeting on the board, show what changes, then name the step and add it to the growing list"
+  },
+  "misconceptions": [
+    {
+      "belief": "an agenda topic such as 'Pilot update' is enough to set up a decision",
+      "why_tempting": "it names the subject everyone will talk about, so it feels like preparation",
+      "refuted_in": "S1",
+      "source_anchor": "F3"
+    },
+    {
+      "belief": "a line like 'Discussed the pilot timeline' in the notes means something was decided",
+      "why_tempting": "it records that the meeting covered the subject, which feels like progress",
+      "refuted_in": "S3",
+      "source_anchor": "F12"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "An hour of good discussion. Everyone leaves, and nobody can say what was decided, or who does what next."
+    },
+    "promise": "three moves, before, during and at the close, that make the same meeting end with decisions",
+    "bridge_from_prior": "the viewer's own recurring meeting: Sam's weekly project meeting stands in for it",
+    "sections": [
+      {
+        "id": "S1",
+        "goal": "the viewer can use a question in the invite to name the decision a meeting must make, and choose who must attend",
+        "bloom": "apply",
+        "concepts": [
+          "decision as a question",
+          "invite who the decision needs"
+        ],
+        "energy": "build",
+        "carrier": "worked example",
+        "recap_after": false
+      },
+      {
+        "id": "S2",
+        "goal": "the viewer can carry out the opening moves of the meeting: restate the decision, park side topics, and say how and by whom it is decided",
+        "bloom": "apply",
+        "concepts": [
+          "parking lot",
+          "decision rule",
+          "decision owner"
+        ],
+        "energy": "peak",
+        "carrier": "scene",
+        "recap_after": false
+      },
+      {
+        "id": "S3",
+        "goal": "the viewer can distinguish a recorded decision (what, owner, date) from a topic discussed, and close by reading decisions back and sending them",
+        "bloom": "analyze",
+        "concepts": [
+          "read back",
+          "written summary"
+        ],
+        "energy": "rest",
+        "carrier": "comparison",
+        "recap_after": true
+      }
+    ],
+    "payoff": "Sam's same meeting ends with three lines read back and sent that afternoon: what was decided, who owns it, by when."
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "S1-S2",
+      "what": "Sam's meeting rewritten step by step on the board, every step narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "S3",
+      "what": "the viewer judges two lines of Sam's closing notes before the answer is shown"
+    },
+    {
+      "stage": "independent",
+      "where": "payoff and transfer",
+      "what": "the viewer rewrites the first line of their own next agenda as a decision question"
+    }
+  ],
+  "pacing": {
+    "requested_s": 129,
+    "target_duration_s": 129,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "what makes a line a decision"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "S3",
+        "kind": "quiz",
+        "prompt_sketch": "Two lines from Sam's notes: 'Discussed the pilot timeline' and 'Pilot ships in June, owner Priya, plan by Friday'. Which one is a decision?",
+        "answer": "the second: it says what was decided, who owns it and by when",
+        "tempting_wrong": "the first names the subject and sounds like progress, but it records only a topic discussed, with no decision, owner or date (F12)"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "before your next meeting, rewrite the first line of its agenda as the decision it must make, phrased as a question"
+  ],
+  "persona": {
+    "voice": "a capable colleague who has sat through too many meetings, brisk and practical",
+    "delivery_notes": "dry and brisk on the problem, a short pause before the quiz answer, slower and warmer on the closing read-back"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the meeting with no outcome",
+      "objective": "promise: three moves",
+      "recall_prior": "bridge: the viewer's own recurring meeting",
+      "present": "S1 to S3 in time order",
+      "guidance": "signature move: run the step, then name it on the growing list",
+      "practice": "quiz after S3",
+      "feedback": "quiz answer explained, with why the topic line tempts",
+      "assess": "the quiz on Sam's closing notes",
+      "transfer": "transfer task: rewrite your next agenda's first line"
+    },
+    "merrill": {
+      "problem_centered": "Sam's meeting is the running problem from hook to payoff",
+      "activation": "the hook draws on the viewer's own meetings",
+      "demonstration": "S1 and S2 show each step in Sam's meeting before naming it",
+      "application": "the S3 quiz makes the viewer judge the notes",
+      "integration": "payoff and transfer task hand the method back"
+    },
+    "mayer": {
+      "coherence": "one running example, no side stories, no statistics",
+      "signalling": "one slowdown, on what makes a line a decision",
+      "redundancy": "the board shows short labels; narration explains",
+      "contiguity": "each step is drawn as it is spoken",
+      "segmenting": "three short sections, one moment each",
+      "pre_training": "the hook shows the meeting before any step is named"
+    },
+    "arcs": {
+      "attention": "the familiar meeting that ends with nothing",
+      "relevance": "the viewer's own recurring meeting",
+      "confidence": "three small steps on a list that grows",
+      "satisfaction": "the payoff returns to Sam's meeting, solved"
+    },
+    "bloom_path": "apply -> apply -> analyze"
+  },
+  "series": null,
+  "flags": []
+}

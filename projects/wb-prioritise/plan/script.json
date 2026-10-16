@@ -1,0 +1,407 @@
+{
+  "title": "When everything feels urgent: sort it, then act",
+  "wpm_target": 150,
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Everything says urgent",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Two questions, one board",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Each zone has its move",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "Saying no or later",
+      "role": "build"
+    },
+    {
+      "id": "close",
+      "title": "Your turn, and the habit",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "intro",
+      "job": "hook",
+      "narration": [
+        "Say it's Monday.",
+        "Maya has four requests.",
+        "All four say urgent."
+      ],
+      "on_screen": [
+        "Monday",
+        "URGENT"
+      ],
+      "visual_intent": "The presenter opens beside the board; four request cards appear in a stack, each stamped urgent.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Maya and her four requests are an invented running example",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "light, a little wry on 'urgent'"
+    },
+    {
+      "id": "b02",
+      "section": "intro",
+      "job": "scenario",
+      "narration": [
+        "She works down from the top.",
+        "By Friday, what mattered most is still waiting."
+      ],
+      "on_screen": [
+        "Friday"
+      ],
+      "visual_intent": "Ticks run down the list in arrival order while a clock moves to Friday; the one important card is left unticked at the bottom.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "working in arrival order leaves the important task waiting (the example's outcome)",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "Urgent says how soon,",
+        "not how much it matters.",
+        "Research suggests we lean toward the nearer deadline."
+      ],
+      "on_screen": [
+        "how soon",
+        "how much it matters"
+      ],
+      "visual_intent": "The word urgent splits into two labels drawn apart: how soon, how much it matters; a balance tilts toward the deadline side.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "urgency is about how soon, importance about how much it matters",
+          "fact": "F7"
+        },
+        {
+          "claim": "research suggests people lean toward the nearer deadline over a bigger payoff",
+          "fact": "F8"
+        }
+      ],
+      "misconception": "the most urgent request is the most important one",
+      "concepts": [
+        "urgent is not important"
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "orient",
+      "narration": [
+        "So ask two other questions.",
+        "How much difference will it make?",
+        "How much work will it take?"
+      ],
+      "on_screen": [
+        "Impact?",
+        "Effort?"
+      ],
+      "visual_intent": "Two questions written large on the board: Impact? and Effort?",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "sort each task by how much difference it makes and how much work it takes",
+          "fact": "F1"
+        }
+      ],
+      "concepts": [
+        "impact",
+        "effort"
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "Impact runs up, effort across.",
+        "The client reply: big impact, ten minutes."
+      ],
+      "on_screen": [
+        "Impact",
+        "Effort",
+        "Client reply"
+      ],
+      "visual_intent": "The two questions become axes drawn on the board; the client reply card lands high on the left.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the matrix crosses impact with effort",
+          "fact": "F2"
+        },
+        {
+          "claim": "the client reply's sizing is part of the invented example",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "The budget report: big impact, days of work.",
+        "Expenses: small and quick.",
+        "A deck redesign: small, but slow."
+      ],
+      "on_screen": [
+        "Budget report",
+        "Expenses",
+        "Deck redesign"
+      ],
+      "visual_intent": "The other three cards land one by one on the same board: high right, low left, low right.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "four positions from high or low impact and effort",
+          "fact": "F2"
+        },
+        {
+          "claim": "the tasks' sizing is part of the invented example",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Four zones, four moves.",
+        "Quick wins: do them first,",
+        "so the client hears back today."
+      ],
+      "on_screen": [
+        "Quick wins",
+        "Do first"
+      ],
+      "visual_intent": "The board divides into four zones; the top left is named quick wins and the client reply gets a tick.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "high impact, low effort tasks are quick wins, done first",
+          "fact": "F3"
+        }
+      ],
+      "delivery": "slow down here through b09",
+      "concepts": [
+        "quick wins"
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "sequence",
+      "narration": [
+        "Major projects: block time for them.",
+        "Switching tasks tends to cost time and accuracy."
+      ],
+      "on_screen": [
+        "Major projects",
+        "Block time"
+      ],
+      "visual_intent": "Top right named major projects; the budget report becomes one solid block in a calendar strip instead of scattered fragments.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "major projects are planned and scheduled, not started in scraps",
+          "fact": "F4"
+        },
+        {
+          "claim": "switching tasks tends to cost time and accuracy",
+          "fact": "F15"
+        }
+      ],
+      "concepts": [
+        "major projects"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "sequence",
+      "narration": [
+        "Fill-ins: batch them into one spare slot.",
+        "Thankless tasks: decline or park them, openly."
+      ],
+      "on_screen": [
+        "Fill-ins",
+        "Batch",
+        "Thankless tasks",
+        "Decline or park"
+      ],
+      "visual_intent": "Bottom left named fill-ins with a batch bracket; bottom right named thankless tasks, the deck card set aside with a later tag.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "fill-ins are batched or wait",
+          "fact": "F5"
+        },
+        {
+          "claim": "thankless tasks are declined or parked, openly",
+          "fact": "F6"
+        }
+      ],
+      "concepts": [
+        "fill-ins",
+        "thankless tasks"
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Saying no isn't refusing.",
+        "Tie it to your priority:",
+        "I'm on the budget report this week.",
+        "Then offer a date, or a smaller version."
+      ],
+      "on_screen": [
+        "I'm on the budget report this week.",
+        "Next Thursday?",
+        "Just two slides?"
+      ],
+      "visual_intent": "A reply note is drafted beside the board with an arrow to the budget report; two options are written under it: a date and a smaller version.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "tie a no or later to your current priorities",
+          "fact": "F11"
+        },
+        {
+          "claim": "offer a specific date or a smaller version instead of a maybe",
+          "fact": "F12"
+        }
+      ],
+      "misconception": "saying no is just refusing",
+      "delivery": "warmer"
+    },
+    {
+      "id": "b11",
+      "section": "close",
+      "job": "check",
+      "narration": [
+        "Your turn.",
+        "Her manager wants a new analysis by Friday.",
+        "Big impact, two days. Where does it go?"
+      ],
+      "on_screen": [
+        "New analysis by Friday",
+        "Where does it go?"
+      ],
+      "visual_intent": "The presenter turns to the viewer; a new card arrives beside the board, unplaced.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "the manager's request is part of the invented example",
+          "hypothetical": true
+        }
+      ],
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "answer": "major projects: block the time and ask which task gives way",
+        "tempting_wrong": "do it right now because it is urgent and from the manager"
+      },
+      "delivery": "pose it, then leave the pause"
+    },
+    {
+      "id": "b12",
+      "section": "close",
+      "job": "consolidate",
+      "narration": [
+        "Major projects.",
+        "She blocks time and asks which task gives way."
+      ],
+      "on_screen": [
+        "Major projects",
+        "Which task gives way?"
+      ],
+      "visual_intent": "The new card lands top right; a second block appears in the calendar strip and a question arrow points at the other cards.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "high impact, high effort work is scheduled",
+          "fact": "F4"
+        },
+        {
+          "claim": "ask a manager which existing task should give way",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "close",
+      "job": "payoff",
+      "narration": [
+        "New request? Place it, then sort again.",
+        "Tomorrow, start with one quick win."
+      ],
+      "on_screen": [
+        "Place it. Sort again.",
+        "Start with a quick win"
+      ],
+      "visual_intent": "The opening list returns, now in the board's order with ticks; a last card drops onto the board and the list reorders itself.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "place new work on the same matrix and sort again rather than work in arrival order",
+          "fact": "F14"
+        },
+        {
+          "claim": "do quick wins first",
+          "fact": "F3"
+        }
+      ]
+    }
+  ]
+}

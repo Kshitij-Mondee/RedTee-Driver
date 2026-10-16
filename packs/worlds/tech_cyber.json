@@ -1,0 +1,715 @@
+{
+ "id": "tech_cyber",
+ "brief": 2,
+ "name": "Technology and cyber",
+ "purpose": "information security, phishing, passwords and MFA, data handling, physical security and tailgating, incident response, AI literacy, secure software practices",
+ "styles_common": [
+  "flat 2D editorial",
+  "glow-flat",
+  "isometric",
+  "2.5D lit layers",
+  "2D story cartoon"
+ ],
+ "identity": {
+  "place": "The technology centre of a national home-and-garden retailer (about 400 people in technology): a two-storey 2016 concrete-framed building on a business park at the edge of an inland city, clad in dark grey fibre-cement panels with long horizontal windows. The ground floor holds the company's own data hall (about 40 racks), entered only through a security vestibule off the main corridor. The first floor holds the engineering floor, the security operations centre (SOC) and the incident room.",
+  "architecture": [
+   "long horizontal ribbon windows on the outer walls: sill at 0.9 m, head at 2.7 m, slim black aluminium frames with mullions every 1.35 m and no transoms; pale grey roller blinds; the data hall has no windows at all",
+   "the first floor: round fair-faced concrete columns 0.4 m across on a 7.2 m grid; a flat concrete soffit painted white at 3.2 m with long black linear pendant lights, black wire cable baskets and a white sprinkler pipe; light grey carpet tiles",
+   "internal walls are white plasterboard; the company's colour is cobalt blue, used on one wall of each room, on doors into secure areas and on chair upholstery; felt acoustic panels in pale grey",
+   "glass partitions on the first floor have black frames and two frosted bands at 0.9 m and 1.5 m (plain, no words); the SOC and the incident room have solid walls to the corridor and a glass door with frosted glass",
+   "the data hall: a 0.6 m raised floor of 600 mm square grey steel tiles (perforated tiles in the cold aisles), white walls, black racks in rows, contained cold aisles with glass sliding doors at each end, overhead yellow fibre trays and black cable baskets, a white ceiling at 3.6 m above the floor with linear lights",
+   "secure doors: cobalt blue steel doors in grey steel frames, each with a card reader and a keypad at 1.1 m, a small black dome camera above, and a green push-to-exit button on the inside"
+  ],
+  "materials": "white plasterboard and white-painted concrete, fair-faced grey concrete columns, light grey carpet tiles, black powder-coated steel (racks, frames, cable baskets), light oak veneer on desk tops, cobalt blue as the company's colour (one wall per room, secure doors, upholstery), pale grey felt, black screens; signal yellow only on fibre trays and floor tile lifters; signal red only on the few things that are red in life (a fire extinguisher, a fire alarm call point, the gas suppression release)",
+  "inhabited": [
+   "screens everywhere, always as slots: code, alerts, dashboards and chat drawn by the engine, never by the set",
+   "engineers' things: noise-cancelling headphones on a monitor, a laptop on a stand, a mechanical keyboard, a stack of sticky notes (blank), a mug, a small plant, a rubber duck on a monitor base",
+   "security in plain sight: badges on lanyards, card readers and keypads by doors, a privacy filter on a laptop, a locked cabinet, a clear desk at night",
+   "infrastructure: floor boxes and cable baskets, a fire extinguisher by each door, a first-aid box, labels on racks as plain coloured strips (no words)",
+   "slight wear: a chair with one armrest lower, a scuffed kick plate on a secure door, cable ties left in a fibre tray"
+  ],
+  "scale": [
+   "a person is about 1.75 m tall; the first floor's soffit is at 3.2 m; a door is 2.1 m high and 0.9 m wide (secure doors 1.0 m wide)",
+   "desks are 1.6 by 0.8 m at 0.72 m (sit-stand, up to about 1.1 m); a monitor is a 27 inch screen about 0.61 by 0.36 m",
+   "a rack is 0.6 m wide, 1.2 m deep and 2.0 m high (42U) on a raised floor 0.6 m above the slab; a cold aisle is 1.8 m wide (three tiles) and a hot aisle 1.2 m (two tiles)",
+   "the SOC's video wall is eight 55 inch panels (each about 1.21 by 0.68 m) in a 4 by 2 array about 4.9 m wide and 1.37 m tall, its base at 1.2 m",
+   "a card reader sits at about 1.1 m beside a door; a fire extinguisher hangs with its handle about 1 m above the floor; green exit signs (a running figure and an arrow, no words) sit above exit doors at about 2.3 m"
+  ],
+  "default_light": "Late morning on an overcast day: soft, even, cool daylight through the long ribbon windows on the first floor, and the neutral white linear lights on everywhere. In the data hall there is no daylight: even white light from the ceiling, the racks' small status LEDs (green and blue) and a slightly cool cast. Shadows are soft and short. Screens are on (their slots are lit).",
+  "motifs": "Use at least three of these in every scene so the sets belong to one place (each scene names the ones its camera can see): one cobalt blue element (a wall, a secure door, upholstery), a round fair-faced concrete column, the long black-framed ribbon window, a black cable basket or a yellow fibre tray, a card reader and keypad by a door, pale grey felt.",
+  "avoid": [
+   "a hacker cliche: hooded figures, green code rain, skulls, padlock icons floating in the air, a dark room lit only by screens",
+   "exposed brick, small-paned steel factory windows, birch ply, brass lamps, deep green, marigold or burgundy (they belong to other places)",
+   "real brands, logos, operating system looks, signs with words, flags or anything that pins a country",
+   "people in the sets (the cast is separate)",
+   "words, numbers or real code on screens, labels or boards (empty slots only)",
+   "screens facing a window or with a window directly behind them: screens sit at about 90 degrees to the windows",
+   "a catalogue-clean tech office: every scene shows that people work here"
+  ],
+  "outside": "Through the ribbon windows: the business park's car park with a few trees in planted islands, a low hedge, other low grey buildings without signs, and a flat overcast sky."
+ },
+ "cast": [
+  {
+   "id": "engineer",
+   "role": "software engineers and developers, varied in age, background and build"
+  },
+  {
+   "id": "security_analyst",
+   "role": "SOC analysts and the SOC shift lead"
+  },
+  {
+   "id": "incident_manager",
+   "role": "an incident manager and the people on the bridge (IT, legal, communications)"
+  },
+  {
+   "id": "dc_technician",
+   "role": "a data hall technician, and an escorted contractor or visitor with a visitor badge"
+  },
+  {
+   "id": "it_support",
+   "role": "IT support"
+  },
+  {
+   "id": "personified_threats",
+   "role": "phishing email, malicious link, weak and strong passwords (C10), for the abstract network only"
+  },
+  {
+   "id": "ai_assistant",
+   "role": "an AI assistant (C12)"
+  }
+ ],
+ "assets": {
+  "core": [
+   "laptop and monitor (slots)",
+   "server rack (42U, with LED strips)",
+   "network cable and fibre patch lead",
+   "badge and lanyard",
+   "card reader and keypad",
+   "phone with an MFA prompt (slots)",
+   "email on screen (slots)",
+   "code window (slots)",
+   "alert dashboard (slots)",
+   "padlock (shackle as a group, for the abstract network)"
+  ],
+  "common": [
+   "router and switch",
+   "USB stick",
+   "CCTV dome camera",
+   "headphones",
+   "privacy filter",
+   "visitor badge",
+   "data packet (abstract)",
+   "firewall (abstract)"
+  ],
+  "optional": [
+   "replacement drive in an anti-static bag",
+   "floor tile lifter",
+   "conference speaker puck",
+   "rubber duck"
+  ]
+ },
+ "research": "Real-space facts checked on 2026-10-15 (rack sizes: makers' and resellers' listings, sizes only; hot and cold aisles and perforated tiles: a hardware site-preparation guide; security vestibules, anti-tailgating and anti-passback: data centre security training and door hardware guides; SOC video walls and consoles: an integrator's case study, a government SOC specification and a practitioner forum). Sources and what was not verified: docs/research/2026-10-13-sets-tech_cyber.md.",
+ "objects": {
+  "server rack": "a black steel 42U cabinet 0.6 m wide, 1.2 m deep and 2.0 m high standing on the raised floor, bayed side by side in a row; a perforated mesh front door (fine round holes) in a slim frame with a vertical handle and a small lock; through the mesh, servers as thin horizontal bands with tiny green and blue status LEDs and black blanking panels in empty slots; plain coloured label strips (no words)",
+  "containment": "a cold aisle enclosure: clear glass roof panels in slim black aluminium frames laid across the aisle on the rack tops at about 2.1 to 2.2 m, and at each end a pair of bi-parting sliding glass doors 2.1 m high in black frames, with a black pull handle on each leaf and a brush seal at the floor",
+  "raised floor": "600 mm square steel floor tiles in a pale grey finish laid on hidden pedestals 0.6 m above the slab; in the cold aisle, perforated tiles (a grid of small square holes) in every other row; thin dark joints between tiles",
+  "fibre tray": "a bright yellow plastic channel about 0.3 m wide with low sides, hung from the ceiling on threaded rods above the racks, carrying fibre patch leads; beside it a black wire cable basket of the same width",
+  "linear light": "a long slim white LED fitting about 1.5 m long, hung from the ceiling above the containment roof, its underside glowing evenly",
+  "hall wall": "a smooth white-painted wall rising from the raised floor to the ceiling at 3.6 m, with a thin black skirting where it meets the floor tiles",
+  "tile lifter": "a hand tool with two black rubber suction cups on a short yellow bar handle, for lifting floor tiles",
+  "dome camera": "a small black hemispherical security camera about 12 cm across on a round white base, fixed to the ceiling",
+  "card reader": "a slim black box about 0.08 by 0.14 m with a dark glass face and a small LED, beside a plain square keypad (keys as plain squares, no numbers), mounted at about 1.1 m beside a door",
+  "secure door": "a cobalt blue steel door leaf 2.1 m high and 1.0 m wide in a grey steel frame, a narrow vertical vision panel of wired glass, a lever handle at about 1.0 m, a heavy closer arm at the top, a scuffed steel kick plate at the foot; a small square pictogram sign on the leaf at eye level (one figure, and a second figure crossed out; no words)",
+  "sign-in kiosk": "a tablet in a grey frame on a slim floor pedestal, its screen at about 1.25 m and tilted up, a small badge printer on a shelf below it; the screen is a slot",
+  "bench": "a plain bench 1.4 m long and 0.45 m deep, seat at 0.45 m, cobalt upholstery on a black steel frame, standing against the wall",
+  "lobby floor": "pale grey rubber floor tiles with a fine raised texture, a dark grey entrance mat strip, a faint worn path to the secure door",
+  "ceiling": "a smooth white plasterboard ceiling at 3.0 m with round recessed downlights",
+  "plants": "real species, recognisable by their leaves: snake plant (upright pointed blades), zz plant (glossy oval leaflets on upright stems), pothos (trailing heart-shaped leaves); a pot with a rim and soil",
+  "video wall": "eight thin black 55 inch display panels (each about 1.21 by 0.68 m) tiled 4 across and 2 high with hairline seams, about 4.9 by 1.37 m in all, fixed flat to the wall on a black frame with its base at 1.2 m; each panel's face is a slot",
+  "soc console": "a long straight console of sit-stand desks, each position 1.6 m wide and 0.8 m deep with a light oak top at 0.74 m on a black steel frame, a deep cable spine at the back, and three 27 inch monitors on a black triple arm (tops at about 1.25 m); seen from behind: the monitors' plain black backs, the arm and the cables",
+  "task chair": "five-spoke base on five castors, a gas-lift column, a seat with a front waterfall edge, a separate mesh backrest on a curved frame with a headrest, two adjustable armrests on posts; cobalt upholstery on the seat; the seat about 0.47 m high",
+  "platform": "a raised floor platform 0.3 m high carpeted in light grey, with a black aluminium nosing along its front edge and a single step with a lit strip at each end",
+  "felt wall panel": "a large flat acoustic panel of pale grey felt about 4 cm thick, fixed flat to the wall with a thin black edge trim, its corners square",
+  "linear pendant": "a long slim black LED fitting about 1.8 m long hung on two fine wires from the soffit, its underside glowing evenly",
+  "cable basket": "a black wire mesh tray about 0.3 m wide hung from the soffit on threaded rods, carrying bundled cables",
+  "desk phone": "a low dark grey desk phone with a handset in its cradle, a coiled cord and a small slot screen; keys as plain squares",
+  "headphones": "over-ear headphones with a padded band and round ear cups, in black, hung on a small hook or laid on a desk",
+  "mug": "a cylinder with an elliptical rim in perspective and a handle loop; mismatched shapes",
+  "pinned sheet": "a single A4 sheet (0.21 by 0.30 m), slightly curled at one corner, held by two round pins; its face is a slot, never words",
+  "meeting table": "a long rectangular table 3.2 by 1.2 m with a light oak top about 3 cm thick at 0.74 m, on two black steel A-frame legs set in from the ends, a flush power and data box with a hinged lid in the middle of the top",
+  "meeting chair": "an upholstered seat pad with a rounded front edge, a separate curved back shell, a visible gap between seat and back, four slim black steel legs; no castors, no arms; cobalt fabric; seat 0.46 m. Seen from behind: the curved back shell, the seat's edge and the four legs.",
+  "wall screen": "a black 75 inch screen (about 1.66 by 0.93 m) with a slim bezel, fixed flat to the wall, a small camera bar on its top edge; its face is a slot",
+  "speaker puck": "a round conference speaker about 0.25 m across and 4 cm high, dark grey, a ring of small LEDs on its top, a thin cable running to the table's power box",
+  "laptop": "a thin grey laptop about 0.32 by 0.22 m, its lid open at about 110 degrees on a visible hinge; the screen face is a slot; seen from behind: the plain lid",
+  "roller blind": "a pale grey fabric roller blind in a slim black cassette at the head of each window bay, here lowered fully to the sill, its bottom bar straight and level; daylight glows softly through it",
+  "ribbon window": "a long horizontal window, sill at 0.9 m and head at 2.7 m, in slim black aluminium frames with mullions every 1.35 m and no transoms",
+  "water jug and glasses": "a clear glass jug about 25 cm tall with a handle and a pouring lip, half full; plain tumblers about 10 cm tall beside it",
+  "notepad": "a spiral-bound pad lying flat, a pen beside it; pages blank or with a few marks, never words",
+  "sit-stand desk": "a light oak top 1.6 by 0.8 m with a rounded front edge about 25 mm thick, on a black steel sit-stand frame (two telescopic legs with flat feet, a cross rail, a black cable tray under the back edge), at 0.72 m; a small up and down switch under the front edge",
+  "monitor": "a thin black 27 inch screen (about 0.61 by 0.36 m) with a slim bezel on a black dual monitor arm clamped to the back edge of the desk; the screen face is a slot; seen from behind: a plain black back, the mount plate, the arm's elbow and a cable",
+  "keyboard and mouse": "a low keyboard with plain key rows (no letters), a small mouse on a plain dark mat",
+  "laptop stand": "a slim aluminium stand raising a closed or open laptop to about 0.2 m above the desk, angled toward the user",
+  "storage unit": "a low grey steel storage unit 0.4 m deep and 0.75 m high running along the back of the bench, with sliding doors and plants and boxes on its top",
+  "kanban board": "a large white board 2.0 by 1.0 m fixed to the wall, ruled into columns with thin black tape, with coloured square sticky notes in the columns (no words)",
+  "rubber duck": "a small yellow rubber duck about 8 cm long sitting on a monitor's foot",
+  "sticky notes": "a small stack of square paper notes, blank, one stuck to a monitor's edge",
+  "network node": "a rounded plinth like a short thick disc, 1.6 m across and 0.5 m high in the space's scale, pale grey with a cobalt ring around its top edge; on top, one large simple symbol, about 1.2 m across, shows what the node is: a server (a short black rack with LED dots), a laptop (open, its screen a slot), a phone (upright, its screen a slot) or a router (a flat box with two short aerials)",
+  "link": "a smooth cobalt blue tube about 0.15 m thick lying on the floor and curving gently between two nodes, like a cable drawn as a clean line; brighter where a packet is travelling",
+  "data packet": "a small rounded cube about 0.3 m on a side, pale with a cobalt edge and a tiny envelope mark on one face (no letters), sitting on a link; a closed padlock mark on its face when it is encrypted",
+  "firewall": "a freestanding translucent wall segment about 3 m long and 2.2 m high, made of stacked rounded pale bricks with soft cobalt joints, standing across a link with a single gate opening where the link passes",
+  "cloud": "a soft rounded white cloud form, about 4 m wide, floating above the far horizon on the right, with one link rising into it",
+  "grid floor": "a flat, pale floor with a faint square grid (lines every 1 m), receding to a soft horizon; no texture beyond the grid"
+ },
+ "aliases": [
+  "cyber",
+  "cyber security",
+  "information security",
+  "technology centre",
+  "it department"
+ ],
+ "batches": [
+  [
+   "soc",
+   "incident_room",
+   "dev_desk"
+  ],
+  [
+   "data_centre",
+   "access_vestibule"
+  ]
+ ],
+ "scenes": [
+  {
+   "id": "data_centre",
+   "aliases": [
+    "data hall",
+    "server room",
+    "server racks",
+    "data center"
+   ],
+   "what": "a contained cold aisle in the company's data hall, seen from its open near end: two rows of black racks facing each other across perforated floor tiles under a clear glass roof, with glass sliding doors closing the far end",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "physical security on the data hall floor, escorting visitors, a technician replacing a drive, cooling explained, no photos and clean hands rules",
+   "plan": [
+    "Seen from above, metres, heights from the raised floor's surface: x runs across the aisle (its centre line x 0); y runs along it from its near end (y 0) to its far end (y 7.2). The raised floor is 0.6 m above the slab; the hall's ceiling is 3.6 m above the floor.",
+    "The cold aisle is 1.8 m wide (three tiles), from x -0.9 to 0.9: perforated tiles in every other row. Two rows of twelve 42U racks (each 0.6 m wide, 1.2 m deep, 2.0 m high) face each other across it: their fronts on x -0.9 and x 0.9, from y 0 to 7.2.",
+    "Containment: clear glass roof panels on the rack tops at 2.1 to 2.2 m; at each end a pair of bi-parting glass sliding doors 2.1 m high. The near doors stand slid fully open, their glass leaves parked in front of the rows' black end panels (from x -0.9 to -1.8 and 0.9 to 1.8, just outside the aisle's opening); the far doors are closed, meeting at a slim black stile on the centre line (x 0, y 7.2).",
+    "Beyond the far doors: the hall's 2.4 m walkway and the hall's end wall at y 9.6, painted cobalt blue, plain, seen through the glass. A card reader and keypad on the far doors' right-hand frame at 1.1 m (x 0.95).",
+    "Above the roof: a yellow fibre tray and a black cable basket run along the aisle at 2.7 m; linear lights at 3.4 m.",
+    "The open rack: on the left row at y 3.0 to 3.6, its perforated door swung open about 180 degrees and folded back flat against the next rack's door (to y 4.2).",
+    "Cast: a technician standing at the open rack, facing it (x -0.25, y 3.3; head top 1.76 m); an escorted visitor further down the aisle, watching (x 0.35, y 4.8; head top 1.68 m).",
+    "Camera: x 0.15, y -2.6, standing eye height 1.62 m in the hall walkway, looking straight down the aisle through the open near doors; lens like 35 mm (55 degrees across); no tilt; horizon at 44 percent of the frame height."
+   ],
+   "camera": "Standing eye height 1.62 m in the hall walkway, 2.6 m before the aisle's open near end, looking straight down the aisle; 35 mm lens, 55 degrees across; no tilt, verticals stay vertical. One-point perspective: the horizon at y 475 (44 percent); every line along the aisle (the rack fronts' top and bottom edges, the tile joints, the roof frames, the fibre tray) runs to one vanishing point at x 960 on the horizon; lines across the aisle stay level.",
+   "composition": "The open near end frames the picture: the rows' black end panels, with the near doors' glass leaves parked in front of them, rise on both sides from the frame edges to the opening's edges at x 215 and x 1492, with the containment's near head beam across the top at about y 135 (the roof's near edge at about y 64). The two walls of rack fronts recede from there: the left row's top edge from x 215, y 206 to x 762, y 404, the right row's from x 1492, y 206 to x 1101, y 404; the perforated floor runs from the bottom edge to the far doors. The far doors close the end, from x 762 to 1101 (top y 385, floor y 780), the slim stile at x 932; through their glass, the walkway and the plain cobalt blue end wall (its floor line about y 720); the card reader on the right-hand frame at about x 1110, y 573. The clear roof runs above the aisle from about y 64 to y 366, with the yellow fibre tray and the black basket seen through it, converging to about x 932, y 272. On the left row, the open rack shows its servers from about x 614 to 648 (top y 350, foot y 957), its folded-back door beyond it to about x 670. Free zones for the cast: the technician at the open rack, in three-quarter back view facing left (head top about x 835, y 431; feet about y 982); the visitor further down the aisle, facing the camera and a little left toward the technician (head top about x 1010, y 460; feet about y 879). Both heads are seen against the glass of the far doors with the plain cobalt wall beyond (behind points on the doors at x -0.51 and 0.41, 1.54 to 1.85 m high), one either side of the stile and at least 50 px clear of it and of the door frames.",
+   "light": "No daylight. Even, slightly cool white light from the linear lights above the clear roof, falling straight down into the aisle: the rack fronts' top halves a little brighter than their feet, the perforated tiles evenly lit with small soft hole shadows. The racks' small green and blue status LEDs dot the mesh doors (never near a head's position). The far doors' glass shows a soft reflection of the aisle, and the walkway beyond is a touch dimmer and warmer. Shadows are short and soft, straight down. Haze about 0.1 at the far doors.",
+   "far": "The far doors with their card reader, and the walkway and the cobalt blue end wall seen through them; the rack fronts on both sides beyond the open rack; the perforated floor; the roof, the fibre tray, the basket and the lights.",
+   "mid": "The open rack on the left with its folded-back door. The technician and the visitor are placed in front of the far layer.",
+   "near": "The near end: the rows' black end panels with plain label strips and the near doors' parked glass leaves in front of them, from the frame's left and right edges to the opening at x 215 and x 1492, and the containment's near head beam across the top (about y 64 to 135); none of it covers the cast.",
+   "details": [
+    "a replacement drive in a silver anti-static bag laid on top of the open rack's shelf",
+    "a yellow and black tile lifter left leaning against the right row's first rack",
+    "black blanking panels in a few empty slots of the racks",
+    "a short fibre patch lead hanging loose from the open rack",
+    "a small round dome camera on the ceiling seen through the roof, over the far doors",
+    "plain coloured label strips (no words) on the row ends"
+   ],
+   "keep_first": "If space is short, keep the drive in its bag, the loose patch lead, the tile lifter and the dome camera; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "metal",
+    "floor",
+    "glass",
+    "screen",
+    "wall"
+   ],
+   "motifs_here": "the yellow fibre tray and the black cable basket, the cobalt blue end wall seen through the far doors, the card reader and keypad on the far doors' frame",
+   "slots": [],
+   "anchors": [
+    "anchor_floor_y (the aisle floor at the technician's feet, about y 982)",
+    "anchor_technician (feet, about x 835, y 982)",
+    "anchor_visitor (feet, about x 1010, y 879)",
+    "anchor_open_rack (the open rack's middle, about x 632, y 606)",
+    "anchor_far_doors (the stile's foot, about x 932, y 780)"
+   ],
+   "variants": [
+    "empty: no rack open, every door closed, for an establishing shot",
+    "alarm: the far doors' frame lit by a red beacon above them (out of frame), the lights unchanged"
+   ],
+   "avoid": [
+    "a person in the set (the cast is separate)",
+    "the stile, a door frame, a rack edge or an LED cluster behind either head",
+    "a dark, glowing hacker space: it is evenly lit",
+    "racks with screens on their doors or words on labels",
+    "cables strewn across the floor (they run overhead)",
+    "people drawn in the walkway beyond the far doors"
+   ],
+   "objects": [
+    "server rack",
+    "containment",
+    "raised floor",
+    "fibre tray",
+    "linear light",
+    "hall wall",
+    "tile lifter",
+    "dome camera",
+    "card reader"
+   ],
+   "checked": "plan",
+   "reuse": "high",
+   "uses": [
+    "a technician replaces a failed drive while an escorted contractor watches",
+    "a visitor is reminded that photos are not allowed on the data hall floor",
+    "how cold air rises through the perforated tiles into the racks (cooling explained)",
+    "a technician notices a rack left unlocked and reports it",
+    "establishing the data hall in a lesson on physical security"
+   ]
+  },
+  {
+   "id": "access_vestibule",
+   "aliases": [
+    "security vestibule",
+    "mantrap",
+    "data hall security door",
+    "secure door",
+    "tailgating door"
+   ],
+   "what": "the entry lobby outside the data hall's security vestibule: a cobalt blue wall with a heavy cobalt steel door, a card reader and keypad beside it, a dome camera above, a sign-in kiosk and a bench for visitors",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "tailgating and piggybacking, badges and PINs, visitors signing in and being escorted, a delivery or a contractor asking to be let in",
+   "plan": [
+    "Seen from above, metres: x runs along the data hall's wall from the lobby's left wall (x 0) to its right wall (x 7.5); y runs from the camera's side of the lobby to that wall (y 4.6). The plasterboard ceiling is at 3.0 m.",
+    "Far wall (y 4.6): the data hall's wall, painted cobalt blue. The vestibule's outer door, a cobalt steel door 1.0 m wide and 2.1 m high, from x 1.9 to 2.9, in a grey steel frame (x 1.8 to 3.0, up to 2.2 m), with a narrow wired-glass vision panel near its handle side (x 2.6 to 2.75, 1.2 to 1.9 m high), a lever handle at x 2.78, 1.0 m and a pictogram sign on the leaf at about 1.5 m. A card reader at x 3.15, 1.1 m high, with a keypad just below it. A dome camera on the ceiling in front of the door (x 2.4, y 4.4). A cobalt bench against the wall from x 5.4 to 6.8.",
+    "Behind the door: the vestibule, about 1.5 by 1.5 m, with a second door into the data hall; only a dim slice of it shows through the vision panel.",
+    "Left: a visitor sign-in kiosk on a pedestal at x 1.35, y 4.2. Right wall (x 7.5): plain white, just out of the frame.",
+    "Cast: the badge holder at the reader, facing it and the door (x 3.55, y 3.95; head top 1.74 m); a second person close behind, carrying a box, about to follow (x 4.45, y 3.35; head top 1.80 m).",
+    "Camera: x 2.9, y -1.7, standing eye height 1.62 m across the lobby, turned 10 degrees right; lens like 35 mm (55 degrees across); no tilt; horizon at 44 percent of the frame height."
+   ],
+   "camera": "Standing eye height 1.62 m across the lobby, turned 10 degrees right; 35 mm lens, 55 degrees across; no tilt, verticals stay vertical. Two-point perspective, close to frontal: the horizon at y 475 (44 percent); lines along the cobalt wall (its floor line, the door head, the bench) fall gently to the right toward a vanishing point far off-frame right (x about 11420); lines running toward the wall (the kiosk's base, the bench's ends) run to a vanishing point at x 635 on the horizon.",
+   "composition": "The cobalt wall fills the frame behind the cast: its floor line runs from below the left edge (about y 999 at the left) to about y 902 at the right, where the lobby's right wall begins just past x 1865; the ceiling meets it at about y 29 at the left and y 98 at x 1496. The secure door stands left of centre: its frame from x 292 to 665 (head y 297 to 303), the leaf from x 324 to 635 (top y 328 to 333, foot y 957 to 971), its vision panel at about x 544 to 589 (y 391 to 601), its handle at about x 598, y 660 and the pictogram sign at about x 466, y 511. The card reader is at about x 710, y 629, the keypad just below (y 673). The dome camera hangs from the ceiling above the door (about x 477, y 45). The sign-in kiosk stands at the left edge (screen about x 111, y 598; base y 1014). The bench runs along the wall at the right from about x 1385 to 1761 (seat about y 808 to 821). Free zones for the cast, both seen whole: the badge holder at the reader, in three-quarter back view facing left toward the reader and the door (head top about x 849, y 436; feet about y 1001); the follower close behind, in three-quarter, carrying a box at chest height (head top about x 1188, y 412; feet about y 1045). Both heads sit against the plain cobalt wall (behind points at x 3.62 and 4.83, 1.62 to 1.84 m high): the badge holder's head about 140 px right of the reader and 180 px right of the door frame, the follower's well clear of the bench.",
+   "light": "Late morning, no window in this lobby: even, neutral white light from round downlights in the ceiling, falling straight down, so the cast and the kiosk throw short soft contact shadows; the cobalt wall is evenly lit with a soft gradient toward the floor. The card reader's small LED is red (locked); the kiosk's screen is on (a lit slot). The vision panel shows only a dim slice of the vestibule. No haze.",
+   "far": "The shell: the cobalt wall with the secure door, its frame, its vision panel and sign, the card reader and keypad, the bench; the floor with its worn path to the door; the ceiling with the dome camera and the downlights.",
+   "mid": "The sign-in kiosk at the left edge. The cast is placed in front of the wall, right of the door.",
+   "near": "Nothing: the lobby floor near the camera is kept clear.",
+   "details": [
+    "a small pictogram sign on the door: one figure, and a second figure crossed out (no words)",
+    "the card reader's small red LED (locked)",
+    "a scuffed steel kick plate on the door",
+    "a faint worn path in the floor leading to the door",
+    "a visitor lanyard left on the bench",
+    "a snake plant in a pot at the bench's far end"
+   ],
+   "keep_first": "If space is short, keep the pictogram sign, the reader's LED, the kick plate and the lanyard on the bench; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "wall2",
+    "floor",
+    "metal",
+    "fabric",
+    "screen"
+   ],
+   "motifs_here": "the cobalt wall, the cobalt secure door, the card reader and keypad by the door, the dome camera",
+   "slots": [
+    "slot_kiosk (the kiosk's screen, about x 85 to 140, y 580 to 615)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor at the badge holder's feet, about y 1001)",
+    "anchor_badge_holder (feet, about x 849, y 1001)",
+    "anchor_follower (feet, about x 1188, y 1045)",
+    "anchor_reader (about x 710, y 629)",
+    "anchor_door_handle (about x 598, y 660)"
+   ],
+   "variants": [
+    "door open: the outer door held open by its closer arm at 80 degrees, the vestibule's white interior and the inner door visible",
+    "after hours: the downlights at half, the kiosk asleep (dark)"
+   ],
+   "avoid": [
+    "a person in the set (the cast is separate)",
+    "the door, its frame, the reader or the kiosk behind either head",
+    "a glass revolving door or a turnstile: it is a two-door vestibule",
+    "words on the sign, the kiosk or the door",
+    "a window anywhere",
+    "security staff drawn in the set"
+   ],
+   "objects": [
+    "secure door",
+    "card reader",
+    "dome camera",
+    "sign-in kiosk",
+    "bench",
+    "lobby floor",
+    "ceiling",
+    "plants"
+   ],
+   "checked": "plan",
+   "reuse": "medium",
+   "uses": [
+    "someone carrying a box follows an engineer through the secure door (tailgating), and the engineer stops them",
+    "a visitor signs in at the kiosk, gets a badge and is escorted in",
+    "a contractor claims to be expected and asks to be let in",
+    "an engineer covers the keypad while entering their PIN"
+   ]
+  },
+  {
+   "id": "soc",
+   "aliases": [
+    "security operations centre",
+    "security operations center",
+    "soc floor",
+    "video wall"
+   ],
+   "what": "the security operations centre on the first floor: a windowless room with a wall of eight display panels at the front, a front row of consoles facing it, a raised rear row behind, and a cobalt blue side wall with a pale grey felt panel",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "triaging an alert, calling a major incident, watching an attack unfold on the wall, shift handover, a SOC lead briefing an analyst",
+   "plan": [
+    "Seen from above, metres: x runs across the room from its left wall (x 0) to its right wall (x 10.0); y runs from the back wall (y 0) to the front wall with the video wall (y 8.0). The soffit is at 3.2 m. The room has no windows; the floor's round concrete columns stand in its back corners, inside the walls' line, out of the frame.",
+    "Front wall (y 8.0): painted white; the video wall (eight 55 inch panels, 4 by 2) from x 2.55 to 7.45, from 1.2 to 2.57 m high.",
+    "Left wall (x 0): painted cobalt blue, with a pale grey felt wall panel from y 4.0 to 7.6, 0.9 to 2.3 m high.",
+    "Front row: one straight console of four positions (x 2.2 to 8.6), desks from y 5.4 to 6.2, monitors' faces toward the video wall at y 5.95 (tops 1.25 m); chairs at about y 4.85.",
+    "Rear row: the same console on a carpeted platform 0.3 m high (y 1.0 to 3.7), desks from y 2.4 to 3.2; out of the frame, behind and left of the camera except the platform's front corner.",
+    "Linear pendants and black cable baskets hang from the soffit over both rows.",
+    "Cast: an analyst seated at the front row's left-end position, the chair swivelled toward the wall side (x 2.7, y 4.85; head top 1.32 m); the SOC shift lead standing in front of the felt panel, near the video wall's left end, turned to the room (x 1.5, y 6.1; head top 1.80 m).",
+    "Camera: x 9.4, y 4.15, standing eye height 1.62 m in the right-hand aisle between the two rows, turned 66 degrees left from the video wall (looking across the room toward the front-left corner); lens like 32 mm (58 degrees across); no tilt; horizon at 44 percent of the frame height."
+   ],
+   "camera": "Standing eye height 1.62 m in the right-hand aisle between the two rows, looking across the room toward the front-left corner; 32 mm lens, 58 degrees across; no tilt, verticals stay vertical. Two-point perspective: the horizon at y 475 (44 percent); lines running toward the front wall (the left wall's floor line, the felt panel's edges, the console's ends) run to a vanishing point far off-frame right (x about 4850); lines across the room (the front row's console, the video wall's top and bottom, the front wall's floor line) run to a vanishing point near the left edge at x about 189.",
+   "composition": "The front-left corner is a vertical at x 908 (floor y 752, soffit y 206). Left of it the cobalt left wall carries the pale grey felt panel, from x 156 (top y 337, bottom y 621) to x 844 (top y 357, bottom y 600). Right of it the front wall carries the video wall, from its left edge at x 1122 (top y 265, bottom y 568) running past the right edge (its middle at about x 1496, top y 181, bottom y 605), every panel a lit slot. The soffit with its pendants and cable baskets fills the top band (a pendant at about x 558, y 47). The front row's console runs from its left end at about x 523 (desk top y 690) toward the bottom right, its monitors' black backs from about x 668 (top y 565) to x 1356 (top y 694) and on past the right edge near the camera, always below the video wall. The rear platform's front corner shows at the left edge (about x 56, y 833). Free zones for the cast: the analyst seated at the front row's left end, chair swivelled toward the shift lead, seen in three-quarter (head top about x 396, y 556; seat about x 396, y 786; feet about y 934); the shift lead standing near the video wall's left end, facing the analyst and the room (head top about x 650, y 436; feet about y 825). Both heads sit against the felt panel (behind points on the left wall at y 5.13 and 6.47, 1.03 to 1.83 m high): the analyst's head 270 px from the nearest monitor, the lead's 250 px from the corner and well left of the video wall.",
+   "light": "No daylight. The linear pendants are on at a medium level, a neutral white from above; the video wall is the brightest thing in the room and throws a cool glow across the front wall, the floor in front of it, the front row's monitor backs and the right side of the shift lead. The felt panel and the cobalt wall are lit evenly and softly. Shadows are soft and short, straight down and a little away from the video wall. The front row's monitors are on (their glow shows around their black backs). No haze.",
+   "far": "The shell: the cobalt left wall with the felt panel, the front wall with the video wall, the floor, the soffit with pendants and cable baskets; the left end of the front row with its empty swivelled chair.",
+   "mid": "The rest of the front row's console, its monitors' backs, chairs and desk things, running toward the bottom right. The shift lead and the analyst are placed in front of the far layer, left of the console.",
+   "near": "Only the rear platform's front corner and step at the left edge, low in the frame, covering none of the cast.",
+   "details": [
+    "a desk phone and a pair of black headphones on the front row's left-end desk",
+    "a closed grey laptop on the next desk",
+    "a mug and a water bottle among the keyboards",
+    "a chair at the middle of the front row pushed back and turned, as if someone just stood up",
+    "a thin black cable bundle dropping from a cable basket into the console's spine",
+    "a printed shift rota pinned to the felt panel near its far end, below head height (a slot)"
+   ],
+   "keep_first": "If space is short, keep the headphones, the turned chair, the cable drop and the mug; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "wall2",
+    "screen",
+    "floor",
+    "metal",
+    "fabric"
+   ],
+   "motifs_here": "the cobalt blue wall and chair upholstery, the pale grey felt panel, black cable baskets under the white soffit",
+   "slots": [
+    "slot_video_wall (the whole video wall, from x 1122, y 265 to 568 at its left edge, past the right edge; eight panels)",
+    "slot_rota (the pinned shift rota, about x 743 to 794, y 514 to 584)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor at the shift lead's feet, about y 825)",
+    "anchor_shift_lead (feet, about x 650, y 825)",
+    "anchor_seat_analyst (about x 396, y 786)",
+    "anchor_video_wall_centre (about x 1496, y 393)"
+   ],
+   "variants": [
+    "major incident: every video wall panel lit warmer (the engine fills them), two more chairs turned out",
+    "night shift: the pendants dimmed low, the video wall the main light"
+   ],
+   "avoid": [
+    "a person in the set (the cast is separate)",
+    "the video wall, a monitor, the corner or the felt panel's edge behind either head",
+    "a dark hacker den with green code; it is a calm, lit control room",
+    "words, numbers, maps with country shapes or logos on the screens (slots only)",
+    "windows (the room has none)"
+   ],
+   "objects": [
+    "video wall",
+    "soc console",
+    "task chair",
+    "platform",
+    "felt wall panel",
+    "linear pendant",
+    "cable basket",
+    "desk phone",
+    "headphones",
+    "mug",
+    "pinned sheet"
+   ],
+   "checked": "plan",
+   "reuse": "high",
+   "uses": [
+    "a SOC analyst triages an alert about a login from an unexpected country",
+    "the shift lead calls a major incident and briefs the analyst",
+    "a phishing campaign spreads and the team watches it on the wall",
+    "a night-shift analyst hands over to the day shift",
+    "establishing the security operations centre"
+   ]
+  },
+  {
+   "id": "incident_room",
+   "aliases": [
+    "incident room",
+    "incident bridge",
+    "war room",
+    "major incident room",
+    "crisis room"
+   ],
+   "what": "the incident room next to the security operations centre: a long oak table with a speaker puck at its centre, cobalt chairs, a large wall screen on the end wall and a ribbon window along the right with its blinds lowered",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "running a major incident bridge, a ransomware decision, a tabletop exercise, a post-incident review, briefing leaders",
+   "plan": [
+    "Seen from above, metres: x runs across the room from its left wall (x 0) to the window wall (x 5.1); y runs from the door wall, behind the camera (y 0), to the end wall (y 6.0). The soffit is at 3.2 m, with two linear pendants over the table.",
+    "End wall (y 6.0): painted cobalt blue; a 75 inch wall screen centred on the table, from x 1.72 to 3.38, 0.95 to 1.88 m high, a small camera bar on its top.",
+    "Left wall (x 0): white plasterboard, plain; its far end shows at the left edge.",
+    "Right wall (x 5.1): the ribbon window from y 1.2 to 5.6 (sill 0.9 m, head 2.7 m), every blind lowered fully.",
+    "A long oak table 3.2 by 1.2 m from x 1.95 to 3.15 and y 1.4 to 4.6, a speaker puck at its centre (x 2.55, y 3.0), laptops at the occupied places. Eight cobalt meeting chairs, four a side.",
+    "Cast: the incident manager standing at the end wall left of the screen, facing the table (x 0.75, y 5.3; head top 1.78 m); one person seated on the right side, facing left across the table (x 3.6, y 3.4); one person seated on the left side, far end, facing right (x 1.6, y 4.0); seated head tops 1.32 m.",
+    "Camera: x 2.55, y 0.3, seated eye height 1.25 m at the table's near end, looking straight down the table at the screen; lens like 35 mm (55 degrees across); no tilt; horizon at 46 percent of the frame height."
+   ],
+   "camera": "Seated eye height 1.25 m at the table's near end, looking straight down the table at the screen; 35 mm lens, 55 degrees across; no tilt, verticals stay vertical. One-point perspective: the horizon at y 497 (46 percent); the table's long edges, the window wall's sill and head, the pendants and the floor's carpet lines run to one vanishing point at x 960 on the horizon; lines across the room stay level.",
+   "composition": "The cobalt end wall fills the middle of the frame, from the left corner at x 135 to the right corner at x 1785 (floor line level at y 901; the soffit above the frame). The wall screen is the focal shape, centred: x 691 to 1229, y 293 to 594. The window wall recedes on the right from the corner: its lowered blinds glowing softly from about x 1847 (sill y 619, head above the frame) to the right edge. A sliver of the plain left wall shows at the left edge. The table runs from the bottom edge (its near corners below the frame) to its far end at x 703 to 1217 (y 716), the speaker puck at its centre (about x 960, y 818), laptops at about x 1228, y 735 and x 736, y 696. Free zones for the cast: the incident manager standing left of the screen, facing the table and the camera in three-quarter (head top about x 296, y 301; feet about y 958); the person seated on the right side, in three-quarter profile facing left (head top about x 1585, y 455; seat about y 961); the person seated on the left side at the far end, facing right (head top about x 487, y 462; seat about y 886). Every head is seen against the plain cobalt end wall (behind points at x 0.5, 1.09 and 4.48, 1.16 to 1.85 m high): the manager's head 160 px from the left corner, the left sitter's 150 px left of the screen, the right sitter's 140 px from the right corner and well right of the screen.",
+   "light": "Daytime with the blinds down: soft, dim, cool daylight glows through the lowered blinds from the right; the two linear pendants over the table are on, a neutral white, lighting the table and the chairs from above. The wall screen is on (its face a lit slot) and throws a faint cool glow on the end wall around it and the table's far end. The laptops' screens face their users. Shadows are soft and short, straight down and a little to the left. No haze.",
+   "far": "The shell: the cobalt end wall with the screen, the window wall with its lowered blinds, the sliver of left wall, the floor (light grey carpet tiles), the soffit with the pendants above the frame; the empty chairs at the table's far end.",
+   "mid": "The table with the speaker puck, the laptops, the jug and glasses, the notepads; the chairs along both sides (two of them, at the seated cast's places, drawn empty). The seated cast is placed at their chairs behind the table's edge; the incident manager in front of the end wall.",
+   "near": "The table's near end and the two nearest chairs' backs at the bottom corners (about x -233 and 2153, y 876, mostly in the overscan), covering none of the cast.",
+   "details": [
+    "the speaker puck with its LED ring lit (a call is live)",
+    "an open printed runbook in a ring binder beside the near-right laptop (a slot)",
+    "a water jug and glasses at the table's centre",
+    "a notepad with a pen across it in front of the left sitter",
+    "one chair pulled out and turned, as if someone just left the bridge",
+    "a phone face down beside a laptop"
+   ],
+   "keep_first": "If space is short, keep the puck's lit ring, the runbook, the turned chair and the jug; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "wall2",
+    "wood",
+    "fabric",
+    "screen",
+    "floor"
+   ],
+   "motifs_here": "the cobalt end wall and cobalt chairs, the long black-framed ribbon window with its lowered blinds, a black linear pendant",
+   "slots": [
+    "slot_screen (the wall screen's face, x 691 to 1229, y 293 to 594)",
+    "slot_runbook (the open binder on the table, strongly foreshortened, about x 1300 to 1400, y 760 to 800)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the end wall's floor line, about y 901)",
+    "anchor_incident_manager (feet, about x 296, y 958)",
+    "anchor_seat_right (about x 1614, y 961)",
+    "anchor_seat_left (about x 462, y 886)",
+    "anchor_puck (about x 960, y 818)",
+    "anchor_screen_centre (about x 960, y 444)"
+   ],
+   "variants": [
+    "night: the blinds dark, the pendants and the screen the only light",
+    "post-incident review: the laptops closed, sticky notes (blank) along the table"
+   ],
+   "avoid": [
+    "a person in the set (the cast is separate)",
+    "the screen, a corner or the window behind any head",
+    "a dark war room lit by red lights",
+    "words, numbers or real interfaces on the screen, the laptops or the binder",
+    "a generic boardroom: no wood panelling, no leather chairs"
+   ],
+   "objects": [
+    "meeting table",
+    "meeting chair",
+    "wall screen",
+    "speaker puck",
+    "laptop",
+    "roller blind",
+    "ribbon window",
+    "water jug and glasses",
+    "notepad",
+    "linear pendant"
+   ],
+   "checked": "plan",
+   "reuse": "medium",
+   "uses": [
+    "the incident manager runs a major incident bridge with IT, legal and communications",
+    "leaders decide what to do about a ransomware demand",
+    "a tabletop exercise walks through a breach scenario",
+    "a blameless post-incident review",
+    "the team decides when and how to tell customers about a data breach"
+   ]
+  },
+  {
+   "id": "dev_desk",
+   "aliases": [
+    "developer desk",
+    "engineering desk",
+    "engineering floor",
+    "code review",
+    "pair programming desk"
+   ],
+   "what": "a desk at the end of a bench on the engineering floor: two engineers' chairs facing two monitors on an arm, a laptop on a stand, a long grey storage unit behind, a cobalt back wall with a pale grey felt panel and a kanban board, and a ribbon window at the far end of the floor",
+   "shots": [
+    "mid",
+    "close"
+   ],
+   "for": "code review, secrets found in code, pasting data into AI tools, MFA prompts, a phishing email to an engineer, pair programming",
+   "plan": [
+    "Seen from above, metres: x runs across the bench (the monitors' faces on x 0.65, the desk from x 0 to 0.8, the engineers' side at negative x); y runs along the bench from its end near the camera (y 1.6) toward the far end of the floor (the far wall at y -9.0). The soffit is at 3.2 m.",
+    "The pair's desk is the last of the bench, from y 0 to 1.6; the next desks continue from y 0 to -4.8. Two 27 inch monitors on a dual arm, faces at x 0.65 from y 0.15 to 1.35, 0.85 to 1.2 m high, facing the engineers; a laptop on a stand at x 0.25, y 1.0; headphones hung on the near monitor. A low grey storage unit (0.4 m deep, 0.75 m high) runs along the back of the bench at x 0.85 to 1.25.",
+    "Back wall (x -2.6), 1.9 m behind the engineers' chairs across an aisle: painted cobalt blue; a pale grey felt wall panel from y 1.4 to -1.6, 0.9 to 2.2 m high; a kanban board from y -4.6 to -6.6, 1.0 to 2.0 m high.",
+    "Far wall (y -9.0): the ribbon window (sill 0.9 m, head 2.7 m) along it, seen beyond the bench; screens are at 90 degrees to it.",
+    "Cast: the author seated at the desk, facing the monitors (x -0.5, y 0.55; head top 1.32 m); the reviewer in a pulled-up chair at the desk's near end, turned toward the monitors and the author (x -0.65, y 1.3; head top 1.34 m).",
+    "Camera: x 1.1, y 3.4, seated eye height 1.25 m in the aisle beyond the bench's end and the storage unit, diagonally in front of the pair, turned to look back along the bench (160 degrees from the y axis); lens like 35 mm (55 degrees across); no tilt; horizon at 46 percent of the frame height."
+   ],
+   "camera": "Seated eye height 1.25 m in the aisle beyond the bench's end, diagonally in front of the pair, looking back along the bench; 35 mm lens, 55 degrees across; no tilt, verticals stay vertical. Two-point perspective: the horizon at y 497 (46 percent); lines along the bench (the desk edges, the storage unit, the far window's sill) run to a vanishing point at x 289 on the horizon; lines across the bench (the desk's ends, the back wall's panel edges) run to a vanishing point far off-frame right (x about 6030).",
+   "composition": "Left of centre, the bench recedes toward the far end of the floor: the storage unit's top runs from the bottom left (about x 109, y 1059) to about x 241, y 647; the pair's desk top from its near corner (about x 1333, y 970) to its far corner (about x 893, y 770), the monitors' black backs standing on it at about x 564 to 713 (tops y 526 to 541, the near one's foot about y 851), the laptop at about x 944, y 787 and the headphones on the near monitor at about x 755, y 546; the next desks continue beyond to the left. At the far end of the floor, the ribbon window glows from the left edge to the far corner at x 851 (sill about y 547 to 555, head about y 254). Right of that corner the cobalt back wall runs to the right edge: the kanban board at about x 970 to 1116 (y 339 to 540), then plain cobalt, then the felt panel from x 1506 (bottom y 605) to past the right edge. Free zones for the cast: the author seated at the desk, seen in three-quarter front facing the monitors (left) (head top about x 1262, y 457; seat about x 1237, y 945); the reviewer in the pulled-up chair nearer the camera, turned toward the monitors and the author (head top about x 1624, y 432; seat about x 1595, y 1060). The author's head is seen against plain cobalt wall between the kanban board and the felt panel (behind point on the back wall at y -3.19, 1.13 to 1.41 m high), about 150 px from the board; the reviewer's head against the felt panel (behind point at y -1.04, 1.19 to 1.44 m high).",
+   "light": "Late morning on an overcast day: soft, cool daylight from the far ribbon window comes along the bench from the left, lighting the monitors' backs, the desk's far edge and the left sides of the cast; the long black linear pendants overhead (above the frame) add a neutral white top light. The monitors are on: their glow lights the engineers' faces softly from the left. Shadows are soft and short, falling to the right and toward the camera. Haze about 0.1 on the far window.",
+   "far": "The shell: the far wall with its ribbon window, the cobalt back wall with the kanban board and the felt panel, the floor (light grey carpet tiles); the far desks of the bench with their monitors' backs and chairs.",
+   "mid": "The pair's desk with the monitors, the laptop on its stand, the keyboard, the headphones and the desk things; the storage unit along the back of the bench; the two empty chairs (the author's at the desk, the reviewer's pulled up). The cast is placed at those chairs, behind the desk's front edge.",
+   "near": "Only the storage unit's near end at the bottom left (about x 109, y 1059), cropped by the bottom edge, covering none of the cast.",
+   "details": [
+    "a rubber duck on the near monitor's foot",
+    "black headphones hung on the near monitor's corner",
+    "a laptop on an aluminium stand, its lid open toward the engineers",
+    "two blank sticky notes on a monitor's back edge",
+    "a mug and a water bottle beside the keyboard",
+    "a snake plant and a stack of plain boxes on the storage unit"
+   ],
+   "keep_first": "If space is short, keep the rubber duck, the headphones, the laptop on its stand and the sticky notes; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "wall2",
+    "wood",
+    "screen",
+    "fabric",
+    "exterior"
+   ],
+   "motifs_here": "the cobalt back wall, the pale grey felt panel, the long black-framed ribbon window at the far end",
+   "slots": [
+    "slot_kanban (the kanban board, about x 970 to 1116, y 339 to 540: coloured squares only)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor at the back wall's foot behind the cast, about y 860)",
+    "anchor_seat_author (about x 1237, y 945)",
+    "anchor_seat_reviewer (about x 1595, y 1060)",
+    "anchor_desk_top (about x 1100, y 860)",
+    "anchor_laptop (about x 944, y 787)"
+   ],
+   "variants": [
+    "solo: the reviewer's chair gone, one engineer at the desk",
+    "evening: the far window deep blue, the pendants dimmed, the monitors' glow stronger on the faces"
+   ],
+   "avoid": [
+    "a person in the set (the cast is separate)",
+    "the kanban board, the felt panel's edge, the window or a monitor behind either head",
+    "a hacker cliche: hoodies, dark room, green code rain",
+    "words, letters, code or logos on any screen, board or sticky note",
+    "screens facing the window"
+   ],
+   "objects": [
+    "sit-stand desk",
+    "monitor",
+    "keyboard and mouse",
+    "laptop stand",
+    "laptop",
+    "storage unit",
+    "kanban board",
+    "felt wall panel",
+    "headphones",
+    "rubber duck",
+    "sticky notes",
+    "mug",
+    "ribbon window",
+    "plants"
+   ],
+   "checked": "plan",
+   "reuse": "high",
+   "uses": [
+    "two engineers review a pull request and find a secret key committed in the code",
+    "an engineer is about to paste customer data into a public AI tool and their colleague stops them",
+    "an engineer gets an MFA push they did not ask for and reports it",
+    "an engineer reports a convincing phishing email to the security team",
+    "a new engineer pairs with a senior colleague on their first change"
+   ]
+  },
+  {
+   "id": "cyberspace",
+   "aliases": [
+    "network world",
+    "computer network",
+    "inside the network",
+    "data flow"
+   ],
+   "what": "an abstract picture of the company's network as a calm, pale space: a gridded floor receding to a soft horizon, rounded plinths standing for servers, laptops, phones and a router, cobalt links lying on the floor between them, a firewall wall across one link and a cloud floating above the horizon",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "how data travels, encryption, a firewall, ransomware spreading from one laptop, phishing links leading to a server, personified threats",
+   "plan": [
+    "Abstract place, no real floor plan: the composition below is written directly in frame terms (1920 by 1080, y down) and was not plan-checked with the camera tool.",
+    "The space's scale is set by the cast: a standing character is about 1.75 m, a node's plinth 1.6 m across and 0.5 m high, the symbol on it (a server, a laptop, a phone, a router) drawn large, about 1.2 m across, a firewall 2.2 m high and 3 m long, so characters can stand beside and between the objects. Frame sizes below follow one rule: at any depth, the floor's distance below the horizon equals the camera's eye height of 1.2 m.",
+    "Layout seen from above, as an idea of depth only: a laptop node near the camera at the right, a router node in the middle ground at the centre left, a server node beyond it, a phone node and two small far nodes near the horizon, the cloud floating above the far horizon at the right; links join laptop to router, router to server, router to phone and the server to the cloud; the firewall stands across the link between the router and the server."
+   ],
+   "camera": "A low eye height for the cast's scale (1.2 m), looking level across the floor, so standing characters' heads rise clear of the horizon into the sky; a lens like 35 mm; one-point perspective with the horizon at y 540 (50 percent) and the vanishing point at x 960; the floor grid's lines run to that point, cross lines stay level.",
+   "composition": "The pale sky fills the top half down to a soft horizon at y 540; the grid floor fills the bottom half, its lines converging to x 960, y 540. Middle ground, centre left: the router node, its plinth from about x 565 to 778 (base y 700, top y 633), the router symbol on it up to about y 570. Beyond it, slightly right: the firewall, a translucent wall from about x 912 to 1087 (foot y 610, top y 482), its gate opening near its middle where the link passes. Beyond the firewall: the server node, its plinth about x 997 to 1063 (base y 590, top y 569), the server rack on it up to about y 486. Near the camera at the right: the laptop node, its plinth from about x 1400 to 1813 (base y 850, top y 721), the large laptop symbol on it up to about y 410, its screen facing the camera and a little left. Left near the horizon: the phone node (plinth about x 310 to 370, base y 585, the phone up to about y 540). Two small far nodes on the horizon at about x 640 and 1280. The cloud floats in the sky at the upper right, far beyond the laptop and clear of it (about x 1500 to 1840, y 250 to 380). Links: from the laptop node curving left to the router (passing about x 1100, y 790), from the router through the firewall's gate to the server, from the router left to the phone, and from the server up into the cloud. Free zones for the cast (personified threats or people), each seen whole with the head against plain sky: one standing on the floor in the left foreground (feet about x 380, y 900; head top about y 375); one standing between the laptop and the router (feet about x 1180, y 860; head top about y 393), right of the firewall and well left of the cloud. Leave the band between y 600 and 760 across the middle clear of any extra objects, for packets to travel.",
+   "light": "Soft, even, high light from above and slightly from the left, like an overcast studio: no sun, no glow halos, no dark areas. Each object casts a soft, short contact shadow straight down onto the floor, a little to the right. The links and the packets are the most saturated colour in the picture. Distance is shown by a gentle fade toward the horizon (haze about 0.3 at the horizon).",
+   "far": "The sky, the horizon, the grid floor, the cloud, the two small far nodes and the phone node.",
+   "mid": "The router node, the firewall, the server node and the links between them.",
+   "near": "The laptop node at the right and the near part of its link.",
+   "details": [
+    "two data packets on the laptop-to-router link, one with a closed padlock mark",
+    "a third packet stopped at the firewall's gate",
+    "small LED dots on the server node's rack",
+    "the laptop node's screen and the phone node's screen as small slots",
+    "a faint brighter glow along the link that a packet is travelling"
+   ],
+   "keep_first": "If space is short, keep the packets, the firewall's gate and the LED dots; drop the far nodes before adding anything else.",
+   "dominant": [
+    "floor",
+    "sky",
+    "wall2",
+    "screen",
+    "metal"
+   ],
+   "motifs_here": "cobalt blue on the links, the plinths' rings and the firewall's joints (the company's colour carried into the abstract space)",
+   "slots": [
+    "slot_laptop_screen (the laptop symbol's screen, about x 1500 to 1720, y 430 to 600)",
+    "slot_phone_screen (the phone symbol's screen, about x 328 to 352, y 548 to 575)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor at the left foreground character's feet, about y 900)",
+    "anchor_character_left (feet, about x 380, y 900)",
+    "anchor_character_mid (feet, about x 1180, y 860)",
+    "anchor_router (top of the router node, about x 672, y 633)",
+    "anchor_firewall_gate (about x 1000, y 600)",
+    "anchor_laptop (top of the laptop node, about x 1610, y 760)"
+   ],
+   "variants": [
+    "under attack: one link and the router's ring turned warm red, the packets on it marked with a broken padlock",
+    "night: the sky deep blue with the grid lines faintly lit, the objects unchanged"
+   ],
+   "avoid": [
+    "a hacker cliche: green code rain, a black void, hooded figures, skulls",
+    "neon glow, lens flares or heavy gradients",
+    "letters, numbers, IP addresses or logos anywhere",
+    "a real map, a globe with countries, or a real product's look",
+    "people in the set (the cast is separate)"
+   ],
+   "objects": [
+    "network node",
+    "link",
+    "data packet",
+    "firewall",
+    "cloud",
+    "grid floor"
+   ],
+   "reuse": "medium",
+   "uses": [
+    "how an email travels from a laptop through the router to the server",
+    "why encryption matters: a packet with a closed padlock and one without",
+    "a firewall stops a packet that does not belong",
+    "ransomware spreads from one laptop across the network",
+    "a phishing link leads a packet out to a fake server in the cloud"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+<title>Relay and Shuttle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; each pipeline gets a full-width drawing in its own scroll box, explained beneath. */
+:root {
+  --bg: #F3F5F7; --panel: #FFFFFF; --fg: #1B2229; --muted: #5A6672; --line: #C9D1D9; --soft: #E7ECF0;
+  --relay: #1F6F8B; --relay-tint: #DCEEF4; --shuttle: #A2611A; --shuttle-tint: #F6E8D6; --engine: #3D4852; --engine-tint: #E3E7EB;
+  --gate: #7A3E8F; --gate-tint: #EFE2F4;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12171C; --panel: #1A2128; --fg: #E4E9EE; --muted: #9AA6B2; --line: #36414C; --soft: #222B33;
+  --relay: #5FB6D3; --relay-tint: #173341; --shuttle: #E0A25C; --shuttle-tint: #3A2A17; --engine: #B5C0CA; --engine-tint: #26303A;
+  --gate: #C68FDB; --gate-tint: #33223B; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12171C; --panel: #1A2128; --fg: #E4E9EE; --muted: #9AA6B2; --line: #36414C; --soft: #222B33;
+  --relay: #5FB6D3; --relay-tint: #173341; --shuttle: #E0A25C; --shuttle-tint: #3A2A17; --engine: #B5C0CA; --engine-tint: #26303A;
+  --gate: #C68FDB; --gate-tint: #33223B; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15.5px; line-height: 1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 64px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 26px; font-weight: 700; margin-top: 56px; }
+h3 { font-size: 18px; font-weight: 600; margin-top: 28px; }
+p, li { max-width: 72ch; }
+.lede { color: var(--muted); font-size: 17px; margin-top: 10px; }
+.eyebrow { font-family: var(--display); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+code, .mono { font-family: var(--mono); font-size: 0.88em; background: var(--soft); padding: 1px 5px; border-radius: 4px; }
+.key { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 18px; font-size: 13px; color: var(--muted); }
+.key span { display: inline-flex; align-items: center; gap: 7px; }
+.sw { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid; display: inline-block; }
+.fig { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow-x: auto; }
+.fig svg { display: block; min-width: 860px; width: 100%; height: auto; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px 28px; margin-top: 8px; }
+.cols > div { min-width: 0; }
+ul { padding-left: 20px; margin: 8px 0; }
+li { margin: 4px 0; }
+.tablewrap { overflow-x: auto; margin-top: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-family: var(--display); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: none; }
+td.r { color: var(--relay); font-weight: 600; } td.s { color: var(--shuttle); font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.note { margin-top: 18px; padding: 12px 16px; border-left: 3px solid var(--gate); background: var(--gate-tint); border-radius: 0 8px 8px 0; font-size: 14px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+/* svg paint, all from tokens */
+.b { fill: var(--panel); stroke: var(--line); stroke-width: 1.5; }
+.be { fill: var(--engine-tint); stroke: var(--engine); stroke-width: 1.5; }
+.br { fill: var(--relay-tint); stroke: var(--relay); stroke-width: 1.6; }
+.bs { fill: var(--shuttle-tint); stroke: var(--shuttle); stroke-width: 1.6; }
+.bg { fill: var(--gate-tint); stroke: var(--gate); stroke-width: 1.6; }
+.dash { stroke-dasharray: 5 4; }
+.t { fill: var(--fg); font-family: var(--body); font-size: 13px; }
+.tb { fill: var(--fg); font-family: var(--display); font-size: 14px; font-weight: 600; }
+.ts { fill: var(--muted); font-family: var(--body); font-size: 11.5px; }
+.tm { fill: var(--muted); font-family: var(--mono); font-size: 11px; }
+.tr { fill: var(--relay); } .tsh { fill: var(--shuttle); } .tg { fill: var(--gate); }
+.a { stroke: var(--muted); stroke-width: 1.5; fill: none; marker-end: url(#arr); }
+.ar { stroke: var(--relay); stroke-width: 1.6; fill: none; marker-end: url(#arrR); }
+.as { stroke: var(--shuttle); stroke-width: 1.6; fill: none; marker-end: url(#arrS); }
+.ag { stroke: var(--gate); stroke-width: 1.6; fill: none; marker-end: url(#arrG); }
+.mk { fill: var(--muted); } .mkr { fill: var(--relay); } .mks { fill: var(--shuttle); } .mkg { fill: var(--gate); }
+.lane { fill: var(--soft); stroke: none; }
+@media (max-width: 520px) { body { font-size: 15px; } h2 { margin-top: 40px; } }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Loom Video-Engine · the two API pipelines</div>
+  <h1>Relay and Shuttle</h1>
+  <p class="lede">Two ways to drive the same engine from a topic to a finished lesson. Relay is a Python conductor that hands each stage to a model. Shuttle is one lead model working inside Claude Code, kept on rails by the engine. Both write the same files and pass the same gates.</p>
+  <div class="key">
+    <span><i class="sw" style="background:var(--engine-tint);border-color:var(--engine)"></i>shared engine (code)</span>
+    <span><i class="sw" style="background:var(--relay-tint);border-color:var(--relay)"></i>Relay</span>
+    <span><i class="sw" style="background:var(--shuttle-tint);border-color:var(--shuttle)"></i>Shuttle</span>
+    <span><i class="sw" style="background:var(--gate-tint);border-color:var(--gate)"></i>a person's approval</span>
+  </div>
+
+  <h2>1. The shared engine</h2>
+  <p>Every lesson moves through one stage graph (<code>loom/stages.py</code>). Model stages produce an artifact that must pass that stage's gate (<code>flow.accept</code>). Code stages run deterministically (<code>flow.run_code</code>). A stage goes stale when anything it was built from changes, so only the affected work is redone.</p>
+  <div class="fig" role="img" aria-label="The stage graph: brief, knowledge, pedagogy, persona, script, allocate, storyboard, narrate, kit, scenes, compose, check, review, render, with the approvals marked.">
+    <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="mk"/></marker>
+        <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="mkr"/></marker>
+        <marker id="arrS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="mks"/></marker>
+        <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="mkg"/></marker>
+      </defs>
+      <text x="20" y="26" class="ts">model stage = filled · code stage = outlined · each writes one artifact</text>
+      <!-- row 1 -->
+      <g>
+        <rect x="20" y="44" width="118" height="56" rx="8" class="b"/><text x="79" y="70" text-anchor="middle" class="tb">ingest</text><text x="79" y="88" text-anchor="middle" class="ts">source mode only</text>
+        <rect x="160" y="44" width="118" height="56" rx="8" class="be"/><text x="219" y="70" text-anchor="middle" class="tb">brief</text><text x="219" y="88" text-anchor="middle" class="tm">brief.json</text>
+        <rect x="300" y="44" width="118" height="56" rx="8" class="be"/><text x="359" y="70" text-anchor="middle" class="tb">knowledge</text><text x="359" y="88" text-anchor="middle" class="tm">knowledge.json</text>
+        <rect x="440" y="44" width="118" height="56" rx="8" class="be"/><text x="499" y="70" text-anchor="middle" class="tb">pedagogy</text><text x="499" y="88" text-anchor="middle" class="tm">teaching_plan</text>
+        <rect x="580" y="44" width="118" height="56" rx="8" class="be"/><text x="639" y="70" text-anchor="middle" class="tb">persona</text><text x="639" y="88" text-anchor="middle" class="tm">persona.json</text>
+        <rect x="720" y="44" width="118" height="56" rx="8" class="be"/><text x="779" y="70" text-anchor="middle" class="tb">script</text><text x="779" y="88" text-anchor="middle" class="tm">script.json</text>
+        <rect x="860" y="44" width="118" height="56" rx="8" class="b"/><text x="919" y="70" text-anchor="middle" class="tb">allocate</text><text x="919" y="88" text-anchor="middle" class="tm">allocation.json</text>
+        <path d="M138 72H158M278 72H298M418 72H438M558 72H578M698 72H718M838 72H858" class="a"/>
+      </g>
+      <!-- facts approval -->
+      <rect x="300" y="112" width="118" height="26" rx="13" class="bg"/><text x="359" y="129" text-anchor="middle" class="ts tg">facts approval</text>
+      <path d="M359 100V110" class="ag"/>
+      <!-- connector down -->
+      <path d="M919 100V150H79V170" class="a"/>
+      <!-- row 2 -->
+      <g>
+        <rect x="20" y="172" width="104" height="56" rx="8" class="be"/><text x="72" y="198" text-anchor="middle" class="tb">storyboard</text><text x="72" y="216" text-anchor="middle" class="tm">storyboard.json</text>
+        <rect x="142" y="172" width="104" height="56" rx="8" class="b"/><text x="194" y="198" text-anchor="middle" class="tb">narrate</text><text x="194" y="216" text-anchor="middle" class="tm">timings.json</text>
+        <rect x="264" y="172" width="104" height="56" rx="8" class="be dash"/><text x="316" y="198" text-anchor="middle" class="tb">kit</text><text x="316" y="216" text-anchor="middle" class="ts">a step, if declared</text>
+        <rect x="386" y="172" width="104" height="56" rx="8" class="be"/><text x="438" y="198" text-anchor="middle" class="tb">scenes</text><text x="438" y="216" text-anchor="middle" class="tm">scenes/*.js</text>
+        <rect x="508" y="172" width="104" height="56" rx="8" class="b"/><text x="560" y="198" text-anchor="middle" class="tb">compose</text><text x="560" y="216" text-anchor="middle" class="tm">build/</text>
+        <rect x="630" y="172" width="104" height="56" rx="8" class="b"/><text x="682" y="198" text-anchor="middle" class="tb">check</text><text x="682" y="216" text-anchor="middle" class="tm">qa/report.json</text>
+        <rect x="752" y="172" width="104" height="56" rx="8" class="be"/><text x="804" y="198" text-anchor="middle" class="tb">review</text><text x="804" y="216" text-anchor="middle" class="ts">picture critic</text>
+        <rect x="874" y="172" width="104" height="56" rx="8" class="b"/><text x="926" y="198" text-anchor="middle" class="tb">render</text><text x="926" y="216" text-anchor="middle" class="tm">renders/*.mp4</text>
+        <path d="M124 200H140M246 200H262M368 200H384M490 200H506M612 200H628M734 200H750M856 200H872" class="a"/>
+      </g>
+      <rect x="226" y="246" width="180" height="26" rx="13" class="bg"/><text x="316" y="263" text-anchor="middle" class="ts tg">plan approval (opt-in in Relay)</text>
+      <path d="M316 244V230" class="ag"/>
+      <rect x="836" y="246" width="140" height="26" rx="13" class="bg"/><text x="906" y="263" text-anchor="middle" class="ts tg">final approval</text>
+      <path d="M916 244V230" class="ag"/>
+      <text x="560" y="262" text-anchor="middle" class="ts">render needs a passing check</text>
+    </svg>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>What the engine guarantees</h3>
+      <ul>
+        <li>A model never writes a file directly: it submits, the engine validates the shape, writes the artifact and runs the gate.</li>
+        <li>An agent can never approve facts. Facts, the plan and the final render are approved by a person (or explicitly "unattended per" a named person).</li>
+        <li>The check runs a runtime probe, lints, layout and contrast checks and contact sheets; render refuses a failing check unless forced with a logged reason.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Shared by both pipelines</h3>
+      <ul>
+        <li>Stages, gates, <code>flow.accept</code> and <code>flow.run_code</code>.</li>
+        <li>The submit and snapshot tools in <code>loom/agents/tools.py</code>, the task brief each worker gets, and the router that sends each defect to its owner.</li>
+        <li>The decision ledger, cost log, toolbox, device presets and the set library.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>2. Relay: a conductor that hands out tasks</h2>
+  <p><code>py -m loom agents run &lt;id&gt; --profile &lt;p&gt;</code>. A Python <code>Conductor</code> decides the stage order, which role and model run, the task message, retries and budgets. Models only produce artifacts.</p>
+  <div class="fig" role="img" aria-label="Relay: the conductor runs one role per stage through a tool loop, scene workers in parallel, then compose and check, routes defects to their owners for repair, runs the picture critic and renders.">
+    <svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg">
+      <!-- conductor -->
+      <rect x="20" y="20" width="960" height="54" rx="10" class="br"/>
+      <text x="40" y="44" class="tb tr">Conductor</text><text x="40" y="63" class="ts">loom/agents/conductor.py · profile picks the model per role · budget refused before a call is sent · exit 0 done, 2 failed, 3 waiting for a person, 4 budget, 5 billing</text>
+      <!-- planning roles row -->
+      <text x="20" y="104" class="ts">PLANNING ROLES (one task each, in order)</text>
+      <rect x="20" y="114" width="108" height="50" rx="8" class="b"/><text x="74" y="136" text-anchor="middle" class="tb">brief</text><text x="74" y="153" text-anchor="middle" class="ts">role</text>
+      <rect x="140" y="114" width="138" height="50" rx="8" class="b"/><text x="209" y="136" text-anchor="middle" class="tb">knowledge</text><text x="209" y="153" text-anchor="middle" class="ts">+ skeptic (other family)</text>
+      <rect x="290" y="114" width="108" height="50" rx="8" class="b"/><text x="344" y="136" text-anchor="middle" class="tb">pedagogy</text><text x="344" y="153" text-anchor="middle" class="ts">role</text>
+      <rect x="410" y="114" width="118" height="50" rx="8" class="b"/><text x="469" y="136" text-anchor="middle" class="tb">persona_pick</text><text x="469" y="153" text-anchor="middle" class="ts">picks a pack persona</text>
+      <rect x="540" y="114" width="98" height="50" rx="8" class="b"/><text x="589" y="136" text-anchor="middle" class="tb">script</text><text x="589" y="153" text-anchor="middle" class="ts">role</text>
+      <rect x="650" y="114" width="330" height="50" rx="8" class="b"/><text x="815" y="136" text-anchor="middle" class="tb">outline → storyboard → look round</text><text x="815" y="153" text-anchor="middle" class="ts">the animatic is watched once; patch or "stands"</text>
+      <path d="M128 139H138M278 139H288M398 139H408M528 139H538M638 139H648" class="ar"/>
+      <!-- task loop inset -->
+      <rect x="20" y="186" width="470" height="168" rx="10" class="lane"/>
+      <text x="36" y="208" class="tb">Every task is the same loop</text>
+      <rect x="36" y="220" width="130" height="52" rx="8" class="b"/><text x="101" y="242" text-anchor="middle" class="t">cached prefix</text><text x="101" y="259" text-anchor="middle" class="ts">rules, role card, schema</text>
+      <rect x="186" y="220" width="120" height="52" rx="8" class="br"/><text x="246" y="242" text-anchor="middle" class="t">model</text><text x="246" y="259" text-anchor="middle" class="ts">claude -p or an API</text>
+      <rect x="326" y="220" width="148" height="52" rx="8" class="b"/><text x="400" y="242" text-anchor="middle" class="t">tools</text><text x="400" y="259" text-anchor="middle" class="ts">read · lab_snapshot · kit_preview</text>
+      <path d="M166 246H184M306 246H324" class="a"/>
+      <rect x="186" y="292" width="120" height="48" rx="8" class="b"/><text x="246" y="313" text-anchor="middle" class="t">submit_*</text><text x="246" y="329" text-anchor="middle" class="ts">the only way out</text>
+      <rect x="326" y="292" width="148" height="48" rx="8" class="be"/><text x="400" y="313" text-anchor="middle" class="t">stage gate</text><text x="400" y="329" text-anchor="middle" class="ts">flow.accept</text>
+      <path d="M246 272V290M306 316H324" class="a"/>
+      <path d="M400 340V348H70V280" class="ar" />
+      <text x="78" y="300" class="ts tr">errors: "fix exactly these"</text><text x="78" y="315" class="ts tr">up to 3 repairs, then one</text><text x="78" y="330" class="ts tr">escalation model if set</text>
+      <!-- scenes block -->
+      <rect x="510" y="186" width="470" height="168" rx="10" class="lane"/>
+      <text x="526" y="208" class="tb">Building the beats</text>
+      <rect x="526" y="220" width="118" height="52" rx="8" class="br"/><text x="585" y="242" text-anchor="middle" class="t">kit worker</text><text x="585" y="259" text-anchor="middle" class="ts">once, before scenes</text>
+      <rect x="664" y="220" width="118" height="52" rx="8" class="br"/><text x="723" y="242" text-anchor="middle" class="t">pilot pair</text><text x="723" y="259" text-anchor="middle" class="ts">2 beats first</text>
+      <rect x="802" y="220" width="162" height="52" rx="8" class="br"/><text x="883" y="242" text-anchor="middle" class="t">scene workers ×4</text><text x="883" y="259" text-anchor="middle" class="ts">parallel chains</text>
+      <path d="M644 246H662M782 246H800" class="ar"/>
+      <text x="526" y="296" class="ts">· a chain is beats joined by "continue" or a kept element</text>
+      <text x="526" y="314" class="ts">· spec hashes decide which files are rewritten</text>
+      <text x="526" y="332" class="ts">· clip roles write Manim, Skia or Three.js beats</text>
+      <!-- check & repair -->
+      <rect x="20" y="380" width="150" height="54" rx="8" class="be"/><text x="95" y="403" text-anchor="middle" class="tb">compose + check</text><text x="95" y="421" text-anchor="middle" class="ts">code stages, free</text>
+      <rect x="196" y="380" width="150" height="54" rx="8" class="be"/><text x="271" y="403" text-anchor="middle" class="tb">router</text><text x="271" y="421" text-anchor="middle" class="ts">defect → owner</text>
+      <rect x="372" y="380" width="230" height="54" rx="8" class="br"/><text x="487" y="403" text-anchor="middle" class="tb">repair rounds</text><text x="487" y="421" text-anchor="middle" class="ts">script · storyboard · kit · scene, 2 each</text>
+      <rect x="628" y="380" width="170" height="54" rx="8" class="br"/><text x="713" y="403" text-anchor="middle" class="tb">picture critic</text><text x="713" y="421" text-anchor="middle" class="ts">≤2 passes + a final look</text>
+      <rect x="824" y="380" width="156" height="54" rx="8" class="be"/><text x="902" y="403" text-anchor="middle" class="tb">render</text><text x="902" y="421" text-anchor="middle" class="ts">MP4, verified</text>
+      <path d="M170 407H194M346 407H370M798 407H822" class="a"/>
+      <path d="M602 407H626" class="ar"/>
+      <path d="M487 434V470H95V436" class="ar"/>
+      <text x="300" y="488" text-anchor="middle" class="ts tr">something was fixed: restart, re-run what went stale (at most repair rounds + 3 passes)</text>
+      <path d="M713 434V462" class="a"/><text x="713" y="478" text-anchor="middle" class="ts">findings route like defects</text>
+      <path d="M745 164V184" class="a"/>
+      <!-- models line -->
+      <text x="20" y="530" class="ts">Models: set per role by a profile (14 profiles). claude-cc: Opus for brief, pedagogy and script, Sonnet for the rest, all through <tspan class="tm">claude -p</tspan>; Gemini Flash as skeptic and critic.</text>
+    </svg>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Predictable: the order, retries and costs are in code, so a run is reproducible and cheap to resume.</li>
+        <li>Each role sees a short, cached prompt with only its job, which keeps tokens low.</li>
+        <li>Defects go straight to the role that owns them, resuming its own session when the cache is still warm.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Limits</h3>
+      <ul>
+        <li>No role sees the whole lesson; judgement across beats lives in the critic and the router only.</li>
+        <li>A fix the router cannot place (an engine defect) stops the run for a person.</li>
+        <li>The plan approval is off unless <code>--plan-gate</code> is given.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>3. Shuttle: one lead on rails</h2>
+  <p><code>py -m loom shuttle run &lt;id&gt;</code>. A launcher starts a Claude Code session (<code>claude -p</code>) whose lead agent follows a playbook. The lead cannot write files or run shells: it acts only through the engine's own MCP server, which enforces the phase order and who may write what.</p>
+  <div class="fig" role="img" aria-label="Shuttle: the launcher starts sessions for the lead, the lead works through the loom-mcp server's rails, delegates sub-agents with owner tokens, and calls reviewers of another model family; eleven phases with three approvals.">
+    <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+      <!-- launcher -->
+      <rect x="20" y="20" width="300" height="118" rx="10" class="bs"/>
+      <text x="38" y="44" class="tb tsh">Launcher</text><text x="38" y="62" class="tm">loom/shuttle/launch.py</text>
+      <text x="38" y="84" class="ts">· sessions: P1 to P4, P5 to P6, then one per phase</text>
+      <text x="38" y="101" class="ts">· logs every message; lesson, phase, agent budgets</text>
+      <text x="38" y="118" class="ts">· stops on overage; waits out a login refresh; resume</text>
+      <path d="M320 79H368" class="as"/>
+      <!-- lead -->
+      <rect x="370" y="20" width="260" height="118" rx="10" class="bs"/>
+      <text x="388" y="44" class="tb tsh">Lead agent</text><text x="388" y="62" class="tm">claude -p + playbook</text>
+      <text x="388" y="84" class="ts">· Opus leads P1 to P5, Sonnet P6 to P11</text>
+      <text x="388" y="101" class="ts">  (the default "opus-plan" preset)</text>
+      <text x="388" y="118" class="ts">· no Write, Edit or shell: tools only</text>
+      <!-- reviewers -->
+      <rect x="680" y="20" width="300" height="118" rx="10" class="b"/>
+      <text x="698" y="44" class="tb">Reviewers (another family)</text>
+      <text x="698" y="66" class="ts">skeptic_review: Gemini Flash, then OpenAI</text>
+      <text x="698" y="84" class="ts">critic_review: Gemini Flash, then OpenAI</text>
+      <text x="698" y="106" class="ts">API calls through Relay's runner, so the</text>
+      <text x="698" y="122" class="ts">model that wrote a thing never judges it</text>
+      <path d="M630 79H678" class="a"/>
+      <!-- mcp rails -->
+      <rect x="20" y="170" width="960" height="118" rx="10" class="be"/>
+      <text x="38" y="194" class="tb">loom-mcp: the rails</text><text x="200" y="194" class="tm">loom/shuttle/server.py · rails.py</text>
+      <text x="38" y="218" class="ts">· a tool of phase N refuses until every earlier phase is accepted; a session sees only its phases' tools</text>
+      <text x="38" y="236" class="ts">· writes need an owner token: which files, how many calls, read the whole brief first; one writer per file</text>
+      <text x="38" y="254" class="ts">· reopen marks only that phase stale (cap 3; a single beat cap 8); a person can grant one more</text>
+      <text x="38" y="272" class="ts">· every submit, snapshot and check calls the same engine functions as Relay, so the gates are identical</text>
+      <path d="M500 138V168" class="as"/>
+      <!-- subagents -->
+      <text x="20" y="318" class="ts">SUB-AGENTS (Agent tool, all Sonnet, each with an owner token from <tspan class="tm">delegate</tspan>)</text>
+      <rect x="20" y="328" width="150" height="50" rx="8" class="bs"/><text x="95" y="350" text-anchor="middle" class="t">fact-finder</text><text x="95" y="367" text-anchor="middle" class="ts">P2 · 12 turns</text>
+      <rect x="184" y="328" width="150" height="50" rx="8" class="bs"/><text x="259" y="350" text-anchor="middle" class="t">kit-builder</text><text x="259" y="367" text-anchor="middle" class="ts">P7 · 25 turns</text>
+      <rect x="348" y="328" width="150" height="50" rx="8" class="bs"/><text x="423" y="350" text-anchor="middle" class="t">scene-author</text><text x="423" y="367" text-anchor="middle" class="ts">P8 to P10 · 20</text>
+      <rect x="512" y="328" width="150" height="50" rx="8" class="bs"/><text x="587" y="350" text-anchor="middle" class="t">clip-author</text><text x="587" y="367" text-anchor="middle" class="ts">P8 to P10 · 15</text>
+      <rect x="676" y="328" width="140" height="50" rx="8" class="bs"/><text x="746" y="350" text-anchor="middle" class="t">fixer</text><text x="746" y="367" text-anchor="middle" class="ts">P8 to P10 · 16</text>
+      <rect x="830" y="328" width="150" height="50" rx="8" class="bs"/><text x="905" y="350" text-anchor="middle" class="t">researcher</text><text x="905" y="367" text-anchor="middle" class="ts">any phase · 6</text>
+      <path d="M500 288V326" class="as"/>
+      <!-- phases strip -->
+      <text x="20" y="414" class="ts">THE ELEVEN PHASES (the lead may only move forward; accept_phase re-runs each phase's gates on disk)</text>
+      <g>
+        <rect x="20"  y="424" width="80" height="58" rx="7" class="b"/><text x="60" y="447" text-anchor="middle" class="tb">P1</text><text x="60" y="466" text-anchor="middle" class="ts">brief</text>
+        <rect x="108" y="424" width="80" height="58" rx="7" class="b"/><text x="148" y="447" text-anchor="middle" class="tb">P2</text><text x="148" y="466" text-anchor="middle" class="ts">facts</text>
+        <rect x="196" y="424" width="80" height="58" rx="7" class="b"/><text x="236" y="447" text-anchor="middle" class="tb">P3</text><text x="236" y="466" text-anchor="middle" class="ts">pedagogy</text>
+        <rect x="284" y="424" width="80" height="58" rx="7" class="b"/><text x="324" y="447" text-anchor="middle" class="tb">P4</text><text x="324" y="466" text-anchor="middle" class="ts">persona, script</text>
+        <rect x="372" y="424" width="80" height="58" rx="7" class="b"/><text x="412" y="447" text-anchor="middle" class="tb">P5</text><text x="412" y="466" text-anchor="middle" class="ts">storyboard</text>
+        <rect x="460" y="424" width="80" height="58" rx="7" class="b"/><text x="500" y="447" text-anchor="middle" class="tb">P6</text><text x="500" y="466" text-anchor="middle" class="ts">narrate, animatic</text>
+        <rect x="548" y="424" width="80" height="58" rx="7" class="b"/><text x="588" y="447" text-anchor="middle" class="tb">P7</text><text x="588" y="466" text-anchor="middle" class="ts">kit</text>
+        <rect x="636" y="424" width="80" height="58" rx="7" class="b"/><text x="676" y="447" text-anchor="middle" class="tb">P8</text><text x="676" y="466" text-anchor="middle" class="ts">beats</text>
+        <rect x="724" y="424" width="80" height="58" rx="7" class="b"/><text x="764" y="447" text-anchor="middle" class="tb">P9</text><text x="764" y="466" text-anchor="middle" class="ts">compose, check</text>
+        <rect x="812" y="424" width="80" height="58" rx="7" class="b"/><text x="852" y="447" text-anchor="middle" class="tb">P10</text><text x="852" y="466" text-anchor="middle" class="ts">critique, fix</text>
+        <rect x="900" y="424" width="80" height="58" rx="7" class="b"/><text x="940" y="447" text-anchor="middle" class="tb">P11</text><text x="940" y="466" text-anchor="middle" class="ts">render</text>
+      </g>
+      <rect x="98" y="498" width="100" height="24" rx="12" class="bg"/><text x="148" y="514" text-anchor="middle" class="ts tg">facts approval</text>
+      <rect x="450" y="498" width="100" height="24" rx="12" class="bg"/><text x="500" y="514" text-anchor="middle" class="ts tg">plan approval</text>
+      <rect x="890" y="498" width="100" height="24" rx="12" class="bg"/><text x="940" y="514" text-anchor="middle" class="ts tg">final approval</text>
+      <path d="M148 496V484M500 496V484M940 496V484" class="ag"/>
+      <rect x="626" y="498" width="100" height="24" rx="12" class="bs"/><text x="676" y="514" text-anchor="middle" class="ts tsh">pilot pair first</text>
+      <text x="20" y="560" class="ts">P10 when the judge and the builder differ: a judging session, then a fix round. Notes in logs/shuttle/notes.md carry the lead's memory between sessions; transcripts do not.</text>
+    </svg>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>Strengths</h3>
+      <ul>
+        <li>One mind sees the whole lesson and can decide across beats: which defect matters, what to reopen, when a critic's note can be accepted with a reason.</li>
+        <li>Rails make free-form agency safe: the order, ownership and caps are enforced by the server, not trusted to the prompt.</li>
+        <li>A reopen redoes only the phase or the single beat that changed.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Limits</h3>
+      <ul>
+        <li>Long sessions cost more: the lead carries context across many turns.</li>
+        <li>Behaviour varies run to run more than Relay's, because a model, not code, chooses the next step within the rails.</li>
+        <li>An Agent SDK runner exists but is marked unverified; the CLI runner is the one used.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>4. Side by side</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Aspect</th><th>Relay</th><th>Shuttle</th></tr></thead>
+      <tbody>
+        <tr><td>Who decides the next step</td><td class="r">Python conductor</td><td class="s">the lead model, within the rails</td></tr>
+        <tr><td>Unit of work</td><td>one role task, one artifact per submit</td><td>a phase; sub-agents per owner token</td></tr>
+        <tr><td>Model routing</td><td>a profile JSON names a model per role</td><td>a lead per phase (Opus plans, Sonnet builds); sub-agents Sonnet</td></tr>
+        <tr><td>Fixing defects</td><td>router → owner's session resumed, 2 rounds each</td><td>the lead delegates a fixer or reopens (caps 3, beat 8)</td></tr>
+        <tr><td>Picture critic</td><td>profile's model, at most 2 passes plus a final look</td><td>another family's model; the lead decides fix or accept</td></tr>
+        <tr><td>Gates and checks</td><td colspan="2">identical: same submit functions, same <code>flow.accept</code>, same <code>qa.check</code>, same router</td></tr>
+        <tr><td>Starts with</td><td><code>py -m loom agents run</code></td><td><code>py -m loom shuttle run</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>What recent runs cost</h3>
+  <p>From <code>docs/context/RUNS.md</code>. "Notional" means list price for calls made on the Claude subscription; only the critic's Gemini calls are billed.</p>
+  <div class="tablewrap">
+    <table class="num">
+      <thead><tr><th>Run</th><th>Pipeline</th><th>Lesson</th><th>Cost</th></tr></thead>
+      <tbody>
+        <tr><td>R-35</td><td class="r">Relay</td><td>feedback-relay-sb</td><td>$14.14 notional, no film</td></tr>
+        <tr><td>R-36</td><td class="r">Relay</td><td>feedback-relay-v2</td><td>$9.62 notional + $0.49 billed</td></tr>
+        <tr><td>R-48</td><td class="r">Relay</td><td>feedback-relay-v3</td><td>$8.85 notional</td></tr>
+        <tr><td>R-34</td><td class="s">Shuttle</td><td>feedback-shuttle-opus</td><td>$71.27 ($18.33 of it overage)</td></tr>
+        <tr><td>R-40</td><td class="s">Shuttle</td><td>feedback-shuttle-v2</td><td>about $19.56</td></tr>
+        <tr><td>R-44</td><td class="s">Shuttle</td><td>feedback-shuttle-v3</td><td>$41.58</td></tr>
+        <tr><td>R-50</td><td class="s">Shuttle</td><td>https-private-v2</td><td>$16.50</td></tr>
+        <tr><td>R-52</td><td class="s">Shuttle</td><td>gps-position</td><td>$36.52 notional</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>5. Hooks both pipelines read</h2>
+  <div class="cols">
+    <div>
+      <h3>Toolbox</h3>
+      <p>Physics, brush, orbs, Three.js and Skia. The menu sits in the storyboard, scene, clip, kit and tweak prompts (Relay) and the playbook (Shuttle, P5 to P10); <code>use_tool</code> loads a tool's section on request. <code>LOOM_TOOLBOX=off</code> removes it all.</p>
+    </div>
+    <div>
+      <h3>Device presets</h3>
+      <p>A phone, laptop or desk beat is a preset whose device, screen and mood can be swapped after the storyboard: <code>set_device</code> (Relay's tweak role; Shuttle's lead from P5).</p>
+    </div>
+    <div>
+      <h3>Set library</h3>
+      <p>A storyboard scene's <code>set</code> loads a drawn room only on an exact id or a perfect description match in the lesson's own style. Checked at the storyboard gate and embedded at compose, the same for both.</p>
+    </div>
+  </div>
+
+  <div class="note"><strong>Docs that disagree with the code</strong> (the code is what this page describes): the conductor's comment says <code>agents run</code> turns the plan approval on, but it is off by default; the rails' docstring says a reopen marks every later phase stale, but only that phase goes stale now; the playbook says the Three.js toolbox lists "models and sets", but it lists models only.</div>
+
+  <footer>Mapped from the code on 2026-10-12: loom/stages.py, loom/flow.py, loom/agents/, loom/shuttle/, shuttle/agents/. Canonical copy: Video-Engine/docs/context/PIPELINES_ARCHITECTURE.html.</footer>
+</div>

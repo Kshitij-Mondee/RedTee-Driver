@@ -1,0 +1,2348 @@
+{
+ "style": "corporate-clean",
+ "concept": "One ordinary office, drawn plainly in calm daylight: Maya's open-plan floor where the vague verdict happens in passing, and a small quiet meeting room where the same update is replayed with the four moves. Moving right is moving forward through the lesson, moving down is going underneath a scene (the reasons, inside Maya's head), and zooming in is going into the report's seat and screen. The motifs that travel are the client update, the calendar that carries the days, the report's thought aside and the four-move card that waits in the corner and ticks as each move lands.",
+ "chrome": {
+  "section_labels": false
+ },
+ "poster": {
+  "beat": "b21"
+ },
+ "motifs": [
+  {
+   "name": "the client update",
+   "desc": "one plain document: on the report's monitor (b04-b07), faded in b10, on the meeting table (b19-b36), and the callback subject of b45"
+  },
+  {
+   "name": "the calendar",
+   "desc": "a tear-off calendar crossing the gone days (b04, b05, b10), a desk calendar on today (b20), one more day torn off (b26), the crossed days again in b45"
+  },
+  {
+   "name": "the thought aside",
+   "desc": "the report's three defences (b06), their last thought as a quote (b12), Maya's drafts (b22-b24, b28), and the empty outline when the report is listening (b27)"
+  },
+  {
+   "name": "the four-move card",
+   "desc": "named in a row of stations (b13-b17), waiting in the corner of the meeting room and ticking line by line (b19-b36), large and blank on your own desk (b37-b41), returned as the list (b44)"
+  },
+  {
+   "name": "the Thursday note",
+   "desc": "the agreed next step written on the table (b34-b35), held up again in the payoff (b45)"
+  }
+ ],
+ "story": {
+  "setting": "an ordinary office: Maya's open-plan floor and a small quiet meeting room",
+  "arc": "the vague verdict in passing (b04-b07), why it is defended (b08-b12), the four moves (b13-b18), the same update replayed with the moves (b19-b36), your own piece of work (b37-b44), the two conversations side by side (b45)",
+  "cast": [
+   {
+    "name": "Maya",
+    "rig": "maya",
+    "role": "the manager, the running example; gets it wrong first, then uses the four moves"
+   },
+   {
+    "name": "the report",
+    "role": "unnamed; drawn by the scene from behind in muted colours, never the lead"
+   }
+  ]
+ },
+ "world": {
+  "stations": [
+   {
+    "id": "st_host",
+    "x": 0,
+    "y": 0,
+    "note": "b01-b03: the presenter opens"
+   },
+   {
+    "id": "st_office",
+    "x": 2400,
+    "y": 0,
+    "note": "b04-b05: the open-plan office; moving right is moving forward through the lesson"
+   },
+   {
+    "id": "st_seat",
+    "parent": "st_office",
+    "rect": {
+     "x": 1060,
+     "y": 300,
+     "w": 640,
+     "h": 360
+    },
+    "note": "b06: inside the report's desk (zoom = into their seat)"
+   },
+   {
+    "id": "st_screen",
+    "parent": "st_seat",
+    "rect": {
+     "x": 700,
+     "y": 200,
+     "w": 560,
+     "h": 315
+    },
+    "note": "b07: inside the monitor (zoom = into the update)"
+   },
+   {
+    "id": "st_why",
+    "x": 2400,
+    "y": 1400,
+    "note": "b08-b09: below the office = the reasons under the scene"
+   },
+   {
+    "id": "st_corridor",
+    "x": 4800,
+    "y": 0,
+    "note": "b10: the walkway, days late"
+   },
+   {
+    "id": "st_sum",
+    "x": 4800,
+    "y": 1400,
+    "note": "b11-b12: below the walkway = the summary and the open question"
+   },
+   {
+    "id": "st_moves",
+    "x": 7200,
+    "y": 0,
+    "note": "b13: section 2 opens"
+   },
+   {
+    "id": "st_move1",
+    "x": 9600,
+    "y": 0,
+    "note": "b14: move one; the four moves run left to right"
+   },
+   {
+    "id": "st_move2",
+    "x": 12000,
+    "y": 0,
+    "note": "b15: move two"
+   },
+   {
+    "id": "st_move3",
+    "x": 14400,
+    "y": 0,
+    "note": "b16: move three"
+   },
+   {
+    "id": "st_move4",
+    "x": 16800,
+    "y": 0,
+    "note": "b17: move four"
+   },
+   {
+    "id": "st_struct",
+    "x": 16800,
+    "y": 1400,
+    "note": "b18: below the moves = the caution under all four"
+   },
+   {
+    "id": "st_room_a",
+    "x": 19200,
+    "y": 0,
+    "note": "b19-b21: the meeting room, same afternoon"
+   },
+   {
+    "id": "st_draft",
+    "x": 19200,
+    "y": 1400,
+    "note": "b22-b25: below the room = inside Maya's head"
+   },
+   {
+    "id": "st_room_b",
+    "x": 19200,
+    "y": 0,
+    "note": "b26-b28: the same room, same world place (a new station so the camera returns to a fresh copy, never to leftovers)"
+   },
+   {
+    "id": "st_check",
+    "x": 21600,
+    "y": 0,
+    "note": "b29-b31: the stopping check, beside the room"
+   },
+   {
+    "id": "st_room_c",
+    "x": 19200,
+    "y": 0,
+    "note": "b32-b36: the same room again (same world place)"
+   },
+   {
+    "id": "st_practice",
+    "x": 24000,
+    "y": 0,
+    "note": "b37-b41: your own desk"
+   },
+   {
+    "id": "st_well",
+    "x": 26400,
+    "y": 0,
+    "note": "b42-b44: when it went well, recall, the card returns"
+   },
+   {
+    "id": "st_payoff",
+    "x": 28800,
+    "y": 0,
+    "note": "b45: the two conversations side by side"
+   },
+   {
+    "id": "st_host_end",
+    "x": 31200,
+    "y": 0,
+    "note": "b46-b47: the presenter closes"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "beat": "b01",
+   "kind": "avatar",
+   "station": "st_host",
+   "join_in": {
+    "type": "cut"
+   },
+   "register": "expressive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "hook",
+   "light": "even",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "title": "\"That update wasn't great.\"",
+    "title_cue": "That update wasn't great"
+   },
+   "rationale": "The presenter opens on the line every manager has said; the line itself is the hook, quoted beside her on the words."
+  },
+  {
+   "beat": "b02",
+   "kind": "avatar",
+   "station": "st_host",
+   "join_in": {
+    "type": "continue"
+   },
+   "keep": [
+    "presenter_frame",
+    "presenter"
+   ],
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "hook",
+   "light": "even",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "title": "It also tends to get defended. Not fixed.",
+    "title_cue": "It also tends to get defended"
+   },
+   "rationale": "The presenter is held (keep) so she does not re-enter; only her card changes, on the words."
+  },
+  {
+   "beat": "b03",
+   "kind": "avatar",
+   "station": "st_host",
+   "join_in": {
+    "type": "continue"
+   },
+   "keep": [
+    "presenter_frame",
+    "presenter"
+   ],
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "light": "even",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "kicker": "A common workplace habit",
+    "title": "Four moves, one short conversation.",
+    "title_cue": "Four moves, one short conversation"
+   },
+   "rationale": "Names the habit as common practice (kicker spoken) and promises the four moves; the presenter then steps out for the scenario."
+  },
+  {
+   "beat": "b04",
+   "kind": "bespoke",
+   "scene": "b04",
+   "station": "st_office",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "establishing"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "setup",
+   "subject": "the client update",
+   "world": "open-plan office",
+   "option": "acting character",
+   "design": {
+    "treatment": "An ordinary open-plan office in daylight (Loom.place.office). Maya, the manager, stands by her desk at left; her report sits at the next desk, seen from behind, the client update open on their monitor. On the wall a tear-off calendar turns over a few days. Calm, documentary framing; one slow push from the wide room to the report's desk.",
+    "why_motion": "time passing is the point: the update went out days ago, so the calendar turning over is content, and the push carries the eye from Maya to the work.",
+    "elements": [
+     "office (Loom.place.office, name \"office\", window side left)",
+     "maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), standing by her desk at left, pose neutral, emotion neutral",
+     "report (drawn by the scene from behind: back of the head, short hair, neck, shoulders and the back of a jacket in muted tokens surface2 and line, no face, no rig; seated; always lower in the frame than Maya so she is the lead), at the hero desk facing the monitor, so the screen faces the camera",
+     "update (on the report's monitor: a document with a title bar and grey text bars, no words except the drawn label)",
+     "calendar (Loom.obj calendar, family tearoff, on the open wall; state cross marks the gone days, no digits)",
+     "tag_maya (Loom.data.tag \"Maya\" on Maya)",
+     "tag_update (Loom.data.tag \"client update\" on the monitor)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "this is Maya",
+      "element": "tag_maya",
+      "action": "Maya is already in place; she glances toward the camera, a small nod; her tag wipes in at her shoulder",
+      "motion": "gesture nod + tag wipe"
+     },
+     {
+      "t_anchor": "A few days ago",
+      "element": "calendar",
+      "action": "the tear-off pages turn over one by one, three days crossed",
+      "motion": "hold and transform (calendar state)"
+     },
+     {
+      "t_anchor": "her report",
+      "element": "office camera",
+      "action": "Loom.cam.push from the wide room toward the report's desk (scale about 1.3), parallax through the layers",
+      "motion": "camera push"
+     },
+     {
+      "t_anchor": "sent a client update",
+      "element": "update + tag_update",
+      "action": "the document on the monitor draws its lines; the tag wipes in on the monitor bezel",
+      "motion": "draw + tag wipe"
+     },
+     {
+      "t_anchor": "It went out unclear",
+      "element": "update",
+      "action": "one line in the middle of the document goes soft (its bar breaks into an uneven smudge), nothing else changes",
+      "motion": "hold and transform"
+     }
+    ],
+    "continuity": "The office, the report's desk and the calendar return in b05 (held: ctx.held(\"office\"), ctx.held(\"report\"), ctx.held(\"update\"), ctx.held(\"calendar\")). The report's desk sits inside the rect of st_seat [1060, 300, 640, 360] so the b06 zoom lands on it. The office's geometry is redrawn from a new angle in b10 and in the left panel of b45.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b05",
+   "kind": "bespoke",
+   "scene": "b05",
+   "station": "st_office",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "wide"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "setup",
+   "subject": "Maya's line, in passing",
+   "world": "open-plan office",
+   "option": "acting character",
+   "alternatives": {
+    "classic dialogue": {
+     "kind": "template",
+     "template": "scenario.dialogue",
+     "register": "expressive",
+     "motion_is": "content",
+     "props": {
+      "left": {
+       "member": "woman",
+       "name": "Maya",
+       "emotion": "neutral"
+      },
+      "right": {
+       "member": "man",
+       "emotion": "neutral"
+      },
+      "lines": [
+       {
+        "who": "left",
+        "text": "That update wasn't great.",
+        "say": "That update wasn't great"
+       }
+      ],
+      "setting": "desk",
+      "caption": "in passing",
+      "say_caption": "in passing"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Same office, held. Maya crosses behind the row of desks with a coffee cup, her legs hidden by the low desk partition (she has no walk cycle, so the partition carries the walk and a small step bob sells it). Her line hangs in a chat bubble as she goes; she never stops; the report never turns round.",
+    "why_motion": "the lesson is that it was said in passing: the movement past the desk without stopping IS the mistake being shown.",
+    "elements": [
+     "office, report, update, calendar (held from b04)",
+     "maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), pose coffee, moving right to left behind the partition, scale 0.44",
+     "partition (a low desk screen in the mid layer, drawn by the scene, tall enough to hide Maya below the hip)",
+     "bubble (Loom.treat.bubble speech, seed chat, \"That update wasn't great.\", tail to Maya)",
+     "tag_passing (Loom.data.tag \"in passing\" on Maya's path)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "walks past their desk",
+      "element": "maya",
+      "action": "enters from the right behind the partition and moves left at an easy pace, a 6 px step bob on a 0.5 s period",
+      "motion": "root travel + bob (Loom.drive)"
+     },
+     {
+      "t_anchor": "in passing",
+      "element": "tag_passing",
+      "action": "wipes in on the floor line under her path",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "That update wasn't great",
+      "element": "bubble",
+      "action": "the chat bubble opens from Maya and types the line; maya.talk over these words only; she keeps moving",
+      "motion": "typeset entrance + lip sync"
+     },
+     {
+      "t_anchor": "keeps walking",
+      "element": "maya",
+      "action": "she leaves frame left; the bubble stays where it was said, then fades a step; the report has not moved",
+      "motion": "exit by travel"
+     }
+    ],
+    "continuity": "Holds office, report, update, calendar from b04. The report is unchanged from behind. b06 zooms into the report's desk through st_seat.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b06",
+   "kind": "bespoke",
+   "scene": "b06",
+   "station": "st_seat",
+   "join_in": {
+    "type": "zoom",
+    "meaning": "into"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "close"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "turn",
+   "subject": "the report's three defences",
+   "world": "the report's desk, from behind",
+   "design": {
+    "treatment": "Over the report's shoulder at their desk: the back of their head and shoulders large in the near layer, the monitor with the update ahead, a quiet thought aside above them that fills one line at a time. The station draws an opaque close-up of the same desk, so the zoom from b05 reads as moving into their seat.",
+    "why_motion": "the defences arrive one after another in the report's head; the order of the lines is the order of the thinking.",
+    "elements": [
+     "seat (the desk close up: monitor, keyboard, a mug, the edge of the partition; drawn with Loom.obj and kit, opaque full frame)",
+     "report (drawn by the scene from behind: back of the head, short hair, neck, shoulders and the back of a jacket in muted tokens surface2 and line, no face, no rig; seated; always lower in the frame than Maya so she is the lead), large, near layer, bottom centre-left",
+     "update (the same document on the monitor, same title bar and grey bars, the soft line still soft)",
+     "thought (Loom.treat.bubble thought, seed chat, above the report: three lines)",
+     "line_1 \"it was fine\"",
+     "line_2 \"nobody said anything\"",
+     "line_3 \"what does she mean?\""
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "sit in their seat",
+      "element": "seat",
+      "action": "the zoom lands; a very slow push continues toward the monitor",
+      "motion": "camera push (Loom.cam.push, small)"
+     },
+     {
+      "t_anchor": "it was fine",
+      "element": "thought + line_1",
+      "action": "the thought aside opens with its puffs from the report's head; line 1 types in",
+      "motion": "typeset entrance"
+     },
+     {
+      "t_anchor": "nobody said anything",
+      "element": "line_2",
+      "action": "types in under line 1",
+      "motion": "typeset entrance"
+     },
+     {
+      "t_anchor": "what does she mean",
+      "element": "line_3 + report",
+      "action": "types in; the report's shoulders rise a little (braced)",
+      "motion": "typeset + posture (Loom.drive)"
+     }
+    ],
+    "continuity": "Nested in st_office (rect [1060, 300, 640, 360] = the report's desk in b04 and b05). The monitor sits inside st_screen's rect [700, 200, 560, 315] so the b07 zoom lands on the update. The thought aside returns as b12's quote.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b07",
+   "kind": "bespoke",
+   "scene": "b07",
+   "station": "st_screen",
+   "join_in": {
+    "type": "zoom",
+    "meaning": "into"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "insert"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "turn",
+   "subject": "the client update, untouched",
+   "world": "the report's screen",
+   "design": {
+    "treatment": "Inside the monitor: the client update as a plain document window (ui.window titled \"Update\"), grey text bars, the one soft line still soft. Nothing in it moves; the camera holds and breathes, then settles on the soft line, and one tag names what changed: nothing.",
+    "why_motion": "the hold IS the point (nothing changed); the slow push onto the unclear line carries the refutation while the narration grants that the verdict sounds honest.",
+    "elements": [
+     "window (ui.window, title \"Update\" as the label of the drawn document)",
+     "bars (grey text bars, no words; the soft line in the middle)",
+     "caret (an idle text caret at the soft line, blinking only while idle, period-locked)",
+     "tag_nothing (Loom.data.tag \"Nothing changed\" beside the soft line)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "it sounds like honesty",
+      "element": "window",
+      "action": "the zoom lands on the document; Loom.hold.breathe on the window while the narration is fair to the verdict",
+      "motion": "hold (breathe)"
+     },
+     {
+      "t_anchor": "look at the update",
+      "element": "camera",
+      "action": "a gentle push onto the soft line (Loom.cam.push or shot drive, about 1.2x)",
+      "motion": "camera push"
+     },
+     {
+      "t_anchor": "Nothing",
+      "element": "tag_nothing",
+      "action": "wipes in beside the soft line; the caret keeps blinking; nothing else moves",
+      "motion": "tag wipe"
+     }
+    ],
+    "continuity": "Nested in st_seat. The document's look (title bar, bars, soft line) is the same one drawn on the monitor in b04 to b06, and returns faded in b10.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b08",
+   "kind": "template",
+   "template": "icon.grid",
+   "station": "st_why",
+   "join_in": {
+    "type": "canvas"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "kicker": "Here is why",
+    "say_kicker": "Here is why",
+    "items": [
+     {
+      "icon": "circle-help",
+      "label": "Nothing to act on",
+      "sub": "nothing specific in it",
+      "say": "nothing specific in it to act on"
+     },
+     {
+      "icon": "user",
+      "label": "About them",
+      "sub": "easily heard",
+      "say": "heard as being about them"
+     }
+    ]
+   },
+   "rationale": "Two costs of the vague verdict, as two peers, each on its words. The story exits to the bare field (canvas) because this is the reason, not the scene."
+  },
+  {
+   "beat": "b09",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_why",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "kicker": "Not everyone",
+    "say_kicker": "Not everyone",
+    "title": "Some people take a blunt line well.",
+    "say_title": "Some people take a blunt line well",
+    "subtitle": "It is a tendency, not a rule.",
+    "say_subtitle": "It is a tendency, not a rule",
+    "align": "left"
+   },
+   "rationale": "The honest caveat, plain and quiet, left aligned like a note; stays a tendency, not a law (F9)."
+  },
+  {
+   "beat": "b10",
+   "kind": "bespoke",
+   "scene": "b10",
+   "station": "st_corridor",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "wide"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "turn",
+   "subject": "the half-remembered update",
+   "world": "the office walkway, days later",
+   "design": {
+    "treatment": "The same office from the walkway where Maya passed, a little wider and from the aisle: the report small at their desk from behind, the calendar pinned on the partition with the gone days crossed, and the update on their screen fading while the narration asks how much of it they remember.",
+    "why_motion": "forgetting is a change over time: the update fades in place (hold and transform), the strongest picture of 'days late'.",
+    "elements": [
+     "walkway (Loom.place.office from the aisle, name \"walkway\", same tokens and furniture as b04 seen from a new angle)",
+     "report (drawn by the scene from behind: back of the head, short hair, neck, shoulders and the back of a jacket in muted tokens surface2 and line, no face, no rig; seated; always lower in the frame than Maya so she is the lead), small, at their desk",
+     "calendar (Loom.obj calendar tearoff on the partition, three days crossed)",
+     "update (on the report's screen, the same document)",
+     "tag_late (Loom.data.tag \"days late\" on the calendar)",
+     "tag_corridor (Loom.data.tag \"corridor\" on the walkway floor)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "days late",
+      "element": "tag_late",
+      "action": "the crossed days on the calendar are in place; the tag wipes in on it",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "in a corridor",
+      "element": "tag_corridor",
+      "action": "wipes in on the walkway where Maya passed",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "How much of the update",
+      "element": "camera",
+      "action": "a slow push toward the report's screen",
+      "motion": "camera push"
+     },
+     {
+      "t_anchor": "Not much",
+      "element": "update",
+      "action": "Loom.hold.heat recolours the document's bars from ink to field2: it goes faint, half remembered",
+      "motion": "hold and transform (heat)"
+     },
+     {
+      "t_anchor": "it got defended",
+      "element": "report",
+      "action": "the shoulders rise slightly, braced",
+      "motion": "posture (Loom.drive)"
+     }
+    ],
+    "continuity": "Same office as b04 to b05 (new station, so no leftovers); the calendar and update match b04. The walkway returns as the left panel of b45.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b11",
+   "kind": "template",
+   "template": "recap",
+   "station": "st_sum",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "items": [
+     {
+      "label": "Vague",
+      "icon": "circle-help",
+      "say": "vague"
+     },
+     {
+      "label": "Late",
+      "icon": "calendar-clock",
+      "say": "late"
+     },
+     {
+      "label": "In passing",
+      "icon": "footprints",
+      "say": "in passing"
+     },
+     {
+      "label": "About them",
+      "icon": "user",
+      "say": "about them"
+     }
+    ]
+   },
+   "rationale": "The four faults of the first conversation as four tokens on one thread, each on its word; camera down = the summary under the scene."
+  },
+  {
+   "beat": "b12",
+   "kind": "template",
+   "template": "quote",
+   "station": "st_sum",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "close"
+   },
+   "story_role": "setup",
+   "props": {
+    "quote": "What does she mean?",
+    "say": "What does she mean"
+   },
+   "rationale": "The report's last thought comes back alone: the open question the rest of the lesson answers (recall prompt)."
+  },
+  {
+   "beat": "b13",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_moves",
+   "join_in": {
+    "type": "canvas"
+   },
+   "register": "expressive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "setup",
+   "props": {
+    "title": "Four moves, in order.",
+    "say_title": "Four moves, in order",
+    "subtitle": "A common practice. Many organisations teach it.",
+    "say_subtitle": "a common practice"
+   },
+   "rationale": "Section divider (canvas join): the method named as common practice, never research. The four moves then sit in a row of stations to the right, one per move."
+  },
+  {
+   "beat": "b14",
+   "kind": "template",
+   "template": "definition",
+   "station": "st_move1",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium",
+    "move": "push"
+   },
+   "story_role": "setup",
+   "props": {
+    "kicker": "First",
+    "term": "Situation",
+    "say_term": "the situation",
+    "definition": "When and where it happened. Enough that they can picture it.",
+    "say_definition": "When and where",
+    "icon": "calendar"
+   },
+   "rationale": "Hybrid: a definition with a gentle push. The camera pans right along the row of moves, so moving right means the next move."
+  },
+  {
+   "beat": "b15",
+   "kind": "template",
+   "template": "definition",
+   "station": "st_move2",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium",
+    "move": "push"
+   },
+   "story_role": "setup",
+   "props": {
+    "kicker": "Second",
+    "term": "Behaviour",
+    "say_term": "the behaviour",
+    "definition": "What they actually did or said, something you could have seen. Not a guess about their attitude.",
+    "say_definition": "What they actually did",
+    "icon": "eye"
+   },
+   "rationale": "Hybrid: same form as move one, next station to the right; the eye says 'something you could have seen'."
+  },
+  {
+   "beat": "b16",
+   "kind": "template",
+   "template": "icon.grid",
+   "station": "st_move3",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "props": {
+    "kicker": "Third, the impact",
+    "say_kicker": "Third, the impact",
+    "title": "What it caused",
+    "say_title": "What it caused",
+    "items": [
+     {
+      "icon": "file-text",
+      "label": "The work",
+      "say": "for the work"
+     },
+     {
+      "icon": "briefcase",
+      "label": "A client",
+      "say": "a client"
+     },
+     {
+      "icon": "users",
+      "label": "The team",
+      "say": "the team"
+     },
+     {
+      "icon": "user",
+      "label": "You",
+      "say": "or you"
+     }
+    ]
+   },
+   "rationale": "Impact can land on four peers, named in the narration's order; peers pop with a tight stagger."
+  },
+  {
+   "beat": "b17",
+   "kind": "template",
+   "template": "process.flow",
+   "station": "st_move4",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "props": {
+    "kicker": "Fourth",
+    "title": "Ask, then agree",
+    "say_title": "Fourth, ask for their view",
+    "steps": [
+     {
+      "label": "Ask their view",
+      "icon": "message-circle-question",
+      "say": "ask for their view"
+     },
+     {
+      "label": "Agree a next step",
+      "icon": "handshake",
+      "say": "then agree a next step together"
+     }
+    ]
+   },
+   "rationale": "The fourth move is itself a two-step order (ask first, then agree), so the connector draws into the agreement."
+  },
+  {
+   "beat": "b18",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_struct",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "props": {
+    "kicker": "One thing",
+    "say_kicker": "One thing",
+    "title": "A structure, not a script.",
+    "say_title": "a structure, not a script",
+    "subtitle": "It should sound like you.",
+    "say_subtitle": "It should sound like you",
+    "align": "left"
+   },
+   "rationale": "Camera down under the row of moves: the caution that sits beneath all four (F15)."
+  },
+  {
+   "beat": "b19",
+   "kind": "bespoke",
+   "scene": "b19",
+   "station": "st_room_a",
+   "join_in": {
+    "type": "wipe",
+    "dir": "left",
+    "meaning": "time"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "wide"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "turn",
+   "subject": "the same conversation, replayed",
+   "world": "a quiet meeting room",
+   "option": "acting character",
+   "design": {
+    "treatment": "A wipe to the left (rewind) opens on a small quiet meeting room the same afternoon: Maya across the table facing us, the report in the foreground from behind (over the shoulder), the update on the table between them, the four-move card waiting in the top-right corner. One push from the wide room to the two-shot. Same room in every meeting beat: Loom.place.meeting with the name \"room\" and the same options, Maya at the same x, the report at the same place, so st_room_a, st_room_b and st_room_c (one place in the world) read as one continuous room. When a beat opens a new room station, everything is present at once (no entrance) because the viewer has been here before.",
+    "why_motion": "the replay is a change of time and place (days later in a corridor becomes the same afternoon in a quiet room); the push settles us into the conversation.",
+    "elements": [
+     "room (Loom.place.meeting, name \"room\": back wall screen, window light, table in perspective, chairs)",
+     "maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), across the table, standing behind it so the table edge and the near layer hide her below the waist (reads as seated; no sit pose)",
+     "report (drawn by the scene from behind: back of the head, short hair, neck, shoulders and the back of a jacket in muted tokens surface2 and line, no face, no rig; seated; always lower in the frame than Maya so she is the lead), in the near layer at bottom right, over-the-shoulder, cropped by the frame edge",
+     "update (the client update: one sheet, Loom.obj document, on the table between them)",
+     "card (the four-move card: a small plain paper card in the frame's top-right corner, four ruled lines labelled Situation, Behaviour, Impact, Ask, then agree, each with an empty box mark at its left; T.mark box ticks a line on its cue)",
+     "clock (Loom.obj clock, family wall, on the back wall: afternoon)",
+     "tag_afternoon (Loom.data.tag \"same afternoon\" on the clock)",
+     "tag_room (Loom.data.tag \"quiet room\" on the door side)",
+     "tag_work (Loom.data.tag \"one piece of work\" on the update)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Same Maya",
+      "element": "maya",
+      "action": "Maya is in place, pose neutral to listen, emotion focus; the card is already in its corner, all four lines open",
+      "motion": "pose spring"
+     },
+     {
+      "t_anchor": "the afternoon it went out",
+      "element": "clock + tag_afternoon",
+      "action": "the clock reads afternoon; its tag wipes in",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "A quiet room",
+      "element": "camera + tag_room",
+      "action": "Loom.cam.push from the wide room to the medium two-shot; the tag wipes in",
+      "motion": "camera push (parallax)"
+     },
+     {
+      "t_anchor": "this one piece of work",
+      "element": "update + tag_work",
+      "action": "the single sheet on the table is the only document; its tag wipes in on it",
+      "motion": "tag wipe"
+     }
+    ],
+    "continuity": "Room, maya, report, update and card are held through b20 and b21 (ctx.held by those names). st_room_b and st_room_c sit at the same world place and redraw the same room.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b20",
+   "kind": "bespoke",
+   "scene": "b20",
+   "station": "st_room_a",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "setup",
+   "subject": "the wall clock and today's date",
+   "world": "a quiet meeting room",
+   "design": {
+    "treatment": "Held room. The wall clock's hands sweep from the morning the update went out to the afternoon (a few hours, not instantly) while a small desk calendar on the table keeps the same day marked. Nothing else moves; the characters only breathe.",
+    "why_motion": "'soon, not instantly' is a quantity of time: the clock passing a few hours while the date stays the same is that quantity drawn.",
+    "elements": [
+     "room, maya, report, update, card, clock (held)",
+     "today (Loom.obj calendar, family desk, on the table; state mark on today, no digits)",
+     "tag_remember (Loom.data.tag \"while you both remember it\" on the calendar)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "doesn't mean instantly",
+      "element": "clock",
+      "action": "the hands sweep forward a few hours (Loom.obj clock t0/t1/turns), steady, not fast",
+      "motion": "hold and transform (time passes)"
+     },
+     {
+      "t_anchor": "while you both remember it",
+      "element": "today + tag_remember",
+      "action": "today's mark on the desk calendar is in place; the tag wipes in",
+      "motion": "tag wipe"
+     }
+    ],
+    "continuity": "Holds everything from b19; b21 holds it on.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b21",
+   "kind": "bespoke",
+   "scene": "b21",
+   "station": "st_room_a",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "Maya's situation line",
+   "world": "a quiet meeting room",
+   "option": "acting character",
+   "alternatives": {
+    "classic dialogue": {
+     "kind": "template",
+     "template": "scenario.dialogue",
+     "register": "expressive",
+     "motion_is": "content",
+     "props": {
+      "left": {
+       "member": "woman",
+       "name": "Maya",
+       "emotion": "explaining"
+      },
+      "right": {
+       "member": "man",
+       "emotion": "neutral"
+      },
+      "lines": [
+       {
+        "who": "left",
+        "text": "The client update this morning, the one about the change.",
+        "say": "The client update this morning"
+       }
+      ],
+      "setting": "meeting"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Maya speaks her first move. Her line opens in a chat bubble from her; the situation line on the corner card ticks; the report's shoulders drop a little as they picture it.",
+    "why_motion": "the effect of the move is a change in the listener: the shoulders easing is the teaching, timed to the line.",
+    "elements": [
+     "room, maya, report, update, card, clock (held)",
+     "bubble (Loom.treat.bubble speech, seed chat, \"The client update this morning, the one about the change.\", tail to Maya)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the situation",
+      "element": "card",
+      "action": "line 1 Situation ticks (Loom.treat.mark box)",
+      "motion": "stamp"
+     },
+     {
+      "t_anchor": "The client update this morning",
+      "element": "maya + bubble",
+      "action": "pose explain, maya.hold(\"hand_r\", \"open\") while she speaks; maya.talk over the quoted words only; the bubble types the line",
+      "motion": "pose + lip sync + typeset"
+     },
+     {
+      "t_anchor": "picture it straight away",
+      "element": "report",
+      "action": "the shoulders drop a few px and the head lifts slightly (one Loom.drive progress)",
+      "motion": "posture ease"
+     }
+    ],
+    "continuity": "The tick on Situation is carried into every later card in the room.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b22",
+   "kind": "template",
+   "template": "quote",
+   "station": "st_draft",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "close"
+   },
+   "story_role": "turn",
+   "props": {
+    "quote": "You were careless with it.",
+    "say": "You were careless with it"
+   },
+   "rationale": "Camera down below the room = inside Maya's head: her first draft, quoted plainly. The misconception is shown before it is broken."
+  },
+  {
+   "beat": "b23",
+   "kind": "template",
+   "template": "definition",
+   "station": "st_draft",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "close"
+   },
+   "story_role": "turn",
+   "props": {
+    "kicker": "It feels precise",
+    "term": "Careless",
+    "say_term": "careless is a label",
+    "definition": "A label for a person.",
+    "say_definition": "a label for a person"
+   },
+   "rationale": "Breaks the misconception: the word that feels precise is defined as what it is, a label for a person (F5)."
+  },
+  {
+   "beat": "b24",
+   "kind": "bespoke",
+   "scene": "b24",
+   "station": "st_draft",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "close"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "reveal",
+   "subject": "Maya's rewritten line",
+   "world": "Maya's head",
+   "design": {
+    "treatment": "Still inside Maya's head. Maya, small at the right, thinking; a quiet thought aside forms around the held word Careless from b23, which is struck and fades, and the describing line writes in where it was, word by word.",
+    "why_motion": "the rewrite is a transformation of one line into another in the same place: hold and transform, not a new card.",
+    "elements": [
+     "term (HELD from b23 with ctx.held(\"term\"): the word Careless)",
+     "maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), at right, scale 0.42, pose chin, emotion thinking",
+     "thought (Loom.treat.bubble thought, seed chat, sized to the new line, around the held word)",
+     "strike (a single ink line through the held word)",
+     "newline (\"The update didn't say when the change takes effect.\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "So she rewrites it",
+      "element": "thought + strike + term",
+      "action": "the thought aside forms around the held word; a strike draws through it; Loom.hold.heat fades it to field2",
+      "motion": "draw + hold and transform"
+     },
+     {
+      "t_anchor": "The update didn't say",
+      "element": "newline",
+      "action": "types in where the word was, in the seed's typeset entrance",
+      "motion": "typeset entrance"
+     },
+     {
+      "t_anchor": "when the change takes effect",
+      "element": "newline + maya",
+      "action": "the line completes; Maya's emotion goes to realisation, a small nod",
+      "motion": "typeset + emotion + gesture nod"
+     }
+    ],
+    "continuity": "Holds b23's term. The new line is what Maya says in b26's room (the behaviour, ticked on the card there).",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b25",
+   "kind": "template",
+   "template": "list.steps",
+   "station": "st_draft",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "kicker": "That is the behaviour",
+    "say_kicker": "That is the behaviour",
+    "marker": "tick",
+    "items": [
+     {
+      "text": "Something you could see in the work",
+      "say": "Something you could see in the work"
+     },
+     {
+      "text": "Something they can fix",
+      "say": "something they can fix"
+     }
+    ]
+   },
+   "rationale": "The two tests the rewritten line passes, ticked on their words (F4, F5)."
+  },
+  {
+   "beat": "b26",
+   "kind": "bespoke",
+   "scene": "b26",
+   "station": "st_room_b",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "the client's reply",
+   "world": "the meeting table",
+   "design": {
+    "treatment": "Camera back up into the room. Same room in every meeting beat: Loom.place.meeting with the name \"room\" and the same options, Maya at the same x, the report at the same place, so st_room_a, st_room_b and st_room_c (one place in the world) read as one continuous room. When a beat opens a new room station, everything is present at once (no entrance) because the viewer has been here before. The card shows Situation and Behaviour already ticked. The impact is shown as plain facts on the table: the client's reply arrives beside the update with a question mark on it, and a desk calendar tears off one more day.",
+    "why_motion": "the impact is a sequence of events (a reply arrives, a day is lost); the props carry it as things that happen.",
+    "elements": [
+     "room (Loom.place.meeting, name \"room\": back wall screen, window light, table in perspective, chairs)",
+     "maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), across the table, standing behind it so the table edge and the near layer hide her below the waist (reads as seated; no sit pose)",
+     "report (drawn by the scene from behind: back of the head, short hair, neck, shoulders and the back of a jacket in muted tokens surface2 and line, no face, no rig; seated; always lower in the frame than Maya so she is the lead), in the near layer at bottom right, over-the-shoulder, cropped by the frame edge",
+     "update (the client update: one sheet, Loom.obj document, on the table between them)",
+     "card (the four-move card: a small plain paper card in the frame's top-right corner, four ruled lines labelled Situation, Behaviour, Impact, Ask, then agree, each with an empty box mark at its left; T.mark box ticks a line on its cue)",
+     "reply (Loom.obj envelope, family flap, state open, with a question mark drawn on its sheet; no words)",
+     "daytile (Loom.obj calendar, family desk, on the table: one page tears off)",
+     "tag_reply (Loom.data.tag \"client wrote back\" on the reply)",
+     "tag_day (Loom.data.tag \"another day\" on the calendar)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the impact",
+      "element": "card",
+      "action": "line 3 Impact ticks (lines 1 and 2 already ticked)",
+      "motion": "stamp"
+     },
+     {
+      "t_anchor": "the client wrote back",
+      "element": "reply + tag_reply",
+      "action": "the reply drops onto the table beside the update and opens; its tag wipes in",
+      "motion": "drop + tag wipe"
+     },
+     {
+      "t_anchor": "asking when the change starts",
+      "element": "reply + camera",
+      "action": "the question mark on the reply settles; Loom.cam.push toward the table",
+      "motion": "settle + camera push"
+     },
+     {
+      "t_anchor": "another day",
+      "element": "daytile + tag_day",
+      "action": "one page tears off the desk calendar; its tag wipes in",
+      "motion": "hold and transform + tag wipe"
+     }
+    ],
+    "continuity": "New station at the same world place as st_room_a; room, maya, report, update and card are redrawn identically and held through b27 and b28.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b27",
+   "kind": "bespoke",
+   "scene": "b27",
+   "station": "st_room_b",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "the report's posture",
+   "world": "a quiet meeting room",
+   "design": {
+    "treatment": "Held room. The camera turns its attention to the report: their back and shoulders ease from braced to leaning in. Above them a faint thought outline appears and stays empty, a callback to b06's three defences.",
+    "why_motion": "the change in the listener (braced to leaning in) is exactly what the lesson claims the method does; it must be seen happening.",
+    "elements": [
+     "room, maya, report, update, card, reply, daytile (held)",
+     "empty_thought (a faint Loom.treat.bubble thought outline above the report, no text)",
+     "tag_listening (Loom.data.tag \"listening\" on the report)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "No verdict in any of it",
+      "element": "maya",
+      "action": "Maya still, pose listen, emotion listening",
+      "motion": "pose spring"
+     },
+     {
+      "t_anchor": "look at the report",
+      "element": "camera",
+      "action": "Loom.cam.push toward the report's shoulder",
+      "motion": "camera push"
+     },
+     {
+      "t_anchor": "Listening",
+      "element": "report + tag_listening + empty_thought",
+      "action": "one Loom.drive progress lowers the shoulders and tilts the torso forward (leaning in); the empty thought outline fades up and stays empty; the tag wipes in",
+      "motion": "posture transform"
+     }
+    ],
+    "continuity": "Holds b26; b28 holds on.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b28",
+   "kind": "bespoke",
+   "scene": "b28",
+   "station": "st_room_b",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "turn",
+   "subject": "Maya's drafted close",
+   "world": "a quiet meeting room",
+   "design": {
+    "treatment": "Held room. The three ticked lines on the corner card brighten in turn as they are named; the fourth stays open. Then Maya's quiet thought aside drafts her closing line.",
+    "why_motion": "three ticks then an open box is the state of the conversation; the draft typing in sets up the prediction in b29.",
+    "elements": [
+     "room, maya, report, update, card (held)",
+     "draft (Loom.treat.bubble thought, seed chat, above Maya: \"So, just be more careful next time.\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Situation, behaviour, impact",
+      "element": "card",
+      "action": "lines 1 to 3 brighten one after another, each on its word; line 4's box stays empty",
+      "motion": "highlight"
+     },
+     {
+      "t_anchor": "her draft for the close",
+      "element": "maya + draft",
+      "action": "Maya pose chin, emotion thinking; the thought aside opens above her",
+      "motion": "pose + bubble open"
+     },
+     {
+      "t_anchor": "just be more careful next time",
+      "element": "draft",
+      "action": "the line types in",
+      "motion": "typeset entrance"
+     }
+    ],
+    "continuity": "The frame freezes here and the check (b29) asks what replaces the draft.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b29",
+   "kind": "template",
+   "template": "quiz.question",
+   "station": "st_check",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "props": {
+    "kicker": "Decide before she does",
+    "question": "Which move would you put in its place?",
+    "say_question": "Which move would you put in its place",
+    "options": [
+     {
+      "text": "Situation"
+     },
+     {
+      "text": "Behaviour"
+     },
+     {
+      "text": "Impact"
+     },
+     {
+      "text": "Ask, then agree"
+     }
+    ],
+    "pause_label": "Pause and decide"
+   },
+   "rationale": "Pause and predict, kept as a template because reading is the job: the four moves are the options, with a real silent pause (4 s)."
+  },
+  {
+   "beat": "b30",
+   "kind": "template",
+   "template": "quiz.answer",
+   "station": "st_check",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "props": {
+    "question": "Which move would you put in its place?",
+    "options": [
+     {
+      "text": "Situation"
+     },
+     {
+      "text": "Behaviour"
+     },
+     {
+      "text": "Impact"
+     },
+     {
+      "text": "Ask, then agree"
+     }
+    ],
+    "answer": 3,
+    "say_answer": "the fourth move",
+    "explanation": "Ask for their view first. Then agree a small next step, together.",
+    "say_explanation": "Ask for their view first"
+   },
+   "rationale": "The answer is marked on the spoken words; the explanation is the fourth move itself (F2)."
+  },
+  {
+   "beat": "b31",
+   "kind": "template",
+   "template": "icon.grid",
+   "station": "st_check",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "kicker": "Be more careful",
+    "say_kicker": "Be more careful",
+    "title": "A verdict about them",
+    "say_title": "a verdict about them",
+    "items": [
+     {
+      "icon": "file-x",
+      "label": "No piece of work",
+      "say": "No piece of work"
+     },
+     {
+      "icon": "calendar-x",
+      "label": "No day",
+      "say": "No day"
+     },
+     {
+      "icon": "message-circle-x",
+      "label": "No question",
+      "say": "No question"
+     }
+    ]
+   },
+   "rationale": "Refutes the tempting close: the three things a next step needs and this line lacks, as peers (F13, F9)."
+  },
+  {
+   "beat": "b32",
+   "kind": "bespoke",
+   "scene": "b32",
+   "station": "st_room_c",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "Maya's real question",
+   "world": "a quiet meeting room",
+   "option": "acting character",
+   "alternatives": {
+    "classic dialogue": {
+     "kind": "template",
+     "template": "scenario.dialogue",
+     "register": "expressive",
+     "motion_is": "content",
+     "props": {
+      "left": {
+       "member": "woman",
+       "name": "Maya",
+       "emotion": "explaining"
+      },
+      "right": {
+       "member": "man",
+       "emotion": "neutral"
+      },
+      "lines": [
+       {
+        "who": "left",
+        "text": "What happened with the date on this one?",
+        "say": "What happened with the date"
+       }
+      ],
+      "setting": "meeting"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Back in the room. Same room in every meeting beat: Loom.place.meeting with the name \"room\" and the same options, Maya at the same x, the report at the same place, so st_room_a, st_room_b and st_room_c (one place in the world) read as one continuous room. When a beat opens a new room station, everything is present at once (no entrance) because the viewer has been here before. The card shows three ticks. Maya asks her question in a chat bubble with an open, offering hand, then waits: a held, quiet moment where only breathing and blinks move.",
+    "why_motion": "the wait is the move: a real question followed by silence, so the stillness after the line is staged on purpose.",
+    "elements": [
+     "room (Loom.place.meeting, name \"room\": back wall screen, window light, table in perspective, chairs)",
+     "maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), across the table, standing behind it so the table edge and the near layer hide her below the waist (reads as seated; no sit pose)",
+     "report (drawn by the scene from behind: back of the head, short hair, neck, shoulders and the back of a jacket in muted tokens surface2 and line, no face, no rig; seated; always lower in the frame than Maya so she is the lead), in the near layer at bottom right, over-the-shoulder, cropped by the frame edge",
+     "update (the client update: one sheet, Loom.obj document, on the table between them)",
+     "card (the four-move card: a small plain paper card in the frame's top-right corner, four ruled lines labelled Situation, Behaviour, Impact, Ask, then agree, each with an empty box mark at its left; T.mark box ticks a line on its cue)",
+     "question (Loom.treat.bubble speech, seed chat, \"What happened with the date on this one?\", tail to Maya)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "asks a real question",
+      "element": "card",
+      "action": "line 4 Ask, then agree ticks",
+      "motion": "stamp"
+     },
+     {
+      "t_anchor": "What happened with the date",
+      "element": "maya + question",
+      "action": "pose explain, maya.hold(\"hand_r\", \"palm_up_offer\") while she speaks; maya.talk over the quoted words only; the bubble types the line",
+      "motion": "pose + lip sync + typeset"
+     },
+     {
+      "t_anchor": "then she waits",
+      "element": "maya",
+      "action": "pose listen, emotion listening; nothing new arrives for the rest of the beat",
+      "motion": "hold (breathe only)"
+     }
+    ],
+    "continuity": "New station at the same world place as st_room_a and st_room_b. The question bubble is held through b33 to b36 (ctx.held(\"question\")).",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b33",
+   "kind": "bespoke",
+   "scene": "b33",
+   "station": "st_room_c",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "the report's answer",
+   "world": "a quiet meeting room",
+   "option": "acting character",
+   "alternatives": {
+    "classic dialogue": {
+     "kind": "template",
+     "template": "scenario.dialogue",
+     "register": "expressive",
+     "motion_is": "content",
+     "props": {
+      "left": {
+       "member": "woman",
+       "name": "Maya",
+       "emotion": "surprised"
+      },
+      "right": {
+       "member": "man",
+       "emotion": "explaining"
+      },
+      "lines": [
+       {
+        "who": "right",
+        "text": "The date was still being confirmed.",
+        "say": "the date was still being confirmed"
+       }
+      ],
+      "setting": "meeting"
+     }
+    }
+   },
+   "design": {
+    "treatment": "The report answers in their own chat bubble from behind; a small note sticks onto the update on the table; Maya takes it in.",
+    "why_motion": "new information changes Maya's picture: her expression shifting on 'now she does' is the payoff of asking.",
+    "elements": [
+     "room, maya, report, update, card, question (held; the question bubble dims a step)",
+     "answer (Loom.treat.bubble speech, seed chat, \"The date was still being confirmed.\", tail to the report's head)",
+     "note_confirm (a small paper note on the update: \"still being confirmed\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the date was still being confirmed",
+      "element": "answer + question",
+      "action": "the report's bubble types in; Maya's question bubble dims a step and stays",
+      "motion": "typeset + dim"
+     },
+     {
+      "t_anchor": "when the update went out",
+      "element": "note_confirm",
+      "action": "the note settles onto the update on the table",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "Maya didn't know that",
+      "element": "maya",
+      "action": "emotion surprise, a small head tilt (gesture tilt)",
+      "motion": "emotion + gesture"
+     },
+     {
+      "t_anchor": "Now she does",
+      "element": "maya",
+      "action": "emotion realisation, gesture nod",
+      "motion": "emotion + gesture"
+     }
+    ],
+    "continuity": "Holds b32. The answer bubble leaves at the end of b33; the note and the question stay.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b34",
+   "kind": "bespoke",
+   "scene": "b34",
+   "station": "st_room_c",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "insert"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "the next-step note",
+   "world": "the meeting table, close",
+   "design": {
+    "treatment": "The camera pushes down onto the table between them. A small next-step note slides into the middle and writes itself one line per phrase.",
+    "why_motion": "the next step is built together, line by line, as it is agreed; the push makes the table the place where it happens.",
+    "elements": [
+     "room, maya, report, update, card, question, note_confirm (held)",
+     "nextstep (a small paper note on the table, three lines: \"If a date isn't confirmed,\" / \"the update says so\" / \"and says when it will be\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "agree a next step",
+      "element": "camera + nextstep",
+      "action": "Loom.cam.push onto the table (scale about 1.6); the blank note slides in between the update and the edge of the table",
+      "motion": "camera push + settle"
+     },
+     {
+      "t_anchor": "If a date isn't confirmed",
+      "element": "nextstep line 1",
+      "action": "writes in",
+      "motion": "typeset entrance"
+     },
+     {
+      "t_anchor": "the update says so",
+      "element": "nextstep line 2",
+      "action": "writes in",
+      "motion": "typeset entrance"
+     },
+     {
+      "t_anchor": "says when it will be",
+      "element": "nextstep line 3",
+      "action": "writes in",
+      "motion": "typeset entrance"
+     }
+    ],
+    "continuity": "Holds b33's room; the camera stays on the table into b35, which pulls back.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b35",
+   "kind": "bespoke",
+   "scene": "b35",
+   "station": "st_room_c",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "reveal",
+   "subject": "Thursday on the note",
+   "world": "the meeting table",
+   "design": {
+    "treatment": "Thursday is written on the note's corner; the camera pulls back to the two-shot and the note slides to Maya's side of the table, where it stays.",
+    "why_motion": "the note moving across the table is the agreement changing hands; the pull back returns us to the people.",
+    "elements": [
+     "room, maya, report, update, card, question, note_confirm, nextstep (held)",
+     "thursday (\"Thursday\" written on the note's top corner, boxed with the seed's mark)",
+     "tag_together (Loom.data.tag \"chose together\" on the note)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "on Thursday",
+      "element": "thursday",
+      "action": "writes onto the note's corner",
+      "motion": "typeset entrance"
+     },
+     {
+      "t_anchor": "Small, concrete",
+      "element": "camera",
+      "action": "Loom.cam.pull back to the medium two-shot",
+      "motion": "camera pull"
+     },
+     {
+      "t_anchor": "something they chose together",
+      "element": "nextstep + tag_together + maya",
+      "action": "the note slides to Maya's side; Maya emotion smile; the tag wipes in",
+      "motion": "travel + tag wipe"
+     }
+    ],
+    "continuity": "The Thursday note returns in b45's right panel.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b36",
+   "kind": "bespoke",
+   "scene": "b36",
+   "station": "st_room_c",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "close"
+   },
+   "depth": "layered",
+   "light": "spotlight",
+   "story_role": "turn",
+   "subject": "the real question",
+   "world": "a quiet meeting room",
+   "design": {
+    "treatment": "Held room. Everything dims a step except Maya's question bubble, which stays at full strength; a tag names what makes it work, and the camera pushes gently toward it.",
+    "why_motion": "signalling, not content: the dim isolates the one thing the caution is about.",
+    "elements": [
+     "room, maya, report, update, card, note_confirm, nextstep, question (held)",
+     "tag_real (Loom.data.tag \"a real question\" on the question bubble)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "One caution",
+      "element": "room and everything but question",
+      "action": "Loom.hold.heat recolours the room, the people and the notes one step toward muted and field2; the question bubble keeps its colour",
+      "motion": "hold and transform (dim)"
+     },
+     {
+      "t_anchor": "a real one",
+      "element": "tag_real",
+      "action": "wipes in on the bubble",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "a verdict with a question mark",
+      "element": "camera",
+      "action": "a slow Loom.cam.push toward the bubble",
+      "motion": "camera push"
+     }
+    ],
+    "continuity": "Ends the room. The practice moves to the viewer's own desk.",
+    "references": [
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b37",
+   "kind": "bespoke",
+   "scene": "b37",
+   "station": "st_practice",
+   "join_in": {
+    "type": "dip",
+    "meaning": "era"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "pov"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "practice",
+   "subject": "the blank four-move card",
+   "world": "your own desk",
+   "option": "building card",
+   "alternatives": {
+    "plain card": {
+     "kind": "template",
+     "template": "title.card",
+     "register": "productive",
+     "motion_is": "staging",
+     "props": {
+      "title": "Which piece of a report's work comes to mind?",
+      "say_title": "Which piece of a report's work",
+      "subtitle": "Pick just one.",
+      "say_subtitle": "Pick just one"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Your turn, at your own desk: the four-move card returns large and blank, ready for one piece of your report's work.",
+    "why_motion": "staging: the card builds once, by additions, across b37 to b41 (one board, changed by additions); nothing is replaced.",
+    "elements": [
+     "desk (the viewer's own desk from a slightly overhead point of view: wood top, the edge of a laptop, a mug, a pen; Loom.obj laptop and kit shapes in warm tokens, accent2 used sparingly)",
+     "pcard (the four-move card, large, plain paper on the desk: a header line and four numbered ruled lines, all blank)",
+     "header (\"One piece of work\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "your own week",
+      "element": "desk",
+      "action": "the dip opens on the desk, already settled; a slow push toward the card",
+      "motion": "camera push (small)"
+     },
+     {
+      "t_anchor": "Which piece of a report's work",
+      "element": "pcard",
+      "action": "the card's frame and its four numbered rules draw (structure first)",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "Pick just one",
+      "element": "header",
+      "action": "the header writes \"One piece of work\" across the top",
+      "motion": "typeset entrance"
+     }
+    ],
+    "continuity": "Desk and card are held through b41 (ctx.held(\"desk\"), ctx.held(\"pcard\"), and each filled line).",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b38",
+   "kind": "bespoke",
+   "scene": "b38",
+   "station": "st_practice",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "pov"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "practice",
+   "subject": "line one of your card",
+   "world": "your own desk",
+   "option": "building card",
+   "alternatives": {
+    "plain card": {
+     "kind": "template",
+     "template": "title.card",
+     "register": "productive",
+     "motion_is": "staging",
+     "props": {
+      "kicker": "First, the situation",
+      "say_kicker": "First, the situation",
+      "title": "When was it, and where?",
+      "say_title": "When was it"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Held desk and card; line 1 fills with its prompt only.",
+    "why_motion": "staging: one addition to the same card.",
+    "elements": [
+     "desk, pcard, header (held)",
+     "pen (a pen that moves to the line being filled)",
+     "line_1 (\"When and where?\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the situation",
+      "element": "pen",
+      "action": "the pen moves to line 1",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "When was it",
+      "element": "line_1",
+      "action": "line 1 writes the prompt \"When and where?\" and holds through the pause",
+      "motion": "typeset entrance"
+     }
+    ],
+    "continuity": "Holds b37.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b39",
+   "kind": "bespoke",
+   "scene": "b39",
+   "station": "st_practice",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "pov"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "practice",
+   "subject": "line two of your card",
+   "world": "your own desk",
+   "option": "building card",
+   "alternatives": {
+    "plain card": {
+     "kind": "template",
+     "template": "title.card",
+     "register": "productive",
+     "motion_is": "staging",
+     "props": {
+      "kicker": "Second",
+      "title": "What did they actually do or say?",
+      "say_title": "what did they actually do or say",
+      "subtitle": "Something you could have seen.",
+      "say_subtitle": "Something you could have seen"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Held desk and card; line 2 fills with its prompt.",
+    "why_motion": "staging: one addition to the same card.",
+    "elements": [
+     "desk, pcard, header, pen, line_1 (held)",
+     "line_2 (\"What did they do or say?\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "what did they actually do",
+      "element": "pen + line_2",
+      "action": "the pen moves to line 2; it writes \"What did they do or say?\" and holds",
+      "motion": "travel + typeset"
+     }
+    ],
+    "continuity": "Holds b38.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b40",
+   "kind": "bespoke",
+   "scene": "b40",
+   "station": "st_practice",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "pov"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "practice",
+   "subject": "line three of your card",
+   "world": "your own desk",
+   "option": "building card",
+   "alternatives": {
+    "plain card": {
+     "kind": "template",
+     "template": "title.card",
+     "register": "productive",
+     "motion_is": "staging",
+     "props": {
+      "kicker": "Third",
+      "title": "What did it cause?",
+      "say_title": "what did it cause",
+      "subtitle": "For the work, a client, or you?",
+      "say_subtitle": "For the work"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Held desk and card; line 3 fills with its prompt.",
+    "why_motion": "staging: one addition to the same card.",
+    "elements": [
+     "desk, pcard, header, pen, line_1, line_2 (held)",
+     "line_3 (\"What did it cause?\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "what did it cause",
+      "element": "pen + line_3",
+      "action": "the pen moves to line 3; it writes \"What did it cause?\" and holds",
+      "motion": "travel + typeset"
+     }
+    ],
+    "continuity": "Holds b39.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b41",
+   "kind": "bespoke",
+   "scene": "b41",
+   "station": "st_practice",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "pov"
+   },
+   "depth": "flat",
+   "light": "even",
+   "story_role": "practice",
+   "subject": "line four of your card",
+   "world": "your own desk",
+   "option": "building card",
+   "alternatives": {
+    "plain card": {
+     "kind": "template",
+     "template": "title.card",
+     "register": "productive",
+     "motion_is": "staging",
+     "props": {
+      "kicker": "Fourth",
+      "title": "The question you'll ask",
+      "say_title": "the question you'll ask",
+      "subtitle": "A real one. Then what you'll agree, and when.",
+      "say_subtitle": "A real one"
+     }
+    }
+   },
+   "design": {
+    "treatment": "Held desk and card; line 4 fills in two parts and the whole card holds, full of the viewer's prompts.",
+    "why_motion": "staging: the last addition; the card is complete.",
+    "elements": [
+     "desk, pcard, header, pen, line_1, line_2, line_3 (held)",
+     "line_4a (\"The question you'll ask\")",
+     "line_4b (\"What you'll agree, and when\")"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the question you'll ask",
+      "element": "pen + line_4a",
+      "action": "the pen moves to line 4; it writes \"The question you'll ask\"",
+      "motion": "travel + typeset"
+     },
+     {
+      "t_anchor": "what you'll agree",
+      "element": "line_4b",
+      "action": "a second half writes \"What you'll agree, and when\"; the full card holds",
+      "motion": "typeset entrance"
+     }
+    ],
+    "continuity": "Holds b40. The card's four moves come back as b44's list.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (props are the information: a flip calendar carries the days; dialogue carries the mechanism)"
+    ]
+   }
+  },
+  {
+   "beat": "b42",
+   "kind": "template",
+   "template": "list.steps",
+   "station": "st_well",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "props": {
+    "title": "When something went well",
+    "say_title": "when something went well",
+    "marker": "tick",
+    "items": [
+     {
+      "text": "Name the behaviour and its impact",
+      "say": "Name the behaviour"
+     },
+     {
+      "text": "Then they know what to keep doing",
+      "say": "Then they know what to keep doing"
+     }
+    ]
+   },
+   "rationale": "The same moves for positive feedback (F14), as two ticked lines."
+  },
+  {
+   "beat": "b43",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_well",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "props": {
+    "title": "Can you say the four moves?",
+    "say_title": "can you say the four moves",
+    "subtitle": "Try it, to yourself.",
+    "say_subtitle": "Try it, to yourself"
+   },
+   "rationale": "Recall before the card returns: only the question on screen, then a 3 s silent gap."
+  },
+  {
+   "beat": "b44",
+   "kind": "template",
+   "template": "list.steps",
+   "station": "st_well",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "props": {
+    "marker": "number",
+    "items": [
+     {
+      "text": "Situation",
+      "say": "Situation"
+     },
+     {
+      "text": "Behaviour",
+      "say": "behaviour"
+     },
+     {
+      "text": "Impact",
+      "say": "impact"
+     },
+     {
+      "text": "Ask, then agree",
+      "say": "Ask, then agree"
+     }
+    ]
+   },
+   "rationale": "The four-move card comes back, plainly, each move on its word: feedback on the recall attempt."
+  },
+  {
+   "beat": "b45",
+   "kind": "bespoke",
+   "scene": "b45",
+   "station": "st_payoff",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "expressive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "wide"
+   },
+   "depth": "layered",
+   "light": "key",
+   "story_role": "payoff",
+   "subject": "the client update",
+   "world": "two rooms side by side",
+   "design": {
+    "treatment": "The payoff, held still: two framed panels side by side. Left, the office walkway from b10 (the report at their desk from behind, the calendar with the crossed days, the faded update). Right, the meeting room from b35 (Maya and the report across the table, the Thursday note on Maya's side). The left panel greys; the right keeps its colour.",
+    "why_motion": "staging for comparison: the only change is the grey that settles on the first conversation, so the two pictures can be compared at rest.",
+    "elements": [
+     "frame_left (the walkway redrawn small inside a framed panel, same geometry as b10)",
+     "frame_right (the meeting room redrawn small inside a framed panel, same geometry as b35, maya (ctx.character(\"maya\", \"maya\", {x, y feet, scale 0.42 to 0.5})), the report from behind)",
+     "divider (a thin rule between the panels)",
+     "tag_late (Loom.data.tag \"days late\" on the left calendar)",
+     "tag_afternoon (Loom.data.tag \"that afternoon\" on the right panel)",
+     "tag_thursday (Loom.data.tag \"Thursday\" on the note)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "two conversations",
+      "element": "frame_left + frame_right + divider",
+      "action": "both panels assemble side by side, left first",
+      "motion": "assemble"
+     },
+     {
+      "t_anchor": "One was a verdict",
+      "element": "frame_left + tag_late",
+      "action": "Loom.hold.heat greys the left panel toward muted; the tag wipes in on its calendar",
+      "motion": "hold and transform (grey)"
+     },
+     {
+      "t_anchor": "that afternoon",
+      "element": "tag_afternoon",
+      "action": "wipes in on the right panel, which keeps its colour",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "Thursday in the diary",
+      "element": "tag_thursday + camera",
+      "action": "the tag wipes in on the note; a slow push into the right panel",
+      "motion": "tag wipe + camera push"
+     }
+    ],
+    "continuity": "Callback to the opening subject (the client update, b04) and to the walkway of b05 and b10; the right panel is b35's room.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (split screen of two framed rooms; bookends: the opening image returns at the end)",
+     "docs/references/places/office.md (perspective box room, 3/4 furniture, one window light, soft contact shadows, a hero desk forward and a second desk receding)"
+    ]
+   }
+  },
+  {
+   "beat": "b46",
+   "kind": "avatar",
+   "station": "st_host_end",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "light": "even",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "kicker": "Next time",
+    "title": "Swap it for what they did. And what it caused.",
+    "title_cue": "swap it for what they did"
+   },
+   "rationale": "The presenter returns (same framing as b01) with the swap from verdict to behaviour and impact."
+  },
+  {
+   "beat": "b47",
+   "kind": "avatar",
+   "station": "st_host_end",
+   "join_in": {
+    "type": "continue"
+   },
+   "keep": [
+    "presenter_frame",
+    "presenter"
+   ],
+   "register": "expressive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "light": "even",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "kicker": "Your next one-to-one",
+    "title": "One specific thing, said soon, ending in a question.",
+    "title_cue": "One specific thing"
+   },
+   "rationale": "The pocket rule in three phrases, and the hand-off to the viewer's next one-to-one; the presenter is held, only her card changes."
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+  "genre": "procedural",
+  "audience": {
+    "motivation": "cares about getting better results from their team without causing friction",
+    "context": "desk, with sound, first-language English",
+    "why": "the brief explicitly states they are corporate employees who care about team results",
+    "assumed_prior": "knows what it feels like to give or receive vague or unhelpful feedback",
+    "level": "practitioner"
+  },
+  "misconceptions": [
+    {
+      "why_tempting": "It is natural to assume we know why someone did something after watching them do it.",
+      "belief": "An observed action directly reveals a person's true intention",
+      "refuted_in": "sec3"
+    }
+  ],
+  "framework_audit": {
+    "bloom_path": "understand -> apply -> understand",
+    "mayer": {
+      "coherence": "no side stories; the project meeting is the only example used throughout",
+      "contiguity": "each component of S-B-I appears on screen as the narrator introduces it",
+      "redundancy": "screen shows the framework steps and keywords; narration explains the application",
+      "signalling": "one slowdown on the Situation-Behavior-Impact framework",
+      "segmenting": "three short sections, separating the concept from the framework and the follow-up",
+      "pre_training": "sec1 distinguishes behavior from character before sec2 introduces the full SBI acronym"
+    },
+    "gagne": {
+      "transfer": "transfer task: write down the SBI steps before your next feedback conversation",
+      "guidance": "signature move + the worked meeting example showing the S-B-I steps",
+      "objective": "promise: you can rephrase the feedback to keep the conversation constructive",
+      "practice": "practice ladder; quiz after sec1 classifying behavior vs character",
+      "attention": "hook: the relatable scenario of someone becoming defensive after vague feedback",
+      "feedback": "quiz answer explained, distinguishing observable actions from interpretations",
+      "recall_prior": "bridge_from_prior: opens from the shared experience of receiving unhelpful feedback",
+      "present": "sections in dependency order: understanding the difference, then using the SBI framework, then agreeing on next steps",
+      "assess": "payoff: the initial bad interaction is replaced by an SBI structured interaction"
+    },
+    "arcs": {
+      "attention": "the relatable opening scenario of a feedback conversation gone wrong",
+      "satisfaction": "seeing the initial bad interaction replayed with a positive outcome",
+      "confidence": "breaking the conversation down into S-B-I steps makes it actionable",
+      "relevance": "resolves a common corporate friction point and avoids defensiveness"
+    },
+    "merrill": {
+      "integration": "transfer task applies the framework to their next real conversation",
+      "demonstration": "the process running carrier shows the SBI framework transforming the statement",
+      "application": "the quiz forces the viewer to classify a statement",
+      "problem_centered": "the defensive reaction to 'You are inconsiderate' is the running problem to solve",
+      "activation": "bridge_from_prior activates the viewer's past experience with vague feedback"
+    }
+  },
+  "flags": [],
+  "performance": "the viewer can deliver specific, behavior-focused feedback using the Situation-Behavior-Impact framework to avoid character attacks",
+  "pacing": {
+    "slowdown_at": [
+      "Situation-Behavior-Impact"
+    ],
+    "target_duration_s": 120,
+    "recall_moments": [
+      {
+        "answer": "'You began speaking while your colleague was updating', because it describes the observable action without labeling the person.",
+        "prompt_sketch": "Imagine correcting an interruption. Which is behaviour-focused: 'You are inconsiderate' or 'You began speaking while your colleague was updating'?",
+        "kind": "quiz",
+        "tempting_wrong": "'You are inconsiderate' is tempting because it expresses the frustration felt, but it judges character rather than observing behavior.",
+        "after_section": "sec1"
+      }
+    ],
+    "words_per_minute": 145
+  },
+  "transfer_tasks": [
+    "The next time you need to give constructive feedback, write down the specific Situation, Behavior, and Impact before you speak."
+  ],
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "the narrator builds the Situation-Behavior-Impact statement for the project meeting interruption, step by step"
+    },
+    {
+      "where": "sec3",
+      "what": "the narrator suggests a next action, prompting the viewer to think of how to check in later",
+      "stage": "faded"
+    },
+    {
+      "what": "the viewer mentally prepares the feedback before the final scene replays the successful interaction",
+      "stage": "independent",
+      "where": "payoff"
+    }
+  ],
+  "title": "Feedback that changes behaviour",
+  "strategy": {
+    "rationale": "The brief specifies one running example of a typical corporate interaction that the whole lesson returns to.",
+    "signature_move": "state the step in the Situation-Behavior-Impact framework, apply it to the imagined meeting example, THEN name the rule used",
+    "name": "worked_example_led"
+  },
+  "arc": {
+    "promise": "By the end, you can rephrase that feedback to keep the conversation constructive.",
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine a project meeting where someone is told, 'You are inconsiderate.' They immediately become defensive."
+    },
+    "bridge_from_prior": "sec1 opens from the shared experience of receiving vague feedback that felt like a personal attack.",
+    "sections": [
+      {
+        "bloom": "understand",
+        "goal": "the viewer can classify feedback as either character-based or behaviour-focused",
+        "carrier": "comparison: traits vs actions sorting on screen",
+        "id": "sec1",
+        "recap_after": false,
+        "energy": "build",
+        "concepts": [
+          "character-based feedback",
+          "behaviour-focused feedback"
+        ]
+      },
+      {
+        "id": "sec2",
+        "recap_after": true,
+        "carrier": "process running: S-B-I steps building sequentially",
+        "energy": "peak",
+        "concepts": [
+          "Situation-Behavior-Impact",
+          "SBI",
+          "observation",
+          "impact on the work"
+        ],
+        "goal": "the viewer can build a feedback message using the Situation-Behavior-Impact framework",
+        "bloom": "apply"
+      },
+      {
+        "carrier": "dialogue: speech bubbles showing the follow-up",
+        "energy": "rest",
+        "recap_after": false,
+        "concepts": [
+          "intention",
+          "next action"
+        ],
+        "id": "sec3",
+        "goal": "the viewer can explain the need to invite the recipient's perspective and agree on a next action",
+        "bloom": "understand"
+      }
+    ],
+    "payoff": "The initial project meeting from the hook is replayed: the speaker uses the complete Situation-Behavior-Impact framework, avoiding a character attack and keeping the colleague receptive."
+  }
+}

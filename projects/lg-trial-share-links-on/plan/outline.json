@@ -1,0 +1,298 @@
+{
+  "concept": "A link is a key that travels. One marker world: the budget draft sits inside three rough rings (anyone with the link, people in the company, named people), and the same hand-drawn forward arrow shows how far a link reaches on each setting; the key is drawn early and handed back at the end.",
+  "world": "One white board world laid out as a grid of boards. Row one is sec1: the hook board (0,0), the presenter spot (2400,0), the rings board (4800,0). Row two is sec2 and sec3: the access board (0,1600), the travel board (2400,1600), the quiz board (4800,1600). Row three is sec4: the checklist board (0,3200), the take-back board (2400,3200), the payoff rings board (4800,3200). A camera pan inside a section reads as the next part of the board; a wipe at each section turn reads as the board wiped clean.",
+  "devices": [
+    {
+      "id": "budget_doc",
+      "what": "the one budget draft page, a rough page with the title Budget draft and three scribbled figure lines; the same page every time (kit part)",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b09",
+        "b10",
+        "b11",
+        "b21",
+        "b24"
+      ]
+    },
+    {
+      "id": "link_key",
+      "what": "one rough hand-drawn key standing for the link: drawn, handed on, later crossed out and returned (kit part)",
+      "kind": "callback",
+      "beats": [
+        "b04",
+        "b05",
+        "b22",
+        "b24"
+      ]
+    },
+    {
+      "id": "three_rings",
+      "what": "three concentric rough rings around the budget page: widest anyone with the link, middle people in the company, inner named people with a door and a short name list; one board gains a ring per beat, later the forward stops at an edge or the door (kit part)",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b24"
+      ]
+    },
+    {
+      "id": "forward_line",
+      "what": "the bent marker forward arrow from one holder to the next, the same arrow every time the link travels",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b24"
+      ]
+    },
+    {
+      "id": "pocket_rule",
+      "what": "a pocket rule written as one line under the board with one accent underline",
+      "kind": "rest",
+      "beats": [
+        "b08",
+        "b17",
+        "b25"
+      ]
+    },
+    {
+      "id": "board_wipe",
+      "what": "the wipe join (dir right) at each section turn; camera pans and continue joins inside a section",
+      "kind": "join",
+      "beats": [
+        "b09",
+        "b13",
+        "b20"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "a clean white board, ink with one accent mark per beat"
+    },
+    {
+      "from": "b13",
+      "band": "mid",
+      "why": "the key mechanism, how a link travels: rings gain hachure, the board is at its fullest"
+    },
+    {
+      "from": "b20",
+      "band": "light",
+      "why": "the close lifts back to a clean board for the checks and the payoff"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec1",
+      "treatment": "Hook drawn on one board (the page, three teammates, a stranger), the presenter names the three choices, then the rings board grows one ring per beat and ends with the first pocket rule.",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "bespoke",
+          "station": "hook",
+          "line": "Budget page and three teammate pictograms drawn; a fourth figure in a rough box with a question mark appears reading it."
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "hook",
+          "join": "continue",
+          "line": "The forward arrow runs from one teammate to a second figure and on to the stranger, passing the sender by; The link travelled written."
+        },
+        {
+          "beat": "b03",
+          "kind": "avatar",
+          "station": "presenter",
+          "join": "camera",
+          "line": "The presenter beside three written words: Who, What they can do, Until when, one per spoken phrase."
+        },
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "rings",
+          "join": "camera",
+          "line": "The budget page drawn as a door with the rough key beside it; a hand-off arrow passes the key to another holder; A link is a key."
+        },
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "rings",
+          "join": "continue",
+          "line": "The widest ring drawn around the page, a crowd of pictograms inside, label Anyone with the link."
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "rings",
+          "join": "continue",
+          "line": "A middle ring drawn inside it with company pictograms, outsiders left outside; label People in the company."
+        },
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "rings",
+          "join": "continue",
+          "line": "A small inner ring with three named pictograms and a door that checks a short name list; label Named people."
+        },
+        {
+          "beat": "b08",
+          "kind": "bespoke",
+          "station": "rings",
+          "join": "continue",
+          "line": "An arrow from widest to narrowest across the rings; Pick the narrowest that works written under them; a muted note Check your company's rules."
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "A fresh board on the budget page itself: view as an eye, edit as a pencil whose change reaches every copy, a copy note that says it depends on the tool, then view first with a small recall sketch of the rings.",
+      "beats": [
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "access",
+          "join": "wipe",
+          "line": "The budget page with an eye icon; a hand reaches in and the original stays unchanged; View, Read only written."
+        },
+        {
+          "beat": "b10",
+          "kind": "bespoke",
+          "station": "access",
+          "join": "continue",
+          "line": "A pencil marks a figure on the page and the same change appears on three small holder copies; Edit, Changes the original."
+        },
+        {
+          "beat": "b11",
+          "kind": "bespoke",
+          "station": "access",
+          "join": "continue",
+          "line": "The eye again, then a copy arrow from the page to a second sheet; View is not copy-proof, with a muted note depends on the tool."
+        },
+        {
+          "beat": "b12",
+          "kind": "bespoke",
+          "station": "access",
+          "join": "continue",
+          "line": "A tick beside View first, Edit only if they must with a question mark; a small muted sketch of the three rings drawn as a recall."
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "The rings redrawn for travel: one forward on the company setting stops at the company edge, on anyone it runs off the board, on named people the door stays shut; the second pocket rule; then the quiz card and its answer.",
+      "beats": [
+        {
+          "beat": "b13",
+          "kind": "bespoke",
+          "station": "travel",
+          "join": "wipe",
+          "line": "The company ring with three teammates inside; the forward arrow leaves one teammate and reaches a manager figure elsewhere in the ring; Company link, Forwarded once."
+        },
+        {
+          "beat": "b14",
+          "kind": "bespoke",
+          "station": "travel",
+          "join": "continue",
+          "line": "The manager opens the page; a second forward arrow stops at the company edge and an outsider is turned back; The link is the permission."
+        },
+        {
+          "beat": "b15",
+          "kind": "bespoke",
+          "station": "travel",
+          "join": "continue",
+          "line": "The widest ring drawn and the same forward arrow runs past where the company edge was, off toward the board border; Anyone with the link: no edge."
+        },
+        {
+          "beat": "b16",
+          "kind": "bespoke",
+          "station": "travel",
+          "join": "continue",
+          "line": "The forward reaches the inner door; the three name list is checked against the manager and the door stays shut with a cross; Not on the list."
+        },
+        {
+          "beat": "b17",
+          "kind": "bespoke",
+          "station": "travel",
+          "join": "continue",
+          "line": "A small note of a listed figure showing the page on; then The link travels. A name does not. written under the board."
+        },
+        {
+          "beat": "b18",
+          "kind": "template",
+          "station": "quiz",
+          "join": "camera",
+          "line": "Quiz card: three teammates need to read the budget, not change it; three setting and permission options; pause, no answer."
+        },
+        {
+          "beat": "b19",
+          "kind": "template",
+          "station": "quiz",
+          "join": "continue",
+          "line": "Answer: Named people, view is marked right, the others dim; the company option gets a why not note about the forward."
+        }
+      ]
+    },
+    {
+      "id": "sec4",
+      "treatment": "A fresh board for the checks before sharing, then the take-back board (key crossed out and returned, a name struck, the shared list reviewed, an expiry date), the payoff redraws the rings calmly, and the presenter closes with three questions and the pocket rule.",
+      "beats": [
+        {
+          "beat": "b20",
+          "kind": "bespoke",
+          "station": "checklist",
+          "join": "wipe",
+          "line": "Four checks written down the board, a hand tick in a rough box beside each as it is spoken."
+        },
+        {
+          "beat": "b21",
+          "kind": "bespoke",
+          "station": "checklist",
+          "join": "continue",
+          "line": "Beside the list, the budget page with a magnifier and three small tabs: Pages, Comments, Version history."
+        },
+        {
+          "beat": "b22",
+          "kind": "bespoke",
+          "station": "takeback",
+          "join": "camera",
+          "line": "The key crossed out and an arrow returns it to the sender; a name on the list struck through; Link off or narrower, Remove names."
+        },
+        {
+          "beat": "b23",
+          "kind": "bespoke",
+          "station": "takeback",
+          "join": "continue",
+          "line": "A rough list of three shared files with one old link ticked off, then a small calendar with Expiry date written."
+        },
+        {
+          "beat": "b24",
+          "kind": "bespoke",
+          "station": "payoff",
+          "join": "camera",
+          "line": "The rings redrawn calmly: three named teammates in the small ring, the forward arrow stops at the shut door, the key back with the sender; Named people, View only, Switched off after."
+        },
+        {
+          "beat": "b25",
+          "kind": "avatar",
+          "station": "presenter",
+          "join": "camera",
+          "line": "The presenter beside three written questions, then the pocket rule Narrowest door. View first. Switch off."
+        }
+      ]
+    }
+  ]
+}

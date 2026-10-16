@@ -1,0 +1,1179 @@
+{
+  "style": "corporate-clean",
+  "concept": "One Report, one laptop, on a plain light field: the backup system builds itself on screen, copy by copy (laptop, external drive, cloud), each copy proven by a failure it survives, while the 3, 2 and 1 tiles light one by one; the opening failure is replayed and survived at the close.",
+  "chrome": {
+    "section_labels": false
+  },
+  "poster": {
+    "beat": "b10"
+  },
+  "story": {
+    "setting": "a plain light field holding one backup system; no room; the presenter only at the two bookends the allocation requires",
+    "arc": "one copy lost (b01-b04), the rule built copy by copy and tested by failures (b05-b10), a setup checked (b11-b12), the same failure survived and the viewer's own check (b13-b14)",
+    "cast": []
+  },
+  "motifs": [
+    {
+      "name": "the Report",
+      "desc": "the one file; whole (surface card, ink lines), empty (dashed outline), locked (slate with a padlock badge); its state is the outcome"
+    },
+    {
+      "name": "the 3-2-1 rail",
+      "desc": "three tiles under the board that light one by one and return as the check"
+    }
+  ],
+  "devices": [
+    {
+      "id": "system_board",
+      "what": "one persistent board on the plain light field: laptop, external drive and cloud, each a drawn kit object holding its own Report copy; held across beats with continue joins and changed in state on the spoken word",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b10",
+        "b13"
+      ]
+    },
+    {
+      "id": "rule_marks",
+      "what": "the 3, 2 and 1 tiles on a rail under the board: unlit (surface2), named (accent), lit (ink), missing (dashed outline with a neg tag); lit one by one, then reused unlit as the check",
+      "kind": "list",
+      "beats": [
+        "b03",
+        "b05",
+        "b06",
+        "b08",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "same_place_boundary",
+      "what": "a rounded dashed boundary drawn round everything in one place (the desk, later the bag); one event fills the whole boundary and takes every copy inside it",
+      "kind": "explain",
+      "beats": [
+        "b07",
+        "b08",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "failure_replay",
+      "what": "the failure of b02 (the laptop drive dies, the Report empties to an outline) replayed exactly in the payoff, this time survived",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b13"
+      ]
+    },
+    {
+      "id": "detail_drop",
+      "what": "join material: one camera drop below the board into the offline detail and back up (camera joins), the only time the board is left mid-section",
+      "kind": "join",
+      "beats": [
+        "b09",
+        "b10"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "pale open: one laptop, one file on the bare light field"
+    },
+    {
+      "from": "b05",
+      "band": "mid",
+      "why": "slightly richer middle as the system fills in; b07's event fills the boundary in slate, the one darker moment"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "why": "the check in its own place, the bag on a field2 ground"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "why": "lift at the close: the failure survived, a pos Restored tag"
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "board",
+        "x": 0,
+        "y": 0,
+        "note": "the system board: laptop left of centre, desk line under laptop and drive, cloud far right, rail of 3-2-1 tiles along the bottom above the caption band"
+      },
+      {
+        "id": "offline",
+        "x": 0,
+        "y": 1300,
+        "note": "a detail below the board: connected versus offline backup"
+      },
+      {
+        "id": "bag",
+        "x": 2400,
+        "y": 0,
+        "note": "the check's own place: the bag"
+      },
+      {
+        "id": "host",
+        "x": 4800,
+        "y": 0,
+        "note": "the presenter's bookends (b01, b14)"
+      }
+    ]
+  },
+  "kit": {
+    "parts": [
+      {
+        "id": "report_file",
+        "what": "the Report: a portrait document card (surface, 20 px radius, offset shadow, three ink text lines, the word Report in label 28 px on it); may start from Loom.obj document. setState(state, t): whole, empty (fill and lines fade out, a 3 px dashed line outline remains), locked (fill turns accent3, a small padlock badge, white), restored (whole again with a short refill). opts.size scales it; it must read at 90 px tall and at 220 px tall.",
+        "states": [
+          "whole",
+          "empty",
+          "locked",
+          "restored"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "laptop",
+        "what": "an open laptop seen front-on, ink bezel, screen surface; a slot on the screen where a report_file sits (handle.slot gives the slot's rect). setState: on, failed (screen turns ink with a small neg cross mark near the base, the drive fault). Neutral tones only; may start from Loom.obj laptop.",
+        "states": [
+          "on",
+          "failed"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "ext_drive",
+        "what": "an external hard drive, a flat rounded slab in accent3 with a small status light, standing on the desk line; slots for up to two report_file copies above it. setState: idle, connected (a cable drawn from its port to a given point), unplugged (no cable).",
+        "states": [
+          "idle",
+          "connected",
+          "unplugged"
+        ],
+        "beats": [
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b13"
+        ]
+      },
+      {
+        "id": "usb_drive",
+        "what": "a small USB stick in accent3 with a metal end, one slot for a report_file copy beside it.",
+        "beats": [
+          "b11",
+          "b12"
+        ]
+      },
+      {
+        "id": "cloud",
+        "what": "a cloud storage shape (surface fill, 2 px surface2 edge, offset shadow) with one slot for a report_file copy; the label Cloud under it in label 28 px muted.",
+        "beats": [
+          "b08",
+          "b10",
+          "b13"
+        ]
+      },
+      {
+        "id": "bag",
+        "what": "a laptop bag outline (surface2 body, line strap, 20 px radius) large enough to hold a laptop and a USB stick visibly inside it (open front, like a cutaway); exposes an inner rect.",
+        "beats": [
+          "b11",
+          "b12"
+        ]
+      },
+      {
+        "id": "rule_rail",
+        "what": "three tiles on a rail: big numerals 3, 2, 1 (Space Grotesk 700) each with an optional label under it (3 copies, 2 kinds of storage, 1 offsite). Per tile setState(i, state, t): unlit (surface2 tile, muted numeral), named (accent tile, white numeral), lit (ink tile, white numeral), missing (dashed outline, no fill, muted numeral), ticked (lit plus a small pos tick). opts.labels on or off; opts.size for large (b03) and normal.",
+        "states": [
+          "unlit",
+          "named",
+          "lit",
+          "missing",
+          "ticked"
+        ],
+        "beats": [
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b10",
+          "b11",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "place_boundary",
+        "what": "a rounded dashed boundary (line token, 3 px, dash 12 10) drawn round a given rect, with a label pill hanging from its top edge (text given: Same place or Same bag). setState: drawn, filled (an accent3 wash at 0.55 fills the inside from the bottom up, the event), cleared.",
+        "states": [
+          "drawn",
+          "filled",
+          "cleared"
+        ],
+        "beats": [
+          "b07",
+          "b08",
+          "b10",
+          "b11",
+          "b12",
+          "b13"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "host",
+      "join_in": {
+        "type": "cut"
+      },
+      "story_role": "hook",
+      "option": "presenter",
+      "rationale": "The allocation makes b01 a presenter bookend because the request sets avatar.provider 'presenter' (loom/allocate.py: avatar_on unless provider is 'none'); the request's notes and the brief ask for no presenter. The storyboard gate refuses a bespoke kind against the allocation, so the presenter stays as the option and the motion-graphics version is the ready alternative: a person switches with `py -m loom switch <id> b01 \"motion graphics, no presenter\"` or sets the request's avatar provider to none.",
+      "props": {
+        "member": "woman",
+        "side": "left",
+        "cloth": "ink",
+        "kicker": "One file",
+        "title": "Your report is due tomorrow",
+        "say_title": "Say your report is due tomorrow",
+        "card": {
+          "title": "Report",
+          "lines": [
+            {
+              "text": "Due tomorrow",
+              "say": "due tomorrow"
+            },
+            {
+              "text": "It lives in one place: your laptop",
+              "say": "your laptop"
+            }
+          ]
+        }
+      },
+      "alternatives": {
+        "motion graphics, no presenter": {
+          "kind": "bespoke",
+          "scene": "b01",
+          "station": "board",
+          "register": "productive",
+          "motion_is": "staging",
+          "shot": {
+            "size": "close"
+          },
+          "accent_on": "the Report",
+          "design": {
+            "treatment": "The bare light field. The laptop (kit laptop, on) settles left of centre (about 620 px wide). The Report (kit report_file, whole, accent edge) slides onto the laptop's screen slot. A small amber tag Due tomorrow hangs from the Report. Nothing else exists. A slow camera push toward the laptop across the beat, ending on exactly the framing b02 opens with, so the cut into b02 reads as a match.",
+            "why_motion": "the file arriving in its single home sets up what is about to be lost",
+            "elements": [
+              "laptop",
+              "report_main",
+              "tag_due"
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "Say your report is due tomorrow",
+                "element": "report_main",
+                "action": "the Report slides onto the screen",
+                "motion": "settle"
+              },
+              {
+                "t_anchor": "due tomorrow",
+                "element": "tag_due",
+                "action": "tag Due tomorrow hangs from the Report",
+                "motion": "wipe"
+              },
+              {
+                "t_anchor": "one place: your laptop",
+                "element": "laptop",
+                "action": "this is the only home; nothing else on the field",
+                "motion": "slow push"
+              }
+            ],
+            "continuity": "b02 cuts in on the same framing and redraws laptop and Report in place; tag_due leaves at the end of b01; nothing held."
+          }
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "scene": "b02",
+      "station": "board",
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "hook",
+      "subject": "the drive dies and the Report goes with it",
+      "accent_on": "the Drive failed tag",
+      "design": {
+        "treatment": "Cut to the bare light field: the laptop (large, left of centre, about 620 px wide) with the Report whole on its screen, already in place in the first half second (laptop settle, Report reveal). On 'the drive dies' the laptop goes to failed (screen to ink, a small neg cross at its base) and a short neg tag Drive failed hangs from it. On 'goes with it' the Report empties to a dashed outline. Nothing else on the field can bring it back: the field stays bare.",
+        "why_motion": "the loss happens over time and the empty outline is the outcome",
+        "elements": [
+          "laptop",
+          "report_main",
+          "tag_failed"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Tonight",
+            "element": "laptop",
+            "action": "laptop and Report in place",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "the drive dies",
+            "element": "laptop",
+            "action": "setState failed; tag Drive failed",
+            "motion": "state cut, tag wipe"
+          },
+          {
+            "t_anchor": "goes with it",
+            "element": "report_main",
+            "action": "setState empty",
+            "motion": "fade to dashed outline"
+          }
+        ],
+        "continuity": "laptop (failed) and report_main (empty) held into b03; tag_failed leaves at the end of b02. This exact failure is replayed in b13."
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "scene": "b03",
+      "station": "board",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "laptop",
+        "report_main"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "setup",
+      "subject": "single point of failure, and the fix in three numbers",
+      "accent_on": "the 3-2-1 rail",
+      "design": {
+        "treatment": "The camera eases back. On 'single point of failure' an amber term label Single point of failure hangs from the empty outline. On 'three numbers' the rule_rail arrives large to the right of the laptop, the three tiles 3, 2, 1 in accent as one family, no labels yet, then they settle to unlit as the beat ends.",
+        "why_motion": "the term lands on the thing it names, then the promise appears as the object the lesson will fill",
+        "elements": [
+          "laptop",
+          "report_main",
+          "label_spof",
+          "rail"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "single point of failure",
+            "element": "label_spof",
+            "action": "term label hangs from the empty outline",
+            "motion": "wipe"
+          },
+          {
+            "t_anchor": "three numbers",
+            "element": "rail",
+            "action": "the three tiles arrive large, accent",
+            "motion": "staggered reveal"
+          }
+        ],
+        "continuity": "laptop, report_main and rail held into b04; label_spof leaves at the end of b03. In b04 the rail shrinks to its home under the board, unlit."
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "scene": "b04",
+      "station": "board",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "laptop",
+        "report_main",
+        "rail"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "subject": "four ways to lose the one copy",
+      "accent_on": "the failure chip being spoken",
+      "design": {
+        "treatment": "The rail moves to its home along the bottom (above y 900), unlit. The laptop comes back on and the Report refills whole (a quick reset). Four failure chips land around the Report one per spoken item, each a white pill with a small Lucide icon and its label: Drive failure (hard-drive), Lost or stolen (map-pin-off), Deleted by mistake (trash-2), Ransomware (lock). As each lands it takes the accent and the Report flicks to empty, then back whole before the next (the last one leaves it locked). About 1.5 s an item.",
+        "why_motion": "each failure arrives on its word and each has the same result on the one copy",
+        "elements": [
+          "laptop",
+          "report_main",
+          "rail",
+          "chip_drive",
+          "chip_stolen",
+          "chip_deleted",
+          "chip_ransom"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A dead drive",
+            "element": "chip_drive",
+            "action": "chip lands; Report empties",
+            "motion": "settle, state cut"
+          },
+          {
+            "t_anchor": "A stolen laptop",
+            "element": "chip_stolen",
+            "action": "chip lands; Report empties",
+            "motion": "settle, state cut"
+          },
+          {
+            "t_anchor": "A wrong delete",
+            "element": "chip_deleted",
+            "action": "chip lands; Report empties",
+            "motion": "settle, state cut"
+          },
+          {
+            "t_anchor": "Ransomware",
+            "element": "chip_ransom",
+            "action": "chip lands; Report locks",
+            "motion": "settle, state cut"
+          }
+        ],
+        "continuity": "laptop, report_main and rail held into b05; the four chips leave at the end of b04."
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "scene": "b05",
+      "station": "board",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "laptop",
+        "report_main",
+        "rail"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "reveal",
+      "subject": "three copies: the original plus two backups",
+      "accent_on": "tile 3",
+      "design": {
+        "treatment": "The Report unlocks to whole. On 'three' it copies twice: two copies (copy_a, copy_b) travel out of the laptop and line up beside it, three files in a row. On 'One failure' the laptop's copy empties and a small neg cross marks it; the two copies stay whole. On 'zero' tile 3 turns accent with its label 3 copies, then the laptop copy refills from copy_a (a short travel of a ghost copy) so all three are whole by the end.",
+        "why_motion": "the count is made by copying, and the survival is shown by striking one",
+        "elements": [
+          "laptop",
+          "report_main",
+          "copy_a",
+          "copy_b",
+          "mark_struck",
+          "rail"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Start with three",
+            "element": "copy_a",
+            "action": "the first copy travels out of the laptop",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "plus two backups",
+            "element": "copy_b",
+            "action": "the second copy lands at the end of the row",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "One failure",
+            "element": "report_main",
+            "action": "empties; the copies stay whole",
+            "motion": "state cut"
+          },
+          {
+            "t_anchor": "One failure",
+            "element": "mark_struck",
+            "action": "neg cross on the laptop copy",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "leaves you with zero",
+            "element": "rail",
+            "action": "tile 3 named (accent) with label 3 copies",
+            "motion": "recolour"
+          }
+        ],
+        "continuity": "laptop, report_main, copy_a, copy_b and rail held into b06; mark_struck leaves at the end of b05. In b06 tile 3 settles from accent to ink."
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "scene": "b06",
+      "station": "board",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "laptop",
+        "report_main",
+        "copy_a",
+        "copy_b",
+        "rail"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "reveal",
+      "subject": "two kinds of storage",
+      "accent_on": "tile 2",
+      "design": {
+        "treatment": "Tile 3 settles to ink. On 'an external drive' the ext_drive settles on a desk line to the right of the laptop, labelled External drive (label 28 px), and the laptop takes its label Laptop; copy_a and copy_b travel into the drive's two slots. On 'One fault' the laptop goes failed and its copy empties; the drive's two copies stay whole. On 'unlikely to take both' tile 2 turns accent with its label 2 kinds of storage. At the end the laptop comes back on and its copy refills.",
+        "why_motion": "the copies move to a different kind of storage and a fault on one kind leaves the other whole",
+        "elements": [
+          "laptop",
+          "report_main",
+          "ext_drive",
+          "copy_a",
+          "copy_b",
+          "desk_line",
+          "label_laptop",
+          "label_drive",
+          "rail"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Two: two kinds of storage",
+            "element": "rail",
+            "action": "tile 3 to ink",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "Say, the laptop",
+            "element": "desk_line",
+            "action": "a desk line draws under the laptop and on to the right",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Say, the laptop",
+            "element": "label_laptop",
+            "action": "label Laptop",
+            "motion": "wipe"
+          },
+          {
+            "t_anchor": "an external drive",
+            "element": "ext_drive",
+            "action": "drive settles on the desk line",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "an external drive",
+            "element": "label_drive",
+            "action": "label External drive",
+            "motion": "wipe"
+          },
+          {
+            "t_anchor": "an external drive",
+            "element": "copy_a",
+            "action": "travels into the drive's first slot",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "an external drive",
+            "element": "copy_b",
+            "action": "travels into the drive's second slot",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "One fault",
+            "element": "laptop",
+            "action": "laptop failed, its copy empties; drive copies whole",
+            "motion": "state cut"
+          },
+          {
+            "t_anchor": "unlikely to take both",
+            "element": "rail",
+            "action": "tile 2 named with its label",
+            "motion": "recolour"
+          }
+        ],
+        "continuity": "laptop, report_main, ext_drive, copy_a, copy_b, desk_line, label_laptop, label_drive and rail held into b07 (all whole)."
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "scene": "b07",
+      "station": "board",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "laptop",
+        "report_main",
+        "ext_drive",
+        "copy_a",
+        "copy_b",
+        "desk_line",
+        "label_laptop",
+        "label_drive",
+        "rail"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "subject": "both copies sit in the same place",
+      "accent_on": "the Same place boundary label",
+      "design": {
+        "treatment": "Tile 2 settles to ink. On 'both sit on your desk' a dashed place_boundary draws round laptop, drive and desk line, its pill Same place in accent. On 'One fire, flood or theft' the boundary fills from the bottom with the slate wash (the event; no flames, no water drawn) and every copy inside empties at once; on 'together' a single neg cross sits on the boundary. The one darker moment of the film.",
+        "why_motion": "one event filling one place takes everything inside it at once",
+        "elements": [
+          "laptop",
+          "report_main",
+          "ext_drive",
+          "copy_a",
+          "copy_b",
+          "desk_line",
+          "label_laptop",
+          "label_drive",
+          "boundary",
+          "mark_together",
+          "rail"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "both sit on your desk",
+            "element": "boundary",
+            "action": "dashed boundary draws round the desk; Same place pill",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "One fire, flood or theft",
+            "element": "boundary",
+            "action": "slate wash fills the inside; all copies empty",
+            "motion": "grow from bottom"
+          },
+          {
+            "t_anchor": "takes them together",
+            "element": "mark_together",
+            "action": "neg cross on the boundary",
+            "motion": "pop"
+          }
+        ],
+        "continuity": "everything but mark_together held into b08; at b08's start the wash clears and the copies refill whole."
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "scene": "b08",
+      "station": "board",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "laptop",
+        "report_main",
+        "ext_drive",
+        "copy_a",
+        "copy_b",
+        "desk_line",
+        "label_laptop",
+        "label_drive",
+        "boundary",
+        "rail"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "reveal",
+      "subject": "one copy offsite, in the cloud",
+      "accent_on": "tile 1",
+      "design": {
+        "treatment": "The wash clears and the copies refill (a rewind, 0.5 s). On 'keep a copy offsite' the camera widens and the cloud arrives far right, well outside the boundary; copy_b travels out of the drive, across the field, into the cloud on a long eased path (1.0 s). On 'The cloud' the cloud's label Cloud appears; then a ghost replay of the event fills the boundary again and stops at its edge: the cloud copy stays whole. Tile 1 turns accent with its label 1 offsite.",
+        "why_motion": "the copy leaving the place is the idea; the event stopping at the edge proves it",
+        "elements": [
+          "laptop",
+          "report_main",
+          "ext_drive",
+          "copy_a",
+          "copy_b",
+          "desk_line",
+          "label_laptop",
+          "label_drive",
+          "boundary",
+          "cloud",
+          "rail"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "keep a copy offsite",
+            "element": "copy_b",
+            "action": "travels out of the boundary into the cloud",
+            "motion": "camera widen, travel"
+          },
+          {
+            "t_anchor": "The cloud",
+            "element": "cloud",
+            "action": "label Cloud",
+            "motion": "wipe"
+          },
+          {
+            "t_anchor": "common way to do it",
+            "element": "rail",
+            "action": "the event fills the boundary and stops at its edge; tile 1 named with label 1 offsite",
+            "motion": "grow, recolour"
+          }
+        ],
+        "continuity": "b10 rebuilds this board from the same layout after the b09 detail: laptop, drive with copy_a, cloud with copy_b, boundary faint, rail."
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "scene": "b09",
+      "station": "offline",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "reveal",
+      "subject": "connected backups can be encrypted; keep one offline",
+      "accent_on": "the offline drive's label",
+      "design": {
+        "treatment": "A detail below the board, same drawing language. A laptop at left with its Report; two backup drives to its right, each holding a copy: the upper drive on a cable from the laptop (ext_drive connected), the lower drive with no cable (unplugged), a label Offline or disconnected beside it. On 'can encrypt backups that stay connected' the laptop's Report locks and a small lock token travels along the cable into the upper drive, whose copy locks (slate, padlock). On 'keep one offline' the lower drive's copy stays whole and its label takes the accent. No cloud in this frame (the claim is about connection, not about the cloud).",
+        "why_motion": "the spread along the connection is the mechanism; the missing cable is the defence",
+        "elements": [
+          "laptop_d",
+          "report_d",
+          "drive_connected",
+          "copy_connected",
+          "cable",
+          "lock_token",
+          "drive_offline",
+          "copy_offline",
+          "label_offline"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Ransomware can encrypt",
+            "element": "report_d",
+            "action": "laptop copy locks",
+            "motion": "state cut"
+          },
+          {
+            "t_anchor": "backups that stay connected",
+            "element": "lock_token",
+            "action": "travels along the cable; connected copy locks",
+            "motion": "along path"
+          },
+          {
+            "t_anchor": "keep one offline or disconnected",
+            "element": "label_offline",
+            "action": "offline copy stays whole; label takes the accent",
+            "motion": "recolour"
+          }
+        ],
+        "continuity": "nothing held; the camera returns to the board in b10."
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "scene": "b10",
+      "station": "board",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "intent": "rest",
+      "shot": {
+        "size": "establishing"
+      },
+      "story_role": "reveal",
+      "subject": "copies that cannot all fail together",
+      "accent_on": "the three lit tiles as one family",
+      "design": {
+        "treatment": "The whole system at rest on the board as b08 left it: laptop and drive on the desk inside a faint boundary, the cloud far right, every copy whole; the rail's three tiles lit ink with labels 3 copies, 2 kinds of storage, 1 offsite. On 'Not more copies' the copies stay as they are (no new ones appear); on 'cannot all fail together' the three tiles turn accent together as one family. A slow push across the hold.",
+        "why_motion": "a finished frame while the voice consolidates; the one change is the rule lighting as a whole",
+        "elements": [
+          "laptop",
+          "report_main",
+          "ext_drive",
+          "copy_a",
+          "desk_line",
+          "label_laptop",
+          "label_drive",
+          "boundary",
+          "cloud",
+          "copy_b",
+          "rail"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Not more copies",
+            "element": "rail",
+            "action": "frame holds",
+            "motion": "slow push"
+          },
+          {
+            "t_anchor": "cannot all fail together",
+            "element": "rail",
+            "action": "all three tiles accent",
+            "motion": "recolour"
+          }
+        ],
+        "continuity": "a chapter cut follows; the bag station starts fresh."
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "scene": "b11",
+      "station": "bag",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "intent": "rest",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "subject": "a laptop and a USB backup in the same bag",
+      "accent_on": "the question Which part breaks?",
+      "upgrade_reason": "The check must be judged on the same drawn objects and 3-2-1 tiles the lesson built, and b12 answers by moving them (the bag leaves with both copies); a quiz template would break that continuity.",
+      "design": {
+        "treatment": "On a field2 ground, a bag (cutaway) holds a small laptop and a USB stick, each with a Report copy; a dashed place_boundary pill Same bag hangs from it. The rule_rail sits below, all three tiles unlit, labels on. On 'Which part breaks?' the question appears as lead text in accent above the rail and holds through the 2 s pause.",
+        "why_motion": "a still setup to judge; the only motion is the question arriving",
+        "elements": [
+          "bag",
+          "laptop_b",
+          "report_b",
+          "usb",
+          "copy_usb",
+          "boundary_bag",
+          "rail",
+          "question"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Quick check",
+            "element": "rail",
+            "action": "the three tiles settle unlit with labels",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "A laptop",
+            "element": "bag",
+            "action": "the bag settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "A laptop",
+            "element": "laptop_b",
+            "action": "laptop settles inside the bag",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "A laptop",
+            "element": "report_b",
+            "action": "its Report copy appears on the screen",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "a USB backup",
+            "element": "usb",
+            "action": "USB stick settles inside the bag",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "a USB backup",
+            "element": "copy_usb",
+            "action": "its Report copy appears beside it",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "in the same bag",
+            "element": "boundary_bag",
+            "action": "dashed boundary and Same bag pill",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Which part breaks?",
+            "element": "question",
+            "action": "question appears; hold through the pause",
+            "motion": "reveal"
+          }
+        ],
+        "continuity": "everything but question held into b12."
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "scene": "b12",
+      "station": "bag",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "bag",
+        "laptop_b",
+        "report_b",
+        "usb",
+        "copy_usb",
+        "boundary_bag",
+        "rail"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "subject": "the missing part is the one offsite copy",
+      "accent_on": "tile 1 marked missing",
+      "design": {
+        "treatment": "On 'The one' tiles 3 and 2 light ink with small pos ticks, tile 1 turns to a dashed missing outline and a neg tag Missing: 1 offsite hangs from it (the accent outline on tile 1). On 'one stolen bag takes both' the bag, with both copies inside, slides off the right edge of the frame; the rail stays, tile 1 still missing.",
+        "why_motion": "the verdict is marked on the rule, then the theft proves it",
+        "elements": [
+          "bag",
+          "laptop_b",
+          "report_b",
+          "usb",
+          "copy_usb",
+          "boundary_bag",
+          "rail",
+          "tag_missing"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The one",
+            "element": "rail",
+            "action": "3 and 2 lit and ticked, 1 missing",
+            "motion": "recolour, pop"
+          },
+          {
+            "t_anchor": "The one",
+            "element": "tag_missing",
+            "action": "tag Missing: 1 offsite hangs from tile 1",
+            "motion": "wipe"
+          },
+          {
+            "t_anchor": "one stolen bag takes both",
+            "element": "bag",
+            "action": "bag slides off the field with both copies",
+            "motion": "travel out"
+          }
+        ],
+        "continuity": "a cut to the board follows for the payoff."
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "scene": "b13",
+      "station": "board",
+      "join_in": {
+        "type": "cut"
+      },
+      "intent": "callback",
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "subject": "same night, same failure, survived",
+      "accent_on": "the restored Report",
+      "design": {
+        "treatment": "The board as in b10 (laptop, drive with its copy, cloud with its copy, rail lit ink, boundary faint), framed a little closer on the laptop like b02. On 'same failure' the b02 failure replays exactly: laptop failed, tag Drive failed, the Report empties. On 'opens from a backup' a copy travels from the external drive into the laptop and the Report refills whole with the accent edge; a pos tag Restored hangs from it, and the cloud copy stays whole at right.",
+        "why_motion": "the replay of the b02 failure, now survived, is the payoff",
+        "elements": [
+          "laptop",
+          "report_main",
+          "ext_drive",
+          "copy_a",
+          "desk_line",
+          "boundary",
+          "cloud",
+          "copy_b",
+          "rail",
+          "tag_failed",
+          "copy_restore",
+          "tag_restored"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Same night, same failure",
+            "element": "laptop",
+            "action": "laptop failed; Drive failed tag; the Report empties",
+            "motion": "state cut"
+          },
+          {
+            "t_anchor": "opens from a backup",
+            "element": "copy_restore",
+            "action": "copy travels from the drive; Report restored; Restored tag",
+            "motion": "travel, refill, tag wipe"
+          }
+        ],
+        "continuity": "a cut to the presenter's close follows; nothing held."
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "avatar",
+      "station": "host",
+      "join_in": {
+        "type": "cut"
+      },
+      "story_role": "payoff",
+      "option": "presenter",
+      "rationale": "The allocation makes the last beat a presenter bookend because the request sets avatar.provider 'presenter'; the notes and the brief ask for none. The gate refuses a bespoke kind against the allocation, so the presenter stays as the option with the 3-2-1 check on its card; the motion-graphics checklist, which returns to the opening laptop and Report, is the ready alternative for a person to switch to.",
+      "props": {
+        "member": "woman",
+        "side": "left",
+        "cloth": "ink",
+        "kicker": "Your turn",
+        "title": "Now check your own key files",
+        "say_title": "check your own key files",
+        "card": {
+          "title": "Which number is missing?",
+          "say": "Which number is missing",
+          "lines": [
+            {
+              "text": "3 copies"
+            },
+            {
+              "text": "2 kinds of storage"
+            },
+            {
+              "text": "1 offsite"
+            }
+          ]
+        }
+      },
+      "alternatives": {
+        "motion graphics, no presenter": {
+          "kind": "bespoke",
+          "scene": "b14",
+          "station": "board",
+          "register": "productive",
+          "motion_is": "staging",
+          "intent": "rest",
+          "shot": {
+            "size": "medium"
+          },
+          "accent_on": "the accent outlines round the unlit tiles",
+          "design": {
+            "treatment": "The plain light field, opening on the b01 image changed: the laptop (on) with the Report whole on its screen, left. The Report lifts off the screen and becomes row one of three file cards stacked at centre left (report_file, whole, small), the viewer's own key files; the laptop eases back and fades. Beside each file a small kit rule_rail of 3, 2, 1 tiles, unlit, labels off. On 'Which number is missing?' a thin accent outline draws round every tile on the three rails at once (drawn by the scene over the unlit tiles) and the rows hold, waiting: nothing ticks. A slow push across the hold; the film ends on this frame.",
+            "why_motion": "the opening file becomes the viewer's own task, the same rule unticked",
+            "elements": [
+              "laptop",
+              "file_1",
+              "file_2",
+              "file_3",
+              "rail_1",
+              "rail_2",
+              "rail_3",
+              "outlines"
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "check your own key files",
+                "element": "file_1",
+                "action": "the Report lifts off the laptop to row one; two more files settle below; laptop fades",
+                "motion": "travel, staggered settle"
+              },
+              {
+                "t_anchor": "check your own key files",
+                "element": "rail_1",
+                "action": "a 3-2-1 rail beside each file, unlit",
+                "motion": "staggered reveal"
+              },
+              {
+                "t_anchor": "Which number is missing?",
+                "element": "outlines",
+                "action": "accent outlines round all tiles; hold",
+                "motion": "draw, slow push"
+              }
+            ],
+            "continuity": "the film ends on this frame."
+          }
+        }
+      }
+    }
+  ]
+}

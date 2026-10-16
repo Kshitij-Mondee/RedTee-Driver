@@ -1,0 +1,207 @@
+{
+  "id": "chalk-lab",
+  "name": "Chalk Lab",
+  "reads_as": "Math and systems on a near-black board: a faint dot grid, chalk-thin white strokes, glassy teal, orange and violet for the parts, serif labels for the symbols and a bold sans for names, one board changed by additions. For mechanisms, models, data and technical concepts.",
+  "look_family": "technical",
+  "fits": [
+    "technical",
+    "quantitative",
+    "science",
+    "engineering",
+    "data",
+    "models"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "warm onboarding",
+    "people stories"
+  ],
+  "palette": {
+    "field": "#0B0B0E",
+    "field2": "#141418",
+    "surface": "#18181E",
+    "surface2": "#202028",
+    "ink": "#F2F2F0",
+    "muted": "#A6A6B0",
+    "line": "#D2D2DA",
+    "accent": "#4FB8D8",
+    "accent2": "#F08A3C",
+    "accent3": "#B07CF0",
+    "accent4": "#E5C55A",
+    "pos": "#7CC47F",
+    "neg": "#EF6B6B",
+    "shadow": "#000000",
+    "onAccent": "#0B0B0E"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400
+      ]
+    },
+    "serif": {
+      "family": "Fraunces",
+      "weights": [
+        500
+      ]
+    },
+    "roles": {
+      "label": "serif"
+    },
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 500,
+        "file": "inter-latin-500-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "Fraunces",
+        "weight": 500,
+        "file": "fraunces-latin-500-normal.woff2",
+        "pkg": "@fontsource/fraunces"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      110,
+      160
+    ],
+    "hero": [
+      96,
+      140
+    ],
+    "title": [
+      60,
+      88
+    ],
+    "lead": [
+      34,
+      42
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      28,
+      34
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 12,
+    "stroke": 2.2,
+    "shading": "flat",
+    "shadow": "none"
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.6,
+    "move": 0.45,
+    "exit": 0.32,
+    "stagger": 0.1,
+    "draw": 1.2,
+    "count": 1.4,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "dots",
+    "density": 0.8
+  },
+  "captions": {
+    "bg": "rgba(11,11,14,0.86)",
+    "fg": "ink",
+    "active": "accent4",
+    "radius": 8,
+    "font": "body",
+    "size": 34,
+    "weight": 700,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 1.6
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2A1E17",
+      "#4A2F1D",
+      "#1C1A1E",
+      "#6B4226",
+      "#8A5A33"
+    ],
+    "cloth": "accent",
+    "hair": "field",
+    "ink": "field",
+    "paper": "ink",
+    "mouth": "accent2",
+    "extra": "muted",
+    "extras": "silhouette",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "Plain and quick: a cut between topics is right; continue inside a topic; covers (dip, fade, wipe, iris) only at a section change, if at all.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 45
+  },
+  "fx": {
+    "background": "mesh",
+    "intensity": 0.25,
+    "grain": 0.012,
+    "vignette": 0.5,
+    "colors": [
+      "accent3",
+      "accent",
+      "accent3"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: glowing shapes on a dark field measure low edge density by design (TED-Ed glow films sat under 0.02 for 43 % of narrated time, D-112)"
+  }
+}

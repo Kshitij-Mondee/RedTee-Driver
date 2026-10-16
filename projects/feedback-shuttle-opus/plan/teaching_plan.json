@@ -1,0 +1,150 @@
+{
+  "title": "Feedback that changes behaviour, not just feelings",
+  "performance": "Before giving a piece of feedback, the viewer can restate a verdict about the person as one specific, observed behaviour, its concrete impact, and a question that ends in an agreed next step",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "has given and received everyday feedback at work; senses that 'be more proactive' style comments rarely change anything, but has not named why",
+    "why": "the brief targets corporate employees who already give feedback to peers or people they lead, not newcomers learning what feedback is",
+    "motivation": "assigned or chosen short L&D viewing; moderate investment, rewarded if their next awkward conversation actually works",
+    "context": "desk or phone, sound likely on, captions available, one sitting of about two minutes"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "one running moment (a deliverable flagged late on the due day) shows the verdict failing first; the shape is then built on that same moment, so each part is seen doing work before it is named",
+    "signature_move": "replay the same moment and swap the verdict for one piece of the shape at a time: the behaviour, then the impact, then the question and next step"
+  },
+  "misconceptions": [
+    {
+      "belief": "if I say the problem clearly and firmly, the person will do it differently next time",
+      "why_tempting": "the receiver reacts at once (nods, apologises, looks uncomfortable), so the feedback looks like it landed",
+      "refuted_in": "sec1",
+      "source_anchor": "knowledge sheet F5, F6 (person-directed feedback triggers defensiveness; vague feedback names no action to repeat or stop)"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Say a teammate tells you on the due day that the report will be late. You say 'you need to be more proactive'. They nod and feel bad. Two weeks later, same day, same message."
+    },
+    "promise": "You can turn that one sentence into feedback they can actually act on next time",
+    "bridge_from_prior": "sec1 opens from the 'be more proactive' line the viewer has almost certainly said or heard",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain the difference between a trait label ('not proactive') and a specific, observed behaviour ('told me on Thursday, the due day')",
+        "bloom": "understand",
+        "concepts": [
+          "trait vs behaviour",
+          "why a label changes feelings, not actions"
+        ],
+        "energy": "build",
+        "carrier": "scenario",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can use the shape on the same moment: add the concrete impact, then close with a question that hears their side and agrees one next step",
+        "bloom": "apply",
+        "concepts": [
+          "concrete impact",
+          "closing question",
+          "agreed next step"
+        ],
+        "energy": "peak",
+        "carrier": "worked example",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can distinguish which of two lines about the same moment gives the teammate something to do differently",
+        "bloom": "analyze",
+        "concepts": [
+          "behaviour, impact, question, next step (in order)"
+        ],
+        "energy": "rest",
+        "carrier": "comparison",
+        "recap_after": false
+      }
+    ],
+    "payoff": "Back to the opening moment, now with the shape: the teammate suggests flagging any slip by the midpoint, and next time the warning comes early"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "the late deliverable rebuilt step by step, each part of the shape narrated as it is added"
+    },
+    {
+      "stage": "faded",
+      "where": "sec3 (check)",
+      "what": "two lines about the same late deliverable; the viewer picks before the narrator answers"
+    },
+    {
+      "stage": "independent",
+      "where": "payoff and transfer",
+      "what": "the viewer is handed their own next 'be more X' sentence to rebuild"
+    }
+  ],
+  "pacing": {
+    "requested_s": 120,
+    "target_duration_s": 120,
+    "words_per_minute": 150,
+    "slowdown_at": [
+      "the closing question and agreed next step"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "quiz",
+        "prompt_sketch": "Same late report, two lines: 'You need to be more proactive' versus 'You told me about the delay on Thursday, the due day, and I had to move the client call. What would help you flag it sooner?' Which one gives them something to do differently?",
+        "answer": "The second: it names the behaviour and its impact, and opens a next step",
+        "tempting_wrong": "the first feels honest and direct, and the person reacts at once, but reacting is not knowing what to change"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "The next time you are about to say someone should 'be more' something, name what they did and when, what it affected, then ask what would help next time"
+  ],
+  "persona": {
+    "voice": "a mentor who has given plenty of feedback that did not land before learning the shape; plain, warm, direct, a colleague not a coach",
+    "delivery_notes": "light and knowing on the hook, matter of fact on each part of the shape, slower and curious on the question, brisk on the close"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the late report and the 'be more proactive' line that changed nothing",
+      "objective": "promise: turn that one sentence into feedback they can act on",
+      "recall_prior": "bridge_from_prior: the viewer's own 'be more proactive' line",
+      "present": "sec1 behaviour vs trait, then sec2 impact and question, in dependency order",
+      "guidance": "signature_move: the same moment rebuilt one part at a time",
+      "practice": "practice_ladder; the faded step is the sec3 check",
+      "feedback": "the check answer explains why the tempting first line fails",
+      "assess": "sec3 check: choose before the answer",
+      "transfer": "transfer_tasks: the viewer's own next 'be more X' sentence"
+    },
+    "merrill": {
+      "problem_centered": "the late deliverable is the running problem throughout",
+      "activation": "the familiar 'be more proactive' line",
+      "demonstration": "sec1-sec2 rebuild the moment step by step",
+      "application": "sec3 check",
+      "integration": "payoff and transfer task"
+    },
+    "mayer": {
+      "coherence": "one running example; no tour of other techniques",
+      "signalling": "one slowdown on the question and next step",
+      "redundancy": "on screen holds short labels and the two lines only; narration explains",
+      "contiguity": "each part appears as it is spoken",
+      "segmenting": "three short sections, one idea each",
+      "pre_training": "sec1 names behaviour vs trait before sec2 builds on it"
+    },
+    "arcs": {
+      "attention": "the same late message arriving twice",
+      "relevance": "the viewer's own next feedback conversation",
+      "confidence": "the shape is modelled before the check asks them to choose",
+      "satisfaction": "the payoff shows the warning arrive early"
+    },
+    "bloom_path": "understand -> apply -> analyze"
+  },
+  "series": null,
+  "flags": []
+}

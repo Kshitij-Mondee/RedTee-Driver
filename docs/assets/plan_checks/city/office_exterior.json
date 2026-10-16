@@ -1,0 +1,520 @@
+{
+ "scene": "office_exterior",
+ "camera_spec": {
+  "camera": {
+   "x": -1.8,
+   "y": 0.3,
+   "eye": 1.6,
+   "yaw": 28,
+   "hfov": 55,
+   "horizon_pct": 44
+  },
+  "walls": [
+   {
+    "name": "mill front (brick, y 6.0)",
+    "axis": "y",
+    "at": 6.0
+   }
+  ],
+  "points": {
+   "opening_L_ground": [
+    0,
+    6,
+    0
+   ],
+   "opening_R_ground": [
+    3.0,
+    6,
+    0
+   ],
+   "opening_L_spring": [
+    0,
+    6,
+    3.2
+   ],
+   "opening_R_spring": [
+    3.0,
+    6,
+    3.2
+   ],
+   "arch_crown": [
+    1.5,
+    6,
+    3.6
+   ],
+   "doors_L": [
+    0.6,
+    6,
+    0
+   ],
+   "doors_R": [
+    2.4,
+    6,
+    0
+   ],
+   "transom_L": [
+    0,
+    6,
+    2.4
+   ],
+   "transom_R": [
+    3.0,
+    6,
+    2.4
+   ],
+   "reader": [
+    3.35,
+    6,
+    1.05
+   ],
+   "pier_L_left_edge": [
+    -1.5,
+    6,
+    0
+   ],
+   "pier_L_left_edge_top": [
+    -1.5,
+    6,
+    3.1
+   ],
+   "win_L1_sill_R": [
+    -1.5,
+    6,
+    1.0
+   ],
+   "E_head_top": [
+    3.45,
+    5.45,
+    1.75
+   ],
+   "E_head_centre": [
+    3.45,
+    5.45,
+    1.62
+   ],
+   "E_feet": [
+    3.45,
+    5.45,
+    0
+   ],
+   "T_head_top": [
+    2.75,
+    4.35,
+    1.75
+   ],
+   "T_head_centre": [
+    2.75,
+    4.35,
+    1.62
+   ],
+   "T_feet": [
+    2.75,
+    4.35,
+    0
+   ],
+   "tower_R_edge_ground": [
+    7.0,
+    6,
+    0
+   ],
+   "tower_R_edge_top": [
+    7.0,
+    6,
+    3.2
+   ],
+   "tower_small_window_L": [
+    4.6,
+    6,
+    2.6
+   ],
+   "tower_small_window_R": [
+    5.4,
+    6,
+    3.4
+   ],
+   "win_beyond_tower_sill": [
+    7.5,
+    6,
+    1.0
+   ],
+   "downpipe_tower": [
+    6.9,
+    6,
+    2.0
+   ],
+   "planter_L_top": [
+    -1.45,
+    5.3,
+    0.6
+   ],
+   "planter_R_top": [
+    -0.15,
+    5.3,
+    0.6
+   ],
+   "planter_front_floor": [
+    -0.8,
+    5.0,
+    0
+   ],
+   "no_smoking_plate": [
+    -1.1,
+    6,
+    1.9
+   ],
+   "wall_lantern": [
+    3.6,
+    6,
+    2.6
+   ],
+   "mill_corner_far": [
+    7.0,
+    6,
+    0
+   ],
+   "head_L1_R": [
+    -1.5,
+    6,
+    3.1
+   ],
+   "plinth_band_R": [
+    7,
+    6,
+    0.6
+   ],
+   "bike_stand_near_top_L": [
+    -1.9,
+    2.6,
+    0.75
+   ],
+   "bike_stand_near_top_R": [
+    -1.15,
+    2.6,
+    0.75
+   ],
+   "bike_stand_near_foot": [
+    -1.15,
+    2.6,
+    0
+   ],
+   "bike_wheel_top": [
+    -1.5,
+    2.75,
+    0.68
+   ],
+   "forecourt_edge_L": [
+    -3,
+    3.0,
+    0
+   ],
+   "forecourt_edge_at_frame": [
+    1.0,
+    3.0,
+    0
+   ],
+   "forecourt_edge_R": [
+    5.5,
+    3.0,
+    0
+   ],
+   "doors_threshold_mid": [
+    1.5,
+    6.0,
+    0
+   ]
+  },
+  "behind": [
+   "E_head_top",
+   "E_head_centre",
+   "T_head_top",
+   "T_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": -21,
+   "along_x": 4428,
+   "horizon_y": 475
+  },
+  "points": {
+   "opening_L_ground": {
+    "x": 619,
+    "y": 977,
+    "where": "frame",
+    "depth": 5.88
+   },
+   "opening_R_ground": {
+    "x": 1355,
+    "y": 880,
+    "where": "frame",
+    "depth": 7.29
+   },
+   "opening_L_spring": {
+    "x": 619,
+    "y": -27,
+    "where": "overscan",
+    "depth": 5.88
+   },
+   "opening_R_spring": {
+    "x": 1355,
+    "y": 70,
+    "where": "frame",
+    "depth": 7.29
+   },
+   "arch_crown": {
+    "x": 1027,
+    "y": -85,
+    "where": "overscan",
+    "depth": 6.58
+   },
+   "doors_L": {
+    "x": 793,
+    "y": 954,
+    "where": "frame",
+    "depth": 6.16
+   },
+   "doors_R": {
+    "x": 1232,
+    "y": 896,
+    "where": "frame",
+    "depth": 7.0
+   },
+   "transom_L": {
+    "x": 619,
+    "y": 224,
+    "where": "frame",
+    "depth": 5.88
+   },
+   "transom_R": {
+    "x": 1355,
+    "y": 273,
+    "where": "frame",
+    "depth": 7.29
+   },
+   "reader": {
+    "x": 1423,
+    "y": 611,
+    "where": "frame",
+    "depth": 7.45
+   },
+   "pier_L_left_edge": {
+    "x": 101,
+    "y": 1046,
+    "where": "frame",
+    "depth": 5.17
+   },
+   "pier_L_left_edge_top": {
+    "x": 101,
+    "y": -59,
+    "where": "overscan",
+    "depth": 5.17
+   },
+   "win_L1_sill_R": {
+    "x": 101,
+    "y": 689,
+    "where": "frame",
+    "depth": 5.17
+   },
+   "E_head_top": {
+    "x": 1543,
+    "y": 436,
+    "where": "frame",
+    "depth": 7.01,
+    "behind": {
+     "wall": "mill front (brick, y 6.0)",
+     "at": [
+      4.01,
+      6.0,
+      1.77
+     ]
+    }
+   },
+   "E_head_centre": {
+    "x": 1543,
+    "y": 470,
+    "where": "frame",
+    "depth": 7.01,
+    "behind": {
+     "wall": "mill front (brick, y 6.0)",
+     "at": [
+      4.01,
+      6.0,
+      1.62
+     ]
+    }
+   },
+   "E_feet": {
+    "x": 1543,
+    "y": 896,
+    "where": "frame",
+    "depth": 7.01
+   },
+   "T_head_top": {
+    "x": 1643,
+    "y": 427,
+    "where": "frame",
+    "depth": 5.71,
+    "behind": {
+     "wall": "mill front (brick, y 6.0)",
+     "at": [
+      4.6,
+      6.0,
+      1.81
+     ]
+    }
+   },
+   "T_head_centre": {
+    "x": 1643,
+    "y": 469,
+    "where": "frame",
+    "depth": 5.71,
+    "behind": {
+     "wall": "mill front (brick, y 6.0)",
+     "at": [
+      4.6,
+      6.0,
+      1.63
+     ]
+    }
+   },
+   "T_feet": {
+    "x": 1643,
+    "y": 992,
+    "where": "frame",
+    "depth": 5.71
+   },
+   "tower_R_edge_ground": {
+    "x": 1985,
+    "y": 797,
+    "where": "overscan",
+    "depth": 9.16
+   },
+   "tower_R_edge_top": {
+    "x": 1985,
+    "y": 153,
+    "where": "overscan",
+    "depth": 9.16
+   },
+   "tower_small_window_L": {
+    "x": 1643,
+    "y": 246,
+    "where": "frame",
+    "depth": 8.04
+   },
+   "tower_small_window_R": {
+    "x": 1767,
+    "y": 81,
+    "where": "frame",
+    "depth": 8.41
+   },
+   "win_beyond_tower_sill": {
+    "x": 2046,
+    "y": 593,
+    "where": "overscan",
+    "depth": 9.4
+   },
+   "downpipe_tower": {
+    "x": 1972,
+    "y": 394,
+    "where": "overscan",
+    "depth": 9.12
+   },
+   "planter_L_top": {
+    "x": 139,
+    "y": 878,
+    "where": "frame",
+    "depth": 4.58
+   },
+   "planter_R_top": {
+    "x": 644,
+    "y": 831,
+    "where": "frame",
+    "depth": 5.19
+   },
+   "planter_front_floor": {
+    "x": 432,
+    "y": 1114,
+    "where": "overscan",
+    "depth": 4.62
+   },
+   "no_smoking_plate": {
+    "x": 252,
+    "y": 372,
+    "where": "frame",
+    "depth": 5.36
+   },
+   "wall_lantern": {
+    "x": 1470,
+    "y": 232,
+    "where": "frame",
+    "depth": 7.57
+   },
+   "mill_corner_far": {
+    "x": 1985,
+    "y": 797,
+    "where": "overscan",
+    "depth": 9.16
+   },
+   "head_L1_R": {
+    "x": 101,
+    "y": -59,
+    "where": "overscan",
+    "depth": 5.17
+   },
+   "plinth_band_R": {
+    "x": 1985,
+    "y": 676,
+    "where": "overscan",
+    "depth": 9.16
+   },
+   "bike_stand_near_top_L": {
+    "x": -126,
+    "y": 1265,
+    "where": "outside",
+    "depth": 1.98
+   },
+   "bike_stand_near_top_R": {
+    "x": 561,
+    "y": 1146,
+    "where": "overscan",
+    "depth": 2.34
+   },
+   "bike_stand_near_foot": {
+    "x": 561,
+    "y": 1738,
+    "where": "outside",
+    "depth": 2.34
+   },
+   "bike_wheel_top": {
+    "x": 251,
+    "y": 1212,
+    "where": "overscan",
+    "depth": 2.3
+   },
+   "forecourt_edge_L": {
+    "x": -1397,
+    "y": 2096,
+    "where": "outside",
+    "depth": 1.82
+   },
+   "forecourt_edge_at_frame": {
+    "x": 1561,
+    "y": 1273,
+    "where": "outside",
+    "depth": 3.7
+   },
+   "forecourt_edge_R": {
+    "x": 2603,
+    "y": 983,
+    "where": "outside",
+    "depth": 5.81
+   },
+   "doors_threshold_mid": {
+    "x": 1027,
+    "y": 923,
+    "where": "frame",
+    "depth": 6.58
+   }
+  }
+ }
+}

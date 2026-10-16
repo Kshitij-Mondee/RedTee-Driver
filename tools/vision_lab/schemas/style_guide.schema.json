@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "style_guide",
+  "description": "What a set of videos teaches about making explainers, distilled from the video and shot records plus the code's corpus statistics. Used twice: per batch of about 10 videos (scope 'batch'), then once for the whole corpus (scope 'corpus') from the batch guides. Every rule cites evidence that exists in the records. Counts come from the statistics given, never from memory.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scope", "videos", "house_constants", "style_families", "technique_library", "explanation_patterns", "rules", "avoid", "judge_rubric", "open_questions"],
+  "definitions": {
+    "evidence": {
+      "type": "array", "maxItems": 8,
+      "items": {"type": "object", "additionalProperties": false, "required": ["video_id", "shot_id"], "properties": {"video_id": {"type": "string"}, "shot_id": {"type": "string"}}}
+    }
+  },
+  "properties": {
+    "scope": {"type": "string", "enum": ["batch", "corpus"]},
+    "videos": {"type": "array", "items": {"type": "string"}},
+    "house_constants": {
+      "type": "array", "maxItems": 15,
+      "items": {"type": "object", "additionalProperties": false, "required": ["rule", "support", "exceptions"], "properties": {
+        "rule": {"type": "string", "description": "Something nearly every video does (format, length, title card, narration style, end card)."},
+        "support": {"type": "array", "items": {"type": "string"}, "description": "video ids that follow it"},
+        "exceptions": {"type": "array", "items": {"type": "string"}, "description": "video ids that do not"}
+      }}
+    },
+    "style_families": {
+      "type": "array", "maxItems": 12,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "label", "defining_features", "members", "signature_techniques", "closest_loom_pack", "what_loom_lacks"], "properties": {
+        "id": {"type": "string"},
+        "label": {"type": "string"},
+        "defining_features": {"type": "array", "maxItems": 10, "items": {"type": "string"}},
+        "members": {"type": "array", "items": {"type": "string"}},
+        "signature_techniques": {"type": "array", "maxItems": 8, "items": {"type": "string"}},
+        "closest_loom_pack": {"type": "string"},
+        "what_loom_lacks": {"type": "array", "maxItems": 8, "items": {"type": "string"}, "description": "What a pack or builder would need to reach this look (from the Loom capability list given)."}
+      }}
+    },
+    "technique_library": {
+      "type": "array", "maxItems": 60,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "name", "category", "description", "when_to_use", "how_to_execute", "timing", "evidence", "frequency_videos", "loom_status", "loom_notes"], "properties": {
+        "id": {"type": "string", "description": "snake_case, stable across batches when it is the same technique"},
+        "name": {"type": "string"},
+        "category": {"type": "string", "enum": ["transition", "motion", "composition", "character", "colour", "typography", "explanation", "camera", "pacing", "sync", "sound", "world_building", "opening", "ending"]},
+        "description": {"type": "string"},
+        "when_to_use": {"type": "string", "description": "The teaching situation it serves."},
+        "how_to_execute": {"type": "array", "maxItems": 8, "items": {"type": "string"}, "description": "Steps an animator or a code engine could follow, with order and rough proportions."},
+        "timing": {"type": "string", "description": "Durations and holds, in seconds, as observed (e.g. 'morph 0.6-1.0 s, then hold 1.5 s before the next line')."},
+        "evidence": {"$ref": "#/definitions/evidence"},
+        "frequency_videos": {"type": "integer", "description": "How many videos in scope use it (from the records, not a guess)."},
+        "loom_status": {"type": "string", "enum": ["exists", "needs_param", "needs_new_primitive", "needs_assets", "not_suitable"]},
+        "loom_notes": {"type": "string"}
+      }}
+    },
+    "explanation_patterns": {
+      "type": "array", "maxItems": 20,
+      "items": {"type": "object", "additionalProperties": false, "required": ["concept_kind", "device", "recipe", "evidence", "frequency_videos"], "properties": {
+        "concept_kind": {"type": "string"},
+        "device": {"type": "string"},
+        "recipe": {"type": "string"},
+        "evidence": {"$ref": "#/definitions/evidence"},
+        "frequency_videos": {"type": "integer"}
+      }}
+    },
+    "rules": {
+      "type": "array", "maxItems": 60,
+      "items": {"type": "object", "additionalProperties": false, "required": ["area", "rule", "strength", "evidence", "measurable_as"], "properties": {
+        "area": {"type": "string", "enum": ["colour", "typography", "character", "camera", "transition", "composition", "pacing", "motion", "sync", "sound", "density", "world"]},
+        "rule": {"type": "string"},
+        "strength": {"type": "string", "enum": ["always", "usually", "sometimes"]},
+        "evidence": {"$ref": "#/definitions/evidence"},
+        "measurable_as": {"type": "string", "description": "How a checker could test it on a frame or a timeline (e.g. 'text cap height >= 0.035 of frame height'), or 'judgement'."}
+      }}
+    },
+    "avoid": {
+      "type": "array", "maxItems": 20,
+      "items": {"type": "object", "additionalProperties": false, "required": ["anti_pattern", "why", "seen_in"], "properties": {
+        "anti_pattern": {"type": "string", "description": "Something these films never or almost never do."},
+        "why": {"type": "string"},
+        "seen_in": {"type": "array", "items": {"type": "string"}, "description": "video ids where it does happen (empty if never)"}
+      }}
+    },
+    "judge_rubric": {
+      "type": "array", "maxItems": 10,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "name", "question", "anchor_1", "anchor_3", "anchor_5", "weight"], "properties": {
+        "id": {"type": "string", "enum": ["composition", "legibility", "visual_explanation", "motion_purpose", "continuity", "style_consistency", "pacing", "polish", "character", "sync"]},
+        "name": {"type": "string"},
+        "question": {"type": "string"},
+        "anchor_1": {"type": "string", "description": "What a 1 looks like, in things you can SEE."},
+        "anchor_3": {"type": "string"},
+        "anchor_5": {"type": "string", "description": "What a 5 looks like, as these films do it."},
+        "weight": {"type": "number"}
+      }}
+    },
+    "open_questions": {"type": "array", "maxItems": 10, "items": {"type": "string"}}
+  }
+}

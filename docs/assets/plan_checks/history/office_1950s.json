@@ -1,0 +1,444 @@
+{
+ "scene": "office_1950s",
+ "camera_spec": {
+  "camera": {
+   "x": 6.6,
+   "y": 0.3,
+   "eye": 1.6,
+   "yaw": -8,
+   "hfov": 55,
+   "horizon_pct": 46.0
+  },
+  "walls": [
+   {
+    "name": "inner wall (y 7.0)",
+    "axis": "y",
+    "at": 7.0
+   },
+   {
+    "name": "front wall (x 0)",
+    "axis": "x",
+    "at": 0
+   }
+  ],
+  "points": {
+   "door_R_top": [
+    1.9,
+    7,
+    2.1
+   ],
+   "clock": [
+    4.2,
+    7,
+    2.6
+   ],
+   "calendar_TL": [
+    6.6,
+    7,
+    2.1
+   ],
+   "calendar_BR": [
+    7.1,
+    7,
+    1.6
+   ],
+   "rowB_desk1_front": [
+    5.4,
+    4.6,
+    0.66
+   ],
+   "rowB_desk1_back": [
+    4.7,
+    5.4,
+    0.66
+   ],
+   "rowB_desk2_front": [
+    7.6,
+    4.6,
+    0.66
+   ],
+   "rowA_desk_front": [
+    5.4,
+    2.4,
+    0.66
+   ],
+   "rowA_desk_back": [
+    4.7,
+    3.2,
+    0.66
+   ],
+   "rowA_desk2_front": [
+    7.6,
+    2.4,
+    0.66
+   ],
+   "T_head_top": [
+    5.75,
+    5.0,
+    1.25
+   ],
+   "T_head_centre": [
+    5.75,
+    5.0,
+    1.13
+   ],
+   "T_seat": [
+    5.8,
+    5.0,
+    0.45
+   ],
+   "T_feet": [
+    5.35,
+    5.0,
+    0
+   ],
+   "T2_head_top": [
+    7.95,
+    5.0,
+    1.25
+   ],
+   "T2_head_centre": [
+    7.95,
+    5.0,
+    1.13
+   ],
+   "S_head_top": [
+    3.9,
+    5.6,
+    1.72
+   ],
+   "S_head_centre": [
+    3.9,
+    5.6,
+    1.59
+   ],
+   "S_feet": [
+    3.9,
+    5.6,
+    0
+   ],
+   "typewriter1": [
+    5.05,
+    5.0,
+    0.8
+   ],
+   "door_L_floor": [
+    1.0,
+    7,
+    0
+   ],
+   "rowB_desk2_back": [
+    6.9,
+    5.4,
+    0.66
+   ],
+   "chair_rowA": [
+    5.8,
+    2.8,
+    0.85
+   ],
+   "cabs_L_top": [
+    6.3,
+    6.6,
+    1.32
+   ],
+   "cabs_R_top": [
+    7.7,
+    6.6,
+    1.32
+   ],
+   "cabs_L_floor": [
+    6.3,
+    6.6,
+    0
+   ],
+   "picture_rail_L": [
+    1.0,
+    7,
+    2.4
+   ],
+   "pendant1": [
+    5.0,
+    4.5,
+    2.7
+   ],
+   "pendant2": [
+    8.0,
+    4.5,
+    2.7
+   ],
+   "window_reflection_check": [
+    6.6,
+    7,
+    1.6
+   ],
+   "ashtray": [
+    5.25,
+    5.25,
+    0.68
+   ],
+   "wall_right_end": [
+    10.5,
+    7,
+    0
+   ]
+  },
+  "behind": [
+   "T_head_top",
+   "T_head_centre",
+   "T2_head_top",
+   "T2_head_centre",
+   "S_head_top",
+   "S_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1219,
+   "along_x": -12162,
+   "horizon_y": 497
+  },
+  "points": {
+   "door_R_top": {
+    "x": 18,
+    "y": 370,
+    "where": "frame",
+    "depth": 7.29
+   },
+   "clock": {
+    "x": 578,
+    "y": 232,
+    "where": "frame",
+    "depth": 6.97
+   },
+   "calendar_TL": {
+    "x": 1219,
+    "y": 358,
+    "where": "frame",
+    "depth": 6.63
+   },
+   "calendar_BR": {
+    "x": 1361,
+    "y": 497,
+    "where": "frame",
+    "depth": 6.57
+   },
+   "rowB_desk1_front": {
+    "x": 714,
+    "y": 889,
+    "where": "frame",
+    "depth": 4.43
+   },
+   "rowB_desk1_back": {
+    "x": 553,
+    "y": 823,
+    "where": "frame",
+    "depth": 5.31
+   },
+   "rowB_desk2_front": {
+    "x": 1671,
+    "y": 918,
+    "where": "frame",
+    "depth": 4.12
+   },
+   "rowA_desk_front": {
+    "x": 224,
+    "y": 1268,
+    "where": "outside",
+    "depth": 2.25
+   },
+   "rowA_desk_back": {
+    "x": 91,
+    "y": 1050,
+    "where": "frame",
+    "depth": 3.14
+   },
+   "rowA_desk2_front": {
+    "x": 2179,
+    "y": 1390,
+    "where": "outside",
+    "depth": 1.94
+   },
+   "T_head_top": {
+    "x": 888,
+    "y": 632,
+    "where": "frame",
+    "depth": 4.77,
+    "behind": {
+     "wall": "inner wall (y 7.0)",
+     "at": [
+      5.39,
+      7.0,
+      1.1
+     ]
+    }
+   },
+   "T_head_centre": {
+    "x": 888,
+    "y": 678,
+    "where": "frame",
+    "depth": 4.77,
+    "behind": {
+     "wall": "inner wall (y 7.0)",
+     "at": [
+      5.39,
+      7.0,
+      0.93
+     ]
+    }
+   },
+   "T_seat": {
+    "x": 907,
+    "y": 942,
+    "where": "frame",
+    "depth": 4.77
+   },
+   "T_feet": {
+    "x": 737,
+    "y": 1108,
+    "where": "overscan",
+    "depth": 4.83
+   },
+   "T2_head_top": {
+    "x": 1782,
+    "y": 641,
+    "where": "frame",
+    "depth": 4.47,
+    "behind": {
+     "wall": "inner wall (y 7.0)",
+     "at": [
+      8.52,
+      7.0,
+      1.1
+     ]
+    }
+   },
+   "T2_head_centre": {
+    "x": 1782,
+    "y": 691,
+    "where": "frame",
+    "depth": 4.47,
+    "behind": {
+     "wall": "inner wall (y 7.0)",
+     "at": [
+      8.52,
+      7.0,
+      0.93
+     ]
+    }
+   },
+   "S_head_top": {
+    "x": 325,
+    "y": 457,
+    "where": "frame",
+    "depth": 5.62,
+    "behind": {
+     "wall": "inner wall (y 7.0)",
+     "at": [
+      3.19,
+      7.0,
+      1.75
+     ]
+    }
+   },
+   "S_head_centre": {
+    "x": 325,
+    "y": 500,
+    "where": "frame",
+    "depth": 5.62,
+    "behind": {
+     "wall": "inner wall (y 7.0)",
+     "at": [
+      3.19,
+      7.0,
+      1.59
+     ]
+    }
+   },
+   "S_feet": {
+    "x": 325,
+    "y": 1021,
+    "where": "frame",
+    "depth": 5.62
+   },
+   "typewriter1": {
+    "x": 626,
+    "y": 800,
+    "where": "frame",
+    "depth": 4.87
+   },
+   "door_L_floor": {
+    "x": -187,
+    "y": 895,
+    "where": "overscan",
+    "depth": 7.41
+   },
+   "rowB_desk2_back": {
+    "x": 1331,
+    "y": 843,
+    "where": "frame",
+    "depth": 5.01
+   },
+   "chair_rowA": {
+    "x": 643,
+    "y": 1031,
+    "where": "frame",
+    "depth": 2.59
+   },
+   "cabs_L_top": {
+    "x": 1130,
+    "y": 579,
+    "where": "frame",
+    "depth": 6.28
+   },
+   "cabs_R_top": {
+    "x": 1556,
+    "y": 582,
+    "where": "frame",
+    "depth": 6.09
+   },
+   "cabs_L_floor": {
+    "x": 1130,
+    "y": 967,
+    "where": "frame",
+    "depth": 6.28
+   },
+   "picture_rail_L": {
+    "x": -187,
+    "y": 298,
+    "where": "overscan",
+    "depth": 7.41
+   },
+   "pendant1": {
+    "x": 539,
+    "y": 34,
+    "where": "frame",
+    "depth": 4.38
+   },
+   "pendant2": {
+    "x": 1877,
+    "y": -15,
+    "where": "overscan",
+    "depth": 3.96
+   },
+   "window_reflection_check": {
+    "x": 1219,
+    "y": 497,
+    "where": "frame",
+    "depth": 6.63
+   },
+   "ashtray": {
+    "x": 725,
+    "y": 830,
+    "where": "frame",
+    "depth": 5.09
+   },
+   "wall_right_end": {
+    "x": 2411,
+    "y": 981,
+    "where": "outside",
+    "depth": 6.09
+   }
+  }
+ }
+}

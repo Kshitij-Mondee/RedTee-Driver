@@ -1,0 +1,345 @@
+{
+  "ok": false,
+  "errors": [
+    "runtime text_spill: drawn text leaves its box (right 4px): \"Today\"",
+    "runtime tight_inset: text sits 1.5px from the edge of its shape (needs 6.0px): \"should be  yourcompany.example\"",
+    "b05: 'draw' builds at 42.16s under the overlay 'chapter_four' (41.21-45.01s); start it after the overlay (chapter E.after)",
+    "b09: 'funnel' builds at 77.50s under the overlay 'chapter_move_three' (75.04-77.59s); start it after the overlay (chapter E.after)",
+    "b02: words cut by the frame edge at 19.4s: \"Already clicked?\" at [1704, 152, 2054, 204], \"Report at once\" at [1704, 210, 2010, 262] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b07: words cut by the frame edge at 61.2s: \"Already clicked?\" at [1704, 152, 2054, 204], \"Report at once\" at [1704, 210, 2010, 262] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b27: text too small to read on screen at 254.2s: \"familiar name\" 16.4px (< 18 px at 1080p, after camera and scale)"
+  ],
+  "warnings": [
+    "compose: b02: camera pan between different worlds (st_host -> st_floor) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b15: first reveal (131.22s) lands before the camera settles (131.72s)",
+    "compose: b31: camera pan between different worlds (st_supplier -> st_funnel) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b42: camera pan between different worlds (st_floor -> st_host) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "runtime literal_colour: scene used a literal colour instead of a token: #855b24",
+    "runtime literal_colour: scene used a literal colour instead of a token: #493214",
+    "runtime literal_colour: scene used a literal colour instead of a token: #da953b",
+    "runtime literal_colour: scene used a literal colour instead of a token: #855b24",
+    "runtime literal_colour: scene used a literal colour instead of a token: #493214",
+    "runtime literal_colour: scene used a literal colour instead of a token: #da953b",
+    "runtime literal_colour: scene used a literal colour instead of a token: #855b24",
+    "runtime literal_colour: scene used a literal colour instead of a token: #493214",
+    "runtime literal_colour: scene used a literal colour instead of a token: #da953b",
+    "b22: 5.2s static hold from 195.5s",
+    "b38: 5.8s static hold from 346.1s",
+    "b02: 12 chunks on screen (body_line, deadline_chip, desk_rows, extra_a, extra_b, extra_c, jo, laptop, screen_message, subject_line, tag_jo, tag_jo.0); the budget is ~5-6",
+    "b13: 17 chunks on screen (desks, security_glow, security_pip, security_tess, shield_ticks, skyline_blocks, staff_0, staff_1, staff_2, staff_3, staff_4, tag_early_warning, tag_early_warning.0, tag_one_company, tag_one_company.0, tag_sooner_limit_harm, tag_sooner_limit_harm.0); the budget is ~5-6",
+    "b15: 11 chunks on screen (magnifier, message, msg_body, msg_button, msg_deadline, msg_link, msg_sender, msg_subject, tag_bad_spelling, tag_written_perfectly, tag_written_perfectly.0); the budget is ~5-6",
+    "b24: 10 chunks on screen (attachment_chip, attachment_tag, attachment_tag.0, inbox_cursor, line, msg_link, msg_number, sender_meta, sender_name, supplier_msg); the budget is ~5-6",
+    "b27: 11 chunks on screen (records_binder, report_button, report_tag, report_tag.0, route_dot, route_tag, route_tag.0, route_tag.1, skyline, supplier_building, supplier_name); the budget is ~5-6",
+    "b28: 18 chunks on screen (ask_copy_chat, ask_copy_text, channel_chat, channel_laptop, channel_phone, channels, chat_bubble, laptop_mail, phone_bubble, signs_chat, signs_email, signs_text, tag_chat, tag_chat.0, tag_email, tag_email.0, tag_text, tag_text.0); the budget is ~5-6",
+    "b29: 9 chunks on screen (extra_length, note, sim_bars, sim_bars.bar0, sim_bars.bar1, sim_bars.val0, sim_bars.val1, sim_tag, sim_tag.0); the budget is ~5-6",
+    "b32: 11 chunks on screen (cursor, extra, laptop, notice, ravi, tag_clicked, tag_clicked.0, tag_ravi, tag_ravi.0, wall_calendar, wall_clock); the budget is ~5-6",
+    "b34: 21 chunks on screen (bin_left, extra_left, extra_right, laptop_left, laptop_right, notice_left, notice_right, pip_left, pip_right, ravi_left, ravi_right, report_button_left, report_button_right, report_light_left, report_light_right, tag_deletes, tag_deletes.0, tag_nothing, tag_nothing.0, tess_left, tess_right); the budget is ~5-6",
+    "b35: 8 chunks on screen (cursor_report, says_bubble, tag_arrives, tag_arrives.0, tag_reports, tag_reports.0, tag_says, tag_says.0); the budget is ~5-6",
+    "b39: 9 chunks on screen (also_why, explanation, option_A, option_B, option_C, option_D, question, takeaway, why_not); the budget is ~5-6",
+    "b41: 8 chunks on screen (coffee_mug, message_row, report_control, tag_no_click, tag_no_click.0, tag_reports, tag_reports.0, walker); the budget is ~5-6",
+    "b02: \"or lose access to the shared drive\" is readable for 1.36s but 7 word(s) need 2.10s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b04: \"and what to do after a click\" is readable for 0.38s but 7 word(s) need 2.10s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b06: \"money\" is readable for 0.30s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b09: \"ONE FINANCIAL COMPANY\" is readable for 0.55s but 3 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b09: \"ONE FINANCIAL COMPANY\" is readable for 0.55s but 3 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b23: \"can still be fake\" is readable for 0.30s but 4 word(s) need 1.20s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b30: \"and let the team look\" is readable for 0.84s but 5 word(s) need 1.50s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b37: \"Say what you clicked\" is readable for 0.65s but 4 word(s) need 1.20s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 0.405 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.656 is worse than the worst baseline lesson (0.636): it grew (beats: b05, b08, b10, b12, b13, b15, b16, b17)",
+    "variety: pop_settle_share = 0.539 is above the baseline median (0.386)",
+    "variety: the seed's camera habit is 'pan' but 21 of 32 bespoke beats have no camera move",
+    "b04: small text on screen at 35.0s: \"READ THIS MESSAGE\" 25.4px (< 26 px)",
+    "b17: small text on screen at 157.0s: \"deadline\" 23.8px (< 26 px)",
+    "b18: small text on screen at 165.9s: \"deadline\" 23.8px, \"authority\" 23.8px (< 26 px)",
+    "b20: small text on screen at 182.4s: \"deadline\" 23.8px, \"authority\" 23.8px, \"address\" 23.8px (< 26 px)",
+    "b21: small text on screen at 192.1s: \"deadline\" 23.8px, \"authority\" 23.8px, \"address\" 23.8px (< 26 px)",
+    "b25: small text on screen at 229.9s: \"familiar name\" 23.8px (< 26 px)",
+    "b26: small text on screen at 245.2s: \"familiar name\" 23.8px (< 26 px)",
+    "b38: small text on screen at 363.4s: \"YOUR TURN\" 25.4px (< 26 px)"
+  ],
+  "stats": {
+    "reading_floor_short": 8,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 1.95
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.43
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.42
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 4.18
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 2.18
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.08
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.88
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.76
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.74
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 1.58
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 2.73
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 3.33
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 2.44
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 3.96
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 1.72
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 5.16
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 1.34
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 1.02
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 2.14
+      },
+      {
+        "beat": "b26",
+        "max_static_s": 1.66
+      },
+      {
+        "beat": "b27",
+        "max_static_s": 1.27
+      },
+      {
+        "beat": "b28",
+        "max_static_s": 1.22
+      },
+      {
+        "beat": "b29",
+        "max_static_s": 2.38
+      },
+      {
+        "beat": "b30",
+        "max_static_s": 2.04
+      },
+      {
+        "beat": "b31",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b32",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b33",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b34",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b35",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b36",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b37",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b38",
+        "max_static_s": 5.79
+      },
+      {
+        "beat": "b39",
+        "max_static_s": 4.45
+      },
+      {
+        "beat": "b40",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b41",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b42",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.048,
+      "template": 0.238,
+      "motion": 0.715,
+      "hybrid": 0.0,
+      "motion_effective": 0.715
+    },
+    "elements": {
+      "b01": 3,
+      "b02": 15,
+      "b03": 5,
+      "b04": 6,
+      "b05": 7,
+      "b06": 5,
+      "b07": 14,
+      "b08": 7,
+      "b09": 24,
+      "b10": 18,
+      "b11": 11,
+      "b12": 37,
+      "b13": 40,
+      "b14": 6,
+      "b15": 16,
+      "b16": 8,
+      "b17": 5,
+      "b18": 1,
+      "b19": 1,
+      "b20": 3,
+      "b21": 2,
+      "b22": 5,
+      "b23": 8,
+      "b24": 12,
+      "b25": 14,
+      "b26": 13,
+      "b27": 16,
+      "b28": 19,
+      "b29": 11,
+      "b30": 5,
+      "b31": 24,
+      "b32": 24,
+      "b33": 2,
+      "b34": 57,
+      "b35": 9,
+      "b36": 6,
+      "b37": 4,
+      "b38": 7,
+      "b39": 9,
+      "b40": 17,
+      "b41": 9,
+      "b42": 3
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.156,
+      "pop_settle_share": 0.539,
+      "wallpaper_share": 0.0,
+      "template_share": 0.19,
+      "classic_share": 0.418,
+      "one_radius_share": 0.405,
+      "still_share": 0.656,
+      "labels_over_objects_share": 0.062,
+      "one_world_share": 0.156,
+      "lines_per_s": 8.26
+    },
+    "sfx_events": 14,
+    "sample_text_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 28.7,
+        "b03": 44.3,
+        "b04": 25.4,
+        "b05": 151.6,
+        "b06": 36.9,
+        "b08": 44.3,
+        "b09": 29.5,
+        "b10": 29.5,
+        "b11": 32,
+        "b12": 29.5,
+        "b13": 29.5,
+        "b14": 36.9,
+        "b15": 29.5,
+        "b16": 29.5,
+        "b17": 23.8,
+        "b18": 23.8,
+        "b19": 43.4,
+        "b20": 23.8,
+        "b21": 23.8,
+        "b22": 36.9,
+        "b23": 44.3,
+        "b24": 32,
+        "b25": 23.8,
+        "b26": 23.8,
+        "b27": 16.4,
+        "b28": 29.5,
+        "b29": 27,
+        "b30": 44.3,
+        "b31": 29.5,
+        "b32": 29.5,
+        "b33": 36.1,
+        "b34": 29.5,
+        "b35": 29.5,
+        "b36": 29.5,
+        "b37": 36.1,
+        "b38": 25.4,
+        "b39": 37.7,
+        "b40": 29.5,
+        "b42": 63.9
+      }
+    }
+  },
+  "sheets": []
+}

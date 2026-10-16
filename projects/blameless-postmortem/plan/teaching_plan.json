@@ -1,0 +1,202 @@
+{
+  "title": "Blameless post-mortems: look at the board, not the person",
+  "performance": "in their next post-mortem, the viewer can run a three-step structure: say the blameless ground rule before the incident is discussed, rebuild the timeline as each person saw it at the time, and replace every who question with what made this easy to do and hard to catch, so the meeting ends with system fixes that each have a named owner and are tracked to done",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "has handled an incident from the inside and has sat in at least one review afterwards that went looking for a culprit; knows what a change, a deploy, an alert and an action item are; has not been taught a structure for running the review",
+    "why": "the brief's audience is engineers, team leads and managers who handle incidents; the knowledge sheet defines the review practices (F1, F9, F12, F13) but assumes incident vocabulary without defining it",
+    "motivation": "mixed: the person dreading being the one everyone looks at, and the person who has to run the meeting and does not want the same outage back next month; viewing is probably assigned rather than chosen (not stated), so relevance must land in the first seconds",
+    "context": "not stated in the brief (open question); plan for a desk or laptop with sound and captions on, first-language English assumed but not confirmed, so screens carry short anchors and nothing rests on audio alone"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "scenario_led",
+    "rationale": "the brief asks for one invented incident to carry every step and the check, and the skill is a judgement skill used live in a room (what to say, what to ask, which finding to accept); the knowledge sheet's practices (F9, F12, F13, F14, F16) are moves a facilitator makes at decision points, so the lesson teaches best by stopping the invented meeting at each decision point and showing the consequence",
+    "signature_move": "freeze the invented meeting at a decision point, show the blaming move and what it costs, replay it with the system move, THEN name the step and its principle"
+  },
+  "misconceptions": [
+    {
+      "belief": "blameless means nobody is accountable for anything",
+      "why_tempting": "finding the culprit feels like the accountable thing to do, so removing blame sounds like removing responsibility",
+      "refuted_in": "sec1",
+      "source_anchor": "knowledge F2 (and not_claimed: blameless is not 'nobody owns anything')",
+      "refutation": "state it fairly, then show what stays on screen when blame is removed: the engineer still gives a full account, the team still owns the fixes; only punishment for an honest mistake is crossed out"
+    },
+    {
+      "belief": "once you know how it ended, the mistake was obvious and they should have seen it",
+      "why_tempting": "in the review everyone is looking at the outcome, and from there the warning signs look loud",
+      "refuted_in": "sec2",
+      "source_anchor": "knowledge F6 (hindsight bias), F7 (outcome bias), F8 (local rationality)",
+      "refutation": "on the timeline, show the 'obvious' answer hovering in grey above the line, then show each moment's screen: it was on nobody's screen at the time, and the action made sense given what was visible"
+    },
+    {
+      "belief": "the finding is that the engineer made a mistake; human error is the cause, and the case is closed",
+      "why_tempting": "there is a real action by a real person right before the failure, and stopping there feels complete",
+      "refuted_in": "sec3",
+      "source_anchor": "knowledge F10 (several contributing conditions), F11 (human error explains little)",
+      "refutation": "draw the single arrow to the engineer, ask what made the change easy to ship and hard to catch, and let three arrows grow in from the system; the single arrow is erased because it explains nothing that can be fixed"
+    },
+    {
+      "belief": "the fix is to tell people to be more careful, or to retrain or remove the person",
+      "why_tempting": "it is fast, it feels firm, and it names a visible action",
+      "refuted_in": "sec4",
+      "source_anchor": "knowledge F14, F15 (and not_claimed: retraining or removing the person prevents recurrence)",
+      "refutation": "put 'be more careful' on the action card, show that every condition from sec3 is still standing next to it, strike it through and replace it with changes to tests, configuration and alerts"
+    }
+  ],
+  "running_example": {
+    "framing": "clearly invented, introduced with 'say' or 'imagine' in the first line of the hook; a made-up online store, no real company, product or outage",
+    "cast": ["the on-call engineer who shipped the change", "the team lead who runs the review", "a manager in the room"],
+    "invented_conditions": [
+      "the change passed code review, but the checkout path had no automated test",
+      "the staging environment did not have the same payment setting as production, so the change looked fine there",
+      "the alert for failed orders went to a dashboard that nobody watched overnight"
+    ],
+    "rule": "these three conditions are the ONLY invented system details; sec2 places them on the timeline, sec3 turns them into the converging arrows, the quiz reuses them, sec4 turns each into a fix; no second example appears (brief must_avoid)"
+  },
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Say an on-call engineer ships a routine change, and a made-up online store stops taking orders. Next morning the post-mortem opens, and every head in the room turns to that engineer.",
+      "on_screen_essence": "Every head turns to the engineer."
+    },
+    "promise": "by the end you have a three-step structure you can carry into your next post-mortem, so the room ends up looking at the system, not at a person",
+    "bridge_from_prior": "sec1 opens from the meeting the viewer has already sat in, the one that went looking for a culprit, and from the instinct that finding the culprit is what accountability looks like",
+    "sections": [
+      {
+        "id": "sec1",
+        "title": "What the room loses when every head turns",
+        "goal": "the viewer can explain why blaming the engineer makes the team learn less, and why blameless still means people give a full account and own the fixes",
+        "bloom": "understand",
+        "concepts": ["blameless post-mortem", "blame and reporting", "first-hand account", "accountability"],
+        "facts": ["F1", "F2", "F3", "F5"],
+        "energy": "build",
+        "carrier": "scenario: the meeting room drawn from above; every head swivels to the engineer, and the engineer's thought bubble (what the deploy screen showed, what they tried first) shrinks and fades unsaid; then a split card where 'punishment for an honest mistake' is crossed out while 'full account' and 'owns the fixes' stay",
+        "recap_after": false,
+        "teaching_notes": "open from the viewer's own experience (the bridge), then refute misconception 1; the point of the fading bubble is F3 and F5: the person closest to the incident holds the most useful information, and blame makes them share less; keep psychological safety as a phrase at most, not a new defined term; F2's caveat applies: say briefly that reckless or malicious acts are handled elsewhere, never imply anything goes"
+      },
+      {
+        "id": "sec2",
+        "title": "Steps one and two: the rule, then the timeline as they saw it",
+        "goal": "the viewer can carry out the first two steps: open with the ground rule, then rebuild the timeline as each person saw it at the time",
+        "bloom": "apply",
+        "concepts": ["ground rule", "timeline (sequence of events)", "hindsight bias", "local rationality"],
+        "facts": ["F13", "F9", "F6", "F7", "F8"],
+        "energy": "steady",
+        "carrier": "timeline: the team lead says the ground rule on a whiteboard header, then the incident is drawn left to right as a chain of moments across the night; at each moment a small screen shows only what that person could see then (review passed, staging green, no alert), while the hindsight answer hovers above the line in grey until the narrator shows it was on nobody's screen",
+        "recap_after": true,
+        "recap": "step one, say what the meeting is for; step two, rebuild it as people saw it then",
+        "teaching_notes": "worked example, cut short for practitioners: narrate the ground rule once in the team lead's words, then two or three timeline moments, not all of them; refute misconception 2 at the grey hindsight answer; this is slowdown 1; F13's caveat applies: saying the rule helps, but how the lead handles a blame-like remark matters as much, and sec3 shows that handling"
+      },
+      {
+        "id": "sec3",
+        "title": "Step three: from who slipped to what made it easy",
+        "goal": "the viewer can distinguish who questions and human-error findings from what and how questions that expose several contributing conditions in the system",
+        "bloom": "analyze",
+        "concepts": ["what and how questions", "human error as a stopping point", "contributing conditions", "root cause (not stopping at the first cause)"],
+        "facts": ["F12", "F11", "F10"],
+        "energy": "peak",
+        "carrier": "diagram: a manager's 'why did you ship without checking?' appears in a speech bubble, is crossed out and rewritten beside it as 'what did the deploy screen show you?'; then the single arrow from the failed checkout to the engineer is erased while three arrows grow in from different parts of the system (the missing checkout test, the mismatched staging setting, the unwatched alert) and converge on the failure",
+        "recap_after": false,
+        "teaching_notes": "the peak: dense visual allowed; refute misconception 3; this is slowdown 2 (the through-line question); faded practice inside the scene: the narrator rewrites the first who question, then shows a second one ('who approved this?') and asks the viewer to rewrite it in their head before the rewrite appears, with a short beat but no stop; F10's caveat applies: do not claim every incident has no single dominant factor, only that you do not stop at the first cause found"
+      },
+      {
+        "id": "sec4",
+        "title": "Close step three with owned fixes, then take it to your own incident",
+        "goal": "the viewer can use the three steps on an incident they remember, ending with a system fix that has a named owner and is tracked to done",
+        "bloom": "apply",
+        "concepts": ["system fix", "action items", "owner", "follow-through"],
+        "facts": ["F14", "F15", "F16"],
+        "energy": "rest",
+        "carrier": "checklist: the action-item card reads 'be more careful', with the three conditions from sec3 still standing beside it; it is struck through and replaced by three system changes (a checkout test, matching the staging setting, routing the alert to the on-call person), each gaining an owner tag and a checkbox that ticks to done; then the same three-step card is shown blank, for the viewer's own incident",
+        "recap_after": true,
+        "recap": "rule, timeline as seen then, what made it easy; and every fix owned and tracked",
+        "teaching_notes": "the valley: warmer and slower, lighter screen after the fix card; refute misconception 4 on the struck-through card; F14's caveat applies: training can be part of a fix but not the whole fix; then the independent practice: the viewer picks one incident they remember and walks the three steps in their head, narration giving one short prompt per step and leaving a beat after each (no stopping check)"
+      }
+    ],
+    "payoff": "Back in the same meeting room: the same engineer, but every head now faces the board, where three converging conditions each carry an owned, tracked system fix."
+  },
+  "practice_ladder": [
+    {"stage": "worked", "where": "sec2", "what": "the invented meeting runs steps one and two with every move narrated: the team lead says the ground rule, and two or three timeline moments are rebuilt as each person saw them; kept short because the audience is practitioners (expertise reversal)"},
+    {"stage": "faded", "where": "sec3", "what": "the narrator rewrites the first who question; the viewer rewrites the second ('who approved this?') in their head before the rewrite appears"},
+    {"stage": "independent", "where": "quiz after sec3", "what": "the viewer sorts three findings from the invented meeting and must spot the one that names nobody but still lands on the engineer; it can be failed"},
+    {"stage": "independent", "where": "sec4 end", "what": "the viewer walks the three steps against an incident they remember and names one system fix, with an owner, they would propose"}
+  ],
+  "pacing": {
+    "target_duration_s": 240,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "hindsight: the answer that looks obvious now was on nobody's screen then (sec2)",
+      "the through-line question: what made this easy to do and hard to catch (sec3)"
+    ],
+    "section_budget_s": {"hook_and_promise": 20, "sec1": 45, "sec2": 55, "sec3": 55, "quiz": 25, "sec4": 30, "payoff": 10},
+    "recall_moments": [
+      {
+        "after_section": "sec1",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Keep the fading thought bubble in mind: that is what the room loses when every head turns. The next two steps are about getting it back."
+      },
+      {
+        "after_section": "sec3",
+        "kind": "quiz",
+        "prompt_sketch": "Three findings from our invented meeting. Which one still lands on the engineer? A: the checkout path had no automated test. B: root cause, a step was missed during the deploy. C: the failed-order alert went to a dashboard nobody watched overnight. Pause the video and decide.",
+        "answer": "B. It names nobody, but 'a step was missed' is a human-error finding about the person who deployed: it stops at one cause and the only fix it points to is 'be more careful'. A and C each name a condition in the system with a system fix attached.",
+        "tempting_wrong": "'none of them, because nobody is named': removing the name does not remove the blame; a finding lands on a person when the only thing it can change is that person's behaviour, and B can change nothing else",
+        "grounding": ["F10", "F11", "F15"]
+      },
+      {
+        "after_section": "sec4",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Before we go back into that room: say the three steps to yourself. The rule. The timeline as they saw it. What made it easy."
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "at the start of your next post-mortem, say out loud what the meeting is for, learning and fixing the system, before anyone discusses the incident",
+    "the next time you hear 'why did you' or 'who' in a review, rewrite it on the spot as 'what did you see' or 'how did the change get through'",
+    "before the meeting ends, check each action item: does it change a tool, check, default or procedure, does it have a named owner, and is it tracked until done"
+  ],
+  "pocket_rule": "Not who slipped, but what made the slip easy and hard to catch.",
+  "persona": {
+    "voice": "a senior colleague who has run a few of these reviews: calm, practical, a little dry, never preachy about culture; speaks to the person dreading the meeting as much as to the person running it (from the brief's voice note; no persona is set yet)",
+    "delivery_notes": "level and unhurried when the heads turn in the hook, no dramatic voice; say the ground rule the way a team lead would actually say it in a room; ask each who-to-what rewrite as a real question, then leave a beat before the answer; slow down and lower the pitch on the two slowdowns only; read the quiz question plainly and stop; dry and quick on recaps; warmer and slower in sec4, speaking to the viewer about their own incident"
+  },
+  "narration_contract": "address every enumerated point on screen in order (the three conditions, the three steps, the three fixes, the three quiz options); never recite on-screen text word for word; frame the incident as invented once with 'say' or 'imagine' and keep it the only example; never end any finding, even in the example, on human error or carelessness as the cause; no statistics, percentages, deadlines or quotes (knowledge sheet not_claimed)",
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: every head in the invented post-mortem turns to the engineer",
+      "objective": "promise: a three-step structure for your next post-mortem so the room looks at the system",
+      "recall_prior": "sec1 bridges from the culprit-hunting meeting the viewer has already sat in",
+      "present": "sec1 to sec4 in the order each step becomes usable: why, steps one and two, step three, fixes and own incident",
+      "guidance": "signature move (freeze, blaming move and cost, replay with system move, name the step) applied at each decision point; worked meeting in sec2",
+      "practice": "faded rewrite in sec3, quiz after sec3, own-incident walk in sec4",
+      "feedback": "quiz answer card explains why B lands on the engineer and why 'nobody is named' is the tempting wrong reading",
+      "assess": "quiz after sec3 (can be failed); sec4 own-incident walk-through",
+      "transfer": "payoff returns to the room; three transfer tasks; pocket rule; recall_prompt after sec4 has the viewer say the three steps first"
+    },
+    "merrill": {
+      "problem_centered": "the invented meeting where every head turns IS the running problem, from hook to payoff",
+      "activation": "sec1 bridge from the viewer's own culprit-hunting meeting",
+      "demonstration": "sec2 shows the team lead saying the rule and rebuilding the timeline; sec3 shows the rewrite and the converging arrows before naming the step",
+      "application": "sec3 faded rewrite and the quiz make the viewer do the discrimination",
+      "integration": "sec4 walks the steps against the viewer's own incident; transfer tasks for the next real review"
+    },
+    "mayer": {
+      "coherence": "one invented incident with exactly three invented conditions; no document formats, tools, timing debates or second example",
+      "signalling": "two slowdowns only: hindsight in sec2, the through-line question in sec3",
+      "redundancy": "screens carry labels, question rewrites and timeline moments; narration explains; quiz question is the one full sentence on screen, readable in the pause",
+      "contiguity": "each timeline moment appears as it is narrated; each converging arrow grows as its condition is named; each owner tag appears as the fix is spoken",
+      "segmenting": "four short sections, one step or idea each; no section above four new terms",
+      "pre_training": "sec1 names the cast and what blameless means before the steps run; the three conditions are placed on the sec2 timeline before sec3 analyses them"
+    },
+    "arcs": {
+      "attention": "the turning heads; variety of carrier (scenario, timeline, diagram, checklist) and energy (build, steady, peak, rest)",
+      "relevance": "in the first seconds: not being the person everyone looks at, and not having the same outage return (brief cares_about)",
+      "confidence": "worked meeting before any question; the quiz reuses conditions the viewer has already seen twice",
+      "satisfaction": "the viewer names the three steps before the payoff, and the same room ends looking at the board"
+    },
+    "bloom_path": "understand -> apply -> analyze -> apply"
+  },
+  "series": null,
+  "flags": []
+}

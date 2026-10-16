@@ -1,0 +1,521 @@
+{
+  "title": "Feedback that changes what people do",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "intro",
+      "title": "The nod that changed nothing",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Behaviour, not the person",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Rebuild the message",
+      "role": "peak"
+    },
+    {
+      "id": "sec3",
+      "title": "Soon, two-way, and for what went well",
+      "role": "rest"
+    },
+    {
+      "id": "close",
+      "title": "Your next talk",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "intro",
+      "job": "scenario",
+      "narration": [
+        "Say a colleague's meeting ran long again.",
+        "You keep it light: \"Maybe tighten it up?\"",
+        "They nod. You both feel fine."
+      ],
+      "on_screen": [
+        "\"Maybe tighten it up?\""
+      ],
+      "visual_intent": "Two peer colleagues by the meeting room door after an overrun; the giver's speech bubble with the vague line, the colleague smiles and nods, both relaxed.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "an illustrative overrunning meeting and a vague friendly comment",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "light and knowing",
+      "concepts": [
+        "general feedback"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "intro",
+      "job": "hook",
+      "narration": [
+        "Next week, it runs over again.",
+        "Feelings changed. Behaviour didn't."
+      ],
+      "on_screen": [
+        "Next week: over again"
+      ],
+      "visual_intent": "The same meeting a week later: the wall clock passes the end time again, the same colleague still talking; the nod from b01 is not enough.",
+      "change_over_time": true,
+      "animate_score": 0.75,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "a pleasant talk is not evidence that anything changed",
+          "fact": "F1"
+        }
+      ],
+      "delivery": "a beat of wry understatement on the second line",
+      "misconception": "a friendly talk ending in a nod means the feedback worked"
+    },
+    {
+      "id": "b03",
+      "section": "intro",
+      "job": "orient",
+      "narration": [
+        "Here's how to make your next talk stick."
+      ],
+      "on_screen": [],
+      "visual_intent": "The presenter, warm and direct, makes the promise in one line.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "the promise: feedback can be shaped to change what happens next",
+          "fact": "F1"
+        }
+      ],
+      "delivery": "warm, direct, short"
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "A nod isn't evidence.",
+        "General feedback tends not to change behaviour:",
+        "it doesn't say what to repeat."
+      ],
+      "on_screen": [
+        "A nod is not a change"
+      ],
+      "visual_intent": "The nod from b01 freezes; a general comment bubble floats with nothing in it to act on, no action highlighted.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "general feedback tends not to change behaviour because it names no specific action",
+          "fact": "F1"
+        },
+        {
+          "claim": "a nod is not evidence of change",
+          "fact": "F1"
+        }
+      ],
+      "misconception": "a friendly talk ending in a nod means the feedback worked",
+      "concepts": [
+        "general feedback"
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "distinguish",
+      "narration": [
+        "\"You're disorganised\" is about the person.",
+        "That kind tends to work worst.",
+        "\"We ran twenty minutes over\" is what you saw."
+      ],
+      "on_screen": [
+        "About the person: \"You're disorganised\"",
+        "What you saw: \"Ran twenty minutes over\""
+      ],
+      "visual_intent": "Side by side about the same meeting: a label stuck on the colleague (they bristle) versus the clock showing the overrun (they look at it). The seen side is marked as the one to use.",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "hybrid",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "feedback aimed at the person is most linked to weak or negative effects",
+          "fact": "F3"
+        },
+        {
+          "claim": "useful feedback describes what was seen or heard, not character",
+          "fact": "F4"
+        },
+        {
+          "claim": "twenty minutes over is an illustration",
+          "hypothetical": true
+        }
+      ],
+      "concepts": [
+        "about the person versus about the action",
+        "observable behaviour"
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "consolidate",
+      "narration": [
+        "Think of your last \"good job\".",
+        "Could they say what to repeat?"
+      ],
+      "on_screen": [
+        "Your last \"good job\""
+      ],
+      "visual_intent": "A quiet frame: a thumbs-up note on a desk, with an empty space where the specific action would be. The viewer thinks.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "motion",
+      "pause_after_s": 1,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Think of the last 'good job' you gave. Could they say what to do again?"
+      },
+      "grounding": [
+        {
+          "claim": "general praise does not say which action to repeat",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Now rebuild it, part by part.",
+        "The situation and what you saw:",
+        "\"Tuesday's meeting ran twenty minutes over.\""
+      ],
+      "on_screen": [
+        "Tuesday's meeting ran twenty minutes over."
+      ],
+      "visual_intent": "The vague bubble from b01 becomes a message card; its first line appears as spoken (situation and behaviour), and the colleague's face shifts from easy to attentive.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "name the situation and the observed behaviour",
+          "fact": "F5"
+        },
+        {
+          "claim": "describe what could be seen",
+          "fact": "F4"
+        }
+      ],
+      "concepts": [
+        "situation and behaviour"
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Then the impact, on the work or people:",
+        "\"Two people missed their next call.\""
+      ],
+      "on_screen": [
+        "Two people missed their next call."
+      ],
+      "visual_intent": "The same message card grows a second line, the accent; behind it two people hurry out late to a call. The colleague's expression turns thoughtful: now it matters.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "impact is what the behaviour did to the work, people or results",
+          "fact": "F6"
+        }
+      ],
+      "delivery": "slower and plain; let 'impact' land",
+      "concepts": [
+        "impact"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Situation, behaviour, impact: one known structure, SBI.",
+        "It stops at impact, so add a step."
+      ],
+      "on_screen": [
+        "Situation, Behaviour, Impact (SBI)"
+      ],
+      "visual_intent": "The two lines on the card are labelled with their parts, the SBI name shown once and small; an empty third slot opens below.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "SBI structures feedback as situation, behaviour and impact; one established structure",
+          "fact": "F5"
+        },
+        {
+          "claim": "SBI stops at impact; the next step is an addition",
+          "fact": "F7"
+        }
+      ],
+      "concepts": [
+        "situation and behaviour",
+        "impact"
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "A concrete next step, agreed together:",
+        "\"Could we try a timed agenda?\"",
+        "Specific goals beat \"do your best\"."
+      ],
+      "on_screen": [
+        "Could we try a timed agenda?"
+      ],
+      "visual_intent": "The third line fills the slot on the same card; the colleague nods again, but this time picks up a pen and writes the agenda times. Complete message: three lines.",
+      "change_over_time": true,
+      "animate_score": 0.65,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "effective feedback points forward with what to do next",
+          "fact": "F7"
+        },
+        {
+          "claim": "specific goals lead to better performance than 'do your best'",
+          "fact": "F8"
+        }
+      ],
+      "concepts": [
+        "next step"
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "check",
+      "narration": [
+        "Say a handover note left out a client deadline.",
+        "Which line would change what happens next?"
+      ],
+      "on_screen": [
+        "Which line changes what happens next?",
+        "A: You're not very detail-minded.",
+        "B: The handover could have been better.",
+        "C: Your note skipped the deadline; it slipped. List it next time?"
+      ],
+      "visual_intent": "A different moment: a handover note with a missing deadline line. Three option cards, A, B, C, held still through the pause.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "question": "Which line would change what happens next?",
+        "options": [
+          "A: You're not very detail-minded.",
+          "B: The handover could have been better.",
+          "C: Your note skipped the deadline; it slipped. List it next time?"
+        ],
+        "answer": "C",
+        "tempting_wrong": "B"
+      },
+      "grounding": [
+        {
+          "claim": "an illustrative handover moment for transfer",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "brisk on the setup, then silence"
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "consolidate",
+      "narration": [
+        "C has the behaviour, impact and a next step.",
+        "B is polite, with nothing to act on.",
+        "A is about the person; it invites defence."
+      ],
+      "on_screen": [
+        "C: behaviour, impact, next step",
+        "B: polite, nothing to act on",
+        "A: about the person"
+      ],
+      "visual_intent": "C is marked right and its three parts light up; B fades with an empty outline where the parts should be; A is marked wrong, the recipient folds their arms.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "behaviour, impact and next step make feedback actionable",
+          "fact": "F7"
+        },
+        {
+          "claim": "general feedback names no action",
+          "fact": "F1"
+        },
+        {
+          "claim": "person-focused feedback is linked to weak effects and invites defence",
+          "fact": "F3"
+        },
+        {
+          "claim": "character labels invite defence",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec3",
+      "job": "sequence",
+      "narration": [
+        "Say it soon, in private.",
+        "Then ask how they saw it, and listen,",
+        "so the next step is agreed."
+      ],
+      "on_screen": [
+        "Soon, in private",
+        "Ask how they saw it"
+      ],
+      "visual_intent": "Back with the two colleagues the same afternoon, a quiet corner: the giver asks, the colleague talks, the giver listens; the next-step line on the card is edited together.",
+      "change_over_time": true,
+      "animate_score": 0.55,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "give feedback soon, in a private and calm moment",
+          "fact": "F9"
+        },
+        {
+          "claim": "two-way: ask how they saw it and listen so the next step is agreed",
+          "fact": "F10"
+        }
+      ],
+      "concepts": [
+        "soon after the event",
+        "two-way conversation"
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "refute",
+      "narration": [
+        "Praise isn't just being nice.",
+        "\"Great job\" names nothing to repeat;",
+        "specific praise says what to keep."
+      ],
+      "on_screen": [
+        "\"Great job\"",
+        "What worked, so keep it"
+      ],
+      "visual_intent": "A plain 'Great job' bubble beside a specific one that points at the exact thing done well; only the specific one connects to the action.",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "hybrid",
+      "misconception": "feedback is for fixing problems; praise is just being nice",
+      "grounding": [
+        {
+          "claim": "specific positive feedback tells the person what worked so they can keep doing it",
+          "fact": "F11"
+        }
+      ],
+      "concepts": [
+        "specific positive feedback"
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "close",
+      "job": "practice",
+      "narration": [
+        "Behaviour, impact, next step, then ask.",
+        "Pick one talk you owe this week",
+        "and draft it that way first."
+      ],
+      "on_screen": [
+        "Behaviour",
+        "Impact",
+        "Next step",
+        "Ask"
+      ],
+      "visual_intent": "The completed message card shrinks to a blank card for the viewer, its four slots ready to fill.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "pause_after_s": 1,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Behaviour, impact, next step: and then ask how they saw it."
+      },
+      "grounding": [
+        {
+          "claim": "the structure built in the lesson",
+          "fact": "F5"
+        },
+        {
+          "claim": "the next step and the two-way check",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "close",
+      "job": "payoff",
+      "narration": [
+        "Next week, the meeting ends on time.",
+        "\"The timed agenda got us out on time.\"",
+        "Behaviour changed. Relationship intact."
+      ],
+      "on_screen": [
+        "Ended on time"
+      ],
+      "visual_intent": "The same meeting room a week on: the clock shows the end time, people leave on time; the giver tells the colleague the specific praise, both smile, easy as before.",
+      "change_over_time": true,
+      "animate_score": 0.65,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "specific positive feedback names what to keep doing",
+          "fact": "F11"
+        },
+        {
+          "claim": "the changed meeting is an illustration",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "warm and short"
+    }
+  ]
+}

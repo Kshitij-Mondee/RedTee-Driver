@@ -1,0 +1,229 @@
+{
+  "topic": "How to run a blameless post-mortem after an incident, so the team learns and fixes the system instead of blaming a person",
+  "scope_note": "Conservative practitioner and safety-science consensus on blameless incident review. No statistics are claimed; the sheet deliberately prefers directions and practices over numbers. Real organisations appear only in reference_hint for the reviewer, never in the lesson.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "A blameless post-mortem is a review held after an incident that examines the system, the conditions and the decisions that led to it, without assigning fault to or punishing the individuals involved.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "blameless post-mortem",
+        "incident review"
+      ],
+      "reference_hint": "Beyer et al., Site Reliability Engineering (2016), chapter 'Postmortem Culture: Learning from Failure'; Allspaw, 'Blameless PostMortems and a Just Culture' (2012)"
+    },
+    {
+      "id": "F2",
+      "statement": "Blameless does not mean nobody is accountable: people still give a full account of what they saw and did, and the team still owns the fixes; what is removed is punishment for honest mistakes.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "accountability",
+        "just culture"
+      ],
+      "reference_hint": "Dekker, Just Culture (2007); Reason, Managing the Risks of Organizational Accidents (1997)",
+      "caveat": "Just culture separates honest mistakes from deliberately reckless or malicious acts; those are handled through other processes, not the post-mortem. The lesson should not imply that anything goes."
+    },
+    {
+      "id": "F3",
+      "statement": "When people expect blame or punishment after an incident, they tend to share less about what they saw and did, so problems stay hidden and the team learns less.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "blame",
+        "reporting"
+      ],
+      "reference_hint": "Dekker, The Field Guide to Understanding Human Error (2006); Reason (1997) on reporting cultures",
+      "caveat": "Widely supported in safety science and practitioner experience, but described as a tendency, not a measured effect size."
+    },
+    {
+      "id": "F4",
+      "statement": "Psychological safety is a shared belief in a team that it is safe to speak up, admit mistakes and raise concerns without being punished or humiliated.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "psychological safety"
+      ],
+      "reference_hint": "Edmondson, 'Psychological Safety and Learning Behavior in Work Teams' (1999)"
+    },
+    {
+      "id": "F5",
+      "statement": "The people closest to an incident usually hold the most useful information about what actually happened, which is why the review depends on them speaking freely.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "first-hand account"
+      ],
+      "reference_hint": "Allspaw (2012); Dekker, Field Guide (2006)",
+      "caveat": "Their account is one view among several and is checked against logs and other people's accounts; it is not treated as the whole truth."
+    },
+    {
+      "id": "F6",
+      "statement": "Hindsight bias: once people know how events turned out, they judge the outcome to have been more predictable than it really was at the time.",
+      "kind": "finding",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "hindsight bias"
+      ],
+      "reference_hint": "Fischhoff, 'Hindsight is not equal to foresight' (1975)"
+    },
+    {
+      "id": "F7",
+      "statement": "Knowing that an outcome was bad tends to make people judge the earlier decisions, and the people who made them, more harshly than the same decisions with a good outcome.",
+      "kind": "finding",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "outcome bias"
+      ],
+      "reference_hint": "Baron and Hershey, 'Outcome bias in decision evaluation' (1988)"
+    },
+    {
+      "id": "F8",
+      "statement": "People's actions during an incident usually made sense to them at the moment, given what they could see, what they were trying to do and the pressures they were under.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "local rationality"
+      ],
+      "reference_hint": "Dekker, Field Guide (2006), the local rationality principle",
+      "caveat": "A working principle for investigation, not a claim that every action was sensible; it directs attention to why an action looked reasonable."
+    },
+    {
+      "id": "F9",
+      "statement": "A useful review rebuilds the sequence of events in order and records, for each moment, what each person knew, could see and was trying to do then, rather than what is known afterwards.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "timeline",
+        "sequence of events"
+      ],
+      "reference_hint": "Dekker, Field Guide (2006); Beyer et al., SRE (2016), postmortem chapter"
+    },
+    {
+      "id": "F10",
+      "statement": "In complex systems, incidents usually arise from several contributing conditions combining, rather than from a single root cause.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "contributing conditions",
+        "root cause"
+      ],
+      "reference_hint": "Cook, 'How Complex Systems Fail' (1998); Reason (1997)",
+      "caveat": "The phrase 'root cause' is still common in practice, and some incidents do have one dominant factor; the point is not to stop at the first cause found."
+    },
+    {
+      "id": "F11",
+      "statement": "Stopping an investigation at 'human error' explains little; the more useful question is what in the system made the action easy to take and hard to catch.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "human error"
+      ],
+      "reference_hint": "Dekker, Field Guide (2006); Reason, Human Error (1990)",
+      "caveat": "Safety-science consensus; some organisations still record human error as a cause category."
+    },
+    {
+      "id": "F12",
+      "statement": "Asking what and how questions, such as what did you see or how did the change get through, tends to draw out more detail than who or why-did-you questions, which put people on the defensive.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "what and how questions"
+      ],
+      "reference_hint": "Allspaw, 'The Infinite Hows' (2014); Dekker, Field Guide (2006)",
+      "caveat": "Practitioner guidance grounded in interviewing experience, not a controlled experiment."
+    },
+    {
+      "id": "F13",
+      "statement": "Stating at the start that the meeting is for learning and improving the system, not for assigning blame, is a common practice for blameless reviews.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "ground rule"
+      ],
+      "reference_hint": "Practitioner incident-review guides; Beyer et al., SRE (2016), postmortem chapter",
+      "caveat": "Setting the rule helps but does not by itself create trust; how blame-like remarks are handled during the meeting matters as much."
+    },
+    {
+      "id": "F14",
+      "statement": "Good action items change the system, for example its tools, checks, defaults or procedures, rather than only asking people to be more careful.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "action items",
+        "system fix"
+      ],
+      "reference_hint": "Beyer et al., SRE (2016); Dekker, Field Guide (2006)",
+      "caveat": "Training and communication can be part of a fix, but on their own they leave the conditions that made the slip easy in place."
+    },
+    {
+      "id": "F15",
+      "statement": "Fixes that only tell a person to be more careful, or that retrain or remove one person, rarely stop the same incident recurring, because the conditions that allowed it remain.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "recurrence"
+      ],
+      "reference_hint": "Dekker, Field Guide (2006); Reason (1997)",
+      "caveat": "Stated as a direction from safety science, not a measured rate."
+    },
+    {
+      "id": "F16",
+      "statement": "Each action item needs a named owner and should be tracked until it is done; post-mortem actions that are never finished leave the same risk in place.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "owner",
+        "follow-through"
+      ],
+      "reference_hint": "Beyer et al., SRE (2016); Beyer et al., The Site Reliability Workbook (2018), postmortem chapter"
+    },
+    {
+      "id": "F17",
+      "statement": "Post-mortems are usually held soon after the incident is resolved, while people's memories and the evidence are still fresh.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "timing"
+      ],
+      "reference_hint": "Beyer et al., SRE (2016); practitioner incident-review guides",
+      "caveat": "There is no single agreed deadline; teams usually wait until the immediate pressure is over. Do not state a specific number of hours or days."
+    }
+  ],
+  "not_claimed": [
+    "Any percentage or share of incidents caused by human error (figures such as 'most incidents are human error' circulate without a usable source and contradict the lesson's framing)",
+    "Any measured reduction in incidents, downtime or cost from adopting blameless post-mortems",
+    "That blameless means nobody is accountable, nobody owns anything, or anything goes",
+    "That every incident has one single root cause, or that asking why a fixed number of times reliably finds it",
+    "That human error, carelessness or one person is the cause of an incident",
+    "That firing, disciplining or retraining the person involved prevents recurrence",
+    "A universal deadline for holding the post-mortem, such as a fixed number of hours or days",
+    "Specific research results on psychological safety presented as proof that blameless reviews improve reliability by a measured amount",
+    "Claims that other industries' safety records come from blameless reporting alone",
+    "Quotes, sayings or practices attributed to real people or real organisations",
+    "Learning-styles claims about how the audience learns best"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "Claude, on Kshitij's instruction (approve on my behalf)",
+    "note": "Drafted by the knowledge-stage model worker for human review. No numbers are used in any statement. Covers every from_knowledge must_cover entry: F1, F2 (meaning, accountability); F3, F4, F5 (why blame backfires); F6, F7, F8, F9 (sequence and hindsight); F10, F11 (several conditions); F12 (what and how questions); F13 (ground rule); F14, F15, F16 (system fixes, owners, tracking)."
+  }
+}

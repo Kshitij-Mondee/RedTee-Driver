@@ -1,0 +1,109 @@
+{
+ "id": "bench-20261006-151439-mixed-value-fix1007",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-mixed-value-fix1007",
+ "beats": 44,
+ "check_errors": 50,
+ "check_warnings": 81,
+ "blurred": {
+  "beats": [],
+  "of": 44
+ },
+ "foreign": {
+  "beats": [],
+  "of": 44,
+  "measured": 44
+ },
+ "off_frame": {
+  "errors": 0,
+  "first": []
+ },
+ "late_lead": {
+  "beats": [
+   "b30"
+  ],
+  "of": 37,
+  "worst": 1.07
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 13
+ },
+ "empty": {
+  "errors": 0,
+  "first": []
+ },
+ "kinds": {
+  "runtime text_overflow": 14,
+  "runtime held_missing": 12,
+  "runtime icon_missing": 11,
+  "hf layout content_overlap": 5,
+  "other": 4,
+  "nothing developing": 2,
+  "runtime unknown_token": 1,
+  "runtime scene_threw": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 3,
+   "kinds": {
+    "length": 3
+   },
+   "first": [
+    "pacing.target_duration_s is 480s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it",
+    "the plan says no length was requested ('supplied no target length'), but the request asks for 2 minutes (120s): set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~469s but the request asks for about 120s (at most 156s); cut about 698 words or whole beats to the requested length",
+    "44 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 21,
+   "kinds": {
+    "allocation": 13,
+    "placeholder": 7,
+    "template cap": 1
+   },
+   "first": [
+    "b04: props.left.items[0].text = 'Blank: yours, kept private' describes the slot instead of filling it ('Blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b04: props.right.items[0].text = 'Blank: yours, kept private' describes the slot instead of filling it ('Blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b08: props.lines[1].text = 'Action for next time: empty' describes the slot instead of filling it ('empty' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b17: props.lines[2].text = 'Request: blank' describes the slot instead of filling it ('blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b18: props.right.items[0].text = 'Blank strip' describes the slot instead of filling it ('Blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot"
+   ]
+  },
+  "scenes": {
+   "errors": 9,
+   "kinds": {
+    "invented words": 6,
+    "ctx.held(['update_message', 'draft_sheet": 1,
+    "ctx.held(['draft_sheet', 'draft', 'updat": 1,
+    "ctx.held(['situation_strip', 'consequenc": 1
+   },
+   "first": [
+    "b09.js: ctx.held(['update_message', 'draft_sheet', 'broad_request_strip']) but the previous beat b08 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b09.js: writes words the lesson never uses ['communicative']: \"Please be more communicative.\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+    "b11.js: ctx.held(['draft_sheet', 'draft', 'update_message', 'update', 'situation_strip', 'situation', 'planning_note']) but the previous beat b10 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b11.js: writes words the lesson never uses ['release', 'yesterday']: \"In yesterday's release planning meeting,\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+    "b13.js: ctx.held(['situation_strip', 'consequence_strip', 'update_message', 'planning_note']) but the previous beat b12 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 478s but the request asks for about 120s (at most 156s): the script must lose about 75 % of its words"
+   ]
+  }
+ }
+}

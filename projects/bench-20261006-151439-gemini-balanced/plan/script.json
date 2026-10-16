@@ -1,0 +1,858 @@
+{
+  "wpm_target": 145,
+  "title": "Feedback for Behavior Change",
+  "beats": [
+    {
+      "section": "sec1_behavior",
+      "narration": [
+        "Picture a manager pulling a colleague aside.",
+        "She calls his negative attitude a problem."
+      ],
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Manager calls negative attitude a problem"
+        }
+      ],
+      "change_over_time": false,
+      "treatment_hint": "any",
+      "visual_intent": "A split screen showing a manager talking to a colleague, with the phrase negative attitude floating between them.",
+      "job": "scenario",
+      "id": "b01",
+      "on_screen": [
+        "Manager",
+        "Colleague",
+        "Negative attitude"
+      ],
+      "animate_score": 0.1
+    },
+    {
+      "treatment_hint": "any",
+      "job": "scenario",
+      "narration": [
+        "He gets defensive immediately.",
+        "The relationship strains.",
+        "The actual work never improves."
+      ],
+      "section": "sec1_behavior",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Colleague gets defensive"
+        }
+      ],
+      "change_over_time": false,
+      "on_screen": [
+        "Defensive",
+        "Strained relationship",
+        "No improvement"
+      ],
+      "animate_score": 0.1,
+      "id": "b02",
+      "visual_intent": "The colleague crosses his arms, and a red jagged line appears between them indicating a strained relationship."
+    },
+    {
+      "visual_intent": "The presenter addresses the camera directly, standing next to large text reading personal and awkward.",
+      "id": "b03",
+      "animate_score": 0.1,
+      "grounding": [
+        {
+          "claim": "Feedback feels personal and awkward",
+          "hypothetical": true
+        }
+      ],
+      "change_over_time": false,
+      "narration": [
+        "You know that giving feedback feels personal.",
+        "It feels awkward."
+      ],
+      "treatment_hint": "avatar",
+      "section": "sec1_behavior",
+      "on_screen": [
+        "Personal",
+        "Awkward"
+      ],
+      "job": "orient"
+    },
+    {
+      "section": "sec1_behavior",
+      "job": "orient",
+      "id": "b04",
+      "on_screen": [
+        "Shift focus"
+      ],
+      "change_over_time": false,
+      "visual_intent": "The presenter gestures to a sharp focus bracket that clears away the previous words.",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "A shift in focus fixes the awkwardness"
+        }
+      ],
+      "narration": [
+        "Why does it always feel so difficult?",
+        "A simple shift in focus fixes that."
+      ],
+      "animate_score": 0.1,
+      "treatment_hint": "avatar"
+    },
+    {
+      "id": "b05",
+      "change_over_time": false,
+      "job": "refute",
+      "on_screen": [
+        "Negative attitude",
+        "Personality trait"
+      ],
+      "treatment_hint": "any",
+      "animate_score": 0.1,
+      "narration": [
+        "Look at the phrase negative attitude.",
+        "It is a personality trait.",
+        "Critiquing a personality trait provokes defensiveness.",
+        "It prevents constructive conversation."
+      ],
+      "grounding": [
+        {
+          "fact": "F1",
+          "claim": "Critiquing personality provokes defensiveness"
+        }
+      ],
+      "section": "sec1_behavior",
+      "visual_intent": "The phrase negative attitude slides into a red box labeled personality trait, which pulses to show conflict."
+    },
+    {
+      "visual_intent": "The manager points to a calendar graphic showing three distinct interruption tally marks.",
+      "treatment_hint": "any",
+      "animate_score": 0.1,
+      "on_screen": [
+        "Interrupted three times"
+      ],
+      "id": "b06",
+      "narration": [
+        "Watch what happens when she says something else.",
+        "She points out he interrupted three times."
+      ],
+      "job": "demonstrate",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Manager points out three interruptions"
+        }
+      ],
+      "change_over_time": false,
+      "section": "sec1_behavior"
+    },
+    {
+      "treatment_hint": "any",
+      "job": "define",
+      "section": "sec1_behavior",
+      "change_over_time": false,
+      "on_screen": [
+        "Observable behavior",
+        "Video camera"
+      ],
+      "id": "b07",
+      "narration": [
+        "That has a name, it is called observable behavior.",
+        "Observable behavior is specific actions or words.",
+        "A video camera could capture it."
+      ],
+      "grounding": [
+        {
+          "claim": "Observable behavior is actions a camera can capture",
+          "fact": "F2"
+        }
+      ],
+      "animate_score": 0.1,
+      "visual_intent": "A drawing of a video camera appears, recording the three tally marks on the calendar."
+    },
+    {
+      "animate_score": 0.1,
+      "section": "sec1_behavior",
+      "job": "distinguish",
+      "visual_intent": "The word absolute fades out in red, replaced by the word specific highlighting in green.",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Feedback should be specific not absolute"
+        }
+      ],
+      "narration": [
+        "Here is where people slip.",
+        "It is not absolute.",
+        "It is specific."
+      ],
+      "id": "b08",
+      "on_screen": [
+        "Absolute",
+        "Specific"
+      ],
+      "treatment_hint": "any",
+      "change_over_time": false
+    },
+    {
+      "on_screen": [
+        "Always",
+        "Never",
+        "Less accurate"
+      ],
+      "treatment_hint": "any",
+      "job": "refute",
+      "id": "b09",
+      "visual_intent": "The words always and never appear and are immediately crossed out with a thick red marker.",
+      "narration": [
+        "Using absolute words makes feedback less accurate.",
+        "Words like always or never.",
+        "Why is that bad?",
+        "They can easily reject it."
+      ],
+      "animate_score": 0.1,
+      "change_over_time": false,
+      "grounding": [
+        {
+          "claim": "Absolute words let recipients reject the claim",
+          "fact": "F8"
+        }
+      ],
+      "section": "sec1_behavior"
+    },
+    {
+      "on_screen": [
+        "Remove subjective guesses",
+        "Internal motives"
+      ],
+      "visual_intent": "A thought bubble showing question marks pops and disappears, leaving only the concrete tally marks.",
+      "id": "b10",
+      "treatment_hint": "any",
+      "animate_score": 0.1,
+      "change_over_time": false,
+      "narration": [
+        "Replacing abstract personality labels with observable actions helps.",
+        "It removes subjective guesses about internal motives."
+      ],
+      "section": "sec1_behavior",
+      "job": "relate",
+      "grounding": [
+        {
+          "fact": "F3",
+          "claim": "Observable actions remove guesses about motives"
+        }
+      ]
+    },
+    {
+      "visual_intent": "A bold text card lands on screen with the first pocket rule clearly displayed.",
+      "animate_score": 0.1,
+      "change_over_time": false,
+      "on_screen": [
+        "Critique the action"
+      ],
+      "treatment_hint": "any",
+      "job": "consolidate",
+      "narration": [
+        "The pocket rule.",
+        "Critique the action, not the person."
+      ],
+      "grounding": [
+        {
+          "claim": "Critique the action not the person",
+          "hypothetical": true
+        }
+      ],
+      "section": "sec1_behavior",
+      "id": "b11"
+    },
+    {
+      "recall": {
+        "tempting_wrong": "You never seem to care about submitting your reports on time.",
+        "question": "Which of these statements correctly targets an observable behavior rather than a personality trait?",
+        "answer": "You submitted the report two days after the deadline."
+      },
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Testing observable behavior recognition"
+        }
+      ],
+      "change_over_time": false,
+      "narration": [
+        "Now you, which statement targets observable behavior?",
+        "Option A, you never seem to care.",
+        "Option B, you submitted it late.",
+        "Pause, and decide."
+      ],
+      "section": "sec1_behavior",
+      "pause_after_s": 3,
+      "treatment_hint": "any",
+      "id": "b12",
+      "visual_intent": "Two feedback options appear side by side in neat boxes, waiting for the viewer to make a choice.",
+      "job": "check",
+      "on_screen": [
+        "A: You never seem to care",
+        "B: You submitted it late"
+      ],
+      "animate_score": 0.1
+    },
+    {
+      "on_screen": [
+        "B: Submitted two days late",
+        "Never assumes motives"
+      ],
+      "section": "sec1_behavior",
+      "id": "b13",
+      "change_over_time": false,
+      "job": "check",
+      "treatment_hint": "any",
+      "animate_score": 0.1,
+      "grounding": [
+        {
+          "claim": "Submitting late is a fact, never is an assumption",
+          "hypothetical": true
+        }
+      ],
+      "visual_intent": "Option B highlights in green. The word never in Option A glows red, showing it is an assumption.",
+      "narration": [
+        "The correct answer is B.",
+        "You submitted the report two days after the deadline.",
+        "The wrong answer uses the word never.",
+        "It assumes they do not care."
+      ]
+    },
+    {
+      "animate_score": 0.1,
+      "grounding": [
+        {
+          "claim": "Colleague interrupted three times during a pitch",
+          "hypothetical": true
+        }
+      ],
+      "id": "b14",
+      "narration": [
+        "Say the colleague interrupted three times.",
+        "During the client pitch."
+      ],
+      "section": "sec2_impact",
+      "visual_intent": "A new scene shows the colleague in a meeting room, with three tally marks floating above the table.",
+      "treatment_hint": "any",
+      "on_screen": [
+        "Interrupted three times",
+        "Client pitch"
+      ],
+      "job": "scenario",
+      "change_over_time": false
+    },
+    {
+      "visual_intent": "A large question mark appears next to the meeting room table, prompting the next step.",
+      "on_screen": [
+        "Why does it matter?"
+      ],
+      "treatment_hint": "any",
+      "animate_score": 0.1,
+      "job": "orient",
+      "narration": [
+        "You just named the behavior.",
+        "Why does it matter?"
+      ],
+      "change_over_time": false,
+      "id": "b15",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Behavior needs to be connected to an outcome"
+        }
+      ],
+      "section": "sec2_impact"
+    },
+    {
+      "on_screen": [
+        "Observed behavior",
+        "Objective impact",
+        "Task or team"
+      ],
+      "change_over_time": false,
+      "treatment_hint": "any",
+      "section": "sec2_impact",
+      "job": "demonstrate",
+      "id": "b16",
+      "animate_score": 0.1,
+      "grounding": [
+        {
+          "fact": "F4",
+          "claim": "Feedback links behavior to objective impact"
+        }
+      ],
+      "visual_intent": "An arrow connects the tally marks to a structured box labeled objective impact.",
+      "narration": [
+        "You need to connect it to an outcome.",
+        "A complete feedback statement links the observed behavior.",
+        "It links directly to its objective impact.",
+        "The impact on the task or team."
+      ]
+    },
+    {
+      "job": "relate",
+      "treatment_hint": "any",
+      "on_screen": [
+        "Lost 10 minutes"
+      ],
+      "section": "sec2_impact",
+      "animate_score": 0.1,
+      "narration": [
+        "So she tells him, we lost ten minutes.",
+        "Ten minutes of presentation time."
+      ],
+      "change_over_time": false,
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "The interruption lost ten minutes of time"
+        }
+      ],
+      "visual_intent": "A clock graphic shows a ten-minute segment being subtracted from a presentation timeline.",
+      "id": "b17"
+    },
+    {
+      "job": "refute",
+      "change_over_time": false,
+      "on_screen": [
+        "Objective consequences",
+        "Not attacked"
+      ],
+      "animate_score": 0.1,
+      "narration": [
+        "Explaining the business impact helps the recipient.",
+        "They see the objective consequences of their behavior.",
+        "They do not feel personally attacked."
+      ],
+      "grounding": [
+        {
+          "fact": "F5",
+          "claim": "Business impact avoids personal attacks"
+        }
+      ],
+      "section": "sec2_impact",
+      "treatment_hint": "any",
+      "visual_intent": "The colleague nods in understanding, looking at the objective timeline instead of crossing his arms.",
+      "id": "b18"
+    },
+    {
+      "on_screen": [
+        "Not emotional",
+        "Factual"
+      ],
+      "id": "b19",
+      "change_over_time": false,
+      "visual_intent": "A dramatic theatrical face icon is crossed out, replaced by a simple, clean graph.",
+      "job": "refute",
+      "treatment_hint": "any",
+      "section": "sec2_impact",
+      "grounding": [
+        {
+          "fact": "F5",
+          "claim": "Impact must remain factual not emotional"
+        }
+      ],
+      "narration": [
+        "Here is where people slip.",
+        "It is not an emotional disaster.",
+        "It is strictly factual."
+      ],
+      "animate_score": 0.1
+    },
+    {
+      "section": "sec2_impact",
+      "visual_intent": "The graph lines adjust to show a moderate, realistic dip rather than a catastrophic plunge.",
+      "id": "b20",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "grounding": [
+        {
+          "fact": "F5",
+          "claim": "Do not exaggerate emotional distress"
+        }
+      ],
+      "job": "refute",
+      "narration": [
+        "Impact statements must remain strictly factual.",
+        "Do not exaggerate emotional distress."
+      ],
+      "treatment_hint": "any",
+      "on_screen": [
+        "Remain factual",
+        "Do not exaggerate"
+      ]
+    },
+    {
+      "job": "consolidate",
+      "animate_score": 0.1,
+      "section": "sec2_impact",
+      "visual_intent": "A metallic shield appears over the relationship line, guarding it with a clear document icon.",
+      "on_screen": [
+        "Objective facts",
+        "Protect feelings"
+      ],
+      "narration": [
+        "People assume any negative feedback ruins relationships.",
+        "They avoid it to protect feelings.",
+        "But objective facts protect feelings."
+      ],
+      "change_over_time": false,
+      "treatment_hint": "any",
+      "grounding": [
+        {
+          "fact": "F5",
+          "claim": "Objective facts protect feelings"
+        }
+      ],
+      "id": "b21"
+    },
+    {
+      "narration": [
+        "The pocket rule.",
+        "State the behavior and its business impact."
+      ],
+      "animate_score": 0.1,
+      "grounding": [
+        {
+          "claim": "State behavior and impact",
+          "hypothetical": true
+        }
+      ],
+      "treatment_hint": "any",
+      "change_over_time": false,
+      "visual_intent": "A bold text card lands with the second pocket rule prominently displayed.",
+      "id": "b22",
+      "job": "consolidate",
+      "section": "sec2_impact",
+      "on_screen": [
+        "State behavior and impact"
+      ]
+    },
+    {
+      "section": "sec2_impact",
+      "change_over_time": false,
+      "treatment_hint": "any",
+      "on_screen": [
+        "Missed deadline",
+        "Lost the client"
+      ],
+      "visual_intent": "A feedback statement is split into two distinct halves on screen, waiting for the viewer to identify the impact.",
+      "animate_score": 0.1,
+      "id": "b23",
+      "pause_after_s": 3,
+      "job": "practice",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Testing identification of impact"
+        }
+      ],
+      "narration": [
+        "Now you, identify the parts.",
+        "You missed the deadline, so we lost the client.",
+        "Which part is the impact?",
+        "Pause, and point to it."
+      ]
+    },
+    {
+      "visual_intent": "The text lost the client highlights in blue, labeling it as the objective impact.",
+      "on_screen": [
+        "Behavior: Missed deadline",
+        "Impact: Lost client"
+      ],
+      "section": "sec2_impact",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "job": "check",
+      "treatment_hint": "any",
+      "narration": [
+        "The impact is losing the client.",
+        "Missing the deadline is the observable behavior.",
+        "It connects the action to a consequence."
+      ],
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Losing the client is the impact"
+        }
+      ],
+      "id": "b24"
+    },
+    {
+      "section": "sec2_impact",
+      "pause_after_s": 3,
+      "grounding": [
+        {
+          "claim": "Testing feedback construction",
+          "hypothetical": true
+        }
+      ],
+      "job": "practice",
+      "narration": [
+        "Try one more.",
+        "A colleague leaves early every day.",
+        "How do you frame the feedback?",
+        "Pause, and build a statement."
+      ],
+      "change_over_time": false,
+      "id": "b25",
+      "animate_score": 0.1,
+      "treatment_hint": "any",
+      "on_screen": [
+        "Colleague leaves early",
+        "Build the statement"
+      ],
+      "visual_intent": "A silhouette of a colleague leaving an office, with empty brackets below for behavior and impact."
+    },
+    {
+      "section": "sec2_impact",
+      "id": "b26",
+      "on_screen": [
+        "Left at four",
+        "Finished report alone"
+      ],
+      "treatment_hint": "any",
+      "visual_intent": "The empty brackets fill in with the concrete behavior on the left and the factual impact on the right.",
+      "change_over_time": false,
+      "grounding": [
+        {
+          "claim": "Start with specific action and objective impact",
+          "hypothetical": true
+        }
+      ],
+      "narration": [
+        "You start with the specific action.",
+        "You left at four o'clock twice this week.",
+        "Then you state the objective impact.",
+        "I had to finish the report alone."
+      ],
+      "job": "check",
+      "animate_score": 0.1
+    },
+    {
+      "job": "transition",
+      "change_over_time": false,
+      "on_screen": [
+        "Feedback delivered",
+        "Now what?"
+      ],
+      "animate_score": 0.1,
+      "treatment_hint": "any",
+      "section": "sec3_future",
+      "visual_intent": "The manager and colleague stand together in the scene, looking down at the completed timeline.",
+      "id": "b27",
+      "narration": [
+        "The feedback is delivered.",
+        "Now what?"
+      ],
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Feedback is delivered what next"
+        }
+      ]
+    },
+    {
+      "section": "sec3_future",
+      "on_screen": [
+        "Past errors",
+        "Unproductive argument"
+      ],
+      "treatment_hint": "any",
+      "job": "refute",
+      "animate_score": 0.1,
+      "id": "b28",
+      "visual_intent": "A heavy circular arrow traps the two figures in an endless loop of past dates.",
+      "change_over_time": false,
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "Dwelling on past traps conversation"
+        }
+      ],
+      "narration": [
+        "You might want to rehash the meeting.",
+        "Dwelling entirely on past errors traps the conversation.",
+        "It traps it in an unproductive argument."
+      ]
+    },
+    {
+      "narration": [
+        "A brief mention of the past event is necessary.",
+        "It grounds the conversation."
+      ],
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "Brief mention of past grounds the conversation"
+        }
+      ],
+      "treatment_hint": "any",
+      "job": "transition",
+      "section": "sec3_future",
+      "on_screen": [
+        "Brief mention",
+        "Grounds conversation"
+      ],
+      "visual_intent": "The heavy loop breaks, leaving just one small anchor dot on the historical timeline.",
+      "change_over_time": false,
+      "id": "b29",
+      "animate_score": 0.1
+    },
+    {
+      "animate_score": 0.1,
+      "on_screen": [
+        "Pivot",
+        "Next pitch"
+      ],
+      "visual_intent": "A bright arrow points forward, extending the timeline to a future calendar date.",
+      "section": "sec3_future",
+      "change_over_time": false,
+      "id": "b30",
+      "job": "transition",
+      "narration": [
+        "But then you need to pivot.",
+        "How do you fix the next pitch?"
+      ],
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Pivot to fix the next pitch"
+        }
+      ],
+      "treatment_hint": "any"
+    },
+    {
+      "narration": [
+        "Shifting the focus to future actions works.",
+        "It turns a difficult critique into a planning session.",
+        "A collaborative planning session."
+      ],
+      "animate_score": 0.1,
+      "id": "b31",
+      "grounding": [
+        {
+          "claim": "Future actions turn critique to planning",
+          "fact": "F7"
+        }
+      ],
+      "visual_intent": "The two figures move together to a whiteboard, actively drawing an upward trajectory arrow.",
+      "section": "sec3_future",
+      "treatment_hint": "any",
+      "change_over_time": false,
+      "on_screen": [
+        "Future actions",
+        "Collaborative planning"
+      ],
+      "job": "demonstrate"
+    },
+    {
+      "job": "demonstrate",
+      "section": "sec3_future",
+      "treatment_hint": "any",
+      "change_over_time": false,
+      "on_screen": [
+        "How can we approach?"
+      ],
+      "id": "b32",
+      "narration": [
+        "So she asks, how can we approach this?",
+        "How can we approach the next project?"
+      ],
+      "visual_intent": "A clean speech bubble from the manager displays the collaborative question.",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Ask how to approach next project"
+        }
+      ],
+      "animate_score": 0.1
+    },
+    {
+      "grounding": [
+        {
+          "fact": "F9",
+          "claim": "Proposing approach builds ownership"
+        }
+      ],
+      "visual_intent": "The colleague takes a marker and draws the final step of the plan on the whiteboard.",
+      "narration": [
+        "Asking the recipient to propose a different approach helps.",
+        "It builds ownership of the new behavior."
+      ],
+      "change_over_time": false,
+      "section": "sec3_future",
+      "animate_score": 0.1,
+      "job": "relate",
+      "treatment_hint": "any",
+      "on_screen": [
+        "Propose approach",
+        "Build ownership"
+      ],
+      "id": "b33"
+    },
+    {
+      "narration": [
+        "The conversation ends.",
+        "The relationship stays intact.",
+        "The work actually improves this time."
+      ],
+      "grounding": [
+        {
+          "claim": "Relationship stays intact and work improves",
+          "hypothetical": true
+        }
+      ],
+      "section": "sec3_future",
+      "job": "payoff",
+      "change_over_time": false,
+      "id": "b34",
+      "treatment_hint": "any",
+      "animate_score": 0.1,
+      "visual_intent": "The red jagged line from the very beginning morphs into a solid, healthy green handshake icon.",
+      "on_screen": [
+        "Relationship intact",
+        "Work improves"
+      ]
+    },
+    {
+      "on_screen": [
+        "Plan the next step"
+      ],
+      "section": "sec3_future",
+      "change_over_time": false,
+      "id": "b35",
+      "job": "consolidate",
+      "visual_intent": "The presenter returns to the screen, gesturing to a final bold text card with the third rule.",
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Plan the next step rule"
+        }
+      ],
+      "narration": [
+        "The pocket rule.",
+        "Ask them to plan the next step."
+      ],
+      "animate_score": 0.1
+    }
+  ],
+  "sections": [
+    {
+      "title": "Behavior vs Personality",
+      "id": "sec1_behavior",
+      "role": "build"
+    },
+    {
+      "title": "Objective Task Impact",
+      "id": "sec2_impact",
+      "role": "build"
+    },
+    {
+      "id": "sec3_future",
+      "title": "Plan Future Actions",
+      "role": "rest"
+    }
+  ]
+}

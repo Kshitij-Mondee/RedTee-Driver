@@ -1,0 +1,253 @@
+{
+  "concept": "One workplace moment, told twice. Priya's confusing status update gets a vague verdict that changes nothing; later the same moment gets a three-part reply (behaviour, impact, question) and it lands. The three-part shape is built piece by piece in front of the viewer, then recalled by name at the quiz and the payoff.",
+  "world": "A small cast of two: Priya (screen left, gives the update) and her manager (screen right, gives the feedback), first in a team status meeting (the hook and, replayed, the payoff's one-to-one desk). Away from the two-person scene, a second world holds the feedback's own anatomy: a card that grows a label at a time (behaviour, then impact, then question) as the mentor narrates the shape into existence. A short cutaway shows Priya's unspoken question when the vague verdict lands. The quiz sits in its own plain space: two replies, one choice.",
+  "look": "story-cartoon: warm paper ground, flat fills, one crisp cel shade, ink outline. Priya and her manager are designed peep busts, one look each for the whole lesson (cloth and skin fixed, never swapped). The growing feedback card is paper-coloured like every other card in this style (a sign a person in the story would write), its labels revealed on their own spoken words. The teaching accent (#A9442A) stays on one thing per frame: the quoted vague line, then the word 'behaviour' as it is named, then each new label as it arrives, then the correct quiz option's wording once the answer is spoken. Verdict colours (pos/neg) mark the compare.two 'door' beat and nothing else.",
+  "devices": [
+    {
+      "id": "desk_scene",
+      "what": "The team status update and the one-to-one feedback moment: Priya and her manager, same two looks, same screen sides, reused at the hook, its time-skip replay, and the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b13"
+      ]
+    },
+    {
+      "id": "shape_card",
+      "what": "A paper card that grows one labelled row at a time: behaviour, then impact, then question, held on one station across its beats (continue joins, ctx.held) so it is one card, not three.",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b07",
+        "b08",
+        "b10"
+      ]
+    },
+    {
+      "id": "shape_words",
+      "what": "The words 'behaviour, impact, question' once spoken, recalled by name (not by redrawing the card) at the quiz and the payoff, so the viewer recognises the shape in a new scene kind.",
+      "kind": "callback",
+      "beats": [
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "page_turn",
+      "what": "The one join material for this lesson: a page turn at the two section boundaries (hook into sec1, sec2 into sec3), fitting the status-update-and-feedback-note world.",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b11"
+      ]
+    }
+  ],
+  "join_material": "page (a page turn) at the two section boundaries; continue/camera within a section; a hard cut back to the opening desk station for the payoff callback.",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "the quoted vague line, 'Communicate better.'",
+      "why": "a pale, flat open matches feedback that fixes nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the word 'behaviour' as sec1 names and defines it",
+      "why": "a richer middle as the real mechanism is taught"
+    },
+    {
+      "from": "b06",
+      "band": "dark",
+      "break": true,
+      "accent": "withheld; Priya's unspoken question carries no accent",
+      "why": "a brief dark beat isolates the misconception before the fix is built"
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "break": false,
+      "accent": "the impact label, then the question label, each as it is named",
+      "why": "back to the working band as the shape is assembled piece by piece"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "break": false,
+      "accent": "withheld through the pause; then on option B's wording once the answer is spoken",
+      "why": "both replies hold equal weight until the spoken answer"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "break": false,
+      "accent": "the three-part reply, then the close card's three words",
+      "why": "a lift at the payoff mirrors the hook's pale open, now resolved"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "Expressive two-person scene (scenario.dialogue) for the vague verdict and its unchanged replay, then the presenter states the promise direct to camera. No device cards yet: this section is the problem, not the mechanism.",
+      "accent_on": "The quoted vague line; nothing else takes the accent while it is unhelpful.",
+      "world": "desk station: the team status meeting, Priya screen left, manager screen right.",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Priya gives her update, her manager replies only 'You need to communicate better.' scenario.dialogue, setting meeting.",
+          "builder": "scenario.dialogue",
+          "device": "desk_scene",
+          "join": "cut",
+          "intent": "establish the problem"
+        },
+        {
+          "beat": "b02",
+          "line": "A memory-bubble replay: next week, the same update, the same confusion, nothing has changed. hero.character_moment, Priya only, day_label 'Next week'.",
+          "builder": "hero.character_moment",
+          "device": "desk_scene",
+          "join": "cut (meaning time)",
+          "intent": "undercut the idea that it worked"
+        },
+        {
+          "beat": "b03",
+          "line": "Presenter states the promise direct to camera: same moment, different feedback.",
+          "builder": "avatar",
+          "device": "none",
+          "join": "cut",
+          "intent": "orient"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "Productive register. The vague phrase breaks into two labels on the growing shape_card (one wrong, one right), then a short cutaway shows Priya's unspoken question before returning. A page turn opens the chapter.",
+      "accent_on": "The word 'behaviour' once it is named; the verdict label is coloured wrong (neg), never the accent.",
+      "world": "shape station: the feedback's own anatomy, away from the two-person scene; a brief cutaway to Priya alone.",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "The vague phrase splits into two labels: a character verdict (wrong) and a specific behaviour (right). bespoke, new station.",
+          "builder": "bespoke",
+          "device": "shape_card",
+          "join": "page",
+          "intent": "distinguish"
+        },
+        {
+          "beat": "b05",
+          "line": "The verdict label fades; the real behaviour label replaces it, pulled from Priya's actual update (timeline and blockers, one paragraph). continue, same card.",
+          "builder": "bespoke",
+          "device": "shape_card",
+          "join": "continue",
+          "intent": "define"
+        },
+        {
+          "beat": "b06",
+          "line": "Cutaway: Priya's thought bubble asks what to do differently; a small frown. hero.character_moment, refute job.",
+          "builder": "hero.character_moment",
+          "device": "none",
+          "join": "camera",
+          "intent": "refute the misconception that a firm verdict is enough"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "Productive register, back on the shape_card (camera returns). Impact grows under behaviour with a connecting line, then the question completes it; one plain compare.two names what a verdict does versus what a question does; the card assembles in full and holds.",
+      "accent_on": "The impact label, then the question label, each on its own spoken word.",
+      "world": "shape station, continued; a brief detour to a plain two-column 'doors' beat.",
+      "beats": [
+        {
+          "beat": "b07",
+          "line": "Camera returns to the card: impact grows as a second line under behaviour, joined by a short arrow.",
+          "builder": "bespoke",
+          "device": "shape_card",
+          "join": "camera",
+          "intent": "sequence"
+        },
+        {
+          "beat": "b08",
+          "line": "A third line completes the card: the closing question.",
+          "builder": "bespoke",
+          "device": "shape_card",
+          "join": "continue",
+          "intent": "demonstrate"
+        },
+        {
+          "beat": "b09",
+          "line": "Plain two-column beat: 'Verdict' (closed door, wrong) ends the conversation; 'Question' (open door, right) starts one. compare.two.",
+          "builder": "compare.two",
+          "device": "none",
+          "join": "camera",
+          "intent": "relate"
+        },
+        {
+          "beat": "b10",
+          "line": "Camera returns to the full card: behaviour, impact, question, assembled and held for a beat as the lesson's own device.",
+          "builder": "bespoke",
+          "device": "shape_card",
+          "join": "camera",
+          "intent": "consolidate, rest"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "Productive register, a plain stopping check. A page turn opens the chapter into its own quiet space; the quiz question holds through its real pause, then the answer returns with the tempting option's 'why not'.",
+      "accent_on": "Withheld until the spoken answer; then on option B's wording only.",
+      "world": "quiz station: two replies on the same moment, nothing else in frame.",
+      "beats": [
+        {
+          "beat": "b11",
+          "line": "Two replies to the same moment: A, the verdict; B, behaviour-impact-question. quiz.question, real pause_after_s.",
+          "builder": "quiz.question",
+          "device": "shape_words",
+          "join": "page",
+          "intent": "check"
+        },
+        {
+          "beat": "b12",
+          "line": "Answer: B. It names, shows impact, and asks; A hands down a verdict and nothing moves. quiz.answer, tempting=A.",
+          "builder": "quiz.answer",
+          "device": "shape_words",
+          "join": "continue",
+          "intent": "feedback is the teaching"
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "Expressive callback to the exact opening station: the same two-person scene, now with the three-part reply, Priya able to answer. The presenter closes direct to camera with the shape restated as three words.",
+      "accent_on": "The reply's parts as they land, then the close card's three words.",
+      "world": "desk station, the SAME station id as b01, now the one-to-one feedback moment.",
+      "beats": [
+        {
+          "beat": "b13",
+          "line": "Back to Priya: her manager delivers the three-part reply; she can finally answer. scenario.dialogue, setting desk, same cast and sides as b01.",
+          "builder": "scenario.dialogue",
+          "device": "desk_scene",
+          "join": "cut (meaning chapter, callback)",
+          "intent": "payoff"
+        },
+        {
+          "beat": "b14",
+          "line": "Presenter closes to camera: name it, show impact, ask. Card restates the three words.",
+          "builder": "avatar",
+          "device": "shape_words",
+          "join": "cut",
+          "intent": "close"
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    "The manager's gender is not specified in the script; chosen as 'man' (member) purely for cast visual variety against Priya's 'woman', with no claim this reflects real-world feedback-giving patterns.",
+    "No kit is declared: the growing shape_card is built as bespoke beats sharing one station with continue joins and ctx.held, per STORYBOARD_GUIDE's 'hold the layout, change its state', rather than a scenes/_kit.js part."
+  ]
+}

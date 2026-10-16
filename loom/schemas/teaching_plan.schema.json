@@ -1,0 +1,200 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Teaching plan (lnd-learning-pedagogy)",
+  "type": "object",
+  "required": [
+    "title",
+    "performance",
+    "audience",
+    "genre",
+    "strategy",
+    "misconceptions",
+    "arc",
+    "practice_ladder",
+    "pacing",
+    "transfer_tasks",
+    "framework_audit"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "performance": {
+      "type": "string",
+      "minLength": 10
+    },
+    "audience": {
+      "type": "object",
+      "required": [
+        "level",
+        "assumed_prior",
+        "why",
+        "motivation",
+        "context"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "beginner",
+            "student",
+            "practitioner",
+            "expert"
+          ]
+        }
+      }
+    },
+    "genre": {
+      "enum": [
+        "quantitative",
+        "conceptual",
+        "procedural",
+        "mixed"
+      ]
+    },
+    "strategy": {
+      "type": "object",
+      "required": [
+        "name",
+        "rationale",
+        "signature_move"
+      ],
+      "properties": {
+        "name": {
+          "enum": [
+            "concrete_first",
+            "question_led",
+            "worked_example_led",
+            "analogy_led",
+            "contrast_led",
+            "scenario_led",
+            "spiral"
+          ]
+        }
+      }
+    },
+    "misconceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "belief",
+          "why_tempting",
+          "refuted_in"
+        ]
+      }
+    },
+    "arc": {
+      "type": "object",
+      "required": [
+        "hook",
+        "promise",
+        "bridge_from_prior",
+        "sections",
+        "payoff"
+      ],
+      "properties": {
+        "hook": {
+          "type": "object",
+          "required": [
+            "kind",
+            "sketch"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "question",
+                "surprising_fact",
+                "stakes",
+                "misconception",
+                "scenario"
+              ]
+            }
+          }
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "goal",
+              "bloom",
+              "concepts",
+              "energy",
+              "carrier",
+              "recap_after"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "goal": {
+                "type": "string",
+                "pattern": "^the viewer can "
+              },
+              "bloom": {
+                "enum": [
+                  "remember",
+                  "understand",
+                  "apply",
+                  "analyze",
+                  "evaluate",
+                  "create"
+                ]
+              },
+              "energy": {
+                "enum": [
+                  "build",
+                  "steady",
+                  "peak",
+                  "rest"
+                ]
+              },
+              "concepts": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "practice_ladder": {
+      "type": "array"
+    },
+    "pacing": {
+      "type": "object",
+      "required": [
+        "target_duration_s",
+        "words_per_minute",
+        "slowdown_at",
+        "recall_moments"
+      ],
+      "properties": {
+        "requested_s": {
+          "type": "number",
+          "description": "the request's length in seconds (length_min x 60), carried as given; the gate refuses another value and any claim that no length was requested"
+        }
+      }
+    },
+    "transfer_tasks": {
+      "type": "array",
+      "minItems": 1
+    },
+    "framework_audit": {
+      "type": "object",
+      "required": [
+        "gagne",
+        "merrill",
+        "mayer",
+        "arcs",
+        "bloom_path"
+      ]
+    },
+    "flags": {
+      "type": "array"
+    }
+  }
+}

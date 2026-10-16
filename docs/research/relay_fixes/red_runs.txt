@@ -1,0 +1,72 @@
+Relay fixes after R-35 (plan docs/research/2026-10-08-relay-fixes-plan.md): the 10 tests of tests/suites/relay_fixes.py,
+run with HYPERFRAMES_BROWSER_PATH set (chrome-headless-shell 152.0.7977.30) and the real claude CLI 2.1.283 on the mock.
+Note on the first run: agents_relayfix_props_index_must_point_inside_its_list PASSED on arrival. Another session had
+added `index_of` to quiz.answer, chart.bars and the hub blueprint, and its gate check, at 21:45 to 21:46 (L-321), a few
+minutes before this red run; the test confirms that change and was not red on this session's code. The other nine
+were red, each for the cause the plan names (ink fill #2A221C; phantom reconcile rows; no `kit` owner; repair said
+"fixed" with nobody run; no `missing_tokens`; the mock could not answer as another model, then the guard was absent).
+
+2026-10-08 21:48:47 engine before the fixes
+AssertionError: phantom reconcile rows: [('persona_pick-e8c4a81b', 0.005539), ('persona_pick-5796c674', 0.013896)]
+ValueError: script step 0: reply has unknown keys ['model']
+AssertionError: {'script': {}, 'storyboard': {}, 'scene': {}, 'engine': {}}
+AssertionError: [('a-normal', {'shape': 'round', 'label': 'pill', 'bubble': 'round', 'panel': 'card', 'icon': 'disc', 'mark': 'disc', 'texture': 'none', 'entrance': 'pop', 'camera': 'cut'})]
+AssertionError: the path's fill: {'fill': '#2A221C'}
+AttributeError: module 'loom.agents.cc_runner' has no attribute 'missing_tokens'
+  FAIL  agents_relayfix_cc_resume_and_unknown_price_add_no_phantom_cost: phantom reconcile rows: [('persona_pick-e8c4a81b', 0.005539), ('persona_pick-5796c674', 0.013896)]
+  FAIL  agents_relayfix_cc_stops_a_task_served_by_another_model: script step 0: reply has unknown keys ['model']
+  FAIL  agents_relayfix_critic_looks_again_after_its_fixes_and_minors_are_routed: {'script': {}, 'storyboard': {}, 'scene': {}, 'engine': {}}
+  FAIL  agents_relayfix_isolated_lessons_neither_read_nor_are_read_by_the_seed: [('a-normal', {'shape': 'round', 'label': 'pill', 'bubble': 'round', 'panel': 'card', 'icon': 'disc', 'mark': 'disc', 'texture': 'none', 'entrance': 'pop', 'camera': 'cut'})]
+  FAIL  agents_relayfix_none_is_no_fill_and_kit_part_errors_name_the_part: the path's fill: {'fill': '#2A221C'}
+  PASS  agents_relayfix_props_index_must_point_inside_its_list  (answer 3 of 3 refused (0-based), answer 2 passes; a nested signal index is checked against its list)
+  FAIL  agents_relayfix_reconcile_prices_missing_tokens_not_the_cli_total: module 'loom.agents.cc_runner' has no attribute 'missing_tokens'
+AssertionError: [('scene', 'b05')]
+  FAIL  agents_relayfix_repair_gives_the_kit_its_defects: [('scene', 'b05')]
+AssertionError: fixed
+AssertionError: ('script', 'storyboard', 'scene', 'engine')
+  FAIL  agents_relayfix_repair_that_ran_nobody_is_not_a_fix: fixed
+  FAIL  agents_relayfix_router_sends_kit_part_errors_and_kit_reports_to_the_kit: ('script', 'storyboard', 'scene', 'engine')
+  PASS  browser probe
+1 passed, 9 failed, 0 skipped  [subset: 10 of 335]
+
+2026-10-08 21:56:00 engine after the fixes
+  PASS  agents_relayfix_cc_resume_and_unknown_price_add_no_phantom_cost  (no reconcile rows; costs 0.005838 and 0.003126 are the rows; costBasis traced)
+  PASS  agents_relayfix_cc_stops_a_task_served_by_another_model  (served by claude-sonnet-5 for cc-sonnet: stopped; served by claude-sonnet-5-5: accepted)
+  PASS  agents_relayfix_critic_looks_again_after_its_fixes_and_minors_are_routed  (minor routed to b05's worker; a second pass after findings, none after a clean pass, never a third)
+  PASS  agents_relayfix_isolated_lessons_neither_read_nor_are_read_by_the_seed  (isolated: reads none, read by none; a normal lesson reads its sibling)
+  PASS  agents_relayfix_none_is_no_fill_and_kit_part_errors_name_the_part  (fill none drew no fill and no error; the part's error names test_desk, the scene's own names none)
+  PASS  agents_relayfix_props_index_must_point_inside_its_list  (answer 3 of 3 refused (0-based), answer 2 passes; a nested signal index is checked against its list)
+  PASS  agents_relayfix_reconcile_prices_missing_tokens_not_the_cli_total  (complete rows add nothing, a cumulative resume adds nothing, a missed message adds exactly its tokens)
+  PASS  agents_relayfix_repair_gives_the_kit_its_defects  (the kit worker fixed its own defect; its rounds are bounded)
+  PASS  agents_relayfix_repair_that_ran_nobody_is_not_a_fix  (every round used: repair says failed, calls nobody)
+  PASS  agents_relayfix_router_sends_kit_part_errors_and_kit_reports_to_the_kit  (part errors and kit reports go to the kit; the beat's own error to its worker; a template's inset to the engine)
+  PASS  browser probe
+10 passed, 0 failed, 0 skipped  [subset: 10 of 337]
+
+2026-10-08 21:57:08 guard control: agents_relayfix_cc_stops_a_task_served_by_another_model with the guard switched off
+(the _Stream built without expect_model, as before the fix; the mock already able to answer as claude-sonnet-5):
+  FAIL: the task served by claude-sonnet-5 for cc-sonnet came back ('accepted', '', []). With the guard: stopped.
+
+2026-10-09 00:25:08 L-332: agents_relayfix_a_text_overlap_is_an_error_only_when_both_texts_are_seen added after the verification run
+stopped with exit 2 on two content_overlap errors in b10 at 64.067 s. On the engine before, those two were errors (qa/report.json of
+feedback-relay-v2, check 3); qa.painted_overlaps did not exist. After: both judged not seen ('one text is under an opaque
+layer at every sampled point (9 of 9 show one text)'); the test: open collision real, under an opaque shape not seen,
+under a half-transparent shape real: PASS.
+- Correction (2026-10-09): "L-332" above is L-335; another session took L-332 to L-334 while this was written.
+
+2026-10-09 00:46:29 L-336: agents_relayfix_a_bespoke_scenes_own_inset_goes_to_its_author (a bespoke beat's own tight_inset
+and contrast_aa_failure go to its worker, a template's to the engine): without the rule (OWN_GEOMETRY_CODES empty, the
+router before) it FAILS (b05's scene list empty: both went to the engine); with it PASS. Found on feedback-relay-v2's
+resumed run: b10's own label at 5.1 px (needs 7.6) after its fix.
+
+2026-10-09 02:24:39 L-339: agents_relayfix_a_scene_only_fix_makes_the_check_stale: with compose's old output hash
+(index.html only) it FAILS (the check stays 'done' after a scene file changes); with the build hash it PASSES.
+
+2026-10-09 05:32:52 L-340 (the robustness pass): agents_relayfix_option_letter_forms_and_spacing: the prefix pattern before
+missed ['(D) Wait', 'A - Plan', 'Option A: Plan']; agents_relayfix_a_scene_helper_on_loom_lesson_stays_the_scenes FAILS under
+the routing before (any part to the kit: b05's own helper went to the kit). The other L-340 tests cover behaviour that
+did not exist before (later passes on changed beats only, the final look, dated model ids, old sessions, the hash
+cache, none in the colour maths): before, the maths returned #NaNNaNNaN for none (hexToRgb('none') has no digits), R-36's
+second passes sent all 18 sheets (its traces), and a resumed old session reconciled its whole cumulative total. All
+new tests PASS on the engine after.
+- Correction (2026-10-09): "L-340" in the robustness-pass lines above is L-346; other sessions took L-340 to L-345 meanwhile.

@@ -1,0 +1,902 @@
+{
+ "title": "Blameless post-mortems",
+ "wpm_target": 145,
+ "sections": [
+  {
+   "id": "intro",
+   "title": "Every head turns",
+   "role": "hook"
+  },
+  {
+   "id": "sec1",
+   "title": "What blame costs"
+  },
+  {
+   "id": "sec2",
+   "title": "Rule, then timeline"
+  },
+  {
+   "id": "sec3",
+   "title": "What made it easy"
+  },
+  {
+   "id": "sec4",
+   "title": "Owned fixes"
+  },
+  {
+   "id": "outro",
+   "title": "Same room, again",
+   "role": "payoff"
+  }
+ ],
+ "beats": [
+  {
+   "id": "b01",
+   "section": "intro",
+   "job": "hook",
+   "delivery": "calm",
+   "hypothetical": true,
+   "narration": [
+    "Say an on-call engineer ships a routine change.",
+    "A made-up online store stops taking orders."
+   ],
+   "on_screen": [
+    "Routine change",
+    "Orders stopped"
+   ],
+   "visual_intent": "the engineer at a laptop late at night presses deploy; beside them the store's order counter slows and flatlines",
+   "change_over_time": true,
+   "animate_score": 0.8,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the engineer, the change and the online store are an invented incident",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b02",
+   "section": "intro",
+   "job": "scenario",
+   "delivery": "calm",
+   "hypothetical": true,
+   "narration": [
+    "Next morning, the post-mortem opens.",
+    "Every head in the room",
+    "turns to the engineer."
+   ],
+   "on_screen": [
+    "Every head turns"
+   ],
+   "visual_intent": "the meeting room drawn from above; one by one every head swivels until all of them point at the engineer, then the frame holds on that moment",
+   "change_over_time": true,
+   "animate_score": 0.9,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the meeting and the room's reaction are part of the invented incident",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b03",
+   "section": "intro",
+   "job": "orient",
+   "delivery": "warm",
+   "narration": [
+    "You have been in that room.",
+    "Here are three steps",
+    "that turn it toward the system instead."
+   ],
+   "on_screen": [
+    "Three steps",
+    "toward the system"
+   ],
+   "visual_intent": "the presenter, beside a small sketch of the room, promises three steps; the words toward the system settle under them",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "avatar",
+   "grounding": []
+  },
+  {
+   "id": "b04",
+   "section": "sec1",
+   "job": "relate",
+   "delivery": "neutral",
+   "narration": [
+    "So why do the heads turn?",
+    "Finding the culprit feels like accountability.",
+    "Watch what it costs."
+   ],
+   "on_screen": [
+    "Finding the culprit",
+    "accountability?"
+   ],
+   "visual_intent": "the frozen room from the hook, with the word accountability hovering over the engineer and a question mark beside it",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "blaming has a cost for what the team learns, shown in the next beats",
+     "fact": "F3"
+    }
+   ]
+  },
+  {
+   "id": "b05",
+   "section": "sec1",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "hypothetical": true,
+   "narration": [
+    "The engineer knows what the deploy screen showed,",
+    "and what they tried first.",
+    "With every head turned,",
+    "less of it gets said."
+   ],
+   "on_screen": [
+    "deploy screen",
+    "tried first"
+   ],
+   "visual_intent": "the engineer's thought bubble holds two sketches, the deploy screen and the first thing they tried; as the heads stay turned the bubble shrinks and fades, unsaid",
+   "change_over_time": true,
+   "animate_score": 0.9,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the people closest to an incident usually hold the most useful information",
+     "fact": "F5"
+    },
+    {
+     "claim": "expecting blame makes people share less",
+     "fact": "F3"
+    },
+    {
+     "claim": "what the engineer saw and tried is invented detail",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b06",
+   "section": "sec1",
+   "job": "relate",
+   "delivery": "calm",
+   "narration": [
+    "When you expect blame, you share less.",
+    "Problems stay hidden,",
+    "and the team learns less."
+   ],
+   "on_screen": [
+    "expect blame",
+    "share less",
+    "learns less"
+   ],
+   "visual_intent": "a short left to right chain of three linked boxes, each arriving as it is said",
+   "change_over_time": false,
+   "animate_score": 0.35,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "people who expect blame tend to share less, so problems stay hidden and the team learns less",
+     "fact": "F3"
+    }
+   ]
+  },
+  {
+   "id": "b07",
+   "section": "sec1",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "A blameless post-mortem examines the system,",
+    "the conditions and the decisions,",
+    "without punishing the people involved."
+   ],
+   "on_screen": [
+    "Blameless post-mortem",
+    "the system",
+    "the conditions",
+    "the decisions"
+   ],
+   "visual_intent": "the term large at the top; beneath it three targets light in turn, the system, the conditions, the decisions, while a small figure of a person stays unmarked",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a blameless post-mortem examines the system, conditions and decisions without assigning fault or punishing individuals",
+     "fact": "F1"
+    }
+   ]
+  },
+  {
+   "id": "b08",
+   "section": "sec1",
+   "job": "refute",
+   "delivery": "calm",
+   "misconception": "blameless means nobody is accountable for anything",
+   "narration": [
+    "Here is where it slips.",
+    "Blameless does not mean nobody owns anything.",
+    "The engineer still gives a full account.",
+    "The team still owns the fixes."
+   ],
+   "on_screen": [
+    "full account",
+    "owns the fixes"
+   ],
+   "visual_intent": "a split card: on one side the two things that stay, full account and owns the fixes, drawn firmly and ticked",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "blameless is not the absence of accountability: people give a full account and the team owns the fixes",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b09",
+   "section": "sec1",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "What goes is punishment for an honest mistake.",
+    "Reckless acts?",
+    "Those go elsewhere."
+   ],
+   "on_screen": [
+    "punishment for an honest mistake",
+    "reckless acts"
+   ],
+   "visual_intent": "the other half of the split card: punishment for an honest mistake is struck through; a small side note for reckless acts points out of the room",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "what is removed is punishment for honest mistakes",
+     "fact": "F2"
+    },
+    {
+     "claim": "reckless or malicious acts are handled through other processes, not the post-mortem",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "calm",
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "remember what the room lost when every head turned?"
+   },
+   "narration": [
+    "Remember that fading bubble?",
+    "Step one gets it back.",
+    "Before anyone discusses the incident,",
+    "the lead says what the meeting is for.",
+    "To learn and fix the system, not to blame."
+   ],
+   "on_screen": [
+    "Step one",
+    "learn and fix the system",
+    "not to blame"
+   ],
+   "visual_intent": "the faded thought bubble returns small in the corner; the team lead writes the ground rule as a header across the whiteboard, where it stays for the rest of the meeting",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the person closest to the incident holds the most useful information",
+     "fact": "F5"
+    },
+    {
+     "claim": "stating at the start that the meeting is for learning and improving the system, not blame, is common practice",
+     "fact": "F13"
+    },
+    {
+     "claim": "the team lead's words are an invented example",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "calm",
+   "narration": [
+    "Step two, you rebuild the night in order,",
+    "as each person saw it then."
+   ],
+   "on_screen": [
+    "Step two",
+    "in order",
+    "as they saw it then"
+   ],
+   "visual_intent": "a timeline draws itself left to right under the header, with empty moment markers spaced along the night",
+   "change_over_time": true,
+   "animate_score": 0.7,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a useful review rebuilds the sequence in order, recording what each person knew and could see then",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "section": "sec2",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "hypothetical": true,
+   "narration": [
+    "The change passed code review.",
+    "Staging looked green.",
+    "The engineer's phone showed no alert.",
+    "Each move made sense."
+   ],
+   "on_screen": [
+    "review passed",
+    "staging green",
+    "no alert"
+   ],
+   "visual_intent": "the timeline fills: at each moment a small screen shows only what that person could see then, review passed, staging green, a phone with no alert",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the review, staging and alert details are the invented incident's conditions",
+     "hypothetical": true
+    },
+    {
+     "claim": "actions usually made sense given what people could see at the time",
+     "fact": "F8"
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "section": "sec2",
+   "job": "refute",
+   "delivery": "calm",
+   "misconception": "once you know how it ended, the mistake was obvious and they should have seen it",
+   "narration": [
+    "It looks obvious now.",
+    "It was not on anyone's screen then.",
+    "That pull is hindsight bias,",
+    "and a bad ending makes people look worse.",
+    "So you ask why each move made sense."
+   ],
+   "on_screen": [
+    "obvious now",
+    "not on anyone's screen",
+    "hindsight bias"
+   ],
+   "visual_intent": "the hindsight answer hovers in grey above the timeline; it drops toward each small screen in turn and is on none of them; the term hindsight bias is written beside it",
+   "change_over_time": true,
+   "animate_score": 0.6,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "once the outcome is known it seems more predictable than it was",
+     "fact": "F6"
+    },
+    {
+     "claim": "a bad outcome makes earlier decisions and people look worse",
+     "fact": "F7"
+    },
+    {
+     "claim": "investigate why an action looked reasonable at the time",
+     "fact": "F8"
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "section": "sec2",
+   "job": "consolidate",
+   "delivery": "brisk",
+   "narration": [
+    "So, you say the rule.",
+    "Then you rebuild it as they saw it."
+   ],
+   "on_screen": [
+    "Say the rule",
+    "Rebuild it as they saw it"
+   ],
+   "visual_intent": "two short step cards side by side, the first two of three slots filled",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "state the purpose at the start",
+     "fact": "F13"
+    },
+    {
+     "claim": "rebuild the timeline as people saw it then",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "section": "sec3",
+   "job": "scenario",
+   "delivery": "calm",
+   "hypothetical": true,
+   "narration": [
+    "Then the manager asks,",
+    "why did you ship without checking?",
+    "That is the first blaming remark.",
+    "The lead's answer matters as much as the rule."
+   ],
+   "on_screen": [
+    "Why did you ship without checking?",
+    "the first blaming remark"
+   ],
+   "visual_intent": "the manager's why question appears in a speech bubble; the engineer's small thought bubble begins to shrink again while the lead turns toward the manager",
+   "change_over_time": false,
+   "animate_score": 0.35,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the manager's question is part of the invented meeting",
+     "hypothetical": true
+    },
+    {
+     "claim": "how blame-like remarks are handled matters as much as setting the rule",
+     "fact": "F13"
+    },
+    {
+     "claim": "why-did-you questions put people on the defensive",
+     "fact": "F12"
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "section": "sec3",
+   "job": "distinguish",
+   "delivery": "curious",
+   "narration": [
+    "Here is the rewrite.",
+    "What did the deploy screen show you?",
+    "One question gets a name.",
+    "The other gets something to fix."
+   ],
+   "on_screen": [
+    "What did the deploy screen show you?",
+    "a name",
+    "something to fix"
+   ],
+   "visual_intent": "the why question is crossed out and the what question is written beside it; under each, what it gets you, a name or something to fix",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "what and how questions draw out more detail than who or why-did-you questions",
+     "fact": "F12"
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "section": "sec3",
+   "job": "practice",
+   "delivery": "curious",
+   "pause_after_s": 2,
+   "narration": [
+    "Your turn. Who approved this?",
+    "Rewrite it in your head."
+   ],
+   "on_screen": [
+    "Who approved this?"
+   ],
+   "visual_intent": "a second who question appears in a speech bubble with an empty space beside it for the viewer's rewrite",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "who questions can be rewritten as what and how questions",
+     "fact": "F12"
+    }
+   ]
+  },
+  {
+   "id": "b18",
+   "section": "sec3",
+   "job": "relate",
+   "delivery": "calm",
+   "narration": [
+    "Maybe, how did the change get through?",
+    "Keep asking what made it easy to do,",
+    "and hard to catch."
+   ],
+   "on_screen": [
+    "How did the change get through?",
+    "easy to do",
+    "hard to catch"
+   ],
+   "visual_intent": "the who question is crossed out and the how question written beside it; then the through-line question is written large across the board, and everything slows",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "how did the change get through is a what and how question",
+     "fact": "F12"
+    },
+    {
+     "claim": "the useful question is what in the system made the action easy to take and hard to catch",
+     "fact": "F11"
+    }
+   ]
+  },
+  {
+   "id": "b19",
+   "section": "sec3",
+   "job": "refute",
+   "delivery": "calm",
+   "misconception": "the finding is that the engineer made a mistake; human error is the cause, and the case is closed",
+   "narration": [
+    "Stop at the engineer, and you have human error.",
+    "It explains little.",
+    "Keep asking, and conditions appear."
+   ],
+   "on_screen": [
+    "human error",
+    "explains little"
+   ],
+   "visual_intent": "a single arrow runs from the failed checkout straight to the engineer, labelled human error; then it is erased",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "stopping at human error explains little",
+     "fact": "F11"
+    }
+   ]
+  },
+  {
+   "id": "b20",
+   "section": "sec3",
+   "job": "relate",
+   "delivery": "calm",
+   "hypothetical": true,
+   "narration": [
+    "The checkout path had no automated test.",
+    "Staging lacked production's payment setting.",
+    "The failed-order alert went to an unwatched dashboard.",
+    "Several conditions. Do not stop at the first."
+   ],
+   "on_screen": [
+    "no checkout test",
+    "staging setting differs",
+    "unwatched alert",
+    "several conditions"
+   ],
+   "visual_intent": "three arrows grow in from different parts of the system, each as it is named, and converge on the failed checkout; the words several conditions settle under them",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the three conditions are the invented incident's system details",
+     "hypothetical": true
+    },
+    {
+     "claim": "incidents usually arise from several contributing conditions combining; do not stop at the first cause found",
+     "fact": "F10"
+    }
+   ]
+  },
+  {
+   "id": "b21",
+   "section": "sec3",
+   "job": "check",
+   "delivery": "neutral",
+   "pause_after_s": 4,
+   "recall": {
+    "kind": "quiz",
+    "question": "Which finding still lands on the engineer?",
+    "options": [
+     "A: no automated test on checkout",
+     "B: root cause, a deploy step was missed",
+     "C: alert went to an unwatched dashboard"
+    ],
+    "answer": 1,
+    "why": "B names nobody, but a missed step is a human-error finding about the person who deployed; its only fix is be more careful",
+    "tempting_wrong": "none of them, because nobody is named"
+   },
+   "narration": [
+    "Three findings from our meeting.",
+    "A, no automated test on checkout.",
+    "B, root cause, a deploy step was missed.",
+    "C, the alert went to an unwatched dashboard.",
+    "Which still lands on the engineer?",
+    "Pause, and decide."
+   ],
+   "on_screen": [
+    "Which finding still lands on the engineer?",
+    "A: no automated test on checkout",
+    "B: root cause, a deploy step was missed",
+    "C: alert went to an unwatched dashboard"
+   ],
+   "visual_intent": "the question and three finding cards as peers, then a real silent pause",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "findings can name a system condition or stop at a person",
+     "fact": "F10"
+    },
+    {
+     "claim": "stopping at human error explains little",
+     "fact": "F11"
+    },
+    {
+     "claim": "the three findings are drawn from the invented incident",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b22",
+   "section": "sec3",
+   "job": "check",
+   "delivery": "warm",
+   "narration": [
+    "It is B. It names nobody,",
+    "but its only fix is, be more careful.",
+    "No name is not the same as no blame.",
+    "A and C point at the system."
+   ],
+   "on_screen": [
+    "B",
+    "only fix: be more careful",
+    "no name is not no blame",
+    "A and C: the system"
+   ],
+   "visual_intent": "card B is marked with its only fix, be more careful; then cards A and C glow as system conditions while B stays grey",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "stopping at human error explains little",
+     "fact": "F11"
+    },
+    {
+     "claim": "be more careful fixes rarely stop recurrence, because the conditions remain",
+     "fact": "F15"
+    },
+    {
+     "claim": "A and C name contributing conditions in the system",
+     "fact": "F10"
+    }
+   ]
+  },
+  {
+   "id": "b23",
+   "section": "sec4",
+   "job": "refute",
+   "delivery": "warm",
+   "misconception": "the fix is to tell people to be more careful, or to retrain or remove the person",
+   "narration": [
+    "So your action card cannot say, be more careful.",
+    "Every condition would still be standing.",
+    "Training can help, but never alone."
+   ],
+   "on_screen": [
+    "be more careful",
+    "conditions still standing"
+   ],
+   "visual_intent": "the action-item card reads be more careful, with the three conditions from the arrows still standing beside it; then it is struck through",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "fixes that only ask people to be more careful rarely stop recurrence, because the conditions remain",
+     "fact": "F15"
+    },
+    {
+     "claim": "training can be part of a fix, but on its own leaves the conditions in place",
+     "fact": "F14"
+    }
+   ]
+  },
+  {
+   "id": "b24",
+   "section": "sec4",
+   "job": "demonstrate",
+   "delivery": "warm",
+   "hypothetical": true,
+   "narration": [
+    "Change the system instead.",
+    "Add a checkout test.",
+    "Match the staging setting.",
+    "Route the alert to whoever is on call."
+   ],
+   "on_screen": [
+    "Add a checkout test",
+    "Match the staging setting",
+    "Route the alert to on-call"
+   ],
+   "visual_intent": "three system changes replace the struck-through card, one per condition, each arriving as it is said",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "good action items change tools, checks, defaults or procedures",
+     "fact": "F14"
+    },
+    {
+     "claim": "the three fixes answer the invented conditions",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b25",
+   "section": "sec4",
+   "job": "sequence",
+   "delivery": "warm",
+   "narration": [
+    "You give each fix a named owner,",
+    "and you track it to done."
+   ],
+   "on_screen": [
+    "named owner",
+    "track it to done"
+   ],
+   "visual_intent": "each of the three fixes gains an owner tag, then its checkbox ticks to done, one after another",
+   "change_over_time": true,
+   "animate_score": 0.6,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "each action item needs a named owner and tracking until done",
+     "fact": "F16"
+    }
+   ]
+  },
+  {
+   "id": "b26",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "pause_after_s": 3,
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "say the three steps to yourself, against an incident you remember"
+   },
+   "narration": [
+    "Now pick an incident you remember.",
+    "Before I say them,",
+    "run the three steps yourself."
+   ],
+   "on_screen": [
+    "Your incident"
+   ],
+   "visual_intent": "a blank three-step card for the viewer's own incident, its slots empty during a short quiet gap",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": []
+  },
+  {
+   "id": "b27",
+   "section": "sec4",
+   "job": "consolidate",
+   "delivery": "warm",
+   "narration": [
+    "The rule. The timeline as they saw it.",
+    "What made it easy.",
+    "And one fix, with its owner."
+   ],
+   "on_screen": [
+    "The rule",
+    "The timeline as they saw it",
+    "What made it easy",
+    "one fix, with its owner"
+   ],
+   "visual_intent": "the three slots fill one at a time, then one fix line with an owner tag appears at the bottom of the card",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "state the purpose first",
+     "fact": "F13"
+    },
+    {
+     "claim": "rebuild what each person could see",
+     "fact": "F9"
+    },
+    {
+     "claim": "ask what made the action easy to take",
+     "fact": "F11"
+    },
+    {
+     "claim": "every fix needs an owner",
+     "fact": "F16"
+    }
+   ]
+  },
+  {
+   "id": "b28",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "warm",
+   "hypothetical": true,
+   "narration": [
+    "Same room. Same engineer.",
+    "Now every head faces the board,",
+    "where each fix has an owner."
+   ],
+   "on_screen": [
+    "the board",
+    "each fix has an owner"
+   ],
+   "visual_intent": "the meeting room from the hook, drawn from above; every head swivels from the engineer to the board, where the three converging conditions each carry an owned, ticked fix",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the meeting is the invented incident again",
+     "hypothetical": true
+    },
+    {
+     "claim": "system fixes each need an owner",
+     "fact": "F16"
+    }
+   ]
+  },
+  {
+   "id": "b29",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "Not who slipped,",
+    "but what made the slip easy,",
+    "and hard to catch."
+   ],
+   "on_screen": [
+    "Not who slipped",
+    "what made it easy",
+    "hard to catch"
+   ],
+   "visual_intent": "the presenter closes, level and firm, beside the pocket rule",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "the useful question is what made the action easy to take and hard to catch",
+     "fact": "F11"
+    }
+   ]
+  }
+ ]
+}

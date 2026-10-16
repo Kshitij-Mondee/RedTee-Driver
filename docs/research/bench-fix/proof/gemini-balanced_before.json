@@ -1,0 +1,125 @@
+{
+ "id": "bench-20261006-151439-gemini-balanced",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine-sandbox\\before\\bench-20261006-151439-gemini-balanced",
+ "beats": 35,
+ "check_errors": 36,
+ "check_warnings": 53,
+ "blurred": {
+  "beats": [
+   "b31"
+  ],
+  "of": 35
+ },
+ "foreign": {
+  "beats": [
+   "b28"
+  ],
+  "of": 35,
+  "measured": 34
+ },
+ "off_frame": {
+  "errors": 11,
+  "first": [
+   "b16: words cut by the frame edge at 143.6s: \"Observed\" at [1755, 960, 2085, 1058], \"behavior\" at [1772, 1057, 2068, 1155] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b31: words cut by the frame edge at 277.7s: \"Relationship stays intact\" at [1063, 713, 2781, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b32: words cut by the frame edge at 283.7s: \"How can we approach this?\" at [1140, 398, 2128, 502], \"Relationship stays intact\" at [1063, 713, 2780, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b33: words cut by the frame edge at 291.4s: \"Propose approach\" at [1700, 398, 2351, 502], \"Relationship stays intact\" at [1063, 713, 2780, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b34: words cut by the frame edge at 299.4s: \"Relationship stays intact\" at [1063, 713, 2780, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b07: off frame at 59.0s: document 'page' 50% outside the frame (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b05",
+   "b07",
+   "b08",
+   "b16",
+   "b19",
+   "b20",
+   "b21",
+   "b23",
+   "b24",
+   "b26",
+   "b28",
+   "b31"
+  ],
+  "of": 32,
+  "worst": 7.73
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 0
+ },
+ "empty": {
+  "errors": 0,
+  "first": []
+ },
+ "kinds": {
+  "runtime text_overflow": 6,
+  "off_frame": 6,
+  "words_cut": 5,
+  "hf layout content_overlap": 4,
+  "hf contrast contrast_aa_failure": 4,
+  "runtime held_missing": 3,
+  "runtime icon_missing": 3,
+  "runtime text_outside_element": 2,
+  "runtime tight_inset": 1,
+  "foreign_pixels": 1,
+  "blurred_beat": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 2,
+   "kinds": {
+    "length": 2
+   },
+   "first": [
+    "pacing.target_duration_s is 270s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~299s but the request asks for about 120s (at most 156s); cut about 342 words or whole beats to the requested length",
+    "35 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 14,
+   "kinds": {
+    "allocation": 4,
+    "cast": 4,
+    "nested w/h": 3,
+    "placeholder": 1,
+    "keep missing": 1,
+    "template cap": 1
+   },
+   "first": [
+    "b02: props.lines[0].text = '...' has no words: a slot that is meant to look empty is an item {\"empty\": true} (compare.two items, document.page lines), never punctuation on screen",
+    "station s_camera_lens: a nested station's own space is always one frame (1920x1080); its size inside 's_calendar' is rect.w/h. Drop w/h (960x540): the runtime ignores them (station_size_ignored) and a layout written for them lands somewhere else",
+    "station s_impact: a nested station's own space is always one frame (1920x1080); its size inside 's_meeting' is rect.w/h. Drop w/h (960x540): the runtime ignores them (station_size_ignored) and a layout written for them lands somewhere else",
+    "station s_future_plan: a nested station's own space is always one frame (1920x1080); its size inside 's_board' is rect.w/h. Drop w/h (960x540): the runtime ignores them (station_size_ignored) and a layout written for them lands somewhere else",
+    "b02: keep names ['left', 'right', 'lines'] but the previous beat b01 (scenario.dialogue) cannot provide them: its template draws only these elements: N_name, N_person, caption, line_N, setting, template_backplate. A kept name must be an element that beat really drew (or kept); a template's design.elements are not drawn. Drop them from keep (held_missing)"
+   ]
+  },
+  "scenes": {
+   "errors": 0,
+   "kinds": {},
+   "first": []
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 306s but the request asks for about 120s (at most 156s): the script must lose about 61 % of its words"
+   ]
+  }
+ }
+}

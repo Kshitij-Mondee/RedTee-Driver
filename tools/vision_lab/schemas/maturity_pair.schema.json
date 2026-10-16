@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "maturity_pair",
+  "description": "Two frames compared: each one's style first, then which is closer to professional and clean for its own style (D-107).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "what_a",
+    "style_a",
+    "what_b",
+    "style_b",
+    "better",
+    "margin",
+    "drivers",
+    "why",
+    "confidence"
+  ],
+  "properties": {
+    "what_a": {
+      "type": "string"
+    },
+    "style_a": {
+      "type": "string",
+      "enum": [
+        "corporate_flat",
+        "editorial_ui",
+        "infographic_diagram",
+        "cinematic_illustration",
+        "cartoon_character",
+        "isometric_3d",
+        "whiteboard_sketch",
+        "live_action_photo",
+        "mixed_other"
+      ]
+    },
+    "what_b": {
+      "type": "string"
+    },
+    "style_b": {
+      "type": "string",
+      "enum": [
+        "corporate_flat",
+        "editorial_ui",
+        "infographic_diagram",
+        "cinematic_illustration",
+        "cartoon_character",
+        "isometric_3d",
+        "whiteboard_sketch",
+        "live_action_photo",
+        "mixed_other"
+      ]
+    },
+    "better": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "same"
+      ]
+    },
+    "margin": {
+      "type": "string",
+      "enum": [
+        "slight",
+        "clear",
+        "large"
+      ]
+    },
+    "drivers": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "enum": [
+          "drawing",
+          "people",
+          "colour",
+          "type",
+          "layout",
+          "density",
+          "slides",
+          "finish",
+          "light",
+          "depth",
+          "texture",
+          "composition"
+        ]
+      }
+    },
+    "why": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

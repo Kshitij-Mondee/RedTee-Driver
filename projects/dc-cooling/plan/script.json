@@ -1,0 +1,328 @@
+{
+  "title": "Where the heat goes: cooling an AI data centre",
+  "wpm_target": 145,
+  "sections": [
+    {"id": "intro", "title": "Where it goes", "role": "hook"},
+    {"id": "sec1", "title": "Follow the air", "role": "what it is"},
+    {"id": "sec2", "title": "Aisles and leaks", "role": "how it works"},
+    {"id": "sec3", "title": "Liquid at the chip", "role": "how it works"},
+    {"id": "sec4", "title": "Measuring the overhead", "role": "why it matters"},
+    {"id": "close", "title": "The whole path", "role": "payoff"}
+  ],
+  "beats": [
+    {
+      "id": "b01", "section": "intro", "job": "hook", "delivery": "calm",
+      "narration": ["Here is one server, running.", "It draws power all day.", "Almost all of that power,", "ends up as heat."],
+      "on_screen": ["heat"],
+      "visual_intent": "the motif that returns at the close: one server alone in a calm frame, a power line feeding it; a warm haze builds behind it on 'heat' until it fills the space around the box",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [{"claim": "almost all the electricity a server uses ends up as heat", "fact": "F1"}],
+      "concepts": ["heat load"]
+    },
+    {
+      "id": "b02", "section": "intro", "job": "hook", "delivery": "curious",
+      "narration": ["Now fill a room with AI servers.", "Where does all that heat go?", "And what stops it coming back?"],
+      "on_screen": ["where does the heat go?"],
+      "visual_intent": "pull back from the single server: it becomes one of many in racks filling a room, each with its own warm haze; the question sits over the room on 'heat go'",
+      "change_over_time": true, "animate_score": 0.55, "treatment_hint": "motion",
+      "grounding": [{"claim": "a room of AI servers produces heat that must be carried away", "fact": "F1"}],
+      "concepts": ["heat load"]
+    },
+    {
+      "id": "b03", "section": "intro", "job": "orient", "delivery": "calm",
+      "narration": ["You can follow it,", "from one chip to the outside."],
+      "on_screen": ["chip", "outside"],
+      "visual_intent": "a faint dotted route appears from a chip on the left to the outside of a building on the right, the promise of the path the lesson will light up",
+      "change_over_time": false, "animate_score": 0.3, "treatment_hint": "template",
+      "grounding": [{"claim": "the heat's path ends outside the building", "fact": "F5"}]
+    },
+    {
+      "id": "b04", "section": "sec1", "job": "demonstrate", "delivery": "warm",
+      "narration": ["Like a laptop, it breathes.", "Cool air in at the front.", "Warm air out the back."],
+      "on_screen": ["front: cool in", "back: warm out"],
+      "visual_intent": "the server from b01 in side view: a cool stream enters the front on 'front', crosses the hot parts and turns warm in colour as it goes, leaving the back on 'back'",
+      "change_over_time": true, "animate_score": 0.85, "treatment_hint": "motion",
+      "grounding": [{"claim": "typical rack servers pull cool air in at the front and push warm air out of the back", "fact": "F2"}],
+      "concepts": ["front-to-back airflow"]
+    },
+    {
+      "id": "b05", "section": "sec1", "job": "sequence", "delivery": "curious",
+      "narration": ["So where does the warm air go?", "To a cooling unit.", "It takes the heat out,", "and sends the air back cool."],
+      "on_screen": ["cooling unit"],
+      "visual_intent": "the warm stream rises from the back of the rack and travels across to a cooling unit; inside the unit it changes colour from warm to cool and flows back toward the rack's front, closing a loop",
+      "change_over_time": true, "animate_score": 0.85, "treatment_hint": "motion",
+      "grounding": [{"claim": "cooling units take in warm air, remove its heat and send it back cool", "fact": "F4"}],
+      "concepts": ["cooling unit"]
+    },
+    {
+      "id": "b06", "section": "sec1", "job": "sequence", "delivery": "calm",
+      "narration": ["The heat rides a water loop,", "to equipment outside."],
+      "on_screen": ["water loop", "outside"],
+      "visual_intent": "from the cooling unit a water line carries a warm pulse through the building wall to a generic outdoor unit, which releases it to open air",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [{"claim": "collected heat is finally released outside, usually through a water loop and outdoor equipment", "fact": "F5"}],
+      "concepts": ["heat released outside"]
+    },
+    {
+      "id": "b07", "section": "sec1", "job": "refute", "delivery": "calm",
+      "narration": ["So the goal is not a cold room.", "Cooling is a path.", "Cool in at the front, warm out the back."],
+      "on_screen": ["not a cold room", "a path"],
+      "visual_intent": "the whole route so far, server to cooling unit to outside, lights up as one continuous path; a struck-out snowflake tag beside the room on 'not a cold room'; the rack's front and back labels glow again on the rule",
+      "change_over_time": false, "animate_score": 0.35, "treatment_hint": "template",
+      "grounding": [
+        {"claim": "heat has to be carried away for the server to keep running", "fact": "F1"},
+        {"claim": "cooling units move heat out of the air and send it on", "fact": "F4"},
+        {"claim": "front intake, back exhaust", "fact": "F2"}
+      ],
+      "misconception": "cooling a data centre means keeping the whole room freezing cold",
+      "recall": {"kind": "recall_prompt", "prompt": "Cool in at the front, warm out the back. Everything next depends on it."}
+    },
+    {
+      "id": "b08", "section": "sec2", "job": "scenario", "delivery": "calm",
+      "narration": ["Now a room, from above.", "Every row faces the same way."],
+      "on_screen": ["every row faces one way"],
+      "visual_intent": "the floor plan that holds for the section: a top-down room with four rows of racks, all fronts pointing the same direction, small arrows marking each front",
+      "change_over_time": false, "animate_score": 0.3, "treatment_hint": "template",
+      "grounding": [{"claim": "the setup where all rows face the same direction", "fact": "F7"}]
+    },
+    {
+      "id": "b09", "section": "sec2", "job": "check", "delivery": "curious",
+      "narration": ["Which row breathes the warmest air?", "Decide before I run it."],
+      "on_screen": ["which row runs warmest?"],
+      "visual_intent": "the floor plan holds still with the rows numbered front to back; nothing moves during the silence",
+      "change_over_time": false, "animate_score": 0.1, "treatment_hint": "template",
+      "grounding": [{"claim": "the question sets up the row-to-row exhaust shown next", "fact": "F7"}],
+      "pause_after_s": 3,
+      "recall": {"kind": "pause_predict", "prompt": "Every row faces the same way. Which row ends up breathing the warmest air?", "answer": "The back row: each row breathes in the exhaust of the row in front, so inlet air warms row by row."}
+    },
+    {
+      "id": "b10", "section": "sec2", "job": "demonstrate", "delivery": "calm",
+      "narration": ["The back row.", "Each row breathes the exhaust ahead.", "So the room gets over-cooled,", "and that wastes energy."],
+      "on_screen": ["warmer row by row", "over-cooled"],
+      "visual_intent": "the plan runs: the warm stream from row one flows straight into the fronts of row two, and so on; each row's stream is a shade warmer than the last, the back row the warmest; then the whole room tints too cold on 'over-cooled'",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "grounding": [{"claim": "with all rows facing one way, each row breathes the exhaust of the row in front, inlet air warms row by row, and the room is over-cooled, wasting energy", "fact": "F7"}]
+    },
+    {
+      "id": "b11", "section": "sec2", "job": "define", "delivery": "calm",
+      "narration": ["Same room. One change.", "Fronts face across a cold aisle.", "Backs face across a hot aisle."],
+      "on_screen": ["cold aisle", "hot aisle"],
+      "visual_intent": "the same floor plan: alternate rows rotate in place; the aisle between two fronts tints cool and is labelled on 'cold aisle', the aisle between two backs tints warm and is labelled on 'hot aisle'",
+      "change_over_time": true, "animate_score": 0.7, "treatment_hint": "motion",
+      "grounding": [{"claim": "server fronts face each other across a cold aisle and backs across a hot aisle", "fact": "F3"}],
+      "concepts": ["hot aisle", "cold aisle"]
+    },
+    {
+      "id": "b12", "section": "sec2", "job": "sequence", "delivery": "calm",
+      "narration": ["Cool air feeds the cold aisle.", "Warm air returns from the hot aisle."],
+      "on_screen": ["feeds", "returns"],
+      "visual_intent": "the same plan runs again: cool streams enter the cold aisles and pass through the racks, warm streams gather in the hot aisles and travel back to cooling units at the room's edge; no stream crosses another",
+      "change_over_time": true, "animate_score": 0.85, "treatment_hint": "motion",
+      "grounding": [{"claim": "cooling units deliver cool air to the cold aisle and take warm air from the hot aisle", "fact": "F4"}]
+    },
+    {
+      "id": "b13", "section": "sec2", "job": "transition", "delivery": "calm",
+      "narration": ["Here is the part people miss.", "One rack slot, left empty."],
+      "on_screen": ["empty slot"],
+      "visual_intent": "zoom from the plan to one rack face-on; one gap between servers is picked out in the accent on 'left empty'",
+      "change_over_time": false, "animate_score": 0.35, "treatment_hint": "motion",
+      "grounding": [{"claim": "racks can have empty slots", "fact": "F8"}],
+      "misconception": "an empty slot in a rack is just unused space and does no harm"
+    },
+    {
+      "id": "b14", "section": "sec2", "job": "demonstrate", "delivery": "calm",
+      "narration": ["Warm air finds the gap,", "slips through to the front,", "and the servers breathe it again.", "That is recirculation."],
+      "on_screen": ["recirculation"],
+      "visual_intent": "the rack in side section: a warm stream from the hot side curls through the empty slot and joins the cool stream entering the servers' fronts, tinting it warm; the term arrives on 'recirculation'",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "grounding": [
+        {"claim": "recirculation is warm exhaust mixing back into the intake air at the front", "fact": "F6"},
+        {"claim": "an open slot lets air pass around the equipment instead of through it", "fact": "F8"}
+      ],
+      "concepts": ["recirculation"]
+    },
+    {
+      "id": "b15", "section": "sec2", "job": "demonstrate", "delivery": "calm",
+      "narration": ["The fix is a blanking panel.", "Gap closed, inlet air stays cool."],
+      "on_screen": ["blanking panel"],
+      "visual_intent": "the same side section: a panel slides into the empty slot on 'blanking panel'; the curling warm stream stops and the intake stream returns to cool",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [{"claim": "blanking panels cover empty slots so cool air goes through the equipment and inlet air stays cooler", "fact": "F8"}],
+      "concepts": ["blanking panel"]
+    },
+    {
+      "id": "b16", "section": "sec2", "job": "demonstrate", "delivery": "calm",
+      "narration": ["Warm air can also spill over rows.", "Doors and a roof stop it.", "That is containment."],
+      "on_screen": ["containment"],
+      "visual_intent": "back to the floor plan: a thin warm stream spills over the row ends into a cold aisle; then end doors and a roof enclose that aisle on 'containment' and the spill stops",
+      "change_over_time": true, "animate_score": 0.75, "treatment_hint": "motion",
+      "grounding": [
+        {"claim": "warm exhaust can spill over the tops and around the ends of rows", "fact": "F9"},
+        {"claim": "containment uses doors, roof panels or curtains to keep supply and exhaust air apart", "fact": "F10"}
+      ],
+      "concepts": ["containment"]
+    },
+    {
+      "id": "b17", "section": "sec2", "job": "practice", "delivery": "warm",
+      "narration": ["Say you spot an open slot.", "Tell the team who runs the floor."],
+      "on_screen": ["open slot? tell the floor team"],
+      "visual_intent": "the rack from b13 again, its empty slot open, seen from the aisle as if on a walk-through; a small tag points toward the floor team",
+      "change_over_time": false, "animate_score": 0.2, "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {"claim": "the walk-through is an invented illustration", "hypothetical": true},
+        {"claim": "an open slot lets warm air recirculate", "fact": "F8"}
+      ]
+    },
+    {
+      "id": "b18", "section": "sec3", "job": "demonstrate", "delivery": "calm",
+      "narration": ["Now swap in AI servers.", "The rack draws far more power,", "so far more heat."],
+      "on_screen": ["far more heat per rack"],
+      "visual_intent": "the single rack from sec1 returns; its servers are swapped for AI servers one by one and the warm stream at its back swells, much wider than before, overflowing the hot aisle",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [{"claim": "racks of AI accelerator servers draw far more power than typical racks, so give off far more heat", "fact": "F11"}],
+      "concepts": ["rack density"]
+    },
+    {
+      "id": "b19", "section": "sec3", "job": "relate", "delivery": "calm",
+      "narration": ["Air can only carry so much.", "Water carries far more heat,", "in the same space."],
+      "on_screen": ["air", "water"],
+      "visual_intent": "two equal boxes side by side, one of air and one of water; heat blocks fill them and the air box is full long before the water box",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [{"claim": "water carries far more heat than air for the same volume", "fact": "F12"}]
+    },
+    {
+      "id": "b20", "section": "sec3", "job": "define", "delivery": "calm",
+      "narration": ["Open one server, find the chip.", "On top, a cold plate.", "Metal, with channels inside."],
+      "on_screen": ["accelerator chip", "cold plate"],
+      "visual_intent": "zoom from the rack into one server, then onto one accelerator chip on its board; a cold plate settles onto the chip on 'cold plate' and is shown in cut-away with its channels",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [{"claim": "a cold plate is a metal block with coolant channels that sits on the processor", "fact": "F13"}],
+      "concepts": ["direct-to-chip", "cold plate"]
+    },
+    {
+      "id": "b21", "section": "sec3", "job": "sequence", "delivery": "calm",
+      "narration": ["Coolant flows through it,", "and carries the heat away."],
+      "on_screen": ["coolant"],
+      "visual_intent": "cool coolant enters the plate's channels, leaves warm, and travels along a hose out of the server toward the rack's side",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "grounding": [{"claim": "coolant flowing through the cold plate carries the chip's heat away", "fact": "F13"}]
+    },
+    {
+      "id": "b22", "section": "sec3", "job": "define", "delivery": "curious",
+      "narration": ["So where does the coolant go?", "To a coolant distribution unit, the CDU."],
+      "on_screen": ["CDU"],
+      "visual_intent": "follow the warm hose to a cabinet-like unit beside the racks; the unit is labelled CDU on 'the CDU' and its front opens",
+      "change_over_time": true, "animate_score": 0.55, "treatment_hint": "motion",
+      "grounding": [{"claim": "coolant from the cold plates goes to a coolant distribution unit", "fact": "F15"}],
+      "concepts": ["coolant distribution unit"]
+    },
+    {
+      "id": "b23", "section": "sec3", "job": "demonstrate", "delivery": "calm",
+      "narration": ["Here is the part to watch.", "Two loops.", "The rack loop, through the cold plates.", "The facility water loop, to the building.", "A heat exchanger passes heat across.", "The liquids never mix."],
+      "on_screen": ["rack loop", "facility water loop", "heat exchanger"],
+      "visual_intent": "inside the CDU: the rack loop on the left and the facility water loop on the right, drawn in two distinct colours; heat pulses cross the heat exchanger between them while each liquid stays in its own loop",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "grounding": [{"claim": "the CDU keeps the rack loop separate from the facility water loop and passes heat between them through a heat exchanger without mixing", "fact": "F15"}],
+      "concepts": ["two separate loops", "heat exchanger"]
+    },
+    {
+      "id": "b24", "section": "sec3", "job": "refute", "delivery": "calm",
+      "narration": ["One limit.", "Other parts still use air.", "Same idea as the blanking panel:", "keep warm and cool apart."],
+      "on_screen": ["still needs air"],
+      "visual_intent": "back out to the server: the cold plate stays lit while a smaller air stream still crosses the other parts; the blanking-panel image from b15 returns beside it",
+      "change_over_time": false, "animate_score": 0.35, "treatment_hint": "template",
+      "grounding": [{"claim": "other parts of a liquid-cooled server are usually still air cooled, so the room still needs airflow", "fact": "F14"}],
+      "misconception": "liquid-cooled AI servers need no air at all",
+      "recall": {"kind": "recall_prompt", "prompt": "Same idea as the blanking panel: keep warm and cool apart."}
+    },
+    {
+      "id": "b25", "section": "sec4", "job": "define", "delivery": "calm",
+      "narration": ["All this costs energy.", "The usual measure is PUE,", "power usage effectiveness.", "Total facility energy,", "divided by the energy reaching IT."],
+      "on_screen": ["PUE", "total facility energy", "IT energy"],
+      "visual_intent": "a fraction builds from energy blocks: a tall stack labelled total facility energy on top of the line, a smaller stack labelled IT energy below it",
+      "change_over_time": false, "animate_score": 0.35, "treatment_hint": "template",
+      "grounding": [
+        {"claim": "PUE is total facility energy divided by IT equipment energy", "fact": "F17"},
+        {"claim": "PUE is the industry's usual measure, developed by The Green Grid", "fact": "F19"}
+      ],
+      "concepts": ["PUE", "IT equipment energy"]
+    },
+    {
+      "id": "b26", "section": "sec4", "job": "quantify", "delivery": "calm",
+      "narration": ["On top, IT plus overhead.", "Cooling is usually the biggest slice."],
+      "on_screen": ["overhead", "cooling"],
+      "visual_intent": "the top stack splits: IT blocks at its base, overhead blocks above them; the cooling block is the largest of the overhead and is labelled on its word",
+      "change_over_time": false, "animate_score": 0.3, "treatment_hint": "template",
+      "grounding": [
+        {"claim": "overhead is energy that goes to cooling, lighting and power losses rather than IT", "fact": "F18"},
+        {"claim": "cooling is usually the largest part of energy on top of IT", "fact": "F21"}
+      ],
+      "concepts": ["overhead"]
+    },
+    {
+      "id": "b27", "section": "sec4", "job": "quantify", "delivery": "calm",
+      "narration": ["If it all went to IT,", "PUE would be 1.0, the floor.", "Real sites sit above it."],
+      "on_screen": ["1.0"],
+      "visual_intent": "the overhead blocks shrink away until the top stack equals the bottom; the ratio reads 1.0 on its word, then the overhead returns a little and the ratio settles above the floor line",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [{"claim": "a PUE of 1.0 is the ideal floor and real facilities score above it", "fact": "F18"}]
+    },
+    {
+      "id": "b28", "section": "sec4", "job": "refute", "delivery": "calm",
+      "narration": ["What it does not tell you,", "is how useful the computing is.", "Useful number, not the whole story."],
+      "on_screen": ["not computing efficiency"],
+      "visual_intent": "the fraction holds; one short note is pinned beside it on its words, with a small strike mark",
+      "change_over_time": false, "animate_score": 0.15, "treatment_hint": "template",
+      "grounding": [{"claim": "PUE measures overhead, not how useful or efficient the computing is", "fact": "F20"}],
+      "misconception": "PUE is a green score that says how efficient the computing is"
+    },
+    {
+      "id": "b29", "section": "sec4", "job": "consolidate", "delivery": "brisk",
+      "narration": ["Every leak we saw,", "lands in that top stack."],
+      "on_screen": [],
+      "visual_intent": "small images of the row-to-row exhaust and the empty slot drift into the overhead stack, which grows a little",
+      "change_over_time": true, "animate_score": 0.5, "treatment_hint": "motion",
+      "grounding": [
+        {"claim": "recirculation leads to over-cooling, which wastes energy", "fact": "F7"},
+        {"claim": "wasted cooling energy is part of total facility energy, not IT energy", "fact": "F17"}
+      ],
+      "recall": {"kind": "recall_prompt", "prompt": "Every leak we saw earlier is overhead in that top number."}
+    },
+    {
+      "id": "b30", "section": "close", "job": "payoff", "delivery": "warm",
+      "narration": ["Back to one server.", "Chip, cold plate, rack loop,", "CDU, facility water, outside."],
+      "on_screen": ["chip", "cold plate", "rack loop", "CDU", "facility water", "outside"],
+      "visual_intent": "callback to b01: the same single server, now with the whole liquid path drawn out of it; each hand-off lights in turn just after its word, from the chip to the outdoor unit",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [
+        {"claim": "heat moves from chip to cold plate to rack loop", "fact": "F13"},
+        {"claim": "the CDU passes it to facility water", "fact": "F15"},
+        {"claim": "and it is released outside", "fact": "F5"}
+      ]
+    },
+    {
+      "id": "b31", "section": "close", "job": "payoff", "delivery": "warm",
+      "narration": ["Or by air, front, back, hot aisle,", "cooling unit, outside."],
+      "on_screen": ["front", "back", "hot aisle", "cooling unit"],
+      "visual_intent": "the air path lights alongside the liquid path in the same frame, each stage on its word, ending at the same outdoor unit",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [
+        {"claim": "front intake, back exhaust", "fact": "F2"},
+        {"claim": "warm air returns from the hot aisle to cooling units", "fact": "F4"},
+        {"claim": "heat is released outside", "fact": "F5"}
+      ]
+    },
+    {
+      "id": "b32", "section": "close", "job": "payoff", "delivery": "warm",
+      "narration": ["Keep the heat moving out.", "Stop it leaking back."],
+      "on_screen": ["moving out", "not leaking back"],
+      "visual_intent": "the full path holds, calm and complete, the room settled; the two short lines rest beside it",
+      "change_over_time": false, "animate_score": 0.15, "treatment_hint": "template",
+      "grounding": [
+        {"claim": "heat has to be carried away continuously", "fact": "F1"},
+        {"claim": "blanking panels and containment stop warm and cool air mixing", "fact": "F10"}
+      ]
+    }
+  ]
+}

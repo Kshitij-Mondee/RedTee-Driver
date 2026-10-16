@@ -1,0 +1,43 @@
+Mock LLM: a request is recorded before its reply goes out. Red run on the old ordering, then green (2026-10-08)
+
+Seen: `py tests/run_tests.py --browser` failed mock_llm_match_filters_and_unmatched_fallback
+(names == ["planner", "two-tools", None, "after-fail"] got the first three) under the browser suite's load; it
+passed 3 of 3 alone and in the run without --browser. Cause: loom/agents/llm/mock_server.py `_Handler._dispatch`
+called `st.record(rec)` only after `_send` / `_send_sse` had written the reply, so a client holding its reply could
+read MockLLM.requests (or /mock/requests) before the server thread got back from the send.
+
+New test: tests/suites/agents_mock_llm.py mock_llm_request_recorded_before_its_reply. It wraps this server's own
+handler subclass so `_send` and `_send_sse` hold the handler 0.4 s after the reply is written (the window the loaded
+machine gave the client), then reads MockLLM.requests right after a JSON reply, /mock/requests right after a second
+one, and MockLLM.requests right after an event-stream reply; finally it waits for every `delivered` to be True.
+
+## Old ordering (mock_server.py as it was, 2026-10-08 12:25)
+py tests/run_tests.py --only mock_llm_request_recorded_before_its_reply,mock_llm_match_filters,mock_llm_client_disconnect
+  File "tests/suites/agents_mock_llm.py", line 531, in mock_llm_request_recorded_before_its_reply
+    assert st == 200 and [q["step_name"] for q in seen] == ["json"], seen
+AssertionError: []
+  PASS  mock_llm_client_disconnect_is_quiet  (disconnect swallowed (delivered=False), server still serving)
+  PASS  mock_llm_match_filters_and_unmatched_fallback  (json, parallel tools, ...)
+  FAIL  mock_llm_request_recorded_before_its_reply: []
+2 passed, 1 failed, 0 skipped
+(The reply had arrived; the client's own request was not in requests yet.)
+
+## Fix
+`_dispatch` records the rec (delivered None) before the delay and the send; `_State.mark_delivered` sets delivered
+under the state lock once the send ends; `snapshot()` already copies under the same lock (a JSON round trip).
+The L-272 disconnect test now waits for `delivered` to be set (not only for the record) and still asserts False.
+
+## New ordering
+py tests/run_tests.py --only mock_llm: 19 passed, 0 failed
+  PASS  mock_llm_request_recorded_before_its_reply  (each request visible before its reply (json, /mock/requests,
+        sse); delivered true once sent)
+  PASS  mock_llm_client_disconnect_is_quiet  (disconnect swallowed (delivered=False), server still serving)
+Six `--only mock_llm` runs in parallel (with the full suite running beside them): 6 of 6 at 19 passed, 0 failed.
+
+## Full suite after the fix (2026-10-08)
+- 12:26 `py tests/run_tests.py`: 264 passed, 1 failed, 27 skipped; all 19 mock_llm tests passed. The one failure was
+  context_layer_agrees_with_the_code (docs/context/STATE.md said 283 tests; 292 with this test and other sessions'
+  new ones), fixed in STATE.md; `py tools/context_check.py` then OK.
+- 12:33 `py tests/run_tests.py --browser` (the run that showed the race): 266 passed, 0 failed, 26 skipped (cairo,
+  OpenCV, symlinks, and primitives that report no browser here); mock_llm_match_filters_and_unmatched_fallback,
+  mock_llm_request_recorded_before_its_reply and mock_llm_client_disconnect_is_quiet all passed.

@@ -1,0 +1,649 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Storyboard: the world, the camera, continuity and one scene per beat",
+  "type": "object",
+  "required": [
+    "style",
+    "world",
+    "scenes"
+  ],
+  "properties": {
+    "style": {
+      "type": "string"
+    },
+    "concept": {
+      "type": "string"
+    },
+    "chrome": {
+      "type": "object"
+    },
+    "motifs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "desc"
+        ]
+      }
+    },
+    "world": {
+      "type": "object",
+      "required": [
+        "stations"
+      ],
+      "properties": {
+        "stations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "w": {
+                "type": "number"
+              },
+              "h": {
+                "type": "number"
+              },
+              "parent": {
+                "type": "string"
+              },
+              "rect": {
+                "type": "object",
+                "required": [
+                  "x",
+                  "y",
+                  "w",
+                  "h"
+                ]
+              },
+              "zone": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "beat",
+          "kind",
+          "station"
+        ],
+        "properties": {
+          "beat": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "template",
+              "blueprint",
+              "bespoke",
+              "manim",
+              "avatar",
+              "media",
+              "redtee",
+              "skia",
+              "three",
+              "page"
+            ]
+          },
+          "station": {
+            "type": "string"
+          },
+          "template": {
+            "type": "string"
+          },
+          "blueprint": {
+            "type": "string"
+          },
+          "scene": {
+            "type": "string"
+          },
+          "props": {
+            "type": "object"
+          },
+          "order_cues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rect": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "keep": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "manim": {
+            "type": "object"
+          },
+          "media": {
+            "type": "object"
+          },
+          "design": {
+            "type": "object"
+          },
+          "shot": {
+            "type": "object",
+            "properties": {
+              "zoom": {
+                "type": "number",
+                "minimum": 0.3,
+                "maximum": 6
+              },
+              "focus": {
+                "type": "array",
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "move": {
+                "enum": [
+                  "none",
+                  "push",
+                  "pull"
+                ]
+              },
+              "size": {
+                "enum": [
+                  "establishing",
+                  "wide",
+                  "medium",
+                  "close",
+                  "insert",
+                  "overhead",
+                  "pov"
+                ]
+              }
+            }
+          },
+          "join_in": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "enum": [
+                  "cut",
+                  "camera",
+                  "travel",
+                  "zoom",
+                  "canvas",
+                  "continue",
+                  "iris",
+                  "wipe",
+                  "dip",
+                  "fade",
+                  "torn",
+                  "page",
+                  "scroll",
+                  "motif",
+                  "handoff",
+                  "fill"
+                ]
+              },
+              "via": {
+                "type": "string"
+              },
+              "dur": {
+                "type": "number"
+              },
+              "meaning": {
+                "enum": [
+                  "into",
+                  "time",
+                  "era",
+                  "meanwhile",
+                  "shock",
+                  "chapter"
+                ]
+              },
+              "dir": {
+                "enum": [
+                  "left",
+                  "right",
+                  "up",
+                  "down"
+                ]
+              },
+              "at": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "overlap": {
+                "enum": [
+                  "ghost"
+                ],
+                "description": "a deliberate overlap of the outgoing picture (ghost hold, in-place redraw); the double-exposure check accepts it (D-112)"
+              }
+            }
+          },
+          "register": {
+            "enum": [
+              "productive",
+              "expressive"
+            ]
+          },
+          "motion_is": {
+            "enum": [
+              "content",
+              "staging"
+            ]
+          },
+          "sfx": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "fx": {
+            "type": "array",
+            "description": "timed fx moments: [{kind: light|spotlight, at: spoken words, dur, rect:[x,y,w,h] station coords}]"
+          },
+          "skia": {
+            "type": "object",
+            "description": "a Skia clip: {file, rect, params, cues, motion_blur: {samples, shutter}, offset, spill} (docs/SKIA_THREE_LOTTIE.md)"
+          },
+          "three": {
+            "type": "object",
+            "description": "a Three.js clip: {file, rect, params, cues, motion_blur, offset, spill}"
+          },
+          "page": {
+            "type": "object",
+            "description": "a page clip (D-176): {file, rect, libs, params, cues, offset, spill}; libs from runtime/page/libs.json"
+          },
+          "depth": {
+            "enum": [
+              "flat",
+              "layered",
+              "iso",
+              "3d"
+            ]
+          },
+          "light": {
+            "enum": [
+              "even",
+              "key",
+              "spotlight",
+              "silhouette",
+              "night",
+              "dawn",
+              "glow"
+            ]
+          },
+          "story_role": {
+            "enum": [
+              "hook",
+              "setup",
+              "turn",
+              "reveal",
+              "payoff",
+              "practice"
+            ]
+          },
+          "option": {
+            "type": "string",
+            "description": "the name of the treatment this beat uses now (loom/options.py)"
+          },
+          "alternatives": {
+            "type": "object",
+            "description": "other treatments this beat could use, by name; `loom switch` swaps them (nothing is lost)"
+          },
+          "intent": {
+            "enum": [
+              "hold",
+              "sparse",
+              "dark",
+              "rest",
+              "process_hold",
+              "punctuation",
+              "callback",
+              "ghost",
+              "diegetic_text"
+            ],
+            "description": "what an emptier, stiller or repeated frame is FOR (D-112). hold/rest/process_hold: a finished frame rests while the voice explains (up to pace.rest_max_s); sparse/dark: emptiness is the picture; punctuation: a 0.6 to 1.2 s beat on one word; callback: a deliberate return of an earlier picture; ghost: a deliberate overlap with the previous picture; diegetic_text: signs and texture text in the world, never a narrated term"
+          },
+          "accent_on": {
+            "type": "string",
+            "description": "the element the narration names in this beat; the one saturated accent goes on it (D-112)"
+          },
+          "footage": {
+            "type": "array",
+            "description": "D-114 footage layers for this beat (consented clips only; downloads need Kshitij's approval). The scene draws each with Loom.footage(ctx, name, {...}); compose copies src into the build and writes the <video> HyperFrames seeks.",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "src"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_\\-]+$"
+                },
+                "src": {
+                  "type": "string",
+                  "description": "project-relative path, e.g. media/clip.webm"
+                },
+                "trim": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "at": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "seconds after the beat start"
+                },
+                "dur": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "consent": {
+                  "type": "string",
+                  "description": "who consented and where it is recorded"
+                }
+              }
+            }
+          },
+          "upgrade_reason": {
+            "type": "string",
+            "minLength": 12,
+            "description": "Only on a beat the allocation made a template: why this beat needs a drawn (motion-family) scene. At most 25 % of beats (L-240)."
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "physics",
+                "brush",
+                "orb",
+                "three",
+                "skia"
+              ]
+            },
+            "uniqueItems": true,
+            "description": "the toolbox tools this beat uses (docs/TOOLBOX.md); its worker is handed their sections. A three or skia beat implies its own."
+          },
+          "set": {
+            "description": "a drawn set from the library (D-152, loom/sets.py): an exact id 'world/scene[/variant]' or {\"want\": \"words that contain the scene's whole name or alias\"}; loads only on an exact or perfect match in the lesson's own set style",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "want": {
+                    "type": "string"
+                  },
+                  "world": {
+                    "type": "string"
+                  },
+                  "scene": {
+                    "type": "string"
+                  },
+                  "variant": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "reuse": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+/beat/[a-z0-9_]+$",
+            "description": "reuse or build (D-163, bespoke scenes): the id of a kept beat of this lesson's style; it becomes the scene author's starting code (the drawing kept, the words and timings this lesson's); leave it out to build the beat"
+          }
+        }
+      }
+    },
+    "music": {
+      "type": "object"
+    },
+    "brand": {
+      "type": "string",
+      "description": "optional brand id (packs/brands/<id>) layered on the style"
+    },
+    "fx": {
+      "type": "object",
+      "description": "shader layer for this lesson, merged over the style pack's fx (runtime/fx.js): background (aurora|mesh|nebula|paper|blueprint), intensity, colors [tokens], grain, vignette, leak, enabled"
+    },
+    "poster": {
+      "type": "object",
+      "description": "the poster frame: {beat} or {t}"
+    },
+    "kit": {
+      "type": "object",
+      "description": "the lesson kit (2026-10-08): the lesson's own sets, screens, devices and parts, written ONCE as code in scenes/_kit.js and composed by its bespoke beats with Loom.lesson.<id>(ctx, parent, opts). Declare a part when two or more beats show the same made thing (a sign-in page, a phone, a room, a funnel world); characters stay kit rigs by id (never drawn in the kit).",
+      "required": [
+        "parts"
+      ],
+      "properties": {
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "what",
+              "beats"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{1,40}$"
+              },
+              "what": {
+                "type": "string",
+                "description": "what it is and what it must show, in plain words (the real artefact, its parts, its look)"
+              },
+              "states": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "named states the beats switch between (e.g. empty, typing, error, approved)"
+              },
+              "beats": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "size": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2,
+                "description": "natural [w, h] in px of the part as drawn"
+              },
+              "reuse": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+/part/[a-z0-9_]+$",
+                "description": "reuse or build (D-163): the id of a kept part of this lesson's style (py -m loom kept list --style <style>), loaded as is under this part's id; leave it out to build the part (the engine keeps it when the film is approved)"
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "story": {
+      "type": "object",
+      "description": "visual storytelling (loom/story.py): the one picture the lesson lives inside",
+      "properties": {
+        "metaphor": {
+          "type": "string"
+        },
+        "setting": {
+          "type": "string"
+        },
+        "arc": {
+          "type": "string"
+        },
+        "cast": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "rig": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "member": {
+                "enum": [
+                  "woman",
+                  "man",
+                  "girl",
+                  "boy",
+                  "elder_woman",
+                  "elder_man"
+                ],
+                "description": "a peep person (templates draw peeps)"
+              },
+              "skin": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "index into the style's skin tones; the same in every beat"
+              },
+              "cloth": {
+                "type": "string",
+                "description": "clothes token (rig: top) the person always wears"
+              }
+            }
+          },
+          "description": "Required when people appear (template person props, character_moment, scenario.dialogue, ctx.character, kit.peep figures). Each person once, with ONE fixed look: rig (ctx.character) or member (peep), skin and cloth. Template person props may say cast: \"<name>\" instead of repeating it (gates: story.cast_errors)."
+        }
+      }
+    },
+    "icon_objects": {
+      "type": "boolean",
+      "description": "D-100: let drawn objects (Loom.obj) stand in for hero-size icons in templates and badges. Off by default, so icons stay one family; a scene may still ask with badge {object: true}."
+    },
+    "devices": {
+      "type": "array",
+      "maxItems": 6,
+      "description": "the lesson's device set (D-112): 3 to 5 named devices reused across beats, plus one join material",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "what"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "what": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "explain",
+              "list",
+              "data",
+              "join",
+              "rest",
+              "callback",
+              "other"
+            ]
+          },
+          "beats": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "value_script": {
+      "type": "array",
+      "description": "the lesson's tone plan (D-112): from which beat a value band holds, and where it breaks for meaning",
+      "items": {
+        "type": "object",
+        "required": [
+          "from",
+          "band"
+        ],
+        "properties": {
+          "from": {
+            "type": "string",
+            "description": "beat id"
+          },
+          "band": {
+            "enum": [
+              "light",
+              "mid",
+              "dark"
+            ]
+          },
+          "break": {
+            "type": "boolean",
+            "description": "a deliberate break of the lesson's main band (a dark mechanism beat, a flood at a turn)"
+          },
+          "accent": {
+            "type": "string"
+          },
+          "why": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ambient": {
+      "type": "object",
+      "description": "the ambient field for this lesson, merged over the style pack's `ambient` (runtime/world.js): kind (none|dots|paper|grid|stars), density, wash"
+    }
+  }
+}

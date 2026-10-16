@@ -1,0 +1,185 @@
+{
+  "topic": "Three-tier data classification: public, internal, confidential",
+  "scope_note": "A common generic three-tier scheme for employees: what each class means, everyday examples, handling, who classifies, and what to do when unsure. No company policy was supplied, so no organisation-specific rules, tools, laws, fines or statistics.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Data classification sorts information into a small number of classes according to how much harm disclosure would cause, so that each class can carry its own handling rules.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "ISO/IEC 27002 control on classification of information; NIST SP 800-60 and FIPS 199 (impact levels)"
+    },
+    {
+      "id": "F2",
+      "statement": "Public information is approved for release to anyone outside the organisation, so its disclosure causes no harm.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Wording varies by organisation; published university and government policies define the lowest class in this way. Say 'in a typical scheme'.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F3",
+      "statement": "Internal information is meant for employees and other authorised staff, and its disclosure would cause only limited harm.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Some schemes call this class 'private' or 'for internal use'. Say 'in a typical scheme'.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F4",
+      "statement": "Confidential information is restricted to the people who need it for their work, and its disclosure could cause significant harm.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Wording varies by organisation. Say 'in a typical scheme'.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F5",
+      "statement": "Class names, the number of classes and the exact rules differ between organisations, so the organisation's own policy overrides a generic description.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "ISO/IEC 27002 leaves the scheme design to the organisation"
+    },
+    {
+      "id": "F6",
+      "statement": "Everyday public examples are a published press release, a job advert already posted, and the content of the public marketing website.",
+      "kind": "example",
+      "confidence": "mainstream",
+      "caveat": "Examples illustrate a typical scheme; the organisation's policy decides each case.",
+      "reference_hint": "Typical examples in published university and government policies"
+    },
+    {
+      "id": "F7",
+      "statement": "Everyday internal examples are team meeting notes, the organisation chart and internal procedures.",
+      "kind": "example",
+      "confidence": "mainstream",
+      "caveat": "Examples illustrate a typical scheme; some organisations publish their org chart, so the policy decides.",
+      "reference_hint": "Typical examples in published university and government policies"
+    },
+    {
+      "id": "F8",
+      "statement": "Everyday confidential examples are payroll and salary data, customers' personal data, contracts and unreleased financial results.",
+      "kind": "example",
+      "confidence": "mainstream",
+      "caveat": "Examples illustrate a typical scheme; the organisation's policy decides each case.",
+      "reference_hint": "Typical examples in published university and government policies"
+    },
+    {
+      "id": "F9",
+      "statement": "An item's class is decided by its content and by the harm its disclosure could cause, not by its file format, its location or how convenient it is to share.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Phrased as common guidance, not a quotation from one standard.",
+      "reference_hint": "ISO/IEC 27002 and NIST SP 800-60 base classification on impact of disclosure"
+    },
+    {
+      "id": "F10",
+      "statement": "Information is public only once someone with authority has approved its release; looking harmless is not approval.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Who approves release (communications team, owner) depends on the organisation.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F11",
+      "statement": "The class label belongs to the information and travels with it, so a document keeps its class whether it is on paper, in a file, in a message or on a screen.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "How labels are applied (header, file name, metadata, stamp) depends on the organisation; the lesson stays generic.",
+      "reference_hint": "ISO/IEC 27002 control on labelling of information"
+    },
+    {
+      "id": "F12",
+      "statement": "Public information can be shared outside the organisation freely, once it has been approved for release.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Typical handling; the organisation's policy governs.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F13",
+      "statement": "Internal information stays among employees and authorised staff, and is not posted or sent outside the organisation without approval.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Typical handling; sharing with a partner under contract or approval is an organisation-specific rule.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F14",
+      "statement": "Confidential information goes only to named people who need it, and is shared only through approved, protected channels.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Which channels are approved is organisation-specific; the lesson names none.",
+      "reference_hint": "Published university and government classification policies; ISO/IEC 27002 handling of information"
+    },
+    {
+      "id": "F15",
+      "statement": "Confidential information is normally stored in approved locations with access limited to those who need it, and is commonly encrypted when stored and sent.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Encryption expectations vary by organisation and by scheme; say 'commonly expected'.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F16",
+      "statement": "The higher the class, the more careful the disposal: confidential paper is shredded and confidential files are securely deleted, not left in ordinary bins.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Typical practice; exact disposal methods are set by the organisation.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F17",
+      "statement": "The information owner, usually the person or team who creates the information or is accountable for it, is responsible for deciding its class.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Who counts as owner (creator, manager, data owner) varies by organisation; the lesson stays generic.",
+      "reference_hint": "ISO/IEC 27002: information is classified by its owner"
+    },
+    {
+      "id": "F18",
+      "statement": "When unsure how to classify something, treat it as the higher class and ask the information owner.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Common guidance in published classification policies, not a quotation from one standard. Who to ask depends on the organisation.",
+      "reference_hint": "Published university and government classification policies"
+    },
+    {
+      "id": "F19",
+      "statement": "The United States federal FIPS standard on security categorisation sets low, moderate and high impact levels by the harm of disclosure, which is the harm-based logic that a three-tier scheme follows.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "caveat": "That standard covers federal systems and also integrity and availability. It is a parallel framing of harm, not a one-to-one match with public, internal and confidential. Cite only as background.",
+      "reference_hint": "NIST FIPS 199; NIST SP 800-60"
+    }
+  ],
+  "terms": [
+    {
+      "term": "information owner",
+      "meaning": "The person or team accountable for a piece of information, who decides its class."
+    },
+    {
+      "term": "need to know",
+      "meaning": "Access is limited to people who need the information to do their work."
+    },
+    {
+      "term": "class",
+      "meaning": "One of the three levels: public, internal, confidential; also called a label or tier."
+    }
+  ],
+  "not_claimed": [
+    "No breach statistics, costs or fines.",
+    "No specific law or regulator is named as the requirement behind any class.",
+    "No claim that every organisation uses exactly these three classes; many add a further top class such as restricted, which this lesson does not present as part of the scheme.",
+    "No claim that internal means harmless, or that anything not marked confidential is safe to share.",
+    "No claim that a document's class depends on its format, or that digital files need a label but paper does not.",
+    "No company tool names, channel names or contact names.",
+    "No quotations attributed to any standard or person.",
+    "No claim that encryption is required by every scheme for every confidential item."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (five-style test, D-167)",
+    "note": ""
+  }
+}

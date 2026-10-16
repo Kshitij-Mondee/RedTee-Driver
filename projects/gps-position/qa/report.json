@@ -1,0 +1,430 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b02: camera pan between different worlds (city -> orbit) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b08: camera pan between different worlds (orbit -> diagram) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b19: camera pan between different worlds (diagram -> clocks) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b20: camera pan between different worlds (clocks -> city) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b21: camera pan between different worlds (city -> diagram) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b25: camera pan between different worlds (diagram -> clocks) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b29: camera pan between different worlds (clocks -> city) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b30: camera pan between different worlds (city -> clocks) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "compose: b33: camera pan between different worlds (diagram -> city) would show the seam; using a fade through the field (set join_in.continuous: true if they join up)",
+    "runtime unknown_exit: fade",
+    "variety: one_radius_share = 0.769 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: labels_over_objects_share = 0.571 is worse than the worst baseline lesson (0.5): it grew (beats: _kit, b03, b05, b06, b09, b10, b11, b12)",
+    "variety: still_share = 0.629 is above the baseline median (0.5) (beats: _kit, b03, b04, b05, b07, b09, b10, b11)",
+    "variety: the seed's camera habit is 'pan' but 22 of 35 bespoke beats have no camera move",
+    "lc layout content_overlap @ 77.5: b11 \"about 0.00 s\" and b11 \"about 0.00 s\" overlap at [1413, 576, 1687, 636] from 77.5 to 77.5 s (a passing crossing (under 500 ms)) [timer / timer]",
+    "b12: no_entrance_words: element 'sending_label' (text) shows \"sending\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b03: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b04: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.20 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.23 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.23 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.18 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.18 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.18 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.18 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b15: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b16: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b17: value script says 'mid' but the frames measure brightness 0.20 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b18: value script says 'mid' but the frames measure brightness 0.20 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b19: value script says 'mid' but the frames measure brightness 0.20 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b20: value script says 'mid' but the frames measure brightness 0.21 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b24: value script says 'mid' but the frames measure brightness 0.20 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b25: value script says 'mid' but the frames measure brightness 0.21 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b26: value script says 'mid' but the frames measure brightness 0.21 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b27: value script says 'mid' but the frames measure brightness 0.22 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b28: value script says 'mid' but the frames measure brightness 0.22 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b29: value script says 'mid' but the frames measure brightness 0.21 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b30: value script says 'mid' but the frames measure brightness 0.21 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b31: value script says 'mid' but the frames measure brightness 0.19 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b32: value script says 'mid' but the frames measure brightness 0.20 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b33: value script says 'mid' but the frames measure brightness 0.22 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b34: value script says 'light' but the frames measure brightness 0.21 (band 0.55 to 1.00); regrade the beat or change the script",
+    "tone: lesson brightness 0.20 against the pack's reference 0.48 (glow_technical_3d, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson dark_share 1.00 against the pack's reference 0.17 (glow_technical_3d, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.48
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.85
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.83
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.75
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 1.24
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 1.03
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 3.29
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 0.0,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 1.45
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 2.47
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b26",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b27",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b28",
+        "max_static_s": 2.23
+      },
+      {
+        "beat": "b29",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b30",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b31",
+        "max_static_s": 1.59
+      },
+      {
+        "beat": "b32",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b33",
+        "max_static_s": 1.87
+      },
+      {
+        "beat": "b34",
+        "max_static_s": 0.91
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.192,
+      "motion": 0.808,
+      "hybrid": 0.0,
+      "motion_effective": 0.808
+    },
+    "elements": {
+      "b01": 2,
+      "b02": 3,
+      "b03": 3,
+      "b04": 2,
+      "b05": 4,
+      "b06": 5,
+      "b07": 1,
+      "b08": 5,
+      "b09": 3,
+      "b10": 2,
+      "b11": 4,
+      "b12": 7,
+      "b13": 3,
+      "b14": 1,
+      "b15": 2,
+      "b16": 3,
+      "b17": 2,
+      "b18": 1,
+      "b19": 10,
+      "b20": 5,
+      "b21": 5,
+      "b22": 1,
+      "b23": 2,
+      "b24": 4,
+      "b25": 5,
+      "b26": 2,
+      "b27": 3,
+      "b28": 5,
+      "b29": 5,
+      "b30": 7,
+      "b31": 10,
+      "b32": 1,
+      "b33": 4,
+      "b34": 3
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.31,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.947,
+      "one_radius_share": 0.769,
+      "still_share": 0.629,
+      "labels_over_objects_share": 0.571,
+      "one_world_share": 0.029,
+      "lines_per_s": 8.41
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 53677,
+      "layout_samples": 562,
+      "texts": 590,
+      "contrast_checked": 409,
+      "errors": 0,
+      "warnings": 1
+    },
+    "nodes": 13691,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b03": 33.6,
+        "b05": 33.6,
+        "b06": 48.4,
+        "b07": 33.6,
+        "b10": 33.6,
+        "b11": 49.2,
+        "b12": 31.1,
+        "b13": 33.6,
+        "b19": 33.6,
+        "b20": 33.6,
+        "b22": 40.2,
+        "b24": 33.6,
+        "b26": 33.6,
+        "b27": 33.6,
+        "b28": 28.7,
+        "b29": 32,
+        "b30": 33.6,
+        "b31": 33.6,
+        "b32": 33.6
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 34,
+      "lines_seen": 34,
+      "blank_beats": [],
+      "blank_measured": 26
+    },
+    "foreign": {
+      "measured_beats": 34,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 125,
+      "without_life": 0,
+      "no_entrance_words": 1
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0647,
+        "b02": 0.0115,
+        "b03": 0.0597,
+        "b04": 0.0578,
+        "b05": 0.0702,
+        "b06": 0.0956,
+        "b07": 0.0803,
+        "b08": 0.0138,
+        "b09": 0.0173,
+        "b10": 0.02,
+        "b11": 0.0268,
+        "b12": 0.0344,
+        "b13": 0.02,
+        "b14": 0.0167,
+        "b15": 0.0256,
+        "b16": 0.028,
+        "b17": 0.0243,
+        "b18": 0.0273,
+        "b19": 0.0354,
+        "b20": 0.0516,
+        "b21": 0.0271,
+        "b22": 0.0301,
+        "b23": 0.0323,
+        "b24": 0.0579,
+        "b25": 0.0325,
+        "b26": 0.0379,
+        "b27": 0.0735,
+        "b28": 0.0698,
+        "b29": 0.0653,
+        "b30": 0.0485,
+        "b31": 0.0398,
+        "b32": 0.051,
+        "b33": 0.0686,
+        "b34": 0.0624
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.01,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 34,
+      "sharpness": {
+        "b03": 0.978,
+        "b05": 0.984,
+        "b06": 0.953,
+        "b07": 1.099,
+        "b10": 1.18,
+        "b11": 1.102,
+        "b12": 1.014,
+        "b13": 1.109,
+        "b19": 1.006,
+        "b20": 1.135,
+        "b22": 1.068,
+        "b24": 0.878,
+        "b26": 1.039,
+        "b27": 1.191,
+        "b28": 1.214,
+        "b29": 1.115,
+        "b30": 1.067,
+        "b31": 1.224,
+        "b32": 1.258
+      },
+      "blurred_beats": [],
+      "blur_measured": 19
+    },
+    "tone": {
+      "value_script_beats": 34,
+      "tone_vs_reference": {
+        "brightness": 0.197,
+        "saturation": 0.617,
+        "dark_share": 1.0,
+        "light_share": 0.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b22.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b23.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b24.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b25.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b26.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b27.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b28.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b29.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b30.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b31.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b32.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b33.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-position\\qa\\sheets\\b34.jpg"
+  ],
+  "build_hash": "c2a8a46b75bec11a"
+}

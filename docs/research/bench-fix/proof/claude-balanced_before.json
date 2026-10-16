@@ -1,0 +1,174 @@
+{
+ "id": "bench-20261006-151439-claude-balanced",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine-sandbox\\before\\bench-20261006-151439-claude-balanced",
+ "beats": 54,
+ "check_errors": 97,
+ "check_warnings": 86,
+ "blurred": {
+  "beats": [
+   "b19",
+   "b23"
+  ],
+  "of": 54
+ },
+ "foreign": {
+  "beats": [
+   "b01",
+   "b02",
+   "b03",
+   "b04",
+   "b05",
+   "b06",
+   "b07",
+   "b08",
+   "b09",
+   "b10",
+   "b11",
+   "b14",
+   "b15",
+   "b16",
+   "b17",
+   "b18",
+   "b19",
+   "b20",
+   "b21",
+   "b22",
+   "b24",
+   "b25",
+   "b26",
+   "b27",
+   "b28",
+   "b29",
+   "b32",
+   "b40",
+   "b41",
+   "b43",
+   "b47",
+   "b48",
+   "b49",
+   "b50",
+   "b51",
+   "b52",
+   "b53",
+   "b54"
+  ],
+  "of": 54,
+  "measured": 54
+ },
+ "off_frame": {
+  "errors": 18,
+  "first": [
+   "b06: words cut by the frame edge at 47.2s: \"effect\" at [-92, 156, 94, 278], \"twice, while she was presenting.\" at [-1466, -65, 204, 86], \"please let her finish before you\" at [-648, 126, 972, 277] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b07: words cut by the frame edge at 54.5s: \"effect\" at [-92, 156, 94, 278], \"twice, while she was presenting.\" at [-1466, -65, 204, 86], \"please let her finish before you\" at [-648, 126, 972, 277] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b08: words cut by the frame edge at 63.4s: \"effect\" at [-92, 156, 94, 278], \"twice, while she was presenting.\" at [-1466, -65, 204, 86], \"please let her finish before you\" at [-648, 126, 972, 277] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b09: words cut by the frame edge at 75.1s: \"effect\" at [-92, 156, 94, 278], \"twice, while she was presenting.\" at [-1466, -65, 204, 86], \"please let her finish before you\" at [-648, 126, 972, 277] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b10: words cut by the frame edge at 83.3s: \"effect\" at [-92, 156, 94, 278], \"twice, while she was presenting.\" at [-1466, -65, 204, 86], \"please let her finish before you\" at [-648, 126, 972, 277] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b30: words cut by the frame edge at 259.0s: \"What the camera does catch. We check it \" at [-3838, 1052, 433, 1297], \"In today's meeting you interrupted Sam t\" at [-1412, 449, 2207, 650], \"she was presenting. I lost track of her \" at [-1412, 650, 2053, 851] (move or shrink the element, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b41"
+  ],
+  "of": 28,
+  "worst": 3.19
+ },
+ "dim_off": {
+  "moments": [
+   "b23 light 197.06s on frame 0",
+   "b27 spotlight 227.21s on frame 0",
+   "b34 light 293.94s on frame 0",
+   "b37 spotlight 336.84s on frame 0",
+   "b42 spotlight 371.46s on frame 0"
+  ],
+  "of": 5
+ },
+ "empty": {
+  "errors": 0,
+  "first": []
+ },
+ "kinds": {
+  "foreign_pixels": 37,
+  "off_frame": 12,
+  "runtime held_missing": 9,
+  "hf contrast contrast_aa_failure": 9,
+  "hf layout content_overlap": 7,
+  "words_cut": 6,
+  "runtime scene_threw": 3,
+  "runtime unknown_motion_setting": 3,
+  "runtime held_needs_same_station": 3,
+  "runtime unknown_token": 2,
+  "blurred_beat": 2,
+  "runtime tween_threw": 1,
+  "runtime text_spill": 1,
+  "runtime tight_inset": 1,
+  "runtime text_overflow": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 3,
+   "kinds": {
+    "length": 3
+   },
+   "first": [
+    "pacing.target_duration_s is 600s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it",
+    "the plan says no length was requested ('no requested length'), but the request asks for 2 minutes (120s): set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~485s but the request asks for about 120s (at most 156s); cut about 689 words or whole beats to the requested length",
+    "54 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 25,
+   "kinds": {
+    "cast": 18,
+    "allocation": 5,
+    "placeholder": 2
+   },
+   "first": [
+    "b11: props.lines[1].text = 'Behaviour, Effect, Request: three empty slots' describes the slot instead of filling it ('empty' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b27: props.lines[2].text = 'Request: still empty' describes the slot instead of filling it ('empty' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b23: allocation says hybrid but this is a plain template: give it its motion layer (shot.move push or pull, or a `continue` join that keeps and builds on the previous picture), or make it a blueprint or bespoke scene",
+    "b27: allocation says hybrid but this is a plain template: give it its motion layer (shot.move push or pull, or a `continue` join that keeps and builds on the previous picture), or make it a blueprint or bespoke scene",
+    "b34: allocation says hybrid but this is a plain template: give it its motion layer (shot.move push or pull, or a `continue` join that keeps and builds on the previous picture), or make it a blueprint or bespoke scene"
+   ]
+  },
+  "scenes": {
+   "errors": 22,
+   "kinds": {
+    "cast": 15,
+    "ctx.held(['dev']) but the previous beat ": 2,
+    "ctx.held(['Priya', 'Dev']) but the previ": 1,
+    "ctx.held(['captions']) but the previous ": 1,
+    "ctx.held(['specific_sentence', 'old_line": 1,
+    "ctx.held('slot_one_words') but the previ": 1,
+    "ctx.held('desk') but the previous beat b": 1
+   },
+   "first": [
+    "b02.js: ctx.held(['Priya', 'Dev']) but the previous beat b01 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b07.js: ctx.held(['dev']) but the previous beat b06 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b10.js: ctx.held(['dev']) but the previous beat b09 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b13.js: ctx.held(['captions']) but the previous beat b12 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b18.js: ctx.held(['specific_sentence', 'old_line']) but the previous beat b17 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 474s but the request asks for about 120s (at most 156s): the script must lose about 75 % of its words"
+   ]
+  }
+ }
+}

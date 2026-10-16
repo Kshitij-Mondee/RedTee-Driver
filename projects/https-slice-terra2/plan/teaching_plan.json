@@ -1,0 +1,227 @@
+{
+  "title": "How HTTPS Keeps Your Data Private",
+  "performance": "After the lesson the viewer explains in their own words why a padlocked site protects what they send (identity check, shared key, scrambled data), and before typing something sensitive reads the site name exactly and looks for a certificate warning, knowing the padlock does not vouch for the site's owner.",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "Uses browsers daily, has seen the padlock, knows little or nothing about how it works. No jargon assumed.",
+    "why": "Corporate employees across functions; prior knowledge is the only attribute worth branching on, so the lesson starts from the padlock they already see.",
+    "motivation": "Wants to know whether what they type at work and at home can be read by anyone else.",
+    "context": "A short two minute video watched at a desk; they need one habit they can use the same day."
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "scenario_led",
+    "rationale": "One login form with one watcher on the path runs through hook, build, check and payoff, so each idea is met as the next thing that happens to the same request. Fits a conceptual topic with no numbers and a short length for practitioners who want decisions soon.",
+    "signature_move": "Send one form submission along the path and change what the watcher sees at each step: readable, identity checked, key agreed, scrambled; then test the same request against a failed check."
+  },
+  "misconceptions": [
+    {
+      "belief": "Nobody but the browser and the server can get at what I send; the network between them is private.",
+      "why_tempting": "Nothing visible happens on the way, so it feels private.",
+      "evidence": "F1, F2: plain traffic is readable text and crosses devices such as Wi-Fi networks and routers; anyone who can see one point on the path can copy it. Say 'anyone on the path', not 'anyone on the internet'.",
+      "refuted_in": "s1_exposed"
+    },
+    {
+      "belief": "If the padlock is showing, the site is safe and its owner can be trusted.",
+      "why_tempting": "A padlock looks like a seal of approval.",
+      "evidence": "F14, F15: the padlock means the connection is encrypted and the certificate matched the domain; a scammer can hold a valid certificate for a domain they control, including a lookalike name.",
+      "refuted_in": "s6_habit"
+    },
+    {
+      "belief": "The padlock protects my data wherever it goes, including after it arrives.",
+      "why_tempting": "'Secure' sounds like it covers the whole journey and what happens after.",
+      "evidence": "F16: the server decrypts the data on arrival and what the site's owner does with it is not controlled by the padlock.",
+      "refuted_in": "s6_habit"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine you press Submit on a login form while a watcher sits on the path. What does the watcher see?",
+      "on_screen_essence": "Submit. What does the watcher see?"
+    },
+    "promise": "Follow this one request from browser to server, then say why the watcher now sees only noise, and what the padlock does and does not tell you.",
+    "bridge_from_prior": "No separate bridge for two minutes: the viewer already sees the padlock, and the promise leads straight into the build by naming the padlock as the result to explain.",
+    "sections": [
+      {
+        "id": "s1_exposed",
+        "goal": "the viewer can explain why plain traffic can be read by anyone on the path",
+        "bloom": "understand",
+        "concepts": [
+          "plain HTTP is readable text (F1)",
+          "a watcher anywhere on the path can read and even change it (F2)"
+        ],
+        "energy": "build",
+        "carrier": "system_diagram_in_motion",
+        "recap_after": false,
+        "est_s": 12,
+        "on_screen_change": "Packets of readable text travel from browser to server; the watcher on the path copies one and shows the same readable text."
+      },
+      {
+        "id": "s2_identity",
+        "goal": "the viewer can describe the three checks a browser makes on a server's certificate",
+        "bloom": "understand",
+        "concepts": [
+          "a certificate ties a domain name to a public key, signed by a certificate authority (F4)",
+          "name matches, not expired, trusted signer (F5)",
+          "the server must also prove it holds the matching private key (F6)"
+        ],
+        "energy": "steady",
+        "carrier": "certificate_inspection",
+        "recap_after": false,
+        "est_s": 18,
+        "on_screen_change": "A certificate card arrives at the browser; three ticks appear one at a time for signer, name and dates."
+      },
+      {
+        "id": "s3_key",
+        "goal": "the viewer can explain how both ends end up with the same key while the watcher does not",
+        "bloom": "understand",
+        "concepts": [
+          "in modern HTTPS each side contributes a temporary value and both combine them to the same session key (F7)",
+          "the key itself is never sent across the network (F7)",
+          "a watcher who records everything still cannot practically work out the key (F8)"
+        ],
+        "energy": "peak",
+        "carrier": "key_agreement_animation",
+        "recap_after": true,
+        "est_s": 20,
+        "on_screen_change": "Browser and server each send a visible value across; the watcher copies both but gets no key; matching keys appear at the two ends only. No maths."
+      },
+      {
+        "id": "s4_scramble",
+        "goal": "the viewer can describe how data is scrambled with the key and unscrambled at the far end",
+        "bloom": "understand",
+        "concepts": [
+          "HTTPS is the same request inside a protected channel set up by TLS (F3)",
+          "one shared key scrambles at one end and unscrambles at the other (F10)",
+          "the key is used for the data because it is much faster (F11)",
+          "the watcher can copy the bytes but not read them, and tampering shows up as an error (F12, F13)"
+        ],
+        "energy": "steady",
+        "carrier": "data_transformation",
+        "recap_after": false,
+        "est_s": 18,
+        "on_screen_change": "The same readable form data turns into scrambled blocks at the browser, passes the watcher as noise, and turns readable again at the server."
+      },
+      {
+        "id": "s5_check",
+        "goal": "the viewer can apply the certificate checks to a site whose certificate was issued for a different name",
+        "bloom": "apply",
+        "concepts": [
+          "a failed check makes the browser show a full-page warning and not load the site by default (F18)",
+          "proceeding anyway gives up the identity check (F5, F9)"
+        ],
+        "energy": "peak",
+        "carrier": "decision_card",
+        "recap_after": true,
+        "est_s": 16,
+        "on_screen_change": "The same request is sent to a site whose certificate card shows a different name; the name check turns red and the options appear."
+      },
+      {
+        "id": "s6_habit",
+        "goal": "the viewer can say what the padlock shows and does not show, and which two things to check before typing",
+        "bloom": "analyze",
+        "concepts": [
+          "padlock means encrypted and the certificate was accepted for that exact domain (F14)",
+          "not proof the site is honest or safe (F15)",
+          "no protection once data has arrived (F16)",
+          "read the exact domain name and look for a warning; the name matters more than the icon (F19)"
+        ],
+        "energy": "rest",
+        "carrier": "address_bar_checklist",
+        "recap_after": false,
+        "est_s": 14,
+        "on_screen_change": "An address bar appears beside the padlock; two ticks are added (exact name, no warning); two 'does not show' labels are added beside it."
+      }
+    ],
+    "payoff": "Return to the opening form: same data, same network, same watcher, who now sees only scrambled noise, while the padlock closes. The viewer can answer the hook's question and says what they will check next time."
+  },
+  "practice_ladder": [
+    {
+      "step": "worked",
+      "where": "s2_identity to s4_scramble",
+      "what": "The single request is walked through identity, key and scrambled data with the narrator doing each step."
+    },
+    {
+      "step": "faded",
+      "where": "pause after s4_scramble, answered in s5_check",
+      "what": "A new site with a certificate issued for a different name; the viewer decides what the browser should do before the answer appears."
+    },
+    {
+      "step": "independent",
+      "where": "s6_habit and transfer task",
+      "what": "The viewer applies the two-point check to a real form of their own after the video."
+    }
+  ],
+  "pacing": {
+    "requested_s": 76,
+    "target_duration_s": 76,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "s3_key"
+    ],
+    "recall_moments": [
+      {
+        "kind": "recall_prompt",
+        "after_section": "s3_key",
+        "prompt": "The key only means something once the identity check has passed. What were the three checks?",
+        "answer": "Signed by a trusted authority, name matches, within its dates."
+      },
+      {
+        "kind": "quiz",
+        "after_section": "s4_scramble",
+        "prompt": "A site's certificate was issued for a different name than the one in the address bar. What should the browser do?",
+        "options": [
+          "Continue quietly, because the connection is still scrambled",
+          "Warn the user and not load the site by default",
+          "Switch to the plain version of the site"
+        ],
+        "answer": "Warn the user and not load the site by default",
+        "tempting_wrong": "Continue quietly, because the connection is still scrambled. Scrambling alone does not say who holds the other end of the key; the identity check does, and proceeding anyway removes it."
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "Before the next time you enter a password or card detail, read the domain name in the address bar letter by letter and check that the browser shows no certificate warning, then decide whether to continue."
+  ],
+  "framework_audit": {
+    "gagne": {
+      "attention": "arc.hook: the form submitted with a watcher on the path",
+      "recall_prior": "arc.bridge_from_prior and audience.assumed_prior: the padlock the viewer already sees",
+      "present": "arc.sections s1 to s4, then s6",
+      "guidance": "strategy.signature_move and the worked steps in practice_ladder",
+      "practice": "pacing.recall_moments: recall_prompt after s3_key, quiz after s4_scramble",
+      "transfer": "arc.payoff and transfer_tasks",
+      "inform_objective": "arc.promise",
+      "feedback": "the s5_check answer explains why the tempting option fails",
+      "assess": "the quiz after s4_scramble; no further assessment in two minutes"
+    },
+    "merrill": {
+      "problem_centred": "one login form with a watcher runs through every section",
+      "activation": "the padlock the viewer already sees",
+      "demonstration": "s2 to s4 show each step on the same request",
+      "application": "quiz after s4_scramble, answered in s5_check",
+      "integration": "s6_habit and transfer_tasks put the check into the viewer's own typing"
+    },
+    "mayer": {
+      "coherence": "one board, no decoration, no people",
+      "signalling": "one loud change at a time, listed in each section's on_screen_change",
+      "redundancy": "narration carries the explanation; on-screen text is labels only",
+      "contiguity": "each label appears as the narration names the idea",
+      "segmenting": "six short sections, one idea each",
+      "pre_training": "each term is named only after it has been seen on screen"
+    },
+    "arcs": {
+      "attention": "the viewer is the person whose form is exposed",
+      "relevance": "what they type at work and at home",
+      "confidence": "one request, three steps, no maths",
+      "satisfaction": "the payoff shows the watcher seeing only noise"
+    },
+    "bloom_path": "understand -> understand -> understand -> understand -> apply -> analyze"
+  },
+  "flags": [
+    "REST-TOO-SHORT: a rest section over 180 s cannot fit in a 120 s video; s6_habit is the only rest, at about 14 s.",
+    "Key agreement kept to the idea only (F8 caveat: cannot practically work out, not impossible); no maths. Say 'in modern HTTPS' (F7). Browser padlock designs differ (F14 caveat), so the picture should be generic.",
+    "The network can usually still see which site name is visited (F17); not shown as hidden, and not needed in two minutes."
+  ]
+}

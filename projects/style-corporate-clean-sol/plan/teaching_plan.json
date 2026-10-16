@@ -1,0 +1,155 @@
+{
+  "title": "The 3-2-1 backup rule: why one copy is never enough",
+  "performance": "the viewer checks where their important work files live and adds the missing copies so each is held as three copies, on two kinds of storage, one offsite",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "knows backups exist; assumes a file saved on the laptop, or synced, is safe",
+    "why": "corporate employees working from laptops; the brief names a non-technical audience",
+    "motivation": "not losing a deliverable or a week of work",
+    "context": "watched between tasks, with sound, at a desk; under two minutes"
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "concrete_first",
+    "rationale": "the rule is three bare numbers that only mean something when seen on one file facing real failures; each number answers one visible way the running example's report can be lost (F4, F5, F7, F8)",
+    "signature_move": "show the report facing one failure, add the copy that survives it, then name the part of the rule that copy satisfied"
+  },
+  "misconceptions": [
+    {
+      "belief": "a file saved on my laptop, or a second copy kept on the same laptop or in the same bag, is safe",
+      "why_tempting": "the file opens every day, and a second copy feels like a backup",
+      "refuted_in": "sec2",
+      "source_anchor": "knowledge F7; brief must_cover 3"
+    },
+    {
+      "belief": "more copies is what makes data safe",
+      "why_tempting": "the rule starts with a count, three",
+      "refuted_in": "sec2",
+      "source_anchor": "knowledge not_claimed: copies that can fail together add little; F6, F7"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Say your report is due tomorrow and lives in one place, your laptop. Tonight the drive stops working."
+    },
+    "promise": "one rule of three numbers makes that night survivable, and you can check your own files against it",
+    "bridge_from_prior": "sec1 starts from what the viewer already does: saving work to the laptop and trusting it",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain why a single copy of a file is a single point of failure",
+        "bloom": "understand",
+        "concepts": [
+          "single point of failure"
+        ],
+        "energy": "build",
+        "carrier": "the report on one laptop, the drive failing",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can use the 3-2-1 rule to place three copies of a file: the original plus two backups, on two kinds of storage, one offsite",
+        "bloom": "apply",
+        "concepts": [
+          "3-2-1 rule",
+          "two kinds of storage",
+          "offsite copy"
+        ],
+        "energy": "peak",
+        "carrier": "the report copied to a second device and to the cloud, each copy surviving a different failure",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can diagnose which part of the rule a given setup breaks",
+        "bloom": "analyze",
+        "concepts": [
+          "copies that fail together"
+        ],
+        "energy": "rest",
+        "carrier": "a check: a laptop and a USB drive in the same bag, then the opening failure replayed and survived",
+        "recap_after": false
+      }
+    ],
+    "payoff": "the same drive fails the night before; the report opens from the second device or the cloud, because the copies could not all fail together"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec2",
+      "what": "each copy of the report added in answer to a named failure, narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "sec3",
+      "what": "the viewer names the broken part of the rule for the same-bag setup before the narrator does"
+    },
+    {
+      "stage": "independent",
+      "where": "transfer",
+      "what": "the viewer checks their own three most important files against the rule"
+    }
+  ],
+  "pacing": {
+    "requested_s": 105,
+    "target_duration_s": 105,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "one offsite: copies in one place fail together"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "pause_predict",
+        "prompt_sketch": "A laptop and a USB drive carried in the same bag: which part of 3-2-1 does it break?",
+        "answer": "the one offsite copy: both copies share one place, so one theft or loss takes both",
+        "tempting_wrong": "'it is fine, there are two kinds of storage and a backup': true, but they travel together (F7, F8)"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "list where your three most important work files live today and name which part of 3-2-1 each one is missing"
+  ],
+  "persona": {
+    "voice": "a capable colleague who has watched someone lose a week of work: calm, practical, a little dry",
+    "delivery_notes": "slower on each of the three numbers as it is named; a short pause after the check question; brisk on the payoff"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the report's only copy, the drive fails",
+      "objective": "promise: check your own files against one rule",
+      "recall_prior": "sec1 starts from saving to the laptop",
+      "present": "sec2 adds copies one failure at a time",
+      "guidance": "signature move: failure, copy, name",
+      "practice": "pause_predict after sec2 (same-bag setup)",
+      "feedback": "the answer explains why 'two kinds of storage' is not enough there",
+      "assess": "sec3 check",
+      "transfer": "transfer task: your own three files"
+    },
+    "merrill": {
+      "problem_centered": "the report at risk is the running problem",
+      "activation": "sec1 from the everyday habit of saving locally",
+      "demonstration": "sec2 shows each copy surviving its failure before naming the rule's part",
+      "application": "sec3 same-bag check",
+      "integration": "payoff replays the failure; transfer task hands the check over"
+    },
+    "mayer": {
+      "coherence": "one file, one laptop, one running example; no side stories",
+      "signalling": "each number shown large as it is named; one slowdown on offsite",
+      "redundancy": "labels only on screen, narration explains",
+      "contiguity": "each copy appears as it is spoken",
+      "segmenting": "three short sections, one idea each",
+      "pre_training": "sec1 names single point of failure before the rule"
+    },
+    "arcs": {
+      "attention": "the report's last night",
+      "relevance": "the viewer's own deliverables",
+      "confidence": "one rule, three numbers, each seen working",
+      "satisfaction": "the payoff: the same failure, survived"
+    },
+    "bloom_path": "understand -> apply -> analyze"
+  },
+  "series": null,
+  "flags": []
+}

@@ -1,0 +1,595 @@
+{
+ "title": "Loom topic packs: 3D sets and models, device swap, physics, brush and orb recipes (2026-10-08)",
+ "out": "docs/styles/demos/2026-10-08_topic_packs_reel.mp4",
+ "music": {
+  "mood": "calm_focus",
+  "root_midi": 50
+ },
+ "segments": [
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "dc_aisle_pair (data centre set)",
+   "sub": "racks face each other across the cold aisle; air goes front to back; containment closes the aisle",
+   "params": {
+    "model": "dc_aisle_pair",
+    "opts": {
+     "racks": 5,
+     "mode": "cold",
+     "supply": "floor",
+     "labels": {
+      "cold": "Cold aisle",
+      "hot": "Hot aisle"
+     }
+    },
+    "states": [
+     {
+      "key": "t",
+      "from": 0,
+      "to": 6,
+      "at": 0,
+      "dur": 6
+     },
+     {
+      "key": "airflow",
+      "from": 0,
+      "to": 1,
+      "at": 0.6,
+      "dur": 0.6
+     },
+     {
+      "key": "mixing",
+      "from": 0,
+      "to": 1,
+      "at": 1.8,
+      "dur": 0.5
+     },
+     {
+      "key": "containment",
+      "from": 0,
+      "to": 1,
+      "at": 2.9,
+      "dur": 1.1
+     },
+     {
+      "key": "thermal",
+      "from": 0,
+      "to": 1,
+      "at": 4.7,
+      "dur": 0.6
+     }
+    ],
+    "light": "studio",
+    "turn": -0.6,
+    "elevation": 30,
+    "mood": "cold_aisle"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "cinematic-noir",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "gpu_server (liquid form)",
+   "sub": "eight identical modules on one baseboard; cool supply in, warm return out",
+   "params": {
+    "model": "gpu_server",
+    "opts": {
+     "cooling": "liquid"
+    },
+    "states": [
+     {
+      "key": "t",
+      "from": 0,
+      "to": 6,
+      "at": 0,
+      "dur": 6
+     },
+     {
+      "key": "lid",
+      "from": 0,
+      "to": 1,
+      "at": 0.6,
+      "dur": 1
+     },
+     {
+      "key": "flow",
+      "from": 0,
+      "to": 1,
+      "at": 1.6,
+      "dur": 0.8
+     },
+     {
+      "key": "load",
+      "from": 0,
+      "to": 1,
+      "at": 2.2,
+      "dur": 1.4
+     }
+    ],
+    "light": "studio",
+    "turn": 1.0,
+    "elevation": 32,
+    "mood": "machine_night"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "engineering",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "power_path (2N power, isometric)",
+   "sub": "utility fails: the UPS carries, the generator starts, the server stays lit",
+   "params": {
+    "model": "power_path",
+    "opts": {
+     "failPath": "b",
+     "labels": {
+      "utility": "Utility",
+      "transformer": "Transformer",
+      "switchgear": "Switchgear",
+      "generator": "Generator",
+      "ups": "UPS",
+      "pdu": "PDU",
+      "server": "Server",
+      "a": "A",
+      "b": "B"
+     }
+    },
+    "states": [
+     {
+      "key": "t",
+      "from": 0,
+      "to": 6,
+      "at": 0,
+      "dur": 6
+     },
+     {
+      "key": "flow",
+      "from": 0,
+      "to": 1,
+      "at": 0.2,
+      "dur": 0.6
+     },
+     {
+      "key": "utility_fail",
+      "from": 0,
+      "to": 1,
+      "at": 1.6,
+      "dur": 2.2
+     },
+     {
+      "key": "path_fail",
+      "from": 0,
+      "to": 1,
+      "at": 4.7,
+      "dur": 0.5
+     }
+    ],
+    "light": "iso",
+    "turn": 0.9,
+    "mood": "blueprint_iso"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "dark-technical",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "embedding_space",
+   "sub": "similar meanings sit close; the lit neighbours are the real nearest points",
+   "params": {
+    "model": "embedding_space",
+    "opts": {
+     "clusters": [
+      "animals",
+      "vehicles",
+      "fruit"
+     ],
+     "per": 12,
+     "k": 4,
+     "query": 0,
+     "seed": 7,
+     "offset": [
+      {
+       "from": [
+        1,
+        6
+       ],
+       "to": [
+        2,
+        0
+       ]
+      },
+      {
+       "from": [
+        1,
+        11
+       ],
+       "to": [
+        2,
+        8
+       ]
+      }
+     ],
+     "caption": "A 3D projection of a space with hundreds of dimensions"
+    },
+    "states": [
+     {
+      "key": "scatter",
+      "from": 0,
+      "to": 1,
+      "at": 0.6,
+      "dur": 1.4
+     },
+     {
+      "key": "query",
+      "from": 0,
+      "to": 1,
+      "at": 2.3,
+      "dur": 1.2
+     },
+     {
+      "key": "offset",
+      "from": 0,
+      "to": 1,
+      "at": 3.9,
+      "dur": 1.0
+     }
+    ],
+    "light": "studio",
+    "turn": 1.0,
+    "elevation": 18,
+    "mood": "latent_space"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "loss_landscape",
+   "sub": "a descent computed from the surface's own gradient; a large learning rate zigzags",
+   "params": {
+    "model": "loss_landscape",
+    "opts": {
+     "lr": "large",
+     "minima": 1,
+     "axes": [
+      "weight 1",
+      "weight 2",
+      "loss"
+     ],
+     "caption": "A two-weight slice of a far larger space"
+    },
+    "states": [
+     {
+      "key": "contours",
+      "from": 0,
+      "to": 1,
+      "at": 0.6,
+      "dur": 1.2
+     },
+     {
+      "key": "descend",
+      "from": 0,
+      "to": 1,
+      "at": 1.6,
+      "dur": 3.6
+     }
+    ],
+    "light": "studio",
+    "turn": 1.0,
+    "elevation": 30,
+    "mood": "clean_bench"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "editorial-paper",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "chunk_cabinet (RAG retrieval)",
+   "sub": "the query finds the chunks; the chosen drawers open in rank order",
+   "params": {
+    "model": "chunk_cabinet",
+    "opts": {
+     "labels": [
+      "Leave policy",
+      "Expenses",
+      "Travel",
+      "Security",
+      "Onboarding",
+      "Benefits",
+      "Payroll",
+      "IT help"
+     ],
+     "query": "How many leave days?",
+     "topk": [
+      0,
+      5,
+      6
+     ]
+    },
+    "states": [
+     {
+      "key": "index",
+      "from": 0,
+      "to": 1,
+      "at": 0.3,
+      "dur": 1.5
+     },
+     {
+      "key": "query",
+      "from": 0,
+      "to": 1,
+      "at": 1.9,
+      "dur": 1.0
+     },
+     {
+      "key": "topk",
+      "from": 0,
+      "to": 1,
+      "at": 3.0,
+      "dur": 1.1
+     },
+     {
+      "key": "hand_off",
+      "from": 0,
+      "to": 1,
+      "at": 4.2,
+      "dur": 1.2
+     }
+    ],
+    "light": "studio",
+    "turn": 0.7,
+    "elevation": 16,
+    "mood": "clean_bench"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "transformer_stack",
+   "sub": "identical blocks; one opens to show causal attention; the output is a spread",
+   "params": {
+    "model": "transformer_stack",
+    "opts": {
+     "blocks": 4,
+     "focus": 1,
+     "tokens": [
+      "The",
+      "cat",
+      "sat",
+      "on"
+     ],
+     "probs": [
+      0.08,
+      0.05,
+      0.46,
+      0.12,
+      0.04,
+      0.15,
+      0.06,
+      0.04
+     ],
+     "outLabels": [
+      "a",
+      "my",
+      "the",
+      "it",
+      "to",
+      "his",
+      "one",
+      "her"
+     ]
+    },
+    "states": [
+     {
+      "key": "pass",
+      "from": 0,
+      "to": 1,
+      "at": 0.5,
+      "dur": 1.9
+     },
+     {
+      "key": "open",
+      "from": 0,
+      "to": 1,
+      "at": 2.6,
+      "dur": 0.9
+     },
+     {
+      "key": "predict",
+      "from": 0,
+      "to": 1,
+      "at": 4.4,
+      "dur": 1.0
+     }
+    ],
+    "light": "studio",
+    "turn": 1.2,
+    "elevation": 14,
+    "mood": "clean_bench"
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "device_shot",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 5.0,
+   "label": "device_shot: phone",
+   "sub": "the same beat, device = phone",
+   "params": {
+    "device": "phone",
+    "screen": {
+     "kind": "notification",
+     "title": "Sign-in request",
+     "line": "Was this you? Approve to continue"
+    },
+    "arrive_at": 0.1,
+    "wake_at": 0.8
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "device_shot",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 5.0,
+   "label": "device_shot: laptop (swapped)",
+   "sub": "py -m loom device <id> <beat> laptop: same screen, new device, nothing rewritten",
+   "params": {
+    "device": "laptop",
+    "screen": {
+     "kind": "notification",
+     "title": "Sign-in request",
+     "line": "Was this you? Approve to continue"
+    },
+    "arrive_at": 0.1,
+    "lid_at": 0.5,
+    "wake_at": 1.4
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "story-cartoon",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "office_floor (workplace set)",
+   "sub": "one desk stays lit; its owner stepped away and left the screen unlocked",
+   "params": {
+    "model": "office_floor",
+    "opts": {
+     "rows": 4,
+     "cols": 3,
+     "focus": 7
+    },
+    "states": [
+     {
+      "key": "lights",
+      "from": 0,
+      "to": 1,
+      "at": 0.3,
+      "dur": 1.6
+     },
+     {
+      "key": "dim",
+      "from": 0,
+      "to": 1,
+      "at": 2.3,
+      "dur": 0.8
+     },
+     {
+      "key": "away",
+      "from": 0,
+      "to": 1,
+      "at": 3.5,
+      "dur": 1.2
+     }
+    ],
+    "light": "iso",
+    "turn": 0.6
+   }
+  },
+  {
+   "kind": "three",
+   "scene": "model_turntable",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "badge_door",
+   "sub": "one badge, one person: the shadow that follows trips the reader",
+   "params": {
+    "model": "badge_door",
+    "opts": {
+     "status": "ok"
+    },
+    "states": [
+     {
+      "key": "tap",
+      "from": 0,
+      "to": 1,
+      "at": 1.0,
+      "dur": 0.4
+     },
+     {
+      "key": "open",
+      "from": 0,
+      "to": 1,
+      "at": 1.6,
+      "dur": 1.0
+     },
+     {
+      "key": "tailgate",
+      "from": 0,
+      "to": 1,
+      "at": 2.6,
+      "dur": 2.2
+     }
+    ],
+    "light": "studio",
+    "turn": 1.0,
+    "elevation": 22
+   }
+  },
+  {
+   "kind": "lab",
+   "scene": "recipe_phys_sieve",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 6.6,
+   "label": "Loom.physics.sieve",
+   "sub": "layered defences: each layer stops exactly the counts the lesson gives"
+  },
+  {
+   "kind": "lab",
+   "scene": "recipe_phys_context_window",
+   "style": "dark-technical",
+   "from": 0.0,
+   "to": 8.0,
+   "label": "Loom.physics.contextWindow",
+   "sub": "a fixed window: when it is full the oldest tile leaves"
+  },
+  {
+   "kind": "lab",
+   "scene": "recipe_brush_redflags",
+   "style": "whiteboard",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "Loom.brush.redFlags",
+   "sub": "pencil rings round the red flags of a real email, in spoken order"
+  },
+  {
+   "kind": "lab",
+   "scene": "recipe_orb_toolloop",
+   "style": "corporate-clean",
+   "from": 0.0,
+   "to": 6.5,
+   "label": "Loom.orb.toolLoop",
+   "sub": "plan, act, observe: the active tool lights"
+  },
+  {
+   "kind": "lab",
+   "scene": "recipe_orb_states",
+   "style": "glow-flat",
+   "from": 0.0,
+   "to": 6.0,
+   "label": "new orb states",
+   "sub": "unsure, checking, paused"
+  }
+ ]
+}

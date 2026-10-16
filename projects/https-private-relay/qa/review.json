@@ -1,0 +1,12 @@
+{
+  "findings": [
+    {
+      "file": "scenes/b11.js",
+      "beat": "b11",
+      "fix": "In scenes/b11.js, exit the held packet from b10 via m.exit(ctx.held(\"packet\"), ctx.start) and start the travel of the fresh packet so premature residue is not rendered over the watcher router box and eye during the join.",
+      "problem": "In b11 join (73.55s) and arrive (74.25s), scrambled packet blocks are rendered directly over the router box and eye graphic before the move begins, creating double-exposure residue across the central watcher device.",
+      "severity": "major"
+    }
+  ],
+  "verdict": "fix"
+}

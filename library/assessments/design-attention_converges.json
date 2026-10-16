@@ -1,0 +1,63 @@
+{
+ "form": "design:attention_converges",
+ "decision": "defer",
+ "confidence": "high",
+ "topic_independent": true,
+ "idea": "a group of seated figures turn one by one to face a single focus, and dashed sight lines converge on it to show where the group's attention has landed",
+ "outline": [
+  "plan-view setting drawn first (walls, a table, an optional focal surface)",
+  "peer figures arrive as top-down heads, each facing a starting target",
+  "the heads rotate in a fixed clockwise order with a short stagger onto the focus",
+  "dashed sight lines draw from the heads and reach the focus together",
+  "a short caption settles and the frame holds"
+ ],
+ "variation_seen": [
+  "b02 (hook): five peers swing from a pinned note onto one ringed person; five curved dashed lines (one bent over the table) converge and stay; the heads are five separate elements; caption 'Every head turns'",
+  "b28 (payoff): the same room, deliberately redrawn from b02 and shifted 150 px left with the board widened; it opens on b02's frozen end state and runs b02's turn in reverse onto the whiteboard, the focal person turns too, and only two straight dashed lines draw and then fade out",
+  "b28's real content is not the turn but the board filling with three owned fixes (icon cards, owner chips, ticks); a reviewer cut its sight lines from six to two because they competed with that content",
+  "the two scenes share geometry by comment ('SHARED with b28, do not change it here without changing b28'): they are one held picture used as a bookend, not two independent uses"
+ ],
+ "closest_existing": {
+  "id": "hero.hub",
+  "falls_short": "hero.hub draws spokes outward from a centre to labelled satellites and sends signals along them; it has no figures, no turning, and no change of focus, so it cannot show a group's attention moving onto one thing. scenario.dialogue has people but only two, facing each other, with speech bubbles."
+ },
+ "jobs": [
+  "hook",
+  "payoff"
+ ],
+ "content_shape": "4-6 unnamed peers, one focus (a person or an object), optionally a prior focus they turn away from",
+ "future_uses": [
+  {
+   "topic": "running effective meetings",
+   "shows": "everyone at the table turns from the agenda screen to the most senior person the moment they speak, showing deference killing discussion"
+  },
+  {
+   "topic": "presentation skills",
+   "shows": "an audience's heads turn from the speaker to a slide dense with text, showing the slide stealing attention"
+  },
+  {
+   "topic": "customer service in a branch",
+   "shows": "staff behind a counter all turn toward one complaining customer while the queue is left unattended"
+  }
+ ],
+ "params_sketch": {
+  "content": [
+   "focus.label",
+   "from.label",
+   "caption"
+  ],
+  "adjustable": [
+   "peers (count 3-6)",
+   "setting (table, rows, counter)",
+   "lines (all, nearest, none)",
+   "direction (onto focus, away from focus)"
+  ]
+ },
+ "selection_test": null,
+ "reason": "The idea is topic-independent, but the evidence is one lesson and effectively one use: b28 is b02's room redrawn on purpose as a bookend (shared geometry by comment, opening on b02's frozen end state), and in b28 the turn is only staging for the board of fixes, which made its sight lines a clutter problem the reviewer had to cut. The future demand above is plausible but untested, and what actually recurs is the parts (turning_head, gaze_lines, whiteboard_panel, already tracked as element forms), so for now this stays bespoke and the element library should handle those parts; revisit once a second lesson reaches for a group turning its attention.",
+ "merge_into": null,
+ "revisit_when": {
+  "uses": 5,
+  "lessons": 2
+ }
+}

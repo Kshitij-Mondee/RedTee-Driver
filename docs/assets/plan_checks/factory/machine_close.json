@@ -1,0 +1,788 @@
+{
+ "scene": "machine_close",
+ "camera_spec": {
+  "camera": {
+   "x": 2.1,
+   "y": -1.6,
+   "eye": 1.6,
+   "yaw": 4,
+   "hfov": 50,
+   "horizon_pct": 48
+  },
+  "walls": [
+   {
+    "name": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+    "axis": "y",
+    "at": 6.0
+   },
+   {
+    "name": "north side wall of the filling hall",
+    "axis": "y",
+    "at": 9.5
+   }
+  ],
+  "points": {
+   "M_head_top": [
+    2.95,
+    5.35,
+    1.75
+   ],
+   "M_head_centre": [
+    2.95,
+    5.35,
+    1.63
+   ],
+   "M_head_left": [
+    2.8400000000000003,
+    5.35,
+    1.65
+   ],
+   "M_head_right": [
+    3.06,
+    5.35,
+    1.65
+   ],
+   "M_chin": [
+    2.95,
+    5.35,
+    1.52
+   ],
+   "M_feet": [
+    2.95,
+    5.35,
+    0
+   ],
+   "O_head_top": [
+    4.7,
+    5.4,
+    1.75
+   ],
+   "O_head_centre": [
+    4.7,
+    5.4,
+    1.63
+   ],
+   "O_head_left": [
+    4.59,
+    5.4,
+    1.65
+   ],
+   "O_head_right": [
+    4.8100000000000005,
+    5.4,
+    1.65
+   ],
+   "O_chin": [
+    4.7,
+    5.4,
+    1.52
+   ],
+   "O_feet": [
+    4.7,
+    5.4,
+    0
+   ],
+   "encl_fl_top": [
+    0.0,
+    6.0,
+    2.2
+   ],
+   "encl_fl_floor": [
+    0.0,
+    6.0,
+    0
+   ],
+   "encl_fr_top": [
+    2.6,
+    6.0,
+    2.2
+   ],
+   "encl_fr_floor": [
+    2.6,
+    6.0,
+    0
+   ],
+   "encl_panel_top_l": [
+    0.0,
+    6.0,
+    1.0
+   ],
+   "encl_panel_top_r": [
+    2.6,
+    6.0,
+    1.0
+   ],
+   "door_hinge_top": [
+    0.3,
+    6.0,
+    2.1
+   ],
+   "door_hinge_r": [
+    2.3,
+    6.0,
+    1.3
+   ],
+   "door_meet_top": [
+    1.3,
+    6.0,
+    2.1
+   ],
+   "door_meet_bot": [
+    1.3,
+    6.0,
+    1.0
+   ],
+   "door_handle": [
+    1.45,
+    5.98,
+    1.3
+   ],
+   "interlock": [
+    1.35,
+    5.98,
+    2.05
+   ],
+   "cab_tl": [
+    2.6,
+    6.0,
+    2.0
+   ],
+   "cab_tr": [
+    3.6,
+    6.0,
+    2.0
+   ],
+   "cab_bl": [
+    2.6,
+    6.0,
+    0.3
+   ],
+   "cab_br": [
+    3.6,
+    6.0,
+    0.3
+   ],
+   "isolator": [
+    3.35,
+    5.98,
+    1.3
+   ],
+   "cab_lamps": [
+    3.5,
+    5.98,
+    1.9
+   ],
+   "cab_handle": [
+    2.7,
+    5.98,
+    1.1
+   ],
+   "estop_encl": [
+    2.5,
+    5.98,
+    1.2
+   ],
+   "hmi": [
+    0.4,
+    5.6,
+    1.5
+   ],
+   "andon": [
+    2.4,
+    6.6,
+    2.8
+   ],
+   "conv_x3.6": [
+    3.6,
+    6.4,
+    0.9
+   ],
+   "conv_x7": [
+    7.0,
+    6.4,
+    0.9
+   ],
+   "cw_l": [
+    4.6,
+    6.2,
+    1.0
+   ],
+   "cw_r": [
+    5.8,
+    6.2,
+    1.0
+   ],
+   "cw_box_top": [
+    5.9,
+    6.2,
+    1.4
+   ],
+   "wall_dado_x-1": [
+    -1,
+    9.5,
+    2.4
+   ],
+   "wall_dado_x8": [
+    8,
+    9.5,
+    2.4
+   ],
+   "wall_floor_x8": [
+    8,
+    9.5,
+    0
+   ],
+   "col_x-7.5_floor": [
+    -7.5,
+    9.3,
+    0
+   ],
+   "col_x-7.5_3m": [
+    -7.5,
+    9.3,
+    3
+   ],
+   "col_x0.0_floor": [
+    0.0,
+    9.3,
+    0
+   ],
+   "col_x0.0_3m": [
+    0.0,
+    9.3,
+    3
+   ],
+   "col_x7.5_floor": [
+    7.5,
+    9.3,
+    0
+   ],
+   "col_x7.5_3m": [
+    7.5,
+    9.3,
+    3
+   ],
+   "airmain_x5": [
+    5,
+    9.45,
+    3.2
+   ],
+   "O_ray_backwall": [
+    6.2,
+    9.5,
+    1.85
+   ],
+   "M_ray_cab": [
+    3.03,
+    6.0,
+    1.63
+   ],
+   "walk_front_x0": [
+    0,
+    3.8,
+    0
+   ],
+   "walk_front_x6": [
+    6,
+    3.8,
+    0
+   ],
+   "walk_back_x0": [
+    0,
+    5.0,
+    0
+   ],
+   "walk_back_x6": [
+    6,
+    5.0,
+    0
+   ],
+   "frame_left_floor": [
+    -1.0,
+    4.0,
+    0
+   ],
+   "screen_tl": [
+    0.25,
+    5.6,
+    1.6
+   ],
+   "screen_br": [
+    0.55,
+    5.6,
+    1.4
+   ],
+   "filler_r_top": [
+    -0.6,
+    6.0,
+    2.3
+   ],
+   "infeed_conv": [
+    -0.3,
+    6.4,
+    0.9
+   ]
+  },
+  "behind": [
+   "M_head_top",
+   "M_head_centre",
+   "M_head_left",
+   "M_head_right",
+   "M_chin",
+   "O_head_top",
+   "O_head_centre",
+   "O_head_left",
+   "O_head_right",
+   "O_chin"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 816,
+   "along_x": 30401,
+   "horizon_y": 518
+  },
+  "points": {
+   "M_head_top": {
+    "x": 1067,
+    "y": 474,
+    "where": "frame",
+    "depth": 6.99,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      3.03,
+      6.0,
+      1.76
+     ]
+    }
+   },
+   "M_head_centre": {
+    "x": 1067,
+    "y": 510,
+    "where": "frame",
+    "depth": 6.99,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      3.03,
+      6.0,
+      1.63
+     ]
+    }
+   },
+   "M_head_left": {
+    "x": 1035,
+    "y": 504,
+    "where": "frame",
+    "depth": 6.98,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      2.91,
+      6.0,
+      1.65
+     ]
+    }
+   },
+   "M_head_right": {
+    "x": 1099,
+    "y": 504,
+    "where": "frame",
+    "depth": 7.0,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      3.15,
+      6.0,
+      1.65
+     ]
+    }
+   },
+   "M_chin": {
+    "x": 1067,
+    "y": 542,
+    "where": "frame",
+    "depth": 6.99,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      3.03,
+      6.0,
+      1.51
+     ]
+    }
+   },
+   "M_feet": {
+    "x": 1067,
+    "y": 989,
+    "where": "frame",
+    "depth": 6.99
+   },
+   "O_head_top": {
+    "x": 1565,
+    "y": 475,
+    "where": "frame",
+    "depth": 7.16,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      4.92,
+      6.0,
+      1.76
+     ]
+    }
+   },
+   "O_head_centre": {
+    "x": 1565,
+    "y": 510,
+    "where": "frame",
+    "depth": 7.16,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      4.92,
+      6.0,
+      1.63
+     ]
+    }
+   },
+   "O_head_left": {
+    "x": 1534,
+    "y": 504,
+    "where": "frame",
+    "depth": 7.16,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      4.8,
+      6.0,
+      1.65
+     ]
+    }
+   },
+   "O_head_right": {
+    "x": 1596,
+    "y": 504,
+    "where": "frame",
+    "depth": 7.17,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      5.04,
+      6.0,
+      1.65
+     ]
+    }
+   },
+   "O_chin": {
+    "x": 1565,
+    "y": 541,
+    "where": "frame",
+    "depth": 7.16,
+    "behind": {
+     "wall": "lidder cabinet front (x 2.6 to 3.6) and the line's front plane",
+     "at": [
+      4.92,
+      6.0,
+      1.51
+     ]
+    }
+   },
+   "O_feet": {
+    "x": 1565,
+    "y": 978,
+    "where": "frame",
+    "depth": 7.16
+   },
+   "encl_fl_top": {
+    "x": 233,
+    "y": 352,
+    "where": "frame",
+    "depth": 7.43
+   },
+   "encl_fl_floor": {
+    "x": 233,
+    "y": 961,
+    "where": "frame",
+    "depth": 7.43
+   },
+   "encl_fr_top": {
+    "x": 952,
+    "y": 356,
+    "where": "frame",
+    "depth": 7.62
+   },
+   "encl_fr_floor": {
+    "x": 952,
+    "y": 951,
+    "where": "frame",
+    "depth": 7.62
+   },
+   "encl_panel_top_l": {
+    "x": 233,
+    "y": 685,
+    "where": "frame",
+    "depth": 7.43
+   },
+   "encl_panel_top_r": {
+    "x": 952,
+    "y": 681,
+    "where": "frame",
+    "depth": 7.62
+   },
+   "door_hinge_top": {
+    "x": 318,
+    "y": 380,
+    "where": "frame",
+    "depth": 7.46
+   },
+   "door_hinge_r": {
+    "x": 870,
+    "y": 600,
+    "where": "frame",
+    "depth": 7.6
+   },
+   "door_meet_top": {
+    "x": 597,
+    "y": 382,
+    "where": "frame",
+    "depth": 7.53
+   },
+   "door_meet_bot": {
+    "x": 597,
+    "y": 683,
+    "where": "frame",
+    "depth": 7.53
+   },
+   "door_handle": {
+    "x": 638,
+    "y": 601,
+    "where": "frame",
+    "depth": 7.52
+   },
+   "interlock": {
+    "x": 610,
+    "y": 395,
+    "where": "frame",
+    "depth": 7.51
+   },
+   "cab_tl": {
+    "x": 952,
+    "y": 410,
+    "where": "frame",
+    "depth": 7.62
+   },
+   "cab_tr": {
+    "x": 1219,
+    "y": 411,
+    "where": "frame",
+    "depth": 7.69
+   },
+   "cab_bl": {
+    "x": 952,
+    "y": 870,
+    "where": "frame",
+    "depth": 7.62
+   },
+   "cab_br": {
+    "x": 1219,
+    "y": 867,
+    "where": "frame",
+    "depth": 7.69
+   },
+   "isolator": {
+    "x": 1153,
+    "y": 599,
+    "where": "frame",
+    "depth": 7.65
+   },
+   "cab_lamps": {
+    "x": 1193,
+    "y": 438,
+    "where": "frame",
+    "depth": 7.66
+   },
+   "cab_handle": {
+    "x": 979,
+    "y": 654,
+    "where": "frame",
+    "depth": 7.6
+   },
+   "estop_encl": {
+    "x": 925,
+    "y": 627,
+    "where": "frame",
+    "depth": 7.59
+   },
+   "hmi": {
+    "x": 319,
+    "y": 548,
+    "where": "frame",
+    "depth": 7.06
+   },
+   "andon": {
+    "x": 892,
+    "y": 217,
+    "where": "frame",
+    "depth": 8.2
+   },
+   "conv_x3.6": {
+    "x": 1199,
+    "y": 697,
+    "where": "frame",
+    "depth": 8.09
+   },
+   "conv_x7": {
+    "x": 2031,
+    "y": 692,
+    "where": "overscan",
+    "depth": 8.32
+   },
+   "cw_l": {
+    "x": 1465,
+    "y": 674,
+    "where": "frame",
+    "depth": 7.96
+   },
+   "cw_r": {
+    "x": 1766,
+    "y": 672,
+    "where": "frame",
+    "depth": 8.04
+   },
+   "cw_box_top": {
+    "x": 1791,
+    "y": 570,
+    "where": "frame",
+    "depth": 8.05
+   },
+   "wall_dado_x-1": {
+    "x": 227,
+    "y": 367,
+    "where": "frame",
+    "depth": 10.86
+   },
+   "wall_dado_x8": {
+    "x": 1876,
+    "y": 375,
+    "where": "frame",
+    "depth": 11.48
+   },
+   "wall_floor_x8": {
+    "x": 1876,
+    "y": 805,
+    "where": "frame",
+    "depth": 11.48
+   },
+   "col_x-7.5_floor": {
+    "x": -1126,
+    "y": 841,
+    "where": "outside",
+    "depth": 10.2
+   },
+   "col_x-7.5_3m": {
+    "x": -1126,
+    "y": 236,
+    "where": "outside",
+    "depth": 10.2
+   },
+   "col_x0.0_floor": {
+    "x": 412,
+    "y": 825,
+    "where": "frame",
+    "depth": 10.73
+   },
+   "col_x0.0_3m": {
+    "x": 412,
+    "y": 250,
+    "where": "frame",
+    "depth": 10.73
+   },
+   "col_x7.5_floor": {
+    "x": 1807,
+    "y": 811,
+    "where": "frame",
+    "depth": 11.25
+   },
+   "col_x7.5_3m": {
+    "x": 1807,
+    "y": 262,
+    "where": "frame",
+    "depth": 11.25
+   },
+   "airmain_x5": {
+    "x": 1349,
+    "y": 225,
+    "where": "frame",
+    "depth": 11.23
+   },
+   "O_ray_backwall": {
+    "x": 1561,
+    "y": 473,
+    "where": "frame",
+    "depth": 11.36
+   },
+   "M_ray_cab": {
+    "x": 1067,
+    "y": 510,
+    "where": "frame",
+    "depth": 7.65
+   },
+   "walk_front_x0": {
+    "x": -11,
+    "y": 1147,
+    "where": "overscan",
+    "depth": 5.24
+   },
+   "walk_front_x6": {
+    "x": 2238,
+    "y": 1100,
+    "where": "outside",
+    "depth": 5.66
+   },
+   "walk_back_x0": {
+    "x": 143,
+    "y": 1030,
+    "where": "frame",
+    "depth": 6.44
+   },
+   "walk_back_x6": {
+    "x": 1990,
+    "y": 999,
+    "where": "overscan",
+    "depth": 6.86
+   },
+   "frame_left_floor": {
+    "x": -375,
+    "y": 1132,
+    "where": "outside",
+    "depth": 5.37
+   },
+   "screen_tl": {
+    "x": 275,
+    "y": 518,
+    "where": "frame",
+    "depth": 7.05
+   },
+   "screen_br": {
+    "x": 364,
+    "y": 577,
+    "where": "frame",
+    "depth": 7.07
+   },
+   "filler_r_top": {
+    "x": 62,
+    "y": 323,
+    "where": "frame",
+    "depth": 7.39
+   },
+   "infeed_conv": {
+    "x": 182,
+    "y": 703,
+    "where": "frame",
+    "depth": 7.81
+   }
+  }
+ }
+}

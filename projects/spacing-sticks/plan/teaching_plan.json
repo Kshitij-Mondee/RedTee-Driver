@@ -1,0 +1,172 @@
+{
+ "title": "Why training fades, and how to make it stick",
+ "performance": "right after their next training, the viewer schedules three short self-tests at growing gaps (about a day, a few days, a week or two) and uses recall instead of rereading",
+ "audience": {
+  "level": "practitioner",
+  "assumed_prior": "has attended workplace training and felt it fade; no memory science",
+  "why": "the brief's audience is working adults; the knowledge sheet assumes no prior terms",
+  "motivation": "voluntary to mildly required; wants their training time to pay off",
+  "context": "laptop or phone, often with sound, sometimes muted (captions needed)"
+ },
+ "genre": "conceptual",
+ "strategy": {
+  "name": "concrete_first",
+  "rationale": "each idea (the curve, the rereading trap, spacing) is easy to SEE in one person's week before it is named",
+  "signature_move": "show it happen to Maya, then name the idea, then show it again on a second concrete case"
+ },
+ "misconceptions": [
+  {
+   "belief": "rereading my notes is a good way to keep training fresh",
+   "why_tempting": "the page looks familiar, and familiar feels like knowing (F5)",
+   "refuted_in": "sec2",
+   "source_anchor": "knowledge F4, F5"
+  },
+  {
+   "belief": "one long review session is as good as several short ones",
+   "why_tempting": "the total time is the same, and cramming works for tomorrow (F7)",
+   "refuted_in": "sec3",
+   "source_anchor": "knowledge F6, F7"
+  }
+ ],
+ "arc": {
+  "hook": {
+   "kind": "scenario",
+   "sketch": "Say Maya leaves a great Monday workshop with three new ideas. By Friday, most of it has gone quiet. Why?"
+  },
+  "promise": "in four minutes you will have a simple schedule for your very next training",
+  "bridge_from_prior": "sec1 opens from the feeling every viewer knows: clear on the day, blank a week later",
+  "sections": [
+   {
+    "id": "sec1",
+    "goal": "the viewer can explain why most of a training fades in the first days",
+    "bloom": "understand",
+    "concepts": [
+     "forgetting curve",
+     "Ebbinghaus"
+    ],
+    "energy": "build",
+    "carrier": "a curve that drops steeply then levels off",
+    "recap_after": false
+   },
+   {
+    "id": "sec2",
+    "goal": "the viewer can use a short self-test in place of rereading",
+    "bloom": "apply",
+    "concepts": [
+     "retrieval practice",
+     "the familiarity trap"
+    ],
+    "energy": "peak",
+    "carrier": "a side by side comparison of the two habits",
+    "recap_after": false
+   },
+   {
+    "id": "sec3",
+    "goal": "the viewer can explain why spaced tests beat one long review",
+    "bloom": "understand",
+    "concepts": [
+     "spacing effect",
+     "cramming"
+    ],
+    "energy": "rest",
+    "carrier": "a memory value that drains and refills, flatter after each test",
+    "recap_after": true
+   },
+   {
+    "id": "sec4",
+    "goal": "the viewer can use a three-test schedule after their next training",
+    "bloom": "apply",
+    "concepts": [
+     "expanding gaps",
+     "short tests with feedback"
+    ],
+    "energy": "build",
+    "carrier": "a journey across days on a calendar",
+    "recap_after": true
+   }
+  ],
+  "payoff": "back to Maya after her next workshop: she tests herself three times at growing gaps and still has it weeks later"
+ },
+ "practice_ladder": [
+  {
+   "stage": "worked",
+   "where": "sec3-sec4",
+   "what": "Maya's schedule built step by step: tomorrow, a few days later, a week or two later"
+  },
+  {
+   "stage": "faded",
+   "where": "sec4 quiz",
+   "what": "the viewer judges which of two plans keeps more after a month"
+  },
+  {
+   "stage": "independent",
+   "where": "payoff",
+   "what": "the viewer applies the three tests to their own next training"
+  }
+ ],
+ "pacing": {
+  "target_duration_s": 240,
+  "words_per_minute": 145,
+  "slowdown_at": [
+   "familiarity trap"
+  ],
+  "recall_moments": [
+   {
+    "after_section": "sec1",
+    "kind": "recall_prompt",
+    "prompt_sketch": "Where on the curve does most of the forgetting happen? Early. Keep that in mind."
+   },
+   {
+    "after_section": "sec3",
+    "kind": "quiz",
+    "prompt_sketch": "Same training, two plans: one long review on Friday, or three short self-tests spread over two weeks. Which keeps more after a month?",
+    "answer": "the three spaced self-tests",
+    "tempting_wrong": "the long Friday review feels thorough, but it is massed rereading: familiar today, forgotten faster later"
+   }
+  ]
+ },
+ "transfer_tasks": [
+  "after your next training, put three short self-tests in your calendar: tomorrow, in a few days, and in a week or two"
+ ],
+ "persona": {
+  "voice": "the mentor persona: a warm senior colleague",
+  "delivery_notes": "warm on Maya's story, calm and slower on the familiarity trap, brisk on the recap"
+ },
+ "framework_audit": {
+  "gagne": {
+   "attention": "hook: Maya's fading Friday",
+   "objective": "promise: a schedule for your next training",
+   "recall_prior": "sec1 opens from the shared feeling of blanking a week later",
+   "present": "sections in dependency order: curve, trap, spacing, plan",
+   "guidance": "signature move: show it on Maya, name it, show it again",
+   "practice": "quiz after sec3; faded plan judgement in sec4",
+   "feedback": "quiz answer explains why the long review loses",
+   "assess": "the viewer picks the better plan before hearing the answer",
+   "transfer": "transfer task: three calendar entries after the next training"
+  },
+  "merrill": {
+   "problem_centered": "Maya's fading workshop is the running problem",
+   "activation": "sec1 starts from the viewer's own experience of forgetting",
+   "demonstration": "Maya's curve, her rereading, her tests are shown before being named",
+   "application": "the quiz and the worked schedule",
+   "integration": "the payoff and transfer task put it in the viewer's next training"
+  },
+  "mayer": {
+   "coherence": "one character, one metaphor (the curve), no side stories",
+   "signalling": "one slowdown on the familiarity trap",
+   "redundancy": "screen shows labels, days and the curve; narration explains",
+   "contiguity": "each label appears as it is spoken",
+   "segmenting": "four short sections, one idea each",
+   "pre_training": "the curve is named before spacing is explained"
+  },
+  "arcs": {
+   "attention": "Maya's quiet Friday",
+   "relevance": "every viewer has lost a training this way",
+   "confidence": "a simple three-step plan, practised once before the payoff",
+   "satisfaction": "Maya still has it weeks later; the viewer has the plan"
+  },
+  "bloom_path": "understand -> apply -> understand -> apply"
+ },
+ "series": null,
+ "flags": []
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Visual review of contact sheets",
+  "type": "object",
+  "required": ["verdict", "findings"],
+  "properties": {
+    "verdict": {"enum": ["ship", "fix"]},
+    "findings": {"type": "array", "items": {"type": "object", "required": ["beat", "severity", "problem", "fix"],
+      "properties": {"beat": {"type": "string"}, "severity": {"enum": ["blocker", "major", "minor"]}, "problem": {"type": "string"}, "fix": {"type": "string"}, "file": {"type": "string"}}}}
+  }
+}

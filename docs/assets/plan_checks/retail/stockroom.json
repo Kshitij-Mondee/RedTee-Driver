@@ -1,0 +1,701 @@
+{
+ "scene": "stockroom",
+ "camera_spec": {
+  "camera": {
+   "x": 6.0,
+   "y": -0.6,
+   "eye": 1.6,
+   "yaw": 4,
+   "hfov": 60,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "back wall (yard side, white blockwork)",
+    "axis": "y",
+    "at": 10.0
+   },
+   {
+    "name": "left wall",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "right wall",
+    "axis": "x",
+    "at": 14.0
+   }
+  ],
+  "points": {
+   "left_far_floor": [
+    0,
+    10,
+    0
+   ],
+   "left_far_eaves": [
+    0,
+    10,
+    5.0
+   ],
+   "shelf_l_top": [
+    0.2,
+    9.4,
+    2.4
+   ],
+   "shelf_r_top": [
+    2.4,
+    9.4,
+    2.4
+   ],
+   "shelf_r_floor": [
+    2.4,
+    9.4,
+    0
+   ],
+   "shutter_l_floor": [
+    11.2,
+    10,
+    0
+   ],
+   "shutter_l_head": [
+    11.2,
+    10,
+    3.5
+   ],
+   "shutter_r_floor": [
+    14,
+    10,
+    0
+   ],
+   "eaves_mid": [
+    7,
+    10,
+    5.0
+   ],
+   "light_row": [
+    6.5,
+    5,
+    3.2
+   ],
+   "cage_A_l_top": [
+    5.5,
+    6.6,
+    1.8
+   ],
+   "cage_A_r_floor": [
+    6.2,
+    7.4,
+    0
+   ],
+   "cage_A_l_floor": [
+    5.5,
+    6.6,
+    0
+   ],
+   "cage_A_r_top": [
+    6.2,
+    6.6,
+    1.8
+   ],
+   "pallet_l_top": [
+    8.6,
+    5.4,
+    1.2
+   ],
+   "pallet_r_top": [
+    9.8,
+    5.4,
+    1.2
+   ],
+   "pallet_r_floor": [
+    9.8,
+    5.4,
+    0
+   ],
+   "pallet_l_floor": [
+    8.6,
+    5.4,
+    0
+   ],
+   "truck_handle_top": [
+    9.2,
+    4.6,
+    1.15
+   ],
+   "A_head_top": [
+    6.6,
+    7.0,
+    1.72
+   ],
+   "A_head_c": [
+    6.6,
+    7.0,
+    1.6
+   ],
+   "A_head_l": [
+    6.5,
+    7.0,
+    1.6
+   ],
+   "A_head_r": [
+    6.7,
+    7.0,
+    1.6
+   ],
+   "A_feet": [
+    6.6,
+    7.0,
+    0
+   ],
+   "B_head_top": [
+    8.2,
+    5.0,
+    1.47
+   ],
+   "B_head_c": [
+    8.2,
+    5.0,
+    1.35
+   ],
+   "B_head_l": [
+    8.1,
+    5.0,
+    1.35
+   ],
+   "B_head_r": [
+    8.3,
+    5.0,
+    1.35
+   ],
+   "B_feet": [
+    8.05,
+    4.8,
+    0
+   ],
+   "C_head_top": [
+    4.6,
+    4.4,
+    1.7
+   ],
+   "C_head_c": [
+    4.6,
+    4.4,
+    1.58
+   ],
+   "C_head_l": [
+    4.5,
+    4.4,
+    1.58
+   ],
+   "C_head_r": [
+    4.7,
+    4.4,
+    1.58
+   ],
+   "C_feet": [
+    4.6,
+    4.4,
+    0
+   ],
+   "ext_handle": [
+    7.6,
+    10,
+    1.0
+   ],
+   "fire_l_head": [
+    8.0,
+    10,
+    2.1
+   ],
+   "fire_r_floor": [
+    9.0,
+    10,
+    0
+   ],
+   "exit_sign": [
+    8.5,
+    10,
+    2.35
+   ],
+   "keepclear_near_l": [
+    7.8,
+    8.6,
+    0
+   ],
+   "keepclear_near_r": [
+    9.2,
+    8.6,
+    0
+   ],
+   "baler_l_top": [
+    4.4,
+    9.2,
+    2.4
+   ],
+   "baler_r_top": [
+    5.4,
+    9.2,
+    2.4
+   ],
+   "baler_r_floor": [
+    5.4,
+    9.2,
+    0
+   ],
+   "baler_l_floor": [
+    4.4,
+    9.2,
+    0
+   ],
+   "island_far_end_top": [
+    4.6,
+    3.2,
+    2.4
+   ],
+   "island_far_end_floor": [
+    4.6,
+    3.2,
+    0
+   ],
+   "island_far_inner_top": [
+    4.0,
+    3.2,
+    2.4
+   ],
+   "island_near_end_top": [
+    4.6,
+    1.0,
+    2.4
+   ],
+   "C_shoulder_l": [
+    4.35,
+    4.4,
+    1.45
+   ],
+   "pallet_top_centre": [
+    9.2,
+    5.9,
+    1.2
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_c",
+   "A_head_l",
+   "A_head_r",
+   "B_head_top",
+   "B_head_c",
+   "B_head_l",
+   "B_head_r",
+   "C_head_top",
+   "C_head_c",
+   "C_head_l",
+   "C_head_r"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 844,
+   "along_x": 24739,
+   "horizon_y": 497
+  },
+  "points": {
+   "left_far_floor": {
+    "x": -141,
+    "y": 759,
+    "where": "overscan",
+    "depth": 10.16
+   },
+   "left_far_eaves": {
+    "x": -141,
+    "y": -60,
+    "where": "overscan",
+    "depth": 10.16
+   },
+   "shelf_l_top": {
+    "x": -166,
+    "y": 358,
+    "where": "overscan",
+    "depth": 9.57
+   },
+   "shelf_r_top": {
+    "x": 227,
+    "y": 360,
+    "where": "frame",
+    "depth": 9.72
+   },
+   "shelf_r_floor": {
+    "x": 227,
+    "y": 770,
+    "where": "frame",
+    "depth": 9.72
+   },
+   "shutter_l_floor": {
+    "x": 1636,
+    "y": 740,
+    "where": "frame",
+    "depth": 10.94
+   },
+   "shutter_l_head": {
+    "x": 1636,
+    "y": 208,
+    "where": "frame",
+    "depth": 10.94
+   },
+   "shutter_r_floor": {
+    "x": 2042,
+    "y": 736,
+    "where": "overscan",
+    "depth": 11.13
+   },
+   "eaves_mid": {
+    "x": 1000,
+    "y": -34,
+    "where": "overscan",
+    "depth": 10.64
+   },
+   "light_row": {
+    "x": 992,
+    "y": 24,
+    "where": "frame",
+    "depth": 5.62
+   },
+   "cage_A_l_top": {
+    "x": 727,
+    "y": 450,
+    "where": "frame",
+    "depth": 7.15
+   },
+   "cage_A_r_floor": {
+    "x": 885,
+    "y": 830,
+    "where": "frame",
+    "depth": 7.99
+   },
+   "cage_A_l_floor": {
+    "x": 727,
+    "y": 869,
+    "where": "frame",
+    "depth": 7.15
+   },
+   "cage_A_r_top": {
+    "x": 890,
+    "y": 451,
+    "where": "frame",
+    "depth": 7.2
+   },
+   "pallet_l_top": {
+    "x": 1546,
+    "y": 605,
+    "where": "frame",
+    "depth": 6.17
+   },
+   "pallet_r_top": {
+    "x": 1857,
+    "y": 603,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "pallet_r_floor": {
+    "x": 1857,
+    "y": 922,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "pallet_l_floor": {
+    "x": 1546,
+    "y": 928,
+    "where": "frame",
+    "depth": 6.17
+   },
+   "truck_handle_top": {
+    "x": 1830,
+    "y": 635,
+    "where": "frame",
+    "depth": 5.41
+   },
+   "A_head_top": {
+    "x": 975,
+    "y": 471,
+    "where": "frame",
+    "depth": 7.62,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      6.84,
+      10.0,
+      1.77
+     ]
+    }
+   },
+   "A_head_c": {
+    "x": 975,
+    "y": 497,
+    "where": "frame",
+    "depth": 7.62,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      6.84,
+      10.0,
+      1.6
+     ]
+    }
+   },
+   "A_head_l": {
+    "x": 953,
+    "y": 497,
+    "where": "frame",
+    "depth": 7.62,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      6.7,
+      10.0,
+      1.6
+     ]
+    }
+   },
+   "A_head_r": {
+    "x": 997,
+    "y": 497,
+    "where": "frame",
+    "depth": 7.63,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      6.98,
+      10.0,
+      1.6
+     ]
+    }
+   },
+   "A_feet": {
+    "x": 975,
+    "y": 846,
+    "where": "frame",
+    "depth": 7.62
+   },
+   "B_head_top": {
+    "x": 1483,
+    "y": 534,
+    "where": "frame",
+    "depth": 5.74,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      10.16,
+      10.0,
+      1.35
+     ]
+    }
+   },
+   "B_head_c": {
+    "x": 1483,
+    "y": 569,
+    "where": "frame",
+    "depth": 5.74,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      10.16,
+      10.0,
+      1.13
+     ]
+    }
+   },
+   "B_head_l": {
+    "x": 1454,
+    "y": 569,
+    "where": "frame",
+    "depth": 5.73,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      9.97,
+      10.0,
+      1.13
+     ]
+    }
+   },
+   "B_head_r": {
+    "x": 1511,
+    "y": 569,
+    "where": "frame",
+    "depth": 5.75,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      10.35,
+      10.0,
+      1.13
+     ]
+    }
+   },
+   "B_feet": {
+    "x": 1462,
+    "y": 978,
+    "where": "frame",
+    "depth": 5.53
+   },
+   "C_head_top": {
+    "x": 367,
+    "y": 463,
+    "where": "frame",
+    "depth": 4.89,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      3.03,
+      10.0,
+      1.81
+     ]
+    }
+   },
+   "C_head_c": {
+    "x": 367,
+    "y": 504,
+    "where": "frame",
+    "depth": 4.89,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      3.03,
+      10.0,
+      1.56
+     ]
+    }
+   },
+   "C_head_l": {
+    "x": 332,
+    "y": 504,
+    "where": "frame",
+    "depth": 4.88,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      2.82,
+      10.0,
+      1.56
+     ]
+    }
+   },
+   "C_head_r": {
+    "x": 401,
+    "y": 504,
+    "where": "frame",
+    "depth": 4.9,
+    "behind": {
+     "wall": "back wall (yard side, white blockwork)",
+     "at": [
+      3.24,
+      10.0,
+      1.56
+     ]
+    }
+   },
+   "C_feet": {
+    "x": 367,
+    "y": 1041,
+    "where": "frame",
+    "depth": 4.89
+   },
+   "ext_handle": {
+    "x": 1093,
+    "y": 590,
+    "where": "frame",
+    "depth": 10.69
+   },
+   "fire_l_head": {
+    "x": 1155,
+    "y": 419,
+    "where": "frame",
+    "depth": 10.71
+   },
+   "fire_r_floor": {
+    "x": 1307,
+    "y": 744,
+    "where": "frame",
+    "depth": 10.78
+   },
+   "exit_sign": {
+    "x": 1231,
+    "y": 381,
+    "where": "frame",
+    "depth": 10.75
+   },
+   "keepclear_near_l": {
+    "x": 1166,
+    "y": 783,
+    "where": "frame",
+    "depth": 9.3
+   },
+   "keepclear_near_r": {
+    "x": 1411,
+    "y": 780,
+    "where": "frame",
+    "depth": 9.4
+   },
+   "baler_l_top": {
+    "x": 568,
+    "y": 359,
+    "where": "frame",
+    "depth": 9.66
+   },
+   "baler_r_top": {
+    "x": 741,
+    "y": 360,
+    "where": "frame",
+    "depth": 9.73
+   },
+   "baler_r_floor": {
+    "x": 741,
+    "y": 770,
+    "where": "frame",
+    "depth": 9.73
+   },
+   "baler_l_floor": {
+    "x": 568,
+    "y": 772,
+    "where": "frame",
+    "depth": 9.66
+   },
+   "island_far_end_top": {
+    "x": 212,
+    "y": 137,
+    "where": "frame",
+    "depth": 3.69
+   },
+   "island_far_end_floor": {
+    "x": 212,
+    "y": 1217,
+    "where": "outside",
+    "depth": 3.69
+   },
+   "island_far_inner_top": {
+    "x": -69,
+    "y": 132,
+    "where": "overscan",
+    "depth": 3.65
+   },
+   "island_near_end_top": {
+    "x": -714,
+    "y": -391,
+    "where": "outside",
+    "depth": 1.5
+   },
+   "C_shoulder_l": {
+    "x": 279,
+    "y": 548,
+    "where": "frame",
+    "depth": 4.87
+   },
+   "pallet_top_centre": {
+    "x": 1639,
+    "y": 596,
+    "where": "frame",
+    "depth": 6.71
+   }
+  }
+ }
+}

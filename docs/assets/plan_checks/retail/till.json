@@ -1,0 +1,539 @@
+{
+ "scene": "till",
+ "camera_spec": {
+  "camera": {
+   "x": 4.0,
+   "y": 0.3,
+   "eye": 1.6,
+   "yaw": -38,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "side wall (left, white blockwork)",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "shopfront glazing (far)",
+    "axis": "y",
+    "at": 9.0
+   }
+  ],
+  "points": {
+   "wall_front_corner_floor": [
+    0,
+    9.0,
+    0
+   ],
+   "wall_front_corner_eaves": [
+    0,
+    9.0,
+    5.0
+   ],
+   "glaze_bottom_at_x2": [
+    2.0,
+    9.0,
+    0.6
+   ],
+   "glaze_head_at_x2": [
+    2.0,
+    9.0,
+    3.0
+   ],
+   "c1_scanner": [
+    1.75,
+    3.4,
+    0.95
+   ],
+   "c1_bag_end_top": [
+    2.0,
+    5.5,
+    0.9
+   ],
+   "c1_bag_end_wall_top": [
+    1.2,
+    5.5,
+    0.9
+   ],
+   "c1_terminal": [
+    2.05,
+    3.0,
+    1.12
+   ],
+   "c1_pod_divider_top": [
+    1.2,
+    4.2,
+    1.3
+   ],
+   "cashier_head_top": [
+    1.05,
+    3.6,
+    1.27
+   ],
+   "cashier_head_c": [
+    1.05,
+    3.6,
+    1.15
+   ],
+   "cashier_seat": [
+    1.05,
+    3.6,
+    0.65
+   ],
+   "cust_head_top": [
+    2.45,
+    3.2,
+    1.68
+   ],
+   "cust_head_c": [
+    2.45,
+    3.2,
+    1.56
+   ],
+   "cust_feet": [
+    2.45,
+    3.2,
+    0
+   ],
+   "c2_belt_start_top": [
+    3.0,
+    1.0,
+    0.9
+   ],
+   "c2_belt_start_floor": [
+    3.0,
+    1.0,
+    0
+   ],
+   "c2_bag_end_top": [
+    3.0,
+    5.5,
+    0.9
+   ],
+   "sign_band_r": [
+    0,
+    8.0,
+    4.0
+   ],
+   "pier_edge_sill": [
+    1.5,
+    9.0,
+    0.6
+   ],
+   "pier_edge_head": [
+    1.5,
+    9.0,
+    3.0
+   ],
+   "glaze_bottom_at_x3": [
+    3.0,
+    9.0,
+    0.6
+   ],
+   "cust_display_top": [
+    1.3,
+    2.7,
+    1.45
+   ],
+   "cust_display_bot": [
+    1.3,
+    2.7,
+    1.2
+   ],
+   "cash_drawer": [
+    1.25,
+    3.4,
+    0.75
+   ],
+   "c1_belt_at_y2_top": [
+    2.0,
+    2.0,
+    0.9
+   ],
+   "c1_lane_edge_floor_y2": [
+    2.0,
+    2.0,
+    0
+   ],
+   "c2_edge_entry": [
+    3.0,
+    1.6,
+    0.9
+   ],
+   "wall_mid_floor": [
+    0,
+    4.0,
+    0
+   ],
+   "wall_mid_eaves": [
+    0,
+    4.0,
+    5.0
+   ],
+   "sign_band_l": [
+    0,
+    3.0,
+    4.5
+   ],
+   "cust_head_l": [
+    2.45,
+    3.1,
+    1.56
+   ],
+   "cust_head_r": [
+    2.45,
+    3.3,
+    1.56
+   ],
+   "cashier_head_l": [
+    1.05,
+    3.5,
+    1.15
+   ],
+   "cashier_head_r": [
+    1.05,
+    3.7,
+    1.15
+   ],
+   "bags_hook": [
+    1.9,
+    5.0,
+    1.1
+   ],
+   "c1_counter_cashier_side_top_at_cashier": [
+    1.2,
+    3.6,
+    0.9
+   ],
+   "c2_top_at_frame_bottom": [
+    3.0,
+    2.2,
+    0.9
+   ],
+   "floor_at_c1_bag_end": [
+    2.0,
+    5.5,
+    0
+   ]
+  },
+  "behind": [
+   "cashier_head_top",
+   "cashier_head_c",
+   "cashier_head_l",
+   "cashier_head_r",
+   "cust_head_top",
+   "cust_head_c",
+   "cust_head_l",
+   "cust_head_r"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 2401,
+   "along_x": -1400,
+   "horizon_y": 497
+  },
+  "points": {
+   "wall_front_corner_floor": {
+    "x": 1396,
+    "y": 813,
+    "where": "frame",
+    "depth": 9.32
+   },
+   "wall_front_corner_eaves": {
+    "x": 1396,
+    "y": -176,
+    "where": "outside",
+    "depth": 9.32
+   },
+   "glaze_bottom_at_x2": {
+    "x": 1822,
+    "y": 725,
+    "where": "frame",
+    "depth": 8.09
+   },
+   "glaze_head_at_x2": {
+    "x": 1822,
+    "y": 178,
+    "where": "frame",
+    "depth": 8.09
+   },
+   "c1_scanner": {
+    "x": 1025,
+    "y": 810,
+    "where": "frame",
+    "depth": 3.83
+   },
+   "c1_bag_end_top": {
+    "x": 1522,
+    "y": 739,
+    "where": "frame",
+    "depth": 5.33
+   },
+   "c1_bag_end_wall_top": {
+    "x": 1275,
+    "y": 719,
+    "where": "frame",
+    "depth": 5.82
+   },
+   "c1_terminal": {
+    "x": 1030,
+    "y": 763,
+    "where": "frame",
+    "depth": 3.33
+   },
+   "c1_pod_divider_top": {
+    "x": 1035,
+    "y": 612,
+    "where": "frame",
+    "depth": 4.8
+   },
+   "cashier_head_top": {
+    "x": 838,
+    "y": 635,
+    "where": "frame",
+    "depth": 4.42,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      4.77,
+      1.15
+     ]
+    }
+   },
+   "cashier_head_c": {
+    "x": 838,
+    "y": 685,
+    "where": "frame",
+    "depth": 4.42,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      4.77,
+      0.99
+     ]
+    }
+   },
+   "cashier_seat": {
+    "x": 838,
+    "y": 893,
+    "where": "frame",
+    "depth": 4.42
+   },
+   "cust_head_top": {
+    "x": 1281,
+    "y": 451,
+    "where": "frame",
+    "depth": 3.24,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      7.78,
+      1.81
+     ]
+    }
+   },
+   "cust_head_c": {
+    "x": 1281,
+    "y": 520,
+    "where": "frame",
+    "depth": 3.24,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      7.78,
+      1.5
+     ]
+    }
+   },
+   "cust_feet": {
+    "x": 1281,
+    "y": 1408,
+    "where": "outside",
+    "depth": 3.24
+   },
+   "c2_belt_start_top": {
+    "x": 396,
+    "y": 1603,
+    "where": "outside",
+    "depth": 1.17
+   },
+   "c2_belt_start_floor": {
+    "x": 396,
+    "y": 3025,
+    "where": "outside",
+    "depth": 1.17
+   },
+   "c2_bag_end_top": {
+    "x": 1904,
+    "y": 771,
+    "where": "frame",
+    "depth": 4.71
+   },
+   "sign_band_r": {
+    "x": 1303,
+    "y": -22,
+    "where": "overscan",
+    "depth": 8.53
+   },
+   "pier_edge_sill": {
+    "x": 1704,
+    "y": 716,
+    "where": "frame",
+    "depth": 8.39
+   },
+   "pier_edge_head": {
+    "x": 1704,
+    "y": 189,
+    "where": "frame",
+    "depth": 8.39
+   },
+   "glaze_bottom_at_x3": {
+    "x": 2088,
+    "y": 744,
+    "where": "overscan",
+    "depth": 7.47
+   },
+   "cust_display_top": {
+    "x": 623,
+    "y": 575,
+    "where": "frame",
+    "depth": 3.55
+   },
+   "cust_display_bot": {
+    "x": 623,
+    "y": 704,
+    "where": "frame",
+    "depth": 3.55
+   },
+   "cash_drawer": {
+    "x": 845,
+    "y": 876,
+    "where": "frame",
+    "depth": 4.14
+   },
+   "c1_belt_at_y2_top": {
+    "x": 580,
+    "y": 999,
+    "where": "frame",
+    "depth": 2.57
+   },
+   "c1_lane_edge_floor_y2": {
+    "x": 580,
+    "y": 1644,
+    "where": "outside",
+    "depth": 2.57
+   },
+   "c2_edge_entry": {
+    "x": 974,
+    "y": 1284,
+    "where": "outside",
+    "depth": 1.64
+   },
+   "wall_mid_floor": {
+    "x": 660,
+    "y": 1045,
+    "where": "frame",
+    "depth": 5.38
+   },
+   "wall_mid_eaves": {
+    "x": 660,
+    "y": -669,
+    "where": "outside",
+    "depth": 5.38
+   },
+   "sign_band_l": {
+    "x": 361,
+    "y": -668,
+    "where": "outside",
+    "depth": 4.59
+   },
+   "cust_head_l": {
+    "x": 1253,
+    "y": 520,
+    "where": "frame",
+    "depth": 3.16,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      7.53,
+      1.5
+     ]
+    }
+   },
+   "cust_head_r": {
+    "x": 1308,
+    "y": 519,
+    "where": "frame",
+    "depth": 3.32,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      8.04,
+      1.5
+     ]
+    }
+   },
+   "cashier_head_l": {
+    "x": 809,
+    "y": 688,
+    "where": "frame",
+    "depth": 4.34,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      4.64,
+      0.99
+     ]
+    }
+   },
+   "cashier_head_r": {
+    "x": 865,
+    "y": 681,
+    "where": "frame",
+    "depth": 4.5,
+    "behind": {
+     "wall": "side wall (left, white blockwork)",
+     "at": [
+      0.0,
+      4.91,
+      0.99
+     ]
+    }
+   },
+   "bags_hook": {
+    "x": 1417,
+    "y": 681,
+    "where": "frame",
+    "depth": 5.0
+   },
+   "c1_counter_cashier_side_top_at_cashier": {
+    "x": 885,
+    "y": 795,
+    "where": "frame",
+    "depth": 4.32
+   },
+   "c2_top_at_frame_bottom": {
+    "x": 1293,
+    "y": 1108,
+    "where": "overscan",
+    "depth": 2.11
+   },
+   "floor_at_c1_bag_end": {
+    "x": 1522,
+    "y": 1050,
+    "where": "frame",
+    "depth": 5.33
+   }
+  }
+ }
+}

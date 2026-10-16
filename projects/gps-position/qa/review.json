@@ -1,0 +1,57 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b03",
+      "severity": "major",
+      "file": "scenes/b03.js",
+      "problem": "Satellite icons clumped on the lower-left orbit ring in the settled frame.",
+      "fix": "Slowed the ring drift so icons stay separate.",
+      "status": "fixed"
+    },
+    {
+      "beat": "b07",
+      "severity": "minor",
+      "file": "scenes/b07.js",
+      "problem": "The two arrival chips stack over the phone point.",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "The two chips are the one signal (where I am, when I sent this) read together; the kit chip's stacking is deliberate and the check shows no overlap."
+    },
+    {
+      "beat": "b12",
+      "severity": "major",
+      "file": "scenes/b12.js",
+      "problem": "The travel-time factor read as an empty white bar before 'x speed of light'.",
+      "fix": "Added the label 0.07 s under the bar.",
+      "status": "fixed"
+    },
+    {
+      "beat": "b15",
+      "severity": "major",
+      "file": "scenes/b15.js",
+      "problem": "Hard horizontal band in the night sky near the satellite row.",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Not drawn by the scene: two fixers bisected it and it persists with the beat's own elements removed; it comes from the style pack's nebula background (engine). The beat's content reads correctly."
+    },
+    {
+      "beat": "b16",
+      "severity": "major",
+      "file": "scenes/b16.js",
+      "problem": "Same horizontal sky band continuing from b15.",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Same engine nebula background artefact as b15; not in scene code."
+    },
+    {
+      "beat": "b17",
+      "severity": "major",
+      "file": "scenes/b17.js",
+      "problem": "Same horizontal sky band behind the satellites.",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Same engine nebula background artefact as b15; not in scene code."
+    }
+  ]
+}

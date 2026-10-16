@@ -1,0 +1,10 @@
+primitive_runtime_a_continue_join_never_leaves_a_speaking_frame_empty, on runtime/world.js before the change (2026-10-08):
+AssertionError: speaking frames left empty on the continue join at [4.7, 4.9, 5.1]: {4.7: {'A': 0, 'B': 0}, 4.9: {'A': 0, 'B': 0}, 5.1: {'A': 0, 'B': 0}, 5.6: {'B': 1}}
+After: PASS (4.7: A 1; 5.1: A 0.87; 5.6: B 1)
+
+Narrowed after the post-style proof (2026-10-08): the claude fork's b01 crowd and chair stayed up to 4 s into b02,
+because b02's first own element arrives late, although b02 holds Priya and Dev (the frame was never empty). The wait
+now applies only when the incoming beat holds nothing. New control
+primitive_runtime_a_continue_join_that_holds_something_does_not_wait, on the wide B2: FAIL {4.5: {A 1, C 1},
+5: {A 1, C 1}, 6.6: {A 1, B 1, C 0}} (C waited for B); after: PASS (C gone by 4.5 s, A held, B in at 6.6 s); the
+original B2 test still PASS.

@@ -1,0 +1,257 @@
+{
+  "id": "cinematic-noir",
+  "name": "Cinematic Noir",
+  "reads_as": "Film-noir 2.5D: near-black blue night, one warm key light, silhouettes in layered depth, haze and bloom, a serif title face. Slow dolly moves; restraint.",
+  "look_family": "illustrated",
+  "_guide": "docs/styles/guides/cinematic-noir.md: what each token is for, light and depth recipes, composition, motion, characters, templates, failure modes and the polish checklist. A token change must keep the guide true.",
+  "fits": [
+    "story",
+    "case study",
+    "risk",
+    "security",
+    "incident",
+    "ethics",
+    "hook"
+  ],
+  "avoid_for": [
+    "cheerful onboarding",
+    "dense data"
+  ],
+  "palette": {
+    "field": "#0B0F17",
+    "field2": "#141B28",
+    "surface": "#1C2536",
+    "surface2": "#101723",
+    "ink": "#F3EBDD",
+    "muted": "#9AA4B6",
+    "line": "#677286",
+    "accent": "#F2A541",
+    "accent2": "#E4572E",
+    "accent3": "#7FB3D5",
+    "accent4": "#C9B79C",
+    "pos": "#8FBF8F",
+    "neg": "#E4572E",
+    "shadow": "#05070B",
+    "onAccent": "#0B0F17"
+  },
+  "_palette_note": "2026-10-07 (style guide pass): muted #8C96A8 -> #9AA4B6 so secondary scene text holds 4.5:1 in the safe-area corners under the vignette (computed 2.92:1 before, 4.86:1 now; round 2 review: the section label is drawn in the overlay ABOVE the fx vignette, so the 2.75:1 and 4.68:1 figures first given for it did not apply), and line #5A6476 -> #677286 so dividers, axes and leads hold 3:1 on surface (2.57:1 before, 3.17:1 now). accent2 equals neg on purpose: red means danger or the wrong move in this style, never decoration. Roles: docs/styles/guides/cinematic-noir.md section 2. Kept outside the palette because style.js turns every palette key into a CSS variable.",
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "weights": [
+        700,
+        800
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "faces": [
+      {
+        "family": "Fraunces",
+        "weight": 700,
+        "file": "fraunces-latin-700-normal.woff2",
+        "pkg": "@fontsource/fraunces"
+      },
+      {
+        "family": "Fraunces",
+        "weight": 800,
+        "file": "fraunces-latin-800-normal.woff2",
+        "pkg": "@fontsource/fraunces"
+      },
+      {
+        "family": "Inter",
+        "weight": 500,
+        "file": "inter-latin-500-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      110,
+      170
+    ],
+    "hero": [
+      96,
+      150
+    ],
+    "title": [
+      60,
+      92
+    ],
+    "lead": [
+      34,
+      44
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      30
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 6,
+    "stroke": 2,
+    "shading": "flat",
+    "shadow": "none",
+    "shadow_dx": 0,
+    "shadow_dy": 18,
+    "shadow_opacity": 0.5
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.8,
+    "move": 0.6,
+    "exit": 0.5,
+    "stagger": 0.14,
+    "draw": 1.1,
+    "count": 1.6,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "none",
+    "density": 0,
+    "wash": "radial-gradient(ellipse at 50% 30%, rgba(242,165,65,0.10), rgba(11,15,23,0) 65%)"
+  },
+  "captions": {
+    "bg": "rgba(5,7,11,0.78)",
+    "fg": "ink",
+    "active": "accent",
+    "radius": 6,
+    "font": "body",
+    "size": 36,
+    "weight": 700,
+    "top": 948
+  },
+  "icons": {
+    "stroke": 2.2
+  },
+  "characters": {
+    "skin": [
+      "#E7C3A0",
+      "#C8946C",
+      "#9A6444",
+      "#6E452E"
+    ],
+    "cloth": "surface",
+    "ink": "field",
+    "paper": "ink",
+    "mouth": "accent2",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson.",
+    "bottom": "surface2"
+  },
+  "join_default": "camera",
+  "seam_join": "fade",
+  "join_note": "Carry over smoothly: hold the place and change its state (continue), move the camera when places connect, a fade only at a change of time or mood. Avoid hard cuts mid-topic; one held cover never.",
+  "music": {
+    "mood": "serious",
+    "root_midi": 45
+  },
+  "fx": {
+    "background": "nebula",
+    "intensity": 0.35,
+    "grain": 0.01,
+    "vignette": 0.35,
+    "_vignette_note": "2026-10-07: 0.6 -> 0.35. The vignette sits OVER the text (fx.js TOP layer), so at 0.6 it took muted text in the safe-area corners to 2.92:1 and the frame corners to #05070B; noir darkness comes from unlit areas of the drawing, not from a global overlay (guide section 5). Measured with the fx.js formula, not yet on an encoded MP4.",
+    "leak": 0.05,
+    "colors": [
+      "accent3",
+      "surface",
+      "accent"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish.",
+    "spotlight": {
+      "strength": 0.45
+    },
+    "vignette_under": true
+  },
+  "tone_reference": {
+    "family": "dark_void_single_light",
+    "brightness": 0.37,
+    "saturation": 0.3,
+    "dark_share": 0.37,
+    "light_share": 0.11,
+    "warm": 0.23,
+    "cool": 0.15,
+    "accent_shots": 0.27,
+    "colours": 5.3,
+    "tolerance": 0.15,
+    "_source": "TED-Ed family means, docs/research/vision/tedEd_2026-10/colour_and_tone.md (96 films, code-measured); a reference, not a target (D-112)"
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: glowing shapes on a dark field measure low edge density by design (TED-Ed glow films sat under 0.02 for 43 % of narrated time, D-112)"
+  },
+  "guide": "docs/styles/guides/cinematic-noir.md",
+  "materials": {
+    "wood": "surface",
+    "chair": "surface",
+    "books": ["surface", "surface2", "muted", "line"],
+    "plant": "surface2",
+    "pot": "surface",
+    "screen": "surface2",
+    "monitor": "shadow",
+    "window_lights": "muted",
+    "vessel": "surface",
+    "cells": ["line", "muted"],
+    "leds": ["muted", "accent3"],
+    "cables": ["line", "muted"],
+    "chart": ["line", "muted"],
+    "safety_line": "muted",
+    "objects": {"document": "accent4", "envelope": "accent4", "folder": "accent4", "package": "surface", "heart": "muted", "bulb": "ink", "lock": "muted"},
+    "_decor_note": "2026-10-08 (L-276), from guide s2: the accent never decorates and accent2 (equal to neg) appears nowhere, so window lights are muted (lit-window specks), the safety line muted, the rack LEDs muted with accent3 points, cables and the wall chart line and muted (hairlines; no accent bar), the package surface (props); the vessel is surface (accent3 is glass and haze at 0.5 or less, and the vessel stacks 0.55 over 0.5) with line and muted cells; paper things are accent4 (old paper, case files: the document header, the envelope, the folder), the heart muted (accent3 is never over 1 % of the frame at full strength) and the lock muted (it was the accent), the spark bulb ink (the key light colour: lamp, moon, bulb). Left at the runtime default because s2 allows it at object size: calendar accent3, clock and building accent4, phone surface2. The laptop reads no tone."
+  },
+  "roles": {
+    "kicker": "accent4",
+    "chapter_kicker": "accent4",
+    "term": "ink",
+    "stat_value": "ink",
+    "date": "accent4",
+    "quiz_letter": "surface",
+    "ui_mark": "neg",
+    "link": "accent3",
+    "button": "accent3",
+    "me_bubble": "surface2",
+    "person_cloth": "surface",
+    "turn_card": "shadow",
+    "avatar": ["accent3", "accent4"]
+  }
+}

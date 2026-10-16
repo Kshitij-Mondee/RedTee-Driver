@@ -1,0 +1,33 @@
+{
+ "name": "claude-code-mix",
+ "description": "smart-mix with the Claude roles run through Claude Code (cc-sonnet writes the script, the storyboard outline, the storyboard and the scenes; cc-haiku tweaks); planning stays on Sol and the checkers on Gemini Flash. Requires provider claude_code: the cc-* model aliases and the claude_code provider are added in loom/agents/llm and loom/agents/config/models.json separately. Until they exist this profile does not load (doctor and bench list it as needing that provider; the profile test skips it by name).",
+ "roles": {
+  "brief": "gpt-6.1-sol",
+  "knowledge": "gpt-6.1-sol",
+  "skeptic": "gemini-3.8-flash",
+  "pedagogy": "gpt-6.1-sol",
+  "persona_pick": "gpt-6-luna",
+  "script": "cc-sonnet",
+  "storyboard_outline": "cc-sonnet",
+  "storyboard": "cc-sonnet",
+  "scene": "cc-sonnet",
+  "critic": "gemini-3.8-flash",
+  "tweak": "cc-haiku"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {},
+ "requires_provider": "claude_code"
+}

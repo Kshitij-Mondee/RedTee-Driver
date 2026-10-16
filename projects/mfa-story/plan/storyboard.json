@@ -1,0 +1,1207 @@
+{
+ "style": "corporate-clean",
+ "concept": "One short case story told on real screens: Maya's desk on the left, another desk somewhere else on the right, the same sign-in page on both. The split frame returns at each turn of the story, so the viewer compares outcomes on the thief's screen, not diagrams.",
+ "chrome": {
+  "section_labels": false
+ },
+ "poster": {
+  "beat": "b10"
+ },
+ "ambient": {
+  "kind": "none"
+ },
+ "fx": {
+  "enabled": false
+ },
+ "story": {
+  "setting": "Maya's office and another desk somewhere else",
+  "arc": "the copied password works (b01-b03), the code stops it (b04-b07), the look-alike page relays it (b08-b11), the passkey gives nothing (b12-b14), the numbers (b15-b16), the prompt she refuses (b17-b18), payoff (b19-b21)",
+  "cast": [
+   {
+    "name": "Maya",
+    "rig": "maya",
+    "role": "the employee whose account it is (invented)"
+   },
+   {
+    "name": "someone else",
+    "role": "an ordinary person seen from behind at a plain desk (invented); never a hooded hacker"
+   }
+  ]
+ },
+ "motifs": [
+  {
+   "name": "the sign-in page",
+   "desc": "the same page on both desks at every turn; its state is the outcome"
+  },
+  {
+   "name": "Maya's phone",
+   "desc": "on her desk: the code, the prompts, the passkey"
+  },
+  {
+   "name": "the address bar",
+   "desc": "login.yourwork.example and the look-alike with -help; large in b08 and b14"
+  }
+ ],
+ "devices": [
+  {
+   "id": "split",
+   "what": "the split frame: Maya's desk and the other desk",
+   "kind": "explain",
+   "beats": [
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b08",
+    "b09",
+    "b10",
+    "b11",
+    "b14",
+    "b17",
+    "b18"
+   ]
+  },
+  {
+   "id": "signin",
+   "what": "the sign-in page whose state is the outcome",
+   "kind": "explain",
+   "beats": [
+    "b01",
+    "b02",
+    "b04",
+    "b05",
+    "b08",
+    "b10",
+    "b13",
+    "b14",
+    "b21"
+   ]
+  },
+  {
+   "id": "phone",
+   "what": "Maya's phone",
+   "kind": "explain",
+   "beats": [
+    "b04",
+    "b05",
+    "b06",
+    "b12",
+    "b13",
+    "b17",
+    "b18",
+    "b19"
+   ]
+  },
+  {
+   "id": "bars",
+   "what": "plain bars with their owner",
+   "kind": "data",
+   "beats": [
+    "b07",
+    "b15",
+    "b16"
+   ]
+  },
+  {
+   "id": "wipe",
+   "what": "a left wipe between turns of time",
+   "kind": "join",
+   "beats": [
+    "b06",
+    "b15"
+   ]
+  }
+ ],
+ "value_script": [
+  {
+   "from": "b01",
+   "band": "light",
+   "why": "a light office and light screens throughout: everyday, calm; the other desk is only a shade cooler"
+  }
+ ],
+ "world": {
+  "stations": [
+   {
+    "id": "st_office",
+    "x": 0,
+    "y": 0,
+    "note": "Maya's office: the opening and the payoff"
+   },
+   {
+    "id": "st_split1",
+    "x": 2400,
+    "y": 0,
+    "note": "the split: Maya's laptop and the other desk (b02-b05)"
+   },
+   {
+    "id": "st_proof",
+    "x": 4800,
+    "y": 0,
+    "note": "Maya's desk close: the three kinds of proof"
+   },
+   {
+    "id": "st_risk",
+    "x": 7200,
+    "y": 0,
+    "note": "the risk bars beside the stopped screen"
+   },
+   {
+    "id": "st_split2",
+    "x": 0,
+    "y": 1400,
+    "note": "the split again: the look-alike page and the relay (b08-b11)"
+   },
+   {
+    "id": "st_phone",
+    "x": 2400,
+    "y": 1400,
+    "note": "Maya's phone, large, and the real sign-in page"
+   },
+   {
+    "id": "st_split3",
+    "x": 4800,
+    "y": 1400,
+    "note": "the split: the passkey at the look-alike page"
+   },
+   {
+    "id": "st_google",
+    "x": 7200,
+    "y": 1400,
+    "note": "the Google bars"
+   },
+   {
+    "id": "st_split4",
+    "x": 0,
+    "y": 2800,
+    "note": "the split: Maya's phone and the prompt she did not start"
+   },
+   {
+    "id": "st_recap",
+    "x": 2400,
+    "y": 2800,
+    "note": "the three things side by side"
+   },
+   {
+    "id": "st_rules",
+    "x": 4800,
+    "y": 2800,
+    "note": "three rules"
+   },
+   {
+    "id": "st_end",
+    "x": 7200,
+    "y": 2800,
+    "note": "Maya's office again"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "beat": "b01",
+   "kind": "bespoke",
+   "scene": "b01",
+   "station": "st_office",
+   "join_in": {
+    "type": "cut",
+    "meaning": "shock"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "hook",
+   "subject": "Maya signing in",
+   "world": "Maya's office",
+   "accent_on": "the welcome on her screen",
+   "design": {
+    "treatment": "Wide office (Loom.place.office), Maya behind her desk in the type pose, the laptop lid toward us. Her screen is shown beside her as a large inset (what she sees), joined to her laptop by a thin line: the sign-in page at login.yourwork.example. The password dots type in, the page cuts to Welcome, Maya. One slow push toward Maya and the inset.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "office (Loom.place.office)",
+     "maya (rig maya, type pose, behind the desk)",
+     "inset: Loom.mfa.signin, real address",
+     "leader line laptop to inset"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Say this is Maya",
+      "element": "maya",
+      "action": "Maya is in place; tag Maya",
+      "motion": "tag wipe"
+     },
+     {
+      "t_anchor": "she types her password",
+      "element": "inset",
+      "action": "the dots type in",
+      "motion": "hard cuts"
+     },
+     {
+      "t_anchor": "her work account opens",
+      "element": "inset",
+      "action": "cut to Welcome, Maya",
+      "motion": "state cut"
+     }
+    ],
+    "continuity": "The inset becomes the left half of the split in b02 (same page, same address)."
+   }
+  },
+  {
+   "beat": "b02",
+   "kind": "bespoke",
+   "scene": "b02",
+   "station": "st_split1",
+   "join_in": {
+    "type": "fade",
+    "meaning": "meanwhile"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "the same password typed far away",
+   "world": "two desks",
+   "accent_on": "the other desk's welcome",
+   "design": {
+    "treatment": "The split (Loom.mfa.split): Maya's laptop left with her page at Welcome; the other desk right, a person from behind at a monitor. On 'leaked' a small tag 'leaked from another site' pins to Maya's password; on 'types it' the dots type on the right page; on 'opens for them too' it cuts to Welcome, Maya there as well.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "split",
+     "laptop + signin left (welcome)",
+     "monitor + signin right",
+     "thief from behind",
+     "tag leaked"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "leaked from another site",
+      "element": "tag",
+      "action": "the leaked tag pins",
+      "motion": "wipe"
+     },
+     {
+      "t_anchor": "Someone else types it",
+      "element": "right signin",
+      "action": "dots type in",
+      "motion": "hard cuts"
+     },
+     {
+      "t_anchor": "It opens for them too",
+      "element": "right signin",
+      "action": "cut to Welcome, Maya",
+      "motion": "state cut"
+     }
+    ],
+    "continuity": "Held through b05: split, laptop, monitor, both pages, thief, Maya's phone."
+   }
+  },
+  {
+   "beat": "b03",
+   "kind": "bespoke",
+   "scene": "b03",
+   "station": "st_split1",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "two identical welcomes",
+   "world": "two desks",
+   "accent_on": "the equals badge",
+   "design": {
+    "treatment": "Both screens read Welcome, Maya. A round equals badge settles on the divider with the words something you know under it; the two people are different, the screens identical.",
+    "why_motion": "the comparison is the content; one reveal on the divider",
+    "elements": [
+     "badge on the divider: '=' and 'something you know'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "something you know",
+      "element": "badge",
+      "action": "the badge settles",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "looks like Maya",
+      "element": "right signin",
+      "action": "a soft highlight rings the right welcome",
+      "motion": "ring draw"
+     }
+    ],
+    "continuity": "The badge leaves at the start of b04."
+   }
+  },
+  {
+   "beat": "b04",
+   "kind": "bespoke",
+   "scene": "b04",
+   "station": "st_split1",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "Maya's second step",
+   "world": "Maya's laptop and phone",
+   "accent_on": "the code on her phone",
+   "design": {
+    "treatment": "The right side dims. Maya's page goes back to the password, the dots type, then it cuts to Enter the code; her phone on the desk lights with 482 913; the digits type into the boxes; Welcome, Maya.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "left signin",
+     "phone (Loom.mfa.phone) on Maya's desk",
+     "right side veil"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "a second step",
+      "element": "right veil",
+      "action": "the other desk dims",
+      "motion": "fade"
+     },
+     {
+      "t_anchor": "a code from her phone",
+      "element": "phone",
+      "action": "the phone lights with the code, a buzz",
+      "motion": "state cut + buzz"
+     }
+    ],
+    "continuity": "The phone stays on Maya's desk through b05."
+   }
+  },
+  {
+   "beat": "b05",
+   "kind": "bespoke",
+   "scene": "b05",
+   "station": "st_split1",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "the thief stopped at the code",
+   "world": "two desks",
+   "accent_on": "the empty code boxes",
+   "design": {
+    "treatment": "The right side undims. The other person types the password again: it works, then Enter the code; empty boxes and a blinking caret. Across the divider Maya's phone lights with a code she did not ask for and stays on her desk. On 'They stop' a red outline closes round the empty boxes.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "right signin",
+     "Maya's phone",
+     "stop outline"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "The thief tries again",
+      "element": "right signin",
+      "action": "dots, then Enter the code",
+      "motion": "hard cuts"
+     },
+     {
+      "t_anchor": "The code is on Maya's phone",
+      "element": "phone",
+      "action": "lights with the code; buzz",
+      "motion": "state cut"
+     },
+     {
+      "t_anchor": "They stop",
+      "element": "outline",
+      "action": "red outline round the boxes",
+      "motion": "draw"
+     }
+    ],
+    "continuity": "Everything leaves at the b06 join."
+   }
+  },
+  {
+   "beat": "b06",
+   "kind": "bespoke",
+   "scene": "b06",
+   "station": "st_proof",
+   "join_in": {
+    "type": "wipe",
+    "dir": "left",
+    "meaning": "time"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "three kinds of proof",
+   "world": "Maya's desk, close",
+   "accent_on": "the phone",
+   "design": {
+    "treatment": "Close on Maya's desk: three large objects in a row, the password field with dots, her phone with the code, a fingerprint pad; MFA and its long name across the top. Each object lifts and takes its label as it is named.",
+    "why_motion": "a definition: a static composition revealed in the order spoken",
+    "elements": [
+     "title MFA, multi-factor authentication",
+     "password field",
+     "phone",
+     "fingerprint pad",
+     "three labels"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "That is MFA",
+      "element": "title",
+      "action": "the title sets",
+      "motion": "wipe"
+     },
+     {
+      "t_anchor": "something you know",
+      "element": "password field",
+      "action": "lifts, label",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "something you have",
+      "element": "phone",
+      "action": "lifts, label",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "something you are",
+      "element": "fingerprint",
+      "action": "lifts, label",
+      "motion": "settle"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b07",
+   "kind": "bespoke",
+   "scene": "b07",
+   "station": "st_risk",
+   "join_in": {
+    "type": "fade",
+    "meaning": "time"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "subject": "the risk cut",
+   "world": "beside the stopped screen",
+   "accent_on": "the sliver",
+   "design": {
+    "treatment": "Left, the other desk's monitor small, still on Enter the code. Right, two plain bars: Without MFA full; With MFA shrinking from full to a sliver; 99.22% named last with Microsoft researchers, their own business accounts, under it; on 'not a guarantee' the sliver gets a small ring.",
+    "why_motion": "a quantity changing: the bar shrinks",
+    "elements": [
+     "small monitor (Enter the code)",
+     "bar without",
+     "bar with",
+     "value 99.22%",
+     "owner line"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Microsoft researchers",
+      "element": "owner line",
+      "action": "the owner line sets",
+      "motion": "wipe"
+     },
+     {
+      "t_anchor": "a little over 99 percent",
+      "element": "bar with",
+      "action": "shrinks to the sliver; the value names",
+      "motion": "drive"
+     },
+     {
+      "t_anchor": "not a guarantee",
+      "element": "sliver",
+      "action": "a small ring",
+      "motion": "draw"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b08",
+   "kind": "bespoke",
+   "scene": "b08",
+   "station": "st_split2",
+   "join_in": {
+    "type": "fade",
+    "meaning": "meanwhile"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "turn",
+   "subject": "the look-alike page",
+   "world": "two desks",
+   "accent_on": "the address",
+   "design": {
+    "treatment": "The split again. Maya's laptop shows a message asking her to sign in with a link button; the click cuts to a sign-in page identical to hers. The address bar reads login.yourwork-help.example. On 'Only the address is different' the -help turns red and the address bar is copied large above the window. The other desk waits on the real sign-in page.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "split",
+     "laptop + message",
+     "fake signin (Loom.mfa.signin, fake address)",
+     "large address copy",
+     "monitor + real signin, thief"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Maya gets a link to sign in",
+      "element": "message",
+      "action": "the message appears; the link is pressed",
+      "motion": "press"
+     },
+     {
+      "t_anchor": "looks exactly like hers",
+      "element": "fake signin",
+      "action": "cut to the look-alike page",
+      "motion": "state cut"
+     },
+     {
+      "t_anchor": "Only the address is different",
+      "element": "address",
+      "action": "-help turns red; the large copy",
+      "motion": "wipe"
+     }
+    ],
+    "continuity": "Held through b11."
+   }
+  },
+  {
+   "beat": "b09",
+   "kind": "bespoke",
+   "scene": "b09",
+   "station": "st_split2",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "subject": "the question",
+   "world": "two desks",
+   "accent_on": "the question card",
+   "design": {
+    "treatment": "Maya types her password on the look-alike page, then her code (her phone lights). A question card drops in over the divider: Does the thief get in? with two chips, Yes and No. Silence holds.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "fake signin",
+     "phone",
+     "question card"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "She types her password",
+      "element": "fake signin",
+      "action": "dots type",
+      "motion": "hard cuts"
+     },
+     {
+      "t_anchor": "then her code",
+      "element": "fake signin + phone",
+      "action": "code page, digits",
+      "motion": "state cut"
+     },
+     {
+      "t_anchor": "Does the thief get in",
+      "element": "question card",
+      "action": "drops in",
+      "motion": "settle"
+     }
+    ],
+    "continuity": "The card leaves at b10."
+   }
+  },
+  {
+   "beat": "b10",
+   "kind": "bespoke",
+   "scene": "b10",
+   "station": "st_split2",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "the relay",
+   "world": "two desks",
+   "accent_on": "the code crossing the divider",
+   "design": {
+    "treatment": "The card lifts. What Maya typed travels across the divider: a chip of password dots, then a chip with 482 913, each landing in the right page's field; the right page cuts to Welcome, Maya.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "password chip",
+     "code chip",
+     "right signin"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "passes on what she types",
+      "element": "password chip",
+      "action": "flies left to right",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "while the code still works",
+      "element": "code chip",
+      "action": "flies; lands in the boxes",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "The thief is in",
+      "element": "right signin",
+      "action": "Welcome, Maya",
+      "motion": "state cut"
+     }
+    ],
+    "continuity": "Held into b11."
+   }
+  },
+  {
+   "beat": "b11",
+   "kind": "bespoke",
+   "scene": "b11",
+   "station": "st_split2",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "what you type can be asked for",
+   "world": "two desks",
+   "accent_on": "the typed code",
+   "design": {
+    "treatment": "Maya's phone and the typed code on her page side by side: the code on her phone takes a soft ring (hers alone); then the typed code on the page is underlined and a tag reads anything you type.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "phone ring",
+     "code underline",
+     "tag"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "hers alone",
+      "element": "phone",
+      "action": "ring",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "anything you type",
+      "element": "fake signin",
+      "action": "underline the typed code; tag",
+      "motion": "draw"
+     }
+    ],
+    "continuity": "Everything leaves at the b12 join."
+   }
+  },
+  {
+   "beat": "b12",
+   "kind": "bespoke",
+   "scene": "b12",
+   "station": "st_phone",
+   "join_in": {
+    "type": "iris",
+    "at": [
+     960,
+     540
+    ],
+    "meaning": "into"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "turn",
+   "subject": "Maya's passkey",
+   "world": "her phone, large",
+   "accent_on": "the key inside the phone",
+   "design": {
+    "treatment": "Maya's phone large at left; a key settles inside it behind the glass; the screen shows Use your passkey with a fingerprint; a soft pulse on the fingerprint as it unlocks.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "phone large",
+     "key",
+     "fingerprint"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "give Maya a passkey",
+      "element": "key",
+      "action": "the key settles into the phone",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "It lives on her phone",
+      "element": "phone",
+      "action": "the screen lights",
+      "motion": "state cut"
+     },
+     {
+      "t_anchor": "fingerprint, face or PIN",
+      "element": "fingerprint",
+      "action": "pulse",
+      "motion": "glow"
+     }
+    ],
+    "continuity": "Held into b13."
+   }
+  },
+  {
+   "beat": "b13",
+   "kind": "bespoke",
+   "scene": "b13",
+   "station": "st_phone",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "the signed answer",
+   "world": "her phone and the real page",
+   "accent_on": "the stamped address",
+   "design": {
+    "treatment": "The real sign-in page at right (passkey state). A small question card travels from the page into the phone; an answer card travels back stamped login.yourwork.example; the page cuts to Welcome, Maya. The key never moves.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "real signin (passkey)",
+     "question card",
+     "answer card with stamp"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "asks a fresh question",
+      "element": "question card",
+      "action": "travels to the phone",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "Her phone signs the answer",
+      "element": "answer card",
+      "action": "appears at the phone",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "stamped with the page's address",
+      "element": "stamp",
+      "action": "stamps the card",
+      "motion": "stamp"
+     },
+     {
+      "t_anchor": "never leaves the phone",
+      "element": "key",
+      "action": "a ring round the key",
+      "motion": "draw"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b14",
+   "kind": "bespoke",
+   "scene": "b14",
+   "station": "st_split3",
+   "join_in": {
+    "type": "fade",
+    "meaning": "meanwhile"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "subject": "nothing to pass on",
+   "world": "two desks",
+   "accent_on": "the wrong address",
+   "design": {
+    "treatment": "The split: Maya's laptop on the look-alike page with only a Sign in with a passkey button; her phone beside it. The address is shown large above the window, -help in red. The phone reads it and stays dark. The other desk waits on Check your phone with nothing arriving.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "split",
+     "fake signin (passkey)",
+     "large address",
+     "phone (dark)",
+     "monitor + real signin (wait)",
+     "thief"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "nothing to type",
+      "element": "fake signin",
+      "action": "the passkey button is pressed",
+      "motion": "press"
+     },
+     {
+      "t_anchor": "the wrong address",
+      "element": "large address",
+      "action": "-help turns red",
+      "motion": "wipe"
+     },
+     {
+      "t_anchor": "nothing to pass on",
+      "element": "right signin",
+      "action": "waits; dots pulse",
+      "motion": "ambient"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b15",
+   "kind": "bespoke",
+   "scene": "b15",
+   "station": "st_google",
+   "join_in": {
+    "type": "wipe",
+    "dir": "left",
+    "meaning": "time"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "subject": "targeted attacks blocked",
+   "world": "the numbers",
+   "accent_on": "the security keys bar",
+   "design": {
+    "treatment": "Three plain vertical bars on a light field, rising one per phrase: texted code 76 percent, phone prompt 90, security keys with the words no one fell. Google study, its own accounts, under them.",
+    "why_motion": "a quantity per method",
+    "elements": [
+     "axis",
+     "three bars",
+     "labels",
+     "owner line"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Google saw the same order",
+      "element": "owner line",
+      "action": "sets",
+      "motion": "wipe"
+     },
+     {
+      "t_anchor": "76 percent",
+      "element": "bar 1",
+      "action": "rises",
+      "motion": "drive"
+     },
+     {
+      "t_anchor": "A phone prompt, 90",
+      "element": "bar 2",
+      "action": "rises",
+      "motion": "drive"
+     },
+     {
+      "t_anchor": "no one fell",
+      "element": "bar 3",
+      "action": "rises; words",
+      "motion": "drive"
+     }
+    ],
+    "continuity": "Held into b16."
+   }
+  },
+  {
+   "beat": "b16",
+   "kind": "bespoke",
+   "scene": "b16",
+   "station": "st_google",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "subject": "read the direction",
+   "world": "the numbers",
+   "accent_on": "the closing line",
+   "design": {
+    "treatment": "The bars hold. One line settles under them: any second factor beats none. The third bar keeps a thin dashed outline above it (not a wall).",
+    "why_motion": "a limit: a static line",
+    "elements": [
+     "line",
+     "dashed outline"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "read the direction",
+      "element": "bars",
+      "action": "a soft arrow up the three bars",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "any second factor beats none",
+      "element": "line",
+      "action": "sets",
+      "motion": "wipe"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b17",
+   "kind": "bespoke",
+   "scene": "b17",
+   "station": "st_split4",
+   "join_in": {
+    "type": "fade",
+    "meaning": "meanwhile"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "subject": "a prompt she did not start",
+   "world": "two desks",
+   "accent_on": "the stacked prompts",
+   "design": {
+    "treatment": "The split: left, Maya's phone large on her desk; right, the other desk on Check your phone. The phone buzzes: Is this you signing in?; again; again, the prompts stacking.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "split",
+     "phone large (prompt)",
+     "monitor + real signin (wait)",
+     "thief"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "is this you signing in",
+      "element": "phone",
+      "action": "prompt; buzz",
+      "motion": "state cut + buzz"
+     },
+     {
+      "t_anchor": "Then again, and again",
+      "element": "phone",
+      "action": "two more prompts stack",
+      "motion": "settle"
+     }
+    ],
+    "continuity": "Held into b18."
+   }
+  },
+  {
+   "beat": "b18",
+   "kind": "bespoke",
+   "scene": "b18",
+   "station": "st_split4",
+   "join_in": {
+    "type": "continue"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "subject": "she denies it",
+   "world": "two desks",
+   "accent_on": "Deny",
+   "design": {
+    "treatment": "Maya's thumb presses Deny; the prompts fall away; the phone goes dark. The right page cuts to Sign-in denied.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "deny press",
+     "right signin"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "wants a tap",
+      "element": "phone",
+      "action": "Approve pulses once",
+      "motion": "glow"
+     },
+     {
+      "t_anchor": "She denies it",
+      "element": "deny",
+      "action": "press; the prompts fall",
+      "motion": "press"
+     },
+     {
+      "t_anchor": "shares no code",
+      "element": "right signin",
+      "action": "Sign-in denied",
+      "motion": "state cut"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b19",
+   "kind": "bespoke",
+   "scene": "b19",
+   "station": "st_recap",
+   "join_in": {
+    "type": "fade",
+    "meaning": "meanwhile"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "subject": "the three outcomes",
+   "world": "the three things",
+   "accent_on": "the passkey",
+   "design": {
+    "treatment": "Three things in a row: the password field (a copy slides out of it), the code (it slides toward a small other monitor), the phone with its key (the real address stamp). Each outcome as it is named.",
+    "why_motion": "a recap that replays each outcome",
+    "elements": [
+     "password field + copy",
+     "code + small monitor",
+     "phone + stamp"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "can be copied",
+      "element": "password field",
+      "action": "a copy slides out",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "can be passed on",
+      "element": "code",
+      "action": "slides away",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "only the real site",
+      "element": "phone",
+      "action": "stamp",
+      "motion": "stamp"
+     }
+    ],
+    "continuity": "None held."
+   }
+  },
+  {
+   "beat": "b20",
+   "kind": "template",
+   "template": "list.steps",
+   "station": "st_rules",
+   "join_in": {
+    "type": "fade",
+    "meaning": "time"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "accent_on": "the third rule",
+   "props": {
+    "title": "Three rules",
+    "items": [
+     {
+      "text": "Turn on a second factor",
+      "say": "turn on a second factor"
+     },
+     {
+      "text": "Pick a passkey when offered",
+      "say": "Pick a passkey when offered"
+     },
+     {
+      "text": "Refuse any prompt you did not start",
+      "say": "Refuse any prompt you did not start"
+     }
+    ],
+    "marker": "tick",
+    "say_title": "So, turn on"
+   },
+   "rationale": "The three actions as a list the viewer can screenshot."
+  },
+  {
+   "beat": "b21",
+   "kind": "bespoke",
+   "scene": "b21",
+   "station": "st_end",
+   "join_in": {
+    "type": "fade",
+    "meaning": "time"
+   },
+   "register": "productive",
+   "motion_is": "content",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "payoff",
+   "subject": "nothing to hand over",
+   "world": "Maya's office",
+   "accent_on": "the line nothing to hand over",
+   "design": {
+    "treatment": "The office again: Maya, at ease, smiles; her inset shows the passkey sign-in at Welcome, Maya. The line nothing to hand over sets large across the wall.",
+    "why_motion": "the story moves: a screen changes state, something travels, someone waits",
+    "elements": [
+     "office",
+     "maya",
+     "inset (welcome)",
+     "line"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "With a passkey",
+      "element": "inset",
+      "action": "passkey, then Welcome",
+      "motion": "state cut"
+     },
+     {
+      "t_anchor": "nothing to hand over",
+      "element": "line",
+      "action": "sets",
+      "motion": "wipe"
+     }
+    ],
+    "continuity": "The end."
+   }
+  }
+ ]
+}

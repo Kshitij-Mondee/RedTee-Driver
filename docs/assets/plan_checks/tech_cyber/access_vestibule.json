@@ -1,0 +1,398 @@
+{
+ "scene": "access_vestibule",
+ "camera_spec": {
+  "camera": {
+   "x": 2.9,
+   "y": -1.7,
+   "eye": 1.62,
+   "yaw": 10,
+   "hfov": 55,
+   "horizon_pct": 44
+  },
+  "walls": [
+   {
+    "name": "data hall wall (cobalt)",
+    "axis": "y",
+    "at": 4.6
+   },
+   {
+    "name": "lobby left wall",
+    "axis": "x",
+    "at": 0.0
+   },
+   {
+    "name": "lobby right wall",
+    "axis": "x",
+    "at": 7.5
+   }
+  ],
+  "points": {
+   "wall_left_floor": [
+    0,
+    4.6,
+    0
+   ],
+   "wall_right_floor": [
+    7.5,
+    4.6,
+    0
+   ],
+   "wall_left_top": [
+    0,
+    4.6,
+    3.0
+   ],
+   "wall_x6_top": [
+    6.0,
+    4.6,
+    3.0
+   ],
+   "wall_x6_floor": [
+    6.0,
+    4.6,
+    0
+   ],
+   "door_L_floor": [
+    1.9,
+    4.6,
+    0
+   ],
+   "door_R_top": [
+    2.9,
+    4.6,
+    2.1
+   ],
+   "door_L_top": [
+    1.9,
+    4.6,
+    2.1
+   ],
+   "door_R_floor": [
+    2.9,
+    4.6,
+    0
+   ],
+   "frame_L_top": [
+    1.8,
+    4.6,
+    2.2
+   ],
+   "frame_R_top": [
+    3.0,
+    4.6,
+    2.2
+   ],
+   "vision_TL": [
+    2.6,
+    4.6,
+    1.9
+   ],
+   "vision_BR": [
+    2.75,
+    4.6,
+    1.2
+   ],
+   "reader": [
+    3.15,
+    4.6,
+    1.1
+   ],
+   "door_handle": [
+    2.78,
+    4.6,
+    1.0
+   ],
+   "keypad": [
+    3.15,
+    4.6,
+    0.95
+   ],
+   "dome": [
+    2.4,
+    4.3999999999999995,
+    3.0
+   ],
+   "sign_on_door": [
+    2.35,
+    4.6,
+    1.5
+   ],
+   "kiosk_screen": [
+    1.35,
+    4.2,
+    1.25
+   ],
+   "kiosk_floor": [
+    1.35,
+    4.2,
+    0
+   ],
+   "extinguisher": [
+    0.0,
+    3.6,
+    1.0
+   ],
+   "badge_head_top": [
+    3.55,
+    3.95,
+    1.74
+   ],
+   "badge_head_c": [
+    3.55,
+    3.95,
+    1.62
+   ],
+   "badge_feet": [
+    3.55,
+    3.95,
+    0
+   ],
+   "tail_head_top": [
+    4.45,
+    3.35,
+    1.8
+   ],
+   "tail_head_c": [
+    4.45,
+    3.35,
+    1.68
+   ],
+   "tail_feet": [
+    4.45,
+    3.35,
+    0
+   ],
+   "bench_L": [
+    5.4,
+    4.199999999999999,
+    0.45
+   ],
+   "bench_R": [
+    6.8,
+    4.199999999999999,
+    0.45
+   ]
+  },
+  "behind": [
+   "badge_head_top",
+   "badge_head_c",
+   "tail_head_top",
+   "tail_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 635,
+   "along_x": 11419,
+   "horizon_y": 475
+  },
+  "points": {
+   "wall_left_floor": {
+    "x": -318,
+    "y": 999,
+    "where": "outside",
+    "depth": 5.7
+   },
+   "wall_right_floor": {
+    "x": 1865,
+    "y": 902,
+    "where": "frame",
+    "depth": 7.0
+   },
+   "wall_left_top": {
+    "x": -318,
+    "y": 29,
+    "where": "outside",
+    "depth": 5.7
+   },
+   "wall_x6_top": {
+    "x": 1496,
+    "y": 98,
+    "where": "frame",
+    "depth": 6.74
+   },
+   "wall_x6_floor": {
+    "x": 1496,
+    "y": 918,
+    "where": "frame",
+    "depth": 6.74
+   },
+   "door_L_floor": {
+    "x": 324,
+    "y": 971,
+    "where": "frame",
+    "depth": 6.03
+   },
+   "door_R_top": {
+    "x": 635,
+    "y": 333,
+    "where": "frame",
+    "depth": 6.2
+   },
+   "door_L_top": {
+    "x": 324,
+    "y": 328,
+    "where": "frame",
+    "depth": 6.03
+   },
+   "door_R_floor": {
+    "x": 635,
+    "y": 957,
+    "where": "frame",
+    "depth": 6.2
+   },
+   "frame_L_top": {
+    "x": 292,
+    "y": 297,
+    "where": "frame",
+    "depth": 6.01
+   },
+   "frame_R_top": {
+    "x": 665,
+    "y": 303,
+    "where": "frame",
+    "depth": 6.22
+   },
+   "vision_TL": {
+    "x": 544,
+    "y": 391,
+    "where": "frame",
+    "depth": 6.15
+   },
+   "vision_BR": {
+    "x": 589,
+    "y": 601,
+    "where": "frame",
+    "depth": 6.18
+   },
+   "reader": {
+    "x": 710,
+    "y": 629,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "door_handle": {
+    "x": 598,
+    "y": 660,
+    "where": "frame",
+    "depth": 6.18
+   },
+   "keypad": {
+    "x": 710,
+    "y": 673,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "dome": {
+    "x": 477,
+    "y": 45,
+    "where": "frame",
+    "depth": 5.92
+   },
+   "sign_on_door": {
+    "x": 466,
+    "y": 511,
+    "where": "frame",
+    "depth": 6.11
+   },
+   "kiosk_screen": {
+    "x": 111,
+    "y": 598,
+    "where": "frame",
+    "depth": 5.54
+   },
+   "kiosk_floor": {
+    "x": 111,
+    "y": 1014,
+    "where": "frame",
+    "depth": 5.54
+   },
+   "extinguisher": {
+    "x": -517,
+    "y": 718,
+    "where": "outside",
+    "depth": 4.72
+   },
+   "badge_head_top": {
+    "x": 849,
+    "y": 436,
+    "where": "frame",
+    "depth": 5.68,
+    "behind": {
+     "wall": "data hall wall (cobalt)",
+     "at": [
+      3.62,
+      4.6,
+      1.75
+     ]
+    }
+   },
+   "badge_head_c": {
+    "x": 849,
+    "y": 475,
+    "where": "frame",
+    "depth": 5.68,
+    "behind": {
+     "wall": "data hall wall (cobalt)",
+     "at": [
+      3.62,
+      4.6,
+      1.62
+     ]
+    }
+   },
+   "badge_feet": {
+    "x": 849,
+    "y": 1001,
+    "where": "frame",
+    "depth": 5.68
+   },
+   "tail_head_top": {
+    "x": 1188,
+    "y": 412,
+    "where": "frame",
+    "depth": 5.24,
+    "behind": {
+     "wall": "data hall wall (cobalt)",
+     "at": [
+      4.83,
+      4.6,
+      1.84
+     ]
+    }
+   },
+   "tail_head_c": {
+    "x": 1188,
+    "y": 454,
+    "where": "frame",
+    "depth": 5.24,
+    "behind": {
+     "wall": "data hall wall (cobalt)",
+     "at": [
+      4.83,
+      4.6,
+      1.69
+     ]
+    }
+   },
+   "tail_feet": {
+    "x": 1188,
+    "y": 1045,
+    "where": "frame",
+    "depth": 5.24
+   },
+   "bench_L": {
+    "x": 1385,
+    "y": 821,
+    "where": "frame",
+    "depth": 6.24
+   },
+   "bench_R": {
+    "x": 1761,
+    "y": 808,
+    "where": "frame",
+    "depth": 6.49
+   }
+  }
+ }
+}

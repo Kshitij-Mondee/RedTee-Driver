@@ -1,0 +1,256 @@
+{
+  "id": "whiteboard",
+  "name": "Whiteboard Sketch",
+  "reads_as": "Hand-drawn whiteboard explainer for working adults: a white board, one confident marker line (seeded rough.js, identical every render), black ink with one marker colour per point, a handwriting display face, the reasoning drawn as it is spoken. Clear and practical, like a good workshop facilitator, never a doodle.",
+  "_guide": "docs/styles/guides/whiteboard.md (the full visual grammar; keep it true when a token changes)",
+  "_changes_2026-10-07": "Accents deepened to dry-erase marker depth so every marker colour reads as text at label size on field, field2 and surface2 (was 3.1 to 4.5:1, now 4.6 to 5.7:1; lint pairs + style_whiteboard guide s2); caption_active re-derived as the tint of the new accent (tools/caption_contrast.py rule, 5.13:1 on the pill); single marker stroke instead of rough.js double stroke (the doubled outline read as a software sketch, blameless-postmortem qa/frames/82.59.png); stroke 3.2 -> 3.6 to match the body text stem; radius 18 -> 6 so crisp companions (highlight rings, backings) match square rough corners (qa/frames/228.25.png); overshoot off: ink is drawn, it does not bounce.",
+  "look_family": "illustrated",
+  "fits": [
+    "onboarding",
+    "soft skills",
+    "workshops",
+    "how-to",
+    "brainstorm"
+  ],
+  "avoid_for": [
+    "data-dense quantitative",
+    "formal policy"
+  ],
+  "palette": {
+    "field": "#FBFBF8",
+    "field2": "#F2F2EC",
+    "surface": "#FFFFFF",
+    "surface2": "#EEF1F6",
+    "ink": "#1E2430",
+    "muted": "#586274",
+    "line": "#1E2430",
+    "accent": "#C2410C",
+    "accent2": "#1A62C4",
+    "accent3": "#BE2A5E",
+    "accent4": "#1B784D",
+    "pos": "#1B784D",
+    "neg": "#BE2A5E",
+    "shadow": "#1E2430",
+    "onAccent": "#FFFFFF",
+    "caption_active": "#DA8D6D"
+  },
+  "fonts": {
+    "display": {
+      "family": "Caveat",
+      "weights": [
+        700
+      ]
+    },
+    "body": {
+      "family": "Patrick Hand",
+      "weights": [
+        400
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400
+      ]
+    },
+    "faces": [
+      {
+        "family": "Caveat",
+        "weight": 700,
+        "file": "caveat-latin-700-normal.woff2",
+        "pkg": "@fontsource/caveat"
+      },
+      {
+        "family": "Patrick Hand",
+        "weight": 400,
+        "file": "patrick-hand-latin-400-normal.woff2",
+        "pkg": "@fontsource/patrick-hand"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      120,
+      180
+    ],
+    "hero": [
+      110,
+      160
+    ],
+    "title": [
+      72,
+      104
+    ],
+    "lead": [
+      38,
+      48
+    ],
+    "body": [
+      34,
+      40
+    ],
+    "label": [
+      28,
+      34
+    ],
+    "caption": [
+      24,
+      28
+    ]
+  },
+  "shape": {
+    "radius": 6,
+    "stroke": 3.6,
+    "shading": "sketch",
+    "shadow": "none",
+    "sketch": {
+      "roughness": 1.1,
+      "bowing": 1.0,
+      "single": true,
+      "fillStyle": "hachure",
+      "hachureGap": 10,
+      "fillWeight": 1.8,
+      "fillOpacity": 0.45
+    }
+  },
+  "motion": {
+    "personality": "calm",
+    "enter": 0.5,
+    "move": 0.36,
+    "exit": 0.3,
+    "stagger": 0.09,
+    "draw": 0.9,
+    "count": 1.1,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "none"
+  },
+  "captions": {
+    "bg": "rgba(30,36,48,0.95)",
+    "fg": "surface",
+    "active": "caption_active",
+    "radius": 14,
+    "font": "body",
+    "size": 38,
+    "weight": 400,
+    "top": 948
+  },
+  "icons": {
+    "stroke": 2.4
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "cloth": "accent2",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "accent3",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson.",
+    "bottom": "surface"
+  },
+  "join_default": "camera",
+  "seam_join": "wipe",
+  "join_note": "A small story world: stay in the place and change its state (continue) or pan where places connect; a wipe or a material join (page, torn) at a change of time or chapter, the dip only for a change of era. Not every beat needs a transition: most beats continue.",
+  "music": {
+    "mood": "upbeat",
+    "root_midi": 55
+  },
+  "fx": {
+    "background": "paper",
+    "intensity": 0.8,
+    "grain": 0,
+    "vignette": 0.08,
+    "colors": [
+      "accent",
+      "accent2",
+      "accent3"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish.",
+    "spotlight": {
+      "strength": 0
+    },
+    "vignette_under": true
+  },
+  "tone_reference": {
+    "family": "sketch_line_paper",
+    "brightness": 0.82,
+    "saturation": 0.08,
+    "dark_share": 0.0,
+    "light_share": 0.86,
+    "warm": 0.05,
+    "cool": 0.07,
+    "accent_shots": 0.09,
+    "colours": 4.7,
+    "tolerance": 0.15,
+    "_source": "TED-Ed family means, docs/research/vision/tedEd_2026-10/colour_and_tone.md (96 films, code-measured); a reference, not a target (D-112)"
+  },
+  "guide": "docs/styles/guides/whiteboard.md",
+  "materials": {
+    "wood": "field2",
+    "chair": "surface2",
+    "screen": "surface",
+    "window_lights": "muted",
+    "vessel": "field2",
+    "cells": [
+      "surface",
+      "muted"
+    ],
+    "leds": [
+      "muted"
+    ],
+    "cables": [
+      "line",
+      "muted"
+    ],
+    "chart": [
+      "muted",
+      "ink"
+    ],
+    "safety_line": "muted",
+    "objects": {
+      "document": "ink",
+      "envelope": "surface",
+      "calendar": "ink",
+      "clock": "surface",
+      "folder": "surface",
+      "package": "surface",
+      "building": "surface",
+      "heart": "surface",
+      "bulb": "surface",
+      "lock": "surface"
+    },
+    "_decor_note": "2026-10-08 (L-276), from guide s2: a frame holds ink, muted for notes and at most two marker colours, one of them the emphasis (accent) or the pos and neg pair, so set decorations and default object tones spend no marker: decorations are muted (the grey marker) or ink and line, the vessel field2 (a large back panel), objects surface (a white inside an outline) and the document and calendar headers ink (a surface document draws its header in the accent). Left at the runtime default: phone surface2 (a pale fill). The laptop reads no tone. The guide's s9 still keeps places out of this style."
+  },
+  "roles": {
+    "verdict": "ink",
+    "quiz_letter": "ink",
+    "recap_rule": "ink",
+    "stat_value": "ink",
+    "chapter_kicker": "muted",
+    "ui_mark": "accent",
+    "button": "ink",
+    "me_bubble": "surface2",
+    "turn_card": "field"
+  },
+  "board": {
+    "carry": {
+      "max_share": 0.4,
+      "max_words": 10,
+      "why": "Kshitij, 2026-10-15: carry a few things into a new section, not so many that the new explanation has no room; the rest is wiped at the end of its section",
+      "max_kept": 8
+    }
+  }
+}

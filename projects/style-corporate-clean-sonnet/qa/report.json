@@ -1,0 +1,257 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b09: camera pan between different worlds (board -> offline) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b10: camera pan between different worlds (offline -> board) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "runtime unknown_exit: fade",
+    "runtime unknown_exit: fade",
+    "runtime part_drawn_again: b05: draws kit part \"report_file\" again as \"copy_a\" while it holds \"report_main\" (the report_file b02 drew, still on screen), elsewhere on screen: a second report_file is fine only when the film shows two; to change the held one use ctx.held(\"report_main\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"report_file\" again as \"copy_b\" while it holds \"report_main\" (the report_file b02 drew, still on screen), elsewhere on screen: a second report_file is fine only when the film shows two; to change the held one use ctx.held(\"report_main\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"report_file\" again as \"ghost_copy\" while it holds \"report_main\" (the report_file b02 drew, still on screen), elsewhere on screen: a second report_file is fine only when the film shows two; to change the held one use ctx.held(\"report_main\").handle",
+    "runtime unknown_exit: fade",
+    "runtime unknown_exit: fade",
+    "b09: 10 chunks on screen (copy_connected, copy_offline, drive_connected, drive_offline, label_connected, label_offline, laptop_d, lock_token, offline_ok, report_d); the budget is ~5-6",
+    "b10: 9 chunks on screen (cloud, copy_a, copy_b, ext_drive, label_drive, label_laptop, laptop, rail, report_main); the budget is ~5-6",
+    "b13: 14 chunks on screen (cloud, copy_a, copy_b, copy_restore, ext_drive, label_drive, label_laptop, laptop, rail, report_main, tag_failed, tag_failed.0, tag_restored, tag_restored.0); the budget is ~5-6",
+    "b01: \"It lives in one place: your laptop\" is readable for 0.92s but 7 word(s) need 2.10s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 0.571 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.846 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b02, b03, b04, b05, b06, b07, b08)",
+    "variety: labels_over_objects_share = 0.769 is worse than the worst baseline lesson (0.5): it grew (beats: _kit, b03, b04, b05, b06, b08, b09, b10)",
+    "lc layout text_covered @ 27: b02 \"Report\" is partly covered by an opaque shape (24 % of it, its words cut) from 27 to 27 s [report_main]",
+    "b10: no_entrance_words: element 'label_laptop' (text) shows \"Laptop\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b10: no_entrance_words: element 'label_drive' (text) shows \"Drive\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'label_laptop' (text) shows \"Laptop\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'label_drive' (text) shows \"External drive\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b05: value script says 'mid' but the frames measure brightness 0.90 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.87 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.80 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.86 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.85 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 1,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.67
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.26
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 1.37
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.41
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.59
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 1.29
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.99
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 2.02
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0,
+        "declared": "rest"
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.07,
+        "declared": "rest"
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 1.68
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 1.31
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.124,
+      "template": 0.1,
+      "motion": 0.776,
+      "hybrid": 0.0,
+      "motion_effective": 0.776
+    },
+    "elements": {
+      "b01": 6,
+      "b02": 4,
+      "b03": 3,
+      "b04": 4,
+      "b05": 5,
+      "b06": 4,
+      "b07": 2,
+      "b08": 2,
+      "b09": 11,
+      "b10": 12,
+      "b11": 8,
+      "b12": 1,
+      "b13": 16,
+      "b14": 7
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.282,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.909,
+      "one_radius_share": 0.571,
+      "still_share": 0.846,
+      "labels_over_objects_share": 0.769,
+      "one_world_share": 0.538,
+      "lines_per_s": 11.33
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 18230,
+      "layout_samples": 199,
+      "texts": 253,
+      "contrast_checked": 295,
+      "errors": 0,
+      "warnings": 1
+    },
+    "nodes": 2381,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 28.7,
+        "b02": 29.5,
+        "b03": 61,
+        "b04": 27.9,
+        "b05": 27.9,
+        "b06": 27.9,
+        "b07": 27.9,
+        "b08": 27.9,
+        "b09": 27.9,
+        "b10": 28.7,
+        "b11": 27.9,
+        "b12": 27.9,
+        "b13": 27.9,
+        "b14": 28.7
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 14,
+      "lines_seen": 59,
+      "blank_beats": [],
+      "blank_measured": 13
+    },
+    "foreign": {
+      "measured_beats": 14,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 85,
+      "without_life": 0,
+      "no_entrance_words": 4
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0618,
+        "b02": 0.023,
+        "b03": 0.0409,
+        "b04": 0.0578,
+        "b05": 0.0411,
+        "b06": 0.0527,
+        "b07": 0.0537,
+        "b08": 0.0812,
+        "b09": 0.048,
+        "b10": 0.0646,
+        "b11": 0.0489,
+        "b12": 0.0561,
+        "b13": 0.0625,
+        "b14": 0.0598
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 14,
+      "sharpness": {
+        "b01": 0.922,
+        "b02": 1.174,
+        "b03": 1.436,
+        "b04": 1.276,
+        "b05": 1.283,
+        "b06": 1.328,
+        "b07": 1.226,
+        "b08": 1.197,
+        "b09": 1.163,
+        "b10": 0.835,
+        "b11": 1.093,
+        "b12": 1.222,
+        "b13": 0.857,
+        "b14": 1.0
+      },
+      "blurred_beats": [],
+      "blur_measured": 14
+    },
+    "tone": {
+      "value_script_beats": 14
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-corporate-clean-sonnet\\qa\\sheets\\b14.jpg"
+  ],
+  "build_hash": "bd32a6978ae7f628"
+}

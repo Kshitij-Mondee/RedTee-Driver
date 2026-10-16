@@ -1,0 +1,842 @@
+{
+ "scene": "shift_board",
+ "camera_spec": {
+  "camera": {
+   "x": -1.0,
+   "y": -2.0,
+   "eye": 1.6,
+   "yaw": 38,
+   "hfov": 55,
+   "horizon_pct": 48
+  },
+  "walls": [
+   {
+    "name": "welfare block north face (board wall)",
+    "axis": "y",
+    "at": 8.0
+   },
+   {
+    "name": "east gable wall of the shed",
+    "axis": "x",
+    "at": 10.0
+   }
+  ],
+  "points": {
+   "L_head_top": [
+    7.6,
+    7.2,
+    1.75
+   ],
+   "L_head_centre": [
+    7.6,
+    7.2,
+    1.63
+   ],
+   "L_head_left": [
+    7.489999999999999,
+    7.2,
+    1.65
+   ],
+   "L_head_right": [
+    7.71,
+    7.2,
+    1.65
+   ],
+   "L_chin": [
+    7.6,
+    7.2,
+    1.52
+   ],
+   "L_feet": [
+    7.6,
+    7.2,
+    0
+   ],
+   "O1_head_top": [
+    6.6,
+    4.0,
+    1.75
+   ],
+   "O1_head_centre": [
+    6.6,
+    4.0,
+    1.63
+   ],
+   "O1_head_left": [
+    6.489999999999999,
+    4.0,
+    1.65
+   ],
+   "O1_head_right": [
+    6.71,
+    4.0,
+    1.65
+   ],
+   "O1_chin": [
+    6.6,
+    4.0,
+    1.52
+   ],
+   "O1_feet": [
+    6.6,
+    4.0,
+    0
+   ],
+   "O2_head_top": [
+    8.0,
+    3.6,
+    1.75
+   ],
+   "O2_head_centre": [
+    8.0,
+    3.6,
+    1.63
+   ],
+   "O2_head_left": [
+    7.89,
+    3.6,
+    1.65
+   ],
+   "O2_head_right": [
+    8.11,
+    3.6,
+    1.65
+   ],
+   "O2_chin": [
+    8.0,
+    3.6,
+    1.52
+   ],
+   "O2_feet": [
+    8.0,
+    3.6,
+    0
+   ],
+   "corner_floor": [
+    10,
+    8,
+    0
+   ],
+   "corner_3m": [
+    10,
+    8,
+    3
+   ],
+   "corner_dado": [
+    10,
+    8,
+    2.4
+   ],
+   "board_L_top": [
+    3.0,
+    8,
+    2.1
+   ],
+   "board_L_bot": [
+    3.0,
+    8,
+    0.9
+   ],
+   "board_R_top": [
+    7.0,
+    8,
+    2.1
+   ],
+   "board_R_bot": [
+    7.0,
+    8,
+    0.9
+   ],
+   "door_L_floor": [
+    0.5,
+    8,
+    0
+   ],
+   "door_R_head": [
+    1.5,
+    8,
+    2.1
+   ],
+   "win_L_bot": [
+    -4,
+    8,
+    3.9
+   ],
+   "win_R_top": [
+    8.0,
+    8,
+    5.1
+   ],
+   "block_top_R": [
+    10,
+    8,
+    6.2
+   ],
+   "block_top_L": [
+    -6,
+    8,
+    6.2
+   ],
+   "gable_dado_near": [
+    10,
+    1,
+    2.4
+   ],
+   "gable_floor_near": [
+    10,
+    1,
+    0
+   ],
+   "gable_floor_m2": [
+    10,
+    -2,
+    0
+   ],
+   "firepoint_ext": [
+    2.1,
+    7.95,
+    1.0
+   ],
+   "firepoint_sign": [
+    2.1,
+    7.97,
+    2.0
+   ],
+   "callpoint": [
+    2.6,
+    7.97,
+    1.4
+   ],
+   "firstaid_sign": [
+    -0.4,
+    7.97,
+    2.0
+   ],
+   "gable_col_y0.5": [
+    9.8,
+    0.5,
+    0
+   ],
+   "gable_col_y0.5_top": [
+    9.8,
+    0.5,
+    3
+   ],
+   "gable_col_y-7": [
+    9.8,
+    -7,
+    0
+   ],
+   "area_line_NW": [
+    -1.0,
+    2.5,
+    0
+   ],
+   "area_line_NE": [
+    10,
+    2.5,
+    0
+   ],
+   "area_line_SW": [
+    -1.0,
+    8,
+    0
+   ],
+   "barrier_NW": [
+    -1.0,
+    2.5,
+    1.1
+   ],
+   "barrier_x2": [
+    2.0,
+    2.5,
+    1.1
+   ],
+   "barrier_x5": [
+    5.0,
+    2.5,
+    1.1
+   ],
+   "barrier_NE": [
+    8.6,
+    2.5,
+    1.1
+   ],
+   "walkway_gable_line": [
+    8.8,
+    -2,
+    0
+   ],
+   "walkway_line_y2.5": [
+    8.8,
+    2.5,
+    0
+   ],
+   "O1_hip": [
+    6.6,
+    4.0,
+    1.0
+   ],
+   "board_mid_top": [
+    5.0,
+    8,
+    2.1
+   ],
+   "board_x4.3": [
+    4.3,
+    8,
+    2.1
+   ],
+   "board_centre": [
+    5.15,
+    8,
+    1.5
+   ],
+   "wb_tl": [
+    4.4,
+    8,
+    2.1
+   ],
+   "wb_bl": [
+    4.4,
+    8,
+    0.9
+   ],
+   "wb_tr": [
+    5.9,
+    8,
+    2.1
+   ],
+   "wb_br": [
+    5.9,
+    8,
+    0.9
+   ],
+   "nm_tr": [
+    7.0,
+    8,
+    2.1
+   ],
+   "nm_br": [
+    7.0,
+    8,
+    0.9
+   ]
+  },
+  "behind": [
+   "L_head_top",
+   "L_head_centre",
+   "L_head_left",
+   "L_head_right",
+   "L_chin",
+   "O1_head_top",
+   "O1_head_centre",
+   "O1_head_left",
+   "O1_head_right",
+   "O1_chin",
+   "O2_head_top",
+   "O2_head_centre",
+   "O2_head_left",
+   "O2_head_right",
+   "O2_chin",
+   "door_R_head"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": -481,
+   "along_x": 3320,
+   "horizon_y": 518
+  },
+  "points": {
+   "L_head_top": {
+    "x": 1124,
+    "y": 496,
+    "where": "frame",
+    "depth": 12.54,
+    "behind": {
+     "wall": "welfare block north face (board wall)",
+     "at": [
+      8.35,
+      8.0,
+      1.76
+     ]
+    }
+   },
+   "L_head_centre": {
+    "x": 1124,
+    "y": 514,
+    "where": "frame",
+    "depth": 12.54,
+    "behind": {
+     "wall": "welfare block north face (board wall)",
+     "at": [
+      8.35,
+      8.0,
+      1.63
+     ]
+    }
+   },
+   "L_head_left": {
+    "x": 1112,
+    "y": 511,
+    "where": "frame",
+    "depth": 12.48,
+    "behind": {
+     "wall": "welfare block north face (board wall)",
+     "at": [
+      8.23,
+      8.0,
+      1.65
+     ]
+    }
+   },
+   "L_head_right": {
+    "x": 1135,
+    "y": 511,
+    "where": "frame",
+    "depth": 12.61,
+    "behind": {
+     "wall": "welfare block north face (board wall)",
+     "at": [
+      8.47,
+      8.0,
+      1.65
+     ]
+    }
+   },
+   "L_chin": {
+    "x": 1124,
+    "y": 530,
+    "where": "frame",
+    "depth": 12.54,
+    "behind": {
+     "wall": "welfare block north face (board wall)",
+     "at": [
+      8.35,
+      8.0,
+      1.51
+     ]
+    }
+   },
+   "L_feet": {
+    "x": 1124,
+    "y": 754,
+    "where": "frame",
+    "depth": 12.54
+   },
+   "O1_head_top": {
+    "x": 1410,
+    "y": 489,
+    "where": "frame",
+    "depth": 9.41,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      6.68,
+      1.82
+     ]
+    }
+   },
+   "O1_head_centre": {
+    "x": 1410,
+    "y": 513,
+    "where": "frame",
+    "depth": 9.41,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      6.68,
+      1.64
+     ]
+    }
+   },
+   "O1_head_left": {
+    "x": 1396,
+    "y": 509,
+    "where": "frame",
+    "depth": 9.34,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      6.81,
+      1.67
+     ]
+    }
+   },
+   "O1_head_right": {
+    "x": 1424,
+    "y": 509,
+    "where": "frame",
+    "depth": 9.47,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      6.56,
+      1.67
+     ]
+    }
+   },
+   "O1_chin": {
+    "x": 1410,
+    "y": 534,
+    "where": "frame",
+    "depth": 9.41,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      6.68,
+      1.48
+     ]
+    }
+   },
+   "O1_feet": {
+    "x": 1410,
+    "y": 832,
+    "where": "frame",
+    "depth": 9.41
+   },
+   "O2_head_top": {
+    "x": 1635,
+    "y": 491,
+    "where": "frame",
+    "depth": 9.95,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      4.84,
+      1.78
+     ]
+    }
+   },
+   "O2_head_centre": {
+    "x": 1635,
+    "y": 513,
+    "where": "frame",
+    "depth": 9.95,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      4.84,
+      1.64
+     ]
+    }
+   },
+   "O2_head_left": {
+    "x": 1624,
+    "y": 509,
+    "where": "frame",
+    "depth": 9.89,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      4.93,
+      1.66
+     ]
+    }
+   },
+   "O2_head_right": {
+    "x": 1647,
+    "y": 509,
+    "where": "frame",
+    "depth": 10.02,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      4.76,
+      1.66
+     ]
+    }
+   },
+   "O2_chin": {
+    "x": 1635,
+    "y": 533,
+    "where": "frame",
+    "depth": 9.95,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      4.84,
+      1.5
+     ]
+    }
+   },
+   "O2_feet": {
+    "x": 1635,
+    "y": 815,
+    "where": "frame",
+    "depth": 9.95
+   },
+   "corner_floor": {
+    "x": 1276,
+    "y": 720,
+    "where": "frame",
+    "depth": 14.65
+   },
+   "corner_3m": {
+    "x": 1276,
+    "y": 342,
+    "where": "frame",
+    "depth": 14.65
+   },
+   "corner_dado": {
+    "x": 1276,
+    "y": 418,
+    "where": "frame",
+    "depth": 14.65
+   },
+   "board_L_top": {
+    "x": 424,
+    "y": 429,
+    "where": "frame",
+    "depth": 10.34
+   },
+   "board_L_bot": {
+    "x": 424,
+    "y": 643,
+    "where": "frame",
+    "depth": 10.34
+   },
+   "board_R_top": {
+    "x": 981,
+    "y": 446,
+    "where": "frame",
+    "depth": 12.81
+   },
+   "board_R_bot": {
+    "x": 981,
+    "y": 619,
+    "where": "frame",
+    "depth": 12.81
+   },
+   "door_L_floor": {
+    "x": -82,
+    "y": 854,
+    "where": "overscan",
+    "depth": 8.8
+   },
+   "door_R_head": {
+    "x": 140,
+    "y": 421,
+    "where": "frame",
+    "depth": 9.42,
+    "behind": {
+     "wall": "east gable wall of the shed",
+     "at": [
+      10.0,
+      42.0,
+      3.8
+     ]
+    }
+   },
+   "win_L_bot": {
+    "x": -1645,
+    "y": -185,
+    "where": "outside",
+    "depth": 6.03
+   },
+   "win_R_top": {
+    "x": 1089,
+    "y": 37,
+    "where": "frame",
+    "depth": 13.42
+   },
+   "block_top_R": {
+    "x": 1276,
+    "y": -61,
+    "where": "overscan",
+    "depth": 14.65
+   },
+   "block_top_L": {
+    "x": -2918,
+    "y": -1248,
+    "where": "outside",
+    "depth": 4.8
+   },
+   "gable_dado_near": {
+    "x": 2337,
+    "y": 357,
+    "where": "outside",
+    "depth": 9.14
+   },
+   "gable_floor_near": {
+    "x": 2337,
+    "y": 841,
+    "where": "outside",
+    "depth": 9.14
+   },
+   "gable_floor_m2": {
+    "x": 3320,
+    "y": 954,
+    "where": "outside",
+    "depth": 6.77
+   },
+   "firepoint_ext": {
+    "x": 263,
+    "y": 632,
+    "where": "frame",
+    "depth": 9.75
+   },
+   "firepoint_sign": {
+    "x": 262,
+    "y": 443,
+    "where": "frame",
+    "depth": 9.77
+   },
+   "callpoint": {
+    "x": 356,
+    "y": 555,
+    "where": "frame",
+    "depth": 10.07
+   },
+   "firstaid_sign": {
+    "x": -310,
+    "y": 429,
+    "where": "outside",
+    "depth": 8.23
+   },
+   "gable_col_y0.5": {
+    "x": 2452,
+    "y": 861,
+    "where": "outside",
+    "depth": 8.62
+   },
+   "gable_col_y0.5_top": {
+    "x": 2452,
+    "y": 219,
+    "where": "outside",
+    "depth": 8.62
+   },
+   "gable_col_y-7": {
+    "x": 8849,
+    "y": 1608,
+    "where": "outside",
+    "depth": 2.71
+   },
+   "area_line_NW": {
+    "x": -481,
+    "y": 1350,
+    "where": "outside",
+    "depth": 3.55
+   },
+   "area_line_NE": {
+    "x": 2014,
+    "y": 804,
+    "where": "overscan",
+    "depth": 10.32
+   },
+   "area_line_SW": {
+    "x": -481,
+    "y": 893,
+    "where": "outside",
+    "depth": 7.88
+   },
+   "barrier_NW": {
+    "x": -481,
+    "y": 778,
+    "where": "outside",
+    "depth": 3.55
+   },
+   "barrier_x2": {
+    "x": 821,
+    "y": 689,
+    "where": "frame",
+    "depth": 5.39
+   },
+   "barrier_x5": {
+    "x": 1459,
+    "y": 646,
+    "where": "frame",
+    "depth": 7.24
+   },
+   "barrier_NE": {
+    "x": 1895,
+    "y": 616,
+    "where": "frame",
+    "depth": 9.46
+   },
+   "walkway_gable_line": {
+    "x": 3320,
+    "y": 1007,
+    "where": "outside",
+    "depth": 6.03
+   },
+   "walkway_line_y2.5": {
+    "x": 1913,
+    "y": 826,
+    "where": "frame",
+    "depth": 9.58
+   },
+   "O1_hip": {
+    "x": 1410,
+    "y": 636,
+    "where": "frame",
+    "depth": 9.41
+   },
+   "board_mid_top": {
+    "x": 732,
+    "y": 439,
+    "where": "frame",
+    "depth": 11.57
+   },
+   "board_x4.3": {
+    "x": 632,
+    "y": 436,
+    "where": "frame",
+    "depth": 11.14
+   },
+   "board_centre": {
+    "x": 753,
+    "y": 534,
+    "where": "frame",
+    "depth": 11.67
+   },
+   "wb_tl": {
+    "x": 647,
+    "y": 436,
+    "where": "frame",
+    "depth": 11.2
+   },
+   "wb_bl": {
+    "x": 647,
+    "y": 634,
+    "where": "frame",
+    "depth": 11.2
+   },
+   "wb_tr": {
+    "x": 851,
+    "y": 442,
+    "where": "frame",
+    "depth": 12.13
+   },
+   "wb_br": {
+    "x": 851,
+    "y": 625,
+    "where": "frame",
+    "depth": 12.13
+   },
+   "nm_tr": {
+    "x": 981,
+    "y": 446,
+    "where": "frame",
+    "depth": 12.81
+   },
+   "nm_br": {
+    "x": 981,
+    "y": 619,
+    "where": "frame",
+    "depth": 12.81
+   }
+  }
+ }
+}

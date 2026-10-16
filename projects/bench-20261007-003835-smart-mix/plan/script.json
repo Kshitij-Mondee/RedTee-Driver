@@ -1,0 +1,503 @@
+{
+  "title": "How to give feedback that changes behaviour, not just feelings",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "sec1",
+      "title": "The exchange"
+    },
+    {
+      "id": "sec2",
+      "title": "Make it actionable"
+    },
+    {
+      "id": "sec3",
+      "title": "Revisit it"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "sec1",
+      "job": "hook",
+      "narration": [
+        "Imagine a status update.",
+        "Afterwards, you tell a colleague, \"I felt dismissed.\"",
+        "They ask, what should I do differently?"
+      ],
+      "on_screen": [
+        "What should I do differently?"
+      ],
+      "visual_intent": "Two cartoon colleagues by a meeting table; a speech bubble 'I felt dismissed' sits large, and the colleague's question mark hangs over their head with nothing to answer it.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Imagined exchange framed with 'imagine'; illustrative, not authentic speech",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "curious",
+      "concepts": [
+        "personal reaction"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "sec1",
+      "job": "orient",
+      "narration": [
+        "Let's turn that into feedback they can act on.",
+        "With a next step,",
+        "and a way to revisit it."
+      ],
+      "on_screen": [
+        "Act on",
+        "Next step",
+        "Revisit"
+      ],
+      "visual_intent": "The same two colleagues; the vague bubble stays while three small labels, act on, next step, revisit, arrive on their words along a faint path.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Actionable feedback identifies something the recipient could do differently",
+          "fact": "F1"
+        }
+      ],
+      "delivery": "warm"
+    },
+    {
+      "id": "b03",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "Here is the tricky part.",
+        "Your feeling matters, but it names no action."
+      ],
+      "on_screen": [
+        "Feeling",
+        "No action named"
+      ],
+      "visual_intent": "The 'I felt dismissed' bubble is highlighted; beside it an empty action slot stays blank, so the gap is visible while the feeling is kept, not crossed out.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A statement of feelings alone does not specify what behaviour to change",
+          "fact": "F2"
+        }
+      ],
+      "delivery": "calm",
+      "misconception": "Expressing my feelings alone tells my colleague what behaviour to change."
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "Say they spoke before you finished the handover.",
+        "Try this: you spoke before I finished.",
+        "I lost my place, and felt dismissed."
+      ],
+      "on_screen": [
+        "Spoke before I finished",
+        "Lost my place"
+      ],
+      "visual_intent": "The vague bubble is revised in place: the line is replaced by the specific action in its update setting, then an effect line is added beneath it, with the active line highlighted and the rest dimmed.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Illustrative revision describing an observed action in its situation, then its effect on the giver's experience; example lines are imagined",
+          "hypothetical": true
+        },
+        {
+          "claim": "Describe a specific observed action in its situation rather than label character",
+          "fact": "F3"
+        },
+        {
+          "claim": "Explain the effect of the behaviour on your experience",
+          "fact": "F4"
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "neutral",
+      "concepts": [
+        "observed behaviour",
+        "impact"
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "That has a name. Observed behaviour, and its impact.",
+        "It shows what happened, not who they are.",
+        "Say it privately, not in front of the team."
+      ],
+      "on_screen": [
+        "Observed behaviour",
+        "Impact"
+      ],
+      "visual_intent": "The two revised lines get small pill labels on them, observed behaviour and impact, each on its word; a character-label bubble drifts out of the frame. The colleagues are then shown alone, away from the table.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Observed behaviour and its impact; behaviour does not by itself establish motive",
+          "fact": "F5"
+        },
+        {
+          "claim": "Describe action rather than label character",
+          "fact": "F3"
+        },
+        {
+          "claim": "Choose conditions without avoidable public embarrassment",
+          "fact": "F19"
+        }
+      ],
+      "delivery": "calm",
+      "concepts": [
+        "observed behaviour",
+        "impact",
+        "intent"
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Keep what you saw apart from what you felt.",
+        "Now ask for their perspective.",
+        "Say they answer, I thought you had finished.",
+        "Maybe your read needs revising."
+      ],
+      "on_screen": [
+        "Their perspective",
+        "I thought you had finished"
+      ],
+      "visual_intent": "The colleague's reply bubble appears beside the revised lines; the giver's interpretation line shifts to make room, showing the description being checked rather than defended.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Invite the recipient to describe how they saw the situation",
+          "fact": "F6"
+        },
+        {
+          "claim": "Use the recipient's account to check whether your description needs revising",
+          "fact": "F7"
+        },
+        {
+          "claim": "Recipient's reply is an imagined illustrative line",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "curious",
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "What did we observe, and what was our experience? Keep those separate as we ask for their view."
+      },
+      "concepts": [
+        "recipient's perspective"
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Propose one action: let me finish the handover.",
+        "That is a next step.",
+        "Can they do it, in their role?",
+        "If not, they need support, not pressure."
+      ],
+      "on_screen": [
+        "Next step",
+        "Feasible in their role?"
+      ],
+      "visual_intent": "A proposed action card, 'Finish the handover first', replaces the label bubble; a small check mark asks about the colleague's role, and a blocked path beside it is marked 'support' rather than a louder demand.",
+      "change_over_time": true,
+      "animate_score": 0.45,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Discuss an observable action as the next step",
+          "fact": "F8"
+        },
+        {
+          "claim": "Check feasibility within the recipient's role and influence; a barrier outside their control may need support or a process change",
+          "fact": "F10"
+        }
+      ],
+      "delivery": "neutral",
+      "concepts": [
+        "next step"
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Ask for a clear yes. Silence is not agreement.",
+        "Can they name an action, in that situation?",
+        "That is the actionability check."
+      ],
+      "on_screen": [
+        "Clear yes",
+        "Actionability check",
+        "Action + situation"
+      ],
+      "visual_intent": "The proposal card is held while a question mark is placed on it and the words 'action + situation' light up, with a 'not a label' strike through a crossed-out label bubble; this is the one emphasised moment.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Seek explicit agreement rather than assume silence means agreement",
+          "fact": "F11"
+        },
+        {
+          "claim": "Actionability check: can the recipient identify an observable action in the relevant situation",
+          "fact": "F12"
+        },
+        {
+          "claim": "A personal label alone fails the check",
+          "fact": "F13"
+        },
+        {
+          "claim": "The proposal is not yet a commitment; agreement comes at the payoff",
+          "fact": "F11"
+        }
+      ],
+      "delivery": "calm",
+      "concepts": [
+        "actionability check",
+        "agreement"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "check",
+      "narration": [
+        "Now you. Which wording passes?",
+        "A, you're inconsiderate. B, wait until I finish.",
+        "Pause the video, and decide."
+      ],
+      "on_screen": [
+        "A: You're inconsiderate",
+        "B: Wait until I finish"
+      ],
+      "visual_intent": "Question card: the next status update setting with two unmarked wording cards, A and B, side by side. No correct marker.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Judge wording by whether the recipient can identify an observable action in the situation",
+          "fact": "F12"
+        }
+      ],
+      "pause_after_s": 4,
+      "delivery": "calm",
+      "recall": {
+        "kind": "quiz",
+        "question": "At the next status update, which revision passes the actionability check?",
+        "options": [
+          "A: You're inconsiderate.",
+          "B: Wait until I finish the handover before adding your comments."
+        ],
+        "pause_after_s": 4
+      }
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "check",
+      "narration": [
+        "B passes. It names an action, in a situation.",
+        "A is a label, so they guess.",
+        "Action plus situation, not a label."
+      ],
+      "on_screen": [
+        "B passes",
+        "Action + situation"
+      ],
+      "visual_intent": "Same two cards: B is highlighted and its action and situation parts are marked; A dims with a question mark over the colleague. A small note says 'a proposal to discuss'.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "B identifies an observable action in the situation, so it passes the actionability check; it remains a proposal, not a guarantee",
+          "fact": "F12"
+        },
+        {
+          "claim": "A personal label alone fails the check, so it leaves the recipient guessing",
+          "fact": "F13"
+        }
+      ],
+      "delivery": "calm",
+      "recall": null,
+      "misconception": "A personal label is a usable request for change."
+    },
+    {
+      "id": "b11",
+      "section": "sec3",
+      "job": "sequence",
+      "narration": [
+        "Back to our colleagues. They agree out loud.",
+        "Finish the handover, then comment.",
+        "Revisit it after the next update.",
+        "Look for that action, not a friendly reaction."
+      ],
+      "on_screen": [
+        "Agreed",
+        "Next update",
+        "Look for: handover finished"
+      ],
+      "visual_intent": "Light diagram: the two colleagues agree, an arrow leads to a later update, where the agreed action is marked 'look for' with an empty box, not ticked.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Agreement shown is an imagined illustration, not evidence",
+          "hypothetical": true
+        },
+        {
+          "claim": "Agree what observable behaviour to look for when revisiting",
+          "fact": "F14"
+        },
+        {
+          "claim": "Agree an opportunity to revisit the next step",
+          "fact": "F15"
+        },
+        {
+          "claim": "Look for relevant behaviour, not approval of the giver",
+          "fact": "F14"
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "warm",
+      "concepts": [
+        "follow-up behaviour",
+        "follow-up opportunity"
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec3",
+      "job": "refute",
+      "narration": [
+        "Agreement is not proof of change.",
+        "And later change does not prove your feedback caused it."
+      ],
+      "on_screen": [
+        "Agreement is not change",
+        "Later change is not proof of cause"
+      ],
+      "visual_intent": "The agreed handshake sits beside the later update where the 'look for' box stays empty; a second note sits over any future improvement. No success is animated.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Agreement during a conversation is not evidence of later behaviour change",
+          "fact": "F16"
+        },
+        {
+          "claim": "A later change does not by itself prove the feedback caused it",
+          "fact": "F17"
+        }
+      ],
+      "delivery": "calm",
+      "misconception": "Agreement in the conversation proves behaviour has changed."
+    },
+    {
+      "id": "b13",
+      "section": "sec3",
+      "job": "practice",
+      "narration": [
+        "Prepare your own conversation.",
+        "Note the action, its effect, and your question.",
+        "Then a feasible action, and what to look for.",
+        "Harassment, misconduct or safety risks go through your reporting process."
+      ],
+      "on_screen": [
+        "Action and effect",
+        "Your question",
+        "Feasible action",
+        "Look for"
+      ],
+      "visual_intent": "Four plain note tiles for the viewer's own preparation arrive one by one on their words, in order; a separate small signpost to 'reporting process' sits apart from them.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Preparation steps follow the approved practices on description, perspective, feasibility and follow-up",
+          "fact": "F14"
+        },
+        {
+          "claim": "Use the organisational reporting process for suspected harassment, serious misconduct or safety risks",
+          "fact": "F20"
+        }
+      ],
+      "delivery": "warm",
+      "concepts": [
+        "scope limit"
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "payoff",
+      "narration": [
+        "Remember the action we agreed?",
+        "That is what to look for.",
+        "The talk is clearer. The change is still unseen.",
+        "Describe, ask, agree, revisit."
+      ],
+      "on_screen": [
+        "Describe",
+        "Ask",
+        "Agree",
+        "Revisit"
+      ],
+      "visual_intent": "Return to the opening table with the same two colleagues, now calm, the handover action card between them; the later update is still empty. The four pocket-rule words arrive in order.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Agreement is not evidence that behaviour has changed",
+          "fact": "F16"
+        },
+        {
+          "claim": "Return to the imagined colleagues; the agreement is illustrative",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "warm",
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Remember the action we agreed? That is what to look for later, not just a polite response."
+      }
+    }
+  ]
+}

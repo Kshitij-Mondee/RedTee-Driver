@@ -1,0 +1,46 @@
+{
+  "name": "loom-video-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Loom: a pedagogy-first, code-rendered L&D video engine (HyperFrames + GSAP + Manim).",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "doctor": "node tools/node/doctor.mjs",
+    "test:runtime": "node tests/runtime/run_runtime_tests.mjs"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.1",
+    "@fontsource/caveat": "^5.2.5",
+    "@fontsource/fraunces": "^5.2.5",
+    "@fontsource/fredoka": "^5.2.5",
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5",
+    "@fontsource/nunito": "^5.2.5",
+    "@fontsource/patrick-hand": "^5.2.5",
+    "@fontsource/space-grotesk": "^5.2.5",
+    "@iconify-json/fluent-emoji-flat": "^1.2.6",
+    "@observablehq/plot": "^0.6.17",
+    "@xterm/xterm": "^6.0.0",
+    "d3": "^7.9.0",
+    "gsap": "^3.13.0",
+    "hersheytext": "^2.0.0",
+    "hyperframes": "^0.8.91",
+    "katex": "^0.19.0",
+    "lottie-web": "^5.13.0",
+    "matter-js": "^0.20.0",
+    "opentype.js": "^2.0.0",
+    "p5.brush": "^2.2.3",
+    "paper": "^0.12.18",
+    "puppeteer-core": "^24.0.0",
+    "roughjs": "^4.6.6",
+    "shiki": "^4.5.0",
+    "thinking-orbs": "^0.3.2",
+    "three": "^0.186.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

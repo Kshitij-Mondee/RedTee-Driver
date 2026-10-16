@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tallyroom (a stand-in desktop app for the screenshot rebuild test)</title>
+<style>
+/* Tallyroom: a stand-in desktop app written for the screencast engine's screenshot-to-theme proof (2026-10-16). */
+@font-face { font-family: "Nunito"; src: url(../../../../node_modules/@fontsource/nunito/files/nunito-latin-400-normal.woff2) format("woff2"); font-weight: 400; }
+@font-face { font-family: "Nunito"; src: url(../../../../node_modules/@fontsource/nunito/files/nunito-latin-700-normal.woff2) format("woff2"); font-weight: 700; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { font-family: "Nunito", sans-serif; font-size: 15px; color: #23262f; background: #eef0f4; display: flex; }
+aside { width: 236px; background: #1e2433; color: #d7dbe6; padding: 18px 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: #fff; padding: 4px 8px 22px; }
+.brand i { width: 30px; height: 30px; border-radius: 7px; background: #e8703a; display: inline-block; }
+aside a { display: flex; align-items: center; gap: 10px; color: #aab1c3; text-decoration: none; padding: 9px 10px; border-radius: 6px; margin-bottom: 2px; }
+aside a b { width: 16px; height: 16px; border: 2px solid currentColor; border-radius: 4px; display: inline-block; }
+aside a.on { background: #2c3447; color: #fff; }
+aside .sec { text-transform: uppercase; letter-spacing: .1em; font-size: 11px; color: #6f7890; padding: 18px 10px 6px; }
+main { flex: 1; display: flex; flex-direction: column; }
+.bar { height: 58px; background: #fff; border-bottom: 1px solid #dfe2e9; display: flex; align-items: center; padding: 0 22px; gap: 12px; }
+.bar .search { width: 360px; height: 34px; border: 1px solid #dfe2e9; border-radius: 6px; background: #f6f7f9; color: #8a90a0; padding: 7px 12px; }
+.bar .sp { flex: 1; }
+.btn { height: 34px; padding: 7px 14px; border-radius: 6px; font-weight: 700; border: 1px solid #dfe2e9; background: #fff; }
+.btn.pri { background: #e8703a; border-color: #e8703a; color: #fff; }
+.page { padding: 22px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.page h1 { grid-column: 1 / -1; margin: 0; font-size: 22px; }
+.kpi { background: #fff; border: 1px solid #dfe2e9; border-radius: 8px; padding: 14px 16px; }
+.kpi small { color: #6b7180; }
+.kpi div { font-size: 26px; font-weight: 700; margin-top: 4px; }
+.list { grid-column: 1 / -1; background: #fff; border: 1px solid #dfe2e9; border-radius: 8px; }
+.list .row { display: grid; grid-template-columns: 2fr 1.2fr 1fr 1fr; padding: 0 16px; height: 42px; align-items: center; border-bottom: 1px solid #eceef3; }
+.list .row.h { color: #6b7180; font-weight: 700; font-size: 13px; background: #f6f7f9; border-radius: 8px 8px 0 0; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 13px; font-weight: 700; }
+.tag.ok { background: #e3f4ea; color: #1f7a4a; } .tag.due { background: #fdeee4; color: #b4501f; }
+</style>
+</head>
+<body>
+<aside>
+  <div class="brand"><i></i>Tallyroom</div>
+  <a class="on" href="#"><b></b>Invoices</a><a href="#"><b></b>Clients</a><a href="#"><b></b>Expenses</a><a href="#"><b></b>Reports</a>
+  <div class="sec">Workspace</div>
+  <a href="#"><b></b>Team</a><a href="#"><b></b>Settings</a>
+</aside>
+<main>
+  <div class="bar"><div class="search">Search invoices</div><div class="sp"></div><span class="btn">Export</span><span class="btn pri">New invoice</span></div>
+  <div class="page">
+    <h1>Invoices</h1>
+    <div class="kpi"><small>Outstanding</small><div>12,480</div></div>
+    <div class="kpi"><small>Overdue</small><div>3</div></div>
+    <div class="kpi"><small>Paid this month</small><div>28,915</div></div>
+    <div class="list">
+      <div class="row h"><span>Client</span><span>Number</span><span>Amount</span><span>Status</span></div>
+      <div class="row"><span>Harbor Studio</span><span>INV-2041</span><span>1,200</span><span><i class="tag ok">Paid</i></span></div>
+      <div class="row"><span>Marlow and Finch</span><span>INV-2042</span><span>3,450</span><span><i class="tag due">Due</i></span></div>
+      <div class="row"><span>Northgate Clinic</span><span>INV-2043</span><span>860</span><span><i class="tag ok">Paid</i></span></div>
+      <div class="row"><span>Pine Street Cafe</span><span>INV-2044</span><span>2,100</span><span><i class="tag due">Due</i></span></div>
+      <div class="row"><span>Riverside Gym</span><span>INV-2045</span><span>640</span><span><i class="tag ok">Paid</i></span></div>
+      <div class="row"><span>Willow Dental</span><span>INV-2046</span><span>4,230</span><span><i class="tag ok">Paid</i></span></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

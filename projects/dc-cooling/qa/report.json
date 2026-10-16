@@ -1,0 +1,399 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b02: camera pan between different worlds (server -> hall) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b03: camera pan between different worlds (hall -> route) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b13: camera pan between different worlds (aisle_3d -> rack) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b14: camera pan between different worlds (rack -> rack_section) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b15: camera pan between different worlds (rack_section -> rack) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b16: camera pan between different worlds (rack -> containment) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b17: camera pan between different worlds (containment -> walkthrough) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b19: camera pan between different worlds (rack_section -> boxes) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b20: camera pan between different worlds (boxes -> chip) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b21: camera pan between different worlds (chip -> gpu) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b22: camera pan between different worlds (gpu -> cdu) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b24: camera pan between different worlds (cdu_inside -> liquid_server) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b26: camera pan between different worlds (pue_term -> pue_pour) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b27: camera pan between different worlds (pue_pour -> pue) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: no audio/mix.wav yet: using the bare narration (run the mix)",
+    "variety: one_radius_share = 0.276 is above the baseline median (0.2)",
+    "b25: small text on screen at 204.3s: \"POWER USAGE EFFECTIVENESS\" 25.4px (< 26 px)",
+    "b26: no_entrance_words: element 'pue_bin_label_0' (text) shows \"IT energy\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b26: no_entrance_words: element 'pue_bin_label_1' (text) shows \"Cooling\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b26: no_entrance_words: element 'pue_bin_label_2' (text) shows \"Power losses\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b26: no_entrance_words: element 'pue_bin_label_3' (text) shows \"Lighting\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b08: value script says 'mid' but the frames measure brightness 0.81 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.81 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.80 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.87 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'mid' but the frames measure brightness 0.85 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.84 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b15: value script says 'mid' but the frames measure brightness 0.85 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b16: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b17: value script says 'mid' but the frames measure brightness 0.83 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b18: value script says 'mid' but the frames measure brightness 0.83 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b19: value script says 'mid' but the frames measure brightness 0.85 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b20: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b21: value script says 'mid' but the frames measure brightness 0.84 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b22: value script says 'mid' but the frames measure brightness 0.81 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b23: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b24: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.26
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.03
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.56,
+        "declared": "rest"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 2.22
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.96
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 1.31
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 0.52
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 4.68
+      },
+      {
+        "beat": "b26",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b27",
+        "max_static_s": 3.14
+      },
+      {
+        "beat": "b28",
+        "max_static_s": 1.85
+      },
+      {
+        "beat": "b29",
+        "max_static_s": 0.82
+      },
+      {
+        "beat": "b30",
+        "max_static_s": 0.96
+      },
+      {
+        "beat": "b31",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b32",
+        "max_static_s": 0.0,
+        "declared": "rest"
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.207,
+      "motion": 0.793,
+      "hybrid": 0.0,
+      "motion_effective": 0.793
+    },
+    "elements": {
+      "b01": 1,
+      "b02": 1,
+      "b03": 1,
+      "b04": 10,
+      "b05": 5,
+      "b06": 8,
+      "b07": 3,
+      "b08": 5,
+      "b09": 2,
+      "b10": 25,
+      "b12": 1,
+      "b13": 1,
+      "b14": 3,
+      "b15": 1,
+      "b16": 1,
+      "b17": 5,
+      "b18": 4,
+      "b19": 8,
+      "b20": 1,
+      "b21": 1,
+      "b22": 1,
+      "b23": 11,
+      "b24": 4,
+      "b25": 4,
+      "b26": 29,
+      "b27": 4,
+      "b28": 4,
+      "b29": 3,
+      "b30": 4,
+      "b31": 2,
+      "b32": 4
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.043,
+      "pop_settle_share": 0.072,
+      "wallpaper_share": 0.0,
+      "template_share": 0.031,
+      "classic_share": 0.545,
+      "one_radius_share": 0.276,
+      "still_share": 0.435,
+      "labels_over_objects_share": 0.217,
+      "one_world_share": 0.174,
+      "lines_per_s": 12.89
+    },
+    "sfx_events": 16,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b03": 29.5,
+        "b04": 40.2,
+        "b05": 38.5,
+        "b06": 37.7,
+        "b07": 28.7,
+        "b08": 29.5,
+        "b09": 36.9,
+        "b10": 29.5,
+        "b11": 29.5,
+        "b14": 36.9,
+        "b17": 36.1,
+        "b18": 29.5,
+        "b19": 29.5,
+        "b23": 36.9,
+        "b24": 29.5,
+        "b25": 25.4,
+        "b26": 29.5,
+        "b27": 32,
+        "b28": 27.9,
+        "b29": 29.5,
+        "b30": 42.6,
+        "b31": 27,
+        "b32": 28.4
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 32,
+      "lines_seen": 74,
+      "blank_beats": [],
+      "blank_measured": 18
+    },
+    "foreign": {
+      "measured_beats": 32,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 157,
+      "without_life": 0,
+      "no_entrance_words": 4
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0415,
+        "b02": 0.0518,
+        "b03": 0.0392,
+        "b04": 0.0634,
+        "b05": 0.0991,
+        "b06": 0.0683,
+        "b07": 0.0877,
+        "b08": 0.0689,
+        "b09": 0.0766,
+        "b10": 0.1498,
+        "b11": 0.0784,
+        "b12": 0.0421,
+        "b13": 0.0637,
+        "b14": 0.0974,
+        "b15": 0.0658,
+        "b16": 0.0443,
+        "b17": 0.1465,
+        "b18": 0.102,
+        "b19": 0.0542,
+        "b20": 0.0232,
+        "b21": 0.057,
+        "b22": 0.0221,
+        "b23": 0.144,
+        "b24": 0.1058,
+        "b25": 0.034,
+        "b26": 0.0584,
+        "b27": 0.0406,
+        "b28": 0.0632,
+        "b29": 0.0474,
+        "b30": 0.0713,
+        "b31": 0.0726,
+        "b32": 0.1046
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 32,
+      "sharpness": {
+        "b03": 1.257,
+        "b04": 1.161,
+        "b05": 1.106,
+        "b06": 1.178,
+        "b07": 1.279,
+        "b08": 1.17,
+        "b09": 1.164,
+        "b10": 1.107,
+        "b11": 1.009,
+        "b14": 1.206,
+        "b17": 1.128,
+        "b18": 1.197,
+        "b19": 1.145,
+        "b23": 1.191,
+        "b24": 1.041,
+        "b25": 1.032,
+        "b26": 1.144,
+        "b27": 1.142,
+        "b28": 1.05,
+        "b29": 1.186,
+        "b30": 1.117,
+        "b31": 1.03,
+        "b32": 0.945
+      },
+      "blurred_beats": [],
+      "blur_measured": 23
+    },
+    "tone": {
+      "value_script_beats": 32
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b22.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b23.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b24.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b25.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b26.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b27.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b28.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b29.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b30.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b31.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\dc-cooling\\qa\\sheets\\b32.jpg"
+  ],
+  "build_hash": "f7bdee3875b6159f"
+}

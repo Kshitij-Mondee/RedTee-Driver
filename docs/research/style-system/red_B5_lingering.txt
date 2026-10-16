@@ -1,0 +1,13 @@
+B5 film audit lingering, red runs on the code before the change (2026-10-08).
+
+check_film_audit_lingering_follows_keep_in_any_case_and_ctx_held, the current suite on tools/film_audit.py and loom/
+from ../Video-Engine-backup-2026-10-08:
+  FAIL AssertionError: [Priya over_s 4.2, card over_s 4.2, chain over_s 8.0, stuck over_s 3.0, over over_s 7.0]
+  "Priya" kept by b02 as "priya" (case), "card" and "chain" held by ctx.held all counted as lingering; only "stuck"
+  and "over" are.
+
+primitive_runtime_held_elements_record_their_holders, on runtime/ from the backup (LOOM_TEST_RUNTIME):
+  FAIL {'Card': 'no record', 'Priya': 'no record'}   (the element records had no heldBy)
+
+After: both PASS ("lingering ['over', 'stuck'] only (Priya kept as priya, card and chain held); an old probe says
+held is not measured"; "heldBy {'Card': ['b2', 'b3'], 'Priya': ['b2']}").

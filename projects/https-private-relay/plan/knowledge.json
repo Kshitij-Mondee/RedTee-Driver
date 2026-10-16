@@ -1,0 +1,152 @@
+{
+  "topic": "How HTTPS keeps your data private",
+  "scope_note": "Conceptual explanation for non-specialists of what HTTPS (HTTP over TLS) does between a browser and a server: identity check, shared key, encrypted data, and what the padlock does and does not mean. No cryptographic maths, no protocol version detail, no statistics.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Ordinary HTTP sends data as readable text, so it is not hidden from the machines it passes through on the way.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "terms": [
+        "HTTP",
+        "plain traffic"
+      ]
+    },
+    {
+      "id": "F2",
+      "statement": "Traffic between a browser and a server crosses many devices that are not either of the two ends, such as Wi-Fi access points and routers, and anyone who controls or taps one of them can copy what passes through.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Say 'can' read plain traffic: most people on a path never look, the point is that nothing prevents it."
+    },
+    {
+      "id": "F3",
+      "statement": "HTTPS is HTTP carried inside an encrypted connection set up with the TLS protocol.",
+      "kind": "definition",
+      "confidence": "established",
+      "terms": [
+        "HTTPS",
+        "TLS"
+      ]
+    },
+    {
+      "id": "F4",
+      "statement": "Encryption turns readable data into scrambled data using a key, and only someone holding the right key can turn it back into readable data.",
+      "kind": "definition",
+      "confidence": "established",
+      "terms": [
+        "encryption",
+        "decryption",
+        "key"
+      ]
+    },
+    {
+      "id": "F5",
+      "statement": "At the start of an HTTPS connection the browser asks the server to identify itself, and the server answers with a certificate.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "terms": [
+        "certificate"
+      ]
+    },
+    {
+      "id": "F6",
+      "statement": "A certificate states which website name it was issued for and is vouched for by a certificate authority, an organisation that the browser or operating system already trusts.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "terms": [
+        "certificate authority"
+      ]
+    },
+    {
+      "id": "F7",
+      "statement": "The browser checks that the certificate matches the site name being visited, that it has not expired, and that it was issued by an authority the browser trusts.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Browsers perform further checks too; these three are the ones a non-specialist can follow."
+    },
+    {
+      "id": "F8",
+      "statement": "If the certificate check fails, the browser warns the user and by default does not continue silently to the site.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Users can often override the warning; the lesson should say that doing so removes the protection of the identity check."
+    },
+    {
+      "id": "F9",
+      "statement": "The browser and the server agree a shared secret key using a key exchange, in which the values sent over the open network are not enough for a watcher to work out the key.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "terms": [
+        "key exchange",
+        "shared key"
+      ],
+      "caveat": "Keep it to the idea: the key itself is never sent in the open. Do not describe the maths."
+    },
+    {
+      "id": "F10",
+      "statement": "Both ends end up with the same key, while a watcher who recorded the whole exchange does not have it.",
+      "kind": "mechanism",
+      "confidence": "established"
+    },
+    {
+      "id": "F11",
+      "statement": "After the key is agreed, the browser encrypts what it sends, such as a form submission, with that key, and the server decrypts it with the same key.",
+      "kind": "mechanism",
+      "confidence": "established"
+    },
+    {
+      "id": "F12",
+      "statement": "A watcher on the path who copies the encrypted data sees only scrambled data that is unreadable without the key.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "The watcher can still see that a connection exists and usually which server it goes to, only not the content."
+    },
+    {
+      "id": "F13",
+      "statement": "The server's replies are protected the same way, so the protection covers data in both directions.",
+      "kind": "mechanism",
+      "confidence": "established"
+    },
+    {
+      "id": "F14",
+      "statement": "The padlock in the browser indicates that the connection to the site is encrypted and that the browser accepted the site's certificate for that site name.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "Browser designs for the padlock and warnings differ and change over time."
+    },
+    {
+      "id": "F15",
+      "statement": "The padlock does not show that the site's owner is honest, safe or trustworthy, because a site run by a bad actor can also have a valid certificate for its own name.",
+      "kind": "caution",
+      "confidence": "established"
+    },
+    {
+      "id": "F16",
+      "statement": "The padlock does not protect data once it has arrived: the server's owner receives it in readable form and can store or misuse it.",
+      "kind": "caution",
+      "confidence": "established"
+    },
+    {
+      "id": "F17",
+      "statement": "Before entering sensitive data, check that the site name in the address bar is exactly the one you intend and that the browser shows no certificate warning.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "A good habit, not a guarantee; look-alike names are a common trick, so read the name, not just the padlock."
+    }
+  ],
+  "not_claimed": [
+    "The padlock means the site is safe or trustworthy",
+    "HTTPS hides which site you are visiting from everyone on the path",
+    "HTTPS protects data after it reaches the server",
+    "HTTPS makes your device immune to malware or phishing",
+    "Any specific percentage of sites using HTTPS or of attacks, without a source",
+    "The key is sent across the network inside the encrypted data in the open",
+    "Encryption cannot ever be broken (do not make absolute claims)"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (https-private on Relay via API, 2026-10-12)",
+    "note": "Written without sources or tools; no numbers or named studies included. Needs human and skeptic review."
+  }
+}

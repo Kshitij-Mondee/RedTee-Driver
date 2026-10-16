@@ -1,0 +1,817 @@
+{
+  "alternatives": {
+    "whiteboard": "Could use a whiteboard style for a more instructional, diagrammatic feel.",
+    "cinematic-dawn": "Could use the cinematic-dawn pack for a more emotional, realistic lighting approach."
+  },
+  "style": "story-cartoon",
+  "value_script": [
+    {
+      "why": "Pale open for the hook",
+      "accent": "subtle cool blue",
+      "band": "light",
+      "break": false,
+      "from": "b01"
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "break": true,
+      "why": "First mechanism introduction",
+      "accent": "urgent red"
+    },
+    {
+      "band": "dark",
+      "break": true,
+      "accent": "focused blue",
+      "from": "b07",
+      "why": "Dark break for the key mechanism"
+    },
+    {
+      "why": "Return to mid band for peak application energy",
+      "break": true,
+      "from": "b12",
+      "accent": "decline green",
+      "band": "mid"
+    },
+    {
+      "why": "Lift at the close for the payoff",
+      "from": "b17",
+      "break": true,
+      "accent": "warm orange",
+      "band": "light"
+    }
+  ],
+  "poster": {
+    "beat": "b07"
+  },
+  "concept": "A visual sorting exercise mapping an overflowing inbox against long-term goals using the Eisenhower framework to reclaim control.",
+  "devices": [
+    {
+      "kind": "explain",
+      "what": "An email interface (document.page) representing immediate demands.",
+      "beats": [
+        "b01",
+        "b12",
+        "b15",
+        "b16",
+        "b18"
+      ],
+      "id": "the_inbox"
+    },
+    {
+      "kind": "explain",
+      "what": "A side-by-side comparison layout distinguishing urgent vs important tasks.",
+      "id": "priority_split",
+      "beats": [
+        "b03",
+        "b04",
+        "b05",
+        "b06"
+      ]
+    },
+    {
+      "beats": [
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11"
+      ],
+      "id": "eisenhower_grid",
+      "kind": "data",
+      "what": "A 2x2 matrix built with bespoke motion, sorting task cards on a 2D plane."
+    },
+    {
+      "what": "A schedule view showing blocked time for priorities.",
+      "kind": "explain",
+      "id": "the_calendar",
+      "beats": [
+        "b17"
+      ]
+    },
+    {
+      "kind": "data",
+      "what": "A stopping check mapping a scenario to the quadrant grid.",
+      "id": "the_quiz",
+      "beats": [
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "beats": [],
+      "what": "A shape morph and motif-shaped wipe (illustrated join).",
+      "kind": "join",
+      "id": "motif_wipe"
+    }
+  ],
+  "chrome": {},
+  "story": {
+    "metaphor": "An overflowing inbox mapped against a four-quadrant grid to filter noise from actual priorities.",
+    "arc": "From an exhausted, unorganized late night to a well-planned, scheduled tomorrow.",
+    "setting": "An abstract, conceptual desk space where office tools and mental models coexist.",
+    "cast": [
+      {
+        "rig": "avatar",
+        "name": "The Worker",
+        "role": "the protagonist managing their workload"
+      }
+    ]
+  },
+  "world": {
+    "stations": [
+      {
+        "x": 0,
+        "y": 0,
+        "h": 1080,
+        "id": "s_intro",
+        "w": 1920
+      },
+      {
+        "w": 1920,
+        "id": "s_inbox",
+        "h": 1080,
+        "x": 1000,
+        "y": 0
+      },
+      {
+        "x": 2000,
+        "y": 0,
+        "h": 1080,
+        "id": "s_split",
+        "w": 1920
+      },
+      {
+        "y": 0,
+        "id": "s_grid",
+        "x": 3000,
+        "h": 1080,
+        "w": 1920
+      },
+      {
+        "h": 1080,
+        "id": "s_quiz",
+        "w": 1920,
+        "y": 0,
+        "x": 4000
+      },
+      {
+        "w": 1920,
+        "h": 1080,
+        "y": 0,
+        "x": 5000,
+        "id": "s_calendar"
+      }
+    ]
+  },
+  "motifs": [
+    {
+      "desc": "A paper shield representing focus and boundaries.",
+      "name": "shield"
+    }
+  ],
+  "scenes": [
+    {
+      "station": "s_inbox",
+      "join_in": {
+        "type": "cut"
+      },
+      "beat": "b01",
+      "kind": "template",
+      "shot": {
+        "size": "establishing"
+      },
+      "depth": "layered",
+      "props": {
+        "title": "Logging Off Late",
+        "person": {
+          "emotion": "neutral",
+          "member": "man"
+        },
+        "say_title": "logging off late",
+        "kind": "email",
+        "lines": [
+          {
+            "say": "urgent emails",
+            "text": "Urgent emails"
+          },
+          {
+            "text": "Core project untouched",
+            "say": "core project"
+          },
+          {
+            "text": "Overflowing inbox",
+            "say": "overflowing inbox"
+          }
+        ]
+      },
+      "accent_on": "overflowing inbox",
+      "template": "document.page"
+    },
+    {
+      "accent_on": "presenter",
+      "kind": "avatar",
+      "station": "s_intro",
+      "join_in": {
+        "type": "cut"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "beat": "b02"
+    },
+    {
+      "accent_on": "ringing phone",
+      "depth": "layered",
+      "kind": "bespoke",
+      "station": "s_split",
+      "join_in": {
+        "type": "cut"
+      },
+      "beat": "b03",
+      "subject": "The ringing phone",
+      "design": {
+        "beat_sheet": [
+          {
+            "action": "shake and emit lines",
+            "motion": "vibrate",
+            "t_anchor": "phone rings loudly",
+            "element": "ringing phone"
+          },
+          {
+            "t_anchor": "strategy document",
+            "action": "sit beside phone",
+            "motion": "fade in",
+            "element": "strategy document"
+          }
+        ],
+        "treatment": "story-cartoon split screen",
+        "why_motion": "establishes the physical layout for the comparison",
+        "continuity": "Left side has the phone, right side has the document",
+        "elements": [
+          "ringing phone",
+          "strategy document"
+        ],
+        "references": [
+          "split-screen comparison",
+          "vibrating desk phone"
+        ]
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "world": "A conceptual workspace"
+    },
+    {
+      "template": "compare.two",
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_split",
+      "kind": "template",
+      "props": {
+        "left": {
+          "say": "ringing phone",
+          "header": "Ringing Phone",
+          "items": [
+            {
+              "text": "Short completion windows",
+              "say": "short completion windows"
+            }
+          ]
+        },
+        "right": {
+          "say": "tasks",
+          "header": "Tasks"
+        },
+        "mode": "pairs"
+      },
+      "beat": "b04",
+      "accent_on": "ringing phone",
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "kind": "template",
+      "template": "compare.two",
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_split",
+      "shot": {
+        "size": "medium"
+      },
+      "accent_on": "urgent work",
+      "props": {
+        "left": {
+          "header": "Immediate Action",
+          "say": "immediate action"
+        },
+        "mode": "columns",
+        "verdict": {
+          "say": "urgent work",
+          "text": "Urgent Work"
+        },
+        "right": {
+          "header": "Priorities",
+          "say": "priorities",
+          "items": [
+            {
+              "say": "other people",
+              "text": "Other people"
+            }
+          ]
+        }
+      },
+      "beat": "b05"
+    },
+    {
+      "accent_on": "strategy document",
+      "kind": "template",
+      "station": "s_split",
+      "join_in": {
+        "type": "continue"
+      },
+      "props": {
+        "left": {
+          "say": "strategy document",
+          "header": "Strategy Document",
+          "items": [
+            {
+              "say": "core professional values",
+              "text": "Core professional values"
+            }
+          ]
+        },
+        "verdict": {
+          "say": "important work",
+          "text": "Important Work"
+        },
+        "mode": "pairs",
+        "right": {
+          "header": "Long-Term Goals",
+          "say": "long-term goals"
+        }
+      },
+      "beat": "b06",
+      "template": "compare.two",
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "world": "A conceptual desk surface",
+      "shot": {
+        "size": "wide"
+      },
+      "subject": "The task sorting grid",
+      "design": {
+        "beat_sheet": [
+          {
+            "t_anchor": "four distinct categories",
+            "element": "empty grid",
+            "action": "draw lines",
+            "motion": "stroke from center"
+          },
+          {
+            "element": "urgent axis, important axis",
+            "t_anchor": "urgency and importance",
+            "action": "label axes",
+            "motion": "fade in"
+          },
+          {
+            "element": "framework title",
+            "t_anchor": "Eisenhower framework",
+            "action": "title appears",
+            "motion": "pop"
+          }
+        ],
+        "elements": [
+          "empty grid",
+          "urgent axis",
+          "important axis",
+          "framework title"
+        ],
+        "continuity": "The grid is established on the desk.",
+        "why_motion": "draws the core mental model of the lesson on screen",
+        "treatment": "story-cartoon bespoke motion",
+        "references": [
+          "2x2 matrix",
+          "physical sorting grid"
+        ]
+      },
+      "station": "s_grid",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "four distinct categories",
+      "beat": "b07",
+      "depth": "layered",
+      "kind": "bespoke"
+    },
+    {
+      "world": "A conceptual desk surface",
+      "accent_on": "server crash card",
+      "shot": {
+        "size": "insert"
+      },
+      "design": {
+        "continuity": "The grid is held, Quadrant one receives its card.",
+        "why_motion": "sorts the first task card to demonstrate the model",
+        "references": [
+          "physical task cards"
+        ],
+        "treatment": "story-cartoon bespoke motion",
+        "beat_sheet": [
+          {
+            "t_anchor": "Quadrant one",
+            "element": "Quadrant one highlight",
+            "action": "glow background",
+            "motion": "fade up"
+          },
+          {
+            "element": "server crash card",
+            "action": "slide into quadrant",
+            "motion": "slide and drop",
+            "t_anchor": "server crashes right now"
+          }
+        ],
+        "elements": [
+          "Quadrant one highlight",
+          "server crash card"
+        ]
+      },
+      "kind": "bespoke",
+      "subject": "Quadrant one card",
+      "beat": "b08",
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_grid"
+    },
+    {
+      "world": "A conceptual desk surface",
+      "kind": "bespoke",
+      "beat": "b09",
+      "subject": "Quadrant two card",
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_grid",
+      "design": {
+        "treatment": "story-cartoon bespoke motion",
+        "elements": [
+          "Quadrant two highlight",
+          "strategy document card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Quadrant two",
+            "action": "glow background",
+            "motion": "fade up",
+            "element": "Quadrant two highlight"
+          },
+          {
+            "action": "slide into quadrant",
+            "motion": "slide and drop",
+            "t_anchor": "core project work",
+            "element": "strategy document card"
+          }
+        ],
+        "references": [
+          "physical task cards"
+        ],
+        "continuity": "Grid and Q1 held, Q2 receives its card.",
+        "why_motion": "sorts the second task card"
+      },
+      "accent_on": "strategy document card",
+      "shot": {
+        "size": "insert"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "subject": "Quadrant three card",
+      "shot": {
+        "size": "insert"
+      },
+      "accent_on": "meeting invite card",
+      "world": "A conceptual desk surface",
+      "design": {
+        "continuity": "Grid, Q1, Q2 held, Q3 receives its card.",
+        "why_motion": "sorts the third task card",
+        "references": [
+          "physical task cards"
+        ],
+        "elements": [
+          "Quadrant three highlight",
+          "meeting invite card"
+        ],
+        "beat_sheet": [
+          {
+            "element": "Quadrant three highlight",
+            "t_anchor": "Quadrant three",
+            "action": "glow background",
+            "motion": "fade up"
+          },
+          {
+            "element": "meeting invite card",
+            "action": "slide into quadrant",
+            "motion": "slide and drop",
+            "t_anchor": "sudden meeting invite"
+          }
+        ],
+        "treatment": "story-cartoon bespoke motion"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_grid"
+    },
+    {
+      "kind": "bespoke",
+      "subject": "Quadrant four card",
+      "station": "s_grid",
+      "join_in": {
+        "type": "continue"
+      },
+      "beat": "b11",
+      "world": "A conceptual desk surface",
+      "design": {
+        "references": [
+          "physical task cards"
+        ],
+        "treatment": "story-cartoon bespoke motion",
+        "continuity": "Grid and other cards held, Q4 card arrives then vanishes.",
+        "why_motion": "sorts and dismisses the final task card",
+        "elements": [
+          "Quadrant four highlight",
+          "web browsing card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Quadrant four",
+            "element": "Quadrant four highlight",
+            "action": "glow background",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "web browsing",
+            "action": "slide into quadrant",
+            "motion": "slide and drop",
+            "element": "web browsing card"
+          },
+          {
+            "element": "web browsing card",
+            "action": "vanish",
+            "motion": "puff of smoke",
+            "t_anchor": "eliminate them entirely"
+          }
+        ]
+      },
+      "accent_on": "web browsing card",
+      "shot": {
+        "size": "insert"
+      }
+    },
+    {
+      "shot": {
+        "size": "medium"
+      },
+      "template": "document.page",
+      "depth": "layered",
+      "props": {
+        "kind": "email",
+        "title": "New Message",
+        "say_title": "inbox message",
+        "lines": [
+          {
+            "say": "quick favour",
+            "text": "Quick favour"
+          },
+          {
+            "say": "right away",
+            "text": "Need it right away"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "station": "s_inbox",
+      "beat": "b12",
+      "accent_on": "inbox message",
+      "kind": "template"
+    },
+    {
+      "accent_on": "quadrant options",
+      "shot": {
+        "size": "pov"
+      },
+      "beat": "b13",
+      "template": "quiz.question",
+      "kind": "template",
+      "station": "s_quiz",
+      "join_in": {
+        "type": "cut"
+      },
+      "props": {
+        "options": [
+          {
+            "text": "Quadrant one",
+            "say": "Quadrant one"
+          },
+          {
+            "text": "Quadrant three",
+            "say": "quadrant three"
+          }
+        ],
+        "question": "Where does a quick favour belong?",
+        "say_question": "Where does a colleague's quick favour belong"
+      }
+    },
+    {
+      "shot": {
+        "size": "pov"
+      },
+      "template": "quiz.answer",
+      "beat": "b14",
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_quiz",
+      "props": {
+        "say_answer": "Quadrant three",
+        "tempting": 0,
+        "say_takeaway": "entirely different",
+        "takeaway": "Entirely different.",
+        "question": "Where does a quick favour belong?",
+        "say_explanation": "urgent to them",
+        "answer": 1,
+        "explanation": "Urgent to them, not important to goals.",
+        "options": [
+          {
+            "text": "Quadrant one"
+          },
+          {
+            "text": "Quadrant three"
+          }
+        ],
+        "say_why_not": "feels exactly like quadrant one",
+        "why_not": "Feels like quadrant one."
+      },
+      "kind": "template",
+      "accent_on": "quadrant three"
+    },
+    {
+      "beat": "b15",
+      "station": "s_inbox",
+      "join_in": {
+        "type": "cut"
+      },
+      "design": {
+        "treatment": "story-cartoon custom icon overlay",
+        "references": [
+          "digital security shield icon"
+        ],
+        "continuity": "The inbox is held; a shield overlays it.",
+        "why_motion": "visually interrupts the distraction to show protecting time",
+        "elements": [
+          "inbox interface",
+          "shield icon"
+        ],
+        "beat_sheet": [
+          {
+            "element": "shield icon",
+            "t_anchor": "protecting your time",
+            "action": "appear over inbox",
+            "motion": "pop and lock"
+          },
+          {
+            "action": "glow",
+            "motion": "pulse",
+            "t_anchor": "guard your focus",
+            "element": "shield icon"
+          }
+        ]
+      },
+      "accent_on": "shield icon",
+      "subject": "The shield icon",
+      "kind": "bespoke",
+      "shot": {
+        "size": "close"
+      },
+      "world": "A conceptual workspace"
+    },
+    {
+      "kind": "template",
+      "accent_on": "typed reply",
+      "join_in": {
+        "type": "continue"
+      },
+      "station": "s_inbox",
+      "shot": {
+        "size": "medium"
+      },
+      "template": "document.page",
+      "beat": "b16",
+      "props": {
+        "say_title": "decline gracefully",
+        "title": "Decline Gracefully",
+        "kind": "email",
+        "lines": [
+          {
+            "text": "Current project commitments",
+            "say": "current project commitments"
+          },
+          {
+            "say": "new tasks",
+            "text": "Prevent new tasks"
+          },
+          {
+            "text": "Review next month",
+            "say": "next month"
+          }
+        ]
+      }
+    },
+    {
+      "shot": {
+        "size": "wide"
+      },
+      "props": {
+        "days": [
+          {
+            "label": "Today"
+          },
+          {
+            "label": "Tomorrow"
+          },
+          {
+            "label": "Next Week"
+          }
+        ],
+        "say_title": "tomorrow's calendar",
+        "title": "Workload Plan",
+        "entries": [
+          {
+            "day": 1,
+            "say": "important task",
+            "label": "Important Task"
+          }
+        ]
+      },
+      "depth": "layered",
+      "station": "s_calendar",
+      "join_in": {
+        "type": "cut"
+      },
+      "beat": "b17",
+      "template": "calendar.plan",
+      "accent_on": "blocked priority slots",
+      "kind": "template"
+    },
+    {
+      "props": {
+        "say_title": "office on time",
+        "title": "Leaving On Time",
+        "kind": "notes",
+        "lines": [
+          {
+            "say": "critical project",
+            "text": "Critical project complete"
+          },
+          {
+            "text": "Tomorrow perfectly planned",
+            "say": "perfectly planned"
+          }
+        ]
+      },
+      "kind": "template",
+      "template": "document.page",
+      "station": "s_inbox",
+      "join_in": {
+        "type": "cut"
+      },
+      "beat": "b18",
+      "shot": {
+        "size": "establishing"
+      },
+      "accent_on": "daily plan"
+    },
+    {
+      "kind": "avatar",
+      "station": "s_intro",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "presenter",
+      "beat": "b19",
+      "shot": {
+        "size": "medium"
+      }
+    }
+  ]
+}

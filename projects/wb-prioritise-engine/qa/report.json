@@ -1,0 +1,287 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b04: camera pan between different worlds (list -> matrix) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b13: camera pan between different worlds (matrix -> list) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "runtime wb_pen_late: b02: the hand starts \"budget_circle\" 0.48s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b03: the hand starts \"split_arrows\" 0.65s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b03: the hand starts \"label_soon\" 0.78s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b03: the hand starts \"label_matters\" 1.15s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b03: the hand starts \"balance\" 1.79s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b03: the hand starts \"deadline_mark\" 2.84s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b05: the hand starts \"axis_effort\" 0.45s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b08: the hand starts \"budget_link\" 1.05s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b10: the hand starts \"reply_note\" 0.55s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b10: the hand starts \"reply_line\" 2.27s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b10: the hand starts \"reply_line\" 0.91s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b10: the hand starts \"reply_link\" 1.66s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b10: the hand starts \"option_date\" 6.07s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b10: the hand starts \"option_smaller\" 6.19s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b11: the hand starts \"new_notes\" 0.75s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b13: the hand starts \"expenses_note\" 0.28s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b13: 4 strokes of \"expenses_note\" in 0.07s",
+    "runtime wb_pen_late: b13: the hand starts \"quickwin_underline\" 0.62s after it was asked (it was still drawing)",
+    "b02: 23 chunks on screen (budget_box, card_budget, card_budget_outline, card_budget_words, card_deck, card_deck_box, card_deck_outline, card_deck_words, card_expenses, card_expenses_box, card_expenses_outline, card_expenses_words, card_reply, card_reply_box, card_reply_outline, card_reply_words, clock, friday_label, list_title, tick_deck, tick_expenses, tick_reply, urgent_tags); the budget is ~5-6",
+    "b06: 9 chunks on screen (card_budget, card_budget_outline, card_budget_words, card_deck, card_deck_outline, card_deck_words, card_expenses, card_expenses_outline, card_expenses_words); the budget is ~5-6",
+    "b13: 21 chunks on screen (budget_note, deck_later, deck_note, expenses_note, reply_tick, resort_title, row_budget, row_budget_outline, row_budget_words, row_deck, row_deck_outline, row_deck_words, row_expenses, row_expenses_outline, row_expenses_words, row_notes, row_reply, row_reply_box, row_reply_outline, row_reply_words, start_line); the budget is ~5-6",
+    "variety: one_radius_share = 1.0 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.846 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b02, b03, b05, b06, b07, b08, b09)",
+    "variety: one_world_share = 1.0 is above the baseline median (0.625) (beats: _kit, b02, b03, b04, b05, b06, b07, b08)",
+    "variety: the seed's camera habit is 'pan' but 11 of 13 bespoke beats have no camera move",
+    "lc layout content_overlap @ 96: b13 \"Client reply\" and b13 \"Budget report\" overlap at [317, 268, 483, 320] from 96 to 96 s (a passing crossing (under 500 ms)) [row_reply_words / row_budget_words]",
+    "lc layout text_covered @ 7: b02 \"Deck redesign\" is partly covered by an opaque shape (60 % of it, its words cut) from 7 to 7 s [card_deck_words]",
+    "lc layout text_covered @ 7: b02 \"Expenses\" is partly covered by an opaque shape (71 % of it, its words cut) from 7 to 7 s [card_expenses_words]",
+    "lc layout text_covered @ 7: b02 \"urgent\" is partly covered by an opaque shape (24 % of it, its words cut) from 7 to 7 s [urgent_tags]",
+    "lc layout text_covered @ 29: b04 \"difference it makes\" is partly covered by an opaque shape (67 % of it, its words cut) from 29 to 29 s [gloss_impact]",
+    "lc layout text_covered @ 32: b05 \"Client reply\" is partly covered by an opaque shape (62 % of it, its words cut) from 32 to 32 s [card_reply_words]",
+    "lc layout text_covered @ 36: b06 \"Budget report\" is partly covered by an opaque shape (33 % of it, its words cut) from 36 to 36 s [card_budget_words]",
+    "lc layout text_covered @ 48: b06 \"Deck redesign\" is partly covered by an opaque shape (48 % of it, its words cut) from 48 to 48 s [card_deck_words]",
+    "lc layout text_covered @ 91: b12 \"Which task gives way?\" is partly covered by an opaque shape (56 % of it, its words cut) from 91 to 91 s [gives_way]",
+    "b07: the same frame as b06 (difference 1.39 < 1.5): a new beat needs a visible change"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.51
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.34
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.25
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 2.18
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.44
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 1.89
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.23
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.61
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 2.59
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.03,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 2.04
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.84
+      }
+    ],
+    "allocation": {
+      "avatar": 0.056,
+      "template": 0.443,
+      "motion": 0.432,
+      "hybrid": 0.069,
+      "motion_effective": 0.467
+    },
+    "elements": {
+      "b01": 7,
+      "b02": 24,
+      "b03": 7,
+      "b04": 5,
+      "b05": 6,
+      "b06": 10,
+      "b07": 5,
+      "b08": 8,
+      "b09": 6,
+      "b10": 5,
+      "b11": 5,
+      "b12": 5,
+      "b13": 22
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.002,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": null,
+      "one_radius_share": 1.0,
+      "still_share": 0.846,
+      "labels_over_objects_share": 0.231,
+      "one_world_share": 1.0,
+      "lines_per_s": 6.8
+    },
+    "sfx_events": 1,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 15082,
+      "layout_samples": 206,
+      "texts": 275,
+      "contrast_checked": 490,
+      "errors": 0,
+      "warnings": 9
+    },
+    "nodes": 1512,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 32,
+        "b02": 31.1,
+        "b03": 31.1,
+        "b04": 31.1,
+        "b05": 31.1,
+        "b06": 42.6,
+        "b07": 32.8,
+        "b08": 27,
+        "b09": 27,
+        "b10": 29.5,
+        "b11": 29.5,
+        "b12": 29.5,
+        "b13": 29.5
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 13,
+      "lines_seen": 143,
+      "blank_beats": [],
+      "blank_measured": 13
+    },
+    "foreign": {
+      "measured_beats": 13,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 115,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "caption_hold": {
+      "enabled": true,
+      "cues": 34,
+      "short": 0,
+      "under_min": 0,
+      "min_hold_s": 1.87,
+      "baselined": false
+    },
+    "grid": {
+      "checked": true,
+      "planned": 6,
+      "placed": 6,
+      "dropped": 0,
+      "unresolved": 0,
+      "joins_into_speech": 0,
+      "bars": 48,
+      "bpm": [
+        115.385,
+        111.881,
+        107.604,
+        116.8,
+        112.11
+      ]
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0846,
+        "b02": 0.0676,
+        "b03": 0.088,
+        "b04": 0.0218,
+        "b05": 0.031,
+        "b06": 0.0483,
+        "b07": 0.0634,
+        "b08": 0.1006,
+        "b09": 0.1167,
+        "b10": 0.1338,
+        "b11": 0.1178,
+        "b12": 0.1175,
+        "b13": 0.0586
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 1,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24,
+        "caption_min_s": 1.8,
+        "caption_tail_s": 0.6
+      },
+      "measured_beats": 13,
+      "sharpness": {
+        "b01": 1.079,
+        "b02": 1.171,
+        "b03": 1.225,
+        "b04": 1.123,
+        "b05": 1.219,
+        "b06": 1.236,
+        "b07": 1.029,
+        "b08": 1.171,
+        "b09": 1.125,
+        "b10": 1.34,
+        "b11": 1.186,
+        "b12": 1.042,
+        "b13": 1.176
+      },
+      "blurred_beats": [],
+      "blur_measured": 13
+    },
+    "tone": {
+      "value_script_beats": 13,
+      "tone_vs_reference": {
+        "brightness": 0.922,
+        "saturation": 0.035,
+        "dark_share": 0.0,
+        "light_share": 1.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-engine\\qa\\sheets\\b13.jpg"
+  ],
+  "build_hash": "97ef80dacdc4e147"
+}

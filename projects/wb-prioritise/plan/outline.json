@@ -1,0 +1,180 @@
+{
+  "concept": "One whiteboard that fills as the reasoning is drawn. Maya's four urgent cards start as a list worked in arrival order; two questions become the axes of an impact and effort board; each card is placed, acted on, then its zone is named; the reply note and the week strip sit beside the board; at the close the camera pans back to the first list, now sorted again by the board.",
+  "world": "One whiteboard, two stations side by side: 'list' (x 0) holds Maya's Monday list and the urgent split; 'matrix' (x 2400) holds the impact and effort board on the left two thirds with a right-hand column for the week strip, the reply note and the new card. Camera pans right at b04, back left at b13.",
+  "devices": [
+    {
+      "id": "task_cards",
+      "what": "Maya's four request cards (client reply, budget report, expenses, deck redesign): the same rough card all lesson, its state changes on the spoken word (urgent tag, tick, placed, later tag)",
+      "kind": "list",
+      "beats": [
+        "b02",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "matrix",
+      "what": "the impact and effort board: the two questions of b04 become its axis labels, four zones are named as each move is taught",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "week_strip",
+      "what": "a hand-drawn Monday to Friday strip where big work becomes one solid block instead of scraps",
+      "kind": "data",
+      "beats": [
+        "b08",
+        "b12"
+      ]
+    },
+    {
+      "id": "reply_note",
+      "what": "a written reply note tied by an arrow to the budget report card, with a date and a smaller version under it",
+      "kind": "other",
+      "beats": [
+        "b10"
+      ]
+    },
+    {
+      "id": "board_pan",
+      "what": "one whiteboard: a camera pan to the next part of the board and back to the first list at the close",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b13"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light"
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "treatment": "presenter opens, then the list is drawn and worked top down",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "avatar",
+          "line": "the presenter, Monday, all four requests say urgent"
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "list",
+          "line": "Maya's four cards in a list, each tagged urgent; ticks run down in arrival order, a clock moves to Friday, the budget report is left unticked"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "urgent split on the list board, then a pan to the matrix board where the questions become axes and the cards are placed",
+      "beats": [
+        {
+          "beat": "b03",
+          "kind": "bespoke",
+          "station": "list",
+          "line": "the word urgent split into how soon and how much it matters; a drawn balance tips to the deadline side"
+        },
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "pan right to a clean part of the board: Impact? and Effort? written large"
+        },
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "the questions become the axes; the client reply card lands high on the left"
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "budget report high right, expenses low left, deck redesign low right"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "act on each card, then name its zone, same board",
+      "beats": [
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "dividers make four zones; the client reply is ticked, then top left is named quick wins, do first"
+        },
+        {
+          "beat": "b08",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "top right named major projects; scattered budget scraps in the week strip become one solid block"
+        },
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "fill-ins bracketed as a batch; the deck card gets a later tag in the thankless zone"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "the reply note drafted beside the board",
+      "beats": [
+        {
+          "beat": "b10",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "a reply note in the right column, an arrow to the budget report card, two options written under it"
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "treatment": "a new card to place, its answer, then the pan back to the list sorted again",
+      "beats": [
+        {
+          "beat": "b11",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "a new unplaced card arrives in the right column: New analysis by Friday, Where does it go?; the board waits"
+        },
+        {
+          "beat": "b12",
+          "kind": "bespoke",
+          "station": "matrix",
+          "line": "the card lands top right; a second block in the week strip; a question arrow to the other cards: which task gives way?"
+        },
+        {
+          "beat": "b13",
+          "kind": "bespoke",
+          "station": "list",
+          "line": "pan back to the first list: the rows travel into the board's order, Place it. Sort again. as heading, start with a quick win underlined"
+        }
+      ]
+    }
+  ]
+}

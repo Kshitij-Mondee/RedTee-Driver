@@ -1,0 +1,121 @@
+{
+  "title": "One Password, Every Door",
+  "genre": "teaching",
+  "audience": {
+    "who": "corporate employees in any role who log in to work systems every day",
+    "knows": "they have passwords and that phishing exists; most reuse a password somewhere and assume one leak only costs one account",
+    "cares_about": "not being the person a breach started with, and keeping their own accounts safe without extra hassle"
+  },
+  "outcome": "After watching, the viewer can check whether any work password is reused elsewhere, replace it with a unique one kept in a password manager, turn on multi-factor authentication, and report a suspicious login prompt or leak notice straight away.",
+  "through_line": "A breach rarely needs a genius: one reused password, leaked somewhere unrelated, opens every door that shares it, and two plain habits (a unique password per account, a second factor) close those doors before anyone tries them.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "Night, one employee's ordinary login; we learn the password was already out there, leaked from an unrelated personal site.",
+      "source_anchor": "knowledge sheet: how credentials leak from third-party breaches"
+    },
+    {
+      "role": "promise",
+      "what": "Follow that one password through the night to see how it became a company-wide breach, and what would have stopped it at each step.",
+      "source_anchor": "from_user: request notes"
+    },
+    {
+      "role": "bridge",
+      "what": "Why reuse matters: a leaked username and password pair is tried automatically against many other services.",
+      "source_anchor": "knowledge sheet: credential stuffing"
+    },
+    {
+      "role": "build",
+      "what": "Section 1, leaked and tried: the pair lands in a dump and is tested at scale against work logins; it works because it was reused.",
+      "source_anchor": "knowledge sheet: credential stuffing"
+    },
+    {
+      "role": "build",
+      "what": "Section 2, spread: once inside with a valid account, the attacker moves to other systems and accounts, so one login becomes many.",
+      "source_anchor": "knowledge sheet: lateral movement after account compromise"
+    },
+    {
+      "role": "build",
+      "what": "Section 3, the doors that would have held: a unique password per account, a password manager to make that practical, multi-factor authentication blocking a correct password used by someone else.",
+      "source_anchor": "knowledge sheet: password manager and MFA guidance"
+    },
+    {
+      "role": "check",
+      "what": "A short scenario the viewer judges: which habit stops the attack at which step.",
+      "source_anchor": "knowledge sheet: password manager and MFA guidance"
+    },
+    {
+      "role": "apply",
+      "what": "What to do this week, including reporting an unexpected login prompt or breach notice to the security team.",
+      "source_anchor": "knowledge sheet: reporting suspicious activity"
+    },
+    {
+      "role": "payoff",
+      "what": "Return to the opening login at night, replayed with the habits in place: the leaked password opens nothing.",
+      "source_anchor": "from_user: request notes"
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "Passwords leak from third-party breaches outside the company's control, and leaked credentials are collected and shared.",
+      "from_user": true
+    },
+    {
+      "what": "Reused passwords enable credential stuffing: automated trying of leaked username and password pairs on other services.",
+      "from_user": true
+    },
+    {
+      "what": "From one compromised account an attacker can spread to other systems and accounts.",
+      "from_user": true
+    },
+    {
+      "what": "A unique password for every account, made practical by a password manager.",
+      "from_user": true
+    },
+    {
+      "what": "Multi-factor authentication stops a correct but stolen password from being enough.",
+      "from_user": true
+    },
+    {
+      "what": "Report unexpected login prompts, MFA requests you did not start, or breach notices to the security team promptly.",
+      "from_user": true
+    }
+  ],
+  "must_avoid": [
+    "sensational or fear-mongering framing, hacker cliches, hooded figures, scrolling green code",
+    "breach statistics or costs without a sourced fact",
+    "naming or implying a real company or real incident as this case",
+    "blaming the employee; the case is about habits, not shame",
+    "learning-styles claims, made-up testimony presented as real",
+    "an agenda opening, or an opening that starts by explaining terms"
+  ],
+  "example_posture": "One fictional employee and one fictional company carried the whole way; every step of the attack is something that happens to this one password, plainly hypothetical, never presented as a real incident.",
+  "visual_direction": "Cinematic night case file: a single key light, silhouettes, slow camera pushes; the password as a physical object we can follow from door to door; doors or locks that open as the password spreads and stay shut when the habits are in place; a before and after of the same night.",
+  "voice_note": "A calm investigator walking a colleague through the case: measured, serious, never dramatic for its own sake; short sentences, plain words, no jargon left unexplained.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "Topic mode with no source document: every arc anchor points at the knowledge sheet the fact-finder will build; any claim it cannot ground is dropped.",
+    "Promise and payoff are framed from the requester's notes rather than a source."
+  ],
+  "provenance": {
+    "from_user": [
+      "topic",
+      "audience",
+      "genre",
+      "length 1.75 min",
+      "style cinematic-noir",
+      "tone: serious, never sensational",
+      "story: reused password leaked, tried, spread, and the habits that stop it"
+    ],
+    "inferred": [
+      "audience.knows",
+      "audience.cares_about",
+      "outcome",
+      "through_line",
+      "example_posture",
+      "voice_note",
+      "arc_plan anchors (pending knowledge sheet)",
+      "must_cover reporting entry"
+    ]
+  }
+}

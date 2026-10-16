@@ -1,0 +1,68 @@
+{
+  "title": "Blameless post-mortems",
+  "genre": "teaching",
+  "audience": {
+    "who": "engineers, team leads and managers in product and operations teams who handle incidents",
+    "knows": "what an incident feels like from the inside, and has sat in at least one meeting afterwards that went looking for a culprit",
+    "cares_about": "not being the person everyone looks at, and not having the same outage come back next month"
+  },
+  "outcome": "Run their next post-mortem with a simple repeatable structure: set the blameless ground rule, rebuild what happened as people saw it at the time, turn every who question into a what-made-this-easy question, and leave with owned, tracked fixes to the system.",
+  "through_line": "After an incident the useful question is never who slipped but what made the slip easy and hard to catch; ask that, and the fix lands on the system instead of on a person, which is the only fix that stops it happening again.",
+  "arc_plan": [
+    {"role": "hook", "what": "The invented incident: an on-call engineer ships a routine change and a made-up online store stops taking orders. Next morning the post-mortem opens and every head in the room turns to that one engineer. Stop on that moment."},
+    {"role": "promise", "what": "Name the payoff in the viewer's terms: a short structure they can carry into their next post-mortem so the room ends up looking at the system, not at a person."},
+    {"role": "bridge", "what": "Connect to what they already do: the instinct to find the culprit feels like accountability. Show, from the knowledge sheet, what blame costs next time (people share less), and that blameless does not mean nobody is responsible."},
+    {"role": "build", "what": "Step one, before anyone discusses the incident: state the ground rule and what the meeting is for, in the running example, so the engineer can speak freely."},
+    {"role": "build", "what": "Step two: rebuild what happened in order, as each person saw it at the moment, using the running example. Make hindsight visible: the answer that looks obvious now was not on anyone's screen then."},
+    {"role": "build", "what": "Step three: turn who questions into what and how questions, find the several conditions in the system that let the change through, and end with fixes that each have an owner and get tracked to done."},
+    {"role": "check", "what": "The viewer sorts findings and questions from the example meeting into blaming a person versus examining the system, including one that sounds neutral but still lands on the engineer. It must be possible to fail."},
+    {"role": "apply", "what": "The viewer picks one incident they remember and walks the three steps against it in their head, ending with one system fix they would propose."},
+    {"role": "payoff", "what": "Return to the same meeting room from the hook: the same engineer, but the room is now looking at the board, and the fix sits on the system that let the change through."}
+  ],
+  "must_cover": [
+    {"what": "A simple, reusable structure for running the post-mortem, small enough to remember and follow next time", "from_user": true},
+    {"what": "What blameless means: examining the system and conditions, and why it is not the same as no accountability", "from_knowledge": true},
+    {"what": "Why blame backfires: it makes people less willing to share what they saw and did, so the team learns less", "from_knowledge": true},
+    {"what": "Rebuilding the sequence of events as people saw it at the time, and guarding against hindsight", "from_knowledge": true},
+    {"what": "Looking for several contributing conditions in the system rather than stopping at a single person or a single cause", "from_knowledge": true},
+    {"what": "Asking what and how questions instead of who and why-did-you questions", "from_knowledge": true},
+    {"what": "Action items that change the system, each with an owner, followed through to done", "from_knowledge": true},
+    {"what": "One realistic but clearly invented incident carries the whole lesson, with no real companies or real outages", "from_user": true}
+  ],
+  "must_avoid": [
+    "naming or alluding to a real company, product or real outage",
+    "any statistic, percentage or study result not on the approved knowledge sheet",
+    "sayings or lines attributed to real people or real organisations",
+    "ending any finding, even in the example, on human error or carelessness as the cause",
+    "implying blameless means nobody owns anything",
+    "opening on a dictionary-style meaning of the term or an agenda",
+    "a tour of post-mortem document formats or incident tools",
+    "learning-styles claims",
+    "a second or third example that appears once and is dropped"
+  ],
+  "example_posture": "One invented incident, clearly framed as invented, with a small cast of roles (the engineer who shipped the change, a team lead, a manager) and ordinary, believable conditions in the system. Every step and the check reuse it. Its details are illustration, never presented as a real event; any claim about how post-mortems work comes from the knowledge sheet, not from the story.",
+  "visual_direction": "Hand-drawn whiteboard throughout. A person in a moment (the engineer as the room turns to them). A room's attention visibly moving from one person to the board. The incident drawn left to right as a chain of moments, each with what that person could see at the time. Several arrows converging on the failure from different parts of the system instead of one arrow to a person. A blame question crossed out and rewritten beside it. A before and after of the same meeting.",
+  "voice_note": "A senior colleague who has run a few of these: calm, practical, a little dry, never preachy about culture. Speaks to the person dreading the meeting as much as to the person running it. About four minutes, so each step gets one clear idea and moves on.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "No persona is set; the voice note assumes a senior practitioner. Confirm.",
+    "Topic mode: the arc is not anchored to a source; every claim about the practice must come from the reviewed knowledge sheet.",
+    "Should the structure match a post-mortem document format the requester's teams already use?",
+    "Is who facilitates the meeting, and how soon after the incident it happens, in scope for four minutes?",
+    "Where will this be watched (course, intranet, team meeting)? Not stated."
+  ],
+  "provenance": {
+    "inferred": [
+      "audience.knows",
+      "audience.cares_about",
+      "outcome wording beyond the requester's run-the-next-post-mortem goal",
+      "through_line",
+      "arc_plan contents, including three build steps",
+      "must_avoid entries beyond no real companies, no real outages and no invented statistics",
+      "example_posture cast and framing",
+      "visual_direction beyond the hand-drawn whiteboard look",
+      "voice_note",
+      "open_questions"
+    ]
+  }
+}

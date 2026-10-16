@@ -1,0 +1,563 @@
+{
+ "scene": "garden",
+ "camera_spec": {
+  "camera": {
+   "x": 5.3,
+   "y": 0.6,
+   "eye": 1.5,
+   "yaw": 0,
+   "hfov": 55,
+   "horizon_pct": 50
+  },
+  "walls": [
+   {
+    "name": "north wall (inner face, granite, 2.7 m)",
+    "axis": "y",
+    "at": 16
+   },
+   {
+    "name": "east wall (inner face)",
+    "axis": "x",
+    "at": 12
+   },
+   {
+    "name": "west wall (inner face)",
+    "axis": "x",
+    "at": 0
+   }
+  ],
+  "points": {
+   "NW_corner_base": [
+    0,
+    16,
+    0
+   ],
+   "NW_corner_top": [
+    0,
+    16,
+    2.7
+   ],
+   "NE_corner_base": [
+    12,
+    16,
+    0
+   ],
+   "NE_corner_top": [
+    12,
+    16,
+    2.7
+   ],
+   "B1_fl": [
+    2.0,
+    8,
+    0.25
+   ],
+   "B1_fr": [
+    3.2,
+    8,
+    0.25
+   ],
+   "B1_bl": [
+    2.0,
+    11,
+    0.25
+   ],
+   "B1_fr_base": [
+    3.2,
+    8,
+    0
+   ],
+   "B2_fl": [
+    3.8,
+    8,
+    0.25
+   ],
+   "B2_fr": [
+    5.0,
+    8,
+    0.25
+   ],
+   "B2_br": [
+    5.0,
+    11,
+    0.25
+   ],
+   "B3_fl": [
+    5.6,
+    8,
+    0.25
+   ],
+   "B3_fr": [
+    6.8,
+    8,
+    0.25
+   ],
+   "B4_fl": [
+    7.4,
+    8,
+    0.25
+   ],
+   "B4_fr": [
+    8.6,
+    8,
+    0.25
+   ],
+   "B4_br": [
+    8.6,
+    11,
+    0.25
+   ],
+   "coldframe_fl": [
+    1.0,
+    13.5,
+    0.35
+   ],
+   "coldframe_fr": [
+    2.2,
+    13.5,
+    0.35
+   ],
+   "coldframe_back_top": [
+    1.0,
+    14.1,
+    0.45
+   ],
+   "shed_front_left_base": [
+    9.5,
+    13.5,
+    0
+   ],
+   "shed_front_left_eave": [
+    9.5,
+    13.5,
+    2.2
+   ],
+   "shed_front_right_eave": [
+    12,
+    13.5,
+    2.2
+   ],
+   "shed_ridge": [
+    10.75,
+    13.5,
+    3.0
+   ],
+   "water_butt_top": [
+    9.2,
+    13.2,
+    0.9
+   ],
+   "tower_gallery": [
+    -35,
+    100,
+    24
+   ],
+   "wheelbarrow": [
+    6.0,
+    6.5,
+    0.6
+   ],
+   "A_head_top": [
+    5.3,
+    7.4,
+    1.75
+   ],
+   "A_head_c": [
+    5.3,
+    7.4,
+    1.63
+   ],
+   "A_feet": [
+    5.3,
+    7.4,
+    0
+   ],
+   "B_head_top": [
+    7.1,
+    9.2,
+    1.75
+   ],
+   "B_head_c": [
+    7.1,
+    9.2,
+    1.63
+   ],
+   "B_feet": [
+    7.1,
+    9.2,
+    0
+   ],
+   "tower_lantern_top": [
+    -35,
+    100,
+    28
+   ],
+   "tower_visible_from": [
+    -35,
+    100,
+    9.3
+   ],
+   "house_ridge_l": [
+    -28,
+    92,
+    14
+   ],
+   "house_ridge_r": [
+    -20,
+    92,
+    14
+   ],
+   "house_eave_r": [
+    -20,
+    92,
+    11.5
+   ],
+   "beans_top_l": [
+    8.0,
+    9.8,
+    1.6
+   ],
+   "beans_top_r": [
+    8.6,
+    10.8,
+    1.6
+   ],
+   "bench_l_top": [
+    2.6,
+    15.6,
+    0.9
+   ],
+   "bench_r_top": [
+    4.4,
+    15.6,
+    0.9
+   ],
+   "espalier_l": [
+    0.5,
+    16,
+    2.2
+   ],
+   "espalier_r": [
+    2.4,
+    16,
+    2.2
+   ],
+   "sun_patch_wall_top_shadow": [
+    6,
+    16,
+    1.0
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_c",
+   "B_head_top",
+   "B_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 960,
+   "along_x": "at infinity (parallel to the frame)",
+   "horizon_y": 540
+  },
+  "points": {
+   "NW_corner_base": {
+    "x": 325,
+    "y": 720,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "NW_corner_top": {
+    "x": 325,
+    "y": 396,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "NE_corner_base": {
+    "x": 1762,
+    "y": 720,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "NE_corner_top": {
+    "x": 1762,
+    "y": 396,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "B1_fl": {
+    "x": 138,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B1_fr": {
+    "x": 437,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B1_bl": {
+    "x": 375,
+    "y": 762,
+    "where": "frame",
+    "depth": 10.4
+   },
+   "B1_fr_base": {
+    "x": 437,
+    "y": 914,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B2_fl": {
+    "x": 586,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B2_fr": {
+    "x": 885,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B2_br": {
+    "x": 907,
+    "y": 762,
+    "where": "frame",
+    "depth": 10.4
+   },
+   "B3_fl": {
+    "x": 1035,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B3_fr": {
+    "x": 1334,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B4_fl": {
+    "x": 1483,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B4_fr": {
+    "x": 1782,
+    "y": 852,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "B4_br": {
+    "x": 1545,
+    "y": 762,
+    "where": "frame",
+    "depth": 10.4
+   },
+   "coldframe_fl": {
+    "x": 345,
+    "y": 704,
+    "where": "frame",
+    "depth": 12.9
+   },
+   "coldframe_fr": {
+    "x": 517,
+    "y": 704,
+    "where": "frame",
+    "depth": 12.9
+   },
+   "coldframe_back_top": {
+    "x": 373,
+    "y": 683,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "shed_front_left_base": {
+    "x": 1560,
+    "y": 754,
+    "where": "frame",
+    "depth": 12.9
+   },
+   "shed_front_left_eave": {
+    "x": 1560,
+    "y": 440,
+    "where": "frame",
+    "depth": 12.9
+   },
+   "shed_front_right_eave": {
+    "x": 1918,
+    "y": 440,
+    "where": "frame",
+    "depth": 12.9
+   },
+   "shed_ridge": {
+    "x": 1739,
+    "y": 326,
+    "where": "frame",
+    "depth": 12.9
+   },
+   "water_butt_top": {
+    "x": 1531,
+    "y": 628,
+    "where": "frame",
+    "depth": 12.6
+   },
+   "tower_gallery": {
+    "x": 212,
+    "y": 123,
+    "where": "frame",
+    "depth": 99.4
+   },
+   "wheelbarrow": {
+    "x": 1179,
+    "y": 821,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "A_head_top": {
+    "x": 960,
+    "y": 472,
+    "where": "frame",
+    "depth": 6.8,
+    "behind": {
+     "wall": "north wall (inner face, granite, 2.7 m)",
+     "at": [
+      5.3,
+      16.0,
+      2.07
+     ]
+    }
+   },
+   "A_head_c": {
+    "x": 960,
+    "y": 505,
+    "where": "frame",
+    "depth": 6.8,
+    "behind": {
+     "wall": "north wall (inner face, granite, 2.7 m)",
+     "at": [
+      5.3,
+      16.0,
+      1.79
+     ]
+    }
+   },
+   "A_feet": {
+    "x": 960,
+    "y": 947,
+    "where": "frame",
+    "depth": 6.8
+   },
+   "B_head_top": {
+    "x": 1346,
+    "y": 486,
+    "where": "frame",
+    "depth": 8.6,
+    "behind": {
+     "wall": "north wall (inner face, granite, 2.7 m)",
+     "at": [
+      8.52,
+      16.0,
+      1.95
+     ]
+    }
+   },
+   "B_head_c": {
+    "x": 1346,
+    "y": 512,
+    "where": "frame",
+    "depth": 8.6,
+    "behind": {
+     "wall": "north wall (inner face, granite, 2.7 m)",
+     "at": [
+      8.52,
+      16.0,
+      1.73
+     ]
+    }
+   },
+   "B_feet": {
+    "x": 1346,
+    "y": 862,
+    "where": "frame",
+    "depth": 8.6
+   },
+   "tower_lantern_top": {
+    "x": 212,
+    "y": 48,
+    "where": "frame",
+    "depth": 99.4
+   },
+   "tower_visible_from": {
+    "x": 212,
+    "y": 395,
+    "where": "frame",
+    "depth": 99.4
+   },
+   "house_ridge_l": {
+    "x": 288,
+    "y": 288,
+    "where": "frame",
+    "depth": 91.4
+   },
+   "house_ridge_r": {
+    "x": 450,
+    "y": 288,
+    "where": "frame",
+    "depth": 91.4
+   },
+   "house_eave_r": {
+    "x": 450,
+    "y": 338,
+    "where": "frame",
+    "depth": 91.4
+   },
+   "beans_top_l": {
+    "x": 1501,
+    "y": 520,
+    "where": "frame",
+    "depth": 9.2
+   },
+   "beans_top_r": {
+    "x": 1557,
+    "y": 522,
+    "where": "frame",
+    "depth": 10.2
+   },
+   "bench_l_top": {
+    "x": 628,
+    "y": 614,
+    "where": "frame",
+    "depth": 15.0
+   },
+   "bench_r_top": {
+    "x": 849,
+    "y": 614,
+    "where": "frame",
+    "depth": 15.0
+   },
+   "espalier_l": {
+    "x": 385,
+    "y": 456,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "espalier_r": {
+    "x": 613,
+    "y": 456,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "sun_patch_wall_top_shadow": {
+    "x": 1044,
+    "y": 600,
+    "where": "frame",
+    "depth": 15.4
+   }
+  }
+ }
+}

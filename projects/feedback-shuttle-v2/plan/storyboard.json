@@ -1,0 +1,1648 @@
+{
+  "style": "story-cartoon",
+  "concept": "One meeting room, one comment rebuilt in front of us. Nina's kind, empty line to Theo changes nothing; a label makes it worse; then the same speech bubble gains three coloured slots (what he did, what it caused, one step) while the wall screen and calendar show each fact. The viewer checks it on a Friday-night report, rebuilds their own comment on a sticky note at their own desk, and the room returns with the budget slide first.",
+  "chrome": {
+    "section_labels": false
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "room",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "meeting room two-shot",
+        "note": "Nina screen left facing right, Theo screen right facing left (flip), peep busts behind the table; wall screen with Theo's slides upper left, wall clock beside it, wall calendar upper right, Nina's comment bubble in the centre of the wall when present."
+      },
+      {
+        "id": "desk",
+        "x": 2200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the viewer's everyday desk",
+        "note": "A desk with a monitor, a mug and an empty chair, nobody at it; b03 and b15."
+      },
+      {
+        "id": "idea",
+        "x": 4400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "feeling versus target",
+        "note": "A paper wall: the vague bubble on the left, a target board on the right."
+      },
+      {
+        "id": "presenter",
+        "x": 0,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "presenter",
+        "note": "The presenter once, b05."
+      },
+      {
+        "id": "comment",
+        "x": 2200,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "close on the comment",
+        "note": "The finished three-slot comment large, b11."
+      },
+      {
+        "id": "quiz",
+        "x": 4400,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the check",
+        "note": "A table top with a laptop and three answer cards, b12 to b14."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "None: a literal workplace moment, rebuilt in place.",
+    "setting": "A small meeting room after a weekly project update; the viewer's own desk.",
+    "arc": "A kind, vague comment changes nothing; a label makes him defensive; the same comment rebuilt as behaviour, effect and one agreed step; the viewer checks and applies it; the next update opens with the decision.",
+    "cast": [
+      {
+        "name": "Presenter",
+        "member": "woman",
+        "skin": 0,
+        "cloth": "accent3",
+        "role": "the presenter avatar, b05 only, never in the room scenes"
+      },
+      {
+        "name": "Nina",
+        "member": "woman",
+        "skin": 2,
+        "cloth": "cloth",
+        "role": "team lead who gives the feedback; screen left facing right in every room beat"
+      },
+      {
+        "name": "Theo",
+        "member": "man",
+        "skin": 1,
+        "cloth": "cloth2",
+        "role": "colleague whose project updates run long; screen right facing left (flip true) in every room beat"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "comment_bubble",
+      "what": "Nina's one speech bubble: the vague line (b01, ghost in b04 and b11), rewritten as the behaviour line (b07) with two dashed empty slots (b08), effect slot (b09), step slot with an agreed tick (b10), all three lit in turn (b11), small in the corner (b16). Each slot has a small colour tab: Behaviour teal (accent3), Effect sage (accent4), Next step ochre (accent2).",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b04",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b16"
+      ]
+    },
+    {
+      "id": "two_shot",
+      "what": "The same meeting room two-shot, Nina left, Theo right, same looks and sides.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b16"
+      ]
+    },
+    {
+      "id": "slide_wall",
+      "what": "Theo's slides on the wall screen with the clock, and the wall calendar: budget last and clock past the hour (b02), a replay of that order (b07), the budget decision card moved to next week (b09), budget first and clock before the hour (b16).",
+      "kind": "data",
+      "beats": [
+        "b02",
+        "b07",
+        "b09",
+        "b16"
+      ]
+    },
+    {
+      "id": "three_slots",
+      "what": "The three slot colours as tick rows on the answer cards (b12 to b14) and as the sticky note's empty slots (b15).",
+      "kind": "list",
+      "beats": [
+        "b12",
+        "b13",
+        "b14",
+        "b15"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "The one join material: a paper page turn into the check (b12) and at the time skip into the payoff (b16).",
+      "kind": "join",
+      "beats": [
+        "b12",
+        "b16"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "Nina's vague bubble",
+      "why": "a pale open: the line that changed nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the bullseye, the label tag, then each slot as it fills",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b12",
+      "band": "mid",
+      "accent": "withheld while the cards are read, then card B",
+      "why": "all three options weigh the same until the answer"
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "break": true,
+      "accent": "the budget slide now first",
+      "why": "a lift at the payoff: the same room, the change visible"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "meeting_room",
+        "what": "The meeting room set: surface2 wall, a field2 table front one value step from the wall with its top edge across the frame at about y 900, drawn so people placed before it are hidden below the table top; optional table-edge nameplates Nina and Theo (first appearance). Room for Nina's bust at x about 360 and Theo's at x about 1560 (size about 560, eyes in one band), the wall screen upper left, the clock beside it, the calendar upper right, and the comment bubble's space in the wall centre. No people in the kit; no accent anywhere in the set.",
+        "states": [
+          "two_shot",
+          "nameplates"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b16"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "wall_screen",
+        "what": "A wall screen (ink bezel, surface face) showing Theo's slide stack as small slide cards with real titles: Design, Hiring, Vendors, Timeline, Budget question. States: blank, stacking (cards add one by one, Budget question last), replay (the same order replayed quickly, the Budget question card arriving last and marked), budget_first (Budget question card first, the others after), decided (a pos tick stamp Decided on the budget card). Accent only on the budget card when it is the thing named.",
+        "states": [
+          "blank",
+          "stacking",
+          "replay",
+          "budget_first",
+          "decided"
+        ],
+        "beats": [
+          "b02",
+          "b07",
+          "b16"
+        ],
+        "size": [
+          540,
+          320
+        ]
+      },
+      {
+        "id": "wall_clock",
+        "what": "A round wall clock (Loom.obj clock style, ink outline). States: on_time (hands at ten to the hour), past_hour (hands sweep on to a quarter past), early (hands well before the hour).",
+        "states": [
+          "on_time",
+          "past_hour",
+          "early"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b11",
+          "b16"
+        ],
+        "size": [
+          150,
+          150
+        ]
+      },
+      {
+        "id": "wall_calendar",
+        "what": "A paper wall calendar with an accent3 header and two week columns This week and Next week. States: plain, flip (the page lifts and turns, with a small tab A week later), budget_card (a card Budget decision sits in This week), moved (it slides into Next week).",
+        "states": [
+          "plain",
+          "flip",
+          "budget_card",
+          "moved"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b09",
+          "b16"
+        ],
+        "size": [
+          380,
+          280
+        ]
+      },
+      {
+        "id": "comment_bubble",
+        "what": "Nina's paper speech bubble, tail down toward Nina (screen left), Nunito body text in ink. States: vague (one line: Great job, maybe tighten it up a bit.), ghost (the vague bubble at low opacity), behaviour (row 1: tab Behaviour in accent3, text Tuesday: budget question on the last slide), slots (rows 2 and 3 as dashed empty slots that can pulse), effect (row 2 filled: tab Effect in accent4, text Budget decision moved to next week), step (row 3 filled: tab Next step in accent2, text Next time: decision first), agreed (a small pos tick lands on row 3), lit_1, lit_2, lit_3 (that row's outline or tab in the accent, the others paper; one at a time), small (the whole three-row bubble scaled to a corner). Rows 42 characters at most. It must fit with the wall screen and calendar still readable.",
+        "states": [
+          "vague",
+          "ghost",
+          "behaviour",
+          "slots",
+          "effect",
+          "step",
+          "agreed",
+          "lit_1",
+          "lit_2",
+          "lit_3",
+          "small"
+        ],
+        "beats": [
+          "b01",
+          "b04",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b16"
+        ],
+        "size": [
+          760,
+          400
+        ]
+      },
+      {
+        "id": "label_tag",
+        "what": "A stick-on paper tag with the words You ramble in Patrick Hand, accent edge. States: in_hand (beside Nina), stuck (flies and slaps onto Theo's chest), peeling (one corner lifts, it falls away).",
+        "states": [
+          "in_hand",
+          "stuck",
+          "peeling"
+        ],
+        "beats": [
+          "b06",
+          "b07"
+        ],
+        "size": [
+          280,
+          120
+        ]
+      },
+      {
+        "id": "answer_cards",
+        "what": "Three paper answer cards in a row on a table top, letter A, B, C in Patrick Hand and the option text in Nunito body: A Be more organised. B The report came Friday night, so the team worked the weekend. Could we try a Thursday draft? C The report came Friday night, so the team worked the weekend. Please be more careful. Under each, a row of three small tick slots in the slot colours (accent3, accent4, accent2). States: in_a, in_b, in_c (each slides in), lifted_b (B forward), ticks_b (three ticks), ticks_c (two ticks), circle_c (the empty third slot circled in the accent), label_a (a small Label tag on A, no ticks), no_step_c (a small No step tag on C).",
+        "states": [
+          "in_a",
+          "in_b",
+          "in_c",
+          "lifted_b",
+          "ticks_b",
+          "ticks_c",
+          "circle_c",
+          "label_a",
+          "no_step_c"
+        ],
+        "beats": [
+          "b12",
+          "b13",
+          "b14"
+        ],
+        "size": [
+          1680,
+          420
+        ]
+      },
+      {
+        "id": "viewer_desk",
+        "what": "An everyday desk with no one at it: a monitor (ink body, surface2 screen), a mug, a plant, an empty office chair. States: chat (the monitor shows a chat message: Great job! Maybe tighten it up a bit.), sticky (a paper sticky note on the monitor bezel with the same comment), crossed (a hand-drawn line strikes it), slots (three empty coloured slots in accent3, accent4, accent2 appear beneath, labelled Behaviour, Effect, Next step), this_week (a small tab This week).",
+        "states": [
+          "chat",
+          "sticky",
+          "crossed",
+          "slots",
+          "this_week"
+        ],
+        "beats": [
+          "b03",
+          "b15"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "notes": "People are never in the kit: Nina and Theo are kit.peep busts placed by each scene with the literal story.cast look (Nina: woman, skin 2, cloth; Theo: man, skin 1, cloth2, flip true). The kit exports the three slot colours (behaviour accent3, effect accent4, step accent2) as constants. Clothes never use accent, accent2, pos or neg."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "Nina's kind, empty comment after Theo's update",
+      "world": "the meeting room as people leave",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "bubble",
+      "design": {
+        "treatment": "The room with nameplates; two muted extras leave through the frame; Nina turns toward Theo; her bubble pops between them with the vague line.",
+        "why_motion": "a moment between two people: the update ends, the comment is said",
+        "elements": [
+          {
+            "name": "set",
+            "label": "meeting_room two_shot with nameplates, wall_screen blank, wall_clock on_time, wall_calendar plain"
+          },
+          {
+            "name": "extras",
+            "label": "two muted colleagues leaving (ctx.crowd)"
+          },
+          {
+            "name": "nina",
+            "label": "Nina, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "theo",
+            "label": "Theo, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "bubble",
+            "label": "comment_bubble vague"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Imagine Nina",
+            "element": "extras",
+            "action": "colleagues walk out behind the table",
+            "motion": "slide out"
+          },
+          {
+            "t_anchor": "after Theo's project update",
+            "element": "theo",
+            "action": "Theo closes his laptop lid and looks up",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Great job",
+            "element": "nina",
+            "action": "Nina turns to explaining face (her own line)",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Great job",
+            "element": "bubble",
+            "action": "the vague bubble pops",
+            "motion": "pop with overshoot"
+          },
+          {
+            "t_anchor": "Maybe tighten",
+            "element": "theo",
+            "action": "Theo smiles (happy face)",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "extras",
+            "nina",
+            "theo",
+            "bubble"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "nina",
+        "theo"
+      ],
+      "subject": "A week later, the update runs just as long",
+      "world": "the same room a week on",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "budget_slide",
+      "design": {
+        "treatment": "The bubble leaves; the calendar page flips with the tab A week later; Theo presents, slides stack on the wall screen with Budget question last; the clock hands sweep past the hour; Nina's face falls to neutral.",
+        "why_motion": "the repetition and the overrun are events in time",
+        "elements": [
+          {
+            "name": "calendar_flip",
+            "label": "wall_calendar flip, tab A week later"
+          },
+          {
+            "name": "slides",
+            "label": "wall_screen stacking"
+          },
+          {
+            "name": "budget_slide",
+            "label": "the Budget question card, last"
+          },
+          {
+            "name": "clock",
+            "label": "wall_clock past_hour"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Theo smiles",
+            "element": "theo",
+            "action": "Theo smiles",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Next week",
+            "element": "calendar_flip",
+            "action": "the page turns, tab A week later",
+            "motion": "page flip"
+          },
+          {
+            "t_anchor": "the update runs",
+            "element": "slides",
+            "action": "slide cards stack one by one",
+            "motion": "drop, staggered"
+          },
+          {
+            "t_anchor": "just as long",
+            "element": "clock",
+            "action": "hands sweep past the hour",
+            "motion": "sweep"
+          },
+          {
+            "t_anchor": "Nothing changed",
+            "element": "budget_slide",
+            "action": "the Budget question card lands last",
+            "motion": "drop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "nina",
+            "theo"
+          ],
+          "travelling": [],
+          "retiring": [
+            "bubble",
+            "extras"
+          ],
+          "incoming": [
+            "calendar_flip",
+            "slides",
+            "budget_slide",
+            "clock"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "You have probably been Theo",
+      "world": "an everyday desk with no one at it",
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "chat_message",
+      "design": {
+        "treatment": "Cut to an empty everyday desk; the monitor shows a chat message with the same kind, empty comment; a slow push toward the screen.",
+        "why_motion": "the push brings the viewer into their own seat",
+        "elements": [
+          {
+            "name": "desk_set",
+            "label": "viewer_desk chat"
+          },
+          {
+            "name": "chat_message",
+            "label": "the chat line Great job! Maybe tighten it up a bit."
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "You have probably been Theo",
+            "element": "chat_message",
+            "action": "the message pops on the monitor",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Kind words",
+            "element": "desk_set",
+            "action": "slow push toward the monitor",
+            "motion": "camera push"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "desk_set",
+            "chat_message"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "idea",
+      "subject": "A feeling, not a target",
+      "world": "a paper wall: the vague bubble and an empty target board",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "dart",
+      "design": {
+        "treatment": "Left: the vague bubble with a small heart badge and the sign Feeling. Right: a target board with no dart and the sign Target. On names an action, a dart lands in the bullseye.",
+        "why_motion": "the dart landing is the contrast: something to aim at",
+        "elements": [
+          {
+            "name": "vague",
+            "label": "comment_bubble vague, with a small accent3 heart badge"
+          },
+          {
+            "name": "feeling_sign",
+            "label": "sign Feeling"
+          },
+          {
+            "name": "board",
+            "label": "target board, no dart"
+          },
+          {
+            "name": "target_sign",
+            "label": "sign Target"
+          },
+          {
+            "name": "dart",
+            "label": "a dart in the accent"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "gave a feeling",
+            "element": "feeling_sign",
+            "action": "the bubble and Feeling sign land",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "not a target",
+            "element": "board",
+            "action": "the empty board and Target sign land",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "names an action",
+            "element": "dart",
+            "action": "the dart flies in and sticks in the bullseye",
+            "motion": "fly and stamp"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "vague",
+            "feeling_sign",
+            "board",
+            "target_sign",
+            "dart"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "avatar",
+      "station": "presenter",
+      "props": {
+        "cast": "Presenter",
+        "kicker": "Rebuild it",
+        "card": {
+          "lines": [
+            "\"Great job, maybe tighten it up a bit.\""
+          ]
+        }
+      },
+      "subject": "The presenter admits the line and invites the rebuild",
+      "world": "direct to camera, the quote on her card",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "card"
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "A label makes him defensive",
+      "world": "the meeting room two-shot",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "tag",
+      "design": {
+        "treatment": "The two-shot; the You ramble tag appears by Nina and slaps onto Theo's chest; Theo leans back; a frosted pane rises from the table between them.",
+        "why_motion": "the tag landing and the pane rising are the defensiveness",
+        "elements": [
+          {
+            "name": "set",
+            "label": "meeting_room two_shot, wall_screen blank, wall_clock on_time, wall_calendar plain"
+          },
+          {
+            "name": "nina",
+            "label": "Nina, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "theo",
+            "label": "Theo, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "tag",
+            "label": "label_tag"
+          },
+          {
+            "name": "pane",
+            "label": "a thin frosted pane on the table between them, muted"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a label",
+            "element": "tag",
+            "action": "the tag appears beside Nina",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "you ramble",
+            "element": "tag",
+            "action": "the tag flies and slaps onto Theo's chest",
+            "motion": "fly and stamp"
+          },
+          {
+            "t_anchor": "defensive",
+            "element": "theo",
+            "action": "Theo leans back away from Nina",
+            "motion": "lean 30 px and tilt"
+          },
+          {
+            "t_anchor": "defensive",
+            "element": "pane",
+            "action": "the pane rises between them",
+            "motion": "rise"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "nina",
+            "theo",
+            "tag",
+            "pane"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "nina",
+        "theo"
+      ],
+      "subject": "Say what you saw",
+      "world": "the same two-shot, the bubble rewrites",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "replay_budget",
+      "design": {
+        "treatment": "The tag peels off and falls; the pane sinks; Theo leans back in; Nina's bubble arrives with row 1 Behaviour: Tuesday: budget question on the last slide; the wall screen replays the slide order with the Budget question card arriving last.",
+        "why_motion": "the label turning into an observed fact is the move",
+        "elements": [
+          {
+            "name": "bubble",
+            "label": "comment_bubble behaviour"
+          },
+          {
+            "name": "replay",
+            "label": "wall_screen replay"
+          },
+          {
+            "name": "replay_budget",
+            "label": "the Budget question card, last, marked"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say what you saw",
+            "element": "tag",
+            "action": "the tag peels and falls; the pane sinks",
+            "motion": "peel and fall"
+          },
+          {
+            "t_anchor": "On Tuesday",
+            "element": "bubble",
+            "action": "the bubble pops with the behaviour row",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "came last",
+            "element": "replay",
+            "action": "slides replay in order",
+            "motion": "staggered drop"
+          },
+          {
+            "t_anchor": "after every other workstream",
+            "element": "replay_budget",
+            "action": "the budget card lands last",
+            "motion": "drop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "nina",
+            "theo"
+          ],
+          "travelling": [],
+          "retiring": [
+            "tag",
+            "pane"
+          ],
+          "incoming": [
+            "bubble",
+            "replay",
+            "replay_budget"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "nina",
+        "theo",
+        "bubble",
+        "replay"
+      ],
+      "subject": "What is the comment still missing?",
+      "world": "the same two-shot, two empty slots",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "layered",
+      "light": "even",
+      "intent": "process_hold",
+      "accent_on": "question_mark",
+      "design": {
+        "treatment": "Two dashed empty slots open under the behaviour row and pulse gently; a hand-lettered question mark lands beside them; Nina and Theo both turn to the bubble.",
+        "why_motion": "the pulse holds attention through the pause",
+        "elements": [
+          {
+            "name": "slots",
+            "label": "comment_bubble slots, pulsing"
+          },
+          {
+            "name": "question_mark",
+            "label": "a hand-lettered ? in the accent"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now you",
+            "element": "slots",
+            "action": "two dashed slots open",
+            "motion": "unfold"
+          },
+          {
+            "t_anchor": "still missing",
+            "element": "question_mark",
+            "action": "the question mark lands",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "nina",
+            "theo",
+            "bubble",
+            "replay"
+          ],
+          "travelling": [],
+          "retiring": [
+            "replay_budget"
+          ],
+          "incoming": [
+            "slots",
+            "question_mark"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "nina",
+        "theo",
+        "bubble",
+        "slots"
+      ],
+      "subject": "What it caused",
+      "world": "the same two-shot, the calendar moves",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "budget_card",
+      "design": {
+        "treatment": "The question mark leaves; the replay quiets; on the wall calendar a Budget decision card sits in This week and slides into Next week; the second slot fills: Effect, Budget decision moved to next week.",
+        "why_motion": "the decision slipping a week is a movement on the calendar",
+        "elements": [
+          {
+            "name": "budget_card",
+            "label": "wall_calendar budget_card then moved"
+          },
+          {
+            "name": "effect_row",
+            "label": "comment_bubble effect"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "What it caused",
+            "element": "budget_card",
+            "action": "the Budget decision card appears in This week",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "ran out of time",
+            "element": "nina",
+            "action": "Nina's explaining face",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "slipped a week",
+            "element": "budget_card",
+            "action": "it slides into Next week",
+            "motion": "slide"
+          },
+          {
+            "t_anchor": "slipped a week",
+            "element": "effect_row",
+            "action": "the effect row fills slot 2",
+            "motion": "write on"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "nina",
+            "theo",
+            "bubble",
+            "slots"
+          ],
+          "travelling": [],
+          "retiring": [
+            "question_mark",
+            "replay"
+          ],
+          "incoming": [
+            "budget_card",
+            "effect_row"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "nina",
+        "theo",
+        "bubble",
+        "slots",
+        "effect_row",
+        "budget_card"
+      ],
+      "subject": "One concrete step, agreed together",
+      "world": "the same two-shot",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "step_row",
+      "design": {
+        "treatment": "The third slot fills: Next step, Next time: decision first. Nina asks (explaining face, her own question); Theo leans in, nods; a small pos tick lands on the step row as they agree.",
+        "why_motion": "agreement is an exchange between two people",
+        "elements": [
+          {
+            "name": "step_row",
+            "label": "comment_bubble step"
+          },
+          {
+            "name": "agreed_tick",
+            "label": "comment_bubble agreed"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "one concrete step",
+            "element": "step_row",
+            "action": "the step row fills slot 3",
+            "motion": "write on"
+          },
+          {
+            "t_anchor": "Could you open",
+            "element": "nina",
+            "action": "Nina's explaining face",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "the decision you need",
+            "element": "theo",
+            "action": "Theo leans in and nods",
+            "motion": "lean and nod"
+          },
+          {
+            "t_anchor": "agree it together",
+            "element": "agreed_tick",
+            "action": "the tick lands on the step row; both faces happy",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "nina",
+            "theo",
+            "bubble",
+            "slots",
+            "effect_row",
+            "budget_card"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "step_row",
+            "agreed_tick"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "comment",
+      "subject": "What he did, what it caused, one step",
+      "world": "the finished comment large on paper",
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "intent": "rest",
+      "accent_on": "lit_row",
+      "design": {
+        "treatment": "The complete three-row comment large, the vague bubble a faint ghost behind; each row lights on its words; on say it soon a small wall clock ticks beside it.",
+        "why_motion": "lighting each part as it is said signals the structure",
+        "elements": [
+          {
+            "name": "ghost",
+            "label": "comment_bubble ghost"
+          },
+          {
+            "name": "full",
+            "label": "comment_bubble step state, large"
+          },
+          {
+            "name": "lit_row",
+            "label": "lit_1, lit_2, lit_3 in turn"
+          },
+          {
+            "name": "clock",
+            "label": "wall_clock small, hand ticks"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "What he did",
+            "element": "lit_row",
+            "action": "row 1 lights",
+            "motion": "light"
+          },
+          {
+            "t_anchor": "what it caused",
+            "element": "lit_row",
+            "action": "row 2 lights",
+            "motion": "light"
+          },
+          {
+            "t_anchor": "one step",
+            "element": "lit_row",
+            "action": "row 3 lights",
+            "motion": "light"
+          },
+          {
+            "t_anchor": "still kind",
+            "element": "ghost",
+            "action": "the ghost fades further",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "say it soon",
+            "element": "clock",
+            "action": "the clock lands and ticks",
+            "motion": "drop"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "ghost",
+            "full",
+            "lit_row",
+            "clock"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "quiz",
+      "subject": "Your turn: a report lands Friday night",
+      "world": "a table top with a laptop and three answer cards",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "intent": "hold",
+      "accent_on": "none",
+      "design": {
+        "treatment": "A laptop shows an inbox: a report email arrives, Friday 11:40 pm. The laptop slides up small; cards A, B, C slide in one at a time as each is read, none marked; the tick rows empty.",
+        "why_motion": "each option arrives on its own words so it can be read",
+        "elements": [
+          {
+            "name": "inbox",
+            "label": "laptop with Loom.ui.mail: Weekly report, Friday 11:40 pm"
+          },
+          {
+            "name": "card_a",
+            "label": "answer_cards in_a"
+          },
+          {
+            "name": "card_b",
+            "label": "answer_cards in_b"
+          },
+          {
+            "name": "card_c",
+            "label": "answer_cards in_c"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A report lands Friday night",
+            "element": "inbox",
+            "action": "the email arrives",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "A. Be more organised",
+            "element": "card_a",
+            "action": "card A slides in",
+            "motion": "slide"
+          },
+          {
+            "t_anchor": "B. It came Friday night",
+            "element": "card_b",
+            "action": "card B slides in",
+            "motion": "slide"
+          },
+          {
+            "t_anchor": "C. Same facts",
+            "element": "card_c",
+            "action": "card C slides in",
+            "motion": "slide"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "inbox",
+            "card_a",
+            "card_b",
+            "card_c"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "quiz",
+      "keep": [
+        "inbox",
+        "card_a",
+        "card_b",
+        "card_c"
+      ],
+      "subject": "It is B",
+      "world": "the same cards",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "card_b",
+      "design": {
+        "treatment": "Card B lifts forward with a pos ring; its three tick slots fill one by one in the three slot colours on what happened, what it caused, one step.",
+        "why_motion": "the ticks map the answer onto the three parts",
+        "elements": [
+          {
+            "name": "b_lift",
+            "label": "answer_cards lifted_b"
+          },
+          {
+            "name": "b_ticks",
+            "label": "answer_cards ticks_b"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "It is B",
+            "element": "b_lift",
+            "action": "card B lifts forward",
+            "motion": "spring"
+          },
+          {
+            "t_anchor": "What happened",
+            "element": "b_ticks",
+            "action": "tick 1",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "what it caused",
+            "element": "b_ticks",
+            "action": "tick 2",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "one step",
+            "element": "b_ticks",
+            "action": "tick 3",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "inbox",
+            "card_a",
+            "card_b",
+            "card_c"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "b_lift",
+            "b_ticks"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "quiz",
+      "keep": [
+        "card_a",
+        "card_b",
+        "card_c",
+        "b_lift",
+        "b_ticks"
+      ],
+      "subject": "Why not C, why not A",
+      "world": "the same cards",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "c_circle",
+      "design": {
+        "treatment": "Card C gains two ticks and its empty third slot is circled in the accent, with a No step tag; card A gets a Label tag and no ticks.",
+        "why_motion": "the gap in C is shown where it is",
+        "elements": [
+          {
+            "name": "c_ticks",
+            "label": "answer_cards ticks_c"
+          },
+          {
+            "name": "c_circle",
+            "label": "answer_cards circle_c and no_step_c"
+          },
+          {
+            "name": "a_label",
+            "label": "answer_cards label_a"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "C sounds complete",
+            "element": "c_ticks",
+            "action": "two ticks on C",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "no real step",
+            "element": "c_circle",
+            "action": "the empty slot is circled, No step tag",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "A is only a label",
+            "element": "a_label",
+            "action": "the Label tag lands on A",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "card_a",
+            "card_b",
+            "card_c",
+            "b_lift",
+            "b_ticks"
+          ],
+          "travelling": [],
+          "retiring": [
+            "inbox"
+          ],
+          "incoming": [
+            "c_ticks",
+            "c_circle",
+            "a_label"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "Now yours: rebuild one comment this week",
+      "world": "the b03 desk again",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "practice",
+      "depth": "layered",
+      "light": "even",
+      "intent": "callback",
+      "accent_on": "strike",
+      "design": {
+        "treatment": "The same desk as b03; a sticky note with the vague comment on the monitor bezel; a line strikes it; three empty coloured slots appear under it; a This week tab.",
+        "why_motion": "the viewer's own rebuild, set up and left open",
+        "elements": [
+          {
+            "name": "desk_set",
+            "label": "viewer_desk"
+          },
+          {
+            "name": "sticky",
+            "label": "viewer_desk sticky"
+          },
+          {
+            "name": "strike",
+            "label": "viewer_desk crossed, the strike in the accent"
+          },
+          {
+            "name": "empty_slots",
+            "label": "viewer_desk slots"
+          },
+          {
+            "name": "week_tab",
+            "label": "viewer_desk this_week"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now yours",
+            "element": "sticky",
+            "action": "the sticky note lands",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "this week",
+            "element": "week_tab",
+            "action": "the This week tab lands",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "rebuild it",
+            "element": "strike",
+            "action": "the strike draws across",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "before you say it",
+            "element": "empty_slots",
+            "action": "three empty coloured slots appear",
+            "motion": "staggered pop"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "desk_set",
+            "sticky",
+            "strike",
+            "empty_slots",
+            "week_tab"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "Next update, the decision comes first",
+      "world": "the opening meeting room again",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "layered",
+      "light": "even",
+      "intent": "callback",
+      "accent_on": "budget_first",
+      "design": {
+        "treatment": "The same room; a sign Next update; the wall screen shows the Budget question card first; a Decided tick stamps on it; the clock sits well before the hour; Nina's three-colour comment small in the upper corner; both happy.",
+        "why_motion": "the change is visible in the same place",
+        "elements": [
+          {
+            "name": "set",
+            "label": "meeting_room two_shot, wall_calendar plain"
+          },
+          {
+            "name": "nina",
+            "label": "Nina, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "theo",
+            "label": "Theo, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "next_sign",
+            "label": "sign Next update"
+          },
+          {
+            "name": "budget_first",
+            "label": "wall_screen budget_first"
+          },
+          {
+            "name": "decided",
+            "label": "wall_screen decided"
+          },
+          {
+            "name": "clock",
+            "label": "wall_clock early"
+          },
+          {
+            "name": "small_comment",
+            "label": "comment_bubble small"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back to Theo",
+            "element": "next_sign",
+            "action": "the Next update sign lands",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "the decision comes first",
+            "element": "budget_first",
+            "action": "the budget card lands first on the screen",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "makes change easier",
+            "element": "decided",
+            "action": "the Decided tick stamps; the clock shows early",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "not certain",
+            "element": "small_comment",
+            "action": "the small comment settles in the corner",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "nina",
+            "theo",
+            "next_sign",
+            "budget_first",
+            "decided",
+            "clock",
+            "small_comment"
+          ]
+        }
+      }
+    }
+  ],
+  "findings": [
+    "Asset request: a back or three-quarter view for a desk worker; b03 is framed as an empty desk instead.",
+    "Asset request: a defensive or arms-folded bust face; b06 carries it with a lean and a pane."
+  ]
+}

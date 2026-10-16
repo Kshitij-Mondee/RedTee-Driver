@@ -1,0 +1,479 @@
+{
+ "style": "dark-technical",
+ "concept": "One held schematic on a dark bench (your laptop and phone on the left, the site drawn as a door on the right, one line between them) re-runs the same sign-in four times with one change each run: password only, plus a code, a look-alike page relaying both, a passkey that answers only the real address. Lenses and a phone cutaway open the detail that decides each run, a four-cell tally keeps the verdicts side by side, and term cards rise over the dimmed bench between runs without the bench ever leaving. Down is deeper: the evidence sits on a study wall below the bench, and the camera climbs back up to the same exchange for the last practice.",
+ "poster": {"beat": "b10"},
+ "references": [
+  "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (section 3, item 4: one layout held while its state changes on the spoken word, one diagram held 44 s; magnifier and cutaway as devices; chapter boundaries as hard cuts)",
+  "docs/research/lucas/2026-10-01-lucas-lab-study.md (build on one board changed by small additions for 20 to 50 s; one running symbol reused all video; the everyday thing before the formal picture)",
+  "docs/research/kurz/2026-10-01-kurzgesagt-study.md (a running comparison pair that returns with one new number; a simulated interface as the explaining device)",
+  "docs/references/ui/mail-chat-doc.md (UI artefacts: every word real, product-neutral, no vendor trade dress)",
+  "packs/styles/dark-technical.json (reads_as: near-black field, precise thin strokes, cool blue and teal, warm yellow for the one thing that matters)"
+ ],
+ "story": {
+  "metaphor": "the site as a door at the end of one line; a sign-in is whatever travels that line, and the lesson asks what a thief can make travel it",
+  "setting": "a dark technical bench holding one schematic of the sign-in exchange, re-run four times; a study wall directly below it for the evidence",
+  "arc": "the plain exchange and its question; run one, a copy gets in; MFA defined; run two, the copy stops; the meter and its gap; run three, a look-alike page relays both and the viewer predicts; the code and the passkey defined; the passkey signs inside the phone; run four, the passkey refuses the look-alike; down to the evidence; back up, a prompt you did not start is run three seen from your end; the three moves; nothing to hand over",
+  "cast": []
+ },
+ "motifs": [
+  {"name": "the bench", "desc": "element names held or kept across beats, built in b01 and rebuilt at the same coordinates in b18: laptop, screen (the sign-in page on the laptop; replaced by fake_screen in b08 to b10 and b15, new screen in b13, none in b18 because the laptop is closed), phone, line, door, door_plate. Station 'bench' geometry: laptop x 120 y 470 w 470 h 410 (screen about x 150 y 495 w 410 h 255); phone x 630 y 540 w 180 h 340; line (830, 720) to (1440, 720); door x 1460 y 330 w 300 h 550, lock band y 560 to 660; door_plate x 1400 y 250 w 420 h 56 'login.yourwork.example'. Free zone for lenses, numeral, distant laptop and prompts: x 760 to 1380, y 84 to 520. Schematic, not to scale, no people."},
+  {"name": "the run label and the tally", "desc": "run_slot (Loom.slot badge, x 96 y 96 w 620 h 72) relabelled 'RUN 1: PASSWORD ONLY', 'RUN 2: PLUS A CODE', 'RUN 3: A LOOK-ALIKE PAGE', 'A PASSKEY SIGN-IN', 'RUN 4: A PASSKEY', 'A PROMPT YOU DID NOT START'; tally (x 96 y 186 w 640 h 64) four cells stamped ACCEPTED (neg) or DENIED (pos): b04 cell 1 ACCEPTED, b06 cell 2 DENIED, b10 cell 3 ACCEPTED, b15 cell 4 DENIED; created b04, held to b15, rebuilt with all four verdicts in b18"},
+  {"name": "the chips", "desc": "small ink chips that travel ON the line: pw_chip 'password', code_chip 'code' (b01); copy_chip (accent3 outline) from the distant laptop (b04, b06, b18); pw_token and code_token (b08 to b10, frozen at the look-alike box in b09); challenge_chip and the sealed answer_chip in cyan (b13); request_chip from the look-alike box (b15)"},
+  {"name": "the look-alike box", "desc": "fake_box: a door replica spliced into the middle of the line at x 980 y 560 w 300 h 320, plate 'login.yourw0rk.example' (a zero for the o); greys while disguised (b08, b09, b15), outline recoloured to accent3 when exposed (b10); returns as a dashed ghost in b19"},
+  {"name": "the sealed key", "desc": "phone_vault: Loom.magnify.cutaway on the phone, circle win (720, 700, r 72), a compartment with a sealed key in cyan; opens in b13, kept in b14, stays dark in b15; the key never moves"}
+ ],
+ "devices": [
+  {"id": "bench", "what": "the held sign-in schematic (laptop, phone, one line, the site as a door) re-run with one change per run; its state changes on the cue word: door shut or open, lock plates, the page on the laptop swapped in place, chips travelling the line", "kind": "explain", "beats": ["b01", "b04", "b06", "b07", "b08", "b10", "b13", "b15", "b18", "b19"]},
+  {"id": "run_tally", "what": "a Loom.slot run label relabelled on 'Run one' to 'Run four', and a four-cell tally where each run's verdict is stamped ACCEPTED or DENIED, so the runs are compared side by side, not remembered", "kind": "list", "beats": ["b04", "b06", "b08", "b10", "b15", "b18", "b19"]},
+  {"id": "lens_and_cutaway", "what": "Loom.magnify lens on the detail that decides a run (the meter's unfilled sliver, the box relaying both chips, the look-alike address), and Loom.magnify.cutaway of the phone showing the sealed key that signs and never leaves", "kind": "explain", "beats": ["b07", "b10", "b13", "b15"]},
+  {"id": "term_card", "what": "a template card over the dimmed bench: the bench is kept (storyboard keep) and steps back behind the template veil, it never leaves; consecutive cards also keep the veil (template_backplate) so it does not blink; each term is defined once, after its picture", "kind": "rest", "beats": ["b02", "b03", "b05", "b09", "b11", "b12", "b14", "b20", "b21", "b22"]},
+  {"id": "number_on_the_thing", "what": "figures drawn as instruments on what they describe, owner and limit in the same frame: the meter mounted on the door (b07), the Google bars on the study wall (b16), their limit stated on the same wall (b17)", "kind": "data", "beats": ["b07", "b16", "b17"]},
+  {"id": "fill_join", "what": "the join material (fill): a shape from the outgoing frame grows until it fills it, then opens on the next shot; the look-alike box grows into the relay (b10), the phone that refused grows into the payoff (b20). One material for the lesson; chapter boundaries elsewhere are hard cuts", "kind": "join", "beats": ["b10", "b20"]}
+ ],
+ "value_script": [
+  {"from": "b01", "band": "dark", "accent": "accent2", "why": "dark-technical bench: near-black field, the schematic in greys, one warm accent on the thing the narration names; the open is sparse and quiet"},
+  {"from": "b10", "band": "dark", "break": true, "accent": "accent3", "why": "the turn: the look-alike box grows into the frame (fill) and the threat colour holds the route for the only time; no red flood or flashing (must_avoid), the break is the open route turning red"},
+  {"from": "b11", "band": "dark", "accent": "accent2", "why": "back to the band for the two term cards"},
+  {"from": "b13", "band": "dark", "accent": "accent", "why": "the passkey's cyan enters only here, withheld until the mechanism that wins"},
+  {"from": "b16", "band": "dark", "accent": "accent2", "why": "the study wall: data calm on a clean field, no threat colour"},
+  {"from": "b20", "band": "dark", "break": true, "accent": "accent", "why": "the lift at the close: the fill join floods cyan from the phone and the passkey colour carries the payoff cards"}
+ ],
+ "world": {
+  "stations": [
+   {"id": "bench", "x": 0, "y": 0, "note": "the held sign-in schematic; every run, every term card (dimmed behind the veil) and the closing practice"},
+   {"id": "study", "x": 0, "y": 1400, "note": "the study wall directly below the bench: down is deeper, the evidence (b16, b17); the camera climbs back up for b18"}
+  ]
+ },
+ "scenes": [
+  {
+   "beat": "b01", "kind": "bespoke", "scene": "b01", "station": "bench",
+   "join_in": {"type": "cut", "meaning": "chapter"},
+   "subject": "the sign-in exchange: laptop, phone, line, the site as a door",
+   "world": "the sign-in bench",
+   "register": "productive", "motion_is": "content", "shot": {"size": "establishing"}, "depth": "flat", "light": "even",
+   "story_role": "hook", "accent_on": "the password chip, then the code chip, then the opening door",
+   "design": {
+    "treatment": "The held picture is built here and not rebuilt until b18: a dark bench schematic, your laptop and phone on the left, the site drawn as a door on the right, one thin line between them. The laptop screen shows a real sign-in page with real words. The sign-in runs once, plainly: a password chip travels the line on 'password', a code chip rises from the phone on 'code' and follows it, the door opens on 'You are in'. Still camera, moving drawing.",
+    "why_motion": "the lesson's object is an exchange over time: what leaves your device, travels, and is accepted. The travel IS the content, and this first run is the baseline every later run is compared against.",
+    "elements": [
+     "laptop: Loom.obj laptop, three-quarter view, screen toward the line, greys (line/muted)",
+     "screen: the sign-in page on the laptop screen, every word real: address line 'login.yourwork.example', title 'Sign in', a 'Password' field, a 'Continue' button. Loom.ui has no login artefact yet: build it from Loom.ui.card or ui.doc parts and kit.text, product-neutral (no vendor colour, logo or layout); text at or above the 24 px label floor",
+     "phone: upright slab, dark screen that later shows the code '482 913' in mono",
+     "line: a thin rail from laptop to door with small direction ticks (world, not counted)",
+     "door with door_plate: a tag reading 'login.yourwork.example' in mono (seed label 'tag')",
+     "pw_chip ('password') and code_chip ('code'): small ink chips that travel ON the line"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Say you type your password", "element": "bench: laptop, screen, phone, line, door, door_plate", "action": "the bench is composed from the first frame (never an empty frame): structure settles first, then the line draws from the laptop into the door (about 0.8 s)", "motion": "settle + draw"},
+     {"t_anchor": "type your password", "element": "screen Password field", "action": "dots type into the field at a human pace (Loom interaction typing, 15 to 25 characters a second), then Continue is pressed", "motion": "typing + press"},
+     {"t_anchor": "password", "element": "pw_chip", "action": "leaves the laptop and travels the line to the door, eased, about 1.2 s; accent2 rides on it", "motion": "value travel"},
+     {"t_anchor": "asks for a code from your phone", "element": "phone + code_chip", "action": "a short pulse returns along the line to the phone; the phone screen lights with '482 913'; on 'code' a code chip rises from the phone onto the line and follows to the door; accent2 moves to it", "motion": "reveal + value travel"},
+     {"t_anchor": "You are in", "element": "door", "action": "the door leaf swings open on its hinge (ease out, 0.6 s, no bounce); a thin pos rim lights the frame; the chips settle into the doorway and fade; the accent leaves", "motion": "state change"}
+    ],
+    "continuity": "Element names are a contract: the template beats keep and later bespoke beats hold laptop, screen, phone, line, door, door_plate (exact names, created with ctx.el). The chips retire. The door ends OPEN (kept open under the veil in b02 and b03; b04 closes it as run one starts). Geometry: see motifs 'the bench'. b18 rebuilds the same bench at the same coordinates.",
+    "colour": "Colour meanings for the whole lesson: bench structure in line/muted greys; your credentials (password, code) in ink; the threat (copied password, distant laptop, the look-alike box once exposed, the route to them) in accent3; the passkey (sealed key, challenge, signed answer) in accent cyan, only from b13; accent2 warm yellow is the ONE accent, on what the narration names now, and it moves on with the narration. Stamps: ACCEPTED in neg when the thief gets in, DENIED in pos when the thief is stopped; the word carries the meaning, colour repeats it. Technical pack: no overshoot, no stepped time, no boil.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (hold the layout, change its state)",
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (build on one board)",
+     "docs/references/ui/mail-chat-doc.md (real UI words, product-neutral)",
+     "packs/styles/dark-technical.json (thin precise strokes, one warm accent)"
+    ]
+   },
+   "rationale": "Hook as the plain exchange everyone knows, drawn as the one picture the whole lesson re-runs (brief visual_direction: one schematic that holds and is re-run with one change each time). First beat, hard cut in."
+  },
+  {
+   "beat": "b02", "kind": "template", "station": "bench", "template": "title.card",
+   "props": {"kicker": "Not everything", "say_kicker": "Not everything", "title": "So what gets through?", "say_title": "So what gets through"},
+   "keep": ["laptop", "screen", "phone", "line", "door", "door_plate"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "hook",
+   "accent_on": "the question (title)",
+   "rationale": "Allocation says template. The question card rises over the bench, which is kept and steps back behind the template veil (keep + backplate: the held world dims, it never leaves); the open door stays faintly visible behind the question. Device term_card."
+  },
+  {
+   "beat": "b03", "kind": "template", "station": "bench", "template": "definition",
+   "props": {"kicker": "What a password proves", "term": "Something you know", "say_term": "something you know", "definition": "A password proves only that someone knows it. Nothing in it ties it to your laptop.", "say_definition": "Anyone who knows it", "example": "Typed on a stranger's laptop, it works the same.", "say_example": "on any device", "icon": "brain"},
+   "keep": ["laptop", "screen", "phone", "line", "door", "door_plate", "template_backplate"],
+   "join_in": {"type": "cut", "meaning": "chapter"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "setup",
+   "accent_on": "the term 'Something you know'",
+   "rationale": "Chapter boundary into sec1 as a hard cut with a card (the studied chapter habit). Allocation says template, so the script's magnifier on the password becomes a term card over the dimmed bench; the lens device is spent where a scene can carry it (b07, b10, b15). Keeps b02's backplate so the veil does not blink between two consecutive cards."
+  },
+  {
+   "beat": "b04", "kind": "bespoke", "scene": "b04", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "a copied password replayed from another device",
+   "world": "the sign-in bench, run one",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "setup", "accent_on": "the copied password chip, then the ACCEPTED stamp",
+   "design": {
+    "treatment": "Run one. The bench returns to full value (the veil leaves), the door swings shut to reset, and the run label is stamped into its slot above a four-cell tally. A distant laptop fades in at the top of the free zone, outlined in the threat colour; a copy of the password chip appears on it, travels a second, dashed line that curves down into the door, and the door opens for the copy exactly as it opened for you. ACCEPTED is stamped on the door and in tally cell 1.",
+    "why_motion": "the claim is behavioural: the door cannot tell the copy from you. Only watching the same opening happen for the copy shows it.",
+    "elements": [
+     "run_slot: Loom.slot(ctx, 'run_slot', {x: 96, y: 96, w: 620, h: 72, frame: 'badge'}); content 'RUN 1: PASSWORD ONLY' arriving with how 'stamp'",
+     "tally: four cells 'RUN 1' to 'RUN 4' at x 96 y 186 w 640 h 64, drawn once here, verdicts empty",
+     "thief_laptop: a smaller laptop outline in accent3 at about x 980 y 110 w 240 h 170, with a dashed accent3 line curving down to the door's left edge near (1460, 470)",
+     "copy_chip: the same 'password' chip, outlined in accent3",
+     "door_stamp 'ACCEPTED' in neg (seed mark stamp: tilted, double-ruled, inked, no fill; Loom.treat.label with as 'stamp' or slot how 'stamp'), and the same word small in tally cell 1"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Run one", "element": "door, run_slot, tally", "action": "the door closes (0.4 s, ease out); the run_slot frame settles and 'RUN 1: PASSWORD ONLY' stamps in; the tally cells settle as one gesture (stagger 0.08 s); the phone dims to muted (password only)", "motion": "state change + slot stamp"},
+     {"t_anchor": "Say it leaked elsewhere", "element": "thief_laptop + copy_chip", "action": "the distant laptop fades up at the top (reveal, no rise); the copy chip appears on its screen; accent2 moves to the copy", "motion": "reveal"},
+     {"t_anchor": "A bot replays it", "element": "dashed line + copy_chip", "action": "the dashed line draws from the thief laptop into the door, then the copy travels it (value travel, about 1.2 s, eased)", "motion": "draw + value travel"},
+     {"t_anchor": "The door opens", "element": "door + door_stamp + tally cell 1", "action": "the door opens exactly as in b01 (same hinge, same timing); ACCEPTED stamps onto the leaf (scale 1.3 to 1, ease out, no overshoot), then small into tally cell 1", "motion": "state change + stamp"}
+    ],
+    "continuity": "Holds laptop, screen, phone, line, door, door_plate (claimed by b03). Creates run_slot and tally (held to the end of b15, rebuilt in b18) and thief_laptop (kept by b05, held by b06, retired at b07). Attach the slot object to its element (E.slot = s, as Loom.ui does with E.ui) so b06, b08, b13 and b15 can relabel it; a slot held across beats is untested (docs/primitives/slot.md), so if the held API fails, draw a fresh slot at the same box with how 'stamp' and log it in RUN_LOG. door_stamp retires at b06.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (hold the layout, change its state)",
+     "docs/primitives/slot.md (relabel and stamp in place)",
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (a running comparison that returns with one new result)"
+    ]
+   },
+   "rationale": "Run one is the baseline failure: same bench, one change (a copy arrives from elsewhere). The tally starts the running comparison the brief asks for: compare runs, not new diagrams."
+  },
+  {
+   "beat": "b05", "kind": "template", "station": "bench", "template": "definition",
+   "props": {"kicker": "Two kinds of proof", "term": "MFA, multi-factor authentication", "say_term": "MFA", "definition": "Proof of two different kinds. Know: a password. Have: your phone or a key. Are: a fingerprint or face.", "say_definition": "two different kinds of proof", "example": "Password plus a code from your phone: two kinds.", "say_example": "something you have", "icon": "layers"},
+   "keep": ["laptop", "screen", "phone", "line", "door", "door_plate", "run_slot", "tally", "thief_laptop"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "setup",
+   "accent_on": "the term 'MFA'",
+   "rationale": "Allocation says template: MFA is defined once, in one plain card, after the picture of run one. The script's three slots become the definition's three kinds; the two locks it promised are drawn on the door as run two starts (b06). Never an icon grid (TED-Ed conclusions: lists are objects)."
+  },
+  {
+   "beat": "b06", "kind": "bespoke", "scene": "b06", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "a second lock the copied password cannot open",
+   "world": "the sign-in bench, run two",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "turn", "accent_on": "the code on your phone, then the DENIED stamp",
+   "design": {
+    "treatment": "Run two, one change: the door now carries two locks. The same copy travels the same dashed line and opens lock one; lock two waits. Your phone, far from the copy, lights with the code. The copy has nothing for lock two and is pushed back off the door. DENIED is stamped on the door and in tally cell 2.",
+    "why_motion": "MFA is a difference in what happens at the door: the same replay now stops. Seen as the same motion as run one with a different ending, the second factor reads as a thing the thief does not have.",
+    "elements": [
+     "run_slot relabel 'RUN 2: PLUS A CODE' (how 'relabel')",
+     "lock_know and lock_have: two lock plates on the door's lock band (Loom.obj lock, angular), labelled 'password' and 'code' (seed label tag)",
+     "copy_chip again on the dashed line from thief_laptop",
+     "the phone screen code '482 913' (accent2 when named), and a dashed empty phone outline beside the thief laptop",
+     "door_stamp 'DENIED' in pos, and tally cell 2 'DENIED'"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Run two", "element": "run_slot + lock plates", "action": "run_slot relabels to 'RUN 2: PLUS A CODE'; run one's ACCEPTED leaves the door and the door is shut; two lock plates settle onto the lock band, lock_have second", "motion": "relabel + settle"},
+     {"t_anchor": "same copied password", "element": "copy_chip + lock_know", "action": "the copy travels the dashed line (same path and speed as b04); lock_know opens (shackle lifts, recolour to pos)", "motion": "value travel + state change"},
+     {"t_anchor": "The code is on your phone", "element": "phone screen code", "action": "the phone lights with '482 913'; accent2 moves to the code", "motion": "reveal"},
+     {"t_anchor": "not theirs", "element": "empty phone outline at the thief laptop", "action": "a dashed phone outline draws beside the thief laptop and stays empty", "motion": "draw"},
+     {"t_anchor": "The replay stops", "element": "copy_chip + door_stamp + tally cell 2", "action": "the copy is pushed back 60 px along its line (ease in-out, no bounce) and dims; DENIED stamps on the door, then small into tally cell 2", "motion": "displace + stamp"}
+    ],
+    "continuity": "Holds laptop, screen, phone, line, door, door_plate, run_slot, tally and thief_laptop (kept through b05). Creates lock_know and lock_have (held through b10; b13 and b15 draw no locks). thief_laptop, its dashed line, the copy and the empty outline retire at the end (b07 does not hold them).",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (hold the layout, change its state)",
+     "docs/primitives/slot.md (relabel on the word)"
+    ]
+   },
+   "rationale": "Second run, one change, and the outcome flips. The comparison is carried by identical motion with a different ending (the plan's contrast_led signature move)."
+  },
+  {
+   "beat": "b07", "kind": "bespoke", "scene": "b07", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "a meter on the door filling to 99.22 percent, with the gap that remains",
+   "world": "the door's meter",
+   "register": "productive", "motion_is": "content", "shot": {"size": "medium"}, "depth": "flat", "light": "even",
+   "story_role": "reveal", "accent_on": "the meter fill at 99.22, then the unfilled sliver under the lens",
+   "design": {
+    "treatment": "The number lives on the furniture: a slim vertical meter is mounted on the door. Instrument law: the track exists with the fill at zero, the fill rises at instrument speed to 99.22 on the spoken number, the reading is marked as it stops, the numeral is named last beside the door. On 'not a guarantee' a magnifier lens opens on the very top of the meter, where the unfilled sliver (0.78 of the track, about 4 px) is too small to read at its real size, and shows it clearly.",
+    "why_motion": "a reduction is a quantity, and its honest limit is a tiny remaining gap. The rising fill carries the size; the lens is the only way to make 0.78 percent of a track visible without changing the meter.",
+    "elements": [
+     "meter: a track on the door at about x 1588 y 380 w 44 h 460, fill (accent4) rising from the base; draw it as its own element so it can be the lens source",
+     "numeral '99.22%' (display role) left of the door, about x 1020 y 420 w 400 h 140, named last (Loom.data.counter, decimals 2)",
+     "caption 'Microsoft researchers, their own accounts' (label role, muted) under the numeral",
+     "lens 'sliver': Loom.magnify(ctx, 'sliver', {source: meter, focus: {x: 1610, y: 384, r: 16}, at: {x: 1180, y: 260, r: 140}, ring: 'accent2'})",
+     "tag 'not a guarantee' beside the lens (seed label tag)"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Microsoft researchers", "element": "meter track + caption", "action": "the track settles onto the door with the fill at zero (scaffold, low weight); the owner caption reveals where it will sit under the numeral (supplied context arrives with the scaffold)", "motion": "settle + reveal"},
+     {"t_anchor": "a little over 99 percent", "element": "meter fill + numeral", "action": "the fill rises from zero to 99.22 at instrument speed (pack count, Loom.drive); a tick marks the stop the instant it stops; then '99.22%' lands as the reading is named; accent2 on the numeral", "motion": "value travel + count"},
+     {"t_anchor": "Their own data", "element": "caption", "action": "a thin accent2 underline draws under 'their own accounts' (the accent moves to the owner)", "motion": "draw"},
+     {"t_anchor": "not a guarantee", "element": "lens 'sliver' + tag", "action": "the focus ring draws on the track top, the leader draws, the lens irises open on the unfilled sliver; the tag 'not a guarantee' wipes in beside it; accent2 moves to the lens ring", "motion": "magnify"}
+    ],
+    "continuity": "Holds laptop, screen, phone, line, door, door_plate, run_slot, tally, lock_know, lock_have (the meter mounts on the door below the lock band). The meter, numeral, caption, lens and tag retire at the end (b08 does not hold them). Grounding F5: Microsoft researchers, their business accounts, risk of compromise cut by 99.22 percent; the caveat (their own data, a reduction, not a guarantee) stays on screen in the caption and the lens.",
+    "references": [
+     "docs/primitives/magnify.md (lens on a detail too small to read at its real size whose place in the whole matters)",
+     "skills/lnd/lnd-motion-fit/SKILL.md section 9.5 (instrument law: scale first, pointer from the minimum, mark at the stop, number named last)",
+     "skills/lnd/lnd-explainer-craft/SKILL.md section 1, move 4 (put the number on the furniture)"
+    ]
+   },
+   "option": "meter on the door",
+   "alternatives": {
+    "classic meter": {"kind": "blueprint", "blueprint": "hero.meter", "props": {"kicker": "Microsoft researchers", "kind": "bar", "label": "Compromise risk cut", "unit": "%", "show_value": true, "max": 100, "stops": [{"value": 99.22, "say": "a little over 99 percent", "note": "their own data", "tone": "pos"}]}}
+   },
+   "rationale": "Allocation motion. The figure is an instrument on the thing it describes, with its owner and limit in the same frame; the magnifier makes the limit visible instead of only saying it. The classic hero.meter is kept as an alternative (D-70)."
+  },
+  {
+   "beat": "b08", "kind": "bespoke", "scene": "b08", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "a look-alike page spliced into the line",
+   "world": "the sign-in bench, run three",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "turn", "accent_on": "the look-alike box on 'only looks real', then the travelling chips",
+   "design": {
+    "treatment": "Run three, one change: a look-alike box slides down into the middle of the line and splices it in two. It wears the door's face exactly (the same door drawing in the same greys, the same plate style) with the plate 'login.yourw0rk.example'. Your laptop's page is replaced in place by the look-alike page: the same layout, its address line 'login.yourw0rk.example'. You type the password, then the code; both chips leave the laptop and stop, poised, at the box's left edge.",
+    "why_motion": "the threat is a change in the path, not in what you do: you type exactly as in b01. Splicing the box into the same line shows that the route changed while your actions did not.",
+    "elements": [
+     "run_slot relabel 'RUN 3: A LOOK-ALIKE PAGE'",
+     "fake_box: a door replica at x 980 y 560 w 300 h 320 in greys, plate 'login.yourw0rk.example' (the one difference is the zero; do not mark it yet)",
+     "the line splits: its middle segment under the box recedes, two stubs meet the box's sides",
+     "fake_screen: the look-alike sign-in page in the laptop's screen rect (address line 'login.yourw0rk.example', 'Sign in', 'Password', 'Code from your phone', 'Continue')",
+     "pw_token and code_token: the ink chips 'password' and 'code'"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Run three", "element": "run_slot + locks", "action": "run_slot relabels to 'RUN 3: A LOOK-ALIKE PAGE'; both locks close again; run two's DENIED leaves the door", "motion": "relabel + state change"},
+     {"t_anchor": "Say a link opens a page", "element": "fake_screen", "action": "the look-alike page replaces the real page in the same screen rect (swap: the old page fades and rises out, the new fades in)", "motion": "swap"},
+     {"t_anchor": "that only looks real", "element": "fake_box + line", "action": "the box slides down into the middle of the line (ease out, 0.6 s); the line's middle recedes under it; accent2 on the box for the phrase, then back to greys", "motion": "slide + state change"},
+     {"t_anchor": "You type your password", "element": "fake_screen + pw_token", "action": "dots type into the Password field; the pw_token leaves the laptop toward the box", "motion": "typing + value travel"},
+     {"t_anchor": "then your code", "element": "phone + code_token", "action": "the phone lights '482 913'; the code types into the field; the code_token follows; both chips come to rest at the box's left edge, about (900, 720) and (950, 720)", "motion": "reveal + typing + value travel"}
+    ],
+    "continuity": "Holds laptop, phone, line, door, door_plate, run_slot, tally, lock_know, lock_have; does NOT hold screen (it retires, replaced by fake_screen). Creates fake_box, fake_screen, pw_token, code_token, all kept by b09 and held by b10. The chips must END at rest before the beat ends so b09's freeze is a still frame. fake_box sits at x 980 y 560 w 300 h 320 exactly: b10's fill join grows from that rect.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (same figure in a new setting with the threat swapped)",
+     "docs/references/ui/mail-chat-doc.md (real words on the page)"
+    ]
+   },
+   "rationale": "The scenario beat that sets up the prediction. The box looks real on purpose; the disguise only drops in b10, after the viewer has predicted."
+  },
+  {
+   "beat": "b09", "kind": "template", "station": "bench", "template": "quiz.question",
+   "props": {"kicker": "Run three, paused", "question": "MFA is on. You typed both into a page that only looks real. Does the thief get in?", "say_question": "Does the thief get in", "options": [{"text": "Yes, the thief gets in"}, {"text": "No, MFA stops it"}], "pause_label": "Decide before it plays"},
+   "keep": ["laptop", "fake_screen", "phone", "line", "door", "door_plate", "run_slot", "tally", "lock_know", "lock_have", "fake_box", "pw_token", "code_token"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "practice", "intent": "hold",
+   "accent_on": "the question",
+   "rationale": "Allocation says template; the pause_predict needs a real choice, so quiz.question carries it with its pause ring through the 3 s pause. The frozen run three (chips poised at the box) is kept under the veil, so b10 resumes the same picture. quiz.answer is not used: b10's relay IS the answer."
+  },
+  {
+   "beat": "b10", "kind": "bespoke", "scene": "b10", "station": "bench",
+   "join_in": {"type": "fill", "box": [980, 560, 300, 320], "token": "surface", "meaning": "into"},
+   "subject": "the look-alike page relaying the password and the code to the real site",
+   "world": "inside the look-alike page, under the lens",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "reveal", "accent_on": "the box under the lens, then the code's validity bar, then the red route",
+   "design": {
+    "treatment": "The answer, finding first. The fill join grows from the look-alike box until it fills the frame and opens on the bench with the veil gone. On 'Yes' the frozen chips move again. A magnifier opens on the box: the password chip goes in its left side and straight out of its right side toward the real door; the code does the same, its validity bar still part full. The box's outline recolours to the threat colour on 'fake page' (the disguise drops). The door opens, and the open route now runs from the door back to the box, not to your laptop. ACCEPTED, tally cell 3.",
+    "why_motion": "the relay is a timing claim: each item passes through while it still works. Only motion shows 'in one side, out the other, before it expires'.",
+    "elements": [
+     "lens 'relay': Loom.magnify(ctx, 'relay', {source: fake_box, focus: {x: 1130, y: 720, r: 110}, at: {x: 1130, y: 290, r: 190}, ring: 'accent2'}) (the lens is a live copy, so the chips are seen passing inside it)",
+     "fake_box outline recolour to accent3 (Loom.hold.heat or a slot recolour)",
+     "code validity bar: a thin bar on the code_token that drains from full to about a third, no number",
+     "open_route: a thick accent3 line drawn from the door back to the fake box (your laptop's stub stays grey)",
+     "door_stamp 'ACCEPTED' in neg, and tally cell 3 'ACCEPTED'"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Yes", "element": "pw_token, code_token", "action": "the frozen chips start again and enter the box's left side (0.5 s)", "motion": "value travel"},
+     {"t_anchor": "The fake page passes each one on", "element": "lens + fake_box + pw_token + lock_know", "action": "the box outline recolours to accent3 on 'fake page'; the lens draws its ring, leader and opens on the box; inside it the password leaves the right side and travels the right stub to the door; lock_know opens", "motion": "recolour + magnify + value travel"},
+     {"t_anchor": "while the code is still valid", "element": "code_token + validity bar + lock_have", "action": "the code passes through the same way; its validity bar, draining, is visibly not empty as it reaches the door (accent2 on the bar); lock_have opens", "motion": "value travel + drain"},
+     {"t_anchor": "The door opens", "element": "door + lens", "action": "the door opens (same hinge as b01); the lens closes (mg.exit) as it opens", "motion": "state change + lens exit"},
+     {"t_anchor": "for them", "element": "open_route + door_stamp + tally cell 3", "action": "the route draws from the open door back to the box in accent3; ACCEPTED stamps on the door, then small into tally cell 3", "motion": "draw + stamp"}
+    ],
+    "continuity": "Joined by a fill from b09: the cover starts as the fake_box rect (screen px [980, 560, 300, 320], camera at the bench's base framing, so no push in b08 or b09) in token surface, then opens on this beat. Holds laptop, fake_screen, phone, line, door, door_plate, run_slot, tally, lock_know, lock_have, fake_box, pw_token, code_token (all kept through b09). At the end only laptop, phone, line, door, door_plate, run_slot and tally go on (kept by b11); everything else retires under the veil.",
+    "references": [
+     "docs/primitives/magnify.md (lens with a leader; a live copy shows the source's own motion)",
+     "docs/primitives/material.md (fill: a shape from the old frame grows to become the next field)",
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (joins from the material in the frame; a dark beat for the key mechanism)"
+    ]
+   },
+   "rationale": "The lesson's peak and the misconception breaking (the plan's best surprise). The lens sits exactly where the brief asks: on the exchange where the detail matters, the code passing while still valid."
+  },
+  {
+   "beat": "b11", "kind": "template", "station": "bench", "template": "definition",
+   "props": {"kicker": "Why it felt safe", "term": "A one-time code", "say_term": "The code felt like yours alone", "definition": "Characters you read on your phone and type into a page.", "say_definition": "But you read it", "example": "Run three: the look-alike page asked, and passed it on.", "say_example": "a page can ask for", "icon": "smartphone"},
+   "keep": ["laptop", "phone", "line", "door", "door_plate", "run_slot", "tally"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "reveal",
+   "accent_on": "the definition line 'Characters you read'",
+   "rationale": "Allocation says template. The code is defined by what it really is (characters you read), which is why it can be asked for; it sits directly before the passkey card so the two definitions read as the lesson's contrast pair (code: read and typed; passkey: never leaves)."
+  },
+  {
+   "beat": "b12", "kind": "template", "station": "bench", "template": "definition",
+   "props": {"term": "Passkey", "say_term": "Now the passkey", "definition": "A sign-in secret kept on your phone or a security key, opened the way you unlock the device.", "say_definition": "It lives on your phone", "example": "Fingerprint, face or PIN.", "say_example": "fingerprint, face or PIN", "icon": "fingerprint"},
+   "keep": ["laptop", "phone", "line", "door", "door_plate", "run_slot", "tally", "template_backplate"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "setup",
+   "accent_on": "the term 'Passkey'",
+   "rationale": "Allocation says template. The passkey is named once, plainly, before its mechanism; the cutaway of the phone that the script planned here opens in b13 instead, on 'Your device signs it', where the inside of the phone is the point. Keeps b11's backplate (two cards in a row)."
+  },
+  {
+   "beat": "b13", "kind": "bespoke", "scene": "b13", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "a phone signing a fresh challenge inside a sealed compartment",
+   "world": "inside your phone, through a cutaway",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "reveal", "accent_on": "the challenge chip, then the seal on it, then the key that stays",
+   "design": {
+    "treatment": "The passkey's mechanism, before the thief returns. The veil lifts. The real sign-in page is back on the laptop with one button, 'Sign in with a passkey'. A challenge chip leaves the door and travels the line to the phone. A cutaway opens a round window in the phone: inside, a sealed key sits in its own compartment. The challenge enters the window, the key presses a seal onto it without moving, and the signed answer travels back to the door, which opens. The key never leaves its compartment.",
+    "why_motion": "'the secret never leaves' is a statement about movement: everything else travels and the key does not. Only a moving picture can show something staying put while the exchange happens around it.",
+    "elements": [
+     "run_slot relabel 'A PASSKEY SIGN-IN' (this is the mechanism, not a numbered run)",
+     "screen: a new real sign-in page (address line 'login.yourwork.example', 'Sign in', one button 'Sign in with a passkey'), no password field",
+     "phone_vault: Loom.magnify.cutaway(ctx, 'phone_vault', {source: phone, shape: 'circle', win: {x: 720, y: 700, r: 72}, reveal: draws a compartment with a sealed key in accent cyan and its own tag 'login.yourwork.example'})",
+     "challenge_chip: a cyan chip labelled 'challenge' (a short row of dots of varying size, no hex or crypto words)",
+     "answer_chip: the same chip with a seal mark, labelled 'signed'; tag 'stays here' on the compartment"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "The site sends a fresh challenge", "element": "screen + challenge_chip", "action": "run_slot relabels; the real page swaps onto the laptop with its passkey button; the door sends the challenge chip along the line to the phone (value travel, right to left, 1.2 s); accent2 on the chip", "motion": "relabel + swap + value travel"},
+     {"t_anchor": "Your device signs it", "element": "phone_vault + challenge_chip", "action": "the cutaway window grows from its centre on the phone (about 0.9 s); the challenge enters the window; the key presses a seal onto it (stamp, no overshoot) and the chip becomes the signed answer; accent2 moves to the seal", "motion": "cutaway + stamp"},
+     {"t_anchor": "The secret never leaves", "element": "answer_chip + key + door", "action": "the signed answer travels back to the door; the key stays exactly where it is; the tag 'stays here' wipes in on the compartment (accent2 on the key); the door opens", "motion": "value travel + hold + state change"}
+    ],
+    "continuity": "Holds laptop, phone, line, door, door_plate, run_slot, tally (kept through b11 and b12). Creates screen (the real page again) and phone_vault (kept by b14, held by b15, where it stays dark). Draw the door without lock plates. The answer chip ends AT the door: b14's card opens it as a page. The cutaway source must be the phone element, and the window must sit inside the phone's rect.",
+    "references": [
+     "docs/primitives/magnify.md (cutaway: open a window in an object when its inside is the point and the outside should stay on screen)",
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (a cutaway per claim)"
+    ]
+   },
+   "rationale": "The brief's cutaway of the phone, placed on the words that need it. The passkey's cyan enters here and only here (value script)."
+  },
+  {
+   "beat": "b14", "kind": "template", "station": "bench", "template": "document.page",
+   "props": {"kind": "notes", "title": "The signed answer", "lines": [{"text": "Signed inside your phone or key", "say": "And the answer is stamped"}, {"text": "Asked by: login.yourwork.example", "say": "the address of the page that asked"}], "mode": "appear", "side": "center"},
+   "keep": ["laptop", "screen", "phone", "line", "door", "door_plate", "run_slot", "tally", "phone_vault"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "insert"}, "depth": "flat", "light": "even", "story_role": "reveal",
+   "accent_on": "the line 'Asked by: login.yourwork.example'",
+   "rationale": "Allocation says template. The answer chip that reached the door in b13 is opened as a page: what the signed answer carries, with the asking address appearing on its own words. This is the plan's one slowdown (pause 0.8 s); the light page on the dark veil is its emphasis."
+  },
+  {
+   "beat": "b15", "kind": "bespoke", "scene": "b15", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "a passkey refusing a look-alike address",
+   "world": "the address check, under the lens",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide", "move": "push"}, "depth": "flat", "light": "even",
+   "story_role": "payoff", "accent_on": "the mismatched character in the look-alike address, then the empty onward line",
+   "design": {
+    "treatment": "Run four, the same fake page. The look-alike box splices into the line again exactly as in b08 and the laptop shows the look-alike page with its passkey button. The box sends a request down to the phone. A magnifier opens on the address the request carries, 'login.yourw0rk.example', and marks the one character that differs from the key's own tag, 'login.yourwork.example'. The sealed key in the cutaway stays dark; no answer forms. There is no field to type into, and the box's onward stub to the real door stays empty. DENIED, tally cell 4. A gentle push early in the beat.",
+    "why_motion": "the refusal is an absence: the answer that formed in b13 does not form here. Running the same request and showing nothing travel back is the only way to show an absence.",
+    "elements": [
+     "run_slot relabel 'RUN 4: A PASSKEY'",
+     "fake_box (new element, same drawing and place as b08, greys) and fake_screen (look-alike page with 'Sign in with a passkey', no fields)",
+     "request_chip: a chip from the box to the phone labelled 'asked by login.yourw0rk.example'",
+     "lens 'address': Loom.magnify(ctx, 'address', {source: request_chip, focus: on the '0' of the address, at: {x: 1130, y: 290, r: 170}, ring: 'accent2'}); the key's tag inside phone_vault reads 'login.yourwork.example'",
+     "DENIED stamp in pos on the fake box, and tally cell 4 'DENIED'"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Run four", "element": "run_slot + fake_box", "action": "run_slot relabels to 'RUN 4: A PASSKEY'; the door is shut; the look-alike box slides into the line exactly as in b08", "motion": "relabel + slide"},
+     {"t_anchor": "same fake page", "element": "fake_screen", "action": "the look-alike page swaps onto the laptop in place of the real page (same rect)", "motion": "swap"},
+     {"t_anchor": "Your passkey will not answer a look-alike", "element": "request_chip + lens + phone_vault", "action": "the box sends the request chip down the line to the phone; the lens opens on its address; the differing character is marked in accent2; inside the cutaway the key stays dark and no answer chip forms", "motion": "value travel + magnify"},
+     {"t_anchor": "Nothing to type", "element": "fake_screen + lens", "action": "the lens closes; a thin accent2 outline marks the look-alike page's empty form: there is no field to type into", "motion": "lens exit + draw"},
+     {"t_anchor": "nothing to pass on", "element": "onward stub + DENIED + tally cell 4", "action": "the stub from the box to the real door draws as an empty dashed line; DENIED stamps on the box, then small into tally cell 4; the real door stays shut", "motion": "draw + stamp"}
+    ],
+    "continuity": "Holds laptop, phone, line, door, door_plate, run_slot, tally and phone_vault (kept through b14); screen retires (replaced by fake_screen). Everything exits before the chapter cut to b16 (the tally's four verdicts are rebuilt in b18). The push is safe here because the next join is a cut to another station.",
+    "references": [
+     "docs/primitives/magnify.md (lens on the detail that decides the run)",
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (a running comparison that returns with one new result)"
+    ]
+   },
+   "rationale": "Run four mirrors run three exactly so that the only difference is the passkey's refusal. The lens sits on the address the passkey checks, as the brief asks. The four tally cells now read ACCEPTED, DENIED, ACCEPTED, DENIED: the recall prompt on b15 (run one versus run four) is on screen."
+  },
+  {
+   "beat": "b16", "kind": "template", "station": "study", "template": "chart.bars",
+   "props": {"kicker": "Google study, their own accounts", "title": "Targeted attacks blocked", "say_title": "Google saw the same line", "unit": "% blocked", "max": 100, "series": [{"cat": "Texted code", "value": 76, "say": "76 percent", "label": "76%"}, {"cat": "Phone prompt", "value": 90, "say": "90", "label": "90%"}, {"cat": "Security keys only", "value": 100, "say": "no one fell", "label": "none fell"}]},
+   "join_in": {"type": "cut", "meaning": "chapter"}, "register": "productive", "motion_is": "content",
+   "shot": {"size": "wide"}, "depth": "flat", "light": "even", "story_role": "reveal",
+   "accent_on": "the bar being named, in turn",
+   "rationale": "Chapter boundary (sec3) as a hard cut to the study wall below the bench: down is deeper, into the evidence. Allocation says template; bars grow from zero on their spoken values. The keys bar is labelled 'none fell', not 100, because F8 says no key-only user fell, not a rate (its caveat goes on b17)."
+  },
+  {
+   "beat": "b17", "kind": "template", "station": "study", "template": "title.card",
+   "props": {"kicker": "Their accounts", "say_kicker": "Their accounts", "title": "Any second factor beats none", "say_title": "any second factor beats none", "subtitle": "Read the direction. None of it is unbreakable.", "say_subtitle": "None of this is unbreakable"},
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "turn",
+   "accent_on": "the title 'Any second factor beats none'",
+   "rationale": "Allocation says template. The limit and the misconception fix on the same wall as the data: the owner first, the limit, then the verdict that texted codes are still worth turning on."
+  },
+  {
+   "beat": "b18", "kind": "bespoke", "scene": "b18", "station": "bench",
+   "join_in": {"type": "camera", "continuous": true},
+   "subject": "sign-in prompts stacking on your phone while your laptop is closed",
+   "world": "the sign-in bench",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "practice", "accent_on": "the closed laptop, then the stacking prompts, then the copied password",
+   "design": {
+    "treatment": "The camera climbs back from the study wall to the bench: the opening exchange is there again at the same coordinates, but your laptop is closed, so you are not signing in. Prompts arrive on your phone as notification cards above it, one, then a second, then a third, stacking. On 'Someone may have your password' the distant laptop from run one is back at the top and its copied password reaches the door: the prompts are the door asking you to finish someone else's sign-in.",
+    "why_motion": "the warning sign is repetition over time (again, and again); a stack that grows on the words carries it.",
+    "elements": [
+     "the bench rebuilt with the same names and coordinates: laptop (closed: lid down at the same base), phone, line, door, door_plate; no screen",
+     "run_slot rebuilt showing 'A PROMPT YOU DID NOT START'; tally rebuilt with all four verdicts (ACCEPTED, DENIED, ACCEPTED, DENIED)",
+     "prompt_1, prompt_2, prompt_3: notification cards above the phone at about x 500 to 1000, y 180 to 470, each offset 24 px, with a tail to the phone (seed bubble 'note'); every word real: 'Sign-in request', 'Is this you signing in?', buttons 'Deny' and 'Approve'",
+     "thief_laptop at the top (as in b04) with copy_chip on its dashed line to the door"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Last, a prompt you did not start", "element": "bench, run_slot, tally, laptop", "action": "the bench, slot and tally are already drawn when the camera arrives (a returning place does not re-enter under a camera move); accent2 rests on the closed laptop", "motion": "camera arrival (no entrance)"},
+     {"t_anchor": "a prompt you did not start", "element": "prompt_1", "action": "the first card slides up out of the phone (0.5 s, ease out)", "motion": "slide"},
+     {"t_anchor": "Say it comes again", "element": "prompt_2", "action": "a second card stacks over the first, offset 24 px", "motion": "slide"},
+     {"t_anchor": "and again", "element": "prompt_3", "action": "a third card stacks; accent2 on the top card", "motion": "slide"},
+     {"t_anchor": "Someone may have your password", "element": "thief_laptop + copy_chip", "action": "the distant laptop fades up at the top; the copy travels its dashed line to the door (same path as run one); accent2 moves to the copy", "motion": "reveal + value travel"}
+    ],
+    "continuity": "Comes back by camera from b17 (study station), so nothing can be held: rebuild laptop, phone, line, door, door_plate, run_slot and tally under the SAME names and coordinates as b01 and b04 (b19 holds them; b20 to b22 keep them). Build them at their final state from the start of the beat. Creates prompt_1 to prompt_3 and thief_laptop, all held by b19. 1.5 s pause after the beat: a finished frame.",
+    "references": [
+     "docs/references/ui/mail-chat-doc.md (real words in a notification, product-neutral)",
+     "skills/lnd/lnd-visual-storyteller/SKILL.md section 2 (payoff: the establishing framing returns, changed)"
+    ]
+   },
+   "rationale": "Independent practice inside the same picture. join_in.continuous keeps the pan a pan (the study wall sits directly below the bench in one canvas), so the return reads as climbing back up to the exchange."
+  },
+  {
+   "beat": "b19", "kind": "bespoke", "scene": "b19", "station": "bench",
+   "join_in": {"type": "continue"},
+   "subject": "refusing a prompt that is the run-three relay seen from your end",
+   "world": "the sign-in bench",
+   "register": "productive", "motion_is": "content", "shot": {"size": "wide"}, "depth": "flat", "light": "even",
+   "story_role": "practice", "accent_on": "the Deny button, then tally cell 3",
+   "design": {
+    "treatment": "The practice answer, on the held frame. On 'Refuse it' the Deny button on the top prompt is tapped; the three prompts fold into one and DENIED is stamped on it. On 'It is run three' the look-alike box from run three fades in as a dashed ghost on the line between the thief and the door, and tally cell 3 rings: the prompt is the relay, seen from your end. The door stays shut.",
+    "why_motion": "the right action is a tap and its result; the callback to run three is a change in the held picture, not a new one.",
+    "elements": [
+     "tap on 'Deny' on prompt_3 (Loom interaction tap: press and a small ripple)",
+     "the stack folds: prompt_1 and prompt_2 slide under prompt_3 (ease in-out, 0.4 s)",
+     "DENIED stamp in pos on the remaining prompt",
+     "fake_box ghost: dashed accent3 outline at the fake box's place on the line, about half opacity",
+     "tally cell 3 ring in accent2"
+    ],
+    "beat_sheet": [
+     {"t_anchor": "Refuse it", "element": "Deny + prompt stack + DENIED", "action": "Deny is tapped; the stack folds into one card; DENIED stamps on it; accent2 on Deny then off", "motion": "tap + slide + stamp"},
+     {"t_anchor": "It is run three", "element": "fake_box ghost + tally cell 3", "action": "the dashed ghost of the look-alike box fades in on the line between the copy and the door; tally cell 3 rings in accent2", "motion": "reveal"},
+     {"t_anchor": "asking you to finish their sign-in", "element": "door", "action": "nothing new arrives during the last words: the door stays shut and the frame holds", "motion": "hold"}
+    ],
+    "continuity": "Holds everything from b18. Ends with the phone at its bench rect (screen px [630, 540, 180, 340], no camera move in b18 or b19): b20's fill join grows from that rect. Prompts, thief laptop and ghost retire under b20's fill; laptop, phone, line, door, door_plate, run_slot and tally are kept by b20.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md (callbacks inside one held picture)"
+    ]
+   },
+   "rationale": "Allocation hybrid: built as a bespoke continuation of b18 (a template would have to cover the very prompt the viewer must refuse)."
+  },
+  {
+   "beat": "b20", "kind": "template", "station": "bench", "template": "recap",
+   "props": {"items": [{"label": "Password: copied", "icon": "key-round", "say": "The password can be copied"}, {"label": "Code: relayed", "icon": "smartphone", "say": "The code can be relayed"}, {"label": "Passkey: one site", "icon": "fingerprint", "say": "fits one site"}]},
+   "keep": ["laptop", "phone", "line", "door", "door_plate", "run_slot", "tally"],
+   "join_in": {"type": "fill", "box": [630, 540, 180, 340], "token": "accent", "meaning": "chapter"},
+   "register": "expressive", "motion_is": "staging",
+   "shot": {"size": "wide"}, "depth": "flat", "light": "even", "story_role": "payoff", "intent": "callback",
+   "accent_on": "the item being named, in turn",
+   "rationale": "Outro chapter boundary carried by the join material: the phone that refused grows into a cyan field (the lift at the close) and opens on the recap over the dimmed bench, the opening exchange still behind it (callback). Allocation says template."
+  },
+  {
+   "beat": "b21", "kind": "template", "station": "bench", "template": "list.steps",
+   "props": {"items": [{"text": "Turn on a second factor", "say": "Turn on a second factor"}, {"text": "Pick a passkey when offered", "say": "Pick a passkey when offered"}, {"text": "Refuse what you did not start", "say": "Refuse what you did not start"}], "marker": "tick"},
+   "keep": ["laptop", "phone", "line", "door", "door_plate", "run_slot", "tally", "template_backplate"],
+   "join_in": {"type": "continue"}, "register": "productive", "motion_is": "staging",
+   "shot": {"size": "medium"}, "depth": "flat", "light": "even", "story_role": "payoff",
+   "accent_on": "the action being named, in turn",
+   "rationale": "Allocation says template. The three actions, each settling on its own words, ticks arriving with them."
+  },
+  {
+   "beat": "b22", "kind": "template", "station": "bench", "template": "title.card",
+   "props": {"kicker": "With a passkey", "say_kicker": "With a passkey", "title": "Nothing to hand over", "say_title": "nothing to hand over"},
+   "keep": ["laptop", "phone", "line", "door", "door_plate", "run_slot", "tally", "template_backplate"],
+   "join_in": {"type": "continue"}, "register": "expressive", "motion_is": "staging",
+   "shot": {"size": "close"}, "depth": "flat", "light": "even", "story_role": "payoff", "intent": "rest",
+   "accent_on": "the title 'Nothing to hand over'",
+   "rationale": "The through-line as the last card, over the same dimmed exchange the lesson opened on. A finished frame that rests through the 1.2 s pause and the outro."
+  }
+ ]
+}

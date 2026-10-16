@@ -1,0 +1,276 @@
+{
+  "id": "glow-flat",
+  "name": "Glow Flat",
+  "reads_as": "A saturated flat world that glows: a deep indigo ground graded into colour fields, gloss-shaded shapes with no outlines (a darker inner band and one bright highlight), saturated pill labels on things, soft light shafts and glows, something alive in every frame, one meaning-carrying change at a time. Inspired by the newer Kurzgesagt look as measured in docs/research/kurz/ (techniques only; every design is original).",
+  "look_family": "illustrated",
+  "fits": [
+    "explainer",
+    "change and strategy",
+    "wellbeing",
+    "science and systems",
+    "onboarding",
+    "teaching"
+  ],
+  "avoid_for": [
+    "sober compliance",
+    "legal policy verbatim",
+    "dense tables"
+  ],
+  "palette": {
+    "field": "#120F3A",
+    "field2": "#1E1957",
+    "surface": "#2C2578",
+    "surface2": "#231D66",
+    "ink": "#FFF8EE",
+    "muted": "#BDB6F4",
+    "line": "#8E85D8",
+    "accent": "#FF9B3D",
+    "accent2": "#FFD24A",
+    "accent3": "#FF4F8B",
+    "accent4": "#35D6E8",
+    "pos": "#7BE36A",
+    "neg": "#FF5A6E",
+    "shadow": "#0A0826",
+    "onAccent": "#120F3A",
+    "violet": "#8C6CFF",
+    "glow": "#8FF4FF",
+    "core": "#FFF3C9",
+    "deep": "#0B0930",
+    "plum": "#4A1D7A"
+  },
+  "fonts": {
+    "display": {
+      "family": "Fredoka",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Nunito",
+      "weights": [
+        700,
+        800
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "roles": {
+      "label": "display"
+    },
+    "faces": [
+      {
+        "family": "Fredoka",
+        "weight": 600,
+        "file": "fredoka-latin-600-normal.woff2",
+        "pkg": "@fontsource/fredoka"
+      },
+      {
+        "family": "Fredoka",
+        "weight": 700,
+        "file": "fredoka-latin-700-normal.woff2",
+        "pkg": "@fontsource/fredoka"
+      },
+      {
+        "family": "Nunito",
+        "weight": 700,
+        "file": "nunito-latin-700-normal.woff2",
+        "pkg": "@fontsource/nunito"
+      },
+      {
+        "family": "Nunito",
+        "weight": 800,
+        "file": "nunito-latin-800-normal.woff2",
+        "pkg": "@fontsource/nunito"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      110,
+      170
+    ],
+    "hero": [
+      96,
+      150
+    ],
+    "title": [
+      60,
+      92
+    ],
+    "lead": [
+      34,
+      44
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      26,
+      32
+    ],
+    "caption": [
+      22,
+      26
+    ]
+  },
+  "shape": {
+    "radius": 24,
+    "stroke": 4,
+    "shading": "gloss",
+    "shadow": "none",
+    "gloss_toward": "plum"
+  },
+  "motion": {
+    "personality": "lively",
+    "enter": 0.48,
+    "move": 0.36,
+    "exit": 0.28,
+    "stagger": 0.07,
+    "draw": 0.75,
+    "count": 1.1,
+    "overshoot": true
+  },
+  "ambient": {
+    "kind": "stars",
+    "density": 0.8,
+    "wash": "radial-gradient(ellipse at 50% 40%, rgba(60,44,150,0.5), rgba(18,15,58,0) 70%)"
+  },
+  "captions": {
+    "bg": "rgba(11,9,48,0.86)",
+    "fg": "ink",
+    "active": "accent2",
+    "radius": 22,
+    "font": "body",
+    "size": 38,
+    "weight": 800,
+    "top": 948
+  },
+  "icons": {
+    "stroke": 2.2
+  },
+  "characters": {
+    "skin": [
+      "#F2C9A0",
+      "#D9A27A",
+      "#A86F4C",
+      "#7A4B32"
+    ],
+    "hair_colors": [
+      "#4E3A3F",
+      "#5C3A30",
+      "#4A3640",
+      "#8A5530"
+    ],
+    "cloth": "muted",
+    "hair": "deep",
+    "ink": "deep",
+    "paper": "ink",
+    "mouth": "neg",
+    "extra": "surface",
+    "extras": "silhouette",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson.",
+    "_hair_note": "2026-10-07: the old hair colours (#2A1E3A, #3B2A20, #1C1A2E) measured 1.07 to 1.33:1 on the field, so dark hair vanished into the ground (rigs ava and sam have no outline). These keep natural families (black-brown, dark brown, soft black, auburn) and lift them to 1.6 to 3.0:1 on field. A cool blue-black (#3F3F66) was tried and read as grey hair in the preview, so every colour keeps a warm undertone. Never the ink token (L-92).",
+    "_cloth_note": "2026-10-07: cloth was accent4, the same cyan as the default pill, hud and label tone, so the cast wore the meaning colour in every frame (stress-signal b05: dress, Cortisol pill and status panel all one cyan). Muted (lavender) keeps people neutral; a scene may still dress one person in an accent on purpose with top: <token>.",
+    "bottom": "line",
+    "white": "ink"
+  },
+  "join_default": "camera",
+  "seam_join": "wipe",
+  "join_note": "A small story world: stay in the place and change its state (continue) or pan where places connect; a wipe or a material join (page, torn) at a change of time or chapter, the dip only for a change of era. Not every beat needs a transition: most beats continue.",
+  "music": {
+    "mood": "warm_curious",
+    "root_midi": 50
+  },
+  "fx": {
+    "background": "nebula",
+    "intensity": 0.55,
+    "grain": 0.01,
+    "vignette": 0.35,
+    "colors": [
+      "violet",
+      "plum",
+      "surface"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish.",
+    "_vignette_note": "2026-10-07: 0.55 (D-92) was never seen on a glow-flat frame (the lab strips run without fx; stress-signal rendered at 0.24). Simulated with the fx.js formula on a preview frame it takes the corners to #09061F and the frame mean down, while glow-flat lessons already measure darker than their reference (0.25 against 0.42). 0.35 gives a 0.30 corner alpha. Judge on the encoded MP4 (D-100); unverified in Chrome.",
+    "_colors_note": "2026-10-07: the nebula mixed accent3 (hot pink) into the field, which showed as a pink smudge behind template beats (stress-signal b02 at 13.5 s) and spent a meaning hue on the background. violet and plum keep the ground in one hue family; G.ground covers the shader in bespoke beats anyway.",
+    "spotlight": {
+      "strength": 0.35,
+      "tint": "deep"
+    },
+    "vignette_under": true
+  },
+  "tone_reference": {
+    "family": "kurz_newer_measured",
+    "brightness": 0.42,
+    "saturation": 0.71,
+    "dark_share": 0.26,
+    "light_share": 0.13,
+    "warm": 0.36,
+    "cool": 0.44,
+    "accent_shots": 0.36,
+    "colours": 5.8,
+    "tolerance": 0.15,
+    "_source": "2026-10-07: brightness, saturation, dark and light shares measured with loom/checks/film.py _tone (the film check's own measure) on 341 keyframes of the five newer Kurzgesagt videos in the requester's folder (studied privately, nothing kept). The TED-Ed glow_technical_3d family (0.48, 0.47, 0.17, 0.22) flagged every glow-flat lesson as too saturated (0.70 against 0.47) though saturation is this register's point. warm, cool, accent_shots and colours are still the TED-Ed family values (not measured here; the film check does not read them). A reference, not a target (D-112)."
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: glowing shapes on a dark field measure low edge density by design (TED-Ed glow films sat under 0.02 for 43 % of narrated time, D-112)"
+  },
+  "_line_note": "2026-10-07 style polish: line was the same hex as muted (#BDB6F4, 9.66:1), so every connector, axis, arrow and floor line was as loud as secondary text, in a register whose reference separates shapes by colour and light, not lines (outline share 0.008 to 0.012, docs/research/kurz). #8E85D8 holds 5.62:1 on field and 3.95:1 on surface (lint floor 3.0), one step below muted. Text never uses line (grep runtime/templates, blueprints).",
+  "guide": "docs/styles/guides/glow-flat.md",
+  "materials": {
+    "wood": "surface2",
+    "chair": "surface",
+    "screen": "violet",
+    "books": ["muted", "violet", "plum", "surface2"],
+    "plant": "violet",
+    "pot": "plum",
+    "objects": {"calendar": "violet", "document": "violet", "envelope": "muted", "clock": "muted", "folder": "muted", "package": "surface", "building": "muted", "heart": "muted", "bulb": "core", "lock": "muted"},
+    "monitor": "deep",
+    "window_lights": "core",
+    "vessel": "plum",
+    "cells": ["violet", "muted"],
+    "leds": ["glow", "core"],
+    "cables": ["line", "violet", "muted"],
+    "chart": ["muted", "violet"],
+    "safety_line": "muted",
+    "_decor_note": "2026-10-08 (L-276), from guide s2: a beat is the field family plus ONE accent family, so set decorations and default object tones spend no accent: lights are light (window lights and the spark bulb core, warm light; rack LEDs glow and core, electric and warm light), the vessel is plum (a colour field; accent3 is alarms, never backgrounds), cells, chart bars and objects are violet and muted (neutral pill, neutral objects), the package surface (sets: a warehouse of muted packages measured 13.9 % of the frame, over muted's 10 %), cables line (connectors) with violet and muted (plum is never a line colour), the safety line muted. The document is violet, as the calendar, because a surface document draws its header in the accent. Left at the runtime default: phone surface2. The laptop reads no tone."
+  },
+  "roles": {
+    "kicker": "accent2",
+    "term": "accent2",
+    "verdict": "accent2",
+    "date": "accent2",
+    "quiz_letter": "accent2",
+    "recap_rule": "accent2",
+    "stat_value": "accent2",
+    "chapter_kicker": "accent2",
+    "ui_mark": "accent2",
+    "link": "accent4",
+    "button": "accent4",
+    "me_bubble": "violet",
+    "person_cloth": "muted",
+    "turn_card": "deep",
+    "avatar": ["violet", "plum", "muted"]
+  }
+}

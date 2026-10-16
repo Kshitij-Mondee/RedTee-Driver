@@ -1,0 +1,53 @@
+{
+ "form": "arrow_into_target",
+ "decision": "reject",
+ "confidence": "high",
+ "topic_independent": true,
+ "idea": "an arrow drawn from a source edge into a target edge, its head appearing only as the shaft arrives",
+ "outline": [
+  "kit.arrow shaft path between two edge points (optionally bent)",
+  "m.draw of the shaft at a cue",
+  "arrowhead opacity 0 -> 1 in the last moment of the draw"
+ ],
+ "variation_seen": [
+  "b16: two straight vertical arrows, bubble bottom to card top, sw 5, colour per yield, default head",
+  "b19: one horizontal arrow sw 8 head 34 in a dim wrapper, hand-rolled dasharray so it can later UN-draw back to its source, plus a label unmasked with the stroke",
+  "b20: three diagonal arrows computed edge-to-edge between rectangles, sw 6 head 28, later pulsed together (shaft width and head scale)"
+ ],
+ "future_uses": [
+  {
+   "topic": "supply chain basics",
+   "shows": "an arrow from a supplier node into a warehouse node"
+  },
+  {
+   "topic": "photosynthesis",
+   "shows": "arrows carrying light and CO2 into a leaf"
+  },
+  {
+   "topic": "sales funnel",
+   "shows": "an arrow from one stage card into the next"
+  }
+ ],
+ "params_sketch": {
+  "content": [],
+  "adjustable": [
+   "x1",
+   "y1",
+   "x2",
+   "y2",
+   "bend",
+   "stroke",
+   "sw",
+   "head",
+   "t",
+   "dur"
+  ]
+ },
+ "slots_sketch": [],
+ "reason": "The form is already the engine's own primitives: kit.arrow returns {g, path, head} and every use is kit.arrow + m.draw(a.path) + a one-line head fade, the same idiom the shipped core.js flow template uses, so a component would wrap three lines and carry no on-screen content; the parts that actually varied (edge-to-edge geometry in b20, un-draw retraction with a dim wrapper and label in b19, pulse emphasis in b20) are each scene's bespoke choreography and would not fit one param set. All three uses are from one lesson; if the head-lands-late timing is worth centralising, it belongs as an option on the motion primitive (for example m.draw recognising a kit.arrow result and landing its head at the end), not as a library component.",
+ "merge_into": null,
+ "revisit_when": {
+  "uses": 8,
+  "lessons": 3
+ }
+}

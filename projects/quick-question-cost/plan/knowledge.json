@@ -1,0 +1,249 @@
+{
+  "topic": "The hidden cost of the quick question: how task switching and interruptions eat focused work, and what teams can do about it",
+  "scope_note": "Conservative sheet for a short corporate explainer. It states directions and mechanisms, not magnitudes: no statement carries a number, because the size of an interruption's cost varies with the task, the person and the interruption, and the figures that circulate are often misquoted. Any size the lesson shows must be framed as hypothetical. Laboratory findings (switch cost, resumption lag, errors after brief interruptions, attention residue, breakpoints) are presented as what experiments found, not as exact office measurements. The team habits are presented as common workplace practice supported in direction by the cited studies, not as proven interventions. Named sources are in reference_hint for the reviewer; the lesson need not name them.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Switching from one task to another has a cost: in experiments, people are slower and make more errors on the first attempt after a switch than when they repeat the same task, even when they know the switch is coming.",
+      "kind": "finding",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "task switching",
+        "switch cost"
+      ],
+      "reference_hint": "Rogers and Monsell (1995), Journal of Experimental Psychology: General; Monsell (2003), Trends in Cognitive Sciences, review of task switching",
+      "caveat": "Measured with simple laboratory tasks; the size of the cost in real office work is not established."
+    },
+    {
+      "id": "F2",
+      "statement": "Switch costs tend to be larger when the tasks are more complex or less familiar.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "switch cost"
+      ],
+      "reference_hint": "Rubinstein, Meyer and Evans (2001), Journal of Experimental Psychology: Human Perception and Performance",
+      "caveat": "Laboratory finding; direction only, no office-work magnitude."
+    },
+    {
+      "id": "F3",
+      "statement": "For two demanding tasks, people do not really do both at once; what feels like multitasking is mostly rapid switching between them, and each switch carries a cost.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "multitasking",
+        "task switching"
+      ],
+      "reference_hint": "Pashler (1994), Psychological Bulletin, dual-task interference; Monsell (2003)",
+      "caveat": "Well-practised, largely automatic tasks (walking while talking) can be combined; the claim is about tasks that each need attention."
+    },
+    {
+      "id": "F4",
+      "statement": "After an interruption, there is a delay before a person is productive on the original task again, while they work out where they were and what came next; researchers call this the resumption lag.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "resumption lag",
+        "interruption"
+      ],
+      "reference_hint": "Altmann and Trafton (2002), Cognitive Science, memory for goals; Trafton, Altmann, Brock and Mintz (2003), International Journal of Human-Computer Studies",
+      "caveat": "Measured in laboratory tasks; its length depends on the task and the interruption."
+    },
+    {
+      "id": "F5",
+      "statement": "In a laboratory study, interruptions lasting only a few seconds still increased mistakes when people went back to a step-by-step task, mostly by losing their place in the sequence.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "interruption",
+        "sequence errors"
+      ],
+      "reference_hint": "Altmann, Trafton and Hambrick (2014), Journal of Experimental Psychology: General, 'Momentary interruptions can derail the train of thought'",
+      "caveat": "One well-cited laboratory study with a procedural task; do not state its error rates as a general office figure."
+    },
+    {
+      "id": "F6",
+      "statement": "When people switch away from a task they have not finished, part of their attention tends to stay on it, which researchers call attention residue, and they tend to do worse on the next task.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "attention residue"
+      ],
+      "reference_hint": "Leroy (2009), Organizational Behavior and Human Decision Processes, 'Why is it so hard to do my work?'",
+      "caveat": "Based on a small number of experimental studies; a well-cited idea, not a settled law."
+    },
+    {
+      "id": "F7",
+      "statement": "Field observation of office information workers found their work was highly fragmented, with frequent switching, and that interrupted work was often picked up again only after other activities had come in between.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "fragmented work"
+      ],
+      "reference_hint": "Gonzalez and Mark (2004), CHI, 'Constant, constant, multi-tasking craziness'; Mark, Gonzalez and Harris (2005), CHI, 'No task left behind?'",
+      "caveat": "Observations of small samples in particular workplaces; the durations reported there should not be quoted as a universal recovery time."
+    },
+    {
+      "id": "F8",
+      "statement": "In an experiment, people who were interrupted often made up for it by working faster, but reported more stress, frustration and effort; the cost did not disappear, it moved.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "interruption",
+        "stress"
+      ],
+      "reference_hint": "Mark, Gudith and Klocke (2008), CHI, 'The cost of interrupted work: more speed and stress'",
+      "caveat": "A single laboratory study with an email task; direction only."
+    },
+    {
+      "id": "F9",
+      "statement": "Not every interruption comes from someone else: research on office work finds people also frequently interrupt themselves, for example by checking messages.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "self-interruption"
+      ],
+      "reference_hint": "Dabbish, Mark and Gonzalez (2011), CHI, 'Why do I keep interrupting myself?'",
+      "caveat": "Shares of self versus external interruptions vary by study and workplace; no proportion is claimed."
+    },
+    {
+      "id": "F10",
+      "statement": "Interruptions that arrive at a natural break between parts of a task tend to be less disruptive than interruptions in the middle of one.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "breakpoint",
+        "interruption timing"
+      ],
+      "reference_hint": "Adamczyk and Bailey (2004), CHI, 'If not now, when?'; Iqbal and Bailey (2008), CHI",
+      "caveat": "Laboratory and computer-task studies; supports the direction that timing matters."
+    },
+    {
+      "id": "F11",
+      "statement": "A study of a software team found that interrupting a colleague often helped the person asking get unstuck quickly, while the cost fell on the person interrupted, whose own work was fragmented.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "interrupter",
+        "time famine"
+      ],
+      "reference_hint": "Perlow (1999), Administrative Science Quarterly, 'The time famine: toward a sociology of work time'",
+      "caveat": "One organisation, one team; an ethnographic study, not an experiment."
+    },
+    {
+      "id": "F12",
+      "statement": "In the same study, the team tried agreed quiet periods in the day when engineers were not to be interrupted; many reported better productivity during the trial, and the habit faded after the trial ended.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "quiet time",
+        "focus blocks"
+      ],
+      "reference_hint": "Perlow (1999), Administrative Science Quarterly",
+      "caveat": "A single field trial with self-reported productivity; it shows a team agreement can work and needs upkeep, not a measured size of effect."
+    },
+    {
+      "id": "F13",
+      "statement": "In a field experiment, people asked to check email only a few times a day, instead of whenever they liked, reported less daily stress.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "batching",
+        "email"
+      ],
+      "reference_hint": "Kushlev and Dunn (2015), Computers in Human Behavior, 'Checking email less frequently reduces stress'",
+      "caveat": "One study over a short period with self-reported stress; it supports batching in direction only."
+    },
+    {
+      "id": "F14",
+      "statement": "Writing a brief note of where you are and what you will do next before switching away from an unfinished task, a ready-to-resume plan, reduced attention residue and improved performance on the interrupting task in experiments.",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "ready-to-resume plan",
+        "attention residue"
+      ],
+      "reference_hint": "Leroy and Glomb (2018), Organization Science, 'Tasks interrupted'",
+      "caveat": "Experimental studies; a promising, low-cost practice rather than a proven cure."
+    },
+    {
+      "id": "F15",
+      "statement": "Many teams agree which channel means urgent and how quickly non-urgent messages are expected to be answered, so that questions which can wait are answered in batches rather than on arrival.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "team agreement",
+        "response time",
+        "urgent channel"
+      ],
+      "reference_hint": "Common workplace practice in team working agreements; consistent in direction with F10, F12 and F13",
+      "caveat": "A common practice, not a research-proven intervention; the right response time is the team's choice."
+    },
+    {
+      "id": "F16",
+      "statement": "A person can reduce how often a colleague has to switch by collecting their non-urgent questions and sending them together, rather than one at a time as each occurs.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "batching questions"
+      ],
+      "reference_hint": "Practical consequence of F1, F4 and F6 (each interruption carries a switch and a resumption); not separately tested",
+      "caveat": "Logical practice rather than a tested intervention; urgent questions should still be asked at once."
+    },
+    {
+      "id": "F17",
+      "statement": "Questions between colleagues are often valuable: they unblock work and share knowledge, so the aim is to change when and how non-urgent questions arrive, not to stop asking them.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "numbers": [],
+      "terms": [
+        "collaboration"
+      ],
+      "reference_hint": "Perlow (1999) found interruptions served real needs of the asker; framing for this lesson",
+      "caveat": "Framing grounded in the study's direction; the lesson must not suggest people should stop asking."
+    },
+    {
+      "id": "F18",
+      "statement": "There is no single, reliable figure for how long it takes to recover from an interruption: it depends on the task, how deep into it the person was, how long the interruption lasted and whether they had a natural break.",
+      "kind": "caution",
+      "confidence": "established",
+      "numbers": [],
+      "terms": [
+        "recovery time"
+      ],
+      "reference_hint": "Follows from F2, F4, F7 and F10; the studies report different measures in different settings",
+      "caveat": "Any size the lesson shows must be explicitly hypothetical ('say', 'imagine')."
+    }
+  ],
+  "not_claimed": [
+    "A fixed refocus time after every interruption, such as the often repeated 'twenty-three minutes': it traces to field research that measured something narrower (time before returning to an interrupted piece of work, often after other activities) and is not a universal recovery time",
+    "Multitasking cuts productivity by a stated percentage: the percentages that circulate are not tied to a measured office study",
+    "Multitasking or email lowers IQ by a stated number of points: from an unpublished commissioned survey, not peer-reviewed research",
+    "Some people are natural multitaskers who pay no switching cost",
+    "Heavy media multitaskers are permanently worse at focusing: contested and not needed here",
+    "Open-plan offices or any named chat tool cause a measured loss of productivity",
+    "Any amount of money lost to interruptions across a company or economy",
+    "Asking questions is bad or a sign of weakness"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (overnight showcase, 2026-10-06)",
+    "note": ""
+  }
+}

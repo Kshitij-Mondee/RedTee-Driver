@@ -1,0 +1,98 @@
+# Vision lab configuration. Paths are on the RunPod volume. Edit the model block to switch models.
+work_dir: /workspace/vision_lab_work      # everything the lab writes (prep, outputs, raw responses)
+videos_dir: /workspace/videos/ted-ed      # the .mp4 files (with their .en.srt and .info.json beside them)
+run_id: tedEd_2026-10                     # names the output folder and the bundle
+
+server:
+  base_url: http://127.0.0.1:8000/v1
+  api_key: EMPTY
+  timeout_s: 2400           # floor for one call; the client raises it per call from (prefill + max_tokens) / measured speed (D-113)
+  timeout_max_s: 7200       # ceiling for that per-call timeout
+  workers: 16                 # parallel requests; vLLM batches them. The pilot ran 8 at 5.8 % KV cache use, so 16 fits one H100 (and the 32-sequence cap); lower if you see out-of-memory errors.
+  video_workers: 12          # whole-film calls in parallel (long answers; the KV cache has room). Was 5 (L-208)
+  retries: 3                # for schema, JSON and transient HTTP errors only; a timeout is never resent unchanged (L-210)
+  timeout_retries: 1        # a timed-out call is retried once, only after the in-flight load has fallen (D-113)
+  kv_tokens: 622215         # the server's KV cache (vLLM prints "GPU KV cache size: N tokens"); the client admits a call
+                            # only while in-flight prompt + max_tokens stay under kv_fraction of it (L-213)
+  kv_fraction: 0.85
+  decode_tps_floor: 10      # tokens/s per stream assumed when no speed is measured yet (the pod measured 11.8 to 20.7)
+  prefill_tps: 2500         # prompt tokens/s per call, for the per-call timeout estimate
+  progress_every_s: 300     # a progress line at least this often in every long step (L-213: the log went silent for 2 h)
+
+models:
+  # A = the watcher used for everything. B = a second rater, used only by `calibrate crossmodel`.
+  # Profile for ONE H100 80GB (Kshitij's pod, 2026-10-03): A = Qwen3.8-27B in BF16; B = the 122B in 4-bit, served
+  # after A is stopped. On 2x H200 or 4x H100, swap them: A = Qwen/Qwen3.5-122B-A10B-FP8, B = Qwen/Qwen3.8-27B.
+  a:
+    # FP8 on Kshitij's pod (2026-10-04): a complete copy (66/66 shards, 30.9 GB) was already on the volume, and the BF16
+    # weights (about 56 GB) did not fit in the 36 GB free. On an H100, FP8 runs natively with near-BF16 quality.
+    name: Qwen/Qwen3.8-27B-FP8
+    context: 131072           # must match serve.sh --max-model-len; synthesize packs its batches to fit it (L-209)
+    thinking: {shots: false, videos: true, synthesize: true, judge: true, maturity: true, maturity_styled: true, maturity_pair: true, maturity_anchored: true}
+    temperature: {thinking: 0.6, plain: 0.2}
+    max_tokens: {shots: 6000, videos: 24000, synthesize: 32000, judge: 16000, judge_film: 16000, maturity: 6000, maturity_styled: 6000, maturity_pair: 6000, maturity_anchored: 6000}
+    # videos 24000: the full run's largest whole-film answer was 21,490 tokens; maturity 6000: 5 of 126 calls thought to the old 4,000 cap (D-113)
+  b:
+    name: Qwen/Qwen3.5-122B-A10B-GPTQ-Int4
+    context: 65536
+    thinking: {shots: false, videos: true, synthesize: true, judge: true, maturity: true, maturity_styled: true, maturity_pair: true, maturity_anchored: true}
+    temperature: {thinking: 0.6, plain: 0.2}
+    max_tokens: {shots: 6000, videos: 32000, synthesize: 32000, judge: 16000, judge_film: 16000, maturity: 4000, maturity_styled: 4000, maturity_pair: 4000, maturity_anchored: 4000}
+
+  # C = the ears (audio + video in, text out), used only by `sound`. Open weights; served on its own, before A.
+  c:
+    name: Qwen/Qwen3-Omni-30B-A3B-Instruct
+    thinking: {sound: false}
+    temperature: {thinking: 0.6, plain: 0.2}
+    max_tokens: {sound: 8000}
+
+# How the media goes to the model. `selftest` tells you which modes your server accepts.
+media:
+  shot_video: clip            # clip = send the shot as an mp4 (file://); frames = send stills only
+  shot_fps: 4                 # frames per second the model sees of a shot clip (the server samples at 4: serve.sh, L-201)
+  shot_clip_height: 480       # the source is 480p (Kshitij's choice, 2026-10-03): never upscale, it adds nothing
+  keyframe_width: 854         # the three stills per shot, at the source's own 480p width
+  video_fps: 1                # whole-video pass: lowres.mp4 is MADE at this rate, so the model sees exactly this
+  video_height: 360
+  judge_fps: 4
+  max_shot_s: 20              # longer shots are split into parts for the shot pass
+  max_shots_per_film: null    # null = every shot; a number = an even sample per film (first and last kept) to shorten a run (L-206)
+  structured_output: true     # use response_format json_schema; false = prompt-only plus validation
+
+prepare:
+  analysis_fps: 5             # code measurement rate (cuts, motion)
+  min_shot_s: 0.5             # cuts closer than this are merged
+  whisper_model: large-v3     # word timings; the .srt beside each video is used for the words if present
+  whisper_dir: null           # null = the HF cache under HF_HOME (/workspace/hf), where faster-whisper-large-v3 already is
+  whisper_device: cuda
+  palette_colours: 6
+  max_words_per_s: 7          # Whisper words packed tighter than this in a 1 s window are dropped as hallucinated (one film had 202 words in 1.3 s)
+
+select:
+  count: 100
+  min_duration_s: 150         # skips teasers and shorts
+  max_duration_s: 900
+  per_year_cap: 0.2           # no single upload year above 20 % of the set
+  per_animator_cap: 4         # at most 4 films credited to the same animation studio or artist (style variety)
+
+calibration:
+  sample_frac: 0.1            # share of shots re-annotated for the consistency and cross-model checks
+  seed: 7
+  plant_videos: 10            # TED-Ed films that get planted defects for the judge test
+  plant_per_video: 15         # 15, not 5: the judge cost scales with windows, the recall precision with plants (+-14 points at 5, about +-8 at 15)
+  plant_min_motion: 0.02      # a freeze is planted only where the source moves (a freeze on a still picture is invisible)
+  match_window_s: 1.0         # a plant is found when any defect lands within this of it (label agreement is reported separately)
+  match_iou: 0.3              # and, where both have a box, the boxes overlap at least this much
+  judge_window_s: 6
+  gates:                      # below these, the related outputs are marked untrusted in the bundle
+    consistency_enum_agreement: 0.75
+    crossmodel_enum_agreement: 0.65
+    planted_recall_gross: 0.85        # black, freeze, placeholder, cut-off text
+    planted_recall_subtle: 0.6        # tiny text, low contrast, grain, seam
+    planted_false_positive_rate: 0.2  # majors reported on clean windows
+    loom_beat_recall: 0.7             # step 7 beats with a known major finding that the judge also flags
+    family_purity: 0.6                # style families vs animation credits (hidden labels)
+  skip_gates: [crossmodel_enum_agreement, loom_beat_recall, family_purity]   # not run on this pod: reported as skipped, never silently absent
+
+copyright:
+  max_verbatim_words: 8       # validate flags any exported string sharing 8+ consecutive words with a transcript

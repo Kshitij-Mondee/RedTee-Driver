@@ -1,0 +1,154 @@
+{
+ "id": "bench-20261006-151439-openai-balanced",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine-sandbox\\before\\bench-20261006-151439-openai-balanced",
+ "beats": 52,
+ "check_errors": 359,
+ "check_warnings": 85,
+ "blurred": {
+  "beats": [
+   "b03",
+   "b06",
+   "b08",
+   "b10",
+   "b18",
+   "b20",
+   "b22",
+   "b24",
+   "b26",
+   "b30",
+   "b34",
+   "b39",
+   "b41",
+   "b43",
+   "b48"
+  ],
+  "of": 52
+ },
+ "foreign": {
+  "beats": [
+   "b16",
+   "b52"
+  ],
+  "of": 52,
+  "measured": 52
+ },
+ "off_frame": {
+  "errors": 50,
+  "first": [
+   "b03: words cut by the frame edge at 33.4s: \"Imagined feedback\" at [-152, -88, 501, 12], \"You're careless.\" at [-215, 135, 226, 217], \"Please be more thoughtful about\" at [-215, 284, 709, 364] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b06: words cut by the frame edge at 71.1s: \"What might they try next?\" at [-535, 295, 393, 396], \"Make the action clear\" at [-535, 523, 211, 623] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b07: words cut by the frame edge at 84.2s: \"Person label\" at [-101, 332, 251, 411], \"Careless\" at [-49, 505, 149, 571] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b08: words cut by the frame edge at 95.6s: \"Handover account\" at [539, -7, 1202, 98] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b09: words cut by the frame edge at 107.0s: \"Handover account\" at [122, -71, 810, 38], \"Handover account\" at [122, -71, 810, 38] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b10: words cut by the frame edge at 118.9s: \"Omitted file information\" at [-188, 530, 407, 600] (move or shrink the element, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b05",
+   "b07",
+   "b10",
+   "b13",
+   "b15",
+   "b16",
+   "b20",
+   "b24",
+   "b26",
+   "b29",
+   "b31",
+   "b45",
+   "b48",
+   "b49"
+  ],
+  "of": 48,
+  "worst": 4.73
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 0
+ },
+ "empty": {
+  "errors": 2,
+  "first": [
+   "runtime held_missing: b06: no element \"empty_action_space\" in previous scene",
+   "b02: empty frame for 2 sampled moment(s) from 17.7s to 23.2s (edge density < 0.003) while the voice is speaking; something the words are about must be on screen (or declare intent: rest / hold, or punctuation for a run of 1.2 s or less)"
+  ]
+ },
+ "kinds": {
+  "runtime held_missing": 268,
+  "words_cut": 27,
+  "off_frame": 23,
+  "blurred_beat": 15,
+  "runtime text_spill": 7,
+  "runtime icon_missing": 6,
+  "runtime text_outside_element": 3,
+  "runtime text_overflow": 2,
+  "hf layout content_overlap": 2,
+  "foreign_pixels": 2,
+  "runtime scene_threw": 1,
+  "runtime tight_inset": 1,
+  "nothing developing": 1,
+  "empty_frame": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 3,
+   "kinds": {
+    "length": 3
+   },
+   "first": [
+    "pacing.target_duration_s is 480s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it",
+    "the plan says no length was requested ('no requested length'), but the request asks for 2 minutes (120s): set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 3,
+   "kinds": {
+    "script runs ~675s against a 480s plan (x": 1,
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~675s against a 480s plan (x1.41); re-cut it",
+    "script runs ~675s but the request asks for about 120s (at most 156s); cut about 1098 words or whole beats to the requested length",
+    "52 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 103,
+   "kinds": {
+    "focus on frame layout": 51,
+    "keep missing": 39,
+    "allocation": 7,
+    "placeholder": 4,
+    "template cap": 2
+   },
+   "first": [
+    "b27: props.title = 'Sample, not universal' describes the slot instead of filling it ('Sample' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b27: props.lines[1].text = 'Sample lines, not a universal script' describes the slot instead of filling it ('Sample' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b29: props.right.items[0].text = '________' has no words: a slot that is meant to look empty is an item {\"empty\": true} (compare.two items, document.page lines), never punctuation on screen",
+    "b30: props.title = 'Sample completion' describes the slot instead of filling it ('Sample' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b01: shot focus [0, 0, 1920, 960] on a avatar beat (avatar): a avatar lays out in the whole 1920x1080 frame and the runtime ignores focus and zoom on it (shot_framing_ignored). Drop shot.focus/zoom here; to frame part of a picture, make the beat bespoke and draw inside the frame"
+   ]
+  },
+  "scenes": {
+   "errors": 1,
+   "kinds": {
+    "ctx.held(['desk_world', 'draft', 'file_g": 1
+   },
+   "first": [
+    "b02.js: ctx.held(['desk_world', 'draft', 'file_gap', 'page', 'review_strip']) but the previous beat b01 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 683s but the request asks for about 120s (at most 156s): the script must lose about 82 % of its words"
+   ]
+  }
+ }
+}

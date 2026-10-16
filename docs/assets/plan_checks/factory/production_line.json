@@ -1,0 +1,970 @@
+{
+ "scene": "production_line",
+ "camera_spec": {
+  "camera": {
+   "x": 2.8,
+   "y": -7.5,
+   "eye": 1.6,
+   "yaw": 6,
+   "hfov": 60,
+   "horizon_pct": 48
+  },
+  "walls": [
+   {
+    "name": "north side wall of the filling hall (behind the line)",
+    "axis": "y",
+    "at": 9.5
+   }
+  ],
+  "points": {
+   "L_head_top": [
+    5.6,
+    3.0,
+    1.75
+   ],
+   "L_head_centre": [
+    5.6,
+    3.0,
+    1.63
+   ],
+   "L_head_left": [
+    5.489999999999999,
+    3.0,
+    1.65
+   ],
+   "L_head_right": [
+    5.71,
+    3.0,
+    1.65
+   ],
+   "L_chin": [
+    5.6,
+    3.0,
+    1.52
+   ],
+   "L_feet": [
+    5.6,
+    3.0,
+    0
+   ],
+   "O_head_top": [
+    4.4,
+    5.4,
+    1.75
+   ],
+   "O_head_centre": [
+    4.4,
+    5.4,
+    1.63
+   ],
+   "O_head_left": [
+    4.29,
+    5.4,
+    1.65
+   ],
+   "O_head_right": [
+    4.510000000000001,
+    5.4,
+    1.65
+   ],
+   "O_chin": [
+    4.4,
+    5.4,
+    1.52
+   ],
+   "O_feet": [
+    4.4,
+    5.4,
+    0
+   ],
+   "filler_fl_top": [
+    -4.0,
+    6.0,
+    2.3
+   ],
+   "filler_fr_top": [
+    0.0,
+    6.0,
+    2.3
+   ],
+   "filler_fl_floor": [
+    -4.0,
+    6.0,
+    0
+   ],
+   "filler_fr_floor": [
+    0.0,
+    6.0,
+    0
+   ],
+   "filler_br_top": [
+    0.0,
+    7.8,
+    2.3
+   ],
+   "lidder_fl_top": [
+    0.6,
+    6.0,
+    2.2
+   ],
+   "lidder_fr_top": [
+    3.0,
+    6.0,
+    2.2
+   ],
+   "lidder_fl_floor": [
+    0.6,
+    6.0,
+    0
+   ],
+   "lidder_fr_floor": [
+    3.0,
+    6.0,
+    0
+   ],
+   "lidder_br_top": [
+    3.0,
+    7.8,
+    2.2
+   ],
+   "labeller_fl_top": [
+    7.4,
+    6.0,
+    2.0
+   ],
+   "labeller_fr_top": [
+    9.9,
+    6.0,
+    2.0
+   ],
+   "labeller_fl_floor": [
+    7.4,
+    6.0,
+    0
+   ],
+   "labeller_fr_floor": [
+    9.9,
+    6.0,
+    0
+   ],
+   "labeller_br_top": [
+    9.9,
+    7.8,
+    2.0
+   ],
+   "depal_fl_top": [
+    -12,
+    6.0,
+    2.2
+   ],
+   "depal_fr_top": [
+    -8,
+    6.0,
+    2.2
+   ],
+   "depal_fl_floor": [
+    -12,
+    6.0,
+    0
+   ],
+   "depal_fr_floor": [
+    -8,
+    6.0,
+    0
+   ],
+   "depal_br_top": [
+    -8,
+    7.8,
+    2.2
+   ],
+   "conv_front_x3.0": [
+    3.0,
+    6.4,
+    0.9
+   ],
+   "conv_front_x7.4": [
+    7.4,
+    6.4,
+    0.9
+   ],
+   "conv_guard_x4": [
+    4.0,
+    6.4,
+    1.1
+   ],
+   "cw_front_l": [
+    5.0,
+    6.2,
+    1.0
+   ],
+   "cw_front_r": [
+    6.2,
+    6.2,
+    1.0
+   ],
+   "reject_bin": [
+    6.4,
+    5.8,
+    0.7
+   ],
+   "andon_filler": [
+    -0.3,
+    6.6,
+    2.9
+   ],
+   "andon_lidder": [
+    2.8,
+    6.6,
+    2.8
+   ],
+   "andon_labeller": [
+    9.7,
+    6.6,
+    2.6
+   ],
+   "estop_filler": [
+    -0.1,
+    5.95,
+    1.2
+   ],
+   "hmi_filler": [
+    -0.8,
+    5.6,
+    1.5
+   ],
+   "estop_cw": [
+    5.0,
+    6.15,
+    1.1
+   ],
+   "wall_dado_x-6": [
+    -6,
+    9.5,
+    2.4
+   ],
+   "wall_dado_x12": [
+    12,
+    9.5,
+    2.4
+   ],
+   "wall_floor_x-6": [
+    -6,
+    9.5,
+    0
+   ],
+   "wall_floor_x12": [
+    12,
+    9.5,
+    0
+   ],
+   "wall_eaves_x3": [
+    3,
+    9.5,
+    8
+   ],
+   "col_x-12_floor": [
+    -12,
+    9.3,
+    0
+   ],
+   "col_x-12_3m": [
+    -12,
+    9.3,
+    3
+   ],
+   "col_x-4.5_floor": [
+    -4.5,
+    9.3,
+    0
+   ],
+   "col_x-4.5_3m": [
+    -4.5,
+    9.3,
+    3
+   ],
+   "col_x3.0_floor": [
+    3.0,
+    9.3,
+    0
+   ],
+   "col_x3.0_3m": [
+    3.0,
+    9.3,
+    3
+   ],
+   "col_x10.5_floor": [
+    10.5,
+    9.3,
+    0
+   ],
+   "col_x10.5_3m": [
+    10.5,
+    9.3,
+    3
+   ],
+   "airpipe_x-3": [
+    -6,
+    9.4,
+    3.2
+   ],
+   "airpipe_x12": [
+    12,
+    9.4,
+    3.2
+   ],
+   "walk_front_x-6": [
+    -6,
+    3.8,
+    0
+   ],
+   "walk_front_x12": [
+    12,
+    3.8,
+    0
+   ],
+   "walk_back_x-6": [
+    -6,
+    5.0,
+    0
+   ],
+   "walk_back_x12": [
+    12,
+    5.0,
+    0
+   ],
+   "board_L_top": [
+    6.8,
+    3.6,
+    2.1
+   ],
+   "board_L_bot": [
+    6.8,
+    3.6,
+    0.9
+   ],
+   "board_R_top": [
+    9.2,
+    3.6,
+    2.1
+   ],
+   "board_R_bot": [
+    9.2,
+    3.6,
+    0.9
+   ],
+   "board_leg_L": [
+    6.8,
+    3.6,
+    0
+   ],
+   "board_leg_R": [
+    9.2,
+    3.6,
+    0
+   ],
+   "light_x3": [
+    3,
+    4,
+    7.0
+   ],
+   "L_ray_line_front": [
+    6.4,
+    6.0,
+    1.79
+   ],
+   "O_ray_line_front": [
+    4.47,
+    6.0,
+    1.76
+   ],
+   "wall_top_frame_x6": [
+    6,
+    9.5,
+    6.6
+   ],
+   "cabletray_x6": [
+    6,
+    9.4,
+    3.6
+   ],
+   "team_area_line_x0": [
+    0,
+    0,
+    0
+   ],
+   "team_area_line_x9": [
+    9,
+    0,
+    0
+   ],
+   "cw_top_mid": [
+    5.6,
+    6.2,
+    1.0
+   ]
+  },
+  "behind": [
+   "L_head_top",
+   "L_head_centre",
+   "L_head_left",
+   "L_head_right",
+   "L_chin",
+   "O_head_top",
+   "O_head_centre",
+   "O_head_left",
+   "O_head_right",
+   "O_chin"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 785,
+   "along_x": 16780,
+   "horizon_y": 518
+  },
+  "points": {
+   "L_head_top": {
+    "x": 1221,
+    "y": 495,
+    "where": "frame",
+    "depth": 10.74,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      7.33,
+      9.5,
+      1.84
+     ]
+    }
+   },
+   "L_head_centre": {
+    "x": 1221,
+    "y": 514,
+    "where": "frame",
+    "depth": 10.74,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      7.33,
+      9.5,
+      1.65
+     ]
+    }
+   },
+   "L_head_left": {
+    "x": 1205,
+    "y": 511,
+    "where": "frame",
+    "depth": 10.72,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      7.16,
+      9.5,
+      1.68
+     ]
+    }
+   },
+   "L_head_right": {
+    "x": 1238,
+    "y": 511,
+    "where": "frame",
+    "depth": 10.75,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      7.51,
+      9.5,
+      1.68
+     ]
+    }
+   },
+   "L_chin": {
+    "x": 1221,
+    "y": 531,
+    "where": "frame",
+    "depth": 10.74,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      7.33,
+      9.5,
+      1.47
+     ]
+    }
+   },
+   "L_feet": {
+    "x": 1221,
+    "y": 766,
+    "where": "frame",
+    "depth": 10.74
+   },
+   "O_head_top": {
+    "x": 991,
+    "y": 499,
+    "where": "frame",
+    "depth": 13.0,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      4.91,
+      9.5,
+      1.8
+     ]
+    }
+   },
+   "O_head_centre": {
+    "x": 991,
+    "y": 515,
+    "where": "frame",
+    "depth": 13.0,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      4.91,
+      9.5,
+      1.64
+     ]
+    }
+   },
+   "O_head_left": {
+    "x": 977,
+    "y": 512,
+    "where": "frame",
+    "depth": 12.99,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      4.76,
+      9.5,
+      1.67
+     ]
+    }
+   },
+   "O_head_right": {
+    "x": 1005,
+    "y": 512,
+    "where": "frame",
+    "depth": 13.01,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      5.05,
+      9.5,
+      1.67
+     ]
+    }
+   },
+   "O_chin": {
+    "x": 991,
+    "y": 529,
+    "where": "frame",
+    "depth": 13.0,
+    "behind": {
+     "wall": "north side wall of the filling hall (behind the line)",
+     "at": [
+      4.91,
+      9.5,
+      1.49
+     ]
+    }
+   },
+   "O_feet": {
+    "x": 991,
+    "y": 723,
+    "where": "frame",
+    "depth": 13.0
+   },
+   "filler_fl_top": {
+    "x": -109,
+    "y": 427,
+    "where": "overscan",
+    "depth": 12.72
+   },
+   "filler_fr_top": {
+    "x": 429,
+    "y": 430,
+    "where": "frame",
+    "depth": 13.13
+   },
+   "filler_fl_floor": {
+    "x": -109,
+    "y": 728,
+    "where": "overscan",
+    "depth": 12.72
+   },
+   "filler_fr_floor": {
+    "x": 429,
+    "y": 721,
+    "where": "frame",
+    "depth": 13.13
+   },
+   "filler_br_top": {
+    "x": 472,
+    "y": 440,
+    "where": "frame",
+    "depth": 14.92
+   },
+   "lidder_fl_top": {
+    "x": 506,
+    "y": 443,
+    "where": "frame",
+    "depth": 13.2
+   },
+   "lidder_fr_top": {
+    "x": 810,
+    "y": 444,
+    "where": "frame",
+    "depth": 13.45
+   },
+   "lidder_fl_floor": {
+    "x": 506,
+    "y": 720,
+    "where": "frame",
+    "depth": 13.2
+   },
+   "lidder_fr_floor": {
+    "x": 810,
+    "y": 716,
+    "where": "frame",
+    "depth": 13.45
+   },
+   "lidder_br_top": {
+    "x": 807,
+    "y": 453,
+    "where": "frame",
+    "depth": 15.24
+   },
+   "labeller_fl_top": {
+    "x": 1338,
+    "y": 471,
+    "where": "frame",
+    "depth": 13.91
+   },
+   "labeller_fr_top": {
+    "x": 1623,
+    "y": 471,
+    "where": "frame",
+    "depth": 14.17
+   },
+   "labeller_fl_floor": {
+    "x": 1338,
+    "y": 710,
+    "where": "frame",
+    "depth": 13.91
+   },
+   "labeller_fr_floor": {
+    "x": 1623,
+    "y": 706,
+    "where": "frame",
+    "depth": 14.17
+   },
+   "labeller_br_top": {
+    "x": 1529,
+    "y": 477,
+    "where": "frame",
+    "depth": 15.96
+   },
+   "depal_fl_top": {
+    "x": -1298,
+    "y": 434,
+    "where": "outside",
+    "depth": 11.88
+   },
+   "depal_fr_top": {
+    "x": -683,
+    "y": 437,
+    "where": "outside",
+    "depth": 12.3
+   },
+   "depal_fl_floor": {
+    "x": -1298,
+    "y": 742,
+    "where": "outside",
+    "depth": 11.88
+   },
+   "depal_fr_floor": {
+    "x": -683,
+    "y": 735,
+    "where": "outside",
+    "depth": 12.3
+   },
+   "depal_br_top": {
+    "x": -497,
+    "y": 448,
+    "where": "outside",
+    "depth": 14.09
+   },
+   "conv_front_x3.0": {
+    "x": 809,
+    "y": 602,
+    "where": "frame",
+    "depth": 13.84
+   },
+   "conv_front_x7.4": {
+    "x": 1323,
+    "y": 600,
+    "where": "frame",
+    "depth": 14.3
+   },
+   "conv_guard_x4": {
+    "x": 929,
+    "y": 578,
+    "where": "frame",
+    "depth": 13.95
+   },
+   "cw_front_l": {
+    "x": 1051,
+    "y": 590,
+    "where": "frame",
+    "depth": 13.85
+   },
+   "cw_front_r": {
+    "x": 1192,
+    "y": 590,
+    "where": "frame",
+    "depth": 13.98
+   },
+   "reject_bin": {
+    "x": 1228,
+    "y": 628,
+    "where": "frame",
+    "depth": 13.6
+   },
+   "andon_filler": {
+    "x": 407,
+    "y": 361,
+    "where": "frame",
+    "depth": 13.7
+   },
+   "andon_lidder": {
+    "x": 785,
+    "y": 376,
+    "where": "frame",
+    "depth": 14.02
+   },
+   "andon_labeller": {
+    "x": 1568,
+    "y": 406,
+    "where": "frame",
+    "depth": 14.74
+   },
+   "estop_filler": {
+    "x": 414,
+    "y": 569,
+    "where": "frame",
+    "depth": 13.07
+   },
+   "hmi_filler": {
+    "x": 310,
+    "y": 532,
+    "where": "frame",
+    "depth": 12.65
+   },
+   "estop_cw": {
+    "x": 1052,
+    "y": 579,
+    "where": "frame",
+    "depth": 13.81
+   },
+   "wall_dado_x-6": {
+    "x": -135,
+    "y": 435,
+    "where": "overscan",
+    "depth": 15.99
+   },
+   "wall_dado_x12": {
+    "x": 1646,
+    "y": 444,
+    "where": "frame",
+    "depth": 17.87
+   },
+   "wall_floor_x-6": {
+    "x": -135,
+    "y": 685,
+    "where": "overscan",
+    "depth": 15.99
+   },
+   "wall_floor_x12": {
+    "x": 1646,
+    "y": 667,
+    "where": "frame",
+    "depth": 17.87
+   },
+   "wall_eaves_x3": {
+    "x": 805,
+    "y": -110,
+    "where": "overscan",
+    "depth": 16.93
+   },
+   "col_x-12_floor": {
+    "x": -847,
+    "y": 694,
+    "where": "outside",
+    "depth": 15.16
+   },
+   "col_x-12_3m": {
+    "x": -847,
+    "y": 365,
+    "where": "outside",
+    "depth": 15.16
+   },
+   "col_x-4.5_floor": {
+    "x": 20,
+    "y": 685,
+    "where": "frame",
+    "depth": 15.94
+   },
+   "col_x-4.5_3m": {
+    "x": 20,
+    "y": 372,
+    "where": "frame",
+    "depth": 15.94
+   },
+   "col_x3.0_floor": {
+    "x": 805,
+    "y": 677,
+    "where": "frame",
+    "depth": 16.73
+   },
+   "col_x3.0_3m": {
+    "x": 805,
+    "y": 379,
+    "where": "frame",
+    "depth": 16.73
+   },
+   "col_x10.5_floor": {
+    "x": 1520,
+    "y": 670,
+    "where": "frame",
+    "depth": 17.51
+   },
+   "col_x10.5_3m": {
+    "x": 1520,
+    "y": 385,
+    "where": "frame",
+    "depth": 17.51
+   },
+   "airpipe_x-3": {
+    "x": -141,
+    "y": 351,
+    "where": "overscan",
+    "depth": 15.89
+   },
+   "airpipe_x12": {
+    "x": 1651,
+    "y": 369,
+    "where": "frame",
+    "depth": 17.77
+   },
+   "walk_front_x-6": {
+    "x": -641,
+    "y": 776,
+    "where": "outside",
+    "depth": 10.32
+   },
+   "walk_front_x12": {
+    "x": 2046,
+    "y": 736,
+    "where": "overscan",
+    "depth": 12.2
+   },
+   "walk_back_x-6": {
+    "x": -493,
+    "y": 750,
+    "where": "outside",
+    "depth": 11.51
+   },
+   "walk_back_x12": {
+    "x": 1934,
+    "y": 717,
+    "where": "overscan",
+    "depth": 13.39
+   },
+   "board_L_top": {
+    "x": 1369,
+    "y": 446,
+    "where": "frame",
+    "depth": 11.46
+   },
+   "board_L_bot": {
+    "x": 1369,
+    "y": 620,
+    "where": "frame",
+    "depth": 11.46
+   },
+   "board_R_top": {
+    "x": 1699,
+    "y": 447,
+    "where": "frame",
+    "depth": 11.71
+   },
+   "board_R_bot": {
+    "x": 1699,
+    "y": 618,
+    "where": "frame",
+    "depth": 11.71
+   },
+   "board_leg_L": {
+    "x": 1369,
+    "y": 751,
+    "where": "frame",
+    "depth": 11.46
+   },
+   "board_leg_R": {
+    "x": 1699,
+    "y": 746,
+    "where": "frame",
+    "depth": 11.71
+   },
+   "light_x3": {
+    "x": 814,
+    "y": -265,
+    "where": "outside",
+    "depth": 11.46
+   },
+   "L_ray_line_front": {
+    "x": 1221,
+    "y": 496,
+    "where": "frame",
+    "depth": 13.8
+   },
+   "O_ray_line_front": {
+    "x": 991,
+    "y": 499,
+    "where": "frame",
+    "depth": 13.6
+   },
+   "wall_top_frame_x6": {
+    "x": 1096,
+    "y": 36,
+    "where": "frame",
+    "depth": 17.24
+   },
+   "cabletray_x6": {
+    "x": 1097,
+    "y": 324,
+    "where": "frame",
+    "depth": 17.14
+   },
+   "team_area_line_x0": {
+    "x": 132,
+    "y": 890,
+    "where": "frame",
+    "depth": 7.17
+   },
+   "team_area_line_x9": {
+    "x": 2064,
+    "y": 847,
+    "where": "overscan",
+    "depth": 8.11
+   },
+   "cw_top_mid": {
+    "x": 1122,
+    "y": 590,
+    "where": "frame",
+    "depth": 13.92
+   }
+  }
+ }
+}

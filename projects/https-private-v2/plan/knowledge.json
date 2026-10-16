@@ -1,0 +1,208 @@
+{
+  "topic": "How HTTPS keeps your data private",
+  "scope_note": "Mechanism and promises of HTTPS for non-technical employees: plain HTTP exposure, handshake, certificate check, shared session key, encrypted and integrity-protected traffic, and what the padlock does and does not mean. No versions, algorithms, key lengths, statistics or dates.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "With plain HTTP, the data travels unprotected, so anyone who can see the traffic on its path can read it.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F2",
+      "statement": "On a shared network such as public wifi, other devices and the network operator may be positioned where they can see traffic passing along the path.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Say 'may be able to'; this describes possibility, not that a given network is being watched.",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F3",
+      "statement": "HTTPS is ordinary HTTP carried inside a protected connection created by TLS (Transport Layer Security).",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F4",
+      "statement": "Before any application data such as a login is sent, the browser and the server run a short exchange called the TLS handshake.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F5",
+      "statement": "During the handshake the server presents a digital certificate that ties its name to its public key, to prove who it is.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F6",
+      "statement": "A certificate is issued by a certificate authority, an organisation that browsers and operating systems already trust.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F7",
+      "statement": "The browser checks that the certificate was issued by a trusted authority, that the name on it matches the address being visited, and that today's date falls within its validity dates.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Browsers perform further checks (for example revocation); the lesson names only these three.",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F8",
+      "statement": "If the certificate fails a check (wrong name, expired, or untrusted issuer), the browser shows a warning instead of silently continuing.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Wording and the option to proceed vary by browser; say 'warns', not 'always blocks'.",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F9",
+      "statement": "The browser and server use key exchange to agree a shared secret session key without ever sending that key readable across the network.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "State the idea and result only, not the mathematics.",
+      "reference_hint": "Diffie-Hellman key exchange (public-key cryptography); used in TLS",
+      "numbers": []
+    },
+    {
+      "id": "F10",
+      "statement": "An eavesdropper who records every message of the key exchange still cannot work out the session key.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Holds for a passive watcher when the exchange is correctly implemented with current methods; the lesson should say 'cannot realistically work out', and the identity check in F7 is what stops an active impostor.",
+      "reference_hint": "Diffie-Hellman key exchange",
+      "numbers": []
+    },
+    {
+      "id": "F11",
+      "statement": "After the handshake, the data in both directions is encrypted with the shared session key, using symmetric encryption where both ends use the same key.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F12",
+      "statement": "Encrypted data looks like meaningless noise to a watcher, and only the two ends holding the session key can turn it back into readable data.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F13",
+      "statement": "TLS also protects integrity: if data is altered in transit, the receiving end detects the change.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Detection, not prevention: someone on the path can still disrupt or drop traffic, but cannot change it unnoticed.",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F14",
+      "statement": "HTTPS therefore provides three things: confidentiality (others cannot read the data), integrity (changes are detected) and authentication of the server (you are talking to the named site).",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F15",
+      "statement": "The browser's padlock means the connection is private and is with the site named in the address bar.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "Browsers have changed how the padlock looks and is labelled; speak of the idea, not the exact icon.",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F16",
+      "statement": "The padlock does not mean the site is honest, safe, or free of phishing or malware, because a site run by a bad actor can also obtain a valid certificate for its own name.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F17",
+      "statement": "HTTPS does not hide which site you connect to: a watcher on the path can still tell which server the traffic is going to.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Which host is visible, and by which means, varies with newer privacy features; say 'does not reliably hide', and that the content of the visit is what is protected.",
+      "reference_hint": "",
+      "numbers": []
+    },
+    {
+      "id": "F18",
+      "statement": "HTTPS protects data only while it travels; once it reaches the server, the server can read it and what it does with it is up to the site.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "",
+      "reference_hint": "",
+      "numbers": []
+    }
+  ],
+  "terms": [
+    {
+      "term": "handshake",
+      "definition": "The short opening exchange in which browser and server check identity and agree a session key before any data is sent."
+    },
+    {
+      "term": "certificate",
+      "definition": "A digital document that ties a site's name to its public key, issued by a certificate authority."
+    },
+    {
+      "term": "certificate authority",
+      "definition": "An organisation that browsers already trust to issue certificates."
+    },
+    {
+      "term": "session key",
+      "definition": "The shared secret both ends use to scramble and unscramble data for this one connection."
+    },
+    {
+      "term": "encryption",
+      "definition": "Scrambling data so that only someone with the right key can read it."
+    },
+    {
+      "term": "integrity",
+      "definition": "The assurance that data was not changed on the way, or that a change is detected."
+    }
+  ],
+  "not_claimed": [
+    "The padlock means the site is safe, honest or trustworthy.",
+    "HTTPS protects against phishing or malware.",
+    "HTTPS hides which site you are visiting.",
+    "HTTPS protects data once it reaches the server or after it is stored there.",
+    "The session key is sent to the server in a form a watcher could read.",
+    "Any statistic about HTTPS adoption, or any dates, versions, algorithm names or key lengths.",
+    "Public wifi is always being watched, or HTTPS makes public wifi risk-free in every respect."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (https-private rerun for comparison, 2026-10-10)",
+    "note": ""
+  }
+}

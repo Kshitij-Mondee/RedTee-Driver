@@ -1,0 +1,910 @@
+{
+ "scene": "corridor_lift",
+ "camera_spec": {
+  "camera": {
+   "x": 2.9,
+   "y": 0.6,
+   "eye": 1.6,
+   "yaw": 3,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "tower south face (far)",
+    "axis": "y",
+    "at": 13.0
+   },
+   {
+    "name": "right corridor wall (solid from y 3.4 to 8.0)",
+    "axis": "x",
+    "at": 4.6
+   }
+  ],
+  "points": {
+   "corridor_mouth_left_floor": [
+    2.4,
+    8.0,
+    0
+   ],
+   "corridor_mouth_right_floor": [
+    4.6,
+    8.0,
+    0
+   ],
+   "corridor_mouth_right_top": [
+    4.6,
+    8.0,
+    4.2
+   ],
+   "tower_face_right_end_floor": [
+    6.0,
+    13.0,
+    0
+   ],
+   "tower_face_at_joists": [
+    3.5,
+    13.0,
+    4.2
+   ],
+   "red_pipe_at_tower_face": [
+    3.5,
+    12.8,
+    3.9
+   ],
+   "N_head_top": [
+    4.2,
+    5.0,
+    1.75
+   ],
+   "N_head_left": [
+    4.09,
+    5.0,
+    1.65
+   ],
+   "N_head_right": [
+    4.31,
+    5.0,
+    1.65
+   ],
+   "N_feet": [
+    4.2,
+    5.0,
+    0
+   ],
+   "F_head_top": [
+    3.65,
+    10.8,
+    1.75
+   ],
+   "F_head_left": [
+    3.54,
+    10.8,
+    1.65
+   ],
+   "F_head_right": [
+    3.76,
+    10.8,
+    1.65
+   ],
+   "F_feet": [
+    3.65,
+    10.8,
+    0
+   ],
+   "patch_far_left": [
+    2.5,
+    9.23,
+    0
+   ],
+   "patch_far_right": [
+    4.3,
+    9.23,
+    0
+   ],
+   "patch_row_7_6_left": [
+    2.5,
+    7.62,
+    0
+   ],
+   "patch_row_7_6_right": [
+    4.3,
+    7.62,
+    0
+   ],
+   "patch_row_6_0_left": [
+    2.5,
+    6.0,
+    0
+   ],
+   "patch_row_6_0_right": [
+    4.3,
+    6.0,
+    0
+   ],
+   "right_wall_glass_end_floor": [
+    4.6,
+    3.4,
+    0
+   ],
+   "left_wall_glass_start_floor": [
+    2.4,
+    6.0,
+    0
+   ],
+   "floor_at_frame_bottom_centre": [
+    2.9,
+    5.6,
+    0
+   ],
+   "N_sunlit_top_on_body": [
+    4.2,
+    5.0,
+    1.38
+   ],
+   "lobby_spotlight": [
+    3.5,
+    11.5,
+    3.85
+   ],
+   "lift_door_centre_floor": [
+    2.85,
+    13.0,
+    0
+   ],
+   "right_wall_paint_start_floor": [
+    4.6,
+    5.0,
+    0
+   ],
+   "right_wall_paint_start_z2": [
+    4.6,
+    5.0,
+    2.0
+   ],
+   "lift_door.left": [
+    2.3,
+    13,
+    0
+   ],
+   "lift_door.right": [
+    3.4,
+    13,
+    0
+   ],
+   "lift_door.top": [
+    2.3,
+    13,
+    2.1
+   ],
+   "lift_door.bottom": [
+    2.3,
+    13,
+    0
+   ],
+   "lift_indicator.left": [
+    2.65,
+    13,
+    2.2
+   ],
+   "lift_indicator.right": [
+    3.05,
+    13,
+    2.2
+   ],
+   "lift_indicator.top": [
+    2.65,
+    13,
+    2.4
+   ],
+   "lift_indicator.bottom": [
+    3.05,
+    13,
+    2.2
+   ],
+   "stair_door.left": [
+    4.2,
+    13,
+    0
+   ],
+   "stair_door.right": [
+    5.1,
+    13,
+    0
+   ],
+   "stair_door.top": [
+    4.2,
+    13,
+    2.1
+   ],
+   "stair_door.bottom": [
+    4.2,
+    13,
+    0
+   ],
+   "exit_sign.left": [
+    4.45,
+    13,
+    2.2
+   ],
+   "exit_sign.right": [
+    4.85,
+    13,
+    2.2
+   ],
+   "exit_sign.top": [
+    4.45,
+    13,
+    2.4
+   ],
+   "exit_sign.bottom": [
+    4.45,
+    13,
+    2.2
+   ],
+   "noticeboard.left": [
+    4.6,
+    5.0,
+    1.0
+   ],
+   "noticeboard.right": [
+    4.6,
+    3.8,
+    1.0
+   ],
+   "noticeboard.top": [
+    4.6,
+    3.8,
+    1.9
+   ],
+   "noticeboard.bottom": [
+    4.6,
+    3.8,
+    1.0
+   ],
+   "bike.left": [
+    2.45,
+    2.0,
+    0
+   ],
+   "bike.right": [
+    2.6,
+    3.7,
+    0
+   ],
+   "bike.top": [
+    2.6,
+    3.7,
+    1.0
+   ],
+   "bike.bottom": [
+    2.45,
+    2.0,
+    0
+   ],
+   "extinguisher.left": [
+    2.4,
+    5.55,
+    0.45
+   ],
+   "extinguisher.right": [
+    2.6,
+    5.75,
+    0.45
+   ],
+   "extinguisher.top": [
+    2.4,
+    5.75,
+    1.05
+   ],
+   "extinguisher.bottom": [
+    2.4,
+    5.55,
+    0.45
+   ],
+   "call_plate.left": [
+    3.5,
+    13,
+    1.0
+   ],
+   "call_plate.right": [
+    3.62,
+    13,
+    1.0
+   ],
+   "call_plate.top": [
+    3.5,
+    13,
+    1.25
+   ],
+   "call_plate.bottom": [
+    3.5,
+    13,
+    1.0
+   ],
+   "phone_room_glass.left": [
+    2.4,
+    6.0,
+    0
+   ],
+   "phone_room_glass.right": [
+    2.4,
+    8.0,
+    0
+   ],
+   "phone_room_glass.top": [
+    2.4,
+    6.0,
+    2.4
+   ],
+   "phone_room_glass.bottom": [
+    2.4,
+    6.0,
+    0
+   ],
+   "store_door.left": [
+    2.4,
+    2.6,
+    0
+   ],
+   "store_door.right": [
+    2.4,
+    3.5,
+    0
+   ],
+   "store_door.top": [
+    2.4,
+    2.6,
+    2.1
+   ],
+   "store_door.bottom": [
+    2.4,
+    2.6,
+    0
+   ],
+   "N_body.left": [
+    3.95,
+    5.1,
+    0
+   ],
+   "N_body.right": [
+    4.45,
+    4.9,
+    0
+   ],
+   "N_body.top": [
+    3.95,
+    4.9,
+    1.75
+   ],
+   "N_body.bottom": [
+    3.95,
+    4.9,
+    0
+   ],
+   "F_body.left": [
+    3.4,
+    10.9,
+    0
+   ],
+   "F_body.right": [
+    3.9,
+    10.7,
+    0
+   ],
+   "F_body.top": [
+    3.4,
+    10.7,
+    1.75
+   ],
+   "F_body.bottom": [
+    3.4,
+    10.7,
+    0
+   ]
+  },
+  "behind": [
+   "N_head_left",
+   "N_head_right",
+   "F_head_left",
+   "F_head_right"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 863,
+   "along_x": 36148,
+   "horizon_y": 497
+  },
+  "points": {
+   "corridor_mouth_left_floor": {
+    "x": 738,
+    "y": 897,
+    "where": "frame",
+    "depth": 7.36
+   },
+   "corridor_mouth_right_floor": {
+    "x": 1283,
+    "y": 891,
+    "where": "frame",
+    "depth": 7.48
+   },
+   "corridor_mouth_right_top": {
+    "x": 1283,
+    "y": -144,
+    "where": "outside",
+    "depth": 7.48
+   },
+   "tower_face_right_end_floor": {
+    "x": 1320,
+    "y": 732,
+    "where": "frame",
+    "depth": 12.55
+   },
+   "tower_face_at_joists": {
+    "x": 953,
+    "y": 111,
+    "where": "frame",
+    "depth": 12.41
+   },
+   "red_pipe_at_tower_face": {
+    "x": 954,
+    "y": 150,
+    "where": "frame",
+    "depth": 12.21
+   },
+   "N_head_top": {
+    "x": 1401,
+    "y": 435,
+    "where": "frame",
+    "depth": 4.46
+   },
+   "N_head_left": {
+    "x": 1356,
+    "y": 476,
+    "where": "frame",
+    "depth": 4.46,
+    "behind": {
+     "wall": "right corridor wall (solid from y 3.4 to 8.0)",
+     "at": [
+      4.6,
+      6.89,
+      1.67
+     ]
+    }
+   },
+   "N_head_right": {
+    "x": 1446,
+    "y": 476,
+    "where": "frame",
+    "depth": 4.47,
+    "behind": {
+     "wall": "right corridor wall (solid from y 3.4 to 8.0)",
+     "at": [
+      4.6,
+      5.9,
+      1.66
+     ]
+    }
+   },
+   "N_feet": {
+    "x": 1401,
+    "y": 1158,
+    "where": "overscan",
+    "depth": 4.46
+   },
+   "F_head_top": {
+    "x": 999,
+    "y": 470,
+    "where": "frame",
+    "depth": 10.23
+   },
+   "F_head_left": {
+    "x": 979,
+    "y": 488,
+    "where": "frame",
+    "depth": 10.22,
+    "behind": {
+     "wall": "tower south face (far)",
+     "at": [
+      3.68,
+      13.0,
+      1.66
+     ]
+    }
+   },
+   "F_head_right": {
+    "x": 1019,
+    "y": 488,
+    "where": "frame",
+    "depth": 10.23,
+    "behind": {
+     "wall": "tower south face (far)",
+     "at": [
+      3.95,
+      13.0,
+      1.66
+     ]
+    }
+   },
+   "F_feet": {
+    "x": 999,
+    "y": 785,
+    "where": "frame",
+    "depth": 10.23
+   },
+   "patch_far_left": {
+    "x": 777,
+    "y": 840,
+    "where": "frame",
+    "depth": 8.6
+   },
+   "patch_far_right": {
+    "x": 1161,
+    "y": 836,
+    "where": "frame",
+    "depth": 8.69
+   },
+   "patch_row_7_6_left": {
+    "x": 758,
+    "y": 919,
+    "where": "frame",
+    "depth": 6.99
+   },
+   "patch_row_7_6_right": {
+    "x": 1228,
+    "y": 913,
+    "where": "frame",
+    "depth": 7.08
+   },
+   "patch_row_6_0_left": {
+    "x": 726,
+    "y": 1046,
+    "where": "frame",
+    "depth": 5.37
+   },
+   "patch_row_6_0_right": {
+    "x": 1336,
+    "y": 1037,
+    "where": "frame",
+    "depth": 5.47
+   },
+   "right_wall_glass_end_floor": {
+    "x": 1951,
+    "y": 1520,
+    "where": "outside",
+    "depth": 2.89
+   },
+   "left_wall_glass_start_floor": {
+    "x": 691,
+    "y": 1047,
+    "where": "frame",
+    "depth": 5.37
+   },
+   "floor_at_frame_bottom_centre": {
+    "x": 863,
+    "y": 1088,
+    "where": "overscan",
+    "depth": 4.99
+   },
+   "N_sunlit_top_on_body": {
+    "x": 1401,
+    "y": 588,
+    "where": "frame",
+    "depth": 4.46
+   },
+   "lobby_spotlight": {
+    "x": 965,
+    "y": 117,
+    "where": "frame",
+    "depth": 10.92
+   },
+   "lift_door_centre_floor": {
+    "x": 856,
+    "y": 735,
+    "where": "frame",
+    "depth": 12.38
+   },
+   "right_wall_paint_start_floor": {
+    "x": 1564,
+    "y": 1155,
+    "where": "overscan",
+    "depth": 4.48
+   },
+   "right_wall_paint_start_z2": {
+    "x": 1564,
+    "y": 332,
+    "where": "frame",
+    "depth": 4.48
+   },
+   "lift_door.left": {
+    "x": 774,
+    "y": 736,
+    "where": "frame",
+    "depth": 12.35
+   },
+   "lift_door.right": {
+    "x": 938,
+    "y": 735,
+    "where": "frame",
+    "depth": 12.41
+   },
+   "lift_door.top": {
+    "x": 774,
+    "y": 422,
+    "where": "frame",
+    "depth": 12.35
+   },
+   "lift_door.bottom": {
+    "x": 774,
+    "y": 736,
+    "where": "frame",
+    "depth": 12.35
+   },
+   "lift_indicator.left": {
+    "x": 826,
+    "y": 407,
+    "where": "frame",
+    "depth": 12.37
+   },
+   "lift_indicator.right": {
+    "x": 886,
+    "y": 408,
+    "where": "frame",
+    "depth": 12.39
+   },
+   "lift_indicator.top": {
+    "x": 826,
+    "y": 378,
+    "where": "frame",
+    "depth": 12.37
+   },
+   "lift_indicator.bottom": {
+    "x": 886,
+    "y": 408,
+    "where": "frame",
+    "depth": 12.39
+   },
+   "stair_door.left": {
+    "x": 1056,
+    "y": 734,
+    "where": "frame",
+    "depth": 12.45
+   },
+   "stair_door.right": {
+    "x": 1188,
+    "y": 733,
+    "where": "frame",
+    "depth": 12.5
+   },
+   "stair_door.top": {
+    "x": 1056,
+    "y": 423,
+    "where": "frame",
+    "depth": 12.45
+   },
+   "stair_door.bottom": {
+    "x": 1056,
+    "y": 734,
+    "where": "frame",
+    "depth": 12.45
+   },
+   "exit_sign.left": {
+    "x": 1093,
+    "y": 408,
+    "where": "frame",
+    "depth": 12.46
+   },
+   "exit_sign.right": {
+    "x": 1152,
+    "y": 408,
+    "where": "frame",
+    "depth": 12.49
+   },
+   "exit_sign.top": {
+    "x": 1093,
+    "y": 378,
+    "where": "frame",
+    "depth": 12.46
+   },
+   "exit_sign.bottom": {
+    "x": 1093,
+    "y": 408,
+    "where": "frame",
+    "depth": 12.46
+   },
+   "noticeboard.left": {
+    "x": 1564,
+    "y": 744,
+    "where": "frame",
+    "depth": 4.48
+   },
+   "noticeboard.right": {
+    "x": 1819,
+    "y": 834,
+    "where": "frame",
+    "depth": 3.28
+   },
+   "noticeboard.top": {
+    "x": 1819,
+    "y": 328,
+    "where": "frame",
+    "depth": 3.28
+   },
+   "noticeboard.bottom": {
+    "x": 1819,
+    "y": 834,
+    "where": "frame",
+    "depth": 3.28
+   },
+   "bike.left": {
+    "x": 259,
+    "y": 2643,
+    "where": "outside",
+    "depth": 1.37
+   },
+   "bike.right": {
+    "x": 683,
+    "y": 1455,
+    "where": "outside",
+    "depth": 3.08
+   },
+   "bike.top": {
+    "x": 683,
+    "y": 856,
+    "where": "frame",
+    "depth": 3.08
+   },
+   "bike.bottom": {
+    "x": 259,
+    "y": 2643,
+    "where": "outside",
+    "depth": 1.37
+   },
+   "extinguisher.left": {
+    "x": 676,
+    "y": 928,
+    "where": "frame",
+    "depth": 4.92
+   },
+   "extinguisher.right": {
+    "x": 755,
+    "y": 910,
+    "where": "frame",
+    "depth": 5.13
+   },
+   "extinguisher.top": {
+    "x": 683,
+    "y": 695,
+    "where": "frame",
+    "depth": 5.12
+   },
+   "extinguisher.bottom": {
+    "x": 676,
+    "y": 928,
+    "where": "frame",
+    "depth": 4.92
+   },
+   "call_plate.left": {
+    "x": 953,
+    "y": 586,
+    "where": "frame",
+    "depth": 12.41
+   },
+   "call_plate.right": {
+    "x": 970,
+    "y": 586,
+    "where": "frame",
+    "depth": 12.42
+   },
+   "call_plate.top": {
+    "x": 953,
+    "y": 549,
+    "where": "frame",
+    "depth": 12.41
+   },
+   "call_plate.bottom": {
+    "x": 953,
+    "y": 586,
+    "where": "frame",
+    "depth": 12.41
+   },
+   "phone_room_glass.left": {
+    "x": 691,
+    "y": 1047,
+    "where": "frame",
+    "depth": 5.37
+   },
+   "phone_room_glass.right": {
+    "x": 738,
+    "y": 897,
+    "where": "frame",
+    "depth": 7.36
+   },
+   "phone_room_glass.top": {
+    "x": 691,
+    "y": 222,
+    "where": "frame",
+    "depth": 5.37
+   },
+   "phone_room_glass.bottom": {
+    "x": 691,
+    "y": 1047,
+    "where": "frame",
+    "depth": 5.37
+   },
+   "store_door.left": {
+    "x": 395,
+    "y": 1994,
+    "where": "outside",
+    "depth": 1.97
+   },
+   "store_door.right": {
+    "x": 542,
+    "y": 1525,
+    "where": "outside",
+    "depth": 2.87
+   },
+   "store_door.top": {
+    "x": 395,
+    "y": 29,
+    "where": "frame",
+    "depth": 1.97
+   },
+   "store_door.bottom": {
+    "x": 395,
+    "y": 1994,
+    "where": "outside",
+    "depth": 1.97
+   },
+   "N_body.left": {
+    "x": 1290,
+    "y": 1145,
+    "where": "overscan",
+    "depth": 4.55
+   },
+   "N_body.right": {
+    "x": 1518,
+    "y": 1171,
+    "where": "overscan",
+    "depth": 4.38
+   },
+   "N_body.top": {
+    "x": 1309,
+    "y": 433,
+    "where": "frame",
+    "depth": 4.35
+   },
+   "N_body.bottom": {
+    "x": 1309,
+    "y": 1175,
+    "where": "overscan",
+    "depth": 4.35
+   },
+   "F_body.left": {
+    "x": 953,
+    "y": 783,
+    "where": "frame",
+    "depth": 10.31
+   },
+   "F_body.right": {
+    "x": 1045,
+    "y": 788,
+    "where": "frame",
+    "depth": 10.14
+   },
+   "F_body.top": {
+    "x": 955,
+    "y": 469,
+    "where": "frame",
+    "depth": 10.11
+   },
+   "F_body.bottom": {
+    "x": 955,
+    "y": 789,
+    "where": "frame",
+    "depth": 10.11
+   }
+  }
+ }
+}

@@ -1,0 +1,786 @@
+{
+  "beats": [
+    {
+      "visual_intent": "A split office desk where Jordan stares uncomfortably at a red-marked project document while the speaker stands alongside, an unresolved delivery timeline glowing overhead.",
+      "grounding": [
+        {
+          "claim": "Jordan's delayed deliverable scenario illustrates feedback triggering defensiveness.",
+          "hypothetical": true
+        }
+      ],
+      "on_screen": [
+        "Jordan",
+        "Late deliverable"
+      ],
+      "section": "sec1_observable_actions",
+      "change_over_time": false,
+      "hypothetical": true,
+      "treatment_hint": "avatar",
+      "id": "b01",
+      "narration": [
+        "Say Jordan submits a deliverable late.",
+        "You tell them the work looked careless.",
+        "Jordan shuts down, defensive and upset.",
+        "Why did that feedback fail completely?",
+        "Good intentions produced zero progress."
+      ],
+      "job": "hook",
+      "animate_score": 0.2
+    },
+    {
+      "grounding": [
+        {
+          "fact": "F1",
+          "claim": "Constructive feedback guides specific adjustments in future work practice rather than managing emotional comfort."
+        }
+      ],
+      "animate_score": 0.6,
+      "change_over_time": true,
+      "on_screen": [
+        "Constructive feedback",
+        "Work practice"
+      ],
+      "section": "sec1_observable_actions",
+      "treatment_hint": "motion",
+      "id": "b02",
+      "visual_intent": "A comfort gauge icon shifts to the side, replaced by an animated workflow diagram showing forward steps in daily work practice.",
+      "narration": [
+        "Most leaders protect personal feelings first.",
+        "Here is where people slip.",
+        "Constructive feedback guides future work practice,",
+        "not someone's emotional comfort.",
+        "What is our primary goal?",
+        "It guides future work practice."
+      ],
+      "job": "define"
+    },
+    {
+      "narration": [
+        "Calling someone careless attacks their character.",
+        "Why attack personal identity?",
+        "That critique hurts task performance.",
+        "Instead, describe verifiable actions.",
+        "That has a name.",
+        "It is called observable actions.",
+        "Stick to observable actions."
+      ],
+      "visual_intent": "A split comparison display juxtaposing a struck-out character critique label with a highlighted log entry showing observable actions.",
+      "change_over_time": false,
+      "treatment_hint": "template",
+      "on_screen": [
+        "Character critique",
+        "Observable actions"
+      ],
+      "section": "sec1_observable_actions",
+      "animate_score": 0.3,
+      "job": "distinguish",
+      "id": "b03",
+      "grounding": [
+        {
+          "claim": "Directing feedback toward personal identity or character traits rather than specific task details is associated with poorer subsequent task performance.",
+          "fact": "F2"
+        },
+        {
+          "claim": "Anchoring feedback in observable, verifiable actions provides a concrete basis for discussion rather than evaluating personal character.",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "narration": [
+        "Many managers tuck corrective critique,",
+        "between two superficial compliments.",
+        "Does praise soften the hard message?",
+        "Here is where people slip.",
+        "Superficial compliments dilute corrective feedback completely.",
+        "Deliver corrective feedback directly."
+      ],
+      "id": "b04",
+      "animate_score": 0.5,
+      "section": "sec1_observable_actions",
+      "treatment_hint": "motion",
+      "visual_intent": "A three-layered sandwich diagram where outer praise layers dissolve, revealing a clear corrective feedback marker in the centre.",
+      "job": "refute",
+      "on_screen": [
+        "Superal compliments",
+        "Corrective feedback"
+      ],
+      "change_over_time": true,
+      "grounding": [
+        {
+          "fact": "F11",
+          "claim": "Sandwiching corrective feedback between superficial compliments can dilute the core message and obscure the needed changes."
+        }
+      ]
+    },
+    {
+      "section": "sec1_observable_actions",
+      "narration": [
+        "We separate the person from the task.",
+        "Observable, verifiable actions keep conversations grounded.",
+        "Ready for your pocket rule?",
+        "Describe the action, not the person."
+      ],
+      "visual_intent": "A tidy pocket rule card appears beside a clean summary table of observable and verifiable actions.",
+      "job": "consolidate",
+      "treatment_hint": "hybrid",
+      "animate_score": 0.2,
+      "id": "b05",
+      "grounding": [
+        {
+          "claim": "Anchoring feedback in observable, verifiable actions provides a concrete basis for discussion rather than evaluating personal character.",
+          "fact": "F3"
+        }
+      ],
+      "on_screen": [
+        "Observable actions",
+        "Verifiable actions"
+      ],
+      "change_over_time": false
+    },
+    {
+      "narration": [
+        "Jordan sits silently at a desk.",
+        "Why assume Jordan lacks dedication?",
+        "We often blame errors on internal motives.",
+        "That has a name.",
+        "It is called fundamental attribution bias.",
+        "Stop judging internal motives."
+      ],
+      "visual_intent": "An animated thought bubble depicting presumed laziness pops, leaving Jordan seated in front of an overloaded project queue.",
+      "change_over_time": true,
+      "job": "orient",
+      "on_screen": [
+        "Fundamental attribution bias",
+        "Internal motives"
+      ],
+      "hypothetical": true,
+      "animate_score": 0.5,
+      "section": "sec2_operational_impact",
+      "treatment_hint": "motion",
+      "id": "b06",
+      "grounding": [
+        {
+          "fact": "F4",
+          "claim": "Attributing an observed error to internal motives or character traits reflects fundamental attribution bias, which can create interpersonal friction."
+        }
+      ]
+    },
+    {
+      "visual_intent": "A project schedule flow displaying a delayed draft milestone causing an downstream client review blocker on the project timeline.",
+      "job": "demonstrate",
+      "change_over_time": false,
+      "id": "b07",
+      "narration": [
+        "Explain what happened to the schedule.",
+        "The delayed draft pushed client reviews back.",
+        "That has a name.",
+        "It is called operational impact.",
+        "Does Jordan see the business consequences?",
+        "Focus on business consequences."
+      ],
+      "grounding": [
+        {
+          "claim": "Explaining the concrete operational impact of an action helps the recipient understand the business consequences without relying on moral judgments.",
+          "fact": "F5"
+        }
+      ],
+      "section": "sec2_operational_impact",
+      "on_screen": [
+        "Operational impact",
+        "Business consequences"
+      ],
+      "animate_score": 0.3,
+      "treatment_hint": "template"
+    },
+    {
+      "job": "sequence",
+      "visual_intent": "A conversational exchange where a pause timer activates, and Jordan shares vendor dependency constraints across the table.",
+      "narration": [
+        "After stating operational impact, pause.",
+        "Do not rush to speak.",
+        "What blocked your progress on this deliverable?",
+        "Inviting perspective sharing lowers defensiveness.",
+        "Listen before you speak."
+      ],
+      "section": "sec2_operational_impact",
+      "treatment_hint": "motion",
+      "id": "b08",
+      "change_over_time": true,
+      "on_screen": [
+        "Perspective sharing",
+        "Defensiveness"
+      ],
+      "grounding": [
+        {
+          "fact": "F8",
+          "claim": "Pausing after describing an observation and inviting the recipient to share their perspective can help reduce defensiveness."
+        }
+      ],
+      "animate_score": 0.6,
+      "pause_after_s": 2
+    },
+    {
+      "grounding": [
+        {
+          "claim": "Framing feedback around shared goals supports shifting a conversation from an adversarial stance toward collaborative problem solving.",
+          "fact": "F9"
+        },
+        {
+          "claim": "Explaining the concrete operational impact of an action helps the recipient understand the business consequences without relying on moral judgments.",
+          "fact": "F5"
+        }
+      ],
+      "visual_intent": "Two figures moving from opposite sides of a desk to stand side by side before a shared goals dashboard.",
+      "job": "relate",
+      "id": "b09",
+      "on_screen": [
+        "Shared goals",
+        "Collaborative problem solving"
+      ],
+      "treatment_hint": "hybrid",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "section": "sec2_operational_impact",
+      "narration": [
+        "Recall why stating operational impact prevents defensiveness.",
+        "It explains business consequences cleanly.",
+        "We frame the deliverable around shared goals.",
+        "That shifts toward collaborative problem solving.",
+        "How do we tackle this obstacle?",
+        "Solve the problem together."
+      ]
+    },
+    {
+      "animate_score": 0.4,
+      "section": "sec2_operational_impact",
+      "job": "consolidate",
+      "narration": [
+        "Connect the delay directly to business consequences.",
+        "State operational impact clearly.",
+        "Ready for your pocket rule?",
+        "Name the impact, then pause."
+      ],
+      "grounding": [
+        {
+          "claim": "Explaining the concrete operational impact of an action helps the recipient understand the business consequences without relying on moral judgments.",
+          "fact": "F5"
+        },
+        {
+          "claim": "Pausing after describing an observation and inviting the recipient to share their perspective can help reduce defensiveness.",
+          "fact": "F8"
+        }
+      ],
+      "on_screen": [
+        "Operational impact",
+        "Business consequences"
+      ],
+      "change_over_time": true,
+      "visual_intent": "The operational impact and business consequences badges lock into place on an executive checklist.",
+      "treatment_hint": "motion",
+      "id": "b10"
+    },
+    {
+      "narration": [
+        "Picture ordering Jordan to submit earlier.",
+        "Jordan nods quickly just to escape.",
+        "Did that order fix anything?",
+        "Unilateral demands produce only superficial compliance.",
+        "Unilateral demands build shallow compliance."
+      ],
+      "id": "b11",
+      "job": "orient",
+      "visual_intent": "A manager pointing firmly at a calendar while Jordan nods half-heartedly, a superficial compliance tag blinking above.",
+      "on_screen": [
+        "Unilateral demands",
+        "Superficial compliance"
+      ],
+      "treatment_hint": "motion",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "hypothetical": true,
+      "section": "sec3_replacement_habits",
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "Imposing unilateral demands without recipient input often limits commitment to superficial compliance rather than sustained practice change."
+        }
+      ]
+    },
+    {
+      "grounding": [
+        {
+          "fact": "F12",
+          "claim": "Describing past errors without identifying replacement behaviours leaves the recipient aware of failure but uncertain how to improve."
+        }
+      ],
+      "animate_score": 0.2,
+      "job": "distinguish",
+      "on_screen": [
+        "Past errors",
+        "Replacement behaviours"
+      ],
+      "treatment_hint": "template",
+      "section": "sec3_replacement_habits",
+      "visual_intent": "A rearview mirror icon showing past errors transitions to a forward road signpost indicating replacement behaviours.",
+      "narration": [
+        "Here is where people slip.",
+        "Describing past errors without replacement behaviours,",
+        "leaves people aware of failure,",
+        "yet uncertain how to improve.",
+        "What should Jordan do differently next time?",
+        "Show what to do instead."
+      ],
+      "change_over_time": false,
+      "id": "b12"
+    },
+    {
+      "id": "b13",
+      "treatment_hint": "motion",
+      "job": "demonstrate",
+      "on_screen": [
+        "Replacement habits",
+        "Collaborative planning"
+      ],
+      "grounding": [
+        {
+          "fact": "F7",
+          "claim": "Collaboratively developing replacement habits gives the recipient clear, actionable steps for how to perform differently on upcoming tasks."
+        }
+      ],
+      "visual_intent": "A project Kanban board where a stalled vendor card is replaced by an automated early escalation flag created collaboratively.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "section": "sec3_replacement_habits",
+      "narration": [
+        "Work with Jordan on workflow adjustments.",
+        "When vendor reviews stall,",
+        "Jordan flags the bottleneck two days early.",
+        "That has a name.",
+        "It is called replacement habits.",
+        "Collaborative planning creates actionable steps.",
+        "Co-create actionable replacement habits."
+      ]
+    },
+    {
+      "on_screen": [
+        "Follow-up checkpoints",
+        "Replacement behaviours"
+      ],
+      "treatment_hint": "motion",
+      "change_over_time": true,
+      "grounding": [
+        {
+          "claim": "Agreeing on explicit follow-up checkpoints helps evaluate whether replacement behaviours are being applied in practice.",
+          "fact": "F10"
+        }
+      ],
+      "visual_intent": "A digital calendar highlighting a ten-minute checkpoint scheduled two days prior to milestone delivery.",
+      "animate_score": 0.5,
+      "section": "sec3_replacement_habits",
+      "narration": [
+        "Good intentions still need an explicit anchor.",
+        "Agree on explicit follow-up checkpoints next week.",
+        "This evaluates replacement behaviours in practice.",
+        "How do we verify progress?",
+        "Set a clear checkpoint."
+      ],
+      "id": "b14",
+      "job": "sequence"
+    },
+    {
+      "on_screen": [
+        "Replacement habits",
+        "Follow-up checkpoints"
+      ],
+      "animate_score": 0.3,
+      "grounding": [
+        {
+          "claim": "Collaboratively developing replacement habits gives the recipient clear, actionable steps for how to perform differently on upcoming tasks.",
+          "fact": "F7"
+        },
+        {
+          "claim": "Agreeing on explicit follow-up checkpoints helps evaluate whether replacement behaviours are being applied in practice.",
+          "fact": "F10"
+        }
+      ],
+      "narration": [
+        "Never leave without an agreed habit.",
+        "Design clear replacement habits together.",
+        "Anchor that habit to follow-up checkpoints.",
+        "Ready for your pocket rule?",
+        "Agree on habits, then verify."
+      ],
+      "visual_intent": "A compact summary card displaying replacement habits and follow-up checkpoints side by side.",
+      "id": "b15",
+      "section": "sec3_replacement_habits",
+      "job": "consolidate",
+      "change_over_time": false,
+      "treatment_hint": "hybrid"
+    },
+    {
+      "on_screen": [
+        "Jordan",
+        "Misses milestone"
+      ],
+      "treatment_hint": "template",
+      "visual_intent": "A delivery calendar showing a missed onboarding schedule milestone, with three dialogue speech options appearing below.",
+      "job": "orient",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "The onboarding schedule missed milestone sets up dialogue options."
+        }
+      ],
+      "section": "sec4_dialogue_evaluation",
+      "narration": [
+        "Imagine Jordan misses another milestone.",
+        "How will you open that discussion?",
+        "Evaluate these three options carefully."
+      ],
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "id": "b16"
+    },
+    {
+      "recall": {
+        "tempting_wrong": "B. Wrapping critique in praise dilutes the message and obscures needed change.",
+        "prompt": "Which response best addresses a missed milestone without triggering defensiveness?",
+        "kind": "quiz",
+        "answer": "C. Grounded in observable actions, explores blockers, and co-creates an earlier checkpoint.",
+        "options": [
+          "A. You need to be more committed to this project and manage your time better.",
+          "B. You missed the milestone, but your presentation slides looked really amazing.",
+          "C. The milestone arrived two days late without sign-offs; let us review blockers and agree on an earlier checkpoint."
+        ]
+      },
+      "on_screen": [
+        "Option A",
+        "Option B",
+        "Option C"
+      ],
+      "treatment_hint": "template",
+      "job": "check",
+      "visual_intent": "Three selectable dialogue options displayed prominently with an active countdown timer indicator at the base.",
+      "id": "b17",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Evaluating feedback dialogue choices for missed milestones."
+        }
+      ],
+      "section": "sec4_dialogue_evaluation",
+      "narration": [
+        "Now you.",
+        "Which response addresses the missed milestone without defensiveness?",
+        "Option A: You need to be more committed.",
+        "Option B: You missed it, but your slides looked amazing.",
+        "Option C: The milestone arrived two days late without sign-offs;",
+        "let us review blockers,",
+        "and agree on an earlier checkpoint.",
+        "Pause the video and decide."
+      ],
+      "pause_after_s": 4,
+      "change_over_time": false,
+      "animate_score": 0.2
+    },
+    {
+      "on_screen": [
+        "Option C",
+        "Observable actions",
+        "Superficial compliments"
+      ],
+      "visual_intent": "Option C highlights in green with checkmarks, while Option A and Option B fade out with red explanatory tags detailing character attack and dilution.",
+      "job": "refute",
+      "id": "b18",
+      "change_over_time": true,
+      "grounding": [
+        {
+          "fact": "F3",
+          "claim": "Anchoring feedback in observable, verifiable actions provides a concrete basis for discussion rather than evaluating personal character."
+        },
+        {
+          "claim": "Sandwiching corrective feedback between superficial compliments can dilute the core message and obscure the needed changes.",
+          "fact": "F11"
+        },
+        {
+          "fact": "F2",
+          "claim": "Directing feedback toward personal identity or character traits rather than specific task details is associated with poorer subsequent task performance."
+        }
+      ],
+      "section": "sec4_dialogue_evaluation",
+      "narration": [
+        "Option C is the clear answer.",
+        "It states observable actions directly.",
+        "Why is Option B tempting?",
+        "Superficial compliments feel polite,",
+        "yet they obscure the required change completely.",
+        "Choose Option C every time."
+      ],
+      "animate_score": 0.6,
+      "treatment_hint": "motion"
+    },
+    {
+      "section": "sec4_dialogue_evaluation",
+      "grounding": [
+        {
+          "claim": "Directing feedback toward personal identity or character traits rather than specific task details is associated with poorer subsequent task performance.",
+          "fact": "F2"
+        },
+        {
+          "fact": "F8",
+          "claim": "Pausing after describing an observation and inviting the recipient to share their perspective can help reduce defensiveness."
+        }
+      ],
+      "animate_score": 0.3,
+      "on_screen": [
+        "Task performance",
+        "Character critique",
+        "Perspective sharing"
+      ],
+      "treatment_hint": "template",
+      "id": "b19",
+      "visual_intent": "A balanced scale showing character critique weighing down performance, while perspective sharing balances the partnership.",
+      "narration": [
+        "Notice what happened in that choice.",
+        "We protected task performance by avoiding character critique.",
+        "Instead, we invited perspective sharing,",
+        "from the start.",
+        "Can you spot that difference?",
+        "The conversation became a partnership."
+      ],
+      "job": "relate",
+      "change_over_time": false
+    },
+    {
+      "change_over_time": true,
+      "treatment_hint": "motion",
+      "id": "b20",
+      "animate_score": 0.5,
+      "job": "transition",
+      "narration": [
+        "Evaluating isolated phrases is a great start.",
+        "Now let us run the full conversation from scratch.",
+        "Are you ready to see it work?",
+        "Watch the complete workflow unfold."
+      ],
+      "section": "sec4_dialogue_evaluation",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "Transitioning from dialogue evaluation to end-to-end conversational conversion."
+        }
+      ],
+      "visual_intent": "The dialogue cards fold into a multi-step conversation workflow arrow leading to the project table.",
+      "on_screen": [
+        "Full conversation",
+        "Complete workflow"
+      ]
+    },
+    {
+      "job": "orient",
+      "animate_score": 0.5,
+      "narration": [
+        "You sit down with Jordan,",
+        "across a shared meeting table.",
+        "The project onboarding schedule is delayed again.",
+        "How do you steer this meeting?",
+        "Step through the four moves."
+      ],
+      "hypothetical": true,
+      "section": "sec5_deliverable_conversion",
+      "treatment_hint": "motion",
+      "id": "b21",
+      "change_over_time": true,
+      "on_screen": [
+        "Jordan",
+        "Onboarding schedule"
+      ],
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "The onboarding schedule review represents an emotionally charged friction point."
+        }
+      ],
+      "visual_intent": "An office meeting room where Jordan and the team lead sit with the delayed project onboarding schedule between them."
+    },
+    {
+      "narration": [
+        "First, state observable actions and operational impact.",
+        "The onboarding schedule arrived two days after our milestone.",
+        "That forced our training team to postpone orientation.",
+        "Did that trigger defensiveness?",
+        "Observable actions prevent instant resentment."
+      ],
+      "animate_score": 0.3,
+      "section": "sec5_deliverable_conversion",
+      "job": "demonstrate",
+      "on_screen": [
+        "Observable actions",
+        "Operational impact"
+      ],
+      "change_over_time": false,
+      "visual_intent": "The deliverable schedule lights up with exact date stamps and the subsequent training team delay highlighted without personal blame.",
+      "id": "b22",
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Anchoring feedback in observable, verifiable actions provides a concrete basis for discussion rather than evaluating personal character.",
+          "fact": "F3"
+        },
+        {
+          "fact": "F5",
+          "claim": "Explaining the concrete operational impact of an action helps the recipient understand the business consequences without relying on moral judgments."
+        }
+      ]
+    },
+    {
+      "on_screen": [
+        "Collaborative problem solving",
+        "Shared goals"
+      ],
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "grounding": [
+        {
+          "fact": "F8",
+          "claim": "Pausing after describing an observation and inviting the recipient to share their perspective can help reduce defensiveness."
+        },
+        {
+          "claim": "Framing feedback around shared goals supports shifting a conversation from an adversarial stance toward collaborative problem solving.",
+          "fact": "F9"
+        }
+      ],
+      "visual_intent": "Jordan points out the vendor dependency bottleneck on screen, and both colleagues begin adjusting the approval workflow together.",
+      "narration": [
+        "Next, ask what constraints emerged.",
+        "Jordan reveals that three vendor approvals were stuck.",
+        "Now we shift to collaborative problem solving.",
+        "Can we solve this together?",
+        "Shared goals turn friction into collaboration."
+      ],
+      "section": "sec5_deliverable_conversion",
+      "id": "b23",
+      "job": "demonstrate",
+      "treatment_hint": "motion"
+    },
+    {
+      "narration": [
+        "Third, co-create explicit replacement habits.",
+        "Jordan flags vendor delays three days early.",
+        "Fourth, schedule follow-up checkpoints next Tuesday.",
+        "Why does this work?",
+        "Commitments are explicit and practical."
+      ],
+      "job": "demonstrate",
+      "id": "b24",
+      "treatment_hint": "template",
+      "visual_intent": "A calendar entry for Tuesday 10am is created alongside a specific replacement habit card for vendor notification.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "on_screen": [
+        "Replacement habits",
+        "Follow-up checkpoints"
+      ],
+      "section": "sec5_deliverable_conversion",
+      "grounding": [
+        {
+          "claim": "Collaboratively developing replacement habits gives the recipient clear, actionable steps for how to perform differently on upcoming tasks.",
+          "fact": "F7"
+        },
+        {
+          "fact": "F10",
+          "claim": "Agreeing on explicit follow-up checkpoints helps evaluate whether replacement behaviours are being applied in practice."
+        }
+      ]
+    },
+    {
+      "animate_score": 0.5,
+      "job": "payoff",
+      "on_screen": [
+        "On time",
+        "Actions and solutions"
+      ],
+      "hypothetical": true,
+      "id": "b25",
+      "change_over_time": true,
+      "section": "sec5_deliverable_conversion",
+      "grounding": [
+        {
+          "claim": "Jordan's revised deliverable arrives on schedule with trust intact.",
+          "hypothetical": true
+        }
+      ],
+      "narration": [
+        "Two weeks later, the revised release arrives on time.",
+        "The working relationship remains completely intact.",
+        "Did you have to sugarcoat anything?",
+        "No.",
+        "You focused on actions and solutions.",
+        "Results improved while trust deepened."
+      ],
+      "visual_intent": "The project dashboard turns green with an on-time release banner, showing Jordan and the team lead smiling and shaking hands.",
+      "treatment_hint": "motion"
+    },
+    {
+      "on_screen": [
+        "Observable actions",
+        "Operational impact"
+      ],
+      "id": "b26",
+      "grounding": [
+        {
+          "claim": "Anchoring feedback in observable, verifiable actions provides a concrete basis for discussion rather than evaluating personal character.",
+          "fact": "F3"
+        },
+        {
+          "fact": "F5",
+          "claim": "Explaining the concrete operational impact of an action helps the recipient understand the business consequences without relying on moral judgments."
+        }
+      ],
+      "visual_intent": "The presenter stands beside a takeaway action card outlining the four conversational steps for tomorrow's feedback discussions.",
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "job": "consolidate",
+      "narration": [
+        "Take this approach to your desk tomorrow morning.",
+        "Draft observable actions before every meeting.",
+        "Name the operational impact, pause, and listen.",
+        "Here is your final pocket rule.",
+        "Frame the action, then solve together."
+      ],
+      "section": "sec5_deliverable_conversion",
+      "change_over_time": false
+    }
+  ],
+  "wpm_target": 140,
+  "sections": [
+    {
+      "title": "Observable Actions",
+      "id": "sec1_observable_actions",
+      "role": "hook"
+    },
+    {
+      "id": "sec2_operational_impact",
+      "title": "Operational Impact",
+      "role": "build"
+    },
+    {
+      "title": "Replacement Habits",
+      "id": "sec3_replacement_habits",
+      "role": "build"
+    },
+    {
+      "id": "sec4_dialogue_evaluation",
+      "title": "Dialogue Evaluation",
+      "role": "check"
+    },
+    {
+      "role": "payoff",
+      "id": "sec5_deliverable_conversion",
+      "title": "Deliverable Conversion"
+    }
+  ],
+  "title": "Giving Feedback That Changes Behaviour"
+}

@@ -1,0 +1,250 @@
+{
+  "id": "screencast",
+  "name": "Living screencast",
+  "reads_as": "A believable generic application redrawn as sharp vector UI on a quiet light desk: a window or browser with a sidebar, a top bar with search, tabs, a toolbar and content (tables, forms, cards, a detail pane, settings, dialogs, menus, toasts), every word supplied by the lesson. The pointer is the learner: it travels at a person's pace, hovers, presses and types; the camera frames the active region and returns. A teaching layer in one magenta signal colour that no product state uses (click rings, dark callouts with leaders, a spotlight freeze that dims all but the result, numbered region tags) sits visibly on top of the product, which keeps a neutral product palette (blue primary, green success, red error, amber warning). Two registers: a calm tour of the whole screen that names regions, and a zoomed, step-precise walkthrough with a keystroke HUD, chapter and step pills and a time-lapse tag.",
+  "look_family": "editorial",
+  "guide": "docs/styles/guides/screencast.md",
+  "fits": [
+    "software training",
+    "systems training",
+    "new tool rollout",
+    "how to use an internal system",
+    "settings and configuration",
+    "security settings",
+    "data entry and forms",
+    "reports and exports",
+    "sharing and permissions",
+    "onboarding to a product"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "people stories",
+    "abstract concepts with no screen",
+    "children",
+    "wellbeing"
+  ],
+  "palette": {
+    "field": "#E9EDF3",
+    "field2": "#DCE2EA",
+    "surface": "#FFFFFF",
+    "surface2": "#F3F5F8",
+    "ink": "#101828",
+    "muted": "#475467",
+    "line": "#6B7588",
+    "accent": "#2456D3",
+    "accent2": "#C0177A",
+    "accent3": "#5B6B82",
+    "accent4": "#B45309",
+    "pos": "#11805C",
+    "neg": "#C52A2A",
+    "shadow": "#0B1220",
+    "onAccent": "#FFFFFF",
+    "caption_active": "#FFD36B"
+  },
+  "_palette_note": "Two colour systems on purpose (van der Meij and van der Meij 2013, G6.3: signals must be clearly perceived as imposed and never confused with the interface). The PRODUCT uses accent (blue primary), pos, neg, accent4 (amber warning) and accent3 (slate). The TEACHING layer uses accent2 only, a magenta no product state uses: click rings, callout leaders, the spotlight edge, region tags, the active chapter pill. field is the desk behind the window; surface the window; surface2 the sidebar and table heads; field2 the hairlines. Contrast (computed by the lint): ink on surface 17.75:1, muted on surface 7.69:1, accent2 on field 4.90:1, white on accent2 5.76:1.",
+  "fonts": {
+    "display": {
+      "family": "Inter",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "faces": [
+      {
+        "family": "Inter",
+        "weight": 400,
+        "file": "inter-latin-400-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "file": "inter-latin-600-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "_fonts_note": "One family for the product and the teaching layer: Inter is what a generic modern app is set in, so the redrawn UI reads as software, not as a slide. JetBrains Mono for code, IDs and a URL when a lesson shows them.",
+  "type": {
+    "display": [
+      96,
+      132
+    ],
+    "hero": [
+      80,
+      112
+    ],
+    "title": [
+      52,
+      72
+    ],
+    "lead": [
+      32,
+      40
+    ],
+    "body": [
+      28,
+      34
+    ],
+    "label": [
+      24,
+      28
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "screencast": {
+    "_note": "read by runtime/engines/screencast.js. UI text is drawn at VIDEO sizes, not desktop sizes (docs/research/2026-10-16-style-screencast.md section 4): 20 px is the floor for context text, 32 px ON SCREEN (after zoom) for words the learner must read, overlays 26 to 32 px in screen space.",
+    "ui_text": 21,
+    "ui_small": 20,
+    "ui_head": 26,
+    "row": 56,
+    "nav_row": 54,
+    "control_h": 48,
+    "radius": 10,
+    "zoom_min": 1.25,
+    "zoom_max": 2.4,
+    "zoom_in_s": 0.8,
+    "zoom_out_s": 0.7,
+    "pointer_px_s": 1500,
+    "dwell_s": 0.3,
+    "after_click_s": 0.6,
+    "type_cps": 14,
+    "read_px": 32
+  },
+  "shape": {
+    "radius": 12,
+    "stroke": 2,
+    "shading": "flat",
+    "shadow": "offset",
+    "shadow_dx": 0,
+    "shadow_dy": 12,
+    "shadow_opacity": 0.1
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.3,
+    "move": 0.36,
+    "exit": 0.25,
+    "stagger": 0.06,
+    "draw": 0.7,
+    "count": 1.0,
+    "overshoot": false
+  },
+  "_motion_note": "UI micro-motion follows NN/g (2020): 100 to 400 ms, ease-out on entrances, exits a little shorter. The camera is not UI motion: zoom in 0.8 s and out 0.7 s, eased in and out, one move in flight at a time (screencast block).",
+  "ambient": {
+    "kind": "none",
+    "_note": "the desk behind the window is a flat quiet field: no dots, grids or drift (vestibular safety, WCAG 2.3.3; nothing competes with the pointer)"
+  },
+  "captions": {
+    "bg": "rgba(16,24,40,0.9)",
+    "fg": "surface",
+    "active": "caption_active",
+    "radius": 12,
+    "font": "body",
+    "size": 34,
+    "weight": 600,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 2.0
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2B2420",
+      "#4A3426",
+      "#6B4A2E",
+      "#1E1E24"
+    ],
+    "cloth": "ink",
+    "hair": "shadow",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "neg",
+    "extras": "none",
+    "_extras_note": "a screencast is about the screen: no background crowd. People appear only as avatars inside the product (from a designed avatar kit, A-09) or as a presenter in another style's beat; never drawn in code."
+  },
+  "roles": {
+    "kicker": "accent2",
+    "chapter_kicker": "accent2",
+    "term": "accent",
+    "stat_value": "ink",
+    "date": "muted",
+    "quiz_letter": "onAccent",
+    "ui_mark": "accent2",
+    "link": "accent",
+    "button": "accent",
+    "me_bubble": "surface2",
+    "person_cloth": "ink",
+    "turn_card": "shadow",
+    "section_label": "muted",
+    "avatar": [
+      "accent",
+      "accent3"
+    ]
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "One app, one take: hold the shell across the beats of a chapter (keep) and let the engine's camera do the moving. A cut between chapters, ideally under a chapter card; never a wipe across the product (it reads as the app changing).",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 50,
+    "_note": "low and passive under the voice; the click and key sounds are the foley, thinned (every 3rd key)"
+  },
+  "fx": {
+    "grain": 0,
+    "vignette": 0,
+    "intensity": 1.0,
+    "colors": [
+      "accent",
+      "surface2",
+      "accent"
+    ],
+    "_background_note": "no shader background, grain or vignette: a screencast must look like a clean screen; the spotlight freeze is drawn by the engine in SVG (an even-odd cut-out), not by the fx spotlight, so it follows the engine's camera exactly"
+  },
+  "pace": {
+    "text_warn_px": 20,
+    "_why": "the tour register shows the whole application, where context text (other table rows, nav labels already named) is 20 to 22 px by design; words the learner must read are framed by the walkthrough's zoom to 32 px or more on screen (research 2026-10-16 section 4). The 18 px error stays."
+  }
+}

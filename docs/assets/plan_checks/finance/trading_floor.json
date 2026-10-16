@@ -1,0 +1,834 @@
+{
+ "scene": "trading_floor",
+ "camera_spec": {
+  "camera": {
+   "x": 7.0,
+   "y": 1.2,
+   "eye": 1.62,
+   "yaw": -8,
+   "hfov": 55,
+   "horizon_pct": 44
+  },
+  "walls": [
+   {
+    "name": "far wall",
+    "axis": "y",
+    "at": 16.0
+   },
+   {
+    "name": "street wall with windows (left)",
+    "axis": "x",
+    "at": 0.0
+   },
+   {
+    "name": "right wall",
+    "axis": "x",
+    "at": 14.0
+   }
+  ],
+  "points": {
+   "far_left_floor": [
+    0,
+    16.0,
+    0
+   ],
+   "far_right_floor": [
+    14,
+    16.0,
+    0
+   ],
+   "far_left_top": [
+    0,
+    16.0,
+    3.0
+   ],
+   "far_x7_top": [
+    7,
+    16.0,
+    3.0
+   ],
+   "wscreen1_TL": [
+    2.9,
+    16.0,
+    2.96
+   ],
+   "wscreen1_BR": [
+    3.98,
+    16.0,
+    2.35
+   ],
+   "wscreen1b_TL": [
+    4.2,
+    16.0,
+    2.96
+   ],
+   "wscreen1b_BR": [
+    5.28,
+    16.0,
+    2.35
+   ],
+   "wscreen2_TL": [
+    8.72,
+    16.0,
+    2.96
+   ],
+   "wscreen2_BR": [
+    9.8,
+    16.0,
+    2.35
+   ],
+   "wscreen2b_TL": [
+    10.02,
+    16.0,
+    2.96
+   ],
+   "wscreen2b_BR": [
+    11.1,
+    16.0,
+    2.35
+   ],
+   "clocks_left": [
+    5.9,
+    16.0,
+    2.65
+   ],
+   "clocks_right": [
+    8.1,
+    16.0,
+    2.65
+   ],
+   "band_TL": [
+    0,
+    16.0,
+    2.1
+   ],
+   "band_BR": [
+    14,
+    16.0,
+    1.2
+   ],
+   "win_y14_near_sill": [
+    0,
+    14.0,
+    0.85
+   ],
+   "win_y15.6_far_head": [
+    0,
+    15.6,
+    2.85
+   ],
+   "win_y15.6_far_sill": [
+    0,
+    15.6,
+    0.85
+   ],
+   "win_y6_near_sill": [
+    0,
+    6.0,
+    0.85
+   ],
+   "win_y7.6_far_head": [
+    0,
+    7.6,
+    2.85
+   ],
+   "win_y12_near_sill": [
+    0,
+    12.0,
+    0.85
+   ],
+   "win_y13.6_far_head": [
+    0,
+    13.6,
+    2.85
+   ],
+   "win_y9_near_sill": [
+    0,
+    9.0,
+    0.85
+   ],
+   "aisle_far_L": [
+    6.0,
+    16.0,
+    0
+   ],
+   "aisle_far_R": [
+    8.0,
+    16.0,
+    0
+   ],
+   "rowL0_aisle_end_scrtop": [
+    6.0,
+    3.9,
+    1.47
+   ],
+   "rowL0_aisle_end_desk_near": [
+    6.0,
+    3.0,
+    0.72
+   ],
+   "rowR0_aisle_end_scrtop": [
+    8.0,
+    3.9,
+    1.47
+   ],
+   "rowR0_aisle_end_desk_near": [
+    8.0,
+    3.0,
+    0.72
+   ],
+   "rowL1_aisle_end_scrtop": [
+    6.0,
+    8.5,
+    1.47
+   ],
+   "rowL1_aisle_end_desk_near": [
+    6.0,
+    7.6,
+    0.72
+   ],
+   "rowR1_aisle_end_scrtop": [
+    8.0,
+    8.5,
+    1.47
+   ],
+   "rowR1_aisle_end_desk_near": [
+    8.0,
+    7.6,
+    0.72
+   ],
+   "rowL2_aisle_end_scrtop": [
+    6.0,
+    13.1,
+    1.47
+   ],
+   "rowL2_aisle_end_desk_near": [
+    6.0,
+    12.2,
+    0.72
+   ],
+   "rowR2_aisle_end_scrtop": [
+    8.0,
+    13.1,
+    1.47
+   ],
+   "rowR2_aisle_end_desk_near": [
+    8.0,
+    12.2,
+    0.72
+   ],
+   "feat_desk_near_left": [
+    4.4,
+    7.6,
+    0.72
+   ],
+   "feat_desk_near_right": [
+    6.0,
+    7.6,
+    0.72
+   ],
+   "feat_scr_top_left": [
+    4.4,
+    8.45,
+    1.47
+   ],
+   "feat_scr_bot_right": [
+    6.0,
+    8.45,
+    0.8
+   ],
+   "dealer_head_top": [
+    5.2,
+    6.9,
+    1.76
+   ],
+   "dealer_head_c": [
+    5.2,
+    6.9,
+    1.64
+   ],
+   "dealer_feet": [
+    5.2,
+    6.9,
+    0
+   ],
+   "comp_head_top": [
+    6.7,
+    6.5,
+    1.7
+   ],
+   "comp_head_c": [
+    6.7,
+    6.5,
+    1.58
+   ],
+   "comp_feet": [
+    6.7,
+    6.5,
+    0
+   ],
+   "walker_head_top": [
+    7.4,
+    11.6,
+    1.78
+   ],
+   "walker_feet": [
+    7.4,
+    11.6,
+    0
+   ],
+   "walker_head_c": [
+    7.4,
+    11.6,
+    1.66
+   ],
+   "chair_pushed": [
+    4.4,
+    6.7,
+    0.95
+   ],
+   "chair_pushed_seat": [
+    4.4,
+    6.6,
+    0.47
+   ],
+   "row0_L_far_scr_top": [
+    6.0,
+    4.8,
+    1.47
+   ],
+   "row0_L_near_scr_top": [
+    6.0,
+    3.0,
+    1.47
+   ],
+   "row0_L_far_desk": [
+    6.0,
+    4.8,
+    0.72
+   ],
+   "row0_R_far_scr_top": [
+    8.0,
+    4.8,
+    1.47
+   ],
+   "row0_R_far_desk": [
+    8.0,
+    4.8,
+    0.72
+   ],
+   "dealer_waist": [
+    5.2,
+    6.9,
+    1.0
+   ],
+   "colA_top": [
+    3.0,
+    10.4,
+    3.0
+   ],
+   "colA_floor_R": [
+    3.25,
+    10.15,
+    0
+   ],
+   "colA_floor_L": [
+    2.75,
+    10.15,
+    0
+   ],
+   "colB_floor_L": [
+    10.75,
+    10.15,
+    0
+   ],
+   "colB_top": [
+    11.0,
+    10.4,
+    3.0
+   ],
+   "colC_floor_R": [
+    3.25,
+    4.15,
+    0
+   ],
+   "colC_top": [
+    3.0,
+    4.4,
+    3.0
+   ],
+   "colD_floor_L": [
+    10.75,
+    4.15,
+    0
+   ]
+  },
+  "behind": [
+   "dealer_head_top",
+   "dealer_head_c",
+   "comp_head_top",
+   "comp_head_c",
+   "walker_head_top",
+   "walker_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1219,
+   "along_x": -12162,
+   "horizon_y": 475
+  },
+  "points": {
+   "far_left_floor": {
+    "x": 385,
+    "y": 666,
+    "where": "frame",
+    "depth": 15.63
+   },
+   "far_right_floor": {
+    "x": 2172,
+    "y": 694,
+    "where": "outside",
+    "depth": 13.68
+   },
+   "far_left_top": {
+    "x": 385,
+    "y": 312,
+    "where": "frame",
+    "depth": 15.63
+   },
+   "far_x7_top": {
+    "x": 1219,
+    "y": 302,
+    "where": "frame",
+    "depth": 14.66
+   },
+   "wscreen1_TL": {
+    "x": 718,
+    "y": 313,
+    "where": "frame",
+    "depth": 15.23
+   },
+   "wscreen1_BR": {
+    "x": 846,
+    "y": 386,
+    "where": "frame",
+    "depth": 15.08
+   },
+   "wscreen1b_TL": {
+    "x": 873,
+    "y": 311,
+    "where": "frame",
+    "depth": 15.05
+   },
+   "wscreen1b_BR": {
+    "x": 1004,
+    "y": 385,
+    "where": "frame",
+    "depth": 14.9
+   },
+   "wscreen2_TL": {
+    "x": 1441,
+    "y": 304,
+    "where": "frame",
+    "depth": 14.42
+   },
+   "wscreen2_BR": {
+    "x": 1585,
+    "y": 381,
+    "where": "frame",
+    "depth": 14.27
+   },
+   "wscreen2b_TL": {
+    "x": 1614,
+    "y": 302,
+    "where": "frame",
+    "depth": 14.24
+   },
+   "wscreen2b_BR": {
+    "x": 1761,
+    "y": 380,
+    "where": "frame",
+    "depth": 14.09
+   },
+   "clocks_left": {
+    "x": 1081,
+    "y": 347,
+    "where": "frame",
+    "depth": 14.81
+   },
+   "clocks_right": {
+    "x": 1360,
+    "y": 344,
+    "where": "frame",
+    "depth": 14.5
+   },
+   "band_TL": {
+    "x": 385,
+    "y": 419,
+    "where": "frame",
+    "depth": 15.63
+   },
+   "band_BR": {
+    "x": 2172,
+    "y": 532,
+    "where": "outside",
+    "depth": 13.68
+   },
+   "win_y14_near_sill": {
+    "x": 264,
+    "y": 579,
+    "where": "frame",
+    "depth": 13.65
+   },
+   "win_y15.6_far_head": {
+    "x": 363,
+    "y": 326,
+    "where": "frame",
+    "depth": 15.23
+   },
+   "win_y15.6_far_sill": {
+    "x": 363,
+    "y": 568,
+    "where": "frame",
+    "depth": 15.23
+   },
+   "win_y6_near_sill": {
+    "x": -1057,
+    "y": 723,
+    "where": "outside",
+    "depth": 5.73
+   },
+   "win_y7.6_far_head": {
+    "x": -564,
+    "y": 165,
+    "where": "outside",
+    "depth": 7.31
+   },
+   "win_y12_near_sill": {
+    "x": 102,
+    "y": 597,
+    "where": "frame",
+    "depth": 11.67
+   },
+   "win_y13.6_far_head": {
+    "x": 236,
+    "y": 304,
+    "where": "frame",
+    "depth": 13.25
+   },
+   "win_y9_near_sill": {
+    "x": -279,
+    "y": 638,
+    "where": "outside",
+    "depth": 8.7
+   },
+   "aisle_far_L": {
+    "x": 1093,
+    "y": 677,
+    "where": "frame",
+    "depth": 14.8
+   },
+   "aisle_far_R": {
+    "x": 1347,
+    "y": 681,
+    "where": "frame",
+    "depth": 14.52
+   },
+   "rowL0_aisle_end_scrtop": {
+    "x": 557,
+    "y": 574,
+    "where": "frame",
+    "depth": 2.81
+   },
+   "rowL0_aisle_end_desk_near": {
+    "x": 250,
+    "y": 1339,
+    "where": "outside",
+    "depth": 1.92
+   },
+   "rowR0_aisle_end_scrtop": {
+    "x": 1954,
+    "y": 584,
+    "where": "overscan",
+    "depth": 2.53
+   },
+   "rowR0_aisle_end_desk_near": {
+    "x": 2352,
+    "y": 1485,
+    "where": "outside",
+    "depth": 1.64
+   },
+   "rowL1_aisle_end_scrtop": {
+    "x": 966,
+    "y": 513,
+    "where": "frame",
+    "depth": 7.37
+   },
+   "rowL1_aisle_end_desk_near": {
+    "x": 932,
+    "y": 731,
+    "where": "frame",
+    "depth": 6.48
+   },
+   "rowR1_aisle_end_scrtop": {
+    "x": 1482,
+    "y": 514,
+    "where": "frame",
+    "depth": 7.09
+   },
+   "rowR1_aisle_end_desk_near": {
+    "x": 1520,
+    "y": 743,
+    "where": "frame",
+    "depth": 6.2
+   },
+   "rowL2_aisle_end_scrtop": {
+    "x": 1063,
+    "y": 498,
+    "where": "frame",
+    "depth": 11.92
+   },
+   "rowL2_aisle_end_desk_near": {
+    "x": 1050,
+    "y": 626,
+    "where": "frame",
+    "depth": 11.03
+   },
+   "rowR2_aisle_end_scrtop": {
+    "x": 1379,
+    "y": 499,
+    "where": "frame",
+    "depth": 11.65
+   },
+   "rowR2_aisle_end_desk_near": {
+    "x": 1392,
+    "y": 630,
+    "where": "frame",
+    "depth": 10.75
+   },
+   "feat_desk_near_left": {
+    "x": 496,
+    "y": 723,
+    "where": "frame",
+    "depth": 6.7
+   },
+   "feat_desk_near_right": {
+    "x": 932,
+    "y": 731,
+    "where": "frame",
+    "depth": 6.48
+   },
+   "feat_scr_top_left": {
+    "x": 577,
+    "y": 512,
+    "where": "frame",
+    "depth": 7.54
+   },
+   "feat_scr_bot_right": {
+    "x": 965,
+    "y": 682,
+    "where": "frame",
+    "depth": 7.32
+   },
+   "dealer_head_top": {
+    "x": 651,
+    "y": 431,
+    "where": "frame",
+    "depth": 5.9,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      2.33,
+      16.0,
+      1.98
+     ]
+    }
+   },
+   "dealer_head_c": {
+    "x": 651,
+    "y": 469,
+    "where": "frame",
+    "depth": 5.9,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      2.33,
+      16.0,
+      1.67
+     ]
+    }
+   },
+   "dealer_feet": {
+    "x": 651,
+    "y": 982,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "comp_head_top": {
+    "x": 1114,
+    "y": 447,
+    "where": "frame",
+    "depth": 5.29,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      6.16,
+      16.0,
+      1.84
+     ]
+    }
+   },
+   "comp_head_c": {
+    "x": 1114,
+    "y": 489,
+    "where": "frame",
+    "depth": 5.29,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      6.16,
+      16.0,
+      1.51
+     ]
+    }
+   },
+   "comp_feet": {
+    "x": 1114,
+    "y": 1040,
+    "where": "frame",
+    "depth": 5.29
+   },
+   "walker_head_top": {
+    "x": 1292,
+    "y": 446,
+    "where": "frame",
+    "depth": 10.24,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      7.57,
+      16.0,
+      1.85
+     ]
+    }
+   },
+   "walker_feet": {
+    "x": 1292,
+    "y": 767,
+    "where": "frame",
+    "depth": 10.24
+   },
+   "walker_head_c": {
+    "x": 1292,
+    "y": 468,
+    "where": "frame",
+    "depth": 10.24,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      7.57,
+      16.0,
+      1.68
+     ]
+    }
+   },
+   "chair_pushed": {
+    "x": 386,
+    "y": 688,
+    "where": "frame",
+    "depth": 5.81
+   },
+   "chair_pushed_seat": {
+    "x": 371,
+    "y": 847,
+    "where": "frame",
+    "depth": 5.71
+   },
+   "row0_L_far_scr_top": {
+    "x": 716,
+    "y": 550,
+    "where": "frame",
+    "depth": 3.7
+   },
+   "row0_L_near_scr_top": {
+    "x": 250,
+    "y": 619,
+    "where": "frame",
+    "depth": 1.92
+   },
+   "row0_L_far_desk": {
+    "x": 716,
+    "y": 923,
+    "where": "frame",
+    "depth": 3.7
+   },
+   "row0_R_far_scr_top": {
+    "x": 1763,
+    "y": 556,
+    "where": "frame",
+    "depth": 3.43
+   },
+   "row0_R_far_desk": {
+    "x": 1763,
+    "y": 960,
+    "where": "frame",
+    "depth": 3.43
+   },
+   "dealer_waist": {
+    "x": 651,
+    "y": 669,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "colA_top": {
+    "x": 449,
+    "y": 212,
+    "where": "frame",
+    "depth": 9.67
+   },
+   "colA_floor_R": {
+    "x": 475,
+    "y": 794,
+    "where": "frame",
+    "depth": 9.38
+   },
+   "colA_floor_L": {
+    "x": 382,
+    "y": 791,
+    "where": "frame",
+    "depth": 9.45
+   },
+   "colB_floor_L": {
+    "x": 2056,
+    "y": 833,
+    "where": "overscan",
+    "depth": 8.34
+   },
+   "colB_top": {
+    "x": 2090,
+    "y": 178,
+    "where": "overscan",
+    "depth": 8.55
+   },
+   "colC_floor_R": {
+    "x": -809,
+    "y": 1343,
+    "where": "outside",
+    "depth": 3.44
+   },
+   "colC_top": {
+    "x": -780,
+    "y": -208,
+    "where": "outside",
+    "depth": 3.73
+   },
+   "colD_floor_L": {
+    "x": 4130,
+    "y": 1720,
+    "where": "outside",
+    "depth": 2.4
+   }
+  }
+ }
+}

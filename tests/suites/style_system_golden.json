@@ -1,0 +1,75 @@
+{
+ "_note": "lm-world outerHTML (without GSAP's origin bookkeeping: the data-svg-origin memo and its inline transform-origin: 0px 0px, L-289) at 3.0 s of each lab scene on the pack with every WS6 key stripped, recorded on 2026-10-08 (L-289) from C:\\Users\\Admin\\Desktop\\Video-Engine-backup-2026-10-08\\runtime plus physics.js, brush.js and orbs.js (namespaces added after WS6 that no lab scene here calls; with the memo-only normalisation this runtime reproduced all 11 earlier hashes) (tests/suites/style_system.py record_golden)",
+ "_note_r48": "2026-10-10 (R-48): re-recorded with record_golden from the current runtime. The hashes are taken at 3.0 s, inside each lab page's last 0.9 s, where runtime/world.js now holds the final scene for the camera's outro fade instead of receding each element (primitive_runtime_the_last_scene_leaves_with_the_frame). Shown first: the test passed against today's runtime with only the old final-scene block restored and failed on the current one. All 11 pairs changed (each is measured inside that window); the earlier per-pair failure list was cut short in the log, not smaller.",
+ "_note_r52": "2026-10-11 (R-52): re-recorded with record_golden from the current runtime. A template beat after a cut now shows its first element at the cut (runtime/templates/_helpers.js H.leadAt; primitive_runtime_joins_never_hold_a_blank_frame), so the lab template page draws more by 3.0 s. Shown first: the test passed against the current runtime with only the old H.leadAt restored. Changed: cinematic-noir|lab_tpl_definition, corporate-clean|lab_tpl_definition, glow-flat|lab_tpl_definition, story-cartoon|lab_tpl_definition",
+ "combos": {
+  "corporate-clean|lab_places": {
+   "sha256": "1282a0f5736228288b0ff6927c7bab9d93ae72fa1777f742facd5ff9824be315",
+   "bytes": 152858,
+   "els": 6,
+   "errs": []
+  },
+  "corporate-clean|lab_tpl_definition": {
+   "sha256": "85e3ea84b2c377c2a2257e64edce224e750e3edf918da10d793d9b801c8e2fe2",
+   "bytes": 4533,
+   "els": 6,
+   "errs": []
+  },
+  "corporate-clean|lab_story_set": {
+   "sha256": "ab551b8a39f9c00ac834187c9ce7aceb9005f2627f70b76b2be3a2716ec06265",
+   "bytes": 13338,
+   "els": 5,
+   "errs": []
+  },
+  "cinematic-noir|lab_places": {
+   "sha256": "70a176366fe34b0219abb0085c130fdf4ab2f347ba62f8dac3f73ac80dd8d3a0",
+   "bytes": 130917,
+   "els": 6,
+   "errs": []
+  },
+  "cinematic-noir|lab_tpl_definition": {
+   "sha256": "e3e7d4408fcb5822cc072f84c148c4883ce990938ea88c29d1dfee34cd81bcbb",
+   "bytes": 4326,
+   "els": 6,
+   "errs": []
+  },
+  "cinematic-noir|lab_story_set": {
+   "sha256": "dfda2b8035e920865b09ea87bc603081bfd84a59c60b555622d87465165771c6",
+   "bytes": 11362,
+   "els": 5,
+   "errs": []
+  },
+  "glow-flat|lab_places": {
+   "sha256": "da67dcaa7360f0d0534ec8896c3e02ebcd025d2bd38aea3c079b4fb5d1a3ef8b",
+   "bytes": 165483,
+   "els": 6,
+   "errs": []
+  },
+  "glow-flat|lab_tpl_definition": {
+   "sha256": "fa4ce95258ba23eaaaf75bd552ad978f8ffca558f458ee236af4e0cfa344a8e9",
+   "bytes": 5060,
+   "els": 6,
+   "errs": []
+  },
+  "glow-flat|lab_story_set": {
+   "sha256": "d3405741e9ba6d81410984ede9008d3c516ec4a0c273300a3c14778c8e5ebada",
+   "bytes": 15764,
+   "els": 5,
+   "errs": []
+  },
+  "story-cartoon|lab_places": {
+   "sha256": "74f251786e8e46570054a9012dfc1269913d58cdf6e8792680327fdb076ff840",
+   "bytes": 164028,
+   "els": 6,
+   "errs": []
+  },
+  "story-cartoon|lab_tpl_definition": {
+   "sha256": "c85f1222ae0f4ffe342e397cb9a126f4921f06c2654918b5a85785a9d2b5f5b4",
+   "bytes": 4950,
+   "els": 6,
+   "errs": [
+    "text_overflow: text does not fit at the label floor (30px): \"e.g.\""
+   ]
+  }
+ }
+}

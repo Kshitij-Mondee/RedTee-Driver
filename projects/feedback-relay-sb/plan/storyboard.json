@@ -1,0 +1,1000 @@
+{
+  "style": "story-cartoon",
+  "concept": "One vague comment gets taken apart and rebuilt, piece by piece, on one board in one office. The same two colleagues and the same presentation run from the hook to the payoff, and the opening frame returns changed: the nod now has something behind it.",
+  "chrome": {
+    "section_labels": false
+  },
+  "poster": {
+    "beat": "b07"
+  },
+  "story": {
+    "metaphor": "A comment is a thing built from three pieces on one board: an observed action, its effect, one next step.",
+    "setting": "One small cartoon office meeting room after a talk: a projector screen on the right wall, a meeting table front left, a wall calendar on the back wall, a whiteboard on the side wall, and the viewer's own desk in POV.",
+    "arc": "Warm nod, nothing changes (b01, b02); the same comment is rebuilt on the board (b04 to b07); the viewer picks and checks (b08 to b11); the opening room returns and this time she opens differently (b12).",
+    "cast": [
+      {
+        "name": "Maya",
+        "rig": "maya",
+        "skin": 0,
+        "cloth": "cloth",
+        "role": "the presenter; stands screen right by the projector screen in every room shot; designed full-figure rig, front view"
+      },
+      {
+        "name": "Theo",
+        "member": "man",
+        "skin": 2,
+        "cloth": "cloth2",
+        "role": "the colleague who gives the comment; seated bust behind the meeting table, screen left, faces right (flip false); peep bust in bespoke scenes only"
+      }
+    ]
+  },
+  "kit": {
+    "parts": [
+      {
+        "id": "meeting_room",
+        "what": "The small meeting room after the talk, drawn once: ctx.scenery room with a surface2 wall and field2 floor, a projector screen on the right wall, a meeting table edge front left (muted top, field2 front), a wall calendar slot on the back wall, and 4 to 5 seated muted audience extras (ctx.crowd) in two rows facing the screen. No accent furniture, no shelf. The screen shows either a dense text-wall slide (grey hand-lettered lines, no accent) or a single slide reading 'Decision' in hand lettering. The audience is either looking down at phones (small surface2 phone shapes in hand) or heads up toward the screen.",
+        "states": [
+          "slide_text_wall",
+          "slide_decision",
+          "phones_down",
+          "heads_up",
+          "bright"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b05",
+          "b12"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "wall_calendar",
+        "what": "A paper wall calendar with an accent3 header band and one hand-lettered page that flips over its top ring from 'This week' to 'Next week' (Patrick Hand, weight 400, ink on surface). Pins in muted.",
+        "states": [
+          "this_week",
+          "next_week"
+        ],
+        "beats": [
+          "b01",
+          "b12"
+        ],
+        "size": [
+          220,
+          260
+        ]
+      },
+      {
+        "id": "natural_bubble",
+        "what": "The 'Natural presenter' chat bubble (seed bubble: chat), surface fill, ink outline, Nunito body text 'Natural presenter', with a small muted heart beside the words. Never in the accent. States: spoken (full size with a tail toward Maya), held (only the muted heart, small, resting in her hands), small_grey (shrunk to 40 %, greyed, no tail).",
+        "states": [
+          "spoken",
+          "held",
+          "small_grey"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b07"
+        ],
+        "size": [
+          520,
+          200
+        ]
+      },
+      {
+        "id": "comment_board",
+        "what": "The meeting-room whiteboard: a surface board with an ink outline and a muted tray, holding three slots in one row (left, middle, right), each slot a dashed muted outline 440 x 170 when empty. A narrow side window on its left edge can open onto the meeting room (the room_cutaway). The same slot geometry is reused as the draft card on the viewer's desk (state draft: a paper card 1200 wide, three empty slots, a blinking ink cursor in slot 1).",
+        "states": [
+          "empty_slots",
+          "filled",
+          "side_window_open",
+          "draft"
+        ],
+        "beats": [
+          "b05",
+          "b07",
+          "b11"
+        ],
+        "size": [
+          1600,
+          760
+        ]
+      },
+      {
+        "id": "comment_tiles",
+        "what": "The three comment pieces as tiles that fit the board slots, each with a tilted stamp label (seed label: stamp) beside it in Patrick Hand: tile 1 'Read the slides aloud' stamped 'Observed action', tile 2 'Room looked at phones' stamped 'Effect', tile 3 'Open with one decision' stamped 'Next step'. Tile text Nunito body, ink. States per tile: muted (field2 fill), accent (the accent fill with field text, only one tile at a time), empty (dashed outline, stamp in muted). State joined: the three tiles locked edge to edge inside one chat bubble outline, read left to right as one sentence, stamps underneath in order.",
+        "states": [
+          "empty",
+          "muted",
+          "accent",
+          "joined"
+        ],
+        "beats": [
+          "b05",
+          "b07",
+          "b11",
+          "b12"
+        ],
+        "size": [
+          1500,
+          220
+        ]
+      }
+    ],
+    "notes": "People are never kit parts: Maya is ctx.character('Maya','maya',...), Theo is kit.peep(...,'man',...,{cloth:'cloth2',skin:2}) with literals in every beat. The templates in b04, b06, b08, b09 and b10 cannot use the kit; they mirror its wording (same tile phrases and stamp names) so the comment reads as the same thing."
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "doorway",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "meeting room after the talk",
+        "note": "Station A: the hook and the payoff. Theo screen left at the table, Maya screen right by the projector screen, calendar on the back wall."
+      },
+      {
+        "id": "board",
+        "x": 2400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the whiteboard on the meeting-room side wall",
+        "note": "Station B, to the right of A: forward in the lesson. The comment is rebuilt here; the quiz and the checklist come back to it."
+      },
+      {
+        "id": "desk",
+        "x": 2400,
+        "y": 1500,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the viewer's own desk, POV",
+        "note": "Station C, below the board: deeper, the viewer's own work. Reached by a camera move down."
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "comment_board",
+      "what": "The whiteboard on the meeting-room wall, held as one station. The old bubble is pinned on it, then the three comment pieces fill its slots while the layout stays put. Hold the layout and change its state.",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11"
+      ]
+    },
+    {
+      "id": "three_pieces",
+      "what": "The three comment pieces as tiles with a stamp label (Observed action, Effect, Next step). Each keeps its slot position and stamp all lesson. The piece being named carries the one saturated accent; the others drop to muted tints. They return as checklist rows, as empty draft slots and in the payoff bubble.",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "natural_bubble",
+      "what": "The 'natural presenter' chat bubble with a muted heart: spoken in the hook, held in her hands as a feeling, pinned to the board, shown small for contrast and returning as quiz option 1. It never takes the accent.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b07",
+        "b08",
+        "b09"
+      ]
+    },
+    {
+      "id": "calendar_flip",
+      "what": "A wall calendar that flips to 'Next week' (stepped time). In the hook it shows nothing changed; in the payoff it shows the change. b06 names next week in the page line.",
+      "kind": "other",
+      "beats": [
+        "b01",
+        "b06",
+        "b12"
+      ]
+    },
+    {
+      "id": "room_cutaway",
+      "what": "The audience in the meeting room: small muted extras, first looking down at phones, later looking up. Seen through the board's side window in b05 and as the before and after in b12.",
+      "kind": "data",
+      "beats": [
+        "b01",
+        "b05",
+        "b12"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "Join material: a paper page turn at chapter boundaries on the warm paper ground, plus one hard cut at the quiz turn. Gradual continue joins inside sections.",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b10",
+        "b12"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "none (withheld); the bubble and heart are muted",
+      "why": "A pale, open hook. Nothing on screen has earned the accent yet, because the comment is empty."
+    },
+    {
+      "from": "b03",
+      "band": "light",
+      "break": false,
+      "accent": "the pinned old comment on the board",
+      "why": "We enter the board station, still pale. The only spot of colour marks what we will take apart."
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the comment piece being named (one at a time)",
+      "why": "A richer middle for the worked example. Exactly one saturated tile at a time."
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "break": true,
+      "accent": "all three pieces flood in order as they join",
+      "why": "The turn of the lesson: the accent floods across the assembled comment once, while the old bubble stays grey beside it."
+    },
+    {
+      "from": "b08",
+      "band": "dark",
+      "break": true,
+      "accent": "none until b09: the mark on option three",
+      "why": "A break for the viewer's decision: the hard cut and the silent pause make it the viewer's turn."
+    },
+    {
+      "from": "b10",
+      "band": "mid",
+      "break": false,
+      "accent": "the check being asked",
+      "why": "Back to the calm, productive board at rest energy."
+    },
+    {
+      "from": "b12",
+      "band": "light",
+      "break": true,
+      "accent": "the rebuilt comment bubble, then her decision slide",
+      "why": "A lift at the close. The opening frame returns brighter, and the accent finally appears in the office scene itself."
+    }
+  ],
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "doorway",
+      "subject": "Maya by the projector screen, nodding at Theo's 'Natural presenter' bubble, then reading her text-wall slide again",
+      "world": "the small meeting room after the talk (kit meeting_room), wall calendar on the back wall",
+      "option": "classic",
+      "story_role": "hook",
+      "register": "expressive",
+      "motion_is": "content",
+      "depth": "layered",
+      "light": "even",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "fade",
+        "dur": 0.8
+      },
+      "rationale": "The misconception has to be watched happening: the warm nod, then the calendar flip, then the same slide-reading pose. Change over time is the point.",
+      "design": {
+        "treatment": "Wide on the meeting room (kit meeting_room, state slide_text_wall, phones_down later). Theo as a seated peep bust behind the table edge, screen left, facing right. Maya full figure screen right by the projector screen, scale about 0.3, feet hidden behind a low lectern edge. Wall calendar on the back wall between them. Accent withheld: nothing is saturated.",
+        "why_motion": "The point is a sequence in time: comment, nod, a week passes, nothing changed. A still frame cannot show that nothing changed.",
+        "elements": [
+          "meeting_room (kit, slide_text_wall)",
+          "Maya (rig maya, cast)",
+          "Theo (peep man, cast)",
+          "natural_bubble (kit, spoken)",
+          "wall_calendar (kit)",
+          "audience extras (part of meeting_room: phones_down)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say you just watched a weak presentation",
+            "element": "meeting_room",
+            "action": "room fades up with the text-wall slide on the screen, Maya standing beside it, Theo seated, extras in two rows",
+            "motion": "fade up, extras settle with a 0.07 stagger"
+          },
+          {
+            "t_anchor": "you're a natural presenter",
+            "element": "natural_bubble",
+            "action": "the chat bubble pops from Theo toward Maya, words 'Natural presenter' with the muted heart",
+            "motion": "pop with overshoot from the tail"
+          },
+          {
+            "t_anchor": "She nods, warm and grateful",
+            "element": "Maya",
+            "action": "emotion happy, nod gesture; the bubble shrinks away",
+            "motion": "rig nod; bubble exit 0.26 s"
+          },
+          {
+            "t_anchor": "Next week",
+            "element": "wall_calendar",
+            "action": "page flips from 'This week' to 'Next week'",
+            "motion": "stepped page flip over the ring"
+          },
+          {
+            "t_anchor": "she reads slides aloud again",
+            "element": "Maya",
+            "action": "Maya turns her pose to the screen, reading; extras drop their heads to phones",
+            "motion": "pose change, extras' heads tilt down in a stagger"
+          }
+        ],
+        "continuity": "Held into b02: the same room, Maya keeps screen right and her place by the screen, Theo keeps screen left. Retiring: the spoken bubble (it returns as the held heart in b02). The calendar stays on 'Next week'. Extras stay on phones.",
+        "references": [
+          "Crayon Capital study: the fact sits on a prop in the place; black cards only for turns",
+          "TED-Ed stepped time for a week passing"
+        ]
+      },
+      "alternatives": {
+        "peep_two_shot": {
+          "kind": "template",
+          "template": "scenario.dialogue",
+          "note": "Two peep busts and the comment as dialogue, then a title card 'Next week'. Loses the room change."
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "doorway",
+      "subject": "Maya's open hands holding a small muted heart, beside an empty dashed slot where an action should be",
+      "world": "the same meeting room, pushed in to a medium on Maya",
+      "option": "classic",
+      "story_role": "setup",
+      "register": "expressive",
+      "motion_is": "content",
+      "depth": "layered",
+      "light": "even",
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "continue",
+        "dur": 0.6
+      },
+      "upgrade_reason": "The misconception must be seen in her hands: a warm feeling held next to an empty slot where an action should be, in the hook's own room with her own rig; a template cannot draw the designed rig holding it.",
+      "rationale": "Refute in the same frame as the hook: push in on Maya so the viewer sees what she is actually left holding.",
+      "design": {
+        "treatment": "A slow push from the b01 wide into a medium on Maya (scale about 0.85), screen right, the room behind her softened. Beside her, at the left third, an empty dashed slot hand-lettered 'Nothing to repeat'. Below it a small strip on a paper card: the word 'Warm nod' next to a flat line labelled 'Change'. Accent withheld; the heart stays muted.",
+        "why_motion": "The two halves of her reaction arrive in turn: the feeling lands in her hands, then the empty slot where an action should be; then the nod sits beside a line that stays flat.",
+        "elements": [
+          "Maya (rig maya, cast)",
+          "natural_bubble (kit, held: the muted heart in her hands)",
+          "empty action slot with 'Nothing to repeat'",
+          "nod versus change card (flat line)",
+          "meeting_room (kit, softened background)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So what is she left holding",
+            "element": "Maya",
+            "action": "camera push to medium; Maya raises both hands palm up",
+            "motion": "cam push 0.8 s; hold palm_up_offer"
+          },
+          {
+            "t_anchor": "A kind feeling",
+            "element": "natural_bubble",
+            "action": "the muted heart settles into her open hands, small label 'A kind feeling' tied to it",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "nothing to repeat",
+            "element": "empty action slot",
+            "action": "a dashed empty slot draws beside her hands, label 'Nothing to repeat'",
+            "motion": "dashed outline revealed, label wipes in"
+          },
+          {
+            "t_anchor": "Here is where people slip",
+            "element": "Maya",
+            "action": "emotion shifts from happy to neutral, a small head tilt",
+            "motion": "rig tilt"
+          },
+          {
+            "t_anchor": "A warm nod is not change",
+            "element": "nod versus change card",
+            "action": "'Warm nod' appears beside a line labelled 'Change' that draws perfectly flat",
+            "motion": "card drops, line draws left to right and stays flat"
+          }
+        ],
+        "continuity": "Held from b01: same room, Maya screen right in the same clothes and place. Travelling: the heart (it reappears pinned on the board in b03 as the old bubble). Retiring at the join: the empty slot and the nod card leave with the room as the camera moves right to the board.",
+        "references": [
+          "lnd-character-design: one person, one look, front view",
+          "Crayon Capital study: grey extras so the cast wins"
+        ]
+      },
+      "alternatives": {
+        "blueprint": {
+          "kind": "blueprint",
+          "blueprint": "hero.character_moment",
+          "note": "Peep bust with a thought bubble holding a heart that stays and an action that never arrives. Cheaper, but changes Maya's drawing system, so a separate cast name would be needed."
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "avatar",
+      "station": "board",
+      "option": "classic",
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "join_in": {
+        "type": "handoff",
+        "dur": 0.8
+      },
+      "accent_on": "the pinned old comment on the board",
+      "props": {
+        "kicker": "The plan",
+        "title": "Rebuild one comment",
+        "card": {
+          "title": "The plan",
+          "lines": [
+            "Same comment",
+            "Under two minutes",
+            "Then check your own"
+          ],
+          "say": "We'll keep that exact comment"
+        }
+      },
+      "rationale": "Presenter bookend on the board station: the promise, stated plainly, before the board starts working. The card's three lines fill the right of the frame, arriving from 'We'll keep that exact comment'."
+    },
+    {
+      "beat": "b04",
+      "kind": "template",
+      "station": "board",
+      "template": "document.page",
+      "option": "classic",
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "close"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dur": 0.7
+      },
+      "accent_on": "the line 'Read the slides aloud'",
+      "props": {
+        "kind": "notes",
+        "variant": "paper",
+        "title": "The comment, rebuilt",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "Read the slides aloud, most of the talk",
+            "say": "You read the slides aloud"
+          },
+          {
+            "text": "Observed action: anyone could have seen it",
+            "say": "The observed action"
+          },
+          {
+            "empty": true
+          },
+          {
+            "empty": true
+          }
+        ]
+      },
+      "rationale": "The board sheet with the first piece and its name. The two empty slots below show the comment is not finished yet."
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "board",
+      "subject": "the audience seen through the board's side window, heads dropping to their phones, beside the 'Room looked at phones' tile",
+      "world": "the meeting-room whiteboard (kit comment_board) with a window onto the room",
+      "option": "classic",
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "depth": "layered",
+      "light": "even",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "dur": 0.6
+      },
+      "accent_on": "tile 2 'Room looked at phones'",
+      "upgrade_reason": "The effect has to be seen happening: a side window on the board opens onto the room and the audience drops to their phones beside the tile, which a page of text cannot show.",
+      "rationale": "The effect is something you saw, so the viewer sees it: the room, then the words for it.",
+      "design": {
+        "treatment": "Medium on the comment_board (kit, three slots in a row). Tile 1 'Read the slides aloud' sits muted in slot 1 with its 'Observed action' stamp. A narrow side window on the board's left edge opens onto the meeting_room (kit, phones_down). Tile 2 takes the accent; slot 3 stays empty.",
+        "why_motion": "The order is the teaching: first the room reacts, then the words for that reaction land, so the effect reads as observed rather than guessed.",
+        "elements": [
+          "comment_board (kit, side_window_open)",
+          "comment_tiles tile 1 (kit, muted)",
+          "meeting_room (kit, phones_down) inside the side window",
+          "comment_tiles tile 2 (kit, accent)",
+          "stamp 'Effect'"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "what did it do to the room",
+            "element": "comment_board",
+            "action": "the side window slides open on the board's left edge, showing the seated audience",
+            "motion": "panel unfolds left to right"
+          },
+          {
+            "t_anchor": "The room looked at their phones",
+            "element": "meeting_room",
+            "action": "the extras' heads drop to their phones in a stagger; tile 2 pops into slot 2 in the accent, tile 1 dims to muted",
+            "motion": "stagger 0.07; tile pop with overshoot"
+          },
+          {
+            "t_anchor": "That is the effect",
+            "element": "stamp 'Effect'",
+            "action": "the 'Effect' stamp lands beside tile 2",
+            "motion": "stamp (scale 1.3 to 1, no overshoot)"
+          },
+          {
+            "t_anchor": "Only what you saw",
+            "element": "meeting_room",
+            "action": "the side window holds on the heads-down audience; a thin ink connector draws from the window into tile 2",
+            "motion": "connector draws into its target"
+          },
+          {
+            "t_anchor": "never a guess",
+            "element": "comment_tiles tile 2",
+            "action": "tile 2 settles; the frame holds finished",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "Held: the board, slot positions and tile 1 with its stamp. Incoming: the side window and tile 2. Retiring at the join to b06: the side window closes; tiles 1 and 2 carry on into the b06 page lines in the same order.",
+        "references": [
+          "Mayer contiguity: the label beside the words it names",
+          "Crayon Capital study: the fact on a prop in the place"
+        ]
+      },
+      "alternatives": {
+        "page": {
+          "kind": "template",
+          "template": "document.page",
+          "note": "The same board sheet with line 2 highlighted and no room window; keeps upgrades at 2 of 12."
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "template",
+      "station": "board",
+      "template": "document.page",
+      "option": "classic",
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "close"
+      },
+      "join_in": {
+        "type": "continue",
+        "dur": 0.5
+      },
+      "accent_on": "the line 'Next week, open with the one decision'",
+      "props": {
+        "kind": "notes",
+        "variant": "paper",
+        "title": "The comment, rebuilt",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "Read the slides aloud, most of the talk"
+          },
+          {
+            "text": "The room looked at their phones"
+          },
+          {
+            "text": "Next week, open with the one decision",
+            "say": "Next week, open with the one decision"
+          },
+          {
+            "text": "Next step: one thing for next time",
+            "say": "That is the next step"
+          }
+        ]
+      },
+      "rationale": "The same sheet as b04: the first two pieces sit quiet and only the third is highlighted, then named. The calendar arrow from the outline is carried by the words 'Next week' in the line; the calendar itself returns in b12."
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "board",
+      "subject": "three comment tiles locking into one speech bubble on the whiteboard, the old grey 'Natural presenter' bubble beside it",
+      "world": "the meeting-room whiteboard (kit comment_board)",
+      "option": "classic",
+      "story_role": "turn",
+      "register": "expressive",
+      "motion_is": "content",
+      "depth": "flat",
+      "light": "even",
+      "shot": {
+        "size": "medium",
+        "move": "pull"
+      },
+      "join_in": {
+        "type": "continue",
+        "dur": 0.5
+      },
+      "accent_on": "the joined comment, flooding tile by tile on 'Action, effect, next step'",
+      "rationale": "The turn: three separate pieces become one comment you could say out loud. The joining is the idea.",
+      "design": {
+        "treatment": "A slight pull back on the comment_board. The three comment_tiles slide together edge to edge and a chat bubble outline closes around them (state joined); the stamps settle underneath in order. To the right, the natural_bubble shrinks to small_grey for contrast. The accent floods once through the tiles in order on their words.",
+        "why_motion": "Separate pieces joining into one sentence is the claim: the motion of locking together says 'one comment', and the in-order flood says the order.",
+        "elements": [
+          "comment_board (kit, filled)",
+          "comment_tiles (kit, joined)",
+          "stamps Action, Effect, Next step",
+          "natural_bubble (kit, small_grey)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Three pieces",
+            "element": "comment_tiles",
+            "action": "the three tiles appear muted in their slots",
+            "motion": "pop with a 0.07 stagger"
+          },
+          {
+            "t_anchor": "one comment",
+            "element": "comment_tiles",
+            "action": "the tiles slide together and lock; a chat bubble outline draws around them",
+            "motion": "move 0.34 s, outline draws into the tiles"
+          },
+          {
+            "t_anchor": "one board",
+            "element": "natural_bubble",
+            "action": "the old 'Natural presenter' bubble appears small and grey beside the new one",
+            "motion": "pop, no accent"
+          },
+          {
+            "t_anchor": "Action",
+            "element": "comment_tiles",
+            "action": "tile 1 floods with the accent; stamp 'Action' lands under it",
+            "motion": "fill wipe left to right; stamp"
+          },
+          {
+            "t_anchor": "effect",
+            "element": "comment_tiles",
+            "action": "the flood passes to tile 2; stamp 'Effect' lands",
+            "motion": "fill wipe; stamp"
+          },
+          {
+            "t_anchor": "next step",
+            "element": "comment_tiles",
+            "action": "the flood reaches tile 3; stamp 'Next step' lands; the whole bubble holds",
+            "motion": "fill wipe; stamp; hold"
+          }
+        ],
+        "continuity": "Held: the board and tile order. Travelling: the joined bubble becomes option 3 and the small grey bubble becomes option 1 in b08. Retiring at the hard cut: the board.",
+        "references": [
+          "lnd-explainer-craft: parts becoming a whole",
+          "seed: chat bubble, stamp label, pop entrance"
+        ]
+      },
+      "alternatives": {
+        "skia_land": {
+          "kind": "skia",
+          "note": "The assembled comment lands from blur to sharp with a soft glow (hero light moment)."
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "station": "board",
+      "template": "quiz.question",
+      "option": "classic",
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "props": {
+        "kicker": "Your turn",
+        "question": "Which comment could she act on tomorrow?",
+        "say_question": "which could she act on tomorrow",
+        "options": [
+          {
+            "text": "You're a natural presenter",
+            "say": "you're a natural presenter"
+          },
+          {
+            "text": "Your slides were weak, be better prepared",
+            "say": "your slides were weak"
+          },
+          {
+            "text": "Read slides aloud, room on phones, open with decision",
+            "say": "action, effect, next step"
+          }
+        ],
+        "pause_label": "Pause and decide"
+      },
+      "rationale": "The faded rung: the viewer decides before the answer. A hard cut marks the turn; the pause ring holds the silence."
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "station": "board",
+      "template": "quiz.answer",
+      "option": "classic",
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "join_in": {
+        "type": "continue",
+        "dur": 0.5
+      },
+      "accent_on": "option 3, the three-part comment",
+      "props": {
+        "question": "Which comment could she act on tomorrow?",
+        "options": [
+          {
+            "text": "You're a natural presenter"
+          },
+          {
+            "text": "Your slides were weak, be better prepared"
+          },
+          {
+            "text": "Read slides aloud, room on phones, open with decision"
+          }
+        ],
+        "answer": 3,
+        "say_answer": "Three",
+        "explanation": "It holds an action anyone could see, its effect, and one next step.",
+        "say_explanation": "It holds action, effect, and one next step",
+        "tempting": 1,
+        "why_not": "It feels kind, but it only describes her.",
+        "say_why_not": "One feels kind, but it only describes her",
+        "takeaway": "Kind is not the same as usable.",
+        "say_takeaway": "Kind is not the same as usable"
+      },
+      "rationale": "Feedback is the teaching: the right option marked on 'Three', the tempting kind option gets its why-not note."
+    },
+    {
+      "beat": "b10",
+      "kind": "template",
+      "station": "board",
+      "template": "list.steps",
+      "option": "classic",
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dur": 0.7
+      },
+      "accent_on": "the check being asked",
+      "props": {
+        "kicker": "Before you say it",
+        "title": "Ask three things",
+        "say_title": "ask three things",
+        "marker": "tick",
+        "items": [
+          {
+            "text": "Could someone have seen or heard it?",
+            "say": "Could someone have seen or heard it"
+          },
+          {
+            "text": "Is the effect stated?",
+            "say": "Is the effect stated"
+          },
+          {
+            "text": "Could they do the step tomorrow?",
+            "say": "Could they do the step tomorrow"
+          }
+        ]
+      },
+      "rationale": "The three checks, one per piece, in the same order as action, effect, next step."
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "a blank draft card on the viewer's desk with three empty slots and a cursor blinking in the first",
+      "world": "the viewer's own desk seen in POV",
+      "option": "classic",
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "depth": "layered",
+      "light": "even",
+      "shot": {
+        "size": "pov",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera",
+        "dir": "down",
+        "meaning": "into",
+        "dur": 0.9
+      },
+      "accent_on": "the blinking cursor in the first empty slot",
+      "upgrade_reason": "The practice is the viewer's own: a POV desk with the same three slots now empty and a cursor waiting, which no template draws; it also breaks a run of templates as the allocation asked for this hybrid beat.",
+      "rationale": "The independent rung: the board's slots come down to the viewer's own desk, empty, waiting for their comment.",
+      "design": {
+        "treatment": "POV over the viewer's desk (Loom.scenery desk, muted top, no monitor accent). The comment_board in its draft state: a paper card titled 'One comment' with the three slots empty, stamps in muted tints. A small faint checklist card at the right with three tick boxes. The cursor in slot 1 is the only accent.",
+        "why_motion": "The empty slots and the waiting cursor invite the viewer to act; the card arrives, then the slots, then the checks, in the order of the instruction.",
+        "elements": [
+          "desk (scenery, POV)",
+          "comment_board (kit, draft)",
+          "comment_tiles (kit, empty, stamps muted)",
+          "cursor in slot 1",
+          "faint checklist card"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "pick one comment you owe this week",
+            "element": "comment_board",
+            "action": "the draft card slides onto the desk, title 'One comment'",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "Rewrite it with the same three parts",
+            "element": "comment_tiles",
+            "action": "three empty slots draw on the card with their muted stamps; label 'Three parts'; the cursor starts blinking in slot 1",
+            "motion": "dashed outlines revealed in a stagger, cursor blink 1 Hz"
+          },
+          {
+            "t_anchor": "Then run the three checks",
+            "element": "faint checklist card",
+            "action": "a small card with three empty tick boxes fades in at the right, label 'Three checks'",
+            "motion": "fade to 0.6 opacity"
+          },
+          {
+            "t_anchor": "run the three checks",
+            "element": "cursor in slot 1",
+            "action": "the frame holds finished with the cursor blinking, a real pause",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "Incoming from b10: the three checks travel down as the faint checklist card; the slot geometry matches the board. Retiring at the join to b12: the desk and the card.",
+        "references": [
+          "Merrill application: the learner's own task",
+          "seed: stamp label, pop entrance"
+        ]
+      },
+      "alternatives": {
+        "page": {
+          "kind": "template",
+          "template": "document.page",
+          "note": "A form page with three empty ruled lines titled 'One comment'; no cursor, no desk."
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "doorway",
+      "subject": "Maya opening on a single 'Decision' slide while the audience looks up, after Theo's three-part bubble",
+      "world": "the opening meeting room returned, brighter, with the wall calendar",
+      "option": "classic",
+      "story_role": "payoff",
+      "intent": "callback",
+      "register": "expressive",
+      "motion_is": "content",
+      "depth": "layered",
+      "light": "dawn",
+      "shot": {
+        "size": "wide",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "time",
+        "dur": 0.8
+      },
+      "accent_on": "the rebuilt comment bubble, then the 'Decision' slide",
+      "rationale": "The opening frame returns, brighter, and this time the change is visible in the room.",
+      "design": {
+        "treatment": "The b01 room (kit meeting_room, state bright), same positions: Theo screen left at the table, Maya screen right by the screen, the calendar on the back wall. Theo's bubble is now the joined comment_tiles, small. After the calendar flip, the screen shows one slide hand-lettered 'Decision' and the extras look up. A small paper inset at the top left shows the before (heads down) next to the room's after (heads up).",
+        "why_motion": "The payoff is a change over a week: comment, flip, a different opening and a different room. Only a sequence can show the nod now leading somewhere.",
+        "elements": [
+          "meeting_room (kit, bright, slide_decision, heads_up)",
+          "Maya (rig maya, cast)",
+          "Theo (peep man, cast)",
+          "comment_tiles (kit, joined, small in Theo's bubble)",
+          "wall_calendar (kit)",
+          "before inset (meeting_room, phones_down, small)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back to that talk",
+            "element": "meeting_room",
+            "action": "the opening room returns brighter, Maya and Theo in their b01 places",
+            "motion": "page turn lands; hold"
+          },
+          {
+            "t_anchor": "you say the rebuilt version",
+            "element": "comment_tiles",
+            "action": "the joined three-tile bubble pops from Theo toward Maya, in the accent",
+            "motion": "pop from the tail"
+          },
+          {
+            "t_anchor": "Next week",
+            "element": "wall_calendar",
+            "action": "page flips to 'Next week'; the bubble leaves",
+            "motion": "stepped page flip"
+          },
+          {
+            "t_anchor": "she opens with the decision",
+            "element": "meeting_room",
+            "action": "the screen switches to the single 'Decision' slide (accent moves here), Maya gestures to it, the extras lift their heads; the small before inset appears top left with heads down",
+            "motion": "slide swap; extras' heads rise in a stagger; inset drops in"
+          },
+          {
+            "t_anchor": "The nod now has something behind it",
+            "element": "Maya",
+            "action": "Maya nods, emotion happy; slow push in on her and the slide",
+            "motion": "rig nod; cam push"
+          }
+        ],
+        "continuity": "Callback to b01: same station, same placements, same cast looks; only the light, the slide and the audience have changed. End frame holds.",
+        "references": [
+          "Crayon Capital study: bookends",
+          "TED-Ed stepped time"
+        ]
+      },
+      "alternatives": {
+        "device_shot": {
+          "kind": "three",
+          "preset": "device_shot",
+          "note": "Maya's laptop switching from a text-wall slide to a single decision slide."
+        }
+      }
+    }
+  ]
+}

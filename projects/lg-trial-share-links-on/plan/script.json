@@ -1,0 +1,717 @@
+{
+  "title": "Who can open your link: sharing files safely",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "sec1",
+      "title": "Who gets in"
+    },
+    {
+      "id": "sec2",
+      "title": "What they can do"
+    },
+    {
+      "id": "sec3",
+      "title": "How a link travels"
+    },
+    {
+      "id": "sec4",
+      "title": "Before and after sharing"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "sec1",
+      "job": "hook",
+      "narration": [
+        "Imagine you send a budget link to three teammates.",
+        "A week later, a stranger is reading it."
+      ],
+      "on_screen": [
+        "Budget draft",
+        "Three teammates",
+        "A stranger?"
+      ],
+      "visual_intent": "A drawn budget document with three teammate pictograms beside it, then a fourth figure in an empty box with a question mark appears reading it",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "delivery": "warm",
+      "grounding": [
+        {
+          "claim": "Illustration: a link sent to three people reaches an unintended reader",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "sec1",
+      "job": "hook",
+      "narration": [
+        "How did it get there?",
+        "Nobody hacked anything.",
+        "The link simply travelled."
+      ],
+      "on_screen": [
+        "The link travelled"
+      ],
+      "visual_intent": "A hand-drawn line carries the link from one teammate to a second figure and on to the stranger, passing the sender by",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "delivery": "curious",
+      "grounding": [
+        {
+          "claim": "A forwarded link can be opened by a new holder without the sender being asked; this is not hacking",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "sec1",
+      "job": "orient",
+      "narration": [
+        "Three quick choices stop that.",
+        "Who can open it.",
+        "What they can do.",
+        "And until when."
+      ],
+      "on_screen": [
+        "Who",
+        "What they can do",
+        "Until when"
+      ],
+      "visual_intent": "The presenter introduces three choices; three short written words appear on the board beside her, one per spoken phrase",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "delivery": "warm",
+      "grounding": [
+        {
+          "claim": "Promise built on the least-privilege checks: who, what, and when access ends",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "orient",
+      "narration": [
+        "You paste links like this every week.",
+        "Think of one as a key.",
+        "A key opens for whoever holds it."
+      ],
+      "on_screen": [
+        "A link is a key"
+      ],
+      "visual_intent": "A document drawn as a door with a rough key beside it; the key is drawn, then a hand-off arrow shows it passing to another holder",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "Framing metaphor only: on broad settings the link itself grants access to whoever holds it",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "First key: anyone with the link.",
+        "Whoever holds it can open the file.",
+        "In many tools, no sign-in needed."
+      ],
+      "on_screen": [
+        "Anyone with the link"
+      ],
+      "visual_intent": "The widest of three rough rings drawn around the document, a crowd of pictograms inside it, the label written beside the ring",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "Anyone with the link can open the document, and in many tools need not sign in",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "Second: people in the company.",
+        "Anyone signed in, not just your team.",
+        "Outsiders stay out."
+      ],
+      "on_screen": [
+        "People in the company"
+      ],
+      "visual_intent": "A middle ring drawn inside the first holding many company pictograms, outsiders left outside it; the label written beside the ring",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "The company-wide setting works for people signed in to the organisation, not for people outside it",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec1",
+      "job": "distinguish",
+      "narration": [
+        "Third: named people.",
+        "Here the door checks you, not just the key.",
+        "Only accounts you added get in."
+      ],
+      "on_screen": [
+        "Named people"
+      ],
+      "visual_intent": "A small inner ring holding three named pictograms; the door checks each person's face against a list, the one place the key analogy breaks",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "Named people opens only for the specific accounts added, each signed in as that account",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec1",
+      "job": "consolidate",
+      "narration": [
+        "Widest to narrowest, in that order.",
+        "Pick the narrowest that works.",
+        "Your company may set rules too. Check."
+      ],
+      "on_screen": [
+        "Widest to narrowest",
+        "Pick the narrowest that works",
+        "Check your company's rules"
+      ],
+      "visual_intent": "The three rings shown together with an arrow from widest to narrowest and the pocket rule written under them, then a small note about company rules",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "delivery": "brisk",
+      "grounding": [
+        {
+          "claim": "The settings run widest to narrowest; choose the narrowest that works",
+          "fact": "F5"
+        },
+        {
+          "claim": "Organisations may set their own rules or defaults",
+          "fact": "F19"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Now, what can they do inside?",
+        "With view, they read the budget.",
+        "They cannot change your original."
+      ],
+      "on_screen": [
+        "View",
+        "Read only"
+      ],
+      "visual_intent": "The budget page drawn with an eye icon beside it; a hand reaches in and the original page stays unchanged",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "delivery": "curious",
+      "grounding": [
+        {
+          "claim": "With view access a holder can read but not change the original",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "distinguish",
+      "narration": [
+        "Edit is different.",
+        "Holders can change the original.",
+        "Everyone sees the change."
+      ],
+      "on_screen": [
+        "Edit",
+        "Changes the original"
+      ],
+      "visual_intent": "A pencil marks a figure on the budget page, and the same change appears on every holder's copy of the page",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "With edit access a holder can change the original and everyone sees the changes",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "refute",
+      "narration": [
+        "Here is where people slip.",
+        "View protects the original.",
+        "Depending on the tool, it may not stop copying."
+      ],
+      "on_screen": [
+        "View is not copy-proof"
+      ],
+      "visual_intent": "The viewing eye icon, then a hand copying the page text to a second sheet, with a written note that it depends on the tool",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "hybrid",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "A viewer may still be able to copy or download content, depending on tool and settings",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "consolidate",
+      "narration": [
+        "So for the budget, start with view.",
+        "Edit only when they must change it.",
+        "Keep those three doors in mind."
+      ],
+      "on_screen": [
+        "View first",
+        "Edit only if they must"
+      ],
+      "visual_intent": "A tick beside view, edit written with a small question mark; the three rings from before return faintly behind",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "any",
+      "delivery": "brisk",
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Keep the three doors in mind: anyone with the link, people in the company, named people."
+      },
+      "grounding": [
+        {
+          "claim": "Give view access unless the person needs to edit",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec3",
+      "job": "scenario",
+      "narration": [
+        "Here is the tricky part.",
+        "Say the link is set to the company.",
+        "A teammate forwards it to a manager elsewhere."
+      ],
+      "on_screen": [
+        "Company link",
+        "Forwarded once"
+      ],
+      "visual_intent": "The company ring on the board with the three teammates inside; a line leaves one teammate and reaches a new figure elsewhere in the ring",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "Illustration: a company-wide link forwarded once to another colleague",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "She opens it. Nobody asks you.",
+        "The link itself is the permission.",
+        "It can travel on, but only inside the company."
+      ],
+      "on_screen": [
+        "The link is the permission",
+        "Edge of the company"
+      ],
+      "visual_intent": "The manager's figure opens the page, a second forward arrow leaves her and stops at the edge of the company ring, an outsider figure turned back",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "On broad settings the link grants access to a new holder without asking the sender, who can forward it again; company-wide stays limited to signed-in company accounts",
+          "fact": "F11"
+        },
+        {
+          "claim": "The link itself grants access on broad settings",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "sec3",
+      "job": "distinguish",
+      "narration": [
+        "Anyone with the link has no such edge."
+      ],
+      "on_screen": [
+        "Anyone with the link: no edge"
+      ],
+      "visual_intent": "The same forward arrow on the widest ring continues past where the company edge was, off toward the board's border",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "hybrid",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "On the anyone setting whoever holds the link can open it however they got it",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Same forward, but the link is set to named people.",
+        "The door asks who she is.",
+        "Where the list is enforced, it stays shut."
+      ],
+      "on_screen": [
+        "Named people",
+        "Not on the list"
+      ],
+      "visual_intent": "The forward arrow reaches the inner door; a rough list of three names is checked against the manager and the door stays closed with a cross marker",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "With named people a forwarded link does not open for someone not on the list, where the tool enforces it",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "sec3",
+      "job": "consolidate",
+      "narration": [
+        "A listed person could still show it on.",
+        "So choose names you trust.",
+        "The link travels. A name does not."
+      ],
+      "on_screen": [
+        "The link travels",
+        "A name does not"
+      ],
+      "visual_intent": "A listed figure shows the page over a shoulder in a small note, then the two written lines sit under the board as the pocket rule",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "A listed person can still show or copy the content to others",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b18",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "Your turn.",
+        "Say three teammates need to read the budget,",
+        "not change it.",
+        "Which setting, and which permission?",
+        "Pause, and decide."
+      ],
+      "on_screen": [
+        "Anyone with the link, edit",
+        "People in the company, view",
+        "Named people, view"
+      ],
+      "visual_intent": "A quiz card with three options, each pairing a setting with a permission, and no answer shown",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "delivery": "curious",
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "quiz",
+        "question": "Say three teammates need to read the budget, not change it. Which setting, and which permission?",
+        "options": [
+          "Anyone with the link, edit",
+          "People in the company, view",
+          "Named people, view"
+        ],
+        "answer": "Named people, view",
+        "why": "It is the narrowest setting that works, and view is enough to read.",
+        "tempting_wrong": "People in the company, view: one forward would open it to everyone signed in to the company."
+      },
+      "grounding": [
+        {
+          "claim": "Illustration: three teammates who only need to read a budget draft",
+          "hypothetical": true
+        },
+        {
+          "claim": "Quiz built on the narrowest-setting and view-first checks",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b19",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "Named people, with view.",
+        "The company setting sounds close.",
+        "But one forward opens it to everyone signed in.",
+        "Named people holds it to three."
+      ],
+      "on_screen": [
+        "Named people, view",
+        "Company: a forward reaches everyone signed in"
+      ],
+      "visual_intent": "The answer card marks named people with view as right and fades the other two; the company option gets a written note about the forward",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "Illustration: three teammates who only need to read a budget draft",
+          "hypothetical": true
+        },
+        {
+          "claim": "Narrowest setting that works, view unless edit is needed",
+          "fact": "F13"
+        },
+        {
+          "claim": "A forwarded company link reaches everyone signed in to the company",
+          "fact": "F11"
+        },
+        {
+          "claim": "Named people holds the line against a forward",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "Before you share, four quick checks.",
+        "Right file? Narrowest setting? View, unless edit?",
+        "And who is on the list?"
+      ],
+      "on_screen": [
+        "Right file?",
+        "Narrowest setting?",
+        "View unless edit?",
+        "Who is on the list?"
+      ],
+      "visual_intent": "A checklist written down the board, one tick drawn beside each line as it is spoken",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "template",
+      "delivery": "brisk",
+      "grounding": [
+        {
+          "claim": "Check the right file, the narrowest setting, view unless edit, and the access list",
+          "fact": "F13"
+        },
+        {
+          "claim": "Check who is on the access list",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "Then look inside the file.",
+        "Other pages, comments, version history.",
+        "Check, do not assume."
+      ],
+      "on_screen": [
+        "Inside the file",
+        "Pages",
+        "Comments",
+        "Version history"
+      ],
+      "visual_intent": "The budget page drawn with a magnifier over it and three small tabs written beside it, one for each hidden place",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "delivery": "brisk",
+      "grounding": [
+        {
+          "claim": "Check other pages, comments and version history for content that should not travel; visibility varies by tool",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b22",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "Third choice: until when.",
+        "When the job is done, take the key back.",
+        "Switch it off, or narrow it, and remove names."
+      ],
+      "on_screen": [
+        "Until when",
+        "Link off or narrower",
+        "Remove names"
+      ],
+      "visual_intent": "The key drawn earlier is crossed out and returned to the sender's hand; a name on the list is struck through",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "hybrid",
+      "delivery": "calm",
+      "grounding": [
+        {
+          "claim": "When access is no longer needed switch the link off or narrow it and remove named people who no longer need the file",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "sec4",
+      "job": "sequence",
+      "narration": [
+        "Many tools list what you have shared.",
+        "Review it, to find old links.",
+        "Some offer an expiry date, too."
+      ],
+      "on_screen": [
+        "Review what you shared",
+        "Expiry date"
+      ],
+      "visual_intent": "A rough list of three shared files with one old link ticked off, then a small calendar with a written end date",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "delivery": "brisk",
+      "grounding": [
+        {
+          "claim": "Many tools list what you have shared, and reviewing finds old links still on",
+          "fact": "F17"
+        },
+        {
+          "claim": "Some tools offer an expiry date on a link or on a person's access",
+          "fact": "F18"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "sec4",
+      "job": "payoff",
+      "narration": [
+        "Back to the budget.",
+        "Named people, view only, switched off after.",
+        "A forwarded link now stops at the door."
+      ],
+      "on_screen": [
+        "Named people",
+        "View only",
+        "Switched off after"
+      ],
+      "visual_intent": "The opening board redrawn calmly: three named teammates inside the small ring, the forward arrow stopping at the closed door, the key returned",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "delivery": "warm",
+      "grounding": [
+        {
+          "claim": "Named people with view and later removal keeps a forwarded link from opening for others, where the tool enforces the list",
+          "fact": "F12"
+        },
+        {
+          "claim": "Switch access off when done",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b25",
+      "section": "sec4",
+      "job": "payoff",
+      "narration": [
+        "Before you press Share, ask three things.",
+        "Who could hold this?",
+        "Can they view it, or edit it?",
+        "When do I switch it off?",
+        "Narrowest door. View first. Switch off."
+      ],
+      "on_screen": [
+        "Who could hold this?",
+        "View or edit?",
+        "Switch off when?"
+      ],
+      "visual_intent": "The presenter beside three written questions on the board, then the pocket rule written as one line",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "delivery": "warm",
+      "grounding": [
+        {
+          "claim": "Transfer: the three questions follow the least-privilege checks and the end-of-access steps",
+          "fact": "F13"
+        },
+        {
+          "claim": "Close access when no longer needed",
+          "fact": "F16"
+        }
+      ]
+    }
+  ]
+}

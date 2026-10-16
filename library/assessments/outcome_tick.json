@@ -1,0 +1,52 @@
+{
+ "form": "outcome_tick",
+ "decision": "reject",
+ "confidence": "high",
+ "topic_independent": true,
+ "idea": "a tick or cross disc that lands on an item a beat after it appears, to show its result",
+ "outline": [
+  "a group (or mark-kind element) placed on the item's corner or free edge",
+  "one kit.mark(parent, yes|no, cx, cy, size) call",
+  "one entrance tween (m.pop, m.stamp or m.settle) timed on or just after the item's reveal cue"
+ ],
+ "variation_seen": [
+  "kind: yes in 4 scenes, no in b19 (the failed checkout)",
+  "size: 40 to 64 px",
+  "container: a bare Loom.svg group inside the item (b12, b19) versus its own ctx.el of kind mark (b25, b05, b12 sense_ticks, b28 fix_ticks)",
+  "count: one mark, or a row/column of peer marks in one element (b12 sense_ticks, b28 fix_ticks)",
+  "entrance: m.pop without overshoot (b12, b19, b05), m.stamp when a track fills (b25), m.settle for the group (b28)",
+  "timing: fixed 0.4 to 0.5 s after the item's settle, a stagger of peers, or the instant a value finishes travelling"
+ ],
+ "future_uses": [
+  {
+   "topic": "phishing awareness",
+   "shows": "a cross on each suspicious email and a tick on the genuine one"
+  },
+  {
+   "topic": "safe manual handling",
+   "shows": "a tick on the correct lifting posture and a cross on the bent-back one"
+  },
+  {
+   "topic": "data privacy consent",
+   "shows": "ticks landing on the checklist items a compliant form satisfies"
+  }
+ ],
+ "params_sketch": {
+  "content": [
+   "kind (yes|no)"
+  ],
+  "adjustable": [
+   "cx",
+   "cy",
+   "size",
+   "fill"
+  ]
+ },
+ "slots_sketch": [],
+ "reason": "The idea is topic-independent and genuinely recurs, but it is already exactly one existing primitive, kit.mark(parent, kind, cx, cy, size, o), and every one of the five uses is that single call plus one ordinary entrance tween; a component would add only a wrapper around a one-liner, while the parts that varied (placement on the host, container choice, pop versus stamp versus settle, and timing against the host's cue) are scene decisions that a param set would either freeze or merely pass through. Nothing here saves real work or fixes a recurring defect, so promoting it would be library bloat that duplicates the kit, and further uses will not change that because the reuse is already happening through kit.mark.",
+ "merge_into": null,
+ "revisit_when": {
+  "uses": 20,
+  "lessons": 8
+ }
+}

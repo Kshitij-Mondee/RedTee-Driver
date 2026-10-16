@@ -1,0 +1,32 @@
+{
+ "name": "claude-core",
+ "description": "Control for smart-mix: Sonnet does every authoring role, so the comparison shows what Sol's planning adds; the checkers still come from another family (Gemini Flash).",
+ "roles": {
+  "brief": "claude-sonnet-5-5",
+  "knowledge": "claude-sonnet-5-5",
+  "skeptic": "gemini-3.8-flash",
+  "pedagogy": "claude-sonnet-5-5",
+  "persona_pick": "claude-haiku-4-5",
+  "script": "claude-sonnet-5-5",
+  "storyboard_outline": "claude-sonnet-5-5",
+  "storyboard": "claude-sonnet-5-5",
+  "scene": "claude-sonnet-5-5",
+  "critic": "gemini-3.8-flash",
+  "tweak": "claude-haiku-4-5"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

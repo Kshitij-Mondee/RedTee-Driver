@@ -1,0 +1,3290 @@
+{
+  "style": "flat-cosmos",
+  "concept": "A flat-cosmos night world with four held stations, each changing state on the spoken word instead of being redrawn. The orbit picture (Earth, tilted rings, satellites broadcasting) says what is overhead. The sky diagram (a cross-section: Earth's curved surface along the bottom, the phone as a glowing point on it, satellites above) is the lesson's working machine: a stamped pulse travels down, a range line becomes a circle, circles meet, swell together when the phone's clock is off, and snap back to one point when a fourth satellite fixes the clock; it returns for the recap. The two-clocks pair (a clock in orbit above, a clock on the ground below, Earth between) shows quartz against atomic, then speed and gravity pulling the orbit clock's rate, then the clock set slow before launch. The night city with the blue dot opens and closes the film, carries the 300 metre ruler, drifts 10 km in a day and comes home.",
+  "chrome": {
+    "section_labels": false
+  },
+  "join_material": "camera",
+  "world": {
+    "stations": [
+      {
+        "id": "orbit",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "Earth and the constellation",
+        "note": "Earth disc centred about (960, 540), radius about 220, crescent-shaded, night side with a few city lights and one teal point for the phone. Orbit rings around it up to about 1500 wide, tilted, front halves over Earth and back halves behind it. Tags sit on objects (a radius line, an orbit arc, a satellite) at label size 26 to 30. Nothing readable below y 930 (captions)."
+      },
+      {
+        "id": "city",
+        "x": 0,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the night city",
+        "note": "Plan form (b01, b20, b29): the night city seen from above filling the frame, street grid, blocks with lit windows, a river; the phone in b01 at centre right (about x 1180 to 1560, y 110 to 880). Skyline form (b33, b34): the night skyline along the lower half (towers up to about y 470, ground about y 900), a faint air band across the upper third, the phone at right (about x 1380 to 1720, y 140 to 820). Nothing readable below y 930."
+      },
+      {
+        "id": "diagram",
+        "x": 2400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the ranging cross-section",
+        "note": "Earth's curved surface across the bottom (crest about y 820 at x 960, falling away to both sides); the phone point at (960, 812). Satellites: A about (430, 230), B about (1490, 200), C about (980, 110); D rises from the right horizon to about (1720, 430) in b23. Range circles centred on the satellites pass through the phone point, large and partly off frame. The phone readout panel (timer, sums, unknown tags) at right about x 1300 to 1800, y 520 to 780; the question at upper left about x 120 to 700, y 380 to 520. Nothing readable below y 930."
+      },
+      {
+        "id": "clocks",
+        "x": 4800,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the two clocks",
+        "note": "Earth disc bottom-left, centre about (420, 1000), radius about 400 (its top near y 600). A satellite on an orbit arc top-left about (560, 230). The orbit clock top-right, centre about (1340, 260), radius about 140, joined by a thin line to the satellite; the ground clock bottom-right, centre about (1340, 700), radius about 140, joined to Earth's surface. Chips beside each clock at about x 1510 to 1880. Gravity well (b27) on the left half under Earth. Phone inset (b30) about x 760 to 1040, y 380 to 860. Nothing readable below y 930."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "None: the literal system, drawn flat. Earth, satellites, a signal, circles, clocks, a phone and its blue dot.",
+    "setting": "One night field: the city below, Earth and its satellites above, a cross-section diagram, and two clocks.",
+    "arc": "A blue dot appears on a night map; the answer is overhead: satellites with atomic clocks broadcasting where and when; travel time gives a distance, a distance gives a sphere, spheres meet at you; the phone's cheap clock breaks it and a fourth satellite fixes it; the satellites' own clocks run fast in orbit and are set slow before launch; the chain replays and the dot lands.",
+    "cast": []
+  },
+  "devices": [
+    {
+      "id": "sky_diagram",
+      "what": "The ranging cross-section held from b08 to b24 and replayed in b31 and b32: Earth's curved surface across the bottom with the phone as a glowing teal point, satellites above, a stamped pulse, range lines that sweep into circles (spheres drawn as circles), the overlap ring, two candidate points, all circles swelling together and snapping back to one point.",
+      "kind": "explain",
+      "beats": [
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18",
+        "b21",
+        "b22",
+        "b23",
+        "b24",
+        "b31",
+        "b32"
+      ]
+    },
+    {
+      "id": "two_clocks",
+      "what": "Two clock faces on one vertical line: the orbit clock on a satellite at the top, the ground clock (the phone's in b19) at the bottom by Earth. Their hands and a small microsecond chip show steady against off, behind, ahead, then in step.",
+      "kind": "explain",
+      "beats": [
+        "b19",
+        "b25",
+        "b26",
+        "b27",
+        "b28",
+        "b30",
+        "b32"
+      ]
+    },
+    {
+      "id": "city_dot",
+      "what": "The night city from above with the phone and its blue dot: the dot pulses in, a 300 metre ruler unrolls across the streets, the dot drifts away under a day dial and comes home, wears a soft halo, then lands for good.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b20",
+        "b29",
+        "b30",
+        "b33",
+        "b34"
+      ]
+    },
+    {
+      "id": "constellation",
+      "what": "Earth in the night field with tilted orbit rings and satellites travelling them; altitude and period as tags on a radius line and an orbit arc, never cards; each satellite pulses as it broadcasts.",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07"
+      ]
+    },
+    {
+      "id": "camera_join",
+      "what": "The one join material: camera moves between the four stations of the one night world (up from the city to orbit, across to the diagram, on to the clocks), continue joins inside a station, hard cuts only at the open and into the recap.",
+      "kind": "join",
+      "beats": [
+        "b01",
+        "b02",
+        "b08",
+        "b19",
+        "b20",
+        "b21",
+        "b25",
+        "b29",
+        "b30",
+        "b31",
+        "b33"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "dark",
+      "accent": "the blue dot",
+      "why": "a quiet night open; one point of colour on the map"
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "accent": "the element the narration names: a satellite, the pulse, a tag",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b21",
+      "band": "dark",
+      "break": true,
+      "accent": "the blurred patch where the circles no longer meet",
+      "why": "the problem darkens the frame and holds through the pause"
+    },
+    {
+      "from": "b24",
+      "band": "mid",
+      "break": true,
+      "accent": "the single snapped point",
+      "why": "the snap is the peak; colour returns with the answer"
+    },
+    {
+      "from": "b29",
+      "band": "mid",
+      "break": true,
+      "accent": "the drifting dot in warning red",
+      "why": "the drift is the cost of ignoring relativity"
+    },
+    {
+      "from": "b31",
+      "band": "mid",
+      "accent": "each replayed step on its word",
+      "why": "the recap replays the lesson's own images"
+    },
+    {
+      "from": "b34",
+      "band": "light",
+      "break": true,
+      "accent": "the blue dot landing",
+      "why": "a lift at the close: the city lights brighten"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "night_city",
+        "what": "The night city in two forms. Plan: seen from straight above, filling 1920 x 1080: a street grid in line and surface2, blocks in surface with small warm lit windows (accent2 at low opacity), a river in field2 crossing diagonally, a park; it reads as a map. Exposes a position anchor (home) near the centre, a metre scale (pixels per 300 m for the ruler, about 360 px) and a far-edge anchor for the drift. Skyline: a side elevation of the same city along the lower half, towers in surface and surface2 with crescent shading and lit windows, one tall tower at about x 820 whose face can catch a signal (a bounce point anchor), and an air band (a faint muted gradient band in the upper third) that a signal crosses. States: lights_low, lights_up (the close).",
+        "states": [
+          "plan",
+          "skyline",
+          "lights_low",
+          "lights_up"
+        ],
+        "beats": [
+          "b01",
+          "b20",
+          "b29",
+          "b33",
+          "b34"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "phone",
+        "what": "The viewer's phone, flat: rounded body in shadow with a surface bezel, crescent shading, offset shadow. Screen states: dark, map (a simplified night map like the city plan), dot (the blue dot in accent4 with a soft pulse ring, offset parameter so it can drift and come home), halo (a soft accent4 uncertainty disc round the dot, size parameter). A readout form for the diagram: a rounded panel (about 500 x 260) that shows a running timer (counts to a given value and stops), and up to four short label rows that light in turn. A quartz clock form: a small cheap clock face that sits on the phone. A mini form (about 280 x 480) for insets. Never a hand or a person.",
+        "states": [
+          "dark",
+          "map",
+          "dot",
+          "dot_drift",
+          "halo",
+          "readout_timer",
+          "readout_rows",
+          "quartz_clock",
+          "mini"
+        ],
+        "beats": [
+          "b01",
+          "b11",
+          "b12",
+          "b18",
+          "b19",
+          "b24",
+          "b30",
+          "b31",
+          "b33",
+          "b34"
+        ],
+        "size": [
+          380,
+          760
+        ]
+      },
+      {
+        "id": "earth",
+        "what": "Earth, flat-cosmos: a crescent-shaded disc (oceans in surface, land in accent4 at low saturation, the night side in shadow with a few warm city lights) with an optional glowing accent4 point for the phone's place, at any radius. An arc form: the curved surface seen from close, spanning the frame bottom, with the phone point on its crest. A gravity well form: curved grid lines dipping under Earth, deep near the surface and shallowing with height, with a height marker that can slide up the well.",
+        "states": [
+          "disc",
+          "disc_point",
+          "arc",
+          "well"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b18",
+          "b19",
+          "b21",
+          "b22",
+          "b23",
+          "b24",
+          "b25",
+          "b26",
+          "b27",
+          "b28",
+          "b30",
+          "b31",
+          "b32"
+        ],
+        "size": [
+          800,
+          800
+        ]
+      },
+      {
+        "id": "gps_satellite",
+        "what": "A GPS satellite, flat: a box body in surface with crescent shading, two solar panels in field2 with accent2 cell lines, an antenna dish facing Earth, and a small clock face slot on its body. States: idle (muted), named (body edge in accent while spoken), dim, broadcasting (rings pulse out from the antenna at a steady rate), on_rocket (seated on a small two-stage rocket for the launch, with a flame that can fire). Sizes from a 24 px point in the constellation to a 360 px close-up.",
+        "states": [
+          "idle",
+          "named",
+          "dim",
+          "broadcasting",
+          "on_rocket"
+        ],
+        "beats": [
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b18",
+          "b19",
+          "b21",
+          "b22",
+          "b23",
+          "b24",
+          "b25",
+          "b26",
+          "b27",
+          "b28",
+          "b30",
+          "b31",
+          "b32",
+          "b34"
+        ],
+        "size": [
+          360,
+          220
+        ]
+      },
+      {
+        "id": "orbit_rings",
+        "what": "The constellation around the Earth disc: tilted elliptical orbit rings in line at low opacity, each split into a back half (behind Earth) and a front half, satellites placed on them by phase and travelling with time (one ring, then the six that fill the sky, about four satellites each, never a count label of its own). A trace state draws one ring bright in accent as a satellite runs it. A radius line from Earth's surface to one satellite with a tag anchor at its middle; a period arc along one ring with a tag anchor.",
+        "states": [
+          "one_ring",
+          "trace",
+          "filled",
+          "radius_line",
+          "period_arc"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07"
+        ],
+        "size": [
+          1600,
+          1000
+        ]
+      },
+      {
+        "id": "signal",
+        "what": "Signals: a travelling pulse (a short bright arc of wavefront in accent2 with a soft glow) that moves from a point to a point at a given progress, with up to two riding chips (a position pin chip, a time stamp chip with a tiny clock); concentric broadcast rings; a light beam streak (a long thin accent2 line with a bright head) for the speed of light; a bent path (refracts slightly crossing a band) and a bounce path (reflects off an anchor).",
+        "states": [
+          "pulse",
+          "pulse_tagged",
+          "rings",
+          "beam",
+          "bend",
+          "bounce",
+          "absorbed"
+        ],
+        "beats": [
+          "b04",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b31",
+          "b33"
+        ],
+        "size": [
+          400,
+          400
+        ]
+      },
+      {
+        "id": "range_circles",
+        "what": "The ranging machinery of the cross-section: a range line from a satellite to a point (label anchor at its middle); a circle around a satellite through a point, drawn by the range line sweeping round, with a radius offset parameter so every circle can swell or shrink together by the same amount; the overlap ring of two circles drawn as a thin tilted ellipse through their two crossing points (a sphere-meets-sphere ring in the flat picture); candidate point markers (bright accent2 discs that can dim or glow); a blurred patch where swollen circles no longer meet (a soft neg tinted region); a snap to one point. Circles in line at mid opacity, the one named in accent.",
+        "states": [
+          "range_line",
+          "sweep",
+          "circle",
+          "swell",
+          "shrink",
+          "ring",
+          "two_points",
+          "patch",
+          "snap"
+        ],
+        "beats": [
+          "b13",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b18",
+          "b21",
+          "b22",
+          "b23",
+          "b24",
+          "b31",
+          "b32"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "clock_face",
+        "what": "A flat clock face (ink face ring, surface fill, crescent shading) whose hands are driven by time with a rate and an offset parameter: steady, off (an offset it cannot know), behind, ahead, in_step, and set_slow (a small knob on its rim turns back). A microsecond chip slot beside it. Small form (about 60 px) for tags and badges, large form (about 280 px) for the clocks station. Atomic and quartz differ by finish (atomic: a fine ring of tick marks; quartz: plain, a slight wobble), never by a logo.",
+        "states": [
+          "steady",
+          "off",
+          "behind",
+          "ahead",
+          "in_step",
+          "set_slow",
+          "small",
+          "large"
+        ],
+        "beats": [
+          "b03",
+          "b06",
+          "b18",
+          "b19",
+          "b24",
+          "b25",
+          "b26",
+          "b27",
+          "b28",
+          "b30",
+          "b32"
+        ],
+        "size": [
+          300,
+          300
+        ]
+      }
+    ],
+    "notes": "No people, no hands, no faces anywhere (the brief: people only with a designed flat-cosmos character kit; none is declared). Flat-cosmos tokens only: field and field2 for the night, surface and surface2 for bodies, ink for type, muted and line for quiet parts, accent (orange) for the one element the narration names, accent2 (gold) for signals and light, accent4 (teal) only for the blue dot and the phone's point on Earth (its identity colour throughout), neg only for errors (the patch, the drift). Crescent shading, radius 26 on cards, stroke 4, offset shadow. Type: labels 24 to 30, body 30 to 36. Every on-screen word is the script's on_screen text, nothing else. Numbers only as the script states them."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "city",
+      "subject": "A blue dot appears right where you stand",
+      "world": "the night city from above, the phone lighting",
+      "shot": {
+        "size": "wide",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "dot",
+      "design": {
+        "treatment": "The night city plan fills the frame, lights low, a slow push. The phone settles at centre right with a dark screen; on 'you open a map' the screen lights with the night map; on 'A blue dot appears' the teal dot pulses into place at the map's centre, the only saturated colour in the frame.",
+        "why_motion": "the dot arriving is the question the lesson answers",
+        "references": [
+          "flat-cosmos pack palette and shape (crescent shading, offset shadow)"
+        ],
+        "elements": [
+          {
+            "name": "city",
+            "label": "night_city plan, lights_low"
+          },
+          {
+            "name": "phone",
+            "label": "phone dark, then map"
+          },
+          {
+            "name": "dot",
+            "label": "phone dot, accent4 pulse"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say it's night",
+            "element": "city",
+            "action": "the night city fades up from the field, slow push begins",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "you open a map",
+            "element": "phone",
+            "action": "the phone settles; its screen lights with the map",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "A blue dot appears",
+            "element": "dot",
+            "action": "the dot pulses into place",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "city",
+            "phone",
+            "dot"
+          ],
+          "incoming": [
+            "city",
+            "phone",
+            "dot"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "orbit",
+      "subject": "The phone told no one; so how does it know?",
+      "world": "up from the city to Earth in the night field",
+      "shot": {
+        "size": "wide",
+        "move": "pull"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "earth_point",
+      "design": {
+        "treatment": "The camera has risen from the city: Earth sits in the night field, night side towards us, and one small teal point glows where the phone is. A slow pull back as the question lands; nothing else moves.",
+        "why_motion": "the pull back puts the phone in the scale of the planet",
+        "references": [
+          "flat-cosmos pack: crescent-shaded discs, twinkling stars"
+        ],
+        "elements": [
+          {
+            "name": "earth",
+            "label": "earth disc_point"
+          },
+          {
+            "name": "earth_point",
+            "label": "the teal point for the phone on Earth"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your phone hasn't told anyone",
+            "element": "earth",
+            "action": "Earth settles in the field as the camera arrives",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "where it is",
+            "element": "earth_point",
+            "action": "the teal point glows once",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "So how does it know?",
+            "element": "earth",
+            "action": "slow pull back, the point steady",
+            "motion": "pull"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "earth",
+            "earth_point"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "orbit",
+      "keep": [
+        "earth",
+        "earth_point"
+      ],
+      "subject": "The answer is overhead, and it is all about time",
+      "world": "Earth with its satellites",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "the clock tag being spoken",
+      "design": {
+        "treatment": "Satellites fade in on their tilted rings around Earth. Three small clock tags line up at the upper right, each a small clock with its word: keep, measure, correct, each in accent while spoken then ink.",
+        "why_motion": "the three verbs arrive in the order the lesson will teach them",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "orbits",
+            "label": "orbit_rings one_ring then filled, low opacity"
+          },
+          {
+            "name": "sats",
+            "label": "gps_satellite idle points on the rings"
+          },
+          {
+            "name": "time_tags",
+            "label": "three small clock_face tags: keep, measure, correct"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The answer is overhead",
+            "element": "sats",
+            "action": "rings and satellites fade in around Earth",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "keeping it",
+            "element": "time_tags",
+            "action": "tag keep lights",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "measuring it",
+            "element": "time_tags",
+            "action": "tag measure lights",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "correcting it",
+            "element": "time_tags",
+            "action": "tag correct lights; all three settle to ink",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "earth_point"
+          ],
+          "travelling": [],
+          "retiring": [
+            "time_tags"
+          ],
+          "incoming": [
+            "orbits",
+            "sats",
+            "time_tags"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "orbit",
+      "keep": [
+        "earth",
+        "earth_point",
+        "orbits",
+        "sats"
+      ],
+      "subject": "Two things you know: satellites and the speed of light",
+      "world": "one ring traced, a beam of light",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "trace",
+      "design": {
+        "treatment": "One satellite runs its ring and the ring draws bright in accent behind it; then a long gold beam of light streaks across the field above Earth, fast, and fades.",
+        "why_motion": "orbit and light speed are both motion; each shown moving on its words",
+        "references": [
+          "flat-cosmos pack motion: smooth"
+        ],
+        "elements": [
+          {
+            "name": "trace",
+            "label": "orbit_rings trace on one ring"
+          },
+          {
+            "name": "beam",
+            "label": "signal beam across the field"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "satellites in orbit",
+            "element": "trace",
+            "action": "one satellite runs its ring; the ring draws bright behind it",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "the speed of light",
+            "element": "beam",
+            "action": "a gold beam streaks across and fades",
+            "motion": "travel"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "earth_point",
+            "orbits",
+            "sats"
+          ],
+          "travelling": [
+            "beam"
+          ],
+          "retiring": [
+            "trace",
+            "beam"
+          ],
+          "incoming": [
+            "trace",
+            "beam"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "orbit",
+      "keep": [
+        "earth",
+        "earth_point",
+        "orbits",
+        "sats"
+      ],
+      "subject": "About 24 satellites, about 20,200 km up, about 12 hours an orbit",
+      "world": "the constellation filling in",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "the tag being spoken",
+      "design": {
+        "treatment": "The rings tilt and multiply until the constellation fills Earth's sky, satellites travelling along them; the tag about 24 by design sits beside the swarm. A radius line draws from Earth's surface to one satellite with the tag about 20,200 km at its middle. That satellite runs a stretch of its ring and a period arc follows it with the tag about 12 h per orbit.",
+        "why_motion": "the numbers sit on the things they measure: the swarm, the height, the loop",
+        "references": [
+          "flat-cosmos pack: text sits on things"
+        ],
+        "elements": [
+          {
+            "name": "fill",
+            "label": "orbit_rings filled, the full constellation"
+          },
+          {
+            "name": "tag_count",
+            "label": "tag about 24 by design"
+          },
+          {
+            "name": "radius",
+            "label": "orbit_rings radius_line with tag about 20,200 km"
+          },
+          {
+            "name": "period",
+            "label": "orbit_rings period_arc with tag about 12 h per orbit"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "About 24 GPS satellites",
+            "element": "fill",
+            "action": "rings tilt in and fill; satellites travel",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "by design",
+            "element": "tag_count",
+            "action": "the count tag settles beside the swarm",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "20,200 kilometres up",
+            "element": "radius",
+            "action": "the radius line draws up to one satellite; tag appears",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "circling every 12 hours",
+            "element": "period",
+            "action": "the period arc follows the satellite; tag appears",
+            "motion": "draw"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "earth_point",
+            "orbits",
+            "sats"
+          ],
+          "travelling": [],
+          "retiring": [
+            "tag_count",
+            "radius",
+            "period"
+          ],
+          "incoming": [
+            "fill",
+            "tag_count",
+            "radius",
+            "period"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "orbit",
+      "keep": [
+        "earth",
+        "earth_point",
+        "orbits",
+        "sats",
+        "fill"
+      ],
+      "subject": "Atomic clocks on board, broadcasting all the time",
+      "world": "close on one satellite",
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "clock",
+      "design": {
+        "treatment": "A push in towards one satellite, which grows to its close-up form beside Earth's limb. The clock face on its body ticks with the tag atomic clock; then broadcast rings pulse out from its antenna, and from every other satellite on the rings behind it.",
+        "why_motion": "the clock ticks and the signal never stops: both are continuous",
+        "references": [
+          "flat-cosmos pack: crescent shading"
+        ],
+        "elements": [
+          {
+            "name": "hero_sat",
+            "label": "gps_satellite close-up, named"
+          },
+          {
+            "name": "clock",
+            "label": "clock_face small on the satellite body, steady, tag atomic clock"
+          },
+          {
+            "name": "broadcast",
+            "label": "signal rings from the hero satellite and the others"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Each carries atomic clocks",
+            "element": "clock",
+            "action": "push in; the satellite grows; its clock ticks; tag appears",
+            "motion": "push and pop"
+          },
+          {
+            "t_anchor": "broadcasting, all the time",
+            "element": "broadcast",
+            "action": "rings pulse out from it and from every satellite",
+            "motion": "pulse"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "earth_point",
+            "orbits",
+            "sats",
+            "fill"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "hero_sat",
+            "clock",
+            "broadcast"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "orbit",
+      "keep": [
+        "earth",
+        "earth_point",
+        "orbits",
+        "sats",
+        "fill",
+        "hero_sat",
+        "clock"
+      ],
+      "subject": "Every signal says where I am and when I sent this",
+      "world": "one pulse with two tags",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "the chip being spoken",
+      "design": {
+        "treatment": "One pulse leaves the hero satellite towards Earth; two chips ride its wavefront: a position pin chip with the words where I am, then a time stamp chip with a tiny clock and the words when I sent this, each in accent while spoken.",
+        "why_motion": "the message travels with the signal; the chips ride it",
+        "references": [
+          "flat-cosmos pack: text sits on things"
+        ],
+        "elements": [
+          {
+            "name": "pulse",
+            "label": "signal pulse_tagged from the hero satellite"
+          },
+          {
+            "name": "chip_where",
+            "label": "position pin chip: where I am"
+          },
+          {
+            "name": "chip_when",
+            "label": "time stamp chip: when I sent this"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Every signal says two things",
+            "element": "pulse",
+            "action": "one pulse leaves the satellite towards Earth",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Here is where I am",
+            "element": "chip_where",
+            "action": "the position chip rides onto the wavefront",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "exactly when I sent this",
+            "element": "chip_when",
+            "action": "the time stamp chip joins it",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "earth_point",
+            "orbits",
+            "sats",
+            "fill",
+            "hero_sat",
+            "clock"
+          ],
+          "travelling": [
+            "pulse"
+          ],
+          "retiring": [
+            "earth",
+            "earth_point",
+            "orbits",
+            "sats",
+            "fill",
+            "hero_sat",
+            "clock",
+            "pulse",
+            "chip_where",
+            "chip_when"
+          ],
+          "incoming": [
+            "pulse",
+            "chip_where",
+            "chip_when"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "diagram",
+      "subject": "The phone only listens; nothing goes up",
+      "world": "the cross-section: ground, phone, satellites",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "up_arrow",
+      "design": {
+        "treatment": "The cross-section settles: Earth's curved surface across the bottom, the teal phone point on its crest, three satellites above. Signals arrive at the point from all three. An arrow starts to draw upward from the point, stops, and fades out, struck through: nothing leaves.",
+        "why_motion": "the arrow that never completes is the refutation",
+        "references": [
+          "flat-cosmos pack: neg only for errors"
+        ],
+        "elements": [
+          {
+            "name": "ground",
+            "label": "earth arc across the bottom"
+          },
+          {
+            "name": "phone_pt",
+            "label": "the teal phone point on the crest"
+          },
+          {
+            "name": "sats",
+            "label": "gps_satellite A, B, C idle"
+          },
+          {
+            "name": "incoming",
+            "label": "signal pulses from A, B, C arriving at the point"
+          },
+          {
+            "name": "up_arrow",
+            "label": "an upward arrow from the point, drawn then struck and faded"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your phone only listens",
+            "element": "incoming",
+            "action": "pulses arrive at the phone point from all three satellites",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Nothing goes up",
+            "element": "up_arrow",
+            "action": "an arrow draws upward, stalls, is struck through and fades",
+            "motion": "draw then exit"
+          },
+          {
+            "t_anchor": "never learn where you are",
+            "element": "sats",
+            "action": "the satellites stay quiet; the point stays teal",
+            "motion": "hold"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "incoming"
+          ],
+          "retiring": [
+            "incoming",
+            "up_arrow"
+          ],
+          "incoming": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "incoming",
+            "up_arrow"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats"
+      ],
+      "subject": "A stamped signal heads for the phone",
+      "world": "the cross-section, one pulse",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "pulse",
+      "design": {
+        "treatment": "Satellite A is named; B and C dim. A single pulse leaves A carrying its time stamp chip (a tiny clock, no words) and starts down towards the phone point.",
+        "why_motion": "the one trip the next beats measure",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "pulse",
+            "label": "signal pulse from satellite A"
+          },
+          {
+            "name": "stamp",
+            "label": "time stamp chip riding the pulse, a tiny clock"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A signal leaves",
+            "element": "pulse",
+            "action": "A is named; a pulse leaves it",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "stamped with its sending time",
+            "element": "stamp",
+            "action": "the stamp chip clips onto the pulse",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "heads for your phone",
+            "element": "pulse",
+            "action": "the pulse travels down, about a third of the way",
+            "motion": "travel"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats"
+          ],
+          "travelling": [
+            "pulse",
+            "stamp"
+          ],
+          "retiring": [],
+          "incoming": [
+            "pulse",
+            "stamp"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "pulse",
+        "stamp"
+      ],
+      "subject": "A radio wave at light speed",
+      "world": "the pulse in flight",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "tag_speed",
+      "design": {
+        "treatment": "The pulse keeps travelling down; the speed tag about 300,000 km/s rides beside it, gold streak lines behind the wavefront.",
+        "why_motion": "the speed is read off the thing that has it",
+        "references": [
+          "flat-cosmos pack: text sits on things"
+        ],
+        "elements": [
+          {
+            "name": "tag_speed",
+            "label": "tag about 300,000 km/s riding beside the pulse"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "It's a radio wave",
+            "element": "pulse",
+            "action": "the pulse continues down, streak lines behind it",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "300,000 kilometres a second",
+            "element": "tag_speed",
+            "action": "the speed tag attaches beside the pulse and rides with it",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "pulse",
+            "stamp"
+          ],
+          "travelling": [
+            "pulse",
+            "stamp",
+            "tag_speed"
+          ],
+          "retiring": [
+            "tag_speed"
+          ],
+          "incoming": [
+            "tag_speed"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "pulse",
+        "stamp"
+      ],
+      "subject": "From overhead the trip takes about 0.07 seconds",
+      "world": "the pulse arrives; the timer stops",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "timer",
+      "design": {
+        "treatment": "The phone readout panel opens at right, linked to the phone point by a thin line. Its timer counts while the pulse covers the last stretch, and stops at about 0.07 s as the pulse reaches the point and is absorbed; the stamp chip drops into the readout.",
+        "why_motion": "the count and the trip are one event",
+        "references": [
+          "capabilities: data_pictures counter"
+        ],
+        "elements": [
+          {
+            "name": "readout",
+            "label": "phone readout panel, linked to the phone point"
+          },
+          {
+            "name": "timer",
+            "label": "phone readout_timer counting to about 0.07 s"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "From straight overhead",
+            "element": "readout",
+            "action": "the readout opens beside the point",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "the trip takes",
+            "element": "timer",
+            "action": "the timer counts as the pulse travels the last stretch",
+            "motion": "count"
+          },
+          {
+            "t_anchor": "about 0.07 seconds",
+            "element": "timer",
+            "action": "the pulse arrives; the timer stops at about 0.07 s; the stamp drops into the readout",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "pulse",
+            "stamp"
+          ],
+          "travelling": [
+            "pulse",
+            "stamp"
+          ],
+          "retiring": [
+            "pulse"
+          ],
+          "incoming": [
+            "readout",
+            "timer"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "timer",
+        "readout_link",
+        "stamp_chip"
+      ],
+      "subject": "Arrival minus sending, times the speed of light",
+      "world": "the readout working the sum",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "the row being spoken",
+      "design": {
+        "treatment": "In the readout three rows light in turn, each in accent while spoken: arrival (the phone's time), sending (the stamp chip slides into this row), x speed of light; the timer value between them shows the travel time, and a thin line extends from the readout up towards satellite A as the product forms.",
+        "why_motion": "three operations in order; each lands on its word",
+        "references": [
+          "flat-cosmos pack: labels 24 to 30"
+        ],
+        "elements": [
+          {
+            "name": "rows",
+            "label": "phone readout_rows: arrival, sending, x speed of light"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "takes the arrival time",
+            "element": "rows",
+            "action": "row arrival lights",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "subtracts the sending time",
+            "element": "rows",
+            "action": "the stamp slides into row sending; it lights",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "multiplies by the speed of light",
+            "element": "rows",
+            "action": "row x speed of light lights; a thin line starts up towards satellite A",
+            "motion": "pop then draw"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "timer",
+            "readout_link",
+            "stamp_chip"
+          ],
+          "travelling": [],
+          "retiring": [
+            "timer",
+            "readout_link",
+            "stamp_chip",
+            "rows"
+          ],
+          "incoming": [
+            "rows"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats"
+      ],
+      "subject": "A distance, not a direction",
+      "world": "the range line",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "range_line",
+      "design": {
+        "treatment": "A straight range line joins satellite A to the phone point with the tag distance at its middle. A direction arrow appears at the point, pointing along the line, then is struck through and fades: only the length is known.",
+        "why_motion": "the struck arrow is what the measurement does not give",
+        "references": [
+          "flat-cosmos pack: neg only for errors"
+        ],
+        "elements": [
+          {
+            "name": "range_line",
+            "label": "range_circles range_line A to the point, tag distance"
+          },
+          {
+            "name": "dir_arrow",
+            "label": "a direction arrow, struck through and faded"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "That gives a distance",
+            "element": "range_line",
+            "action": "the range line draws; tag distance appears",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Not a direction",
+            "element": "dir_arrow",
+            "action": "a direction arrow appears and is struck through",
+            "motion": "pop then strike"
+          },
+          {
+            "t_anchor": "only a distance",
+            "element": "range_line",
+            "action": "the arrow fades; the line holds",
+            "motion": "exit"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats"
+          ],
+          "travelling": [],
+          "retiring": [
+            "dir_arrow"
+          ],
+          "incoming": [
+            "range_line",
+            "dir_arrow"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "range_line"
+      ],
+      "subject": "One distance puts the phone on a sphere",
+      "world": "the range line sweeping into a circle",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "circle_a",
+      "design": {
+        "treatment": "The range line pivots on satellite A and sweeps all the way round, drawing a full circle in accent behind it (the sphere, drawn flat); the circle passes through the phone point on Earth's surface. The range line fades and the circle settles to line colour.",
+        "why_motion": "the sweep shows that every point at that range fits",
+        "references": [
+          "flat-cosmos pack motion: draw 0.8"
+        ],
+        "elements": [
+          {
+            "name": "circle_a",
+            "label": "range_circles sweep then circle around A"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So the phone sits somewhere on a sphere",
+            "element": "circle_a",
+            "action": "the range line sweeps round A drawing the circle",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "at exactly that range",
+            "element": "circle_a",
+            "action": "the circle closes through the phone point; the line fades",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "range_line"
+          ],
+          "travelling": [],
+          "retiring": [
+            "range_line"
+          ],
+          "incoming": [
+            "circle_a"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "circle_a"
+      ],
+      "subject": "Two spheres meet in a circle",
+      "world": "a second circle and the overlap ring",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "ring",
+      "design": {
+        "treatment": "Satellite B is named; its circle grows outward from it until it crosses circle A at two places, one of them the phone point. Through those two crossings a thin tilted ellipse lights in accent: the ring where the two spheres meet.",
+        "why_motion": "the overlap appears only when the second circle arrives",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "circle_b",
+            "label": "range_circles circle around B"
+          },
+          {
+            "name": "ring",
+            "label": "range_circles ring through the two crossings"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Add a second satellite",
+            "element": "circle_b",
+            "action": "B named; its circle grows out",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "Where the two spheres meet",
+            "element": "ring",
+            "action": "the crossings brighten",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "they trace a circle",
+            "element": "ring",
+            "action": "the tilted ring draws through them",
+            "motion": "draw"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circle_a"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "circle_b",
+            "ring"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "circle_a",
+        "circle_b"
+      ],
+      "subject": "A third sphere cuts the ring at two points",
+      "world": "the third circle",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "pts",
+      "design": {
+        "treatment": "Satellite C is named; its circle grows and cuts the ring; the ring fades away except where it was cut, leaving two bright gold points: one on Earth's surface at the phone, one high above in space.",
+        "why_motion": "the ring collapsing to two points is the narrowing",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "circles_ab",
+            "label": "range_circles circles around A and B with their ring"
+          },
+          {
+            "name": "circle_c",
+            "label": "range_circles circle around C"
+          },
+          {
+            "name": "pts",
+            "label": "range_circles two_points: ground point and space point"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A third sphere",
+            "element": "circle_c",
+            "action": "C named; its circle grows",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "cuts that circle",
+            "element": "circle_b",
+            "action": "the ring is cut; it fades",
+            "motion": "exit"
+          },
+          {
+            "t_anchor": "at just two points",
+            "element": "pts",
+            "action": "two bright points remain",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circle_a",
+            "circle_b"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "circles_ab",
+            "circle_c",
+            "pts"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "circle_a",
+        "circle_b",
+        "circle_c",
+        "pts"
+      ],
+      "subject": "One point is in space; the other is you, in principle",
+      "world": "the two points resolved",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "phone_pt",
+      "design": {
+        "treatment": "The point far out in space dims and drifts into the field until it is gone; the ground point merges with the teal phone point, which glows. On 'In principle' the glow hesitates, a small flicker.",
+        "why_motion": "the choice between the two points is made by where they are",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "space_pt",
+            "label": "the space point dimming out"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "One is usually far out in space",
+            "element": "space_pt",
+            "action": "the space point dims and drifts away",
+            "motion": "exit"
+          },
+          {
+            "t_anchor": "on the ground, is you",
+            "element": "phone_pt",
+            "action": "the ground point merges with the phone point, which glows",
+            "motion": "glow"
+          },
+          {
+            "t_anchor": "In principle",
+            "element": "phone_pt",
+            "action": "the glow hesitates once",
+            "motion": "nudge"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circle_a",
+            "circle_b",
+            "circle_c",
+            "pts"
+          ],
+          "travelling": [],
+          "retiring": [
+            "pts",
+            "space_pt"
+          ],
+          "incoming": [
+            "space_pt"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "circle_a",
+        "circle_b",
+        "circle_c"
+      ],
+      "subject": "All this assumed the phone knows the exact time",
+      "world": "the phone's clock appears",
+      "shot": {
+        "size": "wide",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "phone_clock",
+      "design": {
+        "treatment": "A slow push towards the phone point; a small quartz clock badge pops up beside it, ticking. On 'It doesn't' its hands jump off and wobble, and the phone point flickers.",
+        "why_motion": "the hidden assumption is shown, then broken",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "phone_clock",
+            "label": "clock_face small quartz badge beside the phone point"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Because all of this assumed",
+            "element": "phone_clock",
+            "action": "push begins; the clock badge pops up beside the point",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "knows the exact time",
+            "element": "phone_clock",
+            "action": "the badge ticks steadily",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "It doesn't",
+            "element": "phone_clock",
+            "action": "its hands jump off and wobble; the point flickers",
+            "motion": "shake"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circle_a",
+            "circle_b",
+            "circle_c"
+          ],
+          "travelling": [],
+          "retiring": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circle_a",
+            "circle_b",
+            "circle_c",
+            "phone_clock"
+          ],
+          "incoming": [
+            "phone_clock"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "bespoke",
+      "station": "clocks",
+      "subject": "Atomic clocks above, a cheap quartz clock below",
+      "world": "the two clocks",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "bottom_clock",
+      "design": {
+        "treatment": "The clocks station: Earth's disc bottom-left, a satellite top-left. The orbit clock (atomic finish) top-right, joined to the satellite, ticks steadily with the tag atomic. The ground clock sits on a small phone at bottom-right, quartz finish, tag quartz; its hand sits visibly off the orbit clock's and wobbles slightly.",
+        "why_motion": "the two clocks side by side make the difference visible",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "earth",
+            "label": "earth disc bottom-left"
+          },
+          {
+            "name": "sat",
+            "label": "gps_satellite top-left"
+          },
+          {
+            "name": "top_clock",
+            "label": "clock_face large atomic, steady, tag atomic"
+          },
+          {
+            "name": "bottom_clock",
+            "label": "phone quartz_clock, clock_face large off, tag quartz"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Satellites have atomic clocks",
+            "element": "top_clock",
+            "action": "the satellite and its clock settle; tag atomic",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "a cheap quartz clock",
+            "element": "bottom_clock",
+            "action": "the phone clock settles below; tag quartz",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "off by an amount it can't know",
+            "element": "bottom_clock",
+            "action": "its hand shows off from the top clock's and wobbles",
+            "motion": "nudge"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "earth",
+            "sat",
+            "top_clock",
+            "bottom_clock"
+          ],
+          "incoming": [
+            "earth",
+            "sat",
+            "top_clock",
+            "bottom_clock"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "city",
+      "subject": "A microsecond off is 300 metres off",
+      "world": "the night city from above, a ruler",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "ruler",
+      "design": {
+        "treatment": "The night city plan, the teal dot on a street. A tiny tick chip appears by the dot and unrolls into a long ruler laid across the streets from the dot, 300 metres long at the city's scale, with the tag 1 microsecond = about 300 m on it.",
+        "why_motion": "the tick becoming a ruler is time becoming distance",
+        "references": [
+          "capabilities: data_pictures, a number drawn as a picture"
+        ],
+        "elements": [
+          {
+            "name": "city",
+            "label": "night_city plan, lights_low"
+          },
+          {
+            "name": "dot",
+            "label": "the teal dot on a street (home anchor)"
+          },
+          {
+            "name": "ruler",
+            "label": "a tick chip unrolling into a 300 m ruler, tag 1 microsecond = about 300 m"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "here, time is distance",
+            "element": "dot",
+            "action": "the city settles with the dot",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Light covers about 300 metres in a microsecond",
+            "element": "ruler",
+            "action": "a tick chip appears by the dot and unrolls along the street",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "a microsecond off is 300 metres off",
+            "element": "ruler",
+            "action": "the tag lands on the ruler",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "city",
+            "dot",
+            "ruler"
+          ],
+          "incoming": [
+            "city",
+            "dot",
+            "ruler"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "diagram",
+      "subject": "The same error swells every sphere; they stop meeting",
+      "world": "back on the cross-section",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "patch",
+      "design": {
+        "treatment": "The cross-section returns as it was: ground, phone point, satellites A, B, C and their three circles meeting at the point. The three circles swell outward together by the same amount; the single meeting point breaks apart into a soft neg-tinted patch where no point is on all three.",
+        "why_motion": "the same swell on every circle is the shared clock error",
+        "references": [
+          "flat-cosmos pack: neg only for errors"
+        ],
+        "elements": [
+          {
+            "name": "ground",
+            "label": "earth arc"
+          },
+          {
+            "name": "phone_pt",
+            "label": "the teal phone point"
+          },
+          {
+            "name": "sats",
+            "label": "gps_satellite A, B, C"
+          },
+          {
+            "name": "circle_a",
+            "label": "circle around A"
+          },
+          {
+            "name": "circle_b",
+            "label": "circle around B"
+          },
+          {
+            "name": "circle_c",
+            "label": "circle around C"
+          },
+          {
+            "name": "patch",
+            "label": "range_circles patch"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the error is the same for every satellite",
+            "element": "circle_a",
+            "action": "the diagram settles with the three circles meeting",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Every sphere swells together",
+            "element": "circle_b",
+            "action": "all three circles swell by the same amount",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "they stop meeting at one point",
+            "element": "patch",
+            "action": "the meeting breaks into a blurred patch",
+            "motion": "reveal"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circle_a",
+            "circle_b",
+            "circle_c",
+            "patch"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "dusk",
+        "ground",
+        "sats",
+        "circles",
+        "patch"
+      ],
+      "subject": "What would fix it?",
+      "world": "the broken diagram held",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "night",
+      "intent": "process_hold",
+      "accent_on": "question",
+      "design": {
+        "treatment": "Nothing in the diagram moves; the swollen circles and the patch hold. The question What would fix it? settles at the upper left in display type and waits through the pause; only the stars twinkle.",
+        "why_motion": "a held frame is the space to think",
+        "references": [
+          "flat-cosmos pack: type title 60 to 92"
+        ],
+        "elements": [
+          {
+            "name": "question",
+            "label": "What would fix it?"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Every distance is wrong by the same amount",
+            "element": "patch",
+            "action": "the patch breathes once",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "what would fix it?",
+            "element": "question",
+            "action": "the question settles and holds through the pause",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "dusk",
+            "ground",
+            "sats",
+            "circles",
+            "patch"
+          ],
+          "travelling": [],
+          "retiring": [
+            "question"
+          ],
+          "incoming": [
+            "question"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "dusk",
+        "ground",
+        "sats",
+        "circles",
+        "patch"
+      ],
+      "subject": "One more satellite",
+      "world": "a fourth satellite rises",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "sat_d",
+      "design": {
+        "treatment": "A fourth satellite D rises over the right horizon in accent and climbs to its place; its circle grows into the diagram, also swollen by the same error, adding its edge to the patch.",
+        "why_motion": "the fourth measurement arrives as a fourth object",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "sat_d",
+            "label": "gps_satellite D, named"
+          },
+          {
+            "name": "circle_d",
+            "label": "circle around D, swollen"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "One more satellite",
+            "element": "sat_d",
+            "action": "D rises over the horizon",
+            "motion": "rise"
+          },
+          {
+            "t_anchor": "A fourth sphere",
+            "element": "circle_d",
+            "action": "its circle grows into the diagram",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "than position alone needs",
+            "element": "circle_d",
+            "action": "the circle settles over the patch",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "dusk",
+            "ground",
+            "sats",
+            "circles",
+            "patch"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "sat_d",
+            "circle_d"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "dusk",
+        "ground",
+        "sats",
+        "sat_d",
+        "circles",
+        "circle_d",
+        "patch"
+      ],
+      "subject": "Find the one clock error that makes all four meet",
+      "world": "the snap",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "snap_pt",
+      "design": {
+        "treatment": "The readout panel opens at right with four unknown tags lighting as named: east, north, height, clock error. Then all four circles shrink together by the same amount, the patch closes, and they snap to one shared point at the phone; a small quartz clock badge beside it jumps its hand to the right time.",
+        "why_motion": "one shared shrink fixes all four at once: the solution is the motion",
+        "references": [
+          "flat-cosmos pack motion: smooth, settle"
+        ],
+        "elements": [
+          {
+            "name": "unknowns",
+            "label": "phone readout_rows: east, north, height, clock error"
+          },
+          {
+            "name": "snap_pt",
+            "label": "range_circles snap at the phone point"
+          },
+          {
+            "name": "phone_clock",
+            "label": "clock_face small quartz badge, jumps to the right time"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Four unknowns: east, north, height",
+            "element": "unknowns",
+            "action": "tags east, north, height light in turn",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "and the clock error",
+            "element": "unknowns",
+            "action": "tag clock error lights in accent",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "makes all four spheres meet",
+            "element": "snap_pt",
+            "action": "all four circles shrink together; the patch closes; they snap to one point",
+            "motion": "converge"
+          },
+          {
+            "t_anchor": "its position comes with it",
+            "element": "phone_clock",
+            "action": "the clock badge jumps to the right time; the point glows",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "dusk",
+            "ground",
+            "sats",
+            "sat_d",
+            "circles",
+            "circle_d",
+            "patch"
+          ],
+          "travelling": [],
+          "retiring": [
+            "dusk",
+            "ground",
+            "sats",
+            "sat_d",
+            "circles",
+            "circle_d",
+            "patch",
+            "unknowns",
+            "snap_pt",
+            "phone_clock"
+          ],
+          "incoming": [
+            "unknowns",
+            "snap_pt",
+            "phone_clock"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b25",
+      "kind": "bespoke",
+      "station": "clocks",
+      "subject": "It all rests on the satellites' clocks: are they right?",
+      "world": "the two clocks again",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "top_clock",
+      "design": {
+        "treatment": "The clocks station returns: Earth bottom-left with the ground clock (a plain ground clock now, atomic finish, no phone) at bottom-right, ticking. The eye is led up to the satellite and its orbit clock top-right, which comes into focus in accent; both clocks tick together for now.",
+        "why_motion": "the eye moves from the phone's solved problem up to the satellite's clock",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "earth",
+            "label": "earth disc bottom-left"
+          },
+          {
+            "name": "sat",
+            "label": "gps_satellite top-left"
+          },
+          {
+            "name": "top_clock",
+            "label": "clock_face large atomic on the satellite"
+          },
+          {
+            "name": "bottom_clock",
+            "label": "clock_face large atomic, ground"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the phone's clock is handled",
+            "element": "bottom_clock",
+            "action": "Earth and the ground clock settle",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "it all rests on the satellites' clocks",
+            "element": "top_clock",
+            "action": "the satellite and its orbit clock arrive and come into focus",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "Are they right?",
+            "element": "top_clock",
+            "action": "the orbit clock is held in accent",
+            "motion": "glow"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "earth",
+            "sat",
+            "top_clock",
+            "bottom_clock"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b26",
+      "kind": "bespoke",
+      "station": "clocks",
+      "keep": [
+        "earth",
+        "sat",
+        "orbit_clock",
+        "ground_clock"
+      ],
+      "subject": "Speed: a moving clock runs slow, about 7 microseconds a day",
+      "world": "the satellite speeding",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "chip_speed",
+      "design": {
+        "treatment": "The satellite speeds along its orbit arc with motion streaks; the orbit clock's second hand slips behind the ground clock's. The chip speed: about 7 microseconds a day slower settles beside the orbit clock.",
+        "why_motion": "the clock falls behind while the satellite moves",
+        "references": [
+          "flat-cosmos pack: text sits on things"
+        ],
+        "elements": [
+          {
+            "name": "streaks",
+            "label": "speed streaks behind the satellite"
+          },
+          {
+            "name": "chip_speed",
+            "label": "chip speed: about 7 microseconds a day slower"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Satellites move fast",
+            "element": "streaks",
+            "action": "the satellite speeds along the arc, streaks behind it",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "a moving clock runs slow",
+            "element": "orbit_clock",
+            "action": "the orbit clock's hand slips behind the ground clock's",
+            "motion": "lag"
+          },
+          {
+            "t_anchor": "about 7 microseconds a day",
+            "element": "chip_speed",
+            "action": "the chip settles beside the orbit clock",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "sat",
+            "orbit_clock",
+            "ground_clock"
+          ],
+          "travelling": [],
+          "retiring": [
+            "streaks"
+          ],
+          "incoming": [
+            "streaks",
+            "chip_speed"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b27",
+      "kind": "bespoke",
+      "station": "clocks",
+      "keep": [
+        "earth",
+        "sat",
+        "orbit_clock",
+        "ground_clock",
+        "chip_speed"
+      ],
+      "subject": "Gravity: weaker up there, the clock runs fast, about 45",
+      "world": "the gravity well",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "chip_gravity",
+      "design": {
+        "treatment": "Under Earth the gravity well draws: grid lines deep at the surface, shallowing with height; a height marker slides up it to the satellite's level, where the well is nearly flat. The orbit clock's hand now races ahead of the ground clock's; the chip gravity: about 45 microseconds a day faster settles beside it, above the speed chip, which dims to muted.",
+        "why_motion": "the well shallowing with height is why the clock speeds up",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "well",
+            "label": "earth well with height marker"
+          },
+          {
+            "name": "orbit_clock_fast",
+            "label": "the orbit clock's hand racing ahead"
+          },
+          {
+            "name": "chip_gravity",
+            "label": "chip gravity: about 45 microseconds a day faster"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "up there, gravity is weaker",
+            "element": "well",
+            "action": "the well draws; the marker slides up to the satellite's level",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "makes a clock run fast",
+            "element": "orbit_clock_fast",
+            "action": "the orbit clock races ahead",
+            "motion": "spin"
+          },
+          {
+            "t_anchor": "about 45 microseconds a day",
+            "element": "chip_gravity",
+            "action": "the chip settles; the speed chip dims",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "sat",
+            "orbit_clock",
+            "ground_clock",
+            "chip_speed"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "well",
+            "orbit_clock_fast",
+            "chip_gravity"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b28",
+      "kind": "bespoke",
+      "station": "clocks",
+      "keep": [
+        "earth",
+        "sat",
+        "orbit_clock",
+        "ground_clock",
+        "well",
+        "chip_speed",
+        "chip_gravity"
+      ],
+      "subject": "Gravity wins: about 38 microseconds a day",
+      "world": "two pushes on the clock",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "chip_net",
+      "design": {
+        "treatment": "Two arrows push on the orbit clock from opposite sides, a short one from the speed chip (slower) and a long one from the gravity chip (faster); the long one wins and the hand settles ahead. The two chips fold into one: net: about 38 microseconds a day faster.",
+        "why_motion": "two opposing effects, the larger winning, is a tug drawn as one",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "push_back",
+            "label": "short arrow from the speed chip (slower)"
+          },
+          {
+            "name": "push_ahead",
+            "label": "long arrow from the gravity chip (faster)"
+          },
+          {
+            "name": "chip_net",
+            "label": "chip net: about 38 microseconds a day faster"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Gravity wins",
+            "element": "push_ahead",
+            "action": "the two arrows push; the long one wins",
+            "motion": "push"
+          },
+          {
+            "t_anchor": "gains about 38 microseconds a day",
+            "element": "chip_net",
+            "action": "the chips fold into the net chip on the orbit clock",
+            "motion": "converge"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "earth",
+            "sat",
+            "orbit_clock",
+            "ground_clock",
+            "well",
+            "chip_speed",
+            "chip_gravity"
+          ],
+          "travelling": [],
+          "retiring": [
+            "earth",
+            "sat",
+            "orbit_clock",
+            "ground_clock",
+            "well",
+            "chip_speed",
+            "chip_gravity",
+            "push_back",
+            "push_ahead",
+            "chip_net"
+          ],
+          "incoming": [
+            "push_back",
+            "push_ahead",
+            "chip_net"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b29",
+      "kind": "bespoke",
+      "station": "city",
+      "subject": "Roughly 10 km of error every day",
+      "world": "the night city, the dot drifting",
+      "shot": {
+        "size": "wide",
+        "move": "pull"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "dot",
+      "design": {
+        "treatment": "The night city plan with the dot at home. A small day dial sweeps once round 24 hours in the corner while the dot, now neg red, slides steadily away from home across the city, leaving a thin dashed trail; a slow pull back keeps it in frame. The tag roughly 10 km a day rides the trail.",
+        "why_motion": "the drift building with time is the cost",
+        "references": [
+          "flat-cosmos pack: neg only for errors"
+        ],
+        "elements": [
+          {
+            "name": "city",
+            "label": "night_city plan"
+          },
+          {
+            "name": "dot",
+            "label": "the dot, drifting in neg"
+          },
+          {
+            "name": "day_dial",
+            "label": "a 24 hour dial sweeping once, no digits"
+          },
+          {
+            "name": "trail",
+            "label": "dashed trail from home, tag roughly 10 km a day"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "At 300 metres a microsecond",
+            "element": "city",
+            "action": "the city settles with the dot at home",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "roughly 10 kilometres of error",
+            "element": "dot",
+            "action": "the dial starts; the dot turns red and slides away, trail behind",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "building up every day",
+            "element": "trail",
+            "action": "the tag lands on the trail; the dot keeps going",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "dot"
+          ],
+          "retiring": [
+            "city",
+            "dot",
+            "day_dial",
+            "trail"
+          ],
+          "incoming": [
+            "city",
+            "dot",
+            "day_dial",
+            "trail"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b30",
+      "kind": "bespoke",
+      "station": "clocks",
+      "subject": "Set slow before launch, the clock keeps ground time",
+      "world": "the clocks station with a launch",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "top_clock",
+      "design": {
+        "treatment": "The clocks station: Earth, the ground clock bottom-right, and the satellite now on a small rocket on Earth's surface with its clock beside it. The clock's knob turns back (set slow) with the tag set slow before launch; the rocket fires and rises along a dashed arc to the orbit; in orbit the clock's hand falls into step with the ground clock's. At centre a mini phone shows the drifted red dot sliding back home and turning teal.",
+        "why_motion": "the fix happens before launch and pays off in orbit",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "earth",
+            "label": "earth disc bottom-left"
+          },
+          {
+            "name": "bottom_clock",
+            "label": "clock_face large, ground"
+          },
+          {
+            "name": "sat",
+            "label": "gps_satellite on_rocket, then in orbit"
+          },
+          {
+            "name": "top_clock",
+            "label": "clock_face set_slow then in_step, tag set slow before launch"
+          },
+          {
+            "name": "phone_inset",
+            "label": "phone mini with map, dot sliding home"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So the fix goes up with them",
+            "element": "sat",
+            "action": "the satellite sits on its rocket on Earth's surface",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "each clock is set slightly slow",
+            "element": "top_clock",
+            "action": "the knob turns back; tag appears",
+            "motion": "turn"
+          },
+          {
+            "t_anchor": "so in orbit",
+            "element": "sat",
+            "action": "the rocket rises along the arc to orbit",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "it keeps ground time",
+            "element": "phone_inset",
+            "action": "the clock falls in step; the mini phone's dot slides home, teal",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "sat"
+          ],
+          "retiring": [
+            "earth",
+            "bottom_clock",
+            "sat",
+            "top_clock",
+            "phone_inset"
+          ],
+          "incoming": [
+            "earth",
+            "bottom_clock",
+            "sat",
+            "top_clock",
+            "phone_inset"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b31",
+      "kind": "bespoke",
+      "station": "diagram",
+      "subject": "The chain in one breath",
+      "world": "the cross-section replayed",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "night",
+      "intent": "callback",
+      "accent_on": "the replayed step",
+      "design": {
+        "treatment": "The cross-section returns and replays its own images fast, each on its words, with a tag landing on the thing it names: satellites pulse out (broadcast); a stamped pulse falls and the readout timer stops (travel time); three circles grow and meet (spheres meet); satellite D's circle arrives and all four snap to one point (fourth satellite).",
+        "why_motion": "the recap is the lesson's own pictures, in order",
+        "references": [
+          "STORYBOARD_GUIDE: a recap replays the lesson's own images"
+        ],
+        "elements": [
+          {
+            "name": "ground",
+            "label": "earth arc"
+          },
+          {
+            "name": "phone_pt",
+            "label": "the teal phone point"
+          },
+          {
+            "name": "sats",
+            "label": "gps_satellite A, B, C"
+          },
+          {
+            "name": "pulse",
+            "label": "signal pulse_tagged from A"
+          },
+          {
+            "name": "timer",
+            "label": "phone readout_timer stopping"
+          },
+          {
+            "name": "circles",
+            "label": "range_circles A, B, C meeting"
+          },
+          {
+            "name": "sat_d",
+            "label": "gps_satellite D"
+          },
+          {
+            "name": "circle_d",
+            "label": "circle around D"
+          },
+          {
+            "name": "snap_pt",
+            "label": "range_circles snap"
+          },
+          {
+            "name": "recap_tags",
+            "label": "tags broadcast, travel time, spheres meet, fourth satellite, each on its object"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Satellites broadcast where and when",
+            "element": "pulse",
+            "action": "the satellites pulse; tag broadcast",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "Travel time gives distance",
+            "element": "timer",
+            "action": "a pulse falls; the timer stops; tag travel time",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Spheres meet",
+            "element": "circles",
+            "action": "three circles grow and meet; tag spheres meet",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "A fourth satellite fixes your phone's clock",
+            "element": "snap_pt",
+            "action": "D's circle arrives; all snap to one point; tag fourth satellite",
+            "motion": "converge"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "pulse"
+          ],
+          "retiring": [
+            "pulse",
+            "timer",
+            "recap_tags"
+          ],
+          "incoming": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "pulse",
+            "timer",
+            "circles",
+            "sat_d",
+            "circle_d",
+            "snap_pt",
+            "recap_tags"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b32",
+      "kind": "bespoke",
+      "station": "diagram",
+      "keep": [
+        "ground",
+        "phone_pt",
+        "sats",
+        "circles",
+        "sat_d",
+        "circle_d",
+        "snap_pt"
+      ],
+      "subject": "And the satellites' clocks were set before launch",
+      "world": "the clock pair beside the diagram",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "night",
+      "intent": "callback",
+      "accent_on": "clock_pair",
+      "design": {
+        "treatment": "The snapped diagram holds. Beside it at upper right the two clocks arrive in their small form, the orbit clock above the ground clock, ticking in step, with the tag clocks corrected.",
+        "why_motion": "the second fix joins the first in the same picture",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "clock_pair",
+            "label": "clock_face small pair, in_step, tag clocks corrected"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "set for relativity",
+            "element": "clock_pair",
+            "action": "the two small clocks arrive, ticking in step",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "before they ever left the ground",
+            "element": "clock_pair",
+            "action": "tag clocks corrected lands",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circles",
+            "sat_d",
+            "circle_d",
+            "snap_pt"
+          ],
+          "travelling": [],
+          "retiring": [
+            "ground",
+            "phone_pt",
+            "sats",
+            "circles",
+            "sat_d",
+            "circle_d",
+            "snap_pt",
+            "clock_pair"
+          ],
+          "incoming": [
+            "clock_pair"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b33",
+      "kind": "bespoke",
+      "station": "city",
+      "subject": "Real life adds noise: the dot is an estimate",
+      "world": "the night skyline",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "night",
+      "accent_on": "halo",
+      "design": {
+        "treatment": "The city skyline along the bottom, the air band above it, the phone at right with its map. A gold signal comes down from above and bends slightly as it crosses the air band; a second one bounces off the tall tower before reaching the phone. On the phone the teal dot grows a soft halo.",
+        "why_motion": "the bend and the bounce are the noise, seen happening",
+        "references": [
+          "flat-cosmos pack palette"
+        ],
+        "elements": [
+          {
+            "name": "skyline",
+            "label": "night_city skyline with air band"
+          },
+          {
+            "name": "phone",
+            "label": "phone map with the dot"
+          },
+          {
+            "name": "dot",
+            "label": "phone dot, accent4"
+          },
+          {
+            "name": "sig_bend",
+            "label": "signal bend through the air band"
+          },
+          {
+            "name": "sig_bounce",
+            "label": "signal bounce off the tall tower"
+          },
+          {
+            "name": "halo",
+            "label": "phone halo round the dot"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Real life adds noise",
+            "element": "skyline",
+            "action": "skyline and phone settle",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "The air slows signals a little",
+            "element": "sig_bend",
+            "action": "a signal bends crossing the air band",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "buildings bounce them",
+            "element": "sig_bounce",
+            "action": "a signal bounces off the tower to the phone",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "the dot is an estimate",
+            "element": "halo",
+            "action": "the halo grows round the dot",
+            "motion": "grow"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "sig_bend",
+            "sig_bounce"
+          ],
+          "retiring": [
+            "sig_bend",
+            "sig_bounce"
+          ],
+          "incoming": [
+            "skyline",
+            "phone",
+            "dot",
+            "sig_bend",
+            "sig_bounce",
+            "halo"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b34",
+      "kind": "bespoke",
+      "station": "city",
+      "keep": [
+        "skyline",
+        "phone"
+      ],
+      "subject": "Each time it appears, the phone has solved a timing problem",
+      "world": "the phone, the city, the satellites above",
+      "shot": {
+        "size": "wide",
+        "move": "pull"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "night",
+      "intent": "callback",
+      "accent_on": "phone",
+      "design": {
+        "treatment": "The phone's dot pulses as in the opening; the halo tightens into it and the dot lands. A slow pull back: the city lights brighten and small satellites pass slowly above the skyline, each pulsing once. The final frame holds.",
+        "why_motion": "the opening image returns, now understood",
+        "references": [
+          "flat-cosmos pack: a lift at the close"
+        ],
+        "elements": [
+          {
+            "name": "city_warm",
+            "label": "city lights brightening"
+          },
+          {
+            "name": "sats_pass",
+            "label": "small gps_satellite points passing above, pulsing"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "But each time it appears",
+            "element": "phone",
+            "action": "the phone's dot pulses as in the opening",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "solved a timing problem",
+            "element": "phone",
+            "action": "the halo tightens into the dot",
+            "motion": "shrink"
+          },
+          {
+            "t_anchor": "the dot lands where you are",
+            "element": "sats_pass",
+            "action": "the dot lands; pull back; city lights up; satellites pass above; final hold",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "skyline",
+            "phone"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "city_warm",
+            "sats_pass"
+          ]
+        }
+      }
+    }
+  ]
+}

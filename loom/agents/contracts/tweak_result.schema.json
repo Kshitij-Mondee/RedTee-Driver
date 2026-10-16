@@ -1,0 +1,59 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "tweak_result",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "status",
+  "files"
+ ],
+ "properties": {
+  "status": {
+   "enum": [
+    "done",
+    "out_of_scope"
+   ]
+  },
+  "files": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "path",
+     "content"
+    ],
+    "properties": {
+     "path": {
+      "type": "string"
+     },
+     "content": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "checklist": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "change": {
+      "type": "string"
+     },
+     "done": {
+      "type": "boolean"
+     },
+     "proof": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "unverified": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

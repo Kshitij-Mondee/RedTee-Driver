@@ -1,0 +1,457 @@
+{
+ "scene": "home_office",
+ "camera_spec": {
+  "camera": {
+   "x": 1.95,
+   "y": 0.0,
+   "eye": 1.25,
+   "yaw": -36,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "far wall (inner wall to the main bedroom)",
+    "axis": "y",
+    "at": 2.7
+   },
+   {
+    "name": "window wall (the front wall)",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "right wall (inner wall to the landing)",
+    "axis": "x",
+    "at": 2.4
+   }
+  ],
+  "points": {
+   "corner_far_left_floor": [
+    0,
+    2.7,
+    0
+   ],
+   "win_near_jamb_sill": [
+    0,
+    0.95,
+    0.9
+   ],
+   "win_far_jamb_sill": [
+    0,
+    2.15,
+    0.9
+   ],
+   "win_near_jamb_head": [
+    0,
+    0.95,
+    2.1
+   ],
+   "win_far_jamb_head": [
+    0,
+    2.15,
+    2.1
+   ],
+   "win_near_jamb_floor": [
+    0,
+    0.95,
+    0
+   ],
+   "desk_near_L": [
+    0.35,
+    1.45,
+    0.73
+   ],
+   "desk_near_R": [
+    1.55,
+    1.45,
+    0.73
+   ],
+   "desk_far_L": [
+    0.35,
+    2.05,
+    0.73
+   ],
+   "desk_far_R": [
+    1.55,
+    2.05,
+    0.73
+   ],
+   "desk_leg_near_L": [
+    0.38,
+    1.48,
+    0
+   ],
+   "desk_leg_near_R": [
+    1.52,
+    1.48,
+    0
+   ],
+   "laptop_lid_top": [
+    0.95,
+    1.82,
+    1.17
+   ],
+   "laptop_stand_foot": [
+    0.95,
+    1.72,
+    0.73
+   ],
+   "keyboard": [
+    0.95,
+    1.6,
+    0.75
+   ],
+   "lamp_shade": [
+    0.5,
+    1.9,
+    1.15
+   ],
+   "mug": [
+    1.4,
+    1.6,
+    0.8
+   ],
+   "chair_back_top": [
+    0.95,
+    2.55,
+    1.05
+   ],
+   "seat": [
+    0.95,
+    2.3,
+    0.47
+   ],
+   "head_top": [
+    0.95,
+    2.38,
+    1.31
+   ],
+   "head_centre": [
+    0.95,
+    2.38,
+    1.19
+   ],
+   "feet": [
+    0.95,
+    1.85,
+    0
+   ],
+   "radiator_near_top": [
+    0.1,
+    1.1,
+    0.65
+   ],
+   "radiator_far_top": [
+    0.1,
+    2.0,
+    0.65
+   ],
+   "corner_far_left_top_of_frame": [
+    0,
+    2.7,
+    2.0
+   ],
+   "chair_floor": [
+    0.95,
+    2.3,
+    0
+   ],
+   "shelf_left_end": [
+    1.25,
+    2.7,
+    1.72
+   ],
+   "shelf_right_end": [
+    2.05,
+    2.7,
+    1.72
+   ],
+   "far_wall_at_frame_right_1m": [
+    1.55,
+    2.7,
+    1.0
+   ],
+   "lamp_base": [
+    0.5,
+    1.9,
+    0.73
+   ],
+   "phone_on_desk": [
+    1.3,
+    1.75,
+    0.74
+   ],
+   "window_centre_sill": [
+    0,
+    1.55,
+    0.9
+   ],
+   "desk_front_mid": [
+    0.95,
+    1.45,
+    0.73
+   ],
+   "window_far_jamb_floor": [
+    0,
+    2.15,
+    0
+   ],
+   "badge_on_lamp": [
+    0.55,
+    1.9,
+    1.0
+   ],
+   "headphones_on_desk": [
+    0.55,
+    1.6,
+    0.76
+   ]
+  },
+  "behind": [
+   "head_top",
+   "head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 2300,
+   "along_x": -1578,
+   "horizon_y": 497
+  },
+  "points": {
+   "corner_far_left_floor": {
+    "x": 965,
+    "y": 1189,
+    "where": "overscan",
+    "depth": 3.33
+   },
+   "win_near_jamb_sill": {
+    "x": -22,
+    "y": 834,
+    "where": "overscan",
+    "depth": 1.91
+   },
+   "win_far_jamb_sill": {
+    "x": 759,
+    "y": 720,
+    "where": "frame",
+    "depth": 2.89
+   },
+   "win_near_jamb_head": {
+    "x": -22,
+    "y": -322,
+    "where": "outside",
+    "depth": 1.91
+   },
+   "win_far_jamb_head": {
+    "x": 759,
+    "y": -46,
+    "where": "overscan",
+    "depth": 2.89
+   },
+   "win_near_jamb_floor": {
+    "x": -22,
+    "y": 1701,
+    "where": "outside",
+    "depth": 1.91
+   },
+   "desk_near_L": {
+    "x": 574,
+    "y": 951,
+    "where": "frame",
+    "depth": 2.11
+   },
+   "desk_near_R": {
+    "x": 1652,
+    "y": 1178,
+    "where": "overscan",
+    "depth": 1.41
+   },
+   "desk_far_L": {
+    "x": 897,
+    "y": 866,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "desk_far_R": {
+    "x": 1818,
+    "y": 1003,
+    "where": "frame",
+    "depth": 1.89
+   },
+   "desk_leg_near_L": {
+    "x": 612,
+    "y": 1584,
+    "where": "outside",
+    "depth": 2.12
+   },
+   "desk_leg_near_R": {
+    "x": 1624,
+    "y": 2086,
+    "where": "outside",
+    "depth": 1.45
+   },
+   "laptop_lid_top": {
+    "x": 1193,
+    "y": 568,
+    "where": "frame",
+    "depth": 2.06
+   },
+   "laptop_stand_foot": {
+    "x": 1148,
+    "y": 981,
+    "where": "frame",
+    "depth": 1.98
+   },
+   "keyboard": {
+    "x": 1089,
+    "y": 987,
+    "where": "frame",
+    "depth": 1.88
+   },
+   "lamp_shade": {
+    "x": 917,
+    "y": 574,
+    "where": "frame",
+    "depth": 2.39
+   },
+   "mug": {
+    "x": 1525,
+    "y": 1010,
+    "where": "frame",
+    "depth": 1.62
+   },
+   "chair_back_top": {
+    "x": 1440,
+    "y": 636,
+    "where": "frame",
+    "depth": 2.65
+   },
+   "seat": {
+    "x": 1369,
+    "y": 1084,
+    "where": "overscan",
+    "depth": 2.45
+   },
+   "head_top": {
+    "x": 1393,
+    "y": 453,
+    "where": "frame",
+    "depth": 2.51,
+    "behind": {
+     "wall": "far wall (inner wall to the main bedroom)",
+     "at": [
+      0.82,
+      2.7,
+      1.32
+     ]
+    }
+   },
+   "head_centre": {
+    "x": 1393,
+    "y": 541,
+    "where": "frame",
+    "depth": 2.51,
+    "behind": {
+     "wall": "far wall (inner wall to the main bedroom)",
+     "at": [
+      0.82,
+      2.7,
+      1.18
+     ]
+    }
+   },
+   "feet": {
+    "x": 1206,
+    "y": 1603,
+    "where": "outside",
+    "depth": 2.08
+   },
+   "radiator_near_top": {
+    "x": 167,
+    "y": 1056,
+    "where": "frame",
+    "depth": 1.98
+   },
+   "radiator_far_top": {
+    "x": 741,
+    "y": 906,
+    "where": "frame",
+    "depth": 2.71
+   },
+   "corner_far_left_top_of_frame": {
+    "x": 965,
+    "y": 82,
+    "where": "frame",
+    "depth": 3.33
+   },
+   "chair_floor": {
+    "x": 1369,
+    "y": 1438,
+    "where": "outside",
+    "depth": 2.45
+   },
+   "shelf_left_end": {
+    "x": 1685,
+    "y": 163,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "shelf_right_end": {
+    "x": 2407,
+    "y": 89,
+    "where": "outside",
+    "depth": 2.13
+   },
+   "far_wall_at_frame_right_1m": {
+    "x": 1923,
+    "y": 687,
+    "where": "overscan",
+    "depth": 2.42
+   },
+   "lamp_base": {
+    "x": 917,
+    "y": 898,
+    "where": "frame",
+    "depth": 2.39
+   },
+   "phone_on_desk": {
+    "x": 1476,
+    "y": 1020,
+    "where": "frame",
+    "depth": 1.8
+   },
+   "window_centre_sill": {
+    "x": 448,
+    "y": 766,
+    "where": "frame",
+    "depth": 2.4
+   },
+   "desk_front_mid": {
+    "x": 1005,
+    "y": 1041,
+    "where": "frame",
+    "depth": 1.76
+   },
+   "window_far_jamb_floor": {
+    "x": 759,
+    "y": 1296,
+    "where": "outside",
+    "depth": 2.89
+   },
+   "badge_on_lamp": {
+    "x": 948,
+    "y": 692,
+    "where": "frame",
+    "depth": 2.36
+   },
+   "headphones_on_desk": {
+    "x": 793,
+    "y": 924,
+    "where": "frame",
+    "depth": 2.12
+   }
+  }
+ }
+}

@@ -1,0 +1,159 @@
+{
+  "title": "Public, internal, confidential: how our data classification works",
+  "performance": "given an everyday document, file or message, the viewer can name its class (public, internal or confidential), say how that class may be shared, and default to the higher class and ask the owner when unsure",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "knows some information is sensitive; has not used the three class names or their handling rules",
+    "why": "general employee population across roles; the brief's audience.knows",
+    "motivation": "wants to share quickly without causing a leak; mildly wary of compliance training",
+    "context": "desktop at work, with sound or captions, a short break between tasks"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "the classes only mean something applied to real items; one running file (a customer list about to be emailed to a new contractor) carries the lesson and each class is seen on an everyday object before it is named",
+    "signature_move": "show an everyday item, ask who could be harmed if it got out, THEN name the class and its handling rule"
+  },
+  "misconceptions": [
+    {
+      "belief": "if it looks harmless it is fine to share outside",
+      "why_tempting": "most internal items, like meeting notes, contain nothing alarming",
+      "refuted_in": "sec1",
+      "source_anchor": "F10, F13"
+    },
+    {
+      "belief": "the class depends on where the file sits or what format it is in",
+      "why_tempting": "people associate sensitivity with locked folders or paper stamps",
+      "refuted_in": "sec3",
+      "source_anchor": "F9, F11"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Your cursor is on Send: a customer list attached, going to a contractor who started this week. Something makes you pause."
+    },
+    "promise": "three classes and one question sort anything you handle, and the class tells you how to share it",
+    "bridge_from_prior": "you already sense some things are sensitive; the question 'who could be harmed if this got out' turns that instinct into a class (F1, F9)",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain the difference between public and internal information using a released item and an internal one",
+        "bloom": "understand",
+        "concepts": [
+          "public: approved for release, share freely (F2, F6, F10, F12)",
+          "internal: employees only, limited harm, not sent outside without approval (F3, F7, F13)"
+        ],
+        "energy": "build",
+        "carrier": "two everyday items sorted side by side",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can apply the harm question to the customer list, place it in confidential and use its handling rules: named people who need it, approved protected channels",
+        "bloom": "apply",
+        "concepts": [
+          "confidential: need to know, significant harm (F4, F8)",
+          "handling: named recipients, approved channels, protected storage, careful disposal (F14, F15, F16)"
+        ],
+        "energy": "peak",
+        "carrier": "the running customer list classified and its handling shown",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can apply the default rule: when unsure treat it as the higher class and ask the owner; the label travels with the item",
+        "bloom": "apply",
+        "concepts": [
+          "label travels across paper, file and screen (F11)",
+          "owner decides; unsure means higher class and ask (F17, F18)",
+          "our own policy decides each case (F5)"
+        ],
+        "energy": "rest",
+        "carrier": "one item moving across paper, folder and screen keeping its colour",
+        "recap_after": false
+      }
+    ],
+    "payoff": "back to the Send button: the customer list is confidential, so it goes only if the contractor needs it, by an approved protected channel, and if unsure you ask the list's owner first"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "press release, meeting notes and the customer list each sorted with the harm question narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "after sec2",
+      "what": "three items (posted job advert, org chart, payroll file) shown; the viewer sorts them before the answer appears"
+    },
+    {
+      "stage": "independent",
+      "where": "payoff",
+      "what": "the viewer decides what to do with the opening email before the narrator says it"
+    }
+  ],
+  "pacing": {
+    "requested_s": 105,
+    "target_duration_s": 105,
+    "words_per_minute": 150,
+    "slowdown_at": [
+      "confidential handling"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "quiz",
+        "prompt_sketch": "Sort these three: a posted job advert, the org chart, the payroll file.",
+        "answer": "public, internal, confidential (F6, F7, F8)",
+        "tempting_wrong": "calling the org chart public because it looks harmless; it is internal unless approved for release (F10)"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "before you attach a file to anything going outside the team, ask who could be harmed if it got out, and check its class"
+  ],
+  "persona": {
+    "voice": "a calm, capable colleague who explains how things work here",
+    "delivery_notes": "brisk on public and internal, slower on confidential handling, warm on the when-unsure rule"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: cursor on Send with a customer list",
+      "objective": "promise: three classes, one question",
+      "recall_prior": "bridge from the instinct that some things are sensitive",
+      "present": "public, internal, then confidential, in rising harm",
+      "guidance": "signature move: item, harm question, then class",
+      "practice": "faded sort after sec2",
+      "feedback": "answer shown with the tempting wrong on the org chart",
+      "assess": "payoff: viewer decides the opening email first",
+      "transfer": "transfer task: ask the harm question before attaching"
+    },
+    "merrill": {
+      "problem_centered": "the customer list email is the running problem",
+      "activation": "bridge from the existing sense of sensitivity",
+      "demonstration": "each class shown on an everyday item before it is named",
+      "application": "the three-item sort and the payoff decision",
+      "integration": "transfer task and the when-unsure rule"
+    },
+    "mayer": {
+      "coherence": "only everyday office items; no statistics, laws or tools",
+      "signalling": "one colour per class, held throughout; one slowdown on confidential handling",
+      "redundancy": "screen shows items, class names and short rules; narration explains",
+      "contiguity": "each item's colour changes as its class is spoken",
+      "segmenting": "three short sections, one idea each",
+      "pre_training": "the harm question is introduced before any class"
+    },
+    "arcs": {
+      "attention": "the paused Send button",
+      "relevance": "items the viewer handles every week",
+      "confidence": "worked items before the sort",
+      "satisfaction": "the viewer resolves the opening email"
+    },
+    "bloom_path": "understand -> apply -> apply"
+  },
+  "series": null,
+  "flags": [
+    "No company policy supplied: lesson describes a typical scheme and says our own policy decides each case (F5)"
+  ]
+}

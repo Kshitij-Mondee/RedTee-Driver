@@ -1,0 +1,2185 @@
+{
+  "style": "story-cartoon",
+  "concept": "One hypothetical project update stays on a paper desk while the feedback draft beside it is revised clause by clause. The film makes the next action visible. The colleague's reaction, reply and outcome are never drawn: they stay as empty slots.",
+  "motifs": [
+    {
+      "name": "paper-turn",
+      "desc": "The same paper sheet turns or hands off between stations; fallback is a hard cut or a black narration card."
+    },
+    {
+      "name": "strip-slot",
+      "desc": "The feedback draft is a paper sheet whose strips swap in place; the layout is held and only its state changes."
+    },
+    {
+      "name": "open-slot",
+      "desc": "An empty, unlettered space for reaction, reply, future update, circumstances or follow-up. Never filled."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "home",
+        "note": "Returning desk: update message, planning note with the old date, unsent draft. Two small faceless peers, back view."
+      },
+      {
+        "id": "desk_draft",
+        "parent": "desk",
+        "rect": {
+          "x": 1050,
+          "y": 380,
+          "w": 760,
+          "h": 520
+        },
+        "note": "The unsent draft on the desk, entered by a zoom."
+      },
+      {
+        "id": "slots",
+        "x": 2000,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Reaction and action slots beside the recurring draft."
+      },
+      {
+        "id": "sheet",
+        "x": 4000,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Draft sheet beside the update (left update, right draft). Held through the worked and faded stages."
+      },
+      {
+        "id": "table",
+        "x": 4000,
+        "y": 1100,
+        "w": 1920,
+        "h": 1080,
+        "zone": "deeper",
+        "note": "Two-draft table for the judgement."
+      },
+      {
+        "id": "circumstances",
+        "parent": "table",
+        "rect": {
+          "x": 560,
+          "y": 240,
+          "w": 800,
+          "h": 600
+        },
+        "note": "Unresolved circumstances margin, entered by a zoom."
+      },
+      {
+        "id": "model",
+        "x": 6000,
+        "y": 1100,
+        "w": 1920,
+        "h": 1080,
+        "note": "The model card, drawn as a portal."
+      },
+      {
+        "id": "yourdesk",
+        "parent": "model",
+        "rect": {
+          "x": 560,
+          "y": 240,
+          "w": 800,
+          "h": 600
+        },
+        "note": "Your desk: empty private sheet inside the portal."
+      },
+      {
+        "id": "margin",
+        "x": 8000,
+        "y": 1100,
+        "w": 1920,
+        "h": 1080,
+        "note": "Private draft with growing prompt margins."
+      },
+      {
+        "id": "followup",
+        "x": 10000,
+        "y": 1100,
+        "w": 1920,
+        "h": 1080,
+        "note": "Follow-up time bar, separate from the conversation."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "The draft is a paper sheet whose strips swap.",
+    "setting": "A shared-work desk",
+    "arc": "Broad request, then situation and omission, consequence, request, then a separate discussion strip; reaction and reply stay empty.",
+    "cast": [
+      {
+        "name": "Giver",
+        "rig": "extra",
+        "role": "writes the feedback; small, back view, faceless"
+      },
+      {
+        "name": "Colleague",
+        "rig": "extra",
+        "role": "never acts; slots stay empty; small, back view, faceless"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "returning-desk",
+      "what": "The desk with the update message and the giver's planning note (old date), held as the home frame and returned to at the close",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b07",
+        "b23",
+        "b30",
+        "b40",
+        "b41",
+        "b44"
+      ]
+    },
+    {
+      "id": "draft-strips",
+      "what": "The feedback draft as a paper sheet whose strips swap in place",
+      "kind": "explain",
+      "beats": [
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18",
+        "b19",
+        "b20",
+        "b22",
+        "b23",
+        "b26",
+        "b27",
+        "b41",
+        "b42"
+      ]
+    },
+    {
+      "id": "action-occasion-markers",
+      "what": "A hand-drawn underline for the requested action and a box mark for the occasion, reused in practice, quiz and payoff. The one accent.",
+      "kind": "explain",
+      "beats": [
+        "b13",
+        "b14",
+        "b20",
+        "b21",
+        "b26",
+        "b27",
+        "b35",
+        "b37",
+        "b40",
+        "b42",
+        "b43"
+      ]
+    },
+    {
+      "id": "open-slots",
+      "what": "Empty unlettered spaces for reaction, reply, future update, circumstances and follow-up; never filled",
+      "kind": "other",
+      "beats": [
+        "b02",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b15",
+        "b24",
+        "b25",
+        "b28",
+        "b29",
+        "b36",
+        "b38",
+        "b42"
+      ]
+    },
+    {
+      "id": "paper-turn",
+      "what": "Join material: the same sheet turns or hands off between stations; fallback hard cut or black narration card",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b08",
+        "b17",
+        "b23",
+        "b30",
+        "b40"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "withheld",
+      "why": "Pale open on warm paper; the gap in the update is drawn in ink only."
+    },
+    {
+      "from": "b02",
+      "band": "light",
+      "accent": "accent outline only on the empty future-action slot",
+      "why": "The accent is introduced as an empty outline meaning the action to be named."
+    },
+    {
+      "from": "b05",
+      "band": "dark",
+      "break": true,
+      "accent": "none",
+      "why": "Black narration card for the turn: reaction and workplace behaviour are separate."
+    },
+    {
+      "from": "b06",
+      "band": "light",
+      "why": "Return to paper for the delivery and context beat."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "why": "The draft is being built, update left and draft right."
+    },
+    {
+      "from": "b13",
+      "band": "mid",
+      "break": true,
+      "accent": "accent floods the request strip, action underline and occasion box",
+      "why": "Colour flood at the mechanism; the recipient's slots stay uncoloured."
+    },
+    {
+      "from": "b17",
+      "band": "mid",
+      "accent": "accent on the blank strip and anchors",
+      "why": "Faded practice: the accent sits on the missing request."
+    },
+    {
+      "from": "b23",
+      "band": "mid",
+      "accent": "accent on action and occasion only in the answer beat b27",
+      "why": "The two-draft table stays neutral until the answer."
+    },
+    {
+      "from": "b30",
+      "band": "light",
+      "accent": "markers rest unused beside blank targets",
+      "why": "Quiet pale canvas for independent drafting."
+    },
+    {
+      "from": "b40",
+      "band": "light",
+      "accent": "accent on action and occasion in the payoff",
+      "why": "The opening desk returns, changed; reply slots stay empty."
+    }
+  ],
+  "ambient": {
+    "kind": "paper"
+  },
+  "poster": {
+    "beat": "b42"
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "desk",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "hook",
+      "accent_on": "delivery date gap in the update",
+      "subject": "project update message with a gap where the date line should be",
+      "world": "shared-work desk, giver seen small from behind",
+      "rationale": "Presenter in the corner beside a workplace inset labelled Imagine. The update has a gap, the planning note carries the old date. No numerical dates, no reply. Classic alternative: presenter plus message card, no figures."
+    },
+    {
+      "beat": "b02",
+      "kind": "template",
+      "template": "document.page",
+      "station": "desk_draft",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "hook",
+      "accent_on": "empty action slot",
+      "props": {
+        "kind": "notes",
+        "title": "Unsent draft",
+        "say_title": "you are about to write",
+        "lines": [
+          {
+            "text": "Please be more considerate",
+            "say": "please be more considerate"
+          },
+          {
+            "text": "Next update: what should change?",
+            "say": "next update"
+          },
+          {
+            "text": "Action: (to be named)",
+            "say": "name the action"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "Camera zooms from the desk into the unsent draft. Held: update and planning note on the desk as context. Incoming: draft lines. Classic alternative: plain card. Allocation says template, so the script hybrid hint was not followed."
+    },
+    {
+      "beat": "b03",
+      "kind": "avatar",
+      "station": "desk",
+      "join_in": {
+        "type": "camera",
+        "dir": "left",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "existing draft",
+      "subject": "the existing draft and a second empty sheet",
+      "world": "shared-work desk",
+      "rationale": "Presenter indicates the draft and a second empty sheet for the viewer. Workplace inset stays. No agenda. Promise limited to a clearer draft."
+    },
+    {
+      "beat": "b04",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "slots",
+      "join_in": {
+        "type": "camera",
+        "dir": "right",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "action space",
+      "props": {
+        "title": "Reaction and action",
+        "say_title": "think of a conversation",
+        "left": {
+          "header": "Reaction",
+          "say": "what reaction did you notice",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Blank: yours, kept private"
+            }
+          ]
+        },
+        "right": {
+          "header": "Action",
+          "say": "what action did you want next",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Blank: yours, kept private"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "rationale": "Two empty annotation spaces beside the recurring draft. No invented feeling or viewer incident. Classic alternative: two-column card."
+    },
+    {
+      "beat": "b05",
+      "kind": "template",
+      "template": "title.card",
+      "station": "slots",
+      "join_in": {
+        "type": "cut",
+        "meaning": "shock"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "intent": "dark",
+      "accent_on": "workplace behaviour",
+      "props": {
+        "kicker": "The tricky part",
+        "say_kicker": "the tricky part",
+        "title": "A reaction does not show behaviour change",
+        "say_title": "a reaction to feedback does not establish",
+        "subtitle": "Keep them separate",
+        "say_subtitle": "keep those separate",
+        "panel": true
+      },
+      "rationale": "Black narration card for the one turn. Retires: the compare card. Calm state holds after. No causal arrow."
+    },
+    {
+      "beat": "b06",
+      "kind": "template",
+      "template": "document.page",
+      "station": "slots",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "accent_on": "discuss tab",
+      "props": {
+        "kind": "notes",
+        "title": "Delivery and discussion",
+        "say_title": "how you deliver feedback",
+        "lines": [
+          {
+            "text": "Willing to discuss it?",
+            "say": "whether someone is willing to discuss it"
+          },
+          {
+            "text": "Respectful wording: not a guarantee",
+            "say": "does respectful wording ensure they are receptive"
+          },
+          {
+            "text": "Context still matters",
+            "say": "context still matters"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "context still matters",
+          "dur": 1.5,
+          "rect": [
+            300,
+            620,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: page plus a spotlight motion layer on the open context margin. The recipient reply stays empty. Classic alternative: plain annotation."
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "template": "recap",
+      "station": "desk",
+      "join_in": {
+        "type": "camera",
+        "dir": "left",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "next action",
+      "props": {
+        "title": "Back at the update",
+        "say_title": "back at the update",
+        "items": [
+          {
+            "label": "Next action",
+            "say": "the next action matters"
+          },
+          {
+            "label": "Reaction",
+            "say": "the colleague's reaction"
+          }
+        ],
+        "rule": "Name what should change next",
+        "say_rule": "name what should change next"
+      },
+      "rationale": "Callback to the returning desk. Brisk pocket rule. The future-action slot stays separate from the empty reaction space."
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "template": "document.page",
+      "station": "sheet",
+      "join_in": {
+        "type": "page",
+        "dir": "right",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "empty action slot",
+      "props": {
+        "kind": "notes",
+        "title": "Your draft so far",
+        "say_title": "your draft still says",
+        "lines": [
+          {
+            "text": "Please be more considerate",
+            "say": "please be more considerate"
+          },
+          {
+            "text": "Action for next time: empty",
+            "say": "an action for next time"
+          },
+          {
+            "text": "Not yet: make it explicit",
+            "say": "make it explicit"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "Chapter start with a paper turn (fallback hard cut). No blame symbol, no expression. Classic alternative: card."
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "omission span",
+      "subject": "feedback draft sheet with a swapped strip",
+      "world": "shared-work desk, update left and draft right",
+      "design": {
+        "treatment": "Slot swap on the held draft sheet: the broad request strip lifts off and the supplied situation and omission strip unfolds in the same place, then a connector draws from its omission span into the gap in the update.",
+        "why_motion": "The swap IS the revision, and the connector shows which part of the update the clause points at.",
+        "elements": [
+          "update_message",
+          "gap_span",
+          "situation_strip",
+          "omission_link",
+          "omission_tag"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "in the last project update",
+            "element": "situation_strip",
+            "action": "swaps in for the broad request strip, which lifts off",
+            "motion": "slot swap, unfold"
+          },
+          {
+            "t_anchor": "the changed delivery date was not noted",
+            "element": "omission_link",
+            "action": "draws from the omission span of the strip into the gap in the update message",
+            "motion": "connector draws into its target"
+          },
+          {
+            "t_anchor": "an omission",
+            "element": "omission_tag",
+            "action": "label settles on the gap",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "not character",
+            "element": "update_message",
+            "action": "stays the only object marked; no figure is annotated",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "Held from b08: draft sheet and update_message at left. Leaves: broad_request_strip. Incoming: situation_strip, omission_link, omission_tag.",
+        "references": [
+          "story-cartoon pack, slot swap on a paper sheet"
+        ]
+      },
+      "rationale": "Classic alternative: progressive annotation on a message card."
+    },
+    {
+      "beat": "b10",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "accent_on": "substantiate",
+      "props": {
+        "kicker": "The tricky part",
+        "left": {
+          "header": "Original update",
+          "say": "substantiate this example",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "The update: can you show it?"
+            }
+          ]
+        },
+        "right": {
+          "header": "Your feedback",
+          "say": "your interpretation",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Your reading of it"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "Specific does not mean certain",
+          "say": "specific does not mean certain"
+        },
+        "mode": "columns"
+      },
+      "rationale": "Two distinct objects: the update and the feedback. Classic alternative: two-card."
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "consequence line",
+      "subject": "consequence line linked to the planning note",
+      "world": "shared-work desk with the planning note",
+      "design": {
+        "treatment": "The consequence strip drops beneath the grounded account and a thread draws to the unchanged planning note. A motive tag is shown with no thread, so nothing reaches the colleague side.",
+        "why_motion": "The thread shows the consequence is about the giver's own planning, not the colleague's mind.",
+        "elements": [
+          "situation_strip",
+          "consequence_strip",
+          "planning_note",
+          "thread",
+          "motive_gap"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "i used the old date",
+            "element": "consequence_strip",
+            "action": "drops in beneath situation_strip",
+            "motion": "drop and settle"
+          },
+          {
+            "t_anchor": "to plan my work",
+            "element": "thread",
+            "action": "draws from the consequence strip into the planning note",
+            "motion": "connector draws into its target"
+          },
+          {
+            "t_anchor": "why it mattered at work",
+            "element": "planning_note",
+            "action": "pulses once, unchanged",
+            "motion": "single pulse"
+          },
+          {
+            "t_anchor": "motive",
+            "element": "motive_gap",
+            "action": "an unconnected dotted outline appears and no thread reaches it",
+            "motion": "fade in, hold"
+          }
+        ],
+        "continuity": "Held from b09: draft sheet, situation_strip, update_message, planning_note. Incoming: consequence_strip, thread, motive_gap.",
+        "references": [
+          "story-cartoon pack, thread to a prop"
+        ]
+      },
+      "rationale": "The planning note is the stipulated consequence and is unchanged. Classic alternative: annotation on a card."
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "template": "document.page",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "concern or possibility",
+      "props": {
+        "kind": "notes",
+        "title": "Margin note: uncertainty",
+        "lines": [
+          {
+            "text": "Uncertain consequence",
+            "say": "an uncertain consequence"
+          },
+          {
+            "text": "What can you establish?",
+            "say": "what can you establish"
+          },
+          {
+            "text": "Not a possibility dressed as result",
+            "say": "presenting a possibility as an established result"
+          },
+          {
+            "text": "Say: concern or possibility",
+            "say": "a concern or possibility"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "A writing caution; the stipulated planning note is unchanged. Classic alternative: margin card."
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "accent_on": "request strip, action underline, occasion box",
+      "subject": "request strip with an underline and a box mark",
+      "world": "shared-work desk, draft sheet",
+      "design": {
+        "treatment": "The request strip unfolds below the consequence strip and the accent floods it. A box draws around the occasion and an underline draws under the action. The recipient does not act.",
+        "why_motion": "The unfold fills the slot that was empty, and the marks attach to the spans they name.",
+        "elements": [
+          "situation_strip",
+          "consequence_strip",
+          "request_strip",
+          "occasion_box",
+          "action_underline"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "for the next update",
+            "element": "request_strip",
+            "action": "unfolds below the consequence strip; accent floods it",
+            "motion": "unfold, colour flood"
+          },
+          {
+            "t_anchor": "for the next update",
+            "element": "occasion_box",
+            "action": "box draws around the occasion phrase",
+            "motion": "stroke draws on"
+          },
+          {
+            "t_anchor": "flag any changed delivery date",
+            "element": "action_underline",
+            "action": "underline draws left to right under the action phrase",
+            "motion": "stroke draws on"
+          },
+          {
+            "t_anchor": "recognisable request",
+            "element": "request_strip",
+            "action": "flood settles; the recipient slots stay uncoloured",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "Held from b11: situation_strip, consequence_strip, planning_note, update_message. Incoming: request_strip, occasion_box, action_underline.",
+        "references": [
+          "story-cartoon pack, box mark and underline label"
+        ]
+      },
+      "rationale": "Colour flood at the mechanism. Classic alternative: highlight on a card."
+    },
+    {
+      "beat": "b14",
+      "kind": "template",
+      "template": "document.page",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "action and occasion markers",
+      "props": {
+        "kind": "notes",
+        "title": "Locate the request",
+        "lines": [
+          {
+            "text": "Where is the action?",
+            "say": "where is the action"
+          },
+          {
+            "text": "Action: flag a changed delivery date",
+            "say": "flagging a changed delivery date"
+          },
+          {
+            "text": "Occasion: the next update",
+            "say": "the occasion is the next update"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "Request area held large; the reply space stays empty. Natural thinking space, no hold."
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "accent_on": "discussion prompt",
+      "props": {
+        "title": "Invite their account",
+        "left": {
+          "header": "Discussion prompt",
+          "say": "would that work for you",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Would that work for you?"
+            },
+            {
+              "text": "Is there a constraint to account for?",
+              "say": "a constraint we should account for"
+            }
+          ]
+        },
+        "right": {
+          "header": "Their account",
+          "say": "their account",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Left open for them"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "Solution not yet settled",
+          "say": "before settling the solution"
+        },
+        "mode": "columns"
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "their account",
+          "dur": 1.5,
+          "rect": [
+            1000,
+            300,
+            800,
+            600
+          ]
+        }
+      ],
+      "rationale": "Hybrid: a spotlight pulls the eye to the empty reply area. Not an agreement seal. Classic alternative: plain strip."
+    },
+    {
+      "beat": "b16",
+      "kind": "template",
+      "template": "process.flow",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "accent_on": "request",
+      "props": {
+        "kicker": "Your existing method",
+        "title": "A writing aid",
+        "steps": [
+          {
+            "label": "Choose the change",
+            "say": "choose the change"
+          },
+          {
+            "label": "Ground your account",
+            "say": "ground your account"
+          },
+          {
+            "label": "Make a request",
+            "say": "make a request"
+          },
+          {
+            "label": "Invite discussion",
+            "say": "invite discussion"
+          },
+          {
+            "label": "Discuss next action",
+            "say": "discuss the next action"
+          }
+        ],
+        "token": {
+          "label": "Draft"
+        }
+      },
+      "rationale": "The draft's own strips, lit in spoken order, no numerals. Existing method is permission, not a comparative claim."
+    },
+    {
+      "beat": "b17",
+      "kind": "template",
+      "template": "document.page",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "blank request strip",
+      "props": {
+        "kind": "notes",
+        "title": "Our draft",
+        "lines": [
+          {
+            "text": "Changed delivery date was not noted"
+          },
+          {
+            "text": "I used the old date to plan my work"
+          },
+          {
+            "text": "Request: blank",
+            "say": "the request has gone from our draft"
+          },
+          {
+            "text": "Action?",
+            "say": "what was the action"
+          },
+          {
+            "text": "Occasion?",
+            "say": "what was the occasion"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "recall them",
+          "dur": 1.5,
+          "rect": [
+            800,
+            560,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: the request strip lifts off and a spotlight rests on the blank. Retires: request strip. Held: update and planning note. Classic alternative: hidden clause."
+    },
+    {
+      "beat": "b18",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "blank future request",
+      "props": {
+        "title": "What should the colleague do next?",
+        "say_title": "what should the colleague do next",
+        "left": {
+          "header": "Past problem",
+          "say": "where does that belong in the message",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Situation and omission"
+            },
+            {
+              "text": "Work consequence"
+            }
+          ]
+        },
+        "right": {
+          "header": "Future request",
+          "say": "the future request is missing",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Blank strip"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "rationale": "The empty space names the missing job. Not filled. Classic alternative: gap card."
+    },
+    {
+      "beat": "b19",
+      "kind": "template",
+      "template": "document.page",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "two anchors",
+      "props": {
+        "kind": "notes",
+        "title": "Anchors for your request",
+        "lines": [
+          {
+            "text": "Changed delivery date",
+            "say": "changed delivery date"
+          },
+          {
+            "text": "Next update",
+            "say": "next update"
+          },
+          {
+            "text": "Your own request goes here",
+            "say": "your own request"
+          },
+          {
+            "text": "Exact wording not required",
+            "say": "exact wording is not required"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "Faded practice, no pause. The completed model stays hidden."
+    },
+    {
+      "beat": "b20",
+      "kind": "template",
+      "template": "document.page",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "accent_on": "action and occasion markers",
+      "props": {
+        "kind": "notes",
+        "title": "Restored request",
+        "lines": [
+          {
+            "text": "For the next update,",
+            "say": "for the next update"
+          },
+          {
+            "text": "could you flag any changed delivery date",
+            "say": "flag any changed delivery date"
+          },
+          {
+            "text": "in the message?",
+            "say": "in the message"
+          },
+          {
+            "text": "Action: flag",
+            "say": "the action"
+          },
+          {
+            "text": "Occasion: next update",
+            "say": "occasion"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "light",
+          "at": "the action",
+          "dur": 1.2,
+          "rect": [
+            700,
+            500,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: strip unfolds, markers attach, light on the marks. Classic alternative: highlight."
+    },
+    {
+      "beat": "b21",
+      "kind": "template",
+      "template": "definition",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "clarity check",
+      "props": {
+        "kicker": "The check",
+        "term": "Clarity check",
+        "say_term": "can they identify the requested action",
+        "definition": "Can they identify the requested action, and when it applies, from your wording alone?",
+        "say_definition": "and when it applies",
+        "example": "Action: flag a changed delivery date. Occasion: the next update.",
+        "say_example": "that is our clarity check"
+      },
+      "rationale": "Defined after use. The term arrives on the question, so its name appears slightly before it is spoken: noted as a timing trade-off from narration order."
+    },
+    {
+      "beat": "b22",
+      "kind": "template",
+      "template": "process.flow",
+      "station": "sheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "accent_on": "discussion strip",
+      "props": {
+        "title": "Clear wording does not settle their account",
+        "say_title": "does not settle their account",
+        "steps": [
+          {
+            "label": "Describe",
+            "say": "describe"
+          },
+          {
+            "label": "Request",
+            "say": "request"
+          },
+          {
+            "label": "Discuss",
+            "say": "then discuss"
+          }
+        ]
+      },
+      "rationale": "Three strips light in order, not numbered, and settle on the draft. The request is not merged with an agreement marker. Pocket rule."
+    },
+    {
+      "beat": "b23",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "table",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "what to do and when",
+      "props": {
+        "kicker": "Judge",
+        "left": {
+          "header": "Draft A",
+          "say": "two drafts of the same message",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Flag any changed delivery date in the next update"
+            }
+          ]
+        },
+        "right": {
+          "header": "Draft B",
+          "say": "which one names what to do and when",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Please be more considerate"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "Judge the wording, not the reaction",
+          "say": "judge the wording"
+        },
+        "mode": "columns"
+      },
+      "rationale": "Equal styling, no marks, criterion stated before the quiz. Hard cut for the chapter."
+    },
+    {
+      "beat": "b24",
+      "kind": "template",
+      "template": "document.page",
+      "station": "table",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "accent_on": "circumstances annotation",
+      "props": {
+        "kind": "notes",
+        "title": "Circumstances margin",
+        "lines": [
+          {
+            "text": "Request may not fit circumstances",
+            "say": "your request may not fit their circumstances"
+          },
+          {
+            "text": "A request is not",
+            "say": "a request is not"
+          },
+          {
+            "text": "Reply: left empty",
+            "say": "an agreement"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "light",
+          "at": "an agreement",
+          "dur": 1.2,
+          "rect": [
+            700,
+            600,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: light on the empty reply area. No tick, no completed update."
+    },
+    {
+      "beat": "b25",
+      "kind": "blueprint",
+      "blueprint": "hero.hub",
+      "station": "circumstances",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "circumstances",
+      "subject": "a circumstances hub with three question tabs",
+      "world": "the circumstances margin on the two-draft table",
+      "props": {
+        "kicker": "Ask, rather than diagnose",
+        "hub": {
+          "label": "Circumstances",
+          "say": "could"
+        },
+        "satellites": [
+          {
+            "label": "Resources",
+            "say": "resources"
+          },
+          {
+            "label": "Authority",
+            "say": "authority"
+          },
+          {
+            "label": "Skills",
+            "say": "skills"
+          }
+        ]
+      },
+      "rationale": "Question tabs pop in spoken order. None is selected as the colleague's constraint."
+    },
+    {
+      "beat": "b26",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "table",
+      "join_in": {
+        "type": "camera",
+        "dir": "left",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "none until the answer",
+      "props": {
+        "question": "Which draft names an action and occasion?",
+        "say_question": "which draft names an action and occasion",
+        "options": [
+          {
+            "text": "Flag a changed delivery date next update",
+            "say": "flag a changed delivery date next update"
+          },
+          {
+            "text": "Please be more considerate",
+            "say": "please be more considerate"
+          }
+        ]
+      },
+      "rationale": "Single stopping check. No highlight, tick or cue. Silent hold after the narration."
+    },
+    {
+      "beat": "b27",
+      "kind": "template",
+      "template": "quiz.answer",
+      "station": "table",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "action and occasion in draft A",
+      "props": {
+        "question": "Which draft names an action and occasion?",
+        "options": [
+          {
+            "text": "Flag a changed delivery date next update"
+          },
+          {
+            "text": "Please be more considerate"
+          }
+        ],
+        "answer": 0,
+        "say_answer": "a requests flagging any changed delivery date",
+        "explanation": "A names the action, flagging a changed delivery date, and the occasion, the next update.",
+        "say_explanation": "in the next update",
+        "tempting": 1,
+        "why_not": "B asks for consideration but names no next action.",
+        "say_why_not": "asks for consideration without specifying the next action",
+        "takeaway": "That is the difference",
+        "say_takeaway": "that is the difference"
+      },
+      "rationale": "Answer index is zero-based as assumed (A is 0); not verified against the template. Addresses only the listed tempting belief."
+    },
+    {
+      "beat": "b28",
+      "kind": "template",
+      "template": "document.page",
+      "station": "table",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "accent_on": "empty reply and future update",
+      "props": {
+        "kind": "notes",
+        "title": "Stronger draft: limits",
+        "lines": [
+          {
+            "text": "Does that establish agreement?",
+            "say": "does that establish agreement"
+          },
+          {
+            "text": "Or the next update's contents?",
+            "say": "the next update's contents"
+          },
+          {
+            "text": "Neither agreement nor follow-through",
+            "say": "neither agreement nor follow-through"
+          },
+          {
+            "text": "Both stay open: not established",
+            "say": "is established"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "light",
+          "at": "neither agreement nor follow-through",
+          "dur": 1.2,
+          "rect": [
+            700,
+            560,
+            900,
+            240
+          ]
+        }
+      ],
+      "rationale": "Hybrid: slots pulse. Neither slot becomes an outcome."
+    },
+    {
+      "beat": "b29",
+      "kind": "template",
+      "template": "quote",
+      "station": "table",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "discussion line",
+      "props": {
+        "quote": "Would that work for you, or is there a constraint we should account for?",
+        "say": "would that work for you",
+        "attribution": "You, to your colleague (hypothetical)",
+        "say_attribution": "feedback cannot guarantee"
+      },
+      "rationale": "The supplied discussion line prints below the judged draft with an empty reply area. A calm limit, not a verdict. Do not simulate an answer."
+    },
+    {
+      "beat": "b30",
+      "kind": "blueprint",
+      "blueprint": "hero.portal",
+      "station": "model",
+      "join_in": {
+        "type": "camera",
+        "dir": "right",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "private sheet",
+      "subject": "a card frame around an empty private draft sheet",
+      "world": "the model card on the desk, with your own desk inside it",
+      "props": {
+        "kind": "card",
+        "rect": [
+          560,
+          240,
+          800,
+          600
+        ],
+        "label": "Now you",
+        "say_label": "now you"
+      },
+      "rationale": "A card frames the empty private sheet; the next station is nested inside. Classic alternative: title card Now you."
+    },
+    {
+      "beat": "b31",
+      "kind": "template",
+      "template": "document.page",
+      "station": "yourdesk",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "hypothetical reference",
+      "props": {
+        "kind": "notes",
+        "title": "Fallback: hypothetical update",
+        "say_title": "if no suitable situation comes to mind",
+        "lines": [
+          {
+            "text": "Hypothetical project update",
+            "say": "hypothetical project update"
+          },
+          {
+            "text": "Rewrite it independently",
+            "say": "independently"
+          },
+          {
+            "text": "Do not copy our complete draft",
+            "say": "without copying our complete draft"
+          },
+          {
+            "text": "Keep it labelled hypothetical",
+            "say": "keep it labelled hypothetical"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "light",
+          "at": "keep it labelled hypothetical",
+          "dur": 1.2,
+          "rect": [
+            500,
+            560,
+            800,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: camera zooms through the portal into the empty sheet. The model stays hidden. Optional fallback only."
+    },
+    {
+      "beat": "b32",
+      "kind": "blueprint",
+      "blueprint": "hero.journey",
+      "station": "yourdesk",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "practice",
+      "accent_on": "intention prompt",
+      "subject": "a path with three prompt waypoints on the private sheet margin",
+      "world": "your own desk, empty private sheet",
+      "props": {
+        "title": "Start with the change",
+        "waypoints": [
+          {
+            "label": "Future situation",
+            "say": "in that future situation"
+          },
+          {
+            "label": "Intended change",
+            "say": "do differently"
+          },
+          {
+            "label": "Write it first",
+            "say": "write that intention first"
+          }
+        ],
+        "shape": "straight"
+      },
+      "rationale": "A light metaphor for prompts. Response space stays empty. If it reads as forced in the animatic, swap for a margin page."
+    },
+    {
+      "beat": "b33",
+      "kind": "template",
+      "template": "document.page",
+      "station": "margin",
+      "join_in": {
+        "type": "camera",
+        "dir": "right",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "situation and action prompt",
+      "props": {
+        "kind": "notes",
+        "title": "Evidence margin",
+        "lines": [
+          {
+            "text": "An example you can substantiate",
+            "say": "an example you can substantiate"
+          },
+          {
+            "text": "The situation",
+            "say": "the situation"
+          },
+          {
+            "text": "The specific action or omission",
+            "say": "the specific action or omission"
+          },
+          {
+            "text": "Replace broad character judgement",
+            "say": "replace any broad character judgement"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "the specific action or omission",
+          "dur": 1.5,
+          "rect": [
+            600,
+            500,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: pan to the evidence margin with a spotlight. No viewer observation is invented."
+    },
+    {
+      "beat": "b34",
+      "kind": "blueprint",
+      "blueprint": "hero.meter",
+      "station": "margin",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "practice",
+      "accent_on": "concern or possibility",
+      "subject": "a qualitative certainty dial beside the consequence area",
+      "world": "your own desk, consequence margin",
+      "props": {
+        "kind": "bar",
+        "label": "Certainty",
+        "show_value": false,
+        "start": 0,
+        "min": 0,
+        "max": 100,
+        "stops": [
+          {
+            "value": 30,
+            "say": "if uncertain",
+            "note": "Concern or possibility",
+            "tone": "neutral"
+          }
+        ]
+      },
+      "rationale": "Qualitative dial, the number is never shown (show_value false); the stop position is only a drawing position, not data. No motive is drawn."
+    },
+    {
+      "beat": "b35",
+      "kind": "template",
+      "template": "document.page",
+      "station": "margin",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "action and occasion tools",
+      "props": {
+        "kind": "notes",
+        "title": "Your request area",
+        "lines": [
+          {
+            "text": "An action they can recognise and attempt",
+            "say": "an action they can recognise and attempt"
+          },
+          {
+            "text": "Name its occasion",
+            "say": "name its occasion"
+          },
+          {
+            "text": "For peers: a request",
+            "say": "make it a request"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "light",
+          "at": "name its occasion",
+          "dur": 1.2,
+          "rect": [
+            600,
+            500,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: marking tools attach to the empty request area. No manager badge or command icon."
+    },
+    {
+      "beat": "b36",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "margin",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "their account",
+      "props": {
+        "left": {
+          "header": "Their account",
+          "say": "their account",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Left open for them",
+              "say": "add to your understanding"
+            }
+          ]
+        },
+        "right": {
+          "header": "Your request",
+          "say": "your proposed solution",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Proposal, not yet settled",
+              "say": "as settled"
+            },
+            {
+              "text": "Is the action feasible?",
+              "say": "whether the action is feasible"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "the action is feasible",
+          "dur": 1.5,
+          "rect": [
+            1000,
+            500,
+            800,
+            300
+          ]
+        }
+      ],
+      "rationale": "Hybrid: spotlight on feasibility. The colleague's account is an empty space, never predicted."
+    },
+    {
+      "beat": "b37",
+      "kind": "template",
+      "template": "document.page",
+      "station": "margin",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "underline and box targets",
+      "props": {
+        "kind": "notes",
+        "title": "Self-review",
+        "lines": [
+          {
+            "text": "Underline the requested action",
+            "say": "underline the requested action"
+          },
+          {
+            "text": "Underline the occasion",
+            "say": "underline the occasion"
+          },
+          {
+            "text": "If either is missing: revise",
+            "say": "if either is missing"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "fx": [
+        {
+          "kind": "light",
+          "at": "if either is missing",
+          "dur": 1.2,
+          "rect": [
+            600,
+            560,
+            900,
+            200
+          ]
+        }
+      ],
+      "rationale": "Hybrid: tools rest beside blank targets. No completed model, no pass shown."
+    },
+    {
+      "beat": "b38",
+      "kind": "template",
+      "template": "timeline",
+      "station": "followup",
+      "join_in": {
+        "type": "camera",
+        "dir": "right",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "follow-up note",
+      "props": {
+        "title": "Occurrence is not cause",
+        "say_title": "a follow-up",
+        "events": [
+          {
+            "when": "Occasion",
+            "label": "The relevant occasion",
+            "say": "after the relevant occasion"
+          },
+          {
+            "when": "Then",
+            "label": "Follow-up note",
+            "say": "can check"
+          },
+          {
+            "when": "Check",
+            "label": "Did the action occur?",
+            "say": "whether the intended action occurred"
+          }
+        ]
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "caused it",
+          "dur": 1.5,
+          "rect": [
+            1000,
+            400,
+            800,
+            300
+          ]
+        }
+      ],
+      "rationale": "Hybrid: spotlight at caused it. Follow-up slot blank, no future update, no causal arrow."
+    },
+    {
+      "beat": "b39",
+      "kind": "template",
+      "template": "document.page",
+      "station": "margin",
+      "join_in": {
+        "type": "camera",
+        "dir": "left",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "private draft",
+      "props": {
+        "kind": "notes",
+        "title": "Scope of this aid",
+        "lines": [
+          {
+            "text": "Ordinary colleague feedback",
+            "say": "ordinary colleague feedback"
+          },
+          {
+            "text": "Not your authority",
+            "say": "your authority"
+          },
+          {
+            "text": "Not your organisation's procedures",
+            "say": "your organisation's procedures"
+          },
+          {
+            "text": "Finish privately after viewing",
+            "say": "finish your draft privately"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "Scope boundary. No policy document or authority stamp. Finishing later is permission, not another task."
+    },
+    {
+      "beat": "b40",
+      "kind": "template",
+      "template": "recap",
+      "station": "desk",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "action and occasion",
+      "props": {
+        "title": "Beside your own draft",
+        "say_title": "beside your own draft",
+        "items": [
+          {
+            "label": "Clarity check",
+            "say": "the clarity check"
+          },
+          {
+            "label": "Action",
+            "say": "what action"
+          },
+          {
+            "label": "Occasion",
+            "say": "on what occasion"
+          }
+        ],
+        "rule": "Keep both identifiable",
+        "say_rule": "keep both identifiable"
+      },
+      "rationale": "Quiet callback to the opening desk. Not a test."
+    },
+    {
+      "beat": "b41",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "desk",
+      "join_in": {
+        "type": "continue",
+        "meaning": "era"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "revised draft",
+      "props": {
+        "left": {
+          "header": "Initial wording",
+          "say": "we named the last project update",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Please be more considerate"
+            }
+          ]
+        },
+        "right": {
+          "header": "Revised draft",
+          "say": "and the omission",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "I used the old date to plan my work",
+              "say": "the old date"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "What does it request?",
+          "say": "what does the revised draft request"
+        },
+        "mode": "columns"
+      },
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "what does the revised draft request",
+          "dur": 1.5,
+          "rect": [
+            1000,
+            420,
+            800,
+            300
+          ]
+        }
+      ],
+      "rationale": "Hybrid: before and after against the same update and planning note, without replaying the construction. Held: desk."
+    },
+    {
+      "beat": "b42",
+      "kind": "template",
+      "template": "document.page",
+      "station": "desk_draft",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "action and occasion in the final draft",
+      "props": {
+        "kind": "notes",
+        "title": "The revised request",
+        "lines": [
+          {
+            "text": "Flag any changed delivery date",
+            "say": "flag any changed delivery date"
+          },
+          {
+            "text": "In the message",
+            "say": "in the message"
+          },
+          {
+            "text": "For the next project update",
+            "say": "for the next project update"
+          },
+          {
+            "text": "Request: explicit",
+            "say": "the request is explicit"
+          },
+          {
+            "text": "Reply: left empty",
+            "say": "their response unknown"
+          }
+        ],
+        "mode": "highlight"
+      },
+      "rationale": "Answers the hook. Only action and occasion carry the accent. Discussion strip as unlettered lines; reply and outcome empty. Classic alternative: card."
+    },
+    {
+      "beat": "b43",
+      "kind": "avatar",
+      "station": "desk",
+      "join_in": {
+        "type": "camera",
+        "dir": "left",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "action and occasion markers",
+      "subject": "private draft with two markers and an open context margin",
+      "world": "shared-work desk with the project-update inset",
+      "rationale": "Presenter outro. A blank follow-up note stays separate. Classic alternative: presenter card."
+    },
+    {
+      "beat": "b44",
+      "kind": "avatar",
+      "station": "desk",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "accent_on": "prepared draft",
+      "subject": "prepared draft and marker tools on the opening desk",
+      "world": "the opening desk, changed",
+      "rationale": "Close beside the opening desk. End before any recipient reply. No success scene. Stable classic composition kept as the alternative."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "maturity",
+  "description": "One still frame from an explainer video, rated for how mature and professional it looks to adult professionals (D-102 E3). The same 1-5 anchors the human rater used.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["what_is_shown", "score", "drivers", "why", "confidence"],
+  "properties": {
+    "what_is_shown": {"type": "string", "description": "Plain description of the frame before any judgement: subject, setting, people, text, style."},
+    "score": {"type": "integer", "minimum": 1, "maximum": 5,
+              "description": "1 childish (toy-like, a kids' app or a school slide); 2 amateur; 3 passable (nothing wrong, nothing good); 4 professional (would ship in a paid corporate course); 5 studio (broadcast or top-channel quality)."},
+    "drivers": {"type": "array", "maxItems": 4,
+                "items": {"type": "string", "enum": ["drawing", "people", "colour", "type", "layout", "density", "slides", "finish", "light", "depth", "texture", "composition"]},
+                "description": "What most drove the score, up or down, most important first."},
+    "why": {"type": "string", "description": "One to three sentences naming visible features that set the score."},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+  }
+}

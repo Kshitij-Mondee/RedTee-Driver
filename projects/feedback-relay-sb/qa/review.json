@@ -1,0 +1,61 @@
+{
+  "verdict": "fix",
+  "findings": [
+    {
+      "file": "scenes/b12.json",
+      "severity": "blocker",
+      "problem": "In b12 arrive, develop, and settled, Theo's body and shoulders are missing, leaving his head floating in mid-air above the desk.",
+      "beat": "b12",
+      "fix": "Restore Theo's body and purple shirt bust beneath his head behind the meeting table so he matches his b01 appearance instead of floating as a severed head."
+    },
+    {
+      "severity": "major",
+      "beat": "b11",
+      "fix": "Remove the solid black background or unrendered state at t=111.94s so the join transitions cleanly between the cream board and the POV desk.",
+      "file": "scenes/b11.json",
+      "problem": "b11 join at 111.94s renders as a solid pitch black frame across the entire canvas before the desk arrives."
+    },
+    {
+      "beat": "b09",
+      "problem": "In b09 arrive, develop, and settled, all quiz options remain muted and washed out in faint grey, with no accent or selection state applied to correct option C.",
+      "fix": "Highlight option C with the accent color or active card styling so it clearly signals the correct answer named in narration.",
+      "severity": "major",
+      "file": "scenes/b09.json"
+    },
+    {
+      "problem": "In b03 arrive, develop, and settled, the avatar circle sits beside an isolated title while the card props are missing, leaving more than half the canvas completely empty.",
+      "beat": "b03",
+      "fix": "Render the three plan card lines (Same comment, Under two minutes, Then check your own) on the right side of the frame to fill the canvas.",
+      "file": "scenes/b03.json",
+      "severity": "major"
+    },
+    {
+      "problem": "In b02 develop and settled, the wall calendar is cropped off by the top viewport edge during the camera push.",
+      "file": "scenes/b02.json",
+      "severity": "major",
+      "fix": "Adjust the camera crop or calendar position to y=20 so the top of the calendar is not cut off by the upper screen edge.",
+      "beat": "b02"
+    },
+    {
+      "problem": "In b07 develop and settled, the Natural presenter badge at top right is rendered at 16.4px in faint grey, making it illegible.",
+      "file": "scenes/b07.json",
+      "severity": "minor",
+      "fix": "Increase the font size of Natural presenter to at least 22px and darken its fill to improve contrast against the monitor background.",
+      "beat": "b07"
+    },
+    {
+      "beat": "b05",
+      "severity": "minor",
+      "fix": "Reroute the connector path to clear the top margin of the first card by at least 20px before entering slot 2.",
+      "file": "scenes/b05.json",
+      "problem": "In b05 settled, the connector line from the left room thumbnail clips directly over the top border of the Read the slides aloud card."
+    },
+    {
+      "fix": "Remove the brown highlight from lines 1, 2, and 4 so only Next week, open with the one decision carries the accent.",
+      "beat": "b06",
+      "file": "scenes/b06.json",
+      "severity": "minor",
+      "problem": "In b06 settled, all four lines on the notepad receive brown highlight fills, flattening the visual hierarchy."
+    }
+  ]
+}

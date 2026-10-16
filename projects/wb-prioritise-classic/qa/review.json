@@ -1,0 +1,61 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b06",
+      "severity": "blocker",
+      "problem": "card_reply missing in b06",
+      "fix": "b06 holds matrix_board with the Client reply card",
+      "status": "fixed",
+      "reason": "critic no longer reports it"
+    },
+    {
+      "beat": "b08",
+      "severity": "blocker",
+      "problem": "Client reply card, dividers and Quick wins content vanish from b08 to b12",
+      "fix": "b07 to b12 keep card_reply, dividers, tick and zone label",
+      "status": "fixed",
+      "reason": "confirmed on sheets and critic pass 4"
+    },
+    {
+      "beat": "b07",
+      "severity": "major",
+      "problem": "Do first label and tick box collide",
+      "fix": "Do first moved below the card",
+      "status": "fixed",
+      "reason": "sheet checked"
+    },
+    {
+      "beat": "b13",
+      "severity": "major",
+      "problem": "stray checkbox at arrive",
+      "fix": "checkbox delayed until its row reordered",
+      "status": "fixed",
+      "reason": "snapshot checked"
+    },
+    {
+      "beat": "b04",
+      "severity": "minor",
+      "problem": "gloss work it takes under reading floor",
+      "fix": "reveal advanced 0.25s",
+      "status": "fixed",
+      "reason": "snapshot checked"
+    },
+    {
+      "beat": "b09",
+      "severity": "blocker",
+      "problem": "Batch and Decline or park labels translated off screen",
+      "fix": "labels now visible in b09 to b12",
+      "status": "fixed",
+      "reason": "sheets checked, critic pass 4 clean"
+    },
+    {
+      "beat": "b12",
+      "severity": "blocker",
+      "problem": "New analysis card vanishes off screen",
+      "fix": "card lands in Major projects under Budget report and a block also appears in the week strip",
+      "status": "fixed",
+      "reason": "sheet checked, critic pass 4 clean"
+    }
+  ]
+}

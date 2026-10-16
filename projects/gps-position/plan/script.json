@@ -1,0 +1,850 @@
+{
+  "title": "How GPS knows where you are",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "What the sky is saying",
+      "role": "hook and what it is"
+    },
+    {
+      "id": "s2",
+      "title": "From time to distance",
+      "role": "how it works"
+    },
+    {
+      "id": "s3",
+      "title": "Where the spheres meet",
+      "role": "how it works"
+    },
+    {
+      "id": "s4",
+      "title": "Clocks that run fast in orbit",
+      "role": "why it matters"
+    },
+    {
+      "id": "s5",
+      "title": "One timing story",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s1",
+      "job": "hook",
+      "narration": [
+        "Say it's night, and you open a map.",
+        "A blue dot appears, right where you stand."
+      ],
+      "on_screen": [],
+      "visual_intent": "A city at night from above; a phone screen lights with a map and a blue dot pulses into place.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a viewer opening a map at night",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "quiet, close, unhurried"
+    },
+    {
+      "id": "b02",
+      "section": "s1",
+      "job": "hook",
+      "narration": [
+        "Your phone hasn't told anyone where it is.",
+        "So how does it know?"
+      ],
+      "on_screen": [],
+      "visual_intent": "Pull back from the phone up through the night sky to Earth in the dark field; the phone a single glowing point.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the phone transmits nothing to GPS satellites",
+          "fact": "F3"
+        }
+      ],
+      "delivery": "genuine curiosity on the question"
+    },
+    {
+      "id": "b03",
+      "section": "s1",
+      "job": "orient",
+      "narration": [
+        "The answer is overhead.",
+        "And it's all about time:",
+        "keeping it, measuring it, correcting it."
+      ],
+      "on_screen": [
+        "keep",
+        "measure",
+        "correct"
+      ],
+      "visual_intent": "Satellites fade in on their orbits around Earth; three small clock marks light one by one as each verb lands.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "GPS position rests on satellite time stamps and travel time",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "s1",
+      "job": "orient",
+      "narration": [
+        "It runs on two things you know:",
+        "satellites in orbit, and the speed of light."
+      ],
+      "on_screen": [],
+      "visual_intent": "One satellite traced around its orbit; a beam of light streaks across the field beside it.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "signals travel at the speed of light",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "s1",
+      "job": "quantify",
+      "narration": [
+        "About 24 GPS satellites, by design.",
+        "Each about 20,200 kilometres up,",
+        "circling every 12 hours or so."
+      ],
+      "on_screen": [
+        "about 24 by design",
+        "about 20,200 km",
+        "about 12 h per orbit"
+      ],
+      "visual_intent": "The constellation fills in: orbital rings tilt around Earth, satellites travelling along them; the altitude marked on one radius line.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "constellation designed around 24 satellites",
+          "fact": "F18"
+        },
+        {
+          "claim": "about 20,200 km altitude, about 12 hour orbit",
+          "fact": "F17"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "s1",
+      "job": "define",
+      "narration": [
+        "Each carries atomic clocks,",
+        "and each one is broadcasting, all the time."
+      ],
+      "on_screen": [
+        "atomic clock"
+      ],
+      "visual_intent": "Close on one satellite; a clock face on its body ticks; rings of signal pulse outward from it and from the others.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "satellites carry atomic clocks",
+          "fact": "F2"
+        },
+        {
+          "claim": "continuous broadcast",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "s1",
+      "job": "define",
+      "narration": [
+        "Every signal says two things.",
+        "Here is where I am.",
+        "And here is exactly when I sent this."
+      ],
+      "on_screen": [
+        "where I am",
+        "when I sent this"
+      ],
+      "visual_intent": "One pulse carries two tags riding the wavefront: a position marker and a time stamp, each appearing on its words.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "signal carries the satellite's orbit data",
+          "fact": "F1"
+        },
+        {
+          "claim": "signal carries the time of sending",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "s1",
+      "job": "refute",
+      "narration": [
+        "Your phone only listens.",
+        "Nothing goes up.",
+        "The satellites never learn where you are."
+      ],
+      "on_screen": [],
+      "visual_intent": "Signals arrive at the phone on the ground; an arrow from the phone upward is drawn and fades out, nothing leaves it.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "receiver is passive",
+          "fact": "F3"
+        }
+      ],
+      "misconception": "the phone sends a signal up and the satellites track it"
+    },
+    {
+      "id": "b09",
+      "section": "s2",
+      "job": "sequence",
+      "narration": [
+        "A signal leaves, stamped with its sending time,",
+        "and heads for your phone."
+      ],
+      "on_screen": [],
+      "visual_intent": "One satellite fires a single pulse with its time stamp; the pulse travels down toward the phone.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "signal stamped with time of sending",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "s2",
+      "job": "quantify",
+      "narration": [
+        "It's a radio wave, moving at light speed:",
+        "about 300,000 kilometres a second."
+      ],
+      "on_screen": [
+        "about 300,000 km/s"
+      ],
+      "visual_intent": "The pulse in flight, the speed label riding beside it.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "radio waves travel at about 300,000 km/s",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "s2",
+      "job": "quantify",
+      "narration": [
+        "From straight overhead,",
+        "the trip takes about 0.07 seconds."
+      ],
+      "on_screen": [
+        "about 0.07 s"
+      ],
+      "visual_intent": "A timer on the phone counts while the pulse completes its trip, stopping as it arrives.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "about 0.07 s from overhead",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "s2",
+      "job": "demonstrate",
+      "narration": [
+        "Your phone takes the arrival time,",
+        "subtracts the sending time,",
+        "and multiplies by the speed of light."
+      ],
+      "on_screen": [
+        "arrival",
+        "sending",
+        "x speed of light"
+      ],
+      "visual_intent": "The two times sit on the phone; the arrival minus the sending gives travel time, which multiplies into a distance, each step on its word.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "distance from travel time times speed of light",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "s2",
+      "job": "define",
+      "narration": [
+        "That gives a distance.",
+        "Not a direction: only a distance."
+      ],
+      "on_screen": [
+        "distance"
+      ],
+      "visual_intent": "A straight line from satellite to phone, labelled; a direction arrow is offered and struck out.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "ranging gives a distance only",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "s2",
+      "job": "define",
+      "narration": [
+        "So the phone sits somewhere on a sphere",
+        "around that satellite, at exactly that range."
+      ],
+      "on_screen": [],
+      "visual_intent": "The distance line sweeps around the satellite, drawing a full sphere (a circle in the flat picture) that grazes the Earth where the phone is.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "one distance places the receiver on a sphere",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "s3",
+      "job": "sequence",
+      "narration": [
+        "Add a second satellite.",
+        "Where the two spheres meet, they trace a circle."
+      ],
+      "on_screen": [],
+      "visual_intent": "A second satellite's sphere grows; where it crosses the first, a ring of overlap lights up.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "two spheres intersect in a circle",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "s3",
+      "job": "sequence",
+      "narration": [
+        "A third sphere cuts that circle",
+        "at just two points."
+      ],
+      "on_screen": [],
+      "visual_intent": "A third sphere grows and the ring collapses to two bright points.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a third sphere narrows to two points",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "s3",
+      "job": "relate",
+      "narration": [
+        "One is usually far out in space.",
+        "The other, on the ground, is you.",
+        "In principle."
+      ],
+      "on_screen": [],
+      "visual_intent": "One point drifts into the void and dims; the other sits on Earth's surface over the city and glows.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "in principle three satellites suffice; one point is far from Earth",
+          "fact": "F8"
+        }
+      ],
+      "delivery": "a beat of hesitation on 'in principle'"
+    },
+    {
+      "id": "b18",
+      "section": "s3",
+      "job": "refute",
+      "narration": [
+        "Because all of this assumed",
+        "your phone knows the exact time.",
+        "It doesn't."
+      ],
+      "on_screen": [],
+      "visual_intent": "The glowing point flickers; the frame cuts in to the phone and its clock.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "three suffice only with a perfect receiver clock",
+          "fact": "F8"
+        }
+      ],
+      "misconception": "three satellites are enough"
+    },
+    {
+      "id": "b19",
+      "section": "s3",
+      "job": "distinguish",
+      "narration": [
+        "Satellites have atomic clocks.",
+        "Your phone has a cheap quartz clock,",
+        "off by an amount it can't know."
+      ],
+      "on_screen": [
+        "atomic",
+        "quartz"
+      ],
+      "visual_intent": "Two clocks side by side: the satellite's steady, the phone's visibly off its hand position.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "phone clock is cheap quartz, far less accurate",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "s3",
+      "job": "quantify",
+      "narration": [
+        "And here, time is distance.",
+        "Light covers about 300 metres in a microsecond.",
+        "So a microsecond off is 300 metres off."
+      ],
+      "on_screen": [
+        "1 microsecond = about 300 m"
+      ],
+      "visual_intent": "A tiny tick of the clock unrolls into a long ruler across the city map, 300 metres long.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "1 microsecond of error is about 300 m",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "section": "s3",
+      "job": "demonstrate",
+      "narration": [
+        "And the error is the same for every satellite.",
+        "Every sphere swells together,",
+        "and they stop meeting at one point."
+      ],
+      "on_screen": [],
+      "visual_intent": "Back on the diagram: all three circles grow by the same amount and the single point breaks into a blurred patch with no common meeting.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "every distance is shifted by the same unknown amount",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b22",
+      "section": "s3",
+      "job": "check",
+      "narration": [
+        "Every distance is wrong by the same amount.",
+        "Before I show you:",
+        "what would fix it?"
+      ],
+      "on_screen": [
+        "What would fix it?"
+      ],
+      "visual_intent": "The broken diagram holds still; the question appears beside it and the frame waits.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "shared clock error",
+          "fact": "F9"
+        }
+      ],
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "pause_predict",
+        "section": "s3",
+        "prompt": "What would fix it?"
+      },
+      "delivery": "slow, then stop"
+    },
+    {
+      "id": "b23",
+      "section": "s3",
+      "job": "demonstrate",
+      "narration": [
+        "One more satellite.",
+        "A fourth sphere is one more measurement",
+        "than position alone needs."
+      ],
+      "on_screen": [],
+      "visual_intent": "A fourth satellite rises over the horizon and its circle grows into the diagram.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "at least four satellites needed",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "s3",
+      "job": "consolidate",
+      "narration": [
+        "Four unknowns: east, north, height,",
+        "and the clock error.",
+        "The phone finds the one clock error",
+        "that makes all four spheres meet,",
+        "and its position comes with it."
+      ],
+      "on_screen": [
+        "east",
+        "north",
+        "height",
+        "clock error"
+      ],
+      "visual_intent": "Four unknown tiles light as named; then all four circles shrink together by the same amount until they snap to one shared point, and the phone's clock hand jumps to the right time.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "four unknowns: three position, one clock error; fourth signal solves the clock",
+          "fact": "F10"
+        }
+      ],
+      "delivery": "slower; let the snap land"
+    },
+    {
+      "id": "b25",
+      "section": "s4",
+      "job": "transition",
+      "narration": [
+        "So the phone's clock is handled.",
+        "But it all rests on the satellites' clocks.",
+        "Are they right?"
+      ],
+      "on_screen": [],
+      "visual_intent": "Pull back up from the phone to a satellite in orbit; its clock comes into focus.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "ranging uses the satellite's time stamp",
+          "fact": "F5"
+        }
+      ],
+      "recall": {
+        "kind": "recall_prompt",
+        "section": "s4",
+        "prompt": "the time stamp that turned travel time into distance"
+      }
+    },
+    {
+      "id": "b26",
+      "section": "s4",
+      "job": "quantify",
+      "narration": [
+        "Satellites move fast.",
+        "Special relativity says a moving clock runs slow:",
+        "about 7 microseconds a day."
+      ],
+      "on_screen": [
+        "speed: about 7 microseconds a day slower"
+      ],
+      "visual_intent": "Two clocks side by side, ground and orbit; as the satellite speeds along its orbit, its clock falls behind.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "special relativity slows satellite clocks about 7 microseconds a day",
+          "fact": "F12"
+        }
+      ],
+      "misconception": "relativity is a curiosity with no practical effect"
+    },
+    {
+      "id": "b27",
+      "section": "s4",
+      "job": "quantify",
+      "narration": [
+        "But up there, gravity is weaker.",
+        "General relativity says that makes a clock run fast:",
+        "about 45 microseconds a day."
+      ],
+      "on_screen": [
+        "gravity: about 45 microseconds a day faster"
+      ],
+      "visual_intent": "The gravity well of Earth drawn shallowing with height; the orbit clock now races ahead of the ground clock.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "general relativity speeds satellite clocks about 45 microseconds a day",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b28",
+      "section": "s4",
+      "job": "quantify",
+      "narration": [
+        "Gravity wins.",
+        "A satellite clock gains about 38 microseconds a day."
+      ],
+      "on_screen": [
+        "net: about 38 microseconds a day faster"
+      ],
+      "visual_intent": "The two effects as opposing pushes on the clock, the larger winning; the net gain settles on the orbit clock.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "net gain about 38 microseconds a day",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b29",
+      "section": "s4",
+      "job": "relate",
+      "narration": [
+        "At 300 metres a microsecond,",
+        "that's roughly 10 kilometres of error,",
+        "building up every day."
+      ],
+      "on_screen": [
+        "roughly 10 km a day"
+      ],
+      "visual_intent": "Back on the city map: a day counter runs and the blue dot slides steadily away from the phone across the city.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "1 microsecond about 300 m",
+          "fact": "F11"
+        },
+        {
+          "claim": "uncorrected error builds roughly 10 km a day",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b30",
+      "section": "s4",
+      "job": "demonstrate",
+      "narration": [
+        "So the fix goes up with them.",
+        "Before launch, each clock is set slightly slow,",
+        "so in orbit it keeps ground time."
+      ],
+      "on_screen": [
+        "set slow before launch"
+      ],
+      "visual_intent": "The satellite's clock is adjusted on the ground, launched, and in orbit its hands fall into step with the ground clock; the blue dot slides back home.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "clock rate set lower before launch to compensate",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b31",
+      "section": "s5",
+      "job": "consolidate",
+      "narration": [
+        "So, the chain.",
+        "Satellites broadcast where and when.",
+        "Travel time gives distance.",
+        "Spheres meet.",
+        "A fourth satellite fixes your phone's clock."
+      ],
+      "on_screen": [
+        "broadcast",
+        "travel time",
+        "spheres meet",
+        "fourth satellite"
+      ],
+      "visual_intent": "The diagram returns and replays in brief: pulse, timer, circles meeting, fourth circle snapping them to one point, each on its words.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "broadcast of position and time",
+          "fact": "F1"
+        },
+        {
+          "claim": "distance from travel time",
+          "fact": "F5"
+        },
+        {
+          "claim": "spheres intersect",
+          "fact": "F7"
+        },
+        {
+          "claim": "fourth satellite for the clock",
+          "fact": "F10"
+        }
+      ],
+      "recall": {
+        "kind": "recall_prompt",
+        "section": "s5",
+        "prompt": "the chain in one breath"
+      },
+      "delivery": "brisk, a recap"
+    },
+    {
+      "id": "b32",
+      "section": "s5",
+      "job": "consolidate",
+      "narration": [
+        "And the satellites' clocks were set for relativity",
+        "before they ever left the ground."
+      ],
+      "on_screen": [
+        "clocks corrected"
+      ],
+      "visual_intent": "The ground and orbit clocks tick together in step beside the replayed diagram.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "pre-launch clock offset",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b33",
+      "section": "s5",
+      "job": "relate",
+      "narration": [
+        "Real life adds noise.",
+        "The air slows signals a little,",
+        "and buildings bounce them.",
+        "So the dot is an estimate."
+      ],
+      "on_screen": [],
+      "visual_intent": "Descend to the city: a signal bends slightly through the air and another reflects off a tall building; the blue dot shows a soft halo of uncertainty.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "atmosphere and buildings add error; position is an estimate",
+          "fact": "F20"
+        }
+      ]
+    },
+    {
+      "id": "b34",
+      "section": "s5",
+      "job": "payoff",
+      "narration": [
+        "But each time it appears,",
+        "your phone has just solved a timing problem.",
+        "And the dot lands where you are."
+      ],
+      "on_screen": [],
+      "visual_intent": "Back to the phone screen from the opening: the blue dot settles on the map; pull back to the night city and the satellites passing above.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the position is found by timing",
+          "fact": "F5"
+        },
+        {
+          "claim": "fourth satellite solves the clock",
+          "fact": "F10"
+        }
+      ],
+      "delivery": "warm, closing"
+    }
+  ]
+}

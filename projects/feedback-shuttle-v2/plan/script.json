@@ -1,0 +1,468 @@
+{
+  "title": "Feedback That Changes What People Do",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s1_vague",
+      "title": "A feeling, not a target"
+    },
+    {
+      "id": "s2_behaviour",
+      "title": "Say what you saw"
+    },
+    {
+      "id": "s3_effect_step",
+      "title": "What it caused, one step"
+    },
+    {
+      "id": "s4_check",
+      "title": "Your turn"
+    },
+    {
+      "id": "s5_apply_payoff",
+      "title": "Yours, and Theo's next update"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s1_vague",
+      "job": "hook",
+      "narration": [
+        "Imagine Nina, after Theo's project update.",
+        "Great job, she says.",
+        "Maybe tighten it up a bit."
+      ],
+      "on_screen": [
+        "Great job, maybe tighten it up a bit"
+      ],
+      "visual_intent": "A cartoon meeting room as people leave. Nina stops by Theo's seat; her comment appears as a speech bubble between them.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Nina, Theo and the update are an illustrative scene",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "concepts": [
+        "vague feedback"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "s1_vague",
+      "job": "scenario",
+      "narration": [
+        "Theo smiles.",
+        "Next week, the update runs just as long.",
+        "Nothing changed."
+      ],
+      "on_screen": [
+        "A week later"
+      ],
+      "visual_intent": "Same room, a week later. Theo at the screen, slides stacking up; the budget question slide sits last and the wall clock is past the hour.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Theo repeats the same update the following week",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "s1_vague",
+      "job": "relate",
+      "narration": [
+        "You have probably been Theo.",
+        "Kind words, and no idea what to change."
+      ],
+      "on_screen": [],
+      "visual_intent": "The speech bubble drifts to an everyday desk where a figure seen from behind reads the same kind, empty comment on their screen.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The viewer has likely received kind but vague feedback",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b04",
+      "section": "s1_vague",
+      "job": "refute",
+      "narration": [
+        "That comment gave a feeling, not a target.",
+        "Feedback tends to work",
+        "when it names an action to repeat or change."
+      ],
+      "on_screen": [
+        "Feeling",
+        "Target"
+      ],
+      "visual_intent": "The vague bubble beside an empty target board with no dart on it: a warm glow on one side, nothing to aim at on the other.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A comment changes behaviour when the person can tell which action to repeat or change; vague comments tend to leave behaviour where it was",
+          "fact": "F1"
+        },
+        {
+          "claim": "Task-focused feedback tends to be more useful than general praise",
+          "fact": "F3"
+        }
+      ],
+      "misconception": "A warm, general comment is enough to change what someone does."
+    },
+    {
+      "id": "b05",
+      "section": "s1_vague",
+      "job": "transition",
+      "narration": [
+        "I have said that exact line myself.",
+        "Let's rebuild it, one part at a time."
+      ],
+      "on_screen": [],
+      "visual_intent": "The presenter beside the paused meeting scene, gesturing to Nina's bubble as if inviting the viewer to work on it together.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "The mentor narrator admits to having given vague feedback, as persona framing",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b06",
+      "section": "s2_behaviour",
+      "job": "refute",
+      "narration": [
+        "The tempting fix is a label.",
+        "Theo, you ramble.",
+        "But labels tend to make people defensive."
+      ],
+      "on_screen": [
+        "You ramble"
+      ],
+      "visual_intent": "A tag reading You ramble slaps onto Theo's chest. Theo folds his arms and leans back; a thin wall rises between him and Nina.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A trait label is a conclusion drawn from behaviour, not the behaviour itself",
+          "fact": "F4"
+        },
+        {
+          "claim": "A comment about character tends to prompt defensiveness",
+          "fact": "F5"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "Naming the trait is the clearest, most honest feedback."
+    },
+    {
+      "id": "b07",
+      "section": "s2_behaviour",
+      "job": "demonstrate",
+      "narration": [
+        "Say what you saw instead.",
+        "On Tuesday, the budget question came last,",
+        "after every other workstream."
+      ],
+      "on_screen": [
+        "Tuesday: budget question on the last slide"
+      ],
+      "visual_intent": "The label peels off Theo. Nina's bubble rewrites itself into the behaviour line while a small replay of Tuesday's slide stack shows the budget slide arriving last.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Behaviour is what someone visibly did or said, which another person could have seen or heard",
+          "fact": "F4"
+        },
+        {
+          "claim": "Describing what you observed gives the person something specific to recognise",
+          "fact": "F5"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b08",
+      "section": "s2_behaviour",
+      "job": "check",
+      "narration": [
+        "Now you.",
+        "What is that comment still missing?"
+      ],
+      "on_screen": [
+        "?"
+      ],
+      "visual_intent": "The behaviour line holds still with two empty dashed slots after it, pulsing gently while the viewer thinks.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Prompt to predict what the comment still lacks",
+          "hypothetical": true
+        }
+      ],
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "pause_predict",
+        "prompt": "Nina's comment now says what Theo did. What does it still not tell him?"
+      }
+    },
+    {
+      "id": "b09",
+      "section": "s3_effect_step",
+      "job": "demonstrate",
+      "narration": [
+        "What it caused.",
+        "We ran out of time,",
+        "and the decision slipped a week."
+      ],
+      "on_screen": [
+        "Effect: budget decision moved to next week"
+      ],
+      "visual_intent": "The first dashed slot fills with the effect line. Beside it a wall calendar flips and the budget decision card slides from this week to next.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Naming the effect on others or the work shows why it matters; it should be something actually seen",
+          "fact": "F6"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b10",
+      "section": "s3_effect_step",
+      "job": "demonstrate",
+      "narration": [
+        "Then one concrete step.",
+        "Could you open with the decision you need?",
+        "Then agree it together."
+      ],
+      "on_screen": [
+        "Next time: decision first"
+      ],
+      "visual_intent": "The second slot fills with the step. Nina and Theo turn toward each other at the table; Theo nods and adds a note of his own to it.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Specific goals tend to lead to better performance than vague ones",
+          "fact": "F7"
+        },
+        {
+          "claim": "A next step agreed in a two-way conversation is more likely to be carried out",
+          "fact": "F8"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b11",
+      "section": "s3_effect_step",
+      "job": "consolidate",
+      "narration": [
+        "What he did, what it caused, one step.",
+        "Specific, and still kind.",
+        "And say it soon, while it's fresh."
+      ],
+      "on_screen": [
+        "Behaviour",
+        "Effect",
+        "Next step"
+      ],
+      "visual_intent": "The complete comment sits large, its three parts lighting up in three calm colours as each is said; the old vague bubble is a faint ghost behind it.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The comment names behaviour, effect and one step",
+          "fact": "F14"
+        },
+        {
+          "claim": "Specificity is separate from tone",
+          "fact": "F12"
+        },
+        {
+          "claim": "Feedback is easier to use soon after the moment, while both remember the specifics",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "s4_check",
+      "job": "check",
+      "narration": [
+        "Your turn. A report lands Friday night.",
+        "A. Be more organised.",
+        "B. It came Friday night,",
+        "so the team worked the weekend.",
+        "Could we try a Thursday draft?",
+        "C. Same facts, but be more careful."
+      ],
+      "on_screen": [
+        "A",
+        "B",
+        "C"
+      ],
+      "visual_intent": "A report arriving in an inbox on Friday night, then three answer cards sliding in one at a time as each is read, none marked.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The late report is an illustrative scenario",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "role": "question",
+        "options": [
+          "A: Be more organised.",
+          "B: The report came Friday night, so the team worked the weekend. Could we try a Thursday draft?",
+          "C: The report came Friday night, so the team worked the weekend. Please be more careful."
+        ]
+      }
+    },
+    {
+      "id": "b13",
+      "section": "s4_check",
+      "job": "check",
+      "narration": [
+        "It is B.",
+        "What happened, what it caused, one step."
+      ],
+      "on_screen": [
+        "B"
+      ],
+      "visual_intent": "Card B lifts forward and gains three ticks in the same three colours as Nina's comment.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "B names observed behaviour, its effect and one concrete step",
+          "fact": "F14"
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 2,
+      "recall": {
+        "kind": "quiz",
+        "role": "answer",
+        "answer": "B names what happened, what it caused, and one step to try, offered as a question to agree."
+      }
+    },
+    {
+      "id": "b14",
+      "section": "s4_check",
+      "job": "refute",
+      "narration": [
+        "C sounds complete, but has no real step.",
+        "A is only a label."
+      ],
+      "on_screen": [
+        "No step",
+        "Label"
+      ],
+      "visual_intent": "Card C with two ticks and an empty third slot circled; card A with no ticks at all.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A vague instruction like be more careful is not a concrete step",
+          "fact": "F7"
+        },
+        {
+          "claim": "A trait label is a conclusion, not a behaviour",
+          "fact": "F4"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "Naming behaviour and effect is enough without a concrete step."
+    },
+    {
+      "id": "b15",
+      "section": "s5_apply_payoff",
+      "job": "practice",
+      "narration": [
+        "Now yours.",
+        "Pick one comment you owe this week,",
+        "and rebuild it before you say it."
+      ],
+      "on_screen": [
+        "This week"
+      ],
+      "visual_intent": "A sticky note on a monitor with a vague comment; it is crossed out and three empty coloured slots appear beneath it, ready to fill.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The viewer rebuilds a real comment using behaviour, effect and one step",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "s5_apply_payoff",
+      "job": "payoff",
+      "narration": [
+        "Back to Theo.",
+        "Next update, the decision comes first.",
+        "Specific feedback makes change easier,",
+        "not certain."
+      ],
+      "on_screen": [
+        "Next update"
+      ],
+      "visual_intent": "The opening meeting room again: the budget slide now first in Theo's stack, hands raised to decide, the clock well before the hour; Nina's three-colour comment small in the corner.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Theo's next update changes after the rebuilt comment",
+          "hypothetical": true
+        },
+        {
+          "claim": "Specific, task-focused feedback tends to be more useful, without guaranteeing change",
+          "fact": "F3"
+        }
+      ],
+      "hypothetical": true
+    }
+  ]
+}

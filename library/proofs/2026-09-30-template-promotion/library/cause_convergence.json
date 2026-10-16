@@ -1,0 +1,88 @@
+{
+ "scenes": [
+  {
+   "beat": "s1",
+   "kind": "template",
+   "template": "cause.converge",
+   "props": {
+    "outcome": "The slip and fall",
+    "say_outcome": "The fall",
+    "conditions": [
+     {"label": "Wet floor", "say": "floor was wet", "icon": "droplets"},
+     {"label": "No warning sign", "say": "no warning sign", "icon": "triangle-alert"},
+     {"label": "Failed corridor light", "say": "light had failed", "icon": "lightbulb-off"}
+    ],
+    "summary": "Together, not alone",
+    "say_summary": "Together",
+    "say_emphasis": "slip almost certain"
+   },
+   "why": "Three independent conditions jointly producing one incident is exactly the converge shape; arrows into the outcome carry the point that no single cause did it."
+  },
+  {
+   "beat": "s2",
+   "kind": "template",
+   "template": "cause.converge",
+   "props": {
+    "outcome": "Late launch",
+    "say_outcome": "late launch",
+    "conditions": [
+     {"label": "Unclear scope", "say": "scope was unclear", "icon": "circle-help"},
+     {"label": "Only one reviewer", "say": "only one person could review", "icon": "user"},
+     {"label": "Vendor slipped too", "say": "vendor slipped too", "icon": "truck"}
+    ],
+    "summary": "Not one culprit",
+    "say_summary": "all of them",
+    "say_emphasis": "The delay came from all of them"
+   },
+   "why": "A refute that replaces a lone culprit (the vendor) with the full set of causes; the vendor lands as just one of three arrows, which is the correction."
+  },
+  {
+   "beat": "s3",
+   "kind": "template",
+   "template": "cause.converge",
+   "props": {
+    "outcome": "Client lost",
+    "say_outcome": "The client",
+    "conditions": [
+     {"label": "Slow support replies", "say": "Support replies were slow", "icon": "clock"},
+     {"label": "Renewal price went up", "say": "renewal price went up", "icon": "trending-up"},
+     {"label": "Requested feature never shipped", "say": "feature they asked for never shipped", "icon": "package-x"}
+    ],
+    "summary": "All three combined",
+    "say_summary": "All three pushed them out"
+   },
+   "why": "Several reasons combining into one lost account, explicitly not one bad week; parallel causes into one effect, not a chain."
+  },
+  {
+   "beat": "s4",
+   "kind": "template",
+   "template": "definition",
+   "props": {
+    "kicker": "Key term",
+    "term": "Service level objective",
+    "say_term": "service level objective",
+    "definition": "A target for how reliable a service should be.",
+    "say_definition": "a target for how reliable a service should be",
+    "example": "99.9% of requests succeeding over a month",
+    "say_example": "ninety nine point nine percent of requests succeeding",
+    "icon": "target"
+   },
+   "why": "A single term with its meaning and a concrete example is the definition template's exact job; no causal structure here, so cause.converge does not apply."
+  },
+  {
+   "beat": "s5",
+   "kind": "template",
+   "template": "process.flow",
+   "props": {
+    "steps": [
+     {"label": "Logged", "say": "the request is logged", "icon": "clipboard-list"},
+     {"label": "Triaged", "sub": "By the on call engineer", "say": "triaged by the on call engineer", "icon": "user-check"},
+     {"label": "Fixed and tested", "say": "fixed and tested", "icon": "wrench"},
+     {"label": "Customer told", "sub": "Resolved", "say": "customer is told", "icon": "mail-check"}
+    ],
+    "token": {"icon": "ticket", "label": "Request"}
+   },
+   "why": "Four steps where each leads to the next and one request moves through them; the travelling token makes the motion the process, which list.steps would not show."
+  }
+ ]
+}

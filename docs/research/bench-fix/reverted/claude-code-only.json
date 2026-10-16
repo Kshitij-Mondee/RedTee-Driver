@@ -1,0 +1,33 @@
+{
+ "name": "claude-code-only",
+ "description": "Claude Code only: cc-opus plans and writes (brief, knowledge, pedagogy, script, storyboard outline, storyboard) and judges the pictures; cc-sonnet writes the scenes and checks the facts; cc-haiku picks the persona and tweaks. NOTE: Opus writes the storyboard here, which the 2026-10-06 rule refuses for API profiles (registry.profile matches 'claude-opus' in the alias, so 'cc-opus' is not caught): confirm with Kshitij before use. Requires provider claude_code: the cc-* model aliases and the claude_code provider are added in loom/agents/llm and loom/agents/config/models.json separately. Until they exist this profile does not load (doctor and bench list it as needing that provider; the profile test skips it by name).",
+ "roles": {
+  "brief": "cc-opus",
+  "knowledge": "cc-opus",
+  "skeptic": "cc-sonnet",
+  "pedagogy": "cc-opus",
+  "persona_pick": "cc-haiku",
+  "script": "cc-opus",
+  "storyboard_outline": "cc-opus",
+  "storyboard": "cc-opus",
+  "scene": "cc-sonnet",
+  "critic": "cc-opus",
+  "tweak": "cc-haiku"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {},
+ "requires_provider": "claude_code"
+}

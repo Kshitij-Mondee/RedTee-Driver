@@ -1,0 +1,169 @@
+{
+  "title": "Feedback that changes what people do",
+  "performance": "before their next feedback conversation, the viewer can turn a vague reaction into feedback that names one observed behaviour in its situation, its impact, and one concrete next step agreed with the other person, and can tell which kind they just gave",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "has given and received vague praise and vague criticism at work; has had a friendly talk that changed nothing; has no formal feedback training",
+    "why": "the brief's audience are working adults who give feedback already but without a structure; the sheet defines only three terms and assumes ordinary office experience",
+    "motivation": "wants the awkward conversation to be worth it and the relationship intact; mildly tired of talks that feel fine and change nothing",
+    "context": "desk or laptop at work, often with sound, captions on; first language varies, so screen words stay short"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "the sheet teaches a structure of parts (behaviour in situation, impact, next step) that is best shown by rebuilding one real line on one running example; the brief asks for one message that grows, so the lesson is one worked rebuild, then a different moment for the viewer",
+    "signature_move": "show the vague line in the meeting, add one missing part to the same message, show the colleague's reaction shift, THEN name the part just added"
+  },
+  "misconceptions": [
+    {
+      "belief": "a friendly talk that went well, ending in a nod, means the feedback worked",
+      "why_tempting": "both people feel good, nobody argued, and the nod looks like agreement",
+      "refuted_in": "sec1",
+      "source_anchor": "F1 caveat (a pleasant talk is not evidence that anything changed); not_claimed: a nod shows behaviour will change; brief hook"
+    },
+    {
+      "belief": "feedback is for fixing problems; praise is just being nice",
+      "why_tempting": "most feedback people remember was correction, and 'great job' feels complete",
+      "refuted_in": "sec3",
+      "source_anchor": "F11; brief example_posture (include one positive case)"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "After a meeting that overran, a colleague hears a friendly 'maybe tighten it up a bit', smiles and nods, and both feel fine. Next week, the meeting overruns again."
+    },
+    "promise": "the talk changed feelings, not behaviour; in two minutes you will have a way to make your next one change what happens next",
+    "bridge_from_prior": "sec1 opens from the vague comment the viewer has given and received themselves, set beside a line about the same meeting that names what was seen",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can classify a feedback line as about the person or a general impression versus about an observable behaviour, and explain why only the second tells someone what to change",
+        "bloom": "understand",
+        "concepts": [
+          "general feedback",
+          "observable behaviour",
+          "about the person versus about the action"
+        ],
+        "energy": "build",
+        "carrier": "comparison",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can use the situation, the behaviour, the impact and an agreed next step to rebuild a vague comment into feedback that points forward",
+        "bloom": "apply",
+        "concepts": [
+          "situation and behaviour",
+          "impact",
+          "next step"
+        ],
+        "energy": "peak",
+        "carrier": "worked example",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can give an example of feedback offered soon and as a two-way conversation, including specific positive feedback that says what to keep doing",
+        "bloom": "understand",
+        "concepts": [
+          "soon after the event",
+          "two-way conversation",
+          "specific positive feedback"
+        ],
+        "energy": "rest",
+        "carrier": "dialogue",
+        "recap_after": false
+      }
+    ],
+    "payoff": "Back at the next meeting: it ends on time, and the giver names exactly what worked so the colleague keeps doing it. Behaviour changed, relationship intact."
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec2",
+      "what": "the overrunning meeting rebuilt part by part on one growing message: situation and behaviour, impact, agreed next step"
+    },
+    {
+      "stage": "faded",
+      "where": "quiz after sec2",
+      "what": "a different moment (a handover note that left out a deadline): the viewer picks the line that would change behaviour and names what the others are missing"
+    },
+    {
+      "stage": "independent",
+      "where": "transfer before payoff",
+      "what": "the viewer picks one conversation they owe someone this week and drafts it in the same shape before they have it"
+    }
+  ],
+  "pacing": {
+    "requested_s": 120,
+    "target_duration_s": 120,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "impact"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec1",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Think of the last 'good job' you gave. Could they say what to do again?"
+      },
+      {
+        "after_section": "sec2",
+        "kind": "quiz",
+        "prompt_sketch": "A handover note left out the client's deadline. Which line would change what happens next? A: 'You're not very detail-minded.' B: 'The handover could have been better.' C: 'Yesterday's note left out the client deadline, so the next shift missed it. Could you add a deadlines line next time?'",
+        "answer": "C: it names what was seen in its situation, the impact, and a concrete next step to agree",
+        "tempting_wrong": "B sounds polite and fair, but it names no behaviour, no impact and no next step, so the person cannot tell what to change; A is about the person, which invites defence"
+      },
+      {
+        "after_section": "sec3",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Behaviour, impact, next step: and then ask how they saw it."
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "pick one conversation you owe someone this week, and before you have it, write down the behaviour you saw, its impact, and one next step you will ask them to agree to"
+  ],
+  "persona": {
+    "voice": "a mentor who has had these conversations and fumbled a few: warm, direct, a little wry about how good a vague chat can feel, speaking to a capable peer",
+    "delivery_notes": "light and knowing on the hook, slower and plain on impact, brisk on the quiz setup, warm and short on the payoff; short sentences, no lecturing about kindness"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the nod after the overrun, then the same overrun next week",
+      "objective": "promise: make your next talk change what happens next",
+      "recall_prior": "sec1 opens from the vague lines the viewer has given and received",
+      "present": "sec1 to sec3 in dependency order: what to describe, then the full structure, then how to deliver it",
+      "guidance": "signature move on the growing message in sec2",
+      "practice": "quiz after sec2 on a different moment; transfer task",
+      "feedback": "quiz answer explains why B (polite, vague) and A (about the person) fail",
+      "assess": "the quiz is the final check",
+      "transfer": "transfer task (draft the owed conversation) and payoff with specific positive feedback"
+    },
+    "merrill": {
+      "problem_centered": "the overrunning meeting runs through the whole lesson",
+      "activation": "sec1 bridges from the viewer's own vague 'good job' and recall prompt after sec1",
+      "demonstration": "sec2 rebuilds the line on screen, part by part, with the colleague's reaction",
+      "application": "quiz on the handover note; transfer task",
+      "integration": "transfer task in the viewer's own week; payoff shows the changed meeting"
+    },
+    "mayer": {
+      "coherence": "one running example plus one quiz moment; no model tour, no side stories, SBI named once at most",
+      "signalling": "each added part of the message is the accent as it is spoken; one slowdown on impact",
+      "redundancy": "screen shows the message parts in a few words; narration carries the explanation; captions on",
+      "contiguity": "each part appears on the message as the narration names it",
+      "segmenting": "three short sections, one idea each, recall prompts between",
+      "pre_training": "sec1 separates behaviour from the person before sec2 builds the full structure"
+    },
+    "arcs": {
+      "attention": "the familiar nod-and-repeat in the hook",
+      "relevance": "the viewer's own owed conversation this week",
+      "confidence": "a full worked rebuild before the quiz asks anything",
+      "satisfaction": "payoff: the same meeting ends on time and the relationship holds"
+    },
+    "bloom_path": "understand -> apply -> understand (consolidation)"
+  },
+  "series": null,
+  "flags": []
+}

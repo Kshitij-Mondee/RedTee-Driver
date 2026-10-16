@@ -1,0 +1,174 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Production Brief (lnd-creative-director)",
+ "type": "object",
+ "required": [
+  "title",
+  "genre",
+  "audience",
+  "outcome",
+  "through_line",
+  "arc_plan",
+  "must_cover",
+  "must_avoid",
+  "example_posture",
+  "visual_direction",
+  "voice_note",
+  "grounding_posture",
+  "open_questions",
+  "provenance"
+ ],
+ "properties": {
+  "title": {
+   "type": "string",
+   "minLength": 3
+  },
+  "genre": {
+   "type": "string"
+  },
+  "audience": {
+   "type": "object",
+   "required": [
+    "who",
+    "knows",
+    "cares_about"
+   ],
+   "properties": {
+    "who": {
+     "type": "string"
+    },
+    "knows": {
+     "type": "string"
+    },
+    "cares_about": {
+     "type": "string"
+    }
+   }
+  },
+  "outcome": {
+   "type": "string",
+   "minLength": 10
+  },
+  "through_line": {
+   "type": "string",
+   "minLength": 10
+  },
+  "arc_plan": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "required": [
+     "role",
+     "what"
+    ],
+    "properties": {
+     "role": {
+      "type": "string"
+     },
+     "what": {
+      "type": "string",
+      "minLength": 8
+     },
+     "source_anchor": {
+      "type": "string"
+     },
+     "no_material": {
+      "type": "boolean"
+     },
+     "needs": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "must_cover": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "what"
+    ],
+    "properties": {
+     "what": {
+      "type": "string"
+     },
+     "source_anchor": {
+      "type": "string"
+     },
+     "from_user": {
+      "type": "boolean"
+     },
+     "fact": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "must_avoid": {
+   "type": "array",
+   "maxItems": 10,
+   "items": {
+    "type": "string"
+   }
+  },
+  "example_posture": {
+   "type": "string"
+  },
+  "visual_direction": {
+   "type": "string"
+  },
+  "voice_note": {
+   "type": "string"
+  },
+  "grounding_posture": {
+   "enum": [
+    "verbatim",
+    "faithful",
+    "illustrative"
+   ]
+  },
+  "open_questions": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "provenance": {
+   "type": "object",
+   "properties": {
+    "inferred": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "look": {
+   "type": "object",
+   "description": "the requester's answer to the look question (the project interview); the storyboard honours it",
+   "properties": {
+    "story": {
+     "enum": [
+      "plain",
+      "some",
+      "cinematic",
+      "show me options"
+     ]
+    },
+    "people": {
+     "enum": [
+      "faces",
+      "acting",
+      "none",
+      "either"
+     ]
+    },
+    "note": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,2879 @@
+{
+  "style": "story-cartoon",
+  "concept": "One running cartoon story, Priya and Dev in one meeting room with one wall board. The vague sentence is rebuilt on that board one slot at a time, then the same meeting is replayed with the rebuilt sentence. One loud thing per frame; the rule is large when it is named.",
+  "story": {
+    "metaphor": "The wall board holds the sentence; its slots change state (empty, lit, filled, joined) and the room is cheap to replay.",
+    "setting": "One office meeting room with a wall board.",
+    "arc": "Vague kind sentence, nod, same meeting again; rebuild the sentence in three parts; replay the meeting with the rebuilt sentence.",
+    "cast": [
+      {
+        "name": "Priya",
+        "role": "gives the feedback"
+      },
+      {
+        "name": "Dev",
+        "role": "receives it"
+      },
+      {
+        "name": "Sam",
+        "role": "colleague who was presenting"
+      }
+    ]
+  },
+  "motifs": [
+    {
+      "name": "board",
+      "desc": "The wall board and the sentence on it, carried across joins."
+    },
+    {
+      "name": "camera",
+      "desc": "A corner camera and its viewfinder frame; the camera test."
+    },
+    {
+      "name": "calendar_marker",
+      "desc": "Wall calendar markers for next meeting and talk after it."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "room",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "The meeting room with the wall board; opening and payoff."
+      },
+      {
+        "id": "dev_side",
+        "parent": "room",
+        "rect": {
+          "x": 960,
+          "y": 260,
+          "w": 800,
+          "h": 700
+        },
+        "note": "Dev's side of the table (bridge problem cards)."
+      },
+      {
+        "id": "board",
+        "x": 2200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "The wall board: rebuild station; right is forward, same layout reused."
+      },
+      {
+        "id": "viewfinder",
+        "x": 0,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Dark camera viewfinder feed."
+      },
+      {
+        "id": "split",
+        "x": 2200,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "The split room, before and after the interruption."
+      },
+      {
+        "id": "timing",
+        "x": 4400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Timing aside for when to say it."
+      },
+      {
+        "id": "cards",
+        "x": 4400,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Card table for the check."
+      },
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 2400,
+        "w": 1920,
+        "h": 1080,
+        "note": "A quiet desk with a sticky note."
+      },
+      {
+        "id": "worksheet",
+        "parent": "desk",
+        "rect": {
+          "x": 300,
+          "y": 200,
+          "w": 1300,
+          "h": 700
+        },
+        "note": "The worksheet, nested inside the desk."
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "board_sentence",
+      "what": "The wall board held as one station. Three slots (behaviour, effect, request) change state across sections: empty, lit, filled, joined.",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b11",
+        "b16",
+        "b17",
+        "b22",
+        "b25",
+        "b27",
+        "b28",
+        "b29",
+        "b32",
+        "b45",
+        "b47",
+        "b48",
+        "b49"
+      ]
+    },
+    {
+      "id": "camera_frame",
+      "what": "A corner camera and its viewfinder frame that shows only what was said, when and to whom, and lets attitude bubbles drift out.",
+      "kind": "explain",
+      "beats": [
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b24",
+        "b25",
+        "b42"
+      ]
+    },
+    {
+      "id": "fade_and_stay",
+      "what": "The vague remark fades to grey while the specific one stays sharp and solid: the ghost of the first meeting, the old label, card A.",
+      "kind": "callback",
+      "beats": [
+        "b04",
+        "b08",
+        "b15",
+        "b18",
+        "b32",
+        "b37"
+      ]
+    },
+    {
+      "id": "calendar_marker",
+      "what": "A wall calendar with two markers, next meeting and talk after it, joined by a thin line.",
+      "kind": "data",
+      "beats": [
+        "b29",
+        "b30",
+        "b31",
+        "b44",
+        "b46",
+        "b49",
+        "b52",
+        "b53"
+      ]
+    },
+    {
+      "id": "rule_card",
+      "what": "The named rule, large and alone on the paper ground. It is the rest frame after each section.",
+      "kind": "rest",
+      "beats": [
+        "b14",
+        "b19",
+        "b26",
+        "b33",
+        "b39"
+      ]
+    },
+    {
+      "id": "handoff_board",
+      "what": "Join material: handoff. The board and its sentence carry across to and from the presenter.",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b54"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "none yet",
+      "why": "Pale open. The tense room reads through posture, not colour."
+    },
+    {
+      "from": "b06",
+      "band": "mid",
+      "break": false,
+      "accent": "empty checklist and the question marks",
+      "why": "Richer middle for the problem. The accent sits on what is missing."
+    },
+    {
+      "from": "b11",
+      "band": "light",
+      "break": false,
+      "accent": "slot one lit",
+      "why": "Clean board for the rebuild."
+    },
+    {
+      "from": "b12",
+      "band": "dark",
+      "break": true,
+      "accent": "viewfinder frame and the spoken lines inside it",
+      "why": "Dark break for the key mechanism, the camera test."
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "break": false,
+      "accent": "the rule words",
+      "why": "Back to pale for the named rule."
+    },
+    {
+      "from": "b20",
+      "band": "mid",
+      "break": false,
+      "accent": "the word Effect",
+      "why": "Build energy."
+    },
+    {
+      "from": "b27",
+      "band": "mid",
+      "break": false,
+      "accent": "empty slot three, then the action",
+      "why": "The request is the missing piece."
+    },
+    {
+      "from": "b32",
+      "band": "light",
+      "break": true,
+      "accent": "the whole joined sentence",
+      "why": "The turn: one flood of accent."
+    },
+    {
+      "from": "b34",
+      "band": "mid",
+      "break": false,
+      "accent": "the card in focus",
+      "why": "Check section."
+    },
+    {
+      "from": "b40",
+      "band": "light",
+      "break": true,
+      "accent": "none, sticky note only",
+      "why": "Calm rest for drafting."
+    },
+    {
+      "from": "b47",
+      "band": "mid",
+      "break": false,
+      "accent": "the rebuilt sentence in the bubble",
+      "why": "Opening frame returns, changed."
+    },
+    {
+      "from": "b51",
+      "band": "light",
+      "break": false,
+      "accent": "warm lift and the talk after marker",
+      "why": "Lift at the close."
+    }
+  ],
+  "poster": {
+    "beat": "b32"
+  },
+  "alternatives": {
+    "material_joins": "Page turn, torn paper or motif wipes between chapters instead of hard cuts and black narration cards. Kept as an option.",
+    "portal_board": "The board sentence as one continuous camera move entering each slot (hero.portal) instead of cuts. Kept as an option.",
+    "rule_stamp": "Pocket rules as a tilted stamp or brush label instead of plain title cards."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "story_role": "hook",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "pushed_back_chair",
+      "intent": "sparse",
+      "subject": "Priya and Dev facing each other in a just-emptied meeting room",
+      "world": "A cartoon meeting room with a table, papers left behind and a blank wall board",
+      "rationale": "Establish the tense room through posture, not colour.",
+      "design": {
+        "treatment": "Wide cartoon room that empties; two figures stay. Emotion in posture: pushed-back chair, stiff shoulders.",
+        "why_motion": "The room emptying and the stiffness arriving is the story; a still would lose the 'it just ended' beat.",
+        "elements": [
+          "room_set",
+          "wall_board_blank",
+          "papers_on_table",
+          "Priya",
+          "Dev",
+          "pushed_back_chair"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say this is Priya",
+            "element": "room_set",
+            "action": "room and blank board settle, Priya pops in on the left",
+            "motion": "springy pop on the person only"
+          },
+          {
+            "t_anchor": "and this is Dev",
+            "element": "Dev",
+            "action": "Dev pops in facing Priya",
+            "motion": "springy pop"
+          },
+          {
+            "t_anchor": "Their meeting just ended",
+            "element": "papers_on_table",
+            "action": "crowd of grey extras leaves, papers stay on the table",
+            "motion": "extras slide out"
+          },
+          {
+            "t_anchor": "it was tense",
+            "element": "pushed_back_chair",
+            "action": "chair pushed back, shoulders stiffen",
+            "motion": "small settle, no accent colour"
+          }
+        ],
+        "continuity": "Opens the lesson. Held for b02 to b04: room_set, wall_board, Priya, Dev. Leaves: grey extras.",
+        "references": [
+          "outline b01",
+          "story-cartoon pack"
+        ]
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "hook",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "sentence_on_board",
+      "subject": "Priya saying the vague sentence kindly",
+      "world": "The meeting room, Priya in warm three-quarter view, board behind her",
+      "rationale": "The sentence appears in plain ink, no accent.",
+      "design": {
+        "treatment": "Two-shot, Priya smiles; the sentence prints on the board and in her bubble in plain hand-lettered ink.",
+        "why_motion": "The sentence arriving as she speaks it ties words to the board for the rebuild later.",
+        "elements": [
+          "Priya_warm_smile",
+          "speech_bubble",
+          "sentence_on_board",
+          "Dev"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Priya wants to help",
+            "element": "Priya_warm_smile",
+            "action": "Priya smiles warmly, leans in",
+            "motion": "springy pop on posture"
+          },
+          {
+            "t_anchor": "so she says it kindly",
+            "element": "speech_bubble",
+            "action": "bubble opens from Priya",
+            "motion": "unfold from speaker"
+          },
+          {
+            "t_anchor": "you need to be more professional",
+            "element": "sentence_on_board",
+            "action": "sentence prints in the bubble and on the board",
+            "motion": "unmask print"
+          }
+        ],
+        "continuity": "Held from b01: room_set, Priya, Dev, wall_board (now carries the sentence). Incoming: speech_bubble, sentence_on_board.",
+        "references": [
+          "outline b02"
+        ]
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "hook",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "Dev_nod",
+      "subject": "Dev nodding warmly while Priya leaves glowing",
+      "world": "The meeting room, Dev in view, Priya heading for the door",
+      "rationale": "The false it-worked signal.",
+      "design": {
+        "treatment": "A springy warm nod, then Priya walks out with a small pale glow over her head.",
+        "why_motion": "The nod and the exit are the false success signal; motion is the content.",
+        "elements": [
+          "Dev_nod",
+          "fair_point_tag",
+          "Priya_walking_out",
+          "pale_glow",
+          "sentence_on_board"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Dev nods warmly",
+            "element": "Dev_nod",
+            "action": "Dev nods with a warm smile",
+            "motion": "springy nod"
+          },
+          {
+            "t_anchor": "fair point",
+            "element": "fair_point_tag",
+            "action": "small tag by Dev",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Priya walks out",
+            "element": "Priya_walking_out",
+            "action": "Priya crosses to the door and leaves",
+            "motion": "walk, ease out"
+          },
+          {
+            "t_anchor": "feeling good about it",
+            "element": "pale_glow",
+            "action": "glow blooms over her head as she exits",
+            "motion": "soft bloom, pale"
+          }
+        ],
+        "continuity": "Held: room_set, Dev, sentence_on_board. Leaves: speech_bubble, Priya.",
+        "references": [
+          "outline b03"
+        ]
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "continue",
+        "meaning": "time",
+        "overlap": "ghost"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "story_role": "hook",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "ghost_of_first_meeting",
+      "intent": "ghost",
+      "subject": "The same tense meeting repeating over a faded copy of the first",
+      "world": "The same meeting room and seating as b01",
+      "rationale": "The repeat made obvious by a ghost overlay; first use of fade_and_stay.",
+      "design": {
+        "treatment": "Same room and seating; the first meeting sits as a faded ghost while the tense meeting replays on top.",
+        "why_motion": "The ghost overlay is how the viewer sees that nothing changed.",
+        "elements": [
+          "ghost_of_first_meeting",
+          "replayed_meeting",
+          "same_seating",
+          "Priya",
+          "Dev"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next meeting",
+            "element": "ghost_of_first_meeting",
+            "action": "b01 frame returns as a faded ghost",
+            "motion": "dissolve in, grey"
+          },
+          {
+            "t_anchor": "it goes exactly the same way",
+            "element": "replayed_meeting",
+            "action": "figures take the same seats and the same stiff postures over the ghost",
+            "motion": "overlay lines up exactly"
+          },
+          {
+            "t_anchor": "Same moment, same tension",
+            "element": "same_seating",
+            "action": "pushed-back chair repeats, ghost and replay align",
+            "motion": "hold, tension reads as a repeat"
+          }
+        ],
+        "continuity": "Held: room_set. Retiring: sentence_on_board fades with the ghost. Incoming: ghost_of_first_meeting, replayed_meeting.",
+        "references": [
+          "outline b04",
+          "fade_and_stay device"
+        ]
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "avatar",
+      "station": "board",
+      "join_in": {
+        "type": "handoff",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "setup",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "presenter",
+      "rationale": "Presenter beside the board, old sentence faint behind, speaking the promise to camera.",
+      "depth": "flat"
+    },
+    {
+      "beat": "b06",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "dev_side",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "no_action_column",
+      "rationale": "What Dev received: a judgement and no action. The accent sits on what is missing.",
+      "props": {
+        "kicker": "What Dev got",
+        "title": "What Dev received",
+        "say_title": "what did Dev actually receive",
+        "left": {
+          "header": "A judgement",
+          "say": "A judgement",
+          "tone": "neutral"
+        },
+        "right": {
+          "header": "No action",
+          "say": "no action",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Nothing to repeat",
+              "say": "repeat"
+            },
+            {
+              "text": "Nothing to stop",
+              "say": "stop"
+            },
+            {
+              "text": "Nothing to change",
+              "say": "change"
+            }
+          ]
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "dev_side",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "question_marks",
+      "subject": "Dev surrounded by floating question marks over a meeting timeline",
+      "world": "Dev's side of the table, a meeting timeline strip beneath him",
+      "rationale": "Dev is left to guess: each question hovers over a different moment, none chosen.",
+      "design": {
+        "treatment": "Dev in back or three-quarter view; question marks float around him and drift over different moments on a timeline strip.",
+        "why_motion": "The marks hovering and never landing show the guessing; a still would not show none chosen.",
+        "elements": [
+          "Dev",
+          "meeting_timeline",
+          "how_mark",
+          "which_moment_mark",
+          "question_marks"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Be more professional",
+            "element": "meeting_timeline",
+            "action": "timeline strip draws under Dev",
+            "motion": "line draws left to right"
+          },
+          {
+            "t_anchor": "how",
+            "element": "how_mark",
+            "action": "How? pops by Dev",
+            "motion": "springy pop"
+          },
+          {
+            "t_anchor": "in which moment",
+            "element": "which_moment_mark",
+            "action": "Which moment? hovers over one tick then another",
+            "motion": "drift between ticks, never settles"
+          },
+          {
+            "t_anchor": "Dev is left to guess",
+            "element": "question_marks",
+            "action": "marks multiply and circle, none chosen",
+            "motion": "slow float"
+          }
+        ],
+        "continuity": "Held: Dev, dev_side set. Leaves: the compare.two columns from b06. Incoming: meeting_timeline, question_marks.",
+        "references": [
+          "outline b07"
+        ]
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "template": "definition",
+      "station": "dev_side",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "weak_sign",
+      "rationale": "Refutes the nod-as-proof belief; term and definition carry the idea.",
+      "option": "definition",
+      "alternatives": {
+        "hero_meter": {
+          "kind": "blueprint",
+          "blueprint": "hero.meter",
+          "desc": "Dev's nod drawn large with a thin faint arrow toward the next meeting that fades out."
+        }
+      },
+      "props": {
+        "kicker": "Where people slip",
+        "term": "A nod",
+        "say_term": "A nod feels like understanding",
+        "definition": "A weak sign that anything will change.",
+        "say_definition": "It is a weak sign anything will change"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "dev_side",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "content_slot",
+      "rationale": "Tone present, content missing.",
+      "props": {
+        "title": "Tone and content",
+        "left": {
+          "header": "Tone",
+          "say": "Tone shapes how it feels",
+          "tone": "pos"
+        },
+        "right": {
+          "header": "Content",
+          "say": "Content decides what Dev can change",
+          "tone": "neutral"
+        },
+        "verdict": {
+          "text": "Still matters. Not enough.",
+          "say": "It is just not enough"
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "dev_side",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "story_role": "turn",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "label_stamp",
+      "subject": "A label stamped onto Dev's chest while his shoulders tense",
+      "world": "Dev's side of the table, three-quarter view, hands and posture",
+      "rationale": "A label about who you are is often heard as an attack. Brief.",
+      "design": {
+        "treatment": "Three-quarter view of Dev, polite smile held, a label stamp lands on his chest and his shoulders tense behind the smile.",
+        "why_motion": "The stamp landing and the shoulders tightening show the label being received as an attack.",
+        "elements": [
+          "Dev",
+          "label_stamp",
+          "polite_smile",
+          "tensed_shoulders"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a label about who you are",
+            "element": "label_stamp",
+            "action": "label stamp drops onto Dev's chest",
+            "motion": "stamp drop with overshoot"
+          },
+          {
+            "t_anchor": "is often heard as an attack",
+            "element": "tensed_shoulders",
+            "action": "shoulders rise behind the polite smile",
+            "motion": "quick tense"
+          },
+          {
+            "t_anchor": "Not always",
+            "element": "tensed_shoulders",
+            "action": "shoulders ease slightly",
+            "motion": "slow ease"
+          },
+          {
+            "t_anchor": "But often",
+            "element": "tensed_shoulders",
+            "action": "shoulders tense again",
+            "motion": "settle tense"
+          }
+        ],
+        "continuity": "Held: Dev. Leaves: question_marks and timeline from b07. Incoming: label_stamp.",
+        "references": [
+          "outline b10"
+        ]
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "template",
+      "template": "document.page",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "slot_one",
+      "rationale": "The rebuild station: old sentence on top, three empty slots, the first lit.",
+      "props": {
+        "kind": "notes",
+        "title": "The sentence, rebuilt",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "You need to be more professional",
+            "say": "rebuild the sentence"
+          },
+          {
+            "text": "Behaviour, Effect, Request: three empty slots",
+            "say": "one at a time"
+          },
+          {
+            "text": "Slot one is live: behaviour",
+            "say": "Start with the first"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "viewfinder",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "viewfinder_frame",
+      "subject": "A corner camera and the viewfinder feed of the meeting",
+      "world": "The meeting room seen as a dark viewfinder feed with captions",
+      "rationale": "Key mechanism. Dark band break; a black narration card enters the turn.",
+      "design": {
+        "treatment": "A black narration card for the turn, then a camera in the room's corner; the frame pushes into its viewfinder, where captions mark who spoke, to whom and when.",
+        "why_motion": "The push enters the object and the captions arriving show exactly what a camera records.",
+        "elements": [
+          "black_narration_card",
+          "corner_camera",
+          "viewfinder_frame",
+          "caption_what_was_said",
+          "caption_when",
+          "caption_to_whom"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Picture a camera in that meeting room",
+            "element": "corner_camera",
+            "action": "black card clears, camera appears in the corner and the frame pushes into its viewfinder",
+            "motion": "gentle early push"
+          },
+          {
+            "t_anchor": "what was said",
+            "element": "caption_what_was_said",
+            "action": "speech caption prints inside the frame",
+            "motion": "unmask print"
+          },
+          {
+            "t_anchor": "when",
+            "element": "caption_when",
+            "action": "time stamp ticks into the corner of the frame",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "and to whom",
+            "element": "caption_to_whom",
+            "action": "arrow draws from speaker to listener",
+            "motion": "line draws into its target"
+          }
+        ],
+        "continuity": "New world: dark band. Nothing held from the board. Incoming: corner_camera, viewfinder_frame, captions.",
+        "references": [
+          "outline b12",
+          "camera_frame device"
+        ]
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "viewfinder",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "viewfinder_frame",
+      "subject": "Three thought bubbles drifting out of the viewfinder frame",
+      "world": "Inside the dark viewfinder feed",
+      "rationale": "Attitude, motive and intent are not observations: they drift out and fade.",
+      "design": {
+        "treatment": "Three thought bubbles labelled attitude, motive and intent drift out of the camera frame and fade; the frame and its captions stay solid.",
+        "why_motion": "Drifting out of frame and fading shows what the camera cannot record.",
+        "elements": [
+          "viewfinder_frame",
+          "attitude_bubble",
+          "motive_bubble",
+          "intent_bubble",
+          "captions"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The camera never records",
+            "element": "viewfinder_frame",
+            "action": "frame and captions hold solid",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "dismissive attitude",
+            "element": "attitude_bubble",
+            "action": "Attitude bubble forms and drifts out of the frame",
+            "motion": "drift and fade"
+          },
+          {
+            "t_anchor": "motive",
+            "element": "motive_bubble",
+            "action": "Motive bubble drifts out",
+            "motion": "drift and fade"
+          },
+          {
+            "t_anchor": "intent",
+            "element": "intent_bubble",
+            "action": "Intent bubble drifts out",
+            "motion": "drift and fade"
+          },
+          {
+            "t_anchor": "None of them are observations",
+            "element": "viewfinder_frame",
+            "action": "all three gone, frame stays",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "Held: viewfinder_frame, captions. Incoming then retiring: the three bubbles.",
+        "references": [
+          "outline b13",
+          "fade_and_stay device"
+        ]
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "template",
+      "template": "definition",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "observable_behaviour",
+      "intent": "rest",
+      "rationale": "The rule large and alone on pale ground; the camera test is named.",
+      "props": {
+        "kicker": "The rule",
+        "term": "Observable behaviour",
+        "say_term": "Observable behaviour",
+        "definition": "What the camera does catch. We check it with the camera test.",
+        "say_definition": "the camera test"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "a_guess",
+      "rationale": "A label is a guess about motive.",
+      "props": {
+        "kicker": "Where people slip",
+        "left": {
+          "header": "Dismissive",
+          "say": "you were dismissive",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Feels honest and direct",
+              "say": "feels honest"
+            }
+          ]
+        },
+        "right": {
+          "header": "A guess",
+          "say": "a guess about motive",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "You can be wrong",
+              "say": "you can be wrong"
+            }
+          ]
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "template",
+      "template": "document.page",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "slot_one",
+      "intent": "hold",
+      "rationale": "Pause and predict: slot one blinking, calm, no motion.",
+      "props": {
+        "kind": "form",
+        "title": "Slot one: behaviour",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "Be more professional",
+            "say": "Be more professional"
+          },
+          {
+            "text": "What would a camera see?",
+            "say": "What would a camera see"
+          },
+          {
+            "text": "What was done? When? To whom?",
+            "say": "what was done"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "slot_one_words",
+      "subject": "Sam presenting and Dev cutting in twice, while slot one fills",
+      "world": "The wall board with a viewfinder inset showing the meeting",
+      "rationale": "The worked answer fills slot one word by word.",
+      "design": {
+        "treatment": "Split: the viewfinder inset shows Sam presenting and Dev cutting in twice, while slot one on the board fills word by word in the accent.",
+        "why_motion": "The words landing as the two interruptions happen ties the sentence to what a camera saw.",
+        "elements": [
+          "viewfinder_inset",
+          "Sam_presenting",
+          "Dev_cutting_in",
+          "slot_one_words",
+          "board"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "In today's meeting",
+            "element": "slot_one_words",
+            "action": "slot one begins to fill: In today's meeting",
+            "motion": "words print"
+          },
+          {
+            "t_anchor": "you interrupted Sam twice",
+            "element": "Dev_cutting_in",
+            "action": "Dev cuts in twice in the inset; the words Interrupted Sam twice fill",
+            "motion": "two quick cut-ins, words in accent"
+          },
+          {
+            "t_anchor": "while she was presenting",
+            "element": "Sam_presenting",
+            "action": "Sam shown mid-slide; While she was presenting fills",
+            "motion": "words print"
+          }
+        ],
+        "continuity": "Held: board, slot one position. Leaves: the page template from b16. Incoming: viewfinder_inset with Sam and Dev, slot_one_words.",
+        "references": [
+          "outline b17",
+          "camera_frame device"
+        ]
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "specific_sentence",
+      "subject": "The old label fading to grey while the specific sentence stays",
+      "world": "The wall board",
+      "rationale": "The lesson's signature fade and stay.",
+      "design": {
+        "treatment": "The old line be more professional fades to grey and disappears while the specific sentence stays sharp and solid.",
+        "why_motion": "Fading means not usable, staying means something to act on; the change over time is the point.",
+        "elements": [
+          "old_line",
+          "specific_sentence",
+          "Sam_name_mark",
+          "moment_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Watch the old label fade",
+            "element": "old_line",
+            "action": "old line greys and disappears",
+            "motion": "fade to grey, exit"
+          },
+          {
+            "t_anchor": "while the specific moment stays",
+            "element": "specific_sentence",
+            "action": "specific sentence stays sharp and solid",
+            "motion": "hold, slight sharpen"
+          },
+          {
+            "t_anchor": "Sam is named",
+            "element": "Sam_name_mark",
+            "action": "underline draws under Sam",
+            "motion": "line draws"
+          },
+          {
+            "t_anchor": "The moment is named",
+            "element": "moment_mark",
+            "action": "underline draws under In today's meeting",
+            "motion": "line draws"
+          },
+          {
+            "t_anchor": "There is no verdict on Dev",
+            "element": "specific_sentence",
+            "action": "no judging word anywhere; sentence holds clean",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "Held: specific_sentence from b17. Retiring: old_line. Incoming: two underlines.",
+        "references": [
+          "outline b18",
+          "fade_and_stay device"
+        ]
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "template",
+      "template": "title.card",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "rule_words",
+      "intent": "rest",
+      "rationale": "Pocket rule, large and alone.",
+      "props": {
+        "kicker": "Pocket rule",
+        "say_kicker": "Pocket rule",
+        "title": "Describe what a camera would see",
+        "say_title": "describe what a camera would see"
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "so_what_bubble",
+      "subject": "Dev shrugging with a So what bubble beside a filled slot one",
+      "world": "The wall board with slot one filled, Dev standing before it",
+      "rationale": "Motivates the effect step.",
+      "design": {
+        "treatment": "Board with slot one filled; Dev shrugs and a small So what bubble pops. Mid band.",
+        "why_motion": "The shrug is the objection the effect step answers.",
+        "elements": [
+          "board_slot_one_filled",
+          "Dev_shrug",
+          "so_what_bubble"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Slot one is filled",
+            "element": "board_slot_one_filled",
+            "action": "board settles with slot one filled and calm",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Dev might still think",
+            "element": "Dev_shrug",
+            "action": "Dev shrugs",
+            "motion": "springy shrug"
+          },
+          {
+            "t_anchor": "so what",
+            "element": "so_what_bubble",
+            "action": "So what bubble pops over Dev",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Why does it matter",
+            "element": "so_what_bubble",
+            "action": "bubble gains a second line, Why?",
+            "motion": "small pulse"
+          }
+        ],
+        "continuity": "Held: board with slot one. Incoming: Dev and the bubble. Nothing carries from b19 title card.",
+        "references": [
+          "outline b20"
+        ]
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "split",
+      "join_in": {
+        "type": "camera",
+        "meaning": "time",
+        "dur": 1
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "effect_word",
+      "subject": "The same room split: Sam presenting smoothly, and Sam cut off with Priya lost",
+      "world": "The meeting room with identical seating on both halves",
+      "rationale": "Before and after of the same room; Effect lands on the right.",
+      "design": {
+        "treatment": "Wide split of the same room with the same seating. Left: Sam presenting smoothly. Right: Sam cut off mid-slide, Priya looking lost.",
+        "why_motion": "The cut-off and the lost look arriving on the right half is the effect, shown as a change.",
+        "elements": [
+          "split_divider",
+          "left_room_Sam_smooth",
+          "right_room_Sam_cut_off",
+          "Priya_lost",
+          "effect_word"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Look at the room after the second interruption",
+            "element": "split_divider",
+            "action": "room draws as a split, left half shows Sam presenting smoothly",
+            "motion": "divider draws, left half settles"
+          },
+          {
+            "t_anchor": "Priya loses track of Sam's point",
+            "element": "Priya_lost",
+            "action": "right half: Sam cut off mid-slide, Priya looks lost",
+            "motion": "slide freezes, Priya tilts"
+          },
+          {
+            "t_anchor": "is the effect",
+            "element": "effect_word",
+            "action": "the word Effect lands on the right half in accent",
+            "motion": "drop with overshoot"
+          }
+        ],
+        "continuity": "Held: board is left behind; new station. Incoming: both halves, effect_word.",
+        "references": [
+          "outline b21"
+        ]
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "camera",
+        "meaning": "into",
+        "dur": 1
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "effect_clause",
+      "subject": "Priya's tangled thought untangling into a clause on the board sentence",
+      "world": "The wall board with slot one filled, Priya close",
+      "rationale": "Own reaction as a stated effect: honest, hard to dispute.",
+      "design": {
+        "treatment": "Close on Priya, her thought thread untangling into a second clause that attaches to the board sentence.",
+        "why_motion": "The untangling is the change from a feeling to a statable effect.",
+        "elements": [
+          "Priya",
+          "thought_thread",
+          "effect_clause",
+          "slot_one_words"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Priya says what she directly felt",
+            "element": "thought_thread",
+            "action": "tangled thread appears over Priya",
+            "motion": "wobble"
+          },
+          {
+            "t_anchor": "I lost track of her point",
+            "element": "effect_clause",
+            "action": "thread untangles and prints the clause, attaching to slot one",
+            "motion": "thread straightens, clause unmasks in accent"
+          },
+          {
+            "t_anchor": "That is honest",
+            "element": "effect_clause",
+            "action": "clause settles solid",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "hard to dispute",
+            "element": "effect_clause",
+            "action": "underline draws beneath the clause",
+            "motion": "line draws"
+          }
+        ],
+        "continuity": "Held: slot_one_words on the board. Leaves: the split room. Incoming: Priya, thought_thread, effect_clause.",
+        "references": [
+          "outline b22"
+        ]
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "what_you_felt",
+      "rationale": "Do not speculate. A light fx on the ticked card carries the hybrid motion layer.",
+      "fx": [
+        {
+          "kind": "light",
+          "at": "what you felt",
+          "dur": 1.2,
+          "rect": [
+            1000,
+            300,
+            700,
+            500
+          ]
+        }
+      ],
+      "props": {
+        "kicker": "The tricky part",
+        "left": {
+          "header": "What others think",
+          "say": "what others think",
+          "tone": "neg"
+        },
+        "right": {
+          "header": "What you felt",
+          "say": "what you felt",
+          "tone": "pos"
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "template",
+      "template": "title.card",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "camera_test",
+      "intent": "hold",
+      "rationale": "Recall prompt on a blank board, calm hold.",
+      "props": {
+        "kicker": "Without looking back",
+        "say_kicker": "Without looking back",
+        "title": "What is the camera test?",
+        "say_title": "What is the camera test",
+        "subtitle": "Which part of the sentence does it protect?",
+        "say_subtitle": "which part of the sentence does it protect"
+      }
+    },
+    {
+      "beat": "b25",
+      "kind": "template",
+      "template": "document.page",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "part_one",
+      "intent": "callback",
+      "rationale": "The board returns and the camera test links back to part one.",
+      "props": {
+        "kind": "notes",
+        "title": "The camera test",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "The camera test asks one thing",
+            "say": "The camera test asks one thing"
+          },
+          {
+            "text": "What would anyone watching have seen or heard",
+            "say": "What would anyone watching have seen or heard"
+          },
+          {
+            "text": "It protects part one: behaviour",
+            "say": "It protects part one"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b26",
+      "kind": "template",
+      "template": "title.card",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "rule_words",
+      "intent": "rest",
+      "rationale": "Pocket rule rest frame.",
+      "props": {
+        "kicker": "Pocket rule",
+        "say_kicker": "Pocket rule",
+        "title": "Say what happened",
+        "say_title": "say what happened",
+        "subtitle": "And what it did",
+        "say_subtitle": "what it did"
+      }
+    },
+    {
+      "beat": "b27",
+      "kind": "template",
+      "template": "document.page",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "empty_slot_three",
+      "rationale": "Two slots filled, the third empty. A spotlight fx on slot three is the motion layer.",
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "what should Dev do next",
+          "dur": 2,
+          "rect": [
+            400,
+            600,
+            1100,
+            200
+          ]
+        }
+      ],
+      "props": {
+        "kind": "form",
+        "title": "Two slots done, one to go",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "Interrupted Sam twice while she was presenting",
+            "say": "what happened"
+          },
+          {
+            "text": "I lost track of her point",
+            "say": "why it matters"
+          },
+          {
+            "text": "Request: still empty",
+            "say": "what should Dev do next"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b28",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "a_gap",
+      "rationale": "A stop-only request leaves a gap.",
+      "props": {
+        "kicker": "Where people slip",
+        "left": {
+          "header": "Stop interrupting",
+          "say": "stop interrupting",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Only says what to stop",
+              "say": "what to stop"
+            }
+          ]
+        },
+        "right": {
+          "header": "A gap",
+          "say": "a gap",
+          "tone": "neutral"
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b29",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "action_text",
+      "subject": "The empty gap box filling with the action beside a wall calendar",
+      "world": "The wall board with a wall calendar beside it",
+      "rationale": "Say what to do instead; the next meeting is an object on the calendar.",
+      "design": {
+        "treatment": "The empty box fills with the action, written beside the next-meeting marker on a wall calendar.",
+        "why_motion": "The marker landing and the text being written tie the action to a time.",
+        "elements": [
+          "gap_box",
+          "wall_calendar",
+          "next_meeting_marker",
+          "action_text"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So fill the gap",
+            "element": "wall_calendar",
+            "action": "wall calendar slides in beside the board; gap box highlights",
+            "motion": "slide in, pulse"
+          },
+          {
+            "t_anchor": "what to do instead",
+            "element": "gap_box",
+            "action": "gap box begins to fill",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Next meeting",
+            "element": "next_meeting_marker",
+            "action": "marker lands on the calendar",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "let her finish before you respond",
+            "element": "action_text",
+            "action": "Let her finish written in the box in accent",
+            "motion": "print"
+          }
+        ],
+        "continuity": "Held: board with slots one and two, slot three box. Leaves: compare.two columns. Incoming: wall_calendar, marker, action_text.",
+        "references": [
+          "outline b29",
+          "calendar_marker device"
+        ]
+      }
+    },
+    {
+      "beat": "b30",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close",
+        "zoom": 1.8,
+        "focus": [
+          1100,
+          150,
+          700,
+          500
+        ],
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "talk_after_marker",
+      "subject": "A second calendar marker, talk after it, joined to the request",
+      "world": "Close on the wall calendar beside the board",
+      "rationale": "The check-back is an object, not a phrase.",
+      "design": {
+        "treatment": "Close on the calendar: a second marker lands right after the meeting, linked to the request by a thin line.",
+        "why_motion": "The marker landing and the line drawing into it makes the check-back visible.",
+        "elements": [
+          "wall_calendar",
+          "next_meeting_marker",
+          "talk_after_marker",
+          "link_line"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "agree a way to check back",
+            "element": "talk_after_marker",
+            "action": "second marker lands right after the meeting marker",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "let's talk after it",
+            "element": "talk_after_marker",
+            "action": "label prints on the marker",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "More likely to be remembered",
+            "element": "link_line",
+            "action": "thin line draws from the request marker into the talk marker",
+            "motion": "line draws into its target"
+          },
+          {
+            "t_anchor": "and noticed",
+            "element": "talk_after_marker",
+            "action": "marker pulses once",
+            "motion": "small pulse"
+          }
+        ],
+        "continuity": "Held: wall_calendar, next_meeting_marker, action_text. Incoming: talk_after_marker, link_line.",
+        "references": [
+          "outline b30",
+          "calendar_marker device"
+        ]
+      }
+    },
+    {
+      "beat": "b31",
+      "kind": "template",
+      "template": "timeline",
+      "station": "timing",
+      "join_in": {
+        "type": "camera",
+        "meaning": "meanwhile",
+        "dur": 1
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "soon_after",
+      "rationale": "Timing aside: soon after is usually best, sometimes later is wiser.",
+      "props": {
+        "title": "When to say it",
+        "say_title": "when should Priya say all this",
+        "events": [
+          {
+            "when": "Soon after",
+            "label": "You both remember",
+            "say": "Usually soon after"
+          },
+          {
+            "when": "Later",
+            "label": "For calm or privacy",
+            "say": "Sometimes waiting for calm"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b32",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "shock"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "turn",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "joined_sentence",
+      "subject": "The three slots joining into one sentence beside the faded old line",
+      "world": "The wall board, light band",
+      "rationale": "The turn: one flood of accent on the whole sentence.",
+      "design": {
+        "treatment": "The three slots slide together into one sentence while the old line sits grey and faded beside it.",
+        "why_motion": "Sliding together is the whole built from its parts; the faded old line gives the comparison.",
+        "elements": [
+          "slot_behaviour",
+          "slot_effect",
+          "slot_request",
+          "joined_sentence",
+          "old_line_faded"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Put the three parts together",
+            "element": "old_line_faded",
+            "action": "old line appears grey on the left; three slots slide in on the right",
+            "motion": "slide in"
+          },
+          {
+            "t_anchor": "Behaviour",
+            "element": "slot_behaviour",
+            "action": "first slot highlights",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "Effect",
+            "element": "slot_effect",
+            "action": "second slot highlights",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "Request",
+            "element": "slot_request",
+            "action": "third slot highlights",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "One sentence",
+            "element": "joined_sentence",
+            "action": "slots join into one sentence: In today's meeting you interrupted Sam twice while she was presenting. I lost track of her point. Next meeting, please let her finish before you respond, and let's talk after it.",
+            "motion": "slots slide together, one flood of accent"
+          }
+        ],
+        "continuity": "Held: board. Leaves: timeline. Incoming: old_line_faded, slots, joined_sentence.",
+        "references": [
+          "outline b32",
+          "fade_and_stay device"
+        ]
+      }
+    },
+    {
+      "beat": "b33",
+      "kind": "template",
+      "template": "title.card",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "rule_words",
+      "intent": "rest",
+      "rationale": "Pocket rule rest frame.",
+      "props": {
+        "kicker": "Pocket rule",
+        "say_kicker": "Pocket rule",
+        "title": "Say what to do",
+        "say_title": "say what to do",
+        "subtitle": "Not just what to stop",
+        "say_subtitle": "not just what to stop"
+      }
+    },
+    {
+      "beat": "b34",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "cards",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "card_in_focus",
+      "rationale": "Set up the check with a black narration card. A light fx on card B is the motion layer.",
+      "fx": [
+        {
+          "kind": "light",
+          "at": "you are rude",
+          "dur": 1.2,
+          "rect": [
+            1000,
+            300,
+            700,
+            500
+          ]
+        }
+      ],
+      "props": {
+        "kicker": "Same Dev",
+        "title": "Three versions Priya could say",
+        "say_title": "three versions Priya could say",
+        "left": {
+          "header": "Version A",
+          "say": "A",
+          "items": [
+            {
+              "text": "You are great, just be more careful",
+              "say": "you are great"
+            }
+          ]
+        },
+        "right": {
+          "header": "Version B",
+          "say": "B",
+          "items": [
+            {
+              "text": "You are rude, so stop interrupting",
+              "say": "you are rude"
+            }
+          ]
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b35",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "cards",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "card_C",
+      "intent": "hold",
+      "rationale": "Stopping check, no answer shown.",
+      "props": {
+        "question": "Which version has behaviour, effect and request?",
+        "say_question": "Which has all three parts",
+        "options": [
+          {
+            "text": "You are great, just be more careful"
+          },
+          {
+            "text": "You are rude, so stop interrupting"
+          },
+          {
+            "text": "You interrupted Sam twice, I lost track, let her finish"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b36",
+      "kind": "template",
+      "template": "quiz.answer",
+      "station": "cards",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "card_C",
+      "rationale": "The answer lands: C, with its three parts named. Answer index is zero-based (not verified).",
+      "props": {
+        "question": "Which version has behaviour, effect and request?",
+        "options": [
+          {
+            "text": "You are great, just be more careful"
+          },
+          {
+            "text": "You are rude, so stop interrupting"
+          },
+          {
+            "text": "You interrupted Sam twice, I lost track, let her finish"
+          }
+        ],
+        "answer": 2,
+        "say_answer": "Interrupted Sam twice is the behaviour",
+        "explanation": "I lost track is the effect. Let her finish is the request.",
+        "say_explanation": "I lost track is the effect"
+      }
+    },
+    {
+      "beat": "b37",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "cards",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "nothing_to_do",
+      "rationale": "Card A is the tempting one: warm, but Dev has nothing to do. A spotlight fx is the motion layer.",
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "nothing to do",
+          "dur": 1.5,
+          "rect": [
+            1000,
+            300,
+            700,
+            500
+          ]
+        }
+      ],
+      "props": {
+        "left": {
+          "header": "Card A",
+          "say": "A is the tempting one",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Warm, and warmth feels safe",
+              "say": "warmth feels safe"
+            }
+          ]
+        },
+        "right": {
+          "header": "Nothing to do",
+          "say": "nothing to do",
+          "tone": "neutral"
+        },
+        "verdict": {
+          "text": "Warm is tone. Tone is not enough.",
+          "say": "tone is not enough"
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b38",
+      "kind": "template",
+      "template": "document.page",
+      "station": "cards",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "rude_label",
+      "rationale": "B fails differently: a label and half a request.",
+      "props": {
+        "kind": "notes",
+        "title": "Why B fails",
+        "say_title": "B fails differently",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "Rude is a label",
+            "say": "Rude is a label"
+          },
+          {
+            "text": "A guess about Dev",
+            "say": "a guess about Dev"
+          },
+          {
+            "text": "Stop is only half a request",
+            "say": "Stop is only half a request"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b39",
+      "kind": "template",
+      "template": "title.card",
+      "station": "cards",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "rule_words",
+      "intent": "rest",
+      "rationale": "Pocket rule rest frame.",
+      "alternatives": {
+        "checklist": {
+          "kind": "template",
+          "template": "list.steps",
+          "desc": "Three filled slots as a checklist."
+        }
+      },
+      "option": "title.card",
+      "props": {
+        "kicker": "Pocket rule",
+        "say_kicker": "Pocket rule",
+        "title": "Check for all three parts",
+        "say_title": "check for all three parts",
+        "subtitle": "Behaviour. Effect. Request."
+      }
+    },
+    {
+      "beat": "b40",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "sticky_note",
+      "subject": "A single sticky note on a calm desk, its name turned away",
+      "world": "A quiet desk, empty board waiting in the background",
+      "rationale": "Calm rest for choosing one conversation. The sticky note is the only object.",
+      "design": {
+        "treatment": "Calm desk with one sticky note, a name turned away from camera, the board waiting empty. Light band.",
+        "why_motion": "Gentle staging only: the note arrives and the room stays calm; motion must not compete with the viewer's thinking.",
+        "elements": [
+          "desk",
+          "sticky_note",
+          "name_turned_away",
+          "empty_board"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now yours",
+            "element": "desk",
+            "action": "desk and empty board settle",
+            "motion": "quiet settle"
+          },
+          {
+            "t_anchor": "one conversation you have been putting off",
+            "element": "sticky_note",
+            "action": "sticky note lands with its name turned away",
+            "motion": "soft drop"
+          },
+          {
+            "t_anchor": "Just one",
+            "element": "sticky_note",
+            "action": "note is alone; faint pulse",
+            "motion": "small pulse"
+          }
+        ],
+        "continuity": "New station. Nothing held from the cards. Incoming: all elements.",
+        "references": [
+          "outline b40"
+        ]
+      }
+    },
+    {
+      "beat": "b41",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "worksheet",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "one_common_shape",
+      "rationale": "The F13 caveat: one common shape, other models exist. No model names invented.",
+      "alternatives": {
+        "shape_grid": {
+          "kind": "template",
+          "template": "icon.grid",
+          "desc": "Three-slot shape with unnamed ghost outlines of other shapes."
+        }
+      },
+      "option": "compare.two",
+      "props": {
+        "left": {
+          "header": "One common shape",
+          "say": "one common shape",
+          "tone": "pos"
+        },
+        "right": {
+          "header": "Other models",
+          "say": "Other models exist",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "People use them too",
+              "say": "people use them too"
+            }
+          ]
+        },
+        "mode": "columns"
+      }
+    },
+    {
+      "beat": "b42",
+      "kind": "template",
+      "template": "document.page",
+      "station": "worksheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "slot_one",
+      "rationale": "Slot one with the camera test. A spotlight fx is the motion layer.",
+      "fx": [
+        {
+          "kind": "spotlight",
+          "at": "Run the camera test",
+          "dur": 1.5,
+          "rect": [
+            300,
+            200,
+            900,
+            300
+          ]
+        }
+      ],
+      "props": {
+        "kind": "form",
+        "title": "Your worksheet",
+        "side": "center",
+        "mode": "highlight",
+        "lines": [
+          {
+            "text": "Slot one: behaviour",
+            "say": "Slot one"
+          },
+          {
+            "text": "Run the camera test",
+            "say": "Run the camera test"
+          },
+          {
+            "text": "What was said? When? To whom?",
+            "say": "what was said"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b43",
+      "kind": "template",
+      "template": "list.steps",
+      "station": "worksheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "slot_two",
+      "rationale": "Slot two, the effect.",
+      "props": {
+        "title": "Slot two",
+        "items": [
+          {
+            "text": "Slot two: the effect",
+            "say": "Slot two"
+          },
+          {
+            "text": "What did it do to the work?",
+            "say": "What did it do to the work"
+          },
+          {
+            "text": "Or what you directly felt",
+            "say": "what did you directly feel"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b44",
+      "kind": "template",
+      "template": "calendar.plan",
+      "station": "worksheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "talk_again",
+      "rationale": "Slot three with a calendar marker for the check-back.",
+      "props": {
+        "title": "Slot three: the request",
+        "say_title": "Slot three",
+        "days": [
+          {
+            "label": "Today"
+          },
+          {
+            "label": "Next meeting"
+          },
+          {
+            "label": "After it"
+          }
+        ],
+        "entries": [
+          {
+            "day": 2,
+            "label": "Action",
+            "say": "What will they do next time"
+          },
+          {
+            "day": 3,
+            "label": "Talk again",
+            "say": "when will you talk again"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b45",
+      "kind": "template",
+      "template": "document.page",
+      "station": "worksheet",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "your_opening_line",
+      "intent": "hold",
+      "rationale": "Independent practice pause; the screen stays calm.",
+      "props": {
+        "kind": "form",
+        "title": "Your opening line",
+        "say_title": "write your opening line",
+        "side": "center",
+        "mode": "appear",
+        "lines": [
+          {
+            "text": "Behaviour: ______"
+          },
+          {
+            "text": "Effect: ______"
+          },
+          {
+            "text": "Request: ______"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b46",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "camera",
+        "meaning": "into",
+        "dur": 1
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "tick_on_note",
+      "subject": "The sticky note getting a tick and a date-free calendar marker",
+      "world": "The quiet desk, close",
+      "rationale": "Commit: say it this week, agree when you talk again. Gentle motion.",
+      "design": {
+        "treatment": "Close on the desk: the sticky note gets a tick and a date-free calendar marker.",
+        "why_motion": "The tick and the marker landing are the commitment; the motion is gentle staging.",
+        "elements": [
+          "desk",
+          "sticky_note",
+          "tick_on_note",
+          "calendar_marker_plain"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "say it this week",
+            "element": "tick_on_note",
+            "action": "tick draws on the sticky note",
+            "motion": "line draws"
+          },
+          {
+            "t_anchor": "Soon after the moment",
+            "element": "sticky_note",
+            "action": "note nudges forward on the desk",
+            "motion": "gentle slide"
+          },
+          {
+            "t_anchor": "agree when you will talk again",
+            "element": "calendar_marker_plain",
+            "action": "date-free calendar marker settles beside the note",
+            "motion": "soft drop"
+          }
+        ],
+        "continuity": "Held: desk, sticky_note. Leaves: worksheet. Incoming: tick, marker.",
+        "references": [
+          "outline b46",
+          "calendar_marker device"
+        ]
+      }
+    },
+    {
+      "beat": "b47",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "rebuilt_sentence",
+      "intent": "callback",
+      "subject": "The opening room again, now with the rebuilt sentence on the board",
+      "world": "The same meeting room and same seating as b01",
+      "rationale": "The opening frame returns, changed only in the sentence.",
+      "design": {
+        "treatment": "The opening frame replayed with the same room and seating; the board carries the rebuilt sentence in place of the old one.",
+        "why_motion": "The replay with one thing changed is the payoff; the room being cheap to replay is the metaphor.",
+        "elements": [
+          "room_set",
+          "Priya",
+          "Dev",
+          "same_tension_posture",
+          "board_rebuilt_sentence"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back to Priya and Dev",
+            "element": "room_set",
+            "action": "b01 frame returns, same seating",
+            "motion": "cut in as a replay"
+          },
+          {
+            "t_anchor": "in that same room",
+            "element": "Dev",
+            "action": "Priya and Dev take their b01 positions",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Same tension",
+            "element": "same_tension_posture",
+            "action": "stiff postures hold",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "Different sentence",
+            "element": "board_rebuilt_sentence",
+            "action": "rebuilt sentence prints on the board in accent",
+            "motion": "unmask print"
+          }
+        ],
+        "continuity": "Held: nothing from the desk. Incoming: room, Priya, Dev, board_rebuilt_sentence.",
+        "references": [
+          "outline b47",
+          "b01"
+        ]
+      }
+    },
+    {
+      "beat": "b48",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "bubble_sentence",
+      "subject": "Priya speaking the behaviour and effect in a bubble",
+      "world": "The meeting room, two-shot",
+      "rationale": "The two parts appear in the order spoken.",
+      "design": {
+        "treatment": "Two-shot: Priya speaks; the behaviour and the effect appear in her bubble in the order spoken.",
+        "why_motion": "The words arriving as she says them is the lesson's sentence performed.",
+        "elements": [
+          "Priya",
+          "Dev",
+          "speech_bubble",
+          "behaviour_clause",
+          "effect_clause"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "In today's meeting",
+            "element": "speech_bubble",
+            "action": "bubble opens from Priya",
+            "motion": "unfold from speaker"
+          },
+          {
+            "t_anchor": "you interrupted Sam twice",
+            "element": "behaviour_clause",
+            "action": "Interrupted Sam twice prints",
+            "motion": "unmask print"
+          },
+          {
+            "t_anchor": "while she was presenting",
+            "element": "behaviour_clause",
+            "action": "clause completes",
+            "motion": "print"
+          },
+          {
+            "t_anchor": "I lost track of her point",
+            "element": "effect_clause",
+            "action": "effect clause prints",
+            "motion": "unmask print in accent"
+          }
+        ],
+        "continuity": "Held: room, Priya, Dev, board_rebuilt_sentence. Incoming: speech_bubble and clauses.",
+        "references": [
+          "outline b48"
+        ]
+      }
+    },
+    {
+      "beat": "b49",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "talk_after_marker",
+      "subject": "The request and the check-back, each beside its calendar marker",
+      "world": "Close on the bubble, small calendar markers beside it",
+      "rationale": "Request and check-back appear as objects.",
+      "design": {
+        "treatment": "Close on the bubble: the request and the check-back appear, each beside its calendar marker.",
+        "why_motion": "Each clause landing beside its marker shows the request and its follow-up as two separate things.",
+        "elements": [
+          "speech_bubble",
+          "request_clause",
+          "next_meeting_marker",
+          "check_back_clause",
+          "talk_after_marker"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next meeting",
+            "element": "next_meeting_marker",
+            "action": "marker lands beside the bubble",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "please let her finish before you respond",
+            "element": "request_clause",
+            "action": "request clause prints",
+            "motion": "unmask print"
+          },
+          {
+            "t_anchor": "and let's talk after it",
+            "element": "talk_after_marker",
+            "action": "second marker and check-back clause appear",
+            "motion": "drop with overshoot, then print"
+          }
+        ],
+        "continuity": "Held: speech_bubble with the two earlier clauses. Incoming: markers and the request and check-back clauses.",
+        "references": [
+          "outline b49",
+          "calendar_marker device"
+        ]
+      }
+    },
+    {
+      "beat": "b50",
+      "kind": "bespoke",
+      "station": "dev_side",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "insert",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "written_action",
+      "subject": "Dev's hands writing the action in a notebook",
+      "world": "Dev's side of the table, close on the notebook",
+      "rationale": "Contrast with the earlier empty nod: a mood fades, an action stays.",
+      "design": {
+        "treatment": "Close on Dev's hands writing the action in a notebook; a faint mood scribble fades while the action stays.",
+        "why_motion": "The writing is the act of having something to do; the fading mood echoes the fade and stay device.",
+        "elements": [
+          "Dev_hands",
+          "notebook",
+          "mood_scribble",
+          "written_action"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Dev has something to do now",
+            "element": "notebook",
+            "action": "notebook opens, Dev's hand takes the pen",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Not a mood",
+            "element": "mood_scribble",
+            "action": "faint mood scribble appears and fades",
+            "motion": "fade to grey"
+          },
+          {
+            "t_anchor": "An action",
+            "element": "written_action",
+            "action": "Let her finish written solid",
+            "motion": "hand writes, accent"
+          }
+        ],
+        "continuity": "New station nested in the room via zoom. Leaves: bubble and markers. Incoming: notebook, hands.",
+        "references": [
+          "outline b50"
+        ]
+      }
+    },
+    {
+      "beat": "b51",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "camera",
+        "meaning": "time",
+        "dur": 1
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "Dev_holding_back",
+      "subject": "Sam presenting to the end while Dev waits, then responds",
+      "world": "The same room and seating as the opening, tension lower",
+      "rationale": "The visible change; warm lift in the value band.",
+      "design": {
+        "treatment": "Same room and seating as the opening: Sam presents to the end, Dev holds back, then speaks. Tension visibly lower, warm lift.",
+        "why_motion": "The waiting and then the response is the change, shown in time against the opening.",
+        "elements": [
+          "room_set",
+          "Sam_presenting",
+          "Dev_holding_back",
+          "Dev_responding",
+          "warm_lift"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next meeting",
+            "element": "room_set",
+            "action": "room back in the same seating, warmer light",
+            "motion": "warm lift"
+          },
+          {
+            "t_anchor": "Sam presents",
+            "element": "Sam_presenting",
+            "action": "Sam presents her slides",
+            "motion": "steady"
+          },
+          {
+            "t_anchor": "Dev waits",
+            "element": "Dev_holding_back",
+            "action": "Dev holds his hands in his lap, begins to speak and stops",
+            "motion": "small held gesture"
+          },
+          {
+            "t_anchor": "and lets her finish",
+            "element": "Sam_presenting",
+            "action": "Sam reaches her last slide",
+            "motion": "steady"
+          },
+          {
+            "t_anchor": "Then Dev responds",
+            "element": "Dev_responding",
+            "action": "Dev speaks",
+            "motion": "springy pop on person"
+          }
+        ],
+        "continuity": "Held: room_set. Leaves: notebook. Incoming: Sam, warm_lift.",
+        "references": [
+          "outline b51",
+          "b01 to b04"
+        ]
+      }
+    },
+    {
+      "beat": "b52",
+      "kind": "bespoke",
+      "station": "room",
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "talk_after_marker",
+      "subject": "Priya and Dev talking in the emptied room, Dev's nod now clear",
+      "world": "The meeting room, emptied, afterwards",
+      "rationale": "The check-back happens as agreed; the nod now has something behind it.",
+      "design": {
+        "treatment": "Priya and Dev talk briefly in the emptied room; Dev nods with a clear expression, and the talk-after marker sits by them.",
+        "why_motion": "The nod echoes b03 with a different meaning; motion makes the comparison.",
+        "elements": [
+          "Priya",
+          "Dev",
+          "talk_after_marker",
+          "clear_nod"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Afterwards",
+            "element": "Priya",
+            "action": "room empties, Priya turns back to Dev",
+            "motion": "extras exit"
+          },
+          {
+            "t_anchor": "they talk",
+            "element": "Dev",
+            "action": "Priya and Dev talk briefly",
+            "motion": "small gestures"
+          },
+          {
+            "t_anchor": "as agreed",
+            "element": "talk_after_marker",
+            "action": "talk-after marker appears beside them",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "the nod has something behind it",
+            "element": "clear_nod",
+            "action": "Dev nods with a clear expression",
+            "motion": "springy nod"
+          }
+        ],
+        "continuity": "Held: room_set, Priya, Dev. Leaves: Sam. Incoming: talk_after_marker.",
+        "references": [
+          "outline b52",
+          "b03"
+        ]
+      }
+    },
+    {
+      "beat": "b53",
+      "kind": "template",
+      "template": "recap",
+      "station": "board",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "check_back",
+      "rationale": "Honest close: no guarantee, the check back, something to notice.",
+      "props": {
+        "items": [
+          {
+            "label": "No guarantee",
+            "say": "No guarantee"
+          },
+          {
+            "label": "Check back",
+            "say": "The check back"
+          },
+          {
+            "label": "Something to notice",
+            "say": "something to notice"
+          }
+        ]
+      }
+    },
+    {
+      "beat": "b54",
+      "kind": "avatar",
+      "station": "board",
+      "join_in": {
+        "type": "handoff",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "rebuilt_sentence",
+      "rationale": "Presenter to camera, the rebuilt sentence on the board behind; handoff to the viewer.",
+      "depth": "flat"
+    }
+  ]
+}

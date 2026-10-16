@@ -1,0 +1,194 @@
+{
+  "title": "Giving Feedback That Changes Behaviour",
+  "flags": [],
+  "framework_audit": {
+    "arcs": {
+      "confidence": "Step-by-step progression from understanding observable actions to scaffolded dialogue evaluation before full deliverable conversion.",
+      "relevance": "Directly addresses the practitioner dilemma of colleagues repeating errors after feedback while protecting team relationships.",
+      "attention": "Engaging workplace hook highlighting defensive friction, varied visual carriers (comparison, dialogue, process, scenario, worked example), and a structured energy curve.",
+      "satisfaction": "Payoff resolves the opening deliverable conflict with Jordan smoothly, confirmed by actionable transfer tasks for the viewer's own desk."
+    },
+    "bloom_path": "understand -> apply -> analyze -> evaluate -> analyze",
+    "gagne": {
+      "present": "arc.sections",
+      "assess": "arc.sections[3] (sec4_dialogue_evaluation) and pacing.recall_moments[0]",
+      "guidance": "strategy.signature_move and practice_ladder stage 1",
+      "feedback": "pacing.recall_moments[0].explanation",
+      "inform_objective": "arc.promise",
+      "practice": "pacing.recall_moments and practice_ladder stages 2 and 3",
+      "recall_prior": "arc.bridge_from_prior",
+      "transfer": "arc.payoff and transfer_tasks",
+      "attention": "arc.hook"
+    },
+    "merrill": {
+      "activation": "arc.bridge_from_prior linking past feedback discomfort and defensive reactions",
+      "application": "pacing.recall_moments[0] and arc.sections[3] dialogue evaluation choice",
+      "demonstration": "arc.sections[1] and arc.sections[2] demonstrating observable phrasing and replacement habit agreements",
+      "problem_centred": "arc.hook and running scenario deliverable dispute throughout arc.sections",
+      "integration": "arc.payoff and transfer_tasks for upcoming workplace deliverable meetings"
+    },
+    "mayer": {
+      "coherence": "Weeding out personality diagnoses, historical trivia, and abstract theory, focusing strictly on observable workplace actions.",
+      "segmenting": "Five discrete sections with recaps separating observation, impact, habit design, evaluation, and end-to-end conversion.",
+      "signalling": "pacing.slowdown_at emphasizes the pause for recipient perspective and collaborative replacement habit co-creation.",
+      "redundancy": "Voice explains interpersonal nuances while screen displays core phrasing anchors and contrast cards without full text transcription.",
+      "contiguity": "Spoken dialogue lines correspond directly to highlighted on-screen speech cards and deliverable artifacts.",
+      "pre_training": "Section 1 establishes core definitions of observable actions and attribution bias before demonstrating multi-step conversational workflows in sections 2 and 3."
+    }
+  },
+  "transfer_tasks": [
+    "The next time a team member submits an incomplete or late project deliverable, draft your opening remarks before meeting: state the exact observable action, name one concrete operational consequence on the workflow, and write an open question inviting their perspective on constraints.",
+    "At the end of your next corrective conversation, co-create a single replacement habit and schedule a 10-minute follow-up checkpoint within the next week to evaluate whether the new practice is working."
+  ],
+  "practice_ladder": [
+    "Stage 1 (Worked Example): Section 2 and Section 3 walk through converting an accusation into an observable fact, operational impact statement, perspective pause, and replacement habit.",
+    "Stage 2 (Faded Example): Section 4 presents a deliverable friction scenario where observation and impact are provided, prompting the learner to evaluate and select the correct replacement habit response.",
+    "Stage 3 (Independent Practice): Section 5 and transfer tasks challenge the learner to diagnose an emotionally charged dispute from scratch and formulate the complete behavioural feedback conversation."
+  ],
+  "pacing": {
+    "slowdown_at": "sec3_replacement_habits: pausing to invite colleague perspective and co-creating replacement habits rather than dictating unilateral demands",
+    "recall_moments": [
+      {
+        "kind": "recall_prompt",
+        "prompt": "Recall why stating the operational impact of a delay prevents defensiveness: it explains the concrete business consequence rather than questioning personal work ethic.",
+        "after_section": "sec2_operational_impact"
+      },
+      {
+        "answer": "C. 'The milestone was submitted forty-eight hours past the deadline without vendor sign-offs; let us look at what blocked it and agree on an earlier checkpoint.'",
+        "kind": "quiz",
+        "options": [
+          "A. 'You need to be more committed to this project and manage your time better.'",
+          "B. 'You missed the milestone, but your presentation slides looked really amazing.'",
+          "C. 'The milestone was submitted forty-eight hours past the deadline without vendor sign-offs; let us look at what blocked it and agree on an earlier checkpoint.'"
+        ],
+        "explanation": "Option C grounds the discussion in observable actions and business consequences, pauses to understand constraints, and collaborates on a replacement checkpoint. Option B uses the feedback sandwich, which obscures needed changes, while Option A attacks character through fundamental attribution bias.",
+        "tempting_wrong": "B. 'You missed the milestone, but your presentation slides looked really amazing.' Wrapping corrective critique in superficial compliments (the feedback sandwich) is tempting because it feels polite, but it dilutes the core message and obscures the necessary change in work practice.",
+        "prompt": "Which response best addresses a missed milestone without triggering defensiveness?",
+        "after_section": "sec4_dialogue_evaluation"
+      }
+    ],
+    "words_per_minute": 140,
+    "target_duration_s": 360
+  },
+  "genre": "procedural",
+  "audience": {
+    "motivation": "Achieving genuine improvements in deliverable quality without damaging team rapport or triggering interpersonal conflict.",
+    "why": "They need to correct deliverable deficiencies and workflow friction while protecting working relationships.",
+    "assumed_prior": "Corporate employees who have delivered feedback before and experienced defensive pushback or superficial agreement that did not change workplace results.",
+    "context": "Professional corporate workplace interactions, specifically one-on-one corrective deliverable reviews and project workflow debriefs.",
+    "level": "practitioner"
+  },
+  "performance": "Deliver constructive feedback anchored to observable actions and agreed next steps, so the recipient changes their work practice without becoming defensive.",
+  "misconceptions": [
+    {
+      "refuted_in": "sec1_observable_actions",
+      "belief": "Wrapping corrective critique between superficial compliments softens the blow and increases recipient receptivity.",
+      "why_tempting": "Delivering criticism feels uncomfortable, so softening it with compliments appears to protect the relationship despite obscuring the needed change."
+    },
+    {
+      "refuted_in": "sec1_observable_actions",
+      "belief": "The primary objective of constructive feedback is to keep the recipient emotionally comfortable.",
+      "why_tempting": "Avoiding emotional tension preserves immediate workplace harmony and prevents awkward interpersonal friction."
+    },
+    {
+      "why_tempting": "Fundamental attribution bias causes observers to blame poor outcomes on character rather than external constraints.",
+      "belief": "Repeated deliverable mistakes reflect personal character flaws such as carelessness or lack of dedication.",
+      "refuted_in": "sec2_operational_impact"
+    },
+    {
+      "belief": "Giving unilateral corrective instructions guarantees that the colleague will fix the behaviour on the next assignment.",
+      "refuted_in": "sec3_replacement_habits",
+      "why_tempting": "Issuing direct orders feels faster and more decisive than negotiating replacement habits."
+    }
+  ],
+  "arc": {
+    "payoff": "Jordan and their colleague revisit the delayed onboarding schedule; by stating observable facts, exploring constraints, and agreeing on an interim check forty-eight hours prior to delivery, the workflow succeeds without interpersonal resentment.",
+    "hook": {
+      "kind": "scenario",
+      "sketch": "After you tell a colleague their report was careless, they grow defensive and submit the next release late anyway. How do you give feedback that shifts their actual habits without destroying trust?"
+    },
+    "bridge_from_prior": "Most colleagues know the frustration of giving feedback that triggers defensiveness, where pointing out an error produces hurt feelings and superficial agreement but no lasting change in work practice.",
+    "sections": [
+      {
+        "goal": "the viewer can describe the difference between character-focused critique and feedback anchored in observable actions.",
+        "energy": "steady",
+        "recap_after": true,
+        "concepts": [
+          "constructive feedback",
+          "work practice",
+          "observable actions",
+          "verifiable actions",
+          "superficial compliments"
+        ],
+        "carrier": "comparison",
+        "bloom": "understand",
+        "id": "sec1_observable_actions"
+      },
+      {
+        "energy": "build",
+        "recap_after": true,
+        "bloom": "apply",
+        "concepts": [
+          "operational impact",
+          "business consequences",
+          "fundamental attribution bias",
+          "perspective sharing",
+          "shared goals"
+        ],
+        "carrier": "dialogue",
+        "goal": "the viewer can apply operational impact statements and genuine perspective pauses to de-escalate defensiveness.",
+        "id": "sec2_operational_impact"
+      },
+      {
+        "bloom": "analyze",
+        "recap_after": true,
+        "carrier": "process",
+        "concepts": [
+          "replacement habits",
+          "collaborative planning",
+          "unilateral demands",
+          "superficial compliance",
+          "follow-up checkpoints"
+        ],
+        "id": "sec3_replacement_habits",
+        "goal": "the viewer can break down corrective conversations into shared goals, collaborative replacement habits, and follow-up checkpoints.",
+        "energy": "peak"
+      },
+      {
+        "goal": "the viewer can choose between subjective character critiques and observation-based action prompts in realistic deliverable discussions.",
+        "energy": "rest",
+        "recap_after": false,
+        "concepts": [
+          "character critique",
+          "observable actions",
+          "task performance",
+          "perspective sharing"
+        ],
+        "id": "sec4_dialogue_evaluation",
+        "carrier": "scenario",
+        "bloom": "evaluate"
+      },
+      {
+        "id": "sec5_deliverable_conversion",
+        "concepts": [
+          "observable actions",
+          "operational impact",
+          "replacement habits",
+          "follow-up checkpoints",
+          "collaborative problem solving"
+        ],
+        "goal": "the viewer can diagnose missing behavioural components within emotionally charged deliverable disputes before converting them into agreed milestones.",
+        "bloom": "analyze",
+        "recap_after": true,
+        "energy": "steady",
+        "carrier": "worked example"
+      }
+    ],
+    "promise": "You will learn to anchor feedback in verifiable actions, articulate operational consequences, and collaboratively establish replacement habits that improve future work."
+  },
+  "strategy": {
+    "name": "scenario_led",
+    "signature_move": "Present a dialogue friction point, pause for practitioner decision, reveal conversational fallout, then extract the behavioural feedback principle.",
+    "rationale": "The knowledge sheet focuses on interpersonal decision points where subtle differences in phrasing shift outcomes from defensiveness to problem solving. A running workplace scenario lets practitioners evaluate conversational choices, witness the resulting resistance or collaboration, and extract behavioural feedback principles."
+  }
+}

@@ -1,0 +1,28 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "persona_pick",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "pick",
+  "why"
+ ],
+ "properties": {
+  "pick": {
+   "type": "string"
+  },
+  "why": {
+   "type": "string",
+   "maxLength": 600
+  },
+  "adapt": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "voice_id": {
+   "type": "string"
+  }
+ }
+}

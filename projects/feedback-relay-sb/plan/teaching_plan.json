@@ -1,0 +1,185 @@
+{
+  "title": "Feedback That Changes Behaviour",
+  "performance": "After watching, the viewer turns a vague or personal comment into feedback that names a specific observed action, its effect and one clear next step, and checks their own draft with three questions before saying it.",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "Knows feedback matters and has mostly given it as general praise or criticism such as 'good job' or 'that was weak'.",
+    "why": "They give feedback to peers or reports but have not had a repeatable way to build it.",
+    "motivation": "Wants the other person to actually do something different without damaging the relationship.",
+    "context": "Short corporate learning video, watched at the desk, with one comment they owe someone this week in mind."
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "Practitioners need the move shown, not explained at length. One ordinary presentation comment is rebuilt in full on one board, then the viewer takes a faded step (pick the actionable version) and an independent one (rewrite their own). Short worked example and early decisions suit experienced adults.",
+    "signature_move": "Replay the vague comment, name what it lacks, rebuild it on one board piece by piece naming each part after it appears, then have the viewer pick and rewrite."
+  },
+  "misconceptions": [
+    {
+      "belief": "A warm, positive comment such as 'you are a natural presenter' is enough to change what someone does next time.",
+      "why_tempting": "It feels kind, the receiver responds warmly, and that reaction looks like success.",
+      "refuted_in": "s1"
+    },
+    {
+      "belief": "If the receiver nods and agrees in the moment, the feedback has worked.",
+      "why_tempting": "Agreement is the only visible reaction at the time, and the missing change only shows up a week later.",
+      "refuted_in": "s1"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine a colleague says 'You're a natural presenter' after a weak talk. The presenter nods warmly, and next week reads the slides aloud again. On screen: warm nod, nothing changed."
+    },
+    "promise": "In under two minutes you will rebuild that same comment so the receiver knows exactly what to repeat or change, and you will have a quick check for your own drafts.",
+    "bridge_from_prior": "You already give feedback as general praise or criticism. Start from the comment you would naturally say, and look at what the receiver is left holding.",
+    "sections": [
+      {
+        "id": "s1",
+        "goal": "the viewer can explain why a warm, general or personal comment leaves the receiver with nothing to act on",
+        "bloom": "understand",
+        "concepts": [
+          "general praise or criticism tells how you feel, not what to repeat or change (F2)",
+          "comments about the person give nothing specific to act on (F3)",
+          "warm in the moment, no change later (F12)"
+        ],
+        "energy": "build",
+        "carrier": "scenario",
+        "recap_after": false,
+        "duration_s": 15
+      },
+      {
+        "id": "s2",
+        "goal": "the viewer can build a comment from an observed action, its effect and one clear next step",
+        "bloom": "apply",
+        "concepts": [
+          "observed action: what an observer could see or hear, no guesses about motives (F4, F5)",
+          "effect on others or on the work, from what you actually saw (F6, F7)",
+          "next step: one concrete, doable thing for next time (F8)",
+          "the three parts together are more actionable (F9)"
+        ],
+        "energy": "peak",
+        "carrier": "worked example",
+        "recap_after": true,
+        "duration_s": 35
+      },
+      {
+        "id": "s3",
+        "goal": "the viewer can distinguish the comment a receiver could act on from versions that only carry a feeling or a judgement",
+        "bloom": "analyze",
+        "concepts": [
+          "compare personal, general and three-part versions of the same comment (F3, F9)",
+          "which version could the receiver repeat or change"
+        ],
+        "energy": "steady",
+        "carrier": "comparison",
+        "recap_after": true,
+        "duration_s": 25
+      },
+      {
+        "id": "s4",
+        "goal": "the viewer can judge a draft comment against three checks before saying it",
+        "bloom": "evaluate",
+        "concepts": [
+          "could someone have seen or heard the action; is the effect stated; could the receiver do the next step tomorrow (F10)",
+          "pick one comment owed this week and rewrite it with the three parts"
+        ],
+        "energy": "rest",
+        "carrier": "diagram",
+        "recap_after": false,
+        "duration_s": 14
+      }
+    ],
+    "payoff": "Return to the opening presentation: the reworked comment (you read the slides aloud for most of the talk, the room looked at their phones, next week open with the one decision you need from us) is delivered, and next week the presenter visibly opens differently. The warm nod now has something behind it."
+  },
+  "practice_ladder": [
+    {
+      "rung": "worked",
+      "section": "s2",
+      "task": "Watch the vague presentation comment rebuilt into action, effect and next step on one board."
+    },
+    {
+      "rung": "faded",
+      "section": "s3",
+      "task": "Pick which of three versions of the comment the receiver could act on, then see why."
+    },
+    {
+      "rung": "independent",
+      "section": "s4",
+      "task": "Choose a comment owed this week, rewrite it with the three parts and run the three checks."
+    }
+  ],
+  "pacing": {
+    "requested_s": 120,
+    "target_duration_s": 120,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "s2"
+    ],
+    "recall_moments": [
+      {
+        "id": "r1",
+        "kind": "quiz",
+        "after_section": "s2",
+        "prompt": "After a weak presentation, which comment could the presenter act on tomorrow?",
+        "options": [
+          "You're a natural presenter, great job.",
+          "Your slides were weak, you need to be better prepared.",
+          "You read the slides aloud for most of the talk, the room looked at their phones, next week open with the one decision you need from us."
+        ],
+        "answer": "The third option: it names an action anyone could have seen, its effect on the room, and one doable next step.",
+        "tempting_wrong": "The first option: it feels kind and positive, but it describes the person and gives nothing to repeat or change."
+      },
+      {
+        "id": "r2",
+        "kind": "recall_prompt",
+        "after_section": "s3",
+        "prompt": "Before you say it: could someone have seen or heard the action, is the effect stated, could they do the step tomorrow?"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "Pick one comment you owe a peer or report this week, rewrite it as action, effect and next step, and run the three checks before saying it."
+  ],
+  "framework_audit": {
+    "gagne": {
+      "attention": "arc.hook (scenario of the warm nod and no change)",
+      "inform_objective": "arc.promise",
+      "recall_prior": "arc.bridge_from_prior and s1 (the comments the viewer already gives)",
+      "present": "sections s1 to s4",
+      "guidance": "strategy.signature_move and the worked example in s2",
+      "practice": "recall_moments r1 (quiz after s2) and practice_ladder faded and independent rungs",
+      "feedback": "the quiz answer card explains why the answer works and why the tempting wrong option fails",
+      "assess": "r1 quiz and the s4 three-check judgement of the viewer's own draft",
+      "transfer": "arc.payoff, transfer_tasks, and the r2 recall_prompt"
+    },
+    "merrill": {
+      "problem_centred": "One presentation comment runs through hook, s2, s3 and payoff.",
+      "activation": "arc.bridge_from_prior and s1.",
+      "demonstration": "s2 rebuilds the comment on one board.",
+      "application": "r1 quiz in s3 and the s4 rewrite.",
+      "integration": "transfer_tasks: a comment owed this week in the viewer's own job."
+    },
+    "mayer": {
+      "coherence": "One example, one board, no side facts such as timing of feedback (F11 left out).",
+      "signalling": "Each part is highlighted and named after it appears; one loud thing on screen at a time.",
+      "redundancy": "Narration carries the explanation, screen carries only the comment pieces and three labels.",
+      "contiguity": "Each label sits beside the words of the comment it names.",
+      "segmenting": "Four short sections with a recap after s2 and s3.",
+      "pre_training": "Terms action, effect, next step are named as they are seen in s2, before the quiz uses them."
+    },
+    "arcs": {
+      "attention": "Recognisable scene of a warm nod and no change.",
+      "relevance": "The viewer's own comment owed this week; the goal of getting something to actually change.",
+      "confidence": "Short worked example, then a pick-one check, then a three-question self-test.",
+      "satisfaction": "The payoff shows the presenter opening differently."
+    },
+    "bloom_path": "understand -> apply -> analyze -> evaluate"
+  },
+  "flags": [
+    "REST-SHORT: no rest section can exceed 180 s in a 120 s video; s4 is the rest (about 14 s) after the s2 peak.",
+    "NO-MODEL-ANCHORED: the open question on a named feedback model is left unanswered on purpose; the three parts are presented as a practical structure taught under various names.",
+    "HOOK-SCENE-INVENTED: the hook and running example are framed as imagined ('imagine'), with no real people or figures; the sample comment wording follows F3, F5, F6 and F8.",
+    "NOT-VERIFIED: no source documents exist beyond the approved knowledge sheet; all facts are practice-level guidance and are to be voiced as practical guidance, not proven law. F11 (timing) deliberately left out for length."
+  ]
+}

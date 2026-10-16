@@ -1,0 +1,253 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b07: camera pan between different worlds (invite -> meeting) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b09: camera pan between different worlds (meeting -> close) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b10: camera pan between different worlds (close -> quiz) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b12: camera pan between different worlds (quiz -> table) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "runtime part_drawn_again: b02: draws kit part \"team_table\" again as \"b02_board\" while it holds \"table\" (the team_table b01 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second team_table is fine only when the film shows two; to change the held one use ctx.held(\"table\").handle",
+    "b04: 9 chunks on screen (invite, invite_calendar, invite_card, invite_header, invite_title, steps, steps_box, steps_word, subject_note); the budget is ~5-6",
+    "b07: 11 chunks on screen (parked_name, parking_lot, parking_lot_head, parking_lot_item, question, sam, side_bubble, side_bubble_words, steps, steps_box, steps_word); the budget is ~5-6",
+    "b09: 9 chunks on screen (correct_note, decision, decision_label, decision_line, decision_part, sam, steps, steps_box, steps_word); the budget is ~5-6",
+    "b12: 13 chunks on screen (bubbles, decision_line, decision_part, email_envelope, email_flap, email_note, sent_today, steps, steps_box, steps_word, team_bubble, team_bubble_words, team_person); the budget is ~5-6",
+    "variety: one_radius_share = 0.857 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.75 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b04, b05, b06, b08, b13)",
+    "b07: no_entrance_words: element 'steps_word_0' (text) shows \"Before\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b07: no_entrance_words: element 'steps_word_1' (text) shows \"During\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b07: no_entrance_words: element 'steps_word_2' (text) shows \"Close\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b09: no_entrance_words: element 'steps_word_0' (text) shows \"Before\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b09: no_entrance_words: element 'steps_word_1' (text) shows \"During\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b09: no_entrance_words: element 'steps_word_2' (text) shows \"Close\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b12: no_entrance_words: element 'steps_word_0' (text) shows \"Before\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b12: no_entrance_words: element 'steps_word_1' (text) shows \"During\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b12: no_entrance_words: element 'steps_word_2' (text) shows \"Close\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 1.04
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.04
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 1.14
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 3.69
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.29
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 2.09
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.5
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.34
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 2.77
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.74
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 1.41
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 2.22
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.06,
+        "declared": "rest"
+      }
+    ],
+    "allocation": {
+      "avatar": 0.043,
+      "template": 0.489,
+      "motion": 0.384,
+      "hybrid": 0.083,
+      "motion_effective": 0.426
+    },
+    "elements": {
+      "b01": 19,
+      "b02": 11,
+      "b03": 7,
+      "b04": 15,
+      "b05": 9,
+      "b06": 11,
+      "b07": 17,
+      "b08": 11,
+      "b09": 24,
+      "b10": 5,
+      "b11": 5,
+      "b12": 42,
+      "b13": 4,
+      "b14": 11
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.167,
+      "pop_settle_share": 0.021,
+      "wallpaper_share": 0.0,
+      "template_share": 0.143,
+      "classic_share": 1.0,
+      "one_radius_share": 0.857,
+      "still_share": 0.75,
+      "labels_over_objects_share": 0.083,
+      "one_world_share": 0.583,
+      "lines_per_s": 8.52
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 41524,
+      "layout_samples": 258,
+      "texts": 329,
+      "contrast_checked": 311,
+      "errors": 0,
+      "warnings": 0
+    },
+    "nodes": 2341,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 98.4,
+        "b02": 37.7,
+        "b03": 49.2,
+        "b04": 37.7,
+        "b05": 37.7,
+        "b06": 35.2,
+        "b07": 45.1,
+        "b08": 45.1,
+        "b09": 34.4,
+        "b10": 32,
+        "b11": 45.1,
+        "b12": 37.7,
+        "b13": 45.1,
+        "b14": 53.3
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 14,
+      "lines_seen": 84,
+      "blank_beats": [],
+      "blank_measured": 12
+    },
+    "foreign": {
+      "measured_beats": 14,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 191,
+      "without_life": 0,
+      "no_entrance_words": 9
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0585,
+        "b02": 0.0966,
+        "b03": 0.0645,
+        "b04": 0.0517,
+        "b05": 0.0644,
+        "b06": 0.075,
+        "b07": 0.0593,
+        "b08": 0.0974,
+        "b09": 0.0468,
+        "b10": 0.0623,
+        "b11": 0.0714,
+        "b12": 0.1319,
+        "b13": 0.0816,
+        "b14": 0.0626
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 14,
+      "sharpness": {
+        "b01": 1.06,
+        "b02": 1.195,
+        "b03": 1.032,
+        "b04": 1.042,
+        "b05": 1.032,
+        "b06": 1.251,
+        "b07": 0.981,
+        "b08": 1.079,
+        "b09": 1.037,
+        "b10": 1.088,
+        "b11": 1.009,
+        "b12": 1.134,
+        "b13": 1.158,
+        "b14": 1.06
+      },
+      "blurred_beats": [],
+      "blur_measured": 14
+    },
+    "tone": {
+      "value_script_beats": 14,
+      "tone_vs_reference": {
+        "brightness": 0.918,
+        "saturation": 0.029,
+        "dark_share": 0.0,
+        "light_share": 1.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-whiteboard-sonnet\\qa\\sheets\\b14.jpg"
+  ],
+  "build_hash": "1787ddf599014b26"
+}

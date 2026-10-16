@@ -1,0 +1,197 @@
+{
+  "id": "dark-technical",
+  "name": "Dark Technical",
+  "reads_as": "3Blue1Brown-like: near-black blue field, precise thin strokes, cool blue and teal with a warm yellow for the one thing that matters, geometric type, a faint coordinate grid. For maths, data and systems.",
+  "look_family": "technical",
+  "fits": [
+    "quantitative",
+    "technical",
+    "engineering",
+    "data",
+    "science"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "warm onboarding"
+  ],
+  "palette": {
+    "field": "#0E1420",
+    "field2": "#131B2A",
+    "surface": "#1B2638",
+    "surface2": "#141D2C",
+    "ink": "#ECF1F8",
+    "muted": "#9AA8BD",
+    "line": "#6F84A3",
+    "accent": "#58C4DD",
+    "accent2": "#FFD166",
+    "accent3": "#FC6255",
+    "accent4": "#83C167",
+    "pos": "#83C167",
+    "neg": "#FC6255",
+    "shadow": "#05080E",
+    "onAccent": "#0E1420"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 500,
+        "file": "space-grotesk-latin-500-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 500,
+        "file": "inter-latin-500-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      110,
+      160
+    ],
+    "hero": [
+      96,
+      140
+    ],
+    "title": [
+      60,
+      88
+    ],
+    "lead": [
+      34,
+      42
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      30
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 14,
+    "stroke": 3,
+    "shading": "flat",
+    "shadow": "none"
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.55,
+    "move": 0.4,
+    "exit": 0.3,
+    "stagger": 0.08,
+    "draw": 1.0,
+    "count": 1.3,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "grid",
+    "density": 1,
+    "wash": "radial-gradient(ellipse at 50% 40%, rgba(88,196,221,0.08), rgba(0,0,0,0) 70%)"
+  },
+  "captions": {
+    "bg": "rgba(8,12,20,0.86)",
+    "fg": "ink",
+    "active": "accent2",
+    "radius": 10,
+    "font": "body",
+    "size": 36,
+    "weight": 700,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 1.8
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "cloth": "accent",
+    "hair": "field",
+    "ink": "field",
+    "paper": "ink",
+    "mouth": "accent3",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "Plain and quick: a cut between topics is right; continue inside a topic; covers (dip, fade, wipe, iris) only at a section change, if at all.",
+  "music": {
+    "mood": "serious",
+    "root_midi": 45
+  },
+  "fx": {
+    "background": "mesh",
+    "intensity": 0.8,
+    "grain": 0.008,
+    "vignette": 0.45,
+    "colors": [
+      "accent",
+      "accent4",
+      "accent3"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: glowing shapes on a dark field measure low edge density by design (TED-Ed glow films sat under 0.02 for 43 % of narrated time, D-112)"
+  }
+}

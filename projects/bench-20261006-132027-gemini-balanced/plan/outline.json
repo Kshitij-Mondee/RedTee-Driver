@@ -1,0 +1,296 @@
+{
+  "alternatives": [
+    "Could use the cinematic-dawn pack for a more emotional, realistic lighting approach as an alternative to the classic story-cartoon look.",
+    "Could use an architectural shape seed for a more structured, rule-based feel instead of the current round/organic seed."
+  ],
+  "concept": "A visual sorting exercise mapping an overflowing inbox against long-term goals using the Eisenhower framework to reclaim control.",
+  "world": "An abstract, conceptual desk space where office tools (inbox, documents, calendar) and mental models (the grid) exist together.",
+  "devices": [
+    {
+      "what": "An email interface (document.page) representing immediate demands, complete with an expressive worker character.",
+      "beats": [
+        "b01",
+        "b12",
+        "b15",
+        "b16",
+        "b18"
+      ],
+      "kind": "explain",
+      "id": "the_inbox"
+    },
+    {
+      "what": "A side-by-side comparison layout distinguishing urgent vs important tasks.",
+      "id": "priority_split",
+      "beats": [
+        "b03",
+        "b04",
+        "b05",
+        "b06"
+      ],
+      "kind": "explain"
+    },
+    {
+      "kind": "data",
+      "id": "eisenhower_grid",
+      "beats": [
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11"
+      ],
+      "what": "A 2x2 matrix built with bespoke motion, sorting task cards on a 2D plane."
+    },
+    {
+      "what": "A schedule view showing blocked time for priorities.",
+      "beats": [
+        "b17"
+      ],
+      "kind": "explain",
+      "id": "the_calendar"
+    },
+    {
+      "id": "the_quiz",
+      "kind": "data",
+      "what": "A stopping check mapping a scenario to the quadrant grid.",
+      "beats": [
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "kind": "join",
+      "id": "motif_wipe",
+      "beats": [],
+      "what": "A shape morph and motif-shaped wipe (illustrated join)."
+    }
+  ],
+  "look": "story-cartoon",
+  "join_material": "motif wipe and shape morphs",
+  "sections": [
+    {
+      "world": "The Desk (productive register)",
+      "accent_on": "The ringing phone, then the strategy document",
+      "treatment": "story-cartoon with paper texture",
+      "beats": [
+        {
+          "join": "start",
+          "device": "the_inbox",
+          "beat": "b01",
+          "line": "Wide establishing shot of a weary worker beside an overflowing inbox. Story role: hook.",
+          "intent": "hook",
+          "builder": "document.page"
+        },
+        {
+          "builder": "avatar",
+          "line": "Medium shot of the presenter speaking to camera.",
+          "beat": "b02",
+          "intent": "orient",
+          "join": "cut",
+          "device": "none"
+        },
+        {
+          "device": "priority_split",
+          "intent": "relate",
+          "builder": "hybrid",
+          "join": "cut",
+          "beat": "b03",
+          "line": "Medium wide shot. A split screen appears. Story role: setup."
+        },
+        {
+          "join": "continue",
+          "intent": "define",
+          "device": "priority_split",
+          "beat": "b04",
+          "line": "Medium close. Focus settles on the ringing phone.",
+          "builder": "compare.two"
+        },
+        {
+          "device": "priority_split",
+          "join": "continue",
+          "intent": "define",
+          "builder": "compare.two",
+          "line": "Medium close. 'Urgent work' label appears on the phone.",
+          "beat": "b05"
+        },
+        {
+          "line": "Medium close. Focus shifts to the strategy document on the right.",
+          "beat": "b06",
+          "device": "priority_split",
+          "builder": "compare.two",
+          "join": "continue",
+          "intent": "define"
+        }
+      ],
+      "id": "sec_distinction"
+    },
+    {
+      "id": "sec_quadrants",
+      "beats": [
+        {
+          "beat": "b07",
+          "line": "Wide shot. A blank 2x2 grid is drawn on the desk. Story role: turn.",
+          "builder": "motion",
+          "intent": "sequence",
+          "join": "cut",
+          "device": "eisenhower_grid"
+        },
+        {
+          "join": "continue",
+          "builder": "motion",
+          "device": "eisenhower_grid",
+          "beat": "b08",
+          "line": "Close insert shot. Top left box highlights, Server Crash card slides in.",
+          "intent": "quantify"
+        },
+        {
+          "builder": "motion",
+          "join": "continue",
+          "intent": "quantify",
+          "beat": "b09",
+          "line": "Close insert shot. Top right box highlights, Strategy Document card slides in.",
+          "device": "eisenhower_grid"
+        },
+        {
+          "builder": "motion",
+          "beat": "b10",
+          "line": "Close insert shot. Bottom left box highlights, Meeting Invite card slides in.",
+          "device": "eisenhower_grid",
+          "join": "continue",
+          "intent": "quantify"
+        },
+        {
+          "builder": "motion",
+          "beat": "b11",
+          "line": "Close insert shot. Bottom right box highlights, Web Browsing card vanishes.",
+          "intent": "quantify",
+          "join": "continue",
+          "device": "eisenhower_grid"
+        }
+      ],
+      "accent_on": "The highlighted quadrant box and its moving task card",
+      "treatment": "story-cartoon bespoke motion",
+      "world": "The Desk (Grid view)"
+    },
+    {
+      "world": "The Desk (Inbox view)",
+      "id": "sec_decline",
+      "accent_on": "The shield icon, then the highlighted typed reply",
+      "beats": [
+        {
+          "join": "cut",
+          "intent": "transition",
+          "device": "the_inbox",
+          "beat": "b12",
+          "line": "Medium shot. An inbox message appears asking for a quick favour. Story role: practice.",
+          "builder": "document.page"
+        },
+        {
+          "join": "cut",
+          "intent": "check",
+          "builder": "quiz.question",
+          "device": "the_quiz",
+          "beat": "b13",
+          "line": "POV shot. Prompt appears asking which quadrant this belongs to."
+        },
+        {
+          "intent": "check",
+          "line": "POV shot. Quadrant three option expands as the correct answer.",
+          "beat": "b14",
+          "device": "the_quiz",
+          "join": "continue",
+          "builder": "quiz.answer"
+        },
+        {
+          "intent": "refute",
+          "line": "Close insert shot. A shield icon blocks incoming distractions over the inbox.",
+          "beat": "b15",
+          "builder": "hybrid",
+          "device": "the_inbox",
+          "join": "cut"
+        },
+        {
+          "line": "Medium close. Typed reply gracefully declines the request.",
+          "beat": "b16",
+          "join": "continue",
+          "intent": "demonstrate",
+          "builder": "document.page",
+          "device": "the_inbox"
+        }
+      ],
+      "treatment": "story-cartoon"
+    },
+    {
+      "id": "sec_review",
+      "beats": [
+        {
+          "intent": "consolidate",
+          "join": "cut",
+          "device": "the_calendar",
+          "builder": "calendar.plan",
+          "beat": "b17",
+          "line": "Wide establishing shot. Calendar populates with blocked priority slots. Story role: payoff."
+        },
+        {
+          "intent": "payoff",
+          "line": "Wide shot of the worker, now smiling, beside a completed daily plan.",
+          "beat": "b18",
+          "device": "the_inbox",
+          "builder": "document.page",
+          "join": "cut"
+        },
+        {
+          "join": "cut",
+          "intent": "payoff",
+          "builder": "avatar",
+          "device": "none",
+          "line": "Medium shot. Presenter bookend for the final rule.",
+          "beat": "b19"
+        }
+      ],
+      "treatment": "story-cartoon",
+      "accent_on": "The blocked time slot on the calendar",
+      "world": "The Desk (Calendar view)"
+    }
+  ],
+  "open_questions": [
+    "Is a hybrid layer preferred for b18 to show the character leaving over the calendar, given it's currently a strict template beat?"
+  ],
+  "value_script": [
+    {
+      "why": "Pale open for the hook, establishing an empty, overwhelmed feeling.",
+      "accent": "subtle cool blue",
+      "band": "light",
+      "break": false,
+      "from": "b01"
+    },
+    {
+      "accent": "urgent red",
+      "band": "mid",
+      "from": "b03",
+      "why": "First mechanism introduction; richer tone as we distinguish the two types of tasks.",
+      "break": true
+    },
+    {
+      "from": "b07",
+      "band": "dark",
+      "why": "Dark break for the key mechanism (Eisenhower grid) to spotlight the sorting data.",
+      "break": true,
+      "accent": "focused blue"
+    },
+    {
+      "why": "Return to mid band for peak application energy at the inbox practice scenario.",
+      "from": "b12",
+      "band": "mid",
+      "accent": "decline green",
+      "break": true
+    },
+    {
+      "from": "b17",
+      "break": true,
+      "band": "light",
+      "accent": "warm orange",
+      "why": "Lift at the close for the payoff; returning to a pale, calm state reflecting total control."
+    }
+  ]
+}

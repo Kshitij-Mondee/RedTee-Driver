@@ -1,0 +1,4403 @@
+{
+  "style": "story-cartoon",
+  "concept": "In one recurring office conflict, replace the judgement between colleagues with a verifiable work record, then a shared plan. Keep the office and object coordinates stable while wording and work states change.",
+  "chrome": {
+    "titles": "Print titles on physical work artifacts. Retire old text before adding new text.",
+    "shape": "round",
+    "label": "underline",
+    "bubble": "wobble",
+    "panel": "paper",
+    "mark": "box",
+    "texture": "paper",
+    "accent": "Pack rust identifies the discussed phrase or work object, never blame or success.",
+    "avatar": "Use the configured presenter, unnamed, outside the imagined scenario."
+  },
+  "motifs": [
+    {
+      "name": "office_paper",
+      "desc": "Speech slips, evidence pages and calendar leaves share one paper material."
+    },
+    {
+      "name": "shared_surface",
+      "desc": "A real desk or board frames every explanation."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "opening_desk",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Callback master: desk [380,610,1160,240], document [830,560,320,200], schedule [1180,180,400,240]. Jordan right, colleague left. Presenter occupies a reserved edge outside the case."
+      },
+      {
+        "id": "phrasing_bay",
+        "x": 2160,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Board base [320,220,1280,660]. Critique slot [380,340,500,250], evidence slot [1040,340,500,250]. Desk edge and muted office wall remain through b02-b04."
+      },
+      {
+        "id": "action_reference",
+        "x": 2160,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Pocket note on the office desktop, page [450,150,1050,780]."
+      },
+      {
+        "id": "jordans_desk",
+        "x": 4560,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Opening-desk geometry in the middle value band. Work papers are neutral, not evidence of overload."
+      },
+      {
+        "id": "schedule_board",
+        "x": 4560,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Draft [280,420,400,220], schedule consequence [770,420,400,220], review [1260,420,400,220]. Relative time only."
+      },
+      {
+        "id": "listening_table",
+        "x": 6480,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Table [360,600,1200,230], colleague left, Jordan right, shared page [760,520,420,230], question above."
+      },
+      {
+        "id": "impact_reference",
+        "x": 6480,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Work-note detail on the listening table. Draft and review artifacts remain small and muted."
+      },
+      {
+        "id": "demand_desk",
+        "x": 8880,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Calendar-bay counterexample, with the same cast sides and an unresolved document."
+      },
+      {
+        "id": "planning_surface",
+        "x": 11040,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Held through b12-b15. Evidence shelf [180,220,560,280], project/habit region [760,260,600,380], calendar row [1290,620,430,250]."
+      },
+      {
+        "id": "learner_desk",
+        "x": 13440,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Milestone context [240,160,450,230], option sheet [720,170,1000,760]. Fixed slots A [780,330,880,130], B [780,510,880,130], C [780,690,880,170]."
+      },
+      {
+        "id": "partnership_table",
+        "x": 13440,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Adjacent table with a central task page and a muted discarded critique slip."
+      },
+      {
+        "id": "workflow_preview",
+        "x": 15360,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "Choice paper turns into a physical conversation rail on the same desktop."
+      },
+      {
+        "id": "meeting_table",
+        "x": 17760,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Held through b21-b24. Schedule [470,460,460,260], dependency screen [1020,200,530,320], habit slip [1030,580,270,190], calendar leaf [1360,580,270,190]."
+      },
+      {
+        "id": "viewer_desk",
+        "x": 19920,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Presenter bookend and complete desk reference, using opening-desk proportions."
+      }
+    ],
+    "asset_policy": "Use neutral adult catalogue members, not improvised anatomy. Jordan uses man and the unnamed colleague uses woman consistently. No unverified pointing hand, handshake or expressive close-up. When a pose is unavailable, the work-object change carries the meaning.",
+    "set": "Muted desk edges, chair backs, walls and unlabelled office papers establish a setting without extra teaching content."
+  },
+  "story": {
+    "metaphor": "Literal shared work surface.",
+    "setting": "One everyday office with desk, conversation table, board and calendar bays.",
+    "arc": "Tense judgement becomes evidence, impact, listening and a shared habit. Practice precedes a complete meeting; a later-time return resolves the opening.",
+    "cast": [
+      {
+        "name": "Jordan",
+        "role": "Recipient in explicitly imagined cases"
+      },
+      {
+        "name": "Unnamed colleague",
+        "role": "Learner stand-in"
+      },
+      {
+        "name": "Configured presenter",
+        "role": "Narrator outside the imagined action"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "returning_desk",
+      "what": "Opening desk returns with the same document and schedule positions, first unresolved and finally on time.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b06",
+        "b11",
+        "b21",
+        "b25",
+        "b26"
+      ]
+    },
+    {
+      "id": "phrasing_slot",
+      "what": "Held paper slots carry settled wording and in-place replacements. Definitions and comparisons use calm emphasis.",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b08",
+        "b09",
+        "b10",
+        "b16",
+        "b17",
+        "b18",
+        "b19",
+        "b20",
+        "b22",
+        "b26"
+      ]
+    },
+    {
+      "id": "deliverable_chain",
+      "what": "Recurring deliverable, milestone and downstream work objects show consequences. Spoken approval counts become individual papers.",
+      "kind": "data",
+      "beats": [
+        "b01",
+        "b06",
+        "b07",
+        "b13",
+        "b16",
+        "b21",
+        "b22",
+        "b23",
+        "b25"
+      ]
+    },
+    {
+      "id": "habit_rail",
+      "what": "Held planning slots receive evidence, impact, perspective and the agreed plan. Plan objects are a habit slip and calendar checkpoint.",
+      "kind": "list",
+      "beats": [
+        "b05",
+        "b10",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b20",
+        "b21",
+        "b22",
+        "b23",
+        "b24",
+        "b26"
+      ]
+    },
+    {
+      "id": "conversation_rigs",
+      "what": "Neutral adult rigs shift conversational orientation toward a shared work object. No emotional score or humiliating acting.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b06",
+        "b08",
+        "b09",
+        "b11",
+        "b19",
+        "b21",
+        "b23",
+        "b25"
+      ]
+    },
+    {
+      "id": "paper_handoff",
+      "what": "Office paper carries a work slip into a pocket rule and turns the choice sheet into a workflow preview. Hard-cut alternatives preserve its position.",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b10",
+        "b20"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "Withheld",
+      "why": "Posture and unresolved work establish tension."
+    },
+    {
+      "from": "b02",
+      "band": "light",
+      "accent": "Work practice",
+      "why": "Calm definition."
+    },
+    {
+      "from": "b03",
+      "band": "light",
+      "accent": "Observable actions",
+      "why": "Colour identifies evidence, not judgement."
+    },
+    {
+      "from": "b04",
+      "band": "light",
+      "accent": "Corrective feedback",
+      "why": "Message visibility is the mechanism."
+    },
+    {
+      "from": "b05",
+      "band": "light",
+      "accent": "Describe the action",
+      "why": "Finished pocket reference."
+    },
+    {
+      "from": "b06",
+      "band": "mid",
+      "break": true,
+      "accent": "Internal motives, then released",
+      "why": "Chapter change shades the office, not Jordan."
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "accent": "Consequence chain",
+      "why": "Follow the spoken work consequence."
+    },
+    {
+      "from": "b08",
+      "band": "mid",
+      "accent": "Open question",
+      "why": "Emphasise the listening pause through stillness."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "accent": "Shared goals",
+      "why": "A common work object carries collaboration."
+    },
+    {
+      "from": "b10",
+      "band": "mid",
+      "accent": "Impact, then pause",
+      "why": "Retain the working grade through recap."
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "accent": "Unilateral demand",
+      "why": "Identify the phrase, not a bad person."
+    },
+    {
+      "from": "b12",
+      "band": "mid",
+      "accent": "Replacement behaviours",
+      "why": "Forward-action slot becomes the focus."
+    },
+    {
+      "from": "b13",
+      "band": "dark",
+      "break": true,
+      "accent": "Two days early flag",
+      "why": "Isolate co-creation on the single dark mechanism break."
+    },
+    {
+      "from": "b14",
+      "band": "mid",
+      "break": true,
+      "accent": "Next-week checkpoint",
+      "why": "Return to practical calendar planning."
+    },
+    {
+      "from": "b15",
+      "band": "mid",
+      "accent": "Habit, then checkpoint",
+      "why": "Completed-plan callback."
+    },
+    {
+      "from": "b16",
+      "band": "mid",
+      "accent": "Missed milestone",
+      "why": "Set up practice without a preferred option."
+    },
+    {
+      "from": "b17",
+      "band": "mid",
+      "accent": "Withheld from options",
+      "why": "Choices remain equal peers."
+    },
+    {
+      "from": "b18",
+      "band": "mid",
+      "accent": "C, then B's compliment, then C",
+      "why": "Colour follows discussion; a boxed check marks the answer."
+    },
+    {
+      "from": "b19",
+      "band": "mid",
+      "accent": "Perspective question",
+      "why": "Extract partnership without a scale metaphor."
+    },
+    {
+      "from": "b20",
+      "band": "mid",
+      "accent": "Full conversation",
+      "why": "A physical page prepares the full workflow."
+    },
+    {
+      "from": "b21",
+      "band": "mid",
+      "accent": "Onboarding schedule",
+      "why": "Retain the office working grade."
+    },
+    {
+      "from": "b22",
+      "band": "mid",
+      "accent": "Action stamp, then orientation consequence",
+      "why": "Calm evidence."
+    },
+    {
+      "from": "b23",
+      "band": "mid",
+      "accent": "Vendor blockers, then shared goal",
+      "why": "Constraints enter discussion, not approval."
+    },
+    {
+      "from": "b24",
+      "band": "mid",
+      "accent": "Habit, then next Tuesday",
+      "why": "Explicit commitments complete the plan."
+    },
+    {
+      "from": "b25",
+      "band": "light",
+      "break": true,
+      "accent": "On time",
+      "why": "Opening composition returns with improved work and open orientation."
+    },
+    {
+      "from": "b26",
+      "band": "light",
+      "accent": "Action phrase, then plan objects",
+      "why": "Bright finished transfer reference."
+    }
+  ],
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "opening_desk",
+      "subject": "Jordan beside a late deliverable and unresolved schedule",
+      "world": "Office desk with the narrating avatar outside the case",
+      "props": {
+        "layout": "presenter_with_case",
+        "case_labels": [
+          "Jordan",
+          "Late deliverable"
+        ]
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "hook",
+      "intent": "hold",
+      "accent_on": "late_deliverable",
+      "accent_state": "withheld",
+      "option": "avatar with office tableau",
+      "alternatives": {
+        "avatar with illustrated case inset": {
+          "kind": "avatar",
+          "station": "opening_desk",
+          "props": {
+            "layout": "presenter_with_case_inset",
+            "case_labels": [
+              "Jordan",
+              "Late deliverable"
+            ]
+          },
+          "shot": {
+            "size": "medium",
+            "move": "none"
+          }
+        }
+      },
+      "order_cues": [
+        "Say Jordan submits a deliverable late",
+        "the work looked careless",
+        "Jordan shuts down",
+        "zero progress"
+      ],
+      "design": {
+        "treatment": "Static imagined office case beside the configured presenter. Jordan looks toward the document; the colleague faces Jordan. No improvised facial acting.",
+        "elements": [
+          {
+            "name": "late_deliverable",
+            "rect": [
+              830,
+              560,
+              320,
+              200
+            ],
+            "text": "Late deliverable"
+          },
+          {
+            "name": "unresolved_schedule",
+            "rect": [
+              1180,
+              180,
+              400,
+              240
+            ]
+          },
+          {
+            "name": "Jordan",
+            "rect": [
+              1220,
+              430,
+              310,
+              470
+            ]
+          },
+          {
+            "name": "colleague",
+            "rect": [
+              480,
+              410,
+              300,
+              490
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "desk",
+            "late_deliverable",
+            "unresolved_schedule",
+            "Jordan",
+            "colleague",
+            "presenter"
+          ]
+        },
+        "references": [
+          "Approved b01",
+          "scenario.dialogue adult members"
+        ]
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "template",
+      "station": "phrasing_bay",
+      "template": "definition",
+      "subject": "A constructive-feedback definition on a work sheet",
+      "world": "Office speech-and-record board",
+      "rect": [
+        320,
+        220,
+        1280,
+        660
+      ],
+      "props": {
+        "term": "Constructive feedback",
+        "say_term": "Constructive feedback",
+        "definition": "Guides future work practice, not someone's emotional comfort.",
+        "say_definition": "guides future work practice",
+        "example": "Work practice",
+        "say_example": "It guides future work practice"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "intent": "hold",
+      "accent_on": "work_practice_sheet",
+      "option": "definition on a work object",
+      "alternatives": {
+        "compare.two comfort versus practice": {
+          "kind": "template",
+          "template": "compare.two",
+          "station": "phrasing_bay",
+          "props": {
+            "left": {
+              "header": "Emotional comfort",
+              "say": "personal feelings",
+              "tone": "neutral"
+            },
+            "right": {
+              "header": "Work practice",
+              "say": "guides future work practice",
+              "tone": "neutral"
+            },
+            "mode": "columns"
+          }
+        }
+      },
+      "order_cues": [
+        "Constructive feedback",
+        "guides future work practice",
+        "It guides future work practice"
+      ],
+      "design": {
+        "treatment": "Printed definition, with a blank muted margin slip. No comfort gauge or animated workflow.",
+        "elements": [
+          {
+            "name": "phrasing_base",
+            "rect": [
+              320,
+              220,
+              1280,
+              660
+            ]
+          },
+          {
+            "name": "work_practice_sheet",
+            "rect": [
+              420,
+              300,
+              1080,
+              470
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "opening case foreground",
+            "presenter"
+          ],
+          "incoming": [
+            "phrasing_board",
+            "phrasing_base",
+            "work_practice_sheet"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "template",
+      "station": "phrasing_bay",
+      "template": "compare.two",
+      "subject": "Character critique beside an observable-action record",
+      "world": "Held office phrasing board",
+      "rect": [
+        320,
+        220,
+        1280,
+        660
+      ],
+      "props": {
+        "left": {
+          "header": "Character critique",
+          "say": "Calling someone careless",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Careless",
+              "say": "attacks their character"
+            },
+            {
+              "text": "Hurts task performance",
+              "say": "hurts task performance"
+            }
+          ]
+        },
+        "right": {
+          "header": "Observable actions",
+          "say": "describe verifiable actions",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Verifiable actions",
+              "say": "It is called observable actions"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "keep": [
+        "phrasing_board",
+        "phrasing_base"
+      ],
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "intent": "hold",
+      "accent_on": "observable_action_record",
+      "option": "compare.two evidence slips",
+      "alternatives": {
+        "document.page annotated record": {
+          "kind": "template",
+          "template": "document.page",
+          "station": "phrasing_bay",
+          "props": {
+            "kind": "notes",
+            "title": "Observable actions",
+            "lines": [
+              {
+                "text": "Calling someone careless attacks their character.",
+                "say": "Calling someone careless"
+              },
+              {
+                "text": "Instead, describe verifiable actions.",
+                "say": "describe verifiable actions"
+              }
+            ],
+            "mode": "highlight",
+            "side": "center"
+          }
+        }
+      },
+      "order_cues": [
+        "Calling someone careless",
+        "attacks their character",
+        "hurts task performance",
+        "describe verifiable actions",
+        "It is called observable actions"
+      ],
+      "design": {
+        "treatment": "Equal paper regions. Boxed strike on Careless, rust on the evidence record.",
+        "elements": [
+          {
+            "name": "character_critique",
+            "rect": [
+              380,
+              340,
+              500,
+              250
+            ]
+          },
+          {
+            "name": "observable_action_record",
+            "rect": [
+              1040,
+              340,
+              500,
+              250
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [
+            "phrasing_board",
+            "phrasing_base"
+          ],
+          "travelling": [],
+          "retiring": [
+            "definition wording and underline"
+          ],
+          "incoming": [
+            "character_critique in left slot",
+            "observable_action_record in right slot"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "phrasing_bay",
+      "subject": "Compliment slips covering a corrective-feedback slip",
+      "world": "Held office phrasing board",
+      "keep": [
+        "phrasing_board",
+        "phrasing_base"
+      ],
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "intent": "process_hold",
+      "accent_on": "corrective_feedback",
+      "option": "bespoke paper-stack swap and shape morph",
+      "alternatives": {
+        "literal sandwich diagram": {
+          "kind": "bespoke",
+          "station": "phrasing_bay",
+          "design": {
+            "treatment": "Three restrained sandwich layers printed on the office page.",
+            "why_motion": "Outer praise layers lift to expose the correction.",
+            "elements": [
+              {
+                "name": "praise_top",
+                "text": "Superficial compliments"
+              },
+              {
+                "name": "correction",
+                "text": "Corrective feedback"
+              },
+              {
+                "name": "praise_bottom",
+                "text": "Superficial compliments"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "two superficial compliments",
+                "element": "praise_top and praise_bottom",
+                "action": "cover correction",
+                "motion": "place"
+              },
+              {
+                "t_anchor": "dilute corrective feedback completely",
+                "element": "praise_top and praise_bottom",
+                "action": "lift away",
+                "motion": "fold"
+              },
+              {
+                "t_anchor": "Deliver corrective feedback directly",
+                "element": "correction",
+                "action": "remain exposed",
+                "motion": "hold"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "phrasing_base"
+              ],
+              "retiring": [
+                "comparison text"
+              ],
+              "incoming": [
+                "sandwich layers"
+              ]
+            },
+            "references": [
+              "Approved b04 alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "corrective critique",
+        "two superficial compliments",
+        "Superficial compliments dilute corrective feedback completely",
+        "Deliver corrective feedback directly"
+      ],
+      "design": {
+        "treatment": "The evidence-slot paper becomes the central correction. Two praise slips partially obscure it, then fold away.",
+        "why_motion": "Changing visibility explains dilution and directness, rather than decorating a static message.",
+        "elements": [
+          {
+            "name": "corrective_feedback",
+            "rect": [
+              1040,
+              340,
+              500,
+              250
+            ],
+            "text": "Corrective feedback"
+          },
+          {
+            "name": "upper_compliment",
+            "rect": [
+              1010,
+              280,
+              530,
+              160
+            ],
+            "text": "Superficial compliments"
+          },
+          {
+            "name": "lower_compliment",
+            "rect": [
+              1040,
+              470,
+              530,
+              160
+            ],
+            "text": "Superficial compliments"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "corrective critique",
+            "element": "corrective_feedback",
+            "action": "replace the prior evidence wording at its fixed anchor",
+            "motion": "in-place text swap"
+          },
+          {
+            "t_anchor": "two superficial compliments",
+            "element": "upper_compliment and lower_compliment",
+            "action": "cover the correction as peer slips",
+            "motion": "short matched placement"
+          },
+          {
+            "t_anchor": "Superficial compliments dilute corrective feedback completely",
+            "element": "upper_compliment and lower_compliment",
+            "action": "fold away from the correction",
+            "motion": "small outward folds"
+          },
+          {
+            "t_anchor": "Deliver corrective feedback directly",
+            "element": "corrective_feedback",
+            "action": "remain exposed with a rust underline",
+            "motion": "underline, then hold"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "phrasing_board",
+            "phrasing_base",
+            "right paper anchor [1040,340,500,250]"
+          ],
+          "travelling": [],
+          "retiring": [
+            "character critique text",
+            "observable record wording",
+            "compliment slips after folding"
+          ],
+          "incoming": [
+            "corrective_feedback wording",
+            "upper_compliment",
+            "lower_compliment"
+          ]
+        },
+        "references": [
+          "Approved phrasing_slot",
+          "D-114 held-slot replacement"
+        ],
+        "finish": {
+          "hold_s": 3,
+          "frame": "Fully exposed direct correction"
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "template",
+      "station": "action_reference",
+      "template": "document.page",
+      "subject": "Pocket work note separating person and task",
+      "world": "Real office desktop",
+      "rect": [
+        450,
+        150,
+        1050,
+        780
+      ],
+      "props": {
+        "kind": "notes",
+        "title": "Pocket rule",
+        "lines": [
+          {
+            "text": "Separate the person from the task.",
+            "say": "We separate the person from the task"
+          },
+          {
+            "text": "Observable, verifiable actions.",
+            "say": "Observable, verifiable actions"
+          },
+          {
+            "text": "Describe the action, not the person.",
+            "say": "Describe the action, not the person"
+          }
+        ],
+        "mode": "highlight",
+        "side": "center"
+      },
+      "shot": {
+        "size": "overhead",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "handoff",
+        "via": "office_paper",
+        "dur": 0.6,
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "action_rule",
+      "option": "document.page pocket reference",
+      "alternatives": {
+        "compare.two person and task": {
+          "kind": "template",
+          "template": "compare.two",
+          "station": "action_reference",
+          "props": {
+            "left": {
+              "header": "Person",
+              "say": "the person",
+              "tone": "neutral"
+            },
+            "right": {
+              "header": "Task",
+              "say": "the task",
+              "tone": "neutral",
+              "items": [
+                {
+                  "text": "Observable, verifiable actions",
+                  "say": "Observable, verifiable actions"
+                }
+              ]
+            },
+            "mode": "pairs"
+          },
+          "join_in": {
+            "type": "cut",
+            "meaning": "into"
+          }
+        }
+      },
+      "order_cues": [
+        "We separate the person from the task",
+        "Observable, verifiable actions",
+        "Describe the action, not the person"
+      ],
+      "design": {
+        "treatment": "The lesson's paper becomes a usable note, with one small paired person/task drawing in the margin.",
+        "elements": [
+          {
+            "name": "action_rule",
+            "text": "Describe the action, not the person."
+          },
+          {
+            "name": "person_task_pair",
+            "rect": [
+              150,
+              360,
+              240,
+              300
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "corrective-feedback paper becomes pocket page"
+          ],
+          "retiring": [
+            "phrasing-board text and covers"
+          ],
+          "incoming": [
+            "desktop reference",
+            "page wording",
+            "person_task_pair"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "jordans_desk",
+      "subject": "The observer's presumed-motive slip withdrawn from Jordan's situation",
+      "world": "Familiar office desk with neutral work papers",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "motive_assumption",
+      "option": "bespoke motive slip over a neutral queue",
+      "alternatives": {
+        "classic held assumption panels": {
+          "kind": "bespoke",
+          "station": "jordans_desk",
+          "design": {
+            "treatment": "Two held states at the same desk, with and without an observer's assumption.",
+            "why_motion": "State replacement separates inference from evidence.",
+            "elements": [
+              {
+                "name": "Jordan"
+              },
+              {
+                "name": "observer"
+              },
+              {
+                "name": "assumption",
+                "text": "Internal motives"
+              },
+              {
+                "name": "bias",
+                "text": "Fundamental attribution bias"
+              },
+              {
+                "name": "work_papers"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "Why assume Jordan lacks dedication",
+                "element": "assumption",
+                "action": "appear beside observer",
+                "motion": "reveal"
+              },
+              {
+                "t_anchor": "fundamental attribution bias",
+                "element": "bias",
+                "action": "label assumption",
+                "motion": "underline"
+              },
+              {
+                "t_anchor": "Stop judging internal motives",
+                "element": "assumption",
+                "action": "be withdrawn",
+                "motion": "state swap"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "desk coordinates"
+              ],
+              "retiring": [
+                "assumption"
+              ],
+              "incoming": [
+                "bias label"
+              ]
+            },
+            "references": [
+              "Approved b06 object-led alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "Jordan sits silently at a desk",
+        "Why assume Jordan lacks dedication",
+        "internal motives",
+        "fundamental attribution bias",
+        "Stop judging internal motives"
+      ],
+      "design": {
+        "treatment": "Static adult catalogue rigs at the returning desk. The motive slip belongs to the observer, never to Jordan.",
+        "why_motion": "Withdrawal of the assumption leaves the observable situation unchanged.",
+        "elements": [
+          {
+            "name": "Jordan",
+            "rect": [
+              1220,
+              430,
+              310,
+              470
+            ]
+          },
+          {
+            "name": "observer",
+            "rect": [
+              480,
+              410,
+              300,
+              490
+            ]
+          },
+          {
+            "name": "motive_assumption",
+            "rect": [
+              420,
+              210,
+              600,
+              170
+            ],
+            "text": "Internal motives"
+          },
+          {
+            "name": "bias_label",
+            "rect": [
+              390,
+              100,
+              1150,
+              100
+            ],
+            "text": "Fundamental attribution bias"
+          },
+          {
+            "name": "neutral_work_papers",
+            "rect": [
+              830,
+              560,
+              320,
+              200
+            ]
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Jordan sits silently at a desk",
+            "element": "Jordan and neutral_work_papers",
+            "action": "establish familiar geometry",
+            "motion": "settled at cut"
+          },
+          {
+            "t_anchor": "Why assume Jordan lacks dedication",
+            "element": "motive_assumption",
+            "action": "open above observer with a question mark",
+            "motion": "small paper unfold"
+          },
+          {
+            "t_anchor": "internal motives",
+            "element": "motive_assumption",
+            "action": "receive rust underline",
+            "motion": "underline"
+          },
+          {
+            "t_anchor": "fundamental attribution bias",
+            "element": "bias_label",
+            "action": "identify the observer's assumption",
+            "motion": "text unmask"
+          },
+          {
+            "t_anchor": "Stop judging internal motives",
+            "element": "motive_assumption",
+            "action": "withdraw; Jordan and work papers stay unchanged",
+            "motion": "short fold out"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "pocket reference"
+          ],
+          "incoming": [
+            "desk",
+            "Jordan",
+            "observer",
+            "neutral_work_papers",
+            "motive_assumption",
+            "bias_label"
+          ]
+        },
+        "references": [
+          "Approved b06 alternative",
+          "scenario.dialogue adult members",
+          "returning_desk"
+        ],
+        "asset_note": "Object-led alternative chosen because expressive and seated pose compatibility is unverified."
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "station": "schedule_board",
+      "template": "process.flow",
+      "subject": "Delayed draft, schedule displacement and postponed client review",
+      "world": "Physical office project board",
+      "rect": [
+        230,
+        250,
+        1450,
+        540
+      ],
+      "props": {
+        "title": "Operational impact",
+        "say_title": "operational impact",
+        "steps": [
+          {
+            "label": "Delayed draft",
+            "say": "The delayed draft"
+          },
+          {
+            "label": "Schedule pushed back",
+            "say": "pushed client reviews back"
+          },
+          {
+            "label": "Client reviews back",
+            "sub": "Business consequences",
+            "say": "business consequences"
+          }
+        ]
+      },
+      "shot": {
+        "size": "overhead",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "meanwhile"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "intent": "process_hold",
+      "accent_on": "client_review_consequence",
+      "option": "process.flow on the project board",
+      "alternatives": {
+        "document.page consequence record": {
+          "kind": "template",
+          "template": "document.page",
+          "station": "schedule_board",
+          "props": {
+            "kind": "notes",
+            "title": "Operational impact",
+            "lines": [
+              {
+                "text": "The delayed draft pushed client reviews back.",
+                "say": "The delayed draft pushed client reviews back"
+              },
+              {
+                "text": "Focus on business consequences.",
+                "say": "Focus on business consequences"
+              }
+            ],
+            "mode": "highlight",
+            "side": "center"
+          }
+        }
+      },
+      "order_cues": [
+        "The delayed draft",
+        "pushed client reviews back",
+        "operational impact",
+        "business consequences"
+      ],
+      "design": {
+        "treatment": "Complete schedule rail, then calm word-linked emphasis. The middle object is the displaced schedule, not a new event.",
+        "elements": [
+          {
+            "name": "delayed_draft"
+          },
+          {
+            "name": "schedule_displacement"
+          },
+          {
+            "name": "client_review_consequence"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "desk foreground",
+            "bias wording"
+          ],
+          "incoming": [
+            "project board",
+            "draft",
+            "schedule displacement",
+            "client review"
+          ]
+        },
+        "finish": {
+          "hold_s": 4,
+          "frame": "Complete consequence chain without dates or a running token"
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "listening_table",
+      "subject": "An open question followed by listening space",
+      "world": "Jordan and the colleague around a shared work page",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "intent": "process_hold",
+      "accent_on": "open_question",
+      "option": "bespoke two-rig listening exchange",
+      "alternatives": {
+        "classic held listening states": {
+          "kind": "bespoke",
+          "station": "listening_table",
+          "design": {
+            "treatment": "Question and silent-listening panels with identical table anchors.",
+            "why_motion": "State change shows yielding the turn.",
+            "elements": [
+              {
+                "name": "colleague"
+              },
+              {
+                "name": "Jordan"
+              },
+              {
+                "name": "page"
+              },
+              {
+                "name": "question",
+                "text": "What blocked your progress on this deliverable?"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "pause",
+                "element": "colleague",
+                "action": "stop speaking",
+                "motion": "state swap"
+              },
+              {
+                "t_anchor": "What blocked your progress on this deliverable",
+                "element": "question",
+                "action": "become visible",
+                "motion": "unmask"
+              },
+              {
+                "t_anchor": "Listen before you speak",
+                "element": "question",
+                "action": "hold with an empty reply space",
+                "motion": "hold"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "table and page"
+              ],
+              "retiring": [
+                "speaking cue"
+              ],
+              "incoming": [
+                "question"
+              ]
+            },
+            "references": [
+              "Approved b08 two-rig alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "pause",
+        "What blocked your progress on this deliverable",
+        "Inviting perspective sharing lowers defensiveness",
+        "Listen before you speak"
+      ],
+      "design": {
+        "treatment": "Neutral adult rigs. Show the exact open question, remove the speaking cue, and leave the response space unfilled.",
+        "why_motion": "The change from speaking to listening is the mechanism. No timer or invented reply.",
+        "elements": [
+          {
+            "name": "colleague",
+            "rect": [
+              400,
+              330,
+              330,
+              460
+            ]
+          },
+          {
+            "name": "Jordan",
+            "rect": [
+              1190,
+              330,
+              330,
+              460
+            ]
+          },
+          {
+            "name": "shared_page",
+            "rect": [
+              760,
+              520,
+              420,
+              230
+            ]
+          },
+          {
+            "name": "open_question",
+            "rect": [
+              550,
+              170,
+              820,
+              190
+            ],
+            "text": "What blocked your progress on this deliverable?"
+          },
+          {
+            "name": "speaking_cue",
+            "rect": [
+              730,
+              390,
+              90,
+              60
+            ]
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "After stating operational impact",
+            "element": "shared_page",
+            "action": "establish shared consequence page",
+            "motion": "settled"
+          },
+          {
+            "t_anchor": "pause",
+            "element": "speaking_cue",
+            "action": "disappear",
+            "motion": "quiet removal"
+          },
+          {
+            "t_anchor": "What blocked your progress on this deliverable",
+            "element": "open_question",
+            "action": "open from colleague's side",
+            "motion": "paper unfold"
+          },
+          {
+            "t_anchor": "Inviting perspective sharing lowers defensiveness",
+            "element": "Jordan",
+            "action": "orient whole rig toward the page",
+            "motion": "small whole-rig rotation"
+          },
+          {
+            "t_anchor": "Listen before you speak",
+            "element": "open_question",
+            "action": "remain beside unfilled reply space",
+            "motion": "hold"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "schedule-board labels"
+          ],
+          "incoming": [
+            "table",
+            "colleague",
+            "Jordan",
+            "shared_page",
+            "open_question",
+            "speaking_cue"
+          ]
+        },
+        "references": [
+          "Approved b08 alternative",
+          "scenario.dialogue adult members"
+        ],
+        "finish": {
+          "hold_s": 4,
+          "frame": "Question and listening tableau, no vendor constraints yet"
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "station": "listening_table",
+      "template": "scenario.dialogue",
+      "subject": "Settled colleagues looking at one shared-goals page",
+      "world": "Held conversation table",
+      "rect": [
+        300,
+        160,
+        1320,
+        760
+      ],
+      "props": {
+        "left": {
+          "member": "woman",
+          "emotion": "neutral"
+        },
+        "right": {
+          "member": "man",
+          "name": "Jordan",
+          "emotion": "neutral"
+        },
+        "lines": [
+          {
+            "who": "left",
+            "text": "How do we tackle this obstacle?",
+            "say": "How do we tackle this obstacle",
+            "emotion": "neutral"
+          }
+        ],
+        "setting": "meeting",
+        "caption": "Shared goals",
+        "say_caption": "shared goals"
+      },
+      "keep": [
+        "table",
+        "shared_page"
+      ],
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "intent": "hold",
+      "accent_on": "shared_goals_page",
+      "option": "scenario.dialogue shared-object tableau",
+      "alternatives": {
+        "compare.two work and collaboration": {
+          "kind": "template",
+          "template": "compare.two",
+          "station": "listening_table",
+          "props": {
+            "left": {
+              "header": "Business consequences",
+              "say": "business consequences",
+              "tone": "neutral"
+            },
+            "right": {
+              "header": "Shared goals",
+              "say": "shared goals",
+              "tone": "neutral",
+              "items": [
+                {
+                  "text": "Collaborative problem solving",
+                  "say": "collaborative problem solving"
+                }
+              ]
+            },
+            "mode": "columns"
+          }
+        }
+      },
+      "order_cues": [
+        "business consequences",
+        "shared goals",
+        "collaborative problem solving",
+        "How do we tackle this obstacle",
+        "Solve the problem together"
+      ],
+      "design": {
+        "treatment": "A settled shared orientation, not animated walking. The colleague asks the spoken question; Jordan receives no invented line.",
+        "elements": [
+          {
+            "name": "shared_goals_page",
+            "rect": [
+              760,
+              520,
+              420,
+              230
+            ],
+            "text": "Shared goals"
+          },
+          {
+            "name": "partnership_question",
+            "text": "How do we tackle this obstacle?"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "table",
+            "shared_page anchor",
+            "cast sides"
+          ],
+          "travelling": [],
+          "retiring": [
+            "open_question wording",
+            "speaking cue"
+          ],
+          "incoming": [
+            "Shared goals wording",
+            "partnership_question"
+          ]
+        },
+        "renderer_note": "Do not re-enter the held table or duplicate the cast. Swap the question in place."
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "template",
+      "station": "impact_reference",
+      "template": "document.page",
+      "subject": "Impact-and-pause pocket note",
+      "world": "Listening-table desktop detail",
+      "rect": [
+        430,
+        170,
+        1080,
+        740
+      ],
+      "props": {
+        "kind": "notes",
+        "title": "Pocket rule",
+        "lines": [
+          {
+            "text": "Delay leads to business consequences.",
+            "say": "Connect the delay directly to business consequences"
+          },
+          {
+            "text": "State operational impact clearly.",
+            "say": "State operational impact clearly"
+          },
+          {
+            "text": "Name the impact, then pause.",
+            "say": "Name the impact, then pause"
+          }
+        ],
+        "mode": "highlight",
+        "side": "center"
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "handoff",
+        "via": "office_paper",
+        "dur": 0.6,
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "impact_pause_rule",
+      "option": "document.page impact-and-pause note",
+      "alternatives": {
+        "compare.two impact and pause": {
+          "kind": "template",
+          "template": "compare.two",
+          "station": "impact_reference",
+          "join_in": {
+            "type": "cut",
+            "meaning": "into"
+          },
+          "props": {
+            "left": {
+              "header": "Impact",
+              "say": "operational impact",
+              "tone": "neutral"
+            },
+            "right": {
+              "header": "Pause",
+              "say": "then pause",
+              "tone": "neutral"
+            },
+            "mode": "columns"
+          }
+        }
+      },
+      "order_cues": [
+        "Connect the delay directly to business consequences",
+        "State operational impact clearly",
+        "Name the impact, then pause"
+      ],
+      "design": {
+        "treatment": "Shared paper becomes the work note, with a stationary pause tab. Earlier draft and review papers are muted context.",
+        "elements": [
+          {
+            "name": "impact_pause_rule",
+            "text": "Name the impact, then pause."
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "shared_goals_page becomes pocket note"
+          ],
+          "retiring": [
+            "partnership question",
+            "cast foreground"
+          ],
+          "incoming": [
+            "note wording",
+            "pause tab"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "demand_desk",
+      "subject": "A unilateral demand and acknowledgement without changed work",
+      "world": "Calendar-bay office desk",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "unilateral_demand",
+      "option": "bespoke demand slip and unchanged queue",
+      "alternatives": {
+        "classic held counterexample panels": {
+          "kind": "bespoke",
+          "station": "demand_desk",
+          "design": {
+            "treatment": "Two held states show the demand, acknowledgement and unchanged document.",
+            "why_motion": "State replacement separates acknowledgement from improvement.",
+            "elements": [
+              {
+                "name": "Jordan"
+              },
+              {
+                "name": "colleague"
+              },
+              {
+                "name": "demand",
+                "text": "Submit earlier"
+              },
+              {
+                "name": "acknowledgement"
+              },
+              {
+                "name": "document"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "submit earlier",
+                "element": "demand",
+                "action": "show instruction",
+                "motion": "reveal"
+              },
+              {
+                "t_anchor": "Jordan nods quickly just to escape",
+                "element": "acknowledgement",
+                "action": "mark acknowledgement",
+                "motion": "ink draw"
+              },
+              {
+                "t_anchor": "Did that order fix anything",
+                "element": "document",
+                "action": "remain unresolved",
+                "motion": "hold"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "desk coordinates"
+              ],
+              "retiring": [],
+              "incoming": [
+                "demand",
+                "acknowledgement"
+              ]
+            },
+            "references": [
+              "Approved b11 alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "Picture ordering Jordan to submit earlier",
+        "Jordan nods quickly just to escape",
+        "Did that order fix anything",
+        "superficial compliance"
+      ],
+      "design": {
+        "treatment": "Static neutral rigs, instruction slip and acknowledgement mark. The work document does not advance.",
+        "why_motion": "A quick acknowledgement appears, but the unresolved work remains unchanged. That distinction carries superficial compliance.",
+        "elements": [
+          {
+            "name": "Jordan",
+            "rect": [
+              1220,
+              430,
+              310,
+              470
+            ]
+          },
+          {
+            "name": "colleague",
+            "rect": [
+              480,
+              410,
+              300,
+              490
+            ]
+          },
+          {
+            "name": "unilateral_demand",
+            "rect": [
+              650,
+              220,
+              610,
+              160
+            ],
+            "text": "Submit earlier"
+          },
+          {
+            "name": "acknowledgement",
+            "rect": [
+              1280,
+              380,
+              130,
+              70
+            ]
+          },
+          {
+            "name": "unresolved_document",
+            "rect": [
+              830,
+              560,
+              320,
+              200
+            ]
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Picture ordering Jordan to submit earlier",
+            "element": "unilateral_demand",
+            "action": "arrive above unresolved document",
+            "motion": "short paper drop"
+          },
+          {
+            "t_anchor": "Jordan nods quickly just to escape",
+            "element": "acknowledgement",
+            "action": "receive one neutral acknowledgement mark",
+            "motion": "brief ink draw"
+          },
+          {
+            "t_anchor": "Did that order fix anything",
+            "element": "unresolved_document",
+            "action": "remain unchanged",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "superficial compliance",
+            "element": "unilateral_demand",
+            "action": "remain disconnected from a completed work state",
+            "motion": "hold"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "impact reference"
+          ],
+          "incoming": [
+            "calendar desk",
+            "cast",
+            "unilateral_demand",
+            "acknowledgement",
+            "unresolved_document"
+          ]
+        },
+        "references": [
+          "Approved b11 alternative",
+          "scenario.dialogue adult members"
+        ],
+        "asset_note": "No improvised nod anatomy; the acknowledgement object carries its consequence."
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "station": "planning_surface",
+      "template": "compare.two",
+      "subject": "Past-error record beside a next-action slot",
+      "world": "Shared planning surface with calendar row visible",
+      "rect": [
+        200,
+        190,
+        1200,
+        520
+      ],
+      "props": {
+        "left": {
+          "header": "Past errors",
+          "say": "Describing past errors",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Aware of failure",
+              "say": "aware of failure"
+            }
+          ]
+        },
+        "right": {
+          "header": "Replacement behaviours",
+          "say": "without replacement behaviours",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "What to do differently next time",
+              "say": "What should Jordan do differently next time"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "Show what to do instead.",
+          "say": "Show what to do instead"
+        },
+        "mode": "pairs"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "intent": "hold",
+      "accent_on": "next_action_slot",
+      "option": "compare.two past-only and next-action objects",
+      "alternatives": {
+        "document.page planning sheet": {
+          "kind": "template",
+          "template": "document.page",
+          "station": "planning_surface",
+          "props": {
+            "kind": "notes",
+            "title": "Replacement behaviours",
+            "lines": [
+              {
+                "text": "Past errors alone leave improvement uncertain.",
+                "say": "uncertain how to improve"
+              },
+              {
+                "text": "Show what to do instead.",
+                "say": "Show what to do instead"
+              }
+            ],
+            "mode": "highlight",
+            "side": "center"
+          }
+        }
+      },
+      "order_cues": [
+        "Describing past errors",
+        "without replacement behaviours",
+        "aware of failure",
+        "What should Jordan do differently next time",
+        "Show what to do instead"
+      ],
+      "design": {
+        "treatment": "The forward slot is explicitly unfilled, on a finished project sheet. No road metaphor.",
+        "elements": [
+          {
+            "name": "past_error_record",
+            "rect": [
+              240,
+              260,
+              500,
+              250
+            ]
+          },
+          {
+            "name": "next_action_slot",
+            "rect": [
+              820,
+              260,
+              520,
+              250
+            ]
+          },
+          {
+            "name": "calendar_row",
+            "rect": [
+              1290,
+              620,
+              430,
+              250
+            ]
+          },
+          {
+            "name": "planning_base",
+            "rect": [
+              180,
+              160,
+              1540,
+              720
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "demand",
+            "acknowledgement",
+            "counterexample foreground"
+          ],
+          "incoming": [
+            "planning_base",
+            "past_error_record",
+            "next_action_slot",
+            "calendar_row"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "blueprint",
+      "station": "planning_surface",
+      "blueprint": "hero.hub",
+      "subject": "A stalled vendor review and jointly agreed early flag",
+      "world": "Held planning surface, active project region on a dark ink field",
+      "rect": [
+        650,
+        150,
+        950,
+        550
+      ],
+      "props": {
+        "title": "Replacement habits",
+        "say_title": "replacement habits",
+        "hub": {
+          "label": "Workflow adjustments",
+          "say": "Work with Jordan on workflow adjustments"
+        },
+        "satellites": [
+          {
+            "label": "Vendor reviews stall",
+            "say": "When vendor reviews stall"
+          },
+          {
+            "label": "Two days early",
+            "say": "Jordan flags the bottleneck two days early"
+          }
+        ]
+      },
+      "keep": [
+        "planning_base",
+        "calendar_row"
+      ],
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "intent": "process_hold",
+      "accent_on": "early_flag",
+      "option": "hero.hub shared workflow adjustment",
+      "alternatives": {
+        "bespoke held-board slot swap": {
+          "kind": "bespoke",
+          "station": "planning_surface",
+          "design": {
+            "treatment": "Stalled review stays while an early flag fills the habit slot.",
+            "why_motion": "A cause connects into an actionable replacement habit.",
+            "elements": [
+              {
+                "name": "project"
+              },
+              {
+                "name": "stalled_review",
+                "text": "Vendor reviews stall"
+              },
+              {
+                "name": "early_flag",
+                "text": "Two days early"
+              },
+              {
+                "name": "habit_slot"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "workflow adjustments",
+                "element": "project",
+                "action": "remain scaffold",
+                "motion": "hold"
+              },
+              {
+                "t_anchor": "When vendor reviews stall",
+                "element": "stalled_review",
+                "action": "identify constraint",
+                "motion": "emphasis"
+              },
+              {
+                "t_anchor": "Jordan flags the bottleneck two days early",
+                "element": "early_flag",
+                "action": "connect into habit slot",
+                "motion": "placement and connector"
+              },
+              {
+                "t_anchor": "Co-create actionable replacement habits",
+                "element": "habit_slot",
+                "action": "hold agreement",
+                "motion": "hold"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "planning_base",
+                "calendar_row"
+              ],
+              "retiring": [
+                "comparison text"
+              ],
+              "incoming": [
+                "stalled_review",
+                "early_flag"
+              ]
+            },
+            "references": [
+              "Approved b13 alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "Work with Jordan on workflow adjustments",
+        "When vendor reviews stall",
+        "Jordan flags the bottleneck two days early",
+        "replacement habits",
+        "Collaborative planning creates actionable steps"
+      ],
+      "design": {
+        "treatment": "Render hub and satellites as physical papers. Vendor review stays stalled; the early flag is a plan, not automation.",
+        "elements": [
+          {
+            "name": "workflow_project"
+          },
+          {
+            "name": "stalled_vendor_review"
+          },
+          {
+            "name": "early_flag"
+          },
+          {
+            "name": "habit_slot"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "planning_base",
+            "calendar_row",
+            "project and next-action anchors"
+          ],
+          "travelling": [
+            "next_action_slot becomes habit region"
+          ],
+          "retiring": [
+            "past-error comparison wording",
+            "verdict"
+          ],
+          "incoming": [
+            "workflow label",
+            "stalled review",
+            "early flag",
+            "habit title"
+          ]
+        },
+        "renderer_note": "Connectors draw into their targets. No looping signals or approval completion.",
+        "finish": {
+          "hold_s": 4,
+          "frame": "Concrete jointly agreed early-flag habit"
+        }
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "planning_surface",
+      "subject": "The agreed habit gains a next-week checkpoint",
+      "world": "Held planning surface, active calendar row",
+      "keep": [
+        "planning_base",
+        "calendar_row",
+        "early_flag"
+      ],
+      "shot": {
+        "size": "close",
+        "move": "none",
+        "focus": [
+          970,
+          450,
+          820,
+          520
+        ]
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "intent": "process_hold",
+      "accent_on": "next_week_checkpoint",
+      "option": "bespoke stepped-time calendar placement",
+      "alternatives": {
+        "hero.journey relative-time commitment": {
+          "kind": "blueprint",
+          "blueprint": "hero.journey",
+          "station": "planning_surface",
+          "props": {
+            "title": "Follow-up checkpoints",
+            "say_title": "follow-up checkpoints",
+            "waypoints": [
+              {
+                "label": "Agreed habit",
+                "say": "Good intentions still need an explicit anchor"
+              },
+              {
+                "label": "Next week",
+                "sub": "Evaluate replacement behaviours",
+                "say": "next week"
+              }
+            ],
+            "shape": "straight"
+          }
+        }
+      },
+      "order_cues": [
+        "Good intentions still need an explicit anchor",
+        "follow-up checkpoints next week",
+        "replacement behaviours in practice",
+        "Set a clear checkpoint"
+      ],
+      "design": {
+        "treatment": "A small commitment tab travels from the held habit to the fixed next-week calendar leaf. The habit itself stays in place.",
+        "why_motion": "Relative-time placement makes verification part of the agreement, without inventing a duration or delivery-relative date.",
+        "elements": [
+          {
+            "name": "held_habit",
+            "rect": [
+              1030,
+              570,
+              270,
+              140
+            ]
+          },
+          {
+            "name": "commitment_tab",
+            "rect": [
+              1170,
+              610,
+              100,
+              80
+            ]
+          },
+          {
+            "name": "next_week_checkpoint",
+            "rect": [
+              1290,
+              620,
+              430,
+              250
+            ],
+            "text": "Next week"
+          },
+          {
+            "name": "verification_label",
+            "rect": [
+              1290,
+              540,
+              430,
+              70
+            ],
+            "text": "Follow-up checkpoints"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Good intentions still need an explicit anchor",
+            "element": "held_habit",
+            "action": "remain as reference",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "Agree on explicit follow-up checkpoints next week",
+            "element": "commitment_tab",
+            "action": "travel into calendar leaf",
+            "motion": "single stepped lateral placement"
+          },
+          {
+            "t_anchor": "This evaluates replacement behaviours in practice",
+            "element": "next_week_checkpoint",
+            "action": "receive boxed verification mark",
+            "motion": "ink draw"
+          },
+          {
+            "t_anchor": "Set a clear checkpoint",
+            "element": "next_week_checkpoint",
+            "action": "hold with habit still visible",
+            "motion": "hold"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "planning_base",
+            "calendar_row",
+            "early_flag at original coordinates"
+          ],
+          "travelling": [
+            "commitment_tab from habit edge into calendar leaf"
+          ],
+          "retiring": [
+            "hub title and connectors",
+            "stalled-review foreground emphasis"
+          ],
+          "incoming": [
+            "commitment_tab",
+            "next-week text",
+            "verification label"
+          ]
+        },
+        "references": [
+          "Approved b14 stepped-time alternative",
+          "D-114 relative calendar placement"
+        ],
+        "finish": {
+          "hold_s": 4,
+          "frame": "Habit and explicit next-week checkpoint"
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "station": "planning_surface",
+      "template": "compare.two",
+      "subject": "Completed habit slip beside its verification leaf",
+      "world": "The held shared planning surface",
+      "rect": [
+        700,
+        450,
+        1040,
+        430
+      ],
+      "props": {
+        "left": {
+          "header": "Replacement habits",
+          "say": "replacement habits",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Design together",
+              "say": "Design clear replacement habits together"
+            }
+          ]
+        },
+        "right": {
+          "header": "Follow-up checkpoints",
+          "say": "follow-up checkpoints",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Verify",
+              "say": "then verify"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "keep": [
+        "planning_base",
+        "calendar_row",
+        "early_flag",
+        "next_week_checkpoint"
+      ],
+      "shot": {
+        "size": "overhead",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "habit_checkpoint_pair",
+      "option": "compare.two agreed habit and verification anchor",
+      "alternatives": {
+        "document.page completed agreement": {
+          "kind": "template",
+          "template": "document.page",
+          "station": "planning_surface",
+          "props": {
+            "kind": "notes",
+            "title": "Pocket rule",
+            "lines": [
+              {
+                "text": "Design clear replacement habits together.",
+                "say": "Design clear replacement habits together"
+              },
+              {
+                "text": "Anchor that habit to follow-up checkpoints.",
+                "say": "Anchor that habit to follow-up checkpoints"
+              },
+              {
+                "text": "Agree on habits, then verify.",
+                "say": "Agree on habits, then verify"
+              }
+            ],
+            "mode": "highlight",
+            "side": "center"
+          }
+        }
+      },
+      "order_cues": [
+        "replacement habits",
+        "Design clear replacement habits together",
+        "follow-up checkpoints",
+        "then verify"
+      ],
+      "design": {
+        "treatment": "Compare the actual finished habit and checkpoint, not newly entering duplicate cards.",
+        "elements": [
+          {
+            "name": "habit_checkpoint_pair"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "planning_base",
+            "early flag paper",
+            "next-week calendar leaf"
+          ],
+          "travelling": [],
+          "retiring": [
+            "commitment travel cue",
+            "verification annotation duplicates"
+          ],
+          "incoming": [
+            "calm comparison labels on held objects"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "template",
+      "station": "learner_desk",
+      "template": "document.page",
+      "subject": "Missed-milestone scenario and neutral option placeholders",
+      "world": "Learner's real office desk",
+      "rect": [
+        230,
+        140,
+        480,
+        620
+      ],
+      "props": {
+        "kind": "notes",
+        "title": "Missed milestone",
+        "lines": [
+          {
+            "text": "Jordan misses another milestone.",
+            "say": "Imagine Jordan misses another milestone"
+          },
+          {
+            "text": "Evaluate these three options carefully.",
+            "say": "Evaluate these three options carefully"
+          }
+        ],
+        "mode": "highlight",
+        "side": "left"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "intent": "hold",
+      "accent_on": "missed_milestone",
+      "option": "document.page scenario brief",
+      "alternatives": {
+        "calendar.plan relative milestone context": {
+          "kind": "template",
+          "template": "calendar.plan",
+          "station": "learner_desk",
+          "props": {
+            "title": "Missed milestone",
+            "days": [
+              {
+                "label": "Milestone"
+              },
+              {
+                "label": "Missed"
+              },
+              {
+                "label": "Discussion"
+              }
+            ],
+            "say_title": "Imagine Jordan misses another milestone"
+          }
+        }
+      },
+      "order_cues": [
+        "Imagine Jordan misses another milestone",
+        "How will you open that discussion",
+        "Evaluate these three options carefully"
+      ],
+      "design": {
+        "treatment": "Use the approved page alternative rather than fabricating calendar dates. Three blank option slots are visible below the contextual work note.",
+        "elements": [
+          {
+            "name": "missed_milestone",
+            "rect": [
+              240,
+              160,
+              450,
+              230
+            ]
+          },
+          {
+            "name": "option_sheet",
+            "rect": [
+              720,
+              170,
+              1000,
+              760
+            ]
+          },
+          {
+            "name": "option_A_slot",
+            "rect": [
+              780,
+              330,
+              880,
+              130
+            ]
+          },
+          {
+            "name": "option_B_slot",
+            "rect": [
+              780,
+              510,
+              880,
+              130
+            ]
+          },
+          {
+            "name": "option_C_slot",
+            "rect": [
+              780,
+              690,
+              880,
+              170
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "planning-surface labels and cast context"
+          ],
+          "incoming": [
+            "learner desktop",
+            "missed_milestone",
+            "option_sheet",
+            "three neutral slots"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "template",
+      "station": "learner_desk",
+      "template": "quiz.question",
+      "subject": "Three equally styled feedback responses",
+      "world": "Held option sheet on the learner's desk",
+      "rect": [
+        720,
+        170,
+        1000,
+        760
+      ],
+      "props": {
+        "question": "Which response addresses the missed milestone without defensiveness?",
+        "say_question": "Which response addresses the missed milestone without defensiveness",
+        "options": [
+          {
+            "label": "A",
+            "text": "You need to be more committed.",
+            "say": "Option A"
+          },
+          {
+            "label": "B",
+            "text": "You missed it, but your slides looked amazing.",
+            "say": "Option B"
+          },
+          {
+            "label": "C",
+            "text": "Two days late without sign-offs; review blockers, agree earlier checkpoint.",
+            "say": "Option C"
+          }
+        ],
+        "instruction": "Pause and decide."
+      },
+      "keep": [
+        "learner desktop",
+        "missed_milestone",
+        "option_sheet"
+      ],
+      "shot": {
+        "size": "pov",
+        "move": "push",
+        "focus": [
+          720,
+          170,
+          1000,
+          760
+        ]
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "intent": "hold",
+      "accent_on": "option_sheet",
+      "accent_state": "withheld",
+      "option": "quiz.question office option sheet",
+      "alternatives": {
+        "document.page neutral dialogue options": {
+          "kind": "template",
+          "template": "document.page",
+          "station": "learner_desk",
+          "props": {
+            "kind": "notes",
+            "title": "Pause and decide",
+            "lines": [
+              {
+                "text": "A. You need to be more committed.",
+                "say": "Option A"
+              },
+              {
+                "text": "B. You missed it,",
+                "say": "Option B"
+              },
+              {
+                "text": "but your slides looked amazing.",
+                "say": "your slides looked amazing"
+              },
+              {
+                "text": "C. The milestone arrived two days late",
+                "say": "Option C"
+              },
+              {
+                "text": "without sign-offs; let us review blockers,",
+                "say": "without sign-offs"
+              },
+              {
+                "text": "and agree on an earlier checkpoint.",
+                "say": "agree on an earlier checkpoint"
+              }
+            ],
+            "mode": "static",
+            "side": "center"
+          }
+        }
+      },
+      "order_cues": [
+        "Which response addresses the missed milestone without defensiveness",
+        "Option A",
+        "Option B",
+        "Option C",
+        "Pause the video and decide"
+      ],
+      "design": {
+        "treatment": "Three peer paper slips stay in fixed slots. C is a compact core-phrasing display, not a quotation; narration supplies the complete line.",
+        "elements": [
+          {
+            "name": "option_A",
+            "rect": [
+              780,
+              330,
+              880,
+              130
+            ]
+          },
+          {
+            "name": "option_B",
+            "rect": [
+              780,
+              510,
+              880,
+              130
+            ]
+          },
+          {
+            "name": "option_C",
+            "rect": [
+              780,
+              690,
+              880,
+              170
+            ]
+          },
+          {
+            "name": "pause_tab",
+            "rect": [
+              950,
+              920,
+              530,
+              70
+            ],
+            "text": "Pause and decide"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "learner desktop",
+            "milestone context",
+            "option_sheet and all three slot coordinates"
+          ],
+          "travelling": [],
+          "retiring": [
+            "scenario-brief explanatory line"
+          ],
+          "incoming": [
+            "option wording A, B and C on their spoken cues",
+            "stationary pause instruction"
+          ]
+        },
+        "camera_timing": "One gentle early push from calendar context to the same sheet, then hold. Never reorder or resize one answer independently.",
+        "renderer_note": "Omit pause_after_s. No approved countdown duration exists. If omission still renders a ring, use the retained document.page alternative before compose.",
+        "finish": "All choices remain legible, neutral and equally weighted."
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "learner_desk",
+      "subject": "Option C revealed, with B's compliment dilution explained",
+      "world": "Held office option sheet",
+      "keep": [
+        "learner desktop",
+        "option_sheet",
+        "option_A",
+        "option_B",
+        "option_C"
+      ],
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "intent": "process_hold",
+      "accent_on": "option_C",
+      "option": "bespoke held-slot answer reveal",
+      "alternatives": {
+        "bespoke full-sheet ink-mark reveal": {
+          "kind": "bespoke",
+          "station": "learner_desk",
+          "design": {
+            "treatment": "All options remain on one page; boxed ink marks reveal the answer.",
+            "why_motion": "Timed marks distinguish answer, temptation and return.",
+            "elements": [
+              {
+                "name": "option_A"
+              },
+              {
+                "name": "option_B"
+              },
+              {
+                "name": "option_C"
+              },
+              {
+                "name": "answer_mark"
+              },
+              {
+                "name": "compliment_bracket"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "Option C is the clear answer",
+                "element": "answer_mark",
+                "action": "mark C",
+                "motion": "ink draw"
+              },
+              {
+                "t_anchor": "Superficial compliments feel polite",
+                "element": "compliment_bracket",
+                "action": "identify B's praise",
+                "motion": "bracket draw"
+              },
+              {
+                "t_anchor": "Choose Option C every time",
+                "element": "option_C",
+                "action": "receive final emphasis",
+                "motion": "underline"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "option sheet and option coordinates"
+              ],
+              "retiring": [
+                "pause instruction"
+              ],
+              "incoming": [
+                "answer mark",
+                "compliment bracket"
+              ]
+            },
+            "references": [
+              "Approved b18 alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "Option C is the clear answer",
+        "observable actions",
+        "Why is Option B tempting",
+        "Superficial compliments feel polite",
+        "Choose Option C every time"
+      ],
+      "design": {
+        "treatment": "Mark C, dim A and B without deleting them, then discuss B's tempting praise before returning to C.",
+        "why_motion": "Word-linked changes reveal the correct choice and the reason a polite-looking alternative fails.",
+        "elements": [
+          {
+            "name": "option_A",
+            "rect": [
+              780,
+              330,
+              880,
+              130
+            ]
+          },
+          {
+            "name": "option_B",
+            "rect": [
+              780,
+              510,
+              880,
+              130
+            ]
+          },
+          {
+            "name": "option_C",
+            "rect": [
+              780,
+              690,
+              880,
+              170
+            ]
+          },
+          {
+            "name": "boxed_answer_mark",
+            "rect": [
+              1665,
+              740,
+              65,
+              65
+            ]
+          },
+          {
+            "name": "compliment_bracket",
+            "rect": [
+              990,
+              560,
+              540,
+              60
+            ],
+            "text": "Superficial compliments"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Option C is the clear answer",
+            "element": "boxed_answer_mark",
+            "action": "mark C while A and B remain readable",
+            "motion": "boxed ink-check draw"
+          },
+          {
+            "t_anchor": "It states observable actions directly",
+            "element": "option_C",
+            "action": "underline its factual clause",
+            "motion": "rust underline"
+          },
+          {
+            "t_anchor": "Why is Option B tempting",
+            "element": "option_B",
+            "action": "become the spoken focus, not a second correct choice",
+            "motion": "accent transfers from C to B"
+          },
+          {
+            "t_anchor": "Superficial compliments feel polite",
+            "element": "compliment_bracket",
+            "action": "identify B's praise phrase",
+            "motion": "bracket draw"
+          },
+          {
+            "t_anchor": "Choose Option C every time",
+            "element": "option_C",
+            "action": "regain the single accent",
+            "motion": "accent transfer, then hold"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "learner desktop",
+            "option_sheet",
+            "all option wording and coordinates"
+          ],
+          "travelling": [
+            "single accent between discussed phrases"
+          ],
+          "retiring": [
+            "pause_tab"
+          ],
+          "incoming": [
+            "boxed_answer_mark",
+            "compliment_bracket"
+          ]
+        },
+        "references": [
+          "Approved b18",
+          "D-114 held-slot answer reveal",
+          "quiz.question held option positions"
+        ],
+        "finish": {
+          "hold_s": 3,
+          "frame": "C marked; A and B retained without red/green scoring"
+        }
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "template",
+      "station": "partnership_table",
+      "template": "scenario.dialogue",
+      "subject": "Partnership around a task artifact and perspective question",
+      "world": "Adjacent office conversation table",
+      "rect": [
+        300,
+        170,
+        1320,
+        740
+      ],
+      "props": {
+        "left": {
+          "member": "woman",
+          "emotion": "neutral"
+        },
+        "right": {
+          "member": "man",
+          "name": "Jordan",
+          "emotion": "neutral"
+        },
+        "lines": [
+          {
+            "who": "left",
+            "text": "Can you spot that difference?",
+            "say": "Can you spot that difference",
+            "emotion": "neutral"
+          }
+        ],
+        "setting": "meeting",
+        "caption": "Perspective sharing",
+        "say_caption": "perspective sharing"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "intent": "hold",
+      "accent_on": "perspective_question",
+      "option": "scenario.dialogue settled partnership",
+      "alternatives": {
+        "compare.two character and work exchanges": {
+          "kind": "template",
+          "template": "compare.two",
+          "station": "partnership_table",
+          "props": {
+            "left": {
+              "header": "Character critique",
+              "say": "character critique",
+              "tone": "neutral"
+            },
+            "right": {
+              "header": "Perspective sharing",
+              "say": "perspective sharing",
+              "tone": "neutral",
+              "items": [
+                {
+                  "text": "Task performance",
+                  "say": "task performance"
+                }
+              ]
+            },
+            "mode": "columns"
+          }
+        }
+      },
+      "order_cues": [
+        "task performance",
+        "character critique",
+        "perspective sharing",
+        "Can you spot that difference",
+        "The conversation became a partnership"
+      ],
+      "design": {
+        "treatment": "Show a settled partnership. The earlier open question is a work-note callback, not a newly spoken Jordan line. Avoid a decorative scale.",
+        "elements": [
+          {
+            "name": "task_artifact",
+            "rect": [
+              760,
+              520,
+              420,
+              230
+            ]
+          },
+          {
+            "name": "perspective_question",
+            "text": "What blocked your progress on this deliverable?"
+          },
+          {
+            "name": "discarded_critique",
+            "rect": [
+              260,
+              760,
+              260,
+              100
+            ],
+            "text": "Careless"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "quiz answer marks and option foreground"
+          ],
+          "incoming": [
+            "partnership table",
+            "cast",
+            "task_artifact",
+            "perspective_question callback",
+            "discarded_critique"
+          ]
+        },
+        "renderer_note": "The narrator's Can you spot that difference is not presented as an invented exchange between colleagues; use it as an external narration slip above the tableau."
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "workflow_preview",
+      "subject": "Choice paper becoming a complete-conversation rail",
+      "world": "Same office desktop with a physical planning page",
+      "shot": {
+        "size": "overhead",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "via": "office_paper",
+        "dur": 0.7,
+        "meaning": "into"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "accent_on": "full_conversation_heading",
+      "option": "bespoke paper shape morph with page join",
+      "alternatives": {
+        "bespoke handoff to workflow page": {
+          "kind": "bespoke",
+          "station": "workflow_preview",
+          "join_in": {
+            "type": "handoff",
+            "via": "office_paper",
+            "dur": 0.6,
+            "meaning": "into"
+          },
+          "design": {
+            "treatment": "Choice sheet is handed onto a settled conversation page.",
+            "why_motion": "The handoff changes scope from isolated phrases to a complete workflow.",
+            "elements": [
+              {
+                "name": "choice_sheet"
+              },
+              {
+                "name": "conversation_page"
+              },
+              {
+                "name": "rail"
+              },
+              {
+                "name": "heading",
+                "text": "Full conversation"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "isolated phrases",
+                "element": "choice_sheet",
+                "action": "remain reference",
+                "motion": "hold"
+              },
+              {
+                "t_anchor": "full conversation from scratch",
+                "element": "conversation_page",
+                "action": "receive the choice paper",
+                "motion": "handoff"
+              },
+              {
+                "t_anchor": "complete workflow unfold",
+                "element": "rail",
+                "action": "become visible as empty physical slots",
+                "motion": "paper reveal"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "desktop material"
+              ],
+              "travelling": [
+                "choice paper"
+              ],
+              "retiring": [
+                "choice emphasis"
+              ],
+              "incoming": [
+                "conversation page",
+                "rail"
+              ]
+            },
+            "references": [
+              "Approved b20 handoff alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "isolated phrases",
+        "full conversation from scratch",
+        "complete workflow unfold"
+      ],
+      "design": {
+        "treatment": "Fold the evaluated speech paper into a shared planning page. A shallow rail becomes visible, with blank slots rather than an invented outcome.",
+        "why_motion": "Material transformation makes the change from phrase evaluation to a full conversation tangible.",
+        "elements": [
+          {
+            "name": "evaluated_sheet",
+            "rect": [
+              500,
+              230,
+              920,
+              650
+            ]
+          },
+          {
+            "name": "conversation_page",
+            "rect": [
+              360,
+              230,
+              1200,
+              650
+            ]
+          },
+          {
+            "name": "conversation_rail",
+            "rect": [
+              440,
+              570,
+              1040,
+              230
+            ]
+          },
+          {
+            "name": "full_conversation_heading",
+            "rect": [
+              450,
+              300,
+              1000,
+              120
+            ],
+            "text": "Full conversation"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Evaluating isolated phrases is a great start",
+            "element": "evaluated_sheet",
+            "action": "retain a muted reference to the chosen phrase",
+            "motion": "settled after page join"
+          },
+          {
+            "t_anchor": "Now let us run the full conversation from scratch",
+            "element": "conversation_page",
+            "action": "open around the shared paper",
+            "motion": "one restrained paper fold"
+          },
+          {
+            "t_anchor": "Watch the complete workflow unfold",
+            "element": "conversation_rail",
+            "action": "reveal complete planning scaffold with empty slots",
+            "motion": "unfold, then hold"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "office paper from evaluated phrasing into conversation page"
+          ],
+          "retiring": [
+            "partnership-table question and cast foreground"
+          ],
+          "incoming": [
+            "conversation_page",
+            "conversation_rail",
+            "full_conversation_heading"
+          ]
+        },
+        "references": [
+          "Approved b20",
+          "D-114 paper shape morph",
+          "office_paper join"
+        ],
+        "finish": {
+          "hold_s": 2,
+          "frame": "Complete office planning surface, no fictional outcome"
+        }
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "meeting_table",
+      "subject": "Jordan and the colleague begin a meeting around the delayed onboarding schedule",
+      "world": "Shared office meeting table with fixed paper, screen, habit and calendar regions",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "accent_on": "onboarding_schedule",
+      "option": "bespoke neutral-rig seating tableau",
+      "alternatives": {
+        "classic held meeting establishment": {
+          "kind": "bespoke",
+          "station": "meeting_table",
+          "design": {
+            "treatment": "A held meeting tableau establishes the schedule and four physical slots.",
+            "why_motion": "A restrained paper reveal establishes the work surface, not a diagnosis.",
+            "elements": [
+              {
+                "name": "Jordan"
+              },
+              {
+                "name": "colleague"
+              },
+              {
+                "name": "schedule",
+                "text": "Onboarding schedule"
+              },
+              {
+                "name": "conversation_slots"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "across a shared meeting table",
+                "element": "Jordan and colleague",
+                "action": "remain in settled meeting positions",
+                "motion": "hold"
+              },
+              {
+                "t_anchor": "project onboarding schedule is delayed again",
+                "element": "schedule",
+                "action": "become focal",
+                "motion": "underline"
+              },
+              {
+                "t_anchor": "four moves",
+                "element": "conversation_slots",
+                "action": "become visible",
+                "motion": "paper reveal"
+              }
+            ],
+            "continuity": {
+              "held": [],
+              "retiring": [
+                "preview wording"
+              ],
+              "incoming": [
+                "table",
+                "cast",
+                "schedule",
+                "slots"
+              ]
+            },
+            "references": [
+              "Approved b21 alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "You sit down with Jordan",
+        "across a shared meeting table",
+        "project onboarding schedule is delayed again",
+        "Step through the four moves"
+      ],
+      "design": {
+        "treatment": "Establish two neutral adult catalogue rigs beside the shared table. The schedule settles into the centre; blank physical rail slots are visible without naming unspoken steps.",
+        "why_motion": "This is staging, not reasoning. The seating context and schedule placement establish the complete worked example.",
+        "elements": [
+          {
+            "name": "Jordan",
+            "rect": [
+              1260,
+              270,
+              310,
+              420
+            ]
+          },
+          {
+            "name": "colleague",
+            "rect": [
+              300,
+              270,
+              310,
+              420
+            ]
+          },
+          {
+            "name": "onboarding_schedule",
+            "rect": [
+              470,
+              460,
+              460,
+              260
+            ],
+            "text": "Onboarding schedule"
+          },
+          {
+            "name": "conversation_slots",
+            "rect": [
+              470,
+              770,
+              1160,
+              100
+            ]
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "You sit down with Jordan",
+            "element": "Jordan and colleague",
+            "action": "establish neutral meeting positions",
+            "motion": "settled at cut, no invented seated-pose animation"
+          },
+          {
+            "t_anchor": "The project onboarding schedule is delayed again",
+            "element": "onboarding_schedule",
+            "action": "settle into shared centre",
+            "motion": "short paper placement"
+          },
+          {
+            "t_anchor": "Step through the four moves",
+            "element": "conversation_slots",
+            "action": "reveal four unlabelled shallow slots as one scaffold",
+            "motion": "paper-edge unmask"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "workflow-preview heading"
+          ],
+          "incoming": [
+            "meeting table",
+            "cast",
+            "onboarding_schedule",
+            "conversation_slots",
+            "blank habit and calendar regions"
+          ]
+        },
+        "references": [
+          "Approved b21 designed-rig alternative",
+          "scenario.dialogue adult members",
+          "habit_rail"
+        ],
+        "asset_note": "No unverified seating transition or anatomical gesture."
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "template",
+      "station": "meeting_table",
+      "template": "document.page",
+      "subject": "Two-days-late schedule evidence and postponed orientation",
+      "world": "Held shared meeting table, active schedule-page region",
+      "rect": [
+        400,
+        250,
+        620,
+        580
+      ],
+      "props": {
+        "kind": "notes",
+        "title": "Onboarding schedule",
+        "lines": [
+          {
+            "text": "Arrived two days after our milestone.",
+            "say": "The onboarding schedule arrived two days after our milestone"
+          },
+          {
+            "text": "Training team postponed orientation.",
+            "say": "That forced our training team to postpone orientation"
+          },
+          {
+            "text": "Observable actions and operational impact.",
+            "say": "observable actions and operational impact"
+          }
+        ],
+        "mode": "highlight",
+        "side": "left"
+      },
+      "keep": [
+        "meeting table",
+        "cast",
+        "onboarding_schedule",
+        "conversation_slots"
+      ],
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "intent": "process_hold",
+      "accent_on": "schedule_evidence",
+      "option": "document.page annotated onboarding schedule",
+      "alternatives": {
+        "process.flow evidence rail": {
+          "kind": "template",
+          "template": "process.flow",
+          "station": "meeting_table",
+          "props": {
+            "title": "Observable actions and operational impact",
+            "steps": [
+              {
+                "label": "Onboarding schedule",
+                "say": "The onboarding schedule"
+              },
+              {
+                "label": "Two days late",
+                "say": "two days after our milestone"
+              },
+              {
+                "label": "Orientation postponed",
+                "say": "postpone orientation"
+              }
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "observable actions and operational impact",
+        "The onboarding schedule arrived two days after our milestone",
+        "That forced our training team to postpone orientation",
+        "Observable actions prevent instant resentment"
+      ],
+      "design": {
+        "treatment": "Evidence and consequence occupy the same schedule page. Calm emphasis moves from relative-time stamp to postponed orientation; never add actual dates.",
+        "elements": [
+          {
+            "name": "schedule_evidence",
+            "rect": [
+              470,
+              460,
+              460,
+              260
+            ]
+          },
+          {
+            "name": "orientation_consequence",
+            "rect": [
+              480,
+              660,
+              430,
+              100
+            ]
+          }
+        ],
+        "continuity": {
+          "held": [
+            "meeting table",
+            "cast",
+            "schedule paper anchor",
+            "conversation slots",
+            "blank habit and calendar regions"
+          ],
+          "travelling": [],
+          "retiring": [
+            "b21 generic delayed wording"
+          ],
+          "incoming": [
+            "two-days-late evidence",
+            "orientation consequence",
+            "action/impact labels"
+          ]
+        },
+        "finish": {
+          "hold_s": 4,
+          "frame": "Complete evidence and operational consequence"
+        }
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "station": "meeting_table",
+      "subject": "Three stuck vendor approvals revealed as Jordan's constraints",
+      "world": "Held meeting table, active dependency-screen region",
+      "keep": [
+        "meeting table",
+        "cast",
+        "onboarding_schedule",
+        "conversation_slots"
+      ],
+      "shot": {
+        "size": "close",
+        "move": "none",
+        "focus": [
+          940,
+          160,
+          760,
+          660
+        ]
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "intent": "process_hold",
+      "accent_on": "vendor_approval_cluster",
+      "option": "bespoke approval tokens on the held schedule",
+      "alternatives": {
+        "classic held dependency panels": {
+          "kind": "bespoke",
+          "station": "meeting_table",
+          "design": {
+            "treatment": "Three blocked papers are revealed beside a shared-goal note, in two settled states.",
+            "why_motion": "A state swap adds disclosed constraints without implying approval.",
+            "elements": [
+              {
+                "name": "approval_1"
+              },
+              {
+                "name": "approval_2"
+              },
+              {
+                "name": "approval_3"
+              },
+              {
+                "name": "shared_goal"
+              },
+              {
+                "name": "constraint_frame"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "three vendor approvals were stuck",
+                "element": "approval_1, approval_2 and approval_3",
+                "action": "appear as a blocked cluster",
+                "motion": "matched reveal"
+              },
+              {
+                "t_anchor": "collaborative problem solving",
+                "element": "constraint_frame",
+                "action": "include the cluster in shared discussion",
+                "motion": "frame redraw"
+              },
+              {
+                "t_anchor": "Shared goals",
+                "element": "shared_goal",
+                "action": "become focal",
+                "motion": "underline"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "meeting table",
+                "schedule"
+              ],
+              "retiring": [
+                "evidence emphasis"
+              ],
+              "incoming": [
+                "three approvals",
+                "shared goal"
+              ]
+            },
+            "references": [
+              "Approved b23 object alternative"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "ask what constraints emerged",
+        "three vendor approvals were stuck",
+        "collaborative problem solving",
+        "Can we solve this together",
+        "Shared goals"
+      ],
+      "design": {
+        "treatment": "Reveal exactly three individual approval papers in a blocked screen cluster. Both whole rigs orient toward the cluster; no pointing hand is required.",
+        "why_motion": "Newly disclosed constraints enter the shared discussion rather than being silently completed.",
+        "elements": [
+          {
+            "name": "approval_1",
+            "rect": [
+              1060,
+              300,
+              130,
+              140
+            ],
+            "text": "Vendor approval"
+          },
+          {
+            "name": "approval_2",
+            "rect": [
+              1230,
+              300,
+              130,
+              140
+            ],
+            "text": "Vendor approval"
+          },
+          {
+            "name": "approval_3",
+            "rect": [
+              1400,
+              300,
+              130,
+              140
+            ],
+            "text": "Vendor approval"
+          },
+          {
+            "name": "shared_goal",
+            "rect": [
+              1090,
+              590,
+              400,
+              150
+            ],
+            "text": "Shared goals"
+          },
+          {
+            "name": "constraint_frame",
+            "rect": [
+              1020,
+              200,
+              530,
+              320
+            ]
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next, ask what constraints emerged",
+            "element": "constraint_frame",
+            "action": "become the active work region",
+            "motion": "quiet local emphasis"
+          },
+          {
+            "t_anchor": "Jordan reveals that three vendor approvals were stuck",
+            "element": "approval_1, approval_2 and approval_3",
+            "action": "reveal the three blocked papers together",
+            "motion": "matched unmask, no approval check"
+          },
+          {
+            "t_anchor": "Now we shift to collaborative problem solving",
+            "element": "constraint_frame",
+            "action": "carry the papers into the discussion region",
+            "motion": "short grouped paper placement"
+          },
+          {
+            "t_anchor": "Can we solve this together",
+            "element": "cast",
+            "action": "orient whole neutral rigs toward the papers",
+            "motion": "small whole-rig orientation"
+          },
+          {
+            "t_anchor": "Shared goals turn friction into collaboration",
+            "element": "shared_goal",
+            "action": "receive the single accent while blockers remain visible",
+            "motion": "underline, then hold"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "meeting table",
+            "cast positions",
+            "schedule anchor",
+            "conversation slots",
+            "habit and calendar regions"
+          ],
+          "travelling": [
+            "blocked approval papers into shared discussion region"
+          ],
+          "retiring": [
+            "schedule evidence accent only"
+          ],
+          "incoming": [
+            "constraint_frame",
+            "three approval papers",
+            "shared_goal"
+          ]
+        },
+        "references": [
+          "Approved b23 bespoke alternative",
+          "D-114 data as objects",
+          "scenario.dialogue adult members"
+        ],
+        "finish": {
+          "hold_s": 3,
+          "frame": "Three blockers still blocked, now shared"
+        }
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "template",
+      "station": "meeting_table",
+      "template": "document.page",
+      "subject": "Explicit three-days-early habit and next-Tuesday checkpoint",
+      "world": "Held meeting table, active habit and calendar regions",
+      "rect": [
+        980,
+        470,
+        700,
+        400
+      ],
+      "props": {
+        "kind": "notes",
+        "title": "Agreed plan",
+        "lines": [
+          {
+            "text": "Flag vendor delays three days early.",
+            "say": "Jordan flags vendor delays three days early"
+          },
+          {
+            "text": "Follow-up checkpoint next Tuesday.",
+            "say": "schedule follow-up checkpoints next Tuesday"
+          },
+          {
+            "text": "Commitments are explicit and practical.",
+            "say": "Commitments are explicit and practical"
+          }
+        ],
+        "mode": "highlight",
+        "side": "center"
+      },
+      "keep": [
+        "meeting table",
+        "cast",
+        "onboarding_schedule",
+        "conversation_slots",
+        "approval_1",
+        "approval_2",
+        "approval_3"
+      ],
+      "shot": {
+        "size": "overhead",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "intent": "process_hold",
+      "accent_on": "habit_checkpoint_pair",
+      "option": "document.page agreed action note",
+      "alternatives": {
+        "compare.two habit and checkpoint record": {
+          "kind": "template",
+          "template": "compare.two",
+          "station": "meeting_table",
+          "props": {
+            "left": {
+              "header": "Replacement habits",
+              "say": "replacement habits",
+              "tone": "neutral",
+              "items": [
+                {
+                  "text": "Vendor delays flagged three days early",
+                  "say": "three days early"
+                }
+              ]
+            },
+            "right": {
+              "header": "Follow-up checkpoints",
+              "say": "follow-up checkpoints",
+              "tone": "neutral",
+              "items": [
+                {
+                  "text": "Next Tuesday",
+                  "say": "next Tuesday"
+                }
+              ]
+            },
+            "mode": "columns"
+          }
+        }
+      },
+      "order_cues": [
+        "Third, co-create explicit replacement habits",
+        "Jordan flags vendor delays three days early",
+        "Fourth, schedule follow-up checkpoints next Tuesday",
+        "Commitments are explicit and practical"
+      ],
+      "design": {
+        "treatment": "The approved note alternative places two distinct commitments into the existing habit and calendar slots. No invented clock time, duration or ordering between Tuesday and the milestone.",
+        "elements": [
+          {
+            "name": "habit_slip",
+            "rect": [
+              1030,
+              580,
+              270,
+              190
+            ],
+            "text": "Three days early"
+          },
+          {
+            "name": "tuesday_checkpoint",
+            "rect": [
+              1360,
+              580,
+              270,
+              190
+            ],
+            "text": "Next Tuesday"
+          },
+          {
+            "name": "habit_checkpoint_pair"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "meeting table",
+            "cast",
+            "schedule anchor",
+            "blocked approval papers, muted",
+            "conversation slots"
+          ],
+          "travelling": [],
+          "retiring": [
+            "shared-goal foreground wording",
+            "dependency emphasis"
+          ],
+          "incoming": [
+            "habit wording in existing slip",
+            "Next Tuesday on existing calendar leaf",
+            "explicit-plan labels"
+          ]
+        },
+        "finish": {
+          "hold_s": 4,
+          "frame": "Habit and checkpoint both explicit; approvals not falsely completed"
+        }
+      }
+    },
+    {
+      "beat": "b25",
+      "kind": "bespoke",
+      "station": "opening_desk",
+      "subject": "The revised release on time two weeks later",
+      "world": "Exact opening-desk callback with colleagues oriented toward the same result",
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "on_time_release",
+      "option": "bespoke callback tableau with neutral adult rigs",
+      "alternatives": {
+        "classic held returning-desk success": {
+          "kind": "bespoke",
+          "station": "opening_desk",
+          "design": {
+            "treatment": "Same opening composition, held on a warm paper field with an on-time release.",
+            "why_motion": "A word-linked stamp changes the work state; posture is a settled partnership.",
+            "elements": [
+              {
+                "name": "release",
+                "text": "On time"
+              },
+              {
+                "name": "schedule"
+              },
+              {
+                "name": "Jordan"
+              },
+              {
+                "name": "colleague"
+              },
+              {
+                "name": "time_leaf",
+                "text": "Two weeks later"
+              }
+            ],
+            "beat_sheet": [
+              {
+                "t_anchor": "Two weeks later",
+                "element": "time_leaf",
+                "action": "establish elapsed time",
+                "motion": "reveal"
+              },
+              {
+                "t_anchor": "the revised release arrives on time",
+                "element": "release",
+                "action": "receive on-time stamp",
+                "motion": "ink draw"
+              },
+              {
+                "t_anchor": "actions and solutions",
+                "element": "schedule",
+                "action": "hold resolved work state",
+                "motion": "hold"
+              }
+            ],
+            "continuity": {
+              "held": [
+                "opening desk geometry"
+              ],
+              "retiring": [
+                "meeting foreground"
+              ],
+              "incoming": [
+                "on-time state",
+                "elapsed-time leaf"
+              ]
+            },
+            "references": [
+              "Approved b25 alternative",
+              "returning_desk"
+            ]
+          }
+        }
+      },
+      "order_cues": [
+        "Two weeks later",
+        "the revised release arrives on time",
+        "The working relationship remains completely intact",
+        "actions and solutions",
+        "Results improved while trust deepened"
+      ],
+      "design": {
+        "treatment": "Match b01 desk, document and schedule coordinates. The new work state and open shared orientation provide payoff, without green scoring or an unverified handshake.",
+        "why_motion": "The stamped release and changed schedule state resolve the opening's unresolved objects. No numerical trust claim.",
+        "elements": [
+          {
+            "name": "on_time_release",
+            "rect": [
+              830,
+              560,
+              320,
+              200
+            ],
+            "text": "On time"
+          },
+          {
+            "name": "resolved_schedule",
+            "rect": [
+              1180,
+              180,
+              400,
+              240
+            ]
+          },
+          {
+            "name": "Jordan",
+            "rect": [
+              1220,
+              430,
+              310,
+              470
+            ]
+          },
+          {
+            "name": "colleague",
+            "rect": [
+              480,
+              410,
+              300,
+              490
+            ]
+          },
+          {
+            "name": "elapsed_time_leaf",
+            "rect": [
+              740,
+              90,
+              470,
+              100
+            ],
+            "text": "Two weeks later"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Two weeks later",
+            "element": "elapsed_time_leaf",
+            "action": "establish elapsed time at the callback cut",
+            "motion": "short paper reveal"
+          },
+          {
+            "t_anchor": "the revised release arrives on time",
+            "element": "on_time_release",
+            "action": "receive the on-time stamp as the field returns to light",
+            "motion": "boxed stamp draw and gentle light-grade change"
+          },
+          {
+            "t_anchor": "The working relationship remains completely intact",
+            "element": "Jordan and colleague",
+            "action": "show a settled open orientation toward the same release",
+            "motion": "whole-rig state change, no hand gesture"
+          },
+          {
+            "t_anchor": "You focused on actions and solutions",
+            "element": "resolved_schedule",
+            "action": "show the release linked to its now-resolved schedule",
+            "motion": "single ink-link completion"
+          },
+          {
+            "t_anchor": "Results improved while trust deepened",
+            "element": "on_time_release",
+            "action": "remain the focal result",
+            "motion": "hold"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "b01 desk geometry as a callback, not live persistence across elapsed time"
+          ],
+          "travelling": [],
+          "retiring": [
+            "meeting-table annotations",
+            "approval foreground",
+            "habit and checkpoint foreground"
+          ],
+          "incoming": [
+            "elapsed_time_leaf",
+            "on-time release state",
+            "resolved schedule state",
+            "open cast orientation"
+          ]
+        },
+        "references": [
+          "Approved b25 bespoke fallback",
+          "b01 master coordinates",
+          "scenario.dialogue adult members"
+        ],
+        "finish": {
+          "hold_s": 3,
+          "frame": "Opening world visibly improved; no sugarcoating graphic"
+        }
+      }
+    },
+    {
+      "beat": "b26",
+      "kind": "avatar",
+      "station": "viewer_desk",
+      "subject": "Presenter beside the complete feedback desk reference",
+      "world": "Viewer-facing office bookend with actual lesson artifacts",
+      "props": {
+        "layout": "presenter_with_desk_reference",
+        "labels": [
+          "Observable actions",
+          "Operational impact",
+          "Pause and listen",
+          "Solve together"
+        ],
+        "rule": "Frame the action, then solve together."
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "action_and_shared_plan",
+      "option": "avatar with complete desk reference",
+      "alternatives": {
+        "avatar with transfer inset": {
+          "kind": "avatar",
+          "station": "viewer_desk",
+          "props": {
+            "layout": "presenter_with_document_inset",
+            "labels": [
+              "Observable actions",
+              "Operational impact",
+              "Pause and listen",
+              "Solve together"
+            ],
+            "rule": "Frame the action, then solve together."
+          }
+        }
+      },
+      "order_cues": [
+        "Take this approach to your desk tomorrow morning",
+        "Draft observable actions",
+        "Name the operational impact",
+        "pause, and listen",
+        "Frame the action, then solve together"
+      ],
+      "design": {
+        "treatment": "Configured presenter beside the actual evidence page, consequence slip, listening tab and agreed-plan objects. Core anchors only, no full narration transcript.",
+        "elements": [
+          {
+            "name": "evidence_reference",
+            "text": "Observable actions"
+          },
+          {
+            "name": "impact_reference",
+            "text": "Operational impact"
+          },
+          {
+            "name": "listening_tab",
+            "text": "Pause and listen"
+          },
+          {
+            "name": "agreed_plan",
+            "text": "Solve together"
+          },
+          {
+            "name": "action_and_shared_plan",
+            "text": "Frame the action, then solve together."
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "Jordan outcome scene foreground",
+            "elapsed-time leaf"
+          ],
+          "incoming": [
+            "presenter",
+            "viewer desk",
+            "complete reference",
+            "final pocket rule"
+          ]
+        },
+        "finish": "Keep the complete bright reference legible. Never rename the presenter."
+      }
+    }
+  ],
+  "poster": {
+    "beat": "b25"
+  },
+  "ambient": {
+    "kind": "paper",
+    "density": 0.12,
+    "wash": 0.04
+  },
+  "fx": {
+    "background": "paper",
+    "intensity": 0.08,
+    "grain": 0.04,
+    "vignette": 0,
+    "leak": 0,
+    "enabled": true
+  },
+  "music": {
+    "enabled": false
+  },
+  "icon_objects": false,
+  "alternatives": {
+    "classic_grade": {
+      "description": "Same selected illustrated scenes, allocations and case content, with a constant warm paper grade instead of the dark b13 mechanism break.",
+      "value_script": [
+        {
+          "from": "b01",
+          "band": "light",
+          "break": false,
+          "accent": "Same discussed elements as selected plan",
+          "why": "Classic continuous warm-paper treatment"
+        }
+      ]
+    },
+    "classic_joins": {
+      "description": "Replace b05 and b10 handoffs and b20 page join with hard cuts preserving paper screen position. All chapter cuts remain hard.",
+      "overrides": {
+        "b05": {
+          "join_in": {
+            "type": "cut",
+            "meaning": "into"
+          }
+        },
+        "b10": {
+          "join_in": {
+            "type": "cut",
+            "meaning": "into"
+          }
+        },
+        "b20": {
+          "join_in": {
+            "type": "cut",
+            "meaning": "into"
+          }
+        }
+      }
+    }
+  },
+  "open_questions": [
+    "get_beat failed for every supplied beat id with AttributeError: 'str' object has no attribute 'get'. Narration and allocation use the approved user-supplied script. Exact word timings and measured durations were not verified.",
+    "No run_gate tool is exposed. submit_storyboard is the available gate route.",
+    "No external knowledge-sheet or source tools are exposed. Feedback-outcome claims are taken from the supplied script, not independently verified. Jordan's cases remain explicitly imagined.",
+    "Designed seated poses, expressive rigs, hand gestures and the presenter's appearance have not been verified. Object-led approved alternatives are selected where these assets would otherwise be required. No unverified file names are supplied.",
+    "b04 display uses the narration's Superficial compliments, correcting the supplied visual-intent typo Superal compliments. Spelling follows the approved outline's stated policy; separate editorial confirmation is not available.",
+    "b13 preserves the local two-days-early habit; b24 preserves the separate three-days-early agreement. They are not silently harmonised.",
+    "b16 and b24 select approved work-page alternatives to avoid fabricated dates or a calendar layout implying unsupported temporal relationships.",
+    "b17 provides no silent-pause duration. Countdown suppression must be verified before compose; the retained document.page neutral-choice treatment is the fallback. No answer cue is approved before b18.",
+    "Renderer compatibility for world compositing, cross-kind held objects, paper handoff and page joins, and paper texture has not been verified by a full render. All named held objects must persist without entrance; replaced wording must leave before incoming wording appears."
+  ],
+  "flags": [
+    {
+      "severity": "warning",
+      "stage": "storyboard",
+      "what": "Beat-fetch tool failed for all beats; exact timings unavailable.",
+      "fix_route": "Use approved supplied narration anchors, then verify word timings when the beat tool is repaired."
+    },
+    {
+      "severity": "warning",
+      "stage": "storyboard",
+      "what": "Character pose assets and countdown suppression are unverified.",
+      "fix_route": "Use the selected object-led alternatives and verify the neutral quiz renderer before compose."
+    }
+  ]
+}

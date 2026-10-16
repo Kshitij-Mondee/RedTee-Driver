@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "video",
+  "description": "One whole video, seen at low frame rate together with its shot records and the code's measurements. Times are VIDEO seconds. Every claim cites evidence: shot ids or times that exist.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["video_id", "style_family", "structure", "opening", "ending", "visual_system", "colour_script", "transition_grammar", "camera_habits", "pacing", "explanation_patterns", "best_moments", "steal", "do_not_steal", "corporate_translation", "confidence"],
+  "properties": {
+    "video_id": {"type": "string"},
+    "style_family": {
+      "type": "object", "additionalProperties": false,
+      "required": ["label", "descriptors", "closest_loom_pack"],
+      "properties": {
+        "label": {"type": "string", "description": "A short neutral name for the drawing language (e.g. 'textured flat, warm paper, thin dark outlines'). No artist names."},
+        "descriptors": {"type": "array", "maxItems": 10, "items": {"type": "string"}, "description": "Short tags another video of the same family would share."},
+        "closest_loom_pack": {"type": "string", "enum": ["flat-cosmos", "glow-flat", "story-cartoon", "editorial-paper", "chalk-lab", "line-art", "corporate-clean", "engineering", "blueprint", "presenter-pop", "cinematic-noir", "cinematic-dawn", "dark-technical", "whiteboard", "none_close"]}
+      }
+    },
+    "structure": {
+      "type": "array", "maxItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["t0", "t1", "function", "summary", "shots"],
+        "properties": {
+          "t0": {"type": "number"}, "t1": {"type": "number"},
+          "function": {"type": "string", "enum": ["hook", "question", "context", "define", "explain_mechanism", "example", "analogy", "contrast", "data", "story", "turn", "recap", "call_to_action", "credits"]},
+          "summary": {"type": "string", "description": "What this segment does for the learner, in one sentence (no retelling of facts)."},
+          "shots": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "opening": {
+      "type": "object", "additionalProperties": false,
+      "required": ["first_image", "seconds_to_first_question", "hook_device", "why_it_works"],
+      "properties": {
+        "first_image": {"type": "string"},
+        "seconds_to_first_question": {"type": "number", "description": "When the core question or tension is first clear (video seconds), -1 if never."},
+        "hook_device": {"type": "string", "enum": ["mystery", "paradox", "story_in_media_res", "relatable_scene", "striking_image", "direct_question", "surprising_fact", "other"]},
+        "why_it_works": {"type": "string"}
+      }
+    },
+    "ending": {
+      "type": "object", "additionalProperties": false,
+      "required": ["device", "returns_to_opening", "last_image", "credits_s"],
+      "properties": {
+        "device": {"type": "string", "enum": ["recap", "callback", "open_question", "zoom_out", "quiet_image", "call_to_action", "abrupt", "other"]},
+        "returns_to_opening": {"type": "boolean"},
+        "last_image": {"type": "string"},
+        "credits_s": {"type": "number", "description": "Seconds of credits or end card."}
+      }
+    },
+    "visual_system": {
+      "type": "object", "additionalProperties": false,
+      "required": ["recurring_motifs", "character_roster", "world_consistency", "density", "text_use", "rules_the_artist_follows"],
+      "properties": {
+        "recurring_motifs": {"type": "array", "maxItems": 8, "items": {"type": "object", "additionalProperties": false, "required": ["motif", "meaning", "shots"], "properties": {"motif": {"type": "string"}, "meaning": {"type": "string"}, "shots": {"type": "array", "items": {"type": "string"}}}}},
+        "character_roster": {"type": "array", "maxItems": 8, "items": {"type": "object", "additionalProperties": false, "required": ["role", "design", "shots"], "properties": {"role": {"type": "string"}, "design": {"type": "string"}, "shots": {"type": "array", "items": {"type": "string"}}}}},
+        "world_consistency": {"type": "string", "enum": ["one_world", "few_worlds_linked", "many_unlinked"]},
+        "density": {"type": "string", "enum": ["sparse", "balanced", "dense", "varies_by_segment"]},
+        "text_use": {"type": "string", "enum": ["none", "rare_labels", "labels_and_numbers", "frequent", "text_led"]},
+        "rules_the_artist_follows": {"type": "array", "maxItems": 10, "items": {"type": "string"}, "description": "Rules you can infer from the whole film (e.g. 'one accent colour, only on the thing being explained'). Each must be visible in at least 3 shots."}
+      }
+    },
+    "colour_script": {
+      "type": "array", "maxItems": 10,
+      "items": {"type": "object", "additionalProperties": false, "required": ["t0", "t1", "mood", "dominant", "why"], "properties": {"t0": {"type": "number"}, "t1": {"type": "number"}, "mood": {"type": "string"}, "dominant": {"type": "array", "maxItems": 4, "items": {"type": "string"}, "description": "Colour names; the code holds the hex values."}, "why": {"type": "string", "description": "How the colour change follows the content."}}}
+    },
+    "transition_grammar": {
+      "type": "object", "additionalProperties": false,
+      "required": ["dominant", "signature_moves", "how_scenes_link"],
+      "properties": {
+        "dominant": {"type": "array", "maxItems": 4, "items": {"type": "string"}},
+        "signature_moves": {"type": "array", "maxItems": 6, "items": {"type": "object", "additionalProperties": false, "required": ["move", "example_shot", "why"], "properties": {"move": {"type": "string"}, "example_shot": {"type": "string"}, "why": {"type": "string"}}}},
+        "how_scenes_link": {"type": "string"}
+      }
+    },
+    "camera_habits": {"type": "string"},
+    "pacing": {
+      "type": "object", "additionalProperties": false,
+      "required": ["curve", "longest_still_s", "where_it_slows", "where_it_speeds"],
+      "properties": {
+        "curve": {"type": "string", "description": "How the rhythm changes across the film."},
+        "longest_still_s": {"type": "number"},
+        "where_it_slows": {"type": "string"},
+        "where_it_speeds": {"type": "string"}
+      }
+    },
+    "explanation_patterns": {
+      "type": "array", "maxItems": 8,
+      "items": {"type": "object", "additionalProperties": false, "required": ["pattern", "concept_kind", "device", "shots"], "properties": {"pattern": {"type": "string", "description": "A general recipe: how an abstract idea becomes a picture here."}, "concept_kind": {"type": "string", "enum": ["process", "cause_effect", "scale", "comparison", "history", "structure", "quantity", "feeling", "rule", "other"]}, "device": {"type": "string", "enum": ["personification", "metaphor_world", "cutaway_diagram", "zoom_scale", "timeline", "character_story", "map", "chart", "transformation", "split_comparison", "other"]}, "shots": {"type": "array", "items": {"type": "string"}}}}
+    },
+    "best_moments": {
+      "type": "array", "maxItems": 6,
+      "items": {"type": "object", "additionalProperties": false, "required": ["t0", "t1", "what", "why_it_is_good", "technique"], "properties": {"t0": {"type": "number"}, "t1": {"type": "number"}, "what": {"type": "string"}, "why_it_is_good": {"type": "string"}, "technique": {"type": "string"}}}
+    },
+    "steal": {"type": "array", "maxItems": 8, "items": {"type": "string"}, "description": "Techniques worth reusing in OTHER explainers, each concrete enough to build."},
+    "do_not_steal": {"type": "array", "maxItems": 5, "items": {"type": "string"}, "description": "Things specific to this film or its artist that would look like copying, or whose TONE would not suit employees (juvenile gags). Never a style as such."},
+    "corporate_translation": {"type": "array", "maxItems": 5, "items": {"type": "string"}, "description": "How a technique here would be used in a video for a client's employees, keeping its own style and executing it to a professional standard (not converting it to corporate flat)."},
+    "confidence": {"type": "object", "additionalProperties": false, "required": ["overall", "unsure_about"], "properties": {"overall": {"type": "string", "enum": ["high", "medium", "low"]}, "unsure_about": {"type": "array", "maxItems": 6, "items": {"type": "string"}}}}
+  }
+}

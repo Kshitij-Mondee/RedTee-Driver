@@ -1,0 +1,39 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "kit_submission",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "source"
+ ],
+ "properties": {
+  "source": {
+   "type": "string",
+   "minLength": 80,
+   "description": "the complete scenes/_kit.js: starts with `Loom.lesson = Loom.lesson || {};` and defines every declared part as Loom.lesson.<id> = function (ctx, parent, opts) { ... return handle; }"
+  },
+  "parts": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "the part ids you defined"
+  },
+  "api": {
+   "type": "string",
+   "description": "one short paragraph per part for the scene workers: its options, the handle it returns (elements, setState(name, t), sub-parts), its natural size"
+  },
+  "verified": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "unverified": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

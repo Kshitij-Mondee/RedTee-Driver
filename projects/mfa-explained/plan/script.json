@@ -1,0 +1,693 @@
+{
+ "title": "Nothing to hand over: MFA and passkeys",
+ "wpm_target": 140,
+ "sections": [
+  {
+   "id": "intro",
+   "title": "Password, then code",
+   "role": "hook"
+  },
+  {
+   "id": "sec1",
+   "title": "What a factor adds"
+  },
+  {
+   "id": "sec2",
+   "title": "The relay"
+  },
+  {
+   "id": "sec3",
+   "title": "Three rules"
+  },
+  {
+   "id": "outro",
+   "title": "Nothing to hand over",
+   "role": "payoff"
+  }
+ ],
+ "beats": [
+  {
+   "id": "b01",
+   "section": "intro",
+   "job": "hook",
+   "delivery": "calm",
+   "narration": [
+    "Say you type your password.",
+    "The site asks for a code from your phone.",
+    "You are in."
+   ],
+   "on_screen": [
+    "password",
+    "code"
+   ],
+   "visual_intent": "the exchange that holds for the whole lesson: a laptop on the left, the site as a door on the right, one line between them. The password token travels the line on 'password'; a code token rises from a phone beside the laptop on 'code' and follows it; the door opens",
+   "change_over_time": true,
+   "animate_score": 0.7,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the everyday sign-in is a generic illustration",
+     "hypothetical": true
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b02",
+   "section": "intro",
+   "job": "hook",
+   "delivery": "curious",
+   "narration": [
+    "That second step stops a lot.",
+    "Not everything.",
+    "So what gets through?"
+   ],
+   "on_screen": [
+    "what gets through?"
+   ],
+   "visual_intent": "the exchange holds still, door open; the line between laptop and door brightens as the one thing in question, everything else dims",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a second factor stops most account compromise",
+     "fact": "F5"
+    },
+    {
+     "claim": "a second factor does not stop every attack",
+     "fact": "F9"
+    }
+   ],
+   "pause_after_s": 1.0
+  },
+  {
+   "id": "b03",
+   "section": "sec1",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "A password is something you know.",
+    "Anyone who knows it,",
+    "on any device,",
+    "looks like you."
+   ],
+   "on_screen": [
+    "something you know",
+    "any device"
+   ],
+   "visual_intent": "a magnifier on the password token as it sits on the line: only a row of characters, nothing tying it to this laptop; a second, distant laptop fades in at the frame edge on 'any device'",
+   "change_over_time": false,
+   "animate_score": 0.4,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a password is something you know",
+     "fact": "F1"
+    },
+    {
+     "claim": "anyone who knows the password can use it from any device and the site cannot tell",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b04",
+   "section": "sec1",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "Run one.",
+    "Say it leaked elsewhere.",
+    "A bot replays it.",
+    "The door opens."
+   ],
+   "on_screen": [
+    "run one",
+    "password only"
+   ],
+   "visual_intent": "a copy of the password token peels off and travels from the distant laptop along a second line to the same door; the door opens for the copy exactly as it did for you",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the leak and the replay are an invented example",
+     "hypothetical": true
+    },
+    {
+     "claim": "a stolen password works for whoever types it",
+     "fact": "F2"
+    },
+    {
+     "claim": "bots replaying leaked passwords are the common case Google reports",
+     "fact": "F3"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b05",
+   "section": "sec1",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "MFA asks for two different kinds of proof.",
+    "Something you know,",
+    "something you have, like your phone,",
+    "or something you are."
+   ],
+   "on_screen": [
+    "MFA",
+    "know",
+    "have",
+    "are"
+   ],
+   "visual_intent": "back to the single exchange; three slots stand beside the door and fill on their words, the password token, the phone, a fingerprint; the know and have slots become two locks on the door",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "MFA asks for two or more different kinds of proof: know, have, are",
+     "fact": "F1"
+    }
+   ]
+  },
+  {
+   "id": "b06",
+   "section": "sec1",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "Run two, same copied password.",
+    "The code is on your phone,",
+    "not theirs.",
+    "The replay stops."
+   ],
+   "on_screen": [
+    "run two",
+    "code"
+   ],
+   "visual_intent": "the copy travels the second line again and opens the first lock; the second lock waits; the code lights up on your phone beside your laptop, far from the copy; the copy bounces off the door",
+   "change_over_time": true,
+   "animate_score": 0.9,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "with MFA on, a stolen password alone does not get the thief in",
+     "fact": "F4"
+    },
+    {
+     "claim": "the replay is the same invented example",
+     "hypothetical": true
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b07",
+   "section": "sec1",
+   "job": "quantify",
+   "delivery": "calm",
+   "narration": [
+    "Microsoft researchers found MFA cut the risk",
+    "of compromise by a little over 99 percent.",
+    "Their own data, not a guarantee."
+   ],
+   "on_screen": [
+    "a little over 99 percent",
+    "Microsoft researchers"
+   ],
+   "visual_intent": "a meter mounted on the door fills to just over 99 on the spoken number, the study's owner labelled under it in small type; on 'not a guarantee' a thin unfilled sliver at the top stays visible",
+   "change_over_time": true,
+   "animate_score": 0.6,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a Microsoft study found MFA cut the risk of compromise by a little over 99 percent",
+     "fact": "F5"
+    },
+    {
+     "claim": "it is the vendor's own data and a reduction, not a guarantee",
+     "fact": "F5"
+    }
+   ]
+  },
+  {
+   "id": "b08",
+   "section": "sec1",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Run three.",
+    "Say a link opens a page",
+    "that only looks real.",
+    "You type your password, then your code."
+   ],
+   "on_screen": [
+    "run three",
+    "only looks real"
+   ],
+   "visual_intent": "a second box slides into the line between laptop and door, splicing it in two; it wears the door's face exactly; your password and code tokens leave the laptop and travel toward it",
+   "change_over_time": true,
+   "animate_score": 0.8,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the look-alike page is an invented example of a common technique",
+     "hypothetical": true
+    },
+    {
+     "claim": "phishing pages copy real login pages and collect the password and code",
+     "fact": "F9"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b09",
+   "section": "sec1",
+   "job": "check",
+   "delivery": "curious",
+   "narration": [
+    "Does the thief get in?",
+    "Decide before it plays."
+   ],
+   "on_screen": [
+    "Does the thief get in?"
+   ],
+   "visual_intent": "everything freezes with both tokens poised at the edge of the look-alike box; the frame rests in silence",
+   "change_over_time": false,
+   "animate_score": 0.1,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the question sets up the relay shown next",
+     "fact": "F9"
+    }
+   ],
+   "pause_after_s": 3,
+   "recall": {
+    "kind": "pause_predict",
+    "prompt": "MFA is on. You type your password and your code into a page that only looks real. Does the thief get in?",
+    "answer": "Yes: the page passes both to the real site while the code is still valid."
+   },
+   "misconception": "once MFA is on, a phishing page cannot get into my account"
+  },
+  {
+   "id": "b10",
+   "section": "sec2",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "Yes.",
+    "The fake page passes each one on,",
+    "while the code is still valid.",
+    "The door opens, for them."
+   ],
+   "on_screen": [
+    "passes it on",
+    "still valid"
+   ],
+   "visual_intent": "a magnifier settles on the look-alike box: the password token goes in one side and straight out the other to the real door, then the code does the same; the door opens, and the open line now runs to the look-alike box, not to your laptop",
+   "change_over_time": true,
+   "animate_score": 0.95,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a phishing page relays the password and code to the real site while the code is valid",
+     "fact": "F9"
+    }
+   ],
+   "misconception": "once MFA is on, a phishing page cannot get into my account"
+  },
+  {
+   "id": "b11",
+   "section": "sec2",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "The code felt like yours alone.",
+    "But you read it,",
+    "and what you read, a page can ask for."
+   ],
+   "on_screen": [
+    "you read it"
+   ],
+   "visual_intent": "the magnifier moves onto the code token: plain characters, the same copyable look the password had in run one, the two set side by side",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a code you read and type can be collected by a fake page",
+     "fact": "F9"
+    }
+   ],
+   "misconception": "once MFA is on, a phishing page cannot get into my account"
+  },
+  {
+   "id": "b12",
+   "section": "sec2",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "Now the passkey.",
+    "It lives on your phone or a security key,",
+    "unlocked by fingerprint, face or PIN."
+   ],
+   "on_screen": [
+    "passkey",
+    "fingerprint, face or PIN"
+   ],
+   "visual_intent": "a cutaway of the phone: inside, a sealed key sits in its own compartment; a fingerprint touches the glass and the compartment lights, the key does not move",
+   "change_over_time": false,
+   "animate_score": 0.4,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a passkey is kept on a phone, computer or security key and unlocked like the device",
+     "fact": "F12"
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "section": "sec2",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "The site sends a fresh challenge.",
+    "Your device signs it.",
+    "The secret never leaves."
+   ],
+   "on_screen": [
+    "fresh challenge",
+    "signs it"
+   ],
+   "visual_intent": "the exchange returns with the cutaway phone in place of the code: a challenge token travels from the door to the phone, the sealed key stamps it, the signed answer travels back; the key itself never leaves its compartment",
+   "change_over_time": true,
+   "animate_score": 0.75,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the site keeps no shared secret and the device signs a fresh challenge",
+     "fact": "F13"
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "section": "sec2",
+   "job": "distinguish",
+   "delivery": "calm",
+   "narration": [
+    "And the answer is stamped",
+    "with the address of the page that asked."
+   ],
+   "on_screen": [
+    "the address"
+   ],
+   "visual_intent": "the magnifier settles on the signed answer; an address stamp presses onto it on 'address' and stays, the one saturated thing in frame",
+   "change_over_time": false,
+   "animate_score": 0.5,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the signed answer includes the address of the page that asked",
+     "fact": "F14"
+    }
+   ],
+   "pause_after_s": 0.8
+  },
+  {
+   "id": "b15",
+   "section": "sec2",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "Run four, same fake page.",
+    "Your passkey will not answer a look-alike.",
+    "Nothing to type,",
+    "nothing to pass on."
+   ],
+   "on_screen": [
+    "run four",
+    "nothing to pass on"
+   ],
+   "visual_intent": "the look-alike box splices into the line again and sends its request to the phone; the sealed key stays dark, no answer token forms; the box's line onward to the real door stays empty and the door stays shut",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a passkey made for one site cannot be used by a look-alike site",
+     "fact": "F14"
+    },
+    {
+     "claim": "with a passkey there is nothing a fake page can collect and pass on",
+     "fact": "F15"
+    },
+    {
+     "claim": "the fake page is the same invented example",
+     "hypothetical": true
+    }
+   ],
+   "hypothetical": true,
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "Run one: a copied password works from anywhere. Run four: a passkey answer works in one place only."
+   }
+  },
+  {
+   "id": "b16",
+   "section": "sec3",
+   "job": "quantify",
+   "delivery": "calm",
+   "narration": [
+    "Google saw the same line.",
+    "Against targeted attacks, a texted code blocked 76 percent,",
+    "a phone prompt, 90.",
+    "With security keys alone, no one fell."
+   ],
+   "on_screen": [
+    "texted code 76%",
+    "phone prompt 90%",
+    "security keys"
+   ],
+   "visual_intent": "a ladder of three rungs builds beside the door; the first rung fills to 76 on its word, the second to 90 on its word, the third lights with a counter reading none fallen; the source label sits under the ladder",
+   "change_over_time": false,
+   "animate_score": 0.5,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a texted code blocked 76 percent of targeted attacks in Google's study",
+     "fact": "F6"
+    },
+    {
+     "claim": "a phone prompt blocked 90 percent of targeted attacks in Google's study",
+     "fact": "F7"
+    },
+    {
+     "claim": "no security-key-only user fell to targeted phishing",
+     "fact": "F8"
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "section": "sec3",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "Their accounts, so read the direction.",
+    "None of this is unbreakable,",
+    "and any second factor beats none."
+   ],
+   "on_screen": [
+    "the direction",
+    "any second factor beats none"
+   ],
+   "visual_intent": "the whole ladder stays; every rung keeps its fill and the first rung, the texted code, is the one accent on 'any second factor'",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the study rates are Google's accounts and show direction, not a general rate",
+     "fact": "F6"
+    },
+    {
+     "claim": "phishing-resistant is not unbreakable",
+     "fact": "F17"
+    },
+    {
+     "claim": "any MFA is better than none",
+     "fact": "F11"
+    }
+   ],
+   "misconception": "texted codes can be phished, so they are not worth turning on"
+  },
+  {
+   "id": "b18",
+   "section": "sec3",
+   "job": "practice",
+   "delivery": "calm",
+   "narration": [
+    "Last, a prompt you did not start.",
+    "Say it comes again, and again.",
+    "Someone may have your password."
+   ],
+   "on_screen": [
+    "you did not start"
+   ],
+   "visual_intent": "the opening exchange returns with your laptop closed; the phone lights with an approve prompt, then a second, then a third, stacking",
+   "change_over_time": true,
+   "animate_score": 0.7,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "repeated prompts are sent by attackers who already have the password",
+     "fact": "F10"
+    },
+    {
+     "claim": "a prompt you did not start can mean someone else is signing in",
+     "fact": "F18"
+    },
+    {
+     "claim": "the moment is invented",
+     "hypothetical": true
+    }
+   ],
+   "hypothetical": true,
+   "pause_after_s": 1.5,
+   "misconception": "an unexpected sign-in prompt is a glitch, and tapping Accept makes it go away"
+  },
+  {
+   "id": "b19",
+   "section": "sec3",
+   "job": "practice",
+   "delivery": "calm",
+   "narration": [
+    "Refuse it.",
+    "It is run three,",
+    "asking you to finish their sign-in."
+   ],
+   "on_screen": [
+    "refuse it"
+   ],
+   "visual_intent": "the stacked prompts resolve into one refusal; behind the phone the look-alike box from run three fades in briefly at the end of the line and the door stays shut",
+   "change_over_time": false,
+   "animate_score": 0.4,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the safe move is to refuse an unrequested prompt",
+     "fact": "F18"
+    },
+    {
+     "claim": "accepting a pushed prompt grants the attacker access",
+     "fact": "F10"
+    }
+   ],
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "A prompt you did not start is the relay from run three, asking you to finish it."
+   },
+   "misconception": "an unexpected sign-in prompt is a glitch, and tapping Accept makes it go away"
+  },
+  {
+   "id": "b20",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "The password can be copied.",
+    "The code can be relayed.",
+    "The passkey answer fits one site."
+   ],
+   "on_screen": [
+    "copied",
+    "relayed",
+    "one site"
+   ],
+   "visual_intent": "the opening exchange from b01, now readable: each token gets its label on its word, the password, the code, and the stamped passkey answer that replaces them",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a password can be copied",
+     "fact": "F2"
+    },
+    {
+     "claim": "a code can be relayed",
+     "fact": "F9"
+    },
+    {
+     "claim": "a passkey only works for its site",
+     "fact": "F14"
+    }
+   ]
+  },
+  {
+   "id": "b21",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "Turn on a second factor.",
+    "Pick a passkey when offered.",
+    "Refuse what you did not start."
+   ],
+   "on_screen": [
+    "second factor on",
+    "pick a passkey",
+    "refuse what you did not start"
+   ],
+   "visual_intent": "three short lines set one by one on their words beside the held exchange; each line lands on the token it changes",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "turn on any second factor, it beats none",
+     "fact": "F11"
+    },
+    {
+     "claim": "a passkey is phishing-resistant",
+     "fact": "F14"
+    },
+    {
+     "claim": "refuse prompts you did not start",
+     "fact": "F18"
+    }
+   ]
+  },
+  {
+   "id": "b22",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "With a passkey,",
+    "there is nothing to hand over."
+   ],
+   "on_screen": [
+    "nothing to hand over"
+   ],
+   "visual_intent": "the exchange rests with the sealed key inside the phone and the door shut to everything but it",
+   "change_over_time": false,
+   "animate_score": 0.1,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "with a passkey there is nothing to type or pass on",
+     "fact": "F15"
+    }
+   ],
+   "pause_after_s": 1.2
+  }
+ ]
+}

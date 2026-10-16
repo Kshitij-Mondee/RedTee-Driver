@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b03: camera pan between different worlds (office -> corridor) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "compose: b08: camera pan between different worlds (inside -> hall) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "compose: b10: camera pan between different worlds (hall -> corridor) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "compose: b12: camera pan between different worlds (corridor -> bedroom) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_0_0\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_0_1\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_0_2\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_0_3\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_1_0\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_1_1\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_1_2\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_1_3\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_2_0\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_2_1\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_2_2\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_copy_2_3\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"leak_copy\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"door\" again as \"trial_door_0\" while it holds \"door_shop\" (the door b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second door is fine only when the film shows two; to change the held one use ctx.held(\"door_shop\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"door\" again as \"trial_door_1\" while it holds \"door_shop\" (the door b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second door is fine only when the film shows two; to change the held one use ctx.held(\"door_shop\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"door\" again as \"trial_door_2\" while it holds \"door_shop\" (the door b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second door is fine only when the film shows two; to change the held one use ctx.held(\"door_shop\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"door\" again as \"trial_door_3\" while it holds \"door_shop\" (the door b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second door is fine only when the film shows two; to change the held one use ctx.held(\"door_shop\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"stream_copy_0\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"stream_copy_1\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"stream_copy_2\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"stream_copy_3\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"stream_copy_4\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"stream_copy_5\" while it holds \"keycard\" (the keycard b03 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime literal_colour: scene used a literal colour instead of a token: #9AA4B6",
+    "runtime literal_colour: scene used a literal colour instead of a token: #C9B79C",
+    "b10: 8 chunks on screen (card_copy, card_shop, card_work, door_shop, door_work, label_manager, label_unique, vault); the budget is ~5-6",
+    "variety: one_radius_share = 0.5 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: labels_over_objects_share = 0.429 is above the baseline median (0.375) (beats: b04, b05, b09, b10, b11, b13)",
+    "b03: value script says 'mid' but the frames measure brightness 0.12 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson brightness 0.15 against the pack's reference 0.37 (dark_void_single_light, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson saturation 0.45 against the pack's reference 0.30 (dark_void_single_light, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson dark_share 0.93 against the pack's reference 0.37 (dark_void_single_light, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 1.66
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 4.42
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.53
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0,
+        "declared": "rest"
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 2.09
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.85,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.85
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 2.9
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.082,
+      "template": 0.121,
+      "motion": 0.798,
+      "hybrid": 0.0,
+      "motion_effective": 0.798
+    },
+    "elements": {
+      "b01": 6,
+      "b02": 7,
+      "b03": 5,
+      "b04": 18,
+      "b05": 13,
+      "b06": 3,
+      "b07": 12,
+      "b08": 5,
+      "b09": 6,
+      "b10": 12,
+      "b11": 5,
+      "b12": 6,
+      "b13": 9,
+      "b14": 10
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.039,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.0,
+      "one_radius_share": 0.5,
+      "still_share": 0.429,
+      "labels_over_objects_share": 0.429,
+      "one_world_share": 0.5,
+      "lines_per_s": 5.61
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 44405,
+      "layout_samples": 264,
+      "texts": 303,
+      "contrast_checked": 250,
+      "errors": 0,
+      "warnings": 0
+    },
+    "nodes": 3334,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 28.7,
+        "b02": 34.7,
+        "b03": 32,
+        "b04": 32,
+        "b05": 32,
+        "b06": 32,
+        "b07": 32,
+        "b08": 90.2,
+        "b09": 30.3,
+        "b10": 32,
+        "b11": 33.6,
+        "b12": 45.9,
+        "b13": 36.1,
+        "b14": 33.8
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 14,
+      "lines_seen": 54,
+      "blank_beats": [],
+      "blank_measured": 13
+    },
+    "foreign": {
+      "measured_beats": 14,
+      "foreign_beats": [],
+      "max_px": 12
+    },
+    "records": {
+      "elements": 117,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0574,
+        "b02": 0.0394,
+        "b03": 0.0493,
+        "b04": 0.0417,
+        "b05": 0.0559,
+        "b06": 0.0422,
+        "b07": 0.0437,
+        "b08": 0.0516,
+        "b09": 0.061,
+        "b10": 0.0524,
+        "b11": 0.0287,
+        "b12": 0.0309,
+        "b13": 0.0712,
+        "b14": 0.0562
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.01,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 14,
+      "sharpness": {
+        "b01": 1.009,
+        "b02": 0.746,
+        "b03": 1.095,
+        "b04": 1.193,
+        "b05": 0.977,
+        "b06": 1.191,
+        "b07": 1.141,
+        "b08": 0.994,
+        "b09": 1.0,
+        "b10": 1.137,
+        "b11": 1.11,
+        "b12": 1.128,
+        "b13": 1.055,
+        "b14": 1.109
+      },
+      "blurred_beats": [],
+      "blur_measured": 14
+    },
+    "tone": {
+      "value_script_beats": 14,
+      "tone_vs_reference": {
+        "brightness": 0.151,
+        "saturation": 0.451,
+        "dark_share": 0.929,
+        "light_share": 0.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-sol\\qa\\sheets\\b14.jpg"
+  ],
+  "build_hash": "c0cf36ae0b2b53b5"
+}

@@ -1,0 +1,1388 @@
+{
+ "title": "Feedback that lands",
+ "wpm_target": 140,
+ "sections": [
+  {
+   "id": "intro",
+   "title": "That wasn't great",
+   "role": "hook"
+  },
+  {
+   "id": "sec1",
+   "title": "The vague verdict"
+  },
+  {
+   "id": "sec2",
+   "title": "Four moves"
+  },
+  {
+   "id": "sec3",
+   "title": "The same update, replayed"
+  },
+  {
+   "id": "sec4",
+   "title": "Ask, then agree"
+  },
+  {
+   "id": "payoff",
+   "title": "Your next one-to-one",
+   "role": "payoff"
+  }
+ ],
+ "beats": [
+  {
+   "id": "b01",
+   "section": "intro",
+   "job": "hook",
+   "delivery": "calm",
+   "narration": [
+    "You have probably said it, or heard it.",
+    "That update wasn't great.",
+    "So what were they meant to fix?"
+   ],
+   "on_screen": [
+    "\"That update wasn't great.\"",
+    "What do they fix?"
+   ],
+   "visual_intent": "the code-drawn presenter, medium shot in a plain office; the vague line appears beside her as a quoted card, then a small question mark settles under it",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "a vague verdict gives the person nothing specific to act on",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b02",
+   "section": "intro",
+   "job": "hook",
+   "delivery": "calm",
+   "narration": [
+    "It feels direct when you say it.",
+    "It is certainly quick.",
+    "It also tends to get defended.",
+    "Not fixed."
+   ],
+   "on_screen": [
+    "defended",
+    "not fixed"
+   ],
+   "visual_intent": "the presenter again; the quoted line stays beside her and one word, defended, is stamped under it while not fixed sits greyed",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "a vague or judgemental verdict tends to invite defending rather than discussing",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b03",
+   "section": "intro",
+   "job": "orient",
+   "delivery": "calm",
+   "narration": [
+    "There is a common workplace habit for this.",
+    "Four moves, one short conversation.",
+    "Try it in your next one-to-one."
+   ],
+   "on_screen": [
+    "Four moves",
+    "your next one-to-one"
+   ],
+   "visual_intent": "the presenter gestures to an empty four-line card that slides in beside her, its lines still blank; a small calendar tile marked next one-to-one sits at its foot",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "the four moves are a practical habit many organisations teach, not a proven formula",
+     "fact": "F16"
+    },
+    {
+     "claim": "situation, behaviour, impact, then ask and agree a next step",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b04",
+   "section": "sec1",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Say this is Maya, a manager.",
+    "A few days ago, her report",
+    "sent a client update.",
+    "It went out unclear."
+   ],
+   "on_screen": [
+    "Maya",
+    "client update"
+   ],
+   "visual_intent": "Maya, illustrated, in office clothes at her desk; her report, a simpler figure, at the next desk; the client update sits open on the report's screen, and a calendar strip behind them turns over a few days",
+   "change_over_time": true,
+   "animate_score": 0.55,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "the unclear client update is the knowledge sheet's own illustrative example",
+     "fact": "F5"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b05",
+   "section": "sec1",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Today she walks past their desk.",
+    "She says it in passing.",
+    "That update wasn't great.",
+    "Then she keeps walking."
+   ],
+   "on_screen": [
+    "in passing"
+   ],
+   "visual_intent": "Maya walks past the report's desk without stopping; her line hangs in a small speech label as she moves on; the calendar strip still shows the days that have gone",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "feedback given in passing, not at a calm private moment, goes against common practice",
+     "fact": "F10"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b06",
+   "section": "sec1",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Now sit in their seat for a second.",
+    "First, it was fine.",
+    "Then, nobody said anything.",
+    "Then, what does she mean?"
+   ],
+   "on_screen": [
+    "it was fine",
+    "nobody said anything",
+    "what does she mean?"
+   ],
+   "visual_intent": "seen from behind the report, a quiet thought aside fills one line at a time with three defences, in the order spoken",
+   "change_over_time": true,
+   "animate_score": 0.45,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "a vague verdict tends to invite defending rather than discussing",
+     "fact": "F9"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b07",
+   "section": "sec1",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "To be fair, it sounds like honesty.",
+    "It is even true, as far as it goes.",
+    "But look at the update.",
+    "What has changed in it? Nothing."
+   ],
+   "on_screen": [
+    "Nothing changed"
+   ],
+   "visual_intent": "the camera settles on the update on the report's screen, untouched; the same unclear line is still in it, and nothing on the page has moved",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "a vague verdict gives the person nothing specific to act on",
+     "fact": "F9"
+    }
+   ],
+   "hypothetical": true,
+   "misconception": "a short, honest verdict is direct feedback, and the person will know what to fix"
+  },
+  {
+   "id": "b08",
+   "section": "sec1",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "Here is why.",
+    "There is nothing specific in it to act on.",
+    "And it is easily heard as being about them.",
+    "So they defend."
+   ],
+   "on_screen": [
+    "nothing specific to act on",
+    "about them"
+   ],
+   "visual_intent": "two plain labels attach to Maya's quoted line, one for each cost, in order; the report's thought aside stays visible beside them",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a vague verdict gives nothing specific to act on and is easily heard as a judgement of the person",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b09",
+   "section": "sec1",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "Not everyone reacts like this.",
+    "Some people take a blunt line well.",
+    "It is a tendency, not a rule."
+   ],
+   "on_screen": [
+    "a tendency, not a rule"
+   ],
+   "visual_intent": "the two labels stay; a small plain caveat tag sits beneath them, quieter than the labels",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "some people take a blunt verdict well; defensiveness is a tendency, not a law",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "section": "sec1",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "It also came days late, in a corridor.",
+    "How much of the update do they remember?",
+    "Not much. Of course it got defended."
+   ],
+   "on_screen": [
+    "days late",
+    "corridor"
+   ],
+   "visual_intent": "back to the corridor; the calendar strip is pinned behind them with the gone days crossed off, and the update on the screen has gone faint, half remembered",
+   "change_over_time": false,
+   "animate_score": 0.35,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "common practice is to give feedback soon, while both people remember it, at a calm private moment, not in passing",
+     "fact": "F10"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b11",
+   "section": "sec1",
+   "job": "consolidate",
+   "delivery": "calm",
+   "narration": [
+    "So, vague, late, in passing.",
+    "And heard as being about them."
+   ],
+   "on_screen": [
+    "vague",
+    "late",
+    "in passing",
+    "about them"
+   ],
+   "visual_intent": "four short tags line up under Maya's line, one per word as spoken; the line itself greys",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a vague verdict is heard as a judgement of the person",
+     "fact": "F9"
+    },
+    {
+     "claim": "feedback is better given soon, not in passing",
+     "fact": "F10"
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "section": "sec1",
+   "job": "transition",
+   "delivery": "calm",
+   "narration": [
+    "Keep their last thought in your head.",
+    "What does she mean?",
+    "The rest of this answers it."
+   ],
+   "on_screen": [
+    "What does she mean?"
+   ],
+   "visual_intent": "the report's last thought, what does she mean, comes back alone and small in a corner, where it waits",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    }
+   ],
+   "hypothetical": true,
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "what was the report's last thought, and what would answer it?"
+   }
+  },
+  {
+   "id": "b13",
+   "section": "sec2",
+   "job": "orient",
+   "delivery": "brisk",
+   "narration": [
+    "So what could Maya have said?",
+    "Four moves, in order.",
+    "It is a common practice.",
+    "Many organisations teach it."
+   ],
+   "on_screen": [
+    "Four moves",
+    "a common practice"
+   ],
+   "visual_intent": "a short four-line card, blank, builds its frame on a plain ground; a small kicker above it reads a common practice",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the four moves are a practical habit many organisations teach",
+     "fact": "F16"
+    },
+    {
+     "claim": "situation, behaviour, impact is a widely used workplace structure",
+     "fact": "F1"
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "brisk",
+   "narration": [
+    "First, the situation.",
+    "When and where it happened.",
+    "Enough that they can picture it."
+   ],
+   "on_screen": [
+    "Situation",
+    "when and where"
+   ],
+   "visual_intent": "line one of the card fills: the word situation, then its short gloss beside it",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the situation names when and where, specifically enough to picture the moment",
+     "fact": "F3"
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "brisk",
+   "narration": [
+    "Second, the behaviour.",
+    "What they actually did or said,",
+    "something you could have seen.",
+    "Not a guess about their attitude."
+   ],
+   "on_screen": [
+    "Behaviour",
+    "what they did or said"
+   ],
+   "visual_intent": "line two fills: behaviour, then its gloss; the earlier line dims slightly",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the behaviour is what the person did or said, observable, not a guess about attitude or character",
+     "fact": "F4"
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "brisk",
+   "narration": [
+    "Third, the impact.",
+    "What it caused,",
+    "for the work, a client, the team, or you.",
+    "What happened, not a verdict."
+   ],
+   "on_screen": [
+    "Impact",
+    "what it caused"
+   ],
+   "visual_intent": "line three fills: impact, then its gloss",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the impact is the concrete consequence for the work, a client or the team, stated as what happened",
+     "fact": "F6"
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "brisk",
+   "narration": [
+    "Fourth, ask for their view,",
+    "then agree a next step together.",
+    "Now it is a conversation.",
+    "Not a verdict."
+   ],
+   "on_screen": [
+    "Ask, then agree",
+    "their view, then next step"
+   ],
+   "visual_intent": "line four fills: ask, then agree, with its gloss; the whole card is now complete, four lines",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "finishing by asking for their view and agreeing a next step makes it a conversation, not a verdict",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b18",
+   "section": "sec2",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "One thing before Maya tries again.",
+    "This is a structure, not a script.",
+    "It should sound like you."
+   ],
+   "on_screen": [
+    "not a script"
+   ],
+   "visual_intent": "a small tag, not a script, clips to the card; then the card shrinks to the top corner, where it stays",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a structure is not a script; the moves should sound like the manager, not a form",
+     "fact": "F15"
+    }
+   ]
+  },
+  {
+   "id": "b19",
+   "section": "sec3",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Same update. Same Maya.",
+    "This time, the afternoon it went out.",
+    "A quiet room, just the two of them.",
+    "And only this one piece of work."
+   ],
+   "on_screen": [
+    "same afternoon",
+    "quiet room",
+    "one piece of work"
+   ],
+   "visual_intent": "the scene rewinds to the same day; Maya and the report sit across a small table in a quiet meeting room, the update between them; the four-move card waits in the corner",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "feedback soon after the work, at a calm private moment",
+     "fact": "F10"
+    },
+    {
+     "claim": "keeping the conversation to one piece of work makes it easier to hear and act on",
+     "fact": "F11"
+    }
+   ],
+   "hypothetical": true,
+   "misconception": "it is fine to save a concern up, or drop it in passing"
+  },
+  {
+   "id": "b20",
+   "section": "sec3",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Soon doesn't mean instantly.",
+    "It means while you both remember it."
+   ],
+   "on_screen": [
+    "while you both remember it"
+   ],
+   "visual_intent": "the calendar strip from the corridor scene appears small and shows today, the same day; nothing else moves",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "soon means while both remember it clearly, not instantly",
+     "fact": "F10"
+    }
+   ]
+  },
+  {
+   "id": "b21",
+   "section": "sec3",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "She starts with the situation.",
+    "The client update this morning,",
+    "the one about the change.",
+    "They can picture it straight away."
+   ],
+   "on_screen": [
+    "Situation",
+    "\"The client update this morning\""
+   ],
+   "visual_intent": "Maya says her line in a speech label; the situation line on the corner card ticks as she says it; the report's shoulders drop a little",
+   "change_over_time": true,
+   "animate_score": 0.45,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "the situation names when and where so the person can picture the moment",
+     "fact": "F3"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b22",
+   "section": "sec3",
+   "job": "distinguish",
+   "delivery": "calm",
+   "narration": [
+    "Here is where it tends to go wrong.",
+    "Her first draft, in her head.",
+    "You were careless with it."
+   ],
+   "on_screen": [
+    "\"you were careless with it\""
+   ],
+   "visual_intent": "Maya's quiet thought aside drafts the line; the report is still, waiting",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "calling someone careless judges the person",
+     "fact": "F5"
+    }
+   ],
+   "hypothetical": true,
+   "misconception": "calling it careless or sloppy is being specific"
+  },
+  {
+   "id": "b23",
+   "section": "sec3",
+   "job": "distinguish",
+   "delivery": "calm",
+   "narration": [
+    "It feels precise.",
+    "But careless is a label for a person.",
+    "In their seat, what would you fix?",
+    "Nothing. You'd defend."
+   ],
+   "on_screen": [
+    "a label for a person",
+    "nothing to fix"
+   ],
+   "visual_intent": "the word careless in the draft is singled out with a plain label, a person, while the rest of the frame dims",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "calling someone careless judges them rather than describing the work",
+     "fact": "F5"
+    },
+    {
+     "claim": "a judgemental verdict gives nothing specific to act on and invites defending",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b24",
+   "section": "sec3",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "So she rewrites it.",
+    "The update didn't say",
+    "when the change takes effect."
+   ],
+   "on_screen": [
+    "\"didn't say when the change takes effect\""
+   ],
+   "visual_intent": "slowly, the drafted careless line fades out of the thought aside and the new line writes in where it was, word by word",
+   "change_over_time": true,
+   "animate_score": 0.65,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "saying the update did not state when the change takes effect describes the work",
+     "fact": "F5"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b25",
+   "section": "sec3",
+   "job": "distinguish",
+   "delivery": "calm",
+   "narration": [
+    "That is the behaviour.",
+    "Something you could see in the work.",
+    "And something they can fix."
+   ],
+   "on_screen": [
+    "Behaviour",
+    "seen in the work"
+   ],
+   "visual_intent": "the behaviour line on the corner card ticks; on the update itself, the missing date is marked with a small empty bracket",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "the behaviour is what the person did, something another person could have seen",
+     "fact": "F4"
+    },
+    {
+     "claim": "describing the work, not judging the person",
+     "fact": "F5"
+    }
+   ]
+  },
+  {
+   "id": "b26",
+   "section": "sec3",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "Then the impact, as a plain fact.",
+    "Say the client wrote back,",
+    "asking when the change starts.",
+    "The answer took another day."
+   ],
+   "on_screen": [
+    "Impact",
+    "client wrote back",
+    "another day"
+   ],
+   "visual_intent": "a reply from the client arrives beside the update with its question; a day tile turns over; the impact line on the card ticks",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "the impact is the concrete consequence, stated as what happened",
+     "fact": "F6"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b27",
+   "section": "sec3",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "No verdict in any of it.",
+    "Now look at the report.",
+    "Listening, not lining up a defence."
+   ],
+   "on_screen": [
+    "listening"
+   ],
+   "visual_intent": "the report's posture, seen across the table, eases from braced to leaning in; the thought aside above them stays empty this time",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "stating what happened rather than a verdict",
+     "fact": "F6"
+    },
+    {
+     "claim": "specific, non-judgemental feedback is less likely to invite defending",
+     "fact": "F9"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b28",
+   "section": "sec3",
+   "job": "scenario",
+   "delivery": "calm",
+   "narration": [
+    "Situation, behaviour, impact. Three ticks.",
+    "Now her draft for the close.",
+    "So, just be more careful next time."
+   ],
+   "on_screen": [
+    "\"So, just be more careful next time.\""
+   ],
+   "visual_intent": "three ticks on the corner card, the fourth line still open; Maya's thought aside drafts her closing line",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    }
+   ],
+   "hypothetical": true,
+   "misconception": "once you have said your piece, the feedback is done; asking invites an argument"
+  },
+  {
+   "id": "b29",
+   "section": "sec3",
+   "job": "check",
+   "delivery": "calm",
+   "narration": [
+    "Which move would you put in its place?",
+    "Pause, and decide before she does."
+   ],
+   "on_screen": [
+    "Which move goes in its place?"
+   ],
+   "visual_intent": "the scene freezes; the question sits over it with the open fourth line on the card, then a real silent pause",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the fourth move is to ask for their view, then agree a next step",
+     "fact": "F2"
+    }
+   ],
+   "pause_after_s": 4,
+   "recall": {
+    "kind": "pause_predict",
+    "prompt": "Maya has said the situation, the behaviour and the impact. Which move should replace 'So, just be more careful next time'?",
+    "fork": "treat 'be more careful' as the next step, or use the fourth move: ask for their view, then agree a small, concrete next step",
+    "answer": "the fourth move: ask for the report's view first, then agree a small, concrete next step together",
+    "tempting_wrong": "'be more careful' is already the next step; it is not, it is a verdict about the person with no piece of work, no day and no question"
+   }
+  },
+  {
+   "id": "b30",
+   "section": "sec4",
+   "job": "check",
+   "delivery": "calm",
+   "narration": [
+    "It's the fourth move.",
+    "Ask for their view first.",
+    "Then agree a small next step, together."
+   ],
+   "on_screen": [
+    "Ask, then agree"
+   ],
+   "visual_intent": "the fourth line on the corner card lights; Maya's drafted close fades from her thought aside",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "ask for the person's view, then agree a next step together",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b31",
+   "section": "sec4",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "Be more careful sounds like a next step.",
+    "It isn't.",
+    "It's a verdict about them.",
+    "No piece of work. No day. No question."
+   ],
+   "on_screen": [
+    "no piece of work",
+    "no day",
+    "no question"
+   ],
+   "visual_intent": "the drafted close sits alone, and three short tags attach to it in order, each naming what it lacks",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a useful next step names what will be done differently, on what work, and when",
+     "fact": "F13"
+    },
+    {
+     "claim": "a verdict gives nothing specific to act on",
+     "fact": "F9"
+    },
+    {
+     "claim": "asking for their view makes it a conversation",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b32",
+   "section": "sec4",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "So she asks a real question.",
+    "What happened with the date on this one?",
+    "And then she waits."
+   ],
+   "on_screen": [
+    "\"What happened with the date?\""
+   ],
+   "visual_intent": "Maya's question in a speech label; then a held quiet moment with both figures still and the label staying",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "asking for the person's view before agreeing a next step",
+     "fact": "F12"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b33",
+   "section": "sec4",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "Say the date was still being confirmed",
+    "when the update went out.",
+    "Maya didn't know that.",
+    "Now she does."
+   ],
+   "on_screen": [
+    "date not confirmed yet"
+   ],
+   "visual_intent": "the report answers in their own speech label; a small note, date not confirmed yet, appears beside the update and Maya's expression shifts to taking it in",
+   "change_over_time": true,
+   "animate_score": 0.45,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "asking lets the person add context the manager may not have",
+     "fact": "F12"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b34",
+   "section": "sec4",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "So they agree a next step.",
+    "If a date isn't confirmed,",
+    "the update says so.",
+    "And it says when it will be."
+   ],
+   "on_screen": [
+    "say so",
+    "say when it will be"
+   ],
+   "visual_intent": "a small next-step note writes itself on the table between them, one line per phrase",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "a useful next step is small and concrete: what will be done differently, on what work",
+     "fact": "F13"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b35",
+   "section": "sec4",
+   "job": "demonstrate",
+   "delivery": "calm",
+   "narration": [
+    "They'll look at the next one on Thursday.",
+    "Small, concrete,",
+    "and something they chose together."
+   ],
+   "on_screen": [
+    "Thursday",
+    "chose together"
+   ],
+   "visual_intent": "a day, Thursday, is written on the corner of the note; the note slides to Maya's side of the table and stays",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "a next step says when they will look at it again",
+     "fact": "F13"
+    },
+    {
+     "claim": "the next step becomes something they helped choose",
+     "fact": "F12"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b36",
+   "section": "sec4",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "One caution.",
+    "The question has to be a real one.",
+    "If you already know the answer,",
+    "it's a verdict with a question mark."
+   ],
+   "on_screen": [
+    "a real question"
+   ],
+   "visual_intent": "Maya's question label stays; everything else in the room dims a step",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "asking can still go badly if the question is not a real one",
+     "fact": "F12"
+    }
+   ],
+   "misconception": "asking for their view just invites an argument"
+  },
+  {
+   "id": "b37",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "narration": [
+    "Now, your own week.",
+    "Which piece of a report's work comes to mind?",
+    "Pick just one."
+   ],
+   "on_screen": [
+    "one piece of work"
+   ],
+   "visual_intent": "the screen goes light and warm; the four-move card returns large and blank, ready for the viewer's own piece of work",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "keep the conversation to one piece of work",
+     "fact": "F11"
+    }
+   ]
+  },
+  {
+   "id": "b38",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "narration": [
+    "First, the situation.",
+    "When was it, and where?"
+   ],
+   "on_screen": [
+    "When and where?"
+   ],
+   "visual_intent": "line one of the blank card fills with the prompt only, and holds for a breath",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the situation names when and where",
+     "fact": "F3"
+    }
+   ],
+   "pause_after_s": 1.5
+  },
+  {
+   "id": "b39",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "narration": [
+    "Second, what did they actually do or say?",
+    "Something you could have seen."
+   ],
+   "on_screen": [
+    "What did they do or say?"
+   ],
+   "visual_intent": "line two fills with its prompt, and holds",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the behaviour is what the person did or said, observable",
+     "fact": "F4"
+    }
+   ],
+   "pause_after_s": 1.5
+  },
+  {
+   "id": "b40",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "narration": [
+    "Third, what did it cause?",
+    "For the work, a client, or you?"
+   ],
+   "on_screen": [
+    "What did it cause?"
+   ],
+   "visual_intent": "line three fills with its prompt, and holds",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the impact is the consequence for the work, a client, the team or the manager",
+     "fact": "F6"
+    }
+   ],
+   "pause_after_s": 1.5
+  },
+  {
+   "id": "b41",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "narration": [
+    "Fourth, the question you'll ask.",
+    "A real one.",
+    "Then what you'll agree, and when."
+   ],
+   "on_screen": [
+    "Your question",
+    "What you'll agree, and when"
+   ],
+   "visual_intent": "line four fills with its prompt, and holds; the card is full of the viewer's prompts",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "ask for their view, then agree a next step",
+     "fact": "F2"
+    },
+    {
+     "claim": "the question has to be a real one",
+     "fact": "F12"
+    },
+    {
+     "claim": "a next step says when you will look at it again",
+     "fact": "F13"
+    }
+   ],
+   "pause_after_s": 1.5
+  },
+  {
+   "id": "b42",
+   "section": "sec4",
+   "job": "relate",
+   "delivery": "warm",
+   "narration": [
+    "The same moves work when something went well.",
+    "Name the behaviour and its impact.",
+    "Then they know what to keep doing."
+   ],
+   "on_screen": [
+    "went well",
+    "keep doing"
+   ],
+   "visual_intent": "the card stays; a small second tag, went well, clips to it, and the impact line gains a short keep doing note",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the same structure works for positive feedback, telling the person what to keep doing",
+     "fact": "F14"
+    }
+   ]
+  },
+  {
+   "id": "b43",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "warm",
+   "narration": [
+    "Before the card comes back,",
+    "can you say the four moves?",
+    "Try it, to yourself."
+   ],
+   "on_screen": [
+    "The four moves?"
+   ],
+   "visual_intent": "the card turns face down; a quiet gap with only the question visible",
+   "change_over_time": false,
+   "animate_score": 0.1,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the four moves: situation, behaviour, impact, then ask and agree",
+     "fact": "F2"
+    }
+   ],
+   "pause_after_s": 3,
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "say the four moves to yourself before the card comes back"
+   }
+  },
+  {
+   "id": "b44",
+   "section": "sec4",
+   "job": "consolidate",
+   "delivery": "calm",
+   "narration": [
+    "Situation, behaviour, impact.",
+    "Ask, then agree."
+   ],
+   "on_screen": [
+    "Situation",
+    "Behaviour",
+    "Impact",
+    "Ask, then agree"
+   ],
+   "visual_intent": "the card turns back over and its four lines return at once, plainly",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the four moves in order",
+     "fact": "F2"
+    },
+    {
+     "claim": "situation, behaviour, impact",
+     "fact": "F1"
+    }
+   ]
+  },
+  {
+   "id": "b45",
+   "section": "payoff",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "Same update, two conversations.",
+    "One was a verdict, days late, in a corridor.",
+    "The other was about the work, that afternoon.",
+    "It ended with Thursday in the diary."
+   ],
+   "on_screen": [
+    "days late",
+    "that afternoon",
+    "Thursday"
+   ],
+   "visual_intent": "the corridor scene and the meeting-room scene side by side, held still; the corridor one greys, the meeting room keeps its colour and the Thursday note",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "hybrid",
+   "grounding": [
+    {
+     "claim": "Maya, her report and the client update are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "feedback soon after the work rather than days later and in passing",
+     "fact": "F10"
+    },
+    {
+     "claim": "a concrete next step with a time to look again",
+     "fact": "F13"
+    }
+   ],
+   "hypothetical": true
+  },
+  {
+   "id": "b46",
+   "section": "payoff",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "Next time you hear yourself start a verdict,",
+    "swap it for what they did.",
+    "And what it caused."
+   ],
+   "on_screen": [
+    "what they did",
+    "what it caused"
+   ],
+   "visual_intent": "the presenter returns, medium shot; the opening quoted line, that update wasn't great, reappears beside her and is rewritten as two short lines",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "describe the behaviour and its impact instead of a verdict",
+     "fact": "F5"
+    },
+    {
+     "claim": "impact is what it caused",
+     "fact": "F6"
+    }
+   ]
+  },
+  {
+   "id": "b47",
+   "section": "payoff",
+   "job": "payoff",
+   "delivery": "calm",
+   "narration": [
+    "One specific thing, said soon,",
+    "ending in a question.",
+    "Your next one-to-one is the place for it.",
+    "Pick the piece of work. Start there."
+   ],
+   "on_screen": [
+    "One specific thing",
+    "said soon",
+    "ending in a question"
+   ],
+   "visual_intent": "the presenter, with the pocket rule beside her in three short lines; the small calendar tile from the opening, next one-to-one, comes back under it",
+   "change_over_time": false,
+   "animate_score": 0.15,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "one piece of work",
+     "fact": "F11"
+    },
+    {
+     "claim": "soon, while both remember it",
+     "fact": "F10"
+    },
+    {
+     "claim": "end by asking for their view",
+     "fact": "F2"
+    }
+   ]
+  }
+ ]
+}

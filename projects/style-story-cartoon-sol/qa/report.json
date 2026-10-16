@@ -1,0 +1,243 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b07: camera pan between different worlds (desk -> path) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b11: camera pan between different worlds (path -> desk) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "b03: 9 chunks on screen (bubble_business, bubble_cost, bubble_wrong, laptop, maya, phone, receipt_a, receipt_b, receipts); the budget is ~5-6",
+    "b09: 8 chunks on screen (compliance_sign, hr_sign, line_sign, line_tag, manager_sign, maya, other_sign, question_sign); the budget is ~5-6",
+    "b11: 10 chunks on screen (laptop, maya, phone, pocket_notice, pocket_rule, pocket_speak, pocket_weigh, receipt_a, receipt_b, receipts); the budget is ~5-6",
+    "b02: new content arrives at 11.61s while b01 is still leaving (until 12.06s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b03: new content arrives at 15.54s while b02 is still leaving (until 15.85s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "variety: still_share = 0.818 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b03, b04, b05, b06, b09)",
+    "variety: one_radius_share = 0.297 is above the baseline median (0.2)",
+    "variety: one_world_share = 0.636 is above the baseline median (0.625) (beats: b01, b02, b03, b04, b05, b06, b11)",
+    "lc layout text_covered @ 60: b07 \"Compliance\" is partly covered by an opaque shape (48 % of it, its words cut) from 60 to 60 s [compliance_sign]",
+    "lc layout text_covered @ 85: b11 \"$86.40\" is partly covered by an opaque shape (71 % of it, its words cut) from 85 to 85 s [receipt_a]",
+    "page_size: the page has 22382 DOM nodes (budget 20000); draw repeated decoration as one pattern or path",
+    "b01: small text on screen at 11.1s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b03: small text on screen at 24.2s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b04: small text on screen at 32.8s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b05: small text on screen at 41.7s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b06: small text on screen at 46.2s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b11: small text on screen at 93.1s: \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b05: no_entrance_words: element 'pad_heading' (text) shows \"Three questions\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b06: the same frame as b05 (difference 0.91 < 1.5): a new beat needs a visible change",
+    "b04: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'dark' but the frames measure brightness 0.55 (band 0.00 to 0.40); regrade the beat or change the script",
+    "tone: lesson saturation 0.15 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.92 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 2,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.41
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.74
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.98
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 4.29
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0,
+        "declared": "hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.46
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.047,
+      "template": 0.576,
+      "motion": 0.377,
+      "hybrid": 0.0,
+      "motion_effective": 0.377
+    },
+    "elements": {
+      "b01": 10,
+      "b02": 7,
+      "b03": 12,
+      "b04": 4,
+      "b05": 5,
+      "b06": 4,
+      "b07": 17,
+      "b08": 8,
+      "b09": 18,
+      "b11": 13,
+      "b12": 7
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.196,
+      "wallpaper_share": 0.0,
+      "template_share": 0.083,
+      "classic_share": 0.3,
+      "one_radius_share": 0.297,
+      "still_share": 0.818,
+      "labels_over_objects_share": 0.091,
+      "one_world_share": 0.636,
+      "lines_per_s": 8.54
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 93763,
+      "layout_samples": 199,
+      "texts": 294,
+      "contrast_checked": 371,
+      "errors": 0,
+      "warnings": 2
+    },
+    "nodes": 22382,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 24.6,
+        "b02": 37.7,
+        "b03": 24.6,
+        "b04": 24.6,
+        "b05": 24.6,
+        "b06": 24.6,
+        "b07": 35.2,
+        "b08": 34.4,
+        "b09": 34.4,
+        "b10": 35.2,
+        "b11": 25.4,
+        "b12": 34.4
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 12,
+      "lines_seen": 132,
+      "blank_beats": [],
+      "blank_measured": 11
+    },
+    "foreign": {
+      "measured_beats": 12,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 105,
+      "without_life": 0,
+      "no_entrance_words": 1
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.1295,
+        "b02": 0.1157,
+        "b03": 0.1463,
+        "b04": 0.1249,
+        "b05": 0.1348,
+        "b06": 0.1372,
+        "b07": 0.1494,
+        "b08": 0.0757,
+        "b09": 0.1504,
+        "b10": 0.1374,
+        "b11": 0.12,
+        "b12": 0.0777
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 1,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 12,
+      "sharpness": {
+        "b01": 1.144,
+        "b02": 1.091,
+        "b03": 1.184,
+        "b04": 1.024,
+        "b05": 1.216,
+        "b06": 1.182,
+        "b07": 1.208,
+        "b08": 0.91,
+        "b09": 1.142,
+        "b10": 1.091,
+        "b11": 1.068,
+        "b12": 0.995
+      },
+      "blurred_beats": [],
+      "blur_measured": 12
+    },
+    "tone": {
+      "value_script_beats": 12,
+      "tone_vs_reference": {
+        "brightness": 0.735,
+        "saturation": 0.149,
+        "dark_share": 0.0,
+        "light_share": 0.917
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-sol\\qa\\sheets\\b12.jpg"
+  ],
+  "build_hash": "d8d5035d9bd0a4b1"
+}

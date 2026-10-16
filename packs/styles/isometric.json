@@ -1,0 +1,234 @@
+{
+  "id": "isometric",
+  "name": "Isometric infographic",
+  "reads_as": "A clean isometric infographic of a working system: flat three-tone solids at true 30 degree isometric on a floating diorama board with strata at its edges, a pale cool ground, no outlines on solids and thin slate ink only for the infographic furniture (map-pin labels on leaders, routes, cut lines, rings, legends). One reserved vermilion marks the subject; four legend hues and named materials keep one meaning each. Numbers are drawn as Isotype units that add up. Two registers: calm teaching boards (a few plates and stations, iso bars, a three-step flow, side notes) for explaining, and a dense diorama (cutaways, a tracked subject with a you-are-here ring, a circular inset, focus and context, routes with moving things, a scale reveal) where a system must be seen working. For corporate adults: operations, supply chains, data centres, cloud architecture, sites and buildings, processes.",
+  "look_family": "technical",
+  "guide": "docs/styles/guides/isometric.md",
+  "fits": [
+    "supply chain",
+    "logistics",
+    "operations",
+    "data centre",
+    "cloud architecture",
+    "infrastructure",
+    "facilities and buildings",
+    "a site or a city",
+    "process and workflow",
+    "how a system works"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "feelings and wellbeing",
+    "people stories",
+    "abstract ideas with no place or system",
+    "children"
+  ],
+  "palette": {
+    "field": "#F2F4F7",
+    "field2": "#E5E9EF",
+    "surface": "#FFFFFF",
+    "surface2": "#D9DFE7",
+    "ink": "#111823",
+    "muted": "#525D6C",
+    "line": "#2A3442",
+    "accent": "#E85A2F",
+    "accent2": "#2C6BDE",
+    "accent3": "#12998C",
+    "accent4": "#E9A23B",
+    "pos": "#22A066",
+    "neg": "#D43C4C",
+    "shadow": "#262A40",
+    "onAccent": "#FFFFFF",
+    "caption_active": "#B93F14",
+    "concrete": "#C8CFD9",
+    "steel": "#7D8899",
+    "road": "#5B6270",
+    "glass": "#9FC6E6",
+    "leaf": "#5FA95C",
+    "water": "#4D9FD6",
+    "soil": "#A9825E",
+    "wood": "#C9A06C"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "roles": {},
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 500,
+        "file": "space-grotesk-latin-500-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 400,
+        "file": "inter-latin-400-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "file": "inter-latin-600-normal.woff2",
+        "pkg": "@fontsource/inter"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      100,
+      144
+    ],
+    "hero": [
+      88,
+      128
+    ],
+    "title": [
+      56,
+      80
+    ],
+    "lead": [
+      32,
+      40
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      26,
+      30
+    ],
+    "caption": [
+      22,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 8,
+    "stroke": 2.5,
+    "shading": "flat",
+    "shadow": "none",
+    "shade_amount": 0.22,
+    "_note": "Solids are drawn by the isometric engine (runtime/engines/isometric.js) in three tones from one token, with no outline; `stroke` is the ink line weight of the infographic furniture (leaders, routes, cut lines, rings). Cards and plates beside the board are flat white with no shadow: the board's own cast shadows are the only shadows in a frame (one light, one shadow type)."
+  },
+  "materials": {
+    "wood": "wood",
+    "screen": "glass",
+    "monitor": "steel",
+    "plant": "leaf",
+    "pot": "soil",
+    "concrete": "concrete",
+    "steel": "steel",
+    "road": "road",
+    "glass": "glass",
+    "leaf": "leaf",
+    "water": "water",
+    "soil": "soil"
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.5,
+    "move": 0.45,
+    "exit": 0.3,
+    "stagger": 0.08,
+    "draw": 0.7,
+    "count": 1.4,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "none",
+    "_note": "the board carries its own faint isometric lattice (drawn by the engine inside the board, so it moves with the camera); the ground stays a calm flat field"
+  },
+  "captions": {
+    "bg": "rgba(255,255,255,0.95)",
+    "fg": "ink",
+    "active": "caption_active",
+    "_active_note": "the spoken word in a deep vermilion (the subject hue's dark tone), 5.5:1 on the pale map-label pill",
+    "radius": 10,
+    "font": "body",
+    "size": 34,
+    "weight": 600,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 2.0
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2B2420",
+      "#4A3426",
+      "#6B4A2E",
+      "#1E1E24"
+    ],
+    "cloth": "accent2",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "neg",
+    "extras": "silhouette",
+    "_extras_note": "what a background person is (D-100): on an isometric board people are flat Isotype pictograms drawn by the engine (no faces); a designed character kit (Claude Design first, skills/lnd/lnd-character-design) is needed for anyone the story follows as a person. Background extras outside the board are silhouettes."
+  },
+  "roles": {
+    "kicker": "accent2",
+    "chapter_kicker": "accent2",
+    "term": "accent",
+    "stat_value": "ink",
+    "date": "muted",
+    "quiz_letter": "onAccent",
+    "ui_mark": "accent",
+    "link": "accent2",
+    "button": "accent2",
+    "me_bubble": "surface",
+    "person_cloth": "accent2",
+    "turn_card": "ink",
+    "section_label": "muted",
+    "avatar": [
+      "accent2",
+      "accent3"
+    ]
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "One board, one camera: pan, zoom and inset within a board inside a topic (continue); a cut to a second board for before and after, here and there, or a new system; a wipe only at a section change.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 50
+  },
+  "fx": {
+    "vignette": 0.08,
+    "grain": 0,
+    "colors": [
+      "accent2",
+      "accent3"
+    ],
+    "_note": "no background shader: the pale field is calm and the board brings its own lattice. A very light vignette sits the board in the middle. Grain off (D-100)."
+  },
+  "pace": {
+    "_why": "a board is a busy picture by nature: the engine's density limits (docs/styles/engines/isometric.md) keep the teaching register calm"
+  }
+}

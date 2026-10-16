@@ -1,0 +1,270 @@
+{
+  "id": "story-cartoon",
+  "name": "Story Cartoon",
+  "guide": "docs/styles/guides/story-cartoon.md",
+  "reads_as": "An outlined story cartoon: warm paper ground, flat fills with one crisp cel shade, a dark ink outline round the cast and every prop that carries information, hand-lettered signs and numbers, designed people (a kit placed by id, one look per name for the whole lesson), background colleagues in muted clothes, black narration cards for turns. For case stories, scenarios and how-it-happened lessons told through people deciding things in places.",
+  "look_family": "illustrated",
+  "fits": [
+    "scenario",
+    "case story",
+    "soft skills",
+    "policy in practice",
+    "history of a decision",
+    "onboarding"
+  ],
+  "avoid_for": [
+    "dense data",
+    "precise technical diagrams"
+  ],
+  "palette": {
+    "field": "#EEE6D8",
+    "field2": "#D8CBB4",
+    "surface": "#FBF7EF",
+    "surface2": "#E4D8C4",
+    "ink": "#2A221C",
+    "muted": "#6F665C",
+    "line": "#2A221C",
+    "accent": "#A9442A",
+    "accent2": "#87570F",
+    "accent3": "#5E9C8F",
+    "accent4": "#8DAE5A",
+    "pos": "#6E9F4A",
+    "neg": "#9B2D4F",
+    "shadow": "#B9AC97",
+    "onAccent": "#2A221C",
+    "caption_active": "#E9B65C",
+    "cloth": "#5B7A99",
+    "cloth2": "#8A6A85"
+  },
+  "_palette_note": "2026-10-07 (style polish, docs/styles/guides/story-cartoon.md s2): neg moved from #B23E2C to #9B2D4F because it sat 4 degrees of hue from the accent #A9442A, so a teaching mark read as 'wrong'. caption_active (added by the RC20 caption fix as #BDA37B, 5.2:1) is now the honey #E9B65C (6.77:1 on the pill): the tan was darker and greyer than the other caption words, so the spoken word looked dimmed instead of lit; it may also mark one key word on a black narration card, and never sits on the field (1.50:1). cloth #5B7A99 and cloth2 #8A6A85 dress the cast so people never wear the teaching accent (rigs and peeps took the accent as clothing before).",
+  "fonts": {
+    "display": {
+      "family": "Patrick Hand",
+      "weights": [
+        400
+      ]
+    },
+    "body": {
+      "family": "Nunito",
+      "weights": [
+        700,
+        800
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400
+      ]
+    },
+    "roles": {
+      "label": "display"
+    },
+    "faces": [
+      {
+        "family": "Patrick Hand",
+        "weight": 400,
+        "file": "patrick-hand-latin-400-normal.woff2",
+        "pkg": "@fontsource/patrick-hand"
+      },
+      {
+        "family": "Nunito",
+        "weight": 700,
+        "file": "nunito-latin-700-normal.woff2",
+        "pkg": "@fontsource/nunito"
+      },
+      {
+        "family": "Nunito",
+        "weight": 800,
+        "file": "nunito-latin-800-normal.woff2",
+        "pkg": "@fontsource/nunito"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      120,
+      170
+    ],
+    "hero": [
+      104,
+      150
+    ],
+    "title": [
+      68,
+      96
+    ],
+    "lead": [
+      36,
+      46
+    ],
+    "body": [
+      30,
+      38
+    ],
+    "label": [
+      30,
+      38
+    ],
+    "caption": [
+      22,
+      26
+    ]
+  },
+  "shape": {
+    "radius": 10,
+    "stroke": 5,
+    "shading": "toon",
+    "outline": "ink",
+    "shadow": "none",
+    "contact_shadow": 0.28
+  },
+  "motion": {
+    "personality": "lively",
+    "enter": 0.42,
+    "move": 0.34,
+    "exit": 0.26,
+    "stagger": 0.07,
+    "draw": 0.8,
+    "count": 1.0,
+    "overshoot": true
+  },
+  "ambient": {
+    "kind": "none"
+  },
+  "captions": {
+    "bg": "rgba(42,34,28,0.92)",
+    "fg": "field",
+    "active": "caption_active",
+    "radius": 10,
+    "font": "body",
+    "size": 36,
+    "weight": 800,
+    "top": 950,
+    "_active_note": "accent2 #87570F read 2.03:1 on this pill (bench post-mortem RC20); caption_active #E9B65C reads 6.77:1 (computed with the pill composited over the field)."
+  },
+  "icons": {
+    "stroke": 2.4
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2A1E17",
+      "#4A2F1D",
+      "#1C1A1E",
+      "#6B4226",
+      "#8A5A33"
+    ],
+    "cloth": "cloth",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "neg",
+    "extra": "muted",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson. story-cartoon moved from silhouette to people on 2026-10-07: the grey bean is a faceless blob with a head wider than its shoulders, which the character skill rejects (lnd-character-design s8 and s11) and the bench review flagged in a corporate lesson.",
+    "bottom": "ink"
+  },
+  "join_default": "cut",
+  "seam_join": "wipe",
+  "join_note": "A small story world: stay in the place and change its state (continue) or pan where places connect; a wipe or a material join (page, torn) at a change of time or chapter, the dip only for a change of era. Not every beat needs a transition: most beats continue.",
+  "music": {
+    "mood": "warm_curious",
+    "root_midi": 48
+  },
+  "fx": {
+    "background": "paper",
+    "intensity": 0.6,
+    "grain": 0.012,
+    "vignette": 0.32,
+    "colors": [
+      "accent",
+      "accent2",
+      "accent3"
+    ],
+    "paper": 0.06,
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish.",
+    "spotlight": {
+      "strength": 0.3,
+      "tint": "ink"
+    },
+    "vignette_under": true
+  },
+  "tone_reference": {
+    "family": "wobbly_outline_grain_flat",
+    "brightness": 0.6,
+    "saturation": 0.39,
+    "dark_share": 0.09,
+    "light_share": 0.37,
+    "warm": 0.46,
+    "cool": 0.19,
+    "accent_shots": 0.38,
+    "colours": 5.0,
+    "tolerance": 0.15,
+    "_source": "TED-Ed family means, docs/research/vision/tedEd_2026-10/colour_and_tone.md (96 films, code-measured); a reference, not a target (D-112)"
+  },
+  "materials": {
+    "wood": "shadow",
+    "chair": "muted",
+    "screen": "surface2",
+    "books": [
+      "cloth",
+      "cloth2",
+      "accent3",
+      "surface"
+    ],
+    "plant": "accent4",
+    "cells": [
+      "field2",
+      "accent2"
+    ],
+    "leds": [
+      "accent4",
+      "accent2"
+    ],
+    "cables": [
+      "accent3",
+      "line",
+      "muted"
+    ],
+    "chart": [
+      "muted",
+      "accent4"
+    ],
+    "objects": {
+      "document": "accent4",
+      "envelope": "surface",
+      "folder": "surface",
+      "package": "field2",
+      "lock": "accent3"
+    },
+    "_decor_note": "2026-10-08 (L-276), from guide s2: the accent is the one thing the narration names (never furniture or background fills), so the vessel's cells take field2 (quiet props) and the package field2, the lock accent3 (calm fills); pos is never decoration, so the rack LEDs are accent4 and accent2 (small details); cables and the wall chart keep one saturated family besides the accent (accent3 with line and muted; muted bars with an accent4 last bar); accent2 is labels and small details, so the envelope and folder are surface (paper props); the document is accent4 (the document header band; a surface document draws its header in the accent). Left at the runtime default because s2 allows it: window lights and safety line accent2 (small details), vessel and calendar accent3, clock and building accent4, heart accent3, phone surface2, bulb accent2. The laptop reads no tone."
+  },
+  "roles": {
+    "person_cloth": [
+      "cloth",
+      "cloth2"
+    ],
+    "link": "accent2",
+    "button": "accent3",
+    "me_bubble": "accent3",
+    "section_label": "ink",
+    "_section_label_note": "D-154: the section label sits in the top-left corner, where the 0.32 vignette (Kshitij's decision) darkens the paper to #b8b2a7; muted read 2.67:1 there, ink reads 7.41:1"
+  },
+  "templates": {
+    "document.page": {
+      "variant": "paper"
+    }
+  }
+}

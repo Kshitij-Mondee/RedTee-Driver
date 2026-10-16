@@ -1,0 +1,63 @@
+OK  agents_relayup_snapshot_times_are_on_the_lesson_clock
+    mutation (times from the beat start, never refused): FAIL AssertionError: {'image': 'C:\\Users\\Admin\\AppData\\Local\\Temp\\loomagents_57995zk_\\qa\\snapshot_b05.jpg', 'times': [38.51], 'runtime_errors': [], 'note': 'the sheet is attached to your next message, one frame pe
+    restored: PASS 0.5 s refused (b05 runs 38.01 to 52.17), draft kept; 40.01 s photographed as given
+OK  agents_relayup_snapshot_takes_edits_instead_of_the_whole_file
+    mutation (no `edits` in lab_snapshot's schema): FAIL AssertionError: {'error': "bad arguments for lab_snapshot: Additional properties are not allowed ('edits' was unexpected)"}
+    restored: PASS an ambiguous edit refused with nothing changed; an exact one applied
+OK  agents_relayup_a_scene_whose_last_look_threw_is_held
+    mutation (no hold at submit): FAIL AssertionError: None
+    restored: PASS held twice (same file, changed file), then taken; a reported kit error and a clean look pass
+OK  agents_relayup_a_kit_report_reaches_the_kit
+    mutation (fix_route kit not allowed (read as human)): FAIL AssertionError: [{'what': 'part desk throws on fill none', 'severity': 'major', 'stage': 'scenes', 'fix_route': 'human', 'beat': 'b05', 'by': 'scene'}, {'what': 'odd thing', 'severity': 'major', 'stage': 'scenes', 'f
+    restored: PASS fields shown; a kit report logged and routed as kit; an unknown route still goes to a person
+OK  agents_relayup_any_role_can_read_the_plan
+    mutation (no read_artifact for the scene role): FAIL AssertionError: 
+    restored: PASS film, storyboard:world, scene:b05 read; an unknown name refused with the list
+OK  agents_relayup_the_kit_is_previewed_before_it_is_taken
+    mutation (no kit_preview for the kit role): FAIL AssertionError: {'error': "tool 'kit_preview' is not available to the kit role (have: list_skill_sections, get_skill_section, read_artifact, report_finding, use_tool, capabilities, get_api_section, get_example_scene,
+    restored: PASS refused unpreviewed; the previewed draft taken without re-sending it; no flag, no gate
+OK  agents_relayup_snapshot_sheets_are_large_labelled_and_say_what_is_missing
+    mutation (the old 3 x 640 sheet): FAIL AssertionError: (1932, 364)
+    restored: PASS 1 frame 1280 x 720 with its time; 4 asked, 3 drawn in a 2 x 2 grid, 9.0 reported missing
+OK  agents_relayup_snapshot_pictures_run_outside_the_lesson_lock_and_calls_are_logged
+    mutation (lab_snapshot under the server's lock): FAIL AssertionError: 
+    restored: PASS lab_snapshot locks only its writing half; a lesson lock factory on the context; one log line per call
+OK  agents_relayup_every_builder_and_the_critic_share_the_film_card
+    mutation (no film card): FAIL AssertionError: scene
+    restored: PASS card 5583 chars at the top of scene, kit and critic messages, identical for b05 and b10; brief-only before the storyboard
+OK  agents_relayup_a_fresh_storyboard_fixer_sees_the_film
+    mutation (no film card for a fixer): FAIL AssertionError: 
+
+APPROVED OUTLINE (the plan the storyboard follows):
+{"devices":[{"id":"OUTLINE-DEV"}]}
+
+You are fixing the accepted storyboard of this lesson; it is on disk. Read each named beat's scene with get_be
+    restored: PASS film card, outline and the defects in a fresh storyboard fixer's task
+OK  agents_relayup_craft_notes_are_preloaded_for_the_roles_that_draw_and_judge
+    mutation (no craft notes): FAIL AssertionError: 
+    restored: PASS scene and critic carry their guide sections and skill notes; brief none; a guideless style no guide part
+OK  agents_relayup_a_template_with_its_own_room_on_a_drawn_station_is_refused
+    mutation (no people templates checked): FAIL AssertionError: []
+    restored: PASS b02 refused; the quiz on the drawn station and the blueprint on its own station pass; feedback-relay-v2: b02 and b06
+OK  agents_relayup_the_pilot_pair_goes_first_and_its_kit_reports_reach_the_kit
+    mutation (no pilot): FAIL AssertionError: 
+    restored: PASS pilot b02 + b03 (continue); its kit report sent the kit back once, not routed again; b02's picture handed on
+OK  agents_relayup_the_other_mix_is_named_for_an_illustrated_style
+    mutation (no note): FAIL AssertionError: 
+    restored: PASS story-cartoon on classic names the cinema mix; cinema or corporate-clean say nothing
+--  agents_relayup_the_planners_get_the_whole_brief_and_the_voice
+    red by construction: before R-46 the storyboard message carried only look/visual_direction/audience/outcome, persona_pick asked for `voice`, the script had no LOOK block (the three asserts read those strings)
+--  agents_relayup_a_claude_code_prompt_names_tools_in_full
+    red by construction: cc_runner.py had no mcp__relay__ name map
+
+14 of 14 red with the mutation and green restored
+
+R-49 additions:
+OK  agents_relayup_beats_that_hold_are_written_after_the_beat_they_hold_from
+    mutation (every job its own chain, the old parallel pool): FAIL [['b06'], ['b04'], ['b05'], ['b07'], ['b08'], ['b02']]
+    restored: PASS
+OK  primitive_runtime_the_last_scene_leaves_with_the_frame
+    LOOM_TEST_RUNTIME = a copy of the runtime with the old final-scene block: FAIL A left on its own before the frame did:
+    {'o': 1, 'w': 600} -> {'o': 1, 'w': 552}; the current runtime: PASS
+--  check_a_seam_between_worlds_becomes_a_fade_not_black
+    red by construction: before the change every seam warning said "using a dip" and the substituted joins were dips

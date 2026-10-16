@@ -1,0 +1,258 @@
+{
+  "concept": "One meeting room, one comment rebuilt in front of us. A friendly, vague line after an overrun gets a nod and changes nothing; the clock overruns again. A label makes it worse; what the clock showed is the usable part. The same bubble becomes a message card that grows line by line (what you saw, its impact, an agreed next step) while the colleague's face moves from easy to attentive. The viewer checks it on a different moment (a handover note missing a deadline), sees the talk done soon and two-way in a quiet corner, sees praise made specific at their own desk, gets a blank card to fill, and the room returns a week on with the clock at the end mark.",
+  "world": "Stations: room (0,0) the meeting room two-shot, Asha the giver left, Ben the colleague right, wall clock upper right, card space in the wall centre; presenter (0,1300) b03 only; desk (2200,0) the viewer's own desk, nobody at it, b06 b14 b15; handover (4400,0) a desk top with a handover note and three option cards, b11 b12; corner (2200,1300) a quiet corner by a window, same sides as the room, b13. Cast: Presenter (woman, skin 0, accent3), Asha (woman, skin 2, cloth, screen left), Ben (man, skin 1, cloth2, flip, screen right); peep busts; extras muted via ctx.crowd.",
+  "look": "story-cartoon: warm paper ground, flat fills with one cel shade, ink outlines, words on props, one accent per frame on the thing the narration names.",
+  "join_material": "page",
+  "devices": [
+    {
+      "id": "message_card",
+      "what": "Asha's one speech bubble: the vague line (b01), emptied (b04), turned into a paper card that grows line 1 what you saw (b07), line 2 impact (b08), part labels and SBI once (b09), line 3 next step with an agreed tick (b10), edited small in the corner (b13), and as the viewer's blank four-slot card (b15).",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b04",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b13",
+        "b15"
+      ]
+    },
+    {
+      "id": "two_shot",
+      "what": "The same meeting room two-shot, Asha left, Ben right, same looks and sides, faces carrying the reaction.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b04",
+        "b05",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b16"
+      ]
+    },
+    {
+      "id": "wall_clock",
+      "what": "The room's wall clock with a small end-time mark: before the mark (b01), hands past it (b02), the twenty-minute overrun arc shaded (b05, b07), hands on the mark (b16).",
+      "kind": "data",
+      "beats": [
+        "b01",
+        "b02",
+        "b05",
+        "b07",
+        "b16"
+      ]
+    },
+    {
+      "id": "desk_notes",
+      "what": "The viewer's desk: a Good job sticky with an empty space where the action would be (b06); beside it a specific note tied to the timed agenda (b14); a blank four-slot card (b15).",
+      "kind": "callback",
+      "beats": [
+        "b06",
+        "b14",
+        "b15"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "The one join material: a paper page turn into the check (b11), into the quiet corner (b13), and at the week skip into the payoff (b16).",
+      "kind": "join",
+      "beats": [
+        "b11",
+        "b13",
+        "b16"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "the vague bubble",
+      "why": "a pale open: the line that changed nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the label, the overrun arc, then each card line as it fills",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "accent": "the missing deadline gap, withheld from the options until the answer",
+      "why": "the three options weigh the same until the answer"
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "break": true,
+      "accent": "the clock hand on the end mark",
+      "why": "a lift at the payoff: the same room, the change visible"
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "treatment": "Cut open in the room on the vague line and the nod; continue a week on as the clock passes the mark; cut to the presenter's one-line promise.",
+      "world": "room, presenter",
+      "accent_on": "the vague bubble, then the clock",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Asha's bubble pops with Maybe tighten it up?; Ben smiles and nods; both easy.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "cut"
+        },
+        {
+          "beat": "b02",
+          "line": "A week on: the bubble leaves, extras sit, the clock hand sweeps past the end mark while Ben still talks; Asha's face falls.",
+          "builder": "scene-author",
+          "device": "wall_clock",
+          "join": "continue"
+        },
+        {
+          "beat": "b03",
+          "line": "The presenter promises, in one line, a talk that sticks; her card previews Behaviour, Impact, Next step.",
+          "builder": "avatar",
+          "join": "cut"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "Back in the room: the nod frozen, the bubble emptied; then a label versus what the clock showed, the seen side ticked; camera to the viewer's desk for a quiet recall.",
+      "world": "room, desk",
+      "accent_on": "the empty bubble, then the overrun arc, then the empty space on the note",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "The nod freezes; the bubble empties to a dashed hollow: nothing to act on.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "cut"
+        },
+        {
+          "beat": "b05",
+          "line": "A You're disorganised tag sticks on Ben and he bristles, it is crossed and peels away; the clock's twenty-minute overrun arc lights and Ben looks at it, ticked as the one to use.",
+          "builder": "scene-author",
+          "device": "wall_clock",
+          "join": "continue"
+        },
+        {
+          "beat": "b06",
+          "line": "The viewer's desk: a Good job sticky with an empty space under it; a still, thinking hold.",
+          "builder": "scene-author",
+          "device": "desk_notes",
+          "join": "camera",
+          "intent": "rest"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "Camera back to the room: the bubble becomes a card and grows across four continue joins, Ben's face moving from easy to attentive to agreeing; a page turn to the handover check and its answer.",
+      "world": "room, handover",
+      "accent_on": "the line being spoken",
+      "beats": [
+        {
+          "beat": "b07",
+          "line": "The bubble reshapes into a card with three dashed slots; line 1 writes in as spoken; Ben turns attentive.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "camera"
+        },
+        {
+          "beat": "b08",
+          "line": "Line 2 Impact writes in, the accent, slow; two extras hurry out late behind; Ben turns thoughtful.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b09",
+          "line": "Small part tags land on lines 1 and 2, the SBI heading once and small; the third slot pulses open.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b10",
+          "line": "Line 3 fills; a paper agenda on the table gains its times; a pos tick: agreed; Ben nods, this time with a plan.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b11",
+          "line": "Page turn: a handover note with a dashed gap where the deadline should be, the question, three equal option cards, a pause ring through the silence.",
+          "builder": "scene-author",
+          "device": "page_join",
+          "join": "page",
+          "intent": "process_hold"
+        },
+        {
+          "beat": "b12",
+          "line": "C ticked and its three parts light; B dims with three empty outline slots; A crossed.",
+          "builder": "scene-author",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "A page turn to a quiet corner the same afternoon: Asha asks, Ben talks, she listens, line 3 is edited together; camera to the desk where praise is made specific.",
+      "world": "corner, desk",
+      "accent_on": "the edited line, then the specific note",
+      "beats": [
+        {
+          "beat": "b13",
+          "line": "Quiet corner: Soon, in private sign on the moment; Asha asks, Ben's bubble talks, Asha listens; line 3 on the small card is edited.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "page"
+        },
+        {
+          "beat": "b14",
+          "line": "The Good job sticky returns, still empty; beside it a specific note What worked, so keep it, its space filled with the timed agenda, a line joining them.",
+          "builder": "scene-author",
+          "device": "desk_notes",
+          "join": "camera"
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "treatment": "On the desk the viewer's blank four-slot card; a page turn to the room a week on, the clock on the end mark and specific praise.",
+      "world": "desk, room",
+      "accent_on": "the blank card's slots, then the clock hand on the mark",
+      "beats": [
+        {
+          "beat": "b15",
+          "line": "A blank card for the viewer lands on the desk with four slots, Behaviour, Impact, Next step, Ask, each lighting as spoken; a pause to think.",
+          "builder": "scene-author",
+          "device": "message_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b16",
+          "line": "Page turn a week on: the agenda pinned by the clock, the hand reaches the end mark, extras leave on time; Asha's specific praise bubble, both smile.",
+          "builder": "scene-author",
+          "device": "wall_clock",
+          "join": "page"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "b11 and b12 as the quiz.question and quiz.answer templates (kept as an option; not chosen because the handover note must be seen and an earlier lesson's critic flagged the template's uneven option grid)."
+  ],
+  "open_questions": [
+    "Peep busts have only neutral, happy, surprised and explaining faces: Ben's bristle in b05 reads as surprised plus the tag, not a scowl."
+  ]
+}

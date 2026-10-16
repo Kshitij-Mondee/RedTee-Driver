@@ -1,0 +1,454 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b03: camera pan between different worlds (hook -> presenter) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b04: camera pan between different worlds (presenter -> rings) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b18: camera pan between different worlds (travel -> quiz) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b22: camera pan between different worlds (checklist -> takeback) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b24: camera pan between different worlds (takeback -> payoff) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b25: camera pan between different worlds (payoff -> presenter) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "runtime wb_pen_late: b01: the hand starts \"hook_budget_figures_3\" 0.31s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b01: 6 strokes of \"hook_budget_figures_3\" in 0.13s",
+    "runtime wb_window_tight: b05: 11 strokes of \"rings_key_ink_key_1\" in 0.00s",
+    "runtime part_drawn_again: b05: draws kit part \"link_key\" again as \"key_ink\" while it holds \"key\" (the link_key b04 drew, still on screen), elsewhere on screen: a second link_key is fine only when the film shows two; to change the held one use ctx.held(\"key\").handle",
+    "runtime wb_pen_late: b07: the hand starts \"named_accounts_row_0_3\" 0.44s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b07: 1 strokes of \"named_accounts_row_0_3\" in -0.08s",
+    "runtime wb_pen_late: b07: the hand starts \"named_accounts_row_1_5\" 0.54s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b07: 1 strokes of \"named_accounts_row_1_5\" in -0.18s",
+    "runtime wb_pen_late: b07: the hand starts \"named_accounts_row_2_7\" 0.64s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b07: 1 strokes of \"named_accounts_row_2_7\" in -0.28s",
+    "runtime wb_window_tight: b05: 8 strokes of \"access_board_door_shut_5\" in 0.00s",
+    "runtime wb_pen_late: b08: the hand starts \"narrow_arrow\" 0.25s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b09: the hand starts \"access_budget_edit_4\" 0.52s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b11: 1 strokes of \"access_ink_correction_edit_4\" in 0.00s",
+    "runtime wb_window_tight: b11: 1 strokes of \"copy_underline\" in -0.03s",
+    "runtime part_drawn_again: b11: draws kit part \"budget_page\" again as \"edit_ink\" while it holds \"page\" (the budget_page b09 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second budget_page is fine only when the film shows two; to change the held one use ctx.held(\"page\").handle",
+    "runtime wb_window_tight: b13: 17 strokes of \"travel_rings_hatch_company_4\" in 0.25s",
+    "runtime wb_pen_late: b15: the hand starts \"forward3\" 0.72s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b15: 3 strokes of \"forward3\" in -0.32s",
+    "runtime wb_pen_late: b16: the hand starts \"travel_list_row_0_3\" 0.66s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b16: 1 strokes of \"travel_list_row_0_3\" in -0.05s",
+    "runtime wb_pen_late: b16: the hand starts \"travel_list_row_1_5\" 0.76s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b16: 1 strokes of \"travel_list_row_1_5\" in -0.15s",
+    "runtime wb_pen_late: b16: the hand starts \"travel_list_row_2_7\" 0.86s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b16: 1 strokes of \"travel_list_row_2_7\" in -0.25s",
+    "runtime wb_pen_late: b16: the hand starts \"forward4\" 0.35s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b16: 3 strokes of \"forward4\" in 0.05s",
+    "runtime wb_window_tight: b13: 8 strokes of \"travel_rings_door_shut_6\" in 0.00s",
+    "runtime wb_pen_late: b18: the hand starts \"choice_circle_A\" 1.43s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b18: 1 strokes of \"choice_circle_A\" in -1.28s",
+    "runtime wb_window_tight: b18: 28 strokes of \"choice_words_A\" in 0.09s",
+    "runtime wb_pen_late: b20: the hand starts \"check_tick_file\" 0.39s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b20: 1 strokes of \"check_tick_file\" in -0.24s",
+    "runtime wb_pen_late: b20: the hand starts \"check_box_setting\" 0.25s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b20: 4 strokes of \"check_box_setting\" in -0.01s",
+    "runtime wb_pen_late: b20: the hand starts \"check_words_setting\" 0.26s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b20: the hand starts \"check_tick_setting\" 0.61s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b20: 1 strokes of \"check_tick_setting\" in -0.38s",
+    "runtime wb_pen_late: b20: the hand starts \"check_box_permission\" 0.39s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b20: 4 strokes of \"check_box_permission\" in 0.00s",
+    "runtime wb_pen_late: b20: the hand starts \"check_tick_people\" 0.37s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b20: 1 strokes of \"check_tick_people\" in -0.19s",
+    "runtime wb_pen_late: b20: the hand starts \"list_underline\" 0.29s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b20: 1 strokes of \"list_underline\" in -0.02s",
+    "runtime wb_window_tight: b21: 11 strokes of \"inspection_budget_title_2\" in 0.26s",
+    "runtime wb_pen_late: b21: the hand starts \"inspection_budget_figures_3\" 0.43s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b21: 6 strokes of \"inspection_budget_figures_3\" in -0.10s",
+    "runtime wb_pen_late: b21: the hand starts \"inside_words\" 0.45s after it was asked (it was still drawing)",
+    "runtime wb_pen_late: b22: the hand starts \"takeback_names_row_0_3\" 0.55s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b22: 1 strokes of \"takeback_names_row_0_3\" in -0.05s",
+    "runtime wb_pen_late: b22: the hand starts \"takeback_names_row_1_5\" 0.65s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b22: 1 strokes of \"takeback_names_row_1_5\" in -0.15s",
+    "runtime wb_pen_late: b22: the hand starts \"takeback_names_row_2_7\" 0.75s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b22: 1 strokes of \"takeback_names_row_2_7\" in -0.25s",
+    "runtime wb_pen_late: b22: the hand starts \"takeback_names_strike_1_8\" 0.35s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b22: 1 strokes of \"takeback_names_strike_1_8\" in -0.17s",
+    "runtime wb_pen_late: b22: the hand starts \"off_words\" 0.27s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b22: 1 strokes of \"takeback_key_cross_3\" in 0.00s",
+    "runtime wb_pen_late: b23: the hand starts \"shared_list\" 0.59s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b23: 4 strokes of \"shared_list\" in -0.29s",
+    "runtime wb_pen_late: b23: the hand starts \"shared_row_0\" 0.54s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b23: 5 strokes of \"shared_row_0\" in -0.28s",
+    "runtime wb_pen_late: b23: the hand starts \"shared_row_1\" 0.58s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b23: 5 strokes of \"shared_row_1\" in -0.32s",
+    "runtime wb_pen_late: b23: the hand starts \"shared_row_2\" 0.62s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b23: 5 strokes of \"shared_row_2\" in -0.36s",
+    "runtime wb_window_tight: b24: 7 strokes of \"payoff_budget_outline_1\" in 0.11s",
+    "runtime wb_pen_late: b24: the hand starts \"payoff_budget_title_2\" 0.33s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b24: 11 strokes of \"payoff_budget_title_2\" in -0.21s",
+    "runtime wb_pen_late: b24: the hand starts \"payoff_budget_figures_3\" 0.81s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b24: 6 strokes of \"payoff_budget_figures_3\" in -0.71s",
+    "runtime wb_pen_late: b24: the hand starts \"settings\" 0.40s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b24: 1 strokes of \"settings\" in -0.01s",
+    "runtime wb_window_tight: b24: 1 strokes of \"settings\" in 0.07s",
+    "runtime wb_pen_late: b24: the hand starts \"settings\" 0.53s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b24: 1 strokes of \"settings\" in -0.40s",
+    "runtime wb_pen_late: b24: the hand starts \"payoff_key_key_1\" 0.50s after it was asked (it was still drawing)",
+    "runtime wb_window_tight: b24: 11 strokes of \"payoff_key_key_1\" in -0.23s",
+    "b18: 11 chunks on screen (choice_words_A, choice_words_B, choice_words_C, decision, options, pause_ring, pause_words, question, quiz_head, read_only, scenario); the budget is ~5-6",
+    "variety: still_share = 0.833 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b05, b06, b07, b08, b09)",
+    "variety: labels_over_objects_share = 0.625 is worse than the worst baseline lesson (0.5): it grew (beats: _kit, b01, b02, b04, b05, b06, b09, b10)",
+    "variety: one_world_share = 0.792 is above the baseline median (0.625) (beats: _kit, b01, b02, b04, b09, b10, b11, b12)",
+    "variety: the seed's camera habit is 'pan' but 20 of 24 bespoke beats have no camera move",
+    "lc layout text_covered @ 24: b03 \"Three quick choices\" is partly covered by an opaque shape (28 % of it, its words cut) from 24 to 24 s [presenter_title]",
+    "b13: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b15: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b16: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b17: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b18: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b19: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 1.16
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 2.39
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.93
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.97
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.32
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 1.7
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 2.02,
+        "declared": "rest"
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.58
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.09
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.5
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 1.29,
+        "declared": "rest"
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 3.3
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 4.0
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.42
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 2.55
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 2.74,
+        "declared": "rest"
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 0.09
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 0.25
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 1.18
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 1.86
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 1.71
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 1.85
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 1.03
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.096,
+      "template": 0.454,
+      "motion": 0.41,
+      "hybrid": 0.04,
+      "motion_effective": 0.431
+    },
+    "elements": {
+      "b01": 13,
+      "b02": 4,
+      "b03": 3,
+      "b04": 9,
+      "b05": 16,
+      "b06": 9,
+      "b07": 17,
+      "b08": 7,
+      "b09": 9,
+      "b10": 6,
+      "b11": 10,
+      "b12": 7,
+      "b13": 13,
+      "b14": 6,
+      "b15": 3,
+      "b16": 18,
+      "b17": 8,
+      "b18": 15,
+      "b19": 9,
+      "b20": 16,
+      "b21": 13,
+      "b22": 18,
+      "b23": 9,
+      "b24": 19,
+      "b25": 3
+    },
+    "variety": {
+      "pointer_pill_share": null,
+      "hero_icon_rate": 0.5,
+      "pop_settle_share": 0.0,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 1.0,
+      "one_radius_share": null,
+      "still_share": 0.833,
+      "labels_over_objects_share": 0.625,
+      "one_world_share": 0.792,
+      "lines_per_s": 3.15
+    },
+    "sfx_events": 2,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 57991,
+      "layout_samples": 479,
+      "texts": 535,
+      "contrast_checked": 537,
+      "errors": 0,
+      "warnings": 1
+    },
+    "nodes": 3482,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 32,
+        "b02": 32,
+        "b03": 107.4,
+        "b04": 74.6,
+        "b06": 34.4,
+        "b07": 34.4,
+        "b08": 31.1,
+        "b09": 74.6,
+        "b10": 46.7,
+        "b11": 33.6,
+        "b12": 45.9,
+        "b13": 45.9,
+        "b14": 40.2,
+        "b15": 38.5,
+        "b16": 45.9,
+        "b17": 49.2,
+        "b18": 42.6,
+        "b19": 42.6,
+        "b20": 45.9,
+        "b21": 35.2,
+        "b22": 34.4,
+        "b23": 34.4,
+        "b24": 34.4,
+        "b25": 95.1
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 25,
+      "lines_seen": 65,
+      "blank_beats": [],
+      "blank_measured": 25
+    },
+    "foreign": {
+      "measured_beats": 25,
+      "foreign_beats": [],
+      "max_px": 52
+    },
+    "records": {
+      "elements": 260,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "caption_hold": {
+      "enabled": true,
+      "cues": 80,
+      "short": 0,
+      "under_min": 0,
+      "min_hold_s": 1.84,
+      "baselined": false
+    },
+    "grid": {
+      "checked": true,
+      "planned": 14,
+      "placed": 14,
+      "dropped": 0,
+      "unresolved": 0,
+      "joins_into_speech": 0,
+      "bars": 112,
+      "bpm": [
+        110.483,
+        112.064,
+        113.549,
+        113.231
+      ]
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0444,
+        "b02": 0.0525,
+        "b03": 0.0387,
+        "b04": 0.0248,
+        "b05": 0.0425,
+        "b06": 0.0619,
+        "b07": 0.0828,
+        "b08": 0.1045,
+        "b09": 0.0378,
+        "b10": 0.0669,
+        "b11": 0.0618,
+        "b12": 0.0533,
+        "b13": 0.0522,
+        "b14": 0.0585,
+        "b15": 0.0688,
+        "b16": 0.0824,
+        "b17": 0.0949,
+        "b18": 0.0608,
+        "b19": 0.1205,
+        "b20": 0.0532,
+        "b21": 0.0981,
+        "b22": 0.0434,
+        "b23": 0.051,
+        "b24": 0.0626,
+        "b25": 0.0498
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24,
+        "caption_min_s": 1.8,
+        "caption_tail_s": 0.6
+      },
+      "measured_beats": 25,
+      "sharpness": {
+        "b01": 1.024,
+        "b02": 0.985,
+        "b03": 1.034,
+        "b04": 1.07,
+        "b06": 1.27,
+        "b07": 1.289,
+        "b08": 1.252,
+        "b09": 1.032,
+        "b10": 1.171,
+        "b11": 1.172,
+        "b12": 1.221,
+        "b13": 0.996,
+        "b14": 1.004,
+        "b15": 1.24,
+        "b16": 1.004,
+        "b17": 1.196,
+        "b18": 1.097,
+        "b19": 1.167,
+        "b20": 1.144,
+        "b21": 1.149,
+        "b22": 0.976,
+        "b23": 1.275,
+        "b24": 1.286,
+        "b25": 1.042
+      },
+      "blurred_beats": [],
+      "blur_measured": 24
+    },
+    "tone": {
+      "value_script_beats": 25,
+      "tone_vs_reference": {
+        "brightness": 0.921,
+        "saturation": 0.041,
+        "dark_share": 0.0,
+        "light_share": 1.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b22.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b23.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b24.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\lg-trial-share-links-off\\qa\\sheets\\b25.jpg"
+  ],
+  "build_hash": "cb1a2cd9489318c8"
+}

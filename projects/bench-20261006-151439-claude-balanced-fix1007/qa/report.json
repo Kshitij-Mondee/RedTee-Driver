@@ -1,0 +1,754 @@
+{
+  "ok": false,
+  "errors": [
+    "runtime motion_target: b01: m.travel was given an array of 7 (ctx.crowd returns one element per person: travel each); this move is skipped",
+    "runtime unknown_motion_setting: standard",
+    "runtime held_missing: b07: no element \"dev\" in previous scene",
+    "runtime text_spill: drawn text leaves its box (left 2px): \"Tone\"",
+    "runtime held_missing: b10: no element \"dev\" in previous scene",
+    "runtime unknown_motion_setting: short",
+    "runtime held_missing: b13: no element \"captions\" in previous scene",
+    "runtime held_missing: b18: no element \"specific_sentence\" in previous scene",
+    "runtime held_missing: b18: no element \"old_line\" in previous scene",
+    "runtime held_needs_same_station: b22: held(\"slot_one_words\") but previous scene is on another station",
+    "runtime unknown_token: unknown colour token none",
+    "runtime held_needs_same_station: b46: held(\"desk\") but previous scene is on another station",
+    "runtime held_needs_same_station: b46: held(\"sticky_note\") but previous scene is on another station",
+    "runtime unknown_token: unknown colour token none",
+    "runtime motion_target: b46: m.travel was given nothing (a held element that is not there?); this move is skipped",
+    "runtime unknown_motion_setting: 1.2",
+    "runtime text_overflow: text does not fit at the lead floor (36px): \"Something to notice\"",
+    "hf layout content_overlap @ 91.064: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-]",
+    "b01: off frame at 6.8s: character 'priya' cropped 247 px at the top and 0 px at the sides; character 'dev' cropped 267 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b04: off frame at 28.0s: character 'replayed_meeting' cropped 387 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b07: off frame at 54.5s: character 'dev' cropped 487 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b10: off frame at 83.3s: character 'dev' cropped 994 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b20: off frame at 170.1s: character 'dev' cropped 379 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b21: off frame at 180.6s: character 'sam_left' cropped 62 px at the top and 0 px at the sides; character 'sam_right' cropped 59 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b22: off frame at 189.9s: character 'priya' cropped 0 px at the top and 137 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b30: off frame at 259.0s: connector 'link_line' 100% outside the frame; token 'talk_after_marker' 91% outside the frame; text 'talk_after_label' 100% outside the frame (1 word(s) wholly off) (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b44: off frame at 391.8s: card 'entry_2' 81% outside the frame (1 word(s) wholly off); mark 'tick_2' 100% outside the frame; \"Talk again\" wholly outside the frame at [2015, 502, 2155, 554] (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b47: off frame at 418.5s: character 'Priya' cropped 74 px at the top and 0 px at the sides; character 'Dev' cropped 59 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b51: off frame at 448.0s: character 'Sam_presenting' cropped 341 px at the top and 0 px at the sides; character 'Dev_holding_back' cropped 369 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b52: off frame at 455.0s: character 'priya' cropped 361 px at the top and 0 px at the sides; character 'dev' cropped 331 px at the top and 0 px at the sides; character 'extra_1' cropped 192 px at the top and 302 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+    "b13: blank beat at 107.4s: none of its 3 own element(s) is seen in the frame while the voice speaks (bubble 'attitude_bubble' paints nothing, bubble 'motive_bubble' paints nothing, bubble 'intent_bubble' paints nothing); the beat's picture is off frame or absent (lay it out inside the frame, or reveal it)",
+    "b18: blank beat at 159.0s: none of its 2 own element(s) is seen in the frame while the voice speaks (connector 'sam_name_mark' paints nothing, connector 'moment_mark' paints nothing); the beat's picture is off frame or absent (lay it out inside the frame, or reveal it)",
+    "b30: blank beat at 259.0s: none of its 3 own element(s) is seen in the frame while the voice speaks (connector 'link_line' off frame, token 'talk_after_marker' off frame, text 'talk_after_label' off frame); the beat's picture is off frame or absent (lay it out inside the frame, or reveal it)"
+  ],
+  "warnings": [
+    "compose: b21: camera pan between different worlds (board -> split) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b22: camera pan between different worlds (split -> board) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b31: camera pan between different worlds (board -> timing) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "runtime figure_cropped: b01: character \"priya\" (pip) is cut off at the frame: top at y -249 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b01: character \"dev\" (tess) is cut off at the frame: top at y -269 in station space (move its feet in, or lower its scale)",
+    "runtime held_name_case: b02: held(\"Priya\") took \"priya\" (the names differ only in case); use the same name",
+    "runtime held_name_case: b02: held(\"Dev\") took \"dev\" (the names differ only in case); use the same name",
+    "runtime held_name_case: b03: held(\"Dev\") took \"dev\" (the names differ only in case); use the same name",
+    "runtime held_name_case: b03: held(\"Priya\") took \"priya\" (the names differ only in case); use the same name",
+    "runtime figure_cropped: b04: character \"ghost_priya\" (pip) is cut off at the frame: top at y -369 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b04: character \"ghost_dev\" (tess) is cut off at the frame: top at y -390 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b04: character \"priya\" (pip) is cut off at the frame: top at y -369 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b04: character \"dev\" (tess) is cut off at the frame: top at y -390 in station space (move its feet in, or lower its scale)",
+    "runtime compare_tone_deprecated: b06: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b06: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime figure_cropped: b07: character \"dev\" (pip) is cut off at the frame: top at y -485 in station space (move its feet in, or lower its scale)",
+    "runtime unanchored_reveal: b09: \"title\" has no 'say' anchor; placed at 2% of the speech",
+    "runtime compare_tone_deprecated: b09: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b09: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime figure_cropped: b10: character \"dev\" (pip) is cut off at the frame: top at y -979 in station space (move its feet in, or lower its scale)",
+    "runtime literal_colour: scene used a literal colour instead of a token: #FBF7EF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #FBF7EF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #FBF7EF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime unanchored_reveal: b15: \"kicker\" has no 'say' anchor; placed at 0% of the speech",
+    "runtime compare_tone_deprecated: b15: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b15: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime literal_colour: scene used a literal colour instead of a token: #A9442A",
+    "runtime literal_colour: scene used a literal colour instead of a token: #A9442A",
+    "runtime literal_colour: scene used a literal colour instead of a token: #A9442A",
+    "runtime literal_colour: scene used a literal colour instead of a token: #D8CBB4",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #FBF7EF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #6F665C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #6F665C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #A9442A",
+    "runtime literal_colour: scene used a literal colour instead of a token: #A9442A",
+    "runtime figure_cropped: b20: character \"dev\" (pip) is cut off at the frame: top at y -368 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b21: character \"sam_left\" (sam) is cut off at the frame: top at y -59 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b21: character \"sam_right\" (sam) is cut off at the frame: top at y -59 in station space (move its feet in, or lower its scale)",
+    "runtime unanchored_reveal: b23: \"kicker\" has no 'say' anchor; placed at 0% of the speech",
+    "runtime compare_tone_deprecated: b23: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b23: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime unanchored_reveal: b28: \"kicker\" has no 'say' anchor; placed at 0% of the speech",
+    "runtime compare_tone_deprecated: b28: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b28: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b37: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b37: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime unanchored_reveal: b39: \"subtitle\" has no 'say' anchor; placed at 45% of the speech",
+    "runtime compare_tone_deprecated: b41: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime compare_tone_deprecated: b41: compare.two 'tone' is deprecated: it now only colours the side (valence); use verdict: right|wrong for a tick or a cross",
+    "runtime unanchored_reveal: b43: \"title\" has no 'say' anchor; placed at 2% of the speech",
+    "runtime literal_colour: scene used a literal colour instead of a token: #A9442A",
+    "runtime literal_colour: scene used a literal colour instead of a token: #FBF7EF",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #87570F",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2A221C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #87570F",
+    "runtime figure_cropped: b47: character \"Priya\" (tess) is cut off at the frame: top at y -75 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b47: character \"Dev\" (pip) is cut off at the frame: top at y -60 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b51: character \"Sam_presenting\" (sam) is cut off at the frame: top at y -343 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b51: character \"Dev_holding_back\" (pip) is cut off at the frame: top at y -372 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b52: character \"priya\" (tess) is cut off at the frame: top at y -352 in station space (move its feet in, or lower its scale)",
+    "runtime figure_cropped: b52: character \"dev\" (pip) is cut off at the frame: top at y -332 in station space (move its feet in, or lower its scale)",
+    "b30: 6.0s static hold from 247.9s",
+    "b44: 5.2s static hold from 385.0s",
+    "b21: 10 chunks on screen (effect_word, left_room_Sam_smooth, left_slide, priya_left, priya_right, right_room_Sam_cut_off, right_slide, sam_left, sam_right, split_divider); the budget is ~5-6",
+    "b06: \"Nothing to change\" is readable for 0.75s but 3 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b14: \"What the camera does catch. We check it with the c\" is readable for 0.25s but 12 word(s) need 3.60s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b15: \"You can be wrong\" is readable for 1.06s but 4 word(s) need 1.20s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b26: \"And what it did\" is readable for 0.82s but 4 word(s) need 1.20s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b28: \"A gap\" is readable for 0.60s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b48: \"I lost track of her point.\" is readable for 0.62s but 6 word(s) need 1.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b49: \"and let's talk after it\" is readable for 0.93s but 5 word(s) need 1.50s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b50: \"Let her finish\" is readable for 0.00s but 3 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b20: new content arrives at 163.85s while b19 is still leaving (until 164.06s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "variety: template_share = 0.519 is worse than the worst baseline lesson (0.517): it grew",
+    "variety: still_share = 0.75 is worse than the worst baseline lesson (0.636): it grew (beats: b01, b02, b03, b04, b07, b10, b13, b17)",
+    "variety: one_radius_share = 0.201 is above the baseline median (0.2)",
+    "hf runtime console_warning @ 0: Invalid property opacity set to 1 Missing plugin? gsap.registerPlugin() [[data-composition-id]]",
+    "hf layout content_overlap @ 297.739: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(7) > svg:nth-of-type(1) > g:nth-]",
+    "hf contrast contrast_aa_failure @ 108.699: Contrast is 2.7:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 227.28: Contrast is 2.58:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 345.861: Contrast is 2.7:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 464.441: Contrast is 2.76:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "b02: a held element is off frame at 13.9s: character 'priya' 21% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b02: a held element is off frame at 13.9s: character 'dev' 22% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b03: a held element is off frame at 21.0s: character 'dev' 22% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b03: a held element is off frame at 21.0s: character 'priya' 21% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b30: a held element is off frame at 259.0s: \"Calendar\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b30: a held element is off frame at 259.0s: \"Let her finish\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b12: no_entrance_words: element 'caption_to_whom' (connector) shows \"to whom\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'attitude_bubble' (bubble) shows \"Attitude\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'motive_bubble' (bubble) shows \"Motive\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b13: no_entrance_words: element 'intent_bubble' (bubble) shows \"Intent\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b17: no_entrance_words: element 'board_slot_one' (card) shows \"SLOT ONE\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b18: sparse frame (median edge density 0.0059 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b46: sparse frame (median edge density 0.0117 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b06: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.84 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'dark' but the frames measure brightness 0.47 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b13: value script says 'dark' but the frames measure brightness 0.44 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b20: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b21: value script says 'mid' but the frames measure brightness 0.72 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b22: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b23: value script says 'mid' but the frames measure brightness 0.82 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b24: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b25: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b26: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b27: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b28: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b29: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b31: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b34: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b35: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b36: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b37: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b38: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b39: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b47: value script says 'mid' but the frames measure brightness 0.74 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b48: value script says 'mid' but the frames measure brightness 0.80 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b49: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b50: value script says 'mid' but the frames measure brightness 0.81 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson brightness 0.76 against the pack's reference 0.60 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson saturation 0.13 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.89 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 8,
+    "double_exposures": 1,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 2.17
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.37
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.74
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 2.7
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 4.53
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.97
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.55
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 2.21
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 3.59,
+        "declared": "rest"
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 2.78
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 2.15,
+        "declared": "hold"
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 1.52
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 4.97
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 2.28,
+        "declared": "rest"
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 1.95
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 2.84
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 2.37,
+        "declared": "hold"
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 3.06
+      },
+      {
+        "beat": "b26",
+        "max_static_s": 1.07,
+        "declared": "rest"
+      },
+      {
+        "beat": "b27",
+        "max_static_s": 3.94
+      },
+      {
+        "beat": "b28",
+        "max_static_s": 2.85
+      },
+      {
+        "beat": "b29",
+        "max_static_s": 2.09
+      },
+      {
+        "beat": "b30",
+        "max_static_s": 5.99
+      },
+      {
+        "beat": "b31",
+        "max_static_s": 4.07
+      },
+      {
+        "beat": "b32",
+        "max_static_s": 1.81
+      },
+      {
+        "beat": "b33",
+        "max_static_s": 1.62,
+        "declared": "rest"
+      },
+      {
+        "beat": "b34",
+        "max_static_s": 2.75
+      },
+      {
+        "beat": "b35",
+        "max_static_s": 11.86,
+        "declared": "hold"
+      },
+      {
+        "beat": "b36",
+        "max_static_s": 4.58
+      },
+      {
+        "beat": "b37",
+        "max_static_s": 3.26
+      },
+      {
+        "beat": "b38",
+        "max_static_s": 2.22
+      },
+      {
+        "beat": "b39",
+        "max_static_s": 1.43,
+        "declared": "rest"
+      },
+      {
+        "beat": "b40",
+        "max_static_s": 3.21
+      },
+      {
+        "beat": "b41",
+        "max_static_s": 1.57
+      },
+      {
+        "beat": "b42",
+        "max_static_s": 1.96
+      },
+      {
+        "beat": "b43",
+        "max_static_s": 1.95
+      },
+      {
+        "beat": "b44",
+        "max_static_s": 5.17
+      },
+      {
+        "beat": "b45",
+        "max_static_s": 0.46,
+        "declared": "hold"
+      },
+      {
+        "beat": "b46",
+        "max_static_s": 4.62
+      },
+      {
+        "beat": "b47",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b48",
+        "max_static_s": 2.22
+      },
+      {
+        "beat": "b49",
+        "max_static_s": 2.52
+      },
+      {
+        "beat": "b50",
+        "max_static_s": 1.76
+      },
+      {
+        "beat": "b51",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b52",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b53",
+        "max_static_s": 4.03
+      },
+      {
+        "beat": "b54",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.039,
+      "template": 0.448,
+      "motion": 0.372,
+      "hybrid": 0.141,
+      "motion_effective": 0.442
+    },
+    "elements": {
+      "b01": 13,
+      "b02": 2,
+      "b03": 2,
+      "b04": 8,
+      "b05": 2,
+      "b06": 7,
+      "b07": 9,
+      "b08": 5,
+      "b09": 4,
+      "b10": 2,
+      "b11": 4,
+      "b12": 6,
+      "b13": 3,
+      "b14": 4,
+      "b15": 5,
+      "b16": 4,
+      "b17": 4,
+      "b18": 2,
+      "b19": 4,
+      "b20": 6,
+      "b21": 11,
+      "b22": 5,
+      "b23": 4,
+      "b24": 4,
+      "b25": 4,
+      "b26": 4,
+      "b27": 4,
+      "b28": 4,
+      "b29": 5,
+      "b30": 3,
+      "b31": 4,
+      "b32": 5,
+      "b33": 5,
+      "b34": 6,
+      "b35": 6,
+      "b36": 5,
+      "b37": 4,
+      "b38": 4,
+      "b39": 4,
+      "b40": 3,
+      "b41": 3,
+      "b42": 4,
+      "b43": 4,
+      "b44": 6,
+      "b45": 4,
+      "b46": 2,
+      "b47": 4,
+      "b48": 3,
+      "b49": 5,
+      "b50": 4,
+      "b51": 5,
+      "b52": 6,
+      "b53": 4,
+      "b54": 2
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.042,
+      "pop_settle_share": 0.249,
+      "wallpaper_share": 0.0,
+      "template_share": 0.519,
+      "classic_share": 0.727,
+      "one_radius_share": 0.201,
+      "still_share": 0.75,
+      "labels_over_objects_share": 0.208,
+      "one_world_share": 0.042,
+      "lines_per_s": 3.66
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b02": 41.8,
+        "b03": 42.6,
+        "b06": 34.4,
+        "b07": 42.6,
+        "b08": 34.4,
+        "b09": 51.6,
+        "b10": 42.6,
+        "b11": 41,
+        "b12": 42.6,
+        "b14": 34.4,
+        "b15": 34.4,
+        "b16": 41.8,
+        "b17": 34.4,
+        "b19": 34.4,
+        "b20": 41.8,
+        "b21": 139.3,
+        "b22": 89.3,
+        "b23": 34.4,
+        "b24": 34.4,
+        "b25": 41,
+        "b26": 34.4,
+        "b27": 41,
+        "b28": 34.4,
+        "b29": 42.6,
+        "b31": 41,
+        "b32": 34.4,
+        "b33": 34.4,
+        "b34": 34.4,
+        "b35": 34.4,
+        "b36": 41.8,
+        "b37": 41.8,
+        "b38": 41.8,
+        "b39": 34.4,
+        "b41": 41.8,
+        "b42": 41.8,
+        "b43": 41.8,
+        "b44": 42.6,
+        "b45": 41.8,
+        "b47": 42.6,
+        "b48": 51.6,
+        "b49": 42.6,
+        "b50": 106.6,
+        "b53": 40.2
+      },
+      "off_frame_beats": [
+        "b01",
+        "b04",
+        "b07",
+        "b10",
+        "b20",
+        "b21",
+        "b22",
+        "b30",
+        "b44",
+        "b47",
+        "b51",
+        "b52"
+      ],
+      "off_frame_baselined": [],
+      "measured_beats": 54,
+      "lines_seen": 157,
+      "blank_beats": [
+        "b13",
+        "b18",
+        "b30"
+      ],
+      "blank_measured": 52
+    },
+    "foreign": {
+      "measured_beats": 54,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 246,
+      "without_life": 0,
+      "no_entrance_words": 5
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.1255,
+        "b02": 0.1132,
+        "b03": 0.0933,
+        "b04": 0.0918,
+        "b05": 0.0297,
+        "b06": 0.0936,
+        "b07": 0.0321,
+        "b08": 0.0239,
+        "b09": 0.0783,
+        "b10": 0.0235,
+        "b11": 0.0558,
+        "b12": 0.0476,
+        "b13": 0.0279,
+        "b14": 0.0369,
+        "b15": 0.064,
+        "b16": 0.0501,
+        "b17": 0.0567,
+        "b18": 0.0059,
+        "b19": 0.0319,
+        "b20": 0.0699,
+        "b21": 0.1595,
+        "b22": 0.0524,
+        "b23": 0.0556,
+        "b24": 0.04,
+        "b25": 0.0563,
+        "b26": 0.0227,
+        "b27": 0.0511,
+        "b28": 0.0596,
+        "b29": 0.0959,
+        "b30": 0.099,
+        "b31": 0.0322,
+        "b32": 0.1051,
+        "b33": 0.0217,
+        "b34": 0.0901,
+        "b35": 0.1208,
+        "b36": 0.1227,
+        "b37": 0.0713,
+        "b38": 0.0411,
+        "b39": 0.0343,
+        "b40": 0.0647,
+        "b41": 0.058,
+        "b42": 0.0456,
+        "b43": 0.1046,
+        "b44": 0.0893,
+        "b45": 0.0314,
+        "b46": 0.0117,
+        "b47": 0.0812,
+        "b48": 0.0594,
+        "b49": 0.061,
+        "b50": 0.0519,
+        "b51": 0.055,
+        "b52": 0.0589,
+        "b53": 0.0253,
+        "b54": 0.0304
+      },
+      "sparse_beats": 2,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 54,
+      "sharpness": {
+        "b02": 1.164,
+        "b03": 0.962,
+        "b06": 0.971,
+        "b07": 1.134,
+        "b08": 0.989,
+        "b09": 0.82,
+        "b10": 1.032,
+        "b11": 0.732,
+        "b12": 1.093,
+        "b14": 0.942,
+        "b15": 1.019,
+        "b16": 0.649,
+        "b17": 2.333,
+        "b19": 0.837,
+        "b20": 0.859,
+        "b21": 0.778,
+        "b22": 0.986,
+        "b23": 0.725,
+        "b24": 0.796,
+        "b25": 0.737,
+        "b26": 0.942,
+        "b27": 0.727,
+        "b28": 0.932,
+        "b29": 0.798,
+        "b31": 0.984,
+        "b32": 1.06,
+        "b33": 0.879,
+        "b34": 0.976,
+        "b35": 1.01,
+        "b36": 0.985,
+        "b37": 0.841,
+        "b38": 0.659,
+        "b39": 0.816,
+        "b41": 0.985,
+        "b42": 0.649,
+        "b43": 1.053,
+        "b44": 0.952,
+        "b45": 1.005,
+        "b47": 1.326,
+        "b48": 1.025,
+        "b49": 1.01,
+        "b50": 0.993,
+        "b53": 1.095
+      },
+      "blurred_beats": [],
+      "blur_measured": 43
+    },
+    "tone": {
+      "value_script_beats": 54,
+      "tone_vs_reference": {
+        "brightness": 0.756,
+        "saturation": 0.129,
+        "dark_share": 0.0,
+        "light_share": 0.889
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b22.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b23.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b24.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b25.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b26.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b27.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b28.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b29.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b30.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b31.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b32.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b33.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b34.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b35.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b36.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b37.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b38.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b39.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b40.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b41.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b42.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b43.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b44.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b45.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b46.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b47.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b48.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b49.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b50.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b51.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b52.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b53.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007\\qa\\sheets\\b54.jpg"
+  ],
+  "build_hash": "3fcd6e8db9bc6aa1"
+}

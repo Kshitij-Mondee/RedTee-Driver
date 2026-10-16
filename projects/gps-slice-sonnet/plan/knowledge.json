@@ -1,0 +1,235 @@
+{
+  "topic": "How GPS knows where you are",
+  "scope_note": "The GPS mechanism for a general corporate audience: timed broadcasts, distance from travel time, intersecting spheres, the fourth satellite and the receiver clock, relativity corrections. Not covered: signal coding details, other satellite systems, augmentation systems, apps, uses.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Each GPS satellite continuously broadcasts radio signals that carry data describing its own orbit, so a receiver can work out where that satellite is at any moment.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "US GPS interface specification (IS-GPS-200); Ashby (2003), Living Reviews in Relativity"
+    },
+    {
+      "id": "F2",
+      "statement": "Each GPS satellite also broadcasts the time at which the signal was sent, taken from atomic clocks on board the satellite.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "US GPS interface specification (IS-GPS-200)"
+    },
+    {
+      "id": "F3",
+      "statement": "A GPS receiver such as a phone is passive: it only listens to the satellite signals and does not transmit anything to the GPS satellites.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Standard description of GPS as a one-way ranging system",
+      "caveat": "This is about the GPS satellite signals only. A phone can still use its mobile network or wifi for other things, which the lesson does not cover."
+    },
+    {
+      "id": "F4",
+      "statement": "GPS signals are radio waves, which travel at the speed of light, about 300,000 kilometres per second.",
+      "kind": "number",
+      "confidence": "established",
+      "numbers": [
+        "300,000"
+      ],
+      "reference_hint": "Speed of light in vacuum is 299,792,458 m/s by definition (SI)",
+      "caveat": "The atmosphere slows the signal very slightly; the lesson rounds to about 300,000 km per second."
+    },
+    {
+      "id": "F5",
+      "statement": "A receiver finds its distance to a satellite by comparing the time the signal was sent, as stamped by the satellite, with the time it arrived, and multiplying that travel time by the speed of light.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Standard GPS ranging principle; Ashby (2003)"
+    },
+    {
+      "id": "F6",
+      "statement": "For a satellite directly overhead the signal takes about 0.07 seconds to arrive, a small fraction of a second, because the orbit is about 20,200 kilometres up and light covers that in roughly that time.",
+      "kind": "number",
+      "confidence": "mainstream",
+      "numbers": [
+        "0.07",
+        "20,200"
+      ],
+      "reference_hint": "Simple arithmetic from the orbital altitude and the speed of light",
+      "caveat": "Satellites lower in the sky are farther away, so their signals take a little longer. Say 'about' and treat it as an order of magnitude."
+    },
+    {
+      "id": "F7",
+      "statement": "A known distance to one satellite means the receiver lies somewhere on a sphere centred on that satellite; two such spheres intersect in a circle, and a third sphere narrows the position to two points.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Geometry of ranging (trilateration); Ashby (2003)",
+      "caveat": "In a flat picture each sphere is drawn as a circle."
+    },
+    {
+      "id": "F8",
+      "statement": "In principle three satellites with perfectly timed distances are enough, because one of the two intersection points is normally far from Earth's surface, so the point on the surface is the answer.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "reference_hint": "Standard GPS textbooks and the GPS.gov explanation",
+      "caveat": "This holds only if the receiver's clock is perfect, which is why real GPS needs a fourth satellite. Say 'in principle'."
+    },
+    {
+      "id": "F9",
+      "statement": "A phone's clock is a cheap quartz clock, far less accurate than a satellite's atomic clock, so the phone does not know the exact time and every distance it measures is shifted by the same unknown amount.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Ashby (2003), Living Reviews in Relativity; GPS.gov"
+    },
+    {
+      "id": "F10",
+      "statement": "A receiver needs signals from at least four satellites because it has four unknowns: three for its position (east-west, north-south, height) and one for its clock error; the fourth signal lets it solve for the clock error and fix one point.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [
+        "four"
+      ],
+      "reference_hint": "Standard GPS principle; Ashby (2003)"
+    },
+    {
+      "id": "F11",
+      "statement": "Light travels about 300 metres in one microsecond, so a clock error of one microsecond causes a distance error of about 300 metres, and one nanosecond causes about 30 centimetres.",
+      "kind": "number",
+      "confidence": "established",
+      "numbers": [
+        "300",
+        "30"
+      ],
+      "reference_hint": "Arithmetic: speed of light times the time error",
+      "caveat": "This is the ranging error from the timing error alone; real positions have other error sources too."
+    },
+    {
+      "id": "F12",
+      "statement": "Because of their orbital speed, special relativity makes the satellite clocks run slower than clocks on the ground by about 7 microseconds per day.",
+      "kind": "number",
+      "confidence": "established",
+      "numbers": [
+        "7"
+      ],
+      "reference_hint": "Ashby (2003), Living Reviews in Relativity, 'Relativity in the Global Positioning System'",
+      "caveat": "Say 'about'; the exact figure depends on the orbit."
+    },
+    {
+      "id": "F13",
+      "statement": "Because gravity is weaker at orbital height, general relativity makes the satellite clocks run faster than clocks on the ground by about 45 microseconds per day.",
+      "kind": "number",
+      "confidence": "established",
+      "numbers": [
+        "45"
+      ],
+      "reference_hint": "Ashby (2003), Living Reviews in Relativity, 'Relativity in the Global Positioning System'",
+      "caveat": "Say 'about'; the exact figure depends on the orbit."
+    },
+    {
+      "id": "F14",
+      "statement": "The two effects combine so that satellite clocks gain about 38 microseconds per day compared with clocks on the ground, because the faster gravity effect outweighs the slower speed effect.",
+      "kind": "number",
+      "confidence": "established",
+      "numbers": [
+        "38"
+      ],
+      "reference_hint": "Ashby (2003); the net is about 45 minus about 7 microseconds per day",
+      "caveat": "Say 'about'."
+    },
+    {
+      "id": "F15",
+      "statement": "If this clock difference were not corrected, the ranging error would build up by roughly 10 kilometres every day.",
+      "kind": "number",
+      "confidence": "mainstream",
+      "numbers": [
+        "10"
+      ],
+      "reference_hint": "Arithmetic from F14: about 38 microseconds times the speed of light is about 11 km; Ashby (2003) quotes about 10 km per day",
+      "caveat": "Sources round this differently (about 10 or 11 km a day). Say 'roughly ten kilometres a day' and describe it as a build-up of error, not a single exact figure."
+    },
+    {
+      "id": "F16",
+      "statement": "The correction is built in before launch: the satellite clock's rate is set slightly lower than its nominal frequency, so that once in orbit it ticks at the intended rate as seen from the ground.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Ashby (2003), Living Reviews in Relativity",
+      "caveat": "Receivers also apply small extra corrections; the lesson only needs the built-in offset."
+    },
+    {
+      "id": "F17",
+      "statement": "GPS satellites orbit in medium Earth orbit at an altitude of about 20,200 kilometres, and one orbit takes about 12 hours.",
+      "kind": "number",
+      "confidence": "established",
+      "numbers": [
+        "20,200",
+        "12"
+      ],
+      "reference_hint": "US GPS programme documentation (GPS.gov); orbital period is about half a sidereal day",
+      "caveat": "Say 'about'."
+    },
+    {
+      "id": "F18",
+      "statement": "The GPS constellation is designed around 24 satellites, in practice usually a few more are operating, and it is arranged so that a receiver with a clear sky view can normally see at least four satellites at once.",
+      "kind": "number",
+      "confidence": "mainstream",
+      "numbers": [
+        "24"
+      ],
+      "reference_hint": "GPS.gov constellation description",
+      "caveat": "The operational count changes over time as satellites are added and retired, so say 'about two dozen or a few more' and not an exact count. Tall buildings or tunnels can block the view."
+    },
+    {
+      "id": "F19",
+      "statement": "GPS is operated by the United States, by the US Space Force.",
+      "kind": "history",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "GPS.gov",
+      "caveat": "Operation passed to the Space Force when it was created in 2019; earlier it was the US Air Force. Other countries run their own similar systems, which the lesson does not cover."
+    },
+    {
+      "id": "F20",
+      "statement": "A phone's position is an estimate: real-world effects such as the atmosphere slowing the signal and buildings reflecting it add error beyond the ideal geometry.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "numbers": [],
+      "reference_hint": "Standard GPS error sources, GPS.gov",
+      "caveat": "Do not state a precise accuracy figure; it varies with the device and the surroundings."
+    }
+  ],
+  "terms": [
+    {
+      "term": "satellite clock",
+      "meaning": "An atomic clock on board each satellite that stamps the time of sending into the signal."
+    },
+    {
+      "term": "receiver clock error",
+      "meaning": "The unknown amount by which the phone's cheap clock is off, which the fourth satellite lets it solve for."
+    },
+    {
+      "term": "travel time",
+      "meaning": "The time a signal takes from satellite to phone, multiplied by the speed of light to give distance."
+    }
+  ],
+  "not_claimed": [
+    "That the phone sends any signal up to the satellites or that GPS tracks the phone from space.",
+    "That GPS satellites know where the phone is.",
+    "That three satellites are enough in real use.",
+    "That GPS gives a precise accuracy such as exact metres or centimetres for every phone.",
+    "That the relativity correction is one exact figure, or that the drift is exactly 10 km per day.",
+    "That relativity is only a small theoretical effect with no practical consequence.",
+    "That the satellites are in geostationary orbit or stay above one spot.",
+    "That the exact current satellite count is a fixed number.",
+    "That GPS uses the internet or mobile data to find the position.",
+    "Any phone brand, app name or vendor claim."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (scene-writer comparison, D-166)",
+    "note": ""
+  }
+}

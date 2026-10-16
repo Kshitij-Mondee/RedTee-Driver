@@ -1,0 +1,61 @@
+{
+  "title": "Where the heat goes: cooling an AI data centre",
+  "genre": "explainer",
+  "audience": {
+    "who": "corporate staff and new IT, facilities and AI team members who are not cooling engineers",
+    "knows": "that data centres are full of servers and get hot, has heard of GPUs and maybe PUE, has no picture of the path heat takes out of the building",
+    "cares_about": "following conversations about AI capacity, power and cooling without nodding along, and not being the one who undoes the cooling by mistake on the floor"
+  },
+  "outcome": "Trace the heat from a chip to the outside of the building in their own words, say why AI racks need liquid cooling, spot an airflow mistake such as a missing blanking panel, and read a PUE figure as total energy over IT energy",
+  "through_line": "Cooling is not making a room cold, it is moving heat along one path, from the chip to the air or the liquid to the outside, and every design choice from aisles to cold plates to PUE is about keeping that path short and stopping the heat from leaking back",
+  "arc_plan": [
+    {"role": "hook", "what": "Every watt a server draws ends up as heat in the room. Open on one running server and ask the question the whole film answers: where does that heat actually go, and what stops it coming straight back in"},
+    {"role": "what it is", "what": "Name the parts once, after the picture: a rack of servers, each pulling cool air in at the front and pushing warm air out at the back, and cooling units that take the warm air away and return it cool. Cooling is a path, not a temperature"},
+    {"role": "how it works", "what": "The mechanism in two runs of the same floor plan, then a zoom. Run one: rows face front to front and back to back, so the room splits into a cold aisle and a hot aisle; the mistake shown running, warm exhaust curling through an empty rack slot or over a row into the cold side, and the fix (blanking panels, containment). Run two: the same rack filled with AI accelerator servers, far more heat per rack than air can carry well. Zoom into one server, then one accelerator chip with a cold plate on it; follow the coolant to the coolant distribution unit, which keeps the rack loop separate from the facility water loop and passes the heat across a heat exchanger"},
+    {"role": "why it matters", "what": "Cooling costs energy too. PUE as one picture: total facility energy over the energy that reaches IT equipment, so 1.0 would mean every unit goes to computing and nothing to overhead. A shorter, tighter heat path is how the overhead shrinks"},
+    {"role": "payoff", "what": "Back to the opening server, now with the whole path visible from chip to outside. One breath of takeaways a colleague can use on Monday, and close on the through-line: keep the path short, stop the heat leaking back"}
+  ],
+  "must_cover": [
+    {"what": "servers draw cool air in at the front and exhaust warm air at the back", "from_knowledge": true},
+    {"what": "hot aisle and cold aisle layout, rack fronts facing the cold aisle, and containment", "from_user": true},
+    {"what": "recirculation: warm exhaust mixing back into intake air, and how blanking panels and containment prevent it", "from_knowledge": true},
+    {"what": "AI accelerator racks draw much more power per rack than typical servers, so more heat per rack, stated qualitatively unless the knowledge sheet carries a sourced figure", "from_knowledge": true},
+    {"what": "direct-to-chip liquid cooling: cold plate on the chip, coolant loop, coolant distribution unit separating the rack loop from the facility water loop through a heat exchanger", "from_user": true},
+    {"what": "PUE as total facility energy divided by IT equipment energy, with 1.0 as the ideal floor", "from_user": true}
+  ],
+  "must_avoid": [
+    "any statistic, temperature, wattage or percentage not in the approved knowledge sheet",
+    "vendor or hyperscaler claims stated as fact, and named vendors, products or real facilities",
+    "saying PUE measures how green or efficient the computing itself is",
+    "immersion cooling, chiller design or refrigerant chemistry beyond one passing mention",
+    "jargon before the picture: name a part only after it is on screen",
+    "the room drawn as freezing, with frost, ice or shivering people",
+    "alarm visuals: fires, red flashing, meltdowns",
+    "telling staff to adjust cooling equipment themselves"
+  ],
+  "example_posture": "One invented, generic server room seen from above and one generic rack, framed as an example, never a named site or vendor. Mistakes are shown as the airflow doing something wrong, not a person being blamed. Any number is either part of what a term means (PUE of 1.0) or a hypothetical clearly framed with say or imagine.",
+  "visual_direction": "Plain, clean and technical. One floor plan seen from above that holds and is re-run with one change at a time, with air drawn as moving streams coloured cool and warm so the viewer watches the heat travel. A gap in a rack where warm air visibly leaks back, then closes. A zoom from the rack to one server to one chip with a plate on it, then the liquid travelling out to a unit with two separate loops side by side. PUE as two stacked bars or a fraction built from energy blocks, never a headline number. The close shows the whole path at once. No presenter on screen.",
+  "voice_note": "The analyst as a peer explaining to colleagues over coffee: calm, exact, a little dry, the picture first and the name after. Never a teacher, never alarmed. About four minutes, so each idea gets one clean beat and the mistake gets room to be seen.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "Does the company run its own data centres, use colocation, or only cloud? Until told, the lesson stays generic and names no site.",
+    "Should the lesson mention immersion cooling at all? It stays a passing mention at most.",
+    "Is there an internal rule about who may open racks or move panels? The lesson will not invent one."
+  ],
+  "provenance": {
+    "inferred": [
+      "title",
+      "audience.knows",
+      "audience.cares_about",
+      "outcome",
+      "through_line",
+      "arc_plan wording and the two-run plus zoom structure",
+      "must_cover[0], must_cover[2], must_cover[3] (to be established in the knowledge stage)",
+      "must_avoid",
+      "example_posture",
+      "visual_direction",
+      "voice_note",
+      "open_questions"
+    ]
+  }
+}

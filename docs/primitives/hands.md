@@ -1,0 +1,94 @@
+# Hands kit (D-114): hands as presenters, from designed art only
+
+Runtime: `runtime/hands.js` (`Loom.hands`). Assets: `assets/hands/` (contract: `assets/hands/README.md`). Built by
+prim_c, 2026-10-06. Code may not draw figurative content (D-102), so the runtime only stages art; until the art is
+commissioned (`docs/ASSET_WISHLIST.md`, "Hands kit (D-114)") it draws an abstract PLACEHOLDER set and warns.
+
+## API
+
+```js
+const guide = Loom.hands.enter(ctx, "guide", { pose: "open", from: "bottom", to: { x: 640, y: 620 }, t: 0.2 });
+guide.pose("count2", 1.3);                         // stepped swap; the wrist stays, the anchor moves with the pose
+guide.point({ x: 1260, y: 330 }, 1.9);             // pose "point", fingertip travels to the target over [t, t + 0.45]
+guide.exit(2.9);                                   // back out along the arm over [t, t + 0.5]
+
+const carrier = Loom.hands.make(ctx, "carrier", { pose: "hold", from: "right" });   // waits off screen
+carrier.place(cardE, 3.1, { dur: 0.8 });           // carries cardE in, puts it at its own place, releases, leaves
+// the same by name: Loom.hands.pose("guide", "tap", t), .point(name, target, t, o), .place(name, E, t, o), .exit(name, t, o)
+```
+
+| option (enter / make) | default | meaning |
+|---|---|---|
+| `family` | pack `hands.family`, else by `look_family`: illustrated `cartoon`, editorial `flat`, technical `line` | the art family (`placeholder` for the stand-in) |
+| `pose` | `open` | the first pose |
+| `from` | `bottom` | the frame edge the arm comes from: bottom, top, left, right |
+| `to` | frame centre, 55% down | where the pose's ANCHOR lands (fingertip, palm or carry point; see the contract) |
+| `t`, `dur` | `ctx.start`, 0.6 | the entrance starts at t (Loom convention: times are starts) |
+| `size` | pack `hands.size`, else 460 | art height in px |
+| `skin` | 0 | index into the pack's `characters.skin` |
+| `sleeve` | pack `characters.cloth`, else `accent` | sleeve colour token |
+| `tilt` | 0 | degrees added to the edge's angle |
+
+`point(name, target, t, {dur: 0.45, pose: "point"})` returns when it lands. `place(name, E, t, {dur: 0.8, pose:
+"hold", release: "open", leave: 0.3})` returns when the hand has gone; E is any element (`ctx.el`) and this IS its
+entrance (do not reveal it yourself; it is hidden until its carry starts). `exit(name, t, {dur: 0.5})`.
+Call the moves of one hand in time order (each move starts from where the hand is at its start).
+
+## Behaviour
+
+- The hand art is placed so its wrist edge faces the chosen frame edge (canonical art enters from the bottom; the
+  runtime rotates it), and a plain sleeve band continues past the wrist to beyond the frame, so a hand never floats.
+- Poses are all built once and switched by `display` (stepped, like hand-made time); every pose of a family is drawn
+  at the same scale.
+- Colours: classes `hand-skin`, `hand-skin-shade`, `hand-nail`, `hand-sleeve`, `hand-sleeve-shade`, `hand-line`,
+  `hand-label` are recoloured from the pack (skin list and tokens). No literal colour.
+- Report: `Loom.report.hands` lists every hand pose built (beat, name, family, pose, placeholder).
+- Messages: `Loom.warn("hands_placeholder")` whenever the placeholder is drawn (asked for, or as a fallback);
+  `Loom.error("hands_missing")` (no art for the family: the placeholder is drawn so the frame is not empty),
+  `hands_pose_missing` (falls back to `open`), `hands_unknown` (a name never entered), `Loom.warn("hands_bad_edge")`,
+  `hands_place_onscreen` (place() while the hand is visible: the object would appear in its hand).
+
+## When to use, when not
+
+- A presenter's gesture without a presenter: pointing at the one thing that matters, counting steps on fingers,
+  handing over an object ("this is what you get"), tapping a screen in a UI walkthrough.
+- One hand at a time on screen, one gesture per narration idea. Not as decoration, not waving.
+- Pack behaviour: the family follows the look family (cartoon for illustrated, flat for editorial, line for
+  technical); a pack can name its own with `hands: {family, size}`.
+
+## Wiring needed (not done: outside prim_c's edit scope)
+
+Hand art reaches the runtime as `Loom.assets.hands = {"<family>/<pose>": {w, h, body, anchor, wrist, wrist_width,
+licence, placeholder}}`. `embed_hands(families)` in `tests/suites/primitives_material_footage_hands.py` is the reference intake (reads
+`assets/hands/<family>/<pose>.svg` and the optional `.json` sidecar, validates the attributes). Needed:
+
+1. `loom/compose.py`: when a scene source contains `Loom.hands`, embed the families it names (`family: "<name>"`)
+   plus the pack's default family into `manifest.assets.hands` (only those, like vendor art), and turn a family
+   with no folder into a compose error.
+2. `loom/lab.py`: the same into `M.assets.hands`.
+
+Until then only the placeholder exists (the runtime carries a copy, kept equal to the files by a test). The
+placeholder set is generated by `python3 tests/suites/primitives_material_footage_hands.py --make-hands` and copied into the runtime by
+`--sync-hands`.
+
+## Determinism
+
+Every move and pose is recorded at build time as keys at absolute times. One `Loom.drive` per hand, spanning its
+life (first act to the end of the beat), evaluates wrist position, pose and carried objects from those keys as a
+pure function of t. No randomness, no timers.
+
+## Proven (tests/suites/primitives_material_footage_hands.py)
+
+- `primitive_hands_contract`: every family in `assets/hands/` has all 13 poses, anchors inside the art, the wrist
+  on the bottom edge, one size per family; the placeholder is flagged and labelled, designed art must not be.
+- `primitive_hands_runtime_in_sync`: the runtime's placeholder copy equals the files.
+- `primitive_hands_placeholder_warns` (browser): a lab render with the placeholder raises `hands_placeholder` and no
+  error.
+- Lab strips looked at: `docs/styles/demos/lab/lab_hands__story-cartoon.jpg`, `__corporate-clean.jpg`: the open
+  hand enters from the bottom, counts two, its fingertip lands on the target ring, exits; a second hand brings a
+  card in from the right, sets it down, opens and leaves; the card stays.
+
+## Unverified
+
+- Any designed family (none exists yet); the `top` and `left` edges and `tilt` (written, not rendered).
+- Hands inside a lesson (needs the wiring; a camera move during a hand move is untested).

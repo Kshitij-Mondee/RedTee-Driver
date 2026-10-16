@@ -1,0 +1,735 @@
+{
+ "scene": "ward",
+ "camera_spec": {
+  "camera": {
+   "x": 1.0,
+   "y": 0.4,
+   "eye": 1.6,
+   "yaw": 61,
+   "hfov": 55,
+   "horizon_pct": 43
+  },
+  "walls": [
+   {
+    "name": "bed-head wall (sage, right)",
+    "axis": "x",
+    "at": 7.4
+   },
+   {
+    "name": "window wall (west, far)",
+    "axis": "y",
+    "at": 7.2
+   },
+   {
+    "name": "corridor wall (behind the camera)",
+    "axis": "y",
+    "at": 0
+   }
+  ],
+  "points": {
+   "corner_far_floor": [
+    7.4,
+    7.2,
+    0
+   ],
+   "corner_far_ceiling": [
+    7.4,
+    7.2,
+    2.7
+   ],
+   "win_right_jamb_sill": [
+    6.9,
+    7.2,
+    0.7
+   ],
+   "win_right_jamb_head": [
+    6.9,
+    7.2,
+    2.4
+   ],
+   "win_left_jamb_sill": [
+    4.4,
+    7.2,
+    0.7
+   ],
+   "win_left_jamb_head": [
+    4.4,
+    7.2,
+    2.4
+   ],
+   "R1_foot_near": [
+    5.0,
+    1.3,
+    0.6
+   ],
+   "R1_foot_far": [
+    5.0,
+    2.3,
+    0.6
+   ],
+   "R1_head_near": [
+    7.2,
+    1.3,
+    0.6
+   ],
+   "R1_head_far": [
+    7.2,
+    2.3,
+    0.6
+   ],
+   "R1_footboard_top_near": [
+    5.0,
+    1.3,
+    0.95
+   ],
+   "R1_footboard_top_far": [
+    5.0,
+    2.3,
+    0.95
+   ],
+   "R1_backrest_top": [
+    6.75,
+    1.8,
+    1.15
+   ],
+   "R2_foot_near": [
+    5.0,
+    4.9,
+    0.6
+   ],
+   "R2_foot_far": [
+    5.0,
+    5.9,
+    0.6
+   ],
+   "R2_head_near": [
+    7.2,
+    4.9,
+    0.6
+   ],
+   "R2_head_far": [
+    7.2,
+    5.9,
+    0.6
+   ],
+   "patient_head_top": [
+    6.8,
+    1.8,
+    1.43
+   ],
+   "patient_head_c": [
+    6.8,
+    1.8,
+    1.3
+   ],
+   "patient_hips": [
+    6.45,
+    1.8,
+    0.75
+   ],
+   "nurse_head_top": [
+    6.0,
+    2.6,
+    1.72
+   ],
+   "nurse_head_c": [
+    6.0,
+    2.6,
+    1.6
+   ],
+   "nurse_feet": [
+    6.0,
+    2.6,
+    0
+   ],
+   "trunk_R1_near_bot": [
+    7.4,
+    0.9,
+    1.5
+   ],
+   "trunk_R1_far_top": [
+    7.4,
+    2.7,
+    1.75
+   ],
+   "trunk_R2_near_bot": [
+    7.4,
+    4.5,
+    1.5
+   ],
+   "trunk_R2_far_top": [
+    7.4,
+    6.3,
+    1.75
+   ],
+   "bedside_board_R1": [
+    7.4,
+    1.8,
+    2.0
+   ],
+   "table_top_mid": [
+    5.6,
+    1.8,
+    0.85
+   ],
+   "gel_foot": [
+    5.0,
+    1.8,
+    0.98
+   ],
+   "track_R1R2_ceiling_foot": [
+    3.7,
+    3.6,
+    2.7
+   ],
+   "track_R1R2_wall": [
+    7.4,
+    3.6,
+    2.7
+   ],
+   "curtain_parked_bottom": [
+    7.2,
+    3.6,
+    0.25
+   ],
+   "track_foot_R1_near": [
+    3.7,
+    0,
+    2.7
+   ],
+   "ceiling_panel_c": [
+    5.5,
+    3.6,
+    2.7
+   ],
+   "floor_frame_bottom_centre": [
+    4.3,
+    4.3,
+    0
+   ],
+   "monitor_screen_top": [
+    6.95,
+    1.0,
+    1.42
+   ],
+   "monitor_screen_bot": [
+    6.95,
+    1.0,
+    1.15
+   ],
+   "monitor_base": [
+    6.95,
+    1.0,
+    0
+   ],
+   "locker_top_near": [
+    6.75,
+    0.1,
+    0.85
+   ],
+   "locker_top_far": [
+    6.75,
+    0.6,
+    0.85
+   ],
+   "locker_floor_far": [
+    6.75,
+    0.6,
+    0
+   ],
+   "chair_seat": [
+    5.45,
+    3.0,
+    0.5
+   ],
+   "chair_back_top": [
+    5.45,
+    3.3,
+    1.15
+   ],
+   "chair_front_floor": [
+    5.45,
+    2.7,
+    0
+   ],
+   "curtain_bunch_wall_top": [
+    7.4,
+    3.6,
+    2.2
+   ],
+   "curtain_bunch_inner_top": [
+    7.1,
+    3.6,
+    2.2
+   ],
+   "curtain_bunch_inner_bot": [
+    7.1,
+    3.6,
+    0.25
+   ],
+   "L1_foot_far_top": [
+    2.4,
+    2.3,
+    0.95
+   ],
+   "L1_foot_near_top": [
+    2.4,
+    1.3,
+    0.95
+   ],
+   "L1_foot_far_floor": [
+    2.4,
+    2.3,
+    0
+   ],
+   "walking_frame_top": [
+    5.4,
+    0.75,
+    0.9
+   ],
+   "seated_head_top": [
+    5.45,
+    3.12,
+    1.3
+   ],
+   "seated_head_c": [
+    5.45,
+    3.12,
+    1.18
+   ],
+   "seated_feet": [
+    5.45,
+    2.55,
+    0
+   ],
+   "R2_locker_top": [
+    6.95,
+    6.25,
+    0.85
+   ],
+   "R2_chair_seat": [
+    6.2,
+    6.75,
+    0.5
+   ],
+   "R2_chair_back_top": [
+    6.2,
+    7.05,
+    1.15
+   ]
+  },
+  "behind": [
+   "patient_head_top",
+   "patient_head_c",
+   "nurse_head_top",
+   "nurse_head_c",
+   "seated_head_top",
+   "seated_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": -2367,
+   "along_x": 1982,
+   "horizon_y": 464
+  },
+  "points": {
+   "corner_far_floor": {
+    "x": 370,
+    "y": 796,
+    "where": "frame",
+    "depth": 8.89
+   },
+   "corner_far_ceiling": {
+    "x": 370,
+    "y": 236,
+    "where": "frame",
+    "depth": 8.89
+   },
+   "win_right_jamb_sill": {
+    "x": 287,
+    "y": 661,
+    "where": "frame",
+    "depth": 8.46
+   },
+   "win_right_jamb_head": {
+    "x": 287,
+    "y": 290,
+    "where": "frame",
+    "depth": 8.46
+   },
+   "win_left_jamb_sill": {
+    "x": -304,
+    "y": 729,
+    "where": "outside",
+    "depth": 6.27
+   },
+   "win_left_jamb_head": {
+    "x": -304,
+    "y": 229,
+    "where": "outside",
+    "depth": 6.27
+   },
+   "R1_foot_near": {
+    "x": 1500,
+    "y": 933,
+    "where": "frame",
+    "depth": 3.93
+   },
+   "R1_foot_far": {
+    "x": 1076,
+    "y": 882,
+    "where": "frame",
+    "depth": 4.42
+   },
+   "R1_head_near": {
+    "x": 1658,
+    "y": 779,
+    "where": "frame",
+    "depth": 5.86
+   },
+   "R1_head_far": {
+    "x": 1351,
+    "y": 755,
+    "where": "frame",
+    "depth": 6.34
+   },
+   "R1_footboard_top_near": {
+    "x": 1500,
+    "y": 769,
+    "where": "frame",
+    "depth": 3.93
+   },
+   "R1_footboard_top_far": {
+    "x": 1076,
+    "y": 736,
+    "where": "frame",
+    "depth": 4.42
+   },
+   "R1_backrest_top": {
+    "x": 1465,
+    "y": 610,
+    "where": "frame",
+    "depth": 5.71
+   },
+   "R2_foot_near": {
+    "x": 312,
+    "y": 789,
+    "where": "frame",
+    "depth": 5.68
+   },
+   "R2_foot_far": {
+    "x": 101,
+    "y": 764,
+    "where": "frame",
+    "depth": 6.16
+   },
+   "R2_head_near": {
+    "x": 734,
+    "y": 707,
+    "where": "frame",
+    "depth": 7.6
+   },
+   "R2_head_far": {
+    "x": 549,
+    "y": 692,
+    "where": "frame",
+    "depth": 8.09
+   },
+   "patient_head_top": {
+    "x": 1469,
+    "y": 519,
+    "where": "frame",
+    "depth": 5.75,
+    "behind": {
+     "wall": "bed-head wall (sage, right)",
+     "at": [
+      7.4,
+      1.94,
+      1.41
+     ]
+    }
+   },
+   "patient_head_c": {
+    "x": 1469,
+    "y": 561,
+    "where": "frame",
+    "depth": 5.75,
+    "behind": {
+     "wall": "bed-head wall (sage, right)",
+     "at": [
+      7.4,
+      1.94,
+      1.27
+     ]
+    }
+   },
+   "patient_hips": {
+    "x": 1440,
+    "y": 752,
+    "where": "frame",
+    "depth": 5.45
+   },
+   "nurse_head_top": {
+    "x": 1129,
+    "y": 424,
+    "where": "frame",
+    "depth": 5.44,
+    "behind": {
+     "wall": "bed-head wall (sage, right)",
+     "at": [
+      7.4,
+      3.22,
+      1.75
+     ]
+    }
+   },
+   "nurse_head_c": {
+    "x": 1129,
+    "y": 464,
+    "where": "frame",
+    "depth": 5.44,
+    "behind": {
+     "wall": "bed-head wall (sage, right)",
+     "at": [
+      7.4,
+      3.22,
+      1.6
+     ]
+    }
+   },
+   "nurse_feet": {
+    "x": 1129,
+    "y": 1007,
+    "where": "frame",
+    "depth": 5.44
+   },
+   "trunk_R1_near_bot": {
+    "x": 1802,
+    "y": 496,
+    "where": "frame",
+    "depth": 5.84
+   },
+   "trunk_R1_far_top": {
+    "x": 1260,
+    "y": 423,
+    "where": "frame",
+    "depth": 6.71
+   },
+   "trunk_R2_near_bot": {
+    "x": 843,
+    "y": 489,
+    "where": "frame",
+    "depth": 7.59
+   },
+   "trunk_R2_far_top": {
+    "x": 511,
+    "y": 432,
+    "where": "frame",
+    "depth": 8.46
+   },
+   "bedside_board_R1": {
+    "x": 1512,
+    "y": 347,
+    "where": "frame",
+    "depth": 6.28
+   },
+   "table_top_mid": {
+    "x": 1354,
+    "y": 759,
+    "where": "frame",
+    "depth": 4.7
+   },
+   "gel_foot": {
+    "x": 1276,
+    "y": 738,
+    "where": "frame",
+    "depth": 4.18
+   },
+   "track_R1R2_ceiling_foot": {
+    "x": 258,
+    "y": -54,
+    "where": "overscan",
+    "depth": 3.91
+   },
+   "track_R1R2_wall": {
+    "x": 1038,
+    "y": 181,
+    "where": "frame",
+    "depth": 7.15
+   },
+   "curtain_parked_bottom": {
+    "x": 1015,
+    "y": 821,
+    "where": "frame",
+    "depth": 6.97
+   },
+   "track_foot_R1_near": {
+    "x": 2371,
+    "y": -471,
+    "where": "outside",
+    "depth": 2.17
+   },
+   "ceiling_panel_c": {
+    "x": 753,
+    "y": 95,
+    "where": "frame",
+    "depth": 5.49
+   },
+   "floor_frame_bottom_centre": {
+    "x": 261,
+    "y": 1082,
+    "where": "overscan",
+    "depth": 4.78
+   },
+   "monitor_screen_top": {
+    "x": 1752,
+    "y": 525,
+    "where": "frame",
+    "depth": 5.49
+   },
+   "monitor_screen_bot": {
+    "x": 1752,
+    "y": 615,
+    "where": "frame",
+    "depth": 5.49
+   },
+   "monitor_base": {
+    "x": 1752,
+    "y": 1001,
+    "where": "frame",
+    "depth": 5.49
+   },
+   "locker_top_near": {
+    "x": 2112,
+    "y": 748,
+    "where": "overscan",
+    "depth": 4.88
+   },
+   "locker_top_far": {
+    "x": 1900,
+    "y": 734,
+    "where": "frame",
+    "depth": 5.13
+   },
+   "locker_floor_far": {
+    "x": 1900,
+    "y": 1040,
+    "where": "frame",
+    "depth": 5.13
+   },
+   "chair_seat": {
+    "x": 918,
+    "y": 858,
+    "where": "frame",
+    "depth": 5.15
+   },
+   "chair_back_top": {
+    "x": 828,
+    "y": 621,
+    "where": "frame",
+    "depth": 5.3
+   },
+   "chair_front_floor": {
+    "x": 1014,
+    "y": 1054,
+    "where": "frame",
+    "depth": 5.01
+   },
+   "curtain_bunch_wall_top": {
+    "x": 1038,
+    "y": 310,
+    "where": "frame",
+    "depth": 7.15
+   },
+   "curtain_bunch_inner_top": {
+    "x": 1002,
+    "y": 304,
+    "where": "frame",
+    "depth": 6.89
+   },
+   "curtain_bunch_inner_bot": {
+    "x": 1002,
+    "y": 826,
+    "where": "frame",
+    "depth": 6.89
+   },
+   "L1_foot_far_top": {
+    "x": 115,
+    "y": 1023,
+    "where": "frame",
+    "depth": 2.15
+   },
+   "L1_foot_near_top": {
+    "x": 840,
+    "y": 1186,
+    "where": "overscan",
+    "depth": 1.66
+   },
+   "L1_foot_far_floor": {
+    "x": 115,
+    "y": 1840,
+    "where": "outside",
+    "depth": 2.15
+   },
+   "walking_frame_top": {
+    "x": 1799,
+    "y": 786,
+    "where": "frame",
+    "depth": 4.02
+   },
+   "seated_head_top": {
+    "x": 882,
+    "y": 571,
+    "where": "frame",
+    "depth": 5.21,
+    "behind": {
+     "wall": "bed-head wall (sage, right)",
+     "at": [
+      7.4,
+      4.31,
+      1.17
+     ]
+    }
+   },
+   "seated_head_c": {
+    "x": 882,
+    "y": 613,
+    "where": "frame",
+    "depth": 5.21,
+    "behind": {
+     "wall": "bed-head wall (sage, right)",
+     "at": [
+      7.4,
+      4.31,
+      1.0
+     ]
+    }
+   },
+   "seated_feet": {
+    "x": 1064,
+    "y": 1062,
+    "where": "frame",
+    "depth": 4.93
+   },
+   "R2_locker_top": {
+    "x": 448,
+    "y": 636,
+    "where": "frame",
+    "depth": 8.04
+   },
+   "R2_chair_seat": {
+    "x": 227,
+    "y": 730,
+    "where": "frame",
+    "depth": 7.63
+   },
+   "R2_chair_back_top": {
+    "x": 178,
+    "y": 571,
+    "where": "frame",
+    "depth": 7.77
+   }
+  }
+ }
+}

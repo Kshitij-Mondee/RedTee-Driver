@@ -1,0 +1,149 @@
+{
+  "concept": "A flat-cosmos night world with four held stations, each changing state on the spoken word instead of being redrawn. The orbit picture (Earth, tilted rings, satellites broadcasting) says what is overhead. The sky diagram (a cross-section: Earth's curved surface along the bottom, the phone as a glowing point on it, satellites above) is the lesson's working machine: a stamped pulse travels down, a range line becomes a circle, circles meet, swell together when the phone's clock is off, and snap back to one point when a fourth satellite fixes the clock; it returns for the recap. The two-clocks pair (a clock in orbit above, a clock on the ground below, Earth between) shows quartz against atomic, then speed and gravity pulling the orbit clock's rate, then the clock set slow before launch. The night city map with the blue dot opens and closes the film, carries the 300 metre ruler, drifts 10 km in a day and comes home.",
+  "world": "One night field. Stations: orbit (0,0) Earth and the constellation; city (0,1300) the night city from above with the phone; diagram (2400,0) the ranging cross-section; clocks (4800,0) the two-clocks pair with Earth and a satellite. Camera moves between them carry the joins; cuts mark the recap.",
+  "look": "flat-cosmos: crescent-shaded discs, saturated warm accents on the deep night field, twinkling parallax stars, rounded type; no people",
+  "devices": [
+    {
+      "id": "sky_diagram",
+      "what": "The ranging cross-section held from b08 to b24 and replayed in b31 and b32: Earth's curved surface across the bottom with the phone as a glowing teal point, satellites above, a stamped pulse, range lines that sweep into circles (spheres drawn as circles), the overlap ring, two candidate points, all circles swelling together and snapping back to one point.",
+      "kind": "explain",
+      "beats": [
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18"
+      ]
+    },
+    {
+      "id": "camera_join",
+      "what": "The one join material: camera moves between the four stations of the one night world (up from the city to orbit, across to the diagram, on to the clocks), continue joins inside a station, hard cuts only at the open and into the recap.",
+      "kind": "join",
+      "beats": [
+        "b08"
+      ]
+    }
+  ],
+  "join_material": "camera",
+  "value_script": [
+    {
+      "from": "b08",
+      "band": "light",
+      "break": true,
+      "accent": "the blue dot landing",
+      "why": "a lift at the close: the city lights brighten"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "treatment": "From the blue dot on a night map up to the constellation: satellites with atomic clocks broadcasting where and when; the phone only listens.",
+      "accent_on": "the dot, then the satellite named",
+      "beats": [
+        {
+          "beat": "b08",
+          "line": "The cross-section: signals reach the phone; an upward arrow draws and fades.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "camera"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "treatment": "One stamped pulse travels down; travel time times light speed gives a range; the range sweeps into a circle.",
+      "accent_on": "the pulse, then the range line",
+      "beats": [
+        {
+          "beat": "b09",
+          "line": "One satellite fires a stamped pulse down to the phone.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b10",
+          "line": "The pulse in flight, the speed tag riding beside it.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b11",
+          "line": "A timer on the phone counts while the pulse arrives: about 0.07 s.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b12",
+          "line": "Arrival minus sending gives travel time, times light speed gives a distance.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b13",
+          "line": "The range line labelled distance; a direction arrow struck out.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b14",
+          "line": "The range line sweeps round the satellite into a circle grazing the phone.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "treatment": "Circles meet: ring, two points, one on the ground; the phone's cheap clock breaks it; the fourth satellite snaps it back.",
+      "accent_on": "the overlap, then the snapped point",
+      "beats": [
+        {
+          "beat": "b15",
+          "line": "A second circle grows; the overlap ring lights.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b16",
+          "line": "A third circle cuts the ring at two bright points.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b17",
+          "line": "One point dims out in space; the other glows on the ground.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        },
+        {
+          "beat": "b18",
+          "line": "The ground point flickers; the phone's clock pops up beside it.",
+          "builder": "bespoke",
+          "device": "sky_diagram",
+          "join": "continue"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "Templates for b06, b07, b19, b22, b31, b32 as the allocation suggested (rejected: each is better shown on the held station; a card would read as a slide).",
+    "A three device_shot phone for b01 and b34 (rejected: a 3D phone breaks the flat crescent-shaded look; the phone is a flat kit part).",
+    "A nested zoom from the orbit into the city (kept as camera moves: simpler and the city is its own station)."
+  ],
+  "open_questions": []
+}

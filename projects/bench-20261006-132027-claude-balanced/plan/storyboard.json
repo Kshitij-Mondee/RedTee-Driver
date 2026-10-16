@@ -1,0 +1,2036 @@
+{
+  "style": "story-cartoon",
+  "concept": "One person, one desk, one glowing skill icon. Sam's skill fades on screen, then is rebuilt by closing the notes, trying, checking and coming back, until the same desk returns with the icon bright and one small miss. Every idea is a change of state on that desk: the icon's glow, the notepad's gap list, the calendar's marked days.",
+  "story": {
+    "metaphor": "A glowing icon is how well the skill is held.",
+    "setting": "Sam's desk and the wall behind it.",
+    "arc": "Bright, then faded, then rebuilt by try and check on later days, then bright again with one small miss.",
+    "cast": [
+      {
+        "name": "Sam",
+        "role": "the colleague who trained on new software"
+      }
+    ]
+  },
+  "motifs": [
+    {
+      "name": "torn_page",
+      "desc": "A torn paper edge for the 'a week later' time jumps. Fallback is a hard cut with the on-screen time label."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "Sam's desk: laptop, notepad, glowing skill icon"
+      },
+      {
+        "id": "wall_calendar",
+        "x": 2100,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "sticky week calendar pinned on the wall behind the desk"
+      },
+      {
+        "id": "curve_board",
+        "x": 0,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "pinned fade curve board, deeper on the wall"
+      },
+      {
+        "id": "strips",
+        "x": 2100,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "two paper timeline strips pinned on the wall"
+      },
+      {
+        "id": "path_land",
+        "x": 4200,
+        "y": 1200,
+        "w": 1920,
+        "h": 1080,
+        "note": "path landscape for desirable difficulty"
+      },
+      {
+        "id": "plan_table",
+        "x": 4200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "table with three plan cards for the quiz"
+      },
+      {
+        "id": "week_split",
+        "x": 6300,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "note": "split screen: Sam on the left, the viewer's blank week on the right"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "skill_icon",
+      "what": "The glowing skill icon on Sam's desk. Its glow is the one reading of how well the skill is held. Held and relabelled, never redrawn.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b05",
+        "b06",
+        "b08",
+        "b15",
+        "b40",
+        "b41"
+      ]
+    },
+    {
+      "id": "fade_curve",
+      "what": "A hand-drawn fade line on a pinned board with unmarked axes, steep first then flat.",
+      "kind": "data",
+      "beats": [
+        "b05",
+        "b06",
+        "b07",
+        "b15"
+      ]
+    },
+    {
+      "id": "twin_timelines",
+      "what": "Two stacked strips for the same effort drawn as the same amount of colour: one thick block, several thin slices. The skill line changes state on each.",
+      "kind": "explain",
+      "beats": [
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "gap_list",
+      "what": "The notepad's gap list: one missed step per line, stamped on each phrase, then crossed off across later days.",
+      "kind": "list",
+      "beats": [
+        "b20",
+        "b21",
+        "b25",
+        "b31",
+        "b34",
+        "b40"
+      ]
+    },
+    {
+      "id": "week_calendar",
+      "what": "The sticky week calendar. Ten-minute blocks, the later-day try and the real task all land on it.",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b04",
+        "b32",
+        "b33",
+        "b36",
+        "b37",
+        "b38",
+        "b39"
+      ]
+    },
+    {
+      "id": "torn_page_join",
+      "what": "Join device: a torn paper edge for the time jumps.",
+      "kind": "join",
+      "beats": [
+        "b02",
+        "b16",
+        "b40"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "amber glow on the skill icon",
+      "why": "Pale open; amber means skill held."
+    },
+    {
+      "from": "b02",
+      "band": "mid",
+      "break": true,
+      "accent": "amber, dull",
+      "why": "Shock of a week later: the same desk drops a step in value and the icon goes dull."
+    },
+    {
+      "from": "b03",
+      "band": "light",
+      "accent": "amber on the ten-minute blocks",
+      "why": "Presenter promise returns to a pale, calm frame."
+    },
+    {
+      "from": "b05",
+      "band": "mid",
+      "accent": "amber icon dimming",
+      "why": "The fade is the topic."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "accent": "amber on the skill line",
+      "why": "Richer middle; the amber line shows the lasting."
+    },
+    {
+      "from": "b16",
+      "band": "mid",
+      "accent": "teal on the closed notes and the check",
+      "why": "Second hue enters once and means try and check."
+    },
+    {
+      "from": "b18",
+      "band": "dark",
+      "break": true,
+      "accent": "none, a blank screen",
+      "why": "Dark break for the key mechanism: the blank."
+    },
+    {
+      "from": "b20",
+      "band": "mid",
+      "accent": "teal on the gap list lines",
+      "why": "Teal flood at the turn: the check turns the blank into a list."
+    },
+    {
+      "from": "b26",
+      "band": "dark",
+      "break": true,
+      "accent": "none, black narration card",
+      "why": "Black card marks the turn to the viewer's own decision."
+    },
+    {
+      "from": "b27",
+      "band": "light",
+      "accent": "teal on the chosen plan, B",
+      "why": "Quiz sits on a calm pale frame so the choice is readable."
+    },
+    {
+      "from": "b29",
+      "band": "mid",
+      "accent": "teal on the three step cards",
+      "why": "Peak section, the worked step."
+    },
+    {
+      "from": "b36",
+      "band": "light",
+      "accent": "teal on the try marker",
+      "why": "The viewer's own week, lighter and open."
+    },
+    {
+      "from": "b40",
+      "band": "light",
+      "accent": "amber icon at full glow",
+      "why": "Lift at the close: full amber returns as the payoff."
+    }
+  ],
+  "poster": {
+    "beat": "b02"
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "template",
+      "station": "desk",
+      "template": "title.card",
+      "props": {
+        "kicker": "Training day",
+        "say_kicker": "a full day",
+        "title": "Sam feels ready",
+        "say_title": "feels ready",
+        "subtitle": "Everyone says it went well",
+        "say_subtitle": "Everyone says it went well",
+        "icon": "lightbulb",
+        "say_icon": "full notepad"
+      },
+      "accent_on": "skill icon glow",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "establishing"
+      },
+      "story_role": "setup",
+      "light": "even",
+      "rationale": "Wide establishing: Sam small at a detailed desk, laptop, full notepad, amber icon glowing; the trouble is not yet visible."
+    },
+    {
+      "beat": "b02",
+      "kind": "template",
+      "station": "desk",
+      "template": "document.page",
+      "props": {
+        "kind": "notes",
+        "title": "A week later",
+        "say_title": "A week later",
+        "lines": [
+          {
+            "text": "The cursor blinks",
+            "say": "The cursor blinks"
+          },
+          {
+            "text": "No idea where to start",
+            "say": "cannot remember where to start"
+          },
+          {
+            "text": "Notes open, untouched",
+            "say": "The notes are right there"
+          }
+        ],
+        "mode": "appear",
+        "side": "left",
+        "person": {
+          "member": "man",
+          "emotion": "neutral",
+          "name": "Sam"
+        }
+      },
+      "join_in": {
+        "type": "torn",
+        "meaning": "time",
+        "dur": 0.8
+      },
+      "accent_on": "dull skill icon",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "rationale": "Same desk, same angle as b40: notepad open and untouched, blank screen, icon dull. Fallback for the torn join is a hard cut with the label."
+    },
+    {
+      "beat": "b03",
+      "kind": "avatar",
+      "station": "wall_calendar",
+      "order_cues": [
+        "ten minutes",
+        "a few days"
+      ],
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "accent_on": "ten-minute blocks",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "rationale": "Presenter used sparingly, beside a small calendar where ten-minute blocks drop on separate days ahead of a task marker. On-screen: Ten minutes, A few days."
+    },
+    {
+      "beat": "b04",
+      "kind": "template",
+      "station": "wall_calendar",
+      "template": "calendar.plan",
+      "props": {
+        "kicker": "You have been Sam",
+        "title": "The week after training",
+        "say_title": "You have been Sam",
+        "days": [
+          {
+            "label": "Day 1"
+          },
+          {
+            "label": "Day 2"
+          },
+          {
+            "label": "Day 3"
+          },
+          {
+            "label": "Day 4"
+          },
+          {
+            "label": "Day 5"
+          }
+        ],
+        "entries": [
+          {
+            "day": 1,
+            "label": "Good training",
+            "say": "good training"
+          },
+          {
+            "day": 3,
+            "label": "Real task",
+            "say": "real task showed up"
+          },
+          {
+            "day": 4,
+            "label": "Half gone",
+            "say": "half of it was gone"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "accent_on": "half-gone entry on the calendar",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "rationale": "The sticky week calendar held from b03; the pinned training notes blur a little from day to day."
+    },
+    {
+      "beat": "b05",
+      "kind": "blueprint",
+      "station": "curve_board",
+      "blueprint": "hero.meter",
+      "subject": "the glowing skill icon dimming on Sam's desk",
+      "world": "a fade board pinned on the wall behind Sam's desk",
+      "design": {
+        "references": [
+          "b01 bright icon",
+          "b02 dull icon"
+        ]
+      },
+      "props": {
+        "title": "Skill held",
+        "say_title": "skill icon",
+        "kind": "ring",
+        "label": "Skill held",
+        "icon": "lightbulb",
+        "start": 100,
+        "min": 0,
+        "max": 100,
+        "show_value": false,
+        "stops": [
+          {
+            "value": 100,
+            "say": "it is bright",
+            "note": "Day one",
+            "tone": "pos"
+          },
+          {
+            "value": 75,
+            "say": "the days pass",
+            "tone": "neutral"
+          },
+          {
+            "value": 55,
+            "say": "starts to fade",
+            "tone": "neg"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "camera",
+        "meaning": "into"
+      },
+      "accent_on": "skill icon dimming",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "setup",
+      "rationale": "Close on the icon: bright on day one, dims as the days pass. No numbers shown."
+    },
+    {
+      "beat": "b06",
+      "kind": "blueprint",
+      "station": "curve_board",
+      "blueprint": "hero.meter",
+      "subject": "a fade line with steep and flat parts",
+      "world": "a fade board pinned on the wall behind Sam's desk",
+      "design": {
+        "references": [
+          "b05"
+        ]
+      },
+      "props": {
+        "title": "Fastest early",
+        "kind": "bar",
+        "label": "Skill held",
+        "icon": "lightbulb",
+        "start": 100,
+        "min": 0,
+        "max": 100,
+        "show_value": false,
+        "stops": [
+          {
+            "value": 40,
+            "say": "drops fastest",
+            "note": "Fastest early",
+            "tone": "neg"
+          },
+          {
+            "value": 28,
+            "say": "slows down",
+            "note": "Then slower",
+            "tone": "neutral"
+          },
+          {
+            "value": 22,
+            "say": "less is lost",
+            "tone": "neutral"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "steep part of the fade line",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      },
+      "rationale": "Same board held, new state: steep drop first, then flat. Labels sit on the steep and the flat part."
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "station": "curve_board",
+      "template": "timeline",
+      "props": {
+        "title": "Shape, not figures",
+        "say_title": "That is the shape",
+        "events": [
+          {
+            "when": "Early",
+            "label": "Steep fall",
+            "say": "Steep first"
+          },
+          {
+            "when": "Later",
+            "label": "Gentle fall",
+            "say": "gentle"
+          },
+          {
+            "when": "Always",
+            "label": "Rate varies",
+            "say": "They vary with the person"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "intent": "rest",
+      "accent_on": "unmarked fade curve",
+      "register": "productive",
+      "motion_is": "staging",
+      "rationale": "Curve held with unmarked axes and one small tag that the rate varies. Rest on a finished frame."
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "station": "desk",
+      "template": "title.card",
+      "props": {
+        "title": "Sam did nothing",
+        "say_title": "did nothing after the training",
+        "subtitle": "Left to chance",
+        "say_subtitle": "left to chance"
+      },
+      "join_in": {
+        "type": "camera",
+        "meaning": "into"
+      },
+      "accent_on": "dim skill icon",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "rationale": "Back at the desk: Sam leans back, hands off the keyboard, icon dim, a coin hovers over the desk."
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "station": "strips",
+      "template": "timeline",
+      "props": {
+        "title": "Same ten minutes",
+        "say_title": "ten minutes of practice",
+        "events": [
+          {
+            "when": "Day one",
+            "label": "One block, all at once",
+            "say": "All at once"
+          },
+          {
+            "when": "Later days",
+            "label": "Short visits",
+            "say": "short visits"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "accent_on": "the two strips",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "setup",
+      "rationale": "Two strips for the same effort, drawn as the same amount of colour: one thick block, several thin slices."
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "strips",
+      "subject": "a skill line on a paper timeline strip",
+      "world": "two paper strips pinned on Sam's wall",
+      "design": {
+        "treatment": "The top strip from b09 held; an amber skill line draws from its minimum, shoots up after the thick block and stays high through the next day.",
+        "why_motion": "The shoot-up is the content: the cramming effect is a change of the line's state.",
+        "subject": "a skill line on a paper timeline strip",
+        "world": "two paper strips pinned on Sam's wall",
+        "elements": [
+          "strip_block",
+          "strip_spread",
+          "block_slab",
+          "skill_line_block",
+          "label_sharp_tomorrow"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Cram it into one block",
+            "element": "block_slab",
+            "action": "is held from b09 and pulses once",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "it feels great",
+            "element": "skill_line_block",
+            "action": "draws from its minimum and shoots up after the block",
+            "motion": "travel up"
+          },
+          {
+            "t_anchor": "Sam is sharp tomorrow",
+            "element": "label_sharp_tomorrow",
+            "action": "settles on the high stretch of the line",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Cramming does work for that",
+            "element": "skill_line_block",
+            "action": "holds high, a small tick marks the test day",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "Held from b09: both strips, the slab and the slices at the same rect, never re-entering. Incoming: the amber skill line and the label. Nothing leaves.",
+        "references": [
+          "b09 twin strips",
+          "b06 fade board"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "amber skill line",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup"
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "strips",
+      "subject": "a skill line sliding down a strip",
+      "world": "two paper strips pinned on Sam's wall",
+      "design": {
+        "treatment": "Same strip, state changed: the line slides down after its peak with no further lifts, steeper than the spread strip.",
+        "why_motion": "The slide is the content: nothing lifts it again.",
+        "subject": "a skill line sliding down a strip",
+        "world": "two paper strips pinned on Sam's wall",
+        "elements": [
+          "strip_block",
+          "skill_line_block",
+          "fade_slope",
+          "label_fades_faster"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "look past tomorrow",
+            "element": "skill_line_block",
+            "action": "the view slides right past the high stretch",
+            "motion": "pan"
+          },
+          {
+            "t_anchor": "it fades faster",
+            "element": "fade_slope",
+            "action": "the line slides down in dark ink, steeper than the spread strip",
+            "motion": "travel down"
+          },
+          {
+            "t_anchor": "Nothing lifts it again",
+            "element": "label_fades_faster",
+            "action": "label settles, no further lifts appear",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "Held from b10: strips, slab, the peak of the amber line. Incoming: the dark slide and its label. The b10 label 'Sharp tomorrow' retires.",
+        "references": [
+          "b10"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "sliding skill line",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "strips",
+      "subject": "a skill line lifted at each thin slice",
+      "world": "two paper strips pinned on Sam's wall",
+      "design": {
+        "treatment": "On the spread strip the amber line gets a small lift at each thin slice and stays above the one-block line.",
+        "why_motion": "Each lift is the content: a visit catches the fade.",
+        "subject": "a skill line lifted at each thin slice",
+        "world": "two paper strips pinned on Sam's wall",
+        "elements": [
+          "strip_spread",
+          "slice_1",
+          "slice_2",
+          "slice_3",
+          "skill_line_spread",
+          "skill_line_block"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Spread the same effort",
+            "element": "strip_spread",
+            "action": "the thin slices are held and the spread line draws its baseline",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Short visits",
+            "element": "slice_1",
+            "action": "first lift lands on the first slice",
+            "motion": "lift"
+          },
+          {
+            "t_anchor": "on later days",
+            "element": "slice_2",
+            "action": "second lift on the second slice",
+            "motion": "lift"
+          },
+          {
+            "t_anchor": "Each one catches the fade",
+            "element": "slice_3",
+            "action": "third lift lands, the line catches its own fade",
+            "motion": "lift"
+          },
+          {
+            "t_anchor": "The skill stays higher",
+            "element": "skill_line_spread",
+            "action": "the line holds above the one-block line, which sits dim",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "Held from b11: both strips and the sliding block line (dimmed, kept for comparison). Incoming: the spread line and its lifts.",
+        "references": [
+          "b11"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "lifts on the spread line",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "template",
+      "station": "strips",
+      "template": "compare.two",
+      "props": {
+        "left": {
+          "header": "Block feels serious",
+          "say": "One big block feels like the serious option",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Not the one that lasts",
+              "say": "It is not the one that lasts"
+            }
+          ]
+        },
+        "right": {
+          "header": "Spread usually lasts",
+          "say": "For lasting",
+          "tone": "pos"
+        },
+        "verdict": {
+          "text": "Spread usually wins",
+          "say": "spread usually wins"
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "spread side",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "rationale": "Block on the left, slices on the right, equals side by side. Refutes the one-block misconception. Replaces the line board; strips parts retire at this join."
+    },
+    {
+      "beat": "b14",
+      "kind": "template",
+      "station": "strips",
+      "template": "definition",
+      "props": {
+        "term": "The spacing effect",
+        "say_term": "The spacing effect",
+        "definition": "Same amount of practice, spread over sessions, usually lasts longer.",
+        "say_definition": "Same amount of practice",
+        "example": "We give no ideal gap.",
+        "say_example": "we give no ideal gap"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "intent": "rest",
+      "accent_on": "the term 'The spacing effect'",
+      "register": "productive",
+      "motion_is": "staging",
+      "rationale": "Name written over the spread strip, both lines still visible, spread on top. Held and calm."
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "station": "curve_board",
+      "template": "recap",
+      "props": {
+        "title": "Early visits help most",
+        "say_title": "Remember where the icon",
+        "items": [
+          {
+            "label": "Fastest drop",
+            "icon": "clock",
+            "say": "dropped fastest"
+          },
+          {
+            "label": "Early visit",
+            "icon": "calendar",
+            "say": "a visit helps most"
+          },
+          {
+            "label": "Same effort",
+            "icon": "check",
+            "say": "Same effort"
+          }
+        ],
+        "rule": "Spread it out",
+        "say_rule": "Spread it out"
+      },
+      "join_in": {
+        "type": "fade",
+        "meaning": "into"
+      },
+      "intent": "callback",
+      "accent_on": "early stretch of the fade curve",
+      "register": "expressive",
+      "motion_is": "staging",
+      "rationale": "The first fade curve returns, its steep early stretch highlighted with a small visit marker."
+    },
+    {
+      "beat": "b16",
+      "kind": "blueprint",
+      "station": "desk",
+      "blueprint": "hero.character_moment",
+      "subject": "Sam watching the training recording",
+      "world": "Sam's desk a week on",
+      "design": {
+        "references": [
+          "b02 desk frame"
+        ]
+      },
+      "props": {
+        "member": "man",
+        "name": "Sam",
+        "side": "left",
+        "bubble": "thought",
+        "prop": "laptop",
+        "day_label": "A week on",
+        "say_day": "a week on",
+        "moods": [
+          {
+            "emotion": "happy",
+            "say": "Watches it again"
+          }
+        ],
+        "items": [
+          {
+            "icon": "check",
+            "label": "I know this",
+            "say": "Everything looks familiar"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "torn",
+        "meaning": "time",
+        "dur": 0.8
+      },
+      "accent_on": "closed notes and recording (teal enters)",
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "rationale": "Sam re-watches the recording, nodding; thought bubble 'I know this'. The tempting move."
+    },
+    {
+      "beat": "b17",
+      "kind": "template",
+      "station": "desk",
+      "template": "compare.two",
+      "props": {
+        "left": {
+          "header": "Familiar glow",
+          "say": "Familiar",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Easy re-watching can fool you",
+              "say": "Easy re-watching can fool you"
+            }
+          ]
+        },
+        "right": {
+          "header": "Knowing",
+          "say": "knowing",
+          "tone": "neutral"
+        },
+        "verdict": {
+          "text": "It feels like progress",
+          "say": "feels like progress"
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "empty jar labelled knowing",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "rationale": "Two labelled jars beside Sam: one full of familiar glow, one empty labelled knowing. Text sits on the jars."
+    },
+    {
+      "beat": "b18",
+      "kind": "blueprint",
+      "station": "desk",
+      "blueprint": "hero.character_moment",
+      "subject": "Sam's hands over the keys with an empty thought bubble",
+      "world": "Sam's desk, the blank form on screen",
+      "design": {
+        "references": [
+          "b02 blank screen"
+        ]
+      },
+      "props": {
+        "member": "man",
+        "name": "Sam",
+        "side": "left",
+        "bubble": "thought",
+        "prop": "laptop",
+        "moods": [
+          {
+            "emotion": "surprised",
+            "say": "tries the task"
+          }
+        ],
+        "items": [
+          {
+            "icon": "lightbulb",
+            "label": "Blank",
+            "say": "Blank",
+            "fade_say": "Not a single step"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "shock"
+      },
+      "accent_on": "empty thought bubble",
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "reveal",
+      "light": "night",
+      "rationale": "Dark value break, the key mechanism. Sam shuts the recording, the software opens on an empty form, hands hover over the keys."
+    },
+    {
+      "beat": "b19",
+      "kind": "template",
+      "station": "desk",
+      "template": "definition",
+      "props": {
+        "term": "Retrieval practice",
+        "say_term": "Retrieval practice",
+        "definition": "Do the task, or explain it, without looking at anything.",
+        "say_definition": "without looking at anything",
+        "icon": "book"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "intent": "rest",
+      "accent_on": "the term 'Retrieval practice'",
+      "register": "productive",
+      "motion_is": "staging",
+      "rationale": "Name beside Sam's shut notes and the open blank software, notes shown shut. Calm."
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "a notepad gap list",
+      "world": "Sam's desk, close on the notepad",
+      "design": {
+        "treatment": "Close on the notepad. Sam's screen and the recording are compared in teal; a gap list fills in one missed step per phrase, each line stamped.",
+        "why_motion": "The list filling is the content: the check turns the blank into next steps.",
+        "subject": "a notepad gap list",
+        "world": "Sam's desk, close on the notepad",
+        "elements": [
+          "blank_form",
+          "recording_window",
+          "notepad",
+          "gap_line_1",
+          "gap_line_2",
+          "gap_line_3"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Sam opens the recording",
+            "element": "recording_window",
+            "action": "opens beside the blank form, teal outline",
+            "motion": "open"
+          },
+          {
+            "t_anchor": "and checks",
+            "element": "recording_window",
+            "action": "a teal compare tick runs down from recording to form",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Each miss goes on the notepad",
+            "element": "notepad",
+            "action": "notepad slides to the front, empty list ruled",
+            "motion": "slide in"
+          },
+          {
+            "t_anchor": "One step",
+            "element": "gap_line_1",
+            "action": "first missed step stamped",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "Another",
+            "element": "gap_line_2",
+            "action": "second missed step stamped",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "Another",
+            "element": "gap_line_3",
+            "action": "third missed step stamped on the last 'Another'",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": "Held from b19: desk, laptop, closed notes. Incoming: recording window, notepad, gap lines. The definition card from b19 retires at the join.",
+        "references": [
+          "b18 blank form"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "teal gap list lines",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "turn"
+    },
+    {
+      "beat": "b21",
+      "kind": "template",
+      "station": "desk",
+      "template": "process.flow",
+      "props": {
+        "steps": [
+          {
+            "label": "Try first",
+            "sub": "From memory",
+            "say": "Why try first"
+          },
+          {
+            "label": "Then check",
+            "sub": "Look afterwards",
+            "say": "then look"
+          },
+          {
+            "label": "Fill the gaps",
+            "sub": "Gap list",
+            "say": "fills the gaps"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "the order, try then check",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "wide"
+      },
+      "rationale": "Two arrows on the notepad in order, with the gap list beside them, then fill the gaps. The order is the point."
+    },
+    {
+      "beat": "b22",
+      "kind": "blueprint",
+      "station": "desk",
+      "blueprint": "hero.meter",
+      "subject": "an effort gauge with a teal working-zone band",
+      "world": "Sam's desk, glum Sam beside the gap list",
+      "design": {
+        "references": [
+          "b20 gap list"
+        ]
+      },
+      "props": {
+        "title": "Is that failure?",
+        "say_title": "Is that failure",
+        "kind": "gauge",
+        "label": "Effort felt",
+        "start": 0,
+        "min": 0,
+        "max": 100,
+        "show_value": false,
+        "target": 55,
+        "target_label": "Somewhat hard",
+        "stops": [
+          {
+            "value": 75,
+            "say": "Shaky",
+            "note": "Not working?",
+            "tone": "neg"
+          },
+          {
+            "value": 55,
+            "say": "Somewhat hard is the working zone",
+            "note": "Working zone",
+            "tone": "pos"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "camera",
+        "meaning": "into"
+      },
+      "accent_on": "teal somewhat hard band",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "rationale": "Glum Sam at the gap list, then a teal band opens around the effort reading."
+    },
+    {
+      "beat": "b23",
+      "kind": "template",
+      "station": "path_land",
+      "template": "compare.two",
+      "props": {
+        "left": {
+          "header": "Effortless",
+          "say": "Effortless feels like progress",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Often it is not",
+              "say": "Often it is not"
+            }
+          ]
+        },
+        "right": {
+          "header": "Slightly uphill",
+          "say": "A few misses help more than none",
+          "tone": "pos"
+        },
+        "verdict": {
+          "text": "Desirable difficulty",
+          "say": "Desirable difficulty"
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "accent_on": "uphill path",
+      "register": "productive",
+      "motion_is": "staging",
+      "rationale": "World change to a path landscape: a smooth path beside a slightly uphill one, the name lettered over the uphill one."
+    },
+    {
+      "beat": "b24",
+      "kind": "blueprint",
+      "station": "path_land",
+      "blueprint": "hero.journey",
+      "subject": "an uphill path with a cliff crossed out and a checkpoint flag",
+      "world": "the path landscape",
+      "design": {
+        "references": [
+          "b23 path landscape"
+        ]
+      },
+      "props": {
+        "title": "One limit",
+        "say_title": "One limit",
+        "traveller": {
+          "member": "man"
+        },
+        "shape": "climb",
+        "waypoints": [
+          {
+            "label": "Manageable",
+            "say": "Keep it manageable"
+          },
+          {
+            "label": "No checking",
+            "sub": "Impossible, helps nobody",
+            "say": "An impossible task with no checking"
+          },
+          {
+            "label": "Stretch",
+            "say": "Hard enough to stretch you"
+          },
+          {
+            "label": "Checkpoint",
+            "say": "Not so hard you quit"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "checkpoint flag on the manageable slope",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "wide"
+      },
+      "rationale": "The uphill path with a sheer cliff beyond it, crossed out, next to the manageable slope with a checkpoint flag."
+    },
+    {
+      "beat": "b25",
+      "kind": "template",
+      "station": "desk",
+      "template": "recap",
+      "props": {
+        "title": "Try, then check",
+        "items": [
+          {
+            "label": "Re-watch feels familiar",
+            "icon": "eye",
+            "say": "Re-watching feels familiar"
+          },
+          {
+            "label": "Familiar, not known",
+            "icon": "book",
+            "say": "Familiar is not knowing"
+          },
+          {
+            "label": "Try, then check",
+            "icon": "check",
+            "say": "Try first"
+          },
+          {
+            "label": "Misses are normal",
+            "icon": "pencil",
+            "say": "A few misses"
+          }
+        ],
+        "rule": "Misses mean it works",
+        "say_rule": "means it is working"
+      },
+      "join_in": {
+        "type": "fade",
+        "meaning": "into"
+      },
+      "intent": "callback",
+      "accent_on": "try then check tick",
+      "register": "expressive",
+      "motion_is": "staging",
+      "rationale": "Recap strip on the notepad replaying the lesson's own pictures: re-watch crossed out, try then check ticked, a few misses marked normal."
+    },
+    {
+      "beat": "b26",
+      "kind": "template",
+      "station": "desk",
+      "template": "title.card",
+      "props": {
+        "kicker": "Your turn",
+        "say_kicker": "Now you",
+        "title": "A new approval tool",
+        "say_title": "approval tool",
+        "subtitle": "Which plan lasts weeks later?",
+        "say_subtitle": "Which plan lasts weeks later",
+        "panel": true
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "accent_on": "title 'Your turn'",
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "light": "night",
+      "rationale": "Black narration card turn. Sam small at the desk, a new approval tool on screen, three blank plan cards waiting."
+    },
+    {
+      "beat": "b27",
+      "kind": "template",
+      "station": "plan_table",
+      "template": "quiz.question",
+      "props": {
+        "question": "Which plan is most likely to still work weeks later?",
+        "say_question": "Plan A",
+        "options": [
+          {
+            "text": "Re-watch the recording tonight",
+            "say": "re-watch the recording tonight"
+          },
+          {
+            "text": "Try tomorrow, check, repeat later",
+            "say": "try it tomorrow from memory"
+          },
+          {
+            "text": "One long block today",
+            "say": "one long block of practice today"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "camera",
+        "meaning": "into"
+      },
+      "accent_on": "the three plan cards",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "light": "even",
+      "rationale": "Three plan cards slide in, one per option, each with a small picture: a screen, a notepad with calendar, a single big block. Hold for the pause."
+    },
+    {
+      "beat": "b28",
+      "kind": "template",
+      "station": "plan_table",
+      "template": "quiz.answer",
+      "props": {
+        "question": "Which plan is most likely to still work weeks later?",
+        "options": [
+          {
+            "text": "Re-watch the recording tonight"
+          },
+          {
+            "text": "Try tomorrow, check, repeat later"
+          },
+          {
+            "text": "One long block today"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "Plan B",
+        "tempting": 0,
+        "why_not": "Familiar, not known",
+        "say_why_not": "only feels like knowing",
+        "explanation": "Recall, then a check, spread over days, usually lasts.",
+        "say_explanation": "usually lasts"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "card B tick",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "rationale": "Card B lights up with a tick, card A dims with the tag, card C fades away. Answer index is 0-based (B is 1)."
+    },
+    {
+      "beat": "b29",
+      "kind": "template",
+      "station": "desk",
+      "template": "document.page",
+      "props": {
+        "kind": "form",
+        "title": "The task that went blank",
+        "say_title": "the original task",
+        "lines": [
+          {
+            "text": "Blank form, no steps yet",
+            "say": "The one that went blank"
+          },
+          {
+            "text": "Three steps to fill it",
+            "say": "Three steps"
+          }
+        ],
+        "mode": "appear",
+        "side": "left",
+        "person": {
+          "member": "man",
+          "emotion": "neutral",
+          "name": "Sam"
+        }
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "intent": "callback",
+      "accent_on": "three empty step cards",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "rationale": "The blank form from the hook returns on Sam's screen with three empty step cards beside it."
+    },
+    {
+      "beat": "b30",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "a step card and a form filling from memory",
+      "world": "Sam's desk with the original blank form",
+      "design": {
+        "treatment": "Card one fills in teal; the notes and recording shut; the form fills from memory a few fields at a time.",
+        "why_motion": "The form filling from nothing is the content of step one.",
+        "subject": "a step card and a form filling from memory",
+        "world": "Sam's desk with the original blank form",
+        "elements": [
+          "step_card_1",
+          "step_card_2",
+          "step_card_3",
+          "notes_book",
+          "recording_window",
+          "task_form"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Step one",
+            "element": "step_card_1",
+            "action": "card fills in teal, label 'Close it, try it'",
+            "motion": "fill"
+          },
+          {
+            "t_anchor": "Sam shuts the notes and the recording",
+            "element": "notes_book",
+            "action": "notes and recording windows shut together",
+            "motion": "close"
+          },
+          {
+            "t_anchor": "from memory",
+            "element": "task_form",
+            "action": "the form starts to fill, slowly",
+            "motion": "type"
+          },
+          {
+            "t_anchor": "A few steps come",
+            "element": "task_form",
+            "action": "a few fields fill, the rest stay empty",
+            "motion": "fill"
+          }
+        ],
+        "continuity": "Held from b29: desk, blank form, three step cards (cards two and three stay empty). Incoming: teal on card one, closed windows. Nothing leaves.",
+        "references": [
+          "b29",
+          "b18 blank form"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "active step card one (teal)",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b31",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "a step card and the notepad gap list",
+      "world": "Sam's desk, close on the notepad",
+      "design": {
+        "treatment": "Card two fills in; the recording reopens beside the form and each missed step becomes one line on the notepad gap list.",
+        "why_motion": "Lines appearing one by one is the content: the list is the next try's focus.",
+        "subject": "a step card and the notepad gap list",
+        "world": "Sam's desk, close on the notepad",
+        "elements": [
+          "step_card_2",
+          "recording_window",
+          "task_form",
+          "notepad",
+          "gap_line_1",
+          "gap_line_2",
+          "gap_line_3"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Step two",
+            "element": "step_card_2",
+            "action": "card fills in teal, card one dims",
+            "motion": "fill"
+          },
+          {
+            "t_anchor": "Check the misses",
+            "element": "step_card_2",
+            "action": "label 'Check the misses' settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "opens the recording",
+            "element": "recording_window",
+            "action": "recording reopens beside the form",
+            "motion": "open"
+          },
+          {
+            "t_anchor": "Each missed step",
+            "element": "gap_line_1",
+            "action": "missed steps stamp as lines on the notepad, one each",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "That list is the next try",
+            "element": "notepad",
+            "action": "a teal bracket marks the gap list as the focus",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "Held from b30: desk, form with its few filled fields, cards one and three. Incoming: recording window, notepad, gap lines. Recording retires after the stamp.",
+        "references": [
+          "b20 gap list"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "gap list lines (teal)",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      }
+    },
+    {
+      "beat": "b32",
+      "kind": "template",
+      "station": "wall_calendar",
+      "template": "calendar.plan",
+      "props": {
+        "title": "Step three",
+        "say_title": "Step three",
+        "days": [
+          {
+            "label": "Day 1"
+          },
+          {
+            "label": "Day 2"
+          },
+          {
+            "label": "Day 3"
+          },
+          {
+            "label": "Day 4"
+          },
+          {
+            "label": "Day 5"
+          }
+        ],
+        "entries": [
+          {
+            "day": 3,
+            "label": "Short try",
+            "icon": "pencil",
+            "say": "Come back on a later day"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "wipe",
+        "dir": "right",
+        "meaning": "meanwhile"
+      },
+      "accent_on": "the try marked on a later day",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "rationale": "Card three fills in: a small calendar shows the try on a later day with empty days between."
+    },
+    {
+      "beat": "b33",
+      "kind": "template",
+      "station": "wall_calendar",
+      "template": "calendar.plan",
+      "props": {
+        "title": "Tie it to real work",
+        "say_title": "Tie it to work",
+        "days": [
+          {
+            "label": "Day 1"
+          },
+          {
+            "label": "Day 2"
+          },
+          {
+            "label": "Day 3"
+          },
+          {
+            "label": "Day 4"
+          },
+          {
+            "label": "Day 5"
+          }
+        ],
+        "entries": [
+          {
+            "day": 4,
+            "label": "Try on task",
+            "icon": "check",
+            "say": "a real task"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "real task card carrying the try",
+      "register": "productive",
+      "motion_is": "staging",
+      "rationale": "The later-day marker attaches to a real task card in Sam's work week, so no extra session is needed. The same calendar object, entries replaced."
+    },
+    {
+      "beat": "b34",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "a notepad gap list shrinking",
+      "world": "Sam's desk, close on the notepad",
+      "design": {
+        "treatment": "The notepad gap list from b31 returns and shrinks across two later days, lines crossing off until one remains.",
+        "why_motion": "Lines being crossed off is the content: fewer misses over time.",
+        "subject": "a notepad gap list shrinking",
+        "world": "Sam's desk, close on the notepad",
+        "elements": [
+          "notepad",
+          "gap_line_1",
+          "gap_line_2",
+          "gap_line_3",
+          "day_tag_two",
+          "day_tag_three",
+          "spread_marks"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Second try",
+            "element": "day_tag_two",
+            "action": "day tag 'a few days on' stamps beside the full list",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "Fewer misses",
+            "element": "gap_line_1",
+            "action": "first line crosses off",
+            "motion": "strike"
+          },
+          {
+            "t_anchor": "Next one",
+            "element": "day_tag_three",
+            "action": "next day tag stamps",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "fewer still",
+            "element": "gap_line_2",
+            "action": "second line crosses off, one line remains",
+            "motion": "strike"
+          },
+          {
+            "t_anchor": "having a spread",
+            "element": "spread_marks",
+            "action": "the tries show as marks spread over the days",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "Held: notepad and gap list from b31. Incoming: day tags and strike marks. The step cards and form are not on this frame.",
+        "references": [
+          "b31",
+          "b20"
+        ]
+      },
+      "join_in": {
+        "type": "fade",
+        "meaning": "time"
+      },
+      "accent_on": "remaining gap line",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "payoff"
+    },
+    {
+      "beat": "b35",
+      "kind": "template",
+      "station": "plan_table",
+      "template": "recap",
+      "props": {
+        "title": "Same as plan B",
+        "say_title": "Same as the better plan",
+        "items": [
+          {
+            "label": "Close it",
+            "icon": "book",
+            "say": "Close it"
+          },
+          {
+            "label": "Try it",
+            "icon": "pencil",
+            "say": "try it"
+          },
+          {
+            "label": "Check it",
+            "icon": "check",
+            "say": "check it"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "fade",
+        "meaning": "into"
+      },
+      "intent": "callback",
+      "accent_on": "quiz card B",
+      "register": "expressive",
+      "motion_is": "staging",
+      "rationale": "The three step cards stacked beside quiz card B, matching its contents. Callback to the quiz."
+    },
+    {
+      "beat": "b36",
+      "kind": "template",
+      "station": "week_split",
+      "template": "compare.two",
+      "props": {
+        "title": "Your latest training",
+        "say_title": "Now your week",
+        "left": {
+          "header": "Sam's training",
+          "say": "Think of your latest training",
+          "tone": "neutral"
+        },
+        "right": {
+          "header": "Your week",
+          "say": "What tool or skill",
+          "tone": "pos",
+          "items": [
+            {
+              "text": "Hold that one in mind",
+              "say": "Hold that one in mind"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "accent_on": "blank week calendar",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "light": "even",
+      "rationale": "Split screen: Sam on the left, a blank week calendar on the right for the viewer."
+    },
+    {
+      "beat": "b37",
+      "kind": "bespoke",
+      "station": "week_split",
+      "subject": "a week calendar with one task marker",
+      "world": "the viewer's blank week, the same calendar as Sam's",
+      "design": {
+        "treatment": "On the blank week one day gets a task marker for a task that already uses the skill.",
+        "why_motion": "The marker dropping on one day is the content: pick one real task.",
+        "subject": "a week calendar with one task marker",
+        "world": "the viewer's blank week, the same calendar as Sam's",
+        "elements": [
+          "week_calendar",
+          "task_marker",
+          "uses_skill_tag",
+          "work_have_bracket"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Pick one real task",
+            "element": "task_marker",
+            "action": "marker drops onto one day, few days out",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "a few days from now",
+            "element": "week_calendar",
+            "action": "the days between today and the marker are lightly shaded",
+            "motion": "fill"
+          },
+          {
+            "t_anchor": "uses the skill anyway",
+            "element": "uses_skill_tag",
+            "action": "a small tag 'uses the skill' attaches to the marker",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "You are not adding work",
+            "element": "work_have_bracket",
+            "action": "a bracket around the marker shows it was already in the week",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "Held from b36: the blank week on the right, Sam on the left. Incoming: marker, tag, bracket. The 'Your latest training' title retires.",
+        "references": [
+          "b32 calendar",
+          "b33 calendar"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "task marker",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      }
+    },
+    {
+      "beat": "b38",
+      "kind": "bespoke",
+      "station": "week_split",
+      "subject": "a try marker, closed notes and a check mark on the task day",
+      "world": "the viewer's week calendar",
+      "design": {
+        "treatment": "A short teal try marker lands on the task day, a notes icon stays closed beside it, then a check mark follows.",
+        "why_motion": "The marker landing with the notes staying shut is the content: try before looking.",
+        "subject": "a try marker, closed notes and a check mark on the task day",
+        "world": "the viewer's week calendar",
+        "elements": [
+          "task_marker",
+          "try_marker",
+          "notes_icon_closed",
+          "check_mark"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "your later day",
+            "element": "task_marker",
+            "action": "the held task day lights up",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "Before you open any notes",
+            "element": "notes_icon_closed",
+            "action": "a closed notes icon settles beside the day and stays shut",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "try from memory",
+            "element": "try_marker",
+            "action": "teal try marker lands on the task day",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "check what you missed",
+            "element": "check_mark",
+            "action": "the check mark follows after the try marker",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": "Held from b37: week, task marker and tag. Incoming: try marker, closed notes icon, check mark. The 'work you have' bracket retires.",
+        "references": [
+          "b37"
+        ]
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "teal try marker",
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "size": "close"
+      }
+    },
+    {
+      "beat": "b39",
+      "kind": "template",
+      "station": "week_split",
+      "template": "compare.two",
+      "props": {
+        "title": "Trying or looking?",
+        "say_title": "Are you trying",
+        "left": {
+          "header": "Re-read",
+          "say": "Looking again",
+          "tone": "neg",
+          "icon": "eye"
+        },
+        "right": {
+          "header": "Retrieval",
+          "say": "Trying first",
+          "tone": "pos",
+          "icon": "pencil",
+          "items": [
+            {
+              "text": "Notes shut, then check",
+              "say": "then checking"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "wipe",
+        "dir": "right",
+        "meaning": "into"
+      },
+      "accent_on": "retrieval entry",
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "rationale": "Two calendar entries side by side: an eye icon labelled re-read, a pencil over closed notes labelled retrieval."
+    },
+    {
+      "beat": "b40",
+      "kind": "blueprint",
+      "station": "desk",
+      "blueprint": "hero.character_moment",
+      "subject": "Sam typing through the task at the original desk",
+      "world": "Sam's desk, same angle as b02",
+      "design": {
+        "references": [
+          "b02 desk frame",
+          "b01 bright icon"
+        ]
+      },
+      "props": {
+        "member": "man",
+        "name": "Sam",
+        "side": "left",
+        "bubble": "thought",
+        "prop": "desk",
+        "day_label": "A week on",
+        "say_day": "a week on",
+        "moods": [
+          {
+            "emotion": "neutral",
+            "say": "starts the task"
+          },
+          {
+            "emotion": "happy",
+            "say": "carries on"
+          }
+        ],
+        "items": [
+          {
+            "icon": "check",
+            "label": "One step missed",
+            "say": "misses one step"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "torn",
+        "meaning": "time",
+        "dur": 0.8
+      },
+      "accent_on": "amber icon at full glow",
+      "register": "expressive",
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "light": "glow",
+      "rationale": "The hook's desk at the same angle as b02: Sam types, pauses at one step, checks the notepad and carries on. Same frame, changed; icon at full amber."
+    },
+    {
+      "beat": "b41",
+      "kind": "avatar",
+      "station": "desk",
+      "order_cues": [
+        "Close it",
+        "try it",
+        "check it",
+        "come back another day"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "intent": "rest",
+      "accent_on": "the four closing words",
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "rationale": "Presenter beside four words appearing in turn, Sam's bright icon on the desk behind. Hold on a finished frame."
+    }
+  ]
+}

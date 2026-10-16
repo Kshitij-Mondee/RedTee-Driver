@@ -1,0 +1,1145 @@
+{
+  "style": "story-cartoon",
+  "concept": "One colleague, one desk, one path of doors: Maya notices a dinner claimed twice, feels the pull to stay quiet, weighs it with three questions, and finds the right door, even when the first door is the wrong one. The facts sit on things in her world (receipts, a notepad, door signs).",
+  "chrome": {
+    "section_labels": false
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "path",
+        "x": 2400,
+        "y": 0
+      },
+      {
+        "id": "review",
+        "x": 4800,
+        "y": 0
+      },
+      {
+        "id": "host",
+        "x": 7200,
+        "y": 0
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "channels as doors along a path from your desk",
+    "setting": "Maya's finance office and the path of doors beside it",
+    "arc": "notice, pull to stay quiet, weigh, choose a door, the twist, the calm note",
+    "cast": [
+      {
+        "name": "Maya",
+        "rig": "maya",
+        "skin": 0,
+        "cloth": "cloth",
+        "role": "finance employee, the only person in b01 to b11; front view, stands on the right third at her desk, on the left third on the path"
+      },
+      {
+        "name": "Lena",
+        "member": "woman",
+        "skin": 2,
+        "cloth": "cloth2",
+        "role": "the presenter, b12 only"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "desk_set",
+      "what": "Maya's finance desk in her office: the desk edge in front of her, laptop, phone, the two matching dinner receipts with the duplicate circled; one set for the whole story, b11 mirrors b01",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b11"
+      ]
+    },
+    {
+      "id": "thought_bubbles",
+      "what": "three paper thought bubbles rising over Maya, each carrying one reason to stay quiet, dimming as she straightens",
+      "kind": "explain",
+      "beats": [
+        "b03"
+      ]
+    },
+    {
+      "id": "question_pad",
+      "what": "a paper notepad on her desk: three questions written one line at a time, then ticked against the receipts",
+      "kind": "list",
+      "beats": [
+        "b05",
+        "b06"
+      ]
+    },
+    {
+      "id": "door_path",
+      "what": "a path leading from her desk past five labelled doors (Manager, Another manager, HR, Compliance, Speak-up line); one set changed by state: doors appear, the manager's greys out, the others light up",
+      "kind": "explain",
+      "beats": [
+        "b07",
+        "b09",
+        "b10"
+      ]
+    },
+    {
+      "id": "page_turn",
+      "what": "the one join material: a paper page turn into and out of the off-story beats",
+      "kind": "join",
+      "beats": [
+        "b08",
+        "b12"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "the open: warm paper, daylight office, one accent on the duplicate"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "why": "a slightly richer middle as she weighs it and the channels open"
+    },
+    {
+      "from": "b09",
+      "band": "dark",
+      "why": "the twist: the manager's door greys and the path dims, broken for meaning"
+    },
+    {
+      "from": "b10",
+      "band": "light",
+      "why": "the other doors light up, then the calm desk: the lift at the close"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "desk_set",
+        "what": "Maya's finance office desk set: a surface2 wall with one window, a standing-height desk whose near edge sits in front of Maya (field2 front, hides her below the waist, its top line 40 px or more clear of her hip and hem), a laptop facing her (states: expense sheet, mail compose, closed), a phone on the desk, two matching dinner receipts side by side (same restaurant 'Harbour Grill', same 'Team dinner' line, same total) with a circle state (none, drawn: an accent ring round the second receipt's total, the only accent in the set), and a magnifying glass (states: lying by the receipts, absent). No accent furniture, no shelf books. Two framings: medium (Maya scale about 0.85) and close (scale about 1.5, receipts at the lower frame edge).",
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b11"
+        ]
+      },
+      {
+        "id": "question_pad",
+        "what": "a paper notepad lying on the desk_set's desk, ink outline, three lines in Nunito body: 'Breaks a rule?', 'Harms someone?', 'Fine in public?'; states per line: hidden, written (unmasked left to right), ticked (a pos tick shape beside it).",
+        "beats": [
+          "b05",
+          "b06"
+        ]
+      },
+      {
+        "id": "door_path",
+        "what": "the channel path: a paper floor path running from the corner of Maya's desk (left edge, the tie to desk_set) to the right past five doors in perspective, each door an outlined surface door with a hand-lettered sign (Patrick Hand 400): 'Manager', 'Another manager', 'HR', 'Compliance', 'Speak-up line'. States per door: hidden, standing, signed, greyed (muted fill, sign faded to 0.4, a small cross on the sign), lit (door ajar, warm honey light spilling on the path). The path line has states: to the fork, past the greyed door to the lit doors. A dim state for the whole set (darker wall) for b09. Space on the left third for Maya at medium-wide scale with her feet behind the path's near kerb.",
+        "beats": [
+          "b07",
+          "b09",
+          "b10"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "depth": "layered",
+      "light": "even",
+      "story_role": "hook",
+      "accent_on": "receipt_circle",
+      "design": {
+        "subject": "two matching dinner receipts on Maya's desk",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "Maya at her desk (desk_set, medium), the two receipts land side by side, the duplicate is circled, she reaches for the phone and pulls her hand back",
+        "why_motion": "the hesitation is the story: a reach and a retreat says the pull to stay quiet before any word does",
+        "elements": [
+          {
+            "name": "room",
+            "what": "desk_set wall and window"
+          },
+          {
+            "name": "desk",
+            "what": "desk_set desk, near edge in front of Maya"
+          },
+          {
+            "name": "receipts",
+            "what": "the two matching receipts"
+          },
+          {
+            "name": "receipt_circle",
+            "what": "accent ring round the duplicate total"
+          },
+          {
+            "name": "phone",
+            "what": "phone on the desk"
+          },
+          {
+            "name": "laptop",
+            "what": "laptop, expense sheet state"
+          },
+          {
+            "name": "maya",
+            "what": "Maya rig, medium, right third"
+          },
+          {
+            "name": "title_note",
+            "what": "hand-lettered note 'Something doesn't add up'"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say this is Maya",
+            "element": "maya",
+            "action": "settles at her desk, focus",
+            "motion": "pose"
+          },
+          {
+            "t_anchor": "One expense claim",
+            "element": "receipts",
+            "action": "two receipts slide in side by side",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "claimed twice",
+            "element": "receipt_circle",
+            "action": "accent ring draws round the second receipt's total",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "claimed twice",
+            "element": "title_note",
+            "action": "hand-lettered note 'Something doesn't add up' pinned on the wall",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "Her first thought",
+            "element": "maya",
+            "action": "hand reaches toward the phone",
+            "motion": "pose"
+          },
+          {
+            "t_anchor": "Leave it",
+            "element": "maya",
+            "action": "pulls the hand back, uneasy",
+            "motion": "pose"
+          }
+        ],
+        "continuity": "desk set, receipts and Maya stay for b02"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "setup",
+      "accent_on": "receipt_circle",
+      "design": {
+        "subject": "Maya's uneasy face",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "a cut to a close on Maya's uneasy face, the circled receipt at the lower edge; she looks from the receipts up to the viewer",
+        "why_motion": "the reaction is the point: her look turns the question to the viewer",
+        "elements": [
+          {
+            "name": "room",
+            "what": "desk_set wall, close framing"
+          },
+          {
+            "name": "receipts",
+            "what": "receipts at the lower frame edge"
+          },
+          {
+            "name": "receipt_circle",
+            "what": "the accent ring"
+          },
+          {
+            "name": "maya",
+            "what": "Maya rig, close, brow to chin 250 px or more"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Felt that pull",
+            "element": "maya",
+            "action": "eyes down at the receipts, uneasy",
+            "motion": "emotion"
+          },
+          {
+            "t_anchor": "Here's what to do",
+            "element": "maya",
+            "action": "looks up to the viewer, a small resolved breath and a slight nod",
+            "motion": "gesture"
+          }
+        ],
+        "continuity": "same desk set at close framing; b03 cuts back to the medium"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "accent_on": "receipt_circle",
+      "design": {
+        "subject": "three thought bubbles over Maya",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "back to the medium: three paper thought bubbles rise over Maya one per question, then dim as she straightens",
+        "why_motion": "the reasons arrive one after another and then lose their hold: the rise and the dimming carry that",
+        "elements": [
+          {
+            "name": "room",
+            "what": "desk_set wall and window"
+          },
+          {
+            "name": "desk",
+            "what": "desk_set desk"
+          },
+          {
+            "name": "receipts",
+            "what": "the two receipts"
+          },
+          {
+            "name": "receipt_circle",
+            "what": "the accent ring"
+          },
+          {
+            "name": "phone",
+            "what": "phone"
+          },
+          {
+            "name": "laptop",
+            "what": "laptop"
+          },
+          {
+            "name": "maya",
+            "what": "Maya rig, medium"
+          },
+          {
+            "name": "bubble_wrong",
+            "what": "thought bubble 'What if I'm wrong?'"
+          },
+          {
+            "name": "bubble_cost",
+            "what": "thought bubble 'What will it cost me?'"
+          },
+          {
+            "name": "bubble_business",
+            "what": "thought bubble 'Not my business'"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "ordinary reasons",
+            "element": "maya",
+            "action": "shoulders drop, thoughtful",
+            "motion": "pose"
+          },
+          {
+            "t_anchor": "What if I'm wrong",
+            "element": "bubble_wrong",
+            "action": "bubble 'What if I'm wrong?' rises",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "What will it cost",
+            "element": "bubble_cost",
+            "action": "bubble 'What will it cost me?' rises",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "my business",
+            "element": "bubble_business",
+            "action": "bubble 'Not my business' rises",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "my business",
+            "element": "maya",
+            "action": "straightens up; the three bubbles dim to 0.35",
+            "motion": "pose"
+          }
+        ],
+        "continuity": "bubbles leave before b04; desk, receipts and Maya held"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "room",
+        "desk",
+        "receipts",
+        "phone",
+        "laptop",
+        "maya"
+      ],
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "accent_on": "belief_words",
+      "design": {
+        "subject": "a magnifying glass set down on the desk",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "Maya sets a magnifying glass down by the receipts; a card pinned on her wall reads 'Honest belief, not proof': 'proof' is struck and fades, 'Honest belief' stays in accent",
+        "why_motion": "putting the glass down is the refutation: investigating is not her job",
+        "elements": [
+          {
+            "name": "room",
+            "what": "held"
+          },
+          {
+            "name": "desk",
+            "what": "held"
+          },
+          {
+            "name": "receipts",
+            "what": "held"
+          },
+          {
+            "name": "phone",
+            "what": "held"
+          },
+          {
+            "name": "laptop",
+            "what": "held"
+          },
+          {
+            "name": "maya",
+            "what": "held"
+          },
+          {
+            "name": "magnifier",
+            "what": "desk_set magnifying glass"
+          },
+          {
+            "name": "rule_card",
+            "what": "card pinned on the wall, left third"
+          },
+          {
+            "name": "belief_words",
+            "what": "'Honest belief' in accent on the card"
+          },
+          {
+            "name": "proof_word",
+            "what": "'not proof' in ink on the card"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "you don't need proof",
+            "element": "rule_card",
+            "action": "card drops onto the wall, left third",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "you don't need proof",
+            "element": "proof_word",
+            "action": "struck through with an ink line",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "honest belief",
+            "element": "belief_words",
+            "action": "'Honest belief' stamps in accent",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "Investigating isn't",
+            "element": "magnifier",
+            "action": "Maya lowers the glass to the desk and lets go",
+            "motion": "pose"
+          },
+          {
+            "t_anchor": "your job",
+            "element": "proof_word",
+            "action": "'not proof' fades to 0.3",
+            "motion": "fade"
+          }
+        ],
+        "continuity": "the card leaves at the end; the magnifier stays on the desk"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "room",
+        "desk",
+        "receipts",
+        "phone",
+        "laptop",
+        "maya",
+        "magnifier"
+      ],
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "accent_on": "pad_heading",
+      "design": {
+        "subject": "a notepad of three questions on the desk",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "the question_pad lands on the desk beside the receipts, tilted up toward the viewer, and its three lines write in one at a time as each question is asked; Maya tilts her head per question",
+        "why_motion": "each question appears on its word: the list is built as she thinks it",
+        "elements": [
+          {
+            "name": "room",
+            "what": "held"
+          },
+          {
+            "name": "desk",
+            "what": "held"
+          },
+          {
+            "name": "receipts",
+            "what": "held"
+          },
+          {
+            "name": "receipt_circle",
+            "what": "the accent ring, redrawn faint (0.5) so the pad heading carries the accent"
+          },
+          {
+            "name": "phone",
+            "what": "held"
+          },
+          {
+            "name": "laptop",
+            "what": "held"
+          },
+          {
+            "name": "maya",
+            "what": "held"
+          },
+          {
+            "name": "magnifier",
+            "what": "held"
+          },
+          {
+            "name": "pad",
+            "what": "question_pad"
+          },
+          {
+            "name": "pad_heading",
+            "what": "'Three questions' in accent"
+          },
+          {
+            "name": "pad_line1",
+            "what": "'Breaks a rule?'"
+          },
+          {
+            "name": "pad_line2",
+            "what": "'Harms someone?'"
+          },
+          {
+            "name": "pad_line3",
+            "what": "'Fine in public?'"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "three questions",
+            "element": "pad",
+            "action": "notepad slides onto the desk, a small heading 'Three questions' in accent",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "break a rule",
+            "element": "pad_line1",
+            "action": "'Breaks a rule?' writes in",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "harm someone",
+            "element": "pad_line2",
+            "action": "'Harms someone?' writes in",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "fine in public",
+            "element": "pad_line3",
+            "action": "'Fine in public?' writes in",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "fine in public",
+            "element": "maya",
+            "action": "head tilt, weighing",
+            "motion": "gesture"
+          }
+        ],
+        "continuity": "pad held into b06"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "room",
+        "desk",
+        "receipts",
+        "phone",
+        "laptop",
+        "maya",
+        "magnifier",
+        "pad",
+        "pad_line1",
+        "pad_line2",
+        "pad_line3"
+      ],
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "accent_on": "receipt_circle",
+      "design": {
+        "subject": "ticks on the notepad against the receipts",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "the pad's lines tick one after another as the circled receipt's ring redraws to full strength (the ring sits inside the held receipts); Maya nods, decided",
+        "why_motion": "the ticks landing against the receipt is the judgement being made",
+        "elements": [
+          {
+            "name": "pad_ticks",
+            "what": "three pos tick shapes beside the pad lines"
+          },
+          {
+            "name": "receipt_circle",
+            "what": "the accent ring inside the held receipts, tweened back to full strength"
+          },
+          {
+            "name": "maya",
+            "what": "held"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A dinner claimed twice",
+            "element": "receipt_circle",
+            "action": "the ring redraws once round the duplicate",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "enough to raise it",
+            "element": "pad_ticks",
+            "action": "three pos ticks land, staggered",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "raise it",
+            "element": "maya",
+            "action": "firm nod, decided face",
+            "motion": "gesture"
+          }
+        ],
+        "continuity": "the camera pans right to the path in b07"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "path",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "reveal",
+      "accent_on": "manager_sign",
+      "design": {
+        "subject": "five labelled doors along a path",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "the camera pans right from her desk: the door_path opens, Maya at its start on the left third, five doors standing up one at a time along it, each sign lettered as it is named, her manager's first",
+        "why_motion": "the channels arrive in the order she would meet them: the path is the sequence",
+        "elements": [
+          {
+            "name": "path_set",
+            "what": "door_path wall, floor and desk corner"
+          },
+          {
+            "name": "path_line",
+            "what": "the path"
+          },
+          {
+            "name": "door_manager",
+            "what": "door 'Manager'"
+          },
+          {
+            "name": "manager_sign",
+            "what": "the 'Manager' sign, accent while named"
+          },
+          {
+            "name": "door_other",
+            "what": "door 'Another manager'"
+          },
+          {
+            "name": "door_hr",
+            "what": "door 'HR'"
+          },
+          {
+            "name": "door_compliance",
+            "what": "door 'Compliance'"
+          },
+          {
+            "name": "door_line",
+            "what": "door 'Speak-up line' with tag 'anonymous where offered'"
+          },
+          {
+            "name": "maya",
+            "what": "Maya rig, medium-wide, left third"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the channel",
+            "element": "path_line",
+            "action": "the path draws from the desk corner to the right",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "manager",
+            "element": "door_manager",
+            "action": "first door stands up, sign 'Manager' in accent as the easiest start",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "another manager",
+            "element": "door_other",
+            "action": "door 'Another manager' stands up; the Manager sign returns to ink",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "HR",
+            "element": "door_hr",
+            "action": "door 'HR' stands up",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "compliance",
+            "element": "door_compliance",
+            "action": "door 'Compliance' stands up",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "speak-up line",
+            "element": "door_line",
+            "action": "door 'Speak-up line' stands up",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "anonymous where offered",
+            "element": "door_line",
+            "action": "a small tag 'anonymous where offered' hangs on the last sign",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "anonymous",
+            "element": "maya",
+            "action": "turns to present the doors, palm up",
+            "motion": "pose"
+          }
+        ],
+        "continuity": "the path and doors return in b09 in the same layout"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "template": "process.flow",
+      "station": "review",
+      "join_in": {
+        "type": "page"
+      },
+      "story_role": "reveal",
+      "accent_on": "title",
+      "props": {
+        "kicker": "Typically, by policy",
+        "title": "No retaliation for good faith",
+        "say_title": "forbid retaliation",
+        "steps": [
+          {
+            "label": "Others review it",
+            "say": "others review it",
+            "icon": "users"
+          },
+          {
+            "label": "Kept confidential",
+            "sub": "as far as possible",
+            "say": "confidentially",
+            "icon": "lock"
+          },
+          {
+            "label": "No retaliation",
+            "sub": "for a good-faith concern",
+            "say": "good-faith concern",
+            "icon": "shield-check"
+          }
+        ],
+        "token": {
+          "icon": "mail"
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "path",
+      "join_in": {
+        "type": "cut"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "light": "night",
+      "story_role": "turn",
+      "intent": "hold",
+      "accent_on": "question_sign",
+      "design": {
+        "subject": "the manager's door greyed out at a fork",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "back on the same path, dimmed: the manager's door greys out, Maya stands at the fork, a hanging sign over the fork asks the question; the frame holds for the 3 s pause",
+        "why_motion": "the greying door is the twist; the hold gives the viewer time to answer",
+        "elements": [
+          {
+            "name": "path_set",
+            "what": "door_path in its dim state"
+          },
+          {
+            "name": "path_line",
+            "what": "path to the fork"
+          },
+          {
+            "name": "door_manager",
+            "what": "the Manager door, greying"
+          },
+          {
+            "name": "door_other",
+            "what": "door 'Another manager', standing"
+          },
+          {
+            "name": "door_hr",
+            "what": "door 'HR', standing"
+          },
+          {
+            "name": "door_compliance",
+            "what": "door 'Compliance', standing"
+          },
+          {
+            "name": "door_line",
+            "what": "door 'Speak-up line', standing"
+          },
+          {
+            "name": "question_sign",
+            "what": "hanging sign 'Her manager is involved. Where now?', the question in accent"
+          },
+          {
+            "name": "maya",
+            "what": "Maya rig, medium-wide, left third"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "her own manager",
+            "element": "door_manager",
+            "action": "goes grey, sign fades, small cross on it",
+            "motion": "fade"
+          },
+          {
+            "t_anchor": "her own manager",
+            "element": "maya",
+            "action": "worried face",
+            "motion": "emotion"
+          },
+          {
+            "t_anchor": "Where does she go",
+            "element": "question_sign",
+            "action": "sign 'Her manager is involved. Where now?' drops over the fork",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "Where does she go",
+            "element": "maya",
+            "action": "looks along the path, thinking, a slow tilt in the pause",
+            "motion": "gesture"
+          }
+        ],
+        "continuity": "the greyed door and the doors held into b10"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "path",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "path_set",
+        "path_line",
+        "door_manager",
+        "door_other",
+        "door_hr",
+        "door_compliance",
+        "door_line",
+        "maya"
+      ],
+      "shot": {
+        "size": "wide"
+      },
+      "light": "dawn",
+      "story_role": "reveal",
+      "accent_on": "path_line",
+      "design": {
+        "subject": "the other doors lighting up",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "the set brightens, the question sign lifts away, the other doors open and light up one by one, and the path line runs past the grey door to them; Maya turns to them with an open hand. Each door keeps its own sign (and the last its tag) and the path keeps its fork and route strokes: they ride on the held doors and path as followers, so they must not vanish at the join",
+        "why_motion": "light moving past the grey door is the answer: there is always another door",
+        "elements": [
+          {
+            "name": "path_set",
+            "what": "held, back to its day state"
+          },
+          {
+            "name": "path_line",
+            "what": "redrawn in accent past the grey door, its fork and route strokes held with it"
+          },
+          {
+            "name": "door_manager",
+            "what": "held, grey, its sign still faded with the cross"
+          },
+          {
+            "name": "door_other",
+            "what": "lit, its 'Another manager' sign still on"
+          },
+          {
+            "name": "door_hr",
+            "what": "lit, its 'HR' sign still on"
+          },
+          {
+            "name": "door_compliance",
+            "what": "lit, its 'Compliance' sign still on"
+          },
+          {
+            "name": "door_line",
+            "what": "lit, its 'Speak-up line' sign and 'anonymous where offered' tag still on"
+          },
+          {
+            "name": "maya",
+            "what": "held, her near kerb held with her"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Another door",
+            "element": "door_other",
+            "action": "opens, warm light spills",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "Another door",
+            "element": "path_line",
+            "action": "path redraws in accent past the grey door",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "HR",
+            "element": "door_hr",
+            "action": "lights up",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "compliance",
+            "element": "door_compliance",
+            "action": "lights up",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "speak-up line",
+            "element": "door_line",
+            "action": "lights up",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "speak-up line",
+            "element": "maya",
+            "action": "turns toward the lit doors, smile, palm up",
+            "motion": "pose"
+          }
+        ],
+        "continuity": "the camera pans back left to the desk for b11"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "camera",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "intent": "callback",
+      "accent_on": "pocket_rule",
+      "design": {
+        "subject": "a sent note and a sticky note on her wall",
+        "references": [
+          "scenes_examples/style_story_cartoon_rig_mid_shot.js"
+        ],
+        "treatment": "the opening shot returns exactly: Maya at her desk, relaxed now; she sends a short note on the laptop (mail compose: 'To: Compliance', 'Subject: A duplicate expense claim') and closes it; a sticky note on the wall reads 'Notice. Weigh. Speak up.'",
+        "why_motion": "the mirror of b01 shows the change: the same desk, a calm person, a sent note",
+        "elements": [
+          {
+            "name": "room",
+            "what": "desk_set, same framing as b01"
+          },
+          {
+            "name": "desk",
+            "what": "desk_set desk"
+          },
+          {
+            "name": "receipts",
+            "what": "receipts, no ring"
+          },
+          {
+            "name": "phone",
+            "what": "phone"
+          },
+          {
+            "name": "laptop",
+            "what": "laptop, mail compose then closed"
+          },
+          {
+            "name": "mail",
+            "what": "Loom.ui.mail on the laptop screen, real words"
+          },
+          {
+            "name": "maya",
+            "what": "Maya rig, medium, right third"
+          },
+          {
+            "name": "pocket_rule",
+            "what": "sticky note 'Notice. Weigh. Speak up.' with the words in accent"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back at her desk",
+            "element": "maya",
+            "action": "relaxed face at the desk",
+            "motion": "emotion"
+          },
+          {
+            "t_anchor": "sends a calm note",
+            "element": "mail",
+            "action": "mail on the laptop sends, a small 'Sent' tick",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "Notice it",
+            "element": "pocket_rule",
+            "action": "sticky note 'Notice. Weigh. Speak up.' lands on the wall, its words writing in on Notice, Weigh, Speak up",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "Honesty, not proof",
+            "element": "laptop",
+            "action": "laptop closes; Maya smiles and nods",
+            "motion": "pose"
+          }
+        ],
+        "continuity": "the bookend of b01: same framing and set"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "avatar",
+      "station": "host",
+      "join_in": {
+        "type": "page"
+      },
+      "story_role": "payoff",
+      "accent_on": "title",
+      "props": {
+        "title": "Know your channels",
+        "kicker": "This week",
+        "card": {
+          "title": "Your channels",
+          "lines": [
+            "Your manager, or another one",
+            "HR or compliance",
+            "Your speak-up line"
+          ]
+        }
+      }
+    }
+  ]
+}

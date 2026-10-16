@@ -1,0 +1,215 @@
+{
+  "concept": "One long trainer's whiteboard. Sam's meeting is drawn and redrawn as the three moves are applied: a checklist (Before, During, Close) in the top-right corner of every board fills with ticks as each move lands, and the payoff returns to the same table where the hook began.",
+  "world": "One continuous whiteboard laid out left to right: the meeting table (hook, and again for the email and payoff), Sam's invite, Sam's meeting board, the close board, with the quiz board below the close and the learner's blank agenda at the far right. The presenter sits on her own frame below the table. Camera pans read as moving along the board; wipes mark section turns.",
+  "devices": [
+    {
+      "id": "step_list",
+      "what": "the three-step checklist Before / During / Close in the top-right corner of every board, a rough tick box per step, the current step in ink and the others muted, each box ticked by hand as its move lands (kit part step_list)",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "invite_card",
+      "what": "Sam's meeting invite drawn as a rough card: its topic line struck through and rewritten as a question, its guest row trimmed; returns blank as the learner's agenda (kit part invite_card)",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b14"
+      ]
+    },
+    {
+      "id": "team_bubbles",
+      "what": "the team at the table with speech bubbles: four different answers in b02, one shared line after the summary is sent in b12 (kit part team_table)",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "decision_line",
+      "what": "the written decision in three parts (what, who, by when), each underlined as it is read back; folded into the email and written on the payoff table (kit part decision_line)",
+      "kind": "explain",
+      "beats": [
+        "b09",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "board_pan",
+      "what": "one long board: a calm camera pan to the next part of the board within a section, a field2 wipe at a section turn (at most once per chapter)",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b07",
+        "b09",
+        "b12",
+        "b14"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "an open board: ink only, the accent only on the question marks"
+    },
+    {
+      "from": "b04",
+      "band": "light",
+      "why": "the board fills as each move is drawn; one marker colour per board on the stressed thing"
+    },
+    {
+      "from": "b12",
+      "band": "light",
+      "why": "the turn: the bubbles become one, the green ticks land on all three steps (colour withheld until here)"
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "why": "a clean board for the learner's own agenda"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "the meeting table drawn as people talk, then emptied; question marks over it",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "bespoke",
+          "station": "table",
+          "line": "four people talk at a drawn table, then fade out; empty chairs; 'Decided?' and 'Who?' written over it"
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "table",
+          "line": "Sam and three teammates back at the table, Sam named; afterwards each gets a bubble with a different answer"
+        }
+      ]
+    },
+    {
+      "id": "promise",
+      "treatment": "the presenter names the three moves",
+      "beats": [
+        {
+          "beat": "b03",
+          "kind": "avatar",
+          "station": "presenter",
+          "line": "the presenter with a three-line card: Before, During, Close"
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "treatment": "Sam's invite on the board: struck topic, written question, trimmed guest row",
+      "beats": [
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "invite",
+          "line": "the step list appears top right, Before current; Sam's invite card drawn with one line, 'Pilot update', circled as only a subject"
+        },
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "invite",
+          "line": "'Pilot update' struck through; 'May or June?' written in its place; a guest row of faces drawn under it"
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "invite",
+          "line": "two faces labelled Owner and Needed input; the rest crossed off with an arrow to an envelope; Before ticked"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "treatment": "inside Sam's meeting: the question on the board, a parking lot corner, Priya circled as the one who calls it",
+      "beats": [
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "meeting",
+          "line": "Sam at the board under the written question; a side-topic bubble drifts in and is written into a parking lot box in the corner with a name"
+        },
+        {
+          "beat": "b08",
+          "kind": "bespoke",
+          "station": "meeting",
+          "line": "Priya drawn beside Sam; the group's arrows point to her; she is circled, 'Priya decides' written; During ticked"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "treatment": "the read-back underlined part by part, a two-line check, then the email that makes one version",
+      "beats": [
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "close",
+          "line": "Sam reads the decision line; What, Who and By when underlined and labelled one by one; a muted note that people can correct it"
+        },
+        {
+          "beat": "b10",
+          "kind": "template",
+          "station": "quiz",
+          "line": "quiz.question: which line is a decision, A or B, with a pause"
+        },
+        {
+          "beat": "b11",
+          "kind": "template",
+          "station": "quiz",
+          "line": "quiz.answer: A crossed as only a topic, B ticked as what, who, by when"
+        },
+        {
+          "beat": "b12",
+          "kind": "bespoke",
+          "station": "table",
+          "line": "back at the table: the decision line folds into an email marked 'Sent today' that goes to each person; their four bubbles now say the same line"
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "the same table, now ending on a decision with owner and date, all three steps ticked",
+      "beats": [
+        {
+          "beat": "b13",
+          "kind": "bespoke",
+          "station": "table",
+          "line": "the same table and team; the decision list written on it with owner and date; the step list gets its last tick in green"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "treatment": "a blank agenda for the learner with a question mark on its first line and the pocket rule",
+      "beats": [
+        {
+          "beat": "b14",
+          "kind": "bespoke",
+          "station": "apply",
+          "line": "a blank agenda card with a '?' on its first line; 'Name it, steer it, read it back' written beneath"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "title": "Spot it, report it: the first minutes with a phishing message",
+  "performance": "When a message at work pushes them to act fast, the viewer pauses, spots the signs (pressure, a mismatched sender or link, an unexpected attachment, a request for a password or a payment), and reports it through the company's report button or channel without clicking or replying; and if they already clicked, they report it at once instead of hiding it.",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "triages a work inbox and chat every day, already glances at sender and subject before opening, and has sat through at least one awareness training that felt like a list of tips",
+    "why": "the brief's audience is working adults of mixed technical skill who handle messages all day; the knowledge sheet defines phishing from scratch (F1), but the skill being asked for is a workplace judgement call at the desk, not a body of theory, so the plan trusts them with density and moves fast from one worked example to their own decisions (expertise reversal)",
+    "motivation": "required viewing, low expectations ('another boring security training'); cares about not being the person who let something in, not being made to feel stupid, and getting on with the day, so relevance must land in the first minute and the tone must never scold",
+    "context": "at a desk between tasks, laptop, often with sound but sometimes muted; mixed first languages, so on-screen anchors (the four moves, the sign names) carry the structure even without audio"
+  },
+  "genre": "mixed",
+  "genre_note": "The brief's genre is 'policy', but there is no written company policy (topic mode, faithful posture), so the plan maps it onto the closed set as mixed: sec1 and sec5 are procedural (the moves, the already-clicked report), sec3 and sec4 are conceptual (recognising signs, judging grey areas), sec2 carries the lesson's one drawn number (the NCSC funnel). Numbers are well under a third of the substance.",
+  "strategy": {
+    "name": "scenario_led",
+    "rationale": "Every fact on the sheet is a behaviour tied to one moment: a message that pushes you to hurry (F3, F4) and what you do in the next minutes (F10, F11, F16). The brief's own arc already runs as a story of ordinary employees at moments of choice, and the outcome is a judgement call, so the lesson puts the viewer inside that moment and lets the consequences teach, rather than listing tips.",
+    "signature_move": "Freeze the message at the moment of choice, ask the viewer what they notice or would do, then reveal it on the message itself and name the move."
+  },
+  "misconceptions": [
+    {
+      "belief": "You can spot phishing by bad spelling, clumsy grammar or a strange logo.",
+      "why_tempting": "older trainings taught exactly this, and many crude scams really did look sloppy",
+      "refuted_in": "sec3",
+      "how": "The worked message is written perfectly. State the old rule fairly, then show that this clean message still carries every real sign; the sheet says some phishing is now written perfectly and some fools even experts (F9). The real signs are pressure, mismatch and request.",
+      "source_anchor": "knowledge F9; not_claimed 'You can always spot phishing by bad spelling or a strange logo'"
+    },
+    {
+      "belief": "A message from a colleague or supplier I already know, or one that arrives by text or chat rather than email, is not phishing.",
+      "why_tempting": "the name is familiar, the request sounds like normal work, and 'phishing' is usually taught as an email problem",
+      "refuted_in": "sec4",
+      "how": "Targeted phishing uses what it knows about a company and its people to look like a known colleague, manager or supplier (F12), and phishing also arrives by text, chat and phone (F2). The move is the same: do not act on the message, check through a separate route you find yourself (F11), and report it.",
+      "source_anchor": "knowledge F2, F12, F11"
+    },
+    {
+      "belief": "If I clicked but typed nothing, there is no need to tell anyone, and keeping quiet is safer for me.",
+      "why_tempting": "nothing visible happened, reporting feels like confessing, and people fear blame",
+      "refuted_in": "sec5",
+      "how": "Say it fairly and kindly: busy, stressed people click (F18). Then show what the report does: reports, including ones made after a click, are the security team's early warning (F13), and knowing sooner lets the organisation limit the harm (F17). The move: do not panic, tell the IT or security team what happened, through the company's report button or channel (F16). Never promise or threaten any consequence; the company has stated none.",
+      "source_anchor": "knowledge F13, F16, F17, F18; not_claimed 'If you clicked but typed nothing, there is no need to tell anyone'"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Say it is the end of a long day and a message lands: confirm your password in the next hour or lose access to the shared drive. Your cursor is already on the link.",
+      "on_screen_essence": "Act now, it says. Your cursor is on it.",
+      "grounding": "invented, framed with 'say'; the pressure and the password request are the signs in F4 and F7"
+    },
+    "promise": "In the next few minutes you will be able to read that message for what it is, know the one move that beats it, and know what to do if you had already clicked.",
+    "bridge_from_prior": "sec1 opens from what the viewer already does: they sort dozens of messages a day and already glance at sender and subject. This lesson is not ten more tips; it is four moves for the one message that asks you to hurry.",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can name the four moves for a message that pushes them to hurry: look for the signs, do not click or reply, report it with the company's report button or channel, and if they already clicked, report at once",
+        "bloom": "remember",
+        "concepts": [
+          "phishing",
+          "the four moves",
+          "your company's report button or channel"
+        ],
+        "energy": "build",
+        "carrier": "large plain type: the four moves set one by one over the frozen hook message, which dims behind them but never leaves the frame",
+        "recap_after": false,
+        "grounding": [
+          "F1",
+          "F10",
+          "F16",
+          "requester's four behaviours"
+        ],
+        "notes": "Pre-training: name the moves before any are shown working. One-line definition of phishing from F1, spoken, not on screen as a paragraph. The report route is always 'your company's report button or channel'; never a mailbox, number or tool. Narration addresses all four moves in order."
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can explain why one early report protects everyone else in the company, using the NCSC case study",
+        "bloom": "understand",
+        "concepts": [
+          "filtering",
+          "report",
+          "early warning"
+        ],
+        "energy": "steady",
+        "carrier": "data picture, the lesson's one drawn number: a funnel whose counter drains from 1,800 phishing emails to 50 as the filters catch 1,750, then 25 small report marks light up among the 50 and travel back to the security team",
+        "recap_after": true,
+        "grounding": [
+          "F14",
+          "F15",
+          "F13",
+          "F17"
+        ],
+        "notes": "Numbers exactly as the sheet states them and framed as one real company's incident described by the NCSC, not a general rate. Say that some of the 25 reported after clicking, and that the reports were the first sign the attack had got past the filters. Do NOT use the 14 clicks or the infected device (not on the sheet). Recap line: filters catch most; reports catch what gets through."
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can use the pressure, mismatch and request signs to check a message, even when it is written perfectly",
+        "bloom": "apply",
+        "concepts": [
+          "urgency and authority (the pressure signs)",
+          "a sender address or link that does not match (the mismatch signs)",
+          "a request for a password or payment (the request signs)",
+          "spelling is no longer a reliable sign"
+        ],
+        "energy": "peak",
+        "carrier": "evidence board: the same hook message, held still, transforms as each sign lifts off it as a marked callout at the moment it is named (the deadline, the sender's address with one letter changed, the shortened link that hides where it goes, the password box); the inbox becomes the evidence board without cutting away",
+        "recap_after": true,
+        "grounding": [
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F7",
+          "F9"
+        ],
+        "notes": "The worked example: every sign narrated, signature move applied to each (pause, ask what the viewer notices, reveal on the message, name it). Group the signs into three families so the load stays at about four items. Refute the spelling misconception here: the message is clean and still carries every sign. The unexpected attachment is held back for sec4 so the second example is different. Recap line: pressure, mismatch, request."
+      },
+      {
+        "id": "sec4",
+        "goal": "the viewer can distinguish a phishing message that seems to come from a known supplier or colleague, or that arrives by text or chat, from routine work, and still use the same moves on it",
+        "bloom": "analyze",
+        "concepts": [
+          "targeted phishing that looks like a known colleague or supplier",
+          "text message and chat",
+          "check through a separate route you find yourself",
+          "an unexpected attachment"
+        ],
+        "energy": "steady",
+        "carrier": "comparison: a second invented message, say from the usual supplier, asking to pay today's invoice to new bank details, with an attachment nobody expected; it then re-forms side by side as a text and a chat bubble, and the same signs line up across all three channels while only the channel changes",
+        "recap_after": false,
+        "grounding": [
+          "F2",
+          "F8",
+          "F11",
+          "F12",
+          "F20"
+        ],
+        "notes": "Faded example: the narrator points out that the sender's name is familiar, then asks the viewer to find the signs before they are marked (urgency, an unexpected attachment, a payment request). Supplier name is invented and cannot belong to a real organisation. The lesson's only Verizon figure lands here as a spoken aside with a small label, never a headline: in phishing simulations, the median click rate for messages by text or voice was 40% higher than for email; say 'in simulations' and 'higher than email', never '40% of people'. The move when unsure: do not act on the message, check through a separate route you find yourself (not the number or link in the message), and report it. The attachment caveat (most work attachments are genuine; 'unexpected' is the trigger to check) is carried in one line."
+      },
+      {
+        "id": "sec5",
+        "goal": "the viewer can carry out the already-clicked report: without panic, tell the IT or security team at once through the company's report button or channel what happened",
+        "bloom": "apply",
+        "concepts": [
+          "already clicked",
+          "report at once",
+          "no blame"
+        ],
+        "energy": "rest",
+        "carrier": "a journey across time: a dip marks a change of time to a second employee who clicked earlier; from the click the frame splits into two paths, one where the message is quietly deleted and the early-warning light from the sec2 funnel never reaches the security team, one where a report goes out, the light arrives and the screen settles into a calm handled state",
+        "recap_after": true,
+        "grounding": [
+          "F13",
+          "F16",
+          "F17",
+          "F18"
+        ],
+        "notes": "Warmest, slowest section; lighter visuals. The second employee is competent and busy, never foolish. State the misconception fairly, then refute it with the early-warning mechanism (callback to the 25 reports, some after clicking). Do not promise a reply, a fix, a response time, or freedom from consequences, and do not threaten any; the company has stated none. No faster 'already clicked' line is named. Recap line: clicked is not the end of it; quiet is."
+      }
+    ],
+    "payoff": "Back to the frozen opening message: the viewer names its pressure, mismatch and password request, reports it without clicking, and knows that had they clicked, reporting at once still protects everyone."
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec3",
+      "what": "the hook's password message, every sign revealed on the message and named, the move narrated in full"
+    },
+    {
+      "stage": "faded",
+      "where": "sec4",
+      "what": "the known-supplier invoice message: the narrator flags the familiar sender, the viewer finds the urgency, the unexpected attachment and the payment request before they are marked, then the same ask arriving by text and chat"
+    },
+    {
+      "stage": "independent",
+      "where": "after sec5 (the quiz)",
+      "what": "a fresh invented chat message, say from a colleague, asking the viewer to sign in to a shared document within the hour: the viewer picks the signs and the first move before the answer"
+    },
+    {
+      "stage": "independent",
+      "where": "payoff",
+      "what": "the viewer resolves the opening message before the narrator does"
+    }
+  ],
+  "pacing": {
+    "target_duration_s": 380,
+    "duration_note": "Within the requester's 5 to 7 minutes and the brief's 'about six': five short sections, one quiz pause and the bookends at about 140 wpm is roughly 880 spoken words.",
+    "words_per_minute": 140,
+    "slowdown_at": [
+      "the mismatch signs: a sender or link that does not match",
+      "report at once even after a click"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Those 25 reports: which of the four moves put them in front of the security team? The third one. Keep it in mind; the message from the opening is still waiting."
+      },
+      {
+        "after_section": "sec3",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Pressure, mismatch, request. This next one comes from a name you know. Which of the three can you find before I mark them?"
+      },
+      {
+        "after_section": "sec4",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Remember the funnel: some of those 25 reports came from people who had already clicked. That is where this next story goes."
+      },
+      {
+        "after_section": "sec5",
+        "kind": "quiz",
+        "prompt_sketch": "Say a chat message from a colleague says: sign in to this shared document in the next hour or the edits are lost. What is your first move? A: click to see if the document is real. B: reply in the same chat to ask if it is really them. C: report it with your company's report button or channel, without clicking. D: delete it and move on.",
+        "answer": "C. It shows pressure (the deadline) and a request (sign in, meaning your password) behind a link; the first move is to report it without clicking or replying, and if it might be genuine, check with the colleague through a separate route you find yourself.",
+        "tempting_wrong": "B, replying in the same chat, feels polite and careful, but the reply goes to whoever controls that account; check through a separate route instead (F10, F11). D also tempts: deleting protects you, but the security team never learns about the attack, and reports are their early warning (F13)."
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "The next time a message at your desk asks you to hurry, take one breath, look for pressure, mismatch and request, and use your company's report button or channel before you do anything else.",
+    "If you have ever clicked and said nothing, the move still stands: tell your IT or security team what happened, through your company's report button or channel.",
+    "Before you need it, find out where your company's report button or channel sits."
+  ],
+  "pocket_rule": "Hurry is the sign. Reporting is the move.",
+  "persona": {
+    "voice": "a precise, calm analyst colleague who respects the viewer's time and intelligence; dry, never alarmed, never moralising",
+    "delivery_notes": "Even and unhurried on the hook, letting the frozen message hold for a beat of silence. Plain and brisk on the four moves. Lightly curious on the funnel, letting each number land before the next. On each sign, ask the question, wait half a beat, then name it. Slowest and warmest on the already-clicked story: plain sentences, no blame words, no 'you must'. Brisk on recaps. Close on the pocket rule in one breath."
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the password message frozen with the cursor on the link",
+      "objective": "promise: read the message, know the move, know what to do after a click",
+      "recall_prior": "sec1 opens from the viewer's daily inbox triage and their habit of glancing at sender and subject",
+      "present": "sec1 to sec5 in usability order: name the moves, show why reports matter, read the signs, stretch to grey areas, then the after-a-click case",
+      "guidance": "signature move applied to every sign in the sec3 worked example",
+      "practice": "faded supplier example in sec4; recall prompts after sec2, sec3, sec4; the quiz after sec5",
+      "feedback": "quiz answer explains C and why the tempting B and D fall short",
+      "assess": "the quiz on a fresh chat message, then the payoff where the viewer resolves the opening message first",
+      "transfer": "transfer_tasks and the pocket rule; payoff returns to the opening message"
+    },
+    "merrill": {
+      "problem_centered": "the frozen hook message is the running problem, held open from the hook until the payoff",
+      "activation": "sec1 bridges from the viewer's daily inbox triage",
+      "demonstration": "sec3 shows each sign on the message before naming it; sec5 shows both paths after a click",
+      "application": "sec4 faded supplier example and the quiz make the viewer find the signs and choose the move",
+      "integration": "transfer tasks put the moves at the viewer's own desk and send them to find their own report route"
+    },
+    "mayer": {
+      "coherence": "three invented messages only (the hook password message, the supplier invoice, the quiz chat message); one drawn number (the NCSC funnel) and one spoken Verizon aside; no hacker imagery, no scare figures",
+      "signalling": "two slowdowns: the mismatch signs in sec3 and reporting after a click in sec5",
+      "redundancy": "screen shows the four moves, the sign callouts and the funnel numbers as anchors; narration explains them in its own words",
+      "contiguity": "each sign callout lifts off the message at the moment it is named; each funnel number appears as it is spoken",
+      "segmenting": "five short sections, one idea each; the signs grouped into three families so sec3 stays near four items",
+      "pre_training": "sec1 names the four moves before sec3 and sec5 show them working"
+    },
+    "arcs": {
+      "attention": "the frozen message at the moment of choice, held open across sections",
+      "relevance": "the viewer's own inbox and chat; sec2 shows real reports doing real work in one company",
+      "confidence": "a fully worked message before any question; the faded example names the familiar sender first",
+      "satisfaction": "the viewer resolves the opening message themselves in the payoff"
+    },
+    "bloom_path": "remember -> understand -> apply -> analyze -> apply"
+  },
+  "series": null,
+  "flags": [
+    "GENRE-MAP: the brief says 'policy'; with no company policy text the rule is stated as the requester's four behaviours, not quoted verbatim, and genre is planned as mixed",
+    "ORDER: the brief lists 'why it matters' before 'the rule'; the plan names the four moves first (pre-training) so the funnel's report marks can be tied to a named move",
+    "NUMBERS: the NCSC case-study funnel (F14, F15) is the one drawn number; F20 is the single Verizon figure, spoken once in sec4 with its caveat, never a headline; F19 is not used"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b18",
+      "severity": "blocker",
+      "problem": "Quiz options cut off mid-word at the pause cue, other two missing",
+      "fix": "Shorten write windows so all options finish before the pause",
+      "status": "fixed",
+      "reason": "Fixer shortened write windows; sheet at 158.7s shows all three options fully written with the pause mark; critic no longer reports it."
+    },
+    {
+      "beat": "b23",
+      "severity": "major",
+      "problem": "Name list card vanishes leaving orphaned 'Remove names' label, then label erased mid-board",
+      "fix": "Hold list from b22 or wipe",
+      "status": "accepted",
+      "reason": "Sheet shows a coherent whiteboard progression: labels persist and are cleared as the new idea is drawn; marker-world erase between ideas is deliberate, nothing orphaned at settled."
+    },
+    {
+      "beat": "b11",
+      "severity": "major",
+      "problem": "Content from preceding beats vanishes across continue joins b10 to b12",
+      "fix": "Hold elements or wipe",
+      "status": "accepted",
+      "reason": "b11 shows one clean composition at every sampled time; clearing the board between ideas is the whiteboard idiom and contradicts no narration."
+    },
+    {
+      "beat": "b16",
+      "severity": "major",
+      "problem": "Look finding: b15 accent arrow route, b16 manager overlapping the named ring door, 'Not on the list' clipped",
+      "fix": "Fixer round on b13-b17",
+      "status": "fixed",
+      "reason": "Arrow now short and clean, door and manager no longer collide, text fully written at settled; check passes."
+    }
+  ]
+}

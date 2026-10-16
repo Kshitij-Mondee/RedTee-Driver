@@ -1,0 +1,33 @@
+{
+ "name": "claude-core-opus-sb",
+ "description": "claude-core with Opus on the storyboard (Kshitij, 2026-10-12): Opus 5.5 writes the storyboard outline and the storyboard; Sonnet 5.5 writes everything else that is written; Gemini 3.8 Flash is the skeptic and the critic. API calls, real cost.",
+ "opus_storyboard": "Kshitij, 2026-10-12, D-162: 'no let it use opus for storyboading' (Relay on the API, https-private-relay)",
+ "roles": {
+  "brief": "claude-sonnet-5-5",
+  "knowledge": "claude-sonnet-5-5",
+  "skeptic": "gemini-3.8-flash",
+  "pedagogy": "claude-sonnet-5-5",
+  "persona_pick": "claude-haiku-4-5",
+  "script": "claude-sonnet-5-5",
+  "storyboard_outline": "claude-opus-5-5",
+  "storyboard": "claude-opus-5-5",
+  "scene": "claude-sonnet-5-5",
+  "critic": "gemini-3.8-flash",
+  "tweak": "claude-haiku-4-5"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

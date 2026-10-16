@@ -1,0 +1,238 @@
+{
+  "concept": "One ordinary late report told twice. Leo's Thursday message gets a verdict that changes his feelings, not his actions; then the same desk, the same wall planner, and a row of three paper marks on the table edge (what he did, what it caused, ask) built one card at a time until the next step is a pin on Tuesday. Two weeks on, the message comes on Tuesday.",
+  "world": "One office: a two-shot desk (You screen left, Leo screen right, the wall planner between them above the heads), a close on Leo at his side of the same desk, a plain quiz space for the check, and the presenter's bookends.",
+  "look": "story-cartoon",
+  "devices": [
+    {
+      "id": "planner",
+      "what": "The wall week planner between the two heads: Thursday circled as the due day, pages flip two weeks, the client call card slides off Thursday to next week, a check-in pin lands on Tuesday. Every time fact sits on it.",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b08",
+        "b10",
+        "b14"
+      ]
+    },
+    {
+      "id": "marks_rail",
+      "what": "Three paper cards standing on the table edge in a row: 1 What he did, 2 What it caused, 3 Ask. Built one per beat b07 to b09, held through b10, each lit as named in b11, recalled as the presenter's card lines in b15.",
+      "kind": "list",
+      "beats": [
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b15"
+      ]
+    },
+    {
+      "id": "name_tag",
+      "what": "The word proactive leaves the verdict bubble and sticks on Leo as a name tag (a label about who he is), holds while the action cloud asks which action, then peels off when the first mark replaces it.",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b06",
+        "b07"
+      ]
+    },
+    {
+      "id": "two_shot",
+      "what": "The same desk two-shot, You left and Leo right, same looks and sides: the hook, the build of the marks, and the payoff two weeks on.",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b03",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b14"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "The one join material: a paper page turn, at the chapter into the check and at the time skip into the payoff.",
+      "kind": "join",
+      "beats": [
+        "b12",
+        "b14"
+      ]
+    }
+  ],
+  "join_material": "page",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "the quoted verdict",
+      "why": "a pale open: the line that changed nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the still actions dial, then the name tag, then each mark as it lands",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b12",
+      "band": "mid",
+      "accent": "withheld through the pause, then on the takeaway",
+      "why": "both lines weigh the same until the answer"
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "break": true,
+      "accent": "the Tuesday message at the pin",
+      "why": "a lift at the payoff: the same desk, now with time to fix it"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "presenter open, then the desk two-shot, then a cut to Leo close",
+      "accent_on": "the verdict and the circled Thursday",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Presenter to camera, the verdict on her card",
+          "builder": "avatar",
+          "join": "cut"
+        },
+        {
+          "beat": "b02",
+          "line": "Leo's message lands on Thursday, circled on the planner; your verdict bubble; his face drops",
+          "builder": "bespoke",
+          "device": "two_shot",
+          "join": "cut"
+        },
+        {
+          "beat": "b03",
+          "line": "Planner pages flip two weeks; the same message pops on another Thursday",
+          "builder": "bespoke",
+          "device": "planner",
+          "join": "continue",
+          "intent": "callback"
+        },
+        {
+          "beat": "b04",
+          "line": "Close on Leo: feelings dial swings down, actions dial does not move",
+          "builder": "bespoke",
+          "join": "cut"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "close on Leo, then back to the two-shot",
+      "accent_on": "the name tag, then mark 1",
+      "beats": [
+        {
+          "beat": "b05",
+          "line": "Proactive leaves the bubble and sticks on Leo as a name tag; he closes up",
+          "builder": "bespoke",
+          "device": "name_tag",
+          "join": "continue"
+        },
+        {
+          "beat": "b06",
+          "line": "A cloud of possible actions above Leo, each with a question mark, none picked",
+          "builder": "bespoke",
+          "device": "name_tag",
+          "join": "continue"
+        },
+        {
+          "beat": "b07",
+          "line": "Back to the two-shot: the tag peels off, mark 1 What he did stands on the table edge",
+          "builder": "bespoke",
+          "device": "marks_rail",
+          "join": "cut"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "the same two-shot, the rail growing",
+      "accent_on": "each new mark, then the Tuesday pin",
+      "beats": [
+        {
+          "beat": "b08",
+          "line": "Mark 2 What it caused; the client call card slides off Thursday",
+          "builder": "bespoke",
+          "device": "marks_rail",
+          "join": "continue"
+        },
+        {
+          "beat": "b09",
+          "line": "Mark 3 Ask; your question bubble to Leo, who looks up",
+          "builder": "bespoke",
+          "device": "marks_rail",
+          "join": "continue"
+        },
+        {
+          "beat": "b10",
+          "line": "Leo answers; a check-in pin lands on Tuesday; both nod",
+          "builder": "bespoke",
+          "device": "planner",
+          "join": "continue"
+        },
+        {
+          "beat": "b11",
+          "line": "Push in on the rail: each mark lights as it is named",
+          "builder": "bespoke",
+          "device": "marks_rail",
+          "join": "continue",
+          "intent": "process_hold"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "a quiz space, two templates",
+      "accent_on": "withheld, then the takeaway",
+      "beats": [
+        {
+          "beat": "b12",
+          "line": "Two lines side by side, a pause to choose",
+          "builder": "template:quiz.question",
+          "device": "page_join",
+          "join": "page"
+        },
+        {
+          "beat": "b13",
+          "line": "B marked right, A dims with its why not",
+          "builder": "template:quiz.answer",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "the opening desk again, then the presenter close",
+      "accent_on": "the Tuesday message, then the three lines",
+      "beats": [
+        {
+          "beat": "b14",
+          "line": "Same desk two weeks on: the message arrives on Tuesday at the pin, time to fix it",
+          "builder": "bespoke",
+          "device": "two_shot",
+          "join": "page",
+          "intent": "callback"
+        },
+        {
+          "beat": "b15",
+          "line": "Presenter closes, the three marks as her card lines",
+          "builder": "avatar",
+          "device": "marks_rail",
+          "join": "cut"
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    "Leo close (b04 to b06) is a peep bust: the closed-eyed neutral face must not hold more than 4 s (guide A3)."
+  ]
+}

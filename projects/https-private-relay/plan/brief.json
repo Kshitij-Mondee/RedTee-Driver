@@ -1,0 +1,97 @@
+{
+  "title": "How HTTPS Keeps Your Data Private",
+  "genre": "teaching",
+  "audience": {
+    "who": "corporate employees across all functions",
+    "knows": "they use browsers and see a padlock, little about how it works",
+    "cares_about": "whether what they type at work and at home can be read by anyone else"
+  },
+  "outcome": "After watching, the viewer can explain in their own words why a padlocked site protects what they send, and can say what to check before typing something sensitive",
+  "through_line": "The padlock is not decoration: it is the result of a quick check and a shared secret, so a message crossing the open network is useless to anyone but its two ends",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "A login or payment form is submitted and the data crosses a crowded network in plain sight; a watcher in the middle reads it. The viewer recognises the everyday moment and feels the exposure"
+    },
+    {
+      "role": "promise",
+      "what": "Promise the viewer will follow one request from browser to server and be able to say why the watcher now sees only noise, and what the padlock does and does not tell them"
+    },
+    {
+      "role": "bridge",
+      "no_material": true,
+      "what": "Optional link from the exposed message to the idea of locking it",
+      "needs": "Not needed for a two minute lesson; the promise leads straight into the build"
+    },
+    {
+      "role": "build",
+      "what": "One running request, shown as a system in motion. Section one: the browser asks the server to identify itself and checks its certificate. Section two: the two sides agree a shared key without sending it in the open. Section three: data is scrambled with that key, travels as noise past the watcher and is unscrambled at the far end"
+    },
+    {
+      "role": "check",
+      "what": "The viewer is shown a new situation, for example a site whose certificate check fails, and chooses what the browser should do and why, so they can pass it from what they just saw"
+    },
+    {
+      "role": "apply",
+      "what": "A short habit for the viewer: what to look at before entering sensitive data, and the limit of what the padlock proves"
+    },
+    {
+      "role": "payoff",
+      "what": "Return to the opening form: same data, same network, same watcher, now seeing only scrambled noise, and the padlock closing"
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "Why plain traffic can be read by anyone on the path",
+      "from_knowledge": true
+    },
+    {
+      "what": "The server proves its identity with a certificate that the browser checks",
+      "from_knowledge": true
+    },
+    {
+      "what": "Browser and server agree a shared key without exposing it to the watcher",
+      "from_knowledge": true
+    },
+    {
+      "what": "Data is encrypted with that key and decrypted at the other end, so interceptors see only scrambled data",
+      "from_knowledge": true
+    },
+    {
+      "what": "What the padlock means and what it does not guarantee",
+      "from_knowledge": true
+    }
+  ],
+  "must_avoid": [
+    "Opening with a glossary-style explanation or an agenda",
+    "Any statistic or figure without a source",
+    "Jargon before the picture that explains it",
+    "Drawing the encryption maths in depth",
+    "Presenter, avatar or cinematic sets",
+    "Hand-drawn or textured looks",
+    "Fear-mongering or talking down to the viewer",
+    "Claiming the padlock means a site is trustworthy"
+  ],
+  "example_posture": "One running example throughout: a single form submission from a browser to a server with one watcher on the path. Reuse it in hook, build, check and payoff; no separate examples. Use plain generic names, no real brands.",
+  "visual_direction": "Pure motion graphics on the plain light corporate field. Mostly the system in motion: a browser and a server, data travelling between them as packets, a certificate being inspected, two keys coming together, readable data visibly turning into scrambled data and back, a padlock closing. Crisp shapes, clear labels, one loud thing at a time, purposeful motion, one board that changes by additions. No people, no textures, no sets.",
+  "voice_note": "Analyst persona: precise, calm, a colleague walking through a diagram. Name each idea only after it has been seen on screen.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "Which facts the knowledge sheet will fix about the key agreement step, kept at a level suited to non-specialists",
+    "Whether the check should use a failed certificate or another scenario"
+  ],
+  "provenance": {
+    "inferred": [
+      "audience knowledge level and concerns",
+      "outcome wording",
+      "running example of a form submission with a watcher",
+      "bridge marked no_material for length",
+      "check scenario and apply habit"
+    ]
+  },
+  "look": {
+    "story": "plain",
+    "people": "none",
+    "note": "Pure motion graphics on a clean corporate background, mostly the system itself in motion; technical but clean and beautiful"
+  }
+}

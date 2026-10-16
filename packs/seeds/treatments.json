@@ -1,0 +1,102 @@
+{
+ "about": "Design-seed vocabulary (D-81, docs/styles/DISTINCTNESS_PLAN.md step 3). The essentials a lesson needs (labels, speech and thought bubbles, panels, icons, tick and cross marks) are never removed for having appeared before (D-80); each lesson draws them in its OWN treatment, chosen from its subject's material and away from the recent lessons. Read by loom/seed.py (choice) and runtime/treat.js (drawing). Edit by hand; the runtime's option lists must match (tests check).",
+ "axes": {
+  "shape": {
+   "round": "soft, generous corners; friendly and calm",
+   "angular": "chamfered corners and straight cuts; technical, urgent",
+   "organic": "edges that bulge slightly, no two alike; living things, people, growth",
+   "architectural": "square corners, a solid base; rules, institutions, structure"
+  },
+  "label": {
+   "pill": "a saturated pill with a pointer line and a dot on the part (the classic)",
+   "tag": "a luggage tag tied to the part with a curved string",
+   "ribbon": "a folded banner with forked tails",
+   "underline": "plain words with a thick coloured underline that runs into a leader",
+   "stamp": "a tilted double-ruled stamp, inked, no fill",
+   "flag": "a swallowtail flag on a pole planted at the part"
+  },
+  "bubble": {
+   "round": "a rounded speech bubble with a curved tail (the classic)",
+   "comic": "an inked, cut-cornered bubble with a sharp wedge tail",
+   "cloud": "a scalloped cloud with trailing puffs",
+   "note": "a sticky note taped up, tilted, with a folded corner",
+   "chat": "a messaging-app bubble with one square corner and delivery dots",
+   "wobble": "a hand-drawn uneven outline with a soft tail"
+  },
+  "panel": {
+   "card": "a filled card in the lesson's shape language (the classic)",
+   "paper": "a light sheet with a folded corner and faint rules",
+   "glass": "a translucent pane with a bright rim and a sheen",
+   "frame": "no fill: a double hairline with corner brackets, the title set into the rule",
+   "cutout": "a solid colour block with a hard offset shadow",
+   "bare": "no box at all: a short accent bar above the title, content on the ground"
+  },
+  "icon": {
+   "disc": "the icon knocked out of a coloured disc (the classic)",
+   "bare": "the icon alone, heavier, standing on a soft ground shadow",
+   "tile": "a raised tile with a hard shadow, icon in colour",
+   "duotone": "a soft colour blob behind, offset, icon in ink",
+   "ring": "an open ring with a gap and a bead, icon inside",
+   "seal": "a rosette seal, icon knocked out"
+  },
+  "mark": {
+   "disc": "tick or cross knocked out of a disc (the classic)",
+   "box": "a ruled box ticked by hand, the mark overflowing it",
+   "brush": "a thick tapered brush stroke, no container",
+   "stamp": "a tilted double-ringed stamp around the mark"
+  },
+  "texture": {
+   "none": "flat",
+   "grain": "fine seeded speckle inside shapes",
+   "halftone": "a dot screen fading out of one corner",
+   "hatch": "diagonal hatching in the shaded band",
+   "paper": "faint fibres, like card stock"
+  },
+  "entrance": {
+   "pop": "things pop in with a little overshoot (the classic)",
+   "draw": "things are drawn or wiped on, as if by hand",
+   "slide": "things slide in from the side they relate to",
+   "unfold": "panels unroll top to bottom, labels wipe, bubbles open from the speaker",
+   "drop": "things drop in and land, panels settle",
+   "typeset": "things fade up gently, labels wipe like type being set"
+  },
+  "camera": {
+   "push": "the camera pushes into the part that matters (guidance for the storyboard)",
+   "pan": "the camera pans along a process or a row (guidance for the storyboard)",
+   "cut": "cuts between held frames (guidance for the storyboard)"
+  }
+ },
+ "defaults": {"shape": "round", "label": "pill", "bubble": "round", "panel": "card", "icon": "disc", "mark": "disc", "texture": "none", "entrance": "pop", "camera": "cut"},
+ "style_avoid": {
+  "sketch": {"panel": ["glass"], "texture": ["grain", "halftone"], "icon": ["duotone"]},
+  "line": {"panel": ["glass", "cutout"], "texture": ["grain", "halftone", "paper"], "icon": ["duotone", "tile"], "label": ["ribbon"]},
+  "gloss": {"texture": ["paper"]},
+  "toon": {"panel": ["glass"]}
+ },
+ "materials": [
+  {"id": "body", "reads_as": "the body and wellbeing: soft, living, inside-out",
+   "keywords": ["body", "stress", "sleep", "health", "heart", "brain", "breath", "wellbeing", "fatigue", "burnout", "nutrition", "posture", "immune", "hormone", "cortisol", "alarm"],
+   "prefers": {"shape": ["organic", "round"], "label": ["tag", "underline"], "bubble": ["cloud", "wobble"], "panel": ["glass", "bare"], "icon": ["duotone", "bare"], "mark": ["brush"], "texture": ["grain", "none"], "entrance": ["unfold", "drop"], "camera": ["push"]}},
+  {"id": "money", "reads_as": "money and finance: ledgers, coins, receipts",
+   "keywords": ["money", "budget", "cost", "price", "finance", "invoice", "expense", "revenue", "profit", "payment", "tax", "pricing", "spend", "saving"],
+   "prefers": {"shape": ["architectural", "angular"], "label": ["tag", "stamp"], "bubble": ["note", "round"], "panel": ["paper", "frame"], "icon": ["seal", "ring"], "mark": ["stamp", "box"], "texture": ["halftone", "paper"], "entrance": ["typeset", "slide"], "camera": ["pan"]}},
+  {"id": "rules", "reads_as": "law, policy and compliance: documents, seals, structure",
+   "keywords": ["policy", "compliance", "law", "legal", "regulation", "rule", "gdpr", "privacy", "audit", "contract", "governance", "ethics", "consent", "approval"],
+   "prefers": {"shape": ["architectural"], "label": ["stamp", "ribbon"], "bubble": ["note", "comic"], "panel": ["paper", "frame"], "icon": ["seal", "ring"], "mark": ["stamp", "box"], "texture": ["paper", "none"], "entrance": ["typeset", "unfold"], "camera": ["cut", "pan"]}},
+  {"id": "tech", "reads_as": "software, data and systems: screens, signals, precise edges",
+   "keywords": ["software", "code", "data", "system", "api", "cloud", "security", "password", "phishing", "ai", "model", "network", "server", "incident", "deploy", "bug", "database", "postmortem"],
+   "prefers": {"shape": ["angular"], "label": ["flag", "underline"], "bubble": ["chat", "comic"], "panel": ["glass", "frame"], "icon": ["tile", "ring"], "mark": ["box"], "texture": ["none", "halftone"], "entrance": ["draw", "slide"], "camera": ["pan", "push"]}},
+  {"id": "people", "reads_as": "people, teams and conversation: warm, hand-made",
+   "keywords": ["team", "feedback", "meeting", "conversation", "manager", "hiring", "onboarding", "culture", "conflict", "listening", "coaching", "customer", "empathy", "blameless", "trust", "colleague"],
+   "prefers": {"shape": ["round", "organic"], "label": ["underline", "tag"], "bubble": ["chat", "wobble", "round"], "panel": ["paper", "bare"], "icon": ["duotone", "disc"], "mark": ["brush", "disc"], "texture": ["paper", "grain"], "entrance": ["drop", "pop"], "camera": ["cut", "push"]}},
+  {"id": "operations", "reads_as": "safety, operations and the shop floor: signage, industrial",
+   "keywords": ["safety", "warehouse", "factory", "operations", "process", "quality", "maintenance", "hazard", "shift", "logistics", "supply", "inventory", "checklist", "procedure"],
+   "prefers": {"shape": ["angular", "architectural"], "label": ["flag", "stamp"], "bubble": ["comic", "note"], "panel": ["cutout", "frame"], "icon": ["tile", "seal"], "mark": ["box", "stamp"], "texture": ["hatch", "none"], "entrance": ["slide", "drop"], "camera": ["pan"]}},
+  {"id": "nature", "reads_as": "science and the natural world: organic forms, light",
+   "keywords": ["climate", "energy", "planet", "ocean", "biology", "cell", "evolution", "physics", "chemistry", "space", "plant", "animal", "science", "sustainability"],
+   "prefers": {"shape": ["organic", "round"], "label": ["underline", "tag"], "bubble": ["cloud", "round"], "panel": ["glass", "bare"], "icon": ["duotone", "ring"], "mark": ["brush"], "texture": ["grain", "none"], "entrance": ["unfold", "draw"], "camera": ["push"]}},
+  {"id": "learning", "reads_as": "memory, learning and time: notebooks, calendars, steps",
+   "keywords": ["learn", "learning", "memory", "spacing", "study", "habit", "practice", "recall", "skill", "time", "schedule", "plan", "goal", "focus", "productivity"],
+   "prefers": {"shape": ["round", "architectural"], "label": ["underline", "ribbon"], "bubble": ["note", "cloud"], "panel": ["paper", "card"], "icon": ["ring", "tile"], "mark": ["box", "brush"], "texture": ["paper", "none"], "entrance": ["draw", "typeset"], "camera": ["pan", "cut"]}}
+ ]
+}

@@ -1,0 +1,243 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "runtime part_drawn_again: b02: draws kit part \"packet\" again as \"copy\" while it holds \"packet\" (the packet b01 drew, still on screen), elsewhere on screen: a second packet is fine only when the film shows two; to change the held one use ctx.held(\"packet\").handle",
+    "runtime part_drawn_again: b11: draws kit part \"packet\" again as \"copy\" while it holds \"packet\" (the packet b10 drew, still on screen), elsewhere on screen: a second packet is fine only when the film shows two; to change the held one use ctx.held(\"packet\").handle",
+    "variety: one_radius_share = 1.0 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: labels_over_objects_share = 0.769 is worse than the worst baseline lesson (0.5): it grew (beats: b01, b02, b03, b04, b05, b06, b07, b10)",
+    "lc layout content_overlap @ 1.5: b01 \"Password: Sunrise42\" and b01 \"Password: Sunrise42\" overlap at [325, 452, 452, 475] from 1.5 to 1.5 s (a passing crossing (under 500 ms)) [board / packet]",
+    "lc layout text_covered @ 34: b04 \"Domain\" is partly covered by an opaque shape (33 % of it, its words cut) from 34 to 34 s [cert]",
+    "lc layout text_covered @ 34: b04 \"Public key\" is partly covered by an opaque shape (10 % of it, its words cut) from 34 to 34 s [cert]",
+    "lc layout text_covered @ 34: b04 \"Signed by\" is partly covered by an opaque shape (24 % of it, its words cut) from 34 to 34 s [cert]",
+    "b01: small text on screen at 7.5s: \"User: j.doe\" 18.9px, \"Password: Sunrise42\" 18.9px (< 26 px)",
+    "b02: a held element is off frame at 13.7s: instrument 'board' 33% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b02: a held element is off frame at 13.7s: instrument 'board' 33% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b03: small text on screen at 18.2s: \"User: j.doe\" 18px, \"Password: Sunrise42\" 18px, \"User: j.doe\" 19.7px (< 26 px)",
+    "b04: small text on screen at 27.1s: \"Domain\" 21.3px, \"Public key\" 21.3px, \"Valid dates\" 21.3px (< 26 px)",
+    "b05: a held element is off frame at 33.1s: instrument 'board' 68% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b05: a held element is off frame at 33.1s: instrument 'board' 68% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b07: a held element is off frame at 49.2s: instrument 'board' 31% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b07: a held element is off frame at 49.2s: instrument 'board' 31% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b08: small text on screen at 52.1s: \"Temporary value\" 23.8px, \"Temporary value\" 23.8px (< 26 px)",
+    "b09: a held element is off frame at 56.9s: \"accounts.example\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b09: a held element is off frame at 56.9s: instrument 'board' 67% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b10: a held element is off frame at 67.2s: \"accounts.example\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b10: a held element is off frame at 67.2s: instrument 'board' 55% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b11: a held element is off frame at 71.7s: instrument 'board' 48% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b11: a held element is off frame at 71.7s: instrument 'board' 48% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b12: a held element is off frame at 75.5s: \"accounts.example\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b12: a held element is off frame at 75.5s: \"User: j.doe\" wholly outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b04: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.87 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.90 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.90 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 2.2
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.39
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 1.89
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.76
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.21
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.7
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.08
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.6
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.46
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.178,
+      "motion": 0.822,
+      "hybrid": 0.0,
+      "motion_effective": 0.822
+    },
+    "elements": {
+      "b01": 4,
+      "b02": 5,
+      "b03": 4,
+      "b04": 6,
+      "b05": 6,
+      "b06": 3,
+      "b07": 5,
+      "b08": 2,
+      "b09": 2,
+      "b10": 4,
+      "b11": 4,
+      "b12": 1
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.0,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 1.0,
+      "one_radius_share": 1.0,
+      "still_share": 0.154,
+      "labels_over_objects_share": 0.769,
+      "one_world_share": 0.154,
+      "lines_per_s": 11.42
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 10104,
+      "layout_samples": 153,
+      "texts": 198,
+      "contrast_checked": 310,
+      "errors": 0,
+      "warnings": 4
+    },
+    "nodes": 1114,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 18.9,
+        "b02": 30.3,
+        "b03": 18,
+        "b04": 21.3,
+        "b05": 60.7,
+        "b06": 26.2,
+        "b07": 36.1,
+        "b08": 23.8,
+        "b09": 49.2,
+        "b10": 50.8,
+        "b11": 47.5,
+        "b12": 32.8
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 12,
+      "lines_seen": 99,
+      "blank_beats": [],
+      "blank_measured": 12
+    },
+    "foreign": {
+      "measured_beats": 12,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 46,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0517,
+        "b02": 0.0513,
+        "b03": 0.0571,
+        "b04": 0.068,
+        "b05": 0.064,
+        "b06": 0.0543,
+        "b07": 0.0739,
+        "b08": 0.0631,
+        "b09": 0.0782,
+        "b10": 0.0874,
+        "b11": 0.0746,
+        "b12": 0.0507
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 12,
+      "sharpness": {
+        "b01": 1.274,
+        "b02": 1.222,
+        "b03": 1.274,
+        "b04": 1.183,
+        "b05": 1.0,
+        "b06": 1.199,
+        "b07": 1.121,
+        "b08": 1.186,
+        "b09": 1.039,
+        "b10": 1.012,
+        "b11": 1.126,
+        "b12": 1.027
+      },
+      "blurred_beats": [],
+      "blur_measured": 12
+    },
+    "tone": {
+      "value_script_beats": 12
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-slice-sol\\qa\\sheets\\b12.jpg"
+  ],
+  "build_hash": "3868a51cc4fca2a7"
+}

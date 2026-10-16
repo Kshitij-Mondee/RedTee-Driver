@@ -1,0 +1,597 @@
+{
+ "scene": "bridge_build",
+ "camera_spec": {
+  "camera": {
+   "x": 55,
+   "y": 0,
+   "eye": 46.3,
+   "yaw": -40.0,
+   "hfov": 50.0,
+   "horizon_pct": 36.0
+  },
+  "walls": [
+   {
+    "name": "open sky above the inlet and the sea (the heads stand above the horizon)",
+    "axis": "y",
+    "at": 3000
+   }
+  ],
+  "points": {
+   "S_abut_top": [
+    5,
+    150,
+    22
+   ],
+   "S_abut_base": [
+    2,
+    150,
+    0
+   ],
+   "pierS_top": [
+    -70,
+    150,
+    15
+   ],
+   "pierS_water": [
+    -70,
+    150,
+    0
+   ],
+   "pierS_at_11_6": [
+    -70,
+    150,
+    11.6
+   ],
+   "pierN_top": [
+    -190,
+    150,
+    15
+   ],
+   "pierN_water": [
+    -190,
+    150,
+    0
+   ],
+   "TS_south_tip": [
+    -20,
+    150,
+    22
+   ],
+   "TS_south_tip_under": [
+    -20,
+    150,
+    18.5
+   ],
+   "TS_north_tip": [
+    -120,
+    150,
+    22
+   ],
+   "TS_north_tip_under": [
+    -120,
+    150,
+    18.5
+   ],
+   "TN_south_tip": [
+    -140,
+    150,
+    22
+   ],
+   "TN_north_tip": [
+    -240,
+    150,
+    22
+   ],
+   "TN_south_tip_under": [
+    -140,
+    150,
+    18.5
+   ],
+   "N_abut_top": [
+    -255,
+    150,
+    22
+   ],
+   "deck_near_edge_TS_mid": [
+    -70,
+    144.5,
+    22
+   ],
+   "deck_far_edge_TS_mid": [
+    -70,
+    155.5,
+    22
+   ],
+   "trav_S_top": [
+    -118,
+    150,
+    28
+   ],
+   "trav_N_top": [
+    -142,
+    150,
+    28
+   ],
+   "craneS_top": [
+    -62,
+    158,
+    45
+   ],
+   "craneS_base": [
+    -62,
+    158,
+    0
+   ],
+   "craneS_jib_end": [
+    -62,
+    118,
+    44
+   ],
+   "craneN_top": [
+    -182,
+    158,
+    45
+   ],
+   "craneN_base": [
+    -182,
+    158,
+    0
+   ],
+   "craneN_jib_end": [
+    -182,
+    198,
+    44
+   ],
+   "north_shore_y60": [
+    -260,
+    60,
+    0
+   ],
+   "north_shore_y400": [
+    -260,
+    400,
+    0
+   ],
+   "shore_y150": [
+    0,
+    150,
+    0
+   ],
+   "shore_y300": [
+    0,
+    300,
+    0
+   ],
+   "sea_horizon_l": [
+    -1500,
+    6000,
+    0
+   ],
+   "sea_horizon_r": [
+    600,
+    6000,
+    0
+   ],
+   "A_head_top": [
+    52.53,
+    5.76,
+    46.75
+   ],
+   "A_head_c": [
+    52.53,
+    5.76,
+    46.63
+   ],
+   "A_feet": [
+    52.53,
+    5.76,
+    45
+   ],
+   "B_head_top": [
+    53.09,
+    6.23,
+    46.75
+   ],
+   "B_head_c": [
+    53.09,
+    6.23,
+    46.63
+   ],
+   "B_feet": [
+    53.09,
+    6.23,
+    45
+   ],
+   "knoll_brow_-200": [
+    47.91,
+    2.67,
+    45
+   ],
+   "knoll_brow_400": [
+    49.38,
+    3.9,
+    45
+   ],
+   "knoll_brow_960": [
+    50.76,
+    5.06,
+    45
+   ],
+   "knoll_brow_1500": [
+    52.08,
+    6.17,
+    45
+   ],
+   "knoll_brow_2100": [
+    53.56,
+    7.41,
+    45
+   ],
+   "tripod_top": [
+    50.28,
+    3.22,
+    46.5
+   ],
+   "tripod_feet": [
+    50.28,
+    3.22,
+    45
+   ],
+   "berg_waterline": [
+    -2099.4,
+    3413.87,
+    0
+   ],
+   "berg_top": [
+    -2099.4,
+    3413.87,
+    35
+   ],
+   "north_shore_hill": [
+    -388.72,
+    410.92,
+    30
+   ],
+   "north_shore_houses": [
+    -275,
+    330,
+    8
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_c",
+   "B_head_top",
+   "B_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 2687,
+   "along_x": -1493,
+   "horizon_y": 389
+  },
+  "points": {
+   "S_abut_top": {
+    "x": 1774,
+    "y": 729,
+    "where": "frame",
+    "depth": 147.05
+   },
+   "S_abut_base": {
+    "x": 1731,
+    "y": 1029,
+    "where": "frame",
+    "depth": 148.97
+   },
+   "pierS_top": {
+    "x": 967,
+    "y": 719,
+    "where": "frame",
+    "depth": 195.26
+   },
+   "pierS_water": {
+    "x": 967,
+    "y": 877,
+    "where": "frame",
+    "depth": 195.26
+   },
+   "pierS_at_11_6": {
+    "x": 967,
+    "y": 755,
+    "where": "frame",
+    "depth": 195.26
+   },
+   "pierN_top": {
+    "x": 270,
+    "y": 625,
+    "where": "frame",
+    "depth": 272.39
+   },
+   "pierN_water": {
+    "x": 270,
+    "y": 739,
+    "where": "frame",
+    "depth": 272.39
+   },
+   "TS_south_tip": {
+    "x": 1452,
+    "y": 695,
+    "where": "frame",
+    "depth": 163.12
+   },
+   "TS_south_tip_under": {
+    "x": 1452,
+    "y": 740,
+    "where": "frame",
+    "depth": 163.12
+   },
+   "TS_north_tip": {
+    "x": 619,
+    "y": 609,
+    "where": "frame",
+    "depth": 227.39
+   },
+   "TS_north_tip_under": {
+    "x": 619,
+    "y": 640,
+    "where": "frame",
+    "depth": 227.39
+   },
+   "TN_south_tip": {
+    "x": 506,
+    "y": 597,
+    "where": "frame",
+    "depth": 240.25
+   },
+   "TN_north_tip": {
+    "x": 84,
+    "y": 553,
+    "where": "frame",
+    "depth": 304.53
+   },
+   "TN_south_tip_under": {
+    "x": 506,
+    "y": 627,
+    "where": "frame",
+    "depth": 240.25
+   },
+   "N_abut_top": {
+    "x": 36,
+    "y": 548,
+    "where": "frame",
+    "depth": 314.17
+   },
+   "deck_near_edge_TS_mid": {
+    "x": 929,
+    "y": 651,
+    "where": "frame",
+    "depth": 191.04
+   },
+   "deck_far_edge_TS_mid": {
+    "x": 1003,
+    "y": 640,
+    "where": "frame",
+    "depth": 199.47
+   },
+   "trav_S_top": {
+    "x": 631,
+    "y": 555,
+    "where": "frame",
+    "depth": 226.11
+   },
+   "trav_N_top": {
+    "x": 496,
+    "y": 545,
+    "where": "frame",
+    "depth": 241.54
+   },
+   "craneS_top": {
+    "x": 1085,
+    "y": 402,
+    "where": "frame",
+    "depth": 196.24
+   },
+   "craneS_base": {
+    "x": 1085,
+    "y": 875,
+    "where": "frame",
+    "depth": 196.24
+   },
+   "craneS_jib_end": {
+    "x": 789,
+    "y": 417,
+    "where": "frame",
+    "depth": 165.6
+   },
+   "craneN_top": {
+    "x": 358,
+    "y": 399,
+    "where": "frame",
+    "depth": 273.38
+   },
+   "craneN_base": {
+    "x": 358,
+    "y": 737,
+    "where": "frame",
+    "depth": 273.38
+   },
+   "craneN_jib_end": {
+    "x": 592,
+    "y": 404,
+    "where": "frame",
+    "depth": 304.02
+   },
+   "north_shore_y60": {
+    "x": -720,
+    "y": 772,
+    "where": "outside",
+    "depth": 248.44
+   },
+   "north_shore_y400": {
+    "x": 1024,
+    "y": 576,
+    "where": "frame",
+    "depth": 508.9
+   },
+   "shore_y150": {
+    "x": 1704,
+    "y": 1023,
+    "where": "frame",
+    "depth": 150.26
+   },
+   "shore_y300": {
+    "x": 2130,
+    "y": 748,
+    "where": "overscan",
+    "depth": 265.17
+   },
+   "sea_horizon_l": {
+    "x": 1941,
+    "y": 406,
+    "where": "overscan",
+    "depth": 5595.8
+   },
+   "sea_horizon_r": {
+    "x": 3032,
+    "y": 411,
+    "where": "outside",
+    "depth": 4245.95
+   },
+   "A_head_top": {
+    "x": 1581,
+    "y": 234,
+    "where": "frame",
+    "depth": 6.0,
+    "behind": {
+     "wall": "open sky above the inlet and the sea (the heads stand above the horizon)",
+     "at": [
+      -1231.46,
+      3000.0,
+      280.68
+     ]
+    }
+   },
+   "A_head_c": {
+    "x": 1581,
+    "y": 276,
+    "where": "frame",
+    "depth": 6.0,
+    "behind": {
+     "wall": "open sky above the inlet and the sea (the heads stand above the horizon)",
+     "at": [
+      -1231.46,
+      3000.0,
+      218.18
+     ]
+    }
+   },
+   "A_feet": {
+    "x": 1581,
+    "y": 835,
+    "where": "frame",
+    "depth": 6.0
+   },
+   "B_head_top": {
+    "x": 1832,
+    "y": 234,
+    "where": "frame",
+    "depth": 6.0,
+    "behind": {
+     "wall": "open sky above the inlet and the sea (the heads stand above the horizon)",
+     "at": [
+      -864.74,
+      3000.0,
+      262.99
+     ]
+    }
+   },
+   "B_head_c": {
+    "x": 1832,
+    "y": 276,
+    "where": "frame",
+    "depth": 6.0,
+    "behind": {
+     "wall": "open sky above the inlet and the sea (the heads stand above the horizon)",
+     "at": [
+      -864.74,
+      3000.0,
+      205.21
+     ]
+    }
+   },
+   "B_feet": {
+    "x": 1832,
+    "y": 835,
+    "where": "frame",
+    "depth": 6.0
+   },
+   "knoll_brow_-200": {
+    "x": -198,
+    "y": 794,
+    "where": "overscan",
+    "depth": 6.6
+   },
+   "knoll_brow_400": {
+    "x": 399,
+    "y": 794,
+    "where": "frame",
+    "depth": 6.6
+   },
+   "knoll_brow_960": {
+    "x": 961,
+    "y": 794,
+    "where": "frame",
+    "depth": 6.6
+   },
+   "knoll_brow_1500": {
+    "x": 1499,
+    "y": 794,
+    "where": "frame",
+    "depth": 6.6
+   },
+   "knoll_brow_2100": {
+    "x": 2101,
+    "y": 794,
+    "where": "overscan",
+    "depth": 6.6
+   },
+   "tripod_top": {
+    "x": 381,
+    "y": 314,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "tripod_feet": {
+    "x": 381,
+    "y": 875,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "berg_waterline": {
+    "x": 1240,
+    "y": 413,
+    "where": "frame",
+    "depth": 4000.0
+   },
+   "berg_top": {
+    "x": 1240,
+    "y": 395,
+    "where": "frame",
+    "depth": 4000.0
+   },
+   "north_shore_hill": {
+    "x": 700,
+    "y": 445,
+    "where": "frame",
+    "depth": 600.0
+   },
+   "north_shore_houses": {
+    "x": 780,
+    "y": 558,
+    "where": "frame",
+    "depth": 464.91
+   }
+  }
+ }
+}

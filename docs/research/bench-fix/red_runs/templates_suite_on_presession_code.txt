@@ -1,0 +1,92 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 558, in primitive_tpl_a_cast_member_has_one_look_in_every_template
+    assert not d["errors"], d["errors"]
+           ^^^^^^^^^^^^^^^
+AssertionError: ['peep_missing: character not bundled: undefined.neutral']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 447, in primitive_tpl_avatar_card_fills_the_frame_and_unknown_keys_are_errors
+    assert card is not None, [e["name"] for e in cd["els"]]
+           ^^^^^^^^^^^^^^^^
+AssertionError: ['presenter_frame', 'presenter', 'presenter_title']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 500, in primitive_tpl_caption_active_word_reads_on_the_pill_in_every_pack
+    assert got and got.get("active"), f"{pid}: Loom.captions.colours gave {got}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: chalk-lab: Loom.captions.colours gave None
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 354, in primitive_tpl_compare_and_page_structure_leads_and_words_still_land
+    assert min(panels.values()) <= L + 0.75, f"first panel at +{min(panels.values()) - c['start']:.2f}s, lead +{L - c['start']:.2f}s"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: first panel at +4.62s, lead +1.00s
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 426, in primitive_tpl_compare_valence_is_colour_and_verdict_is_the_mark
+    assert t["marks"] == [], f"tone drew marks {t['marks']}: a colour choice became a verdict"
+           ^^^^^^^^^^^^^^^^
+AssertionError: tone drew marks ['no', 'yes']: a colour choice became a verdict
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 390, in primitive_tpl_document_lines_are_followers_of_the_page
+    assert sorted(page["followers"]) == sorted(lines), f"{cid}: followers {page['followers']} != lines {lines}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: document.page#0: followers [] != lines ['line_1', 'line_2']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 374, in primitive_tpl_each_anchor_is_cued_once_per_build
+    assert not twice, twice
+           ^^^^^^^^^
+AssertionError: ['calendar.plan#0: your week x2', 'calendar.plan#0: monday x2', 'hero.character_moment#0: idea x3', 'cast_moment: idea x2', 'redtee_lead: the frame x2']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 401, in primitive_tpl_empty_slots_draw_a_slot_and_no_words
+    assert cat["document.page"]["props"]["lines"]["of"].get("empty", {}).get("type") == "bool", "document.page lines: no `empty` in the catalog"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: document.page lines: no `empty` in the catalog
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 337, in primitive_tpl_every_template_shows_its_structure_by_the_lead
+    assert not bad, bad
+           ^^^^^^^
+AssertionError: ['quiz.question#0: [\'tight_inset: text sits 6.0px from the edge of its shape (needs 7.6px): "Pause and decide"\']', 'cycle#0: [\'text_outside_element: text leaves element "node_1" (top 64px): "Plan"\', \'text_outside_element: text leaves element "node_2" (right 70px, bottom 65px): "Do"\']', 'hero.hub#0: [\'text_outside_element: text leaves element "sat_1" (bottom 49px): "Team"\', \'text_outside_element: text leaves element "sat_2" (bottom 49px): "Client"\']', 'hero.hub#1: [\'text_outside_element: text leaves element "sat_1" (bottom 49px): "Team"\', \'text_outside_element: text leaves element "sat_2" (bottom 49px): "Client"\']']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\templates_film_defects.py", line 528, in primitive_tpl_stance_tags_a_myth_and_strikes_it
+    assert {"Myth", "Fact"} <= set(cat[tid].get("chrome") or []), f"{tid}: the stance tags are not declared chrome"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: compare.two: the stance tags are not declared chrome
+  FAIL  primitive_tpl_a_cast_member_has_one_look_in_every_template: ['peep_missing: character not bundled: undefined.neutral']
+  FAIL  primitive_tpl_avatar_card_fills_the_frame_and_unknown_keys_are_errors: ['presenter_frame', 'presenter', 'presenter_title']
+  FAIL  primitive_tpl_caption_active_word_reads_on_the_pill_in_every_pack: chalk-lab: Loom.captions.colours gave None
+  FAIL  primitive_tpl_compare_and_page_structure_leads_and_words_still_land: first panel at +4.62s, lead +1.00s
+  FAIL  primitive_tpl_compare_valence_is_colour_and_verdict_is_the_mark: tone drew marks ['no', 'yes']: a colour choice became a verdict
+  FAIL  primitive_tpl_document_lines_are_followers_of_the_page: document.page#0: followers [] != lines ['line_1', 'line_2']
+  FAIL  primitive_tpl_each_anchor_is_cued_once_per_build: ['calendar.plan#0: your week x2', 'calendar.plan#0: monday x2', 'hero.character_moment#0: idea x3', 'cast_moment: idea x2', 'redtee_lead: the frame x2']
+  FAIL  primitive_tpl_empty_slots_draw_a_slot_and_no_words: document.page lines: no `empty` in the catalog
+  FAIL  primitive_tpl_every_template_shows_its_structure_by_the_lead: ['quiz.question#0: [\'tight_inset: text sits 6.0px from the edge of its shape (needs 7.6px): "Pause and decide"\']', 'cycle#0: [\'text_outside_element: text leaves element "node_1" (top 64px): "Plan"\', \'text_outside_element: text leaves element "node_2" (right 70px, bottom 65px): "Do"\']', 'hero.hub#0: [\'text_outside_element: text leaves element "sat_1" (bottom 49px): "Team"\', \'text_outside_element: text leaves element "sat_2" (bottom 49px): "Client"\']', 'hero.hub#1: [\'text_outside_element: text leaves element "sat_1" (bottom 49px): "Team"\', \'text_outside_element: text leaves element "sat_2" (bottom 49px): "Client"\']']
+  FAIL  primitive_tpl_stance_tags_a_myth_and_strikes_it: compare.two: the stance tags are not declared chrome
+
+0 passed, 10 failed, 0 skipped  [subset: 10 of 177]

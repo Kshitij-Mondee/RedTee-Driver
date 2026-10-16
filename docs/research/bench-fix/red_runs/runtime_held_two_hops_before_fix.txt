@@ -1,0 +1,3 @@
+primitive_runtime_held_name_case_and_el_parent with the two-hop case, on runtime/world.js before the pool dedupe (2026-10-07; found on the claude fork's check: b03 held "Dev" from b02):
+AssertionError: a held element passed on a second time was lost: [{'code': 'held_missing', 'beat': 'b3', 'msg': 'b3: no element "Priya" in previous scene'}, ...]
+After the fix: PASS (held matched case-insensitively with a warning, over two hops)

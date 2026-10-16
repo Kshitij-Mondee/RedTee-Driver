@@ -1,0 +1,886 @@
+  PASS  demo_artifacts_pass_every_gate
+  PASS  brief_gate_rejects_unanchored_fact_and_template_names
+  PASS  knowledge_gate_rejects_unlisted_number_and_uncaveated_contested_claim
+  PASS  pedagogy_gate_rejects_bloom_jumps_forbidden_verbs_and_peak_endings
+  PASS  script_gate_rejects_dashes_ungrounded_numbers_long_phrases_and_transcripts
+  PASS  script_gate_rejects_quiz_without_pause
+  PASS  storyboard_gate_rejects_bad_kind_props_joins
+  PASS  scenes_gate_rejects_nondeterminism_and_literal_colours
+  PASS  cue_resolution_exact_prefix_and_missing
+allocation: avatar 6%, template 48%, motion 46%, hybrid 0%, motion_effective 46%
+  PASS  allocation_hits_the_mix_and_breaks_template_runs
+allocation: avatar 6%, template 46%, motion 0%, hybrid 47%, motion_effective 24%
+  PASS  allocation_rhythm_rule_can_fail_without_the_fix
+allocation: avatar 6%, template 48%, motion 46%, hybrid 0%, motion_effective 46%
+allocation: avatar 6%, template 28%, motion 66%, hybrid 0%, motion_effective 66%
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 547, in context_layer_agrees_with_the_code
+    assert r.returncode == 0, r.stdout[-1500:] + r.stderr[-500:]
+           ^^^^^^^^^^^^^^^^^
+AssertionError:             3
+  genres                 5
+  tests                  224
+  stages                 14
+  projects               ['_fxdemo', '_ss_base', '_ss_story', 'bench-20261006-132027-budget', 'bench-20261006-132027-claude-balanced', 'bench-20261006-132027-gemini-balanced', 'bench-20261006-132027-mixed-value', 'bench-20261006-132027-openai-balanced', 'bench-20261006-135952-budget', 'bench-20261006-135952-mixed-value', 'bench-20261006-135952-openai-balanced', 'bench-20261006-141846-mixed-value', 'bench-20261006-141846-openai-balanced', 'bench-20261006-151439-budget', 'bench-20261006-151439-budget-fix1007', 'bench-20261006-151439-claude-balanced', 'bench-20261006-151439-claude-balanced-fix1007', 'bench-20261006-151439-gemini-balanced', 'bench-20261006-151439-gemini-balanced-fix1007', 'bench-20261006-151439-mixed-value', 'bench-20261006-151439-mixed-value-fix1007', 'bench-20261006-151439-openai-balanced', 'bench-20261006-151439-openai-balanced-fix1007', 'bench-20261007-003835-claude-core', 'bench-20261007-003835-gemini-director', 'bench-20261007-003835-smart-mix', 'blameless-postmortem', 'feedback-that-lands', 'groupthink-trap', 'mfa-explained', 'mfa-story', 'phishing-report', 'quick-question-cost', 'spacing-sticks', 'stress-signal']
+  forms                  37
+  designs                12
+  library_decisions      6
+  promoted               []
+  learnings              266
+  open_items             60
+
+PROBLEMS:
+  - docs\context\STATE.md: says '223 tests' but the code has 224 tests
+
+  PASS  cinema_mix_is_opt_in_and_the_picture_tells_measure_words_worlds_and_density  (cinema template 0.278 vs classic 0.477; words-only, one-world and lines/s measured)
+  SKIP  cinema_house_upgrades_draw_and_report_in_the_preview  (skipped: no cairo library here (no library called "cairo-2" was found); install it to run the preview tests)
+  SKIP  rig_import_reproduces_the_delivery_and_maya_poses_in_the_preview  (skipped: no cairo library here (no library called "cairo-2" was found); install it to run the preview tests)
+  PASS  style_packs_pass_contrast_and_the_lint_can_fail
+  PASS  scene_gate_rejects_a_non_literal_cue_and_props_gate_rejects_a_dead_prop
+  PASS  component_registry_rejects_content_defaults_and_bad_params
+  PASS  library_counts_forms_and_only_a_strict_assessment_promotes
+  PASS  scenes_gate_rejects_unknown_components_and_malformed_form_tags
+  PASS  check_flags_leftover_sample_text_that_no_prop_supplied
+  PASS  design_promotion_needs_two_distinct_uses_a_strict_assessment_and_a_blind_pick
+  PASS  library_accept_lock_is_exclusive_and_breaks_stale_locks
+  PASS  draw_accepts_a_whole_arrow_and_lands_its_head
+  FAIL  context_layer_agrees_with_the_code:             3
+  genres                 5
+  tests                  224
+  stages                 14
+  projects               ['_fxdemo', '_ss_base', '_ss_story', 'bench-20261006-132027-budget', 'bench-20261006-132027-claude-balanced', 'bench-20261006-132027-gemini-balanced', 'bench-20261006-132027-mixed-value', 'bench-20261006-132027-openai-balanced', 'bench-20261006-135952-budget', 'bench-20261006-135952-mixed-value', 'bench-20261006-135952-openai-balanced', 'bench-20261006-141846-mixed-value', 'bench-20261006-141846-openai-balanced', 'bench-20261006-151439-budget', 'bench-20261006-151439-budget-fix1007', 'bench-20261006-151439-claude-balanced', 'bench-20261006-151439-claude-balanced-fix1007', 'bench-20261006-151439-gemini-balanced', 'bench-20261006-151439-gemini-balanced-fix1007', 'bench-20261006-151439-mixed-value', 'bench-20261006-151439-mixed-value-fix1007', 'bench-20261006-151439-openai-balanced', 'bench-20261006-151439-openai-balanced-fix1007', 'bench-20261007-003835-claude-core', 'bench-20261007-003835-gemini-director', 'bench-20261007-003835-smart-mix', 'blameless-postmortem', 'feedback-that-lands', 'groupthink-trap', 'mfa-explained', 'mfa-story', 'phishing-report', 'quick-question-cost', 'spacing-sticks', 'stress-signal']
+  forms                  37
+  designs                12
+  library_decisions      6
+  promoted               []
+  learnings              266
+  open_items             60
+
+PROBLEMS:
+  - docs\context\STATE.md: says '223 tests' but the code has 224 tests
+
+  PASS  text_fit_uses_real_font_metrics_and_tracking
+  PASS  line_art_draws_outlines_and_packs_can_map_roles_to_faces
+  PASS  brand_layers_on_any_style_and_its_suggested_fixes_really_fix
+  PASS  studio_api_serves_brands_and_refuses_paths_outside_the_engine
+  PASS  runtime_js_parses_and_catalog_is_complete
+[warn] b02: camera pan between different worlds (st_intro -> st_desk) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b03: camera pan between different worlds (st_desk -> st_title) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b04: camera pan between different worlds (st_title -> st_meter) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b05: camera pan between different worlds (st_meter -> st_lab) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b06: camera pan between different worlds (st_lab -> st_curve) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b11: camera pan between different worlds (st_notes -> st_desk2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b12: camera pan between different worlds (st_desk2 -> st_compare) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b14: camera pan between different worlds (st_compare -> st_curve2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b16: camera pan between different worlds (st_curve2 -> st_cram) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b19: camera pan between different worlds (st_quiz -> st_plan) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b22: camera pan between different worlds (st_cal -> st_desk3) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b23: camera pan between different worlds (st_desk3 -> st_recap) would show the seam; using a dip (set join_in.continuous: true if they join up)
+composed 24 scenes, 250.9s -> C:\Users\Admin\Desktop\Video-Engine\projects\spacing-sticks\build\index.html
+[warn] b02: camera pan between different worlds (st_intro -> st_desk) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b03: camera pan between different worlds (st_desk -> st_title) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b04: camera pan between different worlds (st_title -> st_meter) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b05: camera pan between different worlds (st_meter -> st_lab) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b06: camera pan between different worlds (st_lab -> st_curve) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b11: camera pan between different worlds (st_notes -> st_desk2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b12: camera pan between different worlds (st_desk2 -> st_compare) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b14: camera pan between different worlds (st_compare -> st_curve2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b16: camera pan between different worlds (st_curve2 -> st_cram) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b19: camera pan between different worlds (st_quiz -> st_plan) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b22: camera pan between different worlds (st_cal -> st_desk3) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b23: camera pan between different worlds (st_desk3 -> st_recap) would show the seam; using a dip (set join_in.continuous: true if they join up)
+composed 24 scenes, 250.9s -> C:\Users\Admin\Desktop\Video-Engine\projects\spacing-sticks\build\index.html
+  PASS  compose_is_deterministic
+[api] brief: claude-opus-5-5 (round 1)
+[api] brief: claude-opus-5-5 (round 2)
+  PASS  api_mode_round_trip_against_a_mock_server
+manim: rendering b14 (final, 1600x780, 10.5s) ...
+manim: rendering b14 (final, 1600x780, 10.5s) ...
+manim: rendering b14 (final, 1600x780, 11.5s) ...
+  PASS  manim_clips_are_reused_when_the_colours_a_scene_reads_are_unchanged  (3 renders for 7 requests)
+manim: rendering b14 (draft, 1600x780, 10.5s) ...
+manim: rendering b14 (final, 1600x780, 10.5s) ...
+[warn] render: forced past a check that is 'rejected' (1 error(s)): test: the draft path is under test, not the check
+render: Manim drafts found; making them at full quality first
+  PASS  manim_drafts_are_for_previews_only_and_never_reach_a_render
+manim: rendering b06 (final, 1600x780, 17.5s) ...
+manim: rendering b14 (final, 1600x780, 10.5s) ...
+manim: rendering b06 (final, 1600x780, 17.5s) ...
+manim: rendering b14 (final, 1600x780, 10.5s) ...
+  PASS  manim_scenes_render_in_parallel_with_the_same_result  (2 scenes: parallel 0.4s, serial 0.8s)
+  PASS  manim_colour_check_refuses_fixed_colours_and_passes_every_shipped_scene  (4 shipped scene(s) clean)
+  PASS  manim_records_what_a_scene_really_reads  (a dynamic getattr(C, name) read was recorded)
+manim: rendering b06 (final, 1600x780, 17.5s) ...
+manim: rendering b14 (final, 1600x780, 10.5s) ...
+  PASS  manim_clips_get_the_brand_colours_like_the_canvas_does
+  PASS  springs_are_exact_at_both_ends_and_only_bounce_where_the_style_allows
+  PASS  groups_compress_their_stagger_and_leave_in_reverse_order
+check: 1 sound event(s) from the motion; re-mixing
+  PASS  sound_events_are_collected_per_build_and_synthesised_in_key
+  PASS  reading_floor_and_double_exposure_are_measured_from_the_runtime_report
+  PASS  declared_intents_excuse_only_what_they_declare_and_tone_is_measured  (intents excuse only what they declare; tone, plan and pack families checked, each able to fail)
+  SKIP  travel_moves_the_elements_own_origin_whatever_it_draws_and_whatever_order_frames_are_seen  (skipped: no cairo library here (no library called "cairo-2" was found); install it to run the preview tests)
+  SKIP  travel_lands_on_its_own_origin_in_chrome_too  (skipped: no Chrome here (set HYPERFRAMES_BROWSER_PATH or pass --browser))
+  PASS  decision_ledger_logs_routing_tooling_and_outcomes_and_keeps_every_version  (24 shot plans, fail+pass gates with both versions kept, outcomes on b01/b02, dedupe and one-time backfill)
+  PASS  trailer_plan_is_cut_from_the_lessons_own_beats_and_fits_the_target  (29.7s from b01, b02, b05, b23, b28)
+lab: lab_fx [engineering] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_lab_fu8tepfg\lab_fx__engineering.jpg
+lab: lab_lottie [flat-cosmos] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_lab_fu8tepfg\lab_lottie__flat-cosmos.jpg
+  PASS  fx_shaders_compile_and_the_layer_renders_in_a_real_browser  (fx and lottie lab strips clean)
+  PASS  skia_colour_dialect_refuses_fixed_colours
+  PASS  clip_store_keys_separate_renderers_and_keep_manim_keys
+  PASS  skia_renderer_is_deterministic_records_reads_and_blurs_motion
+  PASS  three_renderer_is_deterministic_and_records_reads
+  PASS  trailer_keeps_and_retimes_only_the_clips_it_shows
+  PASS  lottie_auto_recolouring_maps_the_animations_colours_to_tokens
+lab: lab_characters [flat-cosmos] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_lab_07b944dl\lab_characters__flat-cosmos.jpg
+lab: lab_depth [cinematic-noir] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_lab_07b944dl\lab_depth__cinematic-noir.jpg
+lab: lab_iso [whiteboard] 1 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_lab_07b944dl\lab_iso__whiteboard.jpg
+lab: _planted_rig [flat-cosmos] 1 frames, 1 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_lab_07b944dl\_planted_rig__flat-cosmos.jpg
+  PASS  characters_depth_and_iso_render_clean_and_a_missing_rig_is_an_error  (3 lab scenes clean; an unknown rig is reported)
+  PASS  story_warnings_are_a_ratchet_that_can_fire  (4 notes on the planted storyboard, 0 on the good one; policy gets a scenario, not silence)
+  PASS  cost_reports_drivers_without_tiers  ({'avatar': 2, 'blueprint': 7, 'template': 11, 'bespoke': 2, 'manim': 2}, render [4.2, 6.7] min (estimate))
+  PASS  every_style_pack_passes_the_lint_including_the_cinematic_ones  (13 packs clean)
+  PASS  animatic_has_one_panel_per_beat_timed_by_the_narration  (24 panels, 242.85 s)
+  PASS  reel_segments_are_keyed_by_what_they_read  (style, window and source change the key)
+manim: b06 reused (store, final)
+manim: b14 reused (store, final)
+[warn] b02: camera pan between different worlds (st_intro -> st_desk) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b03: camera pan between different worlds (st_desk -> st_title) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b04: camera pan between different worlds (st_title -> st_meter) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b05: camera pan between different worlds (st_meter -> st_lab) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b06: camera pan between different worlds (st_lab -> st_curve) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b11: camera pan between different worlds (st_notes -> st_desk2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b12: camera pan between different worlds (st_desk2 -> st_compare) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b14: camera pan between different worlds (st_compare -> st_curve2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b16: camera pan between different worlds (st_curve2 -> st_cram) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b19: camera pan between different worlds (st_quiz -> st_plan) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b22: camera pan between different worlds (st_cal -> st_desk3) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b23: camera pan between different worlds (st_desk3 -> st_recap) would show the seam; using a dip (set join_in.continuous: true if they join up)
+composed 24 scenes, 250.9s -> C:\Users\Admin\Desktop\Video-Engine\projects\spacing-sticks\build\index.html
+mix: 250.9s, music=warm_curious, -> C:\Users\Admin\Desktop\Video-Engine\projects\spacing-sticks\audio\mix.wav
+  PASS  fx_overlays_are_translucent_so_the_layout_check_sees_through_them  (1 overlay canvas(es) at opacity [0.58])
+[warn] ledger: override not logged ('P' object has no attribute 'root')
+b02: now 'illustrated bust' (kept 'acting character' as an alternative). Next: py -m loom go tmp --until check, then look at qa/sheets/b02.jpg
+b02: now 'acting character' (kept 'illustrated bust' as an alternative). Next: py -m loom go tmp --until check, then look at qa/sheets/b02.jpg
+  PASS  switching_a_beat_keeps_both_ways_and_switches_back_exactly  (bust <-> acting character round trip exact; plain look is respected)
+  PASS  palette_study_finds_real_colours_and_keeps_near_accents_apart  (field #1C1C4C, accents ['#FCCC4C', '#FC8C3C'], ink #FCF4E4)
+  PASS  video_note_checker_rejects_template_filler_and_keeps_real_notes  (3 varied notes usable; template filler rejected (14 of 14 in the real file))
+  PASS  video_study_finds_known_cuts_holds_and_quiet_and_reads_words  (cuts [2.0, 4.0], quiet {'start': 2.0, 'seconds': 2.0}, 153.8 wpm; still video 0 cuts)
+  PASS  transcribe_resumes_from_chunk_cache_and_splits_on_pauses  (4 words from cache, 3 segments)
+  PASS  toon_shading_outlines_shapes_and_other_packs_are_untouched  (toon outlines 3 shapes in #2A221C; corporate-clean draws none)
+  PASS  outlined_people_have_every_pose_and_gesture_of_the_first_rigs  (5 rigs, pip/tess/extra match ava's 8 poses)
+lab: lab_story_set [story-cartoon] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_story_set__story-cartoon.jpg
+lab: lab_matrix_build [presenter-pop] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_matrix_build__presenter-pop.jpg
+lab: lab_one_board [chalk-lab] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_one_board__chalk-lab.jpg
+lab: lab_story_set [corporate-clean] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_story_set__corporate-clean.jpg
+lab: lab_glow_inside [glow-flat] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_glow_inside__glow-flat.jpg
+lab: lab_glow_pressure [glow-flat] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_glow_pressure__glow-flat.jpg
+lab: lab_glow_world [glow-flat] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\lab_glow_world__glow-flat.jpg
+lab: _planted_scenery [story-cartoon] 1 frames, 1 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_reg_bi62n5wb\_planted_scenery__story-cartoon.jpg
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 2284, in vendor_art_comes_only_from_approved_sets_and_builds_clean
+    assert s_.get("licence") in ("MIT", "CC0 1.0") and s_.get("verified_from") and s_.get("licence_url"), (sid, s_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('e2kit', {'id': 'e2kit', 'name': 'E2 kit drawn by Claude in Cowork (bake-off, D-102)', 'licence': "CC0 1.0 (Loom's own)", 'licence_url': 'https://creativecommons.org/publicdomain/zero/1.0/', 'verified_from': 'made in this repository on 2026-10-07', 'attribution': 'not required', 'kind': 'local', 'files': ['room', 'desk', 'priya', 'dev', 'report'], 'use': 'E2 bake-off variant B only'})
+--label given 1 time(s) for 2 input(s): give one per input, or none
+  s: 1 of 1 frames measured
+  b: 1 of 1 frames measured
+  PASS  new_registers_render_clean_in_the_lab  (4 registers (incl. glow-flat x3) + an existing pack clean; an overfull sign is reported)
+  PASS  glow_builders_run_clean_and_deterministic_in_glow_flat_and_in_another_pack  (6 scene/pack builds clean; glow scenes byte-identical across runs; a Math.random scene is caught)
+variety: 1 lesson(s) with a storyboard; a ledger needs at least two (a zero is not a result)
+  PASS  variety_ledger_sees_repetition_and_the_tells_ratchet_can_fail  (overlap a/b 1.0, c 0.182; ratchet fails a worse lesson)
+  PASS  design_seed_changes_the_form_of_the_essentials_and_the_ledger_keys_them_by_treatment  (vocabulary == runtime; chooser moves 9/9 axes away from the last lesson; 5 seeds draw 5 different frames; ledger keys bubbles by treatment)
+  PASS  objects_places_and_seeded_templates_draw_clean_vary_by_seed_and_stay_deterministic  (12 objects x 4 seeds clean and distinct; unknown object caught; 5 camera moves move the picture; template follows the seed)
+  PASS  ai_tells_lint_names_the_beats_and_the_seed_defaults_for_new_lessons_only  (radius and still tells measured with beats named; seed warnings fire and respect --clear; default seed only for new lessons)
+  SKIP  rig_review_measures_expressions_from_the_files_and_refuses_an_empty_delivery  (skipped: no cairo library here (no library called "cairo-2" was found); install it to run the preview tests)
+reference boards: 1 of 17 drawn places and objects have one
+  no board: docs/references/places/inside.md
+  no board: docs/references/places/server.md
+  no board: docs/references/places/meeting.md
+  no board: docs/references/places/warehouse.md
+  no board: docs/references/objects/document.md
+  no board: docs/references/objects/envelope.md
+  no board: docs/references/objects/calendar.md
+  no board: docs/references/objects/clock.md
+  no board: docs/references/objects/phone.md
+  no board: docs/references/objects/laptop.md
+  no board: docs/references/objects/folder.md
+  no board: docs/references/objects/package.md
+  no board: docs/references/objects/building.md
+  no board: docs/references/objects/heart.md
+  no board: docs/references/objects/bulb.md
+  no board: docs/references/objects/lock.md
+reference boards: 1 of 18 drawn places and objects have one
+  no board: docs/references/places/inside.md
+  no board: docs/references/places/server.md
+  no board: docs/references/places/meeting.md
+  no board: docs/references/places/warehouse.md
+  no board: docs/references/places/lighthouse.md
+  no board: docs/references/objects/document.md
+  no board: docs/references/objects/envelope.md
+  no board: docs/references/objects/calendar.md
+  no board: docs/references/objects/clock.md
+  no board: docs/references/objects/phone.md
+  no board: docs/references/objects/laptop.md
+  no board: docs/references/objects/folder.md
+  no board: docs/references/objects/package.md
+  no board: docs/references/objects/building.md
+  no board: docs/references/objects/heart.md
+  no board: docs/references/objects/bulb.md
+  no board: docs/references/objects/lock.md
+NEW work without a reference board (look first, then draw): places/lighthouse
+  PASS  reference_boards_are_a_ratchet_new_drawn_work_needs_one  (office board real; 16 gaps recorded; a new board-less place fails; an empty template does not count)
+  FAIL  vendor_art_comes_only_from_approved_sets_and_builds_clean: ('e2kit', {'id': 'e2kit', 'name': 'E2 kit drawn by Claude in Cowork (bake-off, D-102)', 'licence': "CC0 1.0 (Loom's own)", 'licence_url': 'https://creativecommons.org/publicdomain/zero/1.0/', 'verified_from': 'made in this repository on 2026-10-07', 'attribution': 'not required', 'kind': 'local', 'files': ['room', 'desk', 'priya', 'dev', 'report'], 'use': 'E2 bake-off variant B only'})
+| source | measured | sparse | drawn | covered | outline | lightline | edges | flat | soft | grain | colours | sat | vivid | light | dark |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| s | 1 | 1.0 | 0.0 | 0.0006 | 0.0 | 0.0 | 0.0 | 0.9942 | 0.0058 | 4.1432 | 1 | 0.0004 | 0.0 | 252.0 | 0.0 |
+| b | 1 | 1.0 | 0.0955 | 0.0132 | 0.0196 | 0.0021 | 0.0142 | 0.9581 | 0.0142 | 1.7094 | 1 | 0.0068 | 0.0 | 10.228 | 0.9935 |
+  PASS  style_fingerprint_tells_a_cartoon_from_a_slide_from_a_board  (outline 0.044 vs 0.0000, drawn 0.33 vs 0.00, board dark 0.99)
+no words in the transcript: nothing to rank (a zero is not a result)
+no window qualifies (a zero is not a result)
+  PASS  explain_study_finds_the_analogy_window_and_refuses_an_empty_transcript  (top window 20.0-50.0 s with {'analogy': 4, 'restate': 1}; empty transcript refused; moment at 30 s, not the montage)
+# Intake: b1
+
+Source: `export.zip`. 4 asset(s), 2 failing.
+
+**Review copies, not checked or imported (1):** files under preview/ (preview colours, for people only).
+
+**Not in the manifest, so not imported (1):** assets/sheet. If any of these should be used by the engine (a hand, a mouth, an expression), ask for it as its own listed part.
+
+- **FAIL** `maya/head` (character_part, 1 colours; 0 slot/anchor ids)
+  - character part has no pivot in the manifest
+- **PASS** `props/mug` (prop, 2 colours; 1 slot/anchor ids)
+- **FAIL** `props/sign` (prop, 1 colours; 0 slot/anchor ids)
+  - <text> is not allowed (text goes in slot_ rects; no images or scripts)
+  - colour #123456 is not a contract slot for a prop
+- **PASS** `props/tote` (prop, 1 colours; 0 slot/anchor ids)
+# Intake: b2
+
+Source: `review.html`. 1 asset(s), 0 failing. 1 inline svg(s) without data-asset were skipped.
+
+- **PASS** `props/mug` (prop, 2 colours; 1 slot/anchor ids)
+no assets found in C:\Users\Admin\AppData\Local\Temp\lmt_ai_0l6mc40b\empty (a zero is not a result)
+# Intake: w1
+
+Source: `warm.zip`. 2 asset(s), 1 failing.
+
+- **PASS** `maya/head` (character_part, 1 colours; 0 slot/anchor ids)
+- **FAIL** `props/desk` (prop, 2 colours; 0 slot/anchor ids)
+  - colour #5b5850 is not a contract slot for a prop
+  - colour #f4f1ea is not a contract slot for a prop
+# Intake: w2
+
+Source: `warm.zip`. 2 asset(s), 0 failing.
+
+**--declared-slots:** the manifest's base_slots gave 2 colour(s) a contract slot (#5b5850->#606060, #f4f1ea->#ffffff); recoloured: `props/desk` (2).
+
+- **PASS** `maya/head` (character_part, 1 colours; 0 slot/anchor ids)
+- **PASS** `props/desk` (prop, 2 colours; 0 slot/anchor ids)
+  PASS  asset_intake_reads_zip_and_html_exports_and_enforces_the_contract  (zip with mixed assets fails, html passes, pivot enforced, empty export refused, declared slots opt-in)
+  PASS  film_checks_fail_on_planted_empty_repeat_overlay_cut_small_scale_and_grain  (empty, repeat, overlay, cut, small, scale and grain each fail on a planted case; holds and heroes pass)
+  PASS  strips_pick_the_named_beats_and_refuse_a_spec_that_names_none  (range, list and all; an empty pick is refused)
+lab: lab_ui_artefacts [corporate-clean] 2 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_ui_7k98lfe5\lab_ui_artefacts__corporate-clean.jpg
+lab: lab_ui_artefacts [cinematic-noir] 1 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_ui_7k98lfe5\lab_ui_artefacts__cinematic-noir.jpg
+lab: lab_props_people [corporate-clean] 1 frames, 0 problem(s) -> C:\Users\Admin\AppData\Local\Temp\lmt_ui_7k98lfe5\lab_props_people__corporate-clean.jpg
+  PASS  ui_artefacts_and_props_build_clean_record_scale_and_tags_leave_with_their_lines  (5 exits incl. both lead lines at 7.6 s; 9 objects, 4 figures, scale clean)
+01:04:43 select: 1 of 1 videos; years {'2025': 1}; 1 with an animation credit; 1 with an .srt
+01:04:43 prepare: 1 to do
+01:04:43 prepare FAILED SYNTHvid001: No module named 'cv2'
+01:04:43 prepare progress: 1/1 in 0 min; about 0 min left (estimate)
+01:04:43 prepare: 1 films not prepared: ['SYNTHvid001']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 2586, in vision_lab_runs_end_to_end_on_a_mock_server_and_its_checks_can_fail
+    assert run_("select") == 0 and run_("prepare") == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+  FAIL  vision_lab_runs_end_to_end_on_a_mock_server_and_its_checks_can_fail: 
+01:04:44 synthesize: stats over 9 videos, 0 shots
+01:04:44 synthesize: 5 batches (input budget 26353 tokens each, sizes [2, 2, 2, 2, 1])
+01:04:44 synthesize: 5 to do
+01:04:44 synthesize batch 1: written
+01:04:44 synthesize batch 2: written
+01:04:44 synthesize batch 3: written
+01:04:44 synthesize batch 4: written
+01:04:44 synthesize batch 5: written
+01:04:44 synthesize progress: 5/5 in 0 min; about 0 min left (estimate)
+01:04:44 synthesize: style_guide.json and style_guide.md written
+01:04:44 synthesize: 9 guides too big for one merge; merging in 3 groups first (level 1)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53983)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53981)
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 127, in do_POST
+    return self._answer(body, text, vid_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 172, in _answer
+    self._send(200, {"choices": [{"message": {"content": json.dumps(out), "reasoning_content": "mock thinking" if think else ""}, "finish_reason": "stop"}],
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 77, in _send
+    self.end_headers(); self.wfile.write(b)
+                        ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+----------------------------------------
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 127, in do_POST
+    return self._answer(body, text, vid_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 172, in _answer
+    self._send(200, {"choices": [{"message": {"content": json.dumps(out), "reasoning_content": "mock thinking" if think else ""}, "finish_reason": "stop"}],
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 77, in _send
+    self.end_headers(); self.wfile.write(b)
+                        ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53985)
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 127, in do_POST
+    return self._answer(body, text, vid_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 172, in _answer
+    self._send(200, {"choices": [{"message": {"content": json.dumps(out), "reasoning_content": "mock thinking" if think else ""}, "finish_reason": "stop"}],
+  File "C:\Users\Admin\Desktop\Video-Engine\tools\vision_lab\mock_server.py", line 77, in _send
+    self.end_headers(); self.wfile.write(b)
+                        ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  PASS  vision_lab_synthesize_packs_batches_to_the_context_and_merges_in_levels  (5 batches of <=2 films, 0 refusals, an oversized prompt costs 0 requests, merge took 4 calls in levels)
+  PASS  vision_lab_measures_v2_fix_the_instrument_bugs_of_the_run  (boil/swap/pan/move/jitter told apart, pacing over real shots, continuations found, still runs, Whisper bursts dropped)
+  PASS  vision_lab_client_survives_load_thinking_caps_and_timeouts  (8 parallel calls under load: 0 timeouts (control 2 failed); peak in flight 27840 <= 30000; thinking cap retried; timeout not resent)
+  PASS  vision_lab_calibration_scores_by_time_and_place_and_never_drops_a_gate  (found by time and place under any label; label agreement apart; skipped and NOT RUN gates visible)
+  PASS  vision_lab_rerun_uses_the_true_previous_shot_and_keeps_its_own_raw  (the true previous shot is passed; the re-run's raw lives apart)
+01:04:58 maturity: 6 frames x 2 runs, 2 at a time (progress every 5 frames)
+01:04:58 maturity: 5/6 frames done (0 failed)
+01:04:58 maturity: 6/6 frames done (0 failed)
+01:04:58 maturity: 6 frames x 2; exact self-agreement 1.0; within 1 1.0; WARNING every frame got the same score: this judge cannot rank
+01:05:01 selftest text_schema OK {'answer': 'mock answer'}
+01:05:01 selftest decode_speed OK {'answer': 'mock answer'}
+01:05:01 selftest decode speed (one stream, no load): 400.0 tokens/s
+01:05:01 selftest text_schema_thinking OK {'answer': 'mock answer'}
+01:05:01 selftest image_file OK {'number': 42, 'left_shape': 'circle', 'right_shape': 'square'}
+01:05:07 selftest video_fps+sample FAIL selftest vid_fps+sample: failed after retries: HTTP 400: {"error": {"message": "Failed to apply Qwen3VLProcessor on data={'videos': [[array([[[255, 25 ... 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], ]]} ValueError: do_sample_frames needs video metadata (mock cause)"}}
+01:05:07 selftest video_fps OK {'direction': 'left_to_right', 'background_change_s': 2.0, 'colour_after': 'black'}
+01:05:07 selftest video modes: {'fps+sample': {'accepted': False, 'correct': False, 'prompt_tokens': 0}, 'fps': {'accepted': True, 'correct': True, 'prompt_tokens': 150}} -> using fps
+01:05:07 selftest video rate: {'prompt_tokens': {'none': 150, 'clip_25fps': 150, 'clip_1fps': 150}, 'ratio_4fps_to_1fps': None} -> not measurable on this server
+01:05:07 selftest: ALL GOOD []
+01:05:08 selftest text_schema OK {'answer': 'mock answer'}
+01:05:08 selftest decode_speed OK {'answer': 'mock answer'}
+01:05:08 selftest decode speed (one stream, no load): 400.0 tokens/s
+01:05:08 selftest text_schema_thinking OK {'answer': 'mock answer'}
+01:05:08 selftest image_file OK {'number': 42, 'left_shape': 'circle', 'right_shape': 'square'}
+01:05:14 selftest video_fps+sample FAIL selftest vid_fps+sample: failed after retries: HTTP 400: {"error": {"message": "Failed to apply Qwen3VLProcessor on data={'videos': [[array([[[255, 25 ... 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], ]]} ValueError: do_sample_frames needs video metadata (mock cause)"}}
+01:05:14 selftest video_fps OK {'direction': 'left_to_right', 'background_change_s': 2.0, 'colour_after': 'black'}
+01:05:14 selftest video modes: {'fps+sample': {'accepted': False, 'correct': False, 'prompt_tokens': 0}, 'fps': {'accepted': True, 'correct': True, 'prompt_tokens': 1750}} -> using fps
+01:05:15 selftest video rate: {'prompt_tokens': {'none': 150, 'clip_25fps': 1750, 'clip_1fps': 550}, 'ratio_4fps_to_1fps': 4.0} -> OK (4 fps, and 1 fps files stay 1 fps)
+01:05:15 selftest: ALL GOOD []
+01:05:15 selftest text_schema OK {'answer': 'mock answer'}
+01:05:15 selftest decode_speed OK {'answer': 'mock answer'}
+01:05:15 selftest decode speed (one stream, no load): 400.0 tokens/s
+01:05:15 selftest text_schema_thinking OK {'answer': 'mock answer'}
+01:05:15 selftest image_file OK {'number': 42, 'left_shape': 'circle', 'right_shape': 'square'}
+01:05:21 selftest video_fps+sample FAIL selftest vid_fps+sample: failed after retries: HTTP 400: {"error": {"message": "Failed to apply Qwen3VLProcessor on data={'videos': [[array([[[255, 25 ... 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], array([[[255, 255, 255], ]]} ValueError: do_sample_frames needs video metadata (mock cause)"}}
+01:05:21 selftest video_fps OK {'direction': 'left_to_right', 'background_change_s': 2.0, 'colour_after': 'black'}
+01:05:21 selftest video modes: {'fps+sample': {'accepted': False, 'correct': False, 'prompt_tokens': 0}, 'fps': {'accepted': True, 'correct': True, 'prompt_tokens': 950}} -> using fps
+01:05:21 selftest video rate: {'prompt_tokens': {'none': 150, 'clip_25fps': 950, 'clip_1fps': 550}, 'ratio_4fps_to_1fps': 2.0} -> WRONG: restart the server with the current serve.sh (media-io-kwargs fps 4)
+01:05:21 selftest: SEE RECOMMENDATIONS ["the server samples video at the wrong rate: stop it (pkill -f 'vllm serve') and start it with the current serve.sh"]
+01:05:21 maturity pairs: 8 pairs x 2 orders = 16 comparisons, 2 at a time
+01:05:22 maturity pairs: 16/16 done (0 failed)
+01:05:22 maturity pairs: 16 comparisons; Frame A won 1.0 of decided ones (0.5 = no position bias); same verdict in both orders 0.0
+01:05:22 maturity: 6 frames x 1 runs, 2 at a time (progress every 5 frames)
+01:05:22 maturity: 5/6 frames done (0 failed)
+01:05:22 maturity: 6/6 frames done (0 failed)
+01:05:22 maturity: 6 frames x 1; exact self-agreement None; within 1 None; WARNING every frame got the same score: this judge cannot rank
+01:05:22 maturity: 4 frames x 1 runs, 2 at a time (progress every 5 frames)
+01:05:22 maturity: 4/4 frames done (0 failed)
+01:05:22 maturity: 4 frames x 1; exact self-agreement None; within 1 None; WARNING every frame got the same score: this judge cannot rank
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3104, in vision_lab_finds_weights_already_on_the_volume_and_only_trusts_complete_ones
+    rc, out = run("--root", str(good), "--link")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\lmt_fm_5lb4pva8\\good\\.cache\\huggingface\\hub\\models--Qwen--Qwen3.8-27B' -> 'C:\\Users\\Admin\\AppData\\Local\\Temp\\lmt_fm_5lb4pva8\\good\\hf\\hub\\models--Qwen--Qwen3.8-27B'
+  PASS  vision_lab_maturity_pass_rates_golden_frames_blind_and_flags_a_flat_judge  (6 frames x 2 runs; schema-valid; flat mock judge flagged (exit 1); missing frame refused)
+  FAIL  vision_lab_finds_weights_already_on_the_volume_and_only_trusts_complete_ones: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\lmt_fm_5lb4pva8\\good\\.cache\\huggingface\\hub\\models--Qwen--Qwen3.8-27B' -> 'C:\\Users\\Admin\\AppData\\Local\\Temp\\lmt_fm_5lb4pva8\\good\\hf\\hub\\models--Qwen--Qwen3.8-27B'
+01:05:23 select: 1 of 1 videos; years {'2025': 1}; 0 with an animation credit; 0 with an .srt
+01:05:23 prepare: 1 to do
+01:05:23 prepare FAILED SYNTHvid002: No module named 'cv2'
+01:05:23 prepare progress: 1/1 in 0 min; about 0 min left (estimate)
+01:05:23 prepare: 1 films not prepared: ['SYNTHvid002']
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3146, in vision_lab_prepare_keeps_stills_inside_the_picture_and_fails_loudly_without_words
+    m = json.loads((T / "work/prep/SYNTHvid002/measure.json").read_text())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\lmt_prep_8ds4kafl\\work\\prep\\SYNTHvid002\\measure.json'
+  FAIL  vision_lab_prepare_keeps_stills_inside_the_picture_and_fails_loudly_without_words: [Errno 2] No such file or directory: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\lmt_prep_8ds4kafl\\work\\prep\\SYNTHvid002\\measure.json'
+golden: 26 frames (26 new), 29 presentations, classes {'a': 13, 'b': 13}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\agents_mock_llm.py", line 497, in mock_llm_client_disconnect_is_quiet
+    assert m.requests, "the abandoned request was never recorded"
+           ^^^^^^^^^^
+AssertionError: the abandoned request was never recorded
+  PASS  golden_set_builds_blind_and_its_report_and_judge_gate_can_fail  (26 frames, 29 presentations, repeat gaps [21, 24, 27]; rho good 0.972, bad -0.972)
+  PASS  suites_are_registered_and_none_is_empty  (10 suites, 131 tests)
+  PASS  mock_llm_anthropic_alternation_violation_400  (alternation, first role, dangling tool_use, max_tokens, system role all 400)
+  PASS  mock_llm_anthropic_tool_call_shape  (tool_use toolu_01eiAWTP66tyKIkUSTB1qirg ok, round trip ok)
+  PASS  mock_llm_auth_failure  (anthropic 401, openai 401, gemini 400 API_KEY_INVALID / 403 missing, custom key ok)
+  PASS  mock_llm_caching_on_second_call  (anthropic read=1650, openai cached=1536, gemini cached=1650)
+  FAIL  mock_llm_client_disconnect_is_quiet: the abandoned request was never recorded
+  PASS  mock_llm_concurrent_requests_thread_safe  (24 parallel requests, each step consumed exactly once)
+  PASS  mock_llm_gemini_function_response_order_400  (response without call, call without response, count mismatch, string response all 400)
+  PASS  mock_llm_gemini_tool_call_shape  (functionCall ok, ?key= auth ok, round trip ok)
+  PASS  mock_llm_match_filters_and_unmatched_fallback  (json, parallel tools, last_tool_result_contains, system_contains, unmatched fallback ok)
+  PASS  mock_llm_models_listing  (openai, anthropic and gemini model lists ok)
+  PASS  mock_llm_openai_tool_call_shape  (tool_calls call_jvLyxjYdI13QKG8PeXGUPWmz ok, round trip ok)
+  PASS  mock_llm_openai_unanswered_tool_call_400  (unanswered call id, orphan tool msg, object arguments all 400)
+  PASS  mock_llm_requests_recorded_with_keys_redacted  (4 recorded, 0 key leaks, reset clears)
+  PASS  mock_llm_script_via_env_and_post  (env script, POST script, typo rejected, reset restores, bad script raises)
+  PASS  mock_llm_scripted_429_then_success  (429 then 200 on all three providers)
+  PASS  mock_llm_scripted_529_overloaded_mapping  (529 -> anthropic 529, openai 503, gemini 503)
+  PASS  mock_llm_stop_refusal_and_thinking_shapes  (max_tokens, refusal, thinking blocks and token counts ok)
+[agents] scene b10: mock-gem (gemini) (fix, new session)
+  [scene] turn 1: submit_scene  (0.0 s, $0.009 so far)
+[agents] scene b10: accepted in 1 turns, 1 tool calls, $0.0087
+  PASS  agents_a_changed_spec_reopens_only_that_scene  (unchanged specs: 0 calls; one changed spec: only b10's worker, which records the new spec)
+[agents] storyboard: mock-strong (openai) (fix, new session)
+  [storyboard] turn 1: patch_storyboard  (0.0 s, $0.013 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.0132
+  PASS  agents_a_cold_session_gets_a_cheap_new_fixer_instead_of_a_full_reread  (cold session: new fixer on the small card, no old history; a just-saved session counts as warm)
+[agents] scene b05: mock-gem (gemini)
+  [scene] turn 1: lab_snapshot  (0.0 s, $0.004 so far)
+  [scene] turn 2: submit_scene  (0.0 s, $0.005 so far)
+  [scene] turn 3: lab_snapshot  (0.0 s, $0.008 so far)
+  [scene] turn 4: submit_scene  (0.0 s, $0.010 so far)
+  [scene] turn 5: lab_snapshot  (0.0 s, $0.012 so far)
+  [scene] turn 6: submit_scene  (0.0 s, $0.015 so far)
+  [scene] turn 7: lab_snapshot  (0.0 s, $0.017 so far)
+  [scene] turn 8: submit_scene  (0.0 s, $0.020 so far)
+[agents] scene b05: rejected in 8 turns, 8 tool calls, $0.0198 (still failing after 3 resubmissions)
+  PASS  agents_a_draft_that_was_never_accepted_is_taken_back  (draft written by the snapshot, refused by the gate, removed afterwards)
+[agents] code stage compose
+[agents] code stage check
+[agents] check failed with 7 error(s)
+[agents] defects from the check: storyboard 4, scene 3, engine 3 (qa/defects.json)
+[agents] 3 defect(s) are the engine's, not a model's: logged for a person in qa/defects.json
+[agents] storyboard: mock-strong (openai) (fix, new session)
+  [storyboard] turn 1: patch_storyboard  (0.0 s, $0.014 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.0138
+[agents] scene b05: mock-gem (gemini) (fix, new session)
+  [scene] turn 1: submit_scene  (0.0 s, $0.010 so far)
+[agents] scene b10: mock-gem (gemini) (fix, new session)
+  [scene] turn 1: submit_scene  (0.0 s, $0.008 so far)
+  [scene] turn 2: submit_scene  (0.0 s, $0.017 so far)
+  [scene] turn 3: submit_scene  (0.0 s, $0.027 so far)
+[agents] scene b10: rejected in 3 turns, 3 tool calls, $0.0274 (still failing after 2 resubmissions)
+[agents] scene b05: accepted in 1 turns, 1 tool calls, $0.0097
+[agents] fixes made: re-running what they made stale (code stages are free)
+[agents] code stage narrate
+[agents] code stage compose
+[agents] code stage check
+[warn] check: marked done over a rejection (no reason given); logged as an override
+[agents] done up to check in 1 s; spent $0.0509
+[agents] code stage check
+[agents] check failed with 7 error(s)
+[agents] defects from the check: engine 1 (qa/defects.json)
+[agents] 1 defect(s) are the engine's, not a model's: logged for a person in qa/defects.json
+[agents] nothing a model can fix is left
+[agents] stopped: the check still fails; qa/defects.json says what is left and whose it is (render anyway: py -m loom run agents-test render --force)
+  PASS  agents_a_failed_check_is_repaired_and_the_run_continues  (check failed -> storyboard patched -> narration and compose re-run -> check passed (exit 0); engine-only: exit 2, no call)
+[agents] storyboard: mock-small (anthropic)
+  [storyboard] turn 1: submit_storyboard  (0.0 s, $0.032 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.0316
+[agents] storyboard: mock-small (anthropic) (fix, resuming its session)
+  [storyboard] turn 1: patch_storyboard  (0.0 s, $0.012 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.0125
+  PASS  agents_a_fix_resumes_the_owners_own_conversation  (session saved (3 messages); the fix request replays them unchanged and patches one scene)
+  PASS  agents_a_snapshotted_draft_is_submitted_without_writing_it_twice  (no draft: refused with the reason; with a draft: the file on disk is judged and accepted)
+[warn] anthropic: the 1-hour cache lifetime was refused; using the 5-minute one for this run
+  PASS  agents_anthropic_caches_the_conversation_and_the_hour_falls_back  (breakpoint on the newest turn; 1h on all three; a refused ttl falls back once; other 400s still raise)
+  [storyboard] turn 1: end  (0.0 s, $0.000 so far)
+  PASS  agents_limits_never_cut_a_working_agent_short  (no task cap, full output by default; a long call fitted to the window; a full window stops; cache-aware guard)
+[agents] brief: mock-small (anthropic)
+[agents] stopped: the anthropic account is out of credit (anthropic HTTP 400: {"type": "error", "error": {"type": "invalid_request_error", "message": "Your credit balance is too low to access the Anthropic API."}, "req). Top it up, then run the same command again: everything accepted so far is kept and nothing is redone.
+[agents] knowledge: mock-strong (openai)
+  [knowledge] turn 1: submit_knowledge  (0.0 s, $0.019 so far)
+[agents] knowledge: accepted in 1 turns, 1 tool calls, $0.0193
+[agents] skeptic: mock-small (anthropic)
+[agents] skeptic: error in 1 turns, 0 tool calls, $0.0000 (anthropic HTTP 400: {"type": "error", "error": {"type": "invalid_request_error", "message": "mock: scripted invalid request"}, "request_id": "req_01G2yMvQb6DFHC9S9T4bMJHA"})
+[agents] knowledge: the skeptic did not finish, so the sheet is not approved
+  PASS  agents_out_of_credit_stops_cleanly_and_never_approves_unchecked_facts  (credit errors stop the run (exit 5) after one request; quota 429 not retried; no unchecked sheet approved)
+  PASS  agents_outline_and_storyboard_share_one_cached_reading  (block 1 shared (209k chars), tools identical, calls still role-scoped, 4 breakpoints)
+  PASS  agents_parallel_saves_of_one_file_never_collide  (8 threads x 30 writes: no error, no leftover temporary file)
+  PASS  agents_parity_prefix_is_the_cowork_reading_list  (storyboard prefix 222k chars in parity vs 18k in cards; 9 files, identical on rebuild)
+  PASS  agents_patch_storyboard_replaces_only_named_scenes_and_never_leaves_a_broken_one  (one scene swapped, the rest byte-identical; unknown beat refused; a refused patch restores the accepted file)
+[agents] defects from the check: storyboard 4, scene 3, engine 3 (qa/defects.json)
+[agents] 3 defect(s) are the engine's, not a model's: logged for a person in qa/defects.json
+[agents] storyboard: mock-strong (openai) (fix, new session)
+  [storyboard] turn 1: patch_storyboard  (0.0 s, $0.014 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.0139
+[agents] scene b05: mock-gem (gemini) (fix, new session)
+  [scene] turn 1: submit_scene  (0.0 s, $0.010 so far)
+[agents] scene b10: mock-gem (gemini) (fix, new session)
+  [scene] turn 1: submit_scene  (0.0 s, $0.007 so far)
+[agents] scene b05: accepted in 1 turns, 1 tool calls, $0.0097
+[agents] scene b10: accepted in 1 turns, 1 tool calls, $0.0070
+[agents] storyboard: fix rounds used up (2)
+  PASS  agents_repair_sends_check_defects_to_storyboard_and_scene_workers  (3 owners fixed from one check (storyboard patch, 2 scene workers); engine defects logged; rounds bounded)
+  PASS  agents_router_sends_each_defect_to_its_owner  (storyboard 5, scene 3, script 1, engine 3; repeats counted once)
+  PASS  agents_scene_submit_refused_until_the_worker_looked  (unlooked file refused without using a round; looked-at file judged by the gate; off switch works)
+  PASS  agents_storyboard_may_draw_an_underrated_beat_with_a_reason  (no reason: error with hint; reason: warning; 7 upgrades of 24 beats: refused)
+  PASS  agents_adapters_round_trip_tools_cache_and_retry  (anthropic cached 1600; openai cached 1536; gemini cached 1600)
+  PASS  agents_bench_fixes_send_what_each_model_accepts  (haiku budget thinking; sonnet adaptive; sol on the Responses API with tools and reasoning, encrypted reasoning replayed)
+[bench] mock -> C:\Users\Admin\Desktop\Video-Engine\projects\bench-test-bench-mock
+[agents] brief: mock-strong (openai)
+  [brief] turn 1: submit_brief  (0.0 s, $0.017 so far)
+[agents] brief: accepted in 1 turns, 1 tool calls, $0.0169
+[agents] done up to brief in 0 s; spent $0.0169
+[bench] gemini-balanced: skipped (no key for gemini)
+[bench] report: C:\Users\Admin\Desktop\Video-Engine\bench\test-bench\REPORT.md
+  PASS  agents_bench_reports_each_profile_and_names_the_skipped  (mock profile ran to the brief; gemini-balanced listed as skipped (no key))
+  [persona_pick] turn 1: submit_persona_pick  (0.0 s, $0.002 so far)
+  PASS  agents_budget_refuses_before_sending  (tiny run cap: 0 requests sent; provider cap names the provider; with room the call goes through)
+[agents] scene b05: mock-gem (gemini)
+  [scene] turn 1: submit_scene  (0.0 s, $0.009 so far)
+[agents] scene b10: mock-gem (gemini)
+  [scene] turn 1: submit_scene  (0.0 s, $0.006 so far)
+[agents] scene b05: accepted in 1 turns, 1 tool calls, $0.0085
+[agents] scene b10: accepted in 1 turns, 1 tool calls, $0.0060
+[agents] code stage compose
+manim: b06 reused (store, final)
+manim: b14 reused (store, final)
+[warn] b02: camera pan between different worlds (st_intro -> st_desk) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b03: camera pan between different worlds (st_desk -> st_title) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b04: camera pan between different worlds (st_title -> st_meter) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b05: camera pan between different worlds (st_meter -> st_lab) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b06: camera pan between different worlds (st_lab -> st_curve) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b11: camera pan between different worlds (st_notes -> st_desk2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b12: camera pan between different worlds (st_desk2 -> st_compare) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b14: camera pan between different worlds (st_compare -> st_curve2) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b16: camera pan between different worlds (st_curve2 -> st_cram) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b19: camera pan between different worlds (st_quiz -> st_plan) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b22: camera pan between different worlds (st_cal -> st_desk3) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b23: camera pan between different worlds (st_desk3 -> st_recap) would show the seam; using a dip (set join_in.continuous: true if they join up)
+composed 24 scenes, 250.9s -> C:\Users\Admin\AppData\Local\Temp\loomagents_mklk7m5u\build\index.html
+mix: 250.9s, music=warm_curious, -> C:\Users\Admin\AppData\Local\Temp\loomagents_mklk7m5u\audio\mix.wav
+[agents] done up to compose in 12 s; spent $0.0145
+  PASS  agents_chain_runs_from_a_storyboard_through_scenes_to_compose  (storyboard -> scenes (2 mock workers) -> compose in one run; build/index.html written)
+  anthropic key ANTHROPIC_API_KEY: set; the provider lists 1 models
+  openai    key OPENAI_API_KEY: set; the provider lists 1 models
+  gemini    key GEMINI_API_KEY: set; the provider lists 1 models
+  profile _tmp_doc: all models served
+  anthropic key ANTHROPIC_API_KEY: set; the provider lists 1 models
+  openai    key OPENAI_API_KEY: set; the provider lists 1 models
+  gemini    key GEMINI_API_KEY: set; the provider lists 1 models
+  profile _tmp_doc: persona_pick=mock-small: 'mock-small' is NOT served by anthropic; skeptic=mock-small: 'mock-small' is NOT served by anthropic; tweak=mock-small: 'mock-small' is NOT served by anthropic
+  PASS  agents_doctor_flags_models_a_provider_does_not_serve  (all served: 0; a model the provider does not list: 1)
+  PASS  agents_errors_are_classified_and_auth_is_never_retried  (context overflow and overload classified; a wrong key: one request, no retry, key not echoed)
+  PASS  agents_every_planning_role_is_told_the_topic  (brief and knowledge task messages carry the topic; the request alone does not)
+  [persona_pick] turn 1: submit_brief  (0.0 s, $0.002 so far)
+  [persona_pick] turn 2: submit_persona_pick  (0.0 s, $0.002 so far)
+  [persona_pick] turn 3: submit_persona_pick  (0.0 s, $0.003 so far)
+  [brief] turn 1: get_style_pack  (0.0 s, $0.006 so far)
+  [brief] turn 2: get_style_pack  (0.0 s, $0.008 so far)
+  [brief] turn 3: get_style_pack  (0.0 s, $0.010 so far)
+  [brief] turn 4: get_style_pack  (0.0 s, $0.012 so far)
+  [brief] turn 5: get_style_pack  (0.0 s, $0.014 so far)
+  [brief] turn 6: get_style_pack  (0.0 s, $0.017 so far)
+  PASS  agents_guards_hold_allowlist_loop_and_repairs  (foreign tool refused; looping stopped at the third identical call; failing submits end as rejected)
+[agents] brief: mock-strong (openai)
+  [brief] turn 1: get_skill_section  (0.0 s, $0.007 so far)
+  [brief] turn 2: submit_brief  (0.0 s, $0.020 so far)
+[agents] brief: accepted in 2 turns, 2 tool calls, $0.0202
+[agents] knowledge: mock-strong (openai)
+  [knowledge] turn 1: submit_knowledge  (0.0 s, $0.016 so far)
+[agents] knowledge: accepted in 1 turns, 1 tool calls, $0.0156
+[agents] skeptic: mock-small (anthropic)
+  [skeptic] turn 1: submit_skeptic_verdict  (0.0 s, $0.005 so far)
+[agents] skeptic: accepted in 1 turns, 1 tool calls, $0.0054
+knowledge sheet approved by agent, unattended (test)
+[agents] pedagogy: mock-strong (openai)
+  [pedagogy] turn 1: submit_teaching_plan  (0.0 s, $0.022 so far)
+[agents] pedagogy: accepted in 1 turns, 1 tool calls, $0.0218
+[agents] persona_pick: mock-small (anthropic)
+  [persona_pick] turn 1: submit_persona_pick  (0.0 s, $0.001 so far)
+[agents] persona_pick: accepted in 1 turns, 1 tool calls, $0.0010
+[agents] script: mock-strong (openai)
+  [script] turn 1: submit_script  (0.0 s, $0.047 so far)
+  [script] turn 2: submit_script  (0.0 s, $0.102 so far)
+[agents] script: accepted in 2 turns, 2 tool calls, $0.1018
+[agents] code stage allocate
+allocation: avatar 6%, template 48%, motion 46%, hybrid 0%, motion_effective 46%
+
+design seed: material learning (memory, learning and time: notebooks, calendars, steps)
+recent lessons: none
+
+  shape     round          soft, generous corners; friendly and calm
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: architectural, organic, angular
+  label     underline      plain words with a thick coloured underline that runs into a leader
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: ribbon, pill, tag
+  bubble    note           a sticky note taped up, tilted, with a folded corner
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: cloud, wobble, round
+  panel     paper          a light sheet with a folded corner and faint rules
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: card, frame, cutout
+  icon      ring           an open ring with a gap and a bead, icon inside
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: tile, seal, duotone
+  mark      box            a ruled box ticked by hand, the mark overflowing it
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: brush, disc, stamp
+  texture   paper          faint fibres, like card stock
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: none, hatch, halftone
+  entrance  draw           things are drawn or wiped on, as if by hand
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: typeset, drop, slide
+  camera    pan            the camera pans along a process or a row (guidance for the storyboard)
+                           why: the learning material prefers it; not used in the last 0 lesson(s)
+                           or: cut, push
+
+change any axis: py -m loom seed agents-test --set <axis>=<option>   (the person chooses; D-70)
+(written to plan/design_seed.json; change any axis with py -m loom seed agents-test --set axis=option, or --clear for the classic forms)
+[agents] storyboard_outline: mock-strong (openai)
+  [storyboard_outline] turn 1: submit_outline  (0.0 s, $0.022 so far)
+[agents] storyboard_outline: accepted in 1 turns, 1 tool calls, $0.0216
+[agents] storyboard: mock-strong (openai)
+  [storyboard] turn 1: submit_storyboard  (0.0 s, $0.055 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.0547
+[agents] storyboard: mock-strong (openai) (fix, resuming its session)
+  [storyboard] turn 1: storyboard_stands  (0.0 s, $0.324 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.3245
+[agents] done up to storyboard in 10 s; spent $0.5665
+  PASS  agents_mock_pipeline_plans_a_lesson_through_every_gate  (11 calls over 2 wire protocols; 7 stages done; script repaired once; $0.5665 booked)
+  PASS  agents_profiles_refuse_opus_storyboards_and_unknown_models  (11 shipped profiles load; Opus storyboard and unknown alias refused)
+  PASS  agents_role_cards_cite_real_sections_and_fit_their_budget  (13 cards, largest 1842 tokens (est.), every cited section resolves)
+[agents] scene b05: mock-gem (gemini)
+  [scene] turn 1: submit_scene  (0.0 s, $0.009 so far)
+[agents] scene b10: mock-gem (gemini)
+  [scene] turn 1: submit_scene  (0.0 s, $0.006 so far)
+  [scene] turn 2: submit_scene  (0.0 s, $0.013 so far)
+  [scene] turn 2: submit_scene  (0.0 s, $0.017 so far)
+[agents] scene b10: accepted in 2 turns, 2 tool calls, $0.0129
+[agents] scene b05: accepted in 2 turns, 2 tool calls, $0.0166
+  PASS  agents_scene_workers_fix_their_own_file_through_the_gate  (2 parallel workers over the Gemini protocol; nondeterminism refused and repaired; a worker cannot write another beat)
+  PASS  agents_the_requested_length_is_enforced_and_sent  (600 s refused for a 2-minute request, 120 s passes, the task says 2 minutes)
+  PASS  check_blurred_beat_is_measured_on_its_own_words_and_never_excused  (sharp 1.125, blurred 0.044; blurred under hold, rest and none; sharp passes)
+  PASS  check_every_element_has_a_life_window  (missing lifeT named; old runtime said; zero red)
+  PASS  check_film_audit_reports_preshown_exit_none_foreign_blur_and_zero_denominators  (preshown, exit-none, foreign, blur and kinds reported; zero denominator named)
+  PASS  check_foreign_pixels_report_other_beats_and_never_pass_blind  (697 px named; 129 px quiet; ghost warns; unmeasured and partial never pass)
+  PASS  check_ledger_gives_film_defects_their_own_kinds  (6 kinds)
+[warn] pedagogy: marked done over a rejection (requester: fine with any length); logged as an override
+  PASS  check_mark_done_over_a_rejection_is_logged  (override logged once, with reason and error count)
+  PASS  check_off_frame_rows_are_errors_ratcheted_for_old_lessons_and_a_blind_measure_is_red  (own off-frame and figure crop are errors; held warns; baseline ratchets; blind measure red)
+  PASS  check_probe_measures_foreign_pixels_on_a_built_lesson  (stuck: b2 200000 px from b1; owned (with b2 building inside b1's group): 0 px)
+  PASS  check_probe_measures_off_frame_elements_words_and_figures  (b1 card 100% off and a wholly-off word; b3 figure cropped; b2 clean with 1 line(s) seen)
+[warn] render: forced past a check that is 'rejected' (2 error(s)): post-fix proof
+  PASS  check_render_force_needs_a_reason_the_checked_build_and_no_thrown_scene  (no reason, no report, changed build, scene_threw and tween_threw refused; a reasoned force is logged)
+render: the build changed since its saved segments were made (unstamped -> 988bd2029134373d); starting from frame 0
+render: the build changed since its saved segments were made (988bd2029134373d -> 4fea57809edb1d97); starting from frame 0
+  PASS  check_render_segments_carry_the_build_hash_and_stale_ones_are_dropped  (988bd2029134373d -> 4fea57809edb1d97: stale segments dropped, same build kept)
+  PASS  check_render_verification_fails_above_ten_percent_and_on_zero  (20 % fails, 10 % passes, 0 compared fails)
+  PASS  check_style_lint_measures_the_caption_pill  (chalk-lab 11.67/17.53; cinematic-dawn 5.09/8.24; cinematic-noir 9.72/16.84; corporate-clean 7.98/11.51; dark-technical 13.48/17.12; editorial-paper 5.04/11.99; engineering 4.81/14.65; flat-cosmos 11.52/16.45; glow-flat 13.20/18.05; line-art 4.87/14.38; presenter-pop 11.33/14.53; story-cartoon 6.77/10.14; whiteboard 5.13/13.44)
+  PASS  pipeline_avatar_props_are_checked_against_the_presenter  (unknown keys and a 4-line card refused; a real card passes)
+  PASS  pipeline_bespoke_scenes_may_only_draw_the_lessons_words  (mixed-value b11 and b13 flagged: In yesterday's release planning meeting,)
+  PASS  pipeline_capabilities_list_every_runtime_builder  (38 capabilities; 30 modules tagged; the file is current)
+[agents] clip b06: mock-gem (gemini)
+  [clip] turn 1: submit_clip  (0.0 s, $0.002 so far)
+[agents] clip b11: mock-gem (gemini)
+[agents] clip b16: mock-gem (gemini)
+  [clip] turn 2: render_clip  (0.0 s, $0.007 so far)
+  [clip] turn 1: submit_clip  (0.0 s, $0.001 so far)
+  [clip] turn 1: submit_clip  (0.0 s, $0.001 so far)
+  [clip] turn 2: render_clip  (0.0 s, $0.007 so far)
+  [clip] turn 2: render_clip  (0.0 s, $0.006 so far)
+  [clip] turn 3: submit_clip  (0.0 s, $0.014 so far)
+  [clip] turn 3: submit_clip  (0.0 s, $0.013 so far)
+[agents] clip b06: accepted in 3 turns, 3 tool calls, $0.0137
+[agents] clip b11: accepted in 3 turns, 3 tool calls, $0.0126
+  [clip] turn 3: submit_clip  (0.0 s, $0.014 so far)
+[agents] clip b16: accepted in 3 turns, 3 tool calls, $0.0143
+  PASS  pipeline_clip_workers_render_manim_skia_and_three  (manim b06, three b11, skia b16: each rendered, looked at and submitted; 3 clips)
+  PASS  pipeline_discovery_tools_reach_the_whole_toolbox  (get_beat ok; examples {'data counter unit grid': 'lab/lab_data_objects.js', 'three device turn': 'three/device_turn.js', 'skia hero orb': 'skia/hero_orb.py', 'manim forgetting curve': 'b06.py'})
+  PASS  pipeline_framing_the_runtime_ignores_is_refused  (3 errors: nested w/h, focus on a template, zoom on an avatar; bespoke focus and zoom 1 pass)
+  PASS  pipeline_held_case_only_warns_in_the_scenes_gate_as_at_runtime  (case-only: a warning; a name never drawn: an error)
+[agents] --keep: pedagogy would fail today's gate (2 error(s)); kept as asked, logged as an override
+[agents] done up to brief in 0 s; spent $0.0000
+[agents] done up to brief in 0 s; spent $0.0000
+  PASS  pipeline_keep_and_hand_overrides_are_logged  (--keep override logged (2 error(s) waived); a run without --keep logs none)
+  PASS  pipeline_keep_names_must_exist_on_the_same_station  (2 errors, 1 warning)
+  PASS  pipeline_length_estimate_matches_the_narrated_benches  (balanced +2.2% (was -11.1%); balanced -1.2% (was -10.1%); balanced -2.2% (was -13.6%); value -1.8% (was -11.4%); budget +3.8% (was -6.2%))
+  PASS  pipeline_length_is_sent_stated_and_bounded  (length sent to storyboard and outline; requested_s required; script 1.3x and 20 beats; narration refused at 200 s)
+  PASS  pipeline_one_person_has_one_look  (no cast, an incomplete entry and a second look are errors; cast names resolve; a designed rig and an undrawn role pass)
+  PASS  pipeline_one_template_cannot_carry_a_lesson  (cap, ping-pong and hybrid checks fire; a varied lesson is quiet)
+  PASS  pipeline_placeholder_text_is_refused_and_empty_slots_pass  (4 placeholders refused; empty: true passes)
+  PASS  pipeline_router_sends_the_new_defects_to_their_owners  (8 defects to their owners)
+  PASS  pipeline_scene_workers_get_held_elements_neighbours_and_cast  (held names, neighbours and cast in the task; nothing held across stations)
+  PASS  pipeline_storyboard_refuses_a_kind_nobody_writes  (media refused at submit; manim, skia and three written)
+[agents] critic: mock-gem (gemini)
+  [critic] turn 1: submit_review  (0.0 s, $0.012 so far)
+[agents] critic: accepted in 1 turns, 1 tool calls, $0.0123
+[agents] critic: mock-gem (gemini)
+  [critic] turn 1: submit_review  (0.0 s, $0.001 so far)
+[agents] critic: accepted in 1 turns, 1 tool calls, $0.0015
+[agents] code stage check
+[agents] check failed with 3 error(s)
+[agents] stopped: the check still fails; qa/defects.json says what is left and whose it is (render anyway: py -m loom run agents-test render --force)
+  PASS  pipeline_the_critic_sees_every_beat_with_its_narration_and_runs_on_a_failed_check  (45 sheets in 2 calls with narration, props and the polarity line; the critic runs on a failed check)
+  PASS  pipeline_the_mix_is_a_ceiling_in_an_agents_run  (ceiling in an agents run; share {'kind:avatar': '8%', 'kind:bespoke': '17%', 'kind:blueprint': '29%', 'kind:manim': '8%', 'kind:template': '38%'})
+[agents] storyboard: mock-strong (openai) (fix, new session)
+  [storyboard] turn 1: storyboard_stands  (0.0 s, $0.310 so far)
+[agents] storyboard: accepted in 1 turns, 1 tool calls, $0.3098
+[agents] storyboard: mock-strong (openai) (fix, new session)
+  [storyboard] turn 1: end  (0.0 s, $0.310 so far)
+  [storyboard] turn 2: end  (0.0 s, $0.611 so far)
+  [storyboard] turn 3: end  (0.0 s, $0.913 so far)
+[agents] storyboard: limits in 3 turns, 0 tool calls, $0.9125 (the model stopped calling tools)
+[agents] storyboard: the look round did not finish (limits); the accepted storyboard stands
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\primitives_material_footage_hands.py", line 114, in primitive_material_covered_mid_clear_ends
+    cov = _coverage(c["d"], c["opacity"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: no library called "cairo-2" was found
+no library called "cairo" was found
+no library called "libcairo-2" was found
+cannot load library 'libcairo.so.2': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.so.2'
+cannot load library 'libcairo.2.dylib': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.2.dylib'
+cannot load library 'libcairo-2.dll': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo-2.dll'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3291, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\primitives_material_footage_hands.py", line 130, in primitive_material_moves_between
+    cov = _coverage(c["d"], c["opacity"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: no library called "cairo-2" was found
+no library called "cairo" was found
+no library called "libcairo-2" was found
+cannot load library 'libcairo.so.2': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.so.2'
+cannot load library 'libcairo.2.dylib': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.2.dylib'
+cannot load library 'libcairo-2.dll': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo-2.dll'
+  PASS  pipeline_the_storyboard_looks_at_its_animatic_once  (3 animatic sheets sent; stands logged; an unfinished round changes nothing)
+  PASS  primitive_footage_clip_small_and_in_sync  (47721 bytes, in sync)
+  SKIP  primitive_footage_seek_deterministic  (skipped (no browser here))
+  PASS  primitive_hands_contract  (1 family (placeholder) x 13 poses meet the contract)
+  SKIP  primitive_hands_placeholder_warns  (skipped (no browser here))
+  PASS  primitive_hands_runtime_in_sync  (runtime copy matches the asset files)
+  FAIL  primitive_material_covered_mid_clear_ends: no library called "cairo-2" was found
+no library called "cairo" was found
+no library called "libcairo-2" was found
+cannot load library 'libcairo.so.2': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.so.2'
+cannot load library 'libcairo.2.dylib': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.2.dylib'
+cannot load library 'libcairo-2.dll': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo-2.dll'
+  FAIL  primitive_material_moves_between: no library called "cairo-2" was found
+no library called "cairo" was found
+no library called "libcairo-2" was found
+cannot load library 'libcairo.so.2': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.so.2'
+cannot load library 'libcairo.2.dylib': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo.2.dylib'
+cannot load library 'libcairo-2.dll': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libcairo-2.dll'
+  PASS  primitive_material_schema_accepts_and_rejects  (accepts torn, page, scroll, motif, handoff, fill; rejects crumple)
+  PASS  primitive_material_storyboard_gate  (loom.validate accepts the six kinds and rejects crumple)
+  PASS  primitive_material_tables_agree  (6 kinds agree across runtime, compose and schema)
+  PASS  primitive_material_torn_seeded  (seed 3 twice identical, seed 4 differs)
+  PASS  primitive_morph_exact_ends  (circle->star: p0 within 0.054 px, p1 within 0.009 px, corners within 0.005 px, deterministic)
+  SKIP  primitive_morph_lab_renders_clean  (skipped (no browser here))
+  PASS  primitive_morph_subpaths_and_misuse  (two discs merge (2->2->1 subpaths), a hole grows with opposite winding, 2 misuses reported as morph_bad_path)
+  PASS  primitive_stepped_ease_holds  (6 Hz over 1 s: holds inside steps, jumps at 1/6, reaches 1; values [0, 0, 0, 0.598, 0.598, 0.961, 0.961, 0.999, 1])
+  SKIP  primitive_stepped_lab_holds_in_frames  (skipped (no browser here))
+  PASS  primitive_stepped_switch_and_pack_gate  (story-cartoon: settle stepped in 3 steps, unswitched element smooth, wrap() drive at 8 Hz; corporate-clean: smooth + warning; force: stepped)
+  SKIP  primitive_a_throwing_frame_callback_cannot_stop_a_render  (skipped (no browser here))
+  SKIP  primitive_data_objects_record_their_values  (skipped (no browser here))
+  SKIP  primitive_draw_undrawn_stroke_paints_nothing  (skipped (no browser here))
+  SKIP  primitive_magnify_exit_before_landing_is_clamped  (skipped (no browser here))
+  SKIP  primitive_magnify_lens_is_a_live_uncounted_copy  (skipped (no browser here))
+  SKIP  primitive_slot_is_deterministic_in_any_seek_order  (skipped (no browser here))
+  SKIP  primitive_slot_never_shows_two_contents_at_once  (skipped (no browser here))
+  SKIP  primitive_slot_warns_too_fast_and_only_then  (skipped (no browser here))
+  SKIP  primitive_stamp_lights_exactly_round_n_times_share  (skipped (no browser here))
+  PASS  primitive_runtime_backplate_blur_never_on_own_beat  (own groups sharp at b2/b4 midpoints; pictures under them at 9/9 px)
+  PASS  primitive_runtime_backplate_veil_full_over_kept_words  (veils {'b1': None, 'b2': 0.94, 'b3': None, 'b4': 0.82, 'b5': None, 'b6': None})
+  PASS  primitive_runtime_element_life_pixels  (16 pixel claims hold)
+  PASS  primitive_runtime_figure_cropped_warns  (figure_cropped on the high and the side figure only; 5 figures recorded)
+  PASS  primitive_runtime_five_beat_film_invariants  (24 pixel claims hold on 5 beats at world x 4000)
+  PASS  primitive_runtime_followers_exit_with_leader  (page and both lines exit at [3.42])
+  PASS  primitive_runtime_frame_layout_beats_ignore_focus  (template camera {'s': 1, 'cx': 960, 'cy': 540}, bespoke camera {'s': 2, 'cx': 480, 'cy': 270})
+  PASS  primitive_runtime_fx_moment_rect_follows_camera  (moment rects [[100, 100, 400, 300], [100, 100, 400, 300]])
+  PASS  primitive_runtime_held_name_case_and_el_parent  (held matched case-insensitively with a warning, over two hops; element parent accepted; bad parent names b3)
+  PASS  primitive_runtime_nested_station_is_one_frame  (nested station {'w': 1920, 'h': 1080, 'ws': 0.5, 'inside': 1})
+  PASS  primitive_runtime_thrown_scene_card_sits_in_the_frame  (focused beat card at [151, 350, 1769, 730]; unfocused at [97, 388, 1823, 600])
+  PASS  primitive_runtime_travel_names_a_wrong_target_at_build  (b1: m.travel was given an array of 3 (ctx.crowd returns one element per person: travel eac; b1: m.travel was given nothing (a held element that is not there?); this move is skipped)
+  PASS  primitive_runtime_words_under_a_backplate_are_marked_as_layering  (own beat {'texts': 2, 'marked': 0}; under the backplate {'texts': 2, 'marked': 2})
+  PASS  primitive_tpl_a_cast_member_has_one_look_in_every_template  (Priya and Dev: one look each across sides and templates; the non-cast control keeps its defaults)
+  PASS  primitive_tpl_a_compare_panel_is_never_after_its_own_items  (panel at 886.77s, item 886.92s, header word 888.30s)
+  PASS  primitive_tpl_avatar_card_fills_the_frame_and_unknown_keys_are_errors  (card drawn beside a smaller disc; unknown keys reported)
+  PASS  primitive_tpl_caption_active_word_reads_on_the_pill_in_every_pack  (chalk-lab 11.67->11.67; cinematic-dawn 5.08->5.08; cinematic-noir 9.72->9.72; corporate-clean 8.00->8.00; dark-technical 13.47->13.47; editorial-paper 5.05->5.05; engineering 4.81->4.81; flat-cosmos 11.53->11.53; glow-flat 13.20->13.20; line-art 4.86->4.86; presenter-pop 11.35->11.35; story-cartoon 6.80->6.80; whiteboard 5.14->5.14)
+  PASS  primitive_tpl_compare_and_page_structure_leads_and_words_still_land  (panels and page lead; words marked on their cues)
+  PASS  primitive_tpl_compare_valence_is_colour_and_verdict_is_the_mark  (valence: no mark; verdict: wrong -> no, right -> yes; tone deprecated)
+  PASS  primitive_tpl_document_lines_are_followers_of_the_page  (page.followers = every line)
+  PASS  primitive_tpl_each_anchor_is_cued_once_per_build  (106 anchors, each cued once)
+  PASS  primitive_tpl_empty_slots_draw_a_slot_and_no_words  (empty lines and items: a dashed slot, zero words)
+  PASS  primitive_tpl_every_template_shows_its_structure_by_the_lead  (28 builds of 22 catalog entries: first reveal within the lead)
+  PASS  primitive_tpl_stance_tags_a_myth_and_strikes_it  (myth: tag and strike; fact: tag only; no stance: neither)
+
+198 passed, 8 failed, 18 skipped (cinema_house_upgrades_draw_and_report_in_the_preview, rig_import_reproduces_the_delivery_and_maya_poses_in_the_preview, travel_moves_the_elements_own_origin_whatever_it_draws_and_whatever_order_frames_are_seen, travel_lands_on_its_own_origin_in_chrome_too, rig_review_measures_expressions_from_the_files_and_refuses_an_empty_delivery, primitive_footage_seek_deterministic, primitive_hands_placeholder_warns, primitive_morph_lab_renders_clean, primitive_stepped_lab_holds_in_frames, primitive_a_throwing_frame_callback_cannot_stop_a_render, primitive_data_objects_record_their_values, primitive_draw_undrawn_stroke_paints_nothing, primitive_magnify_exit_before_landing_is_clamped, primitive_magnify_lens_is_a_live_uncounted_copy, primitive_slot_is_deterministic_in_any_seek_order, primitive_slot_never_shows_two_contents_at_once, primitive_slot_warns_too_fast_and_only_then, primitive_stamp_lights_exactly_round_n_times_share)
+
+real	5m11.184s
+user	0m0.015s
+sys	0m0.015s
+  PASS  context_layer_agrees_with_the_code
+1 passed, 0 failed, 0 skipped  [subset: 1 of 224]

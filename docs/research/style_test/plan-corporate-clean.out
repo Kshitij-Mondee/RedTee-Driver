@@ -1,0 +1,100 @@
+[shuttle] P1-P4: own agents (api, lead claude-opus-5-5)
+[shuttle]   shuttle-fact-finder (claude-sonnet-5-5) started
+  [skeptic] turn 1: submit_skeptic_verdict  (49.0 s, $0.031 so far)
+knowledge sheet approved by agent, unattended per Kshitij (five-style test, D-167)
+allocation: avatar 12%, template 10%, motion 78%, hybrid 0%, motion_effective 78%
+[shuttle] P5: own agents (api, lead claude-opus-5-5)
+
+design seed: material rules (law, policy and compliance: documents, seals, structure)
+recent lessons: none
+
+  shape     architectural  square corners, a solid base; rules, institutions, structure
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: angular, round, organic
+  label     stamp          a tilted double-ruled stamp, inked, no fill
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: ribbon, tag, underline
+  bubble    note           a sticky note taped up, tilted, with a folded corner
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: comic, round, chat
+  panel     paper          a light sheet with a folded corner and faint rules
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: frame, card, cutout
+  icon      seal           a rosette seal, icon knocked out
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: ring, duotone, bare
+  mark      stamp          a tilted double-ringed stamp around the mark
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: box, brush, disc
+  texture   paper          faint fibres, like card stock
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: none, grain, halftone
+  entrance  typeset        things fade up gently, labels wipe like type being set
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: unfold, draw, drop
+  camera    cut            cuts between held frames (guidance for the storyboard)
+                           why: the rules material prefers it; not used in the last 0 lesson(s)
+                           or: pan, push
+
+change any axis: py -m loom seed style-corporate-clean --set <axis>=<option>   (the person chooses; D-70)
+(written to plan/design_seed.json; change any axis with py -m loom seed style-corporate-clean --set axis=option, or --clear for the classic forms)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\__main__.py", line 2, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\cli.py", line 184, in main
+    try:
+         
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\cli.py", line 230, in _dispatch
+    from .shuttle.launch import cli as shuttle_cli
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\launch.py", line 1004, in cli
+    return run(p, mode=mode, lead=args.lead, budget=budget, approve_as=args.approve_as, until=args.until, runner=runner,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\launch.py", line 836, in run
+    st = loom_session(project, mode, glead, group, start_message(project, group, approval_notes(project), retry, role=role), session,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\loop.py", line 415, in run_session
+    final = lead_ag.run(msgs, on_turn=on_turn)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\loop.py", line 180, in run
+    results = self.s.dispatch_all(self, resp.tool_calls)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\loop.py", line 289, in dispatch_all
+    out[i] = self.dispatch(ag, c)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\loop.py", line 320, in dispatch
+    res, imgs = self.server.call(name[len(MCP):], args, use_id=event["tool_use_id"])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\server.py", line 166, in call
+    return self._call(name, args, c, kind, phase, images, refusal, t0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\server.py", line 175, in _call
+    refusal = self.rails.allow(name, c, args)      # the rails first: their refusal names the missing step
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\rails.py", line 664, in allow
+    need = idx(phase)
+           ^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\loom\shuttle\rails.py", line 157, in idx
+    return IDS.index(pid)
+           ^^^^^^^^^^^^^^
+ValueError: None is not in list
+plan corporate-clean exit 1 at 17:40:36
+[shuttle] P6: own agents (api, lead claude-sonnet-5-5)
+narration: 14 beats, 73.9s, 32 phrases synthesised (kokoro:af_heart)
+narration: 201.1 wpm vs target 145.0: re-synthesising at speed 0.721
+narration: 14 beats, 99.4s, 32 phrases synthesised (kokoro:af_heart)
+[shuttle] P5: own agents (api, lead claude-opus-5-5)
+[shuttle] P6: own agents (api, lead claude-sonnet-5-5)
+narration: 14 beats, 99.4s, 0 phrases synthesised (kokoro:af_heart)
+plan (script + storyboard) approved by agent, unattended per Kshitij (five-style test, D-167)
+[shuttle] P7: own agents (api, lead claude-sonnet-5-5)
+[shuttle]   shuttle-kit-builder (claude-sonnet-5-5) started
+[shuttle]   shuttle-kit-builder (claude-sonnet-5-5) started
+lab: shuttle_kit_preview [corporate-clean] 6 frames, 6 problem(s) -> C:\Users\Admin\Desktop\Video-Engine\projects\style-corporate-clean\qa\kit_preview\shuttle_kit_preview__corporate-clean.jpg
+lab: shuttle_kit_preview [corporate-clean] 6 frames, 1 problem(s) -> C:\Users\Admin\Desktop\Video-Engine\projects\style-corporate-clean\qa\kit_preview\shuttle_kit_preview__corporate-clean.jpg
+lab: shuttle_kit_preview [corporate-clean] 6 frames, 0 problem(s) -> C:\Users\Admin\Desktop\Video-Engine\projects\style-corporate-clean\qa\kit_preview\shuttle_kit_preview__corporate-clean.jpg
+[shuttle] done up to P7: every phase accepted
+plan corporate-clean resume exit 0 at 08:52:31

@@ -1,0 +1,217 @@
+{
+  "ok": false,
+  "errors": [
+    "lc layout line_into_object @ 47: b14: a line of circle_a (b14) runs into phone_pt (b08) at [893, 745, 1027, 879] from 47 to 73 s; end it at the object's edge or route it around [circle_a / phone_pt]"
+  ],
+  "warnings": [
+    "compose: no audio/mix.wav yet: using the bare narration (run the mix)",
+    "variety: one_radius_share = 1.0 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.917 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b08, b09, b10, b11, b12, b13, b14)",
+    "variety: the seed's camera habit is 'pan' but 11 of 12 bespoke beats have no camera move",
+    "lc layout content_overlap @ 31: b12 \"arrival\" and b12 \"arrival\" overlap at [1450, 700, 1523, 731] from 31 to 31 s (a passing crossing (under 500 ms)) [rows / rows]",
+    "lc layout content_overlap @ 31: b12 \"sending\" and b12 \"sending\" overlap at [1450, 746, 1537, 777] from 31 to 31 s (a passing crossing (under 500 ms)) [rows / rows]",
+    "lc layout content_overlap @ 33.5: b12 \"x speed of light\" and b12 \"x speed of light\" overlap at [1450, 792, 1623, 823] from 33.5 to 33.5 s (a passing crossing (under 500 ms)) [rows / rows]",
+    "lc layout line_into_object @ 39: b13: a line of range_line (b13) runs into dir_arrow (b13) at [736, 570, 814, 647] from 39 to 39 s; end it at the object's edge or route it around [range_line / dir_arrow]",
+    "b12: small text on screen at 35.6s: \"arrival\" 25.4px, \"sending\" 25.4px, \"x speed of light\" 25.4px (< 26 px)",
+    "b17: the same frame as b16 (difference 0.75 < 1.5): a new beat needs a visible change",
+    "b08: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b09: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b10: value script says 'light' but the frames measure brightness 0.20 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b11: value script says 'light' but the frames measure brightness 0.20 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b12: value script says 'light' but the frames measure brightness 0.20 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b13: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b14: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b15: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b16: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b17: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "b18: value script says 'light' but the frames measure brightness 0.19 (band 0.55 to 1.00); regrade the beat or change the script",
+    "tone: lesson brightness 0.19 against the pack's reference 0.48 (glow_technical_3d, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson saturation 0.62 against the pack's reference 0.47 (glow_technical_3d, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson dark_share 1.00 against the pack's reference 0.17 (glow_technical_3d, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b08",
+        "max_static_s": 0.52
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.08
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.52
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 1.21
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 1.35
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.84
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 1.13
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 1.22
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.192,
+      "motion": 0.808,
+      "hybrid": 0.0,
+      "motion_effective": 0.808
+    },
+    "elements": {
+      "b08": 5,
+      "b09": 2,
+      "b10": 2,
+      "b11": 4,
+      "b12": 2,
+      "b13": 3,
+      "b14": 2,
+      "b15": 4,
+      "b16": 3,
+      "b17": 2,
+      "b18": 1
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.207,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 1.0,
+      "one_radius_share": 1.0,
+      "still_share": 0.917,
+      "labels_over_objects_share": 0.25,
+      "one_world_share": 0.083,
+      "lines_per_s": 17.67
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 21842,
+      "layout_samples": 147,
+      "texts": 153,
+      "contrast_checked": 124,
+      "errors": 1,
+      "warnings": 4
+    },
+    "nodes": 2264,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b10": 40.2,
+        "b11": 49.2,
+        "b12": 25.4,
+        "b13": 33.6
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 11,
+      "lines_seen": 7,
+      "blank_beats": [],
+      "blank_measured": 11
+    },
+    "foreign": {
+      "measured_beats": 11,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 30,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b08": 0.0168,
+        "b09": 0.0163,
+        "b10": 0.0272,
+        "b11": 0.0292,
+        "b12": 0.0336,
+        "b13": 0.0228,
+        "b14": 0.0213,
+        "b15": 0.0266,
+        "b16": 0.0285,
+        "b17": 0.0285,
+        "b18": 0.0318
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 1,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.01,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 11,
+      "sharpness": {
+        "b10": 1.162,
+        "b11": 1.062,
+        "b12": 1.34,
+        "b13": 1.133
+      },
+      "blurred_beats": [],
+      "blur_measured": 4
+    },
+    "tone": {
+      "value_script_beats": 11,
+      "tone_vs_reference": {
+        "brightness": 0.191,
+        "saturation": 0.621,
+        "dark_share": 1.0,
+        "light_share": 0.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\gps-slice-sonnet\\qa\\sheets\\b18.jpg"
+  ],
+  "build_hash": "d3d5d823ce08d709"
+}

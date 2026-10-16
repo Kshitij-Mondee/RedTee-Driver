@@ -1,0 +1,586 @@
+{
+ "scene": "weaving_shed",
+ "camera_spec": {
+  "camera": {
+   "x": -0.3,
+   "y": 1.2,
+   "eye": 1.6,
+   "yaw": 6,
+   "hfov": 55,
+   "horizon_pct": 46.0
+  },
+  "walls": [
+   {
+    "name": "end wall (lime-washed stone, y 15.0)",
+    "axis": "y",
+    "at": 15.0
+   }
+  ],
+  "points": {
+   "end_wall_L_floor": [
+    -3,
+    15,
+    0
+   ],
+   "end_wall_R_floor": [
+    3,
+    15,
+    0
+   ],
+   "end_wall_L_beam": [
+    -3,
+    15,
+    3.5
+   ],
+   "end_wall_R_beam": [
+    3,
+    15,
+    3.5
+   ],
+   "alley_L_far_floor": [
+    -0.4,
+    13.3,
+    0
+   ],
+   "alley_R_far_floor": [
+    0.4,
+    13.3,
+    0
+   ],
+   "loomR1_front_near_top": [
+    0.4,
+    4.6,
+    1.2
+   ],
+   "loomR1_front_near_floor": [
+    0.4,
+    4.6,
+    0
+   ],
+   "loomR4_front_far_top": [
+    0.4,
+    13.3,
+    1.2
+   ],
+   "loomL1_front_near_top": [
+    -0.4,
+    4.6,
+    1.2
+   ],
+   "loomL4_front_far_top": [
+    -0.4,
+    13.3,
+    1.2
+   ],
+   "loomR3_near": [
+    0.4,
+    8.95,
+    1.2
+   ],
+   "loomR3_far": [
+    0.4,
+    11.1,
+    1.2
+   ],
+   "col_R_base": [
+    2.2,
+    10.8,
+    0
+   ],
+   "col_R_top": [
+    2.2,
+    10.8,
+    3.5
+   ],
+   "col_L_base": [
+    -2.2,
+    10.8,
+    0
+   ],
+   "col_L_base2": [
+    -2.2,
+    7.2,
+    0
+   ],
+   "col_R_base2": [
+    2.2,
+    7.2,
+    0
+   ],
+   "col_R_top2": [
+    2.2,
+    7.2,
+    3.5
+   ],
+   "shaft_R_near": [
+    1.4,
+    4.6,
+    3.0
+   ],
+   "shaft_R_far": [
+    1.4,
+    13.3,
+    3.0
+   ],
+   "shaft_L_near": [
+    -1.4,
+    4.6,
+    3.0
+   ],
+   "gutter_beam_near": [
+    -3,
+    7.2,
+    3.5
+   ],
+   "gutter_beam_near_R": [
+    3,
+    7.2,
+    3.5
+   ],
+   "ridge_near": [
+    -3,
+    9.0,
+    4.6
+   ],
+   "W_head_top": [
+    0.1,
+    9.2,
+    1.62
+   ],
+   "W_head_centre": [
+    0.1,
+    9.2,
+    1.5
+   ],
+   "W_feet": [
+    0.1,
+    9.2,
+    0
+   ],
+   "O_head_top": [
+    -0.4,
+    14.1,
+    1.75
+   ],
+   "O_head_centre": [
+    -0.4,
+    14.1,
+    1.62
+   ],
+   "O_feet": [
+    -0.4,
+    14.1,
+    0
+   ],
+   "door_end_L": [
+    -2.8,
+    15,
+    0
+   ],
+   "door_end_R_top": [
+    -1.6,
+    15,
+    2.4
+   ],
+   "gas_bracket": [
+    -2.6,
+    15,
+    2.4
+   ],
+   "beltR_y8_9_top": [
+    1.1,
+    8.85,
+    3.0
+   ],
+   "beltR_y8_9_bottom": [
+    1.1,
+    8.85,
+    1.0
+   ],
+   "beltR_y11_top": [
+    1.1,
+    11.0,
+    3.0
+   ],
+   "beltR_y11_bottom": [
+    1.1,
+    11.0,
+    1.0
+   ],
+   "beltR_y13_top": [
+    1.1,
+    13.1,
+    3.0
+   ],
+   "beltL_y8_9_top": [
+    -1.1,
+    8.85,
+    3.0
+   ],
+   "beltL_y11_top": [
+    -1.1,
+    11.0,
+    3.0
+   ],
+   "beltL_y11_bottom": [
+    -1.1,
+    11.0,
+    1.0
+   ],
+   "beltL_y13_top": [
+    -1.1,
+    13.1,
+    3.0
+   ],
+   "col_L_end": [
+    -2.2,
+    14.4,
+    0
+   ],
+   "col_R_end": [
+    2.2,
+    14.4,
+    0
+   ],
+   "rooflight_far": [
+    0,
+    13.0,
+    4.4
+   ],
+   "rooflight_far_L": [
+    -3,
+    13.0,
+    4.4
+   ]
+  },
+  "behind": [
+   "W_head_top",
+   "W_head_centre",
+   "O_head_top",
+   "O_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 766,
+   "along_x": 18506,
+   "horizon_y": 497
+  },
+  "points": {
+   "end_wall_L_floor": {
+    "x": 394,
+    "y": 716,
+    "where": "frame",
+    "depth": 13.44
+   },
+   "end_wall_R_floor": {
+    "x": 1201,
+    "y": 707,
+    "where": "frame",
+    "depth": 14.07
+   },
+   "end_wall_L_beam": {
+    "x": 394,
+    "y": 236,
+    "where": "frame",
+    "depth": 13.44
+   },
+   "end_wall_R_beam": {
+    "x": 1201,
+    "y": 248,
+    "where": "frame",
+    "depth": 14.07
+   },
+   "alley_L_far_floor": {
+    "x": 751,
+    "y": 742,
+    "where": "frame",
+    "depth": 12.02
+   },
+   "alley_R_far_floor": {
+    "x": 873,
+    "y": 741,
+    "where": "frame",
+    "depth": 12.11
+   },
+   "loomR1_front_near_top": {
+    "x": 1142,
+    "y": 710,
+    "where": "frame",
+    "depth": 3.45
+   },
+   "loomR1_front_near_floor": {
+    "x": 1142,
+    "y": 1351,
+    "where": "outside",
+    "depth": 3.45
+   },
+   "loomR4_front_far_top": {
+    "x": 873,
+    "y": 558,
+    "where": "frame",
+    "depth": 12.11
+   },
+   "loomL1_front_near_top": {
+    "x": 711,
+    "y": 716,
+    "where": "frame",
+    "depth": 3.37
+   },
+   "loomL4_front_far_top": {
+    "x": 751,
+    "y": 558,
+    "where": "frame",
+    "depth": 12.02
+   },
+   "loomR3_near": {
+    "x": 933,
+    "y": 592,
+    "where": "frame",
+    "depth": 7.78
+   },
+   "loomR3_far": {
+    "x": 897,
+    "y": 571,
+    "where": "frame",
+    "depth": 9.92
+   },
+   "col_R_base": {
+    "x": 1239,
+    "y": 798,
+    "where": "frame",
+    "depth": 9.81
+   },
+   "col_R_top": {
+    "x": 1239,
+    "y": 140,
+    "where": "frame",
+    "depth": 9.81
+   },
+   "col_L_base": {
+    "x": 389,
+    "y": 812,
+    "where": "frame",
+    "depth": 9.35
+   },
+   "col_L_base2": {
+    "x": 155,
+    "y": 1008,
+    "where": "frame",
+    "depth": 5.77
+   },
+   "col_R_base2": {
+    "x": 1510,
+    "y": 971,
+    "where": "frame",
+    "depth": 6.23
+   },
+   "col_R_top2": {
+    "x": 1510,
+    "y": -66,
+    "where": "overscan",
+    "depth": 6.23
+   },
+   "shaft_R_near": {
+    "x": 1652,
+    "y": -229,
+    "where": "outside",
+    "depth": 3.56
+   },
+   "shaft_R_far": {
+    "x": 1024,
+    "y": 285,
+    "where": "frame",
+    "depth": 12.21
+   },
+   "shaft_L_near": {
+    "x": 142,
+    "y": -294,
+    "where": "outside",
+    "depth": 3.27
+   },
+   "gutter_beam_near": {
+    "x": -115,
+    "y": -120,
+    "where": "overscan",
+    "depth": 5.68
+   },
+   "gutter_beam_near_R": {
+    "x": 1736,
+    "y": -58,
+    "where": "overscan",
+    "depth": 6.31
+   },
+   "ridge_near": {
+    "x": 96,
+    "y": -243,
+    "where": "outside",
+    "depth": 7.48
+   },
+   "W_head_top": {
+    "x": 859,
+    "y": 492,
+    "where": "frame",
+    "depth": 8.0,
+    "behind": {
+     "wall": "end wall (lime-washed stone, y 15.0)",
+     "at": [
+      0.39,
+      15.0,
+      1.63
+     ]
+    }
+   },
+   "W_head_centre": {
+    "x": 859,
+    "y": 520,
+    "where": "frame",
+    "depth": 8.0,
+    "behind": {
+     "wall": "end wall (lime-washed stone, y 15.0)",
+     "at": [
+      0.39,
+      15.0,
+      1.43
+     ]
+    }
+   },
+   "W_feet": {
+    "x": 859,
+    "y": 866,
+    "where": "frame",
+    "depth": 8.0
+   },
+   "O_head_top": {
+    "x": 752,
+    "y": 475,
+    "where": "frame",
+    "depth": 12.82,
+    "behind": {
+     "wall": "end wall (lime-washed stone, y 15.0)",
+     "at": [
+      -0.41,
+      15.0,
+      1.76
+     ]
+    }
+   },
+   "O_head_centre": {
+    "x": 752,
+    "y": 494,
+    "where": "frame",
+    "depth": 12.82,
+    "behind": {
+     "wall": "end wall (lime-washed stone, y 15.0)",
+     "at": [
+      -0.41,
+      15.0,
+      1.62
+     ]
+    }
+   },
+   "O_feet": {
+    "x": 752,
+    "y": 727,
+    "where": "frame",
+    "depth": 12.82
+   },
+   "door_end_L": {
+    "x": 422,
+    "y": 716,
+    "where": "frame",
+    "depth": 13.46
+   },
+   "door_end_R_top": {
+    "x": 589,
+    "y": 388,
+    "where": "frame",
+    "depth": 13.59
+   },
+   "gas_bracket": {
+    "x": 450,
+    "y": 387,
+    "where": "frame",
+    "depth": 13.48
+   },
+   "beltR_y8_9_top": {
+    "x": 1101,
+    "y": 164,
+    "where": "frame",
+    "depth": 7.75
+   },
+   "beltR_y8_9_bottom": {
+    "x": 1101,
+    "y": 639,
+    "where": "frame",
+    "depth": 7.75
+   },
+   "beltR_y11_top": {
+    "x": 1029,
+    "y": 236,
+    "where": "frame",
+    "depth": 9.89
+   },
+   "beltR_y11_bottom": {
+    "x": 1029,
+    "y": 609,
+    "where": "frame",
+    "depth": 9.89
+   },
+   "beltR_y13_top": {
+    "x": 983,
+    "y": 281,
+    "where": "frame",
+    "depth": 11.98
+   },
+   "beltL_y8_9_top": {
+    "x": 569,
+    "y": 154,
+    "where": "frame",
+    "depth": 7.52
+   },
+   "beltL_y11_top": {
+    "x": 613,
+    "y": 230,
+    "where": "frame",
+    "depth": 9.66
+   },
+   "beltL_y11_bottom": {
+    "x": 613,
+    "y": 611,
+    "where": "frame",
+    "depth": 9.66
+   },
+   "beltL_y13_top": {
+    "x": 640,
+    "y": 277,
+    "where": "frame",
+    "depth": 11.75
+   },
+   "col_L_end": {
+    "x": 494,
+    "y": 725,
+    "where": "frame",
+    "depth": 12.93
+   },
+   "col_R_end": {
+    "x": 1112,
+    "y": 717,
+    "where": "frame",
+    "depth": 13.39
+   },
+   "rooflight_far": {
+    "x": 813,
+    "y": 58,
+    "where": "frame",
+    "depth": 11.77
+   },
+   "rooflight_far_L": {
+    "x": 329,
+    "y": 46,
+    "where": "frame",
+    "depth": 11.45
+   }
+  }
+ }
+}

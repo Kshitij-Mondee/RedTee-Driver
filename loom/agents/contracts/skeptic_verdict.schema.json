@@ -1,0 +1,74 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "skeptic_verdict",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "verdict",
+  "checked",
+  "findings"
+ ],
+ "properties": {
+  "verdict": {
+   "enum": [
+    "pass",
+    "revise"
+   ]
+  },
+  "checked": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "findings": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "fact",
+     "problem",
+     "fix"
+    ],
+    "properties": {
+     "fact": {
+      "type": "string"
+     },
+     "problem": {
+      "enum": [
+       "overreach",
+       "missing_caveat",
+       "number_unsourced",
+       "contested",
+       "myth",
+       "unclear",
+       "other"
+      ]
+     },
+     "fix": {
+      "type": "string"
+     },
+     "severity": {
+      "enum": [
+       "blocker",
+       "major",
+       "minor"
+      ]
+     }
+    }
+   }
+  },
+  "coverage_gaps": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "unverifiable": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

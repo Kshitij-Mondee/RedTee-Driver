@@ -1,0 +1,13 @@
+{
+  "verdict": "ship",
+  "reviewer": "Claude (demo run)",
+  "findings": [
+    {"beat": "b08", "severity": "blocker", "problem": "the b09 familiarity gauge was visible during b08, covering Maya", "fix": "engine fix: exit clips moved to a separate wrapper (runtime/motion.js clipFor) so an exit can never cancel an entrance clip", "file": "runtime/motion.js", "status": "fixed"},
+    {"beat": "b13", "severity": "major", "problem": "the compare rows from b12 lingered under the steps list", "fix": "compare.two rows exit with their panels (displace)", "file": "runtime/templates/core.js", "status": "fixed"},
+    {"beat": "b06", "severity": "major", "problem": "Manim title clipped at the top; Manim text used a system font", "fix": "title placed from axes coordinates; style fonts converted to TTF and registered with Pango", "file": "scenes/b06.py, loom/manim_bridge.py", "status": "fixed"},
+    {"beat": "b06, b14", "severity": "blocker", "problem": "Manim clips previewed but were missing from the rendered MP4", "fix": "compose writes media into the static HTML (HyperFrames pre-extracts frames), runtime reparents them into the canvas; render now verifies the MP4 against checked frames", "file": "loom/compose.py, runtime/overlay.js, loom/render.py", "status": "fixed"},
+    {"beat": "b10", "severity": "minor", "problem": "the 'Familiar' tag sat under the cover", "fix": "tag moved above the page", "file": "scenes/b10.js", "status": "fixed"},
+    {"beat": "b13, b17", "severity": "minor", "problem": "content floated in the top half of the frame", "fix": "list.steps and quiz.question vertically balance their blocks", "file": "runtime/templates", "status": "fixed"},
+    {"beat": "b04", "severity": "minor", "problem": "the recall bar reads small in a wide frame", "fix": "consider a taller bar or a day axis under it in a future template revision", "file": "runtime/blueprints/heroes.js", "status": "open"}
+  ]
+}

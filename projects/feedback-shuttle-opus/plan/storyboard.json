@@ -1,0 +1,1410 @@
+{
+  "style": "story-cartoon",
+  "concept": "One ordinary late report told twice. Leo's Thursday message gets a verdict that changes his feelings, not his actions; then the same desk, the same wall planner, and a row of three paper marks on the table edge (what he did, what it caused, ask) built one card at a time until the next step is a pin on Tuesday. Two weeks on, the message comes on Tuesday.",
+  "chrome": {
+    "section_labels": false
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "presenter",
+        "x": 0,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "bookends",
+        "note": "The presenter to camera with her card, b01 and b15."
+      },
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "two-person scene",
+        "note": "One office desk seen as a two-shot: You screen left facing right, Leo screen right facing left (flip), busts above the table top; the week planner hangs on the wall between and above their heads; the marks rail stands on the table edge between them. Same station for the hook, the build and the payoff."
+      },
+      {
+        "id": "leo",
+        "x": 2200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "close on Leo",
+        "note": "Leo alone at his side of the same desk, a closer bust on the right third, still facing left; the left two thirds hold the dials, the name tag and the action cloud. Reached by a cut, which keeps the 180 degree line."
+      },
+      {
+        "id": "quiz",
+        "x": 4400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "stopping check",
+        "note": "Two lines as two option cards, nothing else in frame."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "None: a literal workplace moment, told twice.",
+    "setting": "An open-plan office desk shared by two teammates, with a wall week planner.",
+    "arc": "A verdict changes feelings, not actions; the same moment rebuilt as what he did, what it caused, a question and an agreed next step; two weeks on the warning comes on Tuesday.",
+    "cast": [
+      {
+        "name": "Presenter",
+        "member": "woman",
+        "skin": 0,
+        "cloth": "accent3",
+        "role": "the presenter, b01 and b15 only, never in the office scenes"
+      },
+      {
+        "name": "You",
+        "member": "woman",
+        "skin": 3,
+        "cloth": "cloth",
+        "role": "the feedback giver, the viewer's stand-in; screen left facing right in every desk beat"
+      },
+      {
+        "name": "Leo",
+        "member": "man",
+        "skin": 1,
+        "cloth": "cloth2",
+        "role": "teammate who receives the feedback; screen right facing left (flip true) in every beat, including his close"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "planner",
+      "what": "The wall week planner between the two heads: Thursday circled as the due day, pages flip two weeks, the client call card slides off Thursday to next week, a check-in pin lands on Tuesday.",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b08",
+        "b10",
+        "b14"
+      ]
+    },
+    {
+      "id": "marks_rail",
+      "what": "Three paper cards standing on the table edge: 1 What he did, 2 What it caused, 3 Ask. Built one per beat b07 to b09, held b10, each lit as named in b11, recalled as the presenter's card lines in b15.",
+      "kind": "list",
+      "beats": [
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b15"
+      ]
+    },
+    {
+      "id": "name_tag",
+      "what": "The word proactive leaves the verdict bubble and sticks on Leo as a name tag, holds while the action cloud asks which action, then peels off when the first mark replaces it.",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b06",
+        "b07"
+      ]
+    },
+    {
+      "id": "two_shot",
+      "what": "The same desk two-shot, You left and Leo right, same looks and sides: hook, build of the marks, payoff.",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b03",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b14"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "The one join material: a paper page turn at the chapter into the check and at the time skip into the payoff.",
+      "kind": "join",
+      "beats": [
+        "b12",
+        "b14"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "the quoted verdict",
+      "why": "a pale open: the line that changed nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the still actions dial, then the name tag, then each mark as it lands",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b12",
+      "band": "mid",
+      "accent": "withheld through the pause, then on the takeaway",
+      "why": "both lines weigh the same until the answer"
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "break": true,
+      "accent": "the Tuesday message at the pin",
+      "why": "a lift at the payoff: the same desk, now with time to fix it"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "desk_set",
+        "what": "The office set both desk stations share: surface2 wall with one window, a table whose top edge runs across the frame with a field2 front (one value step from the wall), drawn so that people placed before it are hidden below the table top. Two framings: two_shot (table top about y 880, room for You at x about 560 and Leo at x about 1360, busts 600 px) and leo_close (Leo's end of the same table, a closer framing, his closed laptop edge visible). Optional table-edge nameplates You and Leo for their first appearance. No people drawn in the kit; no accent anywhere in the set.",
+        "states": [
+          "two_shot",
+          "leo_close",
+          "nameplates"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b14"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "week_planner",
+        "what": "A paper wall week planner hung between and above the two heads (about 560 x 220, lower edge 35 px or more above the hair): a header strip in accent3, five day columns Mon Tue Wed Thu Fri in Patrick Hand, a report note on Thursday. States: due_thu (a hand-drawn accent circle round Thu), flip (the page lifts and turns, twice, for two weeks later, with a small date tab changing), call_card (a small Client call card on Thursday) and call_moved (it slides right off Thursday onto a Next week tab), tue_pin (a check-in pin drops on Tuesday), tue_message (a small envelope or alert lands at the Tuesday pin). The accent is used by at most one of these at a time.",
+        "states": [
+          "due_thu",
+          "flip",
+          "call_card",
+          "call_moved",
+          "tue_pin",
+          "tue_message"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b08",
+          "b10",
+          "b14"
+        ],
+        "size": [
+          560,
+          220
+        ]
+      },
+      {
+        "id": "leo_laptop_message",
+        "what": "Leo's open laptop on the table (screen surface2, facing him, three-quarter so the viewer can read it) with a chat message that pops up on it and also floats as a short paper message bubble toward You. Real words only: Thursday version \"Report due today will be late.\"; Tuesday version \"Heads up: Thursday's report is slipping.\". States: idle, message_thu, message_tue.",
+        "states": [
+          "idle",
+          "message_thu",
+          "message_tue"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b14"
+        ],
+        "size": [
+          420,
+          300
+        ]
+      },
+      {
+        "id": "speech_bubble",
+        "what": "A paper speech bubble with a tail toward its speaker, Nunito body text in ink, 42 characters a line at most. You's bubbles are accent3 (ink text), Leo's are surface. Variants: verdict (\"Be more proactive.\"), question (\"What would help you flag a slip sooner?\"), answer (Leo: \"A midpoint check-in?\"). States: in (pops on its word), out.",
+        "states": [
+          "in",
+          "out"
+        ],
+        "beats": [
+          "b02",
+          "b05",
+          "b09",
+          "b10"
+        ],
+        "size": [
+          520,
+          160
+        ]
+      },
+      {
+        "id": "name_tag",
+        "what": "A stick-on name tag, white paper with a slate header band, the word Proactive hand-lettered in Patrick Hand on it; it can sit inside the verdict bubble as a word, fly out and stick on Leo's chest, and peel off at one corner and fall. States: in_bubble, stuck, peeling.",
+        "states": [
+          "in_bubble",
+          "stuck",
+          "peeling"
+        ],
+        "beats": [
+          "b05",
+          "b06",
+          "b07"
+        ],
+        "size": [
+          260,
+          150
+        ]
+      },
+      {
+        "id": "marks_rail",
+        "what": "Three standing paper cards on the table edge in a row between the two people (each about 300 x 110, bottom on the table top, above the caption band), a numeral and a short label in each: \"1 What he did\", \"2 What it caused\", \"3 Ask\". Each card drops in on its word. A lit state brings one card forward (scale and the accent outline or numeral) while the others stay paper; only one lit at a time. States: empty, one, two, three, lit_1, lit_2, lit_3.",
+        "states": [
+          "empty",
+          "one",
+          "two",
+          "three",
+          "lit_1",
+          "lit_2",
+          "lit_3"
+        ],
+        "beats": [
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11"
+        ],
+        "size": [
+          1000,
+          120
+        ]
+      }
+    ],
+    "notes": "People are never in the kit: You and Leo are kit.peep busts placed by each scene with the literal story.cast look (You: woman, skin 3, cloth; Leo: man, skin 1, cloth2, flip true)."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "presenter",
+      "props": {
+        "cast": "Presenter",
+        "kicker": "One line",
+        "card": {
+          "lines": [
+            "\"Be more proactive.\""
+          ]
+        }
+      },
+      "subject": "The presenter admits the line she has said",
+      "world": "direct to camera, the quote on her card",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "hook",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "card"
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "Leo's Thursday message gets a verdict",
+      "world": "the desk two-shot, the planner above them",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "planner_thu_circle",
+      "design": {
+        "treatment": "The two-shot with nameplates arrives; Leo's laptop pings and his message floats to You; the planner's Thursday gets circled as the due day; You's verdict bubble pops; Leo's head sinks.",
+        "why_motion": "a sequence of events between two people: message, verdict, reaction",
+        "elements": [
+          {
+            "name": "set",
+            "label": "desk_set two_shot with nameplates"
+          },
+          {
+            "name": "you",
+            "label": "You, peep woman, skin 3, cloth, screen left"
+          },
+          {
+            "name": "leo",
+            "label": "Leo, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "planner",
+            "label": "week_planner"
+          },
+          {
+            "name": "planner_thu_circle",
+            "label": "accent circle round Thu"
+          },
+          {
+            "name": "laptop",
+            "label": "leo_laptop_message message_thu"
+          },
+          {
+            "name": "verdict_bubble",
+            "label": "speech_bubble verdict, from You"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Leo messages you",
+            "element": "laptop",
+            "action": "the message pops on Leo's laptop and floats toward You",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Thursday",
+            "element": "planner_thu_circle",
+            "action": "Thu is circled on the planner",
+            "motion": "draw the circle"
+          },
+          {
+            "t_anchor": "will be late",
+            "element": "you",
+            "action": "You turns to explaining face",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "be more proactive",
+            "element": "verdict_bubble",
+            "action": "You's verdict bubble pops toward Leo",
+            "motion": "pop with overshoot"
+          },
+          {
+            "t_anchor": "He nods",
+            "element": "leo",
+            "action": "Leo nods once",
+            "motion": "small dip and return"
+          },
+          {
+            "t_anchor": "feels bad",
+            "element": "leo",
+            "action": "Leo's head sinks, eyes close (neutral face reads as downcast)",
+            "motion": "sink 20 px and tilt"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "planner_thu_circle",
+            "laptop",
+            "verdict_bubble"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "desk",
+      "keep": [
+        "set",
+        "you",
+        "leo",
+        "planner",
+        "laptop"
+      ],
+      "subject": "Two weeks later, the same message on the same Thursday",
+      "world": "the same desk, time skips on the planner",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "layered",
+      "light": "even",
+      "intent": "callback",
+      "accent_on": "planner_thu_circle",
+      "design": {
+        "treatment": "The verdict bubble and the old circle leave; the planner pages flip twice with a Two weeks later tab; Thu is circled again; the same message pops on the same laptop; You's face goes surprised.",
+        "why_motion": "the repetition IS the point: the same event on a later page",
+        "elements": [
+          {
+            "name": "planner_flip",
+            "label": "two page turns, tab: Two weeks later"
+          },
+          {
+            "name": "planner_thu_circle",
+            "label": "Thu circled again"
+          },
+          {
+            "name": "message_again",
+            "label": "the same message_thu"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Two weeks later",
+            "element": "planner_flip",
+            "action": "pages flip twice, the tab reads Two weeks later",
+            "motion": "page flip"
+          },
+          {
+            "t_anchor": "Thursday again",
+            "element": "planner_thu_circle",
+            "action": "Thu circled again",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Same message",
+            "element": "message_again",
+            "action": "the same message pops",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Same surprise",
+            "element": "you",
+            "action": "You's face goes surprised",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "laptop"
+          ],
+          "travelling": [],
+          "retiring": [
+            "verdict_bubble",
+            "planner_thu_circle"
+          ],
+          "incoming": [
+            "planner_flip",
+            "planner_thu_circle",
+            "message_again"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "leo",
+      "subject": "His feelings moved, his actions did not",
+      "world": "a close on Leo at his side of the desk",
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "actions_needle",
+      "design": {
+        "treatment": "Close on Leo (right third, facing left). Two round paper gauges stand on the table to his left, labelled Feelings and Actions. The feelings needle swings down hard; the actions needle twitches and stays exactly where it was, and that still needle is the accent.",
+        "why_motion": "one needle moves and one does not: the contrast is motion",
+        "elements": [
+          {
+            "name": "set",
+            "label": "desk_set leo_close"
+          },
+          {
+            "name": "leo",
+            "label": "Leo close, peep man, skin 1, cloth2, flip"
+          },
+          {
+            "name": "feelings_dial",
+            "label": "gauge labelled Feelings"
+          },
+          {
+            "name": "actions_dial",
+            "label": "gauge labelled Actions"
+          },
+          {
+            "name": "actions_needle",
+            "label": "the needle that does not move"
+          },
+          {
+            "name": "caption_sign",
+            "label": "Feelings changed. Actions didn't."
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "His feelings changed",
+            "element": "feelings_dial",
+            "action": "the feelings needle swings down",
+            "motion": "spring swing"
+          },
+          {
+            "t_anchor": "His actions didn't",
+            "element": "actions_needle",
+            "action": "the actions needle shivers and stays",
+            "motion": "tiny wobble then still"
+          },
+          {
+            "t_anchor": "fix that one sentence",
+            "element": "leo",
+            "action": "Leo looks up, surprised face",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "leo",
+            "feelings_dial",
+            "actions_dial",
+            "actions_needle",
+            "caption_sign"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "leo",
+      "keep": [
+        "set",
+        "leo"
+      ],
+      "subject": "Proactive is a label about Leo",
+      "world": "the same close on Leo",
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "name_tag",
+      "design": {
+        "treatment": "The dials leave. The verdict bubble returns at the left edge; the word Proactive lifts out of it, turns into a name tag and sticks on Leo's chest. A small sign reads Label: who he is. Leo closes up: he leans back and his face goes neutral (closed eyes).",
+        "why_motion": "the word physically becomes a tag on the person",
+        "elements": [
+          {
+            "name": "verdict_bubble",
+            "label": "speech_bubble verdict, tail off screen left"
+          },
+          {
+            "name": "name_tag",
+            "label": "name_tag Proactive"
+          },
+          {
+            "name": "label_sign",
+            "label": "Label: who he is"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Proactive",
+            "element": "name_tag",
+            "action": "the word lifts out of the bubble",
+            "motion": "lift"
+          },
+          {
+            "t_anchor": "a label about Leo",
+            "element": "name_tag",
+            "action": "it flies and sticks on Leo's chest",
+            "motion": "arc travel, slap with overshoot"
+          },
+          {
+            "t_anchor": "not something he did",
+            "element": "label_sign",
+            "action": "the sign appears beside the tag",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "defensive",
+            "element": "leo",
+            "action": "Leo leans back, closed face",
+            "motion": "lean back 30 px"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "leo"
+          ],
+          "travelling": [],
+          "retiring": [
+            "feelings_dial",
+            "actions_dial",
+            "actions_needle",
+            "caption_sign"
+          ],
+          "incoming": [
+            "verdict_bubble",
+            "name_tag",
+            "label_sign"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "leo",
+      "keep": [
+        "set",
+        "leo",
+        "name_tag"
+      ],
+      "subject": "Which action should he fix?",
+      "world": "the same close on Leo",
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "which_action",
+      "design": {
+        "treatment": "The bubble and sign leave; the tag stays. A thought cloud rises above and left of Leo holding four small paper cards with question marks (Start sooner?, Reply faster?, Plan more?, Ask for help?), drifting, none picked; the cloud's title Which action? is the accent. Leo looks from card to card (face explaining then surprised).",
+        "why_motion": "options drifting with none chosen shows there is nothing to do",
+        "elements": [
+          {
+            "name": "action_cloud",
+            "label": "thought cloud with four question cards"
+          },
+          {
+            "name": "which_action",
+            "label": "Which action?"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "doesn't say what to change",
+            "element": "action_cloud",
+            "action": "the cloud puffs up, cards pop in with a stagger",
+            "motion": "pop, gentle drift"
+          },
+          {
+            "t_anchor": "Which action",
+            "element": "which_action",
+            "action": "the title lands",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "should he fix",
+            "element": "leo",
+            "action": "Leo's face goes surprised, looking up at the cards",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "leo",
+            "name_tag"
+          ],
+          "travelling": [],
+          "retiring": [
+            "verdict_bubble",
+            "label_sign"
+          ],
+          "incoming": [
+            "action_cloud",
+            "which_action"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "Start with what he did",
+      "world": "back to the desk two-shot",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "mark_1",
+      "design": {
+        "treatment": "The two-shot again (no nameplates now), the planner above showing Thursday circled in ink, not accent. Leo still wears the Proactive tag at the start; it peels at a corner and falls. In its place mark 1 What he did drops onto the table edge. You speaks: a small quote line \"You told me on Thursday, the due day.\" may sit under the card in Nunito, ink.",
+        "why_motion": "the label is physically replaced by the first mark",
+        "elements": [
+          {
+            "name": "set",
+            "label": "desk_set two_shot"
+          },
+          {
+            "name": "you",
+            "label": "You, peep woman, skin 3, cloth, screen left"
+          },
+          {
+            "name": "leo",
+            "label": "Leo, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "planner",
+            "label": "week_planner, Thu marked in ink"
+          },
+          {
+            "name": "name_tag",
+            "label": "name_tag stuck, then peeling"
+          },
+          {
+            "name": "rail",
+            "label": "marks_rail"
+          },
+          {
+            "name": "mark_1",
+            "label": "1 What he did"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "start with what you saw",
+            "element": "name_tag",
+            "action": "the tag peels off Leo and falls out of frame",
+            "motion": "peel, drop"
+          },
+          {
+            "t_anchor": "You told me on Thursday",
+            "element": "mark_1",
+            "action": "mark 1 drops onto the table edge",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "the due day",
+            "element": "planner",
+            "action": "Thu on the planner gets a small ink tick",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "An action, not a character",
+            "element": "leo",
+            "action": "Leo's face opens (explaining), leaning in",
+            "motion": "lean in, face change"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "name_tag",
+            "rail",
+            "mark_1"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "desk",
+      "keep": [
+        "set",
+        "you",
+        "leo",
+        "planner",
+        "rail",
+        "mark_1"
+      ],
+      "subject": "Next, what it caused",
+      "world": "the same two-shot",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "mark_2",
+      "design": {
+        "treatment": "Mark 2 What it caused drops beside mark 1 (mark 1 goes plain paper). On the planner a small Client call card on Thursday slides right off Thursday onto a Next week tab.",
+        "why_motion": "the impact is a move: the call is pushed off its day",
+        "elements": [
+          {
+            "name": "mark_2",
+            "label": "2 What it caused"
+          },
+          {
+            "name": "call_card",
+            "label": "Client call card on the planner"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the impact",
+            "element": "mark_2",
+            "action": "mark 2 drops into the rail",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "move the client call",
+            "element": "call_card",
+            "action": "the call card slides off Thursday to Next week",
+            "motion": "slide"
+          },
+          {
+            "t_anchor": "short notice",
+            "element": "you",
+            "action": "You explains, a small lean",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "rail",
+            "mark_1"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "mark_2",
+            "call_card"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "desk",
+      "keep": [
+        "set",
+        "you",
+        "leo",
+        "planner",
+        "rail",
+        "mark_1",
+        "mark_2",
+        "call_card"
+      ],
+      "subject": "Then stop telling, and ask",
+      "world": "the same two-shot",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "mark_3",
+      "design": {
+        "treatment": "Mark 3 Ask completes the rail. You's question bubble pops toward Leo: \"What would help you flag a slip sooner?\" Leo looks up (surprised, then explaining).",
+        "why_motion": "a question changes who talks next",
+        "elements": [
+          {
+            "name": "mark_3",
+            "label": "3 Ask"
+          },
+          {
+            "name": "question_bubble",
+            "label": "speech_bubble question, from You"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "and ask",
+            "element": "mark_3",
+            "action": "mark 3 drops into the rail",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "What would help you",
+            "element": "question_bubble",
+            "action": "the question bubble pops toward Leo",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "flag a slip sooner",
+            "element": "leo",
+            "action": "Leo looks up, surprised face",
+            "motion": "face change, small rise"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "rail",
+            "mark_1",
+            "mark_2",
+            "call_card"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "mark_3",
+            "question_bubble"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "desk",
+      "keep": [
+        "set",
+        "you",
+        "leo",
+        "planner",
+        "rail",
+        "mark_1",
+        "mark_2",
+        "mark_3"
+      ],
+      "subject": "Leo suggests the next step and you agree it",
+      "world": "the same two-shot",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "tue_pin",
+      "design": {
+        "treatment": "The question bubble and the call card leave. Leo answers in his own bubble (\"A midpoint check-in?\"), his face explaining. A check-in pin drops on Tuesday on the planner with a small label Next step: midpoint check-in. Both nod (happy faces).",
+        "why_motion": "the agreement is an act: his line, the pin, two nods",
+        "elements": [
+          {
+            "name": "answer_bubble",
+            "label": "speech_bubble answer, from Leo"
+          },
+          {
+            "name": "tue_pin",
+            "label": "check-in pin on Tuesday"
+          },
+          {
+            "name": "next_step_sign",
+            "label": "Next step: midpoint check-in"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "knows his week",
+            "element": "leo",
+            "action": "Leo turns to explaining face",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "suggests a midpoint check-in",
+            "element": "answer_bubble",
+            "action": "Leo's bubble pops toward You",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "midpoint check-in",
+            "element": "tue_pin",
+            "action": "the pin drops on Tuesday",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "agree it together",
+            "element": "you",
+            "action": "both nod, happy faces",
+            "motion": "nod"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "rail",
+            "mark_1",
+            "mark_2",
+            "mark_3"
+          ],
+          "travelling": [],
+          "retiring": [
+            "question_bubble",
+            "call_card"
+          ],
+          "incoming": [
+            "answer_bubble",
+            "tue_pin",
+            "next_step_sign"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "desk",
+      "keep": [
+        "set",
+        "you",
+        "leo",
+        "planner",
+        "rail",
+        "mark_1",
+        "mark_2",
+        "mark_3",
+        "tue_pin"
+      ],
+      "subject": "The shape as one row",
+      "world": "the same two-shot, an accent bar walks under the rail",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "intent": "process_hold",
+      "accent_on": "lit_mark",
+      "design": {
+        "treatment": "The answer bubble and sign leave; each card lifts as it is named while one accent bar walks under it (only one lit at a time), and on the last line the Tuesday pin pulses once so ask and next step read together.",
+        "why_motion": "the moving light walks the eye along the order",
+        "elements": [
+          {
+            "name": "lit_mark",
+            "label": "the accent bar under the named card, moving 1 to 2 to 3"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "What he did",
+            "element": "mark_1",
+            "action": "card 1 lifts, the bar appears under it",
+            "motion": "lift and accent"
+          },
+          {
+            "t_anchor": "What it caused",
+            "element": "mark_2",
+            "action": "card 2 lifts, the bar moves under it, card 1 settles",
+            "motion": "lift and accent"
+          },
+          {
+            "t_anchor": "Then a question",
+            "element": "mark_3",
+            "action": "card 3 lifts, the bar moves under it",
+            "motion": "lift and accent"
+          },
+          {
+            "t_anchor": "one next step you agree",
+            "element": "tue_pin",
+            "action": "the Tuesday pin pulses",
+            "motion": "pulse"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "rail",
+            "mark_1",
+            "mark_2",
+            "mark_3",
+            "tue_pin"
+          ],
+          "travelling": [],
+          "retiring": [
+            "answer_bubble",
+            "next_step_sign"
+          ],
+          "incoming": [
+            "lit_mark"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "quiz",
+      "props": {
+        "kicker": "Quick check",
+        "question": "Which one gives Leo something to do?",
+        "say_question": "Which one gives Leo something to do",
+        "options": [
+          {
+            "text": "\"Be more proactive.\"",
+            "say": "Be more proactive"
+          },
+          {
+            "text": "Due day, call moved, what would help?",
+            "say": "You told me on the due day"
+          }
+        ],
+        "pause_label": "Pause and decide"
+      },
+      "subject": "Two lines side by side",
+      "world": "a plain quiz space",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "intent": "hold"
+    },
+    {
+      "beat": "b13",
+      "kind": "template",
+      "template": "quiz.answer",
+      "station": "quiz",
+      "props": {
+        "question": "Which one gives Leo something to do?",
+        "options": [
+          {
+            "text": "\"Be more proactive.\""
+          },
+          {
+            "text": "Due day, call moved, what would help?"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "B",
+        "tempting": 0,
+        "why_not": "Leo reacts, but reacting isn't knowing what to change.",
+        "say_why_not": "reacting isn't knowing what to change",
+        "explanation": "What he did, what it caused, and a question: an action to take.",
+        "say_explanation": "B gives him an action"
+      },
+      "subject": "B gives him an action",
+      "world": "the same quiz space",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "explanation"
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "Two weeks on, the warning comes on Tuesday",
+      "world": "the opening desk two-shot again",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "layered",
+      "light": "even",
+      "intent": "callback",
+      "accent_on": "tue_message",
+      "design": {
+        "treatment": "The b02 framing exactly (same people, sides, planner, laptop) so it reads as the same place. The planner shows the Tuesday pin. On Tuesday the laptop pings early with \"Heads up: Thursday's report is slipping.\"; a small alert lands at the Tuesday pin (accent). A sign Tuesday: heads up. Both lean in together over the planner, faces explaining then happy: there is time.",
+        "why_motion": "the same event, now early: the change must be seen happening",
+        "elements": [
+          {
+            "name": "set",
+            "label": "desk_set two_shot"
+          },
+          {
+            "name": "you",
+            "label": "You, peep woman, skin 3, cloth, screen left"
+          },
+          {
+            "name": "leo",
+            "label": "Leo, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "planner",
+            "label": "week_planner with the Tuesday pin"
+          },
+          {
+            "name": "laptop",
+            "label": "leo_laptop_message message_tue"
+          },
+          {
+            "name": "tue_message",
+            "label": "the alert at the Tuesday pin"
+          },
+          {
+            "name": "heads_up_sign",
+            "label": "Tuesday: heads up"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Two weeks on",
+            "element": "planner",
+            "action": "the planner settles with the Tuesday pin",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "his message comes early",
+            "element": "laptop",
+            "action": "the Tuesday message pops on the laptop",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "the midpoint",
+            "element": "tue_message",
+            "action": "the alert lands at the Tuesday pin",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "time to fix it",
+            "element": "you",
+            "action": "both lean in, happy faces",
+            "motion": "lean, face change"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "you",
+            "leo",
+            "planner",
+            "laptop",
+            "tue_message",
+            "heads_up_sign"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "avatar",
+      "station": "presenter",
+      "props": {
+        "cast": "Presenter",
+        "kicker": "Next time",
+        "card": {
+          "lines": [
+            "What they did.",
+            "What it caused.",
+            "Ask."
+          ]
+        }
+      },
+      "subject": "The presenter closes with the three marks",
+      "world": "direct to camera, the three lines on her card",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "card"
+    }
+  ]
+}

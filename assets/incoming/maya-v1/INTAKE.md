@@ -1,0 +1,398 @@
+# Intake: maya-v1
+
+Source: `maya-v1.zip`. 55 asset(s), 24 failing.
+
+- **FAIL** `assets/maya/maya_story_face_expressions` (set, 17 colours; 0 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_face_features` (set, 10 colours; 0 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_face_kit` (set, 17 colours; 0 slot/anchor ids)
+  - 561 KB is over the 400 KB budget for a set
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_hands` (set, 12 colours; 44 slot/anchor ids)
+  - 477 KB is over the 400 KB budget for a set
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6e747a is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_hands_l` (set, 12 colours; 22 slot/anchor ids)
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6e747a is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_hands_r` (set, 12 colours; 22 slot/anchor ids)
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6e747a is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_pose_pointing_screen_right` (set, 24 colours; 16 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #3e3024 is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #4a6aa0 is not a contract slot for a set
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #7a6250 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_pose_presenting_open_palm` (set, 24 colours; 16 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #3e3024 is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #4a6aa0 is not a contract slot for a set
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #7a6250 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_pose_rig_neutral` (set, 24 colours; 16 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #3e3024 is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #4a6aa0 is not a contract slot for a set
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #7a6250 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_pose_standing_idle` (set, 24 colours; 17 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #3e3024 is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #4a6aa0 is not a contract slot for a set
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #7a6250 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **FAIL** `assets/maya/maya_story_pose_waving` (set, 24 colours; 16 slot/anchor ids)
+  - colour #1a1a1a is not a contract slot for a set
+  - colour #22365c is not a contract slot for a set
+  - colour #24180f is not a contract slot for a set
+  - colour #2f4a7a is not a contract slot for a set
+  - colour #3e3024 is not a contract slot for a set
+  - colour #4a6a8a is not a contract slot for a set
+  - colour #4a6aa0 is not a contract slot for a set
+  - colour #5a4636 is not a contract slot for a set
+  - colour #6a4a36 is not a contract slot for a set
+  - colour #7a6250 is not a contract slot for a set
+  - colour #9aa0a6 is not a contract slot for a set
+  - colour #b8645a is not a contract slot for a set
+  - colour #b8b0a0 is not a contract slot for a set
+  - colour #c98e70 is not a contract slot for a set
+  - colour #d0d4d8 is not a contract slot for a set
+  - colour #d8d2c4 is not a contract slot for a set
+  - colour #e8998a is not a contract slot for a set
+  - colour #f0ece2 is not a contract slot for a set
+  - colour #fbe3cf is not a contract slot for a set
+- **PASS** `maya/badge` (character_part, 6 colours; 4 slot/anchor ids)
+- **PASS** `maya/brow_l` (character_part, 2 colours; 1 slot/anchor ids)
+- **PASS** `maya/brow_r` (character_part, 2 colours; 1 slot/anchor ids)
+- **PASS** `maya/collar` (character_part, 8 colours; 2 slot/anchor ids)
+- **PASS** `maya/cuff_l` (character_part, 3 colours; 1 slot/anchor ids)
+- **PASS** `maya/cuff_r` (character_part, 3 colours; 1 slot/anchor ids)
+- **PASS** `maya/earring_l` (character_part, 3 colours; 1 slot/anchor ids)
+- **PASS** `maya/earring_r` (character_part, 3 colours; 1 slot/anchor ids)
+- **PASS** `maya/eye_l` (character_part, 5 colours; 1 slot/anchor ids)
+- **PASS** `maya/eye_r` (character_part, 5 colours; 1 slot/anchor ids)
+- **PASS** `maya/foot_l` (character_part, 6 colours; 2 slot/anchor ids)
+- **PASS** `maya/foot_r` (character_part, 6 colours; 2 slot/anchor ids)
+- **PASS** `maya/forearm_l` (character_part, 3 colours; 2 slot/anchor ids)
+- **PASS** `maya/forearm_r` (character_part, 3 colours; 2 slot/anchor ids)
+- **PASS** `maya/hair_back` (character_part, 4 colours; 1 slot/anchor ids)
+- **PASS** `maya/hand_l_point` (character_part, 5 colours; 2 slot/anchor ids)
+- **PASS** `maya/hand_l_relaxed` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/hand_r_relaxed` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/head` (character_part, 11 colours; 11 slot/anchor ids)
+- **PASS** `maya/mouth` (character_part, 4 colours; 1 slot/anchor ids)
+- **PASS** `maya/neck` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/pelvis` (character_part, 3 colours; 4 slot/anchor ids)
+- **PASS** `maya/shin_l` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/shin_r` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/thigh_l` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/thigh_l_seated` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/thigh_r` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/thigh_r_seated` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/torso` (character_part, 5 colours; 6 slot/anchor ids)
+- **PASS** `maya/upper_arm_l` (character_part, 4 colours; 2 slot/anchor ids)
+- **PASS** `maya/upper_arm_r` (character_part, 4 colours; 2 slot/anchor ids)
+- **FAIL** `preview/maya_cast/maya_story_face_expressions` (set, 17 colours; 0 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_face_features` (set, 10 colours; 0 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_face_kit` (set, 17 colours; 0 slot/anchor ids)
+  - 561 KB is over the 400 KB budget for a set
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_hands` (set, 12 colours; 44 slot/anchor ids)
+  - 477 KB is over the 400 KB budget for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7c30 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_hands_l` (set, 12 colours; 22 slot/anchor ids)
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7c30 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_hands_r` (set, 12 colours; 22 slot/anchor ids)
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7c30 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_pose_pointing_screen_right` (set, 24 colours; 16 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #545036 is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #8b8763 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ddb15c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_pose_presenting_open_palm` (set, 24 colours; 16 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #545036 is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #8b8763 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ddb15c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_pose_rig_neutral` (set, 24 colours; 16 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #545036 is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #8b8763 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ddb15c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_pose_standing_idle` (set, 24 colours; 17 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #545036 is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #8b8763 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ddb15c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `preview/maya_cast/maya_story_pose_waving` (set, 24 colours; 16 slot/anchor ids)
+  - colour #0e0a07 is not a contract slot for a set
+  - colour #140c08 is not a contract slot for a set
+  - colour #1f1712 is not a contract slot for a set
+  - colour #43322a is not a contract slot for a set
+  - colour #4a2e1c is not a contract slot for a set
+  - colour #545036 is not a contract slot for a set
+  - colour #5f3722 is not a contract slot for a set
+  - colour #6e6a4c is not a contract slot for a set
+  - colour #7c3b33 is not a contract slot for a set
+  - colour #7e4e31 is not a contract slot for a set
+  - colour #8b8763 is not a contract slot for a set
+  - colour #9c6644 is not a contract slot for a set
+  - colour #9c7128 is not a contract slot for a set
+  - colour #b98463 is not a contract slot for a set
+  - colour #c2913a is not a contract slot for a set
+  - colour #c4705e is not a contract slot for a set
+  - colour #c8a24c is not a contract slot for a set
+  - colour #c9c2b2 is not a contract slot for a set
+  - colour #ddb15c is not a contract slot for a set
+  - colour #e9cf7e is not a contract slot for a set
+  - colour #ece8de is not a contract slot for a set
+  - colour #faf8f3 is not a contract slot for a set
+- **FAIL** `props/chair` (prop, 5 colours; 2 slot/anchor ids)
+  - colour #6e747a is not a contract slot for a prop
+  - colour #9aa0a6 is not a contract slot for a prop
+  - colour #b8b0a0 is not a contract slot for a prop
+  - colour #d8d2c4 is not a contract slot for a prop
+- **FAIL** `props/tote` (prop, 5 colours; 2 slot/anchor ids)
+  - colour #3e3024 is not a contract slot for a prop
+  - colour #5a4636 is not a contract slot for a prop
+  - colour #b8b0a0 is not a contract slot for a prop
+  - colour #d8d2c4 is not a contract slot for a prop

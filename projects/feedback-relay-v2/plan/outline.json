@@ -1,0 +1,327 @@
+{
+  "concept": "One comment, one meeting. The film holds a single speech bubble over the same cartoon meeting room and changes its state part by part: vague and warm, then behaviour, then effect, then one step. The viewer watches the same object get fixed, tries a faded version on a new small scene, then sees the opening frame return changed: next week Sam lets Priya finish.",
+  "world": "A neutral, recognisable world, not a metaphor: a warm story-cartoon office meeting room (office world pack, Loom.place.meeting) held as the home station, with three short excursions (the viewer's own desk, Dev's video call, a desk calendar). A governing metaphor was tested (comment as a tool, as a recipe) and rejected: the real meeting is safer and fits the skill exactly, because the thing taught is literally a sentence said in that room.",
+  "look": "story-cartoon (illustrated), classic treatment as the brief asks: outlined cast from designed rigs (sam rig for Sam; Priya, the manager and Dev cast in pass 2 from the kit), paper ground with grain, chat-style bubbles, drop entrances with springy overshoot, cut camera with pushes into the part that matters. Newer treatments are listed under alternatives.",
+  "devices": [
+    {
+      "id": "comment_bubble",
+      "what": "THE comment: one chat bubble held as a station whose contents swap in place (swap slot). Vague words in grey, then a part at a time arrives in its own calm tint, the earlier version fading to a ghost behind it. Text lives on this object, never on a bare card.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b17"
+      ]
+    },
+    {
+      "id": "meeting_room",
+      "what": "The same meeting room cutaway (Sam, Priya, the manager, two muted background colleagues) held across the film with its state changed: emptying out, a week later, replayed, and finally next week. Kept slightly muted until the payoff, when it gets full colour.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b05",
+        "b06",
+        "b07",
+        "b09",
+        "b11",
+        "b17",
+        "b18"
+      ]
+    },
+    {
+      "id": "three_slots",
+      "what": "Three slots that are objects: behaviour, effect, one step, each a fixed tint (behaviour teal-grey, effect sand, step sage). They open at the end of the bubble, lift off as tiles, reappear on answer card B, on the sticky note and beside the presenter's fingers.",
+      "kind": "list",
+      "beats": [
+        "b08",
+        "b10",
+        "b11",
+        "b12",
+        "b14",
+        "b15",
+        "b16",
+        "b18"
+      ]
+    },
+    {
+      "id": "week_step",
+      "what": "Stepped time (illustrated D-114 primitive): a small wall calendar in the meeting room flips one page, 'next week', with the room re-staged in a single step. Used for the failure in the hook and the success in the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b17"
+      ]
+    },
+    {
+      "id": "tick_card",
+      "what": "Answer cards with three tick discs (observable, real effect, one step). Ticks drop in on their words; a missing tick stays an empty dashed disc. The faded practice device.",
+      "kind": "other",
+      "beats": [
+        "b13",
+        "b14",
+        "b15"
+      ]
+    }
+  ],
+  "join_material": "paper: section boundaries are a page turn of the paper ground (illustrated material join), fallback a hard cut on a black narration card; inside a topic the comment_bubble is the handoff (the bubble carries across the cut), and pushes enter the bubble itself.",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "none: the vague bubble in warm cream, no saturated accent",
+      "why": "Pale open; the comment looks pleasant and harmless."
+    },
+    {
+      "from": "b02",
+      "band": "light",
+      "break": false,
+      "accent": "Priya's cut-off bubble edge",
+      "why": "Same pale room a week later; the only loud thing is the interruption."
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the empty hand's open palm",
+      "why": "Close on the bubble, slightly richer as we start to look inside it."
+    },
+    {
+      "from": "b06",
+      "band": "dark",
+      "break": true,
+      "accent": "the 'Dominating' label stamp",
+      "why": "Dark break for the key misconception: a judgement closes Sam down; black narration-card ground behind him."
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "break": true,
+      "accent": "'spoke over Priya' in the bubble",
+      "why": "Colour floods back at the turn: the first concrete part of the comment, marigold accent on the words being named."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "break": false,
+      "accent": "the part being added now (effect, then step)",
+      "why": "Richer middle; the accent always marks the newest part, the settled parts keep their calm tints."
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "break": false,
+      "accent": "the empty agenda slot",
+      "why": "New small scene for the check; calm and productive so the viewer can think."
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "break": false,
+      "accent": "the crossed-out vague line",
+      "why": "The viewer's own desk, quiet, practical."
+    },
+    {
+      "from": "b17",
+      "band": "light",
+      "break": true,
+      "accent": "Priya's completed bubble",
+      "why": "Lift at the close: colour withheld from the meeting room all film arrives in full; the habit has shifted."
+    }
+  ],
+  "sections": [
+    {
+      "id": "s1_vague",
+      "treatment": "Story-cartoon scene in the held meeting room, expressive register for the hook, then calm. Drawn cast from rigs, chat bubble as the comment. Entry join: none (open). Camera: cut, one push into the bubble.",
+      "accent_on": "Priya's cut-off bubble, then the empty hand",
+      "world": "meeting room, then the viewer's desk",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Station meeting_room, WIDE establishing, story_role hook. Room emptying; manager's hand on Sam's shoulder; comment_bubble drops in with overshoot over Sam, who grins and nods; Priya gathers notes behind. Something quietly wrong: Priya's notes half-filled. Option: bespoke motion scene (Loom.place.meeting + character rigs). Alternatives: scenario.dialogue.",
+          "builder": "bespoke (place.meeting + rigs)",
+          "device": "comment_bubble",
+          "join": "open",
+          "intent": "establishing"
+        },
+        {
+          "beat": "b02",
+          "line": "Same WIDE frame, story_role setup. week_step: wall calendar flips, room re-staged a week later; Sam's hand up mid-sentence, Priya's bubble cut off; the old comment bubble greys beside them. 'Nothing changed' written on the greyed bubble. Option: scenario.dialogue (Sam, Priya) on the meeting backdrop. Alternatives: bespoke continuation of b01.",
+          "builder": "scenario.dialogue",
+          "device": "week_step",
+          "join": "time (stepped time, continue)"
+        },
+        {
+          "beat": "b03",
+          "line": "MEDIUM, story_role orient. Shape morph: cartoon Sam morphs into a viewer silhouette at their own desk, holding the same nice-but-empty bubble. Planned as drawn (upgrade from template: the morph IS the bridge). Option: hero.character_moment. Alternatives: bespoke shape morph.",
+          "builder": "hero.character_moment",
+          "device": "comment_bubble",
+          "join": "into (shape morph)",
+          "intent": "bridge"
+        },
+        {
+          "beat": "b04",
+          "line": "CLOSE on the bubble (push enters it), story_role refute. Bubble large centre; left a warm glow tagged 'Feels good', right an empty hand reaching and finding nothing to grip, tagged 'Nothing to repeat'. Option: compare.two with drawn halves. Alternatives: bespoke close-up.",
+          "builder": "compare.two",
+          "device": "comment_bubble",
+          "join": "into (push into the bubble)"
+        },
+        {
+          "beat": "b05",
+          "line": "Avatar presenter, MEDIUM, story_role transition. Presenter beside the frozen meeting_room plate, gesturing at the bubble as an invitation. Option: avatar over scene plate. Alternatives: avatar on paper ground.",
+          "builder": "avatar",
+          "device": "meeting_room",
+          "join": "cut"
+        }
+      ]
+    },
+    {
+      "id": "s2_behaviour",
+      "treatment": "Comment morph over the replayed meeting scene. Opens on the dark break (label on Sam), then the bubble swaps word by word. Productive register for the demonstration. Entry join: chapter (paper page turn). Camera: push from two-shot into the bubble.",
+      "accent_on": "the 'Dominating' stamp, then the words 'spoke over Priya'",
+      "world": "meeting room, replayed",
+      "beats": [
+        {
+          "beat": "b06",
+          "line": "MEDIUM CLOSE on Sam, story_role turn (misconception). 'Dominating' label stamped on Sam's chest, tagged 'Judgement'; arms fold, face tightens, a low wall rises between him and the speaker. Dark ground. Option: hero.character_moment (expression changes on cue). Alternatives: scenario.dialogue.",
+          "builder": "hero.character_moment",
+          "device": "meeting_room",
+          "join": "chapter (paper page turn)",
+          "intent": "dark break"
+        },
+        {
+          "beat": "b07",
+          "line": "MEDIUM TWO-SHOT, replayed meeting, story_role demonstrate. Stamp peels off Sam; comment_bubble swaps word by word into 'In that meeting, you spoke over Priya'; the overlap of Sam's bubble on Priya's is what the highlight points at. Behaviour slot fills, tagged 'A behaviour'. Option: bespoke motion (swap slot + rigs). Alternatives: hero.character_moment.",
+          "builder": "bespoke (swap slot over place.meeting)",
+          "device": "comment_bubble",
+          "join": "continue (hold the station, change its state)"
+        },
+        {
+          "beat": "b08",
+          "line": "CLOSE on the comment (push enters the bubble), story_role check. Rewritten comment holds still; a dashed empty slot after it pulses slowly; tag 'Still missing?'. Planned as drawn (upgrade from template: holds the comment station so the gap is literally the next state). Option: bespoke held bubble. Alternatives: document.page with an empty line.",
+          "builder": "bespoke (held bubble, empty slot)",
+          "device": "three_slots",
+          "join": "into (push into the bubble)",
+          "intent": "recall prompt"
+        }
+      ]
+    },
+    {
+      "id": "s3_effect_step",
+      "treatment": "Same held bubble over the meeting room; each part fills its slot and the earlier version fades behind. Slowdown section, peak energy, but calm motion: one loud thing at a time. Entry join: continue (same station, within topic). Camera: pull back to the room for the reread.",
+      "accent_on": "the newest part of the comment",
+      "world": "meeting room with the held comment",
+      "beats": [
+        {
+          "beat": "b09",
+          "line": "MEDIUM, bubble over two-shot, story_role demonstrate. Dashed slot fills with 'Priya could not finish her point' (effect tint, accent while new); in the scene Priya's half bubble hangs with a trailing break; earlier version fades behind. Option: bespoke motion (swap slot). Alternatives: hero.character_moment.",
+          "builder": "bespoke (swap slot over place.meeting)",
+          "device": "comment_bubble",
+          "join": "continue"
+        },
+        {
+          "beat": "b10",
+          "line": "MEDIUM, Sam and the speaker side by side at the table, story_role demonstrate. Third slot opens; a long scrolling to-do list shrinks to one line that slides into the slot, 'One small step', shared between them. Option: bespoke motion. Alternatives: physics priorityJar (list items tipping out to one).",
+          "builder": "bespoke (rigs + list collapse into slot)",
+          "device": "three_slots",
+          "join": "continue (cut within the room)"
+        },
+        {
+          "beat": "b11",
+          "line": "WIDE then CLOSE: complete comment large over the meeting room, the three parts lighting one at a time as read; vague first version a faint ghost behind. story_role consolidate (reread). Option: bespoke motion. Alternatives: skia key-phrase arrival (blur to sharp).",
+          "builder": "bespoke (held bubble, three slots lit in turn)",
+          "device": "comment_bubble",
+          "join": "continue (pull back)",
+          "intent": "reread"
+        },
+        {
+          "beat": "b12",
+          "line": "INSERT, story_role consolidate. The three tinted parts lift off the bubble and line up as tiles: Behaviour, Effect, One step; faint blank tiles of other shapes sit dimly beside them (others exist). Option: recap template. Alternatives: icon.grid.",
+          "builder": "recap",
+          "device": "three_slots",
+          "join": "handoff (parts lift off the bubble)",
+          "intent": "callback"
+        }
+      ]
+    },
+    {
+      "id": "s4_check",
+      "treatment": "Faded practice on a new small scene: Dev on a video call with an empty agenda slot, answer cards below. Productive, calm register. Entry join: chapter (paper page turn). Camera: cut, then push onto a card.",
+      "accent_on": "the empty agenda slot, then the missing third tick",
+      "world": "Dev's video call (office world)",
+      "beats": [
+        {
+          "beat": "b13",
+          "line": "WIDE new scene, story_role practice. Small cartoon of Dev at a call, empty agenda slot on the shared screen; three answer cards drop in one by one as read, none marked. Option: quiz.question with a drawn scene header. Alternatives: scenario.dialogue then quiz.question.",
+          "builder": "quiz.question",
+          "device": "tick_card",
+          "join": "chapter (paper page turn)"
+        },
+        {
+          "beat": "b14",
+          "line": "CLOSE on card B, story_role check. Card B lifts forward, its three parts light in the slot tints and three tick discs drop: Observable, Real effect, One step. A and C slide back. Option: quiz.answer. Alternatives: compare.two.",
+          "builder": "quiz.answer",
+          "device": "tick_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b15",
+          "line": "CLOSE on card C, story_role refute. Card C returns with behaviour and effect ticked; 'be more prepared' gets a hand-drawn brush circle; third tick disc stays empty, tagged 'No step'. Option: hybrid, quiz.answer plus brush markup layer. Alternatives: quiz.answer alone.",
+          "builder": "quiz.answer + brush markup (hybrid)",
+          "device": "tick_card",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "s5_apply_payoff",
+      "treatment": "The viewer's own desk, then the opening frame back, changed, then the presenter close. Expressive register for the payoff. Entry join: chapter (paper page turn). Camera: insert, then the wide establishing frame from b01.",
+      "accent_on": "the crossed-out line, then Priya's completed bubble",
+      "world": "desk calendar, then the meeting room next week",
+      "beats": [
+        {
+          "beat": "b16",
+          "line": "INSERT POV, story_role practice (independent). Desk calendar with one sticky note carrying a vague comment; a pen strikes it and the three empty tinted slots appear beneath. Option: document.page styled as the sticky note. Alternatives: bespoke brush markup.",
+          "builder": "document.page",
+          "device": "three_slots",
+          "join": "chapter (paper page turn)"
+        },
+        {
+          "beat": "b17",
+          "line": "WIDE, the b01 frame back, story_role payoff. Before and after split of the same meeting with the new comment; week_step flips the calendar: next week, Sam waits, hand lowered, while Priya's bubble completes in full; room in full colour for the first time. Option: bespoke motion (place.meeting split + stepped time). Alternatives: compare.two then timeline.",
+          "builder": "bespoke (place.meeting split + stepped time)",
+          "device": "week_step",
+          "join": "callback (match to b01 frame)",
+          "intent": "payoff"
+        },
+        {
+          "beat": "b18",
+          "line": "Avatar presenter, MEDIUM, story_role close. Three fingers raised one at a time, each with its tinted slot phrase beside it: What happened, What it caused, One step; calm meeting room plate behind. Option: avatar over scene plate. Alternatives: recap template.",
+          "builder": "avatar",
+          "device": "three_slots",
+          "join": "cut"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "Newer treatment (not default, the person chooses): the comment as a paper sticky note rewritten by hand with the brush markup recipe in b07 to b11, instead of a chat bubble swap.",
+    "Newer treatment: a skia blur-to-sharp arrival for the complete comment in b11 (one hero light moment).",
+    "Classic fallback joins: hard cut on a black narration card at each section boundary instead of the paper page turn.",
+    "b10 alternative: physics priorityJar, the long list's items tipping out until one remains."
+  ],
+  "open_questions": [
+    "Cast for Priya, the manager and Dev: only the sam rig is named; pass 2 picks rigs from ava, maya, pip, tess, extra and fixes one look per name.",
+    "Quiz name: the teaching plan's quiz says Priya starts the call, the script says Dev. The outline follows the script (Dev); not verified with the script author.",
+    "Allocation estimate is about 130 s against a 120 s request; b13 (about 18 s) is the long beat. Not resolved here.",
+    "Organisation's own feedback model is unknown; b12 keeps 'one useful shape, others exist' visible with blank tiles."
+  ]
+}

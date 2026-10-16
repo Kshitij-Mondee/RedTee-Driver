@@ -1,0 +1,201 @@
+{
+  "title": "One Password, Every Door",
+  "performance": "given their own work accounts, the viewer can spot a password reused elsewhere, replace it with a unique one kept in a password manager, turn on multi-factor authentication, and deny and report an MFA request or login prompt they did not start",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "has several passwords, knows phishing exists, has seen a login code or approval prompt; assumes one leak only costs one account",
+    "why": "corporate employees in any role who log in every day; no security background",
+    "motivation": "not wanting to be where a breach started; wants safety without extra hassle",
+    "context": "work laptop or phone, sound on or captions, short slot between tasks"
+  },
+  "genre": "mixed",
+  "strategy": {
+    "name": "scenario_led",
+    "rationale": "the request is an incident case study; one fictional password followed through one night makes every mechanism concrete before it is named",
+    "signature_move": "follow the password one step through the night, show the door it opens, THEN name the mechanism and the habit that would have kept that door shut"
+  },
+  "misconceptions": [
+    {
+      "belief": "a leak on some unrelated personal site only costs that one account",
+      "why_tempting": "the sites feel unconnected, and the employer's systems were never touched",
+      "refuted_in": "sec1",
+      "source_anchor": "F1, F4, F9"
+    },
+    {
+      "belief": "nobody would bother targeting my password specifically",
+      "why_tempting": "the employee is not important, so the risk feels personal and small",
+      "refuted_in": "sec1",
+      "source_anchor": "F5"
+    },
+    {
+      "belief": "a long complex password is safe even if I use it in several places",
+      "why_tempting": "complexity is what password rules usually ask for",
+      "refuted_in": "sec3",
+      "source_anchor": "F9; not_claimed on complex reused passwords"
+    },
+    {
+      "belief": "with MFA on, any approval prompt is safe to accept",
+      "why_tempting": "the prompt looks official and accepting is one tap",
+      "refuted_in": "sec3",
+      "source_anchor": "F12, F13"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Late at night, a login to the company system succeeds with the right password. The employee who owns it is asleep."
+    },
+    "promise": "follow that one password through the night and you will see the two habits that close every door it opened",
+    "bridge_from_prior": "sec1 opens from what the viewer already does: using the same password on a shopping site and at work",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain how a password leaked from an unrelated site ends up opening a work login",
+        "bloom": "understand",
+        "concepts": [
+          "third-party breach",
+          "leaked lists shared",
+          "credential stuffing",
+          "password reuse"
+        ],
+        "energy": "build",
+        "carrier": "process",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can describe how one valid account lets an attacker reach other systems and accounts",
+        "bloom": "understand",
+        "concepts": [
+          "valid account looks normal",
+          "lateral movement",
+          "privilege escalation"
+        ],
+        "energy": "steady",
+        "carrier": "diagram",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can apply a unique password per account, a password manager and MFA to decide which step of the attack each habit stops",
+        "bloom": "apply",
+        "concepts": [
+          "unique password per account",
+          "password manager",
+          "multi-factor authentication",
+          "MFA fatigue",
+          "deny and report"
+        ],
+        "energy": "peak",
+        "carrier": "scenario",
+        "recap_after": true
+      },
+      {
+        "id": "sec4",
+        "goal": "the viewer can carry out this week's three checks and report a prompt or notice they did not expect",
+        "bloom": "apply",
+        "concepts": [
+          "check reuse",
+          "breach check service",
+          "report to security team"
+        ],
+        "energy": "rest",
+        "carrier": "demonstration",
+        "recap_after": false
+      }
+    ],
+    "payoff": "replay the same night with the habits in place: the leaked password is tried, opens nothing because it is unique, and the second factor holds; the one prompt sent is denied and reported"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "the narrator walks the password from leak to stuffing to spread, naming each step after it is shown"
+    },
+    {
+      "stage": "faded",
+      "where": "sec3",
+      "what": "the same doors appear again; the viewer is asked which habit would keep each one shut before the narrator shows it"
+    },
+    {
+      "stage": "independent",
+      "where": "sec4 and payoff",
+      "what": "an unexpected approval prompt arrives; the viewer decides deny and report before the replay confirms it"
+    }
+  ],
+  "pacing": {
+    "requested_s": 105,
+    "target_duration_s": 105,
+    "words_per_minute": 140,
+    "slowdown_at": [
+      "credential stuffing",
+      "multi-factor authentication"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "quiz",
+        "prompt_sketch": "Two doors: the leaked password tried at login, and a valid account moving on. Which habit shuts which?",
+        "answer": "a unique password means the leaked one never fits the work login; MFA means even a correct password alone is not enough",
+        "tempting_wrong": "'change the password every few months': routine changes without a sign of compromise are not the advice (F16)"
+      },
+      {
+        "after_section": "sec3",
+        "kind": "recall_prompt",
+        "prompt_sketch": "An approval request you did not start lights up your phone. What do you do?",
+        "answer": "deny it and report it: it can mean someone already has the password",
+        "tempting_wrong": "approve it to make it stop"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "this week, list any work password also used elsewhere and replace it with a unique one from a password manager",
+    "turn on multi-factor authentication wherever work offers it",
+    "the next time an unexpected login prompt, approval request or breach notice arrives, deny it and report it to the security team through your employer's route"
+  ],
+  "persona": {
+    "voice": "a calm investigator walking a colleague through a case file; measured, serious, never dramatic",
+    "delivery_notes": "low and unhurried in the night scenes; slower on credential stuffing and MFA; plain and brisk on the three actions; no blame in the voice on the reuse"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: a successful login at night while its owner sleeps",
+      "objective": "promise: follow the password and see the two habits that close its doors",
+      "recall_prior": "sec1 bridges from reusing one password at a shop and at work",
+      "present": "sections in the order of the attack: leak, try, spread, then the habits",
+      "guidance": "signature move: show the door open, then name the mechanism and the habit",
+      "practice": "quiz after sec2; recall prompt after sec3; faded doors in sec3",
+      "feedback": "quiz answer explained, including why routine changes are not the fix",
+      "assess": "the approval prompt in sec4 decided by the viewer before the replay",
+      "transfer": "payoff replay and three transfer tasks for this week"
+    },
+    "merrill": {
+      "problem_centered": "one fictional password's night is the running problem",
+      "activation": "sec1 opens from the viewer's own reuse habit",
+      "demonstration": "every step is shown happening to the password before it is named",
+      "application": "the viewer picks the habit for each door and decides the prompt",
+      "integration": "transfer tasks hand the checks to the viewer's own accounts this week"
+    },
+    "mayer": {
+      "coherence": "one employee, one company, one password; no statistics or side stories",
+      "signalling": "the key light lands on the password at each step; slowdowns on the two terms",
+      "redundancy": "screen carries the password, doors and a few labels; narration explains",
+      "contiguity": "each door opens as its mechanism is spoken",
+      "segmenting": "four short sections, one step of the night each",
+      "pre_training": "the password as an object and the doors as systems are set up in the hook before the mechanisms run"
+    },
+    "arcs": {
+      "attention": "a cinematic night and a login nobody made",
+      "relevance": "the viewer reuses passwords too; work accounts are theirs",
+      "confidence": "two plain habits and a tool that does the remembering",
+      "satisfaction": "the replayed night where nothing opens"
+    },
+    "bloom_path": "understand -> understand -> apply (peak) -> apply (consolidation)"
+  },
+  "series": null,
+  "flags": [
+    "fictional case only; never a real company or incident",
+    "no statistics, counts or costs",
+    "no blame on the employee"
+  ]
+}

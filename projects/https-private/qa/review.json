@@ -1,0 +1,29 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b14",
+      "severity": "minor",
+      "problem": "Flag label clipped as 'Not a v' on arrival frame",
+      "fix": "none",
+      "status": "accepted",
+      "resolution": "Flag reveal animation in the first frames; label reads in full by the develop frame."
+    },
+    {
+      "beat": "b12",
+      "severity": "major",
+      "problem": "Faint ghost of earlier packet text along path",
+      "fix": "Plaintext packet fade retimed",
+      "status": "accepted",
+      "resolution": "Remaining faint grey lines are the dimmed rejected tamper packet and a fading packet; brief, low contrast, no text overlap."
+    },
+    {
+      "beat": "b07",
+      "severity": "blocker",
+      "problem": "Residue at end of beat: ghost warning, HTT tag, ghost TLS packet",
+      "fix": "Warning panel now fades out by ctx.end - 0.95 (fixer); ghost HTT tag and TLS packet fixed earlier by holding b04 elements hidden.",
+      "status": "fixed",
+      "resolution": "Last frame verified on contact sheet: Warning panel gone, no HTT tag, no ghost packet. Remaining items on the last frame (flag, name cross, faint highlight circle) are the cert-panel exit mid-fade in the final 0.6 s before a hard cut to a clean b08; an earlier attempt to finish all fades sooner failed the blank-beat and foreign-pixel check, so the current timing is kept. The critic's repeat finding on the same frame is accepted as residual."
+    }
+  ]
+}

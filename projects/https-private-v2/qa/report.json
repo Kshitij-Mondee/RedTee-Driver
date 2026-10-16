@@ -1,0 +1,311 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "variety: one_radius_share = 0.589 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 1.0 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b03, b04, b05, b06, b07)",
+    "variety: labels_over_objects_share = 0.562 is worse than the worst baseline lesson (0.5): it grew (beats: _kit, b05, b07, b08, b09, b10, b12, b13)",
+    "variety: the seed's camera habit is 'pan' but 16 of 16 bespoke beats have no camera move",
+    "lc layout content_overlap @ 8: b01 \"Shared wifi\" and b01 \"password: harbour\" overlap at [802, 461, 880, 475] from 8 to 10 s (held, but both texts are seen together only briefly) [path / packet]",
+    "lc layout content_overlap @ 8: b01 \"Shared wifi\" and b01 \"password: harbour\" overlap at [802, 461, 880, 475] from 8 to 10 s (held, but both texts are seen together only briefly) [path / packet]",
+    "lc layout content_overlap @ 12: b02 \"password: harbour\" and b02 \"Login\" overlap at [858, 268, 933, 282] from 12 to 12 s (a passing crossing (under 500 ms)) [watcher / packet_copy]",
+    "lc layout content_overlap @ 12: b02 \"Plain HTTP: readable\" and b02 \"user: alex\" overlap at [858, 315, 1025, 339] from 12 to 12 s (a passing crossing (under 500 ms)) [watcher / packet_copy]",
+    "lc layout content_overlap @ 12: b02 \"Plain HTTP: readable\" and b02 \"password: harbour\" overlap at [858, 338, 1110, 349] from 12 to 12 s (a passing crossing (under 500 ms)) [watcher / packet_copy]",
+    "lc layout content_overlap @ 21: b03 \"1\" and b03 \"1\" overlap at [404, 817, 416, 842] from 21 to 21 s (a passing crossing (under 500 ms)) [step_bar / step_bar]",
+    "lc layout content_overlap @ 21: b03 \"Prove who\" and b03 \"Prove who\" overlap at [452, 817, 596, 842] from 21 to 21 s (a passing crossing (under 500 ms)) [step_bar / step_bar]",
+    "lc layout content_overlap @ 21.5: b01 \"http://\" and b01 \"https://\" overlap at [198, 239, 280, 273] from 21.5 to 21.5 s (a passing crossing (under 500 ms)) [browser / browser]",
+    "lc layout content_overlap @ 21.5: b01 \"login.example.com\" and b01 \"login.example.com\" overlap at [295, 239, 542, 273] from 21.5 to 21.5 s (a passing crossing (under 500 ms)) [browser / browser]",
+    "lc layout content_overlap @ 38.5: b06 \"Issuer\" and b06 \"Issuer\" overlap at [702, 339, 787, 373] from 38.5 to 38.5 s (a passing crossing (under 500 ms)) [cert_rows / cert_rows]",
+    "lc layout content_overlap @ 41: b06 \"Name\" and b06 \"Name\" overlap at [702, 429, 782, 463] from 41 to 41 s (a passing crossing (under 500 ms)) [cert_rows / cert_rows]",
+    "lc layout content_overlap @ 49: b01 \"Log in\" and b07 \"user: alex\" overlap at [228, 518, 288, 536] from 47.5 to 49 s (held, but both texts are seen together only briefly) [browser / packet_rejected]",
+    "lc layout content_overlap @ 49: b01 \"Log in\" and b07 \"password: harbour\" overlap at [228, 535, 288, 552] from 47.5 to 49 s (held, but both texts are seen together only briefly) [browser / packet_rejected]",
+    "lc layout content_overlap @ 49.5: b03 \"1\" and b03 \"1\" overlap at [404, 818, 416, 842] from 49.5 to 49.5 s (a passing crossing (under 500 ms)) [step_bar / step_bar]",
+    "lc layout content_overlap @ 49.5: b03 \"2\" and b03 \"2\" overlap at [809, 818, 827, 842] from 49.5 to 49.5 s (a passing crossing (under 500 ms)) [step_bar / step_bar]",
+    "lc layout content_overlap @ 49.5: b03 \"Agree a key\" and b03 \"Agree a key\" overlap at [860, 818, 1020, 842] from 49.5 to 49.5 s (a passing crossing (under 500 ms)) [step_bar / step_bar]",
+    "lc layout content_overlap @ 79: b11 \"Login\" and b11 \"=~8y&ep(1c=h40>xg\" overlap at [1121, 512, 1197, 544] from 79 to 79 s (a passing crossing (under 500 ms)) [packet / packet]",
+    "lc layout content_overlap @ 133.5: b17 \"Shared wifi\" and b17 \"fh>u1ymmXzdce}Ygv\" overlap at [740, 461, 804, 479] from 133.5 to 134 s (held, but both texts are seen together only briefly) [path / packet]",
+    "lc layout text_redrawn @ 0: b01: 6 text(s) drawn twice on themselves in one beat (\"Shared wifi\", \"user\", \"password\"), from 0 to 104 s [path, browser]",
+    "lc layout text_redrawn @ 21.5: b03: 6 text(s) drawn twice on themselves in one beat (\"1\", \"Prove who\", \"2\"), from 21.5 to 104 s [step_bar]",
+    "lc layout text_redrawn @ 35.5: b06: b06 draws again 5 text(s) b05 still shows (\"Issuer\", \"Name\", \"Date\"): carry the element (hold it) instead of redrawing it, from 35.5 to 45 s [cert, cert_rows]",
+    "lc layout text_redrawn @ 43.5: b06: 1 text(s) drawn twice on themselves in one beat (\"Date\"), from 43.5 to 44.5 s [cert_rows]",
+    "lc layout text_covered @ 4: b01 \"Shared wifi\" is partly covered by an opaque shape (43 % of it, its words cut) from 4 to 4 s [path]",
+    "lc layout text_covered @ 4: b01 \"Shared wifi\" is partly covered by an opaque shape (43 % of it, its words cut) from 4 to 4 s [path]",
+    "lc layout text_covered @ 79: b11 \"Login\" is partly covered by an opaque shape (14 % of it, its words cut) from 79 to 79 s [packet]",
+    "lc layout text_off_card @ 120: b15 \"Pause and decide\" runs onto another fill of its card (a band or strip) (28 % of it) from 120 to 120 s: give it room or shorten it [pause_ring]",
+    "lc contrast contrast_aa_failure @ 47.266: b04 \"TLS\" contrast 2.31:1 (needs 3:1), rgb(255,255,255) on rgb(137,170,242), failing at 1 sample(s) [packet]",
+    "b01: small text on screen at 6.6s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b02: small text on screen at 12.5s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b03: small text on screen at 20.1s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b04: small text on screen at 27.5s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b08: small text on screen at 56.5s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b09: small text on screen at 64.4s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b10: small text on screen at 71.2s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b11: small text on screen at 79.9s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b12: small text on screen at 86.2s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b13: small text on screen at 91.9s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b14: small text on screen at 103.8s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b15: small text on screen at 118.7s: \"YOUR TURN\" 25.4px (< 26 px)",
+    "b17: small text on screen at 141.3s: \"Shared wifi\" 25.4px (< 26 px)",
+    "b02: the same frame as b01 (difference 1.19 < 1.5): a new beat needs a visible change",
+    "b06: the same frame as b05 (difference 1.42 < 1.5): a new beat needs a visible change",
+    "b04: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.211,
+      "motion": 0.789,
+      "hybrid": 0.0,
+      "motion_effective": 0.789
+    },
+    "elements": {
+      "b01": 4,
+      "b02": 3,
+      "b03": 1,
+      "b04": 2,
+      "b05": 3,
+      "b06": 5,
+      "b07": 5,
+      "b08": 2,
+      "b09": 4,
+      "b10": 6,
+      "b11": 2,
+      "b12": 3,
+      "b13": 3,
+      "b14": 4,
+      "b15": 6,
+      "b16": 7,
+      "b17": 8
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.309,
+      "wallpaper_share": 0.0,
+      "template_share": 0.118,
+      "classic_share": 1.0,
+      "one_radius_share": 0.589,
+      "still_share": 1.0,
+      "labels_over_objects_share": 0.562,
+      "one_world_share": 0.062,
+      "lines_per_s": 9.48
+    },
+    "sfx_events": 2,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 10845,
+      "layout_samples": 343,
+      "texts": 568,
+      "contrast_checked": 693,
+      "errors": 0,
+      "warnings": 27
+    },
+    "nodes": 2317,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 25.4,
+        "b02": 25.4,
+        "b03": 25.4,
+        "b04": 25.4,
+        "b05": 27.9,
+        "b06": 27.9,
+        "b07": 27.9,
+        "b08": 25.4,
+        "b09": 25.4,
+        "b10": 25.4,
+        "b11": 25.4,
+        "b12": 25.4,
+        "b13": 25.4,
+        "b14": 25.4,
+        "b15": 25.4,
+        "b16": 36.1,
+        "b17": 25.4
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 17,
+      "lines_seen": 216,
+      "blank_beats": [],
+      "blank_measured": 17
+    },
+    "foreign": {
+      "measured_beats": 17,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 68,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0463,
+        "b02": 0.0556,
+        "b03": 0.0497,
+        "b04": 0.0759,
+        "b05": 0.0857,
+        "b06": 0.0882,
+        "b07": 0.1257,
+        "b08": 0.0702,
+        "b09": 0.0724,
+        "b10": 0.0693,
+        "b11": 0.0764,
+        "b12": 0.0867,
+        "b13": 0.0932,
+        "b14": 0.0802,
+        "b15": 0.0532,
+        "b16": 0.0592,
+        "b17": 0.0661
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 2,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 17,
+      "sharpness": {
+        "b01": 1.273,
+        "b02": 1.345,
+        "b03": 1.376,
+        "b04": 1.339,
+        "b05": 1.322,
+        "b06": 1.346,
+        "b07": 1.13,
+        "b08": 1.391,
+        "b09": 1.27,
+        "b10": 1.398,
+        "b11": 1.365,
+        "b12": 1.022,
+        "b13": 1.301,
+        "b14": 1.222,
+        "b15": 1.146,
+        "b16": 1.022,
+        "b17": 1.187
+      },
+      "blurred_beats": [],
+      "blur_measured": 17
+    },
+    "tone": {
+      "value_script_beats": 17
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-v2\\qa\\sheets\\b17.jpg"
+  ],
+  "build_hash": "f317e3abdf8d556f"
+}

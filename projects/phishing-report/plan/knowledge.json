@@ -1,0 +1,233 @@
+{
+  "topic": "Spotting and reporting phishing at work: the common signs of a phishing message, and what to do in the first minutes (do not click or reply, report it, and report at once if you already clicked)",
+  "scope_note": "Conservative, official-guidance level. Behaviours come from UK NCSC and US CISA public guidance, read this session. Numbers are few and each is stated exactly as its source states it. Preferred data picture: the NCSC case-study funnel (F14, F15), because it shows what reports do. F19 and F20 are optional supporting figures; use at most one of them, never as a scare headline. The company's own report button or channel is not named here because the company has not supplied it; the NCSC and CISA reporting addresses are for the public in their countries and are NOT the company's route.",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "definition",
+      "confidence": "established",
+      "statement": "Phishing is when criminals send a message that tries to get you to open a harmful link or attachment, give away information such as a password, or send money.",
+      "terms": [
+        "phishing"
+      ],
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation (reviewed 2024); US CISA, Recognize and Report Phishing (Secure Our World)"
+    },
+    {
+      "id": "F2",
+      "kind": "finding",
+      "confidence": "established",
+      "statement": "Phishing does not only arrive by email: it also comes as text messages, direct messages on social media and chat, and phone calls.",
+      "terms": [
+        "text message",
+        "direct message"
+      ],
+      "reference_hint": "US CISA, Recognize and Report Phishing; UK NCSC, How to spot a scam email, text message or call"
+    },
+    {
+      "id": "F3",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Phishing messages try to win your trust quickly and pressure you into acting before you stop to think.",
+      "reference_hint": "UK NCSC, How to spot a scam email, text message or call"
+    },
+    {
+      "id": "F4",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "A common sign is urgency: a short deadline, a demand to act immediately, or a threat of a fine or other bad consequence if you do not respond.",
+      "terms": [
+        "urgency"
+      ],
+      "reference_hint": "UK NCSC, How to spot a scam email, text message or call (signs: authority, urgency, emotion, scarcity, current events); US CISA, Recognize and Report Phishing"
+    },
+    {
+      "id": "F5",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "Phishing messages often pretend to come from a trusted or important person or organisation, so a message that leans on authority deserves a second look.",
+      "terms": [
+        "authority",
+        "impersonation"
+      ],
+      "reference_hint": "UK NCSC, How to spot a scam email, text message or call; US CISA, Recognize and Report Phishing"
+    },
+    {
+      "id": "F6",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "A sender address or a link that does not match the real one, such as a web address with one letter changed, or a shortened link that hides where it goes, is a sign of phishing.",
+      "terms": [
+        "sender address",
+        "shortened link"
+      ],
+      "reference_hint": "US CISA, Recognize and Report Phishing (signs: incorrect email addresses or links; untrusted shortened URLs)"
+    },
+    {
+      "id": "F7",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "A request to send personal or financial information, such as a password or bank details, is a sign of phishing; banks and other official sources do not ask for this by email.",
+      "terms": [
+        "credentials"
+      ],
+      "reference_hint": "US CISA, Recognize and Report Phishing (sign: requests to send personal and financial information); UK NCSC, How to spot a scam email, text message or call"
+    },
+    {
+      "id": "F8",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "statement": "Phishing can carry harmful attachments, so an attachment you were not expecting is a reason to stop and check before opening it.",
+      "terms": [
+        "attachment",
+        "malware"
+      ],
+      "reference_hint": "US CISA, Recognize and Report Phishing (harmful links, emails or attachments); UK NCSC, Phishing attacks: defending your organisation (malware is often hidden in phishing emails)",
+      "caveat": "The sources say phishing uses harmful attachments; 'unexpected' as the trigger is the common training heuristic, not a quoted rule. Most attachments at work are genuine."
+    },
+    {
+      "id": "F9",
+      "kind": "caution",
+      "confidence": "established",
+      "statement": "Bad spelling and grammar are no longer a reliable sign: some phishing messages are now written perfectly, and some fool even experts.",
+      "terms": [
+        "spelling",
+        "grammar"
+      ],
+      "reference_hint": "US CISA, Recognize and Report Phishing (perfect grammar in the era of AI); UK NCSC, How to spot a scam email, text message or call (scams are getting smarter and some even fool the experts)"
+    },
+    {
+      "id": "F10",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "If you suspect phishing, do not click its links, open its attachments or reply to it, and that includes any unsubscribe link.",
+      "reference_hint": "US CISA, Recognize and Report Phishing (Resist; Delete: don't reply or click on any attachment or link, including any unsubscribe link); UK NCSC, Phishing (do not click on any links or enter any information)"
+    },
+    {
+      "id": "F11",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "If a message might be genuine, check it through a separate route you find yourself, not the link, number or address in the message.",
+      "terms": [
+        "verify"
+      ],
+      "reference_hint": "UK NCSC, How to spot a scam email, text message or call (how to check if a message is genuine); US CISA, Recognize and Report Phishing"
+    },
+    {
+      "id": "F12",
+      "kind": "finding",
+      "confidence": "established",
+      "statement": "Targeted phishing uses information about a company and its people to make a message look more convincing, so a message can seem to come from a known colleague, manager or supplier.",
+      "terms": [
+        "spear phishing"
+      ],
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation (spear phishing; attackers impersonate trusted senders)"
+    },
+    {
+      "id": "F13",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "When staff report phishing, including messages they have already clicked, the security team learns what attacks are being used, and those reports act as an early warning for everyone.",
+      "terms": [
+        "early warning"
+      ],
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation (create an environment that encourages users to report; employees as a valuable early warning system)"
+    },
+    {
+      "id": "F14",
+      "kind": "number",
+      "confidence": "established",
+      "statement": "In an NCSC case study, a financial company received 1,800 phishing emails; filtering stopped 1,750, leaving 50 in staff inboxes.",
+      "numbers": [
+        "1,800",
+        "1,750",
+        "50"
+      ],
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation, case study (page reviewed 13 February 2024)",
+      "caveat": "One real company's incident, described by the NCSC; it illustrates layered defence and is not a general rate."
+    },
+    {
+      "id": "F15",
+      "kind": "number",
+      "confidence": "established",
+      "statement": "In the same NCSC case study, staff reported 25 of those emails with a report button, some after clicking, and those reports were the first sign the attack had got past the filters.",
+      "numbers": [
+        "25"
+      ],
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation, case study (page reviewed 13 February 2024)",
+      "caveat": "One company's incident. The NCSC also reports that 14 emails were clicked and one device was infected, then found and cleaned in a few hours; if the script uses those, they must be added to this sheet first."
+    },
+    {
+      "id": "F16",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "If you have already clicked, do not panic; on a work laptop or phone, contact your IT or security team and tell them what happened.",
+      "reference_hint": "UK NCSC, Phishing: I've received a suspicious message (don't panic; I've received the message on a work laptop or phone: contact your IT department and tell them what has happened)"
+    },
+    {
+      "id": "F17",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "Knowing about an incident sooner rather than later lets an organisation limit the harm it can cause.",
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation, Layer 4: detect incidents quickly"
+    },
+    {
+      "id": "F18",
+      "kind": "finding",
+      "confidence": "established",
+      "statement": "People click for many reasons, including being busy and stressed, and blaming them does not work; people who fear blame stop reporting their mistakes.",
+      "terms": [
+        "blame"
+      ],
+      "reference_hint": "UK NCSC, Phishing attacks: defending your organisation (the problems with phishing simulations; don't reprimand users)"
+    },
+    {
+      "id": "F19",
+      "kind": "number",
+      "confidence": "established",
+      "statement": "The Verizon Data Breach Investigations Report found a human element in 62% of breaches.",
+      "numbers": [
+        "62"
+      ],
+      "terms": [
+        "human element"
+      ],
+      "reference_hint": "Verizon 2026 Data Breach Investigations Report, Executive Summary (dataset October 2024 to November 2025; up from 60% the previous year)",
+      "caveat": "Human element is broad: it covers errors, misuse, stolen credentials and social engineering, not only phishing clicks. Phishing as the way in was a much smaller share of breaches. Do not say or draw it as 'phishing causes 62% of breaches'."
+    },
+    {
+      "id": "F20",
+      "kind": "number",
+      "confidence": "mainstream",
+      "statement": "In phishing simulations, the median click rate for messages sent by text or voice was 40% higher than for email.",
+      "numbers": [
+        "40"
+      ],
+      "terms": [
+        "phishing simulation"
+      ],
+      "reference_hint": "Verizon 2026 Data Breach Investigations Report, Executive Summary, Mobile-centric Social Engineering",
+      "caveat": "A relative difference (40% higher than email, not 40% of people) measured in simulations, not real attacks. Use it only to support 'phishing by text or chat counts too'."
+    }
+  ],
+  "not_claimed": [
+    "'91% of cyber attacks start with a phishing email': circulates widely but traces to vendor marketing, not a primary source found this session. Do not use it, or any 'most attacks start with phishing' share.",
+    "'Phishing causes 62% of breaches': the Verizon figure is the broader human element (F19), not phishing alone.",
+    "Any cost of a breach, ransom amount or financial loss figure (for example per-breach averages from vendor reports): none is on this sheet.",
+    "'People fall for phishing in under a minute' or any time-to-click figure from earlier Verizon reports: not verified this session.",
+    "'You can always spot phishing by bad spelling or a strange logo': the sources say this is no longer reliable (F9).",
+    "'Good training means you will spot every phishing message': the NCSC says no training can teach users to spot every phishing attempt.",
+    "'A padlock or https in the address bar means a site is safe'.",
+    "'If you clicked but typed nothing, there is no need to tell anyone': at work, report it anyway (F13, F16).",
+    "'Employees are the weakest link' or any framing that blames the person who clicked (F18).",
+    "Any disciplinary, legal or HR consequence for clicking or for reporting: the company has stated none.",
+    "Any promise of what happens after a report (a reply, a fix, a time to respond): the company has stated none.",
+    "A specific company mailbox, phone number, tool or out-of-hours line for reporting: not supplied. The UK public reporting routes (report@phishing.gov.uk, 7726) are not the company's route.",
+    "'Reply to the sender to ask if it is real' or 'click unsubscribe to make it stop'.",
+    "Any real organisation, brand or person as the sender of an example message."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (2026-10-02)",
+    "note": "Sources read this session: UK NCSC 'Phishing: I've received a suspicious message' (ncsc.gov.uk/section/respond-recover/phishing); UK NCSC 'Phishing attacks: defending your organisation' (ncsc.gov.uk/guidance/phishing, reviewed 13 Feb 2024); UK NCSC 'How to spot a scam email, text message or call' (ncsc.gov.uk/collection/phishing-scams/spot-scams); US CISA 'Recognize and Report Phishing' (cisa.gov/secure-our-world/recognize-and-report-phishing); Verizon 2026 DBIR Executive Summary (verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf)."
+  }
+}

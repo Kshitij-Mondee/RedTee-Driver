@@ -1,0 +1,437 @@
+{
+ "scene": "dev_desk",
+ "camera_spec": {
+  "camera": {
+   "x": 1.1,
+   "y": 3.4,
+   "eye": 1.25,
+   "yaw": -160,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "back wall (felt and board)",
+    "axis": "x",
+    "at": -2.6
+   },
+   {
+    "name": "far wall of the floor",
+    "axis": "y",
+    "at": -9.0
+   }
+  ],
+  "points": {
+   "desk_front_near": [
+    0,
+    1.6,
+    0.72
+   ],
+   "desk_front_far": [
+    0,
+    0,
+    0.72
+   ],
+   "desk_back_near": [
+    0.8,
+    1.6,
+    0.72
+   ],
+   "desk_back_far": [
+    0.8,
+    0,
+    0.72
+   ],
+   "mon1_near_top": [
+    0.65,
+    1.35,
+    1.2
+   ],
+   "mon1_far_top": [
+    0.65,
+    0.75,
+    1.2
+   ],
+   "mon2_far_top": [
+    0.65,
+    0.15,
+    1.2
+   ],
+   "mon1_near_bot": [
+    0.65,
+    1.35,
+    0.85
+   ],
+   "e1_head_top": [
+    -0.5,
+    0.55,
+    1.32
+   ],
+   "e1_head_c": [
+    -0.5,
+    0.55,
+    1.2
+   ],
+   "e1_seat": [
+    -0.45,
+    0.55,
+    0.47
+   ],
+   "e2_head_top": [
+    -0.65,
+    1.3,
+    1.34
+   ],
+   "e2_head_c": [
+    -0.65,
+    1.3,
+    1.22
+   ],
+   "e2_seat": [
+    -0.6,
+    1.3,
+    0.47
+   ],
+   "wall_y1.6_floor": [
+    -2.6,
+    1.6,
+    0
+   ],
+   "wall_y-2_floor": [
+    -2.6,
+    -2.0,
+    0
+   ],
+   "wall_y-2_top": [
+    -2.6,
+    -2.0,
+    3.2
+   ],
+   "wall_y1.6_top": [
+    -2.6,
+    1.6,
+    3.2
+   ],
+   "felt_near_top": [
+    -2.6,
+    1.4,
+    2.2
+   ],
+   "felt_far_bot": [
+    -2.6,
+    -1.6,
+    0.9
+   ],
+   "kanban_near_top": [
+    -2.6,
+    -4.6,
+    2.0
+   ],
+   "kanban_far_bot": [
+    -2.6,
+    -6.6,
+    1.0
+   ],
+   "next_desk_front": [
+    0,
+    -1.6,
+    0.72
+   ],
+   "next_mon_top": [
+    0.65,
+    -0.8,
+    1.2
+   ],
+   "storage_near_top": [
+    1.25,
+    1.6,
+    0.75
+   ],
+   "storage_far_top": [
+    1.25,
+    -3.2,
+    0.75
+   ],
+   "farwin_L_sill": [
+    -2.6,
+    -9.0,
+    0.9
+   ],
+   "farwin_R_head": [
+    3.0,
+    -9.0,
+    2.7
+   ],
+   "farwin_R_sill": [
+    3.0,
+    -9.0,
+    0.9
+   ],
+   "far_wall_floor_x3": [
+    3.0,
+    -9.0,
+    0
+   ],
+   "laptop": [
+    0.25,
+    1.0,
+    0.85
+   ],
+   "headphones_on_mon": [
+    0.65,
+    1.55,
+    1.2
+   ],
+   "plant": [
+    0.7,
+    0.05,
+    1.0
+   ]
+  },
+  "behind": [
+   "e1_head_top",
+   "e1_head_c",
+   "e2_head_top",
+   "e2_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 289,
+   "along_x": 6027,
+   "horizon_y": 497
+  },
+  "points": {
+   "desk_front_near": {
+    "x": 1333,
+    "y": 970,
+    "where": "frame",
+    "depth": 2.07
+   },
+   "desk_front_far": {
+    "x": 893,
+    "y": 770,
+    "where": "frame",
+    "depth": 3.57
+   },
+   "desk_back_near": {
+    "x": 617,
+    "y": 1042,
+    "where": "frame",
+    "depth": 1.79
+   },
+   "desk_back_far": {
+    "x": 467,
+    "y": 793,
+    "where": "frame",
+    "depth": 3.3
+   },
+   "mon1_near_top": {
+    "x": 713,
+    "y": 541,
+    "where": "frame",
+    "depth": 2.08
+   },
+   "mon1_far_top": {
+    "x": 623,
+    "y": 532,
+    "where": "frame",
+    "depth": 2.64
+   },
+   "mon2_far_top": {
+    "x": 564,
+    "y": 526,
+    "where": "frame",
+    "depth": 3.21
+   },
+   "mon1_near_bot": {
+    "x": 713,
+    "y": 851,
+    "where": "frame",
+    "depth": 2.08
+   },
+   "e1_head_top": {
+    "x": 1262,
+    "y": 457,
+    "where": "frame",
+    "depth": 3.23,
+    "behind": {
+     "wall": "back wall (felt and board)",
+     "at": [
+      -2.6,
+      -3.19,
+      1.41
+     ]
+    }
+   },
+   "e1_head_c": {
+    "x": 1262,
+    "y": 525,
+    "where": "frame",
+    "depth": 3.23,
+    "behind": {
+     "wall": "back wall (felt and board)",
+     "at": [
+      -2.6,
+      -3.19,
+      1.13
+     ]
+    }
+   },
+   "e1_seat": {
+    "x": 1237,
+    "y": 945,
+    "where": "frame",
+    "depth": 3.21
+   },
+   "e2_head_top": {
+    "x": 1624,
+    "y": 432,
+    "where": "frame",
+    "depth": 2.57,
+    "behind": {
+     "wall": "back wall (felt and board)",
+     "at": [
+      -2.6,
+      -1.04,
+      1.44
+     ]
+    }
+   },
+   "e2_head_c": {
+    "x": 1624,
+    "y": 518,
+    "where": "frame",
+    "depth": 2.57,
+    "behind": {
+     "wall": "back wall (felt and board)",
+     "at": [
+      -2.6,
+      -1.04,
+      1.19
+     ]
+    }
+   },
+   "e2_seat": {
+    "x": 1595,
+    "y": 1060,
+    "where": "frame",
+    "depth": 2.55
+   },
+   "wall_y1.6_floor": {
+    "x": 2744,
+    "y": 1276,
+    "where": "outside",
+    "depth": 2.96
+   },
+   "wall_y-2_floor": {
+    "x": 1434,
+    "y": 860,
+    "where": "frame",
+    "depth": 6.34
+   },
+   "wall_y-2_top": {
+    "x": 1434,
+    "y": -70,
+    "where": "overscan",
+    "depth": 6.34
+   },
+   "wall_y1.6_top": {
+    "x": 2744,
+    "y": -719,
+    "where": "outside",
+    "depth": 2.96
+   },
+   "felt_near_top": {
+    "x": 2598,
+    "y": -60,
+    "where": "outside",
+    "depth": 3.14
+   },
+   "felt_far_bot": {
+    "x": 1506,
+    "y": 605,
+    "where": "frame",
+    "depth": 5.96
+   },
+   "kanban_near_top": {
+    "x": 1116,
+    "y": 339,
+    "where": "frame",
+    "depth": 8.78
+   },
+   "kanban_far_bot": {
+    "x": 970,
+    "y": 540,
+    "where": "frame",
+    "depth": 10.66
+   },
+   "next_desk_front": {
+    "x": 714,
+    "y": 689,
+    "where": "frame",
+    "depth": 5.07
+   },
+   "next_mon_top": {
+    "x": 504,
+    "y": 519,
+    "where": "frame",
+    "depth": 4.1
+   },
+   "storage_near_top": {
+    "x": 109,
+    "y": 1059,
+    "where": "frame",
+    "depth": 1.64
+   },
+   "storage_far_top": {
+    "x": 241,
+    "y": 647,
+    "where": "frame",
+    "depth": 6.15
+   },
+   "farwin_L_sill": {
+    "x": 851,
+    "y": 547,
+    "where": "frame",
+    "depth": 12.92
+   },
+   "farwin_R_head": {
+    "x": -50,
+    "y": 254,
+    "where": "overscan",
+    "depth": 11.0
+   },
+   "farwin_R_sill": {
+    "x": -50,
+    "y": 555,
+    "where": "overscan",
+    "depth": 11.0
+   },
+   "far_wall_floor_x3": {
+    "x": -50,
+    "y": 706,
+    "where": "overscan",
+    "depth": 11.0
+   },
+   "laptop": {
+    "x": 944,
+    "y": 787,
+    "where": "frame",
+    "depth": 2.55
+   },
+   "headphones_on_mon": {
+    "x": 755,
+    "y": 546,
+    "where": "frame",
+    "depth": 1.89
+   },
+   "plant": {
+    "x": 528,
+    "y": 637,
+    "where": "frame",
+    "depth": 3.28
+   }
+  }
+ }
+}

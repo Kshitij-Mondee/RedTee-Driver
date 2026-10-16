@@ -1,0 +1,310 @@
+{
+  "ok": false,
+  "errors": [
+    "runtime tight_inset: text sits 5.4px from the edge of its shape (needs 6.0px): \"password\"",
+    "runtime tight_inset: text sits 5.5px from the edge of its shape (needs 6.0px): \"code\"",
+    "hf layout content_overlap @ 73.292: Two text blocks overlap and may render unreadable. [#mgsrc33 > g:nth-of-type(1) > g:nth-of-type(1) > g:nth-of-ty]",
+    "hf layout content_overlap @ 75.863: Two text blocks overlap and may render unreadable. [#mgsrc33 > g:nth-of-type(3) > g:nth-of-type(1) > g:nth-of-ty]",
+    "hf layout content_overlap @ 80.042: Two text blocks overlap and may render unreadable. [#mgsrc33 > g:nth-of-type(3) > g:nth-of-type(1) > g:nth-of-ty]",
+    "hf layout content_overlap @ 94.186: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 102.865: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 113.473: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(4) > g:nth-of-type(2) > text:nth-of-]",
+    "hf layout content_overlap @ 156.87: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 156.87: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 156.87: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 156.87: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 157.191: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.477: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 158.798: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 164.584: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 164.584: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]"
+  ],
+  "warnings": [
+    "runtime kicker_too_long: kickers are <=4 words: Google study, their own accounts",
+    "runtime fx_unavailable: lm-fx-bg: WebGL is not available here; the fx layer is skipped",
+    "runtime fx_unavailable: lm-fx-top: WebGL is not available here; the fx layer is skipped",
+    "b07: 5.7s static hold from 50.6s",
+    "b01: 8 chunks on screen (ask_pulse, code_chip, door, door_plate, laptop, phone, pw_chip, screen); the budget is ~5-6",
+    "b15: 8 chunks on screen (address, address_check, door_stamp, fake_box, fake_screen, request_address, request_chip, vault_tag); the budget is ~5-6",
+    "b18: 8 chunks on screen (copy_chip, door, door_plate, laptop, phone, prompt, run_slot, thief_laptop); the budget is ~5-6",
+    "b03: \"A password proves only that someone knows it. Noth\" is readable for 3.87s but 16 word(s) need 4.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b03: \"Typed on a stranger's laptop, it works the same.\" is readable for 2.70s but 9 word(s) need 2.70s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b11: \"Run three: the look-alike page asked, and passed i\" is readable for 1.52s but 10 word(s) need 3.00s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b03: new content arrives at 16.30s while b02 is still leaving (until 23.02s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "variety: template_share = 0.545 is worse than the worst baseline lesson (0.517): it grew",
+    "variety: still_share = 0.8 is worse than the worst baseline lesson (0.636): it grew (beats: b01, b04, b06, b07, b08, b10, b13, b19)",
+    "variety: the seed's camera habit is 'push' but 8 of 10 bespoke beats have no camera move",
+    "hf layout content_overlap @ 29.252: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 70.72: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(3) > text:nth-of-type(2) > tspan:nth]",
+    "hf layout content_overlap @ 4.5: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(3) > text:nth-of-type(2) > tspan:nth]",
+    "hf layout content_overlap @ 6.751: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 102.865: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(3) > text:nth-of-type(2) > tspan:nth]",
+    "hf layout content_overlap @ 153.655: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 153.655: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 164.584: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 164.584: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 164.906: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 164.906: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "b01: small text on screen at 6.9s: \"login.yourwork.example\" 25.4px (< 26 px)",
+    "b02: small text on screen at 13.6s: \"NOT EVERYTHING\" 25.4px (< 26 px)",
+    "b03: small text on screen at 22.5s: \"WHAT A PASSWORD PROVES\" 25.4px (< 26 px)",
+    "b04: small text on screen at 30.0s: \"ACCEPTED\" 23.8px, \"RUN 2\" 23.8px, \"RUN 3\" 23.8px (< 26 px)",
+    "b05: small text on screen at 40.0s: \"TWO KINDS OF PROOF\" 25.4px (< 26 px)",
+    "b06: small text on screen at 49.1s: \"Your code\" 23.8px, \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px (< 26 px)",
+    "b07: small text on screen at 61.9s: \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px, \"RUN 3\" 23.8px (< 26 px)",
+    "b08: small text on screen at 71.2s: \"Your code\" 23.8px, \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px (< 26 px)",
+    "b09: small text on screen at 75.8s: \"RUN THREE, PAUSED\" 25.4px (< 26 px)",
+    "b10: small text on screen at 87.7s: \"Your code\" 23.8px, \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px (< 26 px)",
+    "b11: small text on screen at 95.6s: \"WHY IT FELT SAFE\" 25.4px (< 26 px)",
+    "b13: small text on screen at 112.7s: \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px, \"ACCEPTED\" 23.8px (< 26 px)",
+    "b15: small text on screen at 129.2s: \"login.yourw0rk.example\" 21.3px, \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px (< 26 px)",
+    "b16: small text on screen at 143.8s: \"GOOGLE STUDY, THEIR OWN ACCOUNTS\" 25.4px, \"% blocked\" 25.4px (< 26 px)",
+    "b17: small text on screen at 152.6s: \"THEIR ACCOUNTS\" 25.4px (< 26 px)",
+    "b18: small text on screen at 161.4s: \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px, \"ACCEPTED\" 23.8px (< 26 px)",
+    "b19: small text on screen at 169.3s: \"ACCEPTED\" 23.8px, \"DENIED\" 23.8px, \"ACCEPTED\" 23.8px (< 26 px)",
+    "b22: small text on screen at 189.1s: \"WITH A PASSKEY\" 25.4px (< 26 px)"
+  ],
+  "stats": {
+    "reading_floor_short": 3,
+    "double_exposures": 1,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.01
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.44
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.43
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.77
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 3.64
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.15
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 5.69
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.58
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 2.16,
+        "declared": "hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.04
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.04
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 3.46
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.24
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 1.92
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 1.09
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 4.92
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 2.14
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 2.11
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 3.38
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 2.47
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 1.93
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 1.47,
+        "declared": "rest"
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.545,
+      "motion": 0.422,
+      "hybrid": 0.033,
+      "motion_effective": 0.439
+    },
+    "elements": {
+      "b01": 9,
+      "b02": 4,
+      "b03": 6,
+      "b04": 5,
+      "b05": 7,
+      "b06": 5,
+      "b07": 5,
+      "b08": 4,
+      "b09": 6,
+      "b10": 3,
+      "b11": 7,
+      "b12": 5,
+      "b13": 8,
+      "b14": 4,
+      "b15": 11,
+      "b16": 13,
+      "b17": 4,
+      "b18": 13,
+      "b19": 4,
+      "b20": 5,
+      "b21": 3,
+      "b22": 3
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.169,
+      "wallpaper_share": 0.0,
+      "template_share": 0.545,
+      "classic_share": 0.312,
+      "one_radius_share": 0.193,
+      "still_share": 0.8,
+      "labels_over_objects_share": 0.2,
+      "one_world_share": 0.3,
+      "lines_per_s": 12.3
+    },
+    "sfx_events": 47,
+    "sample_text_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 25.4,
+        "b02": 25.4,
+        "b03": 25.4,
+        "b04": 23.8,
+        "b05": 25.4,
+        "b06": 23.8,
+        "b07": 23.8,
+        "b08": 23.8,
+        "b09": 25.4,
+        "b10": 23.8,
+        "b11": 25.4,
+        "b12": 28.7,
+        "b13": 23.8,
+        "b14": 36.1,
+        "b15": 21.3,
+        "b16": 25.4,
+        "b17": 25.4,
+        "b18": 23.8,
+        "b19": 23.8,
+        "b20": 36.1,
+        "b21": 36.1,
+        "b22": 25.4
+      }
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.054,
+        "b02": 0.0435,
+        "b03": 0.0668,
+        "b04": 0.0726,
+        "b05": 0.084,
+        "b06": 0.0815,
+        "b07": 0.0966,
+        "b08": 0.0902,
+        "b09": 0.0952,
+        "b10": 0.1021,
+        "b11": 0.0632,
+        "b12": 0.0598,
+        "b13": 0.0758,
+        "b14": 0.0546,
+        "b15": 0.0986,
+        "b16": 0.049,
+        "b17": 0.0379,
+        "b18": 0.0752,
+        "b19": 0.0766,
+        "b20": 0.0373,
+        "b21": 0.0632,
+        "b22": 0.0453
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.01,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15
+      },
+      "measured_beats": 22
+    },
+    "tone": {
+      "value_script_beats": 22
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-explained\\qa\\sheets\\b22.jpg"
+  ]
+}

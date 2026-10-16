@@ -1,0 +1,186 @@
+{
+  "id": "line-art",
+  "name": "Line Art",
+  "reads_as": "Monoline illustration: every shape is a single even-weight outline on warm white, colour lives in the LINES (never in fills), generous white space, geometric sans type. Calm and precise, like a hand-inked technical manual. For systems, processes and concepts that should feel clean rather than corporate.",
+  "look_family": "technical",
+  "fits": [
+    "concepts",
+    "processes",
+    "systems",
+    "engineering",
+    "product",
+    "policy explainers"
+  ],
+  "avoid_for": [
+    "data-dense dashboards",
+    "playful kids content"
+  ],
+  "palette": {
+    "field": "#FBFAF7",
+    "field2": "#F3F1EC",
+    "surface": "#FFFFFF",
+    "surface2": "#F1EFE9",
+    "ink": "#16181D",
+    "muted": "#505663",
+    "line": "#16181D",
+    "accent": "#2F5BEA",
+    "accent2": "#B4530E",
+    "accent3": "#C8295F",
+    "accent4": "#127A63",
+    "pos": "#127A63",
+    "neg": "#C62F2F",
+    "shadow": "#16181D",
+    "onAccent": "#FFFFFF",
+    "caption_active": "#CA8756"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400
+      ]
+    },
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 500,
+        "file": "space-grotesk-latin-500-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 400,
+        "file": "inter-latin-400-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "file": "inter-latin-600-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      104,
+      150
+    ],
+    "hero": [
+      92,
+      132
+    ],
+    "title": [
+      58,
+      84
+    ],
+    "lead": [
+      32,
+      40
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      28
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 16,
+    "stroke": 3,
+    "shading": "line",
+    "shadow": "none"
+  },
+  "motion": {
+    "personality": "calm",
+    "enter": 0.55,
+    "move": 0.4,
+    "exit": 0.3,
+    "stagger": 0.09,
+    "draw": 1.0,
+    "count": 1.2,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "none"
+  },
+  "captions": {
+    "bg": "rgba(22,24,29,0.92)",
+    "fg": "surface",
+    "active": "caption_active",
+    "radius": 10,
+    "font": "body",
+    "size": 34,
+    "weight": 600,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 2
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "cloth": "accent",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "accent3",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "Plain and quick: a cut between topics is right; continue inside a topic; covers (dip, fade, wipe, iris) only at a section change, if at all.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 50
+  },
+  "fx": {
+    "background": "paper",
+    "intensity": 0.6,
+    "grain": 0,
+    "vignette": 0.06,
+    "colors": [
+      "accent",
+      "accent2",
+      "accent3"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  }
+}

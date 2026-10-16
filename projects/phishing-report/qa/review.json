@@ -1,0 +1,74 @@
+{
+ "verdict": "fix",
+ "reviewer": "Claude (orchestrator), from Chrome contact sheets, 2026-10-02; full review docs/research/2026-10-02-step7-review.md",
+ "findings": [
+  {
+   "beat": "b42",
+   "severity": "blocker",
+   "problem": "the closing headline printed over the opening headline: elements the camera carried away stayed on their station",
+   "fix": "engine: runtime/world.js hides camera-carried elements once out of sight",
+   "file": "runtime/world.js",
+   "status": "fixed"
+  },
+  {
+   "beat": "b01",
+   "severity": "major",
+   "problem": "the hook headline was readable for 0.2 s before the camera left, and no check said so",
+   "fix": "check counts camera exits and the real end of an entrance (loom/qa.py); b01 pause_after_s 1.4",
+   "file": "loom/qa.py, plan/script.json",
+   "status": "fixed"
+  },
+  {
+   "beat": "b19, b21",
+   "severity": "blocker",
+   "problem": "the push landed on empty board; in b21 the board slid 1187 px depending on which frames had been seen (a determinism break)",
+   "fix": "engine: m.travel writes its matrix directly; holds act on the life group",
+   "file": "runtime/motion.js, runtime/hold.js",
+   "status": "fixed"
+  },
+  {
+   "beat": "b39",
+   "severity": "major",
+   "problem": "9.3 s with nothing developing: the second why-not and the takeaway had no slot",
+   "fix": "quiz.answer gains also / also_why and takeaway",
+   "file": "runtime/templates/more.js",
+   "status": "fixed"
+  },
+  {
+   "beat": "b22",
+   "severity": "major",
+   "problem": "the template title printed over the evidence board kept from b21",
+   "fix": "b21 gives the board a real exit; storyboard drops keep",
+   "file": "scenes/b21.js, plan/storyboard.json",
+   "status": "fixed"
+  },
+  {
+   "beat": "b02, b07, b32, b33, b34-b36",
+   "severity": "major",
+   "problem": "bean people (round flat heads, grey bean crowd), a cartoon thought cloud and icon-detail clock and calendar under a mature palette",
+   "fix": "plain/cinema registers need a designed cast or none (plan phases 1 and 3)",
+   "status": "open"
+  },
+  {
+   "beat": "b02, b13, b15, b17, b20, b24, b27, b28, b34 and 5 more",
+   "severity": "minor",
+   "problem": "14 beats over the chunk budget; 9 texts short of their reading floor",
+   "fix": "fewer chips per frame; auto-hold (plan phase 4)",
+   "status": "open"
+  },
+  {
+   "beat": "b15, b16",
+   "severity": "minor",
+   "problem": "the same message card twice in a row",
+   "fix": "b16 changes what it shows (a push onto what the message wants)",
+   "status": "open"
+  },
+  {
+   "beat": "scenes",
+   "severity": "minor",
+   "problem": "9 literal_colour warnings (#855b24, #493214, #da953b). No scene file contains these hex values, so they are most likely shades computed from tokens (S.lighten / S.darken) passed back through S.c, which the warning cannot tell from a typed hex. Which call: unverified",
+   "fix": "instrument first: let S.c accept a shade it derived (or a {token, shade} form) and keep the warning for typed hex",
+   "status": "open"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b01",
+      "problem": "Avatar template",
+      "fix": "none",
+      "severity": "minor",
+      "status": "accepted",
+      "reason": "Requested presenter avatar."
+    },
+    {
+      "beat": "b02",
+      "problem": "Brief fade",
+      "fix": "none",
+      "severity": "minor",
+      "status": "accepted",
+      "reason": "Intentional short fade."
+    },
+    {
+      "beat": "b10",
+      "problem": "Quadrant action labels, bracket and week day labels not held from b09",
+      "fix": "Add them to ctx.held",
+      "severity": "major",
+      "status": "accepted",
+      "reason": "Deliberate clearing: b10 to b12 are about the dialogue; quadrant titles, cards, later tag and week strip stay. Re-adding labels would crowd the dialogue box. Critic pass 4 no longer raises it."
+    },
+    {
+      "beat": "b11",
+      "problem": "Week strip day headers and quadrant actions missing",
+      "fix": "Add them to ctx.held",
+      "severity": "major",
+      "status": "accepted",
+      "reason": "Same as b10: the strip with its budget block carries the idea; day names are secondary."
+    },
+    {
+      "beat": "b12",
+      "problem": "Week strip day headers and quadrant actions missing",
+      "fix": "Add them to ctx.held",
+      "severity": "major",
+      "status": "accepted",
+      "reason": "Same as b10; the end frame stays clean for the accent question."
+    },
+    {
+      "beat": "b12",
+      "problem": "giveway_arrow points into empty space",
+      "fix": "Redraw curving toward the budget card",
+      "severity": "minor",
+      "status": "accepted",
+      "reason": "Arrow runs from the new card toward the week strip where the task gives way; reads acceptably."
+    }
+  ]
+}

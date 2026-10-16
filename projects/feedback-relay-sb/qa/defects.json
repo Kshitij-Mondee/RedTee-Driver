@@ -1,0 +1,135 @@
+{
+  "source": "check",
+  "routed": {
+    "script": {},
+    "storyboard": {},
+    "scene": {
+      "b01": [
+        {
+          "beat": "b01",
+          "code": "unknown_token",
+          "detail": "unknown colour token none",
+          "source": "probe",
+          "count": 9
+        },
+        {
+          "beat": "b01",
+          "code": "check",
+          "detail": "b01: blank beat at 14.3s: none of its 1 own element(s) is seen in the frame while the voice speaks (bubble 'natural_bubble' not visible); the beat's picture is off frame or absent (lay it out inside the frame, or reveal it)",
+          "source": "check",
+          "count": 1
+        }
+      ],
+      "b05": [
+        {
+          "beat": "b05",
+          "code": "unknown_token",
+          "detail": "unknown colour token none",
+          "source": "probe",
+          "count": 9
+        }
+      ],
+      "b12": [
+        {
+          "beat": "b12",
+          "code": "unknown_token",
+          "detail": "unknown colour token none",
+          "source": "probe",
+          "count": 18
+        },
+        {
+          "beat": "b12",
+          "code": "content_overlap",
+          "detail": "at 124.357 s: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(1) > g:nth-of-typ]",
+          "source": "hf",
+          "count": 1
+        },
+        {
+          "beat": "b12",
+          "code": "content_overlap",
+          "detail": "at 128.042 s: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+          "source": "hf",
+          "count": 5
+        }
+      ]
+    },
+    "engine": {
+      "b05": [
+        {
+          "beat": "b05",
+          "code": "tight_inset",
+          "detail": "text sits 0.7px from the edge of its shape (needs 7.4px): \"Observed action\"",
+          "source": "probe",
+          "count": 2
+        },
+        {
+          "beat": "b05",
+          "code": "tight_inset",
+          "detail": "text sits 0.0px from the edge of its shape (needs 7.6px): \"Effect\"",
+          "source": "probe",
+          "count": 3
+        },
+        {
+          "beat": "b05",
+          "code": "tight_inset",
+          "detail": "text sits 0.0px from the edge of its shape (needs 7.6px): \"Next step\"",
+          "source": "probe",
+          "count": 3
+        },
+        {
+          "beat": "b05",
+          "code": "tight_inset",
+          "detail": "text sits 0.5px from the edge of its shape (needs 7.4px): \"Observed action\"",
+          "source": "probe",
+          "count": 1
+        }
+      ],
+      "b07": [
+        {
+          "beat": "b07",
+          "code": "tight_inset",
+          "detail": "text sits 0.0px from the edge of its shape (needs 7.6px): \"Action\"",
+          "source": "probe",
+          "count": 3
+        },
+        {
+          "beat": "b07",
+          "code": "tight_inset",
+          "detail": "text sits 0.0px from the edge of its shape (needs 7.6px): \"Effect\"",
+          "source": "probe",
+          "count": 3
+        },
+        {
+          "beat": "b07",
+          "code": "tight_inset",
+          "detail": "text sits 0.0px from the edge of its shape (needs 7.6px): \"Next step\"",
+          "source": "probe",
+          "count": 3
+        }
+      ],
+      "b12": [
+        {
+          "beat": "b12",
+          "code": "tight_inset",
+          "detail": "text sits 1.0px from the edge of its shape (needs 7.4px): \"Observed action\"",
+          "source": "probe",
+          "count": 3
+        },
+        {
+          "beat": "b12",
+          "code": "tight_inset",
+          "detail": "text sits -0.4px from the edge of its shape (needs 7.6px): \"Effect\"",
+          "source": "probe",
+          "count": 3
+        },
+        {
+          "beat": "b12",
+          "code": "tight_inset",
+          "detail": "text sits -0.4px from the edge of its shape (needs 7.6px): \"Next step\"",
+          "source": "probe",
+          "count": 3
+        }
+      ]
+    }
+  }
+}

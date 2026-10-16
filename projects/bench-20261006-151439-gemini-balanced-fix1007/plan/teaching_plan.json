@@ -1,0 +1,132 @@
+{
+  "practice_ladder": [
+    "Worked example: The narrator breaks down a vague critique, translates it into observable behavior, and adds the objective impact.",
+    "Faded practice: The viewer is shown a feedback statement and must identify which part is the behavior and which is the impact.",
+    "Independent practice: The viewer constructs a full behavior-focused feedback statement for a fresh scenario."
+  ],
+  "pacing": {
+    "slowdown_at": "the explanation of linking observed behavior to objective task impact without exaggerating",
+    "words_per_minute": 145,
+    "target_duration_s": 270,
+    "recall_moments": [
+      {
+        "question": "Which of these statements correctly targets an observable behavior rather than a personality trait?",
+        "answer": "You submitted the report two days after the deadline.",
+        "tempting_wrong": "You never seem to care about submitting your reports on time.",
+        "after_section": "sec1_behavior",
+        "kind": "quiz"
+      }
+    ]
+  },
+  "arc": {
+    "sections": [
+      {
+        "energy": "build",
+        "goal": "the viewer can classify feedback statements as either personality critiques or observable behaviors",
+        "recap_after": true,
+        "bloom": "understand",
+        "carrier": "comparison",
+        "id": "sec1_behavior",
+        "concepts": [
+          "Personality trait",
+          "Observable behavior",
+          "Absolute words"
+        ]
+      },
+      {
+        "recap_after": true,
+        "goal": "the viewer can build a complete feedback statement connecting observed behavior to objective task impact",
+        "energy": "peak",
+        "bloom": "apply",
+        "id": "sec2_impact",
+        "concepts": [
+          "Internal motives",
+          "Objective impact",
+          "Objective consequences"
+        ],
+        "carrier": "worked example"
+      },
+      {
+        "energy": "rest",
+        "goal": "the viewer can use questions to transition the conversation from past errors to future collaborative planning",
+        "carrier": "dialogue",
+        "id": "sec3_future",
+        "recap_after": false,
+        "bloom": "apply",
+        "concepts": [
+          "Past errors",
+          "Future actions",
+          "Collaborative planning",
+          "Ownership"
+        ]
+      }
+    ],
+    "payoff": "Return to the opening conversation. This time, the manager names the exact behavior and its impact, then asks how to approach the next project. The relationship stays intact, and the work improves.",
+    "promise": "By focusing on observable actions instead of character, you can make feedback a catalyst for real change.",
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine a manager telling a colleague they have a negative attitude. The colleague gets defensive, the relationship strains, and the actual work never improves."
+    },
+    "bridge_from_prior": "You already know that giving feedback often feels personal and awkward, but a simple shift in focus can fix that."
+  },
+  "title": "Feedback for Behavior Change",
+  "framework_audit": {
+    "merrill": {
+      "application": "practice_ladder",
+      "problem_centred": "arc.hook",
+      "activation": "arc.bridge_from_prior",
+      "demonstration": "sec2_impact",
+      "integration": "transfer_tasks"
+    },
+    "mayer": {
+      "contiguity": "side-by-side visual direction",
+      "redundancy": "visual direction avoiding text transcription",
+      "coherence": "visual direction",
+      "pre_training": "sec1_behavior",
+      "signalling": "pacing.slowdown_at",
+      "segmenting": "arc.sections"
+    },
+    "gagne": {
+      "guidance": "strategy.signature_move",
+      "transfer": "transfer_tasks",
+      "recall_prior": "arc.bridge_from_prior",
+      "present": "arc.sections",
+      "attention": "arc.hook",
+      "practice": "practice_ladder"
+    },
+    "bloom_path": "understand -> apply -> apply",
+    "arcs": {
+      "confidence": "practice_ladder",
+      "attention": "arc.hook",
+      "relevance": "audience.motivation",
+      "satisfaction": "arc.payoff"
+    }
+  },
+  "performance": "The viewer will consistently frame their feedback around specific, observable behaviors and objective business impacts rather than subjective personality traits.",
+  "flags": [
+    "OPEN-QUESTION: Will the organization prefer a specific behavioral framework or a general approach?"
+  ],
+  "audience": {
+    "context": "Corporate office environments and performance reviews.",
+    "level": "practitioner",
+    "motivation": "Improving performance without ruining working relationships.",
+    "assumed_prior": "Giving feedback often feels personal and awkward.",
+    "why": "To navigate difficult conversations effectively and drive real behavioral change."
+  },
+  "genre": "conceptual",
+  "transfer_tasks": [
+    "Before your next one-on-one meeting, write down one piece of feedback, run it through the video camera test to ensure it is observable behavior, and state its objective impact."
+  ],
+  "strategy": {
+    "rationale": "The lesson hinges on the difference between personality critiques and observable behavior. A contrast-led approach directly visualizes this, allowing the viewer to compare the abstract with the concrete.",
+    "name": "contrast_led",
+    "signature_move": "Show a vague personality critique on screen, place the objective behavioral alternative beside it, and highlight the specific words that remove subjective guesses."
+  },
+  "misconceptions": [
+    {
+      "why_tempting": "Because poorly framed critiques provoke defensiveness, people assume any negative feedback will inherently ruin the working relationship.",
+      "refuted_in": "sec2_impact",
+      "belief": "You must avoid giving negative feedback entirely to protect colleagues' feelings."
+    }
+  ]
+}

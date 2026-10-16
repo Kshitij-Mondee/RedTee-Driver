@@ -1,0 +1,454 @@
+{
+ "scene": "clockwork_room",
+ "camera_spec": {
+  "camera": {
+   "x": 0,
+   "y": -1.95,
+   "eye": 1.35,
+   "yaw": 0,
+   "hfov": 70,
+   "horizon_pct": 42
+  },
+  "walls": [],
+  "points": {
+   "cw_front_left_top": [
+    -0.5,
+    -0.2,
+    1.1
+   ],
+   "cw_front_right_top": [
+    0.5,
+    -0.2,
+    1.1
+   ],
+   "cw_front_left_base": [
+    -0.5,
+    -0.2,
+    0
+   ],
+   "cw_back_left_top": [
+    -0.5,
+    0.4,
+    1.1
+   ],
+   "cw_back_right_top": [
+    0.5,
+    0.4,
+    1.1
+   ],
+   "regulator_top": [
+    0,
+    0.1,
+    1.4
+   ],
+   "shaft_at_ceiling": [
+    0,
+    0.1,
+    2.7
+   ],
+   "shaft_top_of_frame": [
+    0,
+    0.1,
+    2.2
+   ],
+   "crank_hub": [
+    -0.5,
+    0.0,
+    0.85
+   ],
+   "drum_centre": [
+    0,
+    -0.2,
+    0.55
+   ],
+   "W1_left_jamb_bottom": [
+    -1.95,
+    0.78,
+    1.0
+   ],
+   "W1_right_jamb_top": [
+    -1.71,
+    1.22,
+    1.6
+   ],
+   "W1_centre": [
+    -1.82,
+    1.05,
+    1.3
+   ],
+   "W2_left_jamb": [
+    1.71,
+    1.22,
+    1.0
+   ],
+   "W2_right_jamb_top": [
+    1.95,
+    0.78,
+    1.6
+   ],
+   "W2_centre": [
+    1.82,
+    1.05,
+    1.3
+   ],
+   "desk_top_left": [
+    1.25,
+    0.95,
+    0.78
+   ],
+   "desk_top_right": [
+    1.6,
+    0.35,
+    0.78
+   ],
+   "chair_seat": [
+    1.1,
+    0.55,
+    0.45
+   ],
+   "ladder_left_top": [
+    1.88,
+    0.93,
+    2.7
+   ],
+   "ladder_bottom_left": [
+    1.99,
+    0.68,
+    0
+   ],
+   "ladder_rail_at_1_5": [
+    1.97,
+    0.72,
+    1.5
+   ],
+   "wall_far_centre_floor": [
+    0,
+    2.1,
+    0
+   ],
+   "wall_far_centre_top": [
+    0,
+    2.1,
+    2.7
+   ],
+   "wall_far_centre_eye": [
+    0,
+    2.1,
+    1.35
+   ],
+   "wall_az120_floor": [
+    -1.05,
+    1.82,
+    0
+   ],
+   "wall_az60_floor": [
+    1.05,
+    1.82,
+    0
+   ],
+   "stair_rail_near": [
+    -1.2,
+    -1.0,
+    1.0
+   ],
+   "stair_opening_far_edge": [
+    -1.4,
+    -0.2,
+    0
+   ],
+   "A_head_top": [
+    -0.95,
+    0.35,
+    1.75
+   ],
+   "A_head_c": [
+    -0.95,
+    0.35,
+    1.63
+   ],
+   "A_feet": [
+    -0.95,
+    0.35,
+    0
+   ],
+   "B_head_top": [
+    0.8,
+    0.8,
+    1.75
+   ],
+   "B_head_c": [
+    0.8,
+    0.8,
+    1.63
+   ],
+   "B_feet": [
+    0.8,
+    0.8,
+    0
+   ]
+  },
+  "behind": [],
+  "note": "The watch room is round (inside radius 2.1 m), which set_camera.py's flat walls cannot describe; what each head is seen against was computed by intersecting the ray from the eye through the head with the cylinder (work/cyl.py logic, recorded under camera_check.behind_round). Windows: W1 centred at azimuth 150 degrees, W2 at 30 degrees (azimuth from +x, counterclockwise), each 0.6 m wide, sill 1.0 m, head 1.6 m."
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 960,
+   "along_x": "at infinity (parallel to the frame)",
+   "horizon_y": 454
+  },
+  "points": {
+   "cw_front_left_top": {
+    "x": 568,
+    "y": 649,
+    "where": "frame",
+    "depth": 1.75
+   },
+   "cw_front_right_top": {
+    "x": 1352,
+    "y": 649,
+    "where": "frame",
+    "depth": 1.75
+   },
+   "cw_front_left_base": {
+    "x": 568,
+    "y": 1511,
+    "where": "outside",
+    "depth": 1.75
+   },
+   "cw_back_left_top": {
+    "x": 668,
+    "y": 599,
+    "where": "frame",
+    "depth": 2.35
+   },
+   "cw_back_right_top": {
+    "x": 1252,
+    "y": 599,
+    "where": "frame",
+    "depth": 2.35
+   },
+   "regulator_top": {
+    "x": 960,
+    "y": 420,
+    "where": "frame",
+    "depth": 2.05
+   },
+   "shaft_at_ceiling": {
+    "x": 960,
+    "y": -449,
+    "where": "outside",
+    "depth": 2.05
+   },
+   "shaft_top_of_frame": {
+    "x": 960,
+    "y": -115,
+    "where": "overscan",
+    "depth": 2.05
+   },
+   "crank_hub": {
+    "x": 608,
+    "y": 805,
+    "where": "frame",
+    "depth": 1.95
+   },
+   "drum_centre": {
+    "x": 960,
+    "y": 1080,
+    "where": "overscan",
+    "depth": 1.75
+   },
+   "W1_left_jamb_bottom": {
+    "x": -19,
+    "y": 629,
+    "where": "overscan",
+    "depth": 2.73
+   },
+   "W1_right_jamb_top": {
+    "x": 220,
+    "y": 345,
+    "where": "frame",
+    "depth": 3.17
+   },
+   "W1_centre": {
+    "x": 128,
+    "y": 476,
+    "where": "frame",
+    "depth": 3.0
+   },
+   "W2_left_jamb": {
+    "x": 1700,
+    "y": 605,
+    "where": "frame",
+    "depth": 3.17
+   },
+   "W2_right_jamb_top": {
+    "x": 1939,
+    "y": 328,
+    "where": "overscan",
+    "depth": 2.73
+   },
+   "W2_centre": {
+    "x": 1792,
+    "y": 476,
+    "where": "frame",
+    "depth": 3.0
+   },
+   "desk_top_left": {
+    "x": 1551,
+    "y": 723,
+    "where": "frame",
+    "depth": 2.9
+   },
+   "desk_top_right": {
+    "x": 1914,
+    "y": 793,
+    "where": "frame",
+    "depth": 2.3
+   },
+   "chair_seat": {
+    "x": 1563,
+    "y": 947,
+    "where": "frame",
+    "depth": 2.5
+   },
+   "ladder_left_top": {
+    "x": 1855,
+    "y": -189,
+    "where": "outside",
+    "depth": 2.88
+   },
+   "ladder_bottom_left": {
+    "x": 1997,
+    "y": 1157,
+    "where": "overscan",
+    "depth": 2.63
+   },
+   "ladder_rail_at_1_5": {
+    "x": 1972,
+    "y": 377,
+    "where": "overscan",
+    "depth": 2.67
+   },
+   "wall_far_centre_floor": {
+    "x": 960,
+    "y": 911,
+    "where": "frame",
+    "depth": 4.05
+   },
+   "wall_far_centre_top": {
+    "x": 960,
+    "y": -3,
+    "where": "overscan",
+    "depth": 4.05
+   },
+   "wall_far_centre_eye": {
+    "x": 960,
+    "y": 454,
+    "where": "frame",
+    "depth": 4.05
+   },
+   "wall_az120_floor": {
+    "x": 578,
+    "y": 945,
+    "where": "frame",
+    "depth": 3.77
+   },
+   "wall_az60_floor": {
+    "x": 1342,
+    "y": 945,
+    "where": "frame",
+    "depth": 3.77
+   },
+   "stair_rail_near": {
+    "x": -772,
+    "y": 959,
+    "where": "outside",
+    "depth": 0.95
+   },
+   "stair_opening_far_edge": {
+    "x": -137,
+    "y": 1511,
+    "where": "outside",
+    "depth": 1.75
+   },
+   "A_head_top": {
+    "x": 394,
+    "y": 215,
+    "where": "frame",
+    "depth": 2.3
+   },
+   "A_head_c": {
+    "x": 394,
+    "y": 287,
+    "where": "frame",
+    "depth": 2.3
+   },
+   "A_feet": {
+    "x": 394,
+    "y": 1258,
+    "where": "outside",
+    "depth": 2.3
+   },
+   "B_head_top": {
+    "x": 1359,
+    "y": 254,
+    "where": "frame",
+    "depth": 2.75
+   },
+   "B_head_c": {
+    "x": 1359,
+    "y": 314,
+    "where": "frame",
+    "depth": 2.75
+   },
+   "B_feet": {
+    "x": 1359,
+    "y": 1127,
+    "where": "overscan",
+    "depth": 2.75
+   }
+  },
+  "behind_round": {
+   "A_head_top": {
+    "wall": "round wall (R 2.10)",
+    "at": [
+     -1.44,
+     1.53,
+     1.96
+    ],
+    "azimuth_deg": 133.2,
+    "what": "wall"
+   },
+   "A_head_c": {
+    "wall": "round wall (R 2.10)",
+    "at": [
+     -1.44,
+     1.53,
+     1.77
+    ],
+    "azimuth_deg": 133.2,
+    "what": "wall"
+   },
+   "B_head_top": {
+    "wall": "round wall (R 2.10)",
+    "at": [
+     1.09,
+     1.8,
+     1.89
+    ],
+    "azimuth_deg": 58.7,
+    "what": "wall"
+   },
+   "B_head_c": {
+    "wall": "round wall (R 2.10)",
+    "at": [
+     1.09,
+     1.8,
+     1.73
+    ],
+    "azimuth_deg": 58.7,
+    "what": "wall"
+   }
+  }
+ }
+}

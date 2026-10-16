@@ -1,0 +1,250 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "b13: \"What he did, what it caused, and a question: an ac\" is readable for 1.94s but 13 word(s) need 3.90s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 0.556 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 1.0 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b02, b03, b04, b05, b06, b07, b08)",
+    "variety: pop_settle_share = 0.393 is above the baseline median (0.386)",
+    "hf layout rotation_pivot_drift @ 74.252: Rotating element's bounding-box center drifts 791px across rotation — it is not spinning about its own center (check transformOrigin/svgOrigin). [g.lm-in > g:nth-of-type(4) > g:nth-of-type(1)]",
+    "hf layout container_overflow @ 112.753: Element extends outside a clipping layout container. [g.lm-material-layers]",
+    "b04: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.71 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.71 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.71 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.71 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.71 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson saturation 0.15 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.93 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 1,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 4.35
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.58
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 3.3
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 4.21
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.77
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 2.14
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.36
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.26
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 3.42
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.35,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 9.66,
+        "declared": "hold"
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 4.22
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.18
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.136,
+      "template": 0.458,
+      "motion": 0.407,
+      "hybrid": 0.0,
+      "motion_effective": 0.407
+    },
+    "elements": {
+      "b01": 5,
+      "b02": 6,
+      "b04": 6,
+      "b05": 3,
+      "b06": 2,
+      "b07": 7,
+      "b08": 2,
+      "b09": 2,
+      "b10": 3,
+      "b11": 1,
+      "b12": 5,
+      "b13": 5,
+      "b14": 8,
+      "b15": 7
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.393,
+      "wallpaper_share": 0.0,
+      "template_share": 0.133,
+      "classic_share": 1.0,
+      "one_radius_share": 0.556,
+      "still_share": 1.0,
+      "labels_over_objects_share": 0.167,
+      "one_world_share": 0.25,
+      "lines_per_s": 11.38
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 34.4,
+        "b02": 37.7,
+        "b03": 37.7,
+        "b04": 40.2,
+        "b05": 31.9,
+        "b06": 31.9,
+        "b07": 40.2,
+        "b08": 38.4,
+        "b09": 38.4,
+        "b10": 38.4,
+        "b11": 38.4,
+        "b12": 34.4,
+        "b13": 41.8,
+        "b14": 37.7,
+        "b15": 34.4
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 15,
+      "lines_seen": 118,
+      "blank_beats": [],
+      "blank_measured": 14
+    },
+    "foreign": {
+      "measured_beats": 15,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 62,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.055,
+        "b02": 0.0993,
+        "b03": 0.0934,
+        "b04": 0.0851,
+        "b05": 0.0491,
+        "b06": 0.1153,
+        "b07": 0.0759,
+        "b08": 0.0826,
+        "b09": 0.1026,
+        "b10": 0.1075,
+        "b11": 0.0839,
+        "b12": 0.0821,
+        "b13": 0.1093,
+        "b14": 0.0889,
+        "b15": 0.0599
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 15,
+      "sharpness": {
+        "b01": 1.053,
+        "b02": 1.048,
+        "b03": 1.024,
+        "b04": 1.111,
+        "b05": 1.246,
+        "b06": 1.015,
+        "b07": 1.092,
+        "b08": 1.15,
+        "b09": 0.654,
+        "b10": 1.145,
+        "b11": 1.005,
+        "b12": 0.985,
+        "b13": 0.907,
+        "b14": 1.105,
+        "b15": 1.068
+      },
+      "blurred_beats": [],
+      "blur_measured": 15
+    },
+    "tone": {
+      "value_script_beats": 15,
+      "tone_vs_reference": {
+        "brightness": 0.735,
+        "saturation": 0.15,
+        "dark_share": 0.0,
+        "light_share": 0.933
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-opus\\qa\\sheets\\b15.jpg"
+  ],
+  "build_hash": "74b6ae0bbbe1d954"
+}

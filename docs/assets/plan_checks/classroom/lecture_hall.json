@@ -1,0 +1,388 @@
+{
+ "scene": "lecture_hall",
+ "camera_spec": {
+  "camera": {
+   "x": 8.6,
+   "y": 1.9,
+   "eye": 4.0,
+   "yaw": -8,
+   "hfov": 55,
+   "horizon_pct": 20
+  },
+  "walls": [
+   {
+    "name": "teaching wall (front, y 13.0)",
+    "axis": "y",
+    "at": 13.0
+   }
+  ],
+  "points": {
+   "front_wall_L_floor": [
+    0,
+    13,
+    0
+   ],
+   "front_wall_L_top": [
+    0,
+    13,
+    5.0
+   ],
+   "screen_L_bottom": [
+    5.5,
+    13,
+    1.4
+   ],
+   "screen_R_top": [
+    10.5,
+    13,
+    4.2
+   ],
+   "screen_L_top": [
+    5.5,
+    13,
+    4.2
+   ],
+   "screen_R_bottom": [
+    10.5,
+    13,
+    1.4
+   ],
+   "lectern_top": [
+    3.9,
+    11.5,
+    1.1
+   ],
+   "lectern_base": [
+    3.9,
+    11.5,
+    0
+   ],
+   "bench_L": [
+    5.0,
+    12.1,
+    0.9
+   ],
+   "bench_R": [
+    10.0,
+    12.1,
+    0.9
+   ],
+   "bench_L_floor": [
+    5.0,
+    11.8,
+    0
+   ],
+   "exit_door_R_top": [
+    0,
+    12.2,
+    2.1
+   ],
+   "L_head_top": [
+    4.3,
+    11.6,
+    1.75
+   ],
+   "L_head_centre": [
+    4.3,
+    11.6,
+    1.62
+   ],
+   "L_feet": [
+    4.3,
+    11.6,
+    0
+   ],
+   "S_head_top": [
+    6.6,
+    9.55,
+    1.62
+   ],
+   "S_head_centre": [
+    6.6,
+    9.55,
+    1.49
+   ],
+   "S_seat_top": [
+    6.6,
+    9.6,
+    0.75
+   ],
+   "ceiling_front_mid": [
+    8,
+    13,
+    5.0
+   ],
+   "row1_back_top_x3": [
+    2.4,
+    9.35,
+    1.15
+   ],
+   "row1_back_top_x11": [
+    11.6,
+    9.35,
+    1.15
+   ],
+   "row2_back_top_x3": [
+    2.4,
+    8.4,
+    1.45
+   ],
+   "row2_back_top_x11": [
+    11.6,
+    8.4,
+    1.45
+   ],
+   "row4_back_top_x3": [
+    2.4,
+    6.5,
+    2.05
+   ],
+   "row4_back_top_x11": [
+    11.6,
+    6.5,
+    2.05
+   ],
+   "row6_back_top_x3": [
+    2.4,
+    4.6,
+    2.65
+   ],
+   "row6_back_top_x11": [
+    11.6,
+    4.6,
+    2.65
+   ],
+   "row1_tablet_front": [
+    6.6,
+    9.95,
+    0.95
+   ],
+   "screen_centre": [
+    8.0,
+    13.0,
+    2.8
+   ]
+  },
+  "behind": [
+   "L_head_top",
+   "L_head_centre",
+   "S_head_top",
+   "S_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1219,
+   "along_x": -12162,
+   "horizon_y": 216
+  },
+  "points": {
+   "front_wall_L_floor": {
+    "x": -95,
+    "y": 821,
+    "where": "overscan",
+    "depth": 12.19
+   },
+   "front_wall_L_top": {
+    "x": -95,
+    "y": 65,
+    "where": "overscan",
+    "depth": 12.19
+   },
+   "screen_L_bottom": {
+    "x": 714,
+    "y": 636,
+    "where": "frame",
+    "depth": 11.42
+   },
+   "screen_R_top": {
+    "x": 1549,
+    "y": 182,
+    "where": "frame",
+    "depth": 10.73
+   },
+   "screen_L_top": {
+    "x": 714,
+    "y": 184,
+    "where": "frame",
+    "depth": 11.42
+   },
+   "screen_R_bottom": {
+    "x": 1549,
+    "y": 663,
+    "where": "frame",
+    "depth": 10.73
+   },
+   "lectern_top": {
+    "x": 358,
+    "y": 742,
+    "where": "frame",
+    "depth": 10.16
+   },
+   "lectern_base": {
+    "x": 358,
+    "y": 942,
+    "where": "frame",
+    "depth": 10.16
+   },
+   "bench_L": {
+    "x": 587,
+    "y": 755,
+    "where": "frame",
+    "depth": 10.6
+   },
+   "bench_R": {
+    "x": 1482,
+    "y": 793,
+    "where": "frame",
+    "depth": 9.91
+   },
+   "bench_L_floor": {
+    "x": 569,
+    "y": 932,
+    "where": "frame",
+    "depth": 10.3
+   },
+   "exit_door_R_top": {
+    "x": -186,
+    "y": 523,
+    "where": "overscan",
+    "depth": 11.4
+   },
+   "L_head_top": {
+    "x": 434,
+    "y": 623,
+    "where": "frame",
+    "depth": 10.2,
+    "behind": {
+     "wall": "teaching wall (front, y 13.0)",
+     "at": [
+      3.68,
+      13.0,
+      1.43
+     ]
+    }
+   },
+   "L_head_centre": {
+    "x": 434,
+    "y": 646,
+    "where": "frame",
+    "depth": 10.2,
+    "behind": {
+     "wall": "teaching wall (front, y 13.0)",
+     "at": [
+      3.68,
+      13.0,
+      1.28
+     ]
+    }
+   },
+   "L_feet": {
+    "x": 434,
+    "y": 939,
+    "where": "frame",
+    "depth": 10.2
+   },
+   "S_head_top": {
+    "x": 745,
+    "y": 775,
+    "where": "frame",
+    "depth": 7.85,
+    "behind": {
+     "wall": "teaching wall (front, y 13.0)",
+     "at": [
+      5.7,
+      13.0,
+      0.55
+     ]
+    }
+   },
+   "S_head_centre": {
+    "x": 745,
+    "y": 805,
+    "where": "frame",
+    "depth": 7.85,
+    "behind": {
+     "wall": "teaching wall (front, y 13.0)",
+     "at": [
+      5.7,
+      13.0,
+      0.36
+     ]
+    }
+   },
+   "S_seat_top": {
+    "x": 748,
+    "y": 974,
+    "where": "frame",
+    "depth": 7.9
+   },
+   "ceiling_front_mid": {
+    "x": 1118,
+    "y": 49,
+    "where": "frame",
+    "depth": 11.08
+   },
+   "row1_back_top_x3": {
+    "x": -182,
+    "y": 854,
+    "where": "overscan",
+    "depth": 8.24
+   },
+   "row1_back_top_x11": {
+    "x": 2022,
+    "y": 971,
+    "where": "overscan",
+    "depth": 6.96
+   },
+   "row2_back_top_x3": {
+    "x": -363,
+    "y": 860,
+    "where": "outside",
+    "depth": 7.3
+   },
+   "row2_back_top_x11": {
+    "x": 2147,
+    "y": 997,
+    "where": "overscan",
+    "depth": 6.02
+   },
+   "row4_back_top_x3": {
+    "x": -912,
+    "y": 880,
+    "where": "outside",
+    "depth": 5.42
+   },
+   "row4_back_top_x11": {
+    "x": 2569,
+    "y": 1085,
+    "where": "outside",
+    "depth": 4.14
+   },
+   "row6_back_top_x3": {
+    "x": -2046,
+    "y": 920,
+    "where": "outside",
+    "depth": 3.54
+   },
+   "row6_back_top_x11": {
+    "x": 3695,
+    "y": 1319,
+    "where": "outside",
+    "depth": 2.26
+   },
+   "row1_tablet_front": {
+    "x": 768,
+    "y": 898,
+    "where": "frame",
+    "depth": 8.25
+   },
+   "screen_centre": {
+    "x": 1118,
+    "y": 416,
+    "where": "frame",
+    "depth": 11.08
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "name": "claude-openai-value",
+ "description": "Two keys (Anthropic + OpenAI), no Gemini: Sol plans and builds, Sonnet storyboards, Haiku verifies (a different family from the authors), Luna for small roles.",
+ "roles": {
+  "brief": "gpt-6.1-sol",
+  "knowledge": "gpt-6.1-sol",
+  "skeptic": "claude-haiku-4-5",
+  "pedagogy": "gpt-6.1-sol",
+  "persona_pick": "gpt-6-luna",
+  "script": "gpt-6.1-sol",
+  "storyboard_outline": "claude-sonnet-5-5",
+  "storyboard": "claude-sonnet-5-5",
+  "scene": "gpt-6.1-sol",
+  "critic": "claude-haiku-4-5",
+  "tweak": "gpt-6-luna"
+ },
+ "effort": {
+  "brief": "high",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

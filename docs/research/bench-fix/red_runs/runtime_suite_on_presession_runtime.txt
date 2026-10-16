@@ -1,0 +1,92 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 317, in primitive_runtime_backplate_blur_never_on_own_beat
+    assert not bad, "; ".join(bad)
+           ^^^^^^^
+AssertionError: b2 blurs ITSELF at its own midpoint t=6.0: stdDeviation 9
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 338, in primitive_runtime_backplate_veil_full_over_kept_words
+    assert v.get("b2") == 0.94, f"kept words under a 0.82 veil print through the template at 18%: b2 veil {v.get('b2')}"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: kept words under a 0.82 veil print through the template at 18%: b2 veil 0.82
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 455, in primitive_runtime_element_life_pixels
+    assert not bad, f"{bad}; regions {json.dumps(F)}"
+           ^^^^^^^
+AssertionError: ['PRESHOWN: B (no entrance, b2) absent during b1', 'PRESHOWN: E (b5, scene threw) absent during b1', "PRESHOWN: D's filled arrow head absent during b1", "PRESHOWN: D's head absent at 12.5 s, before its draw starts at 13.0 s", 'STUCK: C (exit none, not kept) gone during b4', 'THROWN: b6 drew nothing, so its narration words show', 'THROWN: the fallback card carries the narration', 'REPORT: elements carry their life window']; regions {"2": {"A": 0.999, "B": 0.999, "C": 0, "E": 0.999, "D_head": 0.468, "fallback": 0}, "6": {"A": 0, "B": 0.999, "C": 0, "E": 0.999, "D_head": 0.468, "fallback": 0}, "10": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0.468, "fallback": 0}, "12.5": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0.468, "fallback": 0}, "14": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0.483, "fallback": 0.013}, "18": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0, "fallback": 0}, "22": {"A": 0, "B": 0, "C": 0.999, "E": 0, "D_head": 0, "fallback": 0}}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 542, in primitive_runtime_figure_cropped_warns
+    assert named == ["high", "side"], f"expected figure_cropped for high and side only, got {[w['msg'] for w in ws]}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: expected figure_cropped for high and side only, got []
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 292, in primitive_runtime_five_beat_film_invariants
+    assert not bad, f"{bad}; regions {json.dumps(F)}; blur {json.dumps(BL)}; fx {rects}"
+           ^^^^^^^
+AssertionError: ['STUCK: N (exit none, not kept) gone from b2 on', 'PRESHOWN: R (no entrance, b5) absent in b1 to b4', 'PRESHOWN: the filled arrow head absent before its draw', 'THROWN: b3 drew nothing, so its narration words show', "BLUR: b2's own card is sharp in b2", 'FX: the spotlight on a station at world x 4000 is where it was asked, on screen', 'REPORT: every element carries its life window']; regions {"2": {"P": 1, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 0}, "6": {"P": 1, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0.997, "card4": 0}, "10": {"P": 0, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 0}, "14": {"P": 0, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 1}, "16.5": {"P": 0, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 0}, "18.5": {"P": 0, "N": 1, "R": 1, "head": 0.49, "fallback": 0, "card2": 0, "card4": 0}}; blur {"2": {"card": 0, "P": 0}, "6": {"card": 0.183, "P": 0.279}, "10": {"card": 0, "P": 0}, "14": {"card": 0, "P": 0}, "16.5": {"card": 0, "P": 0}, "18.5": {"card": 0, "P": 0}}; fx [[4100, 100, 400, 300]]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 517, in primitive_runtime_followers_exit_with_leader
+    assert not bad, f"page exits at {by['page']}; " + "; ".join(bad)
+           ^^^^^^^
+AssertionError: page exits at [3.42]; line1: 2 exits at [3.42, 3.47]; line2: 2 exits at [3.42, 3.52]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 377, in primitive_runtime_frame_layout_beats_ignore_focus
+    assert a == {"s": 1.0, "cx": 960.0, "cy": 540.0}, f"the template beat is cropped by its focus: camera {a}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: the template beat is cropped by its focus: camera {'s': 2, 'cx': 480, 'cy': 270}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 398, in primitive_runtime_fx_moment_rect_follows_camera
+    assert rects[0] == [100.0, 100.0, 400.0, 300.0], f"the spotlight on the far station is off screen: {rects[0]}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: the spotlight on the far station is off screen: [4100, 100, 400, 300]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 483, in primitive_runtime_held_name_case_and_el_parent
+    assert ("held_name_case", "b2") in warns, f"no held_name_case warning: {warns}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: no held_name_case warning: set()
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests\suites\runtime_film_defects.py", line 359, in primitive_runtime_nested_station_is_one_frame
+    assert abs(v["ws"] - 0.5) < 1e-6 and v["w"] == 1920 and v["h"] == 1080, f"nested local space should be 1920x1080 at scale 0.5: {v}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: nested local space should be 1920x1080 at scale 0.5: {'w': 960, 'h': 540, 'ws': 1, 'inside': 0.27}
+  FAIL  primitive_runtime_backplate_blur_never_on_own_beat: b2 blurs ITSELF at its own midpoint t=6.0: stdDeviation 9
+  FAIL  primitive_runtime_backplate_veil_full_over_kept_words: kept words under a 0.82 veil print through the template at 18%: b2 veil 0.82
+  FAIL  primitive_runtime_element_life_pixels: ['PRESHOWN: B (no entrance, b2) absent during b1', 'PRESHOWN: E (b5, scene threw) absent during b1', "PRESHOWN: D's filled arrow head absent during b1", "PRESHOWN: D's head absent at 12.5 s, before its draw starts at 13.0 s", 'STUCK: C (exit none, not kept) gone during b4', 'THROWN: b6 drew nothing, so its narration words show', 'THROWN: the fallback card carries the narration', 'REPORT: elements carry their life window']; regions {"2": {"A": 0.999, "B": 0.999, "C": 0, "E": 0.999, "D_head": 0.468, "fallback": 0}, "6": {"A": 0, "B": 0.999, "C": 0, "E": 0.999, "D_head": 0.468, "fallback": 0}, "10": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0.468, "fallback": 0}, "12.5": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0.468, "fallback": 0}, "14": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0.483, "fallback": 0.013}, "18": {"A": 0, "B": 0, "C": 0.999, "E": 0.999, "D_head": 0, "fallback": 0}, "22": {"A": 0, "B": 0, "C": 0.999, "E": 0, "D_head": 0, "fallback": 0}}
+  FAIL  primitive_runtime_figure_cropped_warns: expected figure_cropped for high and side only, got []
+  FAIL  primitive_runtime_five_beat_film_invariants: ['STUCK: N (exit none, not kept) gone from b2 on', 'PRESHOWN: R (no entrance, b5) absent in b1 to b4', 'PRESHOWN: the filled arrow head absent before its draw', 'THROWN: b3 drew nothing, so its narration words show', "BLUR: b2's own card is sharp in b2", 'FX: the spotlight on a station at world x 4000 is where it was asked, on screen', 'REPORT: every element carries its life window']; regions {"2": {"P": 1, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 0}, "6": {"P": 1, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0.997, "card4": 0}, "10": {"P": 0, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 0}, "14": {"P": 0, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 1}, "16.5": {"P": 0, "N": 1, "R": 1, "head": 0.475, "fallback": 0, "card2": 0, "card4": 0}, "18.5": {"P": 0, "N": 1, "R": 1, "head": 0.49, "fallback": 0, "card2": 0, "card4": 0}}; blur {"2": {"card": 0, "P": 0}, "6": {"card": 0.183, "P": 0.279}, "10": {"card": 0, "P": 0}, "14": {"card": 0, "P": 0}, "16.5": {"card": 0, "P": 0}, "18.5": {"card": 0, "P": 0}}; fx [[4100, 100, 400, 300]]
+  FAIL  primitive_runtime_followers_exit_with_leader: page exits at [3.42]; line1: 2 exits at [3.42, 3.47]; line2: 2 exits at [3.42, 3.52]
+  FAIL  primitive_runtime_frame_layout_beats_ignore_focus: the template beat is cropped by its focus: camera {'s': 2, 'cx': 480, 'cy': 270}
+  FAIL  primitive_runtime_fx_moment_rect_follows_camera: the spotlight on the far station is off screen: [4100, 100, 400, 300]
+  FAIL  primitive_runtime_held_name_case_and_el_parent: no held_name_case warning: set()
+  FAIL  primitive_runtime_nested_station_is_one_frame: nested local space should be 1920x1080 at scale 0.5: {'w': 960, 'h': 540, 'ws': 1, 'inside': 0.27}
+
+0 passed, 10 failed, 0 skipped  [subset: 10 of 185]

@@ -1,0 +1,880 @@
+{
+ "scene": "loading_dock",
+ "camera_spec": {
+  "camera": {
+   "x": 0.6,
+   "y": -2.5,
+   "eye": 1.6,
+   "yaw": 22,
+   "hfov": 55,
+   "horizon_pct": 48
+  },
+  "walls": [
+   {
+    "name": "north dock wall plane (door A is open from x 3.75 to 6.75, 0 to 3.0 m up; a ray through it goes on into the trailer)",
+    "axis": "y",
+    "at": 10.0
+   },
+   {
+    "name": "trailer right side wall (inside)",
+    "axis": "x",
+    "at": 6.49
+   },
+   {
+    "name": "trailer nose (front bulkhead)",
+    "axis": "y",
+    "at": 23.9
+   }
+  ],
+  "points": {
+   "A_head_top": [
+    3.85,
+    6.9,
+    1.75
+   ],
+   "A_head_centre": [
+    3.85,
+    6.9,
+    1.63
+   ],
+   "A_head_left": [
+    3.74,
+    6.9,
+    1.65
+   ],
+   "A_head_right": [
+    3.96,
+    6.9,
+    1.65
+   ],
+   "A_chin": [
+    3.85,
+    6.9,
+    1.52
+   ],
+   "A_feet": [
+    3.85,
+    6.9,
+    0
+   ],
+   "truck_floor": [
+    5.25,
+    3.5,
+    0
+   ],
+   "truck_guard_top": [
+    5.25,
+    3.5,
+    2.15
+   ],
+   "truck_mast_top": [
+    5.25,
+    4.8,
+    2.3
+   ],
+   "doorB_L_floor": [
+    0,
+    10,
+    0
+   ],
+   "doorB_R_floor": [
+    3.0,
+    10,
+    0
+   ],
+   "doorB_L_head": [
+    0,
+    10,
+    3.0
+   ],
+   "doorB_R_head": [
+    3.0,
+    10,
+    3.0
+   ],
+   "doorA_L_floor": [
+    3.75,
+    10,
+    0
+   ],
+   "doorA_R_floor": [
+    6.75,
+    10,
+    0
+   ],
+   "doorA_L_head": [
+    3.75,
+    10,
+    3.0
+   ],
+   "doorA_R_head": [
+    6.75,
+    10,
+    3.0
+   ],
+   "doorC_L_floor": [
+    7.5,
+    10,
+    0
+   ],
+   "doorC_R_floor": [
+    10.5,
+    10,
+    0
+   ],
+   "doorC_L_head": [
+    7.5,
+    10,
+    3.0
+   ],
+   "doorC_R_head": [
+    10.5,
+    10,
+    3.0
+   ],
+   "doorA_raised_top_L": [
+    3.75,
+    10,
+    6.2
+   ],
+   "keys_hook": [
+    5.25,
+    9.95,
+    3.25
+   ],
+   "wall_dado_left": [
+    -3,
+    10,
+    2.4
+   ],
+   "wall_dado_right": [
+    12,
+    10,
+    2.4
+   ],
+   "eaves_mid": [
+    5,
+    10,
+    12.5
+   ],
+   "col_left": [
+    -0.375,
+    9.8,
+    0
+   ],
+   "col_left_top": [
+    -0.375,
+    9.8,
+    5
+   ],
+   "col_pier2": [
+    7.125,
+    9.8,
+    0
+   ],
+   "col_pier2_2m": [
+    7.125,
+    9.8,
+    2.0
+   ],
+   "panelA_tl": [
+    3.25,
+    9.95,
+    1.65
+   ],
+   "panelA_br": [
+    3.5,
+    9.95,
+    1.15
+   ],
+   "panelC_tl": [
+    7.0,
+    9.95,
+    1.65
+   ],
+   "panelC_br": [
+    7.25,
+    9.95,
+    1.15
+   ],
+   "estopA": [
+    3.375,
+    9.92,
+    1.25
+   ],
+   "docklamp_head": [
+    6.4,
+    9.7,
+    2.3
+   ],
+   "docklamp_base": [
+    6.95,
+    9.95,
+    2.4
+   ],
+   "lev_A_nl": [
+    4.25,
+    7.5,
+    0
+   ],
+   "lev_A_nr": [
+    6.25,
+    7.5,
+    0
+   ],
+   "lev_A_fl": [
+    4.25,
+    10,
+    0
+   ],
+   "lev_A_fr": [
+    6.25,
+    10,
+    0
+   ],
+   "lip_far": [
+    5.25,
+    10.4,
+    0
+   ],
+   "lev_C_nl": [
+    8.0,
+    7.5,
+    0
+   ],
+   "lev_C_nr": [
+    10.0,
+    7.5,
+    0
+   ],
+   "trailer_in_L_floor": [
+    4.01,
+    10.3,
+    0
+   ],
+   "trailer_in_R_floor": [
+    6.49,
+    10.3,
+    0
+   ],
+   "trailer_in_L_top": [
+    4.01,
+    10.3,
+    2.7
+   ],
+   "trailer_in_R_top": [
+    6.49,
+    10.3,
+    2.7
+   ],
+   "trailer_nose_floor_mid": [
+    5.25,
+    23.9,
+    0
+   ],
+   "trailer_nose_top_mid": [
+    5.25,
+    23.9,
+    2.7
+   ],
+   "pallets_nose_top": [
+    5.25,
+    22.5,
+    1.6
+   ],
+   "laneA_L_near": [
+    3.75,
+    -1,
+    0
+   ],
+   "laneA_R_near": [
+    6.75,
+    -1,
+    0
+   ],
+   "laneC_L_near": [
+    7.5,
+    0,
+    0
+   ],
+   "jambA_L_guard": [
+    3.75,
+    9.9,
+    1.0
+   ],
+   "jambA_R_guard": [
+    6.75,
+    9.9,
+    1.0
+   ],
+   "light_row": [
+    5,
+    5,
+    11
+   ],
+   "doorD_L_floor": [
+    11.25,
+    10,
+    0
+   ],
+   "doorD_R_floor": [
+    14.25,
+    10,
+    0
+   ],
+   "doorD_L_head": [
+    11.25,
+    10,
+    3
+   ],
+   "doorD_R_head": [
+    14.25,
+    10,
+    3
+   ],
+   "panelD": [
+    10.9,
+    9.95,
+    1.4
+   ],
+   "staged_C_a_near_top_L": [
+    8.0,
+    5.6,
+    1.55
+   ],
+   "staged_C_b_near_top_R": [
+    9.8,
+    5.6,
+    1.55
+   ],
+   "staged_C_a_near_floor_L": [
+    8.0,
+    5.6,
+    0
+   ],
+   "staged_C_far_top": [
+    9.8,
+    6.8,
+    1.55
+   ],
+   "A_ray_trailer_wall_top": [
+    6.49,
+    14.54,
+    1.87
+   ],
+   "A_ray_trailer_wall_chin": [
+    6.49,
+    14.54,
+    1.46
+   ],
+   "A_ray_trailer_wall_left": [
+    6.49,
+    15.13,
+    1.69
+   ],
+   "A_ray_trailer_wall_right": [
+    6.49,
+    13.98,
+    1.69
+   ],
+   "sign_pier1": [
+    3.375,
+    9.95,
+    2.2
+   ],
+   "panelA_centre": [
+    3.375,
+    9.95,
+    1.4
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_centre",
+   "A_head_left",
+   "A_head_right",
+   "A_chin"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 215,
+   "along_x": 5524,
+   "horizon_y": 518
+  },
+  "points": {
+   "A_head_top": {
+    "x": 866,
+    "y": 491,
+    "where": "frame",
+    "depth": 9.93,
+    "behind": {
+     "wall": "north dock wall plane (door A is open from x 3.75 to 6.75, 0 to 3.0 m up; a ray through it goes on into the trailer)",
+     "at": [
+      4.92,
+      10.0,
+      1.8
+     ]
+    }
+   },
+   "A_head_centre": {
+    "x": 866,
+    "y": 513,
+    "where": "frame",
+    "depth": 9.93,
+    "behind": {
+     "wall": "north dock wall plane (door A is open from x 3.75 to 6.75, 0 to 3.0 m up; a ray through it goes on into the trailer)",
+     "at": [
+      4.92,
+      10.0,
+      1.64
+     ]
+    }
+   },
+   "A_head_left": {
+    "x": 846,
+    "y": 509,
+    "where": "frame",
+    "depth": 9.89,
+    "behind": {
+     "wall": "north dock wall plane (door A is open from x 3.75 to 6.75, 0 to 3.0 m up; a ray through it goes on into the trailer)",
+     "at": [
+      4.78,
+      10.0,
+      1.67
+     ]
+    }
+   },
+   "A_head_right": {
+    "x": 885,
+    "y": 509,
+    "where": "frame",
+    "depth": 9.97,
+    "behind": {
+     "wall": "north dock wall plane (door A is open from x 3.75 to 6.75, 0 to 3.0 m up; a ray through it goes on into the trailer)",
+     "at": [
+      5.07,
+      10.0,
+      1.67
+     ]
+    }
+   },
+   "A_chin": {
+    "x": 866,
+    "y": 533,
+    "where": "frame",
+    "depth": 9.93,
+    "behind": {
+     "wall": "north dock wall plane (door A is open from x 3.75 to 6.75, 0 to 3.0 m up; a ray through it goes on into the trailer)",
+     "at": [
+      4.92,
+      10.0,
+      1.49
+     ]
+    }
+   },
+   "A_feet": {
+    "x": 866,
+    "y": 815,
+    "where": "frame",
+    "depth": 9.93
+   },
+   "truck_floor": {
+    "x": 1481,
+    "y": 922,
+    "where": "frame",
+    "depth": 7.31
+   },
+   "truck_guard_top": {
+    "x": 1481,
+    "y": 380,
+    "where": "frame",
+    "depth": 7.31
+   },
+   "truck_mast_top": {
+    "x": 1302,
+    "y": 367,
+    "where": "frame",
+    "depth": 8.51
+   },
+   "doorB_L_floor": {
+    "x": 110,
+    "y": 778,
+    "where": "frame",
+    "depth": 11.37
+   },
+   "doorB_R_floor": {
+    "x": 597,
+    "y": 755,
+    "where": "frame",
+    "depth": 12.49
+   },
+   "doorB_L_head": {
+    "x": 110,
+    "y": 291,
+    "where": "frame",
+    "depth": 11.37
+   },
+   "doorB_R_head": {
+    "x": 597,
+    "y": 312,
+    "where": "frame",
+    "depth": 12.49
+   },
+   "doorA_L_floor": {
+    "x": 706,
+    "y": 749,
+    "where": "frame",
+    "depth": 12.77
+   },
+   "doorA_R_floor": {
+    "x": 1095,
+    "y": 731,
+    "where": "frame",
+    "depth": 13.89
+   },
+   "doorA_L_head": {
+    "x": 706,
+    "y": 316,
+    "where": "frame",
+    "depth": 12.77
+   },
+   "doorA_R_head": {
+    "x": 1095,
+    "y": 333,
+    "where": "frame",
+    "depth": 13.89
+   },
+   "doorC_L_floor": {
+    "x": 1183,
+    "y": 727,
+    "where": "frame",
+    "depth": 14.17
+   },
+   "doorC_R_floor": {
+    "x": 1502,
+    "y": 711,
+    "where": "frame",
+    "depth": 15.3
+   },
+   "doorC_L_head": {
+    "x": 1183,
+    "y": 336,
+    "where": "frame",
+    "depth": 14.17
+   },
+   "doorC_R_head": {
+    "x": 1502,
+    "y": 350,
+    "where": "frame",
+    "depth": 15.3
+   },
+   "doorA_raised_top_L": {
+    "x": 706,
+    "y": -146,
+    "where": "outside",
+    "depth": 12.77
+   },
+   "keys_hook": {
+    "x": 911,
+    "y": 289,
+    "where": "frame",
+    "depth": 13.29
+   },
+   "wall_dado_left": {
+    "x": -484,
+    "y": 374,
+    "where": "outside",
+    "depth": 10.24
+   },
+   "wall_dado_right": {
+    "x": 1645,
+    "y": 425,
+    "where": "frame",
+    "depth": 15.86
+   },
+   "eaves_mid": {
+    "x": 876,
+    "y": -1000,
+    "where": "outside",
+    "depth": 13.24
+   },
+   "col_left": {
+    "x": 39,
+    "y": 786,
+    "where": "frame",
+    "depth": 11.04
+   },
+   "col_left_top": {
+    "x": 39,
+    "y": -50,
+    "where": "overscan",
+    "depth": 11.04
+   },
+   "col_pier2": {
+    "x": 1152,
+    "y": 731,
+    "where": "frame",
+    "depth": 13.85
+   },
+   "col_pier2_2m": {
+    "x": 1152,
+    "y": 465,
+    "where": "frame",
+    "depth": 13.85
+   },
+   "panelA_tl": {
+    "x": 635,
+    "y": 511,
+    "where": "frame",
+    "depth": 12.54
+   },
+   "panelA_br": {
+    "x": 672,
+    "y": 584,
+    "where": "frame",
+    "depth": 12.63
+   },
+   "panelC_tl": {
+    "x": 1128,
+    "y": 512,
+    "where": "frame",
+    "depth": 13.94
+   },
+   "panelC_br": {
+    "x": 1157,
+    "y": 578,
+    "where": "frame",
+    "depth": 14.03
+   },
+   "estopA": {
+    "x": 655,
+    "y": 570,
+    "where": "frame",
+    "depth": 12.56
+   },
+   "docklamp_head": {
+    "x": 1070,
+    "y": 423,
+    "where": "frame",
+    "depth": 13.48
+   },
+   "docklamp_base": {
+    "x": 1122,
+    "y": 412,
+    "where": "frame",
+    "depth": 13.92
+   },
+   "lev_A_nl": {
+    "x": 897,
+    "y": 796,
+    "where": "frame",
+    "depth": 10.64
+   },
+   "lev_A_nr": {
+    "x": 1202,
+    "y": 777,
+    "where": "frame",
+    "depth": 11.39
+   },
+   "lev_A_fl": {
+    "x": 775,
+    "y": 746,
+    "where": "frame",
+    "depth": 12.96
+   },
+   "lev_A_fr": {
+    "x": 1035,
+    "y": 734,
+    "where": "frame",
+    "depth": 13.71
+   },
+   "lip_far": {
+    "x": 890,
+    "y": 734,
+    "where": "frame",
+    "depth": 13.7
+   },
+   "lev_C_nl": {
+    "x": 1437,
+    "y": 763,
+    "where": "frame",
+    "depth": 12.04
+   },
+   "lev_C_nr": {
+    "x": 1676,
+    "y": 749,
+    "where": "frame",
+    "depth": 12.79
+   },
+   "trailer_in_L_floor": {
+    "x": 731,
+    "y": 743,
+    "where": "frame",
+    "depth": 13.15
+   },
+   "trailer_in_R_floor": {
+    "x": 1047,
+    "y": 728,
+    "where": "frame",
+    "depth": 14.07
+   },
+   "trailer_in_L_top": {
+    "x": 731,
+    "y": 364,
+    "where": "frame",
+    "depth": 13.15
+   },
+   "trailer_in_R_top": {
+    "x": 1047,
+    "y": 374,
+    "where": "frame",
+    "depth": 14.07
+   },
+   "trailer_nose_floor_mid": {
+    "x": 568,
+    "y": 631,
+    "where": "frame",
+    "depth": 26.22
+   },
+   "trailer_nose_top_mid": {
+    "x": 568,
+    "y": 441,
+    "where": "frame",
+    "depth": 26.22
+   },
+   "pallets_nose_top": {
+    "x": 586,
+    "y": 518,
+    "where": "frame",
+    "depth": 24.92
+   },
+   "laneA_L_near": {
+    "x": 2652,
+    "y": 1666,
+    "where": "outside",
+    "depth": 2.57
+   },
+   "laneA_R_near": {
+    "x": 3526,
+    "y": 1317,
+    "where": "outside",
+    "depth": 3.69
+   },
+   "laneC_L_near": {
+    "x": 3014,
+    "y": 1120,
+    "where": "outside",
+    "depth": 4.9
+   },
+   "jambA_L_guard": {
+    "x": 709,
+    "y": 606,
+    "where": "frame",
+    "depth": 12.68
+   },
+   "jambA_R_guard": {
+    "x": 1101,
+    "y": 599,
+    "where": "frame",
+    "depth": 13.8
+   },
+   "light_row": {
+    "x": 1232,
+    "y": -1497,
+    "where": "outside",
+    "depth": 8.6
+   },
+   "doorD_L_floor": {
+    "x": 1575,
+    "y": 708,
+    "where": "frame",
+    "depth": 15.58
+   },
+   "doorD_R_floor": {
+    "x": 1840,
+    "y": 695,
+    "where": "frame",
+    "depth": 16.7
+   },
+   "doorD_L_head": {
+    "x": 1575,
+    "y": 353,
+    "where": "frame",
+    "depth": 15.58
+   },
+   "doorD_R_head": {
+    "x": 1840,
+    "y": 364,
+    "where": "frame",
+    "depth": 16.7
+   },
+   "panelD": {
+    "x": 1545,
+    "y": 542,
+    "where": "frame",
+    "depth": 15.4
+   },
+   "staged_C_a_near_top_L": {
+    "x": 1646,
+    "y": 527,
+    "where": "frame",
+    "depth": 10.28
+   },
+   "staged_C_b_near_top_R": {
+    "x": 1885,
+    "y": 527,
+    "where": "frame",
+    "depth": 10.96
+   },
+   "staged_C_a_near_floor_L": {
+    "x": 1646,
+    "y": 805,
+    "where": "frame",
+    "depth": 10.28
+   },
+   "staged_C_far_top": {
+    "x": 1731,
+    "y": 526,
+    "where": "frame",
+    "depth": 12.07
+   },
+   "A_ray_trailer_wall_top": {
+    "x": 866,
+    "y": 491,
+    "where": "frame",
+    "depth": 18.01
+   },
+   "A_ray_trailer_wall_chin": {
+    "x": 866,
+    "y": 533,
+    "where": "frame",
+    "depth": 18.01
+   },
+   "A_ray_trailer_wall_left": {
+    "x": 846,
+    "y": 509,
+    "where": "frame",
+    "depth": 18.55
+   },
+   "A_ray_trailer_wall_right": {
+    "x": 885,
+    "y": 509,
+    "where": "frame",
+    "depth": 17.49
+   },
+   "sign_pier1": {
+    "x": 654,
+    "y": 430,
+    "where": "frame",
+    "depth": 12.58
+   },
+   "panelA_centre": {
+    "x": 654,
+    "y": 548,
+    "where": "frame",
+    "depth": 12.58
+   }
+  }
+ }
+}

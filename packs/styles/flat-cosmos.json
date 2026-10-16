@@ -1,0 +1,217 @@
+{
+  "id": "flat-cosmos",
+  "name": "Flat Cosmos",
+  "reads_as": "Kurzgesagt-like flat illustration on a deep night field: saturated warm accents, rounded geometric type, crescent-shaded discs, twinkling parallax stars.",
+  "look_family": "illustrated",
+  "fits": [
+    "explainer",
+    "teaching",
+    "onboarding",
+    "science",
+    "systems",
+    "consumer"
+  ],
+  "avoid_for": [
+    "sober compliance",
+    "legal policy verbatim"
+  ],
+  "palette": {
+    "field": "#1B1F4B",
+    "field2": "#232863",
+    "surface": "#353C85",
+    "surface2": "#2A306C",
+    "ink": "#FFF6E6",
+    "muted": "#B7BDF0",
+    "line": "#B7BDF0",
+    "accent": "#FF8A3D",
+    "accent2": "#FFC94A",
+    "accent3": "#FF5C7A",
+    "accent4": "#2EC4B6",
+    "pos": "#2EC4B6",
+    "neg": "#FF5C7A",
+    "shadow": "#0E1133",
+    "onAccent": "#1B1F4B"
+  },
+  "fonts": {
+    "display": {
+      "family": "Fredoka",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Nunito",
+      "weights": [
+        700,
+        800
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "faces": [
+      {
+        "family": "Fredoka",
+        "weight": 600,
+        "file": "fredoka-latin-600-normal.woff2",
+        "pkg": "@fontsource/fredoka"
+      },
+      {
+        "family": "Fredoka",
+        "weight": 700,
+        "file": "fredoka-latin-700-normal.woff2",
+        "pkg": "@fontsource/fredoka"
+      },
+      {
+        "family": "Nunito",
+        "weight": 700,
+        "file": "nunito-latin-700-normal.woff2",
+        "pkg": "@fontsource/nunito"
+      },
+      {
+        "family": "Nunito",
+        "weight": 800,
+        "file": "nunito-latin-800-normal.woff2",
+        "pkg": "@fontsource/nunito"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      110,
+      170
+    ],
+    "hero": [
+      96,
+      150
+    ],
+    "title": [
+      60,
+      92
+    ],
+    "lead": [
+      34,
+      44
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      30
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 26,
+    "stroke": 4,
+    "shading": "crescent",
+    "shadow": "offset",
+    "shadow_dx": 0,
+    "shadow_dy": 12,
+    "shadow_opacity": 0.4
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.55,
+    "move": 0.38,
+    "exit": 0.32,
+    "stagger": 0.09,
+    "draw": 0.8,
+    "count": 1.2,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "stars",
+    "density": 1,
+    "wash": "radial-gradient(ellipse at 50% 38%, rgba(46,52,120,0.55), rgba(23,26,66,0) 70%)"
+  },
+  "captions": {
+    "bg": "rgba(16,19,52,0.84)",
+    "fg": "ink",
+    "active": "accent2",
+    "radius": 22,
+    "font": "body",
+    "size": 38,
+    "weight": 800,
+    "top": 948
+  },
+  "icons": {
+    "stroke": 2.2
+  },
+  "characters": {
+    "skin": [
+      "#F2C9A0",
+      "#D9A27A",
+      "#A86F4C",
+      "#7A4B32"
+    ],
+    "cloth": "accent",
+    "hair": "field",
+    "ink": "field",
+    "paper": "ink",
+    "mouth": "neg",
+    "extras": "silhouette",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "camera",
+  "seam_join": "wipe",
+  "join_note": "A small story world: stay in the place and change its state (continue) or pan where places connect; a wipe or a material join (page, torn) at a change of time or chapter, the dip only for a change of era. Not every beat needs a transition: most beats continue.",
+  "music": {
+    "mood": "warm_curious",
+    "root_midi": 50
+  },
+  "fx": {
+    "background": "nebula",
+    "intensity": 0.45,
+    "drift": 0.4,
+    "grain": 0.01,
+    "vignette": 0.5,
+    "leak": 0.0,
+    "colors": [
+      "accent4",
+      "accent3",
+      "surface"
+    ],
+    "_calm_note": "L-412: intensity 0.75 and full drift read as a moving, distracting field across a 4-minute lesson (gps-position, 8.5: the background moved too much); 0.45 and drift 0.4 keep the nebula alive and quiet. A lesson may raise them in its storyboard fx.",
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  },
+  "tone_reference": {
+    "family": "glow_technical_3d",
+    "brightness": 0.48,
+    "saturation": 0.47,
+    "dark_share": 0.17,
+    "light_share": 0.22,
+    "warm": 0.36,
+    "cool": 0.44,
+    "accent_shots": 0.36,
+    "colours": 5.8,
+    "tolerance": 0.15,
+    "_source": "TED-Ed family means, docs/research/vision/tedEd_2026-10/colour_and_tone.md (96 films, code-measured); a reference, not a target (D-112)"
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: glowing shapes on a dark field measure low edge density by design (TED-Ed glow films sat under 0.02 for 43 % of narrated time, D-112)"
+  }
+}

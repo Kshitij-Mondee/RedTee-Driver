@@ -1,0 +1,194 @@
+{
+ "verdict": "fix",
+ "findings": [
+  {
+   "beat": "b28",
+   "severity": "major",
+   "problem": "STILL OPEN (partly fixed). The whiteboard is now wide, fix rows are legible (~40px) and the six sight lines are gone (fixed). But the arrive frame (287.76s) still shows a nearly empty room with a faint half-drawn table while the caption says 'Same room. Same engineer.', so the payoff does not start from b02's frozen end state as the storyboard promises. The table and heads also sit about 150px left of b02's positions, so the room is not drawn identically and the before/after does not read as the same room turning. Head facing ticks are still tiny (about 14px).",
+   "fix": "b28 (scenes/b28.js): draw the walls, table, six heads and the engineer ring fully at t=0 in b02's exact positions (table centre (800,500), heads as in b02), all ticks pointing at the engineer, and only then fade in the whiteboard and rotate the heads to it. If the board must stay 620px wide, shrink it from the right edge only and keep the table where b02 had it. Enlarge the facing tick to a 30px wedge so the rotation is visible at 1x.",
+   "file": "scenes/b28.js"
+  },
+  {
+   "beat": "b10",
+   "severity": "major",
+   "problem": "STILL OPEN, unchanged. The subtitle 'The lead says it before anyone discusses the incident' appears at about 95s with the headline still missing (label before shape); the headline only lands at about 101s after 6.0s of near-empty panel (report: static hold). The narration says 'Remember that fading bubble?' but the icon is still a speech bubble (message-circle), not the thought cloud from b05, so the callback fails.",
+   "fix": "b10: set icon to 'cloud' (or the b05 thought motif), keep say_icon 'fading bubble'. Change say_title to 'Step one' or 'the ground rule' so the headline lands before the subtitle, and set say_subtitle to the last phrase 'before anyone discusses' so it lands after. Add shot {move:'push'} to remove the 6s hold.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b21",
+   "severity": "major",
+   "problem": "STILL OPEN, unchanged. Option B wraps to two lines while A is one line, C sits alone in the left cell with the right cell empty, the 'Pause and decide' bar is a tiny 150px pill with no visible countdown, and the lower 35% is empty. Report: 7.5s static hold from 215.6s while the viewer is meant to decide.",
+   "fix": "b21: shorten option B to 'Root cause: a deploy step missed' so all three cards fit one line each, and stack the options in one column at 60% frame width centred vertically. Make the pause bar a full-width countdown at least 60px tall. Add shot {move:'push'} to give the hold some motion.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b16",
+   "severity": "major",
+   "problem": "STILL OPEN, unchanged. The whole composition is pushed to the right: about 180px of margin on the left of the strike bubble but the right bubble ends about 40px from the frame edge, and the left third is empty. The blue hatch behind 'What did the deploy screen show you?' still wraps to two lines and lowers contrast. b16 arrive (152.59s) still starts from a blank frame, not from b15's bubble.",
+   "fix": "b16 (scenes/b16.js): shift the whole group left by about 200px so it is centred on x=960; widen the rewritten bubble to 560px so the question fits on one line; lower its hatch opacity to 10%. Start with b15's manager bubble at exactly its b15 position, then strike it.",
+   "file": "scenes/b16.js"
+  },
+  {
+   "beat": "b08",
+   "severity": "major",
+   "problem": "STILL OPEN. Report still warns late_reveal: the second row 'The team still owns the fixes' arrives at 88% of the speech, after it is said (caption shows 'owns the fixes' as the row lands). Two thin rows with about 24px text sit in the upper-left of the frame and the bottom half is empty; same layout as b14 and b24.",
+   "fix": "b08: set the second item's say to 'The team still owns' so it lands before the phrase ends; raise row height and text to about 40px and centre the list vertically; or switch this beat to marker 'number' with a large icon so it differs from b14/b24.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b27",
+   "severity": "minor",
+   "problem": "PARTLY FIXED. The leaked 'Step one/two/three:' labels are gone and the frame is clean (was a blocker; now resolved). Remaining: report still warns the kicker 'THE THREE STEPS' has no say anchor; node 3 reads 'What, not who' while the narration says 'What made it easy'; the banner 'One fix, with its owner' still floats as a fourth item with no link to the chain; the dotted path runs through the top-left of the timeline and search icons.",
+   "fix": "b27: add say_kicker 'The rule' to the kicker; keep 'What, not who' only if the narration line is edited to match, otherwise use 'What made it easy' (3-word cap permitting); route the dotted path behind the icons (draw it before the nodes) and end it in an arrow into the banner.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b23",
+   "severity": "minor",
+   "problem": "FIXED (was major): the strike now sits inside the card and the Training sticker is fully inside and clear of it. Residual: the arrive frame (241.57s) is blank for about 3s, the 'unwatched alert' node is still fading in at 247s after the strike has landed, and node labels are small (about 30px) against a large empty left third.",
+   "fix": "b23 (scenes/b23.js): draw the action card at the first word of the beat and stagger the three condition nodes so all three are in before the strike draws; raise the node labels to 34px.",
+   "file": "scenes/b23.js"
+  },
+  {
+   "beat": "b20",
+   "severity": "minor",
+   "problem": "FIXED (was major): the 'several conditions' tag now clears the card and arrowheads, and the '?' markers are gone once the cards land. Residual: one-word orphan caption 'first.' at 203.97s, zero-length stroke dots are visible at the arrow starts on the arrive frame, and the frame is left-heavy with an empty lower left.",
+   "fix": "b20 (scenes/b20.js): remove or hide the arrow start dots until each arrow draws; merge the last caption into the previous chunk.",
+   "file": "scenes/b20.js"
+  },
+  {
+   "beat": "b13",
+   "severity": "minor",
+   "problem": "FIXED (was major): 'hindsight bias' now has a gap under the 'Obvious now' box, the grey X badges are gone, and the pill is on the arrow line. Residual: the 'Orders stopped' pill covers the arrowhead and touches the last marker; the caption at 133.79s is still the orphan 'sense.'; the hindsight card is at rest at the right end in the develop and settled frames (the carry-back is not visible in the sampled frames, unverified).",
+   "fix": "b13 (scenes/b13.js): move the pill 40px left so the arrowhead shows; check the card actually travels left across the three screens during 'looks obvious now'.",
+   "file": "scenes/b13.js"
+  },
+  {
+   "beat": "b22",
+   "severity": "minor",
+   "problem": "FIXED (was minor): unpicked options are now readable and 'Like A, it points at the system' matches the narration on C. Residual: contrast of options A and C is still only about 3:1 and the beat reflows the option layout from b21 (question shrinks, options move), so 'continue' shows a jump; lower 40% empty; 6.1s static hold.",
+   "fix": "b22: darken unpicked option text to ink at 70%; keep the question and option positions identical to b21; add a slow push.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b19",
+   "severity": "minor",
+   "problem": "STILL OPEN. Stray dots remain at 179s, 183s and 187s (settled), the '?' markers are only about 90px in a mostly empty frame, and the engineer card vanishes as the markers appear with no hand-off.",
+   "fix": "b19 (scenes/b19.js): remove the dot elements or use butt line caps; scale the '?' markers to 150px; have the engineer card shrink behind the cart card as the markers pop.",
+   "file": "scenes/b19.js"
+  },
+  {
+   "beat": "b15",
+   "severity": "minor",
+   "problem": "STILL OPEN. A pink dot sits at the start of the bubble text just left of 'Why' and two small dots float between the heads, persisting into the settled frame. 5.2s static hold from 146.6s; nothing reacts to 'the lead's answer matters'.",
+   "fix": "b15: remove the stroke start dots of the bubble tail and pointer (butt cap or delete after draw) and add a small head nudge on the engineer at 'the lead's answer'.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b09",
+   "severity": "minor",
+   "problem": "STILL OPEN. Two small panels with one bullet each sit in the upper-middle, the bottom half is empty, text is about 24px, and the headers 'What goes' and 'Reckless acts' are not parallel. Left panel is alone for about 3s.",
+   "fix": "b09: set left.header 'Not tolerated'; enlarge panels to about 420px tall with 40px bullets and centre vertically.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b18",
+   "severity": "minor",
+   "problem": "STILL OPEN. Same small two-panel layout as b09; the verdict banner is only slightly bigger than the bullets; bottom third empty.",
+   "fix": "b18: give the verdict banner 44px text on a full-width bar and scale the panels to about 60% of frame height with 36px bullets.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b07",
+   "severity": "minor",
+   "problem": "STILL OPEN. Top 40% holds the term and a full-sentence definition (about 26px) that repeats the narration; lower 60% empty; 6.6s static hold from 58.0s.",
+   "fix": "b07: replace the body with three chips 'The system', 'The conditions', 'The decisions' and enlarge the term; add shot {move:'push'}.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b04",
+   "severity": "minor",
+   "problem": "STILL OPEN. A large title card with one headline and a small subtitle in a mostly empty frame; the room motif from b02/b03 is not carried into the section opener; title.card layout is identical to b10 and b17.",
+   "fix": "b04: add a small greyed miniature of the b02 room at bottom-right, or change the join to 'travel'; give b17 a side layout.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b03",
+   "severity": "minor",
+   "problem": "STILL OPEN. The presenter opener has nothing for 'You have been in that room' to point at (no miniature room); the avatar mouth is a wide open oval at arrive.",
+   "fix": "b03: add a 240px miniature of the b02 room at lower-left with all heads facing one.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b02",
+   "severity": "minor",
+   "problem": "STILL OPEN. The head ticks are still small (about 14px) so the turn is hard to read at 1x, the caption 'EVERY HEAD TURNS' still repeats the section label at top-left, and the orange sight lines cross the table hatch.",
+   "fix": "b02 (scenes/b02.js): enlarge the nose tick to a 30px wedge in accent colour; change the top section label to 'the hook'; draw the sight lines above the table at 60% opacity.",
+   "file": "scenes/b02.js"
+  },
+  {
+   "beat": "b05",
+   "severity": "minor",
+   "problem": "PARTLY FIXED. The thought cloud now renders as a proper cloud beside the head, but the item labels ('Deploy screen', 'Tried first') are still only about 22px and the frame is about 60% empty.",
+   "fix": "b05: raise the item labels to 28px and make the cloud larger; the empty cloud at the end is intentional.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b06",
+   "severity": "minor",
+   "problem": "STILL OPEN. The arrive frame (46.96s) is empty except three dots for about 3s, and the chain sits small in a wide frame with thin arrows.",
+   "fix": "b06: start the first node at the first word (say 'expect blame') and scale nodes 25%, arrows to 5px.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b12",
+   "severity": "minor",
+   "problem": "STILL OPEN. Cards are small (about 170px) and labels about 22px in a large frame; the eye badge is never explained.",
+   "fix": "b12 (scenes/b12.js): scale the three cards 30% and labels to 30px.",
+   "file": "scenes/b12.js"
+  },
+  {
+   "beat": "b25",
+   "severity": "minor",
+   "problem": "STILL OPEN. The chips still read 'Owner' rather than a name, and the chips, bars and checkboxes are tiny (about 24px) and sit about 45px from the right edge.",
+   "fix": "b25 (scenes/b25.js): use role labels 'Dev lead', 'Platform', 'On-call' (marked as examples) and enlarge chips 50%; move the list left by 60px. Do the same for the b28 chips.",
+   "file": "scenes/b25.js"
+  },
+  {
+   "beat": "b26",
+   "severity": "minor",
+   "problem": "STILL OPEN. The form is small and centred (about 40% of width), the header shows a double hatch strip, and there is no room or prompt to write.",
+   "fix": "b26: widen the form to 900px and add faint underlines after each 'Step N:' label.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b29",
+   "severity": "minor",
+   "problem": "NEW. The closing title 'What made it easy, hard to catch.' is fully on screen from the arrive frame (296.60s) before the narration says it ('Not who slipped,'), so the cue lands on nothing. Otherwise the beat is clean.",
+   "fix": "b29: reveal the title at the title_cue 'Not who slipped' or hold it hidden until the second phrase.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "b11",
+   "severity": "minor",
+   "problem": "UNVERIFIED. The gate report lists hf layout content_overlap @ 102.44s, which falls on the b10 to b11 join; the sampled contact-sheet frames (101.84s, 103.14s) show no overlap, so I could not see it.",
+   "fix": "b11: check the 102.4s join frame and make b10's panel text exit before the b11 rule header enters.",
+   "file": "plan/storyboard.json"
+  },
+  {
+   "beat": "all",
+   "severity": "minor",
+   "problem": "STILL OPEN. One-word orphan captions remain: 'sense.' (b13 133.79s), 'it.' (b14 139.41s), 'first.' (b20 203.97s), 'call.' (b24 262.04s), 'the rule.' (b15 151.69s), 'blame.' (b10 101.84s).",
+   "fix": "Enforce a 3-word minimum caption chunk, merging trailing words into the previous caption.",
+   "file": "plan/script.json"
+  },
+  {
+   "beat": "all",
+   "severity": "minor",
+   "problem": "STILL OPEN. Slideshow tells: list.steps at b08, b14 and b24, compare.two at b09 and b18, title.card at b04, b10 and b17 share layout and reveal, and the template beats between bespoke ones reset to a plain white page with the lower half empty. Static holds of 5 to 7.5s at b07, b10, b15, b21, b22.",
+   "fix": "Vary b14 and b24 (chain or reuse b23 cards), give repeated templates different side/shot settings, and add shot {move:'push'} to b07, b10, b15, b21, b22. The push-camera pivot fix is unverified from stills.",
+   "file": "plan/storyboard.json"
+  }
+ ]
+}

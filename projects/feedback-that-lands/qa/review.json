@@ -1,0 +1,56 @@
+{
+ "verdict": "fix",
+ "reviewer": "Claude (orchestrator), from Chrome contact sheets, 2026-10-02; full review docs/research/2026-10-02-step7-review.md",
+ "findings": [
+  {
+   "beat": "b24",
+   "severity": "major",
+   "problem": "the struck word, cooled to the surface colour, stayed on top of the new line and ate its letters",
+   "fix": "the word fades after its strike",
+   "file": "scenes/b24.js",
+   "status": "fixed"
+  },
+  {
+   "beat": "b08-b18, b22, b23, b25, b31, b42-b44",
+   "severity": "major",
+   "problem": "17 template cards on one pastel gradient; b11-b18 eight in a row; small text, two thirds of the frame empty: reads as a slide deck",
+   "fix": "rebuild these beats as artefact compositions in the plain register (plan phase 2); until then, move two of the four moves into the meeting-room world",
+   "status": "open"
+  },
+  {
+   "beat": "b01-b03, b46, b47",
+   "severity": "major",
+   "problem": "the code presenter bust is the most cartoony element and opens the film",
+   "fix": "plain register: no presenter by default, or a typographic opener; presenter stays opt-in",
+   "status": "open"
+  },
+  {
+   "beat": "b19-b36",
+   "severity": "major",
+   "problem": "Maya (illustrated, outlined) in a flat outline-free room; her head sits in the whiteboard chart; one standing pose for about 10 beats; royal-blue cube chairs from the hard-coded place accent",
+   "fix": "one drawing language per frame (plan phase 3); places take tokens, not the accent; ask Claude Design for walk and seated poses",
+   "status": "open"
+  },
+  {
+   "beat": "b33-b35",
+   "severity": "minor",
+   "problem": "labels on labels: two notes, a Thursday tag, a bubble and a 'chose together' tag overlap; the caption covers the note's last line in b35",
+   "fix": "one annotation at a time; occlusion check (plan phase 4)",
+   "status": "open"
+  },
+  {
+   "beat": "b06, b11, b22, b25, b26, b42",
+   "severity": "minor",
+   "problem": "7 texts short of their reading floor (check)",
+   "fix": "auto-hold in compose (plan phase 4) or cut words",
+   "status": "open"
+  },
+  {
+   "beat": "lesson",
+   "severity": "minor",
+   "problem": "429.6 s, 10 s over the 7 minute target",
+   "fix": "trim when the open findings are fixed",
+   "status": "open"
+  }
+ ]
+}

@@ -1,0 +1,1052 @@
+{
+  "style": "story-cartoon",
+  "concept": "One remark, rebuilt in front of you. A warm, vague 'be a bit more engaged' hangs over Dev as a muted fuzzy cloud; the film zooms into the meeting-room whiteboard and the cloud becomes the first of three lines (observed behaviour, effect, next step). The same meeting room opens and closes the film: before, the cloud and a drained glow; after, Dev speaking with a clear bubble. Kind and specific end up in the same frame.",
+  "chrome": {
+    "section_labels": false
+  },
+  "motifs": [
+    {
+      "name": "fuzzy_cloud",
+      "desc": "The vague remark as a soft muted grey cloud with 'be a bit more engaged' inside; never accent. Over Dev in b01 to b03, morphs into board line 1 in b04, dissolves in b12."
+    },
+    {
+      "name": "board_sheet",
+      "desc": "The three-line board (behaviour, effect, next step) as a paper sheet; the presenter's card in b10 becomes the sheet on the coffee-corner counter in b11 and on the meeting table in b12."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "meeting_room",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "office",
+        "note": "Main set. Manager peep bust left at x 480, Dev peep bust right at x 1440 (flip), peeps size 640, box centre y 620, table top y 900. Whiteboard on the back wall at x 688 to 1232, y 120 to 426, between and above the heads. Window on the back wall far left."
+      },
+      {
+        "id": "board",
+        "parent": "meeting_room",
+        "rect": {
+          "x": 688,
+          "y": 120,
+          "w": 544,
+          "h": 306
+        },
+        "zone": "office",
+        "note": "Inside the whiteboard (down is deeper). Its frame: board surface x 210 to 1710, y 84 to 800, three ruled slots at y 220, 420, 620; the meeting table edge runs y 840 and below (furniture only in the caption band)."
+      },
+      {
+        "id": "check",
+        "x": 2400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "paper",
+        "note": "Plain warm paper station for the two quiz cards (structure beats)."
+      },
+      {
+        "id": "coffee_corner",
+        "x": 4800,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "office",
+        "note": "Quiet corner of the same office, later the same day. Manager left at x 520, Dev right at x 1400 (flip), seated on stools side by side, counter top y 900, mugs on it. Clock on the wall upper left, closed door with a frosted pane on the right wall."
+      },
+      {
+        "id": "presenter",
+        "x": 7200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "paper",
+        "note": "The manager speaks once to camera with the empty three-slot card (your turn)."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "A fuzzy cloud of a remark that sharpens into three lines on a whiteboard.",
+    "setting": "One small office: a meeting room with a whiteboard, and a quiet coffee corner.",
+    "arc": "Warm vague remark, nothing changes; the remark is rebuilt on the board into behaviour, effect, next step; a check; a calm two-way follow-up; the viewer's own rewrite; back in the meeting Dev shares a view first and they are on good terms.",
+    "cast": [
+      {
+        "name": "Manager",
+        "member": "woman",
+        "skin": 1,
+        "cloth": "cloth",
+        "role": "the manager who gives the remark; screen left in every two-shot (faces right); also the presenter in b10. The script never names her, so the cast uses the role name."
+      },
+      {
+        "name": "Dev",
+        "member": "man",
+        "skin": 3,
+        "cloth": "cloth2",
+        "role": "the colleague who receives the remark; screen right in every two-shot (flip true, faces left). Never the neutral emotion (closed eyes): happy, surprised or explaining."
+      }
+    ]
+  },
+  "kit": {
+    "parts": [
+      {
+        "id": "meeting_room",
+        "what": "Story-cartoon meeting room set, furniture only (no people): warm back wall, a window far left, a whiteboard with ink outline and a marker tray centred on the back wall at x 688 to 1232, y 120 to 426 (it is the board station's rect, so it must sit exactly there), a table across the bottom with its top edge at y 900, two chair backs behind where the busts sit, a small nameplate slot on the table edge at x 1440 for 'Dev'. Room light has three states.",
+        "states": [
+          "plain",
+          "dim",
+          "bright"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b12"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "fuzzy_cloud",
+        "what": "The vague remark: a soft lumpy cloud in muted grey with a line-token outline and a faint inner blur, 'be a bit more engaged' inside in Patrick Hand ink. Never accent. Exposes the bounding box of the word 'engaged' so a brush circle can be drawn round it, and a shrink-to-line morph target (a horizontal bar) for b04.",
+        "states": [
+          "drop_in",
+          "hanging",
+          "dissolving",
+          "morph_to_line"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b12"
+        ],
+        "size": [
+          520,
+          240
+        ]
+      },
+      {
+        "id": "build_board",
+        "what": "The three-part board. 'board' variant: a whiteboard close-up, white surface with ink outline, three ruled slots stacked; slot 1 line 'one-word answers on vendors' with a duotone camera icon to its left, label 'observed behaviour'; slot 2 line 'we lost your view' with an empty-chair icon, label 'effect'; slot 3 line 'share a view first' with a small speech-bubble icon, label 'next step'. Lines in Patrick Hand; each label is an underline label set right of its line. The newest line is accent, earlier lines dim to muted. 'sheet' variant: the same three lines and icons, smaller, on a paper sheet lying on a table at a slight angle. 'empty' state shows the three ruled slots with no words.",
+        "states": [
+          "empty",
+          "line1",
+          "line2",
+          "line3",
+          "sheet"
+        ],
+        "beats": [
+          "b04",
+          "b05",
+          "b06",
+          "b11",
+          "b12"
+        ],
+        "size": [
+          1500,
+          716
+        ]
+      },
+      {
+        "id": "coffee_corner",
+        "what": "Quiet coffee corner set, furniture only: a wall with a small round clock upper left, a closed door with a frosted pane on the right, a narrow counter whose top edge is at y 900 with two mugs on it, two stool tops behind the busts, a small hanging pennant hook above the counter. Warm, low-contrast light.",
+        "states": [
+          "day"
+        ],
+        "beats": [
+          "b09",
+          "b11"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "notes": "People are never kit parts: the Manager and Dev are peeps placed by the scenes with literal kit.peep calls. Hands in b06 are Loom.hands (placeholder set)."
+  },
+  "devices": [
+    {
+      "id": "fuzzy_cloud",
+      "what": "The vague remark as a muted grey cloud over Dev; it hangs, gets 'engaged' circled, morphs into board line 1, and dissolves in the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b12"
+      ]
+    },
+    {
+      "id": "build_board",
+      "what": "One board changed by additions: a line per beat with its underline label after it; newest line accent, earlier lines dim. Empty as the presenter's card, a paper sheet on the table in b11 and b12.",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "camera_test",
+      "what": "A small duotone camera icon beside what a recording could show: board line 1, kept on the sheet in b11 and b12.",
+      "kind": "callback",
+      "beats": [
+        "b04",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "glow",
+      "what": "A warm accent3 halo round Dev meaning 'it felt nice to hear'; blooms on 'Dev glows', drains on 'Nothing changes', never returns.",
+      "kind": "explain",
+      "beats": [
+        "b01"
+      ]
+    },
+    {
+      "id": "turn_bubble",
+      "what": "A chat bubble that shows whose turn it is: the manager's question hands over to Dev's bubble in the coffee corner, and Dev's clear bubble carries the change in the payoff.",
+      "kind": "explain",
+      "beats": [
+        "b09",
+        "b12"
+      ]
+    },
+    {
+      "id": "cloud_to_line",
+      "what": "Join material: the cloud shrinks and morphs into board line 1 on the zoom into the whiteboard; the presenter card becomes the paper sheet on the counter.",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b11"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "none; Dev's glow is accent3 and the cloud is muted",
+      "why": "Pale, warm open: the pleasant moment the film will question."
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "break": true,
+      "accent": "the Tuesday square's header",
+      "why": "The slip: the room drops a step so the empty Tuesday is the loudest thing."
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the newest board line",
+      "why": "Richer middle on the board; one line lit at a time while the others dim."
+    },
+    {
+      "from": "b07",
+      "band": "light",
+      "break": false,
+      "accent": "none until the answer; then the quiz.answer takeaway",
+      "why": "Calm even paper for the check so neither option is favoured."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "break": false,
+      "accent": "Dev's bubble as the turn passes to him",
+      "why": "The rest valley: a quiet, warmer room, low contrast."
+    },
+    {
+      "from": "b10",
+      "band": "light",
+      "break": false,
+      "accent": "the card rule",
+      "why": "Open, clear frame for the viewer's own rewrite."
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "break": false,
+      "accent": "the sticky note",
+      "why": "Back in the warm coffee corner."
+    },
+    {
+      "from": "b12",
+      "band": "light",
+      "break": true,
+      "accent": "Dev's clear speech bubble",
+      "why": "Lift at the close: the opening room returns brighter than it began, colour withheld until Dev speaks."
+    }
+  ],
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "meeting_room",
+      "subject": "a manager gives Dev a warm vague remark; he glows and nothing changes",
+      "world": "meeting room, two-shot seated",
+      "join_in": {
+        "type": "fade",
+        "dur": 0.8,
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "glow",
+      "design": {
+        "treatment": "Story-cartoon two-shot in the meeting room. Manager bust left, Dev bust right across the table, whiteboard blank behind between them. The remark arrives as a muted fuzzy cloud over Dev; a warm accent3 glow blooms round him, then drains while the cloud just hangs.",
+        "why_motion": "The point is a change over time: the glow arrives and leaves while the cloud stays, so the viewer sees the good feeling pass and nothing else move.",
+        "elements": [
+          "Loom.lesson.meeting_room (state plain)",
+          "Manager: kit.peep woman, skin 1, cloth 'cloth', x 480, box centre y 620, size 640, emotion explaining then happy",
+          "Dev: kit.peep man, skin 3, cloth 'cloth2', x 1440, box centre y 620, size 640, flip true, emotion happy",
+          "Dev nameplate on the table edge at x 1440, y 905 ('Dev')",
+          "glow: accent3 soft halo behind Dev's head and shoulders",
+          "Loom.lesson.fuzzy_cloud over Dev, centred x 1500, y 210"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say a manager tells Dev",
+            "element": "meeting_room, Manager, Dev, nameplate",
+            "action": "room and both busts are in place as the fade ends; Dev's nameplate drops onto the table edge",
+            "motion": "drop with the pack's overshoot on the nameplate only"
+          },
+          {
+            "t_anchor": "Great job",
+            "element": "Manager",
+            "action": "Manager in explaining emotion, small forward lean; her mouth moves only on the quoted remark (her own line)",
+            "motion": "lean 6 degrees, ease"
+          },
+          {
+            "t_anchor": "be a bit more engaged",
+            "element": "fuzzy_cloud",
+            "action": "cloud drops in over Dev with the words inside",
+            "motion": "drop, soft overshoot, then slow 2 px drift"
+          },
+          {
+            "t_anchor": "Dev glows",
+            "element": "glow",
+            "action": "accent3 halo blooms behind Dev; Dev stays happy",
+            "motion": "scale 0.6 to 1, opacity 0 to 0.8, 0.8 s"
+          },
+          {
+            "t_anchor": "Nothing changes",
+            "element": "glow",
+            "action": "halo drains to nothing; Manager returns to happy, still; the cloud keeps hanging, unchanged",
+            "motion": "opacity 0.8 to 0 over 1.6 s; cloud holds"
+          }
+        ],
+        "continuity": "Held into b02: meeting_room, Manager, Dev, nameplate, fuzzy_cloud. Retired here: glow (never returns). Manager always screen left, Dev screen right, same positions in b02, b03 and b12. Board blank.",
+        "references": [
+          "story-cartoon guide s6 two-shot seated",
+          "outline s1_gap b01"
+        ]
+      },
+      "rationale": "Opens on the running scene with something quietly wrong; the glow fades on its words and the cloud stays.",
+      "alternatives": {
+        "cold_open_close": {
+          "kind": "bespoke",
+          "note": "Start on a close of Dev glowing, then cut wide to reveal the cloud over him."
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "meeting_room",
+      "subject": "same meeting, same remark; an empty bubble asks the viewer about their last feedback",
+      "world": "meeting room, held",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "empty bubble",
+      "upgrade_reason": "A template would bring its own room and break the running scene; the promise and bridge happen inside the same meeting room with the cloud still over Dev, so it is drawn on the same station.",
+      "design": {
+        "treatment": "Same frame held. The promise is lettered on the whiteboard in the order it is spoken; then a faint empty speech bubble floats in front, between the two people, an open question for the viewer.",
+        "why_motion": "A state change of the held room: two small arrivals on their words, nothing else moves.",
+        "elements": [
+          "Loom.lesson.meeting_room (plain, held)",
+          "Manager (held, happy)",
+          "Dev (held, happy)",
+          "Loom.lesson.fuzzy_cloud (held, hanging)",
+          "board lettering 'same meeting' and 'same remark' in Patrick Hand marker ink on the whiteboard",
+          "viewer_bubble: a faint chat bubble, line outline, empty, x 760 to 1160, y 470 to 680"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Same meeting",
+            "element": "board lettering",
+            "action": "'same meeting' writes onto the whiteboard, upper line",
+            "motion": "wipe on, left to right, 0.6 s"
+          },
+          {
+            "t_anchor": "same remark",
+            "element": "board lettering",
+            "action": "'same remark' writes on the line below",
+            "motion": "wipe on, 0.6 s"
+          },
+          {
+            "t_anchor": "Dev can act on it",
+            "element": "Dev",
+            "action": "Dev gives a small nod (gesture only, mouth shut)",
+            "motion": "nod, 0.5 s"
+          },
+          {
+            "t_anchor": "Think of your last feedback",
+            "element": "viewer_bubble",
+            "action": "the empty bubble floats up into the gap between the busts, below the board",
+            "motion": "rise 40 px and fade in, 0.8 s"
+          },
+          {
+            "t_anchor": "anything different",
+            "element": "viewer_bubble",
+            "action": "the bubble gives one slow wobble and stays empty",
+            "motion": "scale 1 to 1.04 to 1"
+          }
+        ],
+        "continuity": "Held: meeting_room, Manager, Dev, nameplate, fuzzy_cloud. Incoming: board lettering, viewer_bubble. Both retire early in b03 so the board is blank for the zoom in b04.",
+        "references": [
+          "outline s1_gap b02"
+        ]
+      },
+      "rationale": "Promise and bridge without a slide: the viewer is invited into the same room.",
+      "alternatives": {
+        "template_title": {
+          "kind": "template",
+          "template": "title.card",
+          "note": "A title card 'Same remark, same meeting' on the field, then back to the room."
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "meeting_room",
+      "subject": "'engaged' is circled as an impression; Dev wonders what to do Tuesday",
+      "world": "meeting room, dimmed one step",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "key",
+      "accent_on": "Tuesday",
+      "tools": [
+        "brush"
+      ],
+      "upgrade_reason": "The refutation happens on the cloud over Dev and in his own thought bubble; a definition card would remove him and the room, so it is drawn in the same set.",
+      "design": {
+        "treatment": "The room dims a step. A brush circle rings the word 'engaged' inside the cloud and an underline label 'an impression' sits under the cloud. Dev's thought bubble shows a question mark that becomes an empty calendar square headed 'Tuesday'. Camera stays wide-medium so neither person is cropped.",
+        "why_motion": "The slip is shown as a sequence: the label is marked, then Dev's thought turns from 'what?' into an empty day he cannot fill.",
+        "elements": [
+          "Loom.lesson.meeting_room (state dim)",
+          "Manager (held, happy)",
+          "Dev (held, emotion surprised from 'how he came across')",
+          "Loom.lesson.fuzzy_cloud (held, hanging; circle space round 'engaged')",
+          "circle: Loom.brush markup circle round 'engaged', accent stroke",
+          "label 'an impression': underline label under the cloud, ink text, muted underline",
+          "thought_bubble from Dev, left of his head, x 900 to 1240, y 430 to 690, holding '?' then the Tuesday square (white square, ink outline, accent header strip lettered 'Tuesday')"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Here is where people slip",
+            "element": "board lettering, viewer_bubble, meeting_room",
+            "action": "the lettering wipes off the board and the empty bubble fades; the room dims one step",
+            "motion": "wipe off 0.5 s; light down 0.8 s"
+          },
+          {
+            "t_anchor": "'Engaged' is an impression",
+            "element": "circle",
+            "action": "brush circle draws round 'engaged' inside the cloud",
+            "motion": "brush stroke on, 0.7 s"
+          },
+          {
+            "t_anchor": "an impression",
+            "element": "label 'an impression'",
+            "action": "underline label appears under the cloud, underline drawn after the words",
+            "motion": "drop, then underline wipe"
+          },
+          {
+            "t_anchor": "how he came across",
+            "element": "thought_bubble, Dev",
+            "action": "thought bubble pops beside Dev with a '?'; Dev's emotion turns to surprised",
+            "motion": "pop with overshoot"
+          },
+          {
+            "t_anchor": "what to do Tuesday",
+            "element": "thought_bubble",
+            "action": "the '?' swaps for the empty calendar square; its accent 'Tuesday' header stamps in",
+            "motion": "swap 0.3 s, stamp on 'Tuesday'"
+          }
+        ],
+        "continuity": "Retiring at the end: thought_bubble, label, circle, and the room's people as the camera zooms into the whiteboard. fuzzy_cloud travels: b04 opens with the same cloud entering the board frame and morphing into line 1. The board is blank when the zoom begins.",
+        "references": [
+          "brush recipe markup",
+          "outline s1_gap b03"
+        ]
+      },
+      "rationale": "Refutes misconception 1 on the cloud itself; the one accent is the empty Tuesday. The outline's camera push into Dev is replaced by a room dim so neither person is cut at a joint.",
+      "alternatives": {
+        "black_card": {
+          "kind": "template",
+          "template": "title.card",
+          "note": "The pack's black narration card for the turn, 'Engaged is an impression', then back to the room."
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "board",
+      "subject": "the label is dropped and replaced by what a camera would capture: one-word answers on vendors",
+      "world": "the meeting-room whiteboard, close",
+      "join_in": {
+        "type": "zoom",
+        "dur": 1,
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "one-word answers on vendors",
+      "design": {
+        "treatment": "Inside the whiteboard. The cloud arrives small at the top right, shrinks and flattens into the first ruled line; a camera icon stamps beside slot 1, the behaviour line writes on, and its underline label 'observed behaviour' follows.",
+        "why_motion": "The idea is a replacement: the label literally becomes a behaviour line, so the morph carries the meaning.",
+        "elements": [
+          "board_frame: Loom.lesson.build_board (variant board, state empty to line1)",
+          "Loom.lesson.fuzzy_cloud (morph_to_line, starts at x 1450, y 200)",
+          "camera_icon (part of build_board slot 1, duotone accent2)",
+          "line1 'one-word answers on vendors' (accent while newest)",
+          "label_behaviour 'observed behaviour' (underline label)",
+          "table edge band at y 840 and below (furniture)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "drop the label",
+            "element": "fuzzy_cloud",
+            "action": "the cloud shrinks and flattens into a bar on slot 1, then fades as the bar",
+            "motion": "morph 0.9 s, ease in-out"
+          },
+          {
+            "t_anchor": "what a camera would capture",
+            "element": "camera_icon",
+            "action": "camera icon stamps at the left of slot 1",
+            "motion": "stamp with overshoot"
+          },
+          {
+            "t_anchor": "one-word answers on vendors",
+            "element": "line1",
+            "action": "line 1 writes on in accent",
+            "motion": "wipe on left to right, 1.0 s"
+          },
+          {
+            "t_anchor": "observed behaviour",
+            "element": "label_behaviour",
+            "action": "label words drop in right of line 1, underline drawn after",
+            "motion": "drop, underline wipe 0.3 s"
+          }
+        ],
+        "continuity": "Held into b05: board_frame, camera_icon, line1, label_behaviour. Retired: fuzzy_cloud (morphed away). Slots 2 and 3 stay empty ruled lines.",
+        "references": [
+          "outline s2_three_parts b04",
+          "kit build_board"
+        ]
+      },
+      "rationale": "The worked example starts where the label was: what a camera would capture replaces the impression.",
+      "alternatives": {
+        "hand_written": {
+          "kind": "bespoke",
+          "note": "Newer seed: the line is written on by a drawn marker hand instead of a wipe."
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "board",
+      "subject": "the effect on the team: we lost your view",
+      "world": "the meeting-room whiteboard, close",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "we lost your view",
+      "design": {
+        "treatment": "Same board, one addition: line 1 dims, line 2 'we lost your view' writes into slot 2 with an empty-chair icon, then its label 'effect'.",
+        "why_motion": "Additions on one held layout: the eye moves from the dimmed first line to the new one.",
+        "elements": [
+          "board_frame: Loom.lesson.build_board (state line2; redraws slot 1 with its camera icon, line and label in place, so nothing is kept across the join)",
+          "line1 (dims to muted)",
+          "camera_icon (slot 1, as in b04)",
+          "label_behaviour (muted)",
+          "chair_icon (empty chair, slot 2)",
+          "line2 'we lost your view' (accent)",
+          "label_effect 'effect' (underline label)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "what it cost the team",
+            "element": "line1, label_behaviour",
+            "action": "line 1 and its label dim to muted",
+            "motion": "colour tween 0.5 s"
+          },
+          {
+            "t_anchor": "We lost your view",
+            "element": "line2",
+            "action": "line 2 writes on in slot 2 in accent",
+            "motion": "wipe on 0.9 s"
+          },
+          {
+            "t_anchor": "before we decided",
+            "element": "chair_icon",
+            "action": "empty-chair icon drops at the left of slot 2",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "the effect",
+            "element": "label_effect",
+            "action": "label 'effect' drops in right of line 2, underline drawn after",
+            "motion": "drop, underline wipe"
+          }
+        ],
+        "continuity": "Opens on the same board layout b04 ended on: the kit part build_board in state line2 redraws slot 1 (camera icon, line 1, label) in the same positions, so the continue join reads as held. Into b06 the same way: slots 1 and 2 redrawn by the kit, slot 3 empty.",
+        "references": [
+          "outline s2_three_parts b05"
+        ]
+      },
+      "rationale": "Effect on the team, stated plainly, added to the same board. Slot 1 is redrawn by the kit part rather than kept, since b04's scene does not expose those names."
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "board",
+      "subject": "a small next step agreed together: share a view first",
+      "world": "the meeting-room whiteboard with the table edge",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "share a view first",
+      "design": {
+        "treatment": "Same board, redrawn whole by the kit part (nothing kept across the join). Line 3 'share a view first' writes into slot 3 with a speech-bubble icon, its label 'next step' follows, and two marker ticks, one in the Manager's 'cloth' colour and one in Dev's 'cloth2' colour, sign off beside it under the tag 'agreed together'. A small muted note 'one common model' settles at the board's lower right. All three lines stacked; a finished frame to rest on.",
+        "why_motion": "The agreement is shown as both people signing off the step on the board, then the last addition completes the board.",
+        "elements": [
+          "board_frame: Loom.lesson.build_board (state line3; it draws slots 1 and 2 itself with their icons, lines and labels in place; no keep list, nothing is held from b05)",
+          "line 2 and its label 'effect' inside board_frame (dim to muted)",
+          "line3 'share a view first' (accent) with bubble_icon",
+          "label_next 'next step' (underline label)",
+          "sign_off: tag 'agreed together' with two marker ticks beside it, left tick in token cloth (Manager), right tick in token cloth2 (Dev), at slot 3's right end",
+          "note 'one common model' (muted, small, x 1500, y 760)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a small step",
+            "element": "board_frame",
+            "action": "line 2 and its label dim to muted",
+            "motion": "colour tween 0.5 s"
+          },
+          {
+            "t_anchor": "agreed together",
+            "element": "sign_off",
+            "action": "the tag 'agreed together' appears, then the two ticks draw on one after the other (Manager's, then Dev's)",
+            "motion": "fade in tag; two quick marker strokes 0.3 s each"
+          },
+          {
+            "t_anchor": "share a view first",
+            "element": "line3, bubble_icon",
+            "action": "line 3 writes on in slot 3 in accent; bubble icon drops at its left",
+            "motion": "wipe on 0.9 s; drop"
+          },
+          {
+            "t_anchor": "the next step",
+            "element": "label_next",
+            "action": "label 'next step' drops in right of line 3, underline after",
+            "motion": "drop, underline wipe"
+          },
+          {
+            "t_anchor": "One common model",
+            "element": "note",
+            "action": "small muted note settles at the lower right",
+            "motion": "fade in 0.4 s; then the frame holds"
+          }
+        ],
+        "continuity": "Opens on the board as b05 ended: the kit part build_board redraws slots 1 and 2 in the same positions, so the scene keeps nothing from b05. The full board (three lines, three icons, three labels) becomes the board_sheet motif seen again as the presenter card in b10 and as a paper sheet in b11 and b12. The sign-off ticks retire with the cut to the check station. No Loom.hands (placeholder only).",
+        "references": [
+          "outline s2_three_parts b06"
+        ]
+      },
+      "rationale": "Completes the worked example; the board station already shows the table edge. Earlier slots are redrawn by the kit part rather than kept. 'Agreed together' is two sign-off ticks in the two people's colours instead of placeholder hands."
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "station": "check",
+      "template": "quiz.question",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "none",
+      "props": {
+        "kicker": "Now you",
+        "question": "Which one can they act on?",
+        "say_question": "Which one can they act on",
+        "options": [
+          {
+            "text": "Be a stronger team player.",
+            "say": "Be a stronger team player"
+          },
+          {
+            "text": "Your one-word answers lost us your view, so share first.",
+            "say": "your one-word answers lost us your view"
+          }
+        ],
+        "pause_label": "Decide"
+      },
+      "rationale": "Faded practice on a fresh remark; options arrive as equal peers (the template letters them A and B), no answer marked. pause_label shortened to one word so the pill is narrower and the template's pause ring clears its edge (the ring radius is template code, not a prop)."
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "station": "check",
+      "template": "quiz.answer",
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "accent_on": "a label",
+      "props": {
+        "question": "Which one can they act on?",
+        "options": [
+          {
+            "text": "Be a stronger team player."
+          },
+          {
+            "text": "Your one-word answers lost us your view, so share first."
+          }
+        ],
+        "answer": 1,
+        "say_answer": "B, because",
+        "explanation": "You can picture it.",
+        "say_explanation": "you can picture it",
+        "tempting": 0,
+        "why_not": "A feels kinder.",
+        "say_why_not": "A feels kinder",
+        "takeaway": "A is a label.",
+        "say_takeaway": "but it is a label"
+      },
+      "rationale": "The answer is marked on 'B'; the tempting kinder option gets its why-not. Not drawn by the template: the outline's camera icon beside B and A turning into the fuzzy cloud (quiz.answer has no such props); the takeaway carries the point instead."
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "coffee_corner",
+      "subject": "a calm private moment soon after; the manager asks, then it is Dev's turn",
+      "world": "coffee corner, two-shot seated side by side",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "key",
+      "accent_on": "Dev's bubble",
+      "upgrade_reason": "The taught change is the turn passing from the manager to Dev, which a static card cannot show; it is drawn as a quiet scene in the same office with the same two people.",
+      "design": {
+        "treatment": "Quiet coffee corner, same left-right sides as the meeting room. Lettered things in the place carry the words: a pennant 'calm' over the counter, a sign 'private' on the closed door, a tag 'soon after' by the clock. The manager's question bubble pops, then Dev's bubble opens as hers shrinks: his turn.",
+        "why_motion": "Two-way is a handover over time; the bubble passing from one speaker to the other is the lesson.",
+        "elements": [
+          "Loom.lesson.coffee_corner (state day)",
+          "Manager: kit.peep woman, skin 1, cloth 'cloth', x 520, box centre y 620, size 600, emotion happy then explaining",
+          "Dev: kit.peep man, skin 3, cloth 'cloth2', x 1400, box centre y 620, size 600, flip true, emotion happy then explaining",
+          "words in the place: pennant 'calm', door sign 'private', clock tag 'soon after'",
+          "manager_bubble: chat bubble with '?' from the Manager, label 'ask first' under it",
+          "dev_bubble: accent chat bubble from Dev with three short ink lines (no words)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a calm, private moment",
+            "element": "pennant 'calm', door sign 'private'",
+            "action": "pennant swings in over the counter, then the sign drops onto the closed door",
+            "motion": "drop with overshoot, 0.3 s apart"
+          },
+          {
+            "t_anchor": "soon after",
+            "element": "clock tag",
+            "action": "the clock's minute hand ticks once and the tag 'soon after' hangs beside it",
+            "motion": "tick, then drop"
+          },
+          {
+            "t_anchor": "ask how it felt to him",
+            "element": "manager_bubble, Manager",
+            "action": "Manager turns to explaining; a bubble with '?' pops from her",
+            "motion": "pop from the speaker"
+          },
+          {
+            "t_anchor": "He may know context",
+            "element": "dev_bubble, manager_bubble, Dev",
+            "action": "the manager's bubble shrinks to small as Dev's accent bubble opens from him; Dev in explaining with his mouth moving (his turn), Manager happy, listening",
+            "motion": "bubble handover 0.8 s"
+          },
+          {
+            "t_anchor": "Soon, private, ask first",
+            "element": "pennant, sign, clock tag, label 'ask first'",
+            "action": "the three words pulse once in spoken order; 'ask first' underlines under the manager's small bubble",
+            "motion": "pulse 1.06, 0.25 s each; underline wipe"
+          }
+        ],
+        "continuity": "Coffee corner and both people return in b11 relaxed. The bubble handover sets up Dev's clear bubble in b12.",
+        "references": [
+          "outline s4_timing_talk b09",
+          "story-cartoon guide s6 two-shot"
+        ]
+      },
+      "rationale": "The rest valley: timely, private and two-way, shown as a turn passing, not a list."
+    },
+    {
+      "beat": "b10",
+      "kind": "avatar",
+      "station": "presenter",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "accent_on": "behaviour",
+      "props": {
+        "cast": "Manager",
+        "kicker": "Now you",
+        "title": "Feedback you were about to give",
+        "card": {
+          "lines": [
+            "behaviour",
+            "effect",
+            "next step"
+          ]
+        }
+      },
+      "rationale": "The manager, a colleague who made this mistake herself, hands the move to the viewer; the card is the empty three-part board, its three lines the three prompts. The camera icon on slot 1 is not drawn (avatar props only)."
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "coffee_corner",
+      "subject": "specific is not harsh: the three-line sheet and a heart note in one frame",
+      "world": "coffee corner, relaxed two-shot",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "key",
+      "accent_on": "specific, not harsh",
+      "upgrade_reason": "The refutation is that kind and specific sit together between the same two people; a card cannot put the sheet, the note and their relaxed faces in one frame.",
+      "design": {
+        "treatment": "Back in the coffee corner, both relaxed. The three-line sheet slides onto the counter between them; a heart-shaped sticky note lands on its corner lettered 'specific, not harsh'.",
+        "why_motion": "The kind thing (the note) lands on the specific thing (the sheet) on the words, joining them.",
+        "elements": [
+          "Loom.lesson.coffee_corner (day)",
+          "Manager: kit.peep woman, skin 1, cloth 'cloth', x 520, box centre y 620, size 600, emotion happy",
+          "Dev: kit.peep man, skin 3, cloth 'cloth2', x 1400, box centre y 620, size 600, flip true, emotion happy",
+          "sheet: Loom.lesson.build_board (variant sheet, centred x 960 on the counter, y 700 to 890)",
+          "sticky note: heart-shaped, accent fill, 'specific, not harsh' in field-coloured Patrick Hand, on the sheet's upper right corner"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Specific is not harsh",
+            "element": "sheet",
+            "action": "the sheet slides in from the left onto the counter between them",
+            "motion": "slide and settle, 0.7 s"
+          },
+          {
+            "t_anchor": "not harsh",
+            "element": "sticky note",
+            "action": "heart note drops onto the sheet's corner with its words",
+            "motion": "drop with overshoot"
+          },
+          {
+            "t_anchor": "Said with care",
+            "element": "Dev",
+            "action": "Dev leans in slightly toward the sheet, mouth shut",
+            "motion": "lean 5 degrees"
+          },
+          {
+            "t_anchor": "protects the relationship",
+            "element": "Manager",
+            "action": "Manager gives a small nod; the frame holds",
+            "motion": "nod 0.5 s"
+          }
+        ],
+        "continuity": "The sheet (board_sheet motif) travels to b12's meeting table. Both people keep their sides.",
+        "references": [
+          "outline s5_your_turn b11"
+        ]
+      },
+      "rationale": "Refutes misconception 2: kind and specific in one frame between the same two people. Cut in from the presenter (a return to the world after the your-turn chapter), so no pan across empty canvas."
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "meeting_room",
+      "subject": "back in the opening meeting room with Dev and the cloud: the cloud is gone and Dev shares a view first",
+      "world": "meeting room, two-shot seated, the opening frame changed",
+      "join_in": {
+        "type": "dip",
+        "dur": 0.8,
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "layered",
+      "light": "dawn",
+      "intent": "callback",
+      "accent_on": "Dev's bubble",
+      "design": {
+        "treatment": "The opening frame returns: same room, same seats, same wide. For a moment Dev sits under the cloud as in b01; the cloud dissolves, the three-line sheet lands on the table ('three parts'), Dev speaks with a clear accent bubble, the manager nods, a small note 'good terms' sits by the sheet, and the room lifts brighter than the opening.",
+        "why_motion": "Before and after of the same scene: the change is the cloud leaving and Dev speaking.",
+        "elements": [
+          "Loom.lesson.meeting_room (plain, then bright)",
+          "Manager: kit.peep woman, skin 1, cloth 'cloth', x 480, box centre y 620, size 640, emotion happy",
+          "Dev: kit.peep man, skin 3, cloth 'cloth2', x 1440, box centre y 620, size 640, flip true, emotion surprised then explaining",
+          "Loom.lesson.fuzzy_cloud (hanging, then dissolving)",
+          "sheet: Loom.lesson.build_board (variant sheet on the table, x 760 to 1160, y 760 to 900, words: false, so it shows only its three icons and ruled lines at this size; the words were read on the board in b04 to b06) with the label 'three parts' lettered beside it at 30 px or more",
+          "dev_bubble: clear accent chat bubble from Dev with three short ink lines, x 1150 to 1500, y 140 to 330",
+          "note 'good terms' (small paper note by the sheet, its words 28 px or more)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back in the meeting",
+            "element": "meeting_room, Manager, Dev, fuzzy_cloud",
+            "action": "the b01 frame: Dev in surprised emotion, silent under the hanging cloud",
+            "motion": "hold, cloud drifts 2 px"
+          },
+          {
+            "t_anchor": "Dev hears three parts",
+            "element": "fuzzy_cloud, sheet",
+            "action": "the cloud dissolves; the sheet (icons and ruled lines, no words) lands on the table and the label 'three parts' underlines beside it",
+            "motion": "dissolve 0.8 s; drop the sheet with overshoot"
+          },
+          {
+            "t_anchor": "he shares a view first",
+            "element": "dev_bubble, Dev",
+            "action": "Dev turns to explaining, mouth moving (his own speech), and his clear accent bubble opens from him",
+            "motion": "pop from the speaker"
+          },
+          {
+            "t_anchor": "still on good terms",
+            "element": "Manager, note",
+            "action": "Manager nods; the 'good terms' note drops by the sheet",
+            "motion": "nod; drop"
+          },
+          {
+            "t_anchor": "The change was",
+            "element": "meeting_room",
+            "action": "the room lifts to its bright state, brighter than b01; the frame holds to the end",
+            "motion": "light up 1.2 s"
+          }
+        ],
+        "continuity": "Callback of b01: same station, positions and shot. Retired: fuzzy_cloud for good. The glow never returns; the payoff colour is Dev's bubble. The sheet is the same board_sheet as b11, drawn with words: false because at 400 px wide its words would fall under 18 px.",
+        "references": [
+          "outline s5_your_turn b12",
+          "b01 frame"
+        ]
+      },
+      "rationale": "The opening scene, changed: the change, not the glow. The sheet stays 400 px wide so it sits on the table between the busts; it shows icons and ruled lines only.",
+      "alternatives": {
+        "split_before_after": {
+          "kind": "bespoke",
+          "note": "A split frame: left half the b01 still, right half the changed room."
+        }
+      }
+    }
+  ],
+  "poster": {
+    "beat": "b06"
+  }
+}

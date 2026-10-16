@@ -1,0 +1,14 @@
+{
+  "_doc": "The libraries a kind 'page' scene may load (D-176; approved by Kshitij 2026-10-15). name -> scripts and stylesheets under node_modules, the npm package whose version keys the clip store, and what it is for. runtime/page/render.mjs and loom/page_bridge.py both read this file.",
+  "d3": {"js": ["d3/dist/d3.min.js"], "pkg": "d3", "for": "scales, shapes, geo projections, interpolation"},
+  "topojson": {"js": ["topojson-client/dist/topojson-client.min.js"], "pkg": "topojson-client", "for": "world-atlas TopoJSON to GeoJSON (P.world)"},
+  "plot": {"js": ["d3/dist/d3.min.js", "@observablehq/plot/dist/plot.umd.min.js"], "pkg": "@observablehq/plot", "for": "charts from data (P.plot)"},
+  "dagre": {"js": ["@dagrejs/dagre/dist/dagre.min.js"], "pkg": "@dagrejs/dagre", "for": "laid-out flowcharts, org charts, process diagrams (P.layout, P.drawGraph)"},
+  "katex": {"js": ["katex/dist/katex.min.js"], "css": ["katex/dist/katex.min.css"], "pkg": "katex", "for": "formulas (P.tex)"},
+  "xterm": {"js": ["@xterm/xterm/lib/xterm.js"], "css": ["@xterm/xterm/css/xterm.css"], "pkg": "@xterm/xterm", "for": "a real terminal (P.terminal)"},
+  "opentype": {"js": ["opentype.js/dist/opentype.min.js"], "pkg": "opentype.js", "for": "glyph outlines in the style's face (P.glyphs)"},
+  "paper": {"js": ["paper/dist/paper-core.min.js"], "pkg": "paper", "for": "vector morphs (P.morph)"},
+  "rough": {"js": ["roughjs/bundled/rough.js"], "pkg": "roughjs", "for": "hand-drawn shapes"},
+  "gsap": {"js": ["gsap/dist/gsap.min.js"], "pkg": "gsap", "for": "a paused timeline seeked to t"},
+  "matter": {"js": ["matter-js/build/matter.min.js"], "pkg": "matter-js", "for": "2D physics, stepped from 0 to t"}
+}

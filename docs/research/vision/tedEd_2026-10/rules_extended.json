@@ -1,0 +1,4159 @@
+[
+ {
+  "id": "c_accent",
+  "area": "colour",
+  "rule": "Keep one saturated accent hue in the frame and put it on the element the narration is naming; everything else stays muted, desaturated or in one cool family. The exceptions are the brand card and credits, a fixed colour code (one hue per entity), the two sides of a comparison, and deliberate abundance or chaos beats.",
+  "strength": "always",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s061"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s026"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Per frame outside the brand card and credits: cluster pixels above a high-chroma threshold by hue; pass at one accent cluster (more only when each extra hue is a declared code or comparison side) whose box overlaps the element named in the current beat's word timings. Colour accent is the top focal cue in every batch, on about a third to a half of shots (0.33 to 0.49 per batch). Accents are named by the vision model, not measured, so calibrate the chroma threshold on frames.",
+  "sources": [
+   "batch01:1",
+   "batch02:1",
+   "batch03:1",
+   "batch04:1",
+   "batch05:1",
+   "batch06:1",
+   "batch07:1",
+   "batch08:1"
+  ]
+ },
+ {
+  "id": "c_accent_moves",
+  "area": "colour",
+  "rule": "The accent moves with the narration: when a new element is named it takes the accent, and the previous one returns to the field family.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "P5pmMe3EarI",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s026b"
+   },
+   {
+    "video_id": "dOqqBQ5Ha6Q",
+    "shot_id": "s003f"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "jLOuMXnM5wk",
+    "shot_id": "s001j"
+   }
+  ],
+  "measurable_as": "Timeline against Loom word timings: the accent-coloured element id changes within about 1 s of the word naming the new element (batch 04 colour changes run a median 1.13 s); on each word-synced pop-in the new element holds the frame's maximum saturation.",
+  "sources": [
+   "batch03:2",
+   "batch04:2",
+   "batch08:2"
+  ]
+ },
+ {
+  "id": "c_meaning_fixed",
+  "area": "colour",
+  "rule": "A colour bound to a meaning or an entity keeps it for the whole film (one hue for the threat, one per recurring entity, one for time markers) and is never swapped or reused as decoration.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "5ljV0Vxu00M",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s061"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s007a"
+   },
+   {
+    "video_id": "5ljV0Vxu00M",
+    "shot_id": "s043"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s062"
+   }
+  ],
+  "measurable_as": "Storyboard declares a concept-to-hue map; lint any beat where a mapped hue sits on an element not tagged with that concept, or where one concept uses two hues.",
+  "sources": [
+   "batch01:2",
+   "batch03:4",
+   "batch04:4",
+   "batch07:2"
+  ]
+ },
+ {
+  "id": "c_colour_script",
+  "area": "colour",
+  "rule": "Plan the palette as a colour script: the dominant field colour changes at section boundaries (one field family per section, neighbours differ) while the accent role, the ground texture and recurring figures' colours stay constant. Mark a new segment by changing the field, not by adding scenery, and end on the brand neutral.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "DbEZmLoGDbk",
+    "shot_id": "s005c"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s106"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "gVXoAbeB8QI",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "mA1lnxfqHk8",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s010a"
+   }
+  ],
+  "measurable_as": "Dominant background hue cluster per section: stable inside a section, different from its neighbour; the records list about 7 to 10 colour-script segments per film (batches 05 and 06); recurring character fills identical across segments; element count at a boundary stays near the shot median; final field near white or the brand neutral.",
+  "sources": [
+   "batch01:3",
+   "batch02:4",
+   "batch04:3",
+   "batch05:2",
+   "batch06:3",
+   "batch07:4",
+   "batch08:4"
+  ]
+ },
+ {
+  "id": "c_temperature",
+  "area": "colour",
+  "rule": "Separate by temperature: the accent sits on the opposite temperature to its field, and two compared groups take a warm and a cool hue so they part without labels.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "bHB5iiDDJ-s",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s036"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s018a"
+   },
+   {
+    "video_id": "iCBzEZek5cY",
+    "shot_id": "s009b"
+   },
+   {
+    "video_id": "ofk-aw5G-FQ",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Hue-angle distance between the accent element and the mean field hue, and between the two subjects of a comparison beat; no threshold was recorded, so calibrate on frames.",
+  "sources": [
+   "batch03:5",
+   "batch06:2"
+  ]
+ },
+ {
+  "id": "c_muted",
+  "area": "colour",
+  "rule": "Fields and figures are muted or desaturated so the accent can work.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "pyDZpDkU46Y",
+    "shot_id": "s011"
+   }
+  ],
+  "measurable_as": "Mean saturation of the background layer is lower than the saturation of the accent element in the same frame.",
+  "sources": [
+   "batch07:3"
+  ]
+ },
+ {
+  "id": "c_dark_field",
+  "area": "colour",
+  "rule": "Put micro, abstract, unknown or technical segments on a near-black, navy or neutral grey field with one cool or yellow accent; keep story segments on warm or muted fields.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "QIqKGMM8ivM",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "P8OEz3PvWZQ",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "QIqKGMM8ivM",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "P8OEz3PvWZQ",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "krNP8RlDsbw",
+    "shot_id": "s007a"
+   },
+   {
+    "video_id": "7dm2AsJ3-E8",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s027"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s030"
+   }
+  ],
+  "measurable_as": "Mean background luminance of explain_mechanism and abstract beats below that of story_beat beats in the same lesson; void_dark backgrounds in 54 shots across 10 films (batch 02) and 166 of 702 shots (batch 04).",
+  "sources": [
+   "batch02:5",
+   "batch05:3"
+  ]
+ },
+ {
+  "id": "c_dark_turn",
+  "area": "colour",
+  "rule": "Signal hazard, grief or a dark turn by draining or darkening the whole field and keeping only the accent.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s018b"
+   },
+   {
+    "video_id": "-Tw81EQYV_Y",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "8H--GLt3h8I",
+    "shot_id": "s017"
+   }
+  ],
+  "measurable_as": "Mean saturation of non-accent pixels drops between the preceding beat and the turn.",
+  "sources": [
+   "batch03:6"
+  ]
+ },
+ {
+  "id": "c_judgement",
+  "area": "colour",
+  "rule": "When colour encodes judgement, red means wrong or active and green means correct or adopted; a red-to-green change marks validation.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s028"
+   }
+  ],
+  "measurable_as": "judgement",
+  "sources": [
+   "batch05:4"
+  ]
+ },
+ {
+  "id": "c_footage_grey",
+  "area": "colour",
+  "rule": "When live footage or photos are used, grade them toward grey so all saturated colour belongs to the drawn overlays.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s040"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s036a"
+   }
+  ],
+  "measurable_as": "Mean saturation of the footage region below the mean saturation of overlay pixels in the same frame.",
+  "sources": [
+   "batch08:3"
+  ]
+ },
+ {
+  "id": "c_flat_shading",
+  "area": "colour",
+  "rule": "Shade flat: cel fills or none, and no gradient shading on characters; soft gradients only in sky bands, lamp glows or a soft highlight, with any other volume from halftone or a flat offset shadow.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s021"
+   },
+   {
+    "video_id": "qKM4JzToM-A",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "ofk-aw5G-FQ",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "bHB5iiDDJ-s",
+    "shot_id": "s029"
+   }
+  ],
+  "measurable_as": "Shading tags flat_cel or none on 657 of 799 shots (batch 02) and 921 of 1068 (batch 06); measure fill variance inside character masks and the share of smooth-gradient pixels outside the top band of the frame.",
+  "sources": [
+   "batch02:3",
+   "batch06:4"
+  ]
+ },
+ {
+  "id": "t_label",
+  "area": "typography",
+  "rule": "Labels that must be read sit at about 0.05 of frame height and do not go below about 0.03.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s004a"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s007b"
+   },
+   {
+    "video_id": "kRAl4Xgs_NU",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "iCBzEZek5cY",
+    "shot_id": "s009a"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s015"
+   }
+  ],
+  "measurable_as": "OCR text height / frame height: label median 0.05 in batches 01 to 07 and 0.07 in batch 08; the batch p10 floors range from 0.025 to 0.04. Flag any meaning-bearing label below 0.03.",
+  "sources": [
+   "batch01:28",
+   "batch02:6",
+   "batch03:7",
+   "batch04:6",
+   "batch05:5",
+   "batch06:7",
+   "batch07:32",
+   "batch08:7"
+  ]
+ },
+ {
+  "id": "t_title",
+  "area": "typography",
+  "rule": "Titles, section cards and term cards are large and alone, one or two lines, in heavy negative space; an opening quote sits smaller under the brand title.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s066"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s013"
+   }
+  ],
+  "measurable_as": "Title text height median 0.12 to 0.18 of frame across batches (p25 0.06 to 0.12; never below 0.08 in batch 08); term cards at least 0.1 high and at most 2 lines; opening quote 0.06 to 0.08.",
+  "sources": [
+   "batch01:29",
+   "batch02:7",
+   "batch03:8",
+   "batch05:8",
+   "batch06:11",
+   "batch08:6"
+  ]
+ },
+ {
+  "id": "t_number",
+  "area": "typography",
+  "rule": "A number that carries the beat is set larger than the labels around it (about two to three times label height) and sits on an object in the world, such as a sign, tag, counter or bar.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "BSdEiOYvKpE",
+    "shot_id": "s001e"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s067"
+   },
+   {
+    "video_id": "bHB5iiDDJ-s",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "ngarNTPMclE",
+    "shot_id": "s080"
+   },
+   {
+    "video_id": "8H--GLt3h8I",
+    "shot_id": "s017"
+   }
+  ],
+  "measurable_as": "Number text median 0.08 to 0.12 of frame height in batches 01, 02, 03, 06 and 07 against labels at 0.05; hero numbers 0.18 to 0.35 (batch 08). Batch 04 measured numbers at label size (median 0.05), so the ratio is usual, not universal.",
+  "sources": [
+   "batch01:30",
+   "batch02:8",
+   "batch03:9",
+   "batch06:8",
+   "batch08:8"
+  ]
+ },
+ {
+  "id": "t_small",
+  "area": "typography",
+  "rule": "Text below about 0.03 of frame height is secondary texture only (credits, UI, signage, or diagram detail next to a larger label), never information the viewer must read.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "JhxuP0AuRPA",
+    "shot_id": "s048"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "yYPnos84NDY",
+    "shot_id": "s109"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s031b"
+   },
+   {
+    "video_id": "5ljV0Vxu00M",
+    "shot_id": "s018b"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s054"
+   },
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s029b"
+   },
+   {
+    "video_id": "N2uQWfV6Jr4",
+    "shot_id": "s063"
+   }
+  ],
+  "measurable_as": "Text under 0.03 of frame height is of kind credits, ui_text, signage or diagram_text; credits median 0.03 (p10 0.02); batch 07 diagram text reaches p10 0.015, the one place these films go smaller; fail meaning-bearing text below 0.02.",
+  "sources": [
+   "batch01:33",
+   "batch04:7",
+   "batch08:9"
+  ]
+ },
+ {
+  "id": "t_terms",
+  "area": "typography",
+  "rule": "On-screen text is a word, a term, a number or a short label, never a narration sentence or a bullet list; sentences appear only on the opening quote card, in the credits, or on an artefact in the world.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "DbEZmLoGDbk",
+    "shot_id": "s005d"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s021a"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s074"
+   },
+   {
+    "video_id": "2gPzWP3dcOQ",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s069b"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s001"
+   }
+  ],
+  "measurable_as": "Words per text block at most 3 to 4 outside title, quote and credits cards (batches 03 and 04); list-type text in only a few shots per batch (4 of 640 in batch 01, 4 of 1068 in batch 06); text echo of the narration in 41 of 640 shots (batch 01); share of shots with any text 0.10 to 0.53 per film, story films under 0.20 (batch 08).",
+  "sources": [
+   "batch01:32",
+   "batch02:10",
+   "batch03:10",
+   "batch04:8",
+   "batch05:6",
+   "batch06:10",
+   "batch07:34",
+   "batch08:10"
+  ]
+ },
+ {
+  "id": "t_on_object",
+  "area": "typography",
+  "rule": "Put text on something: an object surface, sign, tag, screen, backing card or band, or hand-letter it in the art's line; not loose caption strips over the scene. Text that must be read in full lives on a document or board written on with the voice.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s003a"
+   },
+   {
+    "video_id": "MBir652KZPE",
+    "shot_id": "s061"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "2gPzWP3dcOQ",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s062"
+   },
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "-61qDRPG3to",
+    "shot_id": "s001"
+   }
+  ],
+  "measurable_as": "Every text box has an opaque backing or lies inside an object's bounding box; text kinds signage, label and diagram_text outnumber caption 260 to 26 (batch 05).",
+  "sources": [
+   "batch01:31",
+   "batch05:7",
+   "batch07:35"
+  ]
+ },
+ {
+  "id": "t_no_cover",
+  "area": "typography",
+  "rule": "Text and overlays sit in negative space beside the subject and never cover a face or the focal object.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s036a"
+   },
+   {
+    "video_id": "lQRsqMiBTsI",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "yYPnos84NDY",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s043a"
+   },
+   {
+    "video_id": "ybftH3XSd0Q",
+    "shot_id": "s053"
+   }
+  ],
+  "measurable_as": "Bounding boxes of text or overlays do not intersect detected face boxes or the focal object's box.",
+  "sources": [
+   "batch02:9",
+   "batch08:27"
+  ]
+ },
+ {
+  "id": "t_label_life",
+  "area": "typography",
+  "rule": "A label sits on the thing it names, arrives on its word and clears before the next label or idea; labels never pile up into a legend, and keys and leader lines are avoided.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "YtCpZnBhWZ0",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "iCBzEZek5cY",
+    "shot_id": "s009b"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "MBir652KZPE",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Label box touches or overlaps its target; onset inside the target word's interval (Loom word timings); no overlay from beat n still visible after the first new overlay of beat n+1 enters.",
+  "sources": [
+   "batch06:9",
+   "batch07:33",
+   "batch07:19"
+  ]
+ },
+ {
+  "id": "t_stamp",
+  "area": "typography",
+  "rule": "A stamped keyword is held about a second and removed before the next idea; it never stays on as a caption.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s061"
+   }
+  ],
+  "measurable_as": "Stamp visible 0.6 to 1.5 s and removed before the next spoken sentence starts.",
+  "sources": [
+   "batch04:9"
+  ]
+ },
+ {
+  "id": "t_typeon",
+  "area": "typography",
+  "rule": "Type the key question or caption on word by word with the narration, the key word in the accent colour.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s021"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s021a"
+   },
+   {
+    "video_id": "krNP8RlDsbw",
+    "shot_id": "s004"
+   }
+  ],
+  "measurable_as": "Word reveal times match word timings within one frame step; the highlighted word's colour equals the accent.",
+  "sources": [
+   "batch02:11"
+  ]
+ },
+ {
+  "id": "t_nameplate",
+  "area": "typography",
+  "rule": "Bring a named person or figure in on the word that names them, introduced by a nameplate or badge in the art that is removed by the end of that sentence or after about 2 s; no lower-third bars.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s026"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s036"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s035"
+   },
+   {
+    "video_id": "ybftH3XSd0Q",
+    "shot_id": "s032"
+   }
+  ],
+  "measurable_as": "Name text onset inside the spoken name's interval (the records describe it at or up to 0.3 s before the word; not measured); visible about 2 s.",
+  "sources": [
+   "batch03:11",
+   "batch08:43",
+   "batch08:16"
+  ]
+ },
+ {
+  "id": "t_lettering",
+  "area": "typography",
+  "rule": "Keep one lettering style per film; hand-drawn families letter titles, labels and numbers in the art's own hand.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "yYPnos84NDY",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s036"
+   }
+  ],
+  "measurable_as": "Judgement: one lettering style across all text of a film.",
+  "sources": [
+   "batch08:11"
+  ]
+ },
+ {
+  "id": "h_faces",
+  "area": "character",
+  "rule": "Faces stay minimal (dot eyes, an arc, one exaggerated feature, or blank), and emotion is carried by posture, one gesture, the head and brows, and the accent.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "DbEZmLoGDbk",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "jLOuMXnM5wk",
+    "shot_id": "s001n"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s003e"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "mA1lnxfqHk8",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "JhxuP0AuRPA",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s015"
+   }
+  ],
+  "measurable_as": "Rig property: face features limited to eyes, one mouth line and brows, with no face shading beyond one split; judgement for the pose read.",
+  "sources": [
+   "batch01:41",
+   "batch02:13",
+   "batch04:10",
+   "batch05:9",
+   "batch07:29",
+   "batch08:13"
+  ]
+ },
+ {
+  "id": "h_no_lipsync",
+  "area": "character",
+  "rule": "Animated characters do not talk on camera: no lip sync; the off-screen narrator carries the words.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "iCBzEZek5cY",
+    "shot_id": "s047"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s029"
+   },
+   {
+    "video_id": "B-ukcWJzXwc",
+    "shot_id": "s065"
+   }
+  ],
+  "measurable_as": "No mouth-shape track on drawn rigs; lip sync in 2 to 13 shots per batch, nearly all live action (all 4 in batch 03).",
+  "sources": [
+   "batch03:13",
+   "batch06:14"
+  ]
+ },
+ {
+  "id": "h_few",
+  "area": "character",
+  "rule": "Keep characters few: one actor carries each beat.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s047"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s025a"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "Q9Vt6NGBVBc",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s065"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s034"
+   }
+  ],
+  "measurable_as": "Characters per shot median 1 in every batch; p90 3 to 4 in most batches (6 in batch 05, 8 in batch 01 where crowds appear); flag beats above 4 unless the extra figures are a repeated crowd.",
+  "sources": [
+   "batch02:12",
+   "batch03:12",
+   "batch05:10",
+   "batch06:12",
+   "batch08:12",
+   "batch01:36"
+  ]
+ },
+ {
+  "id": "h_crowds",
+  "area": "character",
+  "rule": "Crowds are one repeated figure design varied in at most two small details, or silhouettes, with offset loop phases; only the subject is drawn fully.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s057"
+   },
+   {
+    "video_id": "krNP8RlDsbw",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s055"
+   },
+   {
+    "video_id": "BT93bRX2t68",
+    "shot_id": "s011"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s052"
+   },
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s010b"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s045"
+   }
+  ],
+  "measurable_as": "In beats with more than 4 figures, at most one uses the detailed rig and the others share one design id; their loop phases differ.",
+  "sources": [
+   "batch01:42",
+   "batch02:15",
+   "batch07:30"
+  ]
+ },
+ {
+  "id": "h_gesture",
+  "area": "character",
+  "rule": "Acting is short snaps: one pose or gesture change per beat, landing on the stressed word, then held; not continuous performance.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s035"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "-61qDRPG3to",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "D98UJl6Ea6o",
+    "shot_id": "s049"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s040"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s042"
+   },
+   {
+    "video_id": "kRAl4Xgs_NU",
+    "shot_id": "s036"
+   }
+  ],
+  "measurable_as": "character_act median 0.5 to 1.0 s across batches (p75 1.5 to 2.4 s); one main gesture per character beat with its peak inside the stressed word's interval (Loom word timings).",
+  "sources": [
+   "batch02:14",
+   "batch03:14",
+   "batch05:11",
+   "batch06:15",
+   "batch07:28"
+  ]
+ },
+ {
+  "id": "h_walks",
+  "area": "character",
+  "rule": "Walk cycles are rare and short; travel is shown by path-follow or slides, and figures mostly hold and gesture.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "DbEZmLoGDbk",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s018a"
+   },
+   {
+    "video_id": "JhxuP0AuRPA",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s068"
+   }
+  ],
+  "measurable_as": "walk_cycle about 17 to 20 events per batch of 12 films (median 2.96 s in batch 01); path_follow in 76 shots across 12 films (batch 03); walk time under 10 percent of runtime.",
+  "sources": [
+   "batch01:43",
+   "batch03:15"
+  ]
+ },
+ {
+  "id": "h_hands",
+  "area": "character",
+  "rule": "Let a hand act alone: a flat, disembodied hand enters from the nearest frame edge to draw, swap, present or remove, then leaves, when the body adds nothing.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "JDqpcHGfJ2I",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s081"
+   },
+   {
+    "video_id": "QWCHnR53oIw",
+    "shot_id": "s011"
+   },
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s057"
+   },
+   {
+    "video_id": "7dm2AsJ3-E8",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "kRAl4Xgs_NU",
+    "shot_id": "s040"
+   }
+  ],
+  "measurable_as": "Hand enters from the nearest edge and exits before the next keyword.",
+  "sources": [
+   "batch01:44",
+   "batch05:12"
+  ]
+ },
+ {
+  "id": "h_identity",
+  "area": "character",
+  "rule": "A recurring character or abstract agent keeps one design, one silhouette and one accent for the whole film; a change of state is a pose, expression or colour swap on the same figure, not a new character.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "wtovy-1-QUM",
+    "shot_id": "s005a"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s054"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "2A1IEBFt6Xg",
+    "shot_id": "s079"
+   },
+   {
+    "video_id": "7dm2AsJ3-E8",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s119"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s015"
+   }
+  ],
+  "measurable_as": "Character id maps to one rig id and one accent across all beats; the same design recurs in at least 3 to 4 shots of its sections.",
+  "sources": [
+   "batch04:12",
+   "batch05:13",
+   "batch06:13",
+   "batch07:31"
+  ]
+ },
+ {
+  "id": "h_agents",
+  "area": "character",
+  "rule": "Give invisible agents, tools and personified objects a simple face (two dot eyes, one curve) and one fixed colour, and change their expression only on the word naming the effect.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "P5pmMe3EarI",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "NOaeKRft-gc",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s025"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s029"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s049"
+   },
+   {
+    "video_id": "yYPnos84NDY",
+    "shot_id": "s092"
+   }
+  ],
+  "measurable_as": "The same agent design recurs in at least 3 shots of a film; expression swaps sit within a beat of the effect word.",
+  "sources": [
+   "batch04:11",
+   "batch08:14"
+  ]
+ },
+ {
+  "id": "h_violence",
+  "area": "character",
+  "rule": "Show death, injury, violence and destruction by symbol: one snappy motion plus a flat colour mark, a small burst, X eyes, a flash or a fade of light, then a hold; no anatomical detail or animated wounds.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "pyDZpDkU46Y",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s033"
+   },
+   {
+    "video_id": "pyDZpDkU46Y",
+    "shot_id": "s072"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s083"
+   },
+   {
+    "video_id": "zpEuvaondSo",
+    "shot_id": "s097"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s042"
+   },
+   {
+    "video_id": "PN4moDNE-Kg",
+    "shot_id": "s029"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s010"
+   }
+  ],
+  "measurable_as": "Judgement; the state change completes in under 1 s on its keyword.",
+  "sources": [
+   "batch07:27",
+   "batch08:15"
+  ]
+ },
+ {
+  "id": "k_static",
+  "area": "camera",
+  "rule": "Lock the camera by default; meaning comes from change inside the frame, in the drawing (morph, transform, draw-on, redraw), not from moving the whole picture.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "BSdEiOYvKpE",
+    "shot_id": "s001e"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "m2BE9GZJJbs",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s003e"
+   },
+   {
+    "video_id": "B-ukcWJzXwc",
+    "shot_id": "s065"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s003"
+   }
+  ],
+  "measurable_as": "Share of shots with no camera move 0.76 to 0.86 per batch (607 of 799 to 815 of 945); flag a lesson below about 0.7. The lowest per-film share in batch 08 was 0.58, and two batch 02 films never move. transform_into, morph and draw_on appear in 11 to 12 of 12 films (batch 05).",
+  "sources": [
+   "batch01:5",
+   "batch02:16",
+   "batch03:16",
+   "batch04:13",
+   "batch05:14",
+   "batch06:17",
+   "batch07:5",
+   "batch08:17",
+   "batch05:37"
+  ]
+ },
+ {
+  "id": "k_one_move",
+  "area": "camera",
+  "rule": "When the camera moves, it makes one slow move on one axis (push, pull, pan, tilt or truck) that eases and settles; no handheld, shake, whip or compound moves, and a shake is kept for a single shock.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s058"
+   },
+   {
+    "video_id": "kRAl4Xgs_NU",
+    "shot_id": "s025"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s026"
+   },
+   {
+    "video_id": "PN4moDNE-Kg",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s073"
+   },
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s012"
+   }
+  ],
+  "measurable_as": "Per shot: at most one move segment, one dominant axis, no direction reversal or velocity spike; compound 'multiple' camera tags in only 2 to 6 shots per batch; shake in at most one shot per film.",
+  "sources": [
+   "batch01:6",
+   "batch02:17",
+   "batch03:17",
+   "batch05:15",
+   "batch06:18",
+   "batch07:6",
+   "batch08:20"
+  ]
+ },
+ {
+  "id": "k_push_pull",
+  "area": "camera",
+  "rule": "Use a push-in to isolate or emphasise a named subject and a pull-out to reveal scale or context; pans, tilts and follows are rarer and kept for reading a row or a reveal.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "IpaVpMFBwAE",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s048"
+   },
+   {
+    "video_id": "dOqqBQ5Ha6Q",
+    "shot_id": "s003f"
+   },
+   {
+    "video_id": "WJhCa12UTsg",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s012"
+   }
+  ],
+  "measurable_as": "Push-in and pull-out are the leading moves in most batches (push_in 31 to 57 and pull_out 12 to 62 shots per batch; which one leads varies, and batch 06 also has 46 right pans); each move is tagged reveal or focus in the storyboard.",
+  "sources": [
+   "batch01:7",
+   "batch02:18",
+   "batch03:18",
+   "batch04:14",
+   "batch06:19",
+   "batch08:18"
+  ]
+ },
+ {
+  "id": "k_on_word",
+  "area": "camera",
+  "rule": "Tie each move to the narration: a push starts on the noun that names its target and holds once framed; a reveal move ends on the word it reveals.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "dOqqBQ5Ha6Q",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s043"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s084"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s033"
+   }
+  ],
+  "measurable_as": "Timeline against Loom word timings: push start or reveal end inside the keyword's interval, followed by a static hold. In the films this timing is the vision model's description, not a measured offset.",
+  "sources": [
+   "batch04:16",
+   "batch06:20"
+  ]
+ },
+ {
+  "id": "k_speed",
+  "area": "camera",
+  "rule": "Show speed by scrolling or streaking the background behind a fixed subject rather than moving or tracking the camera.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "2A1IEBFt6Xg",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "QFbQkZT1EEk",
+    "shot_id": "s030"
+   }
+  ],
+  "measurable_as": "In beats tagged speed or travel, the camera is static while background layers move; follow moves in 9 of 702 shots (batch 04).",
+  "sources": [
+   "batch04:15"
+  ]
+ },
+ {
+  "id": "k_still_subject",
+  "area": "camera",
+  "rule": "During a reveal move, hold the subjects still so the frame change is the only motion.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "mA1lnxfqHk8",
+    "shot_id": "s028b"
+   }
+  ],
+  "measurable_as": "During camera moves, subject displacement in frame space is near zero apart from the camera transform.",
+  "sources": [
+   "batch08:19"
+  ]
+ },
+ {
+  "id": "k_sizes",
+  "area": "camera",
+  "rule": "Medium is the working shot size; wide and close are punctuation, and full-frame diagrams and text cards are resets. Change emphasis by cutting to a close insert at the key gesture rather than zooming, and avoid long runs at one size.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s032"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "-61qDRPG3to",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "ngarNTPMclE",
+    "shot_id": "s003"
+   }
+  ],
+  "measurable_as": "Shot-size histogram per lesson: medium is the mode in most batches (268 of 529 to 561 of 1068); batch 02 is nearly level (medium 271, wide 234); judgement on run length.",
+  "sources": [
+   "batch05:16",
+   "batch06:25",
+   "batch07:7",
+   "batch02:52"
+  ]
+ },
+ {
+  "id": "j_cut",
+  "area": "transition",
+  "rule": "The hard cut is the default join, on the narration beat.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "D98UJl6Ea6o",
+    "shot_id": "s027"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s060"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "JDqpcHGfJ2I",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s004"
+   }
+  ],
+  "measurable_as": "Hard cuts are 0.63 to 0.79 of joins per batch and 0.53 to 0.93 per film in batch 08. These counts include boundaries between sub-shots of one long shot, which are not real joins, so treat them as approximate.",
+  "sources": [
+   "batch01:8",
+   "batch02:19",
+   "batch06:21",
+   "batch07:8",
+   "batch08:21"
+  ]
+ },
+ {
+  "id": "j_meaning",
+  "area": "transition",
+  "rule": "Every gradual join carries a meaning tied to the content: morph for becoming or idea to idea, zoom-through for entering a place, layer or scale, dissolve or redraw for passing time or emotion, a shaped wipe or iris for a chapter, topic reset or caused change, a pan for travelling along a list or between scales. Gradual joins sit at section, world or scale boundaries; inside a scene the beats are hard cuts.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s026"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s025b"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "kRAl4Xgs_NU",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "qKM4JzToM-A",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s027"
+   }
+  ],
+  "measurable_as": "Each non-cut join carries a meaning tag in the storyboard and coincides with a section, world, time or scale change; joins at segment boundaries are gradual more often than joins inside segments.",
+  "sources": [
+   "batch01:11",
+   "batch02:20",
+   "batch03:19",
+   "batch04:17",
+   "batch05:17",
+   "batch06:22",
+   "batch08:22"
+  ]
+ },
+ {
+  "id": "j_content",
+  "area": "transition",
+  "rule": "Build a gradual join out of what is in the frame: the outgoing subject becomes the next (morph, object transform), a departing object, an opening or a portal carries the eye, or the wipe is cut from the subject's own material. Thematic wipes are fast.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s059"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s021"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "JOs-q7rXqdk",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "2A1IEBFt6Xg",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "qKM4JzToM-A",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s036"
+   }
+  ],
+  "measurable_as": "Judgement at each non-cut join: name the element that persists or drives the change, and fail when none is named; the same shape and colour in the last frame of shot n and the first frame of shot n+1; wipe_in median 0.63 s (batch 03).",
+  "sources": [
+   "batch01:9",
+   "batch02:21",
+   "batch02:22",
+   "batch03:20",
+   "batch03:22",
+   "batch04:18",
+   "batch06:24",
+   "batch07:9"
+  ]
+ },
+ {
+  "id": "j_rare_dissolve",
+  "area": "transition",
+  "rule": "Plain dissolves and fades through black are rare: a dissolve marks time, links a person to a place or releases emotion, and a fade through black is one quiet breath before a final or darker turn, about once per film at most. Some of the films' dissolves hold a deliberate ghost of the outgoing shot; Loom's double-exposure check at joins would flag that, so it is a gate conflict to resolve, not a defect of the films.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "8H--GLt3h8I",
+    "shot_id": "s044b"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s062"
+   },
+   {
+    "video_id": "B-ukcWJzXwc",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s021"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s075"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s066"
+   },
+   {
+    "video_id": "mA1lnxfqHk8",
+    "shot_id": "s008"
+   }
+  ],
+  "measurable_as": "Dissolves 4 to 26 joins per batch of 529 to 1068 (under 3 percent); fade_through_black 1 to 4 per batch; flag more than 2 fades per lesson (batch 03).",
+  "sources": [
+   "batch03:21",
+   "batch04:19",
+   "batch06:23",
+   "batch08:23"
+  ]
+ },
+ {
+  "id": "j_in_place",
+  "area": "transition",
+  "rule": "When the subject stays the same, change the picture in place (redraw, swap, add, or hold and change on the same ground) instead of cutting to a new scene.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s006b"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s036a"
+   },
+   {
+    "video_id": "DbEZmLoGDbk",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s018b"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s067"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s059"
+   },
+   {
+    "video_id": "wtovy-1-QUM",
+    "shot_id": "s005h"
+   },
+   {
+    "video_id": "N2uQWfV6Jr4",
+    "shot_id": "s014"
+   }
+  ],
+  "measurable_as": "Judgement on consecutive beats about the same subject. The records' none_continuous join counts cannot support this rule numerically, because many of them fall on boundaries between sub-shots of one long shot.",
+  "sources": [
+   "batch05:18",
+   "batch08:24",
+   "batch01:10"
+  ]
+ },
+ {
+  "id": "j_scale",
+  "area": "transition",
+  "rule": "Change the scale level (into a body, down to a cell, out to a planet) with one continuous move or zoom-through rather than a cut.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "PN4moDNE-Kg",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "PN4moDNE-Kg",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s011"
+   },
+   {
+    "video_id": "YtCpZnBhWZ0",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Beats tagged as a scale change use a zoom, push, pull or iris join, not a cut. A close insert for emphasis (see shot sizes) is a cut and is a different case.",
+  "sources": [
+   "batch07:10"
+  ]
+ },
+ {
+  "id": "j_ground",
+  "area": "transition",
+  "rule": "Gradual joins share the ground: the outgoing and incoming shots keep the same field colour or paper so the join feels like a page turn.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "2gPzWP3dcOQ",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s003"
+   }
+  ],
+  "measurable_as": "Mean background colour difference across dissolve and morph joins is small compared with hard cuts.",
+  "sources": [
+   "batch05:19"
+  ]
+ },
+ {
+  "id": "j_register",
+  "area": "transition",
+  "rule": "Register breaks (footage, archive, 3D, neon, a flat brand outro) are short contiguous runs, entered and exited by a marked join: a colour bridge (tint, fade through the outgoing hue, coloured band wipe), a portal, a white flash or a hard cut.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s057"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s015a"
+   },
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s038"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s045"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Technique tags 3d_render, photo_mixed or other form contiguous runs; at each boundary the join frame's dominant hue matches the outgoing field within a tolerance, or the join is a flash or cut.",
+  "sources": [
+   "batch03:23",
+   "batch05:20"
+  ]
+ },
+ {
+  "id": "p_cut_rate",
+  "area": "pacing",
+  "rule": "Pick a tempo family and hold it through the film: slow diagram films cut about 5 to 6 times a minute, fast story films 12 to 15 or more, and most films sit near 8 to 13.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s007a"
+   },
+   {
+    "video_id": "P5pmMe3EarI",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s003e"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "BT93bRX2t68",
+    "shot_id": "s006"
+   }
+  ],
+  "measurable_as": "Code cuts per minute per film: batch medians 8.3 to 15.0; per-film p10 to p90 about 4 to 20 across batches. Outliers: 3.89 (BSdEiOYvKpE, detector likely missed redraws) and 30.67 (HDt_rTPPh70); jLOuMXnM5wk has 0 detected cuts and its pacing is unknown.",
+  "sources": [
+   "batch01:12",
+   "batch02:31",
+   "batch03:29",
+   "batch04:26",
+   "batch05:26",
+   "batch06:29",
+   "batch07:12",
+   "batch08:31"
+  ]
+ },
+ {
+  "id": "p_shot_len",
+  "area": "pacing",
+  "rule": "Median shot about 3 to 6 s with a wide spread: short montage shots and long anchors in the same film.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s033"
+   },
+   {
+    "video_id": "ngarNTPMclE",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s033a"
+   },
+   {
+    "video_id": "pyDZpDkU46Y",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s009"
+   }
+  ],
+  "measurable_as": "All-shot median 3.0 to 6.2 s per batch; per-film median 2.8 to 4.6 s for most films (batch 08 p10 to p90); p25 about 2.2 to 3 s, p75 about 7 to 11.5 s. Shot records split any shot over 20 s into equal sub-shots, so read the long tail from the cut detector.",
+  "sources": [
+   "batch01:13",
+   "batch02:32",
+   "batch07:11",
+   "batch08:30"
+  ]
+ },
+ {
+  "id": "p_vary",
+  "area": "pacing",
+  "rule": "Speed up through lists, examples and action montages (shots of about 1 to 3 s) and slow down at definitions, mechanisms, data and key images (about 5 to 18 s). Sub-second bursts stay short and are followed by a longer shot.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s033"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s033a"
+   },
+   {
+    "video_id": "m2BE9GZJJbs",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "FKUc8vg_Lus",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "P8OEz3PvWZQ",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s073"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s054"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s042"
+   }
+  ],
+  "measurable_as": "Mean shot length of define, explain_mechanism and diagram beats exceeds the film median, and example, list and story_beat beats fall below it; runs of shots under 1 to 1.5 s last at most about 3 shots or 10 s outside a montage.",
+  "sources": [
+   "batch01:15",
+   "batch02:35",
+   "batch03:34",
+   "batch04:30",
+   "batch05:31",
+   "batch06:33"
+  ]
+ },
+ {
+  "id": "p_motion_share",
+  "area": "pacing",
+  "rule": "Keep something meaningful moving in most seconds, even with a locked camera.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "krNP8RlDsbw",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "m2BE9GZJJbs",
+    "shot_id": "s058"
+   },
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "B-ukcWJzXwc",
+    "shot_id": "s072"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s077"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s063"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s018"
+   }
+  ],
+  "measurable_as": "Code motion share per film: batch medians 0.72 to 0.95, p10 0.60 to 0.82; flag a lesson below about 0.6. The share comes from frame change, so grain and compression may lift it; check against the frames.",
+  "sources": [
+   "batch01:16",
+   "batch02:33",
+   "batch03:30",
+   "batch05:30",
+   "batch06:31",
+   "batch07:13",
+   "batch08:32"
+  ]
+ },
+ {
+  "id": "p_holds",
+  "area": "pacing",
+  "rule": "Still holds are short and purposeful: spend them on the key line, a definition, a finished diagram, a symbol or the end card, not on story beats. Most films keep their longest motionless stretch near 5 s, but some hold 10 to 24 s. Loom's static-hold check would flag those long holds; that is a gate conflict to resolve, not a defect of the films.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s012a"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s019b"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s031a"
+   },
+   {
+    "video_id": "WJhCa12UTsg",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s013a"
+   },
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s044"
+   }
+  ],
+  "measurable_as": "Code over all holds: longest still stretch per film median 5 s, maximum 24 s, over 10 s in 10 of 96 films (the batch figures of a 4 to 8 s median came from hold lists truncated at six entries). Tag each hold over about 8 s as define, symbol, diagram, release or credits.",
+  "sources": [
+   "batch01:14",
+   "batch03:31",
+   "batch04:28",
+   "batch05:27",
+   "batch06:30",
+   "batch08:33"
+  ]
+ },
+ {
+  "id": "p_build",
+  "area": "pacing",
+  "rule": "Build a diagram on one held page: the background and placed elements stay still while new parts arrive, so a mechanism build can run 10 to 18 s on one frame provided something is added every few seconds. Diagram beats are the longest in a film and character beats cut short.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s073"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s029"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s040"
+   },
+   {
+    "video_id": "5ljV0Vxu00M",
+    "shot_id": "s033a"
+   }
+  ],
+  "measurable_as": "Within a diagram shot, existing elements do not move while new ones are added; shots over 10 s contain a new element or state change at least every 4 s (batch 04); full-frame diagram examples run 15.6 to 18.2 s (batch 07).",
+  "sources": [
+   "batch02:25",
+   "batch04:27",
+   "batch07:14"
+  ]
+ },
+ {
+  "id": "p_wpm",
+  "area": "pacing",
+  "rule": "Narrate at a calm explainer rate, about 125 to 160 words per minute.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s021b"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s003f"
+   },
+   {
+    "video_id": "uJ_d-UD0xPE",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s005c"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s012b"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s001"
+   }
+  ],
+  "measurable_as": "Words per minute per film: batch medians 129 to 161; per-film p10 to p90 about 116 to 182.",
+  "sources": [
+   "batch02:34",
+   "batch03:33",
+   "batch04:29",
+   "batch05:28",
+   "batch06:32",
+   "batch08:34"
+  ]
+ },
+ {
+  "id": "p_open",
+  "area": "pacing",
+  "rule": "Open on a silent card (the brand mark alone in its colour on a plain field, often with a single quote) and start the narration only after it, at about 6 to 8.7 s; the picture speaks first.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "m2BE9GZJJbs",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s001"
+   }
+  ],
+  "measurable_as": "First word time about 6.0 to 8.7 s in nearly every film (10 to 12 of 12 per batch); no speech in the first 6 s. Exceptions are live-host or hybrid films (UDdkgOoeNcQ at 0.85 s; one batch 02 film at 1.17 s).",
+  "sources": [
+   "batch01:27",
+   "batch02:47",
+   "batch03:32",
+   "batch05:29",
+   "batch06:42",
+   "batch07:15",
+   "batch07:21",
+   "batch06:6"
+  ]
+ },
+ {
+  "id": "p_close",
+  "area": "pacing",
+  "rule": "Close on one held image under a thin credits bar for about 6 to 20 s, with music and no narration, so the open and the close frame the lesson.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s109b"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s043"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s045"
+   }
+  ],
+  "measurable_as": "Last shot tagged credits: one image with a bottom bar of text at about 0.03 to 0.05 of frame height, 6 to 20.1 s long (7 to 20 s in batch 04, 8 to 18.2 s in batch 07).",
+  "sources": [
+   "batch01:49",
+   "batch03:49",
+   "batch04:43",
+   "batch07:16"
+  ]
+ },
+ {
+  "id": "p_length",
+  "area": "pacing",
+  "rule": "A full topic runs about 5 to 6.5 minutes.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s001"
+   }
+  ],
+  "measurable_as": "Total duration median 336 s (p10 305 s, p90 401 s) in batch 02; within 280 to 523 s for a full topic.",
+  "sources": [
+   "batch02:36"
+  ]
+ },
+ {
+  "id": "p_fast_open",
+  "area": "pacing",
+  "rule": "Open fast, then settle: the hook segment cuts quicker than the explanation that follows.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Cuts per minute in the first 30 s exceed the film's overall rate.",
+  "sources": [
+   "batch08:35"
+  ]
+ },
+ {
+  "id": "m_entrances",
+  "area": "motion",
+  "rule": "Entrances are short and eased: pops and fades about half a second, slides about 0.6 to 0.9 s, scale-ins about 0.7 to 0.9 s, draw-ons up to about a second.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s040"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s026a"
+   },
+   {
+    "video_id": "-61qDRPG3to",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s017"
+   }
+  ],
+  "measurable_as": "Batch medians: pop_in 0.40 to 0.58 s, fade_in 0.5 to 0.7 s, slide_in 0.63 to 0.88 s, scale_in 0.67 to 0.92 s, draw_on 0.67 to 1.08 s; flag an entrance outside its type's batch p10 to p90 band (pop_in 0.13 to 1.84 s in batch 01).",
+  "sources": [
+   "batch01:18",
+   "batch02:37",
+   "batch03:35",
+   "batch05:33",
+   "batch07:22",
+   "batch08:36",
+   "batch04:33"
+  ]
+ },
+ {
+  "id": "m_exits",
+  "area": "motion",
+  "rule": "Exits are short and finish before the next idea arrives; usually they are no longer than the matching entrance, so the stage clears first.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s021b"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "P5pmMe3EarI",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s030b"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s047"
+   }
+  ],
+  "measurable_as": "Exit medians: exit_fade 0.38 to 0.7 s, exit_scale 0.42 to 0.92 s, exit_slide 0.6 to 0.92 s; outgoing elements are gone before the incoming element finishes. Batches disagree on slides and scales (exit slide slower than slide-in in batches 01, 05 and 06), so exit-faster is usual, not universal.",
+  "sources": [
+   "batch01:20",
+   "batch02:38",
+   "batch03:36",
+   "batch04:32",
+   "batch06:35",
+   "batch08:38"
+  ]
+ },
+ {
+  "id": "m_transform",
+  "area": "motion",
+  "rule": "Transformations take about a second, longer than entrances, with a hold before and after; morphs between unlike shapes take longer.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s043"
+   },
+   {
+    "video_id": "ngarNTPMclE",
+    "shot_id": "s083"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s006b"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s009c"
+   },
+   {
+    "video_id": "qKM4JzToM-A",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s014c"
+   }
+  ],
+  "measurable_as": "morph median 0.71 to 1.5 s across batches (p75 up to 2.5 s); transform_into median 0.71 to 1.29 s; still frames before and after the change.",
+  "sources": [
+   "batch01:19",
+   "batch02:39",
+   "batch03:37",
+   "batch05:34",
+   "batch06:36",
+   "batch07:24",
+   "batch08:37"
+  ]
+ },
+ {
+  "id": "m_ease",
+  "area": "motion",
+  "rule": "Ease every authored move: arrivals ease out, falls, tips and plunges ease in, and ease-in-out is the most common shape; the speed peak sits near the middle of the move or a little before.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s067"
+   },
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s027"
+   },
+   {
+    "video_id": "Q9Vt6NGBVBc",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s062"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Code move shapes per batch: ease_in_out about 640 to 1080, ease_out about 460 to 660, ease_in about 320 to 390; ease_out median 0.67 to 0.96 s and ease_in 0.83 to 1.38 s; move peak at a median 0.43 to 0.5 of the move. Ignore the code's 'linear' moves (median 0.13 s): they are measurement jitter, not authored motion.",
+  "sources": [
+   "batch01:21",
+   "batch02:40",
+   "batch03:38",
+   "batch04:31",
+   "batch05:32",
+   "batch06:34",
+   "batch07:23",
+   "batch08:39",
+   "batch02:41"
+  ]
+ },
+ {
+  "id": "m_content",
+  "area": "motion",
+  "rule": "Most motion carries the idea; staging, transition, ambient and emphasis motion support it, and ambient motion never outweighs content in a scene.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s018b"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s016b"
+   },
+   {
+    "video_id": "D98UJl6Ea6o",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "yYPnos84NDY",
+    "shot_id": "s074"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s007b"
+   }
+  ],
+  "measurable_as": "Motion meaning tags: content is the largest class in every batch (953 to 1318 events; about 0.4 of all tagged motion in batch 08); flag scenes where ambient motion exceeds content motion.",
+  "sources": [
+   "batch02:42",
+   "batch03:39",
+   "batch04:34",
+   "batch05:35",
+   "batch06:39",
+   "batch08:40"
+  ]
+ },
+ {
+  "id": "m_ambient",
+  "area": "motion",
+  "rule": "Keep a held shot alive with one slow ambient layer while the subject stays still; ambient loops are long, low in contrast, off the focal object and never the fastest thing in frame.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s051"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s021"
+   },
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "QIqKGMM8ivM",
+    "shot_id": "s005"
+   }
+  ],
+  "measurable_as": "Ambient loop period median 3.0 to 5.2 s across batches (p25 1.6 to 2.75 s); static shots over about 2 to 3 s contain one looping element; moving pixels in held shots sit in one layer below the subject's contrast.",
+  "sources": [
+   "batch01:17",
+   "batch02:43",
+   "batch04:35",
+   "batch05:36",
+   "batch07:25",
+   "batch08:41"
+  ]
+ },
+ {
+  "id": "m_stagger",
+  "area": "motion",
+  "rule": "Build a set by staggered arrivals, one member per spoken item, never a finished set or diagram presented at once.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s007a"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "5ljV0Vxu00M",
+    "shot_id": "s033a"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s029"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s046"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s020b"
+   },
+   {
+    "video_id": "m2BE9GZJJbs",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "D98UJl6Ea6o",
+    "shot_id": "s021"
+   }
+  ],
+  "measurable_as": "In a group reveal, entrance onsets differ and each aligns to its word; no more than about 2 new elements in any 0.5 s window unless they are a staggered set (batch 04); pop_in is the most common entrance (262 events in all 12 films of batch 06).",
+  "sources": [
+   "batch03:40",
+   "batch06:38",
+   "batch04:25"
+  ]
+ },
+ {
+  "id": "m_path",
+  "area": "motion",
+  "rule": "Travel along a path is slow and steady, about 1.7 to 3 s, and ends at the destination as it is named.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s049"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s036"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "path_follow median 1.7 s (batch 06), 2.5 s (batch 07) and 3.04 s (batch 04); path end time inside the destination word's interval.",
+  "sources": [
+   "batch06:37",
+   "batch07:26"
+  ]
+ },
+ {
+  "id": "m_particles",
+  "area": "motion",
+  "rule": "Particles and bursts are punctuation at a beat's peak word, not continuous sparkle.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s051"
+   },
+   {
+    "video_id": "zpEuvaondSo",
+    "shot_id": "s040"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s029"
+   }
+  ],
+  "measurable_as": "Particle emissions per beat counted and aligned to the beat's peak word (particle median 1.5 s, batch 07).",
+  "sources": [
+   "batch07:25"
+  ]
+ },
+ {
+  "id": "s_word",
+  "area": "sync",
+  "rule": "Each new element, label, number or change lands on the word that names it.",
+  "strength": "always",
+  "evidence": [
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "krNP8RlDsbw",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s021a"
+   },
+   {
+    "video_id": "5ljV0Vxu00M",
+    "shot_id": "s043"
+   },
+   {
+    "video_id": "-61qDRPG3to",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s036"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s018"
+   }
+  ],
+  "measurable_as": "Loom-side check with TTS word timings: entry or landing frame inside the naming word's interval (batch rules give windows of 0 to 0.5 s). In the films this is observed, not measured: the vision model labelled picture and speech as coinciding in about nine of ten shots (572 of 640 to 1002 of 1068 per batch), and the offsets it wrote are not measurements. Whether entrances lead the word slightly (records describe 0.2 to 0.5 s early) or never precede it (batch 04) is unsettled.",
+  "sources": [
+   "batch01:22",
+   "batch02:44",
+   "batch03:41",
+   "batch04:36",
+   "batch05:38",
+   "batch06:40",
+   "batch07:17",
+   "batch08:42"
+  ]
+ },
+ {
+  "id": "s_order",
+  "area": "sync",
+  "rule": "Within a beat, show the thing first and let its label or number land on it; in a mechanism, the cause completes before its labels or result appear.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s020"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "QIqKGMM8ivM",
+    "shot_id": "s027"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s031"
+   }
+  ],
+  "measurable_as": "Label onset follows the object onset in the same shot; in mechanism beats, label start is at or after the end of the cause motion.",
+  "sources": [
+   "batch02:45",
+   "batch03:42"
+  ]
+ },
+ {
+  "id": "s_result",
+  "area": "sync",
+  "rule": "The decisive change completes on the result word, and a counter settles on the spoken figure, not at the start of the sentence.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "FKUc8vg_Lus",
+    "shot_id": "s034a"
+   },
+   {
+    "video_id": "2A1IEBFt6Xg",
+    "shot_id": "s060"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s084"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s020b"
+   },
+   {
+    "video_id": "jLOuMXnM5wk",
+    "shot_id": "s001m"
+   }
+  ],
+  "measurable_as": "End of the morph or transform within a beat of the result word; counter final value equals the spoken number and lands within 0.5 s of it.",
+  "sources": [
+   "batch04:37",
+   "batch04:38"
+  ]
+ },
+ {
+  "id": "s_hits",
+  "area": "sync",
+  "rule": "Cut and move on the narration, not on a music or effects grid: only about a third of cuts and moves land on a sound hit.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "BT93bRX2t68",
+    "shot_id": "s050"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s034"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "2gPzWP3dcOQ",
+    "shot_id": "s019b"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s032"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s062"
+   },
+   {
+    "video_id": "eR5blcjll8o",
+    "shot_id": "s067"
+   }
+  ],
+  "measurable_as": "Code: cuts-on-hit share batch medians 0.29 to 0.37 (p10 to p90 about 0.23 to 0.5); moves-on-hit 0.35 to 0.40.",
+  "sources": [
+   "batch01:23",
+   "batch02:46",
+   "batch03:43",
+   "batch05:39",
+   "batch06:41",
+   "batch07:18",
+   "batch08:44",
+   "batch04:40"
+  ]
+ },
+ {
+  "id": "d_bed",
+  "area": "sound",
+  "rule": "Keep the music bed a few dB under the voice.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s076"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s039"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s016a"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s032"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s068"
+   }
+  ],
+  "measurable_as": "Code bed_below_speech: batch medians 5.6 to 6.8 dB, p10 to p90 about 2.8 to 9.2 dB. What the code measure means exactly is unsettled, so compare like with like.",
+  "sources": [
+   "batch01:26",
+   "batch02:48",
+   "batch03:44",
+   "batch04:39",
+   "batch05:40",
+   "batch07:20",
+   "batch08:45"
+  ]
+ },
+ {
+  "id": "d_hits",
+  "area": "sound",
+  "rule": "Use non-speech sound hits sparingly, on real events that carry the idea.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "BT93bRX2t68",
+    "shot_id": "s050"
+   },
+   {
+    "video_id": "Lq_TYsGwTfM",
+    "shot_id": "s076"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s039"
+   },
+   {
+    "video_id": "QWCHnR53oIw",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s062"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s053"
+   },
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s068"
+   }
+  ],
+  "measurable_as": "Code non-speech hits per minute: batch medians 5.1 to 7.5, p10 to p90 about 2 to 10. No per-shot sound records exist, so which events carry the hits is unknown.",
+  "sources": [
+   "batch01:25",
+   "batch02:48",
+   "batch03:44",
+   "batch04:40",
+   "batch05:41",
+   "batch06:43",
+   "batch07:20",
+   "batch08:46"
+  ]
+ },
+ {
+  "id": "d_wordless",
+  "area": "sound",
+  "rule": "No narration over the brand open or the credits, and let a few wordless stretches (cold open, release beats, credits) breathe on music alone. Loom's empty-frame check would flag the near-empty rest beats some films use here; that is a gate conflict to resolve, not a defect of the films.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s142"
+   },
+   {
+    "video_id": "QWCHnR53oIw",
+    "shot_id": "s057"
+   },
+   {
+    "video_id": "56F0Y33QZnQ",
+    "shot_id": "s070b"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s048"
+   }
+  ],
+  "measurable_as": "no_speech shots sit on brand cards, transitions, release beats and credits (20 shots across 9 films in batch 05; 56 of 1003 shots in batch 08).",
+  "sources": [
+   "batch05:42",
+   "batch08:47"
+  ]
+ },
+ {
+  "id": "n_elements",
+  "area": "density",
+  "rule": "Keep shots simple: about five elements per shot, rarely more than about twelve, in two or at most three flat depth planes.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s045"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "NOaeKRft-gc",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "D98UJl6Ea6o",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s002"
+   }
+  ],
+  "measurable_as": "Elements per shot: batch medians 4 to 6, p90 8 to 12; depth layers median 2 and p90 3 in every batch. Flag frames above about 12 elements outside a repeated-icon field, crowd, grid or contained panel.",
+  "sources": [
+   "batch01:34",
+   "batch02:28",
+   "batch03:25",
+   "batch04:23",
+   "batch05:24",
+   "batch06:44",
+   "batch07:38",
+   "batch08:26"
+  ]
+ },
+ {
+  "id": "n_layers",
+  "area": "density",
+  "rule": "Build depth with two, at most three, flat planes rather than perspective.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s031"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s018b"
+   },
+   {
+    "video_id": "FKUc8vg_Lus",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "ngarNTPMclE",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "P5pmMe3EarI",
+    "shot_id": "s054"
+   },
+   {
+    "video_id": "lQRsqMiBTsI",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "8H--GLt3h8I",
+    "shot_id": "s044b"
+   }
+  ],
+  "measurable_as": "Depth layers median 2 and p90 3 in every batch.",
+  "sources": [
+   "batch02:29",
+   "batch03:26",
+   "batch04:24"
+  ]
+ },
+ {
+  "id": "n_one_idea",
+  "area": "density",
+  "rule": "One idea per shot: one subject, one change and one label at a time; clear the frame before the next idea so two explanation groups never animate together.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s010b"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s098"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s013a"
+   },
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "65I_1sgTMLE",
+    "shot_id": "s022b"
+   },
+   {
+    "video_id": "gePOX4nbMU4",
+    "shot_id": "s072"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s011"
+   }
+  ],
+  "measurable_as": "Simultaneous independent changes per shot at most 1 outside lists; no two explanation groups animate in the same time window; one function tag per shot.",
+  "sources": [
+   "batch01:36",
+   "batch02:30",
+   "batch06:45",
+   "batch08:48"
+  ]
+ },
+ {
+  "id": "n_vary",
+  "area": "density",
+  "rule": "Density follows the content: sparse frames for definitions and turns, denser for maps, crowds and swarms. Dense material is contained in a frame, grid or panel so it reads as one object, and a crowded frame keeps one clear landing area for the accent.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "l29K-ZkARmE",
+    "shot_id": "s046"
+   },
+   {
+    "video_id": "dOqqBQ5Ha6Q",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "zpEuvaondSo",
+    "shot_id": "s080"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "jLOuMXnM5wk",
+    "shot_id": "s001k"
+   },
+   {
+    "video_id": "zpEuvaondSo",
+    "shot_id": "s110"
+   },
+   {
+    "video_id": "JOs-q7rXqdk",
+    "shot_id": "s025"
+   },
+   {
+    "video_id": "2A1IEBFt6Xg",
+    "shot_id": "s080"
+   }
+  ],
+  "measurable_as": "Element-count spread inside a lesson spans about 3 to 10; frames above 12 elements have a containing shape; in crowded beats the accent sits in or against an uncluttered region (judgement).",
+  "sources": [
+   "batch03:45",
+   "batch04:22",
+   "batch07:39"
+  ]
+ },
+ {
+  "id": "n_data",
+  "area": "density",
+  "rule": "Show numbers and data as picture: repeated units, grids, counters, rise-and-fall cycles, a comparison with a familiar object, or a big numeral on an object, rather than axis charts; a chart, if any, is a short summary after the enacted version.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s042"
+   },
+   {
+    "video_id": "PN4moDNE-Kg",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "v27fd0fa271",
+    "shot_id": "s034"
+   }
+  ],
+  "measurable_as": "Data-visualisation shots only 2 to 5 per batch; share of data beats using a picture device versus a chart template.",
+  "sources": [
+   "batch07:40"
+  ]
+ },
+ {
+  "id": "n_lists",
+  "area": "density",
+  "rule": "Turn a spoken list into pictures that build one item per spoken item, in place, and clear together before an exception or the next idea; never bullets.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "UDdkgOoeNcQ",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "JDqpcHGfJ2I",
+    "shot_id": "s028b"
+   },
+   {
+    "video_id": "nQf-lystVn4",
+    "shot_id": "s055"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "yYPnos84NDY",
+    "shot_id": "s074"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s045"
+   }
+  ],
+  "measurable_as": "n staggered entrances bound to n words; frame cleared before the next list; list-type text at most about 1 percent of text items (3 of 506 in batch 08).",
+  "sources": [
+   "batch01:24",
+   "batch08:49"
+  ]
+ },
+ {
+  "id": "n_text_cards",
+  "area": "density",
+  "rule": "Full-frame text cards and text-heavy frames are rare and kept for the opening, the credits, one key term or a deliberate list.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "G3hXvByzLHs",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "2gPzWP3dcOQ",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "-Tw81EQYV_Y",
+    "shot_id": "s029"
+   },
+   {
+    "video_id": "kRAl4Xgs_NU",
+    "shot_id": "s049b"
+   },
+   {
+    "video_id": "UQdtUaeZWLo",
+    "shot_id": "s001"
+   }
+  ],
+  "measurable_as": "text_card shot size in 19 of 529 shots (batch 05) and 35 to 37 shots in batches 02, 06 and 07; words on screen per content frame at most about 8 outside quote cards (batch 03 judgement threshold).",
+  "sources": [
+   "batch05:25",
+   "batch03:46"
+  ]
+ },
+ {
+  "id": "o_centre",
+  "area": "composition",
+  "rule": "Centre the subject by default; use thirds and diagonals for action, travel and character beats, and symmetry for authority, formality and pairs.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s027"
+   },
+   {
+    "video_id": "XNEHP6qFeCs",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "Q9Vt6NGBVBc",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "N2uQWfV6Jr4",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "z3Y-gsBKChc",
+    "shot_id": "s027"
+   },
+   {
+    "video_id": "IpaVpMFBwAE",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Composition tags: centred is the largest class in seven of eight batches (0.41 to 0.49 of shots); batch 06 has thirds slightly ahead (390 against 351 centred); focal centroid in the central third in about 40 to 50 percent of shots.",
+  "sources": [
+   "batch01:37",
+   "batch02:23",
+   "batch04:20",
+   "batch06:26",
+   "batch07:36",
+   "batch08:25"
+  ]
+ },
+ {
+  "id": "o_negative",
+  "area": "composition",
+  "rule": "Give the subject real negative space: medium by default, high for definitions, establishing shots and lone objects; low negative space and crowded frames are exceptions.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s001"
+   },
+   {
+    "video_id": "IpaVpMFBwAE",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "JOs-q7rXqdk",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s021"
+   },
+   {
+    "video_id": "D98UJl6Ea6o",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s040"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s012"
+   }
+  ],
+  "measurable_as": "Negative space medium or high in about 0.7 to 0.9 of shots per batch (490 of 640, 717 of 1003, 472 of 529); crowded composition in 13 of 702 shots (batch 04) and 25 of 529 (batch 05).",
+  "sources": [
+   "batch01:35",
+   "batch02:24",
+   "batch03:24",
+   "batch04:21",
+   "batch05:21",
+   "batch06:28",
+   "batch08:28"
+  ]
+ },
+ {
+  "id": "o_compare",
+  "area": "composition",
+  "rule": "Lay out comparisons and opposed pairs as equal, mirrored panels or a symmetric split with a thin seam, identical in scale and pose so one variable differs; labels land after the split.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s003b"
+   },
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s005"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "8hgEorF0vyY",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "jG7ULeWUfDw",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s013b"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s003"
+   }
+  ],
+  "measurable_as": "Panel widths equal within 2 percent and figure heights within 5 percent (batch 01); subject centroids mirror about the vertical centre within 0.05 of width (batch 03); symmetric compositions in 66 shots across 11 films and split screens in 17 shots across 8 films (batch 02).",
+  "sources": [
+   "batch01:38",
+   "batch02:27",
+   "batch03:27"
+  ]
+ },
+ {
+  "id": "o_fwf",
+  "area": "composition",
+  "rule": "Use a frame within the frame (door, window, screen, lens, card, arch, spotlight, torn border) to isolate a subject, contain dense material, mark something as entered, observed or reported, or direct the eye in place of arrows.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "BlK23YzqXOM",
+    "shot_id": "s017"
+   },
+   {
+    "video_id": "bHB5iiDDJ-s",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "mzREA81VQ34",
+    "shot_id": "s044"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "BT93bRX2t68",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s039"
+   }
+  ],
+  "measurable_as": "frame_within_frame in 26 to 58 shots per batch, across 7 to 11 films; the focal cue comes from framing or isolation rather than arrows (judgement).",
+  "sources": [
+   "batch01:39",
+   "batch02:26",
+   "batch03:28",
+   "batch06:27",
+   "batch07:37",
+   "batch08:29"
+  ]
+ },
+ {
+  "id": "o_scale",
+  "area": "composition",
+  "rule": "Let scale contrast carry power, burden or danger instead of adjectives: a tiny figure beside a giant object, a large angular threat against a small round protagonist.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "JhxuP0AuRPA",
+    "shot_id": "s037b"
+   },
+   {
+    "video_id": "wxf_pKCOCBo",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "BSdEiOYvKpE",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "B-ukcWJzXwc",
+    "shot_id": "s024"
+   },
+   {
+    "video_id": "_GI9-J-sE5k",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "ofk-aw5G-FQ",
+    "shot_id": "s007"
+   },
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s068"
+   }
+  ],
+  "measurable_as": "Judgement; the focal figure under one fifth of the giant object's height (batch 01); threat-to-protagonist height ratio above 1 (batch 06).",
+  "sources": [
+   "batch01:40",
+   "batch06:16"
+  ]
+ },
+ {
+  "id": "o_fg",
+  "area": "composition",
+  "rule": "Draw the background lighter, thinner or lower in contrast than the foreground so the subject reads first.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "DDo4rW0DMpk",
+    "shot_id": "s003e"
+   },
+   {
+    "video_id": "2gPzWP3dcOQ",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s057"
+   }
+  ],
+  "measurable_as": "Contrast of foreground strokes against the field exceeds that of background strokes; judgement on frames.",
+  "sources": [
+   "batch05:22"
+  ]
+ },
+ {
+  "id": "o_focal",
+  "area": "composition",
+  "rule": "Every frame has one focal cue, led by the colour accent, then contrast, gaze, isolation and light; a frame with no focal cue is a fault.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s041"
+   },
+   {
+    "video_id": "v887304c142",
+    "shot_id": "s002"
+   },
+   {
+    "video_id": "JDqpcHGfJ2I",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "-61qDRPG3to",
+    "shot_id": "s019"
+   },
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s013b"
+   },
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s021"
+   }
+  ],
+  "measurable_as": "Focal cue tags: colour accent first in every batch (batch 01: accent 214, contrast 122, isolation 91, gaze 78 of 640 shots); none in 1 of 529 shots (batch 05).",
+  "sources": [
+   "batch01:4",
+   "batch05:23"
+  ]
+ },
+ {
+  "id": "w_worlds",
+  "area": "world",
+  "rule": "Build a few linked worlds with fixed jobs (the story world, an evidence desk, an interior or abstract world) rather than one continuous set or a new look per scene; re-enter each by the same move and keep finish, palette and drawing language constant across them.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "JDqpcHGfJ2I",
+    "shot_id": "s004"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s011"
+   },
+   {
+    "video_id": "H5DhD5Nwl_0",
+    "shot_id": "s025a"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s057"
+   },
+   {
+    "video_id": "7dm2AsJ3-E8",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "iCBzEZek5cY",
+    "shot_id": "s009a"
+   },
+   {
+    "video_id": "gVXoAbeB8QI",
+    "shot_id": "s028"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s004"
+   }
+  ],
+  "measurable_as": "About 3 or fewer worlds per lesson; each crossing is a gradual join or carries a shared motif or the accent. The records label nearly every film few_worlds_linked, which batch 05 suspects is a default label, so judge it on the storyboard.",
+  "sources": [
+   "batch01:46",
+   "batch02:49",
+   "batch03:47",
+   "batch04:41",
+   "batch05:43",
+   "batch06:46",
+   "batch07:41",
+   "batch08:50"
+  ]
+ },
+ {
+  "id": "w_motif",
+  "area": "world",
+  "rule": "Thread the film with a recurring object or motif that crosses settings and sections (a passport, a dashed route, a window, a map, an accent object), and return to a human anchor between technical sections.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "JhxuP0AuRPA",
+    "shot_id": "s040a"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s049"
+   },
+   {
+    "video_id": "QyRqlTV60zM",
+    "shot_id": "s057"
+   },
+   {
+    "video_id": "_gP3aXvNmv8",
+    "shot_id": "s030"
+   },
+   {
+    "video_id": "I8XaYkRW1tA",
+    "shot_id": "s099"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s039"
+   },
+   {
+    "video_id": "NEFmWclWiOw",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "bHB5iiDDJ-s",
+    "shot_id": "s088"
+   }
+  ],
+  "measurable_as": "At least one motif recurs in 3 or more segments; the records list about 6 to 8 recurring motifs per film (batches 05 and 06).",
+  "sources": [
+   "batch01:48",
+   "batch06:47",
+   "batch04:41"
+  ]
+ },
+ {
+  "id": "w_token",
+  "area": "world",
+  "rule": "Draw the core concept as one token and reuse it unchanged (same shape, palette and asset) in every scene where it appears.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "IpaVpMFBwAE",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "AMKzXZphgyo",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "_gTgloPR0Aw",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "EtiC0DVewa4",
+    "shot_id": "s035"
+   },
+   {
+    "video_id": "krNP8RlDsbw",
+    "shot_id": "s009a"
+   },
+   {
+    "video_id": "m2BE9GZJJbs",
+    "shot_id": "s052"
+   },
+   {
+    "video_id": "lQRsqMiBTsI",
+    "shot_id": "s005b"
+   }
+  ],
+  "measurable_as": "The concept token has one asset id and one palette across all stations (template match).",
+  "sources": [
+   "batch02:50",
+   "batch03:48"
+  ]
+ },
+ {
+  "id": "w_finish",
+  "area": "world",
+  "rule": "The finish (grain, paper, crayon, brush, stipple, or clean flat fills) and the shading model are a family choice made once: apply them to every layer for the whole film so mixed media reads as one world, and never switch mid-film. Texture is not a house constant: one batch found paper or grain in all 12 films while two others found no texture on most shots.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "t0h8Dmni8g8",
+    "shot_id": "s010a"
+   },
+   {
+    "video_id": "lQRsqMiBTsI",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "cmO2ryQ8LcY",
+    "shot_id": "s074"
+   },
+   {
+    "video_id": "QWCHnR53oIw",
+    "shot_id": "s023"
+   },
+   {
+    "video_id": "qKM4JzToM-A",
+    "shot_id": "s003"
+   },
+   {
+    "video_id": "rdEC52iCQNk",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s006"
+   },
+   {
+    "video_id": "BSdEiOYvKpE",
+    "shot_id": "s007"
+   }
+  ],
+  "measurable_as": "Texture and shading class per shot constant within a lesson; texture none on 949 of 1068 shots (batch 06) and 621 of 945 (batch 07) against texture in all 12 films of batch 02. Judge grain on the encoded video, since 854x480 compression may mimic it.",
+  "sources": [
+   "batch01:45",
+   "batch02:2",
+   "batch04:42",
+   "batch05:44",
+   "batch06:5",
+   "batch07:43",
+   "batch08:5"
+  ]
+ },
+ {
+  "id": "w_backgrounds",
+  "area": "world",
+  "rule": "Backgrounds stay plain: a solid field or dark void isolates symbols, definitions and diagrams, and illustrated scenes are kept for story; no detailed environment or gradient sky behind a diagram.",
+  "strength": "usually",
+  "evidence": [
+   {
+    "video_id": "HdieAFhQtPo",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "FBpBUwlDId0",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "JOs-q7rXqdk",
+    "shot_id": "s013"
+   },
+   {
+    "video_id": "P5pmMe3EarI",
+    "shot_id": "s026"
+   },
+   {
+    "video_id": "JDqpcHGfJ2I",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "-bFgGvl4pBQ",
+    "shot_id": "s009"
+   },
+   {
+    "video_id": "EMbZ72cCAzI",
+    "shot_id": "s014"
+   },
+   {
+    "video_id": "ul-c6a4QkiU",
+    "shot_id": "s007b"
+   }
+  ],
+  "measurable_as": "Solid plus dark-void backgrounds on about 0.4 to 0.5 of shots (257 of 640 in batch 01, 330 of 621 in batch 03, 358 of 702 in batch 04); illustrated scenes about a quarter to a third (286 of 945 in batch 07); symbol and define beats use a solid or void field.",
+  "sources": [
+   "batch01:47",
+   "batch02:51",
+   "batch03:3",
+   "batch04:5"
+  ]
+ },
+ {
+  "id": "w_glyphs",
+  "area": "world",
+  "rule": "Make invisible things visible with small glyphs: notes for sound, tags for found evidence, rays for importance, stink lines or sweat drops for states.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s015"
+   },
+   {
+    "video_id": "aob7rM5PV5A",
+    "shot_id": "s010"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s022"
+   },
+   {
+    "video_id": "QWCHnR53oIw",
+    "shot_id": "s012"
+   }
+  ],
+  "measurable_as": "judgement",
+  "sources": [
+   "batch05:45"
+  ]
+ },
+ {
+  "id": "w_light",
+  "area": "world",
+  "rule": "Render evidence, signals or active substances as the only light in the frame.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "P8OEz3PvWZQ",
+    "shot_id": "s036"
+   },
+   {
+    "video_id": "P8OEz3PvWZQ",
+    "shot_id": "s060"
+   },
+   {
+    "video_id": "0RiDPisQAzM",
+    "shot_id": "s017a"
+   }
+  ],
+  "measurable_as": "The brightest region of the frame coincides with the named element.",
+  "sources": [
+   "batch05:46"
+  ]
+ },
+ {
+  "id": "w_cheap_place",
+  "area": "world",
+  "rule": "Set a place with one cheap repeated motif (a pattern band, banded water, a checkerboard) or a single light wedge rather than a detailed background.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "zpEuvaondSo",
+    "shot_id": "s043"
+   },
+   {
+    "video_id": "uBwkMc1llmM",
+    "shot_id": "s008"
+   },
+   {
+    "video_id": "bVjKL1zd-vQ",
+    "shot_id": "s026"
+   },
+   {
+    "video_id": "pyDZpDkU46Y",
+    "shot_id": "s045"
+   }
+  ],
+  "measurable_as": "judgement",
+  "sources": [
+   "batch07:42"
+  ]
+ },
+ {
+  "id": "w_diagram_in_world",
+  "area": "world",
+  "rule": "Draw diagrams inside the world (onto the landscape, as a cross-section of the same ground) wherever possible.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s012"
+   },
+   {
+    "video_id": "6hCo4S_1Fhw",
+    "shot_id": "s016"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s018"
+   },
+   {
+    "video_id": "vyUJNsibkfQ",
+    "shot_id": "s043"
+   }
+  ],
+  "measurable_as": "Judgement: diagram shots share palette and texture with the scene shots.",
+  "sources": [
+   "batch08:51"
+  ]
+ },
+ {
+  "id": "w_return",
+  "area": "world",
+  "rule": "Return to the opening world or palette for the ending.",
+  "strength": "sometimes",
+  "evidence": [
+   {
+    "video_id": "zrjhaYc-9pg",
+    "shot_id": "s096"
+   },
+   {
+    "video_id": "2x3rJMBVB28",
+    "shot_id": "s064"
+   },
+   {
+    "video_id": "mA1lnxfqHk8",
+    "shot_id": "s037"
+   },
+   {
+    "video_id": "HDt_rTPPh70",
+    "shot_id": "s154"
+   }
+  ],
+  "measurable_as": "Final scene palette or set matches the first scene after the cold open (judgement; the records' returns_to_opening flag was wrong for some films in batches 01 and 03).",
+  "sources": [
+   "batch08:52"
+  ]
+ }
+]

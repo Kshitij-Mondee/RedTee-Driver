@@ -1,0 +1,456 @@
+{
+  "title": "Meetings that end with decisions",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "The meeting that ends with nothing",
+      "role": "hook"
+    },
+    {
+      "id": "promise",
+      "title": "Three moves",
+      "role": "promise"
+    },
+    {
+      "id": "S1",
+      "title": "Before: name the decision",
+      "role": "build"
+    },
+    {
+      "id": "S2",
+      "title": "During: stay on it, say who decides",
+      "role": "build"
+    },
+    {
+      "id": "S3",
+      "title": "Close: read back, check, write it up",
+      "role": "build"
+    },
+    {
+      "id": "payoff",
+      "title": "Sam's meeting, solved",
+      "role": "payoff"
+    },
+    {
+      "id": "apply",
+      "title": "Your next meeting",
+      "role": "apply"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "An hour of good discussion.",
+        "Then everyone leaves.",
+        "What was decided? Who does what?",
+        "Nobody can say."
+      ],
+      "on_screen": [
+        "Decided?",
+        "Who?"
+      ],
+      "visual_intent": "a meeting table sketched with people talking; they leave, the chairs empty, question marks drawn over the table",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "a meeting that ends without a clear decision or owner",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "scenario",
+      "narration": [
+        "Say it's Sam's weekly project meeting.",
+        "Ask around after, and everyone remembers it differently."
+      ],
+      "on_screen": [
+        "Sam"
+      ],
+      "visual_intent": "Sam and three teammates drawn; afterwards each has a speech bubble with a different scribble",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam's meeting is an illustration",
+          "hypothetical": true
+        },
+        {
+          "claim": "people remember a meeting differently",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "promise",
+      "job": "orient",
+      "narration": [
+        "Three moves fix it.",
+        "Before, during, and at the close."
+      ],
+      "on_screen": [
+        "Before",
+        "During",
+        "Close"
+      ],
+      "visual_intent": "the presenter beside the board as a three-step list appears with empty tick boxes",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "name the decision before the meeting",
+          "fact": "F1"
+        },
+        {
+          "claim": "close with a read-back",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "S1",
+      "job": "refute",
+      "narration": [
+        "Before.",
+        "Sam's invite says: Pilot update.",
+        "That's a subject, not a decision."
+      ],
+      "on_screen": [
+        "Pilot update"
+      ],
+      "visual_intent": "the meeting invite drawn as a card with the topic title as its only line; first box on the list highlighted",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "misconception": "an agenda topic is enough to set up a decision",
+      "grounding": [
+        {
+          "claim": "name the decision before the meeting, in the invite",
+          "fact": "F1"
+        },
+        {
+          "claim": "a topic title only names a subject",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "S1",
+      "job": "demonstrate",
+      "narration": [
+        "Write the decision as a question instead.",
+        "Do we ship the pilot in May or June?",
+        "Now people come ready to answer."
+      ],
+      "on_screen": [
+        "May or June?"
+      ],
+      "visual_intent": "the topic title on the invite is crossed out and the question is written in its place",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "concepts": [
+        "decision as a question"
+      ],
+      "grounding": [
+        {
+          "claim": "phrase the decision as a question so people know what to answer",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "S1",
+      "job": "demonstrate",
+      "narration": [
+        "Invite whoever owns that decision,",
+        "and whoever it can't be made without.",
+        "Everyone else gets the notes."
+      ],
+      "on_screen": [
+        "Owner",
+        "Needed input"
+      ],
+      "visual_intent": "the invite list of faces is trimmed to the owner and the needed inputs; the rest get an envelope for the notes",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "concepts": [
+        "invite who the decision needs"
+      ],
+      "grounding": [
+        {
+          "claim": "invite the owner and those whose input it needs",
+          "fact": "F4"
+        },
+        {
+          "claim": "people who only need the result get the written summary",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "S2",
+      "job": "demonstrate",
+      "narration": [
+        "During.",
+        "Open by saying the question again.",
+        "A side topic comes up? Park it,",
+        "in a corner of the board, with a name."
+      ],
+      "on_screen": [
+        "Parking lot"
+      ],
+      "visual_intent": "Sam at the board points to the question; a side topic bubble floats in and is written into a box drawn in the board's corner, with a name beside it",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "concepts": [
+        "parking lot"
+      ],
+      "grounding": [
+        {
+          "claim": "restate the decision before discussion starts",
+          "fact": "F6"
+        },
+        {
+          "claim": "a parking lot is a visible list of off-topic items, such as a corner of the board",
+          "fact": "F7"
+        },
+        {
+          "claim": "name someone to pick each parked item up",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "S2",
+      "job": "define",
+      "narration": [
+        "Then say how it's decided, and who calls it.",
+        "Here, Priya decides after hearing the group."
+      ],
+      "on_screen": [
+        "Priya decides"
+      ],
+      "visual_intent": "Priya is circled as the one who calls it, the group's arrows pointing to her; the second step gets its tick",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "concepts": [
+        "decision rule",
+        "decision owner"
+      ],
+      "grounding": [
+        {
+          "claim": "make clear how the decision will be made",
+          "fact": "F9"
+        },
+        {
+          "claim": "make clear who makes the decision",
+          "fact": "F10"
+        },
+        {
+          "claim": "Priya as decision owner is an illustration",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "S3",
+      "job": "demonstrate",
+      "narration": [
+        "At the close, read each decision back.",
+        "What, who owns it, by when.",
+        "People can still correct it in the room."
+      ],
+      "on_screen": [
+        "What",
+        "Who",
+        "By when"
+      ],
+      "visual_intent": "Sam reads from the board; the three parts of a decision are underlined one by one as they are spoken",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "concepts": [
+        "read back"
+      ],
+      "grounding": [
+        {
+          "claim": "close by reading back each decision with owner and due date so people can correct it",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "S3",
+      "job": "check",
+      "narration": [
+        "Quick check. Which line is a decision?",
+        "Discussed the pilot timeline.",
+        "Or: pilot ships in June, Priya, by Friday."
+      ],
+      "on_screen": [
+        "A: Discussed pilot timeline",
+        "B: June. Priya. Friday."
+      ],
+      "visual_intent": "two lines of notes side by side on the board, nothing marked yet",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "pause_after_s": 2.5,
+      "recall": {
+        "kind": "quiz",
+        "answer": "the second line",
+        "tempting_wrong": "the first names the subject but records only a topic discussed"
+      },
+      "delivery": "a short pause after the question",
+      "grounding": [
+        {
+          "claim": "a topic line is not a decision; a decision states what, owner and date",
+          "fact": "F12"
+        },
+        {
+          "claim": "the two note lines are illustrations",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "S3",
+      "job": "distinguish",
+      "narration": [
+        "The second.",
+        "The first only names a topic.",
+        "A decision says what, who, and by when."
+      ],
+      "on_screen": [
+        "Topic",
+        "Decision"
+      ],
+      "visual_intent": "a cross drawn on the first line and a tick on the second; the second line's three parts are labelled",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "template",
+      "misconception": "a topic discussed in the notes means something was decided",
+      "delivery": "slower on what makes a line a decision",
+      "grounding": [
+        {
+          "claim": "a recorded decision states what, who and by when",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "S3",
+      "job": "demonstrate",
+      "narration": [
+        "Then send it in writing, ideally the same day,",
+        "to everyone there and anyone affected.",
+        "One version of the meeting."
+      ],
+      "on_screen": [
+        "Sent today"
+      ],
+      "visual_intent": "the decision lines fold into an email that flies out to the team; the mismatched speech bubbles from b02 become one",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "concepts": [
+        "written summary"
+      ],
+      "grounding": [
+        {
+          "claim": "send decisions in writing soon after, ideally the same day, to attendees and anyone affected",
+          "fact": "F13"
+        },
+        {
+          "claim": "everyone checks the same list",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Same team, same hour.",
+        "Now it ends with decisions, owners and dates,",
+        "read back and sent."
+      ],
+      "on_screen": [
+        "Before",
+        "During",
+        "Close"
+      ],
+      "visual_intent": "Sam's meeting table again, ending on a short list of decisions with names and dates; all three steps ticked",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "delivery": "warmer and slower",
+      "grounding": [
+        {
+          "claim": "decisions read back with owner and date",
+          "fact": "F11"
+        },
+        {
+          "claim": "sent in writing",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "apply",
+      "job": "practice",
+      "narration": [
+        "Before your next meeting,",
+        "rewrite the agenda's first line as a question.",
+        "Name it, steer it, read it back."
+      ],
+      "on_screen": [
+        "Name it",
+        "Steer it",
+        "Read it back"
+      ],
+      "visual_intent": "a blank agenda with a question mark on its first line; the three-part rule written underneath",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "name the decision in the agenda before the meeting",
+          "fact": "F1"
+        },
+        {
+          "claim": "phrase it as a question",
+          "fact": "F2"
+        }
+      ]
+    }
+  ]
+}

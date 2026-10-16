@@ -1,0 +1,1004 @@
+{
+  "style": "story-cartoon",
+  "concept": "One imagined status update, told with the same two outlined colleagues (giver and colleague, designed rigs pip and tess, no invented names). A vague line is revised in place into something a colleague can act on, then the next step is agreed and left open for a later look. Nothing is shown as already changed.",
+  "motifs": [
+    {
+      "name": "revision_bubble",
+      "desc": "The giver's round speech bubble, held at the table and revised in place; the feeling stays visible, never crossed out."
+    },
+    {
+      "name": "proposal_card",
+      "desc": "The hand-lettered sign 'Finish the handover first', held across beats and relabelled on the spoken word."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "table",
+        "x": 0,
+        "y": 0,
+        "note": "Plain meeting room: one table, one status board, one quiet corner. Opening table and payoff table are the same station."
+      },
+      {
+        "id": "update",
+        "x": 2400,
+        "y": 0,
+        "note": "The next status update seen from the viewer's seat, for the wording check."
+      },
+      {
+        "id": "board",
+        "x": 4800,
+        "y": 0,
+        "note": "Plain light follow-up board: agreement, arrow, later update."
+      },
+      {
+        "id": "desk",
+        "x": 7200,
+        "y": 0,
+        "note": "A desk of note tiles for the viewer's own preparation."
+      }
+    ]
+  },
+  "ambient": {
+    "kind": "paper"
+  },
+  "poster": {
+    "beat": "b01"
+  },
+  "devices": [
+    {
+      "id": "revision_bubble",
+      "what": "The giver's speech bubble is held at the table and revised in place (swap slot): 'I felt dismissed' stays visible, then the action line and the effect line replace and extend it. The feeling is kept, never crossed out.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b03",
+        "b04",
+        "b05",
+        "b06"
+      ]
+    },
+    {
+      "id": "spotlight_line",
+      "what": "One line at a time is bright with the single accent; every other line and bubble is dimmed to the field. The accent moves to the line the narration names, then the old line returns to the field family.",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b10"
+      ]
+    },
+    {
+      "id": "proposal_card",
+      "what": "A hand-lettered sign 'Finish the handover first' replaces the label bubble and is held on the table across beats, relabelled (question mark, 'action + situation', 'agreed', 'look for') on the spoken word.",
+      "kind": "explain",
+      "beats": [
+        "b07",
+        "b08",
+        "b10",
+        "b11",
+        "b14"
+      ]
+    },
+    {
+      "id": "table_callback",
+      "what": "The opening table and the same two colleagues come back at the payoff, calm, with the action card between them and the later update still empty.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b14"
+      ]
+    },
+    {
+      "id": "note_tiles",
+      "what": "Four plain note tiles on a desk arrive on their words for the viewer's own preparation, with a separate reporting signpost kept apart. Each tile is an object, never a bullet or an icon grid.",
+      "kind": "list",
+      "beats": [
+        "b13"
+      ]
+    },
+    {
+      "id": "handoff_field",
+      "what": "Join material: handoff, the next field grows in from the held object. Section boundaries are hard cuts or a card; handoff only inside a topic.",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b13"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "one warm accent on the giver's bubble",
+      "why": "Pale, quiet open on the unanswered question."
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "break": false,
+      "accent": "accent on the 'No action named' slot",
+      "why": "Richer middle where the problem and the revision sit; colour moves with the line being discussed."
+    },
+    {
+      "from": "b08",
+      "band": "dark",
+      "break": true,
+      "accent": "accent on 'action + situation'",
+      "why": "The single dark break is the actionability check, the key mechanism and the one emphasised moment; everything else on the board is dimmed."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "break": false,
+      "accent": "accent withheld on both wording cards until the answer, then on B only",
+      "why": "Colour withheld so the marking after the pause is an event."
+    },
+    {
+      "from": "b11",
+      "band": "light",
+      "break": false,
+      "accent": "none on the 'look for' box, which stays an empty outline",
+      "why": "Lift for follow-up and payoff, with colour deliberately withheld from any outcome so no success is implied."
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "break": false,
+      "accent": "accent on the action card only",
+      "why": "Closing lift: the opening table returns, calm, the change still unseen."
+    }
+  ],
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "table",
+      "subject": "the vague line 'I felt dismissed'",
+      "world": "meeting room after a status update",
+      "design": {
+        "treatment": "Establishing wide of the meeting room (ctx.scenery room) after a status update. Giver (pip) and colleague (tess) are small, posed, calm, at the table; the status board is on the wall. The giver's round bubble holds 'I felt dismissed' large; a hand-lettered sign 'What should I do differently?' with a question mark hangs over the colleague, unanswered.",
+        "why_motion": "Staging only: the picture is a situation, not a change. Motion just orders attention (bubble, then question) and a slow push keeps the sparse frame alive.",
+        "elements": [
+          "room_set",
+          "status_board",
+          "giver_pip",
+          "colleague_tess",
+          "feeling_bubble",
+          "question_sign"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Imagine a status update",
+            "element": "room_set",
+            "action": "table, status board and both colleagues draw on, scaffold first",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "I felt dismissed",
+            "element": "feeling_bubble",
+            "action": "round bubble outline draws from the giver, text prints; the one warm accent sits on it",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "what should I do differently",
+            "element": "question_sign",
+            "action": "sign and question mark settle over colleague_tess and stay, unanswered",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "First scene. feeling_bubble and the table set are held into b02 and b03; the question_sign leaves in b02 as the promise arrives.",
+        "references": [
+          "lnd-explainer-craft#1 moves 2 and 9",
+          "lnd-visual-storyteller section 3 establishing shot",
+          "no reference board built; not verified against existing drawn references"
+        ]
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "shock"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "feeling_bubble",
+      "story_role": "hook",
+      "depth": "flat",
+      "light": "even",
+      "option": "acting pair",
+      "alternatives": {
+        "illustrated bust": {
+          "kind": "template",
+          "station": "table",
+          "template": "scenario.dialogue",
+          "props": {
+            "left": {
+              "member": "woman",
+              "emotion": "neutral"
+            },
+            "right": {
+              "member": "man",
+              "emotion": "neutral"
+            },
+            "lines": [
+              {
+                "who": "left",
+                "text": "I felt dismissed.",
+                "say": "I felt dismissed"
+              },
+              {
+                "who": "right",
+                "text": "What should I do differently?",
+                "say": "what should I do differently"
+              }
+            ],
+            "setting": "meeting"
+          }
+        }
+      },
+      "rationale": "Hook as an imagined situation; the unanswered question is the gap the lesson fills. Bookend with b14."
+    },
+    {
+      "beat": "b02",
+      "kind": "template",
+      "station": "table",
+      "template": "process.flow",
+      "subject": "the promise: act on, next step, revisit",
+      "world": "the same meeting room table",
+      "props": {
+        "title": "Feedback they can act on",
+        "steps": [
+          {
+            "label": "Act on",
+            "say": "act on"
+          },
+          {
+            "label": "Next step",
+            "say": "a next step"
+          },
+          {
+            "label": "Revisit",
+            "say": "revisit it"
+          }
+        ]
+      },
+      "keep": [
+        "feeling_bubble"
+      ],
+      "shot": {
+        "size": "wide",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "Act on",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "rationale": "Hybrid: the vague bubble is held while three signs arrive along a faint path on their words, one slow push. The question sign from b01 leaves first. Process.flow is used as a path, not as a claim of a proven process."
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "table",
+      "subject": "feeling versus action",
+      "world": "the same meeting room table",
+      "upgrade_reason": "A blank action slot beside a held bubble, with the feeling kept and nothing crossed out, has no template.",
+      "design": {
+        "treatment": "Medium on the table. The held 'I felt dismissed' bubble sits at left, tagged 'Feeling'. Beside it an empty outlined action slot stays blank, tagged 'No action named'. The gap is the picture; the feeling is kept, never struck.",
+        "why_motion": "Staging: a structure of two slots. The accent moves from the bubble to the empty slot to say where the information is missing.",
+        "elements": [
+          "feeling_bubble",
+          "feeling_tag",
+          "action_slot",
+          "gap_tag"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your feeling matters",
+            "element": "feeling_bubble",
+            "action": "bubble lifts to bright, feeling_tag prints on it",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "names no action",
+            "element": "action_slot",
+            "action": "empty outlined slot draws beside the bubble and stays blank; gap_tag prints on it; accent moves to the slot and the bubble returns to the field family",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "Held from b01 and b02: feeling_bubble, table set, colleagues. The b02 signs retire in reverse order before action_slot arrives. Nothing crossed out.",
+        "references": [
+          "lnd-motion-fit#9.3 comparison, two sides",
+          "lnd-explainer-craft#1 move 2 label on the object"
+        ]
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "action_slot",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "intent": "rest",
+      "option": "drawn slots",
+      "alternatives": {
+        "plain diagram": {
+          "kind": "template",
+          "station": "table",
+          "template": "compare.two",
+          "props": {
+            "left": {
+              "header": "Feeling",
+              "say": "Your feeling matters"
+            },
+            "right": {
+              "header": "No action named",
+              "say": "names no action"
+            },
+            "mode": "columns"
+          }
+        }
+      },
+      "rationale": "Rest is declared on a finished two-slot frame while the voice makes the point; the 6 second beat is short."
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "table",
+      "subject": "observed action and its effect",
+      "world": "the status update, shown on the status board",
+      "design": {
+        "treatment": "Close on the held bubble. The vague line is revised in place: first the handover on the status board is lit (the setting), then the bubble's slot swaps to 'Spoke before I finished', then 'Lost my place' is added beneath. The active line is bright with the accent; the rest is dimmed. The original feeling stays visible as a small chip.",
+        "why_motion": "Content: the revision IS the change over time. The vague line becomes a specific one in the same place, and the order of arrival teaches action first, then effect.",
+        "elements": [
+          "status_board_handover",
+          "action_line",
+          "effect_line",
+          "feeling_chip"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "spoke before you finished the handover",
+            "element": "status_board_handover",
+            "action": "handover row on the status board lights as the update setting; colleague_tess posed leaning in",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "you spoke before I finished",
+            "element": "action_line",
+            "action": "bubble slot swaps from the vague line to 'Spoke before I finished'; accent on this line",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "I lost my place",
+            "element": "effect_line",
+            "action": "'Lost my place' prints beneath; accent moves to it, action_line returns to the field family",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "felt dismissed",
+            "element": "feeling_chip",
+            "action": "the original feeling is lit briefly as a chip, kept and not erased",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "Held: feeling_bubble (becomes the revision slot), table, both colleagues. Retiring: action_slot and tags from b03. Incoming: status_board_handover, action_line, effect_line.",
+        "references": [
+          "lnd-explainer-craft#1 moves 9 and 13",
+          "lnd-motion-fit section 8 unmask for prose"
+        ]
+      },
+      "shot": {
+        "size": "close",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "action_line",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "key",
+      "option": "acting pair",
+      "rationale": "Illustrative lines from the imagined case only; they are example lines, not authentic quotations. Describes only what was observed in the imagined update."
+    },
+    {
+      "beat": "b05",
+      "kind": "template",
+      "station": "table",
+      "template": "document.page",
+      "subject": "naming the move, and a private setting",
+      "world": "the meeting room, then the quiet corner",
+      "props": {
+        "kind": "notes",
+        "title": "Say what you saw",
+        "mode": "highlight",
+        "side": "left",
+        "lines": [
+          {
+            "text": "Observed behaviour: spoke before I finished",
+            "say": "Observed behaviour"
+          },
+          {
+            "text": "Impact: lost my place",
+            "say": "its impact"
+          },
+          {
+            "text": "Privately, not in front of the team",
+            "say": "privately, not in front of the team"
+          }
+        ]
+      },
+      "keep": [
+        "action_line",
+        "effect_line"
+      ],
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "handoff",
+        "meaning": "meanwhile"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "Observed behaviour",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "rationale": "Hybrid: the revised lines are held and read along, the pill labels land on their words. The privacy line is one short note, with the corner shown by the handoff; no separate scenario. A label bubble drifts out of frame on 'not who they are'. Not verified: whether the template can show the pair alone in the corner; the scene author may fall back to the sign alone."
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "table",
+      "subject": "the recipient's account",
+      "world": "back at the meeting table",
+      "design": {
+        "treatment": "Medium at the table. The revised lines are held, dimmed. A thin divider separates what was seen from what was felt. The colleague's reply bubble 'I thought you had finished' appears beside the lines with a 'Their perspective' pill, and the giver's interpretation chip shifts aside to make room: checked, not defended.",
+        "why_motion": "Content: the giver's read moves to make room for the other account, which is the change in the conversation.",
+        "elements": [
+          "revised_lines",
+          "divider",
+          "reply_bubble",
+          "perspective_pill",
+          "interpretation_chip"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "what you saw apart from what you felt",
+            "element": "divider",
+            "action": "divider draws between the observed lines and the feeling",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "their perspective",
+            "element": "perspective_pill",
+            "action": "pill prints at an empty reply spot beside the lines",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "I thought you had finished",
+            "element": "reply_bubble",
+            "action": "colleague's round reply bubble draws in; accent on it",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "your read needs revising",
+            "element": "interpretation_chip",
+            "action": "the giver's interpretation chip slides aside and stays open to revision, not removed",
+            "motion": "settle"
+          }
+        ],
+        "continuity": "Held: revised lines, table, both colleagues, dimmed. Retiring: document page and label bubble from b05. Incoming: reply_bubble, perspective_pill.",
+        "references": [
+          "lnd-motion-fit#9.3 comparison, two sides",
+          "lnd-explainer-craft#2 one saturated thing"
+        ]
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "reply_bubble",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "option": "acting pair",
+      "rationale": "The reply is an illustrative line. No consensus is invented: the beat ends on the giver's read being open to revision."
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "table",
+      "subject": "the proposed next step and its feasibility",
+      "world": "the same meeting table",
+      "design": {
+        "treatment": "Medium. The hand-lettered sign 'Finish the handover first' settles into the revision bubble's place as the proposal card. A small 'Next step' pill sits on it. A small check sign asks 'Feasible in their role?'. Beside it a blocked path is marked 'Support', not a louder demand.",
+        "why_motion": "Content: a label is replaced by an action, and the path is shown blocked then supported, the order of the argument.",
+        "elements": [
+          "proposal_card",
+          "next_step_pill",
+          "role_check",
+          "blocked_path",
+          "support_sign"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "let me finish the handover",
+            "element": "proposal_card",
+            "action": "sign swaps into the bubble slot, replacing the label; accent on it",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "a next step",
+            "element": "next_step_pill",
+            "action": "pill prints on the card",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "in their role",
+            "element": "role_check",
+            "action": "small check sign with the question draws beside the card",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "they need support, not pressure",
+            "element": "blocked_path",
+            "action": "a path draws and stops at a block; support_sign lands at the block",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "Held: table, both colleagues, perspective context dimmed. Retiring: reply bubble and divider leave in reverse order. Incoming: proposal_card and its companions.",
+        "references": [
+          "lnd-motion-fit#9.2 container and junction",
+          "lnd-explainer-craft#1 move 6 one overlay each"
+        ]
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "proposal_card",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "option": "acting pair",
+      "rationale": "One concise caveat inside the beat, no new scenario. The proposal is not yet a commitment; agreement is left for the payoff."
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "table",
+      "subject": "the actionability check",
+      "world": "the meeting table, dimmed",
+      "upgrade_reason": "A held proposal card with a placed question mark, lit words and a struck label bubble needs a built scene, not a definition card.",
+      "design": {
+        "treatment": "Close on the held proposal card; the rest of the table and both colleagues dim to the field. A question mark is placed on the card for the clear yes. Then 'Action + situation' lights in the single accent. A crossed-out label bubble reads 'Not a label'. The one emphasised moment of the film, the dark break.",
+        "why_motion": "Staging: the criterion is a structure, so motion only places each mark on its word. The dim of everything else is the signal.",
+        "elements": [
+          "proposal_card",
+          "yes_question_mark",
+          "action_situation_words",
+          "label_bubble_struck",
+          "check_pill"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a clear yes",
+            "element": "yes_question_mark",
+            "action": "question mark is placed on the card; the card is not marked agreed",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Silence is not agreement",
+            "element": "proposal_card",
+            "action": "hold, nothing new arrives, question mark stays",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "an action, in that situation",
+            "element": "action_situation_words",
+            "action": "'Action + situation' lights with the one accent",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "the actionability check",
+            "element": "check_pill",
+            "action": "pill prints; a label bubble beside it is struck through and reads 'Not a label'",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "Held: proposal_card from b07 at the same position. Retiring: next_step_pill, role_check, blocked_path, support_sign. Table and colleagues dim, not leave.",
+        "references": [
+          "lnd-visual-design section 5a dark break at the mechanism",
+          "lnd-motion-fit#9.3 definition and callout"
+        ]
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "action_situation_words",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "spotlight",
+      "intent": "rest",
+      "option": "drawn held card",
+      "alternatives": {
+        "plain diagram": {
+          "kind": "template",
+          "station": "table",
+          "template": "definition",
+          "props": {
+            "term": "Actionability check",
+            "say_term": "the actionability check",
+            "definition": "Can the recipient name an observable action in that situation? A personal label does not pass.",
+            "say_definition": "an action, in that situation"
+          }
+        }
+      },
+      "rationale": "Slowdown point named in the plan; the frame is finished and rests while the voice explains. Declared rest, 10 s, under the pack limit."
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "station": "update",
+      "template": "quiz.question",
+      "subject": "the two wordings",
+      "world": "the next status update, from the viewer's seat",
+      "props": {
+        "question": "At the next status update, which wording passes?",
+        "say_question": "Which wording passes",
+        "options": [
+          {
+            "text": "You're inconsiderate",
+            "say": "you're inconsiderate"
+          },
+          {
+            "text": "Wait until I finish",
+            "say": "wait until I finish"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "shock"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "none until the answer, accent withheld on both cards",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "intent": "hold",
+      "rationale": "Two unmarked cards, no correct marker. The silent hold after the narration is the script's planned pause (about 3 s), a hold and not an interactive stop. This is a wording check, not a test of whether behaviour will change."
+    },
+    {
+      "beat": "b10",
+      "kind": "template",
+      "station": "update",
+      "template": "quiz.answer",
+      "subject": "why B passes",
+      "world": "the next status update, same two cards",
+      "props": {
+        "question": "At the next status update, which wording passes?",
+        "options": [
+          {
+            "text": "You're inconsiderate"
+          },
+          {
+            "text": "Wait until I finish"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "B passes",
+        "explanation": "It names an action, in a situation: a proposal to discuss.",
+        "say_explanation": "It names an action, in a situation",
+        "tempting": 0,
+        "why_not": "A is a label, so they guess.",
+        "say_why_not": "A is a label, so they guess",
+        "takeaway": "Action plus situation, not a label.",
+        "say_takeaway": "Action plus situation, not a label"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "into"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "option B",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "rationale": "Feedback covers only the one tempting wrong belief, then the takeaway. B is marked after the pause, so the accent arrives as an event."
+    },
+    {
+      "beat": "b11",
+      "kind": "blueprint",
+      "station": "board",
+      "blueprint": "hero.journey",
+      "subject": "the follow-up",
+      "world": "a plain light board, overhead",
+      "props": {
+        "title": "Agree, then look for it",
+        "shape": "straight",
+        "waypoints": [
+          {
+            "label": "Agreed",
+            "say": "They agree out loud"
+          },
+          {
+            "label": "Next update",
+            "say": "after the next update"
+          },
+          {
+            "label": "Look for: handover finished",
+            "say": "Look for that action"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "overhead",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "Agreed",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "even",
+      "intent": "process_hold",
+      "option": "journey diagram",
+      "alternatives": {
+        "plain diagram": {
+          "kind": "template",
+          "station": "board",
+          "template": "process.flow",
+          "props": {
+            "steps": [
+              {
+                "label": "Agreed",
+                "say": "They agree out loud"
+              },
+              {
+                "label": "Next update",
+                "say": "after the next update"
+              },
+              {
+                "label": "Look for",
+                "say": "Look for that action"
+              }
+            ]
+          }
+        }
+      },
+      "rationale": "The route is the sequence. The last waypoint is an open 'look for' box and must not be ticked or coloured as an outcome. Not verified: the blueprint may stamp the last waypoint; if the frame reads as success, switch to the plain diagram alternative."
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "station": "board",
+      "template": "compare.two",
+      "subject": "agreement versus change",
+      "world": "the same plain board",
+      "props": {
+        "left": {
+          "header": "Agreement",
+          "say": "Agreement",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Not proof of change",
+              "say": "not proof of change"
+            }
+          ]
+        },
+        "right": {
+          "header": "Later change",
+          "say": "later change",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Not proof of cause",
+              "say": "does not prove your feedback caused it"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "insert",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "Agreement",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "rationale": "Two equals with neutral tone so neither side reads as success or failure. No success is animated. Open check: confirm the board's empty 'look for' box, carried in the held layout, does not read as broken."
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "the viewer's own preparation",
+      "world": "a desk of note tiles",
+      "upgrade_reason": "Four note tiles as desk objects with a separate reporting signpost kept apart need a built scene; a list template cannot keep the signpost apart.",
+      "design": {
+        "treatment": "Medium on a desk. Four plain note tiles arrive one per spoken item, in order: Action and effect, Your question, Feasible action, Look for. A separate small signpost 'Reporting process' stands apart from the tiles for harassment, misconduct and safety risks.",
+        "why_motion": "Staging: a set of items arriving on their words. No value travels.",
+        "elements": [
+          "tile_action_effect",
+          "tile_question",
+          "tile_feasible_action",
+          "tile_look_for",
+          "reporting_signpost"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the action, its effect",
+            "element": "tile_action_effect",
+            "action": "first note tile settles on the desk",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "your question",
+            "element": "tile_question",
+            "action": "second tile settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "a feasible action",
+            "element": "tile_feasible_action",
+            "action": "third tile settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "what to look for",
+            "element": "tile_look_for",
+            "action": "fourth tile settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "through your reporting process",
+            "element": "reporting_signpost",
+            "action": "signpost draws apart from the tiles, with clear space between",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "Handoff from the board: the board field grows into the desk. Nothing is held. The tiles are the viewer's own, with no supplied dialogue.",
+        "references": [
+          "lnd-explainer-craft#1 move 11 a list is objects",
+          "lnd-motion-fit#9.3 list"
+        ]
+      },
+      "join_in": {
+        "type": "handoff",
+        "meaning": "meanwhile"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "the note tile being named",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "option": "desk tiles",
+      "alternatives": {
+        "plain list": {
+          "kind": "template",
+          "station": "desk",
+          "template": "list.steps",
+          "props": {
+            "title": "Prepare your own conversation",
+            "say_title": "Prepare your own conversation",
+            "items": [
+              {
+                "text": "Action and effect",
+                "say": "the action, its effect"
+              },
+              {
+                "text": "Your question",
+                "say": "your question"
+              },
+              {
+                "text": "Feasible action",
+                "say": "a feasible action"
+              },
+              {
+                "text": "Look for",
+                "say": "what to look for"
+              }
+            ],
+            "marker": "number"
+          }
+        }
+      },
+      "rationale": "Independent practice invitation after viewing, not a recorded assessment. The signpost does not imply that this conversation replaces required reporting."
+    },
+    {
+      "beat": "b14",
+      "kind": "avatar",
+      "station": "table",
+      "props": {
+        "member": "woman",
+        "side": "right",
+        "kicker": "Back at the table",
+        "title": "Describe, ask, agree, revisit"
+      },
+      "subject": "the opening table, returned",
+      "world": "the same meeting room table",
+      "join_in": {
+        "type": "cut",
+        "meaning": "era"
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "proposal_card",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "even",
+      "intent": "callback",
+      "rationale": "Allocation honoured: the presenter bookend stands beside the table station. The opening table and the same two colleagues are held behind, calm, with the action card between them and the later update still an empty outline. No name is invented for the presenter. The four pocket-rule words are carried by the title and should arrive in order. Not verified: the avatar template cannot draw the pair, so the scene author should reuse the b01 set. If it cannot, show the card and sign alone."
+    }
+  ]
+}

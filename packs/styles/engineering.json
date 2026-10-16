@@ -1,0 +1,198 @@
+{
+  "id": "engineering",
+  "name": "Engineering",
+  "reads_as": "Technical documentation and architecture-diagram look: cool off-white field on a faint dot grid, crisp square-ish cards with thin rules, blueprint blue with syntax-highlight accents (amber, red, green), sans headings with MONOSPACE labels, captions and kickers like code comments. Calm, exact motion. For engineers, systems, incidents, APIs and runbooks.",
+  "look_family": "technical",
+  "fits": [
+    "engineering",
+    "systems",
+    "incidents",
+    "APIs",
+    "devops",
+    "security",
+    "data",
+    "technical onboarding"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "warm consumer onboarding",
+    "children"
+  ],
+  "palette": {
+    "field": "#F6F8FA",
+    "field2": "#EDF1F5",
+    "surface": "#FFFFFF",
+    "surface2": "#E7ECF2",
+    "ink": "#0D1726",
+    "muted": "#4B5A6E",
+    "line": "#5B6B80",
+    "accent": "#1F5FD6",
+    "accent2": "#9A5B00",
+    "accent3": "#C2255C",
+    "accent4": "#0F7A5A",
+    "pos": "#0F7A5A",
+    "neg": "#C22A2A",
+    "shadow": "#0D1726",
+    "onAccent": "#FFFFFF",
+    "caption_active": "#B88C4C"
+  },
+  "fonts": {
+    "display": {
+      "family": "Inter",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "roles": {
+      "label": "mono",
+      "caption": "mono"
+    },
+    "faces": [
+      {
+        "family": "Inter",
+        "weight": 400,
+        "file": "inter-latin-400-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "file": "inter-latin-600-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      104,
+      150
+    ],
+    "hero": [
+      92,
+      132
+    ],
+    "title": [
+      58,
+      84
+    ],
+    "lead": [
+      32,
+      40
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      28
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 8,
+    "stroke": 2.5,
+    "shading": "flat",
+    "shadow": "offset",
+    "shadow_dx": 0,
+    "shadow_dy": 4,
+    "shadow_opacity": 0.06
+  },
+  "motion": {
+    "personality": "smooth",
+    "enter": 0.45,
+    "move": 0.36,
+    "exit": 0.26,
+    "stagger": 0.07,
+    "draw": 0.8,
+    "count": 1.1,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "dots",
+    "density": 1
+  },
+  "captions": {
+    "bg": "rgba(13,23,38,0.92)",
+    "fg": "surface",
+    "active": "caption_active",
+    "radius": 6,
+    "font": "body",
+    "size": 34,
+    "weight": 600,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 1.9
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "cloth": "accent",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "accent3",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "Plain and quick: a cut between topics is right; continue inside a topic; covers (dip, fade, wipe, iris) only at a section change, if at all.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 48
+  },
+  "fx": {
+    "background": "blueprint",
+    "intensity": 1.0,
+    "grain": 0,
+    "vignette": 0.12,
+    "colors": [
+      "accent",
+      "accent4",
+      "accent3"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  }
+}

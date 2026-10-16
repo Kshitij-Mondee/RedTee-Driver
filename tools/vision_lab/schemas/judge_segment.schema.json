@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "judge_segment",
+  "description": "A strict review of one segment (a lesson beat, or a fixed window) of a film made by the Loom engine, against the reference style guide. Times are FILM seconds. A defect is reported only if it is visible in the frames or clip given; 'none found' is a valid answer.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["segment_id", "t0", "t1", "what_is_shown", "scores", "defects", "what_works", "reference_gap", "verdict", "confidence"],
+  "properties": {
+    "segment_id": {"type": "string"},
+    "t0": {"type": "number"},
+    "t1": {"type": "number"},
+    "what_is_shown": {"type": "string", "description": "Plain description of the picture and how it changes, before any judgement."},
+    "scores": {
+      "type": "object", "additionalProperties": false,
+      "required": ["composition", "legibility", "visual_explanation", "motion_purpose", "continuity", "style_consistency", "pacing", "polish"],
+      "properties": {
+        "composition": {"$ref": "#/definitions/score"},
+        "legibility": {"$ref": "#/definitions/score"},
+        "visual_explanation": {"$ref": "#/definitions/score"},
+        "motion_purpose": {"$ref": "#/definitions/score"},
+        "continuity": {"$ref": "#/definitions/score"},
+        "style_consistency": {"$ref": "#/definitions/score"},
+        "pacing": {"$ref": "#/definitions/score"},
+        "polish": {"$ref": "#/definitions/score"}
+      }
+    },
+    "defects": {
+      "type": "array", "maxItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["type", "t", "dur", "box", "severity", "description", "fix_route", "confidence"],
+        "properties": {
+          "type": {"type": "string", "enum": ["black_frame", "freeze_frame", "empty_frame", "static_hold", "text_too_small", "text_cut_off", "text_overlap", "illegible_low_contrast", "placeholder_content", "double_exposure", "residue_leftover", "seam_visible", "bad_crop", "wrong_viewpoint", "scale_error", "floating_object", "off_model_character", "style_mix", "icon_family_mix", "clutter", "dead_space", "grain_noise", "compression_artifact", "jank_motion", "late_arrival", "early_exit", "off_sync", "unmotivated_motion", "slide_like", "other"]},
+          "t": {"type": "number", "description": "Film seconds where it is first visible."},
+          "dur": {"type": "number", "description": "How long it is visible, seconds."},
+          "box": {"type": "array", "items": {"type": "number"}, "description": "[x0, y0, x1, y1] as fractions of the frame; [0,0,1,1] for the whole frame."},
+          "severity": {"type": "string", "enum": ["blocker", "major", "minor"]},
+          "description": {"type": "string", "description": "What exactly is wrong, specific enough to find it."},
+          "fix_route": {"type": "string", "enum": ["prop", "scene", "storyboard", "engine", "pack", "asset", "unknown"]},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+        }
+      }
+    },
+    "what_works": {"type": "array", "maxItems": 5, "items": {"type": "string"}},
+    "reference_gap": {"type": "string", "description": "The single biggest difference from how the reference films would handle this moment, and what they would do instead."},
+    "verdict": {"type": "string", "enum": ["ship", "fix", "rebuild"]},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+  },
+  "definitions": {
+    "score": {
+      "type": "object", "additionalProperties": false, "required": ["score", "evidence"],
+      "properties": {"score": {"type": "integer", "description": "1 to 5 against the rubric anchors"}, "evidence": {"type": "string", "description": "The visible thing the score rests on."}}
+    }
+  }
+}

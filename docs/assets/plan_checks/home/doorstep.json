@@ -1,0 +1,655 @@
+{
+ "scene": "doorstep",
+ "camera_spec": {
+  "camera": {
+   "x": 3.4,
+   "y": 0.6,
+   "eye": 1.6,
+   "yaw": -24,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "house front (brick, y 6.0)",
+    "axis": "y",
+    "at": 6.0
+   }
+  ],
+  "points": {
+   "arch_L_ground": [
+    0,
+    6.0,
+    0
+   ],
+   "arch_R_ground": [
+    1.6,
+    6.0,
+    0
+   ],
+   "arch_L_spring": [
+    0,
+    6.0,
+    1.95
+   ],
+   "arch_R_spring": [
+    1.6,
+    6.0,
+    1.95
+   ],
+   "arch_crown": [
+    0.8,
+    6.0,
+    2.75
+   ],
+   "porch_back_L_floor": [
+    0,
+    7.0,
+    0.15
+   ],
+   "door_L_jamb_floor": [
+    0.38,
+    7.0,
+    0.15
+   ],
+   "door_R_jamb_floor": [
+    1.22,
+    7.0,
+    0.15
+   ],
+   "door_L_jamb_head": [
+    0.38,
+    7.0,
+    2.13
+   ],
+   "door_R_jamb_head": [
+    1.22,
+    7.0,
+    2.13
+   ],
+   "doorbell": [
+    0.25,
+    7.0,
+    1.35
+   ],
+   "step_front_L": [
+    0.2,
+    5.75,
+    0.15
+   ],
+   "step_front_R": [
+    1.4,
+    5.75,
+    0.15
+   ],
+   "bay_L_ground": [
+    1.95,
+    5.25,
+    0
+   ],
+   "bay_L_top": [
+    1.95,
+    5.25,
+    2.6
+   ],
+   "bay_sill_L": [
+    1.95,
+    5.25,
+    0.85
+   ],
+   "bay_corner_front_L": [
+    2.45,
+    5.25,
+    0.85
+   ],
+   "bay_corner_front_R": [
+    3.9,
+    5.25,
+    0.85
+   ],
+   "resident_feet": [
+    0.8,
+    7.05,
+    0.15
+   ],
+   "resident_head_top": [
+    0.8,
+    7.05,
+    1.9
+   ],
+   "resident_head_centre": [
+    0.8,
+    7.05,
+    1.77
+   ],
+   "caller_feet": [
+    -0.1,
+    5.0,
+    0
+   ],
+   "caller_head_top": [
+    -0.1,
+    5.0,
+    1.75
+   ],
+   "caller_head_centre": [
+    -0.1,
+    5.0,
+    1.62
+   ],
+   "parcel": [
+    1.25,
+    6.3,
+    0.3
+   ],
+   "hedge_near": [
+    3.4,
+    4.0,
+    0.9
+   ],
+   "house_left_corner_ground": [
+    -2.0,
+    6.0,
+    0
+   ],
+   "house_left_corner_2m": [
+    -2.0,
+    6.0,
+    2.0
+   ],
+   "downpipe": [
+    -1.9,
+    6.0,
+    1.5
+   ],
+   "render_line_left": [
+    -2.0,
+    6.0,
+    2.9
+   ],
+   "render_line_at_bay": [
+    1.95,
+    6.0,
+    2.9
+   ],
+   "path_L_at_step": [
+    -0.2,
+    5.75,
+    0
+   ],
+   "path_R_at_step": [
+    1.0,
+    5.75,
+    0
+   ],
+   "path_L_near": [
+    -0.2,
+    3.0,
+    0
+   ],
+   "path_R_near": [
+    1.0,
+    3.0,
+    0
+   ],
+   "lawn_edge_bay": [
+    1.95,
+    5.25,
+    0
+   ],
+   "hydrangea_top": [
+    3.0,
+    3.4,
+    1.0
+   ],
+   "hydrangea_base": [
+    3.0,
+    3.4,
+    0
+   ],
+   "porch_lantern": [
+    0.8,
+    6.5,
+    2.45
+   ],
+   "coat_hooks_inside": [
+    -0.4,
+    7.5,
+    1.7
+   ],
+   "wheelie_bin_top": [
+    -1.4,
+    5.3,
+    1.07
+   ],
+   "wheelie_bin_base": [
+    -1.4,
+    5.3,
+    0
+   ],
+   "parcel_label_a": [
+    1.17,
+    6.22,
+    0.35
+   ],
+   "parcel_label_b": [
+    1.33,
+    6.22,
+    0.35
+   ],
+   "parcel_label_c": [
+    1.33,
+    6.36,
+    0.35
+   ],
+   "parcel_label_d": [
+    1.17,
+    6.36,
+    0.35
+   ]
+  },
+  "behind": [
+   "caller_head_top",
+   "caller_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1781,
+   "along_x": -3182,
+   "horizon_y": 497
+  },
+  "points": {
+   "arch_L_ground": {
+    "x": 694,
+    "y": 964,
+    "where": "frame",
+    "depth": 6.32
+   },
+   "arch_R_ground": {
+    "x": 1140,
+    "y": 1018,
+    "where": "frame",
+    "depth": 5.67
+   },
+   "arch_L_spring": {
+    "x": 694,
+    "y": 395,
+    "where": "frame",
+    "depth": 6.32
+   },
+   "arch_R_spring": {
+    "x": 1140,
+    "y": 383,
+    "where": "frame",
+    "depth": 5.67
+   },
+   "arch_crown": {
+    "x": 905,
+    "y": 143,
+    "where": "frame",
+    "depth": 5.99
+   },
+   "porch_back_L_floor": {
+    "x": 832,
+    "y": 867,
+    "where": "frame",
+    "depth": 7.23
+   },
+   "door_L_jamb_floor": {
+    "x": 919,
+    "y": 875,
+    "where": "frame",
+    "depth": 7.08
+   },
+   "door_R_jamb_floor": {
+    "x": 1128,
+    "y": 894,
+    "where": "frame",
+    "depth": 6.73
+   },
+   "door_L_jamb_head": {
+    "x": 919,
+    "y": 359,
+    "where": "frame",
+    "depth": 7.08
+   },
+   "door_R_jamb_head": {
+    "x": 1128,
+    "y": 352,
+    "where": "frame",
+    "depth": 6.73
+   },
+   "doorbell": {
+    "x": 889,
+    "y": 561,
+    "where": "frame",
+    "depth": 7.13
+   },
+   "step_front_L": {
+    "x": 706,
+    "y": 942,
+    "where": "frame",
+    "depth": 6.01
+   },
+   "step_front_R": {
+    "x": 1049,
+    "y": 981,
+    "where": "frame",
+    "depth": 5.52
+   },
+   "bay_L_ground": {
+    "x": 1176,
+    "y": 1107,
+    "where": "overscan",
+    "depth": 4.84
+   },
+   "bay_L_top": {
+    "x": 1176,
+    "y": 116,
+    "where": "frame",
+    "depth": 4.84
+   },
+   "bay_sill_L": {
+    "x": 1176,
+    "y": 783,
+    "where": "frame",
+    "depth": 4.84
+   },
+   "bay_corner_front_L": {
+    "x": 1367,
+    "y": 795,
+    "where": "frame",
+    "depth": 4.63
+   },
+   "bay_corner_front_R": {
+    "x": 2031,
+    "y": 839,
+    "where": "overscan",
+    "depth": 4.04
+   },
+   "resident_feet": {
+    "x": 1026,
+    "y": 882,
+    "where": "frame",
+    "depth": 6.95
+   },
+   "resident_head_top": {
+    "x": 1026,
+    "y": 417,
+    "where": "frame",
+    "depth": 6.95
+   },
+   "resident_head_centre": {
+    "x": 1026,
+    "y": 452,
+    "where": "frame",
+    "depth": 6.95
+   },
+   "caller_feet": {
+    "x": 483,
+    "y": 1039,
+    "where": "frame",
+    "depth": 5.44
+   },
+   "caller_head_top": {
+    "x": 483,
+    "y": 446,
+    "where": "frame",
+    "depth": 5.44,
+    "behind": {
+     "wall": "house front (brick, y 6.0)",
+     "at": [
+      -0.9,
+      6.0,
+      1.78
+     ]
+    }
+   },
+   "caller_head_centre": {
+    "x": 483,
+    "y": 490,
+    "where": "frame",
+    "depth": 5.44,
+    "behind": {
+     "wall": "house front (brick, y 6.0)",
+     "at": [
+      -0.9,
+      6.0,
+      1.62
+     ]
+    }
+   },
+   "parcel": {
+    "x": 1067,
+    "y": 891,
+    "where": "frame",
+    "depth": 6.08
+   },
+   "hedge_near": {
+    "x": 1781,
+    "y": 912,
+    "where": "frame",
+    "depth": 3.11
+   },
+   "house_left_corner_ground": {
+    "x": 252,
+    "y": 911,
+    "where": "frame",
+    "depth": 7.13
+   },
+   "house_left_corner_2m": {
+    "x": 252,
+    "y": 393,
+    "where": "frame",
+    "depth": 7.13
+   },
+   "downpipe": {
+    "x": 272,
+    "y": 523,
+    "where": "frame",
+    "depth": 7.09
+   },
+   "render_line_left": {
+    "x": 252,
+    "y": 161,
+    "where": "frame",
+    "depth": 7.13
+   },
+   "render_line_at_bay": {
+    "x": 1251,
+    "y": 63,
+    "where": "frame",
+    "depth": 5.52
+   },
+   "path_L_at_step": {
+    "x": 603,
+    "y": 975,
+    "where": "frame",
+    "depth": 6.17
+   },
+   "path_R_at_step": {
+    "x": 928,
+    "y": 1016,
+    "where": "frame",
+    "depth": 5.68
+   },
+   "path_L_near": {
+    "x": -206,
+    "y": 1304,
+    "where": "outside",
+    "depth": 3.66
+   },
+   "path_R_near": {
+    "x": 252,
+    "y": 1428,
+    "where": "outside",
+    "depth": 3.17
+   },
+   "lawn_edge_bay": {
+    "x": 1176,
+    "y": 1107,
+    "where": "overscan",
+    "depth": 4.84
+   },
+   "hydrangea_top": {
+    "x": 1484,
+    "y": 904,
+    "where": "frame",
+    "depth": 2.72
+   },
+   "hydrangea_base": {
+    "x": 1484,
+    "y": 1581,
+    "where": "outside",
+    "depth": 2.72
+   },
+   "porch_lantern": {
+    "x": 967,
+    "y": 254,
+    "where": "frame",
+    "depth": 6.45
+   },
+   "coat_hooks_inside": {
+    "x": 804,
+    "y": 473,
+    "where": "frame",
+    "depth": 7.85
+   },
+   "wheelie_bin_top": {
+    "x": 230,
+    "y": 653,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "wheelie_bin_base": {
+    "x": 230,
+    "y": 969,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "parcel_label_a": {
+    "x": 1036,
+    "y": 878,
+    "where": "frame",
+    "depth": 6.04
+   },
+   "parcel_label_b": {
+    "x": 1082,
+    "y": 883,
+    "where": "frame",
+    "depth": 5.98
+   },
+   "parcel_label_c": {
+    "x": 1096,
+    "y": 874,
+    "where": "frame",
+    "depth": 6.1
+   },
+   "parcel_label_d": {
+    "x": 1051,
+    "y": 870,
+    "where": "frame",
+    "depth": 6.17
+   }
+  }
+ },
+ "note": "The resident stands inside the open door, so what is behind their head is checked with a second run against the hall walls (camera_spec_inside); the caller is checked against the house front.",
+ "camera_spec_inside": {
+  "camera": {
+   "x": 3.4,
+   "y": 0.6,
+   "eye": 1.6,
+   "yaw": -24,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "the hall's left wall, inside the open door (x -0.4, from y 7.0 to the hall's far end at y 11.5)",
+    "axis": "x",
+    "at": -0.4
+   },
+   {
+    "name": "the hall's far end wall (y 11.5)",
+    "axis": "y",
+    "at": 11.5
+   }
+  ],
+  "points": {
+   "resident_head_top": [
+    0.8,
+    7.05,
+    1.9
+   ],
+   "resident_head_centre": [
+    0.8,
+    7.05,
+    1.77
+   ],
+   "hall_far_left_corner_1_8m": [
+    -0.4,
+    11.5,
+    1.8
+   ],
+   "coat_hooks_inside": [
+    -0.4,
+    7.5,
+    1.7
+   ]
+  },
+  "behind": [
+   "resident_head_top",
+   "resident_head_centre"
+  ]
+ },
+ "camera_check_inside": {
+  "vanishing": {
+   "along_y": 1781,
+   "along_x": -3182,
+   "horizon_y": 497
+  },
+  "points": {
+   "resident_head_top": {
+    "x": 1026,
+    "y": 417,
+    "where": "frame",
+    "depth": 6.95,
+    "behind": {
+     "wall": "the hall's left wall, inside the open door (x -0.4, from y 7.0 to the hall's far end at y 11.5)",
+     "at": [
+      -0.4,
+      10.03,
+      2.04
+     ]
+    }
+   },
+   "resident_head_centre": {
+    "x": 1026,
+    "y": 452,
+    "where": "frame",
+    "depth": 6.95,
+    "behind": {
+     "wall": "the hall's left wall, inside the open door (x -0.4, from y 7.0 to the hall's far end at y 11.5)",
+     "at": [
+      -0.4,
+      10.03,
+      1.85
+     ]
+    }
+   },
+   "hall_far_left_corner_1_8m": {
+    "x": 1114,
+    "y": 465,
+    "where": "frame",
+    "depth": 11.5
+   },
+   "coat_hooks_inside": {
+    "x": 804,
+    "y": 473,
+    "where": "frame",
+    "depth": 7.85
+   }
+  }
+ }
+}

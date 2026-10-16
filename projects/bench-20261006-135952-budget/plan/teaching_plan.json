@@ -1,0 +1,203 @@
+{
+  "pacing": {
+    "slowdown_at": [
+      "sec3_escalation_vs_tradeoffs: analyzing strict escalation boundaries between contractual breaches and internal routine schedule adjustments"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2_decision_filter",
+        "prompt": "Recall the three evaluation filters: external dependency, business consequence, and effort. Notice which criterion takes immediate priority when downstream colleagues are blocked.",
+        "kind": "recall_prompt"
+      },
+      {
+        "question": "You are juggling two tasks: an urgent slide formatting request from a partner team due in two hours, and a weekly client billing report due by end of day that directly affects invoicing. Neither task violates compliance standards or contracts. What is your correct action?",
+        "after_section": "sec3_escalation_vs_tradeoffs",
+        "takeaway": "Evaluate operational impact over deadline proximity, and handle routine trade-offs within your authority without burdening managers.",
+        "options": [
+          "Escalate immediately to your team manager to decide which project takes precedence.",
+          "Drop the billing report and complete the urgent formatting request because of the two-hour deadline proximity.",
+          "Prioritise the billing report based on business consequence, adjust the formatting delivery schedule within your authority, and notify the partner team."
+        ],
+        "answer": "Prioritise the billing report based on business consequence, adjust the formatting delivery schedule within your authority, and notify the partner team.",
+        "tempting_wrong": "Escalate immediately to your team manager to decide which project takes precedence (tempting because escalating feels risk-free, but it consumes supervisory capacity on low-risk decisions within routine authority).",
+        "kind": "quiz"
+      }
+    ],
+    "words_per_minute": 140,
+    "target_duration_s": 360
+  },
+  "flags": [],
+  "practice_ladder": [
+    {
+      "description": "Narrated walkthrough in section 2 where the colleague applies the three-part filter to sequence an urgent formatting request against a blocked downstream team deliverable, demonstrating how dependency outranks deadline proximity.",
+      "level": "worked_example"
+    },
+    {
+      "level": "faded_example",
+      "description": "Guided analysis in section 3 where the criteria evaluate a scheduling collision, and the learner identifies whether the constraint breaches contractual compliance or remains a routine trade-off within existing employee authority."
+    },
+    {
+      "level": "independent_practice",
+      "description": "Interactive scenario quiz after section 3 where the learner independently evaluates competing deliverables with conflicting urgency, selects autonomous prioritization over unnecessary escalation, and determines the execution order."
+    },
+    {
+      "description": "Application in sections 4 and 5 resolving multi-departmental dependencies with sudden deadline compression, formulating a prompt notification with operational rationale and a partial modular delivery proposal.",
+      "level": "edge_case_transfer"
+    }
+  ],
+  "audience": {
+    "context": "Desk or laptop environment during regular working hours, viewing as self-paced professional development with audio enabled.",
+    "assumed_prior": "Basic company communication channels (email, chat) and general office workflows, but prone to stalling work or escalating routine task collisions to managers when deadlines conflict.",
+    "level": "practitioner",
+    "motivation": "Handling daily workloads smoothly, eliminating decision paralysis, and preventing project stalls without second-guessing priority choices.",
+    "why": "Corporate employees with established operational routines who already execute individual deliverables but need systematic criteria for resolving competing requests independently."
+  },
+  "strategy": {
+    "signature_move": "State the competing task dilemma, trace the downstream consequence of stalling, apply the specific filter criterion to decide execution order, then confirm the operational rationale.",
+    "rationale": "The knowledge sheet teaches workplace prioritization and escalation boundaries through operational trade-offs; placing corporate practitioners inside an active workflow dilemma with immediate downstream consequences anchors abstract filter rules in concrete operational choices.",
+    "name": "scenario_led"
+  },
+  "performance": "Prioritise competing incoming work requests independently, resolve routine delivery trade-offs within existing authority, and communicate revised timelines with operational rationale without escalating to managers.",
+  "arc": {
+    "sections": [
+      {
+        "concepts": [
+          "urgency versus operational impact",
+          "operational bottlenecks",
+          "downstream workflow stalls",
+          "context switching throughput penalties"
+        ],
+        "recap_after": true,
+        "bloom": "understand",
+        "goal": "the viewer can compare task urgency with operational impact when workplace requests collide",
+        "id": "sec1_urgency_vs_impact",
+        "carrier": "comparison: split screen showing incoming request queues, where visual queue blocks shift from red urgency alerts to organizational impact metrics, showing bottleneck backlogs clearing",
+        "energy": "steady"
+      },
+      {
+        "id": "sec2_decision_filter",
+        "goal": "the viewer can apply the three-part decision filter to sequence competing deliverables",
+        "bloom": "apply",
+        "energy": "build",
+        "concepts": [
+          "systematic decision filter",
+          "external dependency",
+          "business consequence",
+          "required effort",
+          "lightweight triage sequence"
+        ],
+        "carrier": "process: three-stage evaluation pipeline where competing work items visibly advance through external dependency, business consequence, and effort criteria gates",
+        "recap_after": true
+      },
+      {
+        "energy": "rest",
+        "recap_after": true,
+        "goal": "the viewer can distinguish genuine escalation triggers from routine operational trade-offs",
+        "concepts": [
+          "routine trade-offs within existing authority",
+          "genuine escalation triggers",
+          "contractual and compliance thresholds",
+          "supervisory capacity review delays"
+        ],
+        "carrier": "diagram: branching decision flow where decision tokens route to either autonomous local scheduling or managerial escalation when compliance or contract limits are breached",
+        "id": "sec3_escalation_vs_tradeoffs",
+        "bloom": "analyze"
+      },
+      {
+        "goal": "the viewer can prioritise competing cross-functional tasks when deadlines shift",
+        "energy": "peak",
+        "concepts": [
+          "task collision resolution",
+          "verifying shared dependencies",
+          "confirming task ownership",
+          "deadline proximity versus consequence"
+        ],
+        "id": "sec4_resolving_collisions",
+        "bloom": "evaluate",
+        "recap_after": true,
+        "carrier": "worked example: running project board where cross-functional deliverable cards reorder dynamically as dependencies and schedule constraints update"
+      },
+      {
+        "carrier": "dialogue: message thread interface displaying drafted stakeholder notifications with revised delivery timestamps and partial delivery options",
+        "goal": "the viewer can justify revised delivery timelines to affected stakeholders using operational trade-offs",
+        "bloom": "evaluate",
+        "recap_after": true,
+        "energy": "rest",
+        "concepts": [
+          "stakeholder communication",
+          "operational rationale",
+          "preserving operational trust",
+          "modular partial delivery options"
+        ],
+        "id": "sec5_stakeholder_alignment"
+      }
+    ],
+    "bridge_from_prior": "Connect the common workplace reflex of pausing work or pinging a manager to the underlying operating principle of evaluating urgency against organizational impact.",
+    "payoff": "Return to the opening workplace dilemma where conflicting requests arrive: the employee evaluates operational impact over deadline proximity, executes the high-impact deliverable first, and notifies the partner team with an alternative delivery schedule, clearing the bottleneck smoothly without managerial escalation.",
+    "promise": "Demonstrate that a structured decision filter enables any employee to determine task priority independently and take decisive action without waiting for managerial escalation.",
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine your screen flashes with an urgent request from another department while your current project deadline looms. Which deliverable moves first, and which one waits?"
+    }
+  },
+  "transfer_tasks": [
+    "Audit your active task list tomorrow morning: identify any task waiting on a manager that falls within routine trade-off authority, sequence it using the three-part filter (dependency, consequence, effort), and resume execution.",
+    "When your next conflicting request arrives via chat or email, evaluate operational impact against urgency before responding; if delivery must shift, notify the requester before the deadline with a clear operational rationale and an offer of partial delivery.",
+    "Establish a pocket rule for your team: escalate only when conflicting requests breach contractual commitments, violate compliance standards, or exceed allocated resource limits; handle standard schedule adjustments locally."
+  ],
+  "genre": "procedural",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "framework_audit": {
+    "gagne": {
+      "attention": "arc.hook: opening scenario with colliding workplace deadlines",
+      "transfer": "transfer_tasks: three workplace application prompts and arc.payoff resolving the opening hook dilemma",
+      "recall_prior": "arc.bridge_from_prior: connecting daily chat reflex and assumed_prior to operational criteria",
+      "practice": "pacing.recall_moments: interactive stopping check quiz after sec3, plus practice_ladder steps",
+      "present": "arc.sections: sec1 to sec5 presenting triage sequence, decision criteria, escalation boundaries, and communication",
+      "inform_objective": "arc.promise: promise of determining priority independently without escalation",
+      "guidance": "strategy.signature_move: four-step mechanical routine, paired with worked examples in sec2 and sec4",
+      "feedback": "pacing.recall_moments[1].answer and tempting_wrong explanation revealing why premature escalation harms supervisory capacity",
+      "assess": "pacing.recall_moments[1] scenario check and sec4 worked edge-case application"
+    },
+    "mayer": {
+      "signalling": "Highlights key filter criteria (dependency, consequence, effort) on screen and marks scarce slowdown at escalation boundary analysis.",
+      "pre_training": "Teaches the core distinction between urgency and organizational impact in sec1 before running the full multi-factor triage filter in sec2.",
+      "segmenting": "Breaks prioritization into distinct sections: urgency vs impact, filter mechanics, escalation thresholds, and communication.",
+      "coherence": "Eliminates generic corporate greetings, policy theory, and multi-example distractions to focus exclusively on the running workflow scenario.",
+      "redundancy": "Narration explains operational trade-offs conversationally while screens show only visual pipeline stages, state changes, and key terms.",
+      "contiguity": "Filter labels and consequence indicators appear immediately adjacent to the workflow deliverable cards they describe."
+    },
+    "bloom_path": "understand -> apply -> analyze -> evaluate -> evaluate",
+    "merrill": {
+      "activation": "arc.bridge_from_prior connects existing familiarity with chat notifications and managerial escalation reflexes to the new framework.",
+      "problem_centred": "Anchored in a running corporate scenario of colliding deliverable deadlines and cross-functional task friction.",
+      "demonstration": "sec2 and sec4 demonstrate the decision filter step-by-step on concrete operational cases before formalizing rules.",
+      "application": "pacing.recall_moments interactive quiz and practice_ladder challenge learner to evaluate ambiguous trade-offs independently.",
+      "integration": "transfer_tasks prompt learner to audit active task lists tomorrow morning and apply the pocket rule to team trade-offs."
+    },
+    "arcs": {
+      "attention": "Varied visual carriers across sections (comparison, process, diagram, worked example, dialogue) and a sharp dilemma hook.",
+      "confidence": "Scaffolded practice ladder moving from a fully worked filter demonstration to faded decisions and an independent check.",
+      "relevance": "Directly addresses corporate employees daily pain of stalled queues, context switching penalties, and manager bottlenecks.",
+      "satisfaction": "arc.payoff resolves the opening bottleneck, proving the learner can protect supervisory capacity and maintain stakeholder trust."
+    }
+  },
+  "misconceptions": [
+    {
+      "refuted_in": "sec1_urgency_vs_impact",
+      "why_tempting": "Urgent requests feel immediately pressing and ignoring them feels risky, creating an intuitive reflex to treat deadline proximity as organizational importance.",
+      "belief": "The request that arrives most recently or with the loudest urgency always has the highest operational priority."
+    },
+    {
+      "belief": "Every task conflict requires managerial escalation to ensure safe procedural compliance.",
+      "why_tempting": "Escalating feels like a safe way to avoid personal accountability for trade-offs and delays.",
+      "refuted_in": "sec3_escalation_vs_tradeoffs"
+    },
+    {
+      "why_tempting": "Employees fear disappointing stakeholders by admitting a delay, hoping context switching will somehow deliver both on time.",
+      "refuted_in": "sec5_stakeholder_alignment",
+      "belief": "Handling colliding tasks means juggling them simultaneously or waiting in silence until work is finished."
+    }
+  ],
+  "title": "Workplace Decision Standards for Corporate Teams"
+}

@@ -1,0 +1,692 @@
+{
+ "title": "Why training fades, and how to make it stick",
+ "wpm_target": 145,
+ "sections": [
+  {
+   "id": "intro",
+   "title": "The fade",
+   "role": "hook"
+  },
+  {
+   "id": "sec1",
+   "title": "The curve"
+  },
+  {
+   "id": "sec2",
+   "title": "The trap"
+  },
+  {
+   "id": "sec3",
+   "title": "The gaps"
+  },
+  {
+   "id": "sec4",
+   "title": "Your plan"
+  },
+  {
+   "id": "outro",
+   "title": "Maya, again",
+   "role": "payoff"
+  }
+ ],
+ "beats": [
+  {
+   "id": "b01",
+   "section": "intro",
+   "job": "hook",
+   "delivery": "warm",
+   "narration": [
+    "A quick question about your last training.",
+    "How much could you still explain today?"
+   ],
+   "on_screen": [
+    "Why training fades"
+   ],
+   "visual_intent": "the presenter greets the viewer beside the lesson title",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "avatar",
+   "grounding": []
+  },
+  {
+   "id": "b02",
+   "section": "intro",
+   "job": "scenario",
+   "delivery": "warm",
+   "hypothetical": true,
+   "narration": [
+    "Say this is Maya.",
+    "On Monday, she leaves a great workshop,",
+    "buzzing with three new ideas.",
+    "By Wednesday, one has gone fuzzy.",
+    "By Friday, most of it has gone quiet."
+   ],
+   "on_screen": [
+    "Monday",
+    "Friday"
+   ],
+   "visual_intent": "Maya at her desk with three bright ideas in a thought bubble; across the week the ideas grey out and drift away one by one",
+   "change_over_time": true,
+   "animate_score": 0.95,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya and her week are an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "forgetting is fastest soon after learning",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b03",
+   "section": "intro",
+   "job": "orient",
+   "delivery": "warm",
+   "narration": [
+    "It is not her fault.",
+    "It is how memory works.",
+    "And in four minutes,",
+    "you will have a simple way to beat it."
+   ],
+   "on_screen": [
+    "Why training fades",
+    "and how to make it stick"
+   ],
+   "visual_intent": "the lesson title prints large; a promise line settles under it",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": []
+  },
+  {
+   "id": "b04",
+   "section": "sec1",
+   "job": "hook",
+   "delivery": "warm",
+   "narration": [
+    "You have felt this too.",
+    "Clear on the day,",
+    "blank a week later."
+   ],
+   "on_screen": [
+    "How much you can recall"
+   ],
+   "visual_intent": "a recall bar full on the training day drains toward empty a week later",
+   "change_over_time": true,
+   "animate_score": 0.8,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "recall falls in the days after learning (shape only, no numbers)",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b05",
+   "section": "sec1",
+   "job": "demonstrate",
+   "delivery": "curious",
+   "narration": [
+    "In 1885, Hermann Ebbinghaus",
+    "measured this on himself.",
+    "He learned lists of nonsense syllables,",
+    "then tested what he kept over time."
+   ],
+   "on_screen": [
+    "Ebbinghaus, 1885",
+    "nonsense syllables"
+   ],
+   "visual_intent": "a notebook of syllable cards; he learns them, then tests himself later and some cards flip to blank",
+   "change_over_time": true,
+   "animate_score": 0.75,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Ebbinghaus measured his own memory with nonsense syllables and published in 1885",
+     "fact": "F1"
+    }
+   ]
+  },
+  {
+   "id": "b06",
+   "section": "sec1",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "What he found has a name,",
+    "the forgetting curve.",
+    "Recall drops steeply at first,",
+    "then it levels off.",
+    "How steep depends on you and the material.",
+    "There is no magic percentage."
+   ],
+   "on_screen": [
+    "The forgetting curve",
+    "fast at first",
+    "then slower"
+   ],
+   "visual_intent": "axes of recall over time; the curve draws itself, steep then flat; faint alternative curves show it varies by person",
+   "change_over_time": true,
+   "animate_score": 0.95,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "the forgetting curve drops steeply then levels off",
+     "fact": "F2"
+    },
+    {
+     "claim": "the rate varies; no single percentage",
+     "fact": "F3"
+    }
+   ]
+  },
+  {
+   "id": "b07",
+   "section": "sec1",
+   "job": "consolidate",
+   "delivery": "calm",
+   "recall": {
+    "kind": "recall_prompt",
+    "prompt": "where does most of the forgetting happen?"
+   },
+   "narration": [
+    "So, where does most of the forgetting happen?",
+    "Early. Hold on to that."
+   ],
+   "on_screen": [
+    "Most forgetting happens early"
+   ],
+   "visual_intent": "one short line, large, as a thing to hold on to",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "forgetting is fastest soon after learning",
+     "fact": "F2"
+    }
+   ]
+  },
+  {
+   "id": "b08",
+   "section": "sec2",
+   "job": "scenario",
+   "delivery": "warm",
+   "hypothetical": true,
+   "narration": [
+    "So what does Maya do?",
+    "What most of us do.",
+    "She rereads her notes."
+   ],
+   "on_screen": [
+    "Rereading"
+   ],
+   "visual_intent": "Maya at her laptop, eyes on her notes; the lines of the notes highlight one after another",
+   "change_over_time": true,
+   "animate_score": 0.6,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "an invented illustration of a common habit",
+     "hypothetical": true
+    }
+   ]
+  },
+  {
+   "id": "b09",
+   "section": "sec2",
+   "job": "refute",
+   "delivery": "calm",
+   "misconception": "rereading keeps training fresh",
+   "narration": [
+    "Here is where people slip.",
+    "Rereading feels like learning,",
+    "because the page looks familiar."
+   ],
+   "on_screen": [
+    "Feels familiar"
+   ],
+   "visual_intent": "a familiarity gauge climbs high as she rereads, looking reassuring",
+   "change_over_time": true,
+   "animate_score": 0.75,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "rereading feels effective because the material becomes familiar",
+     "fact": "F5"
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "section": "sec2",
+   "job": "refute",
+   "delivery": "calm",
+   "narration": [
+    "But familiar is not the same",
+    "as being able to recall it.",
+    "Close the notes,",
+    "and it is gone."
+   ],
+   "on_screen": [
+    "Familiar",
+    "Recall"
+   ],
+   "visual_intent": "the notes page is covered; the thought bubble tries to pull the lines back and finds only question marks",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "familiarity is mistaken for being able to recall",
+     "fact": "F5"
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "section": "sec2",
+   "job": "demonstrate",
+   "delivery": "warm",
+   "narration": [
+    "What works is the opposite.",
+    "Close the notes,",
+    "and pull the ideas back out.",
+    "That is called retrieval practice."
+   ],
+   "on_screen": [
+    "Retrieval practice"
+   ],
+   "visual_intent": "Maya thinks hard; the three ideas come back into her bubble one by one; the name arrives last",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "retrieval practice means actively recalling information",
+     "fact": "F4"
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "section": "sec2",
+   "job": "distinguish",
+   "delivery": "neutral",
+   "narration": [
+    "Testing yourself beats rereading,",
+    "even when it feels harder.",
+    "Rereading feels easy,",
+    "and fades fast.",
+    "Testing feels harder,",
+    "and lasts longer."
+   ],
+   "on_screen": [
+    "Rereading",
+    "Testing yourself",
+    "feels easy",
+    "fades fast",
+    "feels harder",
+    "lasts longer"
+   ],
+   "visual_intent": "two columns as equals, rereading against testing, each claim arriving as it is said",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "retrieval practice beats rereading for long-term retention",
+     "fact": "F4"
+    },
+    {
+     "claim": "rereading feels easy because it is familiar",
+     "fact": "F5"
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "section": "sec2",
+   "job": "sequence",
+   "delivery": "brisk",
+   "narration": [
+    "A self-test takes a few minutes.",
+    "Close your notes.",
+    "Write down what you remember.",
+    "Then check it against the notes.",
+    "The check is part of the learning."
+   ],
+   "on_screen": [
+    "Close your notes",
+    "Write what you remember",
+    "Check against the notes"
+   ],
+   "visual_intent": "three steps, each arriving as it is spoken, the check marked as part of the learning",
+   "change_over_time": false,
+   "animate_score": 0.35,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "a few minutes of recall then checking counts",
+     "fact": "F10"
+    },
+    {
+     "claim": "checking provides feedback that matters",
+     "fact": "F11"
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "section": "sec3",
+   "job": "demonstrate",
+   "delivery": "curious",
+   "narration": [
+    "Now, timing.",
+    "Each time Maya tests herself,",
+    "the memory jumps back up,",
+    "and the next drop is slower."
+   ],
+   "on_screen": [
+    "test",
+    "test",
+    "test"
+   ],
+   "visual_intent": "the forgetting curve returns; at each test it jumps back up and the next drop is gentler, a staircase of flatter curves",
+   "change_over_time": true,
+   "animate_score": 1.0,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "each successful recall makes the memory more durable",
+     "fact": "F8"
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "section": "sec3",
+   "job": "define",
+   "delivery": "calm",
+   "narration": [
+    "That is the spacing effect.",
+    "Spread your practice out,",
+    "and it lasts longer than cramming it together."
+   ],
+   "on_screen": [
+    "The spacing effect"
+   ],
+   "visual_intent": "the term, its one-line definition, and a concrete workplace example",
+   "change_over_time": false,
+   "animate_score": 0.25,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "spaced practice beats massed practice for long-term retention",
+     "fact": "F6"
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "section": "sec3",
+   "job": "refute",
+   "delivery": "neutral",
+   "misconception": "one long review is as good as several short ones",
+   "narration": [
+    "What about one long review on Friday?",
+    "Cramming works for tomorrow,",
+    "but it fades faster after."
+   ],
+   "on_screen": [
+    "Cramming"
+   ],
+   "visual_intent": "a cramming gauge shoots up for tomorrow, then drains faster than you expect",
+   "change_over_time": true,
+   "animate_score": 0.8,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "cramming helps shortly afterwards but fades faster",
+     "fact": "F7"
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "section": "sec3",
+   "job": "check",
+   "delivery": "calm",
+   "pause_after_s": 4,
+   "recall": {
+    "kind": "quiz",
+    "question": "Same training, two plans. Which keeps more after a month?",
+    "options": [
+     "One long review on Friday",
+     "Three short self-tests, spread out"
+    ],
+    "answer": 1
+   },
+   "narration": [
+    "Your turn.",
+    "Same training, two plans.",
+    "Plan A, one long review on Friday.",
+    "Plan B, three short self-tests, spread out.",
+    "Which keeps more after a month?",
+    "Pause, and decide."
+   ],
+   "on_screen": [
+    "Which keeps more after a month?",
+    "One long review on Friday",
+    "Three short self-tests, spread out"
+   ],
+   "visual_intent": "the question and two options as peers, then a real pause with a countdown",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "the quiz contrasts massed and spaced practice",
+     "fact": "F6"
+    }
+   ]
+  },
+  {
+   "id": "b18",
+   "section": "sec3",
+   "job": "check",
+   "delivery": "warm",
+   "narration": [
+    "It is Plan B.",
+    "Spaced self-tests keep more, for longer.",
+    "Plan A feels thorough,",
+    "but it is one long reread,",
+    "and it fades faster."
+   ],
+   "on_screen": [
+    "Plan B"
+   ],
+   "visual_intent": "the right option is marked; the explanation, then why the tempting option loses",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "spaced retrieval beats massed rereading",
+     "fact": "F6"
+    },
+    {
+     "claim": "massed study fades faster",
+     "fact": "F7"
+    }
+   ]
+  },
+  {
+   "id": "b19",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "brisk",
+   "narration": [
+    "Here is the plan for your next training.",
+    "The first test, tomorrow.",
+    "The second, a few days later.",
+    "The third, a week or two after that."
+   ],
+   "on_screen": [
+    "Training day",
+    "Tomorrow",
+    "A few days later",
+    "A week or two later"
+   ],
+   "visual_intent": "Maya travels a path across the calendar, stopping at each test as it is named",
+   "change_over_time": true,
+   "animate_score": 0.9,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "a practical guideline: about a day, a few days, a week or two",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b20",
+   "section": "sec4",
+   "job": "distinguish",
+   "delivery": "neutral",
+   "narration": [
+    "It is a guideline, not a rule.",
+    "If a test feels easy, stretch the next gap.",
+    "If it feels hard, bring it closer."
+   ],
+   "on_screen": [
+    "Easy? Stretch the gap",
+    "Hard? Bring it closer"
+   ],
+   "visual_intent": "two peer cards: the easy case and the hard case",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "stretch gaps when recall is easy, shorten when it fails",
+     "fact": "F9"
+    },
+    {
+     "claim": "later reviews can come after longer gaps",
+     "fact": "F8"
+    }
+   ]
+  },
+  {
+   "id": "b21",
+   "section": "sec4",
+   "job": "practice",
+   "delivery": "brisk",
+   "narration": [
+    "And put all three in your calendar,",
+    "before you leave the room."
+   ],
+   "on_screen": [
+    "Self-test"
+   ],
+   "visual_intent": "a calendar page; three self-test entries drop onto their days and tick",
+   "change_over_time": true,
+   "animate_score": 0.5,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "applying the guideline schedule",
+     "fact": "F9"
+    }
+   ]
+  },
+  {
+   "id": "b22",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "warm",
+   "hypothetical": true,
+   "narration": [
+    "Remember Maya?",
+    "After her next workshop,",
+    "she tests herself three times.",
+    "Weeks later, she still has it."
+   ],
+   "on_screen": [
+    "Weeks later"
+   ],
+   "visual_intent": "Maya again, happy; the three ideas return and this time they stay bright",
+   "change_over_time": true,
+   "animate_score": 0.85,
+   "treatment_hint": "motion",
+   "grounding": [
+    {
+     "claim": "Maya is an invented illustration",
+     "hypothetical": true
+    },
+    {
+     "claim": "spaced retrieval supports long-term retention",
+     "fact": "F6"
+    }
+   ]
+  },
+  {
+   "id": "b23",
+   "section": "outro",
+   "job": "consolidate",
+   "delivery": "brisk",
+   "narration": [
+    "So, three things.",
+    "Forgetting starts fast.",
+    "Recall beats rereading.",
+    "And space your tests out.",
+    "Test it, space it, test it again."
+   ],
+   "on_screen": [
+    "Forgetting starts fast",
+    "Recall beats rereading",
+    "Space your tests",
+    "Test it. Space it. Test it again."
+   ],
+   "visual_intent": "three tokens light up in turn, joined by a thread; the pocket rule stamps last",
+   "change_over_time": false,
+   "animate_score": 0.3,
+   "treatment_hint": "template",
+   "grounding": [
+    {
+     "claim": "summary of F2, F4, F6",
+     "fact": "F6"
+    }
+   ]
+  },
+  {
+   "id": "b24",
+   "section": "outro",
+   "job": "payoff",
+   "delivery": "warm",
+   "narration": [
+    "Your next training starts the clock.",
+    "Test it, space it,",
+    "and more of it will stick."
+   ],
+   "on_screen": [
+    "Test it. Space it."
+   ],
+   "visual_intent": "the presenter closes, warm, beside the pocket rule",
+   "change_over_time": false,
+   "animate_score": 0.2,
+   "treatment_hint": "avatar",
+   "grounding": [
+    {
+     "claim": "spaced retrieval improves retention",
+     "fact": "F6"
+    }
+   ]
+  }
+ ]
+}

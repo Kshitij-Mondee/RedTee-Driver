@@ -1,0 +1,169 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "outline",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "concept",
+  "world",
+  "devices",
+  "value_script",
+  "sections"
+ ],
+ "properties": {
+  "concept": {
+   "type": "string",
+   "minLength": 10
+  },
+  "world": {
+   "type": "string",
+   "minLength": 3
+  },
+  "look": {
+   "type": "string"
+  },
+  "devices": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "what",
+     "kind"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "what": {
+      "type": "string"
+     },
+     "kind": {
+      "enum": [
+       "explain",
+       "list",
+       "data",
+       "join",
+       "rest",
+       "callback",
+       "other"
+      ]
+     },
+     "beats": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
+   "minItems": 3,
+   "maxItems": 6
+  },
+  "join_material": {
+   "type": "string"
+  },
+  "value_script": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "from",
+     "band"
+    ],
+    "properties": {
+     "from": {
+      "type": "string"
+     },
+     "band": {
+      "enum": [
+       "light",
+       "mid",
+       "dark"
+      ]
+     },
+     "break": {
+      "type": "boolean"
+     },
+     "accent": {
+      "type": "string"
+     },
+     "why": {
+      "type": "string"
+     }
+    }
+   },
+   "minItems": 1
+  },
+  "sections": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "treatment",
+     "beats"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "treatment": {
+      "type": "string"
+     },
+     "accent_on": {
+      "type": "string"
+     },
+     "world": {
+      "type": "string"
+     },
+     "beats": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "beat",
+        "line"
+       ],
+       "properties": {
+        "beat": {
+         "type": "string"
+        },
+        "line": {
+         "type": "string",
+         "minLength": 5
+        },
+        "builder": {
+         "type": "string"
+        },
+        "device": {
+         "type": "string"
+        },
+        "join": {
+         "type": "string"
+        },
+        "intent": {
+         "type": "string"
+        }
+       }
+      },
+      "minItems": 1
+     }
+    }
+   },
+   "minItems": 1
+  },
+  "alternatives": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "open_questions": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

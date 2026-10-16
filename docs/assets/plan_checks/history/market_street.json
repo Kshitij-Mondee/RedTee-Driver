@@ -1,0 +1,388 @@
+{
+ "scene": "market_street",
+ "camera_spec": {
+  "camera": {
+   "x": 5.6,
+   "y": 0.6,
+   "eye": 1.6,
+   "yaw": -26,
+   "hfov": 55,
+   "horizon_pct": 46.0
+  },
+  "walls": [
+   {
+    "name": "market hall side wall (plain ashlar, y 8.0)",
+    "axis": "y",
+    "at": 8.0
+   }
+  ],
+  "points": {
+   "arch1_L": [
+    -3.0,
+    8,
+    0
+   ],
+   "arch1_R": [
+    -1.0,
+    8,
+    0
+   ],
+   "arch1_crown": [
+    -2.0,
+    8,
+    3.4
+   ],
+   "arch1_spring_R": [
+    -1.0,
+    8,
+    2.4
+   ],
+   "arch2_L": [
+    5.0,
+    8,
+    0
+   ],
+   "arch2_spring_L": [
+    5.0,
+    8,
+    2.4
+   ],
+   "arch2_crown": [
+    6.0,
+    8,
+    3.4
+   ],
+   "board_front_L": [
+    1.0,
+    6.4,
+    0.9
+   ],
+   "board_front_R": [
+    3.4,
+    6.4,
+    0.9
+   ],
+   "board_back_R": [
+    3.4,
+    7.3,
+    0.9
+   ],
+   "board_leg_front_L": [
+    1.05,
+    6.45,
+    0
+   ],
+   "awning_front_L": [
+    0.9,
+    6.2,
+    2.3
+   ],
+   "awning_front_R": [
+    3.5,
+    6.2,
+    2.3
+   ],
+   "awning_back_L": [
+    0.9,
+    7.6,
+    2.0
+   ],
+   "pole_front_L_base": [
+    0.9,
+    6.2,
+    0
+   ],
+   "scales": [
+    2.0,
+    6.8,
+    1.15
+   ],
+   "H_head_top": [
+    2.2,
+    7.6,
+    1.7
+   ],
+   "H_head_centre": [
+    2.2,
+    7.6,
+    1.57
+   ],
+   "H_feet": [
+    2.2,
+    7.6,
+    0
+   ],
+   "C_head_top": [
+    1.9,
+    5.7,
+    1.66
+   ],
+   "C_head_centre": [
+    1.9,
+    5.7,
+    1.53
+   ],
+   "C_feet": [
+    1.9,
+    5.7,
+    0
+   ],
+   "lamp_base": [
+    4.5,
+    5.9,
+    0
+   ],
+   "stall2_board_front_R": [
+    -1.6,
+    6.4,
+    0.9
+   ],
+   "stall2_awning_front_R": [
+    -1.5,
+    6.2,
+    2.3
+   ],
+   "kerb_at_stall": [
+    1.0,
+    6.0,
+    0.12
+   ],
+   "gutter_line": [
+    2.0,
+    5.9,
+    0
+   ],
+   "lamp_lantern": [
+    4.5,
+    5.9,
+    3.2
+   ],
+   "hall_wall_at_frame_top": [
+    2.0,
+    8,
+    4.6
+   ]
+  },
+  "behind": [
+   "H_head_top",
+   "H_head_centre",
+   "C_head_top",
+   "C_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1859,
+   "along_x": -2821,
+   "horizon_y": 497
+  },
+  "points": {
+   "arch1_L": {
+    "x": 166,
+    "y": 780,
+    "where": "frame",
+    "depth": 10.42
+   },
+   "arch1_R": {
+    "x": 441,
+    "y": 806,
+    "where": "frame",
+    "depth": 9.54
+   },
+   "arch1_crown": {
+    "x": 297,
+    "y": 164,
+    "where": "frame",
+    "depth": 9.98
+   },
+   "arch1_spring_R": {
+    "x": 441,
+    "y": 342,
+    "where": "frame",
+    "depth": 9.54
+   },
+   "arch2_L": {
+    "x": 1681,
+    "y": 924,
+    "where": "frame",
+    "depth": 6.91
+   },
+   "arch2_spring_L": {
+    "x": 1681,
+    "y": 283,
+    "where": "frame",
+    "depth": 6.91
+   },
+   "arch2_crown": {
+    "x": 1986,
+    "y": -16,
+    "where": "overscan",
+    "depth": 6.48
+   },
+   "board_front_L": {
+    "x": 554,
+    "y": 675,
+    "where": "frame",
+    "depth": 7.23
+   },
+   "board_front_R": {
+    "x": 1129,
+    "y": 706,
+    "where": "frame",
+    "depth": 6.18
+   },
+   "board_back_R": {
+    "x": 1213,
+    "y": 682,
+    "where": "frame",
+    "depth": 6.99
+   },
+   "board_leg_front_L": {
+    "x": 572,
+    "y": 904,
+    "where": "frame",
+    "depth": 7.25
+   },
+   "awning_front_L": {
+    "x": 500,
+    "y": 315,
+    "where": "frame",
+    "depth": 7.09
+   },
+   "awning_front_R": {
+    "x": 1136,
+    "y": 280,
+    "where": "frame",
+    "depth": 5.95
+   },
+   "awning_back_L": {
+    "x": 705,
+    "y": 408,
+    "where": "frame",
+    "depth": 8.35
+   },
+   "pole_front_L_base": {
+    "x": 500,
+    "y": 913,
+    "where": "frame",
+    "depth": 7.09
+   },
+   "scales": {
+    "x": 826,
+    "y": 613,
+    "where": "frame",
+    "depth": 7.15
+   },
+   "H_head_top": {
+    "x": 963,
+    "y": 473,
+    "where": "frame",
+    "depth": 7.78,
+    "behind": {
+     "wall": "market hall side wall (plain ashlar, y 8.0)",
+     "at": [
+      2.01,
+      8.0,
+      1.71
+     ]
+    }
+   },
+   "H_head_centre": {
+    "x": 963,
+    "y": 504,
+    "where": "frame",
+    "depth": 7.78,
+    "behind": {
+     "wall": "market hall side wall (plain ashlar, y 8.0)",
+     "at": [
+      2.01,
+      8.0,
+      1.57
+     ]
+    }
+   },
+   "H_feet": {
+    "x": 963,
+    "y": 876,
+    "where": "frame",
+    "depth": 7.78
+   },
+   "C_head_top": {
+    "x": 636,
+    "y": 479,
+    "where": "frame",
+    "depth": 6.21,
+    "behind": {
+     "wall": "market hall side wall (plain ashlar, y 8.0)",
+     "at": [
+      0.23,
+      8.0,
+      1.69
+     ]
+    }
+   },
+   "C_head_centre": {
+    "x": 636,
+    "y": 518,
+    "where": "frame",
+    "depth": 6.21,
+    "behind": {
+     "wall": "market hall side wall (plain ashlar, y 8.0)",
+     "at": [
+      0.23,
+      8.0,
+      1.5
+     ]
+    }
+   },
+   "C_feet": {
+    "x": 636,
+    "y": 972,
+    "where": "frame",
+    "depth": 6.21
+   },
+   "lamp_base": {
+    "x": 1429,
+    "y": 1059,
+    "where": "frame",
+    "depth": 5.25
+   },
+   "stall2_board_front_R": {
+    "x": 94,
+    "y": 651,
+    "where": "frame",
+    "depth": 8.37
+   },
+   "stall2_awning_front_R": {
+    "x": 71,
+    "y": 338,
+    "where": "frame",
+    "depth": 8.15
+   },
+   "kerb_at_stall": {
+    "x": 486,
+    "y": 894,
+    "where": "frame",
+    "depth": 6.87
+   },
+   "gutter_line": {
+    "x": 695,
+    "y": 962,
+    "where": "frame",
+    "depth": 6.34
+   },
+   "lamp_lantern": {
+    "x": 1429,
+    "y": -66,
+    "where": "overscan",
+    "depth": 5.25
+   },
+   "hall_wall_at_frame_top": {
+    "x": 962,
+    "y": -175,
+    "where": "outside",
+    "depth": 8.23
+   }
+  }
+ }
+}

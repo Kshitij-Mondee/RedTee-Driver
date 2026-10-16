@@ -1,0 +1,253 @@
+{
+  "concept": "One Report, one laptop, on a plain light field: the backup system builds itself on screen, copy by copy (laptop, external drive, cloud), each copy proven by a failure it survives, while the 3, 2 and 1 marks light one by one; the opening failure is replayed and survived at the close.",
+  "world": "A plain light field (corporate-clean, dot grid, quiet blue mesh) holding one system board: laptop at left centre, external drive beside it on a drawn desk line, cloud far right, the 3-2-1 rail of tiles under them. Stations: board (0,0) for the system; offline (0,1300) a detail below the board for the connected-versus-offline contrast; bag (2400,0) the check's own place; yours (4800,0) the closing checklist. No people.",
+  "devices": [
+    {
+      "id": "system_board",
+      "what": "one persistent board on the plain light field: laptop, external drive and cloud, each a drawn kit object holding its own Report copy; held across beats with continue joins and changed in state on the spoken word",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b10",
+        "b13"
+      ]
+    },
+    {
+      "id": "rule_marks",
+      "what": "the 3, 2 and 1 marks as three physical tiles on a rail under the board: unlit (surface2), lit (accent while named, ink after), missing (dashed outline with a neg tag); lit one by one, then reused unlit as the check and as the closing checklist",
+      "kind": "list",
+      "beats": [
+        "b03",
+        "b05",
+        "b06",
+        "b08",
+        "b10",
+        "b11",
+        "b12",
+        "b14"
+      ]
+    },
+    {
+      "id": "same_place_boundary",
+      "what": "a rounded dashed boundary drawn round everything in one place (the desk, later the bag); one event fills the whole boundary and takes every copy inside it",
+      "kind": "explain",
+      "beats": [
+        "b07",
+        "b08",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "failure_replay",
+      "what": "the opening failure (the laptop drive dies, the report empties to an outline) replayed exactly in the payoff, this time survived",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b13"
+      ]
+    },
+    {
+      "id": "copy_handoff",
+      "what": "join material, handoff, used once: the restored Report carries from the board into the closing checklist",
+      "kind": "join",
+      "beats": [
+        "b13",
+        "b14"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "pale open: one laptop, one file on the bare light field"
+    },
+    {
+      "from": "b05",
+      "band": "mid",
+      "why": "slightly richer middle as the system fills in; b07's event fills the boundary in slate, the one darker moment"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "why": "the check in its own place on a field2 band"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "why": "lift at the close: the failure survived, a pos Restored tag, the checklist"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "bespoke motion on the system board",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "cut"
+          },
+          "line": "One Report file sits inside one laptop on the bare field; a Due tomorrow tag hangs from it."
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "The laptop's drive fails (screen goes dark, a neg Drive failed tag); the Report empties to an outline."
+        }
+      ]
+    },
+    {
+      "id": "promise",
+      "treatment": "bespoke, a label on the held outline and the 3-2-1 rail arrives",
+      "beats": [
+        {
+          "beat": "b03",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "The empty outline is labelled Single point of failure; the 3-2-1 rail of three unlit tiles arrives large beside it."
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "bespoke, four failures land on the single copy",
+      "beats": [
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "The Report is whole again; four failure chips land on it one per word (Drive failure, Lost or stolen, Deleted by mistake, Ransomware), each emptying it."
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "bespoke, the board grows copy by copy; one detail station below for offline",
+      "beats": [
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "The Report copies twice into three files in a row; one is struck out and two remain whole; tile 3 lights."
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "A copy travels from the laptop to an external drive; a fault strikes the laptop only, the drive's copy stays whole; tile 2 lights."
+        },
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "A dashed Same place boundary draws round the desk; one event fills the boundary in slate and both copies empty together."
+        },
+        {
+          "beat": "b08",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "The camera widens; a copy travels out of the boundary to a cloud far right, beyond the event's reach; tile 1 lights."
+        },
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "offline",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "Below the board: laptop with two backup drives, one on a cable (connected), one unplugged (offline); a lock travels the cable into the connected copy, the offline copy stays clean."
+        },
+        {
+          "beat": "b10",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "camera"
+          },
+          "line": "Back on the board at rest: laptop, external drive and cloud each with a whole copy, tiles 3, 2 and 1 lit with their labels."
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "bespoke check in its own place: the bag",
+      "beats": [
+        {
+          "beat": "b11",
+          "kind": "bespoke",
+          "station": "bag",
+          "join_in": {
+            "type": "cut"
+          },
+          "line": "A bag outline holds a laptop and a USB drive, each with a Report copy; the 3-2-1 tiles sit unlit below; the question waits."
+        },
+        {
+          "beat": "b12",
+          "kind": "bespoke",
+          "station": "bag",
+          "join_in": {
+            "type": "continue"
+          },
+          "line": "Tiles 3 and 2 light, tile 1 stays a dashed outline tagged Missing: 1 offsite; then the bag slides off the field with both copies."
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "bespoke replay on the board, then the checklist",
+      "beats": [
+        {
+          "beat": "b13",
+          "kind": "bespoke",
+          "station": "board",
+          "join_in": {
+            "type": "cut"
+          },
+          "line": "The b02 failure replays exactly on the laptop; this time the Report travels back from the external drive and opens whole, a pos Restored tag; the cloud copy stays whole."
+        },
+        {
+          "beat": "b14",
+          "kind": "bespoke",
+          "station": "yours",
+          "join_in": {
+            "type": "handoff"
+          },
+          "line": "The restored Report carries into a checklist: three file objects, each beside the 3, 2 and 1 tiles, unticked, waiting for the viewer."
+        }
+      ]
+    }
+  ]
+}

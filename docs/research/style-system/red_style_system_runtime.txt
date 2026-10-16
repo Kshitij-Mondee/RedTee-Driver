@@ -1,0 +1,45 @@
+tests/suites/style_system.py, browser tests on the runtime BEFORE WS6 (LOOM_TEST_RUNTIME=../Video-Engine-backup-2026-10-08/runtime), 2026-10-08.
+First run (as captured):
+  PASS  primitive_style_a_second_travel_does_not_jump_at_load  (0.5 s (200.0, 200.0), 2 s (800.0, 200.0), 3.5 s (800.0, 700.0) (seeked out of order))
+  FAIL  primitive_style_characters_bottom_and_contact_shadow_follow_the_pack: characters.bottom = neg did not reach the rig: ['#EAF0F7', '#C9CED4', '#0F1B2D', '#0D1727', '#F1CCA7', '#D4B493', '#2A1E17', '#FFFFFF']
+  FAIL  primitive_style_document_paper_variant_and_the_counter: {'page': '#2A221C', 'words': ['#EEE6D8'], 'tabular': '', 'errs': []}
+  FAIL  primitive_style_fx_spotlight_and_vignette_follow_the_pack: outside alpha: default 242, strength 0.25 242 (want about 0.25/0.55 of it)
+  FAIL  primitive_style_glow_is_one_gradient_and_depth_ids_are_unique: one gradient disc and no stepped rings (the core is apart): {'gradientCircles': 0, 'rings': 6, 'dup': ['dp1g36', 'dp1g14', 'dp1cone', 'dp1cb'], 'burst': ['#FF4F8B', '#FF9B3D', '#FFD24A', '#FFF3C9']}
+  PASS  primitive_style_lab_file_resolves_its_cues  (title 0.9, 'gone home' 6.00, '2.5' 2.5, unknown word not a cue)
+  FAIL  primitive_style_m_draw_draws_outlines_first_and_keeps_dashes_and_opacity: the sketch rect has fill and stroke paths (data-set): {'fill': [], 'stroke': [{'drawn': 0.02101562608647778, 'op': 1, 'own': '0.45'}, {'drawn': 0, 'op': 1, 'own': None}], 'dash': {'op': 1, 'da': '600 624'}}
+  FAIL  primitive_style_materials_and_roles_paint_their_call_sites: caption_active (#FCD34D) did not reach: ['office', 'kick', 'msg', 'thread']
+  FAIL  primitive_style_no_pack_draws_a_weight_its_font_did_not_load: ['corporate-clean: Space Grotesk 300 x3 (loaded: [500, 700])', 'corporate-clean: Space Grotesk 400 x3 (loaded: [500, 700])', 'corporate-clean: Space Grotesk 600 x3 (loaded: [500, 700])', 'corporate-clean: Space Grotesk 800 x3 (loaded: [500, 700])', 'corporate-
+  FAIL  primitive_style_sketch_arrows_are_open_strokes_and_rects_keep_their_radius: {'shaft': False, 'head': False, 'filledHead': False, 'strokesOnly': False, 'corner': 0}
+  FAIL  primitive_style_untouched_packs_draw_byte_identical_to_before: an untouched pack draws differently from before WS6: story-cartoon/lab_places: 165005 bytes, before 165007
+  PASS  browser probe
+2 passed, 9 failed, 0 skipped  [subset: 11 of 247]
+
+Corrections after that run:
+- primitive_style_a_second_travel_does_not_jump_at_load PASSED on the old runtime because its first seek was 3.5 s:
+  a forward seek renders both legs in order and hides the load state. With the early seek first ([0.5, 3.5, 2.0]):
+  old FAIL {0.5: (800.0, 200.0), ...} (the element sits at the second leg's start), new PASS (200, 200).
+- primitive_style_lab_file_resolves_its_cues PASSED above because it builds the page with loom/lab.py from the
+  current tree; on the old Python (red_style_system_python.txt): TypeError page() got an unexpected keyword 'file'.
+- primitive_style_untouched_packs_draw_byte_identical_to_before is the guard that an untouched pack draws the same
+  bytes as before WS6, so it PASSES on the old runtime by construction (its hashes were recorded from it). Its first
+  run failed by 2 bytes: GSAP's data-svg-origin memo (a getBBox) came back 318.06 or 317.67 between runs of the SAME
+  page on either runtime (10 renders: 6 one way, 4 the other). The memo is now left out of the hash; the drawing is
+  compared whole. After: 3 of 3 runs PASS on the new runtime, 2 of 2 on the old one.
+- The other 8 browser tests FAIL on the old runtime (above) and PASS on the new one.
+
+Added after (same method):
+- primitive_style_every_role_and_material_site_follows_the_pack: old FAIL "accent3 (#64748B) did not reach: [stat_value,
+  quiz_letter, recap_rule, date, verdict, chapter_kicker, ui_mark, button, person_cloth, chair, screen]"; new PASS.
+- primitive_style_characters_bottom_and_contact_shadow_follow_the_pack now also checks characters.white (eye whites).
+- primitive_style_document_paper_variant_and_the_counter now also checks the pack's own templates["document.page"].variant.
+- primitive_style_turn_card_words_read_on_their_card_in_every_pack (found by the A4 proof: whiteboard's lab_story_set
+  turn card had no visible words): old FAIL ['whiteboard: #1E2430 on #1E2430 = 1.00:1']; new PASS (16.1, 12.6, 18.2,
+  17.0, 15.0 : 1).
+- primitive_style_every_role_and_material_site_follows_the_pack grew with the proof: books, plant, pot, objects,
+  turn_card, monitor, avatar (18 sites); old FAIL on every site, new PASS.
+- primitive_style_lab_page_draws_the_vignette_under_the_drawing: see red_style_system_python.txt.
+- primitive_style_person_cloth_keeps_two_people_apart (found by the full suite: one pack person_cloth token put both
+  of a dialogue's non-cast people in the same clothes and broke primitive_tpl_a_cast_member_has_one_look_in_every_
+  template's control): old runtime FAIL {'list': ['accent', 'accent4'], 'one': [...], 'none': [...]} (no pack role at
+  all); new PASS {'list': ['cloth', 'cloth2'], 'one': ['muted', 'muted'], 'none': ['accent', 'accent4']}. The template
+  test's control now derives the left side's default from the pack.

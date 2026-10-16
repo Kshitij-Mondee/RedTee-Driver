@@ -1,0 +1,873 @@
+{
+ "scene": "mission_control",
+ "camera_spec": {
+  "camera": {
+   "x": 7.5,
+   "y": 0.4,
+   "eye": 1.6,
+   "yaw": 8.0,
+   "hfov": 60.0,
+   "horizon_pct": 46.0
+  },
+  "walls": [
+   {
+    "name": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+    "axis": "y",
+    "at": 16
+   },
+   {
+    "name": "right side wall",
+    "axis": "x",
+    "at": 20
+   }
+  ],
+  "points": {
+   "screen1_bl": [
+    1.9,
+    16,
+    2.6
+   ],
+   "screen1_tr": [
+    7.1,
+    16,
+    5.2
+   ],
+   "screen2_bl": [
+    7.4,
+    16,
+    2.6
+   ],
+   "screen2_tr": [
+    12.6,
+    16,
+    5.2
+   ],
+   "screen3_bl": [
+    12.9,
+    16,
+    2.6
+   ],
+   "screen3_tr": [
+    18.1,
+    16,
+    5.2
+   ],
+   "front_wall_floor_l": [
+    0,
+    16,
+    0
+   ],
+   "front_wall_floor_r": [
+    20,
+    16,
+    0
+   ],
+   "front_wall_ceiling_l": [
+    0,
+    16,
+    6.0
+   ],
+   "front_wall_ceiling_r": [
+    20,
+    16,
+    6.0
+   ],
+   "right_wall_front_floor": [
+    20,
+    16,
+    0
+   ],
+   "right_wall_back_floor": [
+    20,
+    1,
+    0
+   ],
+   "right_wall_back_ceiling": [
+    20,
+    1,
+    5.6
+   ],
+   "row1_l_mon_top": [
+    3,
+    12.5,
+    1.25
+   ],
+   "row1_r_mon_top": [
+    17,
+    12.5,
+    1.25
+   ],
+   "row1_l_desk_front": [
+    3,
+    13.3,
+    0.75
+   ],
+   "row1_r_desk_back": [
+    17,
+    12.5,
+    0.75
+   ],
+   "row1_l_floor": [
+    3,
+    13.3,
+    0
+   ],
+   "row2_l_mon_top": [
+    3,
+    9.5,
+    1.25
+   ],
+   "row2_r_mon_top": [
+    17,
+    9.5,
+    1.25
+   ],
+   "row2_l_desk_front": [
+    3,
+    10.3,
+    0.75
+   ],
+   "row2_r_desk_back": [
+    17,
+    9.5,
+    0.75
+   ],
+   "row2_l_floor": [
+    3,
+    10.3,
+    0
+   ],
+   "row3_l_mon_top": [
+    3,
+    6.5,
+    1.25
+   ],
+   "row3_r_mon_top": [
+    17,
+    6.5,
+    1.25
+   ],
+   "row3_l_desk_front": [
+    3,
+    7.3,
+    0.75
+   ],
+   "row3_r_desk_back": [
+    17,
+    6.5,
+    0.75
+   ],
+   "row3_l_floor": [
+    3,
+    7.3,
+    0
+   ],
+   "row4_l_mon_top": [
+    3,
+    3.5,
+    1.25
+   ],
+   "row4_r_mon_top": [
+    17,
+    3.5,
+    1.25
+   ],
+   "row4_l_desk_front": [
+    3,
+    4.3,
+    0.75
+   ],
+   "row4_r_desk_back": [
+    17,
+    3.5,
+    0.75
+   ],
+   "row4_l_floor": [
+    3,
+    4.3,
+    0
+   ],
+   "fd_console_mon": [
+    10,
+    6.5,
+    1.25
+   ],
+   "A_row4_mon_in_front": [
+    7.2,
+    3.5,
+    1.25
+   ],
+   "A_row4_desk_front_edge": [
+    7.2,
+    4.3,
+    0.75
+   ],
+   "B_row4_mon_in_front": [
+    9.4,
+    3.5,
+    1.25
+   ],
+   "B_row4_desk_front_edge": [
+    9.4,
+    4.3,
+    0.75
+   ],
+   "row1_mon_x5": [
+    5,
+    12.5,
+    1.25
+   ],
+   "row1_mon_x10": [
+    10,
+    12.5,
+    1.25
+   ],
+   "row1_mon_x15": [
+    15,
+    12.5,
+    1.25
+   ],
+   "row2_mon_x5": [
+    5,
+    9.5,
+    1.25
+   ],
+   "row2_mon_x10": [
+    10,
+    9.5,
+    1.25
+   ],
+   "row2_mon_x15": [
+    15,
+    9.5,
+    1.25
+   ],
+   "row3_mon_x5": [
+    5,
+    6.5,
+    1.25
+   ],
+   "row3_mon_x10": [
+    10,
+    6.5,
+    1.25
+   ],
+   "row3_mon_x15": [
+    15,
+    6.5,
+    1.25
+   ],
+   "row4_mon_x5": [
+    5,
+    3.5,
+    1.25
+   ],
+   "row4_mon_x10": [
+    10,
+    3.5,
+    1.25
+   ],
+   "row4_mon_x15": [
+    15,
+    3.5,
+    1.25
+   ],
+   "A_head_top": [
+    7.2,
+    5.3,
+    1.75
+   ],
+   "A_head_c": [
+    7.2,
+    5.3,
+    1.63
+   ],
+   "A_chin": [
+    7.2,
+    5.3,
+    1.52
+   ],
+   "A_feet": [
+    7.2,
+    5.3,
+    0
+   ],
+   "B_head_top": [
+    9.4,
+    4.9,
+    1.75
+   ],
+   "B_head_c": [
+    9.4,
+    4.9,
+    1.63
+   ],
+   "B_chin": [
+    9.4,
+    4.9,
+    1.52
+   ],
+   "B_feet": [
+    9.4,
+    4.9,
+    0
+   ],
+   "row4_desk_l_end_front": [
+    3,
+    4.3,
+    0.75
+   ],
+   "row4_desk_x6_front": [
+    6,
+    4.3,
+    0.75
+   ],
+   "row4_desk_x11_front": [
+    11,
+    4.3,
+    0.75
+   ],
+   "row4_mon_x6": [
+    6,
+    3.5,
+    1.25
+   ],
+   "row4_mon_x11": [
+    11,
+    3.5,
+    1.25
+   ],
+   "row4_chair_x9_back": [
+    9.4,
+    2.6,
+    1.1
+   ],
+   "row4_floor_x9": [
+    9.4,
+    2.4,
+    0
+   ],
+   "row2_mon_x8": [
+    8,
+    9.5,
+    1.25
+   ],
+   "row1_mon_x12": [
+    12,
+    12.5,
+    1.25
+   ],
+   "clock_strip_l": [
+    4,
+    16,
+    5.45
+   ],
+   "clock_strip_r": [
+    16,
+    16,
+    5.75
+   ],
+   "left_wall_front": [
+    0,
+    16,
+    0
+   ],
+   "door_left_wall": [
+    0,
+    10,
+    2.1
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_c",
+   "A_chin",
+   "B_head_top",
+   "B_head_c",
+   "B_chin"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 726,
+   "along_x": 12791,
+   "horizon_y": 497
+  },
+  "points": {
+   "screen1_bl": {
+    "x": 85,
+    "y": 383,
+    "where": "frame",
+    "depth": 14.67
+   },
+   "screen1_tr": {
+    "x": 683,
+    "y": 108,
+    "where": "frame",
+    "depth": 15.39
+   },
+   "screen2_bl": {
+    "x": 715,
+    "y": 389,
+    "where": "frame",
+    "depth": 15.43
+   },
+   "screen2_tr": {
+    "x": 1256,
+    "y": 126,
+    "where": "frame",
+    "depth": 16.16
+   },
+   "screen3_bl": {
+    "x": 1286,
+    "y": 394,
+    "where": "frame",
+    "depth": 16.2
+   },
+   "screen3_tr": {
+    "x": 1778,
+    "y": 143,
+    "where": "frame",
+    "depth": 16.92
+   },
+   "front_wall_floor_l": {
+    "x": -148,
+    "y": 681,
+    "where": "overscan",
+    "depth": 14.4
+   },
+   "front_wall_floor_r": {
+    "x": 1947,
+    "y": 652,
+    "where": "overscan",
+    "depth": 17.19
+   },
+   "front_wall_ceiling_l": {
+    "x": -148,
+    "y": -11,
+    "where": "overscan",
+    "depth": 14.4
+   },
+   "front_wall_ceiling_r": {
+    "x": 1947,
+    "y": 71,
+    "where": "overscan",
+    "depth": 17.19
+   },
+   "right_wall_front_floor": {
+    "x": 1947,
+    "y": 652,
+    "where": "overscan",
+    "depth": 17.19
+   },
+   "right_wall_back_floor": {
+    "x": 9720,
+    "y": 1637,
+    "where": "outside",
+    "depth": 2.33
+   },
+   "right_wall_back_ceiling": {
+    "x": 9720,
+    "y": -2353,
+    "where": "outside",
+    "depth": 2.33
+   },
+   "row1_l_mon_top": {
+    "x": 61,
+    "y": 548,
+    "where": "frame",
+    "depth": 11.36
+   },
+   "row1_r_mon_top": {
+    "x": 1925,
+    "y": 541,
+    "where": "overscan",
+    "depth": 13.3
+   },
+   "row1_l_desk_front": {
+    "x": 104,
+    "y": 613,
+    "where": "frame",
+    "depth": 12.15
+   },
+   "row1_r_desk_back": {
+    "x": 1925,
+    "y": 603,
+    "where": "overscan",
+    "depth": 13.3
+   },
+   "row1_l_floor": {
+    "x": 104,
+    "y": 716,
+    "where": "frame",
+    "depth": 12.15
+   },
+   "row2_l_mon_top": {
+    "x": -175,
+    "y": 566,
+    "where": "overscan",
+    "depth": 8.39
+   },
+   "row2_r_mon_top": {
+    "x": 2270,
+    "y": 553,
+    "where": "outside",
+    "depth": 10.33
+   },
+   "row2_l_desk_front": {
+    "x": -97,
+    "y": 651,
+    "where": "overscan",
+    "depth": 9.18
+   },
+   "row2_r_desk_back": {
+    "x": 2270,
+    "y": 634,
+    "where": "outside",
+    "depth": 10.33
+   },
+   "row2_l_floor": {
+    "x": -97,
+    "y": 787,
+    "where": "overscan",
+    "depth": 9.18
+   },
+   "row3_l_mon_top": {
+    "x": -669,
+    "y": 604,
+    "where": "outside",
+    "depth": 5.41
+   },
+   "row3_r_mon_top": {
+    "x": 2893,
+    "y": 576,
+    "where": "outside",
+    "depth": 7.36
+   },
+   "row3_l_desk_front": {
+    "x": -491,
+    "y": 725,
+    "where": "outside",
+    "depth": 6.21
+   },
+   "row3_r_desk_back": {
+    "x": 2893,
+    "y": 689,
+    "where": "outside",
+    "depth": 7.36
+   },
+   "row3_l_floor": {
+    "x": -491,
+    "y": 925,
+    "where": "outside",
+    "depth": 6.21
+   },
+   "row4_l_mon_top": {
+    "x": -2366,
+    "y": 735,
+    "where": "outside",
+    "depth": 2.44
+   },
+   "row4_r_mon_top": {
+    "x": 4358,
+    "y": 629,
+    "where": "outside",
+    "depth": 4.39
+   },
+   "row4_l_desk_front": {
+    "x": -1609,
+    "y": 934,
+    "where": "outside",
+    "depth": 3.24
+   },
+   "row4_r_desk_back": {
+    "x": 4358,
+    "y": 819,
+    "where": "outside",
+    "depth": 4.39
+   },
+   "row4_l_floor": {
+    "x": -1609,
+    "y": 1319,
+    "where": "outside",
+    "depth": 3.24
+   },
+   "fd_console_mon": {
+    "x": 1383,
+    "y": 588,
+    "where": "frame",
+    "depth": 6.39
+   },
+   "A_row4_mon_in_front": {
+    "x": 560,
+    "y": 689,
+    "where": "frame",
+    "depth": 3.03
+   },
+   "A_row4_desk_front_edge": {
+    "x": 594,
+    "y": 867,
+    "where": "frame",
+    "depth": 3.82
+   },
+   "B_row4_mon_in_front": {
+    "x": 1683,
+    "y": 671,
+    "where": "frame",
+    "depth": 3.33
+   },
+   "B_row4_desk_front_edge": {
+    "x": 1499,
+    "y": 839,
+    "where": "frame",
+    "depth": 4.13
+   },
+   "row1_mon_x5": {
+    "x": 366,
+    "y": 547,
+    "where": "frame",
+    "depth": 11.63
+   },
+   "row1_mon_x10": {
+    "x": 1067,
+    "y": 544,
+    "where": "frame",
+    "depth": 12.33
+   },
+   "row1_mon_x15": {
+    "x": 1693,
+    "y": 541,
+    "where": "frame",
+    "depth": 13.03
+   },
+   "row2_mon_x5": {
+    "x": 242,
+    "y": 564,
+    "where": "frame",
+    "depth": 8.66
+   },
+   "row2_mon_x10": {
+    "x": 1175,
+    "y": 559,
+    "where": "frame",
+    "depth": 9.36
+   },
+   "row2_mon_x15": {
+    "x": 1979,
+    "y": 555,
+    "where": "overscan",
+    "depth": 10.06
+   },
+   "row3_mon_x5": {
+    "x": -11,
+    "y": 599,
+    "where": "overscan",
+    "depth": 5.69
+   },
+   "row3_mon_x10": {
+    "x": 1383,
+    "y": 588,
+    "where": "frame",
+    "depth": 6.39
+   },
+   "row3_mon_x15": {
+    "x": 2504,
+    "y": 579,
+    "where": "outside",
+    "depth": 7.08
+   },
+   "row4_mon_x5": {
+    "x": -816,
+    "y": 711,
+    "where": "outside",
+    "depth": 2.72
+   },
+   "row4_mon_x10": {
+    "x": 1955,
+    "y": 667,
+    "where": "overscan",
+    "depth": 3.42
+   },
+   "row4_mon_x15": {
+    "x": 3788,
+    "y": 638,
+    "where": "outside",
+    "depth": 4.11
+   },
+   "A_head_top": {
+    "x": 622,
+    "y": 445,
+    "where": "frame",
+    "depth": 4.81,
+    "behind": {
+     "wall": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+     "at": [
+      6.54,
+      16.0,
+      2.08
+     ]
+    }
+   },
+   "A_head_c": {
+    "x": 622,
+    "y": 486,
+    "where": "frame",
+    "depth": 4.81,
+    "behind": {
+     "wall": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+     "at": [
+      6.54,
+      16.0,
+      1.7
+     ]
+    }
+   },
+   "A_chin": {
+    "x": 622,
+    "y": 524,
+    "where": "frame",
+    "depth": 4.81,
+    "behind": {
+     "wall": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+     "at": [
+      6.54,
+      16.0,
+      1.35
+     ]
+    }
+   },
+   "A_feet": {
+    "x": 622,
+    "y": 1050,
+    "where": "frame",
+    "depth": 4.81
+   },
+   "B_head_top": {
+    "x": 1402,
+    "y": 444,
+    "where": "frame",
+    "depth": 4.72,
+    "behind": {
+     "wall": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+     "at": [
+      14.09,
+      16.0,
+      2.12
+     ]
+    }
+   },
+   "B_head_c": {
+    "x": 1402,
+    "y": 486,
+    "where": "frame",
+    "depth": 4.72,
+    "behind": {
+     "wall": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+     "at": [
+      14.09,
+      16.0,
+      1.7
+     ]
+    }
+   },
+   "B_chin": {
+    "x": 1402,
+    "y": 525,
+    "where": "frame",
+    "depth": 4.72,
+    "behind": {
+     "wall": "front wall (big screens from z 2.6 to 5.2; plain panels below)",
+     "at": [
+      14.09,
+      16.0,
+      1.32
+     ]
+    }
+   },
+   "B_feet": {
+    "x": 1402,
+    "y": 1060,
+    "where": "frame",
+    "depth": 4.72
+   },
+   "row4_desk_l_end_front": {
+    "x": -1609,
+    "y": 934,
+    "where": "outside",
+    "depth": 3.24
+   },
+   "row4_desk_x6_front": {
+    "x": 37,
+    "y": 884,
+    "where": "frame",
+    "depth": 3.65
+   },
+   "row4_desk_x11_front": {
+    "x": 2078,
+    "y": 822,
+    "where": "overscan",
+    "depth": 4.35
+   },
+   "row4_mon_x6": {
+    "x": -154,
+    "y": 700,
+    "where": "overscan",
+    "depth": 2.86
+   },
+   "row4_mon_x11": {
+    "x": 2379,
+    "y": 660,
+    "where": "outside",
+    "depth": 3.56
+   },
+   "row4_chair_x9_back": {
+    "x": 2032,
+    "y": 837,
+    "where": "overscan",
+    "depth": 2.44
+   },
+   "row4_floor_x9": {
+    "x": 2147,
+    "y": 1682,
+    "where": "outside",
+    "depth": 2.24
+   },
+   "row2_mon_x8": {
+    "x": 819,
+    "y": 561,
+    "where": "frame",
+    "depth": 9.08
+   },
+   "row1_mon_x12": {
+    "x": 1326,
+    "y": 543,
+    "where": "frame",
+    "depth": 12.61
+   },
+   "clock_strip_l": {
+    "x": 334,
+    "y": 69,
+    "where": "frame",
+    "depth": 14.96
+   },
+   "clock_strip_r": {
+    "x": 1584,
+    "y": 82,
+    "where": "frame",
+    "depth": 16.63
+   },
+   "left_wall_front": {
+    "x": -148,
+    "y": 681,
+    "where": "overscan",
+    "depth": 14.4
+   },
+   "door_left_wall": {
+    "x": -762,
+    "y": 399,
+    "where": "outside",
+    "depth": 8.46
+   }
+  }
+ }
+}

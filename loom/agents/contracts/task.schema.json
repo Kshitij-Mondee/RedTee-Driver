@@ -1,0 +1,95 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "task",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "task_id",
+  "role",
+  "project",
+  "stage",
+  "model",
+  "limits"
+ ],
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "role": {
+   "type": "string"
+  },
+  "project": {
+   "type": "string"
+  },
+  "stage": {
+   "type": "string"
+  },
+  "target": {
+   "type": "string"
+  },
+  "beat": {
+   "type": "string"
+  },
+  "inputs": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "path"
+    ],
+    "properties": {
+     "path": {
+      "type": "string"
+     },
+     "sha": {
+      "type": "string"
+     },
+     "why": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "model": {
+   "type": "string"
+  },
+  "effort": {
+   "enum": [
+    "low",
+    "medium",
+    "high",
+    null
+   ]
+  },
+  "limits": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "turns": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "tool_calls": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "max_tokens": {
+     "type": "integer",
+     "minimum": 256
+    },
+    "usd": {
+     "type": "number",
+     "minimum": 0
+    },
+    "seconds": {
+     "type": "number",
+     "minimum": 1
+    },
+    "repairs": {
+     "type": "integer",
+     "minimum": 0
+    }
+   }
+  }
+ }
+}

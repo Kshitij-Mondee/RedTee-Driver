@@ -1,0 +1,427 @@
+{
+  "ok": false,
+  "errors": [
+    "runtime held_missing: b02: no element \"left\" in previous scene",
+    "runtime held_missing: b02: no element \"right\" in previous scene",
+    "runtime held_missing: b02: no element \"lines\" in previous scene",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Interrupted 3 times\"",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Observable actions\"",
+    "runtime tight_inset: text sits 6.0px from the edge of its shape (needs 7.6px): \"Pause and decide\"",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Client pitch\"",
+    "runtime icon_missing: icon not bundled: undefined",
+    "runtime text_outside_element: text leaves element \"sat_1\" (left 26px, right 27px, bottom 50px): \"Objective impact\"",
+    "runtime icon_missing: icon not bundled: undefined",
+    "runtime text_outside_element: text leaves element \"sat_2\" (left 6px, right 5px, bottom 49px): \"Task or team\"",
+    "runtime text_overflow: text does not fit at the lead floor (36px): \"Observed behavior\"",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Objective consequences\"",
+    "runtime icon_missing: icon not bundled: leave",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Leaves early\"",
+    "hf layout content_overlap @ 293.137: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(19) > svg:nth-of-type(1) > g:nth]",
+    "hf layout content_overlap @ 294.669: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(19) > svg:nth-of-type(1) > g:nth]",
+    "hf layout content_overlap @ 297.222: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(19) > svg:nth-of-type(1) > g:nth]",
+    "hf layout content_overlap @ 297.222: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(19) > svg:nth-of-type(1) > g:nth]",
+    "hf contrast contrast_aa_failure @ 6.373: Contrast is 2.89:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 70.103: Contrast is 2.8:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 146.579: Contrast is 2.79:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 223.055: Contrast is 2.8:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "b16: words cut by the frame edge at 143.6s: \"Observed\" at [1755, 960, 2085, 1058], \"behavior\" at [1772, 1057, 2068, 1155] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b31: words cut by the frame edge at 277.7s: \"Relationship stays intact\" at [1063, 713, 2781, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b32: words cut by the frame edge at 283.7s: \"How can we approach this?\" at [1140, 398, 2128, 502], \"Relationship stays intact\" at [1063, 713, 2780, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b33: words cut by the frame edge at 291.4s: \"Propose approach\" at [1700, 398, 2351, 502], \"Relationship stays intact\" at [1063, 713, 2780, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b34: words cut by the frame edge at 299.4s: \"Relationship stays intact\" at [1063, 713, 2780, 973] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b31: empty frame for 2 sampled moment(s) from 273.5s to 277.9s (edge density < 0.003) while the voice is speaking; something the words are about must be on screen (or declare intent: rest / hold, or punctuation for a run of 1.2 s or less)"
+  ],
+  "warnings": [
+    "compose: no audio/mix.wav yet: using the bare narration (run the mix)",
+    "b02: 6.6s static hold from 8.7s",
+    "b05: 6.9s static hold from 31.3s",
+    "b10: 6.8s static hold from 81.1s",
+    "b13: 6.6s static hold from 111.3s",
+    "b16: 5.4s static hold from 130.4s",
+    "b18: 5.8s static hold from 155.8s",
+    "b21: 5.0s static hold from 177.4s",
+    "b23: 5.0s static hold from 198.9s",
+    "b33: 5.4s static hold from 286.3s",
+    "b08: \"Specific\" is readable for 0.60s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b13: \"Why not A? It assumes they do not care.\" is readable for 1.69s but 9 word(s) need 2.70s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b27: \"Future\" is readable for 0.66s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b27: \"Now what\" is readable for 0.66s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b30: \"Future\" is readable for 0.40s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b30: \"Next pitch\" is readable for 0.40s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: template_share = 0.629 is worse than the worst baseline lesson (0.517): it grew",
+    "variety: one_radius_share = 0.388 is above the baseline median (0.2)",
+    "hf layout text_box_overflow @ 286.785: Text extends outside its nearest visual/container box. [g.lm-in > text:nth-of-type(1) > tspan:nth-of-type(1)]",
+    "hf layout text_box_overflow @ 299.531: Text extends outside its nearest visual/container box. [g.lm-in > text:nth-of-type(1) > tspan:nth-of-type(1)]",
+    "hf contrast contrast_aa_failure @ 6.373: Contrast is 2.12:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 146.579: Contrast is 2.12:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 223.055: Contrast is 2.12:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 299.531: Contrast is 2.12:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-t]",
+    "hf contrast contrast_aa_failure @ 299.531: Contrast is 2.76:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-t]",
+    "b16: sparse frame (median edge density 0.0048 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b31: sparse frame (median edge density 0.0027 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b33: sparse frame (median edge density 0.0136 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b34: sparse frame (median edge density 0.0156 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b06: value script says 'dark' but the frames measure brightness 0.75 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b07: value script says 'dark' but the frames measure brightness 0.46 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b08: value script says 'dark' but the frames measure brightness 0.78 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b09: value script says 'dark' but the frames measure brightness 0.76 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b10: value script says 'dark' but the frames measure brightness 0.67 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b11: value script says 'dark' but the frames measure brightness 0.78 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b12: value script says 'dark' but the frames measure brightness 0.78 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b13: value script says 'dark' but the frames measure brightness 0.78 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b15: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b16: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b17: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b19: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b20: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b21: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b22: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b23: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b24: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b26: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b27: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b28: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b29: value script says 'mid' but the frames measure brightness 0.80 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson brightness 0.75 against the pack's reference 0.60 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson saturation 0.12 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.86 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 6,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 4.08
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 6.57
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 6.91
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 3.48
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 3.48
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 3.08
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 4.34
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 6.77
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.42
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 4.2
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 6.59
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.77
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 1.11
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 5.39
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 2.72
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 5.78
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 3.09
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 4.02
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 5.03
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 2.45
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 5.04
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 3.52
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 3.98
+      },
+      {
+        "beat": "b26",
+        "max_static_s": 3.61
+      },
+      {
+        "beat": "b27",
+        "max_static_s": 1.57
+      },
+      {
+        "beat": "b28",
+        "max_static_s": 3.65
+      },
+      {
+        "beat": "b29",
+        "max_static_s": 2.0
+      },
+      {
+        "beat": "b30",
+        "max_static_s": 1.51
+      },
+      {
+        "beat": "b31",
+        "max_static_s": 3.49
+      },
+      {
+        "beat": "b32",
+        "max_static_s": 4.23
+      },
+      {
+        "beat": "b33",
+        "max_static_s": 5.38
+      },
+      {
+        "beat": "b34",
+        "max_static_s": 2.37
+      },
+      {
+        "beat": "b35",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.06,
+      "template": 0.486,
+      "motion": 0.0,
+      "hybrid": 0.454,
+      "motion_effective": 0.227
+    },
+    "elements": {
+      "b01": 6,
+      "b02": 7,
+      "b03": 2,
+      "b04": 2,
+      "b05": 3,
+      "b06": 5,
+      "b07": 3,
+      "b08": 2,
+      "b09": 4,
+      "b10": 5,
+      "b11": 3,
+      "b12": 5,
+      "b13": 5,
+      "b14": 5,
+      "b15": 3,
+      "b16": 6,
+      "b17": 2,
+      "b18": 5,
+      "b19": 2,
+      "b20": 2,
+      "b21": 3,
+      "b22": 3,
+      "b23": 2,
+      "b24": 4,
+      "b25": 5,
+      "b26": 5,
+      "b27": 3,
+      "b28": 4,
+      "b29": 4,
+      "b30": 3,
+      "b31": 4,
+      "b32": 7,
+      "b33": 6,
+      "b34": 3,
+      "b35": 2
+    },
+    "variety": {
+      "pointer_pill_share": null,
+      "hero_icon_rate": null,
+      "pop_settle_share": 0.247,
+      "wallpaper_share": null,
+      "template_share": 0.629,
+      "classic_share": null,
+      "one_radius_share": 0.388,
+      "still_share": null,
+      "labels_over_objects_share": null,
+      "one_world_share": null,
+      "lines_per_s": null
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 35.2,
+        "b02": 35.2,
+        "b05": 41.8,
+        "b06": 35.2,
+        "b07": 85.2,
+        "b08": 51.2,
+        "b09": 41.8,
+        "b10": 32.8,
+        "b11": 34.4,
+        "b12": 34.4,
+        "b13": 41.8,
+        "b14": 35.2,
+        "b16": 80.3,
+        "b17": 49.2,
+        "b18": 32.8,
+        "b19": 51.6,
+        "b20": 49.2,
+        "b21": 41.8,
+        "b22": 34.4,
+        "b23": 51.6,
+        "b24": 41.8,
+        "b25": 33.6,
+        "b26": 41.8,
+        "b28": 44.3,
+        "b32": 85.2,
+        "b33": 85.2,
+        "b34": 213.1
+      }
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0605,
+        "b02": 0.0643,
+        "b03": 0.0309,
+        "b04": 0.0314,
+        "b05": 0.0399,
+        "b06": 0.041,
+        "b07": 0.0523,
+        "b08": 0.033,
+        "b09": 0.0382,
+        "b10": 0.0405,
+        "b11": 0.0238,
+        "b12": 0.0515,
+        "b13": 0.0555,
+        "b14": 0.0427,
+        "b15": 0.0208,
+        "b16": 0.0048,
+        "b17": 0.0352,
+        "b18": 0.0431,
+        "b19": 0.0369,
+        "b20": 0.0259,
+        "b21": 0.0252,
+        "b22": 0.029,
+        "b23": 0.0337,
+        "b24": 0.041,
+        "b25": 0.0412,
+        "b26": 0.0401,
+        "b27": 0.0232,
+        "b28": 0.0266,
+        "b29": 0.0237,
+        "b30": 0.0202,
+        "b31": 0.0027,
+        "b32": 0.0246,
+        "b33": 0.0136,
+        "b34": 0.0156,
+        "b35": 0.0297
+      },
+      "sparse_beats": 4,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15
+      },
+      "measured_beats": 35
+    },
+    "tone": {
+      "value_script_beats": 35,
+      "tone_vs_reference": {
+        "brightness": 0.752,
+        "saturation": 0.125,
+        "dark_share": 0.0,
+        "light_share": 0.857
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b21.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b22.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b23.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b24.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b25.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b26.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b27.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b28.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b29.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b30.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b31.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b32.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b33.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b34.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced\\qa\\sheets\\b35.jpg"
+  ]
+}

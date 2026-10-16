@@ -1,0 +1,45 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b10",
+      "severity": "major",
+      "problem": "Banner 'Scrambled with the key' clipped at right edge, 'key' cut.",
+      "fix": "Moved the banner left and entered it earlier in scenes/b10.js.",
+      "status": "fixed",
+      "reason": "The full text now reads in the settled frame."
+    },
+    {
+      "beat": "b05",
+      "severity": "major",
+      "problem": "Row highlight rectangles cut through baselines of 'accounts.example' and 'Example Authority'.",
+      "fix": "Scene draws its own taller outlines instead of the kit's rowHL.",
+      "status": "fixed",
+      "reason": "Strokes clear the text."
+    },
+    {
+      "beat": "b07",
+      "severity": "major",
+      "problem": "Duplicate 'accounts.example example' in server header; 'Temporary value' collides with retiring 'Shared key' banner at arrive.",
+      "fix": "None needed.",
+      "status": "accepted",
+      "reason": "The duplicate is a false positive: the 'example' text is the browser card header cropped at the neighbouring contact-sheet panel's edge; frames at 42 s and 45.8 s show the server header once. The banner overlap is a transient cross-fade of about half a second at beat start."
+    },
+    {
+      "beat": "b17",
+      "severity": "minor",
+      "problem": "Pills and warning slot exit early, leaving an empty dashed rectangle and lone tick in the settled frame.",
+      "fix": "Pills, slot and tick exit together just before the beat ends.",
+      "status": "fixed",
+      "reason": "An earlier keep-all attempt failed the foreign-pixels check; the settled frame now shows the clean bar with its tick."
+    },
+    {
+      "beat": "b02",
+      "severity": "minor",
+      "problem": "Copied form packet in the watcher tray sits too low and is clipped by the caption.",
+      "fix": "Copy scaled to 1.2 and raised.",
+      "status": "fixed",
+      "reason": "Fully visible above the caption."
+    }
+  ]
+}

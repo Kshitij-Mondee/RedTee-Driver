@@ -1,0 +1,580 @@
+{
+ "scene": "cafe",
+ "camera_spec": {
+  "camera": {
+   "x": 3.0,
+   "y": 0.6,
+   "eye": 1.2,
+   "yaw": -12,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "banquette wall (left, x 0)",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "back wall (y 12)",
+    "axis": "y",
+    "at": 12
+   }
+  ],
+  "points": {
+   "left_wall_back_floor": [
+    0,
+    12,
+    0
+   ],
+   "left_wall_back_top": [
+    0,
+    12,
+    3.6
+   ],
+   "right_wall_back_floor": [
+    5,
+    12,
+    0
+   ],
+   "banquette_back_top_near": [
+    0.0,
+    3.0,
+    0.95
+   ],
+   "banquette_back_top_far": [
+    0.0,
+    9.0,
+    0.95
+   ],
+   "banquette_front_near": [
+    0.5,
+    3.0,
+    0.45
+   ],
+   "banquette_front_far": [
+    0.5,
+    9.0,
+    0.45
+   ],
+   "table1": [
+    0.85,
+    3.6,
+    0.73
+   ],
+   "table2": [
+    0.85,
+    5.0,
+    0.73
+   ],
+   "table3": [
+    0.85,
+    6.4,
+    0.73
+   ],
+   "table4": [
+    0.85,
+    7.8,
+    0.73
+   ],
+   "chair2_back": [
+    1.5,
+    5.0,
+    0.85
+   ],
+   "chair3_back": [
+    1.5,
+    6.4,
+    0.85
+   ],
+   "A_head_top": [
+    0.3,
+    5.0,
+    1.3
+   ],
+   "A_head_centre": [
+    0.3,
+    5.0,
+    1.17
+   ],
+   "A_seat": [
+    0.25,
+    5.0,
+    0.45
+   ],
+   "B_head_top": [
+    0.3,
+    6.4,
+    1.3
+   ],
+   "B_head_centre": [
+    0.3,
+    6.4,
+    1.17
+   ],
+   "B_seat": [
+    0.25,
+    6.4,
+    0.45
+   ],
+   "counter_front_near": [
+    3.9,
+    4.0,
+    1.0
+   ],
+   "counter_front_far": [
+    3.9,
+    9.0,
+    1.0
+   ],
+   "counter_front_near_floor": [
+    3.9,
+    4.0,
+    0
+   ],
+   "coffee_machine": [
+    4.3,
+    6.0,
+    1.45
+   ],
+   "pastry_case": [
+    4.0,
+    4.6,
+    1.3
+   ],
+   "back_door_L": [
+    3.8,
+    12,
+    0
+   ],
+   "back_door_R_top": [
+    4.7,
+    12,
+    2.1
+   ],
+   "pendant1": [
+    0.85,
+    5.0,
+    2.2
+   ],
+   "pendant2": [
+    0.85,
+    6.4,
+    2.2
+   ],
+   "ceiling_far_L": [
+    0,
+    12,
+    3.6
+   ],
+   "print1_TL": [
+    0,
+    4.1,
+    2.4
+   ],
+   "print1_BR": [
+    0,
+    4.5,
+    1.9
+   ],
+   "print2_TL": [
+    0,
+    5.95,
+    2.4
+   ],
+   "print2_BR": [
+    0,
+    6.35,
+    1.9
+   ],
+   "print3_TL": [
+    0,
+    7.8,
+    2.4
+   ],
+   "print3_BR": [
+    0,
+    8.2,
+    1.9
+   ],
+   "coffee_machine_L": [
+    4.3,
+    5.6,
+    1.0
+   ],
+   "coffee_machine_top": [
+    4.3,
+    6.2,
+    1.55
+   ],
+   "menu_board_BR": [
+    5.0,
+    8.5,
+    1.8
+   ],
+   "floor_table2": [
+    0.85,
+    5.0,
+    0
+   ],
+   "banquette_end_far_top": [
+    0.5,
+    9.0,
+    0.95
+   ],
+   "menu_board_TL_frame": [
+    5.0,
+    7.0,
+    2.5
+   ],
+   "A_feet": [
+    0.7,
+    5.0,
+    0
+   ],
+   "coat_on_chair2": [
+    1.5,
+    5.0,
+    0.7
+   ],
+   "near_table_far_L": [
+    3.3,
+    1.15,
+    0.73
+   ],
+   "near_table_far_R": [
+    3.9,
+    1.15,
+    0.73
+   ],
+   "near_table_far_L2": [
+    2.7,
+    1.15,
+    0.73
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_centre",
+   "B_head_top",
+   "B_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1352,
+   "along_x": -7716,
+   "horizon_y": 497
+  },
+  "points": {
+   "left_wall_back_floor": {
+    "x": 872,
+    "y": 685,
+    "where": "frame",
+    "depth": 11.77
+   },
+   "left_wall_back_top": {
+    "x": 872,
+    "y": 121,
+    "where": "frame",
+    "depth": 11.77
+   },
+   "right_wall_back_floor": {
+    "x": 1703,
+    "y": 703,
+    "where": "frame",
+    "depth": 10.74
+   },
+   "banquette_back_top_near": {
+    "x": -552,
+    "y": 652,
+    "where": "outside",
+    "depth": 2.97
+   },
+   "banquette_back_top_far": {
+    "x": 712,
+    "y": 549,
+    "where": "frame",
+    "depth": 8.84
+   },
+   "banquette_front_near": {
+    "x": -292,
+    "y": 979,
+    "where": "outside",
+    "depth": 2.87
+   },
+   "banquette_front_far": {
+    "x": 812,
+    "y": 655,
+    "where": "frame",
+    "depth": 8.74
+   },
+   "table1": {
+    "x": 153,
+    "y": 753,
+    "where": "frame",
+    "depth": 3.38
+   },
+   "table2": {
+    "x": 499,
+    "y": 679,
+    "where": "frame",
+    "depth": 4.75
+   },
+   "table3": {
+    "x": 690,
+    "y": 638,
+    "where": "frame",
+    "depth": 6.12
+   },
+   "table4": {
+    "x": 811,
+    "y": 613,
+    "where": "frame",
+    "depth": 7.49
+   },
+   "chair2_back": {
+    "x": 739,
+    "y": 637,
+    "where": "frame",
+    "depth": 4.62
+   },
+   "chair3_back": {
+    "x": 879,
+    "y": 605,
+    "where": "frame",
+    "depth": 5.99
+   },
+   "A_head_top": {
+    "x": 306,
+    "y": 459,
+    "where": "frame",
+    "depth": 4.87,
+    "behind": {
+     "wall": "banquette wall (left, x 0)",
+     "at": [
+      0.0,
+      5.49,
+      1.31
+     ]
+    }
+   },
+   "A_head_centre": {
+    "x": 306,
+    "y": 508,
+    "where": "frame",
+    "depth": 4.87,
+    "behind": {
+     "wall": "banquette wall (left, x 0)",
+     "at": [
+      0.0,
+      5.49,
+      1.17
+     ]
+    }
+   },
+   "A_seat": {
+    "x": 289,
+    "y": 780,
+    "where": "frame",
+    "depth": 4.88
+   },
+   "B_head_top": {
+    "x": 536,
+    "y": 467,
+    "where": "frame",
+    "depth": 6.23,
+    "behind": {
+     "wall": "banquette wall (left, x 0)",
+     "at": [
+      0.0,
+      7.04,
+      1.31
+     ]
+    }
+   },
+   "B_head_centre": {
+    "x": 536,
+    "y": 506,
+    "where": "frame",
+    "depth": 6.23,
+    "behind": {
+     "wall": "banquette wall (left, x 0)",
+     "at": [
+      0.0,
+      7.04,
+      1.17
+     ]
+    }
+   },
+   "B_seat": {
+    "x": 522,
+    "y": 718,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "counter_front_near": {
+    "x": 1893,
+    "y": 614,
+    "where": "frame",
+    "depth": 3.14
+   },
+   "counter_front_far": {
+    "x": 1563,
+    "y": 543,
+    "where": "frame",
+    "depth": 8.03
+   },
+   "counter_front_near_floor": {
+    "x": 1893,
+    "y": 1202,
+    "where": "overscan",
+    "depth": 3.14
+   },
+   "coffee_machine": {
+    "x": 1841,
+    "y": 405,
+    "where": "frame",
+    "depth": 5.01
+   },
+   "pastry_case": {
+    "x": 1861,
+    "y": 447,
+    "where": "frame",
+    "depth": 3.7
+   },
+   "back_door_L": {
+    "x": 1489,
+    "y": 698,
+    "where": "frame",
+    "depth": 10.98
+   },
+   "back_door_R_top": {
+    "x": 1649,
+    "y": 343,
+    "where": "frame",
+    "depth": 10.8
+   },
+   "pendant1": {
+    "x": 499,
+    "y": 109,
+    "where": "frame",
+    "depth": 4.75
+   },
+   "pendant2": {
+    "x": 690,
+    "y": 195,
+    "where": "frame",
+    "depth": 6.12
+   },
+   "ceiling_far_L": {
+    "x": 872,
+    "y": 121,
+    "where": "frame",
+    "depth": 11.77
+   },
+   "print1_TL": {
+    "x": -46,
+    "y": -50,
+    "where": "overscan",
+    "depth": 4.05
+   },
+   "print1_BR": {
+    "x": 78,
+    "y": 206,
+    "where": "frame",
+    "depth": 4.44
+   },
+   "print2_TL": {
+    "x": 386,
+    "y": 119,
+    "where": "frame",
+    "depth": 5.86
+   },
+   "print2_BR": {
+    "x": 447,
+    "y": 290,
+    "where": "frame",
+    "depth": 6.25
+   },
+   "print3_TL": {
+    "x": 614,
+    "y": 208,
+    "where": "frame",
+    "depth": 7.67
+   },
+   "print3_BR": {
+    "x": 650,
+    "y": 337,
+    "where": "frame",
+    "depth": 8.06
+   },
+   "coffee_machine_L": {
+    "x": 1882,
+    "y": 577,
+    "where": "frame",
+    "depth": 4.62
+   },
+   "coffee_machine_top": {
+    "x": 1823,
+    "y": 373,
+    "where": "frame",
+    "depth": 5.21
+   },
+   "menu_board_BR": {
+    "x": 1868,
+    "y": 345,
+    "where": "frame",
+    "depth": 7.31
+   },
+   "floor_table2": {
+    "x": 499,
+    "y": 963,
+    "where": "frame",
+    "depth": 4.75
+   },
+   "banquette_end_far_top": {
+    "x": 812,
+    "y": 550,
+    "where": "frame",
+    "depth": 8.74
+   },
+   "menu_board_TL_frame": {
+    "x": 1997,
+    "y": 87,
+    "where": "overscan",
+    "depth": 5.84
+   },
+   "A_feet": {
+    "x": 445,
+    "y": 960,
+    "where": "frame",
+    "depth": 4.78
+   },
+   "coat_on_chair2": {
+    "x": 739,
+    "y": 697,
+    "where": "frame",
+    "depth": 4.62
+   },
+   "near_table_far_L": {
+    "x": 2541,
+    "y": 2319,
+    "where": "outside",
+    "depth": 0.48
+   },
+   "near_table_far_R": {
+    "x": 6188,
+    "y": 2967,
+    "where": "outside",
+    "depth": 0.35
+   },
+   "near_table_far_L2": {
+    "x": 410,
+    "y": 1941,
+    "where": "outside",
+    "depth": 0.6
+   }
+  }
+ }
+}

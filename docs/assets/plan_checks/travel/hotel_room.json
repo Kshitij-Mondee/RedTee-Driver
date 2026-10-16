@@ -1,0 +1,574 @@
+{
+ "scene": "hotel_room",
+ "camera_spec": {
+  "camera": {
+   "x": 0.3,
+   "y": 0.3,
+   "eye": 1.5,
+   "yaw": 30,
+   "hfov": 66,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "headboard wall (x 4.0)",
+    "axis": "x",
+    "at": 4.0
+   },
+   {
+    "name": "entry wall (y 7.6)",
+    "axis": "y",
+    "at": 7.6
+   },
+   {
+    "name": "bathroom wall (x 2.4, y 5.6 to 7.6)",
+    "axis": "x",
+    "at": 2.4
+   }
+  ],
+  "points": {
+   "corner_R_floor": [
+    4.0,
+    5.6,
+    0
+   ],
+   "corner_R_ceiling": [
+    4.0,
+    5.6,
+    2.7
+   ],
+   "bath_corner_floor": [
+    2.4,
+    5.6,
+    0
+   ],
+   "bath_corner_ceiling": [
+    2.4,
+    5.6,
+    2.7
+   ],
+   "door_L_floor": [
+    0.9,
+    7.6,
+    0
+   ],
+   "door_R_top": [
+    1.8,
+    7.6,
+    2.1
+   ],
+   "door_R_floor": [
+    1.8,
+    7.6,
+    0
+   ],
+   "door_L_top": [
+    0.9,
+    7.6,
+    2.1
+   ],
+   "map_TL": [
+    1.15,
+    7.58,
+    1.65
+   ],
+   "map_BR": [
+    1.55,
+    7.58,
+    1.35
+   ],
+   "viewer": [
+    1.35,
+    7.58,
+    1.5
+   ],
+   "wardrobe_front_near_top": [
+    0.6,
+    5.8,
+    2.4
+   ],
+   "wardrobe_front_near_floor": [
+    0.6,
+    5.8,
+    0
+   ],
+   "bath_door_near": [
+    2.4,
+    6.0,
+    2.1
+   ],
+   "bath_door_far_floor": [
+    2.4,
+    6.8,
+    0
+   ],
+   "bed_foot_L_top": [
+    1.97,
+    3.0,
+    0.6
+   ],
+   "bed_foot_R_top": [
+    1.97,
+    4.93,
+    0.6
+   ],
+   "bed_head_L_top": [
+    4.0,
+    3.0,
+    0.6
+   ],
+   "bed_foot_L_floor": [
+    1.97,
+    3.0,
+    0
+   ],
+   "headboard_TL": [
+    4.0,
+    2.6,
+    1.8
+   ],
+   "headboard_TR": [
+    4.0,
+    5.4,
+    1.8
+   ],
+   "nightstand_near_top": [
+    3.6,
+    2.6,
+    0.55
+   ],
+   "nightstand_far_top": [
+    3.6,
+    5.25,
+    0.55
+   ],
+   "desk_far_top": [
+    0.55,
+    4.4,
+    0.74
+   ],
+   "sit_head_top": [
+    3.0,
+    2.85,
+    1.45
+   ],
+   "sit_head_c": [
+    3.0,
+    2.85,
+    1.33
+   ],
+   "sit_seat": [
+    3.0,
+    3.05,
+    0.6
+   ],
+   "door_head_top": [
+    1.35,
+    7.0,
+    1.75
+   ],
+   "door_head_c": [
+    1.35,
+    7.0,
+    1.62
+   ],
+   "door_feet": [
+    1.35,
+    7.0,
+    0
+   ],
+   "headboard_BL": [
+    4.0,
+    2.6,
+    0.3
+   ],
+   "lamp_near_top": [
+    3.7,
+    2.75,
+    1.15
+   ],
+   "lamp_far_top": [
+    3.7,
+    5.25,
+    1.15
+   ],
+   "sit_feet": [
+    3.0,
+    2.65,
+    0
+   ],
+   "near_chair_back_top": [
+    0.75,
+    2.3,
+    0.85
+   ],
+   "desk_near_top": [
+    0.55,
+    2.6,
+    0.74
+   ],
+   "desk_near_floor": [
+    0.55,
+    2.6,
+    0
+   ],
+   "smoke_detector": [
+    2.0,
+    4.2,
+    2.7
+   ],
+   "ceiling_corner_far_R": [
+    4.0,
+    5.6,
+    2.7
+   ],
+   "wardrobe_far": [
+    0.6,
+    7.6,
+    2.4
+   ],
+   "rug_corner_near": [
+    1.6,
+    2.4,
+    0
+   ],
+   "rug_corner_far": [
+    1.6,
+    5.4,
+    0
+   ],
+   "sun_patch_far": [
+    1.6,
+    3.4,
+    0
+   ],
+   "sun_patch_near": [
+    1.2,
+    1.6,
+    0
+   ],
+   "bed_head_R_top": [
+    4.0,
+    4.93,
+    0.6
+   ]
+  },
+  "behind": [
+   "sit_head_top",
+   "sit_head_c",
+   "door_head_top",
+   "door_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 107,
+   "along_x": 3520,
+   "horizon_y": 497
+  },
+  "points": {
+   "corner_R_floor": {
+    "x": 1087,
+    "y": 841,
+    "where": "frame",
+    "depth": 6.44
+   },
+   "corner_R_ceiling": {
+    "x": 1087,
+    "y": 221,
+    "where": "frame",
+    "depth": 6.44
+   },
+   "bath_corner_floor": {
+    "x": 742,
+    "y": 890,
+    "where": "frame",
+    "depth": 5.64
+   },
+   "bath_corner_ceiling": {
+    "x": 742,
+    "y": 182,
+    "where": "frame",
+    "depth": 5.64
+   },
+   "door_L_floor": {
+    "x": 261,
+    "y": 832,
+    "where": "frame",
+    "depth": 6.62
+   },
+   "door_R_top": {
+    "x": 469,
+    "y": 371,
+    "where": "frame",
+    "depth": 7.07
+   },
+   "door_R_floor": {
+    "x": 469,
+    "y": 810,
+    "where": "frame",
+    "depth": 7.07
+   },
+   "door_L_top": {
+    "x": 261,
+    "y": 363,
+    "where": "frame",
+    "depth": 6.62
+   },
+   "map_TL": {
+    "x": 322,
+    "y": 464,
+    "where": "frame",
+    "depth": 6.73
+   },
+   "map_BR": {
+    "x": 414,
+    "y": 529,
+    "where": "frame",
+    "depth": 6.93
+   },
+   "viewer": {
+    "x": 369,
+    "y": 497,
+    "where": "frame",
+    "depth": 6.83
+   },
+   "wardrobe_front_near_top": {
+    "x": 211,
+    "y": 226,
+    "where": "frame",
+    "depth": 4.91
+   },
+   "wardrobe_front_near_floor": {
+    "x": 211,
+    "y": 948,
+    "where": "frame",
+    "depth": 4.91
+   },
+   "bath_door_near": {
+    "x": 705,
+    "y": 349,
+    "where": "frame",
+    "depth": 5.99
+   },
+   "bath_door_far_floor": {
+    "x": 643,
+    "y": 829,
+    "where": "frame",
+    "depth": 6.68
+   },
+   "bed_foot_L_top": {
+    "x": 1005,
+    "y": 916,
+    "where": "frame",
+    "depth": 3.17
+   },
+   "bed_foot_R_top": {
+    "x": 695,
+    "y": 771,
+    "where": "frame",
+    "depth": 4.84
+   },
+   "bed_head_L_top": {
+    "x": 1614,
+    "y": 814,
+    "where": "frame",
+    "depth": 4.19
+   },
+   "bed_foot_L_floor": {
+    "x": 1005,
+    "y": 1196,
+    "where": "overscan",
+    "depth": 3.17
+   },
+   "headboard_TL": {
+    "x": 1750,
+    "y": 381,
+    "where": "frame",
+    "depth": 3.84
+   },
+   "headboard_TR": {
+    "x": 1114,
+    "y": 426,
+    "where": "frame",
+    "depth": 6.27
+   },
+   "nightstand_near_top": {
+    "x": 1653,
+    "y": 882,
+    "where": "frame",
+    "depth": 3.64
+   },
+   "nightstand_far_top": {
+    "x": 1055,
+    "y": 733,
+    "where": "frame",
+    "depth": 5.94
+   },
+   "desk_far_top": {
+    "x": 223,
+    "y": 802,
+    "where": "frame",
+    "depth": 3.68
+   },
+   "sit_head_top": {
+    "x": 1402,
+    "y": 518,
+    "where": "frame",
+    "depth": 3.56,
+    "behind": {
+     "wall": "headboard wall (x 4.0)",
+     "at": [
+      4.0,
+      3.79,
+      1.43
+     ]
+    }
+   },
+   "sit_head_c": {
+    "x": 1402,
+    "y": 567,
+    "where": "frame",
+    "depth": 3.56,
+    "behind": {
+     "wall": "headboard wall (x 4.0)",
+     "at": [
+      4.0,
+      3.79,
+      1.27
+     ]
+    }
+   },
+   "sit_seat": {
+    "x": 1342,
+    "y": 853,
+    "where": "frame",
+    "depth": 3.73
+   },
+   "door_head_top": {
+    "x": 390,
+    "y": 438,
+    "where": "frame",
+    "depth": 6.33,
+    "behind": {
+     "wall": "entry wall (y 7.6)",
+     "at": [
+      1.44,
+      7.6,
+      1.77
+     ]
+    }
+   },
+   "door_head_c": {
+    "x": 390,
+    "y": 469,
+    "where": "frame",
+    "depth": 6.33,
+    "behind": {
+     "wall": "entry wall (y 7.6)",
+     "at": [
+      1.44,
+      7.6,
+      1.63
+     ]
+    }
+   },
+   "door_feet": {
+    "x": 390,
+    "y": 847,
+    "where": "frame",
+    "depth": 6.33
+   },
+   "headboard_BL": {
+    "x": 1750,
+    "y": 959,
+    "where": "frame",
+    "depth": 3.84
+   },
+   "lamp_near_top": {
+    "x": 1625,
+    "y": 632,
+    "where": "frame",
+    "depth": 3.82
+   },
+   "lamp_far_top": {
+    "x": 1076,
+    "y": 583,
+    "where": "frame",
+    "depth": 5.99
+   },
+   "sit_feet": {
+    "x": 1468,
+    "y": 1152,
+    "where": "overscan",
+    "depth": 3.39
+   },
+   "near_chair_back_top": {
+    "x": 499,
+    "y": 988,
+    "where": "frame",
+    "depth": 1.96
+   },
+   "desk_near_top": {
+    "x": 308,
+    "y": 1028,
+    "where": "frame",
+    "depth": 2.12
+   },
+   "desk_near_floor": {
+    "x": 308,
+    "y": 1544,
+    "where": "outside",
+    "depth": 2.12
+   },
+   "smoke_detector": {
+    "x": 793,
+    "y": 77,
+    "where": "frame",
+    "depth": 4.23
+   },
+   "ceiling_corner_far_R": {
+    "x": 1087,
+    "y": 221,
+    "where": "frame",
+    "depth": 6.44
+   },
+   "wardrobe_far": {
+    "x": 186,
+    "y": 291,
+    "where": "frame",
+    "depth": 6.47
+   },
+   "rug_corner_near": {
+    "x": 1005,
+    "y": 1395,
+    "where": "outside",
+    "depth": 2.47
+   },
+   "rug_corner_far": {
+    "x": 544,
+    "y": 934,
+    "where": "frame",
+    "depth": 5.07
+   },
+   "sun_patch_far": {
+    "x": 772,
+    "y": 1162,
+    "where": "overscan",
+    "depth": 3.33
+   },
+   "sun_patch_near": {
+    "x": 1081,
+    "y": 1904,
+    "where": "outside",
+    "depth": 1.58
+   },
+   "bed_head_R_top": {
+    "x": 1184,
+    "y": 724,
+    "where": "frame",
+    "depth": 5.86
+   }
+  }
+ }
+}

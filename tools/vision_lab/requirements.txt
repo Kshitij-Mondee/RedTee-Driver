@@ -1,0 +1,8 @@
+# the lab's own client side (the model server, vLLM, is installed by setup.sh separately)
+numpy>=1.26
+pillow>=10
+PyYAML>=6
+requests>=2.31
+jsonschema>=4
+faster-whisper>=1.1
+opencv-python-headless>=4.8   # optical flow (motion curves at full frame rate); was only present by luck, via vLLM (L-195)

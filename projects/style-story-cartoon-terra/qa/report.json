@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b07: camera pan between different worlds (desk -> path) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b11: camera pan between different worlds (path -> desk) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "runtime unknown_exit: hold",
+    "b01: 8 chunks on screen (laptop, magnifier, maya, phone, receipt_a, receipt_b, receipts, title_note); the budget is ~5-6",
+    "b03: 11 chunks on screen (bubble_business, bubble_cost, bubble_wrong, laptop, laptop_art_laptop, maya, phone, phone_art_phone, receipt_a, receipt_b, receipts); the budget is ~5-6",
+    "b06: 9 chunks on screen (pad, pad_heading, pad_line1, pad_line2, pad_line3, pad_tick1, pad_tick2, pad_tick3, pad_ticks); the budget is ~5-6",
+    "b09: 9 chunks on screen (Maya, compliance_sign, hr_sign, line_sign, line_tag, manager_sign, maya, other_sign, question_sign); the budget is ~5-6",
+    "b10: 8 chunks on screen (Maya, compliance_sign, hr_sign, line_sign, line_tag, manager_sign, maya_overlay, other_sign); the budget is ~5-6",
+    "b11: 11 chunks on screen (laptop, magnifier, maya, notice_words, phone, pocket_rule, receipt_a, receipt_b, receipts, speak_words, weigh_words); the budget is ~5-6",
+    "b02: new content arrives at 11.61s while b01 is still leaving (until 12.11s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "b03: new content arrives at 15.54s while b02 is still leaving (until 16.05s) on the same station: a double exposure. Let the old leave first, or dip through the field",
+    "variety: still_share = 0.818 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b03, b04, b05, b06, b09)",
+    "variety: one_radius_share = 0.331 is above the baseline median (0.2)",
+    "lc layout text_covered @ 60: b07 \"Compliance\" is partly covered by an opaque shape (48 % of it, its words cut) from 60 to 60 s [compliance_sign]",
+    "lc layout text_covered @ 85: b11 \"$86.40\" is partly covered by an opaque shape (71 % of it, its words cut) from 85 to 85 s [receipt_a]",
+    "page_size: the page has 25774 DOM nodes (budget 20000); draw repeated decoration as one pattern or path",
+    "b01: small text on screen at 11.1s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b03: small text on screen at 24.2s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b04: small text on screen at 32.8s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b05: small text on screen at 41.7s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b06: small text on screen at 46.2s: \"Expenses\" 24.6px, \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b11: small text on screen at 93.1s: \"Team dinner\" 25.4px, \"Team dinner\" 25.4px (< 26 px)",
+    "b04: no_entrance_words: element 'proof_word' (text) shows \"not proof\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b05: no_entrance_words: element 'pad_heading' (text) shows \"Three questions\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b06: no_entrance_words: element 'pad_heading' (text) shows \"Three questions\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b06: the same frame as b05 (difference 0.96 < 1.5): a new beat needs a visible change",
+    "b04: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'dark' but the frames measure brightness 0.55 (band 0.00 to 0.40); regrade the beat or change the script",
+    "tone: lesson saturation 0.15 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.92 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 2,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.41
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 2.01
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.31
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 4.29
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0,
+        "declared": "hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.047,
+      "template": 0.576,
+      "motion": 0.377,
+      "hybrid": 0.0,
+      "motion_effective": 0.377
+    },
+    "elements": {
+      "b01": 11,
+      "b02": 11,
+      "b03": 16,
+      "b04": 4,
+      "b05": 6,
+      "b06": 9,
+      "b07": 17,
+      "b08": 8,
+      "b09": 20,
+      "b10": 19,
+      "b11": 14,
+      "b12": 3
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.265,
+      "wallpaper_share": 0.0,
+      "template_share": 0.083,
+      "classic_share": 0.6,
+      "one_radius_share": 0.331,
+      "still_share": 0.818,
+      "labels_over_objects_share": 0.091,
+      "one_world_share": 0.545,
+      "lines_per_s": 8.22
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 69321,
+      "layout_samples": 199,
+      "texts": 306,
+      "contrast_checked": 363,
+      "errors": 0,
+      "warnings": 2
+    },
+    "nodes": 25774,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 24.6,
+        "b02": 37.7,
+        "b03": 24.6,
+        "b04": 24.6,
+        "b05": 24.6,
+        "b06": 24.6,
+        "b07": 35.2,
+        "b08": 34.4,
+        "b09": 35.2,
+        "b10": 35.2,
+        "b11": 25.4,
+        "b12": 34.4
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 12,
+      "lines_seen": 128,
+      "blank_beats": [],
+      "blank_measured": 12
+    },
+    "foreign": {
+      "measured_beats": 12,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 138,
+      "without_life": 0,
+      "no_entrance_words": 3
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.1205,
+        "b02": 0.1157,
+        "b03": 0.1244,
+        "b04": 0.1364,
+        "b05": 0.1332,
+        "b06": 0.1362,
+        "b07": 0.1493,
+        "b08": 0.0757,
+        "b09": 0.1454,
+        "b10": 0.1354,
+        "b11": 0.1172,
+        "b12": 0.0426
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 1,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 12,
+      "sharpness": {
+        "b01": 1.255,
+        "b02": 1.091,
+        "b03": 1.149,
+        "b04": 1.063,
+        "b05": 1.216,
+        "b06": 1.222,
+        "b07": 1.208,
+        "b08": 0.91,
+        "b09": 1.132,
+        "b10": 1.215,
+        "b11": 1.215,
+        "b12": 0.953
+      },
+      "blurred_beats": [],
+      "blur_measured": 12
+    },
+    "tone": {
+      "value_script_beats": 12,
+      "tone_vs_reference": {
+        "brightness": 0.733,
+        "saturation": 0.15,
+        "dark_share": 0.0,
+        "light_share": 0.917
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-story-cartoon-terra\\qa\\sheets\\b12.jpg"
+  ],
+  "build_hash": "ee60ef0568f5716f"
+}

@@ -1,0 +1,81 @@
+{
+  "arrow_into_target": {
+    "decision": "reject",
+    "confidence": "high",
+    "at_uses": 3,
+    "at_lessons": 1,
+    "reason": "The form is already the engine's own primitives: kit.arrow returns {g, path, head} and every use is kit.arrow + m.draw(a.path) + a one-line head fade, the same idiom the shipped core.js flow template uses, so a component would wrap three lines and carry no on-screen content; the parts that actually varied (edge-to-edge geometry in b20, un-draw retraction with a dim wrapper and label in b19, pulse emphasis in b20) are each scene's bespoke choreography and would not fit one param set. All three uses are from one lesson; if the head-lands-late timing is worth centralising, it belongs as an option on the motion primitive (for example m.draw recognising a kit.arrow result and landing its head at the end), not as a library component.",
+    "revisit_when": {
+      "uses": 8,
+      "lessons": 3
+    },
+    "merge_into": null,
+    "assessment": "library/assessments/arrow_into_target.json"
+  },
+  "icon_label_card": {
+    "decision": "defer",
+    "confidence": "medium",
+    "at_uses": 5,
+    "at_lessons": 1,
+    "reason": "The idea is genuinely topic-independent, but the five uses are one lesson in one style and three of them are the same three conditions re-drawn, so the evidence is about three distinct uses with a two-layout, two-icon-style spread that no lesson has yet shown it wants to share. Each copy is three or four kit calls, so a component saves little today; the one recurring fix (a crisp solid backing under a sketched outline) is worth capturing once a second or third lesson confirms which layout and icon treatment actually recur.",
+    "revisit_when": {
+      "uses": 12,
+      "lessons": 3
+    },
+    "merge_into": null,
+    "assessment": "library/assessments/icon_label_card.json"
+  },
+  "outcome_tick": {
+    "decision": "reject",
+    "confidence": "high",
+    "at_uses": 5,
+    "at_lessons": 2,
+    "reason": "The idea is topic-independent and genuinely recurs, but it is already exactly one existing primitive, kit.mark(parent, kind, cx, cy, size, o), and every one of the five uses is that single call plus one ordinary entrance tween; a component would add only a wrapper around a one-liner, while the parts that varied (placement on the host, container choice, pop versus stamp versus settle, and timing against the host's cue) are scene decisions that a param set would either freeze or merely pass through. Nothing here saves real work or fixes a recurring defect, so promoting it would be library bloat that duplicates the kit, and further uses will not change that because the reuse is already happening through kit.mark.",
+    "revisit_when": {
+      "uses": 20,
+      "lessons": 8
+    },
+    "merge_into": null,
+    "assessment": "library/assessments/outcome_tick.json"
+  },
+  "placeholder_slot": {
+    "decision": "reject",
+    "confidence": "high",
+    "at_uses": 3,
+    "at_lessons": 2,
+    "reason": "The id merges three different ideas (an empty container frame awaiting screens, a dashed '?' ring marking an unknown cause, and a blank filled recall row) that share no fixed parts, so one param set would be a shape switch over two-to-four kit calls each and would save no real work over writing them inline. Worse, each successor scene depends on the exact child structure the scene built (b20 counts exactly three children of probes, b12 lays screens into b11's geometry), so a component wrapping that structure risks breaking the held-element hand-offs it would be used for.",
+    "revisit_when": {
+      "uses": 6,
+      "lessons": 4
+    },
+    "merge_into": null,
+    "assessment": "library/assessments/placeholder_slot.json"
+  },
+  "verdict_stamp": {
+    "decision": "defer",
+    "confidence": "medium",
+    "at_uses": 5,
+    "at_lessons": 2,
+    "reason": "The id merges two unrelated looks (a solid valence-filled pill and a tilted outlined note, the latter really one use since b28 redraws b01's motif), and one of the pill uses is an aggregate caption rather than a verdict, so no single honest component covers all five tags; stripped to the pill alone it is three scenes in two lessons. The pill is topic-independent and has plausible demand, but inline it is three lines (kit.pill, kit.text with pickTokenOn, m.stamp) with no recurring defect to fix, so promoting now is not worth the catalogue weight; re-tag the tilted note as its own form and revisit the pill once it recurs.",
+    "revisit_when": {
+      "uses": 9,
+      "lessons": 4
+    },
+    "merge_into": null,
+    "assessment": "library/assessments/verdict_stamp.json"
+  },
+  "design:attention_converges": {
+    "decision": "defer",
+    "confidence": "high",
+    "at_uses": 2,
+    "at_lessons": 1,
+    "reason": "The idea is topic-independent, but the evidence is one lesson and effectively one use: b28 is b02's room redrawn on purpose as a bookend (shared geometry by comment, opening on b02's frozen end state), and in b28 the turn is only staging for the board of fixes, which made its sight lines a clutter problem the reviewer had to cut. The future demand above is plausible but untested, and what actually recurs is the parts (turning_head, gaze_lines, whiteboard_panel, already tracked as element forms), so for now this stays bespoke and the element library should handle those parts; revisit once a second lesson reaches for a group turning its attention.",
+    "revisit_when": {
+      "uses": 5,
+      "lessons": 2
+    },
+    "merge_into": null,
+    "assessment": "library/assessments/design-attention_converges.json",
+    "status": "defer"
+  }
+}

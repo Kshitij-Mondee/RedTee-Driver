@@ -1,0 +1,53 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b03",
+      "severity": "major",
+      "problem": "Avatar template: talking-head rig with a slide-like card and duplicate inner title.",
+      "fix": "none needed; keep the avatar beat",
+      "status": "accepted",
+      "reason": "The request's mix asks for a presenter avatar (woman, 10%); the template is the engine's avatar beat with no scene file, and it reads clearly as the three-moves overview. The duplicate title is minor repetition, not a meaning error."
+    },
+    {
+      "beat": "b02",
+      "severity": "minor",
+      "problem": "b01 held 'Decided?' text caught mid-exit at the arrive frame.",
+      "fix": "clear b01 held text at ctx.start",
+      "status": "accepted",
+      "reason": "A one-frame join transition residue at the beat boundary; it clears within a moment and does not touch meaning."
+    },
+    {
+      "beat": "b04",
+      "severity": "minor",
+      "problem": "Empty tick boxes shown before labels appear.",
+      "fix": "reveal labels with boxes",
+      "status": "accepted",
+      "reason": "The boxes arrive as the section opens and each label lands on its spoken word; a short empty window is intended checklist build."
+    },
+    {
+      "beat": "b10",
+      "severity": "minor",
+      "problem": "Pause and decide button is a smooth pill.",
+      "fix": "restyle the button",
+      "status": "accepted",
+      "reason": "b10 is a quiz template with no scene file; its look comes from the style pack and is not a per-beat defect."
+    },
+    {
+      "beat": "b11",
+      "severity": "minor",
+      "problem": "Why not A text shifts when the explanation box enters.",
+      "fix": "place the text at its final y",
+      "status": "accepted",
+      "reason": "b11 is a quiz template with no scene file; the shift is a short template layout move, and the text stays legible."
+    },
+    {
+      "beat": "b13",
+      "severity": "minor",
+      "problem": "Close tick was a hand-drawn green element, not the kit step_list tick.",
+      "fix": "use step_list tick in ink",
+      "status": "fixed",
+      "reason": "Fixer replaced it; second critic pass found nothing and the b13 sheet shows ink ticks on all three steps."
+    }
+  ]
+}

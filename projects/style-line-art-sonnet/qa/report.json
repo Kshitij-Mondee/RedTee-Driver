@@ -1,0 +1,245 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b02: camera pan between different worlds (desk -> board) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b04: camera pan between different worlds (board -> shelf) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b07: camera pan between different worlds (shelf -> vault) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b09: camera pan between different worlds (vault -> sort) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b11: camera pan between different worlds (sort -> travel) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b12: camera pan between different worlds (travel -> rule) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b13: camera pan between different worlds (rule -> desk) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "runtime literal_colour: scene used a literal colour instead of a token: #2F5BEA",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "runtime literal_colour: scene used a literal colour instead of a token: #505663",
+    "runtime literal_colour: scene used a literal colour instead of a token: #505663",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "runtime part_drawn_again: b05: draws kit part \"item\" again as \"notes\" while it holds \"press_release\" (the item b04 drew, still on screen), elsewhere on screen: a second item is fine only when the film shows two; to change the held one use ctx.held(\"press_release\").handle",
+    "runtime literal_colour: scene used a literal colour instead of a token: #16181D",
+    "b08: 9 chunks on screen (Recipient, file_icon, folder, label_channel, label_folder, label_recipient, label_shred, name_tag, shredder); the budget is ~5-6",
+    "variety: one_radius_share = 0.333 is above the baseline median (0.2)",
+    "variety: still_share = 0.538 is above the baseline median (0.5) (beats: _kit, b01, b03, b05, b06, b08, b10)",
+    "b03: no_entrance_words: element 'type_badge' (card) shows \"File type\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b03: no_entrance_words: element 'folder' (card) shows \"Folder\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b05: no_entrance_words: element 'colleagues' (icon) shows \"Colleagues\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b12: no_entrance_words: element 'owner_arrow' (connector) shows \"Ask the owner\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b12: no_entrance_words: element 'policy_note' (card) shows \"Our policy\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b07: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.74
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 1.61
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 2.78
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.02
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 2.32
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.56,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 2.85
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.42
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.053,
+      "template": 0.544,
+      "motion": 0.403,
+      "hybrid": 0.0,
+      "motion_effective": 0.403
+    },
+    "elements": {
+      "b01": 2,
+      "b02": 7,
+      "b03": 4,
+      "b04": 3,
+      "b05": 2,
+      "b06": 1,
+      "b07": 4,
+      "b08": 10,
+      "b09": 5,
+      "b11": 6,
+      "b12": 7,
+      "b13": 2
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.036,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": null,
+      "one_radius_share": 0.333,
+      "still_share": 0.538,
+      "labels_over_objects_share": 0.231,
+      "one_world_share": 0.615,
+      "lines_per_s": 8.29
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 31363,
+      "layout_samples": 248,
+      "texts": 289,
+      "contrast_checked": 239,
+      "errors": 0,
+      "warnings": 0
+    },
+    "nodes": 1408,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 35.2,
+        "b02": 40.2,
+        "b03": 30.3,
+        "b04": 41.8,
+        "b05": 27.9,
+        "b06": 33.6,
+        "b07": 53.3,
+        "b08": 27.9,
+        "b09": 26.2,
+        "b10": 26.2,
+        "b11": 40.2,
+        "b12": 27.9,
+        "b13": 33.6
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 13,
+      "lines_seen": 46,
+      "blank_beats": [],
+      "blank_measured": 11
+    },
+    "foreign": {
+      "measured_beats": 13,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 53,
+      "without_life": 0,
+      "no_entrance_words": 5
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.1165,
+        "b02": 0.0716,
+        "b03": 0.0398,
+        "b04": 0.0588,
+        "b05": 0.0832,
+        "b06": 0.0619,
+        "b07": 0.0687,
+        "b08": 0.0586,
+        "b09": 0.0915,
+        "b10": 0.0818,
+        "b11": 0.0528,
+        "b12": 0.0552,
+        "b13": 0.1294
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 13,
+      "sharpness": {
+        "b01": 1.195,
+        "b02": 1.044,
+        "b03": 1.226,
+        "b04": 1.212,
+        "b05": 1.156,
+        "b06": 1.259,
+        "b07": 1.143,
+        "b08": 1.319,
+        "b09": 1.255,
+        "b10": 1.03,
+        "b11": 1.182,
+        "b12": 1.167,
+        "b13": 1.143
+      },
+      "blurred_beats": [],
+      "blur_measured": 13
+    },
+    "tone": {
+      "value_script_beats": 13
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sonnet\\qa\\sheets\\b13.jpg"
+  ],
+  "build_hash": "f3e36ac6d895eab1"
+}

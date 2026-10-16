@@ -1,0 +1,1316 @@
+{
+  "title": "Spot it, report it: the first minutes with a phishing message",
+  "wpm_target": 140,
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Act now, it says",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Four moves"
+    },
+    {
+      "id": "sec2",
+      "title": "What reports do"
+    },
+    {
+      "id": "sec3",
+      "title": "Read the signs"
+    },
+    {
+      "id": "sec4",
+      "title": "Names you know"
+    },
+    {
+      "id": "sec5",
+      "title": "If you clicked"
+    },
+    {
+      "id": "check",
+      "title": "Your turn",
+      "role": "check"
+    },
+    {
+      "id": "outro",
+      "title": "Back to Jo",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "intro",
+      "job": "hook",
+      "delivery": "calm",
+      "narration": [
+        "I read odd messages for a living.",
+        "Most want one thing from you.",
+        "They want you to hurry."
+      ],
+      "on_screen": [
+        "hurry"
+      ],
+      "visual_intent": "the presenter at her desk, level and unhurried; the word hurry sets beside her as she says it, then the frame slides past her into an ordinary office at the end of the day",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "phishing messages pressure you into acting before you stop to think",
+          "fact": "F3"
+        }
+      ],
+      "pause_after_s": 1.4
+    },
+    {
+      "id": "b02",
+      "section": "intro",
+      "job": "scenario",
+      "delivery": "calm",
+      "narration": [
+        "Say this is Jo,",
+        "at the end of a long day.",
+        "A message lands.",
+        "Confirm your password within the hour,",
+        "or lose access to the shared drive."
+      ],
+      "on_screen": [
+        "Confirm your password",
+        "within the hour"
+      ],
+      "visual_intent": "a drawn office at dusk, one figure at a laptop; a new message slides into the inbox and the camera pushes in until the message fills the screen, its subject line and deadline readable",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Jo and the message are invented",
+          "hypothetical": true
+        },
+        {
+          "claim": "a short deadline or threat of losing something is the urgency sign",
+          "fact": "F4"
+        },
+        {
+          "claim": "a request for a password is a sign",
+          "fact": "F7"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "intro",
+      "job": "hook",
+      "delivery": "calm",
+      "narration": [
+        "Act now, it says.",
+        "Jo's cursor is already on the link.",
+        "You have been here too."
+      ],
+      "on_screen": [
+        "Act now",
+        "the link"
+      ],
+      "visual_intent": "the cursor drifts across the message and settles on the link; everything freezes mid-motion and the frame holds still for a beat of silence",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the moment of choice is invented",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 1.5
+    },
+    {
+      "id": "b04",
+      "section": "intro",
+      "job": "orient",
+      "delivery": "calm",
+      "narration": [
+        "You will read this message for what it is,",
+        "know the one move that beats it,",
+        "and what to do after a click."
+      ],
+      "on_screen": [
+        "read it",
+        "the one move",
+        "after a click"
+      ],
+      "visual_intent": "the frozen message stays dimmed behind; three short anchors set one by one in the open space beside it",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "the lesson's promise",
+          "source_anchor": "teaching_plan arc.promise"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "orient",
+      "delivery": "calm",
+      "narration": [
+        "You already glance at sender and subject.",
+        "This is not ten more tips.",
+        "Just four moves, for the message that says hurry."
+      ],
+      "on_screen": [
+        "not ten more tips",
+        "four moves"
+      ],
+      "visual_intent": "the frozen message shrinks back into a full, ordinary inbox; a long imagined list of tips fans out and folds away, leaving one empty frame for four items",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the lesson gives four behaviours, not a list of tips",
+          "source_anchor": "brief must_cover (from_user): the requester's four behaviours"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "define",
+      "delivery": "calm",
+      "narration": [
+        "Phishing, in one line.",
+        "Criminals send a message",
+        "to get you to open a link or attachment,",
+        "give away a password,",
+        "or send money."
+      ],
+      "on_screen": [
+        "phishing",
+        "link or attachment",
+        "password",
+        "money"
+      ],
+      "visual_intent": "the word phishing set large over the dimmed message; three small marks appear on the message itself as each aim is named: the link, the password box, a payment line",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "phishing tries to get you to open a harmful link or attachment, give away information such as a password, or send money",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec1",
+      "job": "sequence",
+      "delivery": "brisk",
+      "narration": [
+        "Move one,",
+        "look for the signs.",
+        "Move two,",
+        "do not click it, or reply to it."
+      ],
+      "on_screen": [
+        "1 Look for the signs",
+        "2 Do not click or reply"
+      ],
+      "visual_intent": "the four moves in large plain type, set one by one over the dimmed frozen message, which never leaves the frame",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "look for the signs",
+          "source_anchor": "brief must_cover (from_user): the requester's four behaviours"
+        },
+        {
+          "claim": "if you suspect phishing, do not click its links, open its attachments or reply",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec1",
+      "job": "sequence",
+      "delivery": "brisk",
+      "narration": [
+        "Move three,",
+        "report it with your company's report button or channel.",
+        "Move four, the one people skip,",
+        "if you already clicked, report it at once,",
+        "and do not hide it."
+      ],
+      "on_screen": [
+        "3 Report it",
+        "4 Already clicked? Report at once"
+      ],
+      "visual_intent": "moves three and four join the first two; the fourth sits a little apart, with a quiet mark of emphasis",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "report it with the company's report button or channel",
+          "source_anchor": "brief must_cover (from_user): the requester's four behaviours"
+        },
+        {
+          "claim": "if you have already clicked, contact your IT or security team and tell them what happened",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "orient",
+      "delivery": "calm",
+      "narration": [
+        "Why move three matters.",
+        "The UK's National Cyber Security Centre, the NCSC,",
+        "has a case study from one financial company."
+      ],
+      "on_screen": [
+        "NCSC case study",
+        "one financial company"
+      ],
+      "visual_intent": "the four moves slide aside, move three stays lit; an empty funnel draws in, with a small office block at its mouth labelled as one company",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "an NCSC case study describes a financial company",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "quantify",
+      "delivery": "curious",
+      "narration": [
+        "1,800 phishing emails arrived.",
+        "The filters stopped 1,750 of them.",
+        "That left 50,",
+        "in staff inboxes."
+      ],
+      "on_screen": [
+        "1,800",
+        "1,750 stopped",
+        "50 in inboxes"
+      ],
+      "visual_intent": "a counter at the top of the funnel reads 1,800 as the emails pour in; the filter layer catches them and the counter drains to 50 as 1,750 fall away; the 50 land as small envelopes in a row of inboxes",
+      "change_over_time": true,
+      "animate_score": 0.95,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the company received 1,800 phishing emails; filtering stopped 1,750, leaving 50 in staff inboxes",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2",
+      "job": "quantify",
+      "delivery": "curious",
+      "narration": [
+        "Filters catch most. Not all.",
+        "Staff reported 25 of those 50,",
+        "with a report button.",
+        "Some of them after clicking."
+      ],
+      "on_screen": [
+        "25 reported",
+        "some after clicking"
+      ],
+      "visual_intent": "among the 50 envelopes, 25 small report marks light up one after another; a few of them carry a small click mark first",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "staff reported 25 of those emails with a report button, some after clicking",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec2",
+      "job": "relate",
+      "delivery": "calm",
+      "narration": [
+        "Those reports were the first sign",
+        "the attack had got past the filters."
+      ],
+      "on_screen": [
+        "first sign",
+        "past the filters"
+      ],
+      "visual_intent": "the 25 lights travel back up out of the inboxes to the security team's desk, arriving before anything else signals the problem",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "those reports were the first sign the attack had got past the filters",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec2",
+      "job": "relate",
+      "delivery": "calm",
+      "narration": [
+        "An early warning, for everyone else.",
+        "The sooner the team knows,",
+        "the more harm it can limit.",
+        "One company, mind, not a general rate."
+      ],
+      "on_screen": [
+        "early warning",
+        "sooner: limit the harm"
+      ],
+      "visual_intent": "the security desk lights up and a calm ring spreads out from it across the other inboxes in the building",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "reports act as an early warning for everyone",
+          "fact": "F13"
+        },
+        {
+          "claim": "knowing sooner lets an organisation limit the harm",
+          "fact": "F17"
+        },
+        {
+          "claim": "one company's incident, not a general rate",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec2",
+      "job": "consolidate",
+      "delivery": "brisk",
+      "narration": [
+        "Filters catch most,",
+        "reports catch what gets through.",
+        "Which move got those 25 to the team?",
+        "Move three, report it."
+      ],
+      "on_screen": [
+        "filters catch most",
+        "reports catch what gets through"
+      ],
+      "visual_intent": "the funnel shrinks to a small icon in the corner and the frozen message from the opening returns to centre",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "filtering stopped most of the emails",
+          "fact": "F14"
+        },
+        {
+          "claim": "staff reports were the first sign",
+          "fact": "F15"
+        }
+      ],
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Which of the four moves put those 25 reports in front of the security team?"
+      }
+    },
+    {
+      "id": "b15",
+      "section": "sec3",
+      "job": "refute",
+      "delivery": "calm",
+      "narration": [
+        "You may have learned to spot bad spelling.",
+        "Plenty of old scams were sloppy.",
+        "This one is written perfectly."
+      ],
+      "on_screen": [
+        "bad spelling?",
+        "written perfectly"
+      ],
+      "visual_intent": "the camera pushes back into Jo's message; a magnifier passes over it looking for typos and finds none, each line ticks clean",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "some phishing messages are now written perfectly",
+          "fact": "F9"
+        }
+      ],
+      "misconception": "You can spot phishing by bad spelling, clumsy grammar or a strange logo."
+    },
+    {
+      "id": "b16",
+      "section": "sec3",
+      "job": "refute",
+      "delivery": "calm",
+      "narration": [
+        "Spelling is no longer a reliable sign.",
+        "Some phishing fools even experts.",
+        "Look at what it wants from you."
+      ],
+      "on_screen": [
+        "spelling: no longer reliable",
+        "fools even experts"
+      ],
+      "visual_intent": "the magnifier sets down; a plain label beside the message reads spelling, not reliable, and the message stays clean and convincing",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "bad spelling and grammar are no longer a reliable sign; some fool even experts",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "sec3",
+      "job": "demonstrate",
+      "delivery": "calm",
+      "narration": [
+        "First, what is it pushing you to do?",
+        "Within the hour, or lose access.",
+        "That pressure is doing the work.",
+        "Its job is to stop you checking."
+      ],
+      "on_screen": [
+        "pressure",
+        "within the hour"
+      ],
+      "visual_intent": "the message held still; the deadline line lifts off it as a marked callout labelled pressure, and stays pinned on the board beside the message",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "phishing pressures you into acting before you think",
+          "fact": "F3"
+        },
+        {
+          "claim": "a short deadline or threat is the urgency sign",
+          "fact": "F4"
+        }
+      ],
+      "pause_after_s": 0.8
+    },
+    {
+      "id": "b18",
+      "section": "sec3",
+      "job": "demonstrate",
+      "delivery": "calm",
+      "narration": [
+        "It also claims to be IT support.",
+        "Phishing likes to borrow authority.",
+        "Reason enough for you to look twice."
+      ],
+      "on_screen": [
+        "IT support",
+        "authority"
+      ],
+      "visual_intent": "the sender name lifts off as a second callout, authority, pinned under pressure; the two together form the pressure family",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "phishing often pretends to come from a trusted or important person or organisation, so authority deserves a second look",
+          "fact": "F5"
+        },
+        {
+          "claim": "the IT support sender name is invented",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b19",
+      "section": "sec3",
+      "job": "demonstrate",
+      "delivery": "calm",
+      "narration": [
+        "Now slow down.",
+        "The name says IT support.",
+        "The address has one letter changed."
+      ],
+      "on_screen": [
+        "one letter changed"
+      ],
+      "visual_intent": "the camera closes on the address; the real spelling slides in beneath it and the one changed letter lights up, everything else grey",
+      "change_over_time": false,
+      "animate_score": 0.45,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a sender address that does not match the real one, such as one letter changed, is a sign",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "sec3",
+      "job": "demonstrate",
+      "delivery": "calm",
+      "narration": [
+        "Then the link.",
+        "It is shortened, so it hides where it goes.",
+        "So you have the mismatch sign,",
+        "not who, or where, it claims to be."
+      ],
+      "on_screen": [
+        "shortened link",
+        "mismatch sign"
+      ],
+      "visual_intent": "the short link unfolds into its full destination, which is plainly not the shared drive; it lifts off as a callout and joins the address under the label mismatch",
+      "change_over_time": true,
+      "animate_score": 0.55,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a shortened link that hides where it goes is a sign",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "section": "sec3",
+      "job": "demonstrate",
+      "delivery": "calm",
+      "narration": [
+        "Last, what does it want from you?",
+        "Your password, the request sign.",
+        "Banks and other official sources",
+        "do not ask for this by email."
+      ],
+      "on_screen": [
+        "password",
+        "request sign"
+      ],
+      "visual_intent": "the password box lifts off as the last callout, request; Jo's inbox has now become an evidence board with three families pinned around one clean message",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a request for a password or bank details is a sign; banks and official sources do not ask for this by email",
+          "fact": "F7"
+        }
+      ],
+      "pause_after_s": 0.8
+    },
+    {
+      "id": "b22",
+      "section": "sec3",
+      "job": "consolidate",
+      "delivery": "brisk",
+      "narration": [
+        "Pressure, mismatch, request,",
+        "three kinds of sign, one clean message.",
+        "Your move stays the same,",
+        "do not click, report it."
+      ],
+      "on_screen": [
+        "pressure",
+        "mismatch",
+        "request"
+      ],
+      "visual_intent": "the three family labels brighten in turn on the evidence board, then the message dims and the two moves set over it",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "urgency, mismatch and requests for credentials are signs",
+          "fact": "F4"
+        },
+        {
+          "claim": "mismatched sender or link",
+          "fact": "F6"
+        },
+        {
+          "claim": "password requests",
+          "fact": "F7"
+        },
+        {
+          "claim": "do not click or reply",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "sec4",
+      "job": "transition",
+      "delivery": "calm",
+      "narration": [
+        "Here is the part people miss.",
+        "A name you know can still be fake."
+      ],
+      "on_screen": [
+        "a name you know",
+        "can still be fake"
+      ],
+      "visual_intent": "the evidence board slides away and a new message arrives in the same inbox, from a familiar contact with a known avatar",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "targeted phishing can seem to come from a known colleague, manager or supplier",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "sec4",
+      "job": "scenario",
+      "delivery": "calm",
+      "narration": [
+        "Say your usual supplier, Quillmoor Supplies, writes.",
+        "Please pay today's invoice,",
+        "to our new bank details.",
+        "Plus an attachment nobody expected."
+      ],
+      "on_screen": [
+        "Quillmoor Supplies",
+        "pay today's invoice",
+        "new bank details",
+        "attachment nobody expected"
+      ],
+      "visual_intent": "the supplier message held on screen, its name and logo familiar, the attachment icon at the bottom, nothing marked yet",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Quillmoor Supplies and its message are invented",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b25",
+      "section": "sec4",
+      "job": "practice",
+      "delivery": "calm",
+      "narration": [
+        "The name is familiar, and that is the point.",
+        "Targeted phishing uses what it knows",
+        "about a company and its people.",
+        "See if you can find the three signs."
+      ],
+      "on_screen": [
+        "familiar name",
+        "the three signs"
+      ],
+      "visual_intent": "the familiar name glows softly; the rest of the message waits unmarked while the viewer looks",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "targeted phishing uses information about a company and its people to look convincing",
+          "fact": "F12"
+        }
+      ],
+      "pause_after_s": 2.5,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Pressure, mismatch, request: which can you find before they are marked?"
+      }
+    },
+    {
+      "id": "b26",
+      "section": "sec4",
+      "job": "demonstrate",
+      "delivery": "calm",
+      "narration": [
+        "Today is the pressure.",
+        "New bank details, the payment request,",
+        "and that unexpected attachment.",
+        "Most work attachments are genuine,",
+        "so unexpected is what makes you check."
+      ],
+      "on_screen": [
+        "pressure: today",
+        "request: payment",
+        "unexpected attachment"
+      ],
+      "visual_intent": "the three signs mark themselves on the supplier message in the order spoken: the word today, the bank details, the attachment",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "urgency is a sign",
+          "fact": "F4"
+        },
+        {
+          "claim": "a request for financial information is a sign",
+          "fact": "F7"
+        },
+        {
+          "claim": "an attachment you were not expecting is a reason to stop and check; most attachments at work are genuine",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b27",
+      "section": "sec4",
+      "job": "sequence",
+      "delivery": "calm",
+      "narration": [
+        "If it might be genuine, check it,",
+        "by a route you find yourself,",
+        "not the number or link in the message.",
+        "Then report it."
+      ],
+      "on_screen": [
+        "a route you find yourself",
+        "then report it"
+      ],
+      "visual_intent": "beside the message, a separate path draws out to the supplier's contact found in the company's own records, bypassing the link and number in the message",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "check through a separate route you find yourself, not the link, number or address in the message",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b28",
+      "section": "sec4",
+      "job": "distinguish",
+      "delivery": "calm",
+      "narration": [
+        "The same ask,",
+        "as an email, a text, a chat message.",
+        "Only the channel changes, so your move does not."
+      ],
+      "on_screen": [
+        "email",
+        "text",
+        "chat"
+      ],
+      "visual_intent": "the supplier email re-forms as a phone text, then as a chat bubble, side by side; the same three sign marks line up across all three while only the channel changes",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "phishing also arrives as text messages, chat messages and phone calls",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b29",
+      "section": "sec4",
+      "job": "relate",
+      "delivery": "neutral",
+      "narration": [
+        "One aside.",
+        "In phishing simulations,",
+        "the median click rate for text or voice",
+        "was 40 percent higher than for email.",
+        "Simulations, and relative to email."
+      ],
+      "on_screen": [
+        "in simulations",
+        "40% higher than email"
+      ],
+      "visual_intent": "a small, quiet label sits under the text and chat bubbles: in simulations, 40% higher than email; no headline, no alarm",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "in phishing simulations, the median click rate for text or voice was 40% higher than for email",
+          "fact": "F20"
+        }
+      ]
+    },
+    {
+      "id": "b30",
+      "section": "sec4",
+      "job": "consolidate",
+      "delivery": "calm",
+      "narration": [
+        "You do not need to be sure.",
+        "If it feels off, do not act.",
+        "Report it, and let the team look."
+      ],
+      "on_screen": [
+        "do not act",
+        "report it"
+      ],
+      "visual_intent": "the three channels settle into one row and a single report mark lands on each",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "do not click or reply to a suspected phishing message",
+          "fact": "F10"
+        },
+        {
+          "claim": "report it with the company's report button or channel",
+          "source_anchor": "brief must_cover (from_user): the requester's four behaviours"
+        }
+      ]
+    },
+    {
+      "id": "b31",
+      "section": "sec5",
+      "job": "transition",
+      "delivery": "warm",
+      "narration": [
+        "Remember the funnel.",
+        "Some of those 25 reports came after a click.",
+        "This story goes there."
+      ],
+      "on_screen": [
+        "25 reports",
+        "after a click"
+      ],
+      "visual_intent": "a brief glimpse of the funnel with its 25 lights, then a slow dip to a new time and a different desk",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "some of the 25 reports came after clicking",
+          "fact": "F15"
+        }
+      ],
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Some of those 25 reports came from people who had already clicked."
+      }
+    },
+    {
+      "id": "b32",
+      "section": "sec5",
+      "job": "scenario",
+      "delivery": "warm",
+      "narration": [
+        "Say this is Ravi, earlier in the week.",
+        "Back to back meetings, a delivery notice,",
+        "and he clicked before he noticed.",
+        "That happens to busy people."
+      ],
+      "on_screen": [
+        "Ravi",
+        "clicked"
+      ],
+      "visual_intent": "a second drawn figure between meetings, laptop half open; a delivery notice, a click, and the screen carries on as if nothing changed",
+      "change_over_time": true,
+      "animate_score": 0.55,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Ravi and the delivery notice are invented",
+          "hypothetical": true
+        },
+        {
+          "claim": "people click for many reasons, including being busy and stressed",
+          "fact": "F18"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b33",
+      "section": "sec5",
+      "job": "refute",
+      "delivery": "warm",
+      "narration": [
+        "Nothing seemed to happen.",
+        "The tempting thought:",
+        "I typed nothing, why tell anyone?"
+      ],
+      "on_screen": [
+        "I typed nothing",
+        "why tell anyone?"
+      ],
+      "visual_intent": "Ravi pauses with a small thought bubble holding the tempting line; the frame stays soft and unhurried",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Ravi's thought is invented",
+          "hypothetical": true
+        },
+        {
+          "claim": "people who fear blame stop reporting their mistakes",
+          "fact": "F18"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "If I clicked but typed nothing, there is no need to tell anyone, and keeping quiet is safer for me."
+    },
+    {
+      "id": "b34",
+      "section": "sec5",
+      "job": "distinguish",
+      "delivery": "warm",
+      "narration": [
+        "From the click, two paths.",
+        "On one, Ravi quietly deletes it.",
+        "The team learns nothing."
+      ],
+      "on_screen": [
+        "quietly deletes it",
+        "the team learns nothing"
+      ],
+      "visual_intent": "from the click the frame splits in two; on the left path the message is deleted and the early-warning light from the funnel flickers at Ravi's desk and never travels to the security team",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "reports are the security team's early warning",
+          "fact": "F13"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b35",
+      "section": "sec5",
+      "job": "distinguish",
+      "delivery": "warm",
+      "narration": [
+        "On the other, he reports it at once,",
+        "through your company's report button or channel,",
+        "and says what he clicked.",
+        "The warning arrives,",
+        "in time to limit the harm."
+      ],
+      "on_screen": [
+        "reports it at once",
+        "says what he clicked",
+        "the warning arrives"
+      ],
+      "visual_intent": "on the right path a report goes out, the light travels to the security desk and arrives, and Ravi's screen settles into a calm handled state",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "if you clicked, contact your IT or security team and tell them what happened",
+          "fact": "F16"
+        },
+        {
+          "claim": "reports including after clicking act as an early warning",
+          "fact": "F13"
+        },
+        {
+          "claim": "knowing sooner lets an organisation limit harm",
+          "fact": "F17"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b36",
+      "section": "sec5",
+      "job": "relate",
+      "delivery": "warm",
+      "narration": [
+        "Blaming people for clicks does not work.",
+        "People who fear blame stop reporting.",
+        "If you click, no panic.",
+        "Tell the team."
+      ],
+      "on_screen": [
+        "no panic",
+        "tell the team"
+      ],
+      "visual_intent": "the split resolves to the right-hand path only; Ravi back at his desk, the day carrying on, nothing dramatic",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "blaming people who click does not work; people who fear blame stop reporting",
+          "fact": "F18"
+        },
+        {
+          "claim": "do not panic; tell your IT or security team what happened",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b37",
+      "section": "sec5",
+      "job": "consolidate",
+      "delivery": "warm",
+      "narration": [
+        "Clicked is not the end of it.",
+        "Quiet is.",
+        "Report it now, and say what you clicked."
+      ],
+      "on_screen": [
+        "report it now",
+        "say what you clicked"
+      ],
+      "visual_intent": "move four from the opening list returns, large and plain, over Ravi's settled desk",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "if you already clicked, tell your IT or security team what happened",
+          "fact": "F16"
+        },
+        {
+          "claim": "if you already clicked, report immediately and do not hide it",
+          "source_anchor": "brief must_cover (from_user): the requester's four behaviours"
+        }
+      ]
+    },
+    {
+      "id": "b38",
+      "section": "check",
+      "job": "check",
+      "delivery": "neutral",
+      "narration": [
+        "Your turn.",
+        "Say a colleague's chat message says,",
+        "sign in to this shared document within the hour,",
+        "or the edits are lost.",
+        "A, click to see if it is real.",
+        "B, reply in the chat and ask.",
+        "C, report it, without clicking.",
+        "D, delete it and move on.",
+        "Your first move? Pause, and decide."
+      ],
+      "on_screen": [
+        "First move?",
+        "A: click to see if it is real",
+        "B: reply in the chat and ask",
+        "C: report it, without clicking",
+        "D: delete it and move on"
+      ],
+      "visual_intent": "a fresh chat message on screen, the question above and four option cards as peers below it, then a real silent pause",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "the chat message is invented",
+          "hypothetical": true
+        },
+        {
+          "claim": "urgency is a sign",
+          "fact": "F4"
+        },
+        {
+          "claim": "a request to sign in, meaning a password, is a sign",
+          "fact": "F7"
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "quiz",
+        "question": "First move?",
+        "options": [
+          "A: click to see if it is real",
+          "B: reply in the chat and ask",
+          "C: report it, without clicking",
+          "D: delete it and move on"
+        ],
+        "answer": 2,
+        "why": "the deadline is pressure and sign in means your password behind a link; report it without clicking or replying",
+        "tempting_wrong": "B feels polite, but the reply goes to whoever controls the account; D protects you but the team never gets its early warning"
+      }
+    },
+    {
+      "id": "b39",
+      "section": "check",
+      "job": "check",
+      "delivery": "neutral",
+      "narration": [
+        "It is C.",
+        "The hour is pressure,",
+        "and sign in means your password, behind a link.",
+        "B feels polite,",
+        "but your reply goes to whoever controls that account.",
+        "D keeps you safe,",
+        "but the team gets no warning.",
+        "Unsure? Ask them by a separate route."
+      ],
+      "on_screen": [
+        "C",
+        "pressure: the hour",
+        "your password",
+        "B: reply goes to the account",
+        "D: no warning"
+      ],
+      "visual_intent": "card C lifts and the two signs mark themselves on the chat message; then B and D each get one plain line on why they fall short, while A stays grey",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "urgency is a sign",
+          "fact": "F4"
+        },
+        {
+          "claim": "a request for a password is a sign",
+          "fact": "F7"
+        },
+        {
+          "claim": "do not reply to a suspected phishing message",
+          "fact": "F10"
+        },
+        {
+          "claim": "check through a separate route you find yourself",
+          "fact": "F11"
+        },
+        {
+          "claim": "reports are an early warning for everyone",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b40",
+      "section": "outro",
+      "job": "payoff",
+      "delivery": "calm",
+      "narration": [
+        "Back to Jo's message:",
+        "within the hour, one letter off,",
+        "a shortened link, a password.",
+        "So, what does Jo do?"
+      ],
+      "on_screen": [
+        "within the hour",
+        "one letter off",
+        "shortened link",
+        "password"
+      ],
+      "visual_intent": "the opening dusk office and Jo's frozen message return; the four signs mark themselves on it in quick succession, then the frame holds for the viewer to answer",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "urgency sign",
+          "fact": "F4"
+        },
+        {
+          "claim": "mismatched sender or link",
+          "fact": "F6"
+        },
+        {
+          "claim": "password request",
+          "fact": "F7"
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 2
+    },
+    {
+      "id": "b41",
+      "section": "outro",
+      "job": "payoff",
+      "delivery": "calm",
+      "narration": [
+        "Jo does not click.",
+        "Jo reports it,",
+        "with the company's report button or channel.",
+        "The afternoon carries on."
+      ],
+      "on_screen": [
+        "does not click",
+        "reports it"
+      ],
+      "visual_intent": "the cursor moves off the link to the report control; the message folds away into a calm handled state and the office settles, no celebration",
+      "change_over_time": true,
+      "animate_score": 0.65,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "do not click",
+          "fact": "F10"
+        },
+        {
+          "claim": "report it with the company's report button or channel",
+          "source_anchor": "brief must_cover (from_user): the requester's four behaviours"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b42",
+      "section": "outro",
+      "job": "payoff",
+      "delivery": "warm",
+      "narration": [
+        "Had Jo clicked,",
+        "reporting at once still protects everyone.",
+        "Today, find your company's report button or channel.",
+        "Hurry is the sign. Reporting is the move."
+      ],
+      "on_screen": [
+        "Hurry is the sign",
+        "Reporting is the move"
+      ],
+      "visual_intent": "the presenter returns, level and dry; the pocket rule sets beside her in two lines",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "reports, including after clicking, are an early warning for everyone",
+          "fact": "F13"
+        },
+        {
+          "claim": "find where the report button or channel sits",
+          "source_anchor": "teaching_plan transfer_tasks"
+        }
+      ]
+    }
+  ]
+}

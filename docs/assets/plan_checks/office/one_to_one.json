@@ -1,0 +1,464 @@
+{
+ "scene": "one_to_one",
+ "camera_spec": {
+  "camera": {
+   "x": 2.8,
+   "y": -1.2,
+   "eye": 1.2,
+   "yaw": -17,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "window wall (south)",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "west end wall",
+    "axis": "y",
+    "at": 4.6
+   },
+   {
+    "name": "felt screen (x 3.8, y 1.4 to 4.6, 1.8 m high)",
+    "axis": "x",
+    "at": 3.8
+   }
+  ],
+  "points": {
+   "A_head_top": [
+    1.29,
+    3.38,
+    1.3
+   ],
+   "A_head_centre": [
+    1.29,
+    3.38,
+    1.18
+   ],
+   "A_seat": [
+    1.36,
+    3.28,
+    0.42
+   ],
+   "A_feet": [
+    1.77,
+    2.68,
+    0
+   ],
+   "A_back_top_L": [
+    0.78,
+    3.4,
+    1.0
+   ],
+   "A_back_top_R": [
+    1.44,
+    3.86,
+    1.0
+   ],
+   "B_head_top": [
+    2.87,
+    2.95,
+    1.3
+   ],
+   "B_head_centre": [
+    2.87,
+    2.95,
+    1.18
+   ],
+   "B_seat": [
+    2.76,
+    2.9,
+    0.42
+   ],
+   "B_feet": [
+    2.1,
+    2.6,
+    0
+   ],
+   "B_back_top_near": [
+    3.32,
+    2.72,
+    1.0
+   ],
+   "B_back_top_far": [
+    2.98,
+    3.44,
+    1.0
+   ],
+   "B_arm_front_near": [
+    2.54,
+    2.36,
+    0.62
+   ],
+   "table_top": [
+    2.16,
+    3.47,
+    0.55
+   ],
+   "corner_floor": [
+    0,
+    4.6,
+    0
+   ],
+   "corner_top_of_frame": [
+    0,
+    4.6,
+    2.8
+   ],
+   "W1_near_jamb_sill": [
+    0,
+    2.58,
+    0.9
+   ],
+   "W1_far_jamb_sill": [
+    0,
+    4.38,
+    0.9
+   ],
+   "W1_far_jamb_2m": [
+    0,
+    4.38,
+    2.0
+   ],
+   "W1_near_jamb_head": [
+    0,
+    2.58,
+    3.0
+   ],
+   "W2_far_jamb_sill": [
+    0,
+    2.15,
+    0.9
+   ],
+   "felt_corner_top": [
+    3.8,
+    4.6,
+    1.8
+   ],
+   "lamp_shade": [
+    2.35,
+    4.3,
+    1.45
+   ],
+   "lamp_base": [
+    2.35,
+    4.3,
+    0
+   ],
+   "rug_far_left": [
+    0.7,
+    4.3,
+    0
+   ],
+   "rug_near_left": [
+    0.7,
+    1.9,
+    0
+   ],
+   "near_table_top": [
+    0.8,
+    0.9,
+    0.5
+   ],
+   "near_plant_top": [
+    0.8,
+    0.9,
+    1.3
+   ],
+   "green_top_mid": [
+    2.0,
+    4.6,
+    3.0
+   ],
+   "sun_W1_floor_a": [
+    2.6,
+    1.63,
+    0
+   ],
+   "sun_W1_floor_b": [
+    2.6,
+    3.43,
+    0
+   ],
+   "sun_W1_floor_c": [
+    3.8,
+    3.0,
+    0
+   ],
+   "sun_W1_floor_d": [
+    3.8,
+    1.2,
+    0
+   ],
+   "felt_end_in_frame_top": [
+    3.8,
+    4.2,
+    1.8
+   ],
+   "table_centre_top": [
+    2.16,
+    3.47,
+    0.55
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_centre",
+   "B_head_top",
+   "B_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1524,
+   "along_x": -5072,
+   "horizon_y": 497
+  },
+  "points": {
+   "A_head_top": {
+    "x": 920,
+    "y": 459,
+    "where": "frame",
+    "depth": 4.82,
+    "behind": {
+     "wall": "west end wall",
+     "at": [
+      0.89,
+      4.6,
+      1.33
+     ]
+    }
+   },
+   "A_head_centre": {
+    "x": 920,
+    "y": 504,
+    "where": "frame",
+    "depth": 4.82,
+    "behind": {
+     "wall": "west end wall",
+     "at": [
+      0.89,
+      4.6,
+      1.17
+     ]
+    }
+   },
+   "A_seat": {
+    "x": 934,
+    "y": 803,
+    "where": "frame",
+    "depth": 4.71
+   },
+   "A_feet": {
+    "x": 1029,
+    "y": 1048,
+    "where": "frame",
+    "depth": 4.01
+   },
+   "A_back_top_L": {
+    "x": 743,
+    "y": 571,
+    "where": "frame",
+    "depth": 4.99
+   },
+   "A_back_top_R": {
+    "x": 1023,
+    "y": 567,
+    "where": "frame",
+    "depth": 5.24
+   },
+   "B_head_top": {
+    "x": 1558,
+    "y": 450,
+    "where": "frame",
+    "depth": 3.95,
+    "behind": {
+     "wall": "west end wall",
+     "at": [
+      2.9,
+      4.6,
+      1.34
+     ]
+    }
+   },
+   "B_head_centre": {
+    "x": 1558,
+    "y": 506,
+    "where": "frame",
+    "depth": 3.95,
+    "behind": {
+     "wall": "west end wall",
+     "at": [
+      2.9,
+      4.6,
+      1.17
+     ]
+    }
+   },
+   "B_seat": {
+    "x": 1504,
+    "y": 863,
+    "where": "frame",
+    "depth": 3.93
+   },
+   "B_feet": {
+    "x": 1172,
+    "y": 1073,
+    "where": "frame",
+    "depth": 3.84
+   },
+   "B_back_top_near": {
+    "x": 1803,
+    "y": 599,
+    "where": "frame",
+    "depth": 3.6
+   },
+   "B_back_top_far": {
+    "x": 1603,
+    "y": 581,
+    "where": "frame",
+    "depth": 4.38
+   },
+   "B_arm_front_near": {
+    "x": 1380,
+    "y": 804,
+    "where": "frame",
+    "depth": 3.48
+   },
+   "table_top": {
+    "x": 1259,
+    "y": 754,
+    "where": "frame",
+    "depth": 4.65
+   },
+   "corner_floor": {
+    "x": 676,
+    "y": 844,
+    "where": "frame",
+    "depth": 6.37
+   },
+   "corner_top_of_frame": {
+    "x": 676,
+    "y": 33,
+    "where": "frame",
+    "depth": 6.37
+   },
+   "W1_near_jamb_sill": {
+    "x": 306,
+    "y": 622,
+    "where": "frame",
+    "depth": 4.43
+   },
+   "W1_far_jamb_sill": {
+    "x": 647,
+    "y": 587,
+    "where": "frame",
+    "depth": 6.15
+   },
+   "W1_far_jamb_2m": {
+    "x": 647,
+    "y": 257,
+    "where": "frame",
+    "depth": 6.15
+   },
+   "W1_near_jamb_head": {
+    "x": 306,
+    "y": -252,
+    "where": "outside",
+    "depth": 4.43
+   },
+   "W2_far_jamb_sill": {
+    "x": 181,
+    "y": 634,
+    "where": "frame",
+    "depth": 4.02
+   },
+   "felt_corner_top": {
+    "x": 1891,
+    "y": 286,
+    "where": "frame",
+    "depth": 5.25
+   },
+   "lamp_shade": {
+    "x": 1363,
+    "y": 411,
+    "where": "frame",
+    "depth": 5.39
+   },
+   "lamp_base": {
+    "x": 1363,
+    "y": 907,
+    "where": "frame",
+    "depth": 5.39
+   },
+   "rug_far_left": {
+    "x": 834,
+    "y": 874,
+    "where": "frame",
+    "depth": 5.87
+   },
+   "rug_near_left": {
+    "x": 392,
+    "y": 1115,
+    "where": "overscan",
+    "depth": 3.58
+   },
+   "near_table_top": {
+    "x": 36,
+    "y": 995,
+    "where": "frame",
+    "depth": 2.59
+   },
+   "near_plant_top": {
+    "x": 36,
+    "y": 426,
+    "where": "frame",
+    "depth": 2.59
+   },
+   "green_top_mid": {
+    "x": 1257,
+    "y": -77,
+    "where": "overscan",
+    "depth": 5.78
+   },
+   "sun_W1_floor_a": {
+    "x": 1384,
+    "y": 1297,
+    "where": "outside",
+    "depth": 2.76
+   },
+   "sun_W1_floor_b": {
+    "x": 1438,
+    "y": 990,
+    "where": "frame",
+    "depth": 4.49
+   },
+   "sun_W1_floor_c": {
+    "x": 2042,
+    "y": 1091,
+    "where": "overscan",
+    "depth": 3.72
+   },
+   "sun_W1_floor_d": {
+    "x": 2487,
+    "y": 1602,
+    "where": "outside",
+    "depth": 2.0
+   },
+   "felt_end_in_frame_top": {
+    "x": 1920,
+    "y": 270,
+    "where": "frame",
+    "depth": 4.87
+   },
+   "table_centre_top": {
+    "x": 1259,
+    "y": 754,
+    "where": "frame",
+    "depth": 4.65
+   }
+  }
+ }
+}

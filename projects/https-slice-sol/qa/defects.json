@@ -1,0 +1,39 @@
+{
+  "source": "check",
+  "routed": {
+    "script": {},
+    "storyboard": {
+      "b02": [
+        {
+          "beat": "b02",
+          "code": "words_cut",
+          "detail": "b02: words cut by the frame edge at 13.7s: \"accounts.example\" at [-415, 206, 13, 266], \"Password: Sunrise42\" at [-398, 498, 89, 557], \"accounts.example\" at [1677, 207, 2104, 265] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+          "source": "check",
+          "count": 1
+        }
+      ],
+      "b07": [
+        {
+          "beat": "b07",
+          "code": "words_cut",
+          "detail": "b07: words cut by the frame edge at 49.2s: \"accounts.example\" at [-206, 234, 157, 283], \"User: j.doe\" at [-191, 359, 20, 408], \"Password: Sunrise42\" at [-191, 481, 222, 530] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+          "source": "check",
+          "count": 1
+        }
+      ]
+    },
+    "kit": {},
+    "scene": {
+      "b10": [
+        {
+          "beat": "b10",
+          "code": "content_overlap",
+          "detail": "at 65.5 s: b01 \"Password: Sunrise42\" and b10 \"Password: Sunrise42\" overlap at [366, 537, 704, 551] from 65.5 to 66 s (both texts seen overlapping for 500 ms) [board / packet] (an element b01 drew and b10 holds: b10 changes its state or draws over it)",
+          "source": "lc",
+          "count": 1
+        }
+      ]
+    },
+    "engine": {}
+  }
+}

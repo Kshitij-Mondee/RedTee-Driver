@@ -1,0 +1,30 @@
+{
+  "source": "picture critic",
+  "routed": {
+    "script": {},
+    "storyboard": {
+      "b11": [
+        {
+          "beat": "b11",
+          "code": "reported",
+          "detail": "b11 join_in type 'camera' pans across empty canvas from the presenter station; change to 'cut' (scene file cannot set the join). (reported by scene)",
+          "source": "agent",
+          "count": 1
+        }
+      ]
+    },
+    "kit": {},
+    "scene": {
+      "b11": [
+        {
+          "beat": "b11",
+          "code": "critic",
+          "detail": "[major] The camera transition from presenter to coffee corner pans across empty canvas space, leaving an almost completely blank beige frame at mid-join (118.35s). (suggested fix: In storyboard for beat b11, change join_in.type from 'camera' to 'cut' to eliminate the empty pan across disconnected stations.)",
+          "source": "critic",
+          "count": 1
+        }
+      ]
+    },
+    "engine": {}
+  }
+}

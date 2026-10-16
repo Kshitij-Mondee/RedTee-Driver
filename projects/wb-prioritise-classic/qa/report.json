@@ -1,0 +1,276 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b04: camera pan between different worlds (list -> matrix) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "compose: b13: camera pan between different worlds (matrix -> list) would show the seam; using the style's seam join, a wipe (set join_in.continuous: true if they join up)",
+    "runtime part_drawn_again: b07: draws kit part \"matrix_board\" again as \"matrix_divider_build\" while it holds \"matrix_board\" (the matrix_board b05 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second matrix_board is fine only when the film shows two; to change the held one use ctx.held(\"matrix_board\").handle",
+    "runtime part_drawn_again: b07: draws kit part \"matrix_board\" again as \"quick_zone_build\" while it holds \"matrix_board\" (the matrix_board b05 drew, still on screen), drawings not comparable (nested, or nothing measurable): a second matrix_board is fine only when the film shows two; to change the held one use ctx.held(\"matrix_board\").handle",
+    "runtime literal_colour: scene used a literal colour instead of a token: #586274",
+    "runtime literal_colour: scene used a literal colour instead of a token: #1E2430",
+    "runtime literal_colour: scene used a literal colour instead of a token: #1E2430",
+    "runtime literal_colour: scene used a literal colour instead of a token: #1E2430",
+    "runtime literal_colour: scene used a literal colour instead of a token: #586274",
+    "runtime literal_colour: scene used a literal colour instead of a token: #C2410C",
+    "runtime literal_colour: scene used a literal colour instead of a token: #C2410C",
+    "b02: 23 chunks on screen (budget_box, card_budget, card_budget_outline, card_budget_words, card_deck, card_deck_box, card_deck_outline, card_deck_words, card_expenses, card_expenses_box, card_expenses_outline, card_expenses_words, card_reply, card_reply_box, card_reply_outline, card_reply_words, clock, friday_label, list_title, tick_deck, tick_expenses, tick_reply, urgent_tags); the budget is ~5-6",
+    "b06: 9 chunks on screen (card_budget, card_budget_outline, card_budget_words, card_deck, card_deck_outline, card_deck_words, card_expenses, card_expenses_outline, card_expenses_words); the budget is ~5-6",
+    "b07: 9 chunks on screen (matrix_divider_build, move_quick, quick_zone_build, reply_box, reply_tick_state, reply_tick_state_outline, reply_tick_state_words, tick_reply, zone_quick); the budget is ~5-6",
+    "b13: 18 chunks on screen (resort_title, row_budget, row_budget_outline, row_budget_words, row_deck, row_deck_later, row_deck_outline, row_deck_words, row_expenses, row_expenses_outline, row_expenses_words, row_notes, row_reply, row_reply_box, row_reply_outline, row_reply_words, start_line, tick_reply); the budget is ~5-6",
+    "variety: one_radius_share = 1.0 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.846 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b02, b03, b05, b06, b07, b08, b09)",
+    "variety: one_world_share = 0.923 is above the baseline median (0.625) (beats: _kit, b02, b03, b04, b06, b07, b08, b09)",
+    "variety: the seed's camera habit is 'pan' but 11 of 13 bespoke beats have no camera move",
+    "lc layout content_overlap @ 60: b09 \"Fill-ins\" and b09 \"Batch\" overlap at [623, 597, 685, 609] from 59.5 to 60 s (held, but both texts are seen together only briefly) [zone_fill / move_fill]",
+    "lc layout content_overlap @ 64: b09 \"Thankless tasks\" and b09 \"Decline or park\" overlap at [1015, 597, 1178, 609] from 59.5 to 64 s (held, but both texts are seen together only briefly) [zone_thankless / move_thankless]",
+    "lc layout content_overlap @ 97.5: b13 \"Deck redesign\" and b13 \"Budget report\" overlap at [365, 567, 555, 611] from 97.5 to 97.5 s (a passing crossing (under 500 ms)) [row_deck_words / row_budget_words]",
+    "lc layout text_redrawn @ 45: b07: b07 draws again 1 text(s) b05 still shows (\"Client reply\"): carry the element (hold it) instead of redrawing it, from 45 to 51.5 s [card_reply_words, reply_tick_state_words]",
+    "b07: no_entrance_words: element 'reply_tick_state_words' (text) shows \"Client reply\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b04: sparse frame (median edge density 0.0107 < 0.02): reads as a slide; give it a picture or fill the frame",
+    "b07: the same frame as b06 (difference 1.35 < 1.5): a new beat needs a visible change"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.17
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.52
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.17
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.77
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.89
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 1.88
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.73
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.12
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.93
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 3.37,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 1.19
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 1.24
+      }
+    ],
+    "allocation": {
+      "avatar": 0.056,
+      "template": 0.443,
+      "motion": 0.432,
+      "hybrid": 0.069,
+      "motion_effective": 0.467
+    },
+    "elements": {
+      "b01": 7,
+      "b02": 24,
+      "b03": 9,
+      "b04": 5,
+      "b05": 7,
+      "b06": 9,
+      "b07": 12,
+      "b08": 9,
+      "b09": 7,
+      "b10": 7,
+      "b11": 5,
+      "b12": 5,
+      "b13": 19
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.008,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": null,
+      "one_radius_share": 1.0,
+      "still_share": 0.846,
+      "labels_over_objects_share": 0.154,
+      "one_world_share": 0.923,
+      "lines_per_s": 6.49
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 14456,
+      "layout_samples": 206,
+      "texts": 270,
+      "contrast_checked": 493,
+      "errors": 0,
+      "warnings": 4
+    },
+    "nodes": 1334,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 32,
+        "b02": 31.1,
+        "b03": 31.1,
+        "b04": 32,
+        "b05": 42.6,
+        "b06": 42.6,
+        "b07": 32.8,
+        "b08": 31.1,
+        "b09": 28.7,
+        "b10": 31.1,
+        "b11": 31.1,
+        "b12": 31.1,
+        "b13": 31.1
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 13,
+      "lines_seen": 152,
+      "blank_beats": [],
+      "blank_measured": 13
+    },
+    "foreign": {
+      "measured_beats": 13,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 125,
+      "without_life": 0,
+      "no_entrance_words": 1
+    },
+    "caption_hold": {
+      "enabled": true,
+      "cues": 34,
+      "short": 0,
+      "under_min": 0,
+      "min_hold_s": 1.87,
+      "baselined": false
+    },
+    "grid": {
+      "checked": true,
+      "planned": 6,
+      "placed": 6,
+      "dropped": 0,
+      "unresolved": 0,
+      "joins_into_speech": 0,
+      "bars": 48,
+      "bpm": [
+        115.385,
+        111.881,
+        107.604,
+        116.8,
+        112.11
+      ]
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0846,
+        "b02": 0.0627,
+        "b03": 0.0832,
+        "b04": 0.0107,
+        "b05": 0.0274,
+        "b06": 0.0466,
+        "b07": 0.0641,
+        "b08": 0.0961,
+        "b09": 0.113,
+        "b10": 0.15,
+        "b11": 0.133,
+        "b12": 0.1361,
+        "b13": 0.0483
+      },
+      "sparse_beats": 1,
+      "repeated_frames": 1,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24,
+        "caption_min_s": 1.8,
+        "caption_tail_s": 0.6
+      },
+      "measured_beats": 13,
+      "sharpness": {
+        "b01": 1.079,
+        "b02": 1.19,
+        "b03": 1.102,
+        "b04": 1.061,
+        "b05": 1.219,
+        "b06": 1.236,
+        "b07": 0.991,
+        "b08": 1.139,
+        "b09": 1.065,
+        "b10": 1.186,
+        "b11": 0.888,
+        "b12": 0.857,
+        "b13": 1.148
+      },
+      "blurred_beats": [],
+      "blur_measured": 13
+    },
+    "tone": {
+      "value_script_beats": 13,
+      "tone_vs_reference": {
+        "brightness": 0.924,
+        "saturation": 0.021,
+        "dark_share": 0.0,
+        "light_share": 1.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\wb-prioritise-classic\\qa\\sheets\\b13.jpg"
+  ],
+  "build_hash": "d37cacbc790c572d"
+}

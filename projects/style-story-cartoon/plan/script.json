@@ -1,0 +1,378 @@
+{
+  "title": "Speaking up: when something at work doesn't feel right",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "Something doesn't add up",
+      "role": "hook"
+    },
+    {
+      "id": "s1",
+      "title": "Why we stay quiet",
+      "role": "build"
+    },
+    {
+      "id": "s2",
+      "title": "Weigh it in good faith",
+      "role": "build"
+    },
+    {
+      "id": "s3",
+      "title": "Pick the right channel",
+      "role": "build"
+    },
+    {
+      "id": "s4",
+      "title": "What happens next",
+      "role": "build"
+    },
+    {
+      "id": "check",
+      "title": "A twist",
+      "role": "check"
+    },
+    {
+      "id": "payoff",
+      "title": "Back to Maya",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "treatment_hint": "motion",
+      "narration": [
+        "Say this is Maya, in finance.",
+        "One expense claim doesn't add up.",
+        "The same dinner, claimed twice.",
+        "Her first thought? Leave it."
+      ],
+      "on_screen": [
+        "Something doesn't add up"
+      ],
+      "visual_intent": "Maya at her desk; two matching receipts side by side, one figure circled; she reaches for her phone, then pulls her hand back.",
+      "grounding": [
+        {
+          "claim": "Maya and the duplicate claim are an invented example",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.7
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "orient",
+      "treatment_hint": "motion",
+      "narration": [
+        "Felt that pull?",
+        "Here's what to do with it."
+      ],
+      "on_screen": [],
+      "visual_intent": "Close on Maya's uneasy face as she looks from the receipts toward the viewer; a quiet beat.",
+      "grounding": [
+        {
+          "claim": "many people feel the pull to stay quiet",
+          "fact": "F1"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": false,
+      "animate_score": 0.3
+    },
+    {
+      "id": "b03",
+      "section": "s1",
+      "job": "scenario",
+      "treatment_hint": "motion",
+      "narration": [
+        "We stay quiet for ordinary reasons.",
+        "What if I'm wrong?",
+        "What will it cost me?",
+        "Is it even my business?"
+      ],
+      "on_screen": [
+        "What if I'm wrong?",
+        "What will it cost me?",
+        "Not my business"
+      ],
+      "visual_intent": "Three thought bubbles rise one by one over Maya's head, each landing on its question, then dim as she straightens up.",
+      "grounding": [
+        {
+          "claim": "fear of being wrong",
+          "fact": "F1"
+        },
+        {
+          "claim": "fear of fallout",
+          "fact": "F2"
+        },
+        {
+          "claim": "not my business",
+          "fact": "F3"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.6
+    },
+    {
+      "id": "b04",
+      "section": "s2",
+      "job": "refute",
+      "treatment_hint": "motion",
+      "misconception": "You need proof before you speak up.",
+      "narration": [
+        "Good news: you don't need proof.",
+        "Good faith means an honest belief.",
+        "Investigating isn't your job."
+      ],
+      "on_screen": [
+        "Honest belief, not proof"
+      ],
+      "visual_intent": "The rule large beside Maya: she sets a magnifying glass down on the desk as 'proof' fades and 'honest belief' stays.",
+      "grounding": [
+        {
+          "claim": "good faith is an honest and reasonable belief",
+          "fact": "F4"
+        },
+        {
+          "claim": "no proof needed, not expected to investigate",
+          "fact": "F5"
+        }
+      ],
+      "change_over_time": true,
+      "animate_score": 0.5
+    },
+    {
+      "id": "b05",
+      "section": "s2",
+      "job": "demonstrate",
+      "treatment_hint": "template",
+      "narration": [
+        "So Maya asks three questions.",
+        "Could it break a rule?",
+        "Could it harm someone?",
+        "Would it look fine in public?"
+      ],
+      "on_screen": [
+        "Breaks a rule?",
+        "Harms someone?",
+        "Fine in public?"
+      ],
+      "visual_intent": "A short checklist beside Maya fills in one line at a time as each question is asked.",
+      "grounding": [
+        {
+          "claim": "does it break a law, policy or the code",
+          "fact": "F7"
+        },
+        {
+          "claim": "could it harm someone",
+          "fact": "F8"
+        },
+        {
+          "claim": "would it be fine if public",
+          "fact": "F9"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.6
+    },
+    {
+      "id": "b06",
+      "section": "s2",
+      "job": "practice",
+      "treatment_hint": "motion",
+      "narration": [
+        "A dinner claimed twice?",
+        "That's enough to raise it."
+      ],
+      "on_screen": [],
+      "visual_intent": "The checklist ticks against the duplicate receipts; Maya nods, decided.",
+      "grounding": [
+        {
+          "claim": "Maya's answer is part of the invented example",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.5
+    },
+    {
+      "id": "b07",
+      "section": "s3",
+      "job": "sequence",
+      "treatment_hint": "motion",
+      "narration": [
+        "Next, the channel.",
+        "Her manager is often the easiest start.",
+        "Or another manager, HR,",
+        "compliance, or a speak-up line,",
+        "anonymous where offered."
+      ],
+      "on_screen": [
+        "Manager",
+        "Another manager",
+        "HR",
+        "Compliance",
+        "Speak-up line"
+      ],
+      "visual_intent": "A path opens from Maya's desk; doors appear along it one at a time, each labelled as it is named, her manager's first.",
+      "grounding": [
+        {
+          "claim": "the line manager is often the first and easiest route",
+          "fact": "F11"
+        },
+        {
+          "claim": "typical channels",
+          "fact": "F10"
+        },
+        {
+          "claim": "anonymous where offered",
+          "fact": "F13"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.6
+    },
+    {
+      "id": "b08",
+      "section": "s4",
+      "job": "consolidate",
+      "treatment_hint": "template",
+      "misconception": "Speaking up just gets you punished.",
+      "narration": [
+        "Then others review it, confidentially where possible.",
+        "And policies typically forbid retaliation",
+        "for a good-faith concern."
+      ],
+      "on_screen": [
+        "No retaliation for good faith"
+      ],
+      "visual_intent": "Maya's note passes to a review desk; the rule large, with a protective shield settling around Maya.",
+      "grounding": [
+        {
+          "claim": "reviewed by people other than the reporter",
+          "fact": "F14"
+        },
+        {
+          "claim": "confidential as far as possible",
+          "fact": "F15"
+        },
+        {
+          "claim": "policies typically prohibit retaliation for good-faith concerns",
+          "fact": "F16"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.4
+    },
+    {
+      "id": "b09",
+      "section": "check",
+      "job": "check",
+      "treatment_hint": "motion",
+      "narration": [
+        "Now say the claims lead to her own manager.",
+        "Where does she go?"
+      ],
+      "on_screen": [
+        "Her manager is involved. Where now?"
+      ],
+      "visual_intent": "The manager's door on the path greys out; Maya stands at the fork. Silent pause.",
+      "grounding": [
+        {
+          "claim": "the twist is part of the invented example",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "recall": {
+        "kind": "pause_predict",
+        "answer": "another channel: another manager, HR, compliance or the speak-up line"
+      },
+      "pause_after_s": 3,
+      "change_over_time": true,
+      "animate_score": 0.5
+    },
+    {
+      "id": "b10",
+      "section": "check",
+      "job": "refute",
+      "treatment_hint": "motion",
+      "misconception": "If your manager is involved there is nowhere to go.",
+      "narration": [
+        "Another door.",
+        "HR, compliance, or the speak-up line."
+      ],
+      "on_screen": [],
+      "visual_intent": "The other doors light up and Maya walks past the greyed one.",
+      "grounding": [
+        {
+          "claim": "when the manager is involved, use another channel",
+          "fact": "F12"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.6
+    },
+    {
+      "id": "b11",
+      "section": "payoff",
+      "job": "payoff",
+      "treatment_hint": "motion",
+      "narration": [
+        "Back at her desk, Maya sends a calm note.",
+        "Notice it. Weigh it. Speak up.",
+        "Honesty, not proof."
+      ],
+      "on_screen": [
+        "Notice. Weigh. Speak up."
+      ],
+      "visual_intent": "The opening shot returns: Maya at her desk, now relaxed, sends the note and closes her laptop; the pocket rule appears.",
+      "grounding": [
+        {
+          "claim": "Maya's resolution is part of the invented example",
+          "hypothetical": true
+        },
+        {
+          "claim": "no proof needed",
+          "fact": "F5"
+        }
+      ],
+      "hypothetical": true,
+      "change_over_time": true,
+      "animate_score": 0.6
+    },
+    {
+      "id": "b12",
+      "section": "payoff",
+      "job": "consolidate",
+      "treatment_hint": "avatar",
+      "narration": [
+        "This week, find out which channels you have."
+      ],
+      "on_screen": [
+        "Know your channels"
+      ],
+      "visual_intent": "The presenter, warm and brief, beside the row of doors from the path, each with a blank label for the viewer's own organisation.",
+      "grounding": [
+        {
+          "claim": "channel names vary by organisation",
+          "fact": "F10"
+        }
+      ],
+      "change_over_time": false,
+      "animate_score": 0.3
+    }
+  ]
+}

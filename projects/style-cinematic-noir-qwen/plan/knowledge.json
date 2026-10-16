@@ -1,0 +1,163 @@
+{
+  "topic": "How one leaked password became a company-wide breach",
+  "scope_note": "Hypothetical case study for corporate employees: how a reused password leaked from an unrelated site can be tried against work logins and spread, and the habits that stop it. No statistics, costs or real incidents. Habits and mechanisms only.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Passwords can be exposed when a third-party service, such as a shopping, forum or social site, is breached, and the employer has no control over that service's security.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) password guidance; Have I Been Pwned breach corpus (Troy Hunt)"
+    },
+    {
+      "id": "F2",
+      "statement": "Credentials taken in breaches are often compiled into lists that are shared or traded, so a leaked username and password pair can circulate long after the original breach.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "OWASP Credential Stuffing Prevention Cheat Sheet; Have I Been Pwned (Troy Hunt) on breach collections"
+    },
+    {
+      "id": "F3",
+      "statement": "Credential stuffing is the automated trying of leaked username and password pairs against other services' login pages.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "OWASP, Credential Stuffing (attack description)"
+    },
+    {
+      "id": "F4",
+      "statement": "Credential stuffing works because people reuse the same password on more than one service: a pair leaked from one service then also unlocks the other.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "reference_hint": "OWASP Credential Stuffing Prevention Cheat Sheet; NCSC (UK) password guidance"
+    },
+    {
+      "id": "F5",
+      "statement": "Because the trying is automated, an attacker can test a very large number of leaked pairs against a login page cheaply, so a single reused password does not need to be targeted by a person to be found.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Say 'automated' and 'at scale'; do not give attempt counts or success rates.",
+      "reference_hint": "OWASP Credential Stuffing Prevention Cheat Sheet"
+    },
+    {
+      "id": "F6",
+      "statement": "Lateral movement is when an attacker who has gained access to one system or account uses that foothold to reach other systems and accounts in the same environment.",
+      "kind": "definition",
+      "confidence": "established",
+      "reference_hint": "MITRE ATT&CK, Lateral Movement tactic"
+    },
+    {
+      "id": "F7",
+      "statement": "An attacker logging in with a valid account can look like a normal user, which makes the activity harder to notice than a forced break-in.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Detection depends on the organisation's monitoring; say 'can be harder to notice', not 'undetectable'.",
+      "reference_hint": "MITRE ATT&CK, Valid Accounts technique"
+    },
+    {
+      "id": "F8",
+      "statement": "From a first compromised account an attacker may look for further credentials or higher-privilege accounts, which is called privilege escalation.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Say 'may' and 'can': how far an attacker gets depends on how access and permissions are set up.",
+      "reference_hint": "MITRE ATT&CK, Privilege Escalation tactic"
+    },
+    {
+      "id": "F9",
+      "statement": "Using a different password for each account limits the damage of a leak, because a password exposed from one service does not unlock the others.",
+      "kind": "practice",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) password guidance"
+    },
+    {
+      "id": "F10",
+      "statement": "A password manager makes a unique password per account practical, because it generates and stores them so a person does not have to remember each one.",
+      "kind": "practice",
+      "confidence": "established",
+      "reference_hint": "NCSC (UK) password manager guidance; NIST SP 800-63B (password managers and paste)"
+    },
+    {
+      "id": "F11",
+      "statement": "Multi-factor authentication asks for something beyond the password, so a correct password that someone else has stolen is not on its own enough to log in.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Applies to the password alone; it does not make an account immune to every attack.",
+      "reference_hint": "NCSC (UK) multi-factor authentication guidance; CISA, More than a password"
+    },
+    {
+      "id": "F12",
+      "statement": "Multi-factor authentication is not perfect: in MFA fatigue or prompt bombing, an attacker who has the password sends repeated approval requests hoping the user will approve one.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Present as a known weakness of some push-based MFA, not as a reason to skip MFA.",
+      "reference_hint": "CISA guidance on MFA fatigue / push bombing and phishing-resistant MFA"
+    },
+    {
+      "id": "F13",
+      "statement": "An MFA request you did not start should be denied, not approved, and reported, because it can mean someone else already has your password.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Frame it as a warning sign worth reporting, not proof of an attack.",
+      "reference_hint": "CISA guidance on MFA fatigue; NCSC (UK) guidance on reporting suspicious activity"
+    },
+    {
+      "id": "F14",
+      "statement": "Reporting an unexpected login prompt, an MFA request you did not start, or a breach notice to the security team promptly gives them a chance to act before an attacker spreads further.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Follow the employer's own reporting route; the lesson does not name one.",
+      "reference_hint": "NCSC (UK) guidance on reporting incidents; CISA incident reporting guidance"
+    },
+    {
+      "id": "F15",
+      "statement": "Have I Been Pwned is a free service, run by Troy Hunt, where a person can check whether their email address appears in known data breaches.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "It only covers breaches in its collection, so not appearing does not prove an address is safe.",
+      "reference_hint": "haveibeenpwned.com (Troy Hunt)"
+    },
+    {
+      "id": "F16",
+      "statement": "NIST advises against forcing routine periodic password changes with no sign of compromise, and advises changing a password when there is evidence it has been compromised.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "Use only as a myth to avoid; the lesson's advice is unique passwords and MFA, not frequent changes.",
+      "reference_hint": "NIST SP 800-63B, memorized secret verifiers guidance"
+    }
+  ],
+  "terms": [
+    {
+      "term": "credential stuffing",
+      "definition": "Automated trying of leaked username and password pairs on other services."
+    },
+    {
+      "term": "lateral movement",
+      "definition": "Using one compromised account or system to reach others in the same environment."
+    },
+    {
+      "term": "multi-factor authentication (MFA)",
+      "definition": "Logging in with something more than a password, such as a code or an approval on a device."
+    },
+    {
+      "term": "password manager",
+      "definition": "A tool that generates, stores and fills in a unique password for each account."
+    },
+    {
+      "term": "MFA fatigue",
+      "definition": "Repeated unexpected approval requests sent in the hope the user approves one."
+    }
+  ],
+  "not_claimed": [
+    "No breach statistics, percentages, costs or attempt counts (for example 'most breaches involve stolen passwords') are claimed.",
+    "The case is fictional and not any real company or incident.",
+    "Frequent forced password changes are not claimed to be good practice.",
+    "MFA is not claimed to make an account unbreakable.",
+    "Complex-looking passwords with symbols are not claimed to protect a password that is reused or already leaked.",
+    "The employee is not blamed: the reuse is a habit that the tools make easy to fix.",
+    "Not claimed that every leaked password is used or that every reused password leads to a company-wide breach."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (five-style test, D-167)",
+    "note": ""
+  }
+}

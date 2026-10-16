@@ -1,0 +1,166 @@
+{
+  "title": "How HTTPS keeps your data private",
+  "performance": "after the video, the viewer can explain in plain words how a browser and a site make a trip private before any data is sent (the site proves who it is, the two sides agree a secret key, then everything is scrambled), and can say what the padlock does and does not promise",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "uses the web, email and work apps daily; has seen the padlock and certificate warnings; knows public wifi is risky; has no networking background",
+    "why": "the brief's audience are working adults who rely on the padlock without knowing what it checks; the sheet defines seven plain terms and assumes only everyday browser use",
+    "motivation": "wants to avoid leaking a login or work data and to know when to trust what the browser shows; mildly uneasy that the padlock is a symbol they have never been shown",
+    "context": "desk or laptop at work, often with sound, captions on; first language varies, so screen words stay short and labels are single plain words"
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "the sheet is a sequence of steps in one handshake (identity check, shared key, scrambled data) that is best taught by running one login through it once, narrating each step; the brief asks for the same trip retold from open to private",
+    "signature_move": "show the login on the open path, add the one protection for that moment, show what the watcher now sees, THEN name the part just used"
+  },
+  "misconceptions": [
+    {
+      "belief": "the padlock means the site is safe and honest",
+      "why_tempting": "the icon looks like a security seal and sits next to the address, so it reads as a verdict on the site",
+      "refuted_in": "sec3",
+      "source_anchor": "F18, F19, not_claimed: the padlock means the site is safe, honest or trustworthy"
+    },
+    {
+      "belief": "the secret key is simply sent across to the server, perhaps locked, and a watcher could grab it",
+      "why_tempting": "sending a key over the same open network sounds like it must expose it",
+      "refuted_in": "sec2",
+      "source_anchor": "F12, F13 (the key is agreed without being sent readable; a watcher who sees the exchange cannot practically work it out)"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "A login leaves a browser, crosses a shared network and reaches a server. On the way a watcher sits on the path, and the plain data reads like a postcard."
+    },
+    "promise": "in about two minutes you will see how the same trip becomes private in three moves, and what the padlock really tells you",
+    "bridge_from_prior": "sec1 opens from the padlock and the certificate warning the viewer has already seen in their browser, set beside the trip the data actually takes",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain how a browser uses a certificate to decide whether a server is who it claims, naming the three checks it makes",
+        "bloom": "understand",
+        "concepts": [
+          "handshake",
+          "certificate",
+          "certificate authority",
+          "issuer, name and date checks"
+        ],
+        "energy": "build",
+        "carrier": "process",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can explain why two sides can agree a shared secret key across an open network that a watcher who sees the whole exchange cannot practically work out",
+        "bloom": "understand",
+        "concepts": [
+          "session key",
+          "key exchange",
+          "shared secret"
+        ],
+        "energy": "peak",
+        "carrier": "diagram",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can use the three protections (identity, shared key, scrambled data with tamper detection) to judge what the padlock does and does not promise about a site",
+        "bloom": "apply",
+        "concepts": [
+          "encryption",
+          "integrity",
+          "padlock",
+          "limits of HTTPS"
+        ],
+        "energy": "steady",
+        "carrier": "comparison",
+        "recap_after": false
+      }
+    ],
+    "payoff": "Back to the opening login on the same shared network: the packets still pass the watcher, who now sees only noise; the padlock marks a private trip to the claimed site, and the viewer knows it says nothing about whether the site is honest."
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1 to sec3",
+      "what": "one login run through identity check, shared key and scrambled data, the watcher's view changing at each step"
+    },
+    {
+      "stage": "faded",
+      "where": "quiz after sec3",
+      "what": "a different fictional site: the viewer picks which connection should carry a password and why a certificate from a trusted authority for a different name still fails"
+    },
+    {
+      "stage": "independent",
+      "where": "transfer before payoff",
+      "what": "next time the browser shows a padlock or a warning, the viewer asks the two questions the lesson taught: is the name right, and is this only a private trip"
+    }
+  ],
+  "pacing": {
+    "requested_s": 120,
+    "target_duration_s": 120,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "shared key"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec1",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Issuer, name, date: three checks before a single byte of the login moves."
+      },
+      {
+        "after_section": "sec3",
+        "kind": "quiz",
+        "prompt_sketch": "Two connections to a different fictional site. A: valid certificate for the exact address typed. B: certificate from a trusted authority, but made out for a different site name. Which would you let carry a password?",
+        "answer": "A: the issuer, name and date checks all pass, so the trip is private to the site you asked for; B fails the name check, so the browser should warn",
+        "tempting_wrong": "B looks fine because its issuer is trusted, but a trusted issuer is only one of three checks; the name must also match the address typed"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "the next time the browser shows a padlock or a certificate warning, check that the address is the one you meant and treat the padlock as a private trip, not as a verdict on the site"
+  ],
+  "persona": {
+    "voice": "an analyst: precise, calm, a little dry; explains each step of the mechanism and says plainly what each part does and does not promise, speaking to a capable colleague",
+    "delivery_notes": "even and unhurried on the hook, slower and plain on the shared key, brisk on the quiz setup with a clear pause cue, level and exact on the padlock's limits; short sentences, no jargon without the picture on screen"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the plain login crossing the shared network with a watcher reading it",
+      "objective": "promise: the same trip private in three moves, and what the padlock really tells you",
+      "recall_prior": "sec1 opens from the padlock and warning the viewer has already seen",
+      "present": "sec1 to sec3 in dependency order: who the site is, then the shared key, then the scrambled trip and its limits",
+      "guidance": "signature move on the one running login: add the protection, show the watcher's view, then name it",
+      "practice": "quiz after sec3 on a different site; transfer task",
+      "feedback": "the quiz answer explains why B (trusted issuer, wrong name) still fails",
+      "assess": "the quiz is the final check",
+      "transfer": "transfer task on the viewer's own browser; payoff returns to the opening login"
+    },
+    "merrill": {
+      "problem_centered": "one login crossing a shared network runs through the whole lesson",
+      "activation": "sec1 bridges from the padlock and warnings the viewer has seen",
+      "demonstration": "sec1 to sec3 run the login through each step with the watcher's view beside it",
+      "application": "quiz on a different site; transfer task",
+      "integration": "transfer task in the viewer's own browsing; payoff shows the same trip now private"
+    },
+    "mayer": {
+      "coherence": "one running login plus one quiz; no algorithm names, no versions, no side stories",
+      "signalling": "the part being explained is the accent as it is spoken; one slowdown on the shared key",
+      "redundancy": "screen shows single-word labels; narration carries the explanation; captions on",
+      "contiguity": "each check, key and scramble appears as the narration names it",
+      "segmenting": "three short sections, one move each, a recall prompt after the first",
+      "pre_training": "the hook names the parts on screen (browser, server, watcher) before the handshake runs"
+    },
+    "arcs": {
+      "attention": "the readable login with a watcher in the hook",
+      "relevance": "the viewer's own padlock and certificate warnings, and the transfer task",
+      "confidence": "a full worked trip before the quiz asks anything",
+      "satisfaction": "payoff: the same trip, watcher sees noise, padlock understood"
+    },
+    "bloom_path": "understand -> understand -> apply"
+  },
+  "series": null,
+  "flags": []
+}

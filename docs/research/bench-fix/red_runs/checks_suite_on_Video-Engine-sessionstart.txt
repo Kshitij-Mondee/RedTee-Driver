@@ -1,0 +1,74 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 338, in check_film_audit_reports_preshown_exit_none_foreign_blur_and_zero_denominators
+    assert [e["name"] for e in out["preshown"]] == ["card"], out["preshown"]
+                               ~~~^^^^^^^^^^^^
+KeyError: 'preshown'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 257, in check_mark_done_over_a_rejection_is_logged
+    flow.mark_done(p, "pedagogy", reason="requester: fine with any length")
+TypeError: mark_done() got an unexpected keyword argument 'reason'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 392, in check_probe_measures_foreign_pixels_on_a_built_lesson
+    assert rows["b2"]["px"] <= 200000 + 300, f"b2's own element built in b1's group was counted as foreign: {rows['b2']}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b2's own element built in b1's group was counted as foreign: {'beat': 'b2', 't': 7.15, 'px': 292952, 'by': {'b1': 292952}, 'held': ['A'], 'candidates': 1, 'box': [600, 100, 1698, 498], 'dpr': 0.5}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 453, in check_probe_measures_off_frame_elements_words_and_figures
+    assert not b2.get("off") and not b2.get("off_text") and b2.get("n_own", 0) > 0, \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: control: b2 is inside and seen; its flyer left on its own motion and its lens is clipped: {'beat': 'b2', 't': 7.15, 'n': 1, 'n_own': 1, 'els': 3, 'min_px': 41.8, 'small': [], 'cut': [], 'off': [{'off': True, 'held': False, 'name': 'flyer', 'kind': 'card', 'share': 1, 'words': 1, 'rect': [2700, -250, 3000, -130]}, {'off': True, 'held': False, 'name': 'lens', 'kind': 'magnify', 'share': 0.71, 'words': 0, 'rect': [900, -500, 3300, 1100]}], 'off_text': [{'offText': True, 'text': 'Sent away', 'rect': [2720, -215, 2933, -164]}], 'held_off': [], 'boxes': [[330, 395, 718, 446]]}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 235, in check_render_force_needs_a_reason_the_checked_build_and_no_thrown_scene
+    refused("", {"errors": ["b01: x"], "build_hash": h}, "--reason")
+AttributeError: module 'loom.flow' has no attribute 'force_render_allowed'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 165, in check_render_segments_carry_the_build_hash_and_stale_ones_are_dropped
+    from loom.render import stamp_segments
+ImportError: cannot import name 'stamp_segments' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-sessionstart\loom\render.py)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 192, in check_render_verification_fails_above_ten_percent_and_on_zero
+    from loom.render import verify_failure
+ImportError: cannot import name 'verify_failure' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-sessionstart\loom\render.py)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-sessionstart\tests\suites\checks_film_defects.py", line 274, in check_style_lint_measures_the_caption_pill
+    from loom.checks.style_lint import caption_ratios, lint_all, lint_style
+ImportError: cannot import name 'caption_ratios' from 'loom.checks.style_lint' (C:\Users\Admin\Desktop\Video-Engine-sessionstart\loom\checks\style_lint.py)
+  PASS  check_blurred_beat_is_measured_on_its_own_words_and_never_excused  (sharp 1.125, blurred 0.044; blurred under hold, rest and none; sharp passes)
+  PASS  check_every_element_has_a_life_window  (missing lifeT named; old runtime said; zero red)
+  FAIL  check_film_audit_reports_preshown_exit_none_foreign_blur_and_zero_denominators: 'preshown'
+  PASS  check_foreign_pixels_report_other_beats_and_never_pass_blind  (697 px named; 129 px quiet; ghost warns; unmeasured and partial never pass)
+  PASS  check_ledger_gives_film_defects_their_own_kinds  (6 kinds)
+  FAIL  check_mark_done_over_a_rejection_is_logged: mark_done() got an unexpected keyword argument 'reason'
+  PASS  check_off_frame_rows_are_errors_ratcheted_for_old_lessons_and_a_blind_measure_is_red  (own off-frame and figure crop are errors; held warns; baseline ratchets; blind measure red)
+  FAIL  check_probe_measures_foreign_pixels_on_a_built_lesson: b2's own element built in b1's group was counted as foreign: {'beat': 'b2', 't': 7.15, 'px': 292952, 'by': {'b1': 292952}, 'held': ['A'], 'candidates': 1, 'box': [600, 100, 1698, 498], 'dpr': 0.5}
+  FAIL  check_probe_measures_off_frame_elements_words_and_figures: control: b2 is inside and seen; its flyer left on its own motion and its lens is clipped: {'beat': 'b2', 't': 7.15, 'n': 1, 'n_own': 1, 'els': 3, 'min_px': 41.8, 'small': [], 'cut': [], 'off': [{'off': True, 'held': False, 'name': 'flyer', 'kind': 'card', 'share': 1, 'words': 1, 'rect': [2700, -250, 3000, -130]}, {'off': True, 'held': False, 'name': 'lens', 'kind': 'magnify', 'share': 0.71, 'words': 0, 'rect': [900, -500, 3300, 1100]}], 'off_text': [{'offText': True, 'text': 'Sent away', 'rect': [2720, -215, 2933, -164]}], 'held_off': [], 'boxes': [[330, 395, 718, 446]]}
+  FAIL  check_render_force_needs_a_reason_the_checked_build_and_no_thrown_scene: module 'loom.flow' has no attribute 'force_render_allowed'
+  FAIL  check_render_segments_carry_the_build_hash_and_stale_ones_are_dropped: cannot import name 'stamp_segments' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-sessionstart\loom\render.py)
+  FAIL  check_render_verification_fails_above_ten_percent_and_on_zero: cannot import name 'verify_failure' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-sessionstart\loom\render.py)
+  FAIL  check_style_lint_measures_the_caption_pill: cannot import name 'caption_ratios' from 'loom.checks.style_lint' (C:\Users\Admin\Desktop\Video-Engine-sessionstart\loom\checks\style_lint.py)
+
+5 passed, 8 failed, 0 skipped  [subset: 13 of 198]

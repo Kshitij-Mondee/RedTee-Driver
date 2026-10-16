@@ -1,0 +1,862 @@
+{
+  "style": "corporate-clean",
+  "concept": "One path for the heat. A single server's heat is followed outward, from the chip to the outside of the building, along one route the camera travels (right is outward along the path, down is inside a part, a zoom enters a thing). Air and coolant are moving streams and beads coloured cool and warm, the same in the 2D sections and in the 3D models, and the route promised at the start (b03) is lit stage by stage at the close (b30 to b32), around the same one server the film opens on.",
+  "motifs": [
+    {"name": "heat_path", "desc": "The route from the chip to the outside: a faint dashed promise in b03, the air path lit as one line in b07, both lanes lit stage by stage in b30 to b32."},
+    {"name": "temperature_code", "desc": "Cool is accent4, warm is accent2, in every 2D scene and every 3D model (the models' cool and warm roles resolve to the same tokens). A stream recolours exactly where it picks up or gives off heat. Blue (accent) is never a temperature: it marks only the thing the narration is naming."}
+  ],
+  "world": {
+    "stations": [
+      {"id": "server", "x": 0, "y": 0, "zone": "hook", "note": "One server on a clean bench (3D, b01). The film's opening subject; it returns, drawn, in b30."},
+      {"id": "hall", "x": 0, "y": -1400, "zone": "hook", "note": "Above the server: the pull back to a whole data hall (3D, b02)."},
+      {"id": "route", "x": 2400, "y": 0, "zone": "the path", "note": "The heat path map (kit heat_route): the promise in b03, the whole path at the close b30 to b32."},
+      {"id": "air_section", "x": 4800, "y": 0, "zone": "sec1 air path", "note": "One server in side view, its cooling unit, the water loop, the wall and the outdoor unit, built up over b04 to b07 with continue joins and in-scene pans to the right."},
+      {"id": "floor_plan", "x": 7200, "y": 0, "zone": "sec2 room from above", "note": "The floor plan held across b08 to b11 (kit floor_plan)."},
+      {"id": "aisle_3d", "parent": "floor_plan", "rect": {"x": 640, "y": 520, "w": 640, "h": 360}, "note": "Inside the plan, over rows 1 and 2 and the cold aisle between them: b12 zooms into the 3D aisle pair."},
+      {"id": "rack", "x": 9600, "y": 0, "zone": "sec2 one rack", "note": "One rack in 3D: the empty slot (b13), the blanking panel (b15)."},
+      {"id": "rack_section", "x": 9600, "y": 1400, "zone": "sec2 inside the rack", "note": "Below the rack: its side section (kit rack). The leak in b14; the AI servers in b18 (a cut back to this place)."},
+      {"id": "containment", "x": 12000, "y": 0, "zone": "sec2 containment", "note": "The 3D aisle pair again, now with the spill and the containment (b16)."},
+      {"id": "walkthrough", "x": 12000, "y": 1400, "zone": "sec2 practice", "note": "The rack face seen from the cold aisle on a walk-through (b17)."},
+      {"id": "boxes", "x": 14400, "y": 0, "zone": "sec3 air and water", "note": "Two equal boxes, air and water (b19)."},
+      {"id": "chip", "x": 16800, "y": 1400, "zone": "sec3 inside the server", "note": "Below the server: one accelerator chip and its cold plate (3D, b20)."},
+      {"id": "gpu", "x": 16800, "y": 0, "zone": "sec3 the AI server", "note": "The liquid-cooled AI server (3D, b21)."},
+      {"id": "cdu", "x": 19200, "y": 0, "zone": "sec3 the CDU", "note": "Right of the server, outward along the path: the coolant distribution unit (3D, b22)."},
+      {"id": "cdu_inside", "parent": "cdu", "rect": {"x": 760, "y": 358, "w": 400, "h": 225}, "note": "Inside the CDU cabinet: the two loops as a schematic (b23); b23 zooms in through the open door."},
+      {"id": "liquid_server", "x": 21600, "y": 0, "zone": "sec3 the limit", "note": "Back out to one server in side view, liquid form, and the blanking panel callback (b24)."},
+      {"id": "pue_term", "x": 24000, "y": 0, "zone": "sec4 the term", "note": "The PUE definition card (b25)."},
+      {"id": "pue_pour", "x": 26400, "y": 0, "zone": "sec4 where energy goes", "note": "Energy beads pour into IT and overhead bins (physics, b26)."},
+      {"id": "pue", "x": 28800, "y": 0, "zone": "sec4 the fraction", "note": "The PUE fraction of energy blocks held across b27 to b29 (kit energy_fraction)."}
+    ]
+  },
+  "story": {
+    "metaphor": "none: the real path the heat takes, from the chip to the outside of the building",
+    "setting": "One invented, generic data centre (no site, no vendor): a server, a hall, the room from above, one rack, one AI server and its chip, the CDU and the outside, drawn as clean 2D sections, and as 3D models where seeing the object itself is the point",
+    "arc": "Hook: one server's heat, then a room of them, and the question where it goes. Setup: the air path, server to cooling unit to outside. Turn: the goal is not a cold room, it is a path. Reveal: the room from above, aisles, the leak through an empty slot, the panel and containment. Turn: AI racks need liquid. Reveal: chip, cold plate, CDU and its two loops. Data: PUE as energy objects. Payoff: the opening server with the whole path lit, and the rule."
+  },
+  "devices": [
+    {"id": "heat_path", "what": "The heat path map (kit heat_route): the chip to the outside as one route. A faint dashed promise at the start, the air path lit as one continuous line when the misconception breaks, and both lanes (liquid above, air below) lit stage by stage at the close. Every stage is a small object with its word on it.", "kind": "callback", "beats": ["b03", "b07", "b30", "b31", "b32"]},
+    {"id": "held_floor_plan", "what": "One floor plan from above, held while one thing changes per run: every row the same way, the prediction on the plan, the row-to-row exhaust, the rotation into cold and hot aisles; then a zoom into one aisle, in 3D.", "kind": "explain", "beats": ["b08", "b09", "b10", "b11", "b12"]},
+    {"id": "temperature_code", "what": "Air and coolant drawn as moving streams or beads, cool in accent4 and warm in accent2, identical in the 2D sections and the 3D models. A stream recolours where it picks up or gives off heat, so the viewer watches the heat travel.", "kind": "other", "beats": ["b01", "b04", "b05", "b06", "b10", "b12", "b14", "b16", "b18", "b20", "b21", "b23", "b24", "b30", "b31"]},
+    {"id": "one_rack", "what": "One rack returns, changed each time: the empty slot (3D), its side section with the leak, the blanking panel sliding in (3D), the same slot seen from the aisle, then filled with AI servers and a flood of heat, and as a small callback card beside the liquid-cooled server.", "kind": "callback", "beats": ["b13", "b14", "b15", "b17", "b18", "b24"]},
+    {"id": "energy_objects", "what": "Energy as objects, never a headline number: beads poured into an IT bin and overhead bins (physics), then blocks stacked as the PUE fraction that holds while the overhead shrinks, returns and grows with the leaks. The only number ever printed is 1.0.", "kind": "data", "beats": ["b26", "b27", "b28", "b29"]},
+    {"id": "camera_follows_heat", "what": "The join material: the camera travels with the heat. Right is outward along the path, up is a pull back to the room, down is inside a part, and a zoom enters a thing (the plan into one aisle, the CDU into its two loops). Section changes are hard cuts.", "kind": "join", "beats": ["b02", "b03", "b06", "b12", "b14", "b20", "b21", "b22", "b23", "b30"]}
+  ],
+  "value_script": [
+    {"from": "b01", "band": "light", "break": false, "accent": "the server's warm exhaust", "why": "Pale open: one object on the clean field, its heat the only colour."},
+    {"from": "b08", "band": "mid", "break": false, "accent": "the row or aisle being named", "why": "The mechanism section: the plan's floor, rows and streams make the frame a little richer."},
+    {"from": "b18", "band": "mid", "break": true, "accent": "the swollen exhaust band", "why": "A flood at the turn: AI servers arrive and warm colour floods the back of the rack, the only time amber covers a large area."},
+    {"from": "b23", "band": "mid", "break": true, "accent": "the loop being named", "why": "Colour withheld for the hardest idea: inside the CDU everything is neutral except the two loops and the heat crossing between them."},
+    {"from": "b25", "band": "light", "break": false, "accent": "PUE, then the cooling bin, then 1.0", "why": "Data and definitions stay calm and pale."},
+    {"from": "b30", "band": "light", "break": true, "accent": "each stage as it is named", "why": "Lift at the close: both lanes of the path light in full colour for the first time, every stage at once by the end."}
+  ],
+  "kit": {
+    "parts": [
+      {"id": "heat_route", "what": "The heat path map as a long horizontal strip. Left end: one server in cutaway (the server_side part, small) with its chip. Right end: the building's outer wall and one generic outdoor unit releasing warm air to open air. Two lanes run between them: the upper, liquid lane (chip, cold plate, rack loop, CDU, facility water, outside) and the lower, air lane (front, back, hot aisle, cooling unit, then a water line to the same outdoor unit). Each stage is a small neutral object with its label hung on it (28 px or larger). A lane segment is faint (dashed, line token), lit (temperature colours: accent4 before the heat is picked up, accent2 after) or named (accent, while the narration names it).", "states": ["faint", "liquid_lit", "air_lit", "both_lit"], "beats": ["b03", "b30", "b31", "b32"], "size": [1720, 760]},
+      {"id": "server_side", "what": "One server in side view: a flat chassis with fans at the front on the left (intake) and the back on the right (exhaust), a chip under a heatsink in the middle, memory and power supplies beside it. Air form: a cool stream (accent4) enters the front and turns warm (accent2) as it crosses the hot parts, leaving the back. Liquid form: a cold plate on the chip with a cool hose in and a warm hose out of the back, and a thinner air stream still crossing the other parts.", "states": ["air", "liquid"], "beats": ["b04", "b24", "b30"], "size": [900, 360]},
+      {"id": "floor_plan", "what": "The room from above: walls, a raised-floor tile grid (surface2), two cooling units on the bottom wall, four rows of racks as long ink bars of six rack tiles each, numbered 1 to 4 from the bottom (the front row, nearest the cooling units) to the top (the back row). Each row's front edge carries a small arrow. same_way: every front points down. alternating: rows 1 and 3 turned round in place, so fronts face across a cold aisle between rows 1 and 2 and between rows 3 and 4, backs across a hot aisle between rows 2 and 3; aisle washes (cold accent4, hot accent2 at low opacity) with labels. Rows 1 and 2 and the cold aisle between them sit inside x 640 to 1280, y 520 to 880 of the frame, so the b12 zoom lands on them.", "states": ["same_way", "numbered", "alternating"], "beats": ["b08", "b09", "b10", "b11"], "size": [1500, 800]},
+      {"id": "rack", "what": "One rack of servers, two views. Side section: the frame with its front (cold aisle side, left) and back (hot aisle side, right), seven servers stacked with one empty slot third from the top, cool intake streams on the left, warm exhaust on the right. Front view (seen from the aisle): the same rack face-on, the same empty slot, a perforated floor tile in front. gap: the slot open. blanked: a blanking panel fills it. ai: every server swapped for a taller AI server whose accelerator blocks glow warm, the exhaust band several times wider.", "states": ["gap", "blanked", "ai"], "beats": ["b14", "b17", "b18", "b24"], "size": [700, 860]},
+      {"id": "energy_fraction", "what": "PUE as a fraction of energy blocks: a top stack (IT energy blocks in accent3 at its base, overhead blocks in line grey above them, the cooling block the largest of the overhead), a fraction bar, a bottom stack (the same IT energy blocks), the labels Total facility energy (top) and IT energy (bottom), and a thin floor line where the top would equal the bottom. built; ideal (no overhead, top equals bottom); real (a little overhead back, the top just above the floor line); grown (one more overhead block).", "states": ["built", "ideal", "real", "grown"], "beats": ["b27", "b28", "b29"], "size": [900, 760]}
+    ],
+    "notes": "Colours: cool accent4, warm accent2 everywhere (the 3D models use the same tokens); accent (blue) only on the element being named, one at a time; context in accent3, line and muted. Every label 28 px or larger as seen, words only from the script or the knowledge sheet. No people anywhere (the brief: no presenter; the floor team is never drawn)."
+  },
+  "scenes": [
+    {
+      "beat": "b01", "kind": "three", "station": "server", "tools": ["three"],
+      "subject": "one server",
+      "world": "one server, alone on a clean bench",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "gpu_server", "opts": {"cooling": "air"},
+        "states": [
+          {"key": "lid", "from": 0, "to": 1, "say": "running", "dur": 0.9},
+          {"key": "load", "from": 0, "to": 1, "say": "It draws power all day", "dur": 1.4},
+          {"key": "airflow", "from": 0, "to": 1, "say": "ends up as heat", "dur": 0.8}
+        ],
+        "mood": "clean_bench", "arrive_say": "Here is one server", "elevation": 30, "zoom": 1.2, "turn": 0.45}},
+      "join_in": {"type": "cut"},
+      "shot": {"size": "medium"},
+      "depth": "3d", "light": "key", "story_role": "hook", "register": "expressive", "motion_is": "content",
+      "accent_on": "the warm exhaust leaving the back of the server",
+      "references": ["docs/assets/models3d/gpu_server__corporate-clean.jpg (turntable sheet: lid, load, airflow states)", "docs/research/teded/2026-10-01-teded-study.md (the AI data centres film: one object, its heat, then scale)"],
+      "rationale": "Seeing one real server open, its accelerators glowing and warm air leaving the back, IS the hook: every watt becomes heat. The motif that returns, drawn, at b30."
+    },
+    {
+      "beat": "b02", "kind": "three", "station": "hall", "tools": ["three"],
+      "subject": "a data hall full of AI servers",
+      "world": "the data hall",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "dc_hall", "opts": {"rows": 6, "racks": 8},
+        "states": [
+          {"key": "lights", "from": 0, "to": 1, "say": "fill a room with AI servers", "dur": 1.8}
+        ],
+        "mood": "hot_aisle", "arrive_say": "Now fill a room", "elevation": 26, "yaw": -0.5, "turn": 0.35}},
+      "join_in": {"type": "camera", "dir": "up"},
+      "shot": {"size": "establishing"},
+      "depth": "3d", "story_role": "hook", "register": "expressive", "motion_is": "content",
+      "accent_on": "the rows lighting one after another",
+      "references": ["docs/assets/models3d/dc_hall__corporate-clean.jpg (turntable sheet: lights row by row)"],
+      "rationale": "The pull back from one server to a room of them is scale, and scale is what a real hall shows at a glance. A different object from b01, back to back on purpose: the camera pulls up and out. The two questions are spoken over the lit hall and answered by the rest of the film."
+    },
+    {
+      "beat": "b03", "kind": "bespoke", "station": "route",
+      "subject": "the heat path from one chip to the outside",
+      "world": "the heat path map",
+      "upgrade_reason": "The promise is a route: a path drawn from the chip to the outside is the picture the whole lesson lights up again at the close (b30 to b32), and a template card would lose the map the close returns to.",
+      "design": {
+        "treatment": "The heat path map as a promise (kit heat_route, state faint): a long horizontal strip across the frame on the plain field. Left: one chip, small and neutral. Right: the edge of a building with one generic outdoor unit and open air beyond. A faint dashed route draws from the chip to the outside, left to right; everything between is still unlit and unlabelled, waiting for the lesson.",
+        "why_motion": "The route drawing from left to right IS the promise: the heat will travel this way, and the film will follow it.",
+        "elements": [
+          {"name": "route_map", "what": "kit heat_route in state faint, filling about 1720 x 760, both lanes as faint dashed lines, every middle stage a pale outline with no label"},
+          {"name": "route_line", "what": "the dashed route from the chip to the outdoor unit (line token; accent while it draws)"},
+          {"name": "chip", "what": "the chip at the left end with its label Chip"},
+          {"name": "outside", "what": "the building edge and outdoor unit at the right end with its label Outside"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "You can follow it", "element": "route_line", "action": "the dashed route wipes in left to right across the whole map", "motion": "m.unmask on a box that hugs the line (dashes kept), 1.2 s, editorial ease"},
+          {"t_anchor": "from one chip", "element": "chip", "action": "the chip settles at the left end; label Chip hangs from it", "motion": "m.settle, label m.reveal dy 10"},
+          {"t_anchor": "to the outside", "element": "outside", "action": "the building edge and outdoor unit settle at the right end; label Outside; the camera eases 140 px right inside the place", "motion": "m.settle; Loom.cam.pan 1.4 s"}
+        ],
+        "continuity": "The same map, same positions, returns in b30 to b32 with every stage lit; draw it through the kit part so the two frames match exactly.",
+        "references": ["docs/styles/guides/corporate-clean.md R1 (a process as a route across a real place, one blue owner at a time)", "docs/research/teded/2026-10-01-teded-study.md (the data centre film keeps one map and adds to it)"]
+      },
+      "join_in": {"type": "camera"},
+      "shot": {"size": "wide"},
+      "depth": "flat", "story_role": "setup", "register": "productive", "motion_is": "content",
+      "accent_on": "route_line"
+    },
+    {
+      "beat": "b04", "kind": "bespoke", "station": "air_section",
+      "subject": "a server breathing, front to back",
+      "world": "one server in side view",
+      "option": "laptop then server section",
+      "design": {
+        "treatment": "The everyday thing first, then the formal picture. A small laptop (Loom.obj laptop, neutral) at the left gives one soft warm puff from its side vent. Then the server in side view (kit server_side, state air) takes the centre and right: front on the left, back on the right, fans, a chip under a heatsink. A cool stream (accent4) enters the front, crosses the hot parts and shifts to warm (accent2) as it goes, then leaves the back. Labels hang on the server's two faces.",
+        "why_motion": "Front-to-back airflow is a change over time: the air enters cool and leaves warm, and the colour change along the stream is the lesson's whole temperature code.",
+        "elements": [
+          {"name": "laptop", "what": "a small neutral laptop at the left third, the analogy; it retires once the server arrives"},
+          {"name": "server_side", "what": "kit server_side, state air, about 900 x 360 at the centre right"},
+          {"name": "cool_stream", "what": "accent4 particles entering the front"},
+          {"name": "warm_stream", "what": "the same stream after the hot parts, accent2, leaving the back"},
+          {"name": "label_front", "what": "label on the front face: Front: cool in"},
+          {"name": "label_back", "what": "label on the back face: Back: warm out"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Like a laptop", "element": "laptop", "action": "the laptop settles; a small warm puff leaves its side vent", "motion": "m.settle; puff m.reveal and drift 0.8 s"},
+          {"t_anchor": "it breathes", "element": "server_side", "action": "the camera pushes right from the laptop to the server, which settles in side view; the laptop retires left", "motion": "Loom.cam.push 1.3 s; laptop exit 0.3 s"},
+          {"t_anchor": "Cool air in at the front", "element": "cool_stream", "action": "cool particles enter the front and run into the chassis; label Front: cool in", "motion": "m.along, period-locked flow"},
+          {"t_anchor": "Warm air out the back", "element": "warm_stream", "action": "the stream turns warm over the heatsink and leaves the back; label Back: warm out", "motion": "colour shift along the path; m.along"}
+        ],
+        "continuity": "b05 to b07 continue on this station and keep server_side and the streams exactly where they are; the labels retire in b05 and return in b07.",
+        "references": ["docs/assets/models3d/gpu_server__corporate-clean.jpg (front intake, rear exhaust, fans at the front)", "skills/lnd/lnd-explainer-craft s1.5 (the everyday thing, then the formal picture)"]
+      },
+      "alternatives": {
+        "3D laptop": {"kind": "three", "three": {"preset": "device_shot", "rect": [192, 54, 1536, 864], "params": {"device": "laptop", "screen": {"kind": "blank"}, "lid_say": "Like a laptop", "mood": "clean_bench"}}, "depth": "3d", "register": "productive", "motion_is": "staging"}
+      },
+      "join_in": {"type": "cut", "meaning": "chapter"},
+      "shot": {"size": "medium", "move": "push"},
+      "depth": "flat", "story_role": "setup", "register": "productive", "motion_is": "content",
+      "accent_on": "cool_stream, then warm_stream (their own temperature colours; no blue in this frame)",
+      "rationale": "Chosen over the 3D laptop clip: a laptop clip can show the analogy but not the front-to-back air the narration states in the next two sentences. The 3D laptop stays as the alternative."
+    },
+    {
+      "beat": "b05", "kind": "bespoke", "station": "air_section",
+      "subject": "the warm air travelling to a cooling unit and back",
+      "world": "one server and its cooling unit",
+      "keep": ["server_side", "cool_stream", "warm_stream"],
+      "design": {
+        "treatment": "Same server, same place. The warm stream rises from the back and travels right to a floor-standing cooling unit (a neutral cabinet with a coil inside). Inside the unit it changes colour from warm to cool, then runs back low along the floor to the server's front, closing a loop.",
+        "why_motion": "The loop is a journey: the viewer follows the warm air to the unit and watches it come back cool.",
+        "elements": [
+          {"name": "return_stream", "what": "warm particles rising from the server's back and arcing right to the unit's top intake"},
+          {"name": "cooling_unit", "what": "a floor-standing cooling unit at the right, surface and accent3, coil visible through a cutaway panel"},
+          {"name": "unit_label", "what": "label Cooling unit hanging from the unit"},
+          {"name": "coil", "what": "the coil inside the unit, where the stream recolours warm to cool"},
+          {"name": "supply_stream", "what": "cool particles leaving the unit low and returning to the server's front"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "So where does the warm air go", "element": "return_stream", "action": "the warm stream rises from the back and arcs right; the camera pans right to make room", "motion": "m.along; Loom.cam.pan 1.3 s"},
+          {"t_anchor": "To a cooling unit", "element": "cooling_unit", "action": "the unit settles where the stream lands; label Cooling unit", "motion": "m.settle; label m.reveal"},
+          {"t_anchor": "It takes the heat out", "element": "coil", "action": "inside the unit the particles recolour from warm to cool as they cross the coil", "motion": "colour shift along the path at the coil"},
+          {"t_anchor": "sends the air back cool", "element": "supply_stream", "action": "cool air runs back along the floor into the server's front: the loop closes", "motion": "m.along, period-locked"}
+        ],
+        "continuity": "Keeps server_side and both streams from b04 untouched. b06 keeps everything here and extends right.",
+        "references": ["docs/assets/models3d/dc_aisle_pair__corporate-clean.jpg (cooling units at the row ends, warm return)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "setup", "register": "productive", "motion_is": "content",
+      "accent_on": "cooling_unit"
+    },
+    {
+      "beat": "b06", "kind": "bespoke", "station": "air_section",
+      "subject": "the heat leaving the building on a water loop",
+      "world": "the server room, its wall and the outside",
+      "keep": ["server_side", "cooling_unit", "return_stream", "supply_stream"],
+      "design": {
+        "treatment": "From the cooling unit a water pipe runs right through the building wall to a generic outdoor unit on the other side. A warm pulse rides the pipe out; at the outdoor unit warm air lifts away into open air. The camera pans right with the pulse.",
+        "why_motion": "The heat moving along the water loop and out of the building is the change over time; the pan follows it outward.",
+        "elements": [
+          {"name": "water_loop", "what": "a water pipe (line, 5 px) from the unit through the wall, with a return pipe beside it"},
+          {"name": "warm_pulse", "what": "a warm (accent2) pulse travelling along the outgoing pipe"},
+          {"name": "building_wall", "what": "the building's wall in section, field2 and surface2"},
+          {"name": "outdoor_unit", "what": "a generic outdoor unit with a fan on top, warm air lifting away"},
+          {"name": "label_water", "what": "label Water loop on the pipe"},
+          {"name": "label_outside", "what": "label Outside on the outdoor unit"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "The heat rides a water loop", "element": "water_loop", "action": "the pipe draws from the unit toward the wall and the camera starts its pan right with it (the beat is only about 3.5 s, so pan and draw run together); the warm pulse starts along it; label Water loop", "motion": "m.draw 0.8 s; Loom.cam.pan 1.4 s from this anchor; m.along"},
+          {"t_anchor": "to equipment outside", "element": "outdoor_unit", "action": "the wall and the outdoor unit are already in view as the pan ends; the unit settles, the pulse arrives and warm air lifts away; label Outside", "motion": "m.settle; drift"}
+        ],
+        "continuity": "Keeps the server, unit and air loop from b05. b07 keeps everything and pulls back to the whole route.",
+        "references": ["docs/styles/guides/corporate-clean.md R1 (route across a place, carriers per leg)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "wide"},
+      "depth": "flat", "story_role": "setup", "register": "productive", "motion_is": "content",
+      "accent_on": "warm_pulse"
+    },
+    {
+      "beat": "b07", "kind": "bespoke", "station": "air_section",
+      "subject": "cooling as one path, not a cold room",
+      "world": "the server room, its wall and the outside",
+      "keep": ["server_side", "cooling_unit", "return_stream", "supply_stream", "water_loop", "building_wall", "outdoor_unit"],
+      "design": {
+        "treatment": "The camera pulls back so the whole route is in frame: server, cooling unit, water loop, wall, outdoor unit. A tag with a struck snowflake icon reading Not a cold room is pinned beside the room (no frost, no ice: a small icon struck through). Then one continuous accent line traces the whole route as a single path, labelled A path, and the server's two face labels return.",
+        "why_motion": "The misconception breaks on screen: the separate pieces light as one continuous path.",
+        "elements": [
+          {"name": "cold_room_tag", "what": "a small card: snowflake icon struck through, text Not a cold room"},
+          {"name": "path_line", "what": "one accent line over the whole route, server to outside, label A path"},
+          {"name": "label_front", "what": "Front: cool in, back on the server's front"},
+          {"name": "label_back", "what": "Back: warm out, back on the server's back"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "So the goal is not a cold room", "element": "cold_room_tag", "action": "the camera pulls back to the whole route; the tag settles beside the room and its snowflake is struck", "motion": "Loom.cam.frame 1.4 s; m.settle; strike m.draw 0.4 s"},
+          {"t_anchor": "Cooling is a path", "element": "path_line", "action": "one line traces the whole route left to right and its label A path settles; the tag dims", "motion": "m.draw 1.2 s"},
+          {"t_anchor": "Cool in at the front", "element": "label_front", "action": "Front: cool in returns on the server", "motion": "m.reveal"},
+          {"t_anchor": "warm out the back", "element": "label_back", "action": "Back: warm out returns on the server; the frame then rests", "motion": "m.reveal"}
+        ],
+        "continuity": "The last frame of the air section. The rule Cool in at the front, warm out the back is the recall the floor plan section builds on.",
+        "references": ["skills/lnd/lnd-explainer-craft s1.13 (expected, then actual: strike it and keep it visible)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "wide", "move": "pull"},
+      "depth": "flat", "story_role": "turn", "register": "productive", "motion_is": "content",
+      "accent_on": "path_line"
+    },
+    {
+      "beat": "b08", "kind": "bespoke", "station": "floor_plan",
+      "subject": "a server room from above, every row facing one way",
+      "world": "the floor plan from above",
+      "design": {
+        "treatment": "The floor plan that holds for the section (kit floor_plan, state same_way): room walls, a raised-floor tile grid, two cooling units on the bottom wall, four long rows of racks. Every row's front edge carries a small arrow, and all point down.",
+        "why_motion": "Staging only: the plan builds in place, structure first, so the next beats can run it.",
+        "elements": [
+          {"name": "floor_plan", "what": "kit floor_plan, state same_way, about 1500 x 800, centred above the caption band"},
+          {"name": "rows", "what": "the four rows, part of the plan, settling bottom to top"},
+          {"name": "front_arrows", "what": "one small arrow on each row's front edge, all pointing down"},
+          {"name": "tag_one_way", "what": "tag Every row faces one way hanging from the top row"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Now a room, from above", "element": "floor_plan", "action": "walls and floor draw, the cooling units settle, then the rows settle bottom to top", "motion": "m.draw walls 0.8 s; m.settle rows, stagger 0.12 s"},
+          {"t_anchor": "Every row faces the same way", "element": "front_arrows", "action": "the front arrows stamp row by row, all pointing down; the tag settles", "motion": "m.reveal stagger 0.15 s; tag m.reveal"}
+        ],
+        "continuity": "Held across b08 to b11 (continue joins): never redraw the plan, change its state. Rows 1 and 2 and the aisle between them sit inside the aisle_3d portal rect (x 640 to 1280, y 520 to 880).",
+        "references": ["docs/assets/models3d/dc_hall__corporate-clean.jpg (rows, tiles, cooling units on the wall)", "skills/lnd/lnd-explainer-craft s1.9 (hold the layout, change its state)"]
+      },
+      "join_in": {"type": "cut", "meaning": "chapter"},
+      "shot": {"size": "overhead"},
+      "depth": "flat", "story_role": "setup", "register": "productive", "motion_is": "staging",
+      "accent_on": "front_arrows"
+    },
+    {
+      "beat": "b09", "kind": "bespoke", "station": "floor_plan",
+      "subject": "the prediction, made on the floor plan",
+      "world": "the floor plan from above",
+      "keep": ["floor_plan", "rows", "front_arrows"],
+      "intent": "rest",
+      "upgrade_reason": "The prediction has to be made on the plan itself, held still: a quiz slide would take the rows away at the exact moment the viewer needs to look at them and decide.",
+      "design": {
+        "treatment": "The plan holds still. Row numbers 1 to 4 appear at each row's left end, counted from the front (bottom, by the cooling units) to the back (top). A question card is pinned at the right of the plan: Which row runs warmest? A thin pause bar under the question runs through the silence; nothing else moves.",
+        "why_motion": "Staging only: the frame rests so the viewer can decide.",
+        "elements": [
+          {"name": "row_numbers", "what": "number discs 1 to 4 at the rows' left ends, bottom to top"},
+          {"name": "question_card", "what": "card pinned right: Which row runs warmest?"},
+          {"name": "pause_bar", "what": "a thin bar under the question that fills through the 3 s pause"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Which row breathes the warmest air", "element": "row_numbers", "action": "the numbers 1 to 4 appear bottom to top; the question card settles", "motion": "m.reveal stagger 0.15 s; card m.settle"},
+          {"t_anchor": "Decide before I run it", "element": "pause_bar", "action": "the pause bar fills across the silence; nothing else moves", "motion": "linear fill over the pause"}
+        ],
+        "continuity": "Takes the plan from b08 unchanged; b10 keeps the numbers and the plan and answers on it.",
+        "references": ["runtime/catalog.md quiz.question (the pause ring through the scripted silence)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "overhead"},
+      "depth": "flat", "story_role": "practice", "register": "productive", "motion_is": "staging",
+      "accent_on": "question_card"
+    },
+    {
+      "beat": "b10", "kind": "bespoke", "station": "floor_plan",
+      "subject": "each row breathing the exhaust of the row ahead",
+      "world": "the floor plan from above",
+      "keep": ["floor_plan", "rows", "front_arrows", "row_numbers"],
+      "design": {
+        "treatment": "The plan runs. Row 4 (the back row) is marked. Cool air from the units enters row 1's front; row 1's exhaust flows straight into row 2's front, and so on up the room; each row's stream is a shade warmer than the last (accent4 shading to accent2 by row), row 4 the warmest. Then the units push harder: the supply stream thickens and the floor tints cool at low opacity, tagged Over-cooled.",
+        "why_motion": "Warming row by row is a change over time: the viewer watches the exhaust feed the next row.",
+        "elements": [
+          {"name": "back_row_mark", "what": "row 4's number disc fills accent and an outline rings the row"},
+          {"name": "row_streams", "what": "four short streams, each from a row's back into the next row's front, cool to warm by row"},
+          {"name": "tag_warmer", "what": "tag Warmer row by row beside the streams"},
+          {"name": "overcool_tint", "what": "a low-opacity accent4 wash over the floor, the supply stream thicker"},
+          {"name": "tag_overcooled", "what": "tag Over-cooled on the cooling units"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "The back row", "element": "back_row_mark", "action": "row 4 is marked: disc to accent, a ring round the row", "motion": "m.reveal 0.4 s"},
+          {"t_anchor": "Each row breathes the exhaust ahead", "element": "row_streams", "action": "streams run from each row's back into the next row's front, bottom to top, each warmer; tag Warmer row by row", "motion": "m.along per stream, stagger 0.3 s, colour by row"},
+          {"t_anchor": "So the room gets over-cooled", "element": "overcool_tint", "action": "the units' supply thickens and the floor tints cool; tag Over-cooled", "motion": "Loom.hold.heat on the floor surface2 to a pale accent4 tint, 0.6 s"},
+          {"t_anchor": "and that wastes energy", "element": "tag_overcooled", "action": "the tag settles on the units; the frame holds", "motion": "m.reveal"}
+        ],
+        "continuity": "b11 keeps the plan and the numbers; the streams and tags retire in reading order before the rows turn.",
+        "references": ["knowledge F7 (ENERGY STAR, what happens if you do not)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "overhead"},
+      "depth": "flat", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "back_row_mark"
+    },
+    {
+      "beat": "b11", "kind": "bespoke", "station": "floor_plan",
+      "subject": "rows turned to face across cold and hot aisles",
+      "world": "the floor plan from above",
+      "keep": ["floor_plan", "rows", "front_arrows", "row_numbers"],
+      "design": {
+        "treatment": "Same room, one change: rows 1 and 3 turn round in place (their arrows flip up). Now fronts face across a cold aisle between rows 1 and 2 and between rows 3 and 4, and backs face across a hot aisle between rows 2 and 3. The cold aisles wash accent4 and take the label Cold aisle; the hot aisle washes accent2 and takes the label Hot aisle.",
+        "why_motion": "The one change is a rotation: watching the rows turn is how the layout is understood.",
+        "elements": [
+          {"name": "row_turn", "what": "rows 1 and 3 rotating 180 degrees in place with their arrows"},
+          {"name": "cold_aisle", "what": "accent4 wash in the aisles between rows 1 and 2 and between rows 3 and 4"},
+          {"name": "label_cold", "what": "label Cold aisle in the lower cold aisle"},
+          {"name": "hot_aisle", "what": "accent2 wash in the aisle between rows 2 and 3"},
+          {"name": "label_hot", "what": "label Hot aisle in the hot aisle"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Same room. One change", "element": "row_turn", "action": "rows 1 and 3 turn round in place, arrows flipping", "motion": "rotate 180 degrees, 0.8 s, editorial ease, stagger 0.2 s"},
+          {"t_anchor": "Fronts face across a cold aisle", "element": "cold_aisle", "action": "the two cold aisles wash cool; label Cold aisle", "motion": "m.grow wash from the aisle centre; label m.reveal"},
+          {"t_anchor": "Backs face across a hot aisle", "element": "hot_aisle", "action": "the hot aisle washes warm; label Hot aisle", "motion": "m.grow wash; label m.reveal"}
+        ],
+        "continuity": "b12 zooms into the aisle_3d portal over rows 1 and 2 and the lower cold aisle: keep that block exactly inside x 640 to 1280, y 520 to 880 after the turn.",
+        "references": ["knowledge F3 (ENERGY STAR hot aisle and cold aisle layout)", "docs/assets/models3d/dc_aisle_pair__corporate-clean.jpg (labels on the floor)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "overhead"},
+      "depth": "flat", "story_role": "turn", "register": "productive", "motion_is": "content",
+      "accent_on": "row_turn"
+    },
+    {
+      "beat": "b12", "kind": "three", "station": "aisle_3d", "tools": ["three"],
+      "subject": "a hot and cold aisle pair with its air running",
+      "world": "inside one aisle of the room",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "dc_aisle_pair", "opts": {"racks": 5, "mode": "cold", "supply": "floor", "labels": {"cold": "Cold aisle", "hot": "Hot aisle"}},
+        "states": [
+          {"key": "airflow", "from": 0, "to": 1, "say": "Cool air feeds the cold aisle", "dur": 0.8},
+          {"key": "thermal", "from": 0, "to": 1, "say": "Warm air returns from the hot aisle", "dur": 0.8}
+        ],
+        "mood": "cold_aisle", "elevation": 30, "yaw": -0.6, "turn": 0.3}},
+      "join_in": {"type": "zoom", "meaning": "into"},
+      "shot": {"size": "wide"},
+      "depth": "3d", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "the cool air rising through the cold aisle tiles",
+      "references": ["docs/assets/models3d/dc_aisle_pair__corporate-clean.jpg (airflow at 1.4 s, thermal at 5.6 s)"],
+      "rationale": "The zoom goes into the plan and lands in the real room: perforated tiles, rack fronts facing across the cold aisle, cooling units at the row ends. Seeing the supply rise and the return travel back is what the plan meant.",
+      "alternatives": {
+        "2D plan run": {"kind": "bespoke", "design": {"treatment": "Stay on the plan: cool streams enter the cold aisles and pass through the racks, warm streams gather in the hot aisle and travel back to the cooling units at the room's edge; no stream crosses another.", "why_motion": "The streams running is the mechanism.", "elements": [{"name": "feed_streams", "what": "cool streams into the cold aisles"}, {"name": "return_streams", "what": "warm streams along the hot aisle to the units"}], "beat_sheet": [{"t_anchor": "Cool air feeds the cold aisle", "element": "feed_streams", "action": "cool streams rise into the cold aisles and through the racks", "motion": "m.along"}, {"t_anchor": "Warm air returns from the hot aisle", "element": "return_streams", "action": "warm streams gather in the hot aisle and run back to the units", "motion": "m.along"}], "continuity": "On the floor_plan station with a continue join."}, "depth": "flat", "register": "productive", "motion_is": "content"}
+      }
+    },
+    {
+      "beat": "b13", "kind": "three", "station": "rack", "tools": ["three"],
+      "subject": "one rack with one slot left empty",
+      "world": "in front of one rack",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "server_rack", "opts": {"units": 8, "empty": [2]},
+        "states": [
+          {"key": "load", "from": 0, "to": 1, "say": "Here is the part people miss", "dur": 0.8},
+          {"key": "door", "from": 0, "to": 1, "say": "One rack slot", "dur": 0.9}
+        ],
+        "mood": "cold_aisle", "arrive_say": "Here is the part", "elevation": 10, "yaw": -0.35, "zoom": 1.15, "turn": 0.2}},
+      "join_in": {"type": "camera"},
+      "shot": {"size": "medium"},
+      "depth": "3d", "story_role": "setup", "register": "productive", "motion_is": "staging",
+      "accent_on": "the empty slot behind the opening door",
+      "references": ["docs/assets/models3d/server_rack__corporate-clean.jpg (door, empty units at 2.4 s)"],
+      "rationale": "The heads-up beat: the real rack, its door swinging open on the words, and one dark gap among lit servers. Seeing that an empty slot is just a hole in a real cabinet is the point before the section shows what goes through it."
+    },
+    {
+      "beat": "b14", "kind": "bespoke", "station": "rack_section",
+      "subject": "warm exhaust leaking back through an empty slot",
+      "world": "inside the rack, in side section",
+      "design": {
+        "treatment": "The rack in side section (kit rack, state gap): front (cold aisle) on the left, back (hot aisle) on the right, seven servers stacked, the empty slot third from the top. Cool intake streams enter the fronts, warm exhaust leaves the backs. Then a warm stream curls from the back into the gap, slips through to the front and joins the intake of the servers just below, tinting it warm. The term Recirculation arrives on the curling stream.",
+        "why_motion": "Recirculation is air moving where it should not: the leak has to be seen travelling through the gap and into the intake.",
+        "elements": [
+          {"name": "rack_section", "what": "kit rack, side view, state gap, about 700 x 860, centred"},
+          {"name": "intake_streams", "what": "cool streams entering each server's front"},
+          {"name": "exhaust_streams", "what": "warm streams leaving each server's back"},
+          {"name": "leak_stream", "what": "a warm stream curling from the back through the gap to the front"},
+          {"name": "label_recirculation", "what": "label Recirculation set on the curling stream"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Warm air finds the gap", "element": "leak_stream", "action": "the camera pushes toward the gap; a warm stream curls from the back into it", "motion": "Loom.cam.push 1.3 s; m.along"},
+          {"t_anchor": "slips through to the front", "element": "leak_stream", "action": "the stream exits the front of the gap and curls down into the intake", "motion": "m.along continues"},
+          {"t_anchor": "the servers breathe it again", "element": "intake_streams", "action": "the intake of the servers below the gap tints from cool to warm", "motion": "Loom.hold.heat accent4 to accent2 on those streams, 0.6 s"},
+          {"t_anchor": "That is recirculation", "element": "label_recirculation", "action": "the term settles on the curling stream", "motion": "m.reveal dy 10"}
+        ],
+        "continuity": "The same kit part returns in b17 (front view), b18 (state ai) and b24 (small card, state blanked); keep the slot third from the top in every view. The 3D rack in b13 and b15 has its empty unit in the same place (opts.empty [2]).",
+        "references": ["knowledge F6, F8 (ENERGY STAR, manage airflow for cooling efficiency)", "docs/assets/models3d/server_rack__corporate-clean.jpg (recirc at 2.4 s)"]
+      },
+      "join_in": {"type": "camera", "dir": "down"},
+      "shot": {"size": "close", "move": "push"},
+      "depth": "flat", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "leak_stream"
+    },
+    {
+      "beat": "b15", "kind": "three", "station": "rack", "tools": ["three"],
+      "subject": "a blanking panel closing the empty slot",
+      "world": "in front of one rack",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "server_rack", "opts": {"units": 8, "empty": [2]},
+        "states": [
+          {"key": "load", "from": 1, "to": 1, "say": "The fix is a blanking panel", "dur": 0.1},
+          {"key": "door", "from": 1, "to": 1, "say": "The fix is a blanking panel", "dur": 0.1},
+          {"key": "airflow", "from": 1, "to": 1, "say": "The fix is a blanking panel", "dur": 0.1},
+          {"key": "recirc", "from": 1, "to": 0, "say": "Gap closed", "dur": 0.8},
+          {"key": "blanking", "from": 0, "to": 1, "say": "blanking panel", "dur": 1.0}
+        ],
+        "mood": "cold_aisle", "arrive_say": "The fix is", "elevation": 10, "yaw": -0.35, "zoom": 1.15, "turn": 0.25}},
+      "join_in": {"type": "camera", "dir": "up"},
+      "shot": {"size": "medium"},
+      "depth": "3d", "story_role": "turn", "register": "productive", "motion_is": "content",
+      "accent_on": "the blanking panel sliding into the slot",
+      "references": ["docs/assets/models3d/server_rack__corporate-clean.jpg (blanking at 3.4 s)"],
+      "rationale": "The fix is a physical object: the panel sliding into the real slot and the curling warm air stopping is the whole point. Back on the b13 rack with the door already open and the leak still running, so it reads as the same rack fixed."
+    },
+    {
+      "beat": "b16", "kind": "three", "station": "containment", "tools": ["three"],
+      "subject": "aisle containment: doors and a roof over the cold aisle",
+      "world": "inside one aisle of the room",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "dc_aisle_pair", "opts": {"racks": 5, "mode": "cold", "supply": "floor", "labels": {"cold": "Cold aisle", "hot": "Hot aisle"}},
+        "states": [
+          {"key": "airflow", "from": 1, "to": 1, "say": "Warm air can also spill", "dur": 0.1},
+          {"key": "mixing", "from": 0, "to": 1, "say": "spill over rows", "dur": 0.8},
+          {"key": "containment", "from": 0, "to": 1, "say": "Doors and a roof stop it", "dur": 1.4}
+        ],
+        "mood": "cold_aisle", "elevation": 30, "yaw": -0.6, "turn": 0.3}},
+      "join_in": {"type": "camera"},
+      "shot": {"size": "wide"},
+      "depth": "3d", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "the roof panels and end doors closing",
+      "references": ["docs/assets/models3d/dc_aisle_pair__corporate-clean.jpg (mixing at 2.4 s, containment at 3.4 to 4.4 s)"],
+      "rationale": "A roof and doors cannot be shown from above: the 3D aisle pair from b12 returns with the spill over the rack tops, then the roof drops in and the doors slide shut and the spill stops. Not adjacent to b12; a deliberate return to the same aisle."
+    },
+    {
+      "beat": "b17", "kind": "bespoke", "station": "walkthrough",
+      "subject": "an open slot seen on a walk-through",
+      "world": "the cold aisle, at one rack",
+      "upgrade_reason": "The practice step happens at a real rack: the viewer has to recognise the open slot as it looks from the aisle, with the tag on the thing itself; a template would show the instruction without the slot.",
+      "design": {
+        "treatment": "Say, a walk-through: the cold aisle in gentle perspective, the rack from b13 face-on (kit rack, front view, state gap), neighbouring racks dimmed at the frame edges, perforated tiles on the floor. The open slot is outlined in accent. A tag hangs from the slot: Open slot? Tell the floor team, with a short arrow leading toward the aisle end. No person is drawn.",
+        "why_motion": "Staging only: the camera walks up to the rack and the tag lands on the slot.",
+        "elements": [
+          {"name": "aisle_view", "what": "floor tiles and dimmed neighbouring racks, the set"},
+          {"name": "rack_face", "what": "kit rack, front view, state gap"},
+          {"name": "slot_outline", "what": "an accent outline round the open slot"},
+          {"name": "tag", "what": "tag hanging from the slot: Open slot? Tell the floor team"},
+          {"name": "tag_arrow", "what": "a short line arrow from the tag toward the aisle end"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Say you spot an open slot", "element": "slot_outline", "action": "the camera walks up the aisle toward the rack; the outline draws round the open slot", "motion": "Loom.cam.push 1.4 s; m.draw 0.6 s"},
+          {"t_anchor": "Tell the team who runs the floor", "element": "tag", "action": "the tag drops from the slot and its arrow draws toward the aisle end", "motion": "m.settle; m.draw arrow 0.5 s"}
+        ],
+        "continuity": "The slot is the same slot as b13 to b15 (third from the top). The brief forbids telling staff to fix cooling themselves: the tag only says tell the floor team.",
+        "references": ["docs/assets/models3d/dc_hall__corporate-clean.jpg (a cold aisle with perforated tiles)"]
+      },
+      "join_in": {"type": "camera", "dir": "down"},
+      "shot": {"size": "pov", "move": "push"},
+      "depth": "layered", "story_role": "practice", "register": "productive", "motion_is": "staging",
+      "accent_on": "slot_outline"
+    },
+    {
+      "beat": "b18", "kind": "bespoke", "station": "rack_section",
+      "subject": "a rack of AI servers giving off far more heat",
+      "world": "inside the rack, in side section",
+      "design": {
+        "treatment": "Back to the rack in side section (kit rack, state blanked: the gap is fixed). Its servers swap one by one, top to bottom, for taller AI servers whose accelerator blocks glow warm. The power feed at the back thickens. The warm exhaust band at the back swells to several times its old width, flooding past the rack outline into the hot aisle. Tag: Far more heat per rack. No figures.",
+        "why_motion": "The swap and the swelling exhaust are the change: more power in, more heat out, seen as the width of the warm band.",
+        "elements": [
+          {"name": "rack_section", "what": "kit rack, side view, from state blanked to state ai"},
+          {"name": "ai_servers", "what": "the taller AI servers swapping in, accelerator blocks warm"},
+          {"name": "power_feed", "what": "the power line at the back, thickening"},
+          {"name": "heat_band", "what": "the warm exhaust band at the back, several times wider"},
+          {"name": "tag_heat", "what": "tag Far more heat per rack"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Now swap in AI servers", "element": "ai_servers", "action": "servers swap top to bottom for AI servers, accelerators glowing", "motion": "swap in place per unit, stagger 0.2 s"},
+          {"t_anchor": "The rack draws far more power", "element": "power_feed", "action": "the power feed at the back thickens", "motion": "m.grow on stroke width 0.6 s"},
+          {"t_anchor": "so far more heat", "element": "heat_band", "action": "the exhaust band swells far wider and floods into the hot aisle; tag Far more heat per rack", "motion": "m.grow 0.9 s; tag m.reveal"}
+        ],
+        "continuity": "Same place and framing as b14 (a cut back to the rack section), so the viewer reads it as the same rack changed.",
+        "references": ["knowledge F11 (said qualitatively, no per-rack figure)", "docs/assets/models3d/gpu_server__corporate-clean.jpg (accelerators glowing warm)"]
+      },
+      "join_in": {"type": "cut", "meaning": "chapter"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "turn", "register": "productive", "motion_is": "content",
+      "accent_on": "heat_band"
+    },
+    {
+      "beat": "b19", "kind": "bespoke", "station": "boxes",
+      "subject": "air and water carrying heat in the same space",
+      "world": "two equal boxes, air and water",
+      "design": {
+        "treatment": "Two equal clear boxes side by side on the field, the same outline and size. Left labelled Air, right labelled Water. Small warm heat blocks drop into each. The Air box fills to its brim after only a few; its rim marks full. The Water box keeps taking far more blocks, packed in, and is still far from full. A bracket under both boxes shows they are the same size. No numbers anywhere: the counts are a picture of far more, not a measurement.",
+        "why_motion": "Filling is a change over time: the air box runs out of room while the water box keeps taking heat.",
+        "elements": [
+          {"name": "box_air", "what": "left box, surface2 outline, label Air"},
+          {"name": "box_water", "what": "right box, same size, label Water"},
+          {"name": "heat_blocks", "what": "small accent2 blocks dropping into the boxes"},
+          {"name": "full_mark", "what": "the air box rim marking full"},
+          {"name": "same_bracket", "what": "a dimension bracket under both boxes"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Air can only carry so much", "element": "box_air", "action": "a few heat blocks drop into the Air box and fill it; its rim marks full", "motion": "m.drop stagger 0.25 s, no overshoot; rim recolour"},
+          {"t_anchor": "Water carries far more heat", "element": "box_water", "action": "blocks keep dropping into the Water box, far more of them, and it is still not full", "motion": "m.drop stagger 0.1 s"},
+          {"t_anchor": "in the same space", "element": "same_bracket", "action": "the bracket draws under both boxes", "motion": "m.draw 0.6 s"}
+        ],
+        "continuity": "The heat blocks are the same warm tiles the energy section later stacks (b27), in a different colour role there.",
+        "references": ["knowledge F12 (heat capacity per volume, stated as a comparison only)", "skills/lnd/lnd-explainer-craft s1.4 (the number as the quantity)"]
+      },
+      "join_in": {"type": "camera"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "box_water"
+    },
+    {
+      "beat": "b20", "kind": "three", "station": "chip", "tools": ["three"],
+      "subject": "an accelerator chip with a cold plate on it",
+      "world": "inside the AI server, at one chip",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "accelerator_chip", "opts": {"stacks": 6},
+        "states": [
+          {"key": "cores", "from": 0, "to": 1, "say": "find the chip", "dur": 0.6},
+          {"key": "plate", "from": 0, "to": 1, "say": "On top, a cold plate", "dur": 1.2},
+          {"key": "cutaway", "from": 0, "to": 1, "say": "with channels inside", "dur": 0.8}
+        ],
+        "mood": "clean_bench", "arrive_say": "Open one server", "elevation": 34, "turn": 0.4}},
+      "join_in": {"type": "camera", "dir": "down"},
+      "shot": {"size": "close"},
+      "depth": "3d", "story_role": "setup", "register": "productive", "motion_is": "content",
+      "accent_on": "the cold plate settling onto the chip",
+      "references": ["docs/assets/models3d/accelerator_chip__corporate-clean.jpg (plate at 2.0 s, cutaway at 3.9 s)"],
+      "rationale": "Direct-to-chip cooling is a physical fit: a metal plate seated on the die, with channels inside. Seeing it lower onto the chip and open to its channels is the definition."
+    },
+    {
+      "beat": "b21", "kind": "three", "station": "gpu", "tools": ["three"],
+      "subject": "coolant carrying heat away from every chip in the server",
+      "world": "the liquid-cooled AI server",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "gpu_server", "opts": {"cooling": "liquid"},
+        "states": [
+          {"key": "lid", "from": 1, "to": 1, "say": "Coolant flows through it", "dur": 0.1},
+          {"key": "load", "from": 0, "to": 1, "say": "Coolant flows through it", "dur": 0.8},
+          {"key": "flow", "from": 0, "to": 1, "say": "Coolant flows through it", "dur": 1.0}
+        ],
+        "mood": "clean_bench", "elevation": 32, "turn": 0.6}},
+      "join_in": {"type": "camera", "dir": "up"},
+      "shot": {"size": "medium"},
+      "depth": "3d", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "the coolant turning warm on its way to the rear return",
+      "references": ["docs/assets/models3d/gpu_server__corporate-clean.jpg (the liquid form: flat cold plates on manifolds)"],
+      "rationale": "The camera pulls back from one plate to the whole server: every accelerator has its plate, and the coolant runs cool in, warm out, to the rear. The same server as b01, now in its liquid form (a device of change). Follows b20 on purpose: the camera follows the coolant outward, chip, server, then CDU."
+    },
+    {
+      "beat": "b22", "kind": "three", "station": "cdu", "tools": ["three"],
+      "subject": "a coolant distribution unit",
+      "world": "beside the racks, at the CDU",
+      "three": {"preset": "model_shot", "rect": [192, 54, 1536, 864], "params": {
+        "model": "cdu", "opts": {},
+        "states": [
+          {"key": "secondary", "from": 0, "to": 1, "say": "So where does the coolant go", "dur": 0.6},
+          {"key": "door", "from": 0, "to": 1, "say": "the CDU", "dur": 1.0}
+        ],
+        "mood": "clean_bench", "arrive_say": "So where does", "elevation": 14, "yaw": 0.4, "turn": 0.3}},
+      "join_in": {"type": "camera", "dir": "right"},
+      "shot": {"size": "medium"},
+      "depth": "3d", "story_role": "setup", "register": "productive", "motion_is": "content",
+      "accent_on": "the cabinet door opening on the name",
+      "references": ["docs/assets/models3d/cdu__corporate-clean.jpg (door at 0.5 s, secondary flow at 1.3 s)"],
+      "rationale": "A CDU is a cabinet nobody outside the facility team has seen: the warm coolant arrives at its pipes, and the door opens on its name. b23 zooms in through the open door."
+    },
+    {
+      "beat": "b23", "kind": "bespoke", "station": "cdu_inside",
+      "subject": "two separate loops passing heat across a heat exchanger",
+      "world": "inside the CDU",
+      "design": {
+        "treatment": "Inside the CDU as a clean schematic (no cabinet detail). A heat exchanger in the centre, a stack of thin neutral plates. The rack loop on the left: a closed pipe loop running out to the left edge toward the racks. The facility water loop on the right: its own closed loop running out to the right edge toward the building. Beads move round each loop: the rack loop arrives warm (accent2) and leaves the exchanger cool (accent4); the facility loop arrives cool and leaves warm. Small warm chevrons cross the plates from left to right. A strip of plain field runs down the middle of the exchanger between the two loops: they never touch. The accent moves to whatever is being named.",
+        "why_motion": "The hardest idea of the film: heat crosses while each liquid stays in its own loop. Only motion shows both at once.",
+        "elements": [
+          {"name": "heat_exchanger", "what": "the plate stack in the centre, neutral, label Heat exchanger"},
+          {"name": "rack_loop", "what": "the left loop, pipe outline accent3, beads warm to cool, label Rack loop"},
+          {"name": "facility_loop", "what": "the right loop, pipe outline muted, beads cool to warm, label Facility water loop"},
+          {"name": "heat_pulses", "what": "small accent2 chevrons crossing the plates left to right"},
+          {"name": "gap_strip", "what": "the plain strip between the loops inside the exchanger"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Here is the part to watch", "element": "heat_exchanger", "action": "the exchanger settles in the centre", "motion": "m.settle"},
+          {"t_anchor": "Two loops", "element": "rack_loop", "action": "both loop pipes draw out from the exchanger at once, left and right", "motion": "m.draw 0.9 s both"},
+          {"t_anchor": "The rack loop, through the cold plates", "element": "rack_loop", "action": "the left loop's outline turns accent, its beads start, label Rack loop", "motion": "Loom.hold.heat accent3 to accent; beads period-locked"},
+          {"t_anchor": "The facility water loop, to the building", "element": "facility_loop", "action": "the accent moves to the right loop (the left returns to accent3), its beads start, label Facility water loop", "motion": "Loom.hold.heat both, 0.5 s"},
+          {"t_anchor": "A heat exchanger passes heat across", "element": "heat_pulses", "action": "the accent moves to the plates; chevrons cross left to right; label Heat exchanger; the camera eases in on the plates", "motion": "m.along per chevron; Loom.cam.push 1.4 s"},
+          {"t_anchor": "The liquids never mix", "element": "gap_strip", "action": "the strip between the loops brightens; the beads on each side turn back at the plates; the accent leaves and the frame runs calmly", "motion": "m.reveal 0.4 s; beads continue"}
+        ],
+        "continuity": "Zoomed in from the b22 cabinet through its open door. The rack loop is the warm coolant from b21; the facility loop leads to the facility water of the close (b30).",
+        "references": ["docs/assets/models3d/cdu__corporate-clean.jpg (two loops meeting only at the plates)", "knowledge F15 (loop terms as ASHRAE TC 9.9 usage)"]
+      },
+      "join_in": {"type": "zoom", "meaning": "into"},
+      "shot": {"size": "close", "move": "push"},
+      "depth": "flat", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "rack_loop, then facility_loop, then heat_exchanger (one at a time, as named)"
+    },
+    {
+      "beat": "b24", "kind": "bespoke", "station": "liquid_server",
+      "subject": "a liquid-cooled server that still needs air",
+      "world": "one server in side view, liquid form",
+      "intent": "callback",
+      "design": {
+        "treatment": "Back out to one server in side view (kit server_side, state liquid): the same drawing as b04, now with a cold plate on the chip and its two hoses (cool in, warm out) running out of the back. A thinner cool air stream still crosses the other parts front to back and leaves warm; label Still needs air. Beside it a small card returns from b15: the rack with its gap closed by a blanking panel (kit rack, side view, state blanked, small). One thin rule marks the line between cool and warm in both pictures at once.",
+        "why_motion": "The limit lands by showing the air stream still running beside the liquid, then the earlier image returning with the same idea.",
+        "elements": [
+          {"name": "server_side", "what": "kit server_side, state liquid, the plate and hoses lit"},
+          {"name": "air_stream", "what": "a thinner accent4 to accent2 stream crossing the other parts"},
+          {"name": "label_air", "what": "label Still needs air"},
+          {"name": "panel_card", "what": "a small card: kit rack side view, state blanked"},
+          {"name": "apart_rule", "what": "a thin rule between the cool and warm sides on the server and on the card"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "One limit", "element": "server_side", "action": "the server settles, plate and hoses lit", "motion": "m.settle"},
+          {"t_anchor": "Other parts still use air", "element": "air_stream", "action": "the thinner air stream runs through the other parts; label Still needs air", "motion": "m.along, period-locked"},
+          {"t_anchor": "Same idea as the blanking panel", "element": "panel_card", "action": "the blanking panel card settles beside the server", "motion": "m.settle"},
+          {"t_anchor": "keep warm and cool apart", "element": "apart_rule", "action": "the rule draws on both pictures at once between their cool and warm sides", "motion": "m.draw 0.6 s"}
+        ],
+        "continuity": "The b04 server, changed: same proportions, same front-left, back-right orientation.",
+        "references": ["knowledge F14 (other parts still air cooled; no share given)"]
+      },
+      "join_in": {"type": "camera", "dir": "right"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "turn", "register": "productive", "motion_is": "content",
+      "accent_on": "air_stream"
+    },
+    {
+      "beat": "b25", "kind": "template", "station": "pue_term", "template": "definition",
+      "props": {
+        "kicker": "Power usage effectiveness",
+        "term": "PUE",
+        "say_term": "measure is PUE",
+        "definition": "Total facility energy, divided by the energy reaching IT.",
+        "say_definition": "Total facility energy"
+      },
+      "join_in": {"type": "cut", "meaning": "chapter"},
+      "shot": {"size": "medium"},
+      "story_role": "setup", "register": "productive", "motion_is": "staging",
+      "accent_on": "the term PUE",
+      "rationale": "A new term the viewer must keep gets its own lettered card (lnd-explainer-craft s2); the energy objects that explain it follow at once. No icon (the guide: definition with an icon spends three hue families)."
+    },
+    {
+      "beat": "b26", "kind": "bespoke", "station": "pue_pour", "tools": ["physics"],
+      "subject": "energy pouring into IT and overhead bins",
+      "world": "the energy pour",
+      "upgrade_reason": "Overhead is energy that goes somewhere other than computing: watching one stream split into bins, cooling the fullest of the overhead, says it without a number; a template would need a figure the knowledge sheet does not carry.",
+      "design": {
+        "treatment": "Energy as objects, physically (Loom.physics.puePour): a feed pipe at the top labelled Total facility energy pours energy beads that split into an IT energy bin and three overhead bins (Cooling, Power losses, Lighting; the names are from the knowledge sheet). A bracket groups the overhead bins, labelled Overhead. The Cooling bin is clearly the fullest of the overhead bins and its label takes the accent on its word. The bead counts are a picture of the claim (cooling is the biggest slice of the overhead), not a measurement: print no counts, no shares and no ratio (showShares false, no ratioText). Sketch of opts: itShare 0.62, overheads [[Cooling, 0.26], [Power losses, 0.08], [Lighting, 0.04]], beads 28, colors {it: accent3, overhead: line, bead: muted}, t on the first anchor, seconds about 4.5.",
+        "why_motion": "Energy splitting as it pours is the point: it is one flow, and part of it never reaches the computing.",
+        "elements": [
+          {"name": "pour", "what": "Loom.physics.puePour world: pipe, beads, IT energy bin and the three overhead bins"},
+          {"name": "label_total", "what": "label Total facility energy on the pipe"},
+          {"name": "overhead_bracket", "what": "a bracket over the overhead bins, label Overhead"},
+          {"name": "cooling_label", "what": "the Cooling bin's label, accent on its word"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "On top, IT plus overhead", "element": "pour", "action": "the beads pour from the pipe and split into the bins; label Total facility energy; then the Overhead bracket settles", "motion": "physics replay (baked, seeded); bracket m.draw 0.5 s"},
+          {"t_anchor": "Cooling is usually the biggest slice", "element": "cooling_label", "action": "the Cooling label and its bin rim take the accent as the beads come to rest", "motion": "Loom.hold.heat line to accent on the rim, 0.5 s"}
+        ],
+        "continuity": "The overhead bins become the overhead blocks on top of the fraction in b27 (same order: cooling largest).",
+        "references": ["docs/TOOLBOX.md physics (puePour recipe)", "scenes_examples/lab/recipe_phys_*.js", "knowledge F18, F21 (overhead parts; cooling usually the largest, no share given)"]
+      },
+      "join_in": {"type": "camera"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "cooling_label"
+    },
+    {
+      "beat": "b27", "kind": "bespoke", "station": "pue",
+      "subject": "the PUE fraction falling to 1.0, then back above it",
+      "world": "the PUE fraction",
+      "design": {
+        "treatment": "The fraction built from energy blocks (kit energy_fraction, state built): top stack (IT energy blocks with overhead blocks above, cooling the largest), a fraction bar, bottom stack (the same IT energy blocks), labels Total facility energy and IT energy, a thin floor line. On the first words the overhead blocks shrink away one by one and the top drops to equal the bottom; the readout 1.0 appears beside the bar and the floor line takes it as its label. Then a little overhead returns (the cooling block back, smaller) and the top settles just above the floor line. No other number is shown.",
+        "why_motion": "1.0 is a limit the stack reaches and real sites do not: the overhead shrinking and coming back is the meaning.",
+        "elements": [
+          {"name": "energy_fraction", "what": "kit energy_fraction, about 900 x 760, centred left of centre"},
+          {"name": "overhead_blocks", "what": "the overhead blocks on top of the IT blocks in the top stack"},
+          {"name": "floor_line", "what": "the thin floor line where top equals bottom"},
+          {"name": "readout", "what": "the value 1.0 beside the fraction bar, then as the floor line's label"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "If it all went to IT", "element": "overhead_blocks", "action": "the fraction settles (built) and its overhead blocks shrink away one by one; the top drops to equal the bottom", "motion": "m.settle 0.5 s; shrink per block, stagger 0.2 s"},
+          {"t_anchor": "PUE would be 1.0", "element": "readout", "action": "1.0 appears beside the bar; the floor line draws", "motion": "m.reveal; m.draw 0.6 s"},
+          {"t_anchor": "Real sites sit above it", "element": "overhead_blocks", "action": "a little overhead returns and the top settles just above the floor line; 1.0 moves to label the floor line", "motion": "m.grow 0.6 s; readout m.travel to the line"}
+        ],
+        "continuity": "Held across b27 to b29 (continue joins): b28 pins a note to it, b29 adds to its overhead.",
+        "references": ["knowledge F17, F18 (PUE definition; 1.0 the ideal floor)", "docs/styles/guides/corporate-clean.md s9 (grey context, one blue; only spoken values on screen)"]
+      },
+      "join_in": {"type": "camera"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "reveal", "register": "productive", "motion_is": "content",
+      "accent_on": "readout"
+    },
+    {
+      "beat": "b28", "kind": "bespoke", "station": "pue",
+      "subject": "what the PUE fraction does not tell you",
+      "world": "the PUE fraction",
+      "keep": ["energy_fraction", "overhead_blocks", "floor_line", "readout"],
+      "upgrade_reason": "The limit belongs pinned to the fraction it qualifies: the viewer must see the same fraction with its caveat beside it, which a separate template frame would pull apart.",
+      "design": {
+        "treatment": "The fraction holds. A note card is pinned beside it: Not computing efficiency, with a small cross mark on it. On the last line the camera pulls back a little so the fraction and its note sit together as one finished frame.",
+        "why_motion": "Staging only: the caveat arrives on its words and the frame rests.",
+        "elements": [
+          {"name": "limit_note", "what": "a surface card pinned to the right of the fraction: Not computing efficiency"},
+          {"name": "cross_mark", "what": "kit.mark no on the note's corner"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "What it does not tell you", "element": "limit_note", "action": "the note card settles beside the fraction", "motion": "m.settle"},
+          {"t_anchor": "how useful the computing is", "element": "cross_mark", "action": "the note's words print and the cross mark pops on", "motion": "m.unmask text; m.pop 0.3 s"},
+          {"t_anchor": "Useful number, not the whole story", "element": "limit_note", "action": "the camera pulls back so fraction and note sit together; the frame rests", "motion": "Loom.cam.frame 1.2 s"}
+        ],
+        "continuity": "Keeps the fraction from b27 untouched; the note retires at the start of b29.",
+        "references": ["knowledge F20 (overhead, not how useful the computing is)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "medium", "move": "pull"},
+      "depth": "flat", "story_role": "turn", "register": "productive", "motion_is": "staging",
+      "accent_on": "limit_note"
+    },
+    {
+      "beat": "b29", "kind": "bespoke", "station": "pue",
+      "subject": "the earlier leaks landing in the overhead",
+      "world": "the PUE fraction",
+      "keep": ["energy_fraction", "overhead_blocks", "floor_line", "readout"],
+      "intent": "callback",
+      "design": {
+        "treatment": "Two small images from earlier drift in from the left: the row-to-row exhaust on the plan (b10) and the warm air curling through the empty slot (b14), each as a small card. They shrink and drop into the top stack, where the overhead grows by one block; the top edge rises a little above where it was. The bottom (IT energy) does not change.",
+        "why_motion": "The leaks are not lost: they turn into overhead you can see added to the top of the fraction.",
+        "elements": [
+          {"name": "leak_card_rows", "what": "a small card of the plan with warm row-to-row streams (b10)"},
+          {"name": "leak_card_slot", "what": "a small card of the rack section with the curling stream (b14)"},
+          {"name": "new_block", "what": "one more overhead block landing on the top stack"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Every leak we saw", "element": "leak_card_rows", "action": "both small cards drift in from the left", "motion": "m.travel 0.8 s, stagger 0.3 s"},
+          {"t_anchor": "lands in that top stack", "element": "new_block", "action": "the cards shrink into the top stack; one overhead block lands; the top edge rises a little", "motion": "m.travel and scale down 0.6 s; m.drop"}
+        ],
+        "continuity": "The last frame of the PUE section; the close cuts back to the route.",
+        "references": ["skills/lnd/lnd-explainer-craft s1.15 (recap by replaying the lesson's own images)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "medium"},
+      "depth": "flat", "story_role": "payoff", "register": "productive", "motion_is": "content",
+      "accent_on": "new_block"
+    },
+    {
+      "beat": "b30", "kind": "bespoke", "station": "route",
+      "subject": "one server",
+      "world": "the heat path map",
+      "intent": "callback",
+      "design": {
+        "treatment": "The heat path map from b03 returns, same place, now lit (kit heat_route, liquid lane). The server from b04 drawn at the left in cutaway with its chip; the liquid lane runs right: chip, cold plate, rack loop, CDU, facility water, outside (the same outdoor unit as b03 and b06). Each hand-off lights just after its word: its segment draws in the temperature colours and its label carries the accent while it is named, then settles. The camera makes one long pan left to right along the lane.",
+        "why_motion": "The payoff is the heat travelling the whole path once, in the order the film taught it.",
+        "elements": [
+          {"name": "route_map", "what": "kit heat_route, state from faint to liquid_lit"},
+          {"name": "server_on_map", "what": "the server at the left in cutaway with its chip"},
+          {"name": "liquid_lane", "what": "the upper lane segments, each lit on its word"},
+          {"name": "stage_labels", "what": "labels Chip, Cold plate, Rack loop, CDU, Facility water, Outside on their stages"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Back to one server", "element": "server_on_map", "action": "the map returns faint as in b03; the server settles at the left", "motion": "m.settle"},
+          {"t_anchor": "Chip", "element": "liquid_lane", "action": "the chip lights, label Chip", "motion": "Loom.hold.heat, label m.reveal"},
+          {"t_anchor": "cold plate", "element": "liquid_lane", "action": "the plate lights, label Cold plate; the long pan starts", "motion": "Loom.cam.pan 5 s, editorial ease"},
+          {"t_anchor": "rack loop", "element": "liquid_lane", "action": "the hose to the CDU draws warm, label Rack loop", "motion": "m.draw 0.5 s"},
+          {"t_anchor": "CDU", "element": "liquid_lane", "action": "the CDU lights, label CDU", "motion": "m.reveal"},
+          {"t_anchor": "facility water", "element": "liquid_lane", "action": "the pipe through the wall draws, label Facility water", "motion": "m.draw 0.5 s"},
+          {"t_anchor": "outside", "element": "stage_labels", "action": "the outdoor unit releases warm air, label Outside", "motion": "drift; m.reveal"}
+        ],
+        "continuity": "The opening subject returns (one server, b01 and b04) on the b03 map. b31 keeps everything and lights the lower lane.",
+        "references": ["docs/styles/guides/corporate-clean.md R1 (one owner at a time along a route)", "skills/lnd/lnd-visual-storyteller s2 (payoff: the establishing framing returns, changed)"]
+      },
+      "join_in": {"type": "cut", "meaning": "chapter"},
+      "shot": {"size": "wide"},
+      "depth": "flat", "story_role": "payoff", "register": "expressive", "motion_is": "content",
+      "accent_on": "the stage being named"
+    },
+    {
+      "beat": "b31", "kind": "bespoke", "station": "route",
+      "subject": "one server",
+      "world": "the heat path map",
+      "keep": ["route_map", "server_on_map", "liquid_lane", "stage_labels"],
+      "design": {
+        "treatment": "Same map. The lower, air lane lights alongside the liquid lane, each stage on its word: front, back, hot aisle, cooling unit, then its water line to the same outdoor unit. The camera pulls back to the whole map.",
+        "why_motion": "The second path lit beside the first shows they end in the same place.",
+        "elements": [
+          {"name": "air_lane", "what": "the lower lane segments: front, back, hot aisle, cooling unit, water line"},
+          {"name": "air_labels", "what": "labels Front, Back, Hot aisle, Cooling unit"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Or by air, front", "element": "air_lane", "action": "the cool stream into the server's front lights, label Front; the camera pulls back to the whole map", "motion": "m.along; Loom.cam.frame 1.4 s"},
+          {"t_anchor": "back", "element": "air_lane", "action": "the warm stream out of the back lights, label Back", "motion": "m.along"},
+          {"t_anchor": "hot aisle", "element": "air_labels", "action": "the hot aisle band lights, label Hot aisle", "motion": "m.grow"},
+          {"t_anchor": "cooling unit, outside", "element": "air_lane", "action": "the cooling unit lights, label Cooling unit, and its water line draws to the same outdoor unit", "motion": "m.reveal; m.draw 0.6 s"}
+        ],
+        "continuity": "Both lanes end at the one outdoor unit. b32 keeps the whole map and rests on it.",
+        "references": ["knowledge F2, F4, F5"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "wide", "move": "pull"},
+      "depth": "flat", "story_role": "payoff", "register": "expressive", "motion_is": "content",
+      "accent_on": "the air stage being named"
+    },
+    {
+      "beat": "b32", "kind": "bespoke", "station": "route",
+      "subject": "one server",
+      "world": "the heat path map",
+      "keep": ["route_map", "server_on_map", "liquid_lane", "stage_labels", "air_lane", "air_labels"],
+      "intent": "rest",
+      "upgrade_reason": "The close is the whole path at rest with the rule beside it: the payoff frame is the map itself, so the two lines sit on the finished map rather than on a title card that would hide it.",
+      "design": {
+        "treatment": "The whole map holds, calm and complete, both lanes in their temperature colours. Two short lines rest above it: Keep the heat moving out, then Stop it leaking back. With the second line, two small closed marks appear at the two leak points the film showed (a blanking panel tick at the server's front, a closed door on the hot aisle). Then the frame rests to the end.",
+        "why_motion": "Staging only: the rule arrives on its words over the finished picture.",
+        "elements": [
+          {"name": "rule_out", "what": "line Keep the heat moving out, title role, above the map"},
+          {"name": "rule_back", "what": "line Stop it leaking back, under the first"},
+          {"name": "closed_marks", "what": "two small closed marks at the leak points"}
+        ],
+        "beat_sheet": [
+          {"t_anchor": "Keep the heat moving out", "element": "rule_out", "action": "the first line prints above the map", "motion": "m.unmask 0.6 s"},
+          {"t_anchor": "Stop it leaking back", "element": "rule_back", "action": "the second line prints; the two closed marks settle at the leak points; the frame rests", "motion": "m.unmask 0.6 s; marks m.pop"}
+        ],
+        "continuity": "The last frame: the b03 promise kept.",
+        "references": ["skills/lnd/lnd-visual-storyteller s2 (the opening image returns, changed)"]
+      },
+      "join_in": {"type": "continue"},
+      "shot": {"size": "wide"},
+      "depth": "flat", "story_role": "payoff", "register": "expressive", "motion_is": "staging",
+      "accent_on": "rule_back"
+    }
+  ],
+  "poster": {"beat": "b31"}
+}

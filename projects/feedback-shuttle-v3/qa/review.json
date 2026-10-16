@@ -1,0 +1,77 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b03",
+      "severity": "minor",
+      "problem": "In settled (19.14s), the third bullet 'Next step' appears only 0.48s before the beat cut to b04, below the 0.80s reading floor for a 2-word label.",
+      "fix": "Reveal 'Next step' earlier.",
+      "file": "scenes/b03.scene.json",
+      "status": "accepted",
+      "reason": "b03 is the presenter avatar beat with no scene file; the bullet timing is inside the engine's presenter card, and the three parts are spelled out on screen again in b07 to b10 and b15."
+    },
+    {
+      "beat": "b13",
+      "severity": "minor",
+      "problem": "Line 3 text stays accent red beside the green tick.",
+      "fix": "Set line 3 text color to neutral ink after settling.",
+      "file": "scenes/b13.json",
+      "status": "accepted",
+      "reason": "By design: the storyboard puts b13's accent on the agreed next step (line 3 'Try a timed agenda.'), and the green tick is the verdict mark (valence is colour, verdict is the mark). The accent is the one emphasis on this beat."
+    },
+    {
+      "beat": "b07",
+      "severity": "blocker",
+      "problem": "The vague bubble 'Maybe tighten it up?' covers b07 for the whole beat; the message card and line 1 never appear.",
+      "fix": "Root cause: b10.js wiped b07's held elements at build time and drew its own first frame into them. b10 now hides each held element from its own start (opacity) and redraws fresh ones; b08 and b09 do the same.",
+      "file": "scenes/b10.js",
+      "status": "fixed",
+      "reason": "Seen again in the contact sheet this session: the card forms on 'Now rebuild it', line 1 writes in, Ben turns surprised. The check passes."
+    },
+    {
+      "beat": "b05",
+      "severity": "major",
+      "problem": "'About the person' label lingered into the settled frame.",
+      "fix": "Label exits at tWorst+1.5.",
+      "file": "scenes/b05.js",
+      "status": "fixed",
+      "reason": "The label has gone in the b05 settled frame (contact sheet this session)."
+    },
+    {
+      "beat": "b08",
+      "severity": "minor",
+      "problem": "Lead's look: the clock lost its muted overrun arc in b08 and b09 (present in b07 and b10).",
+      "fix": "clk.setState('overrun_arc_muted', ctx.start, 0) in b08 and b09.",
+      "file": "scenes/b08.js",
+      "status": "fixed",
+      "reason": "The arc shows in the b08 and b09 sheets; the critic re-reviewed b08 and b09 with no findings; the check passes."
+    },
+    {
+      "beat": "b14",
+      "severity": "minor",
+      "problem": "Lead's look: the camera joins into b06, b07 and b14 pass briefly through black.",
+      "fix": "none",
+      "file": "runtime",
+      "status": "accepted",
+      "reason": "Engine camera transition between distant stations; brief (under 0.5 s) and the same at each station change."
+    },
+    {
+      "beat": "b12",
+      "severity": "minor",
+      "problem": "Lead's look: the storyboard's 'recipient folds their arms' is not drawn; b12 shows no person.",
+      "fix": "none",
+      "file": "scenes/b12.js",
+      "status": "accepted",
+      "reason": "The quiz answer reads fully from the options, the marks and the labels; a person is not needed for the explanation."
+    },
+    {
+      "beat": "b11",
+      "severity": "minor",
+      "problem": "Lead's look: option C runs three lines while A and B run one.",
+      "fix": "none",
+      "file": "scenes/b11.js",
+      "status": "accepted",
+      "reason": "C is the complete message (behaviour, impact, next step), so it is longer by content; B (the tempting polite one) keeps the same box style."
+    }
+  ]
+}

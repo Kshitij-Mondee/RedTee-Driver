@@ -1,0 +1,515 @@
+{
+ "style": "glow-flat",
+ "concept": "One worker's desk on a deep indigo night, and the alarm inside her: moving right is going deeper into the body, far left is long ago, and the last beat returns to the same desk, now calm. The glowing core in her chest is the motif that switches on, holds, and settles.",
+ "chrome": {
+  "section_labels": false
+ },
+ "motifs": [
+  {
+   "name": "the worker",
+   "desc": "an invented worker (rig tess) at a desk; b01, b03, b05, b07, b09, b10"
+  },
+  {
+   "name": "the core",
+   "desc": "the glowing alarm in her chest: switches on in b02, beats in b03, holds in b04, softens in b09"
+  }
+ ],
+ "music": {
+  "mood": "warm_curious",
+  "level": 0.08
+ },
+ "story": {
+  "metaphor": "an alarm inside the body",
+  "setting": "her desk at night, and inside her",
+  "arc": "message, alarm, why it fires, pause, same message calm",
+  "cast": [
+   {
+    "name": "the worker",
+    "rig": "tess",
+    "role": "the viewer's stand-in"
+   }
+  ]
+ },
+ "poster": {
+  "beat": "b05"
+ },
+ "world": {
+  "stations": [
+   {
+    "id": "st_desk",
+    "x": 0,
+    "y": 0,
+    "note": "the desk, hook"
+   },
+   {
+    "id": "st_term",
+    "x": 2300,
+    "y": 0,
+    "note": "the term"
+   },
+   {
+    "id": "st_body",
+    "x": 4600,
+    "y": 0,
+    "note": "inside her: hormones and the status panel"
+   },
+   {
+    "id": "st_past",
+    "x": -2300,
+    "y": 1300,
+    "note": "long ago, the physical danger"
+   },
+   {
+    "id": "st_today",
+    "x": 2300,
+    "y": 1300,
+    "note": "today, the pressures close in"
+   },
+   {
+    "id": "st_calm",
+    "x": 4600,
+    "y": 1300,
+    "note": "the alarm settles"
+   },
+   {
+    "id": "st_desk2",
+    "x": 0,
+    "y": 2600,
+    "note": "the same desk, calm"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "beat": "b01",
+   "kind": "bespoke",
+   "scene": "b01",
+   "station": "st_desk",
+   "join_in": {
+    "type": "cut"
+   },
+   "motion_is": "content",
+   "register": "expressive",
+   "shot": {
+    "size": "medium"
+   },
+   "depth": "flat",
+   "light": "glow",
+   "story_role": "hook",
+   "design": {
+    "treatment": "a worker at her desk on a glowing ground; an urgent envelope drops in; a jagged burst flares behind her as her heart races",
+    "why_motion": "the hook is the instant the alarm fires: a state changing",
+    "elements": [
+     "ground",
+     "worker (tess) behind a desk",
+     "laptop",
+     "urgent envelope with an Urgent pill",
+     "burst",
+     "crackle on her outline"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Say a message lands",
+      "element": "envelope",
+      "action": "drops onto the laptop and glows",
+      "motion": "drop"
+     },
+     {
+      "t_anchor": "Marked urgent",
+      "element": "Urgent pill",
+      "action": "pops on the envelope",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "second line",
+      "element": "worker",
+      "action": "leans in, worried",
+      "motion": "pose"
+     },
+     {
+      "t_anchor": "already racing",
+      "element": "burst + crackle",
+      "action": "the burst pops behind her, crackle hugs her outline",
+      "motion": "pop + loop"
+     }
+    ],
+    "continuity": "the worker returns in b03 (inside view) and b10 (same desk, calm)"
+   }
+  },
+  {
+   "beat": "b02",
+   "kind": "template",
+   "template": "definition",
+   "station": "st_term",
+   "join_in": {
+    "type": "camera"
+   },
+   "motion_is": "staging",
+   "register": "productive",
+   "props": {
+    "term": "Stress response",
+    "say_term": "fast stress response",
+    "icon": "zap",
+    "definition": "Your body's alarm. It gets you ready to act.",
+    "say_definition": "ready to act"
+   }
+  },
+  {
+   "beat": "b03",
+   "kind": "bespoke",
+   "scene": "b03",
+   "station": "st_body",
+   "join_in": {
+    "type": "camera"
+   },
+   "motion_is": "content",
+   "register": "expressive",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "glow",
+   "story_role": "setup",
+   "design": {
+    "treatment": "the worker lit from inside: the core switches on, the adrenaline label pins to her, the core beats faster and crackle runs along her outline",
+    "why_motion": "adrenaline acting is a process: heart, breath, energy",
+    "elements": [
+     "ground",
+     "worker (tess), large, left",
+     "glowing core",
+     "Adrenaline pill with pointer",
+     "crackle",
+     "sparkles"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "First, adrenaline",
+      "element": "Adrenaline pill",
+      "action": "pops with a pointer to the core",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "heart speeds up",
+      "element": "core",
+      "action": "pulses faster",
+      "motion": "idle breathe"
+     },
+     {
+      "t_anchor": "breathing quickens",
+      "element": "worker",
+      "action": "chest rises, worried",
+      "motion": "pose"
+     },
+     {
+      "t_anchor": "energy floods your muscles",
+      "element": "crackle",
+      "action": "runs along her outline to the arms",
+      "motion": "loop"
+     }
+    ],
+    "continuity": "held into b04 and b05 (same station)"
+   }
+  },
+  {
+   "beat": "b04",
+   "kind": "bespoke",
+   "scene": "b04",
+   "station": "st_body",
+   "join_in": {
+    "type": "continue"
+   },
+   "motion_is": "content",
+   "register": "productive",
+   "design": {
+    "treatment": "a second label, Cortisol, pins beside the first; the core's glow holds steady",
+    "why_motion": "cortisol keeps the state going: the glow that would fade does not",
+    "elements": [
+     "Cortisol pill with pointer",
+     "the core (held)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Then cortisol",
+      "element": "Cortisol pill",
+      "action": "pops",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "keep that energy coming",
+      "element": "core glow",
+      "action": "holds bright",
+      "motion": "hold"
+     }
+    ],
+    "continuity": "builds on b03"
+   }
+  },
+  {
+   "beat": "b05",
+   "kind": "bespoke",
+   "scene": "b05",
+   "station": "st_body",
+   "join_in": {
+    "type": "continue"
+   },
+   "motion_is": "content",
+   "register": "productive",
+   "design": {
+    "treatment": "a status panel of her body's slower jobs; each switches off on its word",
+    "why_motion": "turning functions down is a state change, one per named job",
+    "elements": [
+     "status panel: Digestion, Immune, Careful thinking"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Slower jobs get turned down",
+      "element": "panel",
+      "action": "settles in",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "Digestion",
+      "element": "slot 1",
+      "action": "switches off",
+      "motion": "state"
+     },
+     {
+      "t_anchor": "Some immune work",
+      "element": "slot 2",
+      "action": "switches off",
+      "motion": "state"
+     },
+     {
+      "t_anchor": "careful thinking gets harder",
+      "element": "slot 3",
+      "action": "switches off",
+      "motion": "state"
+     }
+    ],
+    "continuity": "the last of the body station"
+   }
+  },
+  {
+   "beat": "b06",
+   "kind": "bespoke",
+   "scene": "b06",
+   "station": "st_past",
+   "join_in": {
+    "type": "canvas"
+   },
+   "motion_is": "content",
+   "register": "expressive",
+   "shot": {
+    "size": "wide"
+   },
+   "depth": "layered",
+   "light": "night",
+   "story_role": "turn",
+   "design": {
+    "treatment": "long ago: a tall grass plain at night, a small figure, a large predator shadow passes behind the grass; the Physical danger label lands",
+    "why_motion": "the original use of the alarm: a short danger passing",
+    "elements": [
+     "ground with hills",
+     "grass layers",
+     "figure (extra)",
+     "predator shadow",
+     "Physical danger pill"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "This alarm was built",
+      "element": "plain",
+      "action": "slow push in",
+      "motion": "camera"
+     },
+     {
+      "t_anchor": "short, physical danger",
+      "element": "shadow + pill",
+      "action": "the shadow slides behind the grass; the pill pops",
+      "motion": "travel + pop"
+     },
+     {
+      "t_anchor": "fight, or run from",
+      "element": "figure",
+      "action": "turns and leans to run",
+      "motion": "pose"
+     }
+    ],
+    "continuity": "contrast with b07 (today)"
+   }
+  },
+  {
+   "beat": "b07",
+   "kind": "bespoke",
+   "scene": "b07",
+   "station": "st_today",
+   "join_in": {
+    "type": "camera"
+   },
+   "motion_is": "content",
+   "register": "expressive",
+   "shot": {
+    "size": "overhead"
+   },
+   "light": "glow",
+   "story_role": "reveal",
+   "design": {
+    "treatment": "today, from above: she sits at the centre of a turning vortex while the day's pressures orbit and close in, each named on its word",
+    "why_motion": "pressures arriving and closing in over time",
+    "elements": [
+     "vortex",
+     "worker disc at centre",
+     "orbit: calendar, chat, envelope",
+     "pills: Deadlines, Conflict, A sharp message"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the same alarm goes off",
+      "element": "vortex",
+      "action": "turns",
+      "motion": "loop"
+     },
+     {
+      "t_anchor": "deadlines",
+      "element": "calendar + Deadlines pill",
+      "action": "arrives in orbit",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "conflict",
+      "element": "chat + Conflict pill",
+      "action": "arrives",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "a sharp message",
+      "element": "envelope + pill",
+      "action": "arrives; the orbit tightens",
+      "motion": "pop + orbit"
+     }
+    ],
+    "continuity": "the orbit falls away in b08"
+   }
+  },
+  {
+   "beat": "b08",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_calm",
+   "join_in": {
+    "type": "camera"
+   },
+   "motion_is": "staging",
+   "register": "expressive",
+   "props": {
+    "title": "Not a fault",
+    "say_title": "not a fault",
+    "subtitle": "It is the alarm, doing its job.",
+    "say_subtitle": "It is the alarm",
+    "icon": "heart",
+    "accent": "accent2",
+    "say_icon": "racing heart"
+   }
+  },
+  {
+   "beat": "b09",
+   "kind": "bespoke",
+   "scene": "b09",
+   "station": "st_calm",
+   "join_in": {
+    "type": "continue"
+   },
+   "motion_is": "content",
+   "register": "productive",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "glow",
+   "story_role": "practice",
+   "design": {
+    "treatment": "a gauge from alarm to calm slides down while the core softens; Give it time lands",
+    "why_motion": "settling is a value travelling over time",
+    "elements": [
+     "gauge",
+     "worker (tess)",
+     "core softening",
+     "Give it time pill"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "settles on its own",
+      "element": "gauge marker",
+      "action": "starts to slide down",
+      "motion": "value travel"
+     },
+     {
+      "t_anchor": "a little time",
+      "element": "core",
+      "action": "softens",
+      "motion": "fade"
+     },
+     {
+      "t_anchor": "give it some",
+      "element": "pill",
+      "action": "pops",
+      "motion": "pop"
+     }
+    ],
+    "continuity": "leads back to the desk"
+   }
+  },
+  {
+   "beat": "b10",
+   "kind": "bespoke",
+   "scene": "b10",
+   "station": "st_desk2",
+   "join_in": {
+    "type": "camera"
+   },
+   "motion_is": "content",
+   "register": "expressive",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "glow",
+   "story_role": "payoff",
+   "design": {
+    "treatment": "the opening desk again, calm: the envelope arrives, she pauses, the reply flies out; three steps light up in turn",
+    "why_motion": "the payoff replays the hook with the new move",
+    "elements": [
+     "ground",
+     "worker (tess) at desk",
+     "envelope",
+     "steps: Notice, Pause, Reply",
+     "reply paper plane"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Same message",
+      "element": "envelope",
+      "action": "drops in, gently",
+      "motion": "drop"
+     },
+     {
+      "t_anchor": "Notice the alarm",
+      "element": "step Notice",
+      "action": "lights",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "Pause",
+      "element": "step Pause",
+      "action": "lights; she breathes",
+      "motion": "pop + pose"
+     },
+     {
+      "t_anchor": "reply on purpose",
+      "element": "step Reply + plane",
+      "action": "lights; the reply flies out",
+      "motion": "pop + travel"
+     }
+    ],
+    "continuity": "bookend of b01"
+   }
+  }
+ ]
+}

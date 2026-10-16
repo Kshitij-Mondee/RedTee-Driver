@@ -1,0 +1,54 @@
+{
+ "form": "verdict_stamp",
+ "decision": "defer",
+ "confidence": "medium",
+ "topic_independent": true,
+ "idea": "a short status word stamped onto the scene as a solid pill whose fill token carries its valence",
+ "outline": [
+  "solid pill filled with a valence token (pos, neg or accent)",
+  "optional leading icon in the contrast token of that fill",
+  "one bold single-line label in the contrast token of that fill",
+  "stamp entrance on a cue"
+ ],
+ "variation_seen": [
+  "Two different looks share this id: a solid valence-filled pill (b13, b20, spacing-sticks b10 twice) and a tilted, outlined, opaque-backed note with an icon (blameless-postmortem b01, redrawn in b28 as the same held motif, so those two are ONE use).",
+  "Pill fill varied across neg, pos and accent; widths 220 to 460, heights 56 and 84; text role label vs lead; icon present once (eye) and absent three times.",
+  "Meaning varied: three are verdicts (Orders stopped, Familiar, Recall: nothing) but b20 'several conditions' is an aggregate caption stamped under a convergence, not a verdict, so valence colouring there is just emphasis.",
+  "Entrance was m.stamp in every pill use; the tilted note used m.stamp in b01 and m.reveal in b28."
+ ],
+ "future_uses": [
+  {
+   "topic": "information security phishing awareness",
+   "shows": "a red 'Phishing' or green 'Safe' pill stamped onto an example email"
+  },
+  {
+   "topic": "expense policy compliance",
+   "shows": "an 'Approved' or 'Out of policy' pill stamped onto a sample claim"
+  },
+  {
+   "topic": "quiz or knowledge check feedback",
+   "shows": "a 'Correct' or 'Not quite' pill stamped beside the chosen answer"
+  }
+ ],
+ "params_sketch": {
+  "content": [
+   "label"
+  ],
+  "adjustable": [
+   "w",
+   "h",
+   "valence",
+   "icon",
+   "at"
+  ]
+ },
+ "slots_sketch": [
+  "the icon"
+ ],
+ "reason": "The id merges two unrelated looks (a solid valence-filled pill and a tilted outlined note, the latter really one use since b28 redraws b01's motif), and one of the pill uses is an aggregate caption rather than a verdict, so no single honest component covers all five tags; stripped to the pill alone it is three scenes in two lessons. The pill is topic-independent and has plausible demand, but inline it is three lines (kit.pill, kit.text with pickTokenOn, m.stamp) with no recurring defect to fix, so promoting now is not worth the catalogue weight; re-tag the tilted note as its own form and revisit the pill once it recurs.",
+ "merge_into": null,
+ "revisit_when": {
+  "uses": 9,
+  "lessons": 4
+ }
+}

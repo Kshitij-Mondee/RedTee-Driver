@@ -1,0 +1,37 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b10",
+      "severity": "major",
+      "problem": "Org chart transiently covers job advert card during develop",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Transient motion in transit; both items readable at settled, no overlap at rest"
+    },
+    {
+      "beat": "b02",
+      "severity": "minor",
+      "problem": "Title appears both as header and in card",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Card heading reads as a deliberate list title; schema needs it; not worth reopening P5"
+    },
+    {
+      "beat": "b08",
+      "severity": "minor",
+      "problem": "Bottom storage and disposal props crowd base of customer list card.",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Already repositioned by an earlier fixer so Customer list stays readable; props sit beside, not over, the card at rest"
+    },
+    {
+      "beat": "b12",
+      "severity": "minor",
+      "problem": "Policy badge container remains empty during arrive and develop frames.",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "The outlined slot is the placeholder that fills with 'Our policy' on the closing words; reads as an intentional slot, and settled frame is clean"
+    }
+  ]
+}

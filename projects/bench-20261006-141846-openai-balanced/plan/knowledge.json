@@ -1,0 +1,83 @@
+{
+  "topic": "Topic pending requester confirmation",
+  "scope_note": "Blocked administrative draft, not an instructional knowledge source. The facts below describe limitations of the supplied request and brief only. They must not be turned into lesson content. No topic-specific claims, workplace rules, correct answers, or evidence have been supplied or verified. An instructional sheet requires a confirmed topic, workplace action, success criterion, and grounding account.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "The supplied request does not identify a teaching topic.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied REQUEST and BRIEF.open_questions",
+      "numbers": []
+    },
+    {
+      "id": "F2",
+      "statement": "The brief labels the learner outcome as provisional.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied BRIEF.outcome",
+      "numbers": []
+    },
+    {
+      "id": "F3",
+      "statement": "The intended topic-specific workplace action has not been supplied.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied BRIEF.open_questions",
+      "numbers": []
+    },
+    {
+      "id": "F4",
+      "statement": "The audience's relevant prior knowledge has not been supplied.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied BRIEF.audience.knows",
+      "numbers": []
+    },
+    {
+      "id": "F5",
+      "statement": "No instructional source passage has been supplied in the request.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied REQUEST and BRIEF.grounding_posture and open_questions",
+      "numbers": []
+    },
+    {
+      "id": "F6",
+      "statement": "The brief has no approved workplace situation for the running example.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied BRIEF.arc_plan and example_posture",
+      "numbers": []
+    },
+    {
+      "id": "F7",
+      "statement": "The brief has no approved correct response for the proposed decision check.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied BRIEF.arc_plan, check segment",
+      "numbers": []
+    },
+    {
+      "id": "F8",
+      "statement": "The brief prohibits inventing a workplace rule to fill the missing material.",
+      "kind": "caution",
+      "confidence": "established",
+      "reference_hint": "User-supplied BRIEF.must_avoid",
+      "numbers": []
+    }
+  ],
+  "not_claimed": [
+    "A teaching topic can be inferred from the requested visual style or mentor persona.",
+    "A provisional outcome establishes a correct workplace answer.",
+    "An illustrative fictional situation establishes workplace policy or evidence.",
+    "Matching instruction to learning styles improves learning.",
+    "Universal retention percentages can be assigned to presentation modalities.",
+    "More animation or interactivity always produces more learning."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended bench (topic mode)",
+    "note": "Blocked pending requester input, not ready for instructional approval or scripting. The entries document supplied-input gaps only and are not topic knowledge. Confirm the teaching topic, workplace action, success criterion, relevant audience experience, and grounding account before replacing this administrative draft with a substantive knowledge sheet. No external research, topic-specific evidence, workplace policy, or proposed correct answer has been verified."
+  }
+}

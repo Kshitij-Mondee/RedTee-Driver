@@ -1,0 +1,2743 @@
+{
+ "style": "cinematic-noir",
+ "concept": "One ordinary office at dusk and the messages that cross it: the camera pushes into Jo's message to enter it, the same message becomes an evidence board as its signs lift off, the company's mail is drawn as a funnel whose report lights travel to the security desk, and the lesson ends where it began, the same message, now readable. Moving right is forward through the lesson, left is earlier in time, a portal into the laptop is going inside the message.",
+ "chrome": {
+  "section_labels": false
+ },
+ "music": {
+  "mood": "calm_focus",
+  "level": 0.07
+ },
+ "poster": {
+  "beat": "b21"
+ },
+ "motifs": [
+  {
+   "name": "the message",
+   "desc": "Jo's password message: lands in b02, entered in b03, frozen behind b04, one row in b05, rebuilt on screen in b15, becomes the evidence board in b17 to b22, returns marked in b40, folds away in b41"
+  },
+  {
+   "name": "the report light",
+   "desc": "move three's lit strip (b08, ctx.motif 'move_three') travels into the funnel (b09); the 25 lights rise to the security desk (b12); Ravi's light fails (b34) or arrives (b35)"
+  },
+  {
+   "name": "Jo",
+   "desc": "invented employee, rig ava, at the hero desk: b02, b07, b08, b40, b41"
+  },
+  {
+   "name": "Ravi",
+   "desc": "invented employee, rig sam: b32 to b37, competent and busy, never foolish"
+  },
+  {
+   "name": "the security desk",
+   "desc": "two ordinary figures (pip, tess) at a desk with a lamp: b12, b13, b34, b35"
+  }
+ ],
+ "story": {
+  "metaphor": "none forced: a realistic workplace moment (policy genre), with the message itself becoming the evidence board",
+  "setting": "an open-plan office at dusk; the company's mail drawn as a funnel; a meeting-room corridor earlier in the week",
+  "arc": "a message lands and freezes at the choice; four moves; why reports matter (the funnel); the same message read for its signs (the evidence board); a familiar name and other channels; the click and its two paths; the check; the same message again, handled",
+  "cast": [
+   {
+    "name": "Jo",
+    "rig": "ava",
+    "role": "the viewer's stand-in at the moment of choice"
+   },
+   {
+    "name": "Ravi",
+    "rig": "sam",
+    "role": "the colleague who already clicked"
+   },
+   {
+    "name": "security team",
+    "rig": "pip",
+    "role": "where reports arrive (with tess)"
+   },
+   {
+    "name": "colleagues",
+    "rig": "extra",
+    "role": "the office around them"
+   }
+  ]
+ },
+ "references": [
+  "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+  "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+  "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)",
+  "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)",
+  "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)",
+  "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)",
+  "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)",
+  "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+ ],
+ "world": {
+  "stations": [
+   {
+    "id": "st_host",
+    "x": 0,
+    "y": 0,
+    "note": "the presenter (b01, b42)"
+   },
+   {
+    "id": "st_floor",
+    "x": 2300,
+    "y": 0,
+    "note": "the open-plan office at dusk; Jo's desk (b02, b07, b08, b40, b41)"
+   },
+   {
+    "id": "st_msg",
+    "parent": "st_floor",
+    "rect": {
+     "x": 1180,
+     "y": 430,
+     "w": 480,
+     "h": 270
+    },
+    "note": "inside Jo's laptop screen: the message, the inbox, the evidence board (b03 to b06, b15 to b22)"
+   },
+   {
+    "id": "st_funnel",
+    "x": 4600,
+    "y": 0,
+    "note": "the NCSC case study company's mail funnel (b09 to b12, b31)"
+   },
+   {
+    "id": "st_building",
+    "x": 4600,
+    "y": 1300,
+    "note": "inside the office block, cut away (b13, b14)"
+   },
+   {
+    "id": "st_supplier",
+    "x": 2300,
+    "y": 2600,
+    "note": "the familiar sender, the separate route, three channels (b23 to b30)"
+   },
+   {
+    "id": "st_ravi",
+    "x": -2300,
+    "y": 1300,
+    "note": "earlier in the week: Ravi between meetings, the fork (b32 to b37)"
+   },
+   {
+    "id": "st_check",
+    "x": 0,
+    "y": 2600,
+    "note": "the check, on the bare field (b38, b39)"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "beat": "b01",
+   "kind": "avatar",
+   "station": "st_host",
+   "join_in": {
+    "type": "cut"
+   },
+   "register": "expressive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "hook",
+   "light": "key",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "kicker": "Odd messages",
+    "title": "They want you to hurry.",
+    "title_cue": "want you to hurry"
+   },
+   "rationale": "the code-drawn presenter opens (allocation: avatar bookend), level and unhurried; the word the lesson turns on sets beside her as she says it. No name is invented for her."
+  },
+  {
+   "beat": "b02",
+   "kind": "bespoke",
+   "scene": "b02",
+   "station": "st_floor",
+   "join_in": {
+    "type": "camera"
+   },
+   "subject": "Jo at her desk as a message lands",
+   "world": "the open-plan office at dusk",
+   "motion_is": "content",
+   "register": "expressive",
+   "depth": "layered",
+   "shot": {
+    "size": "establishing"
+   },
+   "light": "key",
+   "story_role": "setup",
+   "props": {
+    "name": "Jo",
+    "subject_line": "Confirm your password",
+    "deadline": "within the hour",
+    "body": "or lose access to the shared drive"
+   },
+   "design": {
+    "treatment": "Loom.place.office at dusk, seen wide: Jo (rig ava) at the hero desk, laptop open; behind her a Loom.array of desks recedes across the floor, a few grey extras packing up. The window light cools from warm amber to evening blue across the beat (Loom.hold.heat on the window and the light shapes on the floor: the day ending). A new message slides into Jo's laptop screen; Loom.cam.push carries the camera to the laptop until the subject line and its deadline are readable on the screen itself.",
+    "why_motion": "two things change and carry the hook: the day ends (light) and a message arrives that the camera pushes into; the push IS entering the message",
+    "elements": [
+     "office place (wall, window, floor: world, not counted)",
+     "array of receding desks with 3 grey extras (world)",
+     "Jo, rig ava, seated, focused",
+     "tag 'Jo' on the figure",
+     "laptop with the new message",
+     "subject line 'Confirm your password' and deadline 'within the hour' lettered on the screen"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Say this is Jo",
+      "element": "tag Jo",
+      "action": "wipes in beside Jo (Loom.data.tag)",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "at the end of a long day",
+      "element": "window light",
+      "action": "heat from accent to accent3 over 4 s (the day ending)",
+      "motion": "Loom.hold.heat"
+     },
+     {
+      "t_anchor": "A message lands",
+      "element": "message on laptop",
+      "action": "slides into the screen with a soft ping",
+      "motion": "slide + sfx pop"
+     },
+     {
+      "t_anchor": "Confirm your password within the hour",
+      "element": "camera",
+      "action": "Loom.cam.push to the laptop screen, 2.5 s, editorial ease",
+      "motion": "push"
+     },
+     {
+      "t_anchor": "within the hour",
+      "element": "deadline line",
+      "action": "the deadline words print on the screen as spoken",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "or lose access to the shared drive",
+      "element": "message body",
+      "action": "the second line prints; hold",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "The laptop screen must sit at station rect {x:1180, y:430, w:480, h:270}: st_msg is nested there, so b03's zoom flies through it. The same desk, chair and window return in b07, b08, b40 and b41 (same geometry). The message layout is the message motif: b03 draws it full size with the same lines.",
+    "references": [
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)"
+    ],
+    "depth_note": "Loom.place layers (far, mid, near) moved by Loom.cam at their depths: parallax, text kept out of the moving layers"
+   },
+   "option": "acting character",
+   "alternatives": {
+    "illustrated bust": {
+     "kind": "blueprint",
+     "blueprint": "hero.character_moment",
+     "props": {
+      "member": "woman",
+      "name": "Jo",
+      "side": "left",
+      "bubble": "thought",
+      "prop": "laptop",
+      "moods": [
+       {
+        "emotion": "neutral",
+        "say": "at the end of a long day"
+       },
+       {
+        "emotion": "surprised",
+        "say": "A message lands"
+       }
+      ],
+      "items": [
+       {
+        "icon": "mail",
+        "label": "Confirm your password",
+        "say": "Confirm your password"
+       }
+      ],
+      "caption": "within the hour",
+      "say_caption": "within the hour"
+     }
+    }
+   }
+  },
+  {
+   "beat": "b03",
+   "kind": "bespoke",
+   "scene": "b03",
+   "station": "st_msg",
+   "join_in": {
+    "type": "zoom",
+    "meaning": "into"
+   },
+   "subject": "Jo's cursor settling on the link",
+   "world": "inside Jo's screen: the message",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "close"
+   },
+   "light": "spotlight",
+   "story_role": "hook",
+   "props": {
+    "button": "Act now",
+    "link_tag": "the link",
+    "subject_line": "Confirm your password",
+    "deadline": "within the hour"
+   },
+   "design": {
+    "treatment": "We are inside the message (the screen fills the frame through the zoom). The window holds the subject line and deadline from b02, the body as grey line bars (no invented words), an 'Act now' button and the link. Jo's cursor (ui.cursor) drifts across the body on a gentle arc and settles on the link. Then everything freezes mid-motion: the cursor stops, the ambient drift stops, and in the 1.5 s silence the frame grades down (the message dims to about 45 percent under a field wash) so it can sit behind b04's panel.",
+    "why_motion": "the cursor travelling to the link is the moment of choice happening; the freeze is the lesson's signature move (stop at the moment of choice)",
+    "elements": [
+     "message window (subject line, deadline, body bars)",
+     "'Act now' button with its tag",
+     "the link, with a tag 'the link'",
+     "Jo's cursor"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Act now, it says",
+      "element": "Act now button",
+      "action": "the button lights (accent) and its tag wipes in",
+      "motion": "highlight"
+     },
+     {
+      "t_anchor": "Jo's cursor is already on the link",
+      "element": "cursor",
+      "action": "m.cursorTo the link, arriving on 'on the link'",
+      "motion": "cursor arc"
+     },
+     {
+      "t_anchor": "the link",
+      "element": "tag the link",
+      "action": "wipes in under the link (Loom.data.tag)",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "You have been here too",
+      "element": "whole frame",
+      "action": "freeze; hold still; then the grade-down wash through the pause",
+      "motion": "hold"
+     }
+    ],
+    "continuity": "Name the window element 'message': b04 keeps it (held, dimmed), b05 holds it and shrinks it into the inbox. The same message layout (same line positions) is rebuilt in b15 and b40 so the viewer recognises it.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+     "docs/SCENE_API.md simulated interaction (ui.window, ui.cursor, m.cursorTo, m.tap)"
+    ]
+   }
+  },
+  {
+   "beat": "b04",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "kicker": "Read this message",
+    "say_kicker": "read this message",
+    "title": "Know the one move that beats it",
+    "say_title": "the one move",
+    "subtitle": "and what to do after a click",
+    "say_subtitle": "after a click",
+    "align": "center",
+    "panel": true
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "the promise, as three short anchors on a glass panel (the seed's panel) over the frozen, dimmed message, which stays held behind it: the world does not leave",
+   "subject": "the lesson's promise, over the frozen message",
+   "world": "inside Jo's screen: the message",
+   "keep": [
+    "message"
+   ],
+   "shot": {
+    "size": "close"
+   },
+   "story_role": "setup"
+  },
+  {
+   "beat": "b05",
+   "kind": "bespoke",
+   "scene": "b05",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "Jo's full inbox, and the tips that fold away",
+   "world": "Jo's inbox, many messages",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "props": {
+    "tag": "not ten more tips",
+    "chapter_title": "Four moves"
+   },
+   "design": {
+    "treatment": "Hold and transform: the held message shrinks and travels up until it is one row of a full, ordinary inbox (Loom.array of 14 message rows, grey sender and subject bars, seeded widths, no words). On 'not ten more tips' a fan of ten blank tip cards (Loom.array, ordered fan) spreads out over the inbox, then folds back into one thin stack and slides away. On 'Just four moves' a chapter sting (Loom.data.chapter, title 'Four moves') dims the inbox and leaves one empty frame with four open slots.",
+    "why_motion": "one becomes many (the message joins an inbox of dozens) and many becomes few (ten tips fold away to four slots); both are changes the narration names",
+    "elements": [
+     "inbox: array of message rows (world, scale)",
+     "the message, now one row (held, travelling)",
+     "fan of ten blank tip cards",
+     "tag 'not ten more tips' on the fan",
+     "chapter sting 'Four moves'",
+     "empty frame with four slots"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "You already glance at sender and subject",
+      "element": "message",
+      "action": "travels from full size into its inbox row while the rows arrive around it (Loom.array, centre order)",
+      "motion": "travel + array"
+     },
+     {
+      "t_anchor": "not ten more tips",
+      "element": "tip cards",
+      "action": "fan out from the inbox in a seeded arc; the tag wipes in",
+      "motion": "array fan"
+     },
+     {
+      "t_anchor": "This is not ten more tips",
+      "element": "tip cards",
+      "action": "fold back into one stack and slide off right before the next phrase",
+      "motion": "collapse"
+     },
+     {
+      "t_anchor": "Just four moves",
+      "element": "chapter",
+      "action": "Loom.data.chapter, title 'Four moves'; the inbox dims under it",
+      "motion": "chapter"
+     },
+     {
+      "t_anchor": "for the message that says hurry",
+      "element": "four slots",
+      "action": "an empty frame with four slots draws in",
+      "motion": "draw"
+     }
+    ],
+    "continuity": "Name the rows element 'inbox' (text-free): b06 keeps it as the backdrop. The message ends inside its own row, matching that row's rect, so the inbox reads complete when the message element retires at b06.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b06",
+   "kind": "template",
+   "template": "icon.grid",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "title": "Phishing",
+    "say_title": "Phishing",
+    "items": [
+     {
+      "icon": "link",
+      "label": "link or attachment",
+      "say": "link or attachment"
+     },
+     {
+      "icon": "key-round",
+      "label": "password",
+      "say": "give away a password"
+     },
+     {
+      "icon": "banknote",
+      "label": "money",
+      "say": "send money"
+     }
+    ]
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "the one-line definition shown as its three aims, as peers (icon.grid pops them with a tight stagger on their words; at 100 px or more the seed draws them as objects, not stock icons), over the dimmed inbox. The definition sentence is spoken, not printed (redundancy)",
+   "subject": "what phishing wants: a link or attachment, a password, money",
+   "world": "Jo's inbox, many messages",
+   "keep": [
+    "inbox"
+   ],
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup"
+  },
+  {
+   "beat": "b07",
+   "kind": "bespoke",
+   "scene": "b07",
+   "station": "st_floor",
+   "join_in": {
+    "type": "camera"
+   },
+   "subject": "the four moves on the office wall board",
+   "world": "Jo's office at night, the wall board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "layered",
+   "shot": {
+    "size": "wide"
+   },
+   "light": "night",
+   "story_role": "setup",
+   "props": {
+    "moves": [
+     "1 Look for the signs",
+     "2 Do not click or reply"
+    ]
+   },
+   "design": {
+    "treatment": "The camera pulls back out of the screen into Jo's office, now dark outside (same place and desk as b02). Jo sits frozen at her desk in the foreground, small. On the wall behind her hangs a long board (Loom.scenery.sign strips on a framed board): the moves are lettered ON the board, large and plain, one strip per move. Loom.cam.pan travels slowly along the board left to right as each move lights (Loom.hold.heat from muted to ink on the strip that is named).",
+    "why_motion": "the moves are set in order on a held place, and the pan follows the order: reading order is the sequence",
+    "elements": [
+     "office place at night (world)",
+     "Jo, rig ava, seated and still (continuity)",
+     "wall board with four strips (two lit here)",
+     "move 1 lettering '1 Look for the signs'",
+     "move 2 lettering '2 Do not click or reply'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Move one",
+      "element": "board strip 1",
+      "action": "lights",
+      "motion": "heat"
+     },
+     {
+      "t_anchor": "look for the signs",
+      "element": "move 1 lettering",
+      "action": "prints on the strip",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "Move two",
+      "element": "camera",
+      "action": "Loom.cam.pan along the board to strip 2, 2 s",
+      "motion": "pan"
+     },
+     {
+      "t_anchor": "do not click it, or reply to it",
+      "element": "move 2 lettering",
+      "action": "prints on strip 2",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "Same office geometry as b02 (desk, window, laptop in the same place). The board and its strips stay for b08 (continue). Strips 3 and 4 exist from the start as dark blanks, so nothing re-lays out.",
+    "references": [
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)"
+    ],
+    "depth_note": "Loom.place layers (far, mid, near) moved by Loom.cam at their depths: parallax, text kept out of the moving layers"
+   }
+  },
+  {
+   "beat": "b08",
+   "kind": "bespoke",
+   "scene": "b08",
+   "station": "st_floor",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "moves three and four join the board",
+   "world": "Jo's office at night, the wall board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "light": "night",
+   "story_role": "setup",
+   "props": {
+    "moves": [
+     "3 Report it",
+     "4 Already clicked? Report at once"
+    ]
+   },
+   "design": {
+    "treatment": "The pan continues to strips 3 and 4. Move three lights; a small report button is drawn on Jo's laptop as the report channel is named (the thing, not a word). Move four lights a little apart from the first three, with one quiet mark of emphasis (the seed's box mark), the only accent on the board.",
+    "why_motion": "the list completes on a held place; the gap before move four is the emphasis the script asks for",
+    "elements": [
+     "held board (strips 1 and 2 lit)",
+     "move 3 lettering '3 Report it'",
+     "report button on Jo's laptop",
+     "move 4 lettering '4 Already clicked? Report at once'",
+     "emphasis mark beside move 4"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Move three",
+      "element": "camera",
+      "action": "Loom.cam.pan on to strips 3 and 4, 2 s",
+      "motion": "pan"
+     },
+     {
+      "t_anchor": "report it with your company's report button or channel",
+      "element": "move 3 lettering",
+      "action": "prints; the strip lights",
+      "motion": "unmask + heat"
+     },
+     {
+      "t_anchor": "report button",
+      "element": "report button",
+      "action": "draws on Jo's laptop screen",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "Move four, the one people skip",
+      "element": "strip 4",
+      "action": "lights, set apart",
+      "motion": "heat"
+     },
+     {
+      "t_anchor": "if you already clicked, report it at once",
+      "element": "move 4 lettering",
+      "action": "prints",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "do not hide it",
+      "element": "emphasis mark",
+      "action": "stamps beside move 4",
+      "motion": "T.mark"
+     }
+    ],
+    "continuity": "Create strip 3 as a motif, ctx.motif('move_three'): b09's travel join carries it, still lit, into the funnel world (the lesson's report light).",
+    "references": [
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)"
+    ]
+   }
+  },
+  {
+   "beat": "b09",
+   "kind": "bespoke",
+   "scene": "b09",
+   "station": "st_funnel",
+   "join_in": {
+    "type": "travel",
+    "via": "move_three"
+   },
+   "subject": "one financial company's email funnel",
+   "world": "the company's mail system: a funnel over an office block",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "light": "key",
+   "story_role": "setup",
+   "props": {
+    "chapter_title": "Why move three matters",
+    "tags": [
+     "NCSC case study",
+     "one financial company"
+    ]
+   },
+   "design": {
+    "treatment": "A chapter sting over the new world (Loom.data.chapter, title 'Why move three matters'). The lit move-three strip travels in and settles top left, still lit. A tall funnel draws itself (the seed's draw entrance) with a filter mesh across its throat; at its mouth stands an office block (Loom.obj building, tower) with a row of small inbox trays at its door. A tag names the block 'one financial company'; a second names the picture 'NCSC case study'.",
+    "why_motion": "the world is drawn as the narration introduces it (staging); the funnel must exist empty before anything pours into it in b10 (scaffolding before content)",
+    "elements": [
+     "chapter sting 'Why move three matters'",
+     "move three strip (travelled motif)",
+     "empty funnel with filter mesh",
+     "office block with inbox trays",
+     "tag 'one financial company'",
+     "tag 'NCSC case study'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Why move three matters",
+      "element": "chapter",
+      "action": "Loom.data.chapter over the world",
+      "motion": "chapter"
+     },
+     {
+      "t_anchor": "Why move three matters",
+      "element": "move three",
+      "action": "the adopted motif lands top left",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "National Cyber Security Centre",
+      "element": "funnel",
+      "action": "draws top to bottom",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "the NCSC",
+      "element": "tag NCSC case study",
+      "action": "wipes in by the funnel",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "one financial company",
+      "element": "office block",
+      "action": "builds up (grow) with its trays; the tag wipes in",
+      "motion": "grow + unmask"
+     }
+    ],
+    "continuity": "b10 to b12 continue on this picture. b31 rebuilds the same funnel at the same geometry.",
+    "references": [
+     "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)",
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b10",
+   "kind": "bespoke",
+   "scene": "b10",
+   "station": "st_funnel",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "1,800 phishing emails meeting the filters",
+   "world": "the company's mail system: a funnel over an office block",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "props": {
+    "counter_to": 1800,
+    "counter_after": 50,
+    "stopped": 1750,
+    "left": 50,
+    "tags": [
+     "1,750 stopped",
+     "50 in inboxes"
+    ]
+   },
+   "design": {
+    "treatment": "The number as a picture. A counter (Loom.data.counter) at the funnel's rim runs to 1,800 as a stream of small envelopes (Loom.array, seeded, random order) pours in. On 'stopped 1,750' the filter mesh catches them: it heats (Loom.hold.heat) and the caught envelopes fall away sideways into a dim heap, tagged '1,750 stopped', while the counter runs down from 1,800 to 50. On 'That left 50' a unitGrid of 50 envelopes (10 by 5) lands in the inbox trays at the building's door, tagged '50 in inboxes'.",
+    "why_motion": "the quantity IS a change over time: emails arrive, most are caught, a remainder gets through; the counter and the grid make the numbers things, not a card",
+    "elements": [
+     "counter on the funnel rim (1,800, then 50)",
+     "stream of envelopes (world motion)",
+     "filter mesh heating",
+     "heap of caught envelopes with tag '1,750 stopped'",
+     "unitGrid of 50 envelopes with tag '50 in inboxes'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "1,800 phishing emails arrived",
+      "element": "counter + stream",
+      "action": "counter runs 0 to 1,800 as envelopes pour in (1.6 s)",
+      "motion": "count + array"
+     },
+     {
+      "t_anchor": "The filters stopped 1,750",
+      "element": "filter mesh",
+      "action": "heats; caught envelopes fall to the heap; the tag wipes in",
+      "motion": "heat + drop"
+     },
+     {
+      "t_anchor": "stopped 1,750 of them",
+      "element": "counter",
+      "action": "runs down from 1,800 to 50",
+      "motion": "count"
+     },
+     {
+      "t_anchor": "That left 50",
+      "element": "unitGrid 50",
+      "action": "the 50 land in order in the trays (whole group within 1.2 s)",
+      "motion": "unitGrid"
+     },
+     {
+      "t_anchor": "in staff inboxes",
+      "element": "tag 50 in inboxes",
+      "action": "wipes in",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "Name the grid 'grid50' and keep its geometry: b11 lights 25 of its cells and b12 sends their lights up.",
+    "references": [
+     "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b11",
+   "kind": "bespoke",
+   "scene": "b11",
+   "station": "st_funnel",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "25 of the 50 reported with a report button",
+   "world": "the company's mail system: a funnel over an office block",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium",
+    "move": "push"
+   },
+   "story_role": "reveal",
+   "props": {
+    "lit": 25,
+    "of": 50,
+    "tags": [
+     "25 reported",
+     "some after clicking"
+    ]
+   },
+   "design": {
+    "treatment": "The camera pushes gently in on the 50-envelope grid (shot push). On 'Staff reported 25' 25 of the 50 envelopes light one after another with a small report mark (unitGrid lit = 25, accent); the other 25 stay grey. On 'Some of them after clicking' ONE cursor glyph hovers over part of the lit group with a tag 'some after clicking': the source says 'some', so no number of clicked envelopes is drawn or countable.",
+    "why_motion": "lighting 25 of 50 in order shows the count accumulating; it is the reported share made visible",
+    "elements": [
+     "held grid of 50 envelopes",
+     "25 lit report marks",
+     "tag '25 reported'",
+     "one cursor glyph",
+     "tag 'some after clicking'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Filters catch most",
+      "element": "camera",
+      "action": "gentle push on the grid, 2 s",
+      "motion": "push"
+     },
+     {
+      "t_anchor": "Staff reported 25 of those 50",
+      "element": "25 cells",
+      "action": "light in order with report marks (one progress, within 1.2 s)",
+      "motion": "unitGrid lit"
+     },
+     {
+      "t_anchor": "with a report button",
+      "element": "tag 25 reported",
+      "action": "wipes in",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "Some of them after clicking",
+      "element": "cursor glyph + tag",
+      "action": "the cursor settles over the lit group; the tag wipes in",
+      "motion": "settle"
+     }
+    ],
+    "continuity": "Never draw 14 clicks or an infected device (not on the knowledge sheet).",
+    "references": [
+     "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b12",
+   "kind": "bespoke",
+   "scene": "b12",
+   "station": "st_funnel",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the reports reaching the security team first",
+   "world": "the company's mail system: a funnel over an office block",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "turn",
+   "props": {
+    "tags": [
+     "first sign",
+     "past the filters"
+    ]
+   },
+   "design": {
+    "treatment": "From the 25 lit envelopes, 25 small lights rise and travel along one curved path (m.along) up past the filter mesh to a security desk drawn at the top right of the funnel: two ordinary figures (rigs pip and tess) at an ordinary desk. The desk lamp switches on as the first light arrives. A tag 'first sign' marks the arrival; a second tag 'past the filters' marks the mesh the lights rose past.",
+    "why_motion": "the reports travelling to the team before anything else is the causal order being taught (value travel)",
+    "elements": [
+     "held grid with 25 lit",
+     "25 travelling lights on a path",
+     "security desk with two figures (pip, tess)",
+     "tag 'first sign'",
+     "tag 'past the filters'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Those reports were the first sign",
+      "element": "lights",
+      "action": "rise along the path to the desk, staggered, arriving on 'first sign'",
+      "motion": "along"
+     },
+     {
+      "t_anchor": "first sign",
+      "element": "desk lamp + tag",
+      "action": "the lamp comes on; the tag wipes in",
+      "motion": "heat + unmask"
+     },
+     {
+      "t_anchor": "got past the filters",
+      "element": "tag past the filters",
+      "action": "wipes in on the mesh",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "The security desk returns in b13 (inside the building), b34 and b35 (where Ravi's light does or does not arrive): same two figures, same lamp.",
+    "references": [
+     "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)",
+     "no server or security-room board exists yet (docs/references/RESOURCES.md s4); the security desk is drawn as an ordinary office desk from the office board"
+    ]
+   }
+  },
+  {
+   "beat": "b13",
+   "kind": "bespoke",
+   "scene": "b13",
+   "station": "st_building",
+   "join_in": {
+    "type": "fade",
+    "meaning": "meanwhile"
+   },
+   "subject": "the warning spreading to everyone in the building",
+   "world": "inside the office block, cut away",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "glow",
+   "story_role": "turn",
+   "props": {
+    "tags": [
+     "early warning",
+     "sooner: limit the harm",
+     "one company"
+    ]
+   },
+   "design": {
+    "treatment": "Hold and transform. The office block from the funnel, seen close: its facade lifts away (Loom.hold.lift) to show five floors of desks with people at inboxes (Loom.array of desks and grey extras, seeded). The security desk on the top floor glows; on 'early warning' a calm ring spreads from it down through the floors (a soft draw, no flashing), and each inbox it passes gets a small shield tick. On 'the more harm it can limit' a tag 'sooner: limit the harm' is set on the ring. On 'One company' a small tag 'one company' sits on the roof edge: one building, not every building.",
+    "why_motion": "the warning reaching everyone else is a spread over time; the cutaway lets us see who it protects",
+    "elements": [
+     "building facade (lifts away)",
+     "five floors: array of desks and extras (world, scale)",
+     "security desk glow",
+     "spreading ring with shield ticks",
+     "tag 'early warning'",
+     "tag 'sooner: limit the harm'",
+     "tag 'one company'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "An early warning, for everyone else",
+      "element": "facade",
+      "action": "Loom.hold.lift, 1.2 s",
+      "motion": "lift"
+     },
+     {
+      "t_anchor": "early warning",
+      "element": "ring + tag",
+      "action": "the ring starts spreading from the security desk; the tag wipes in",
+      "motion": "draw + unmask"
+     },
+     {
+      "t_anchor": "for everyone else",
+      "element": "shield ticks",
+      "action": "tick each inbox as the ring passes",
+      "motion": "unitGrid lit"
+     },
+     {
+      "t_anchor": "the more harm it can limit",
+      "element": "tag sooner: limit the harm",
+      "action": "wipes in on the ring",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "One company, mind",
+      "element": "tag one company",
+      "action": "wipes in on the roof edge",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "Name the floors and building element 'building_set' (text-free): b14 keeps it behind the recap.",
+    "references": [
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)",
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)",
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)"
+    ]
+   }
+  },
+  {
+   "beat": "b14",
+   "kind": "template",
+   "template": "recap",
+   "station": "st_building",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "title": "Which move got those 25 to the team?",
+    "say_title": "Which move got those 25",
+    "items": [
+     {
+      "label": "filters catch most",
+      "icon": "filter",
+      "say": "Filters catch most"
+     },
+     {
+      "label": "reports catch",
+      "icon": "flag",
+      "say": "reports catch what gets through"
+     }
+    ],
+    "rule": "Move three, report it.",
+    "say_rule": "Move three, report it"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "consolidate over the held, dimmed building: the two halves of the defence light in turn, the recall question prints, and the answer stamps as the pocket rule",
+   "subject": "filters and reports, the two layers",
+   "world": "inside the office block, cut away",
+   "keep": [
+    "building_set"
+   ],
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff"
+  },
+  {
+   "beat": "b15",
+   "kind": "bespoke",
+   "scene": "b15",
+   "station": "st_msg",
+   "join_in": {
+    "type": "iris",
+    "meaning": "into"
+   },
+   "subject": "Jo's message under a magnifier",
+   "world": "Jo's message on screen",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "close"
+   },
+   "light": "key",
+   "story_role": "turn",
+   "props": {
+    "subject_line": "Confirm your password",
+    "deadline": "within the hour",
+    "body": "or lose access to the shared drive",
+    "button": "Act now",
+    "tags": [
+     "bad spelling?",
+     "written perfectly"
+    ]
+   },
+   "design": {
+    "treatment": "An iris opens onto Jo's message, rebuilt exactly as in b03 (same lines, same place), this time with its body lettered word for word from b02 ('Confirm your password within the hour, or lose access to the shared drive.'). A drawn magnifier (a lens and handle, in the seed's shape language) passes over each line looking for typos; each line it leaves gets a small clean tick. The tag 'bad spelling?' rides the lens; on 'written perfectly' a tag sets beside the message.",
+    "why_motion": "the search is a process the viewer follows line by line; finding nothing is the refutation happening",
+    "elements": [
+     "the message (rebuilt, same layout as b03)",
+     "magnifier",
+     "clean ticks per line",
+     "tag 'bad spelling?'",
+     "tag 'written perfectly'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "You may have learned to spot bad spelling",
+      "element": "magnifier + tag",
+      "action": "the lens enters; the tag rides it",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "Plenty of old scams were sloppy",
+      "element": "magnifier",
+      "action": "passes line by line (one drive)",
+      "motion": "along"
+     },
+     {
+      "t_anchor": "This one is written perfectly",
+      "element": "ticks + tag",
+      "action": "each line ticks clean; the tag wipes in",
+      "motion": "mark + unmask"
+     }
+    ],
+    "continuity": "Name the window 'message' again; b16 to b22 continue on it. Every word lettered on the message was spoken in b02 or b03; nothing else is invented.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)"
+    ]
+   }
+  },
+  {
+   "beat": "b16",
+   "kind": "bespoke",
+   "scene": "b16",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the old spelling rule losing its hold",
+   "world": "Jo's message on screen",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "close"
+   },
+   "story_role": "turn",
+   "props": {
+    "tags": [
+     "spelling: no longer reliable",
+     "fools even experts"
+    ]
+   },
+   "design": {
+    "treatment": "The magnifier sets down beside the message. Hold and transform: the clean ticks recolour from pos to muted (Loom.hold.heat) as the rule is called unreliable, and a plain tag 'spelling: no longer reliable' sets beside them. On 'fools even experts' a second tag. On 'Look at what it wants from you' three spots on the message (the deadline, the sender row, the link and password box) glow faintly, unlabelled: the viewer is told where to look next.",
+    "why_motion": "the old rule fading in colour is the belief changing; the faint glows set up the next five beats",
+    "elements": [
+     "held message",
+     "magnifier at rest",
+     "ticks recolouring",
+     "tag 'spelling: no longer reliable'",
+     "tag 'fools even experts'",
+     "three faint glows"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Spelling is no longer a reliable sign",
+      "element": "ticks + tag",
+      "action": "heat to muted; the tag wipes in",
+      "motion": "heat + unmask"
+     },
+     {
+      "t_anchor": "Some phishing fools even experts",
+      "element": "tag fools even experts",
+      "action": "wipes in",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "Look at what it wants from you",
+      "element": "three glows",
+      "action": "breathe on once (Loom.hold.breathe), no labels",
+      "motion": "breathe"
+     }
+    ],
+    "continuity": "The message stays exactly where it was (held).",
+    "references": [
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)",
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)"
+    ]
+   }
+  },
+  {
+   "beat": "b17",
+   "kind": "bespoke",
+   "scene": "b17",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the deadline lifting off the message as pressure",
+   "world": "the evidence board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "key",
+   "story_role": "reveal",
+   "props": {
+    "callout": "within the hour",
+    "family": "pressure"
+   },
+   "design": {
+    "treatment": "Hold and transform: the screen becomes the evidence board. The window chrome and the screen glow peel away past the camera (Loom.hold.peel, outer layer first), leaving the message pinned to a dark board with room around it. The deadline line 'within the hour' lifts off the message (Loom.hold.lift upward) and travels to the board's left margin, where it is pinned as a callout under a flag label 'pressure' (T.label, the seed's flag). A thin lead joins it back to where it came from.",
+    "why_motion": "the inbox turning into the board, and the sign lifting off the thing it was part of, are the two changes the section is built on (the brief's own picture)",
+    "elements": [
+     "held message, now pinned",
+     "peeling screen layers (world transform)",
+     "evidence board (world)",
+     "lifted deadline callout 'within the hour'",
+     "flag label 'pressure'",
+     "lead line"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "First, what is it pushing you to do?",
+      "element": "screen layers",
+      "action": "Loom.hold.peel, 1.4 s, leaving the board",
+      "motion": "peel"
+     },
+     {
+      "t_anchor": "Within the hour, or lose access",
+      "element": "deadline line",
+      "action": "lifts off and travels to the margin",
+      "motion": "lift + travel"
+     },
+     {
+      "t_anchor": "That pressure is doing the work",
+      "element": "flag label pressure + lead",
+      "action": "the lead draws, the flag plants",
+      "motion": "draw + T.label"
+     },
+     {
+      "t_anchor": "Its job is to stop you checking",
+      "element": "board",
+      "action": "hold; the board breathes once",
+      "motion": "breathe"
+     }
+    ],
+    "continuity": "Name the board 'board' and keep the message 'message': b18 to b22 continue and pin to the same board. Leave room on the left for two pressure callouts, on the right for two mismatch callouts, below for one request callout.",
+    "references": [
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)",
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b18",
+   "kind": "bespoke",
+   "scene": "b18",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the sender name lifting off as authority",
+   "world": "the evidence board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "sender": "IT support",
+    "family": "authority"
+   },
+   "design": {
+    "treatment": "The sender row of the message now reads 'IT support' (lettered on the message as it is said). It lifts off and is pinned under the pressure callout as a second callout, with a flag 'authority'. A thin bracket gathers the two pressure callouts into one family.",
+    "why_motion": "the second sign lifts off the same message onto the same board: one board changed by additions",
+    "elements": [
+     "held board, message and pressure callout",
+     "sender row 'IT support'",
+     "lifted callout 'IT support'",
+     "flag label 'authority'",
+     "family bracket"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "It also claims to be IT support",
+      "element": "sender row",
+      "action": "the name prints on the message",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "IT support",
+      "element": "sender callout",
+      "action": "lifts off and pins under pressure",
+      "motion": "lift + travel"
+     },
+     {
+      "t_anchor": "borrow authority",
+      "element": "flag authority",
+      "action": "plants on the callout",
+      "motion": "T.label"
+     },
+     {
+      "t_anchor": "Reason enough for you to look twice",
+      "element": "family bracket",
+      "action": "draws around both pressure callouts",
+      "motion": "draw"
+     }
+    ],
+    "continuity": "IT support is the invented sender (hypothetical). No real organisation, logo or address.",
+    "references": [
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)"
+    ]
+   }
+  },
+  {
+   "beat": "b19",
+   "kind": "bespoke",
+   "scene": "b19",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the sender address with one letter changed",
+   "world": "the evidence board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "tag": "one letter changed"
+   },
+   "design": {
+    "treatment": "Insert shot: the camera pushes close on the address under the sender name (shot push, the one move). The address is drawn as a row of letter tiles in grey glyph blocks (no readable invented domain). The real spelling slides in beneath as a matching row; every tile pair matches except one, which lights in accent on both rows. The tag 'one letter changed' points at it.",
+    "why_motion": "the comparison is made by the eye travelling between two rows; the one lit tile is the single difference (one saturated thing among grey)",
+    "elements": [
+     "address tile row",
+     "real spelling tile row",
+     "the one changed tile pair (accent)",
+     "tag 'one letter changed'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Now slow down",
+      "element": "camera",
+      "action": "push close on the address, 2.5 s",
+      "motion": "push"
+     },
+     {
+      "t_anchor": "The name says IT support",
+      "element": "address row",
+      "action": "the tiles settle under the name",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "The address has one letter changed",
+      "element": "real row + lit tile + tag",
+      "action": "the real row slides in beneath; the odd tile lights; the tag wipes in",
+      "motion": "converge + heat + unmask"
+     }
+    ],
+    "continuity": "The pull back is b21's move, not this one. The tiles stay on the board as the mismatch callout's picture.",
+    "references": [
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)"
+    ]
+   },
+   "rationale": "; shot is medium with no camera move: the scene pushes the board itself (x3.3), and an insert camera on top of that zoomed twice, onto empty board (2026-10-02 review, L-165)"
+  },
+  {
+   "beat": "b20",
+   "kind": "bespoke",
+   "scene": "b20",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the shortened link unfolding to where it really goes",
+   "world": "the evidence board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "tags": [
+     "shortened link",
+     "mismatch sign"
+    ]
+   },
+   "design": {
+    "treatment": "The short link on the message (a short chip of glyph tiles) unrolls left to right into a long chain of tiles that ends at a dark, unmarked box, plainly not the shared-drive folder (Loom.obj folder) drawn beside the message where the link claims to go. The unrolled link lifts off as a callout and joins the address tiles on the right of the board under a flag 'mismatch sign'.",
+    "why_motion": "the link unfolding is the hidden destination being revealed: a change over time",
+    "elements": [
+     "the link chip with tag 'shortened link'",
+     "unrolled tile chain to an unmarked box",
+     "shared-drive folder object (where it claims to go)",
+     "flag 'mismatch sign' over the link and address callouts"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Then the link",
+      "element": "link chip + tag",
+      "action": "the chip lights; the tag 'shortened link' wipes in",
+      "motion": "highlight + unmask"
+     },
+     {
+      "t_anchor": "it hides where it goes",
+      "element": "tile chain",
+      "action": "unmasks left to right to the unmarked box",
+      "motion": "unmask ltr"
+     },
+     {
+      "t_anchor": "So you have the mismatch sign",
+      "element": "callouts + flag",
+      "action": "the chain lifts to the right margin beside the address; the flag plants",
+      "motion": "lift + T.label"
+     },
+     {
+      "t_anchor": "where, it claims to be",
+      "element": "folder",
+      "action": "the claimed destination dims",
+      "motion": "heat"
+     }
+    ],
+    "continuity": "The board keeps growing: the pressure family on the left, the mismatch family on the right.",
+    "references": [
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)",
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)"
+    ]
+   }
+  },
+  {
+   "beat": "b21",
+   "kind": "bespoke",
+   "scene": "b21",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the password request lifting off, the board complete",
+   "world": "the evidence board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "props": {
+    "tags": [
+     "password",
+     "request sign"
+    ]
+   },
+   "design": {
+    "treatment": "The password box on the message lifts off as the last callout and pins below the message under a flag 'request sign'. Beside it a small bank building (Loom.obj building, institution) with a closed envelope crossed through: banks do not ask by email. Then the camera pulls back (shot pull, the one move) to show the whole evidence board: three families pinned around one clean message.",
+    "why_motion": "the last addition completes the board; the pull back shows the whole changed picture",
+    "elements": [
+     "password box callout with tag 'password'",
+     "flag 'request sign'",
+     "bank building with crossed envelope",
+     "the whole board (pressure, mismatch, request around the message)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Last, what does it want from you?",
+      "element": "password box",
+      "action": "glows on the message",
+      "motion": "highlight"
+     },
+     {
+      "t_anchor": "Your password, the request sign",
+      "element": "password callout + flag",
+      "action": "lifts off and pins below; the flag plants",
+      "motion": "lift + T.label"
+     },
+     {
+      "t_anchor": "Banks and other official sources",
+      "element": "bank building + crossed envelope",
+      "action": "builds up; the cross draws",
+      "motion": "grow + draw"
+     },
+     {
+      "t_anchor": "do not ask for this by email",
+      "element": "camera",
+      "action": "pull back to the whole board, 2.5 s",
+      "motion": "pull"
+     }
+    ],
+    "continuity": "Name the board and its pinned callouts 'board' (one element): b22 keeps it behind the peers.",
+    "references": [
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)",
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)"
+    ]
+   },
+   "rationale": "; golden segment (D-100, 2026-10-03): no camera pull, the whole board is already in frame and a pull showed the station edge"
+  },
+  {
+   "beat": "b22",
+   "kind": "template",
+   "template": "icon.grid",
+   "station": "st_msg",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "title": "Do not click, report it",
+    "say_title": "do not click, report it",
+    "items": [
+     {
+      "icon": "timer",
+      "label": "pressure",
+      "say": "Pressure"
+     },
+     {
+      "icon": "link-2-off",
+      "label": "mismatch",
+      "say": "mismatch"
+     },
+     {
+      "icon": "key-round",
+      "label": "request",
+      "say": "request"
+     }
+    ]
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "the three families as peers over the held evidence board, then the move that stays the same; peers pop with a tight stagger on their words; the board now leaves first (2026-10-02 review): kept under the template, the title printed over the message card, which no check flagged (L-165)",
+   "subject": "the three kinds of sign",
+   "world": "the field",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "payoff"
+  },
+  {
+   "beat": "b23",
+   "kind": "bespoke",
+   "scene": "b23",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "cut",
+    "meaning": "shock"
+   },
+   "subject": "a message from a familiar contact arriving",
+   "world": "Jo's inbox, a familiar sender",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "key",
+   "story_role": "turn",
+   "props": {
+    "chapter_title": "A name you know",
+    "chapter_sub": "can still be fake"
+   },
+   "design": {
+    "treatment": "A hard cut (the jolt the line asks for) to Jo's inbox again, closer and calmer. A chapter sting (Loom.data.chapter: title 'A name you know', sub 'can still be fake') sits over it. Under it a new row slides into the top of the inbox with a known contact's round avatar (a drawn initial disc, no name yet).",
+    "why_motion": "the new message arriving is the turn; the sting marks the section",
+    "elements": [
+     "inbox rows (world)",
+     "chapter sting 'A name you know' / 'can still be fake'",
+     "new message row",
+     "contact avatar disc"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Here is the part people miss",
+      "element": "new message row",
+      "action": "slides into the top of the inbox",
+      "motion": "slide"
+     },
+     {
+      "t_anchor": "A name you know",
+      "element": "chapter",
+      "action": "Loom.data.chapter over the inbox",
+      "motion": "chapter"
+     },
+     {
+      "t_anchor": "can still be fake",
+      "element": "chapter sub",
+      "action": "prints under the title",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "The inbox has the same row shapes as b05, now with the supplier row on top. b24 opens it.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)",
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)"
+    ]
+   }
+  },
+  {
+   "beat": "b24",
+   "kind": "bespoke",
+   "scene": "b24",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the supplier's invoice message",
+   "world": "Jo's inbox, a familiar sender",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium",
+    "move": "push"
+   },
+   "story_role": "setup",
+   "props": {
+    "sender": "Quillmoor Supplies",
+    "lines": [
+     "Please pay today's invoice",
+     "to our new bank details"
+    ],
+    "tag": "attachment nobody expected"
+   },
+   "design": {
+    "treatment": "The supplier row opens into a full message window (it grows from its row). The sender reads 'Quillmoor Supplies' beside the familiar avatar; the lines print as spoken: 'Please pay today's invoice', 'to our new bank details'; at the bottom an attachment chip (a drawn document with a paperclip) appears with a tag 'attachment nobody expected'. Nothing is marked yet. A gentle push in (shot push).",
+    "why_motion": "the message is read as it is spoken; the push brings the viewer close enough to search it",
+    "elements": [
+     "supplier message window",
+     "sender 'Quillmoor Supplies' with avatar",
+     "line 'Please pay today's invoice'",
+     "line 'to our new bank details'",
+     "attachment chip (document object) with its tag"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Say your usual supplier, Quillmoor Supplies, writes",
+      "element": "window + sender",
+      "action": "the row grows into the window; the name prints",
+      "motion": "grow + unmask"
+     },
+     {
+      "t_anchor": "Please pay today's invoice",
+      "element": "line 1",
+      "action": "prints",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "to our new bank details",
+      "element": "line 2",
+      "action": "prints",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "Plus an attachment nobody expected",
+      "element": "attachment chip + tag",
+      "action": "settles at the bottom; the tag wipes in",
+      "motion": "settle + unmask"
+     }
+    ],
+    "continuity": "Quillmoor Supplies is invented (hypothetical) and cannot belong to a real organisation. Name the window 'supplier_msg'; b25 to b28 hold it.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)"
+    ]
+   }
+  },
+  {
+   "beat": "b25",
+   "kind": "bespoke",
+   "scene": "b25",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the familiar name, and what it knows about the company",
+   "world": "Jo's inbox, a familiar sender",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice",
+   "props": {
+    "tags": [
+     "familiar name",
+     "the three signs"
+    ]
+   },
+   "design": {
+    "treatment": "The familiar name glows softly (Loom.hold.heat ink to accent), tagged 'familiar name'. On 'Targeted phishing uses what it knows' thin threads draw from the name out to a small office floor beside the message (Loom.array of tiny desks and grey extras: the company and its people) and back. On 'See if you can find the three signs' three empty dashed pin rings appear beside the message, unfilled, tagged 'the three signs'. Then the frame holds still for the 2.5 s pause while the viewer looks (Loom.hold.breathe only).",
+    "why_motion": "the threads show the targeting (what the sender knows flowing into the message); the empty rings hand the viewer a job before the answer",
+    "elements": [
+     "held supplier message",
+     "name glow with tag 'familiar name'",
+     "threads",
+     "small office floor array (world)",
+     "three empty pin rings with tag 'the three signs'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "The name is familiar",
+      "element": "name glow + tag",
+      "action": "heat; the tag wipes in",
+      "motion": "heat + unmask"
+     },
+     {
+      "t_anchor": "Targeted phishing uses what it knows",
+      "element": "threads + office array",
+      "action": "the array arrives in order; threads draw to the name",
+      "motion": "array + draw"
+     },
+     {
+      "t_anchor": "about a company and its people",
+      "element": "threads",
+      "action": "a second set of threads draws from the people",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "See if you can find the three signs",
+      "element": "pin rings + tag",
+      "action": "three dashed rings draw; the tag wipes in",
+      "motion": "draw + unmask"
+     }
+    ],
+    "continuity": "The three rings are filled in b26 in spoken order.",
+    "references": [
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)",
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)"
+    ]
+   }
+  },
+  {
+   "beat": "b26",
+   "kind": "bespoke",
+   "scene": "b26",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the three signs marking themselves on the supplier message",
+   "world": "Jo's inbox, a familiar sender",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "reveal",
+   "props": {
+    "flags": [
+     "pressure: today",
+     "request: payment",
+     "unexpected attachment"
+    ]
+   },
+   "design": {
+    "treatment": "The three rings fill in spoken order, each with a lead to its place on the message: 'today' in the first line lights and its ring fills with a flag 'pressure: today'; the bank details light, 'request: payment'; the attachment chip lights, 'unexpected attachment'. On 'Most work attachments are genuine' a short row of ordinary attachment chips (Loom.array, grey document objects) sits beside it, and the unexpected one stays the only lit one.",
+    "why_motion": "the marks arrive in the order the narration finds them: the viewer checks their own answers against it",
+    "elements": [
+     "held message",
+     "flag 'pressure: today'",
+     "flag 'request: payment'",
+     "flag 'unexpected attachment'",
+     "row of ordinary attachments (grey array)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Today is the pressure",
+      "element": "today + ring 1",
+      "action": "the word lights; the lead draws; the flag plants",
+      "motion": "heat + draw + T.label"
+     },
+     {
+      "t_anchor": "New bank details, the payment request",
+      "element": "bank details + ring 2",
+      "action": "light; the flag plants",
+      "motion": "heat + T.label"
+     },
+     {
+      "t_anchor": "and that unexpected attachment",
+      "element": "attachment + ring 3",
+      "action": "lights; the flag plants",
+      "motion": "heat + T.label"
+     },
+     {
+      "t_anchor": "Most work attachments are genuine",
+      "element": "ordinary attachments",
+      "action": "a grey row arrives (Loom.array)",
+      "motion": "array"
+     },
+     {
+      "t_anchor": "unexpected is what makes you check",
+      "element": "the lit attachment",
+      "action": "the one lit chip glows once",
+      "motion": "m.glow"
+     }
+    ],
+    "continuity": "The three flags and the message carry into b27 (held).",
+    "references": [
+     "docs/research/lucas/2026-10-01-lucas-lab-study.md (one board changed by small additions; nothing replaced)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b27",
+   "kind": "bespoke",
+   "scene": "b27",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the separate route to the supplier, found in the company's records",
+   "world": "the separate route",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "props": {
+    "tags": [
+     "a route you find yourself",
+     "then report it"
+    ]
+   },
+   "design": {
+    "treatment": "Loom.cam.pan right (the one move): beside the message, the company's own records appear (a filing cabinet and a binder, Loom.obj folder binder) and, further right, the supplier's building (Loom.obj building). The link and the phone number inside the message are crossed with a dashed stop line. A separate path draws from the records to the supplier's building, bypassing the message, tagged 'a route you find yourself'. Then a report button on Jo's screen edge presses (m.press) with a tag 'then report it'.",
+    "why_motion": "the route is a path that runs; drawing it around the message shows it does not pass through it",
+    "elements": [
+     "held message (left)",
+     "company records (binder object)",
+     "supplier building",
+     "stop marks on the link and number",
+     "separate path with tag 'a route you find yourself'",
+     "report button with tag 'then report it'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "If it might be genuine, check it",
+      "element": "camera",
+      "action": "Loom.cam.pan right, 2.5 s",
+      "motion": "pan"
+     },
+     {
+      "t_anchor": "by a route you find yourself",
+      "element": "records + path + tag",
+      "action": "the records settle; the path draws to the supplier; the tag wipes in",
+      "motion": "settle + draw"
+     },
+     {
+      "t_anchor": "not the number or link in the message",
+      "element": "stop marks",
+      "action": "dashed stops draw across the link and number",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "Then report it",
+      "element": "report button + tag",
+      "action": "press; the tag wipes in",
+      "motion": "m.press + unmask"
+     }
+    ],
+    "continuity": "The message window is reused in b28 (it re-forms into three channels).",
+    "references": [
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)",
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)"
+    ]
+   }
+  },
+  {
+   "beat": "b28",
+   "kind": "bespoke",
+   "scene": "b28",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "one ask in three channels: email, text, chat",
+   "world": "three channels side by side",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "props": {
+    "tags": [
+     "email",
+     "text",
+     "chat"
+    ]
+   },
+   "design": {
+    "treatment": "Hold and transform, one becomes three: the held supplier email shrinks left onto a laptop (Loom.obj laptop); a copy travels to the middle and re-forms as a phone text (Loom.obj phone, a short bubble of the same ask); a third re-forms as a chat window bubble on the right. The same three small sign marks (pressure, request, attachment) line up across all three at the same height. Tags 'email', 'text', 'chat' under each device.",
+    "why_motion": "the same message changing its container while its signs stay put is the point: only the channel changes",
+    "elements": [
+     "laptop with the email",
+     "phone with the text",
+     "chat window bubble",
+     "three sign marks repeated across all three",
+     "tags 'email', 'text', 'chat'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "The same ask",
+      "element": "email",
+      "action": "shrinks onto the laptop at left",
+      "motion": "travel"
+     },
+     {
+      "t_anchor": "as an email",
+      "element": "tag email",
+      "action": "wipes in",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "a text",
+      "element": "phone + tag",
+      "action": "the copy travels and re-forms in the phone; the tag wipes in",
+      "motion": "travel + unmask"
+     },
+     {
+      "t_anchor": "a chat message",
+      "element": "chat bubble + tag",
+      "action": "the copy re-forms as a chat bubble; the tag wipes in",
+      "motion": "travel + unmask"
+     },
+     {
+      "t_anchor": "Only the channel changes",
+      "element": "sign marks",
+      "action": "the three marks line up across all three",
+      "motion": "settle"
+     }
+    ],
+    "continuity": "Name the three devices 'channels' (one element): b29 and b30 hold it.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)"
+    ]
+   }
+  },
+  {
+   "beat": "b29",
+   "kind": "bespoke",
+   "scene": "b29",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the simulation click rates for text or voice against email",
+   "world": "three channels side by side",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "setup",
+   "props": {
+    "bars": [
+     {
+      "label": "email",
+      "value": 100
+     },
+     {
+      "label": "text or voice",
+      "value": 140,
+      "note": "40% higher than email"
+     }
+    ],
+    "tag": "in simulations"
+   },
+   "design": {
+    "treatment": "Small and quiet, under the phone and the chat: Loom.data.barsOn with two thin bars, 'email' and 'text or voice', grown from one baseline, the second 40 percent longer (values 100 and 140 as a relative index; no absolute click rate is drawn or implied, no axis numbers). A small tag 'in simulations' sits on the bars; the note '40% higher than email' on the second bar. Muted and accent3 only: no red, no alarm.",
+    "why_motion": "a relative quantity drawn as two bars growing from one baseline (magnitude), inside its caveat",
+    "elements": [
+     "held channels (dimmed)",
+     "bar 'email'",
+     "bar 'text or voice'",
+     "tag 'in simulations'",
+     "note '40% higher than email'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "In phishing simulations",
+      "element": "tag in simulations",
+      "action": "wipes in",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "the median click rate for text or voice",
+      "element": "bars",
+      "action": "the baseline draws; the email bar grows, then the text or voice bar",
+      "motion": "grow-x"
+     },
+     {
+      "t_anchor": "40 percent higher than for email",
+      "element": "note",
+      "action": "the note lands on the second bar",
+      "motion": "settle"
+     },
+     {
+      "t_anchor": "Simulations, and relative to email",
+      "element": "bars",
+      "action": "hold; the tag brightens once",
+      "motion": "highlight"
+     }
+    ],
+    "continuity": "The values are an index for the relative difference stated in F20, never a rate.",
+    "references": [
+     "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b30",
+   "kind": "template",
+   "template": "title.card",
+   "station": "st_supplier",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "title": "Do not act. Report it.",
+    "say_title": "do not act",
+    "subtitle": "and let the team look",
+    "say_subtitle": "let the team look",
+    "panel": true
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "the move, on a glass panel over the three held channels; short, plain, no lecture",
+   "subject": "the move when unsure",
+   "world": "three channels side by side",
+   "keep": [
+    "channels"
+   ],
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "payoff"
+  },
+  {
+   "beat": "b31",
+   "kind": "bespoke",
+   "scene": "b31",
+   "station": "st_funnel",
+   "join_in": {
+    "type": "camera"
+   },
+   "subject": "the funnel's 25 lights, some after a click",
+   "world": "the company's mail system, remembered",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "turn",
+   "props": {
+    "tag": "25 reports",
+    "chapter_title": "After a click"
+   },
+   "design": {
+    "treatment": "The camera pans back up to the funnel world (same geometry as b09 to b12): the grid of 50 with its 25 lit reports and the one cursor glyph, tagged '25 reports'. A chapter sting (Loom.data.chapter, title 'After a click') dims it. The lit group under the cursor glows once (Loom.hold.heat) as the story turns there; the frame is ready to dip.",
+    "why_motion": "a callback: the remembered picture, with the one part this section is about lit",
+    "elements": [
+     "funnel and grid of 50 (rebuilt)",
+     "25 lit report marks",
+     "cursor glyph",
+     "tag '25 reports'",
+     "chapter 'After a click'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Remember the funnel",
+      "element": "funnel + grid",
+      "action": "settle in at once (it is remembered)",
+      "motion": "reveal"
+     },
+     {
+      "t_anchor": "Some of those 25 reports",
+      "element": "tag 25 reports",
+      "action": "wipes in",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "came after a click",
+      "element": "chapter",
+      "action": "Loom.data.chapter: 'After a click'",
+      "motion": "chapter"
+     },
+     {
+      "t_anchor": "This story goes there",
+      "element": "lit group",
+      "action": "glows once",
+      "motion": "heat"
+     }
+    ],
+    "continuity": "Same geometry as b11, so it reads as the same picture.",
+    "references": [
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)",
+     "docs/styles/CINEMA_PLAN.md (B3 data as a picture, B7 joins with meaning, B8 hold and transform, B9 chapter stings, B10 arrays)"
+    ]
+   }
+  },
+  {
+   "beat": "b32",
+   "kind": "bespoke",
+   "scene": "b32",
+   "station": "st_ravi",
+   "join_in": {
+    "type": "dip",
+    "meaning": "era"
+   },
+   "subject": "Ravi clicking a delivery notice between meetings",
+   "world": "a meeting-room corridor, earlier in the week",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "layered",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "key",
+   "story_role": "setup",
+   "props": {
+    "name": "Ravi",
+    "tag": "clicked"
+   },
+   "design": {
+    "treatment": "A dip to black marks the change of time. Loom.place.meeting, earlier in the week (a desk calendar shows an earlier day, marked, no words): through the glass a meeting runs (grey extras at a table, Loom.array of seats); Ravi (rig sam) stands at the end of the table with his laptop half open, between meetings. A delivery notice (Loom.obj package on the screen) pops in; his cursor taps it (m.tap) on 'he clicked'; the screen carries on exactly as before. Tags 'Ravi' and 'clicked'.",
+    "why_motion": "the click is an event in time; the screen not changing afterwards is the point the next beats build on",
+    "elements": [
+     "meeting place (world)",
+     "extras in the meeting (world)",
+     "Ravi, rig sam, standing with laptop",
+     "tag 'Ravi'",
+     "delivery notice on screen",
+     "cursor tap with tag 'clicked'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Say this is Ravi, earlier in the week",
+      "element": "Ravi + tag",
+      "action": "Ravi settles in; the tag wipes in",
+      "motion": "settle + unmask"
+     },
+     {
+      "t_anchor": "Back to back meetings",
+      "element": "meeting behind glass",
+      "action": "extras shift in their seats (ambient)",
+      "motion": "drift"
+     },
+     {
+      "t_anchor": "a delivery notice",
+      "element": "notice",
+      "action": "pops on his screen",
+      "motion": "pop"
+     },
+     {
+      "t_anchor": "he clicked before he noticed",
+      "element": "cursor + tag clicked",
+      "action": "m.tap on the notice; the tag wipes in",
+      "motion": "tap + unmask"
+     },
+     {
+      "t_anchor": "That happens to busy people",
+      "element": "Ravi",
+      "action": "pose idle, looks back to the meeting; the screen is unchanged",
+      "motion": "pose"
+     }
+    ],
+    "continuity": "Ravi, the same desk and screen return through b37. Ravi is competent and busy, never foolish.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)",
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+     "Loom.place.meeting has no reference board yet (docs/references/RESOURCES.md s4); composition taken from the office board"
+    ],
+    "depth_note": "Loom.place layers (far, mid, near) moved by Loom.cam at their depths: parallax, text kept out of the moving layers"
+   }
+  },
+  {
+   "beat": "b33",
+   "kind": "bespoke",
+   "scene": "b33",
+   "station": "st_ravi",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "Ravi's tempting thought",
+   "world": "a meeting-room corridor, earlier in the week",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "close"
+   },
+   "light": "key",
+   "story_role": "turn",
+   "props": {
+    "thought": "I typed nothing, why tell anyone?"
+   },
+   "design": {
+    "treatment": "Ravi pauses (pose think, a small look down at the laptop). A thought bubble (T.bubble kind thought, with puffs) opens from him with the line 'I typed nothing, why tell anyone?' printed as he thinks it. Soft key light; nothing else moves.",
+    "why_motion": "the thought arriving is the misconception being stated fairly, in his voice",
+    "elements": [
+     "held Ravi and place",
+     "Ravi's pose change",
+     "thought bubble with the line"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Nothing seemed to happen",
+      "element": "Ravi",
+      "action": "pose think",
+      "motion": "pose"
+     },
+     {
+      "t_anchor": "I typed nothing",
+      "element": "thought bubble",
+      "action": "opens from Ravi; the first half prints",
+      "motion": "T.bubble"
+     },
+     {
+      "t_anchor": "why tell anyone?",
+      "element": "thought bubble",
+      "action": "the second half prints",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "The bubble stays into b34, where the frame splits from the click.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)"
+    ]
+   },
+   "option": "acting character",
+   "alternatives": {
+    "illustrated bust": {
+     "kind": "blueprint",
+     "blueprint": "hero.character_moment",
+     "props": {
+      "member": "man",
+      "name": "Ravi",
+      "side": "left",
+      "bubble": "thought",
+      "prop": "laptop",
+      "moods": [
+       {
+        "emotion": "neutral",
+        "say": "Nothing seemed to happen"
+       }
+      ],
+      "items": [
+       {
+        "icon": "keyboard",
+        "label": "typed nothing",
+        "say": "I typed nothing"
+       },
+       {
+        "icon": "message-circle-question",
+        "label": "tell anyone?",
+        "say": "why tell anyone"
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "beat": "b34",
+   "kind": "bespoke",
+   "scene": "b34",
+   "station": "st_ravi",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the path where Ravi quietly deletes it",
+   "world": "the fork: two paths from the click",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "light": "night",
+   "story_role": "turn",
+   "props": {
+    "tags": [
+     "quietly deletes it",
+     "the team learns nothing"
+    ]
+   },
+   "design": {
+    "treatment": "From the click, the frame splits down the middle (one vertical seam, a split screen). Left: Ravi deletes the notice (it drops into a bin); a small report light (the lesson's light from the funnel) flickers at his desk and goes out. A dashed path leads up to the security desk (pip and tess, as in b12) whose lamp stays dark. Tags 'quietly deletes it' and 'the team learns nothing'. The right half waits, dim.",
+    "why_motion": "the light failing to travel is the consequence happening; the split makes the two futures comparable",
+    "elements": [
+     "seam (split)",
+     "left: Ravi deleting into a bin",
+     "flickering light that goes out",
+     "dark security desk",
+     "tag 'quietly deletes it'",
+     "tag 'the team learns nothing'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "From the click, two paths",
+      "element": "seam",
+      "action": "draws top to bottom; the frame divides",
+      "motion": "draw"
+     },
+     {
+      "t_anchor": "Ravi quietly deletes it",
+      "element": "left Ravi + bin + tag",
+      "action": "the notice drops into the bin; the tag wipes in",
+      "motion": "drop + unmask"
+     },
+     {
+      "t_anchor": "The team learns nothing",
+      "element": "light + desk + tag",
+      "action": "the light flickers and fades at his desk; the desk stays dark; the tag wipes in",
+      "motion": "heat + unmask"
+     }
+    ],
+    "continuity": "The right half is built here (dim) so b35 lights it without re-layout.",
+    "references": [
+     "docs/research/kurz/2026-10-01-kurzgesagt-study.md (the modern office worker: same figure, a desk, an unread count on the inbox; split screens with one vertical line)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)"
+    ]
+   }
+  },
+  {
+   "beat": "b35",
+   "kind": "bespoke",
+   "scene": "b35",
+   "station": "st_ravi",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the path where Ravi reports at once and the warning arrives",
+   "world": "the fork: two paths from the click",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "light": "glow",
+   "story_role": "reveal",
+   "props": {
+    "tags": [
+     "reports it at once",
+     "says what he clicked",
+     "the warning arrives"
+    ]
+   },
+   "design": {
+    "treatment": "The right half lights. Ravi presses the report button on his laptop (m.press); a speech bubble from him holds the delivery notice's picture and a cursor glyph (what he clicked, shown, not written). The report light leaves his desk and travels (m.along) up the path to the security desk; the lamp comes on as it arrives; Ravi's screen settles to a calm handled state (it recolours from accent2 to pos). Tags 'reports it at once', 'says what he clicked', 'the warning arrives'.",
+    "why_motion": "the light arriving in time is the cause and effect taught; the calm state change is relief, not victory",
+    "elements": [
+     "right: Ravi pressing report",
+     "speech bubble with the notice and a cursor",
+     "travelling light and the desk lamp",
+     "calm screen state",
+     "tags 'reports it at once', 'says what he clicked', 'the warning arrives'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "he reports it at once",
+      "element": "Ravi + button + tag",
+      "action": "m.press on the report button; the tag wipes in",
+      "motion": "press + unmask"
+     },
+     {
+      "t_anchor": "says what he clicked",
+      "element": "speech bubble + tag",
+      "action": "opens from Ravi; the tag wipes in",
+      "motion": "T.bubble + unmask"
+     },
+     {
+      "t_anchor": "The warning arrives",
+      "element": "light + lamp + tag",
+      "action": "the light travels to the desk; the lamp comes on; the tag wipes in",
+      "motion": "along + heat + unmask"
+     },
+     {
+      "t_anchor": "in time to limit the harm",
+      "element": "Ravi's screen",
+      "action": "recolours to the calm state",
+      "motion": "heat"
+     }
+    ],
+    "continuity": "Same security desk and lamp as b12.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)",
+     "docs/research/2026-10-02-explainer-skill-study.md (a number stands next to a grid of that many lit things while a counter runs)"
+    ]
+   }
+  },
+  {
+   "beat": "b36",
+   "kind": "bespoke",
+   "scene": "b36",
+   "station": "st_ravi",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "Ravi back at work after reporting",
+   "world": "Ravi's desk, the day carrying on",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "medium"
+   },
+   "light": "key",
+   "story_role": "payoff",
+   "props": {
+    "tags": [
+     "no panic",
+     "tell the team"
+    ]
+   },
+   "design": {
+    "treatment": "The split resolves: the left half folds away (collapse toward the seam) and the right becomes the whole frame. Ravi at his desk, the day carrying on: two grey extras walk past behind the glass (walk), the meeting resumes. Tags 'no panic' and 'tell the team' set quietly beside him.",
+    "why_motion": "one future closing and the other continuing is the resolution; ordinary life resuming is the tone",
+    "elements": [
+     "left half folding away",
+     "Ravi at his desk (pose idle, calm)",
+     "two extras walking past",
+     "tag 'no panic'",
+     "tag 'tell the team'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Blaming people for clicks does not work",
+      "element": "left half",
+      "action": "folds away to the seam; the right widens",
+      "motion": "collapse"
+     },
+     {
+      "t_anchor": "People who fear blame stop reporting",
+      "element": "extras",
+      "action": "walk past behind the glass",
+      "motion": "walk"
+     },
+     {
+      "t_anchor": "If you click, no panic",
+      "element": "tag no panic",
+      "action": "wipes in",
+      "motion": "unmask"
+     },
+     {
+      "t_anchor": "Tell the team",
+      "element": "tag tell the team",
+      "action": "wipes in",
+      "motion": "unmask"
+     }
+    ],
+    "continuity": "Name the place 'ravi_set' (text-free) so b37 keeps it.",
+    "references": [
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)",
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)"
+    ]
+   }
+  },
+  {
+   "beat": "b37",
+   "kind": "template",
+   "template": "list.steps",
+   "station": "st_ravi",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "title": "Clicked is not the end of it",
+    "say_title": "Clicked is not the end",
+    "items": [
+     {
+      "text": "Report it now",
+      "say": "Report it now",
+      "icon": "flag"
+     },
+     {
+      "text": "Say what you clicked",
+      "say": "say what you clicked",
+      "icon": "message-circle"
+     }
+    ],
+    "marker": "icon"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "move four, large and plain, over Ravi's settled desk (held). Two items with icons, not numbers, so they do not read as moves one and two",
+   "subject": "move four, for whoever clicked",
+   "world": "Ravi's desk, the day carrying on",
+   "keep": [
+    "ravi_set"
+   ],
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff"
+  },
+  {
+   "beat": "b38",
+   "kind": "template",
+   "template": "quiz.question",
+   "station": "st_check",
+   "join_in": {
+    "type": "canvas"
+   },
+   "props": {
+    "kicker": "Your turn",
+    "question": "A chat says: sign in to this shared document within the hour. Your first move?",
+    "say_question": "sign in to this shared document within the hour",
+    "options": [
+     {
+      "text": "Click to see if it is real",
+      "say": "click to see if it is real"
+     },
+     {
+      "text": "Reply in the chat and ask",
+      "say": "reply in the chat and ask"
+     },
+     {
+      "text": "Report it, without clicking",
+      "say": "report it, without clicking"
+     },
+     {
+      "text": "Delete it and move on",
+      "say": "delete it and move on"
+     }
+    ],
+    "pause_label": "Pause and decide"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "a calm stop on the bare noir field: nothing in the frame competes with the decision; options as peers; the 4 s pause ring runs through the script's silence",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "practice"
+  },
+  {
+   "beat": "b39",
+   "kind": "template",
+   "template": "quiz.answer",
+   "station": "st_check",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "question": "A chat says: sign in to this shared document within the hour. Your first move?",
+    "options": [
+     {
+      "text": "Click to see if it is real"
+     },
+     {
+      "text": "Reply in the chat and ask"
+     },
+     {
+      "text": "Report it, without clicking"
+     },
+     {
+      "text": "Delete it and move on"
+     }
+    ],
+    "answer": 2,
+    "say_answer": "It is C",
+    "explanation": "The hour is pressure, and sign in means your password, behind a link.",
+    "say_explanation": "The hour is pressure",
+    "tempting": 1,
+    "why_not": "Your reply goes to whoever controls that account.",
+    "say_why_not": "your reply goes to whoever controls",
+    "also": 3,
+    "also_why": "The team gets no warning.",
+    "say_also_why": "but the team gets no warning",
+    "takeaway": "Unsure? Ask them by a separate route.",
+    "say_takeaway": "Unsure? Ask them by a separate route"
+   },
+   "register": "productive",
+   "motion_is": "staging",
+   "rationale": "C marked on the spoken answer, the others dim; the explanation names the two signs; B, the polite trap, gets its why-not. D's line (no warning) is spoken only: the template has one why-not slot (L-21); D's why-not and the takeaway now have their own slots (quiz.answer also_why and takeaway, L-163), so the tail of the beat develops",
+   "shot": {
+    "size": "medium",
+    "move": "push"
+   },
+   "story_role": "practice"
+  },
+  {
+   "beat": "b40",
+   "kind": "bespoke",
+   "scene": "b40",
+   "station": "st_floor",
+   "join_in": {
+    "type": "wipe",
+    "meaning": "time",
+    "dir": "left"
+   },
+   "subject": "Jo's message again, with all four signs marked",
+   "world": "the open-plan office at dusk",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "layered",
+   "shot": {
+    "size": "close"
+   },
+   "light": "key",
+   "story_role": "practice",
+   "props": {
+    "flags": [
+     "within the hour",
+     "one letter off",
+     "shortened link",
+     "password"
+    ]
+   },
+   "design": {
+    "treatment": "A wipe back in time to the opening: the same office at dusk, the same desks, Jo at the same desk, frozen as we left her. Loom.cam.push into her laptop (the opening push, quicker, 1.5 s) until the message fills the frame (drawn large in the station as the push lands, same layout as b03 and b15). The four signs mark themselves on it in quick succession, each a small flag on the part it names: 'within the hour', 'one letter off', 'shortened link', 'password'. Then the frame holds for the 2 s pause: the viewer answers.",
+    "why_motion": "the callback image, changed by what was learned: the same message, now readable for what it is",
+    "elements": [
+     "office at dusk (world, callback)",
+     "Jo at her desk",
+     "the message (same layout)",
+     "flag 'within the hour'",
+     "flag 'one letter off'",
+     "flag 'shortened link'",
+     "flag 'password'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Back to Jo's message",
+      "element": "camera",
+      "action": "Loom.cam.push into the laptop, 1.5 s",
+      "motion": "push"
+     },
+     {
+      "t_anchor": "within the hour",
+      "element": "flag 1",
+      "action": "plants on the deadline",
+      "motion": "T.label"
+     },
+     {
+      "t_anchor": "one letter off",
+      "element": "flag 2",
+      "action": "plants on the address",
+      "motion": "T.label"
+     },
+     {
+      "t_anchor": "a shortened link",
+      "element": "flag 3",
+      "action": "plants on the link",
+      "motion": "T.label"
+     },
+     {
+      "t_anchor": "a password",
+      "element": "flag 4",
+      "action": "plants on the password box",
+      "motion": "T.label"
+     },
+     {
+      "t_anchor": "So, what does Jo do?",
+      "element": "whole frame",
+      "action": "hold through the pause",
+      "motion": "hold"
+     }
+    ],
+    "continuity": "Same office geometry as b02 and b07 (callback). Name the message 'message' and the office 'office_set': b41 holds both.",
+    "references": [
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+     "docs/research/cleo/2026-10-01-cleo-abram-study.md (one simple diagram built in steps and returned to with new information)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (the number lives on an object; split-screen call with nameplates; chapter cards mark the acts)"
+    ],
+    "depth_note": "Loom.place layers (far, mid, near) moved by Loom.cam at their depths: parallax, text kept out of the moving layers"
+   }
+  },
+  {
+   "beat": "b41",
+   "kind": "bespoke",
+   "scene": "b41",
+   "station": "st_floor",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "Jo at her desk, reporting the message",
+   "world": "the open-plan office at dusk",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "shot": {
+    "size": "wide"
+   },
+   "light": "key",
+   "story_role": "payoff",
+   "props": {
+    "tags": [
+     "does not click",
+     "reports it"
+    ]
+   },
+   "design": {
+    "treatment": "Jo's cursor moves off the link to the report control (m.cursorTo, m.tap): the tag 'does not click' as it leaves the link, the tag 'reports it' on the tap. The message folds away into a calm handled state (it collapses into its row, which takes a small tick, the seed's box mark). Loom.cam.pull back out to the office (the one move): the window light settles, an extra walks past with a coffee, Jo leans back. No celebration.",
+    "why_motion": "the cursor's path away from the link is the behaviour; the office settling is the consequence: relief",
+    "elements": [
+     "held message",
+     "Jo's cursor with tag 'does not click'",
+     "report control with tag 'reports it'",
+     "the message folding to a ticked row",
+     "office at dusk, settling (world)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Jo does not click",
+      "element": "cursor + tag",
+      "action": "the cursor moves off the link; the tag wipes in",
+      "motion": "cursor arc + unmask"
+     },
+     {
+      "t_anchor": "Jo reports it",
+      "element": "report control + tag",
+      "action": "m.tap; the tag wipes in",
+      "motion": "tap + unmask"
+     },
+     {
+      "t_anchor": "with the company's report button or channel",
+      "element": "message",
+      "action": "folds into its row; the tick lands",
+      "motion": "collapse + T.mark"
+     },
+     {
+      "t_anchor": "The afternoon carries on",
+      "element": "camera + office",
+      "action": "Loom.cam.pull back to the room; an extra walks past",
+      "motion": "pull + walk"
+     }
+    ],
+    "continuity": "Callback to b02's world: the same office, the same desk, the light settled.",
+    "references": [
+     "docs/references/places/office.md (one-point perspective room, 3/4 desks, one window light, contact shadows)",
+     "docs/research/teded/2026-10-01-teded-study.md (one object transformed in place; a light turning red as a change inside a shot)"
+    ]
+   }
+  },
+  {
+   "beat": "b42",
+   "kind": "avatar",
+   "station": "st_host",
+   "join_in": {
+    "type": "camera"
+   },
+   "register": "expressive",
+   "motion_is": "staging",
+   "shot": {
+    "size": "medium"
+   },
+   "story_role": "payoff",
+   "light": "key",
+   "props": {
+    "member": "woman",
+    "side": "left",
+    "cloth": "accent",
+    "title": "Hurry is the sign. Reporting is the move.",
+    "title_cue": "Hurry is the sign"
+   },
+   "rationale": "the presenter closes on the pocket rule in two lines, level and dry; the camera returns left to where the lesson began (allocation: avatar bookend)"
+  }
+ ]
+}

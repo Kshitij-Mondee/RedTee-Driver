@@ -1,0 +1,1763 @@
+{
+  "style": "story-cartoon",
+  "concept": "One meeting room, one comment rebuilt in front of us. A friendly, vague line after an overrun gets a nod and changes nothing; the clock overruns again. A label makes it worse; what the clock showed is the usable part. The same bubble becomes a message card that grows line by line (what you saw, its impact, an agreed next step) while the colleague's face moves from easy to attentive. The viewer checks it on a handover note missing a deadline, sees the talk done soon and two-way in a quiet corner, sees praise made specific at their own desk, gets a blank card to fill, and the room returns a week on with the clock on the end mark.",
+  "chrome": {
+    "section_labels": false
+  },
+  "join_material": "page",
+  "world": {
+    "stations": [
+      {
+        "id": "room",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "meeting room two-shot",
+        "note": "Asha (the giver) screen left facing right, Ben (the colleague who runs the meeting) screen right facing left (flip), peep busts behind the table; wall clock upper right; the message card in the wall centre between them."
+      },
+      {
+        "id": "presenter",
+        "x": 0,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "presenter",
+        "note": "The presenter once, b03."
+      },
+      {
+        "id": "desk",
+        "x": 2200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the viewer's own desk",
+        "note": "An everyday desk with nobody at it: monitor, sticky notes, mug, plant. b06, b14, b15."
+      },
+      {
+        "id": "handover",
+        "x": 4400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the check",
+        "note": "A desk top: the handover note left, three equal option cards in one column right, the question above. b11, b12."
+      },
+      {
+        "id": "corner",
+        "x": 2200,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "a quiet corner",
+        "note": "Two soft chairs by a window, afternoon light; Asha left, Ben right, same sides and bust size as the room. b13."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "None: a literal workplace moment, rebuilt in place.",
+    "setting": "A small meeting room after a weekly meeting that overran; a quiet corner the same afternoon; the viewer's own desk.",
+    "arc": "A friendly vague line and a nod change nothing; a label would make it worse; the same line rebuilt as what was seen, its impact and an agreed next step; checked on a handover note; said soon and two-way; praise made specific; the next meeting ends on time.",
+    "cast": [
+      {
+        "name": "Presenter",
+        "member": "woman",
+        "skin": 0,
+        "cloth": "accent3",
+        "role": "the presenter avatar, b03 only, never in the story scenes"
+      },
+      {
+        "name": "Asha",
+        "member": "woman",
+        "skin": 2,
+        "cloth": "cloth",
+        "role": "the giver, a peer and the viewer's stand-in; screen left facing right in every beat; never named on screen"
+      },
+      {
+        "name": "Ben",
+        "member": "man",
+        "skin": 1,
+        "cloth": "cloth2",
+        "role": "the colleague who runs the meeting; screen right facing left (flip true) in every beat; never named on screen"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "message_card",
+      "what": "Asha's one speech bubble: the vague line (b01), emptied (b04), turned into a paper card that grows line 1 what you saw (b07), line 2 impact (b08), part tags and SBI once (b09), line 3 next step with an agreed tick (b10), edited small in the corner (b13), and as the viewer's blank four-slot card (b15).",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b04",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b13",
+        "b15"
+      ]
+    },
+    {
+      "id": "two_shot",
+      "what": "The same meeting room two-shot, Asha left, Ben right, same looks and sides, faces carrying the reaction.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b04",
+        "b05",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b16"
+      ]
+    },
+    {
+      "id": "wall_clock",
+      "what": "The room's wall clock with a small end-time mark: before the mark (b01), the hand past it (b02), the twenty-minute overrun arc shaded (b05, b07), the hand on the mark (b16).",
+      "kind": "data",
+      "beats": [
+        "b01",
+        "b02",
+        "b05",
+        "b07",
+        "b16"
+      ]
+    },
+    {
+      "id": "desk_notes",
+      "what": "The viewer's desk: a Good job sticky with an empty space where the action would be (b06); a Great job bubble beside a specific note tied to the timed agenda (b14); a blank four-slot card (b15).",
+      "kind": "callback",
+      "beats": [
+        "b06",
+        "b14",
+        "b15"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "The one join material: a paper page turn into the check (b11), into the quiet corner (b13), and at the week skip into the payoff (b16).",
+      "kind": "join",
+      "beats": [
+        "b11",
+        "b13",
+        "b16"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "the vague bubble",
+      "why": "a pale open: the line that changed nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the empty bubble, the overrun arc, then each card line as it fills",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "accent": "the missing deadline gap, withheld from the options until the answer",
+      "why": "the three options weigh the same until the answer"
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "break": true,
+      "accent": "the clock hand on the end mark",
+      "why": "a lift at the payoff: the same room, the change visible"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "meeting_room",
+        "what": "The meeting room set: surface2 wall, field2 table front one value step from the wall, table top edge across the frame at about y 900 so peep busts placed before it are hidden below it; room for Asha's bust at x about 380 and Ben's at x about 1540 (size about 560, eyes in one band); the wall clock's place upper right; the card's space in the wall centre (about 820 x 420); space for two muted extras behind the table. Exports the anchors (asha, ben, clock, card, agenda_pin, extras). No people; no accent in the set.",
+        "states": [
+          "two_shot",
+          "extras_space"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b04",
+          "b05",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b16"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "wall_clock",
+        "what": "A round wall clock, ink outline, surface face, with a small end-time tick on its rim. States: on_time (minute hand just before the mark), over (the minute hand sweeps past the mark on a cue), overrun_arc (the twenty minutes past the mark shaded as an arc; the accent only when named), at_end (the hand settles on the mark). No digits needed.",
+        "states": [
+          "on_time",
+          "over",
+          "overrun_arc",
+          "at_end"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b05",
+          "b07",
+          "b16"
+        ],
+        "size": [
+          180,
+          180
+        ]
+      },
+      {
+        "id": "message_card",
+        "what": "Asha's paper speech bubble that becomes a card, tail toward Asha (screen left), Nunito ink text. States: vague (one line: Maybe tighten it up?), empty (the bubble emptied to a dashed hollow: nothing to act on), card (the bubble reshapes into a card with three dashed empty slots), line1 (Tuesday's meeting ran twenty minutes over.), line2 (Two people missed their next call.), tags (small tags Situation, Behaviour on line 1 and Impact on line 2, and the small heading Situation, Behaviour, Impact (SBI)), slot3_open (the third slot pulses open), line3 (Could we try a timed agenda?), agreed (a small pos tick on line 3), small (the whole card scaled to about 520 wide for the corner, line 3 able to be struck and rewritten), blank_four (an empty card with four slots labelled Behaviour, Impact, Next step, Ask, each able to light in turn). One accent at a time: the line or slot being spoken; the others ink on surface.",
+        "states": [
+          "vague",
+          "empty",
+          "card",
+          "line1",
+          "line2",
+          "tags",
+          "slot3_open",
+          "line3",
+          "agreed",
+          "small",
+          "blank_four"
+        ],
+        "beats": [
+          "b01",
+          "b04",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b13",
+          "b15"
+        ],
+        "size": [
+          820,
+          420
+        ]
+      },
+      {
+        "id": "label_tag",
+        "what": "A stick-on paper tag with the words You're disorganised in Patrick Hand 400. States: in_hand (near Asha), stuck (flies and sticks on Ben's chest), crossed (a neg cross lands on it), peeling (it peels and falls away).",
+        "states": [
+          "in_hand",
+          "stuck",
+          "crossed",
+          "peeling"
+        ],
+        "beats": [
+          "b05"
+        ],
+        "size": [
+          320,
+          120
+        ]
+      },
+      {
+        "id": "timed_agenda",
+        "what": "A paper agenda sheet with three rows, each with a small drawn time box beside it that fills in turn (bars of length, no digits), titled Agenda. States: blank, filling (the time boxes fill row by row), pinned (the sheet small, pinned on the room wall beside the clock), thumb (a small drawing of it for a note).",
+        "states": [
+          "blank",
+          "filling",
+          "pinned",
+          "thumb"
+        ],
+        "beats": [
+          "b10",
+          "b14",
+          "b16"
+        ],
+        "size": [
+          360,
+          300
+        ]
+      },
+      {
+        "id": "desk_set",
+        "what": "An everyday desk with nobody at it: monitor (ink body, surface2 screen), a mug, a plant, an empty chair. States: thumbs_note (a sticky note reading Good job with a thumbs-up and a dashed empty space under it where the action would be), great_bubble (a plain speech bubble Great job, its inside empty of any action), specific_note (a second note beside it, heading What worked, so keep it, with the timed agenda thumb drawn in its space, joined to it by a line), card_space (room in the desk centre for the blank card). The note text is a parameter.",
+        "states": [
+          "thumbs_note",
+          "great_bubble",
+          "specific_note",
+          "card_space"
+        ],
+        "beats": [
+          "b06",
+          "b14",
+          "b15"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "handover_check",
+        "what": "A desk top with a paper handover note left (rows Client and Open tasks, and a dashed gap where the client deadline row should be) and three equal option cards in ONE even column right: A You're not very detail-minded. B The handover could have been better. C Your note skipped the deadline; it slipped. List it next time? The question line above: Which line changes what happens next? A pause ring. States: note (the note lands, the gap shows), options (the cards arrive as peers, tight stagger), pause (the ring drains over the silent pause), c_right (a pos tick on C, its three parts underline in turn), b_hollow (B dims, three empty outline slots beside it), a_wrong (a neg cross on A), labels (one short label under each card: C: behaviour, impact, next step; B: polite, nothing to act on; A: about the person).",
+        "states": [
+          "note",
+          "options",
+          "pause",
+          "c_right",
+          "b_hollow",
+          "a_wrong",
+          "labels"
+        ],
+        "beats": [
+          "b11",
+          "b12"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "quiet_corner",
+        "what": "A quiet corner set: two soft chairs angled toward each other by a window with afternoon light, a small side table where the small message card lies; room for Asha's bust left and Ben's right, same sides and size as in the room; a small paper sign space for Soon, in private. No people; no accent in the set.",
+        "states": [
+          "corner"
+        ],
+        "beats": [
+          "b13"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "notes": "People are never in the kit: Asha and Ben are kit.peep busts placed by each scene with literal story.cast looks (Asha: woman, skin 2, cloth, screen left; Ben: man, skin 1, cloth2, flip true, screen right). Extras through ctx.crowd only, muted, behind the cast. Clothes never accent, accent2, pos or neg. The peep neutral face has closed eyes: never hold it on a listener past 4 s. Furniture never uses the accent."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "A friendly vague line gets a nod",
+      "world": "the meeting room as the meeting ends",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "card",
+      "design": {
+        "treatment": "The room with the clock just before its end mark; two muted extras leave; Asha turns to Ben; her bubble pops with the vague line; Ben smiles and nods; both easy.",
+        "why_motion": "a moment between two people: the meeting ends, the line is said, the nod comes",
+        "elements": [
+          {
+            "name": "set",
+            "label": "meeting_room two_shot"
+          },
+          {
+            "name": "clock",
+            "label": "wall_clock on_time"
+          },
+          {
+            "name": "extras",
+            "label": "two muted colleagues leaving (ctx.crowd)"
+          },
+          {
+            "name": "asha",
+            "label": "Asha, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "ben",
+            "label": "Ben, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "card",
+            "label": "message_card vague: Maybe tighten it up?"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say a colleague's meeting",
+            "element": "extras",
+            "action": "colleagues walk out behind the table",
+            "motion": "slide out"
+          },
+          {
+            "t_anchor": "ran long again",
+            "element": "ben",
+            "action": "Ben looks up, explaining face",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "You keep it light",
+            "element": "asha",
+            "action": "Asha turns happy toward Ben",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Maybe tighten it up",
+            "element": "card",
+            "action": "the vague bubble pops",
+            "motion": "pop with overshoot"
+          },
+          {
+            "t_anchor": "They nod",
+            "element": "ben",
+            "action": "Ben smiles (happy) and nods",
+            "motion": "small bob twice"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "extras"
+          ],
+          "incoming": [
+            "set",
+            "clock",
+            "asha",
+            "ben",
+            "card"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "clock",
+        "asha",
+        "ben"
+      ],
+      "subject": "A week later, it runs over again",
+      "world": "the same room a week on",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "clock",
+      "design": {
+        "treatment": "The bubble leaves; a small paper tag Next week: over again drops by the clock; two muted extras sit behind the table; Ben explains on; the clock's minute hand sweeps past the end mark; Asha's face falls from happy.",
+        "why_motion": "the repetition and the overrun are events in time",
+        "elements": [
+          {
+            "name": "week_tag",
+            "label": "paper tag: Next week: over again"
+          },
+          {
+            "name": "extras_sit",
+            "label": "two muted colleagues seated behind the table (ctx.crowd)"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next week",
+            "element": "week_tag",
+            "action": "the tag drops in by the clock",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "Next week",
+            "element": "extras_sit",
+            "action": "extras settle behind the table",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "runs over again",
+            "element": "clock",
+            "action": "the minute hand sweeps past the end mark (state over)",
+            "motion": "sweep"
+          },
+          {
+            "t_anchor": "runs over again",
+            "element": "ben",
+            "action": "Ben keeps explaining",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Behaviour didn't",
+            "element": "asha",
+            "action": "Asha's face drops to surprised",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "clock",
+            "asha",
+            "ben"
+          ],
+          "travelling": [],
+          "retiring": [
+            "card",
+            "week_tag",
+            "extras_sit"
+          ],
+          "incoming": [
+            "week_tag",
+            "extras_sit"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "avatar",
+      "station": "presenter",
+      "props": {
+        "cast": "Presenter",
+        "kicker": "Make it stick",
+        "card": {
+          "lines": [
+            "Behaviour",
+            "Impact",
+            "Next step"
+          ]
+        }
+      },
+      "subject": "The presenter promises a talk that sticks",
+      "world": "direct to camera, the three parts on her card",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "card"
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "A nod is not evidence",
+      "world": "back in the room, the b01 moment frozen",
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "card",
+      "design": {
+        "treatment": "The b01 two-shot returns frozen, Ben mid-nod (happy), Asha happy; the vague bubble's words lift away and the bubble empties to a dashed hollow; a paper tag A nod is not a change lands under Ben; a slow push toward the empty bubble.",
+        "why_motion": "the emptying shows there is nothing in the line to act on",
+        "elements": [
+          {
+            "name": "set",
+            "label": "meeting_room two_shot"
+          },
+          {
+            "name": "clock",
+            "label": "wall_clock on_time"
+          },
+          {
+            "name": "asha",
+            "label": "Asha, peep woman, skin 2, cloth, screen left, happy"
+          },
+          {
+            "name": "ben",
+            "label": "Ben, peep man, skin 1, cloth2, flip, screen right, happy"
+          },
+          {
+            "name": "card",
+            "label": "message_card vague, then empty"
+          },
+          {
+            "name": "nod_tag",
+            "label": "paper tag: A nod is not a change"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A nod",
+            "element": "nod_tag",
+            "action": "the tag lands under Ben",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "General feedback",
+            "element": "card",
+            "action": "the words lift off and the bubble empties to a dashed hollow (state empty)",
+            "motion": "lift and fade, then dash in"
+          },
+          {
+            "t_anchor": "what to repeat",
+            "element": "card",
+            "action": "the hollow pulses once",
+            "motion": "pulse"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "card",
+            "nod_tag"
+          ],
+          "incoming": [
+            "set",
+            "clock",
+            "asha",
+            "ben",
+            "card",
+            "nod_tag"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set",
+        "clock",
+        "asha",
+        "ben"
+      ],
+      "subject": "About the person versus what you saw",
+      "world": "the same room",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "clock",
+      "design": {
+        "treatment": "Two takes on the same meeting. A tag You're disorganised flies from Asha and sticks on Ben's chest; he bristles (surprised); a label About the person sits under it and a neg cross lands; the tag peels away. Then the clock's twenty-minute overrun arc lights in the accent; Ben turns to look at it (explaining); a label What you saw: Ran twenty minutes over sits under the clock with a pos tick.",
+        "why_motion": "the same moment named two ways, and the two reactions differ",
+        "elements": [
+          {
+            "name": "tag",
+            "label": "label_tag You're disorganised"
+          },
+          {
+            "name": "person_label",
+            "label": "About the person: \"You're disorganised\""
+          },
+          {
+            "name": "seen_label",
+            "label": "What you saw: \"Ran twenty minutes over\""
+          },
+          {
+            "name": "tick",
+            "label": "pos tick on the seen label"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "You're disorganised",
+            "element": "tag",
+            "action": "the tag flies and sticks on Ben (state stuck); Ben surprised",
+            "motion": "arc and slap"
+          },
+          {
+            "t_anchor": "about the person",
+            "element": "person_label",
+            "action": "the label writes in under the tag",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "work worst",
+            "element": "tag",
+            "action": "a neg cross lands, then the tag peels away",
+            "motion": "stamp, then peel and fall"
+          },
+          {
+            "t_anchor": "We ran twenty minutes over",
+            "element": "clock",
+            "action": "the overrun arc shades in the accent (state overrun_arc); Ben turns to the clock",
+            "motion": "sweep fill"
+          },
+          {
+            "t_anchor": "what you saw",
+            "element": "seen_label",
+            "action": "the label writes in under the clock",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "what you saw",
+            "element": "tick",
+            "action": "a pos tick lands on the seen label",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set",
+            "clock",
+            "asha",
+            "ben"
+          ],
+          "travelling": [],
+          "retiring": [
+            "tag",
+            "person_label",
+            "seen_label",
+            "tick"
+          ],
+          "incoming": [
+            "tag",
+            "person_label",
+            "seen_label",
+            "tick"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "Your last good job",
+      "world": "the viewer's own desk, nobody at it",
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "note",
+      "intent": "rest",
+      "design": {
+        "treatment": "Camera to an empty desk; a Good job sticky with a thumbs-up on the monitor bezel, a dashed empty space under it where the action would be; a small paper label Your last \"good job\"; a slow push toward the empty space; the frame then holds still through the pause.",
+        "why_motion": "the slow push brings the viewer into their own seat to think",
+        "elements": [
+          {
+            "name": "desk",
+            "label": "desk_set"
+          },
+          {
+            "name": "note",
+            "label": "desk_set thumbs_note: Good job, dashed empty space"
+          },
+          {
+            "name": "prompt_label",
+            "label": "label: Your last \"good job\""
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Think of your last",
+            "element": "note",
+            "action": "the sticky lands on the bezel",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "good job",
+            "element": "prompt_label",
+            "action": "the label writes in",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "what to repeat",
+            "element": "note",
+            "action": "the dashed empty space draws in under the thumbs-up",
+            "motion": "dash draw"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "prompt_label"
+          ],
+          "incoming": [
+            "desk",
+            "note",
+            "prompt_label"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "Rebuild it: the situation and what you saw",
+      "world": "the meeting room again",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "card7",
+      "design": {
+        "treatment": "Back in the room; the vague bubble returns between them, then reshapes into a paper card with three dashed slots; line 1 writes in as spoken; the clock keeps its overrun arc, muted; Ben's face shifts from happy to surprised (attentive).",
+        "why_motion": "the same message is rebuilt in front of us, part by part",
+        "elements": [
+          {
+            "name": "set7",
+            "label": "meeting_room two_shot"
+          },
+          {
+            "name": "clock7",
+            "label": "wall_clock overrun_arc, muted (not the accent here)"
+          },
+          {
+            "name": "asha7",
+            "label": "Asha, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "ben7",
+            "label": "Ben, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "card7",
+            "label": "message_card vague, then card, then line1"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now rebuild it",
+            "element": "card7",
+            "action": "the vague bubble reshapes into a card with three dashed slots (state card)",
+            "motion": "morph"
+          },
+          {
+            "t_anchor": "The situation and what you saw",
+            "element": "asha7",
+            "action": "Asha explaining",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Tuesday's meeting",
+            "element": "card7",
+            "action": "line 1 writes in (state line1), the accent",
+            "motion": "type on"
+          },
+          {
+            "t_anchor": "twenty minutes over",
+            "element": "ben7",
+            "action": "Ben turns attentive (surprised)",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set7",
+            "clock7",
+            "asha7",
+            "ben7",
+            "card7"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set7",
+        "clock7",
+        "asha7",
+        "ben7",
+        "card7"
+      ],
+      "subject": "The impact",
+      "world": "the same room",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "card",
+      "design": {
+        "treatment": "Line 1 settles to ink; line 2 writes in slowly as the accent; behind the table two muted extras hurry out late toward the door; Ben's face turns from surprised to explaining (thoughtful): now it matters.",
+        "why_motion": "the impact is people affected, shown leaving late",
+        "elements": [
+          {
+            "name": "extras_late",
+            "label": "two muted colleagues hurrying out (ctx.crowd)"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Then the impact",
+            "element": "card",
+            "action": "line 1 settles to ink; slot 2 pulses",
+            "motion": "colour settle"
+          },
+          {
+            "t_anchor": "Two people missed",
+            "element": "extras_late",
+            "action": "two extras hurry out behind the table",
+            "motion": "slide out quickly"
+          },
+          {
+            "t_anchor": "Two people missed",
+            "element": "card",
+            "action": "line 2 writes in (state line2), the accent",
+            "motion": "type on, slow"
+          },
+          {
+            "t_anchor": "their next call",
+            "element": "ben",
+            "action": "Ben turns thoughtful (explaining)",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set7",
+            "clock7",
+            "asha7",
+            "ben7",
+            "card7"
+          ],
+          "travelling": [],
+          "retiring": [
+            "extras_late"
+          ],
+          "incoming": [
+            "extras_late"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set7",
+        "clock7",
+        "asha7",
+        "ben7",
+        "card7"
+      ],
+      "subject": "Situation, behaviour, impact: and it stops there",
+      "world": "the same room",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "card",
+      "design": {
+        "treatment": "Small tags land on the card's lines (Situation, Behaviour on line 1; Impact on line 2); the small heading Situation, Behaviour, Impact (SBI) writes in once above the card; then the empty third slot pulses open in the accent.",
+        "why_motion": "naming the parts on the card already built, then pointing to what is missing",
+        "elements": [
+          {
+            "name": "sbi_heading",
+            "label": "small heading: Situation, Behaviour, Impact (SBI)"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Situation, behaviour",
+            "element": "card",
+            "action": "tag Situation, Behaviour lands on line 1 (state tags)",
+            "motion": "stick"
+          },
+          {
+            "t_anchor": "impact",
+            "element": "card",
+            "action": "tag Impact lands on line 2",
+            "motion": "stick"
+          },
+          {
+            "t_anchor": "one known structure",
+            "element": "sbi_heading",
+            "action": "the heading writes in above the card",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "so add a step",
+            "element": "card",
+            "action": "the empty third slot pulses open in the accent (state slot3_open)",
+            "motion": "pulse"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set7",
+            "clock7",
+            "asha7",
+            "ben7",
+            "card7"
+          ],
+          "travelling": [],
+          "retiring": [
+            "sbi_heading"
+          ],
+          "incoming": [
+            "sbi_heading"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "room",
+      "keep": [
+        "set7",
+        "clock7",
+        "asha7",
+        "ben7",
+        "card7"
+      ],
+      "subject": "A concrete next step, agreed together",
+      "world": "the same room",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "card",
+      "design": {
+        "treatment": "Line 3 fills the open slot as spoken, the accent; Ben nods again (happy), and this time a paper agenda slides onto the table in front of him and its time boxes fill row by row; a small pos tick lands on line 3: agreed. The complete three-line card.",
+        "why_motion": "the second nod comes with a plan: the change is visible",
+        "elements": [
+          {
+            "name": "agenda",
+            "label": "timed_agenda blank, then filling, on the table before Ben"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "agreed together",
+            "element": "ben",
+            "action": "Ben surprised, listening",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Could we try",
+            "element": "card",
+            "action": "line 3 writes in (state line3), the accent",
+            "motion": "type on"
+          },
+          {
+            "t_anchor": "a timed agenda",
+            "element": "agenda",
+            "action": "the agenda slides onto the table and its time boxes fill",
+            "motion": "slide in, then fill row by row"
+          },
+          {
+            "t_anchor": "Specific goals",
+            "element": "ben",
+            "action": "Ben nods (happy)",
+            "motion": "small bob"
+          },
+          {
+            "t_anchor": "do your best",
+            "element": "card",
+            "action": "a pos tick lands on line 3 (state agreed)",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "set7",
+            "clock7",
+            "asha7",
+            "ben7",
+            "card7"
+          ],
+          "travelling": [],
+          "retiring": [
+            "set7",
+            "clock7",
+            "asha7",
+            "ben7",
+            "card7",
+            "agenda"
+          ],
+          "incoming": [
+            "agenda"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "handover",
+      "subject": "Check: a handover note left out a deadline",
+      "world": "a desk top with a handover note",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dir": "left"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "handover_note",
+      "intent": "process_hold",
+      "design": {
+        "treatment": "Page turn to a desk top: the handover note lands left with a dashed gap where the client deadline row should be (the accent on the gap); the question writes in above; three equal option cards arrive as peers in one even column on the right; the accent leaves the gap; a pause ring drains through the silence. No option is favoured.",
+        "why_motion": "a stopping check: options arrive as peers and hold through the pause",
+        "elements": [
+          {
+            "name": "desk_top",
+            "label": "handover_check desk top"
+          },
+          {
+            "name": "handover_note",
+            "label": "handover_check note with the deadline gap"
+          },
+          {
+            "name": "question",
+            "label": "Which line changes what happens next?"
+          },
+          {
+            "name": "option_a",
+            "label": "A: You're not very detail-minded."
+          },
+          {
+            "name": "option_b",
+            "label": "B: The handover could have been better."
+          },
+          {
+            "name": "option_c",
+            "label": "C: Your note skipped the deadline; it slipped. List it next time?"
+          },
+          {
+            "name": "ring",
+            "label": "pause ring"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say a handover note",
+            "element": "handover_note",
+            "action": "the note lands (state note)",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "left out a client deadline",
+            "element": "handover_note",
+            "action": "the dashed gap pulses in the accent",
+            "motion": "pulse"
+          },
+          {
+            "t_anchor": "Which line",
+            "element": "question",
+            "action": "the question writes in",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "Which line",
+            "element": "option_a",
+            "action": "A, B, C arrive as peers (state options), the gap settles to ink",
+            "motion": "slide in, tight stagger"
+          },
+          {
+            "t_anchor": "what happens next",
+            "element": "ring",
+            "action": "the ring appears and drains over the 3 s pause (state pause)",
+            "motion": "stroke drain"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "ring"
+          ],
+          "incoming": [
+            "desk_top",
+            "handover_note",
+            "question",
+            "option_a",
+            "option_b",
+            "option_c",
+            "ring"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "handover",
+      "keep": [
+        "desk_top",
+        "handover_note",
+        "question",
+        "option_a",
+        "option_b",
+        "option_c"
+      ],
+      "subject": "C changes what happens next",
+      "world": "the same desk top",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "option_c",
+      "design": {
+        "treatment": "In the narration's order: C gets a pos tick and its three parts underline in turn (behaviour, impact, next step), its label C: behaviour, impact, next step; B dims with three empty outline slots beside it and the label B: polite, nothing to act on; A gets a neg cross and the label A: about the person.",
+        "why_motion": "the feedback is the teaching: each verdict lands on its own words",
+        "elements": [
+          {
+            "name": "verdict_c",
+            "label": "pos tick, three part underlines, label C: behaviour, impact, next step"
+          },
+          {
+            "name": "verdict_b",
+            "label": "three empty outline slots, label B: polite, nothing to act on"
+          },
+          {
+            "name": "verdict_a",
+            "label": "neg cross, label A: about the person"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "C has the behaviour",
+            "element": "verdict_c",
+            "action": "pos tick on C (state c_right), the accent on C",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "impact and a next step",
+            "element": "verdict_c",
+            "action": "the three parts underline in turn; label writes in",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "B is polite",
+            "element": "verdict_b",
+            "action": "B dims, three empty outline slots draw (state b_hollow); label writes in",
+            "motion": "dim, dash draw"
+          },
+          {
+            "t_anchor": "A is about the person",
+            "element": "verdict_a",
+            "action": "a neg cross lands on A (state a_wrong); label writes in",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "desk_top",
+            "handover_note",
+            "question",
+            "option_a",
+            "option_b",
+            "option_c"
+          ],
+          "travelling": [],
+          "retiring": [
+            "desk_top",
+            "handover_note",
+            "question",
+            "option_a",
+            "option_b",
+            "option_c",
+            "verdict_a",
+            "verdict_b",
+            "verdict_c"
+          ],
+          "incoming": [
+            "verdict_c",
+            "verdict_b",
+            "verdict_a"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "corner",
+      "subject": "Soon, in private, then ask and listen",
+      "world": "a quiet corner the same afternoon",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dir": "left"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "layered",
+      "light": "key",
+      "accent_on": "small_card",
+      "design": {
+        "treatment": "Page turn to the quiet corner, Asha left and Ben right as in the room; a small paper sign Soon, in private on the wall; Asha's small question bubble (no words, a question mark) and the label Ask how they saw it; Ben's bubble answers (a short wavy line, no words) while Asha listens; on the side table the small three-line card: line 3 is struck and rewritten together, then a pos tick.",
+        "why_motion": "a two-way talk: the turn of speaking and the edit are events",
+        "elements": [
+          {
+            "name": "corner",
+            "label": "quiet_corner"
+          },
+          {
+            "name": "asha",
+            "label": "Asha, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "ben",
+            "label": "Ben, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "soon_sign",
+            "label": "paper sign: Soon, in private"
+          },
+          {
+            "name": "ask_bubble",
+            "label": "Asha's small question bubble with a question mark"
+          },
+          {
+            "name": "ask_label",
+            "label": "label: Ask how they saw it"
+          },
+          {
+            "name": "ben_bubble",
+            "label": "Ben's bubble, a wavy line, no words"
+          },
+          {
+            "name": "small_card",
+            "label": "message_card small, line 3 edited"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say it soon",
+            "element": "soon_sign",
+            "action": "the sign lands on the wall",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "Then ask",
+            "element": "ask_bubble",
+            "action": "Asha's question bubble pops; Asha explaining",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "how they saw it",
+            "element": "ask_label",
+            "action": "the label writes in",
+            "motion": "fade up"
+          },
+          {
+            "t_anchor": "and listen",
+            "element": "ben_bubble",
+            "action": "Ben's bubble pops, Ben explaining; Asha's bubble leaves, Asha happy and listening",
+            "motion": "pop, face change"
+          },
+          {
+            "t_anchor": "the next step is agreed",
+            "element": "small_card",
+            "action": "line 3 is struck and rewritten, the accent, then a pos tick",
+            "motion": "strike, type on, stamp"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "corner",
+            "asha",
+            "ben",
+            "soon_sign",
+            "ask_bubble",
+            "ask_label",
+            "ben_bubble",
+            "small_card"
+          ],
+          "incoming": [
+            "corner",
+            "asha",
+            "ben",
+            "soon_sign",
+            "ask_bubble",
+            "ask_label",
+            "ben_bubble",
+            "small_card"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "desk",
+      "subject": "Praise that names what to keep",
+      "world": "the viewer's desk again",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "specific_note",
+      "design": {
+        "treatment": "Back at the desk; a plain Great job bubble on the monitor, empty of any action; beside it a specific note What worked, so keep it lands, the timed agenda drawn in its space, a line joining it to the agenda thumb; only the specific note connects to an action.",
+        "why_motion": "the connection line is the difference: one bubble ties to an action, the other does not",
+        "elements": [
+          {
+            "name": "desk",
+            "label": "desk_set"
+          },
+          {
+            "name": "great_bubble",
+            "label": "desk_set great_bubble: \"Great job\""
+          },
+          {
+            "name": "specific_note",
+            "label": "desk_set specific_note: What worked, so keep it, with the timed_agenda thumb"
+          },
+          {
+            "name": "link",
+            "label": "a line from the note to the agenda thumb"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Praise isn't just being nice",
+            "element": "great_bubble",
+            "action": "the Great job bubble pops on the monitor",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "names nothing to repeat",
+            "element": "great_bubble",
+            "action": "its empty inside shows; it settles to muted",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "specific praise",
+            "element": "specific_note",
+            "action": "the specific note lands beside it, the accent",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "what to keep",
+            "element": "link",
+            "action": "the line draws to the agenda thumb",
+            "motion": "draw"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [
+            "great_bubble",
+            "specific_note",
+            "link"
+          ],
+          "incoming": [
+            "desk",
+            "great_bubble",
+            "specific_note",
+            "link"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "desk",
+      "keep": [
+        "desk"
+      ],
+      "subject": "Your card: behaviour, impact, next step, ask",
+      "world": "the viewer's desk",
+      "shot": {
+        "size": "medium",
+        "move": "push"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "blank_card",
+      "design": {
+        "treatment": "The notes leave; a blank card with four slots (Behaviour, Impact, Next step, Ask) lands in the desk centre, each slot label lighting as spoken; a slow push toward the card; it holds through the pause, ready to fill.",
+        "why_motion": "the card is now the viewer's: the push hands it over",
+        "elements": [
+          {
+            "name": "blank_card",
+            "label": "message_card blank_four: Behaviour, Impact, Next step, Ask"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Behaviour",
+            "element": "blank_card",
+            "action": "the blank card lands (state blank_four); Behaviour lights",
+            "motion": "drop, then highlight"
+          },
+          {
+            "t_anchor": "impact",
+            "element": "blank_card",
+            "action": "Impact lights",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "next step",
+            "element": "blank_card",
+            "action": "Next step lights",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "then ask",
+            "element": "blank_card",
+            "action": "Ask lights",
+            "motion": "highlight"
+          },
+          {
+            "t_anchor": "Pick one talk",
+            "element": "blank_card",
+            "action": "all four settle, the card waits; slow push",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "desk"
+          ],
+          "travelling": [],
+          "retiring": [
+            "desk",
+            "blank_card"
+          ],
+          "incoming": [
+            "blank_card"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "room",
+      "subject": "A week on: it ends on time",
+      "world": "the same meeting room a week later",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "time",
+        "dir": "left"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "layered",
+      "light": "glow",
+      "accent_on": "clock",
+      "design": {
+        "treatment": "Page turn to the room a week on; the timed agenda pinned by the clock; the minute hand reaches the end mark and stops, the accent; a paper tag Ended on time; two muted extras leave on time; Asha's bubble with the specific praise The timed agenda got us out on time.; Ben smiles; both easy, as in b01.",
+        "why_motion": "the payoff is the change itself: the clock and the people leaving on time",
+        "elements": [
+          {
+            "name": "set",
+            "label": "meeting_room two_shot"
+          },
+          {
+            "name": "clock",
+            "label": "wall_clock at_end"
+          },
+          {
+            "name": "agenda",
+            "label": "timed_agenda pinned by the clock"
+          },
+          {
+            "name": "extras",
+            "label": "two muted colleagues leaving on time (ctx.crowd)"
+          },
+          {
+            "name": "asha",
+            "label": "Asha, peep woman, skin 2, cloth, screen left"
+          },
+          {
+            "name": "ben",
+            "label": "Ben, peep man, skin 1, cloth2, flip, screen right"
+          },
+          {
+            "name": "end_tag",
+            "label": "paper tag: Ended on time"
+          },
+          {
+            "name": "praise_bubble",
+            "label": "Asha's bubble: The timed agenda got us out on time."
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next week",
+            "element": "agenda",
+            "action": "the agenda is pinned by the clock",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "ends on time",
+            "element": "clock",
+            "action": "the minute hand reaches the end mark and stops (state at_end), the accent",
+            "motion": "sweep and settle"
+          },
+          {
+            "t_anchor": "ends on time",
+            "element": "end_tag",
+            "action": "the tag drops in",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "ends on time",
+            "element": "extras",
+            "action": "colleagues leave on time",
+            "motion": "slide out"
+          },
+          {
+            "t_anchor": "The timed agenda got us",
+            "element": "praise_bubble",
+            "action": "Asha's praise bubble pops; Asha explaining",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Behaviour changed",
+            "element": "ben",
+            "action": "Ben smiles (happy)",
+            "motion": "face change"
+          },
+          {
+            "t_anchor": "Relationship intact",
+            "element": "asha",
+            "action": "Asha smiles (happy)",
+            "motion": "face change"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "set",
+            "clock",
+            "agenda",
+            "extras",
+            "asha",
+            "ben",
+            "end_tag",
+            "praise_bubble"
+          ]
+        }
+      }
+    }
+  ]
+}

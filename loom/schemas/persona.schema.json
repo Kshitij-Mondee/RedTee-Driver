@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Narrator persona (lnd-narrator-persona)",
+  "type": "object",
+  "required": ["name", "character", "voice_rules", "signature_moves", "rhythm", "refuses", "examples", "anti_examples", "voice_casting"],
+  "properties": {
+    "name": {"type": "string"},
+    "character": {"type": "string", "minLength": 40},
+    "voice_rules": {"type": "array", "minItems": 6, "maxItems": 12, "items": {"type": "string"}},
+    "signature_moves": {"type": "array", "minItems": 3, "maxItems": 6, "items": {"type": "object", "required": ["name", "when", "shape"]}},
+    "rhythm": {"type": "object"},
+    "refuses": {"type": "array", "minItems": 2},
+    "examples": {"type": "array", "minItems": 5},
+    "anti_examples": {"type": "array", "minItems": 5, "items": {"type": "object", "required": ["text", "why"]}},
+    "voice_casting": {"type": "object", "required": ["instructions"]},
+    "pace_bias": {"type": "object"},
+    "provenance": {"type": "object"}
+  }
+}

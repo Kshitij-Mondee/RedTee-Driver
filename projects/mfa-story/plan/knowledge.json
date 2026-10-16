@@ -1,0 +1,202 @@
+{
+  "topic": "How multi-factor authentication stops most account takeovers, and why phishing-resistant passkeys go further",
+  "scope_note": "Sources were fetched and read on 2026-10-06: CISA fact sheet 'Implementing Phishing-Resistant MFA' (October 2022) and CISA Secure Our World MFA page; Google Online Security Blog, 'New research: How effective is basic account hygiene at preventing hijacking' (Thomas and Moscicki, 17 May 2019, with NYU and UC San Diego); Meyer et al., 'How effective is multifactor authentication at deterring cyberattacks?' (arXiv 2305.00945, 2023, Microsoft authors); MDN Web Docs, 'Passkeys'; FIDO Alliance passkeys page. The two effectiveness studies are by the platforms' own researchers on their own accounts: they are carried as attributed findings with their limits, never as general guarantees.",
+  "facts": [
+    {
+      "id": "F1",
+      "kind": "definition",
+      "confidence": "established",
+      "statement": "Multi-factor authentication, or MFA, asks for two or more different kinds of proof at sign-in: something you know, something you have, or something you are.",
+      "terms": [
+        "multi-factor authentication",
+        "MFA",
+        "factor"
+      ],
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, overview (2022)"
+    },
+    {
+      "id": "F2",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "A password is something you know, so anyone who learns it can type it from any device, and the site cannot tell that person from you.",
+      "reference_hint": "MDN, Passwords and Passkeys (weaknesses of password-based authentication)"
+    },
+    {
+      "id": "F3",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "statement": "Google reported in 2019 that most of the account hijacking attempts it sees come from automated bots using passwords leaked in breaches of other sites.",
+      "numbers": [
+        "2019"
+      ],
+      "reference_hint": "Google Online Security Blog, Thomas and Moscicki, 17 May 2019",
+      "caveat": "Google's own accounts; say 'Google reported', not that this is true of every service."
+    },
+    {
+      "id": "F4",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "With MFA on, a thief who has stolen the password still cannot sign in unless they can also provide the second factor.",
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, overview (2022)"
+    },
+    {
+      "id": "F5",
+      "kind": "number",
+      "confidence": "mainstream",
+      "statement": "A 2023 study by Microsoft researchers of their business sign-in accounts found MFA cut the risk of compromise by 99.22 percent, a little over 99 percent, and by 98.56 percent for accounts whose passwords had leaked.",
+      "numbers": [
+        "2023",
+        "99.22",
+        "99",
+        "98.56"
+      ],
+      "reference_hint": "Meyer et al., arXiv 2305.00945 (2023), abstract",
+      "caveat": "The vendor's own data, on one platform, for accounts showing suspicious activity, over one study period. Say who measured it and that it is a reduction in risk, not a guarantee for any single account."
+    },
+    {
+      "id": "F6",
+      "kind": "number",
+      "confidence": "mainstream",
+      "statement": "In a year-long Google study with NYU and UC San Diego, a code texted to a phone blocked 100 percent of automated bot attacks, 96 percent of bulk phishing and 76 percent of targeted attacks.",
+      "numbers": [
+        "100",
+        "96",
+        "76"
+      ],
+      "reference_hint": "Google Online Security Blog, 17 May 2019",
+      "caveat": "These measured Google's own sign-in challenges on Google accounts during the study; they show the pattern (codes beat bots, struggle more against targeted phishing), not a rate for any other service."
+    },
+    {
+      "id": "F7",
+      "kind": "number",
+      "confidence": "mainstream",
+      "statement": "In the same Google study, a sign-in prompt on the phone blocked 100 percent of automated bot attacks, 99 percent of bulk phishing and 90 percent of targeted attacks.",
+      "numbers": [
+        "100",
+        "99",
+        "90"
+      ],
+      "reference_hint": "Google Online Security Blog, 17 May 2019",
+      "caveat": "Same limits as F6: Google accounts, Google's challenges, one study period."
+    },
+    {
+      "id": "F8",
+      "kind": "finding",
+      "confidence": "mainstream",
+      "statement": "In the same study, no user who signed in only with security keys fell victim to targeted phishing.",
+      "reference_hint": "Google Online Security Blog, 17 May 2019",
+      "caveat": "A small, high-risk group during one study; it shows the direction, not that keys can never be beaten."
+    },
+    {
+      "id": "F9",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "A common phishing technique uses a fake page that copies a real login page, collects the password and the one-time code as you type them, and the attacker uses them at the real site while the code is still valid.",
+      "terms": [
+        "phishing",
+        "one-time code"
+      ],
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, Cyber threats to MFA (2022); Google blog 2019, man-in-the-middle example"
+    },
+    {
+      "id": "F10",
+      "kind": "caution",
+      "confidence": "established",
+      "statement": "In push bombing, attackers who already have the password send sign-in prompt after prompt, hoping the person taps Accept to make them stop.",
+      "terms": [
+        "push bombing",
+        "push fatigue"
+      ],
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, Cyber threats to MFA (2022)"
+    },
+    {
+      "id": "F11",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "CISA says any form of MFA is better than no MFA, that codes sent by text are the weakest form, and that phishing-resistant MFA is the gold standard.",
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, overview and Table 1 (2022); CISA Secure Our World MFA page"
+    },
+    {
+      "id": "F12",
+      "kind": "definition",
+      "confidence": "established",
+      "statement": "A passkey is a sign-in credential kept on your phone, computer or security key, which you unlock the same way you unlock the device, with a fingerprint, face or PIN.",
+      "terms": [
+        "passkey",
+        "security key"
+      ],
+      "reference_hint": "FIDO Alliance, Passkeys; MDN, Passkeys"
+    },
+    {
+      "id": "F13",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "With a passkey there is no shared secret: the site keeps only a public key, and the private key stays in your device or key, which signs a fresh challenge from the site at each sign-in.",
+      "terms": [
+        "challenge",
+        "public key",
+        "private key"
+      ],
+      "reference_hint": "MDN, Passkeys (introduction and security properties)",
+      "caveat": "Synced passkeys are copied between a person's own devices by their passkey provider; the point that holds either way is that the secret is never typed into, or sent to, the website."
+    },
+    {
+      "id": "F14",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "A passkey's signed answer includes the address of the page that asked, and a passkey made for one site cannot be used by a look-alike site, which is why passkeys resist phishing.",
+      "terms": [
+        "origin",
+        "phishing-resistant"
+      ],
+      "reference_hint": "MDN, Passkeys (passkey scope; origin verification)"
+    },
+    {
+      "id": "F15",
+      "kind": "mechanism",
+      "confidence": "established",
+      "statement": "With a passkey there is no code to read or type, so a fake page has nothing it can collect and pass on to the real site.",
+      "reference_hint": "FIDO Alliance, Passkeys ('no sign-in data that can be used to perpetuate attacks'); MDN, Passkeys"
+    },
+    {
+      "id": "F16",
+      "kind": "practice",
+      "confidence": "established",
+      "statement": "CISA called the standard that passkeys use the only widely available phishing-resistant authentication in its 2022 guidance.",
+      "numbers": [
+        "2022"
+      ],
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, Phishing-resistant MFA implementations (2022)"
+    },
+    {
+      "id": "F17",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "statement": "Phishing-resistant is not the same as unbreakable: a stolen or compromised device, or a weak account recovery route, can still put an account at risk.",
+      "reference_hint": "MDN, Passkeys (security properties note); FIDO Alliance, Passkeys (synced passkeys and theft)",
+      "caveat": "State it as a limit, without listing attack techniques."
+    },
+    {
+      "id": "F18",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "statement": "A sign-in prompt or code request you did not start can mean someone else is signing in with your password, so the safe move is to refuse it and not share the code.",
+      "reference_hint": "CISA, Implementing Phishing-Resistant MFA, push bombing (2022); follows from F9 and F10",
+      "caveat": "Who to tell is company-specific; the lesson does not name a route."
+    }
+  ],
+  "not_claimed": [
+    "MFA blocks 99.9 percent of attacks: a widely repeated vendor blog figure without published method; use F5 with its source and limits instead",
+    "passkeys or MFA make an account unhackable or impossible to take over",
+    "texted codes are useless or worse than nothing (CISA: any MFA beats none)",
+    "your fingerprint or face is sent to the website (biometrics stay on the device)",
+    "MFA stops all phishing (codes and prompts can be relayed or approved by mistake)",
+    "any count of accounts hacked, breaches or losses per year: none is on this sheet",
+    "the study rates in F5 to F7 apply to your company's own systems"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, carried over from mfa-explained (approved unattended per Kshitij 2026-10-06); facts unchanged; rebuild requested by Kshitij",
+    "note": ""
+  }
+}

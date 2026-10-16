@@ -1,0 +1,412 @@
+{
+  "open_questions": [
+    "Will the organization prefer a specific behavioral framework or a general approach?"
+  ],
+  "devices": [
+    {
+      "kind": "explain",
+      "id": "tally_calendar",
+      "what": "An angular desk calendar that holds concrete tally marks instead of vague complaints",
+      "beats": [
+        "b06",
+        "b07",
+        "b10",
+        "b14"
+      ]
+    },
+    {
+      "id": "timeline_board",
+      "kind": "data",
+      "what": "A wide whiteboard tracking events from past errors to future collaborative plans",
+      "beats": [
+        "b17",
+        "b18",
+        "b27",
+        "b28",
+        "b29",
+        "b30",
+        "b31",
+        "b33"
+      ]
+    },
+    {
+      "id": "relationship_line",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b21",
+        "b34"
+      ],
+      "what": "A visual thread between the manager and colleague that strains or heals"
+    },
+    {
+      "kind": "explain",
+      "beats": [
+        "b09",
+        "b13",
+        "b19"
+      ],
+      "id": "red_marker",
+      "what": "A thick, hand-drawn red marker stroke that aggressively crosses out absolute words"
+    },
+    {
+      "beats": [
+        "b01",
+        "b05",
+        "b10",
+        "b14",
+        "b19",
+        "b25",
+        "b27"
+      ],
+      "what": "A torn paper wipe that reveals the objective truth beneath subjective layers",
+      "kind": "join",
+      "id": "torn_paper_join"
+    }
+  ],
+  "concept": "Visualizing the contrast between abstract personality criticism, which is messy and subjective, and concrete observable behavior, which is clean, structured, and objective.",
+  "join_material": "torn_paper",
+  "value_script": [
+    {
+      "accent": "red (conflict)",
+      "from": "b01",
+      "break": false,
+      "why": "A pale open establishing the awkward baseline without heavy contrast",
+      "band": "light"
+    },
+    {
+      "break": true,
+      "band": "dark",
+      "why": "A dark break for the key mechanism of observable behavior, bringing sharp focus",
+      "from": "b06",
+      "accent": "green (factual specific)"
+    },
+    {
+      "break": false,
+      "why": "A slightly richer middle as we map objective business impacts",
+      "band": "mid",
+      "from": "b14",
+      "accent": "blue (objective impact)"
+    },
+    {
+      "from": "b30",
+      "break": true,
+      "band": "light",
+      "accent": "green (collaboration)",
+      "why": "A lift at the close for the collaborative payoff and clear future path"
+    }
+  ],
+  "alternatives": [
+    "round friendly shapes instead of angular",
+    "traditional slide joins instead of material torn paper joins"
+  ],
+  "world": "A stylized office environment that acts as an infinite whiteboard stage, allowing the camera to push seamlessly from messy interpersonal moments into clean, objective structures.",
+  "look": "story-cartoon",
+  "sections": [
+    {
+      "beats": [
+        {
+          "beat": "b01",
+          "builder": "scenario.dialogue",
+          "join": "torn_paper",
+          "device": "relationship_line",
+          "intent": "Split screen of manager and colleague, negative attitude in a chat bubble",
+          "line": "Picture a manager pulling a colleague aside. She calls his negative attitude a problem."
+        },
+        {
+          "device": "relationship_line",
+          "beat": "b02",
+          "intent": "Colleague crosses arms; red jagged line connects them",
+          "builder": "scenario.dialogue",
+          "join": "continue",
+          "line": "He gets defensive immediately. The relationship strains. The actual work never improves."
+        },
+        {
+          "beat": "b03",
+          "join": "cut",
+          "builder": "avatar",
+          "line": "You know that giving feedback feels personal. It feels awkward.",
+          "intent": "Presenter beside personal and awkward text",
+          "device": "none"
+        },
+        {
+          "beat": "b04",
+          "builder": "avatar",
+          "join": "continue",
+          "intent": "Presenter gestures to a sharp focus bracket that clears the words",
+          "device": "none",
+          "line": "Why does it always feel so difficult? A simple shift in focus fixes that."
+        },
+        {
+          "builder": "compare.two",
+          "line": "Look at the phrase negative attitude. It is a personality trait. Critiquing a personality trait provokes defensiveness. It prevents constructive conversation.",
+          "device": "none",
+          "intent": "Motion: phrase slides into a red box labeled personality trait that pulses",
+          "join": "torn_paper",
+          "beat": "b05"
+        },
+        {
+          "join": "cut",
+          "beat": "b06",
+          "builder": "hero.character_moment",
+          "intent": "Manager points to tally calendar showing 3 distinct marks",
+          "device": "tally_calendar",
+          "line": "Watch what happens when she says something else. She points out he interrupted three times."
+        },
+        {
+          "intent": "Camera lens frame overlays the tally marks",
+          "beat": "b07",
+          "device": "tally_calendar",
+          "join": "zoom",
+          "builder": "document.page",
+          "line": "That has a name, it is called observable behavior. Observable behavior is specific actions or words. A video camera could capture it."
+        },
+        {
+          "line": "Here is where people slip. It is not absolute. It is specific.",
+          "join": "cut",
+          "builder": "compare.two",
+          "intent": "Absolute vs Specific text on angular ribbon labels",
+          "beat": "b08",
+          "device": "none"
+        },
+        {
+          "beat": "b09",
+          "intent": "Motion: always and never crossed out with thick red marker",
+          "join": "continue",
+          "device": "red_marker",
+          "builder": "compare.two",
+          "line": "Using absolute words makes feedback less accurate. Words like always or never. Why is that bad? They can easily reject it."
+        },
+        {
+          "beat": "b10",
+          "join": "torn_paper",
+          "intent": "Thought bubble pops, leaving only concrete tally marks",
+          "device": "tally_calendar",
+          "line": "Replacing abstract personality labels with observable actions helps. It removes subjective guesses about internal motives.",
+          "builder": "hero.character_moment"
+        },
+        {
+          "beat": "b11",
+          "builder": "title.card",
+          "join": "cut",
+          "intent": "Pocket rule card lands",
+          "device": "none",
+          "line": "The pocket rule. Critique the action, not the person."
+        },
+        {
+          "line": "Now you, which statement targets observable behavior? Option A, you never seem to care. Option B, you submitted it late. Pause, and decide.",
+          "beat": "b12",
+          "builder": "quiz.question",
+          "join": "cut",
+          "intent": "Two options in bare panels",
+          "device": "none"
+        },
+        {
+          "device": "red_marker",
+          "builder": "quiz.answer",
+          "intent": "Option B highlights green; never glows red",
+          "line": "The correct answer is B. You submitted the report two days after the deadline. The wrong answer uses the word never. It assumes they do not care.",
+          "join": "continue",
+          "beat": "b13"
+        }
+      ],
+      "world": "A stylized office environment that acts as an infinite whiteboard stage",
+      "treatment": "story-cartoon, flat fills, big-headed outlined people with chat bubbles on a warm paper ground",
+      "id": "sec1_behavior",
+      "accent_on": "The specific words or tally marks (green) vs the subjective personality labels (red)"
+    },
+    {
+      "id": "sec2_impact",
+      "beats": [
+        {
+          "builder": "hero.character_moment",
+          "beat": "b14",
+          "intent": "Meeting room; colleague sits under floating tally marks",
+          "join": "torn_paper",
+          "device": "tally_calendar",
+          "line": "Say the colleague interrupted three times. During the client pitch."
+        },
+        {
+          "join": "continue",
+          "intent": "Large duotone question mark icon beside the table",
+          "beat": "b15",
+          "device": "none",
+          "builder": "title.card",
+          "line": "You just named the behavior. Why does it matter?"
+        },
+        {
+          "line": "You need to connect it to an outcome. A complete feedback statement links the observed behavior. It links directly to its objective impact. The impact on the task or team.",
+          "device": "none",
+          "builder": "hero.hub",
+          "intent": "Arrow connects tally marks to an objective impact bare panel",
+          "beat": "b16",
+          "join": "zoom"
+        },
+        {
+          "beat": "b17",
+          "join": "cut",
+          "builder": "hero.meter",
+          "device": "timeline_board",
+          "intent": "Clock graphic showing 10-minute segment subtracted",
+          "line": "So she tells him, we lost ten minutes. Ten minutes of presentation time."
+        },
+        {
+          "join": "continue",
+          "beat": "b18",
+          "intent": "Colleague nods at objective timeline, uncrossed arms",
+          "builder": "hero.character_moment",
+          "line": "Explaining the business impact helps the recipient. They see the objective consequences of their behavior. They do not feel personally attacked.",
+          "device": "timeline_board"
+        },
+        {
+          "builder": "compare.two",
+          "line": "Here is where people slip. It is not an emotional disaster. It is strictly factual.",
+          "device": "red_marker",
+          "intent": "Motion: theatrical face crossed out, replaced by clean graph",
+          "beat": "b19",
+          "join": "torn_paper"
+        },
+        {
+          "beat": "b20",
+          "builder": "hero.meter",
+          "join": "continue",
+          "device": "none",
+          "intent": "Graph lines adjust to a moderate dip instead of catastrophic plunge",
+          "line": "Impact statements must remain strictly factual. Do not exaggerate emotional distress."
+        },
+        {
+          "intent": "Metallic shield stamp guards the relationship line",
+          "join": "cut",
+          "device": "relationship_line",
+          "beat": "b21",
+          "builder": "document.page",
+          "line": "People assume any negative feedback ruins relationships. They avoid it to protect feelings. But objective facts protect feelings."
+        },
+        {
+          "beat": "b22",
+          "join": "cut",
+          "builder": "title.card",
+          "intent": "Pocket rule card lands",
+          "device": "none",
+          "line": "The pocket rule. State the behavior and its business impact."
+        },
+        {
+          "builder": "compare.two",
+          "join": "cut",
+          "beat": "b23",
+          "intent": "Motion: feedback statement splits into two distinct halves",
+          "line": "Now you, identify the parts. You missed the deadline, so we lost the client. Which part is the impact? Pause, and point to it.",
+          "device": "none"
+        },
+        {
+          "join": "continue",
+          "builder": "compare.two",
+          "beat": "b24",
+          "line": "The impact is losing the client. Missing the deadline is the observable behavior. It connects the action to a consequence.",
+          "intent": "Lost the client highlights blue as objective impact",
+          "device": "none"
+        },
+        {
+          "intent": "Silhouette of colleague leaving; empty brackets below",
+          "device": "none",
+          "join": "torn_paper",
+          "beat": "b25",
+          "line": "Try one more. A colleague leaves early every day. How do you frame the feedback? Pause, and build a statement.",
+          "builder": "hero.character_moment"
+        },
+        {
+          "join": "continue",
+          "intent": "Brackets fill: concrete behavior on left, factual impact on right",
+          "builder": "compare.two",
+          "beat": "b26",
+          "device": "none",
+          "line": "You start with the specific action. You left at four o'clock twice this week. Then you state the objective impact. I had to finish the report alone."
+        }
+      ],
+      "world": "A meeting room that fades away to leave only the objective timeline board",
+      "accent_on": "The objective consequences (blue arrows and clock segments)",
+      "treatment": "story-cartoon, shifting to cleaner bare panels and duotone icons to reflect objectivity"
+    },
+    {
+      "treatment": "story-cartoon, bright, energetic grain textures with collaborative drawing motions",
+      "beats": [
+        {
+          "beat": "b27",
+          "builder": "timeline",
+          "join": "torn_paper",
+          "line": "The feedback is delivered. Now what?",
+          "device": "timeline_board",
+          "intent": "Manager and colleague at the timeline board"
+        },
+        {
+          "line": "You might want to rehash the meeting. Dwelling entirely on past errors traps the conversation. It traps it in an unproductive argument.",
+          "device": "timeline_board",
+          "intent": "Heavy circular arrow traps figures in an endless loop on past dates",
+          "join": "continue",
+          "beat": "b28",
+          "builder": "hero.journey"
+        },
+        {
+          "device": "timeline_board",
+          "line": "A brief mention of the past event is necessary. It grounds the conversation.",
+          "intent": "Heavy loop breaks into just one small anchor dot",
+          "join": "continue",
+          "beat": "b29",
+          "builder": "timeline"
+        },
+        {
+          "line": "But then you need to pivot. How do you fix the next pitch?",
+          "device": "timeline_board",
+          "intent": "Bright arrow extends timeline to future calendar date",
+          "beat": "b30",
+          "builder": "timeline",
+          "join": "continue"
+        },
+        {
+          "builder": "hero.journey",
+          "intent": "Motion: drawing an upward trajectory arrow on the board",
+          "device": "timeline_board",
+          "line": "Shifting the focus to future actions works. It turns a difficult critique into a planning session. A collaborative planning session.",
+          "join": "zoom",
+          "beat": "b31"
+        },
+        {
+          "intent": "Clean speech bubble from manager displays question",
+          "beat": "b32",
+          "device": "none",
+          "join": "continue",
+          "builder": "scenario.dialogue",
+          "line": "So she asks, how can we approach this? How can we approach the next project?"
+        },
+        {
+          "device": "timeline_board",
+          "intent": "Colleague draws the final step of the plan",
+          "line": "Asking the recipient to propose a different approach helps. It builds ownership of the new behavior.",
+          "builder": "scenario.dialogue",
+          "join": "continue",
+          "beat": "b33"
+        },
+        {
+          "builder": "title.card",
+          "line": "The conversation ends. The relationship stays intact. The work actually improves this time.",
+          "device": "relationship_line",
+          "intent": "Red jagged line morphs into a healthy green handshake stamp",
+          "join": "continue",
+          "beat": "b34"
+        },
+        {
+          "device": "none",
+          "line": "The pocket rule. Ask them to plan the next step.",
+          "intent": "Presenter with pocket rule card",
+          "builder": "avatar",
+          "beat": "b35",
+          "join": "cut"
+        }
+      ],
+      "accent_on": "The bright forward-pointing arrow and green handshake",
+      "world": "The same timeline board, now fully open and stretching into the right-hand future space",
+      "id": "sec3_future"
+    }
+  ]
+}

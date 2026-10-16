@@ -1,0 +1,1256 @@
+{
+  "style": "flat-cosmos",
+  "concept": "Maya's week as a journey across one night sky of ideas: moving right is time passing, moving down is looking closer, and one zoom dives into the steep part of the forgetting curve. Maya is the recurring motif: we meet her, watch her forget, watch her test herself, and meet her again weeks later.",
+  "chrome": {
+    "section_labels": true
+  },
+  "motifs": [
+    {
+      "name": "Maya",
+      "desc": "the invented colleague whose week carries the lesson; appears in b02, b08, b11, b19, b22"
+    }
+  ],
+  "music": {
+    "mood": "warm_curious",
+    "level": 0.085
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "st_intro",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "st_desk",
+        "x": 2300,
+        "y": 150
+      },
+      {
+        "id": "st_title",
+        "x": 2300,
+        "y": -1350
+      },
+      {
+        "id": "st_meter",
+        "x": 4600,
+        "y": -1350
+      },
+      {
+        "id": "st_lab",
+        "x": 4600,
+        "y": 150
+      },
+      {
+        "id": "st_curve",
+        "x": 6900,
+        "y": 150
+      },
+      {
+        "id": "st_early",
+        "parent": "st_curve",
+        "rect": {
+          "x": 250,
+          "y": 160,
+          "w": 560,
+          "h": 315
+        }
+      },
+      {
+        "id": "st_notes",
+        "x": 6900,
+        "y": 1650
+      },
+      {
+        "id": "st_desk2",
+        "x": 9200,
+        "y": 1650
+      },
+      {
+        "id": "st_compare",
+        "x": 9200,
+        "y": 150
+      },
+      {
+        "id": "st_curve2",
+        "x": 11500,
+        "y": 150
+      },
+      {
+        "id": "st_cram",
+        "x": 11500,
+        "y": 1650
+      },
+      {
+        "id": "st_quiz",
+        "x": 13800,
+        "y": 900
+      },
+      {
+        "id": "st_plan",
+        "x": 16100,
+        "y": 900
+      },
+      {
+        "id": "st_cal",
+        "x": 16100,
+        "y": 2400
+      },
+      {
+        "id": "st_desk3",
+        "x": 18400,
+        "y": 2400
+      },
+      {
+        "id": "st_recap",
+        "x": 18400,
+        "y": 900
+      },
+      {
+        "id": "st_outro",
+        "x": 20700,
+        "y": 900
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "st_intro",
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "member": "woman",
+        "side": "left",
+        "kicker": "Memory at work",
+        "title": "Why training fades",
+        "title_cue": "last training",
+        "cloth": "accent"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "hook"
+    },
+    {
+      "beat": "b02",
+      "station": "st_desk",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "push"
+      },
+      "story_role": "setup",
+      "option": "acting character",
+      "alternatives": {
+        "illustrated bust": {
+          "kind": "blueprint",
+          "blueprint": "hero.character_moment",
+          "props": {
+            "member": "woman",
+            "name": "Maya",
+            "side": "left",
+            "cloth": "accent4",
+            "prop": "laptop",
+            "bubble": "thought",
+            "days": [
+              {
+                "label": "Monday",
+                "say": "On Monday"
+              },
+              {
+                "label": "Wednesday",
+                "say": "By Wednesday"
+              },
+              {
+                "label": "Friday",
+                "say": "By Friday"
+              }
+            ],
+            "moods": [
+              {
+                "emotion": "happy",
+                "say": "buzzing"
+              },
+              {
+                "emotion": "surprised",
+                "say": "By Friday"
+              }
+            ],
+            "items": [
+              {
+                "icon": "lightbulb",
+                "label": "Idea one",
+                "say": "buzzing",
+                "fade_say": "one has gone fuzzy"
+              },
+              {
+                "icon": "target",
+                "label": "Idea two",
+                "say": "three new",
+                "fade_say": "most of it"
+              },
+              {
+                "icon": "message-circle",
+                "label": "Idea three",
+                "say": "new ideas",
+                "fade_say": "gone quiet"
+              }
+            ]
+          },
+          "register": "expressive",
+          "motion_is": "content",
+          "sfx": [
+            {
+              "kind": "pop",
+              "cue": "buzzing",
+              "f": 880,
+              "g": 0.12
+            }
+          ]
+        }
+      },
+      "kind": "bespoke",
+      "scene": "b02",
+      "design": {
+        "treatment": "Maya, a rigged character in her room with a window on the city, acts her week while three ideas in her head fade one by one",
+        "why_motion": "forgetting is a change over the week: the ideas lose focus as the days pass, and she reacts",
+        "elements": [
+          "room (floor, window with city depth stage, desk, laptop)",
+          "maya (rig ava)",
+          "name_tag",
+          "calendar with day_1..3",
+          "bubble",
+          "idea_1..3"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "this is Maya",
+            "element": "maya, name_tag",
+            "action": "presents, tag springs in",
+            "motion": "pose + spring"
+          },
+          {
+            "t_anchor": "buzzing",
+            "element": "bubble, idea_1..3",
+            "action": "bubble irises open, ideas spring in on three new ideas; Maya cheers",
+            "motion": "iris + spring + pose"
+          },
+          {
+            "t_anchor": "one has gone fuzzy",
+            "element": "idea_1",
+            "action": "blurs and fades; Maya thinks, concerned",
+            "motion": "fade + blur"
+          },
+          {
+            "t_anchor": "most of it",
+            "element": "idea_2",
+            "action": "blurs and fades; Maya shrugs",
+            "motion": "fade + blur"
+          },
+          {
+            "t_anchor": "gone quiet",
+            "element": "idea_3",
+            "action": "blurs and fades",
+            "motion": "fade + blur"
+          }
+        ],
+        "continuity": "the room returns in b11 and b22"
+      },
+      "motion_is": "content",
+      "depth": "layered",
+      "sfx": [
+        {
+          "kind": "pop",
+          "cue": "buzzing",
+          "f": 880,
+          "g": 0.12
+        }
+      ]
+    },
+    {
+      "beat": "b03",
+      "kind": "template",
+      "template": "title.card",
+      "station": "st_title",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "Memory at work",
+        "title": "Why training fades",
+        "say_title": "how memory works",
+        "icon": "brain",
+        "say_icon": "not her fault",
+        "subtitle": "and how to make it stick",
+        "say_subtitle": "simple way"
+      },
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "blueprint",
+      "blueprint": "hero.meter",
+      "station": "st_meter",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "props": {
+        "kind": "bar",
+        "label": "What you can recall",
+        "start": 0,
+        "show_value": false,
+        "stops": [
+          {
+            "value": 95,
+            "say": "Clear on the day",
+            "note": "On the day",
+            "tone": "pos"
+          },
+          {
+            "value": 16,
+            "say": "blank a week later",
+            "note": "A week later",
+            "tone": "neg"
+          }
+        ]
+      },
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "scene": "b05",
+      "station": "st_lab",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "design": {
+        "treatment": "a notebook of syllable cards: learned, then tested later, and some cards go blank",
+        "why_motion": "the method itself is a process over time: learn, wait, test, lose some",
+        "elements": [
+          "name_tag (Hermann Ebbinghaus)",
+          "year_stamp (1885)",
+          "notebook",
+          "syllable cards x8",
+          "clock",
+          "result marks"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "In 1885",
+            "element": "year_stamp",
+            "action": "stamps in",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "Hermann Ebbinghaus",
+            "element": "name_tag",
+            "action": "unmasks",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "measured this on himself",
+            "element": "notebook",
+            "action": "settles open",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "nonsense syllables",
+            "element": "cards",
+            "action": "flip in as peers, tight stagger",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "then tested",
+            "element": "clock",
+            "action": "hand sweeps a full turn (time passing)",
+            "motion": "value travel"
+          },
+          {
+            "t_anchor": "what he kept",
+            "element": "cards",
+            "action": "half fade to blank, the kept ones get a tick",
+            "motion": "fade + pop"
+          }
+        ],
+        "continuity": "none; the next scene is the curve those results make"
+      },
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "manim",
+      "station": "st_curve",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "manim": {
+        "file": "scenes/b06.py",
+        "rect": [
+          160,
+          110,
+          1600,
+          780
+        ],
+        "spill": 2.0
+      },
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "template": "title.card",
+      "station": "st_early",
+      "join_in": {
+        "type": "zoom",
+        "dur": 1.3
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "Hold on to this",
+        "say_kicker": "Hold on",
+        "title": "Most forgetting happens early",
+        "say_title": "Early",
+        "accent": "accent2",
+        "panel": true
+      },
+      "rationale": "the camera dives INTO the steep early part of the curve: the place is the point",
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "turn"
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "template": "document.page",
+      "station": "st_notes",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "staging",
+      "props": {
+        "kind": "notes",
+        "title": "Workshop notes",
+        "say_title": "What most of us do",
+        "mode": "highlight",
+        "side": "left",
+        "lines": [
+          {
+            "text": "Idea one: ask before assuming",
+            "say": "She rereads"
+          },
+          {
+            "text": "Idea two: summarise the decision",
+            "say": "rereads her"
+          },
+          {
+            "text": "Idea three: follow up in writing",
+            "say": "her notes"
+          }
+        ],
+        "person": {
+          "member": "woman",
+          "emotion": "neutral",
+          "name": "Maya"
+        }
+      },
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "blueprint",
+      "blueprint": "hero.meter",
+      "station": "st_notes",
+      "keep": [
+        "page",
+        "line_1",
+        "line_2",
+        "line_3"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "motion_is": "content",
+      "props": {
+        "kind": "ring",
+        "anchor": "right",
+        "label": "Feels familiar",
+        "icon": "eye",
+        "start": 15,
+        "stops": [
+          {
+            "value": 92,
+            "say": "feels like learning",
+            "note": "Feels like learning",
+            "tone": "pos"
+          }
+        ]
+      },
+      "shot": {
+        "size": "close"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "scene": "b10",
+      "station": "st_notes",
+      "keep": [
+        "page",
+        "line_1",
+        "line_2",
+        "line_3"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "motion_is": "content",
+      "design": {
+        "treatment": "the notes get covered; the thought bubble reaches for the lines and finds question marks",
+        "why_motion": "the test of familiarity versus recall is an event: cover the page, try to recall, fail",
+        "elements": [
+          "familiar_tag (on the page)",
+          "cover (slides over the page)",
+          "bubble",
+          "question marks x3",
+          "recall_tag"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "familiar is not the same",
+            "element": "familiar_tag",
+            "action": "stamps on the page",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "recall it",
+            "element": "bubble",
+            "action": "irises open on the right",
+            "motion": "iris"
+          },
+          {
+            "t_anchor": "Close the notes",
+            "element": "cover",
+            "action": "slides across the page",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "it is gone",
+            "element": "question marks",
+            "action": "pop as peers; recall_tag stamps",
+            "motion": "pop + stamp"
+          }
+        ],
+        "continuity": "keeps the page from b08"
+      },
+      "sfx": [
+        {
+          "kind": "whoosh",
+          "cue": "Close the notes",
+          "d": 0.6,
+          "g": 0.18
+        }
+      ],
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "reveal"
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "st_desk2",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "scene": "b11",
+      "design": {
+        "treatment": "the same room: Maya closes her notebook, thinks, and the ideas come back out of her head into the bubble; then the term is named",
+        "why_motion": "retrieval is an act: pulling ideas out, shown as ideas travelling from her head into place",
+        "elements": [
+          "room",
+          "notebook (closes)",
+          "maya",
+          "bubble",
+          "idea_1..3 (travel from her head)",
+          "term"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the opposite",
+            "element": "maya",
+            "action": "points",
+            "motion": "pose"
+          },
+          {
+            "t_anchor": "Close the notes",
+            "element": "notebook",
+            "action": "right page folds shut; Maya thinks",
+            "motion": "close + pose"
+          },
+          {
+            "t_anchor": "pull the ideas",
+            "element": "idea_1..3",
+            "action": "travel out of her head into the bubble one by one",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "retrieval practice",
+            "element": "term",
+            "action": "stamps; Maya cheers",
+            "motion": "stamp + pose"
+          }
+        ],
+        "continuity": "the room from b02"
+      },
+      "depth": "layered",
+      "option": "acting character",
+      "alternatives": {
+        "illustrated bust": {
+          "kind": "blueprint",
+          "blueprint": "hero.character_moment",
+          "props": {
+            "member": "woman",
+            "name": "Maya",
+            "side": "left",
+            "cloth": "accent4",
+            "prop": "desk",
+            "bubble": "thought",
+            "moods": [
+              {
+                "emotion": "explaining",
+                "say": "pull the ideas"
+              },
+              {
+                "emotion": "happy",
+                "say": "retrieval practice"
+              }
+            ],
+            "items": [
+              {
+                "icon": "lightbulb",
+                "label": "Idea one",
+                "say": "pull the ideas"
+              },
+              {
+                "icon": "target",
+                "label": "Idea two",
+                "say": "ideas back"
+              },
+              {
+                "icon": "message-circle",
+                "label": "Idea three",
+                "say": "back out"
+              }
+            ],
+            "caption": "Retrieval practice",
+            "say_caption": "retrieval practice"
+          },
+          "register": "expressive",
+          "motion_is": "content"
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "st_compare",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "staging",
+      "props": {
+        "title": "Testing beats rereading",
+        "say_title": "Testing yourself beats",
+        "mode": "columns",
+        "left": {
+          "header": "Rereading",
+          "say": "Rereading feels",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Feels easy",
+              "say": "Rereading feels easy"
+            },
+            {
+              "text": "Fades fast",
+              "say": "fades fast"
+            }
+          ]
+        },
+        "right": {
+          "header": "Testing yourself",
+          "say": "Testing feels",
+          "tone": "pos",
+          "items": [
+            {
+              "text": "Feels harder",
+              "say": "Testing feels harder"
+            },
+            {
+              "text": "Lasts longer",
+              "say": "lasts longer"
+            }
+          ]
+        }
+      },
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "template",
+      "template": "list.steps",
+      "station": "st_compare",
+      "join_in": {
+        "type": "continue"
+      },
+      "motion_is": "staging",
+      "props": {
+        "title": "A self-test in a few minutes",
+        "say_title": "a few minutes",
+        "marker": "number",
+        "items": [
+          {
+            "text": "Close your notes",
+            "say": "Close your notes"
+          },
+          {
+            "text": "Write down what you remember",
+            "say": "Write down"
+          },
+          {
+            "text": "Check it against the notes",
+            "say": "check it against"
+          }
+        ]
+      },
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "manim",
+      "station": "st_curve2",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "manim": {
+        "file": "scenes/b14.py",
+        "rect": [
+          160,
+          110,
+          1600,
+          780
+        ],
+        "spill": 1.2
+      },
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "template": "definition",
+      "station": "st_curve2",
+      "join_in": {
+        "type": "continue"
+      },
+      "motion_is": "staging",
+      "props": {
+        "term": "The spacing effect",
+        "say_term": "spacing effect",
+        "icon": "calendar-range",
+        "definition": "Practice spread out over time lasts longer than the same practice crammed together.",
+        "say_definition": "Spread your practice",
+        "example": "Short self-tests across the weeks after a course, not one long review.",
+        "say_example": "cramming it together"
+      },
+      "shot": {
+        "size": "close"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "blueprint",
+      "blueprint": "hero.meter",
+      "station": "st_cram",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "props": {
+        "kind": "ring",
+        "anchor": "center",
+        "label": "Cramming",
+        "icon": "zap",
+        "start": 10,
+        "stops": [
+          {
+            "value": 92,
+            "say": "works for tomorrow",
+            "note": "Great for tomorrow",
+            "tone": "pos"
+          },
+          {
+            "value": 14,
+            "say": "fades faster",
+            "note": "Gone faster after",
+            "tone": "neg"
+          }
+        ]
+      },
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "st_quiz",
+      "join_in": {
+        "type": "canvas"
+      },
+      "motion_is": "staging",
+      "props": {
+        "kicker": "Your turn",
+        "question": "Which keeps more after a month?",
+        "say_question": "Which keeps more",
+        "options": [
+          {
+            "text": "One long review on Friday",
+            "say": "Plan A"
+          },
+          {
+            "text": "Three short self-tests, spread out",
+            "say": "Plan B"
+          }
+        ]
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice"
+    },
+    {
+      "beat": "b18",
+      "kind": "template",
+      "template": "quiz.answer",
+      "station": "st_quiz",
+      "join_in": {
+        "type": "continue"
+      },
+      "motion_is": "staging",
+      "props": {
+        "question": "Which keeps more after a month?",
+        "options": [
+          {
+            "text": "One long review on Friday"
+          },
+          {
+            "text": "Three short self-tests, spread out"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "It is Plan B",
+        "explanation": "Spaced self-tests pull the memory back out at growing gaps, so it lasts.",
+        "say_explanation": "keep more",
+        "tempting": 0,
+        "why_not": "It feels thorough, but it is one long reread.",
+        "say_why_not": "feels thorough"
+      },
+      "sfx": [
+        {
+          "kind": "chime",
+          "cue": "It is Plan B",
+          "f": 1318.5,
+          "g": 0.12
+        }
+      ],
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "blueprint",
+      "blueprint": "hero.journey",
+      "station": "st_plan",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "props": {
+        "title": "Your plan",
+        "say_title": "the plan",
+        "traveller": {
+          "member": "woman"
+        },
+        "shape": "climb",
+        "waypoints": [
+          {
+            "label": "Training day",
+            "say": "your next training",
+            "icon": "presentation"
+          },
+          {
+            "label": "Tomorrow",
+            "sub": "Test one",
+            "say": "tomorrow",
+            "icon": "brain"
+          },
+          {
+            "label": "A few days later",
+            "sub": "Test two",
+            "say": "a few days later",
+            "icon": "brain"
+          },
+          {
+            "label": "A week or two",
+            "sub": "Test three",
+            "say": "a week or two",
+            "icon": "brain"
+          }
+        ]
+      },
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "template",
+      "template": "icon.grid",
+      "station": "st_plan",
+      "join_in": {
+        "type": "continue"
+      },
+      "motion_is": "staging",
+      "props": {
+        "title": "A guideline, not a rule",
+        "say_title": "a guideline",
+        "items": [
+          {
+            "icon": "move-horizontal",
+            "label": "Easy? Stretch it",
+            "sub": "Make the next gap longer",
+            "say": "feels easy"
+          },
+          {
+            "icon": "undo-2",
+            "label": "Hard? Bring it closer",
+            "sub": "Make the next gap shorter",
+            "say": "feels hard"
+          }
+        ]
+      },
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "template",
+      "template": "calendar.plan",
+      "station": "st_cal",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "staging",
+      "props": {
+        "kicker": "Before you leave",
+        "title": "Book all three now",
+        "say_title": "put all three",
+        "days": [
+          {
+            "label": "Training"
+          },
+          {
+            "label": "Tomorrow"
+          },
+          {
+            "label": "Later that week"
+          },
+          {
+            "label": "Next week"
+          },
+          {
+            "label": "Week after"
+          }
+        ],
+        "entries": [
+          {
+            "day": 1,
+            "label": "Self-test",
+            "say": "put all three"
+          },
+          {
+            "day": 2,
+            "label": "Self-test",
+            "say": "in your calendar"
+          },
+          {
+            "day": 4,
+            "label": "Self-test",
+            "say": "before you leave"
+          }
+        ]
+      },
+      "sfx": [
+        {
+          "kind": "pop",
+          "cue": "in your calendar",
+          "f": 660,
+          "g": 0.1
+        }
+      ],
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "st_desk3",
+      "join_in": {
+        "type": "camera"
+      },
+      "motion_is": "content",
+      "shot": {
+        "size": "establishing",
+        "move": "push"
+      },
+      "story_role": "payoff",
+      "scene": "b22",
+      "design": {
+        "treatment": "the payoff echoes b02: same room and bubble; three tests land on a line with widening gaps; weeks later the ideas stay bright",
+        "why_motion": "spacing is a pattern in time (widening gaps) and the payoff is the contrast with b02's fade",
+        "elements": [
+          "room",
+          "maya",
+          "calendar with day_1..2",
+          "test_line with test_1..3",
+          "bubble",
+          "idea_1..3"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Remember Maya",
+            "element": "maya",
+            "action": "waves",
+            "motion": "pose + gesture"
+          },
+          {
+            "t_anchor": "After her next workshop",
+            "element": "calendar",
+            "action": "drops in, day reads Next workshop",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "tests herself",
+            "element": "test_line, bubble, ideas",
+            "action": "line draws, bubble opens full",
+            "motion": "draw + iris + spring"
+          },
+          {
+            "t_anchor": "three times",
+            "element": "test_1..3",
+            "action": "pop on the line, each gap wider",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Weeks later",
+            "element": "calendar",
+            "action": "turns to Weeks later",
+            "motion": "exit + reveal"
+          },
+          {
+            "t_anchor": "still has it",
+            "element": "idea_1..3, maya",
+            "action": "glow; Maya cheers",
+            "motion": "glow + pose"
+          }
+        ],
+        "continuity": "echoes the opening frame of b02 (the payoff)"
+      },
+      "depth": "layered",
+      "fx": [
+        {
+          "kind": "light",
+          "at": "still has it",
+          "dur": 1.4,
+          "rect": [
+            120,
+            320,
+            560,
+            420
+          ]
+        }
+      ],
+      "option": "acting character",
+      "alternatives": {
+        "illustrated bust": {
+          "kind": "blueprint",
+          "blueprint": "hero.character_moment",
+          "props": {
+            "member": "woman",
+            "name": "Maya",
+            "side": "left",
+            "cloth": "accent4",
+            "prop": "calendar",
+            "bubble": "thought",
+            "days": [
+              {
+                "label": "Next workshop",
+                "say": "After her next workshop"
+              },
+              {
+                "label": "Weeks later",
+                "say": "Weeks later"
+              }
+            ],
+            "moods": [
+              {
+                "emotion": "happy",
+                "say": "still has it"
+              }
+            ],
+            "items": [
+              {
+                "icon": "lightbulb",
+                "label": "Idea one",
+                "say": "she tests"
+              },
+              {
+                "icon": "target",
+                "label": "Idea two",
+                "say": "tests herself"
+              },
+              {
+                "icon": "message-circle",
+                "label": "Idea three",
+                "say": "three times"
+              }
+            ],
+            "caption": "She still has it",
+            "say_caption": "still has it"
+          },
+          "register": "expressive",
+          "motion_is": "content"
+        }
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "template",
+      "template": "recap",
+      "station": "st_recap",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "title": "Three things",
+        "say_title": "three things",
+        "items": [
+          {
+            "label": "Starts fast",
+            "say": "Forgetting starts fast",
+            "icon": "trending-down"
+          },
+          {
+            "label": "Recall, not reread",
+            "say": "Recall beats rereading",
+            "icon": "brain"
+          },
+          {
+            "label": "Space your tests",
+            "say": "space your tests",
+            "icon": "calendar-range"
+          }
+        ],
+        "rule": "Test it. Space it. Test it again.",
+        "say_rule": "Test it, space it"
+      },
+      "sfx": [
+        {
+          "kind": "chime",
+          "cue": "Test it, space it",
+          "f": 1046.5,
+          "g": 0.1
+        }
+      ],
+      "shot": {
+        "size": "wide"
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "avatar",
+      "station": "st_outro",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "member": "woman",
+        "side": "right",
+        "kicker": "Your next training",
+        "title": "Test it. Space it.",
+        "title_cue": "Test it",
+        "cloth": "accent"
+      },
+      "shot": {
+        "size": "medium"
+      }
+    }
+  ],
+  "story": {
+    "setting": "Maya's room across her week: a desk, a window on the city",
+    "cast": [
+      {
+        "name": "Maya",
+        "rig": "ava",
+        "role": "the learner's stand-in, the running example"
+      }
+    ],
+    "arc": "Maya forgets (b02), learns why (b03 to b10), does the opposite (b11), and in the payoff the same room shows her ideas intact (b22)"
+  }
+}

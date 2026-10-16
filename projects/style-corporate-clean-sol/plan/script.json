@@ -1,0 +1,431 @@
+{
+  "title": "The 3-2-1 backup rule: why one copy is never enough",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "One file, one laptop",
+      "role": "hook"
+    },
+    {
+      "id": "promise",
+      "title": "A rule of three numbers",
+      "role": "promise"
+    },
+    {
+      "id": "sec1",
+      "title": "One copy, one failure",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Three, two, one",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "Check a setup",
+      "role": "check"
+    },
+    {
+      "id": "payoff",
+      "title": "The same night, survived",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "Say your report is due tomorrow.",
+        "It lives in one place: your laptop."
+      ],
+      "on_screen": [
+        "Report",
+        "Due tomorrow"
+      ],
+      "visual_intent": "One file object labelled Report sits inside a single laptop on the plain light field; nothing else exists yet.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "a report kept only on a laptop",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "scenario",
+      "narration": [
+        "Tonight, the drive dies.",
+        "The report goes with it."
+      ],
+      "on_screen": [
+        "Drive failed"
+      ],
+      "visual_intent": "The laptop's drive fails; the report fades to an empty outline and nothing on the field can bring it back.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "losing the only copy means the data is gone",
+          "fact": "F4"
+        },
+        {
+          "claim": "hardware failure is a cause of data loss",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "promise",
+      "job": "orient",
+      "narration": [
+        "One copy is a single point of failure.",
+        "The fix is three numbers."
+      ],
+      "on_screen": [
+        "Single point of failure",
+        "3-2-1"
+      ],
+      "visual_intent": "The empty outline is labelled single point of failure, then 3-2-1 is set large beside it.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "concepts": [
+        "single point of failure",
+        "3-2-1 rule"
+      ],
+      "grounding": [
+        {
+          "claim": "a single copy is a single point of failure",
+          "fact": "F4"
+        },
+        {
+          "claim": "the rule is 3-2-1",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "relate",
+      "narration": [
+        "A dead drive is one way to lose it.",
+        "A stolen laptop.",
+        "A wrong delete.",
+        "Ransomware."
+      ],
+      "on_screen": [
+        "Drive failure",
+        "Lost or stolen",
+        "Deleted by mistake",
+        "Ransomware"
+      ],
+      "visual_intent": "Four failures arrive one at a time around the single report, each a small labelled mark that lands on its word and empties the file.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "hardware failure, a lost or stolen device, accidental deletion and ransomware cause data loss",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Start with three: the original, plus two backups.",
+        "One failure no longer leaves you with zero."
+      ],
+      "on_screen": [
+        "3 copies"
+      ],
+      "visual_intent": "The report copies twice into three files in a row; one is struck and two remain. The 3 lights.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "concepts": [
+        "3 copies"
+      ],
+      "delivery": "slower on 'three'",
+      "grounding": [
+        {
+          "claim": "three copies of data",
+          "fact": "F1"
+        },
+        {
+          "claim": "the original plus two backups",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "Two: two kinds of storage.",
+        "Say, the laptop and an external drive.",
+        "One fault is unlikely to take both."
+      ],
+      "on_screen": [
+        "2 kinds of storage",
+        "Laptop",
+        "External drive"
+      ],
+      "visual_intent": "A copy moves from the laptop to an external drive; a fault strikes the laptop only and the drive's copy stays whole. The 2 lights.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "concepts": [
+        "two kinds of storage"
+      ],
+      "delivery": "slower on 'two'",
+      "grounding": [
+        {
+          "claim": "two different types of storage",
+          "fact": "F1"
+        },
+        {
+          "claim": "different storage types fail in different ways, so one fault is unlikely to remove every copy",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "refute",
+      "narration": [
+        "But both sit on your desk.",
+        "One fire, flood or theft takes them together."
+      ],
+      "on_screen": [
+        "Same place"
+      ],
+      "visual_intent": "A boundary draws round the desk holding laptop and drive; one event fills the whole boundary and both copies go together.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "misconception": "a second copy in the same place is safe",
+      "grounding": [
+        {
+          "claim": "copies in the same place can be lost together by one event such as theft, fire or flood",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "So, one: keep a copy offsite.",
+        "The cloud is a common way to do it."
+      ],
+      "on_screen": [
+        "1 offsite",
+        "Cloud"
+      ],
+      "visual_intent": "A copy travels out of the boundary to a cloud far across the field, out of the event's reach. The 1 lights.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "concepts": [
+        "offsite copy"
+      ],
+      "delivery": "slower on 'offsite'",
+      "grounding": [
+        {
+          "claim": "one copy offsite",
+          "fact": "F1"
+        },
+        {
+          "claim": "an offsite copy is in a different location, so an event there does not reach it",
+          "fact": "F8"
+        },
+        {
+          "claim": "cloud storage is a common way to keep the offsite copy",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "distinguish",
+      "narration": [
+        "Ransomware can encrypt backups that stay connected.",
+        "So keep one offline or disconnected."
+      ],
+      "on_screen": [
+        "Offline or disconnected"
+      ],
+      "visual_intent": "A lock spreads along a connected line into one backup; the disconnected copy, with no line to it, stays clean.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "ransomware can encrypt connected backups; guidance advises keeping one offline or disconnected",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "consolidate",
+      "narration": [
+        "Not more copies.",
+        "Copies that cannot all fail together."
+      ],
+      "on_screen": [
+        "3 copies",
+        "2 kinds of storage",
+        "1 offsite"
+      ],
+      "visual_intent": "The whole system at rest: laptop, external drive and cloud, each holding its copy, with 3, 2 and 1 lit beside them.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "misconception": "more copies is what makes data safe",
+      "grounding": [
+        {
+          "claim": "the 3-2-1 rule",
+          "fact": "F1"
+        },
+        {
+          "claim": "copies that can fail together add little",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "Quick check.",
+        "A laptop and a USB backup, in the same bag.",
+        "Which part breaks?"
+      ],
+      "on_screen": [
+        "Same bag",
+        "Which part breaks?"
+      ],
+      "visual_intent": "A bag outline holds a laptop and a USB drive, each with a copy of the report; 3, 2 and 1 sit below, unlit, waiting.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "pause_after_s": 2,
+      "recall": {
+        "kind": "pause_predict",
+        "answer": "the one offsite copy"
+      },
+      "grounding": [
+        {
+          "claim": "a laptop and USB drive in the same bag",
+          "hypothetical": true
+        },
+        {
+          "claim": "the rule's three parts",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec3",
+      "job": "practice",
+      "narration": [
+        "The one.",
+        "They travel together, so one stolen bag takes both."
+      ],
+      "on_screen": [
+        "Missing: 1 offsite"
+      ],
+      "visual_intent": "3 and 2 light, 1 stays dark and is marked missing; then the bag leaves the field with both copies inside.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "copies in the same place can be lost together by one theft",
+          "fact": "F7"
+        },
+        {
+          "claim": "offsite means a different location",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Same night, same failure.",
+        "This time the report opens from a backup."
+      ],
+      "on_screen": [
+        "Report",
+        "Restored"
+      ],
+      "visual_intent": "The opening laptop fails again exactly as before; the report comes back from the external drive while the cloud copy stays whole.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the same failure replayed with backups in place",
+          "hypothetical": true
+        },
+        {
+          "claim": "copies elsewhere survive a failure of the laptop",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "payoff",
+      "job": "transition",
+      "narration": [
+        "Now check your own key files.",
+        "Which number is missing?"
+      ],
+      "on_screen": [
+        "3",
+        "2",
+        "1"
+      ],
+      "visual_intent": "Three file objects, each beside the 3-2-1 marks, waiting to be checked off: the viewer's own task.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the 3-2-1 rule as a check",
+          "fact": "F1"
+        }
+      ]
+    }
+  ]
+}

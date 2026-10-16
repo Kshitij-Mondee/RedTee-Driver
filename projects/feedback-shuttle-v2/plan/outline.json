@@ -1,0 +1,251 @@
+{
+  "concept": "One meeting room, one comment rebuilt in front of us. Nina's kind, empty line to Theo changes nothing; a label makes it worse; then the same speech bubble gains three coloured slots on the table between them (what he did, what it caused, one step) while the wall screen and calendar show each fact. The viewer checks it on a Friday-night report, rebuilds their own comment on a sticky note at their own desk, and the room returns with the budget slide first.",
+  "world": "The meeting room two-shot (Nina screen left, Theo screen right, wall screen with Theo's slides and a clock between and above them, wall calendar), a close on the comment bubble, an everyday desk with a monitor (the viewer's, no person), an idea board space for the feeling versus target contrast, a quiz table with three answer cards, and the presenter once.",
+  "look": "story-cartoon",
+  "devices": [
+    {
+      "id": "comment_bubble",
+      "what": "Nina's one speech bubble, the lesson's through-line: vague line in b01, ghosted in b04, rewritten as the behaviour line with two dashed empty slots in b07 and b08, effect slot filled b09, step slot filled b10, all three lit in turn b11, small in the corner b16. Each slot has its own small colour tab (behaviour teal, effect sage, step ochre) reused on the answer-card ticks and the sticky-note slots.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b04",
+        "b05",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b16"
+      ]
+    },
+    {
+      "id": "two_shot",
+      "what": "The same meeting room two-shot, Nina left facing right, Theo right facing left, same looks and sides: hook, the week later, the label, the rebuild and the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b06",
+        "b07",
+        "b09",
+        "b10",
+        "b16"
+      ]
+    },
+    {
+      "id": "slide_wall",
+      "what": "Theo's slides on the wall screen and the wall clock beside it: slides stack with the budget question last and the clock past the hour (b02), a small replay of that order (b07), the budget slide first and the clock well before the hour (b16). The wall calendar beside it moves the budget decision to next week (b09).",
+      "kind": "data",
+      "beats": [
+        "b02",
+        "b07",
+        "b09",
+        "b16"
+      ]
+    },
+    {
+      "id": "three_slots",
+      "what": "The three coloured slots as answer cards with tick rows (b12 to b14) and as the sticky note's empty slots on the viewer's monitor (b15).",
+      "kind": "list",
+      "beats": [
+        "b12",
+        "b13",
+        "b14",
+        "b15"
+      ]
+    },
+    {
+      "id": "page_join",
+      "what": "The one join material: a paper page turn into the check (b12) and at the time skip into the payoff (b16).",
+      "kind": "join",
+      "beats": [
+        "b12",
+        "b16"
+      ]
+    }
+  ],
+  "join_material": "page",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "Nina's vague bubble",
+      "why": "a pale open: the line that changed nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the bullseye, the label tag, then each slot as it fills",
+      "why": "a slightly richer middle while the mechanism is taught"
+    },
+    {
+      "from": "b12",
+      "band": "mid",
+      "accent": "withheld while the cards are read, then card B",
+      "why": "all three options weigh the same until the answer"
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "break": true,
+      "accent": "the budget slide now first",
+      "why": "a lift at the payoff: the same room, the change visible"
+    }
+  ],
+  "sections": [
+    {
+      "id": "s1_vague",
+      "treatment": "meeting room two-shot, a cut to the viewer's desk, an idea board, the presenter",
+      "accent_on": "the vague bubble, then the empty target",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "People leave the meeting room; Nina stops by Theo; her vague bubble pops between them",
+          "builder": "bespoke",
+          "device": "two_shot",
+          "join": "cut"
+        },
+        {
+          "beat": "b02",
+          "line": "A week later: slides stack on the wall screen, budget last, clock past the hour",
+          "builder": "bespoke",
+          "device": "slide_wall",
+          "join": "continue"
+        },
+        {
+          "beat": "b03",
+          "line": "Cut to an everyday desk with no one at it: the same kind comment on the monitor's chat",
+          "builder": "bespoke",
+          "join": "cut"
+        },
+        {
+          "beat": "b04",
+          "line": "The vague bubble with a small heart beside an empty target board; a dart lands on names an action",
+          "builder": "bespoke",
+          "device": "comment_bubble",
+          "join": "cut"
+        },
+        {
+          "beat": "b05",
+          "line": "Presenter with the quote on her card",
+          "builder": "avatar",
+          "join": "cut"
+        }
+      ]
+    },
+    {
+      "id": "s2_behaviour",
+      "treatment": "back to the two-shot; the bubble rewrites",
+      "accent_on": "the label tag, then the behaviour line",
+      "beats": [
+        {
+          "beat": "b06",
+          "line": "A You ramble tag slaps onto Theo; he leans back; a frosted pane rises on the table between them",
+          "builder": "bespoke",
+          "device": "two_shot",
+          "join": "cut"
+        },
+        {
+          "beat": "b07",
+          "line": "Tag peels off, pane drops; bubble becomes the behaviour line; small replay of the slides with budget last",
+          "builder": "bespoke",
+          "device": "comment_bubble",
+          "join": "continue"
+        },
+        {
+          "beat": "b08",
+          "line": "Push in on the bubble: behaviour line plus two dashed empty slots pulsing",
+          "builder": "bespoke",
+          "device": "comment_bubble",
+          "join": "continue",
+          "intent": "process_hold"
+        }
+      ]
+    },
+    {
+      "id": "s3_effect_step",
+      "treatment": "the same two-shot, slots filling, then a close on the whole comment",
+      "accent_on": "each slot as it fills",
+      "beats": [
+        {
+          "beat": "b09",
+          "line": "Effect slot fills; the budget decision card slides to next week on the wall calendar",
+          "builder": "bespoke",
+          "device": "comment_bubble",
+          "join": "continue"
+        },
+        {
+          "beat": "b10",
+          "line": "Step slot fills; Nina and Theo face each other, Theo nods, an agreed tick lands on the step",
+          "builder": "bespoke",
+          "device": "comment_bubble",
+          "join": "continue"
+        },
+        {
+          "beat": "b11",
+          "line": "Close on the complete comment, three parts lit in turn, the vague bubble a faint ghost behind",
+          "builder": "bespoke",
+          "device": "comment_bubble",
+          "join": "cut"
+        }
+      ]
+    },
+    {
+      "id": "s4_check",
+      "treatment": "a quiz table, three answer cards",
+      "accent_on": "withheld, then card B",
+      "beats": [
+        {
+          "beat": "b12",
+          "line": "A report lands in an inbox Friday night; cards A, B, C slide in as read",
+          "builder": "bespoke",
+          "device": "page_join",
+          "join": "page"
+        },
+        {
+          "beat": "b13",
+          "line": "Card B lifts forward, three coloured ticks",
+          "builder": "bespoke",
+          "device": "three_slots",
+          "join": "continue"
+        },
+        {
+          "beat": "b14",
+          "line": "Card C two ticks and a circled empty third slot; card A a label, no ticks",
+          "builder": "bespoke",
+          "device": "three_slots",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "s5_apply_payoff",
+      "treatment": "the viewer's desk again, then the meeting room again",
+      "accent_on": "the crossed-out note, then the budget slide first",
+      "beats": [
+        {
+          "beat": "b15",
+          "line": "The b03 desk: a sticky note with the vague comment is crossed out; three empty coloured slots appear",
+          "builder": "bespoke",
+          "device": "three_slots",
+          "join": "cut",
+          "intent": "callback"
+        },
+        {
+          "beat": "b16",
+          "line": "Same meeting room: budget slide first, a Decided stamp, clock before the hour; the three-colour comment small in the corner",
+          "builder": "bespoke",
+          "device": "two_shot",
+          "join": "page",
+          "intent": "callback"
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    "No kit has a back view, so b03's figure from behind becomes the empty desk with the comment on its monitor (lnd-character-design s10: a cut to the place without people).",
+    "Peep busts have no defensive face: b06 carries defensiveness with Theo leaning back and the pane, never a facial beat.",
+    "Templates: none. The quiz is bespoke so the answer cards can carry the three slot colours (mix is a ceiling)."
+  ]
+}

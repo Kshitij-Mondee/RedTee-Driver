@@ -1,0 +1,194 @@
+{
+  "concept": "One colleague, one desk, one path of doors: Maya notices a dinner claimed twice, feels the pull to stay quiet, weighs it with three questions, and finds the right door, even when the first door is the wrong one. The facts sit on things in her world (receipts, a notepad, door signs).",
+  "world": "Four stations left to right: desk (Maya's finance office, the story's home, opened in b01 and mirrored in b11), path (the corridor of five channel doors that opens to the right of her desk), review (the off-story template page, reached by a page turn), host (the presenter's close). The story advances to the right and returns to the desk at the payoff.",
+  "devices": [
+    {
+      "id": "desk_set",
+      "what": "Maya's finance desk in her office: the desk edge in front of her, laptop, phone, the two matching dinner receipts with the duplicated amount circled; one set for the whole story, b11 mirrors b01",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b11"
+      ]
+    },
+    {
+      "id": "thought_bubbles",
+      "what": "three paper thought bubbles rising over Maya, each carrying one reason to stay quiet, dimming as she straightens",
+      "kind": "explain",
+      "beats": [
+        "b03"
+      ]
+    },
+    {
+      "id": "question_pad",
+      "what": "a paper notepad on her desk: three questions written one line at a time, then ticked against the receipts",
+      "kind": "list",
+      "beats": [
+        "b05",
+        "b06"
+      ]
+    },
+    {
+      "id": "door_path",
+      "what": "a path leading from her desk past five labelled doors (Manager, Another manager, HR, Compliance, Speak-up line); one set changed by state: doors appear, the manager's greys out, the others light up",
+      "kind": "explain",
+      "beats": [
+        "b07",
+        "b09",
+        "b10"
+      ]
+    },
+    {
+      "id": "page_turn",
+      "what": "the one join material: a paper page turn into and out of the off-story beats",
+      "kind": "join",
+      "beats": [
+        "b08",
+        "b12"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "the open: warm paper, daylight office, one accent on the duplicated amount"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "why": "a slightly richer middle as she weighs it and the channels open"
+    },
+    {
+      "from": "b09",
+      "band": "dark",
+      "why": "the twist: the manager's door greys and the path dims, broken for meaning"
+    },
+    {
+      "from": "b10",
+      "band": "light",
+      "why": "the other doors light up, then the calm desk: the lift at the close"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "story at the desk",
+      "beats": [
+        {
+          "beat": "b01",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "Medium shot: Maya behind her desk, two matching receipts, the duplicated amount circled; she reaches for the phone and pulls back"
+        },
+        {
+          "beat": "b02",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "Close on Maya's uneasy face, receipts at the frame edge; she looks up toward the viewer"
+        }
+      ]
+    },
+    {
+      "id": "s1",
+      "treatment": "story at the desk",
+      "beats": [
+        {
+          "beat": "b03",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "Medium again: three thought bubbles rise over her head one per question, then dim as she straightens"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "treatment": "story at the desk",
+      "beats": [
+        {
+          "beat": "b04",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "She sets a magnifying glass down; a pinned card reads 'Honest belief, not proof', proof struck out"
+        },
+        {
+          "beat": "b05",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "A notepad on the desk: three questions written one line at a time as asked"
+        },
+        {
+          "beat": "b06",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "The pad ticks against the receipts; Maya nods, decided"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "treatment": "the door path",
+      "beats": [
+        {
+          "beat": "b07",
+          "kind": "bespoke",
+          "station": "path",
+          "line": "Camera pans right: a path from her desk, five doors arriving one by one with name signs, the manager's first"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "treatment": "template",
+      "beats": [
+        {
+          "beat": "b08",
+          "kind": "template",
+          "station": "review",
+          "line": "process.flow: Maya's note travels from 'Others review it' to 'Kept confidential'; the rule 'No retaliation for good faith' lands last"
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "treatment": "the door path",
+      "beats": [
+        {
+          "beat": "b09",
+          "kind": "bespoke",
+          "station": "path",
+          "line": "Back on the path, dimmed: the manager's door greys out, Maya at the fork under a hanging sign with the question; 3 s pause"
+        },
+        {
+          "beat": "b10",
+          "kind": "bespoke",
+          "station": "path",
+          "line": "The other doors light up one by one and the path line runs past the grey door to them; Maya turns toward them"
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "story at the desk, then the presenter",
+      "beats": [
+        {
+          "beat": "b11",
+          "kind": "bespoke",
+          "station": "desk",
+          "line": "The opening shot returns: Maya relaxed, sends a short note on the laptop, closes it; a sticky note reads 'Notice. Weigh. Speak up.'"
+        },
+        {
+          "beat": "b12",
+          "kind": "avatar",
+          "station": "host",
+          "line": "The presenter with a card 'Know your channels': three lines to fill in for your own organisation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "topic": "Sharing files safely: who can open your link",
+  "scope_note": "Tool-neutral link-sharing practice for documents in cloud storage. No product names, menu wording, company policy, legal claims or statistics. Behaviour that differs between tools is marked varies by tool.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Cloud storage tools let you share a document by a link, and the link has a general access setting that decides who the link works for.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Common to the help pages of major cloud storage vendors"
+    },
+    {
+      "id": "F2",
+      "statement": "With the broadest setting, anyone with the link can open the document, and in many tools they do not need to sign in.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Names and sign-in rules vary by tool, and some organisations switch this setting off. Say: in many tools, and check your own.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on public or anyone links"
+    },
+    {
+      "id": "F3",
+      "statement": "With the company-wide setting, the link works for people who are signed in to your organisation's accounts, and not for people outside it.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Exact wording and whether guest accounts count vary by tool and by company configuration.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on organisation-only links"
+    },
+    {
+      "id": "F4",
+      "statement": "With the named-people setting, the document opens only for the specific accounts you added, and each person has to sign in as that account.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Some tools also allow a one-time code for people without accounts; this varies by tool.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on sharing with specific people"
+    },
+    {
+      "id": "F5",
+      "statement": "The three settings run from widest to narrowest: anyone with the link, then people in the company, then named people.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Follows from F2 to F4"
+    },
+    {
+      "id": "F6",
+      "statement": "With view access, a holder can read the document but cannot change the original.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Vendor help pages on viewer permission"
+    },
+    {
+      "id": "F7",
+      "statement": "With edit access, a holder can change the original document, and the changes are seen by everyone who uses it.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Vendor help pages on editor permission"
+    },
+    {
+      "id": "F8",
+      "statement": "Many tools also offer a comment permission, which lets a holder add comments without changing the text itself.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "caveat": "Not every tool offers comment access, and what it allows varies by tool.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on commenter permission"
+    },
+    {
+      "id": "F9",
+      "statement": "With view access, a person who can read the file may still be able to copy its content or download it, depending on the tool and its settings.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "Whether viewers can download, copy or print is a tool setting and varies; view protects the original, not the content from being copied.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on download and copy options"
+    },
+    {
+      "id": "F10",
+      "statement": "On the anyone-with-the-link and company-wide settings, the link itself is what grants access, so whoever holds it and meets the setting can open the document, however they got it.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Vendor help pages and general guidance on link-based sharing"
+    },
+    {
+      "id": "F11",
+      "statement": "If a link on a broad setting is forwarded once, the new holder can open it without the sender being asked, and can forward it again.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Follows from F10; company-wide forwarding still stays limited to signed-in company accounts"
+    },
+    {
+      "id": "F12",
+      "statement": "With named-people access, a forwarded link does not open the document for someone who is not on the list, because the tool checks the signed-in account.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "Applies where the tool enforces the list; behaviour varies by tool, and a listed person can still show or copy the content to others.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on restricted links"
+    },
+    {
+      "id": "F13",
+      "statement": "Before sharing, check you have the right file, choose the narrowest setting that works, and give view access unless the person needs to edit.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Least-privilege principle in general security guidance, such as national cyber security agencies and vendor help pages"
+    },
+    {
+      "id": "F14",
+      "statement": "Before sharing, check who is on the access list, and check the file, including any other pages, comments and version history, for content that should not travel.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Whether comments and version history are visible to viewers varies by tool; say check, not assume.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on sharing and on removing hidden data"
+    },
+    {
+      "id": "F15",
+      "statement": "Sharing a folder usually shares what is inside it, including files added later, so check the folder contents too.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Inheritance rules vary by tool.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on folder permissions"
+    },
+    {
+      "id": "F16",
+      "statement": "When access is no longer needed, switch the link off or change it to a narrower setting, and remove named people who no longer need the file.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": false,
+      "reference_hint": "Vendor help pages on stopping sharing; least-privilege guidance"
+    },
+    {
+      "id": "F17",
+      "statement": "Reviewing your shared items from time to time helps you find old links still switched on, and many tools list what you have shared.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "How the list is found varies by tool.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on reviewing shared files; periodic access review in security guidance"
+    },
+    {
+      "id": "F18",
+      "statement": "Some tools let you set an expiry date on a link or on a person's access, so it ends by itself.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "caveat": "Not every tool or plan offers expiry; varies by tool.",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Vendor help pages on link expiration"
+    },
+    {
+      "id": "F19",
+      "statement": "Your organisation may set its own rules or defaults for link sharing, so follow them where they differ from general practice.",
+      "kind": "caution",
+      "confidence": "established",
+      "numbers": [],
+      "varies_by_tool": true,
+      "reference_hint": "Organisations configure sharing policy in their admin settings"
+    }
+  ],
+  "terms": [
+    {
+      "term": "link setting",
+      "definition": "The general access choice that decides who a link works for."
+    },
+    {
+      "term": "holder",
+      "definition": "Anyone who has the link in hand."
+    },
+    {
+      "term": "view / edit",
+      "definition": "The permission a link or person gets: read only, or able to change the original."
+    },
+    {
+      "term": "named people",
+      "definition": "Access limited to specific accounts you add."
+    }
+  ],
+  "not_claimed": [
+    "Any statistic about how often shared links leak or cause breaches",
+    "Any breach story or named incident",
+    "That a link setting is technically unbreakable or that forwarding is hacking",
+    "That the company-wide setting is safe for anything sensitive without checking who is in the company",
+    "That view access stops people copying or downloading content",
+    "That a link with a long random address is a substitute for choosing the right setting",
+    "Any real product name, menu wording or default setting as universal",
+    "Any legal, compliance or company-policy requirement"
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (layout guard trial, D-169)",
+    "note": ""
+  }
+}

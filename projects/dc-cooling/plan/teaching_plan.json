@@ -1,0 +1,127 @@
+{
+  "title": "Where the heat goes: cooling an AI data centre",
+  "performance": "the viewer can trace the heat from a chip to the outside of the building, spot an airflow leak such as an open rack slot or a row facing the wrong way, say why AI racks move to liquid cooling, and read a PUE figure as total energy over IT energy and nothing more",
+  "audience": {
+    "level": "beginner",
+    "assumed_prior": "knows servers sit in racks and get hot, has felt warm air behind a computer or a fridge, has heard GPU and maybe PUE in meetings; no cooling vocabulary",
+    "why": "the brief's audience is corporate staff and new IT, facilities and AI team members who are explicitly not cooling engineers; the knowledge sheet defines every term from scratch",
+    "motivation": "wants to follow capacity and cooling conversations without nodding along, and not be the person who undoes the cooling on the floor; partly required onboarding, partly curiosity about AI",
+    "context": "desk or laptop in an onboarding course or intranet, with sound, captions on; some viewers will be non-native English speakers"
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "question_led",
+    "rationale": "the material is one physical path (chip, air or liquid, cooling unit, outside) and every fact on the sheet answers the same question, where does the heat go next and what stops it leaking back, so the lesson can ask that question at each step and let the picture answer it",
+    "signature_move": "ask where the heat goes next, follow it on screen one step, THEN name the part that carried it and the leak it prevents"
+  },
+  "misconceptions": [
+    {"belief": "cooling a data centre means keeping the whole room freezing cold",
+     "why_tempting": "server rooms feel cold at the front and people picture a giant air conditioner",
+     "refuted_in": "sec1",
+     "source_anchor": "brief through_line and must_avoid; knowledge F1, F4, not_claimed 'kept freezing cold'"},
+    {"belief": "an empty slot in a rack is just unused space and does no harm",
+     "why_tempting": "nothing is plugged in there, so it looks neutral",
+     "refuted_in": "sec2",
+     "source_anchor": "knowledge F6, F8"},
+    {"belief": "liquid-cooled AI servers need no air at all",
+     "why_tempting": "the phrase liquid cooling sounds total",
+     "refuted_in": "sec3",
+     "source_anchor": "knowledge F14, not_claimed"},
+    {"belief": "PUE is a green score that says how efficient the computing is",
+     "why_tempting": "it is quoted as the efficiency number in headlines and reports",
+     "refuted_in": "sec4",
+     "source_anchor": "knowledge F20, brief must_avoid"}
+  ],
+  "arc": {
+    "hook": {"kind": "question", "sketch": "Almost every watt a server draws turns into heat. In a room full of AI servers, where does all that heat actually go, and what stops it coming straight back?"},
+    "promise": "by the end you can follow the heat from one chip all the way outside, and spot the places it leaks back",
+    "bridge_from_prior": "sec1 opens from the warm air everyone has felt behind a computer or a fridge: the server does the same thing, front in, back out",
+    "sections": [
+      {"id": "sec1", "goal": "the viewer can explain how cool air enters a server at the front, leaves warm at the back, and is carried to a cooling unit and finally outside", "bloom": "understand",
+       "concepts": ["heat load", "front-to-back airflow", "cooling unit", "heat released outside"], "energy": "build",
+       "carrier": "process: one rack in side view, a cool stream entering the front and a warm stream leaving the back, then the warm stream travelling to a cooling unit and out of the building",
+       "recap_after": false},
+      {"id": "sec2", "goal": "the viewer can use the front-in, back-out rule to spot where warm exhaust leaks back into the cold aisle and name the fix", "bloom": "apply",
+       "concepts": ["hot aisle", "cold aisle", "recirculation", "blanking panel", "containment"], "energy": "peak",
+       "carrier": "diagram: one floor plan seen from above, re-run with one change at a time (rows all facing one way, then alternating aisles, then an open rack slot leaking, then a panel and containment closing it), warm and cool streams visibly mixing or staying apart",
+       "recap_after": true},
+      {"id": "sec3", "goal": "the viewer can explain why AI racks move heat with liquid and trace it from the chip through the cold plate and the CDU into the facility water", "bloom": "understand",
+       "concepts": ["rack density", "direct-to-chip", "cold plate", "coolant distribution unit", "two separate loops"], "energy": "steady",
+       "carrier": "zoom journey: the same rack fills with AI servers and its warm stream swells, then zoom into one server, one chip, the cold plate on it, and follow the coolant out to a unit where two loops sit side by side and pass heat across a heat exchanger",
+       "recap_after": true},
+      {"id": "sec4", "goal": "the viewer can explain what a PUE figure says, total facility energy over IT energy, and what it does not say", "bloom": "understand",
+       "concepts": ["PUE", "IT equipment energy", "overhead"], "energy": "rest",
+       "carrier": "chart: energy blocks stacked into a fraction, IT blocks below and IT plus cooling and other overhead above; the overhead blocks shrink toward the floor of 1.0 without ever reaching it",
+       "recap_after": false}
+    ],
+    "payoff": "Return to the opening server, now with the whole path lit from chip to outside; the viewer names each hand-off and each leak before the narrator does."
+  },
+  "practice_ladder": [
+    {"stage": "worked", "where": "sec1", "what": "one rack's heat path traced step by step, every hand-off named after it is seen"},
+    {"stage": "faded", "where": "sec2", "what": "pause and predict: with every row facing the same way, which row breathes the hottest air; then the viewer spots the open slot before it is named"},
+    {"stage": "faded", "where": "sec3", "what": "at the chip the narrator asks where the heat goes next and lets a beat pass before the cold plate and the CDU answer"},
+    {"stage": "independent", "where": "payoff", "what": "the viewer traces the full path from chip to outside, and names the two leaks, before the narrator does"}
+  ],
+  "pacing": {
+    "target_duration_s": 240,
+    "requested_s": 240,
+    "words_per_minute": 145,
+    "slowdown_at": ["recirculation through an open rack slot", "the CDU keeping two loops separate"],
+    "recall_moments": [
+      {"after_section": "sec1", "kind": "recall_prompt",
+       "prompt_sketch": "Hold on to the rule: cool in the front, warm out the back. Everything next depends on it."},
+      {"after_section": "sec2", "kind": "pause_predict",
+       "prompt_sketch": "Every row faces the same way. Which row ends up breathing the warmest air? Decide before I run it."},
+      {"after_section": "sec3", "kind": "recall_prompt",
+       "prompt_sketch": "Same idea as the blanking panel: keep the warm side and the cool side from touching. The CDU does it with liquid."},
+      {"after_section": "sec4", "kind": "recall_prompt",
+       "prompt_sketch": "Every leak we saw earlier is overhead in that top number."}
+    ]
+  },
+  "transfer_tasks": [
+    "the next time you are on a data centre floor and see an open slot in a rack or a row facing the wrong way, tell the facilities or operations team rather than leaving it or fixing it yourself",
+    "the next time someone quotes a PUE, read it as total over IT energy and ask how much of the gap is cooling and what it does not tell you about the computing",
+    "the next time an AI capacity plan mentions liquid cooling, trace it in your head: chip, cold plate, rack loop, CDU, facility water, outside"
+  ],
+  "persona": {
+    "voice": "the analyst as a peer explaining to colleagues: calm, exact, a little dry, the picture first and the name after",
+    "delivery_notes": "plain and level on the hook question; slow down and leave a beat on the open-slot leak and on the two loops; quick and light on the recap lines; warm, unhurried close"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: where does all that heat go, and what stops it coming back",
+      "objective": "promise: follow the heat from one chip all the way outside",
+      "recall_prior": "sec1 opens from the warm air behind a computer or a fridge",
+      "present": "sections in dependency order: path, aisles and leaks, liquid, measure",
+      "guidance": "signature move: ask where the heat goes next, follow it, then name the part",
+      "practice": "pause_predict after sec2; faded beats in sec2 and sec3; payoff trace",
+      "feedback": "the floor plan runs the predicted case and shows the back row breathing the front row's exhaust",
+      "assess": "payoff: the viewer names each hand-off and leak before the narrator",
+      "transfer": "transfer tasks: report an open slot, read a PUE, trace a liquid-cooling plan"
+    },
+    "merrill": {
+      "problem_centered": "the opening question, where does the heat go, runs through every section",
+      "activation": "sec1 bridges from warm air behind everyday machines",
+      "demonstration": "every hand-off is shown moving on screen before it is named",
+      "application": "the viewer predicts the hottest row and spots the open slot",
+      "integration": "transfer tasks put the path into the viewer's own floor walks and meetings"
+    },
+    "mayer": {
+      "coherence": "no vendor stories, no temperatures, no immersion detour; one rack, one floor plan, one chip",
+      "signalling": "two slowdowns only, on the open-slot leak and the two loops",
+      "redundancy": "screen shows the streams, parts and short labels; narration explains",
+      "contiguity": "each part label appears on the part as it is named",
+      "segmenting": "four sections, one hand-off idea each",
+      "pre_training": "sec1 names intake, exhaust and cooling unit before the floor plan runs"
+    },
+    "arcs": {
+      "attention": "the heat question and visible warm and cool streams",
+      "relevance": "AI capacity is the reason this room is changing; staff walk these floors and hear these numbers",
+      "confidence": "one rack before a whole room, one chip before the whole loop",
+      "satisfaction": "the viewer traces the full path unaided at the close"
+    },
+    "bloom_path": "understand -> apply -> understand -> understand"
+  },
+  "series": null,
+  "flags": []
+}

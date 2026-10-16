@@ -1,0 +1,37 @@
+{
+ "id": "mfa-story",
+ "created": "2026-10-06T12:59:26",
+ "engine": "loom",
+ "mode": "topic",
+ "topic": "How multi-factor authentication stops most account takeovers, and why phishing-resistant passkeys go further",
+ "sources": [],
+ "request": {
+  "audience": "all employees, non-technical, in a corporate security awareness programme",
+  "genre": "explainer",
+  "length_min": 2.5,
+  "style": "corporate-clean",
+  "persona": "analyst",
+  "voice": {
+   "provider": "kokoro",
+   "voice": "af_heart",
+   "speed": 0.7
+  },
+  "captions": true,
+  "avatar": {
+   "provider": "none",
+   "member": "woman"
+  },
+  "mix": {
+   "avatar": 0.0,
+   "template": 0.05,
+   "motion": 0.95,
+   "min_score": 0.0
+  },
+  "notes": "Rebuild of mfa-explained after the requester's review (projects/mfa-explained/REVIEW_2026-10-06.md). One story, two people: an employee and an invented thief at another desk. Real-looking login screens and a phone, large in frame. The four ideas as four turns of the same story. At most four templates. Light, warm, readable; type large."
+ },
+ "models": {
+  "plan": "claude-opus-5-5",
+  "build": "claude-sonnet-5-5",
+  "tweak": "claude-haiku-4-5-20251001"
+ }
+}

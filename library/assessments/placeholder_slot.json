@@ -1,0 +1,52 @@
+{
+ "form": "placeholder_slot",
+ "decision": "reject",
+ "confidence": "high",
+ "topic_independent": true,
+ "idea": "an empty reserved region that shows the viewer something is missing and will be supplied later",
+ "outline": [
+  "no fixed parts are shared by all three uses: the only common trait is that the element is visibly empty and a later beat fills or replaces it"
+ ],
+ "variation_seen": [
+  "shape: a wobbled dashed rounded rectangle (b11), a dashed circle ring (b19), a solid filled rounded bar with no outline (spacing-sticks b10)",
+  "empty signal: dashed muted stroke (b11, b19) versus a flat surface2 fill with no dash at all (b10)",
+  "glyph: none (b11), a '?' drawn inside the same group (b19), a '?' created later as a SEPARATE element on a different cue (b10)",
+  "furniture: b11 adds an eye badge on the corner and a dashed leader down to a timeline marker; b19 and b10 have none",
+  "entrance: per-frame top-down clip unmask (b11), peer pop (b19), rise-in reveal (b10)",
+  "hand-off contract: b12 lays screens inside b11's frames by geometry; b20 walks probes.inner.children and requires exactly three child marks to shrink; b10 is consumed within its own beat",
+  "these are three different ideas: a container frame awaiting content, an unknown-cause marker, and a blank recall line"
+ ],
+ "future_uses": [
+  {
+   "topic": "fill-in-the-blank vocabulary drill",
+   "shows": "a blank line in a sentence where the missing word will appear (but this is one text underline, cheaper inline)"
+  },
+  {
+   "topic": "root cause analysis in manufacturing",
+   "shows": "dashed '?' rings where the unknown causes will be revealed (the b19 idea alone)"
+  },
+  {
+   "topic": "org chart for a new team",
+   "shows": "an empty dashed card for a role not yet hired (closer to ghost_card than to these uses)"
+  }
+ ],
+ "params_sketch": {
+  "content": [],
+  "adjustable": [
+   "shape (rect | circle | bar)",
+   "dashed",
+   "glyph",
+   "badge icon",
+   "leader"
+  ]
+ },
+ "slots_sketch": [
+  "the interior, which a later beat fills"
+ ],
+ "reason": "The id merges three different ideas (an empty container frame awaiting screens, a dashed '?' ring marking an unknown cause, and a blank filled recall row) that share no fixed parts, so one param set would be a shape switch over two-to-four kit calls each and would save no real work over writing them inline. Worse, each successor scene depends on the exact child structure the scene built (b20 counts exactly three children of probes, b12 lays screens into b11's geometry), so a component wrapping that structure risks breaking the held-element hand-offs it would be used for.",
+ "merge_into": null,
+ "revisit_when": {
+  "uses": 6,
+  "lessons": 4
+ }
+}

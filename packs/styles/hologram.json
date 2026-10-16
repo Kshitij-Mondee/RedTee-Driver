@@ -1,0 +1,249 @@
+{
+  "id": "hologram",
+  "name": "Hologram",
+  "reads_as": "A calm operations HUD projected in light on a deep blue-teal field: hairline cyan frames with corner brackets, dark plates under every word, panels that assemble rule by rule, and depth in three layers (near panels lighter and brighter, far ones dimmer). Two registers: a briefing register of a few readable data cards and one diagram for explaining, and an analysis register for the moments that need the dense HUD (a scan across a system, a target lock on one element, live readouts, a wireframe globe or a network mesh with traffic, panels layered in depth). Cyan is the HUD's own ink; amber means a measure or a warning, red an alert, green healthy, each always with its word. Nothing moves unless the narration names it. For corporate adults: security operations, AI systems, data and analytics, digital twins and monitoring, network and cloud operations, future-of-work briefings.",
+  "look_family": "technical",
+  "guide": "docs/styles/guides/hologram.md",
+  "fits": [
+    "security operations",
+    "cybersecurity incidents",
+    "AI systems and model monitoring",
+    "data pipelines and analytics",
+    "digital twins and monitoring",
+    "network and cloud operations",
+    "observability and SRE",
+    "future-of-work briefings"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "people stories",
+    "wellbeing",
+    "children",
+    "warm consumer onboarding",
+    "history and humanities"
+  ],
+  "palette": {
+    "field": "#06131C",
+    "field2": "#0A1C28",
+    "surface": "#0D2433",
+    "surface2": "#0A1A26",
+    "ink": "#E3F6FC",
+    "muted": "#8DB4C4",
+    "line": "#4FA7BF",
+    "accent": "#3EE3F2",
+    "accent2": "#FFB547",
+    "accent3": "#FF5D6C",
+    "accent4": "#4FE3A0",
+    "pos": "#4FE3A0",
+    "neg": "#FF5D6C",
+    "shadow": "#020A10",
+    "onAccent": "#04141C",
+    "caption_active": "#3EE3F2"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "roles": {
+      "label": "mono",
+      "caption": "mono"
+    },
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 500,
+        "file": "space-grotesk-latin-500-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 400,
+        "file": "inter-latin-400-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "file": "inter-latin-600-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      96,
+      136
+    ],
+    "hero": [
+      84,
+      120
+    ],
+    "title": [
+      52,
+      72
+    ],
+    "lead": [
+      32,
+      40
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      30
+    ],
+    "caption": [
+      22,
+      26
+    ]
+  },
+  "shape": {
+    "radius": 0,
+    "stroke": 2,
+    "shading": "line",
+    "shadow": "none"
+  },
+  "motion": {
+    "personality": "calm",
+    "enter": 0.45,
+    "move": 0.5,
+    "exit": 0.3,
+    "stagger": 0.07,
+    "draw": 0.7,
+    "count": 1.0,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "dots",
+    "density": 1,
+    "wash": "radial-gradient(ellipse at 50% 42%, rgba(62,227,242,0.07), rgba(6,19,28,0) 68%)",
+    "_note": "still dots as ONE tiled pattern (world.js ambient 'dots'), not one node per dot; nothing in the field moves (no fuigetry: docs/research/2026-10-16-style-hologram.md S4). The engine draws its own hex or dot grid inside a panel when a beat needs one (H.grid)."
+  },
+  "captions": {
+    "bg": "rgba(2,10,16,0.88)",
+    "fg": "ink",
+    "active": "caption_active",
+    "radius": 2,
+    "font": "body",
+    "size": 34,
+    "weight": 600,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 1.75
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2B2420",
+      "#4A3426",
+      "#6B4A2E",
+      "#1E1E24"
+    ],
+    "cloth": "surface",
+    "hair": "shadow",
+    "ink": "line",
+    "paper": "ink",
+    "mouth": "accent3",
+    "extras": "silhouette",
+    "_extras_note": "what a background person is (D-100): a HUD is about the system; people are rare, small, and come from a designed kit (CLAUDE.md rule 11), shown as a role marker on a panel (an analyst, an on-call engineer), never drawn in scene code."
+  },
+  "roles": {
+    "kicker": "accent",
+    "chapter_kicker": "accent",
+    "term": "accent",
+    "stat_value": "accent2",
+    "date": "muted",
+    "quiz_letter": "onAccent",
+    "ui_mark": "accent",
+    "link": "accent",
+    "button": "accent",
+    "me_bubble": "surface",
+    "person_cloth": "surface",
+    "turn_card": "shadow",
+    "section_label": "muted",
+    "avatar": [
+      "accent",
+      "accent4"
+    ]
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "One HUD, one camera: push through its layers and pan across it inside a topic (continue or camera); a cut between topics; a panel powering down and the next booting up at a section change.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 45
+  },
+  "fx": {
+    "vignette": 0.3,
+    "grain": 0,
+    "intensity": 1.0,
+    "colors": [
+      "accent",
+      "accent4",
+      "accent2"
+    ],
+    "_background_note": "no shader background by default: the still dot field (ambient) and the engine's own grid layers carry it. A still 'holo' shader (dot grid + soft lift, following the camera) is requested from the lead (see docs/styles/guides/hologram.md s15); the moving mesh and nebula shaders are fuigetry here.",
+    "_grain_note": "D-100: grain off; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173)."
+  },
+  "hologram": {
+    "glow": true,
+    "halo": 0.22,
+    "halo_width": 3.2,
+    "blur": 2.4,
+    "depth": {
+      "far": { "z": 0.35, "line": 0.5, "plate": 0.55, "stroke": 0.8 },
+      "mid": { "z": 0.7, "line": 0.8, "plate": 0.8, "stroke": 1.0 },
+      "near": { "z": 1.15, "line": 1.0, "plate": 0.92, "stroke": 1.2 }
+    },
+    "flash_per_second": 3,
+    "_note": "read only by runtime/engines/hologram.js: glow is an enhancement (a halo stroke under key lines, blurred only where filters render); depth sets line brightness, plate opacity and stroke width per layer (Material elevation: near is lighter and brighter); the flash ledger keeps every flash within WCAG 2.3.1."
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: hairlines on a deep field measure low edge density by design, as dark-technical and blueprint (D-112)"
+  }
+}

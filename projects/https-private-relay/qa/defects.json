@@ -1,0 +1,30 @@
+{
+  "source": "picture critic",
+  "routed": {
+    "script": {},
+    "storyboard": {
+      "b09": [
+        {
+          "beat": "b09",
+          "code": "reported",
+          "detail": "b09 shot.focus [80,100,800,450] puts the key_slots group box (x600-1320) mostly outside the frame. The browser key is fully visible in the frames, but the check measures the whole group. Widen the focus to about x100 y140 w800 h600, or the check will keep warning. (reported by scene)",
+          "source": "agent",
+          "count": 1
+        }
+      ]
+    },
+    "kit": {},
+    "scene": {
+      "b11": [
+        {
+          "beat": "b11",
+          "code": "critic",
+          "detail": "[major] In b11 join (73.55s) and arrive (74.25s), scrambled packet blocks are rendered directly over the router box and eye graphic before the move begins, creating double-exposure residue across the central watcher device. (suggested fix: In scenes/b11.js, exit the held packet at ctx.start and create a fresh packet element at the b10 settled position (x=720, y=420) to travel past the watcher, preventing the engine's second m.travel drive from rendering premature residue at load over the router box and eye.)",
+          "source": "critic",
+          "count": 1
+        }
+      ]
+    },
+    "engine": {}
+  }
+}

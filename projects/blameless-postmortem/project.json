@@ -1,0 +1,36 @@
+{
+  "id": "blameless-postmortem",
+  "created": "2026-09-29T23:06:11",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How to run a blameless post-mortem after an incident, so the team learns and fixes the system instead of blaming a person",
+  "sources": [],
+  "request": {
+    "audience": "engineers, team leads and managers in product and operations teams who handle incidents",
+    "genre": "teaching",
+    "length_min": 4.0,
+    "style": "whiteboard",
+    "persona": null,
+    "voice": {
+      "provider": "kokoro",
+      "voice": "am_michael",
+      "speed": 0.759
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "presenter",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "Hand-drawn whiteboard look. Practical: viewers should be able to run their next post-mortem using a simple structure. Use a realistic but clearly invented incident as the running example. Avoid naming real companies or real outages. Evidence-based, no invented statistics."
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  }
+}

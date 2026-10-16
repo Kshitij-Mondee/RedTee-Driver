@@ -1,0 +1,311 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "runtime part_drawn_again: b02: draws kit part \"packet\" again as \"copy\" while it holds \"packet\" (the packet b01 drew, still on screen), elsewhere on screen: a second packet is fine only when the film shows two; to change the held one use ctx.held(\"packet\").handle",
+    "runtime outer_tweened: b01: a tween on \"packet\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b02: a tween on \"copy\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b03: a tween on \"padlock\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b03: a tween on \"label_padlock\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime part_drawn_again: b12: draws kit part \"packet\" again as \"reply\" while it holds \"packet\" (the packet b11 drew, still on screen), elsewhere on screen: a second packet is fine only when the film shows two; to change the held one use ctx.held(\"packet\").handle",
+    "runtime outer_tweened: b13: a tween on \"kicker\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b13: a tween on \"question\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b13: a tween on \"pause_ring\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b14: a tween on \"board\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b14: a tween on \"flag_warn\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b14: a tween on \"cert\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b14: a tween on \"warn_ring\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "runtime outer_tweened: b14: a tween on \"label_identity\".outer was moved to its .inner: the outer group is the engine's (place and life); animate E.inner, or use ctx.m.reveal / ctx.m.exit",
+    "b14: 5.9s static hold from 100.6s",
+    "b18: 9 chunks on screen (board_browser, board_router, board_server, board_tray, key_browser, key_server, label_scrambled, packet, padlock); the budget is ~5-6",
+    "variety: one_radius_share = 0.503 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: labels_over_objects_share = 1.0 is worse than the worst baseline lesson (0.5): it grew (beats: _kit, b01, b02, b03, b04, b05, b06, b07)",
+    "lc layout content_overlap @ 39.5: b01 \"accounts.example\" and b04 \"Site name\" overlap at [296, 293, 367, 302] from 39.5 to 39.5 s (a passing crossing (under 500 ms)) [pb_browser / cert]",
+    "lc layout content_overlap @ 55.5: b01 \"Value\" and b01 \"Value\" overlap at [865, 644, 933, 674] from 55.5 to 55.5 s (a passing crossing (under 500 ms)) [pb_tray / pb_tray]",
+    "lc layout content_overlap @ 55.5: b01 \"Value\" and b01 \"Value\" overlap at [987, 644, 1055, 674] from 55.5 to 55.5 s (a passing crossing (under 500 ms)) [pb_tray / pb_tray]",
+    "lc layout text_off_card @ 97: b13 \"Pause and decide\" runs onto another fill of its card (a band or strip) (43 % of it) from 97 to 97 s: give it room or shorten it [pause_ring]",
+    "b01: small text on screen at 7.8s: \"accounts.example\" 21.3px, \"User\" 23.8px, \"Password\" 23.8px (< 26 px)",
+    "b03: small text on screen at 19.0s: \"User\" 18px, \"Password\" 18px, \"accounts.example\" 20.7px (< 26 px)",
+    "b04: small text on screen at 30.1s: \"Site name\" 21.3px, \"Valid until\" 21.3px, \"Issued by\" 21.3px (< 26 px)",
+    "b06: small text on screen at 44.4s: \"accounts.example\" 20.8px, \"User\" 24.6px, \"Password\" 24.6px (< 26 px)",
+    "b07: small text on screen at 51.5s: \"accounts.example\" 21.5px, \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b08: small text on screen at 56.6s: \"accounts.example\" 20.3px, \"User\" 24.6px, \"Password\" 24.6px (< 26 px)",
+    "b10: a held element is off frame at 72.8s: slot 'key_slots' 39% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b10: a held element is off frame at 72.8s: slot 'key_slots' 39% outside (it was placed by an earlier beat; move it there or stop holding it)",
+    "b12: small text on screen at 86.9s: \"accounts.example\" 21.8px, \"User\" 23.8px, \"Password\" 23.8px (< 26 px)",
+    "b13: small text on screen at 94.8s: \"YOUR TURN\" 25.4px (< 26 px)",
+    "b14: small text on screen at 107.8s: \"accounts.example\" 21.3px, \"Site name\" 21.3px, \"Valid until\" 21.3px (< 26 px)",
+    "b18: small text on screen at 140.5s: \"accounts.example\" 21.3px, \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b14: no_entrance_words: element 'board_browser' (card) shows \"accounts.example\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b14: no_entrance_words: element 'board_server' (card) shows \"accounts.example\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b14: no_entrance_words: element 'flag_warn' (card) shows \"Warn you\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b14: no_entrance_words: element 'label_identity' (card) shows \"Identity check\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b18: no_entrance_words: element 'board_browser' (card) shows \"accounts.example\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b18: no_entrance_words: element 'board_server' (card) shows \"accounts.example\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b04: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.85 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'dark' but the frames measure brightness 0.89 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b08: value script says 'dark' but the frames measure brightness 0.89 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.88 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.87 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.89 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 2.15
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.27
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.65
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.41
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.33
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.04
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 1.36
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.95
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.3
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.99
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.71
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 1.43
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 2.91
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 5.92
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 1.48
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 2.88
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 1.37
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 0.84
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.276,
+      "motion": 0.724,
+      "hybrid": 0.0,
+      "motion_effective": 0.724
+    },
+    "elements": {
+      "b01": 8,
+      "b02": 3,
+      "b03": 2,
+      "b04": 4,
+      "b05": 3,
+      "b06": 4,
+      "b07": 4,
+      "b08": 1,
+      "b09": 1,
+      "b10": 3,
+      "b11": 4,
+      "b12": 4,
+      "b13": 7,
+      "b14": 10,
+      "b15": 5,
+      "b16": 4,
+      "b17": 6,
+      "b18": 11
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.245,
+      "wallpaper_share": 0.0,
+      "template_share": 0.056,
+      "classic_share": 1.0,
+      "one_radius_share": 0.503,
+      "still_share": 0.444,
+      "labels_over_objects_share": 1.0,
+      "one_world_share": 0.278,
+      "lines_per_s": 7.61
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 38531,
+      "layout_samples": 286,
+      "texts": 407,
+      "contrast_checked": 576,
+      "errors": 0,
+      "warnings": 4
+    },
+    "nodes": 2959,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 21.3,
+        "b02": 35.2,
+        "b03": 18,
+        "b04": 21.3,
+        "b05": 56.8,
+        "b06": 20.8,
+        "b07": 21.5,
+        "b08": 20.3,
+        "b09": 32.3,
+        "b10": 43.7,
+        "b11": 44.3,
+        "b12": 21.8,
+        "b13": 25.4,
+        "b14": 21.3,
+        "b15": 37.7,
+        "b16": 27.9,
+        "b17": 27.9,
+        "b18": 21.3
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 18,
+      "lines_seen": 142,
+      "blank_beats": [],
+      "blank_measured": 17
+    },
+    "foreign": {
+      "measured_beats": 18,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 84,
+      "without_life": 0,
+      "no_entrance_words": 6
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.051,
+        "b02": 0.0614,
+        "b03": 0.0527,
+        "b04": 0.0605,
+        "b05": 0.0911,
+        "b06": 0.0511,
+        "b07": 0.0524,
+        "b08": 0.0527,
+        "b09": 0.0549,
+        "b10": 0.0587,
+        "b11": 0.0522,
+        "b12": 0.0633,
+        "b13": 0.0655,
+        "b14": 0.0762,
+        "b15": 0.0432,
+        "b16": 0.0641,
+        "b17": 0.0547,
+        "b18": 0.0546
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 18,
+      "sharpness": {
+        "b01": 1.17,
+        "b02": 1.019,
+        "b03": 1.232,
+        "b04": 1.174,
+        "b05": 1.024,
+        "b06": 1.273,
+        "b07": 1.232,
+        "b08": 1.265,
+        "b09": 1.126,
+        "b10": 1.007,
+        "b11": 1.04,
+        "b12": 1.252,
+        "b13": 1.044,
+        "b14": 1.157,
+        "b15": 1.139,
+        "b16": 0.974,
+        "b17": 1.24,
+        "b18": 1.2
+      },
+      "blurred_beats": [],
+      "blur_measured": 18
+    },
+    "tone": {
+      "value_script_beats": 18
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private-relay\\qa\\sheets\\b18.jpg"
+  ],
+  "build_hash": "03245c0a58b96ce0"
+}

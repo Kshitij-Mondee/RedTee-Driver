@@ -1,0 +1,200 @@
+{
+  "id": "editorial-paper",
+  "name": "Editorial Paper",
+  "reads_as": "Vox-like editorial explainer: warm paper field, near-black ink, one red accent plus a muted blue and ochre, a serif display face over a clean sans, paper-cut shapes with soft offset shadows, faint paper grain.",
+  "look_family": "editorial",
+  "fits": [
+    "explainer",
+    "policy",
+    "compliance",
+    "journalistic",
+    "history",
+    "leadership"
+  ],
+  "avoid_for": [
+    "kids",
+    "playful consumer"
+  ],
+  "palette": {
+    "field": "#F3EBDD",
+    "field2": "#EDE3D1",
+    "surface": "#FFFBF3",
+    "surface2": "#E7DCC8",
+    "ink": "#1D1B18",
+    "muted": "#5E574D",
+    "line": "#3A352E",
+    "accent": "#C2361F",
+    "accent2": "#96620A",
+    "accent3": "#2F5D8A",
+    "accent4": "#3C7A5A",
+    "pos": "#2F7A4F",
+    "neg": "#C23A26",
+    "shadow": "#1D1B18",
+    "onAccent": "#FFFBF3",
+    "caption_active": "#C0A16C"
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "weights": [
+        700,
+        800
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "faces": [
+      {
+        "family": "Fraunces",
+        "weight": 700,
+        "file": "fraunces-latin-700-normal.woff2",
+        "pkg": "@fontsource/fraunces"
+      },
+      {
+        "family": "Fraunces",
+        "weight": 800,
+        "file": "fraunces-latin-800-normal.woff2",
+        "pkg": "@fontsource/fraunces"
+      },
+      {
+        "family": "Inter",
+        "weight": 500,
+        "file": "inter-latin-500-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      110,
+      160
+    ],
+    "hero": [
+      96,
+      140
+    ],
+    "title": [
+      60,
+      88
+    ],
+    "lead": [
+      34,
+      42
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      30
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 10,
+    "stroke": 3,
+    "shading": "paper",
+    "shadow": "offset",
+    "shadow_dx": 8,
+    "shadow_dy": 8,
+    "shadow_opacity": 0.12
+  },
+  "motion": {
+    "personality": "calm",
+    "enter": 0.6,
+    "move": 0.4,
+    "exit": 0.34,
+    "stagger": 0.1,
+    "draw": 0.9,
+    "count": 1.3,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "paper",
+    "density": 1,
+    "wash": "radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0.35), rgba(0,0,0,0.06) 90%)"
+  },
+  "captions": {
+    "bg": "rgba(29,27,24,0.88)",
+    "fg": "surface",
+    "active": "caption_active",
+    "radius": 8,
+    "font": "body",
+    "size": 36,
+    "weight": 700,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 2.0
+  },
+  "characters": {
+    "skin": [
+      "#EBC6A3",
+      "#C9956B",
+      "#9A6A48",
+      "#6B4430"
+    ],
+    "cloth": "accent3",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "accent",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "Plain and quick: a cut between topics is right; continue inside a topic; covers (dip, fade, wipe, iris) only at a section change, if at all.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 48
+  },
+  "fx": {
+    "background": "paper",
+    "intensity": 1.0,
+    "grain": 0.012,
+    "vignette": 0.42,
+    "leak": 0.12,
+    "colors": [
+      "accent2",
+      "accent",
+      "accent3"
+    ],
+    "paper": 0.07,
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  }
+}

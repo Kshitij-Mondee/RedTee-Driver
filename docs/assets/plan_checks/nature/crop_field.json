@@ -1,0 +1,833 @@
+{
+ "scene": "crop_field",
+ "camera_spec": {
+  "camera": {
+   "x": 0,
+   "y": 0,
+   "eye": 1.3,
+   "yaw": 12.0,
+   "hfov": 55.0,
+   "horizon_pct": 52.0
+  },
+  "walls": [
+   {
+    "name": "far hedgerow line (its oaks rise to 20 m)",
+    "axis": "y",
+    "at": 250
+   },
+   {
+    "name": "field's east hedge (farmyard beyond)",
+    "axis": "x",
+    "at": 60
+   }
+  ],
+  "points": {
+   "crop_edge_c_top": [
+    0,
+    7.5,
+    0.85
+   ],
+   "crop_edge_c_base": [
+    0,
+    7.5,
+    0
+   ],
+   "crop_edge_l_top": [
+    -6,
+    7.5,
+    0.85
+   ],
+   "crop_edge_r_top": [
+    8,
+    7.5,
+    0.85
+   ],
+   "tram_x-24_near": [
+    -24,
+    8,
+    0
+   ],
+   "tram_x-24_far": [
+    -24,
+    240,
+    0
+   ],
+   "tram_x0_near": [
+    0,
+    8,
+    0
+   ],
+   "tram_x0_far": [
+    0,
+    240,
+    0
+   ],
+   "tram_x24_near": [
+    24,
+    8,
+    0
+   ],
+   "tram_x24_far": [
+    24,
+    240,
+    0
+   ],
+   "tram_x48_near": [
+    48,
+    8,
+    0
+   ],
+   "tram_x48_far": [
+    48,
+    240,
+    0
+   ],
+   "far_hedge_l": [
+    -200,
+    250,
+    2.5
+   ],
+   "far_hedge_c": [
+    0,
+    250,
+    2.5
+   ],
+   "far_hedge_r": [
+    110,
+    250,
+    2.5
+   ],
+   "oak0_top": [
+    -44.0,
+    252,
+    20
+   ],
+   "oak0_base": [
+    -44.0,
+    252,
+    0
+   ],
+   "oak0_crown_l": [
+    -52.0,
+    252,
+    14
+   ],
+   "oak0_crown_r": [
+    -36.0,
+    252,
+    14
+   ],
+   "oak1_top": [
+    100.0,
+    252,
+    20
+   ],
+   "oak1_base": [
+    100.0,
+    252,
+    0
+   ],
+   "oak1_crown_l": [
+    92.0,
+    252,
+    14
+   ],
+   "oak1_crown_r": [
+    108.0,
+    252,
+    14
+   ],
+   "oak2_top": [
+    186.0,
+    252,
+    20
+   ],
+   "oak2_base": [
+    186.0,
+    252,
+    0
+   ],
+   "oak2_crown_l": [
+    178.0,
+    252,
+    14
+   ],
+   "oak2_crown_r": [
+    194.0,
+    252,
+    14
+   ],
+   "side_hedge_near": [
+    60,
+    10,
+    2.5
+   ],
+   "side_hedge_mid": [
+    60,
+    120,
+    2.5
+   ],
+   "side_hedge_far": [
+    60,
+    250,
+    2.5
+   ],
+   "barn_near_ridge": [
+    84,
+    135,
+    9
+   ],
+   "barn_far_ridge": [
+    84,
+    165,
+    9
+   ],
+   "barn_near_eave_w": [
+    75,
+    135,
+    6
+   ],
+   "barn_far_eave_w": [
+    75,
+    165,
+    6
+   ],
+   "barn_near_base_w": [
+    75,
+    135,
+    0
+   ],
+   "barn_far_base_w": [
+    75,
+    165,
+    0
+   ],
+   "house_near_ridge": [
+    125,
+    165,
+    8.5
+   ],
+   "house_far_ridge": [
+    125,
+    177,
+    8.5
+   ],
+   "house_near_base": [
+    119,
+    165,
+    0
+   ],
+   "house_near_eave": [
+    119,
+    165,
+    5.5
+   ],
+   "bales_stack_top": [
+    66,
+    128,
+    2.4
+   ],
+   "gateway_far_corner": [
+    60,
+    40,
+    0
+   ],
+   "T0_hub": [
+    -315.0,
+    2600,
+    160
+   ],
+   "T0_tip_low": [
+    -315.0,
+    2600,
+    95
+   ],
+   "T0_tip_up": [
+    -315.0,
+    2600,
+    225
+   ],
+   "T0_base": [
+    -315.0,
+    2600,
+    60
+   ],
+   "T1_hub": [
+    335.0,
+    2600,
+    160
+   ],
+   "T1_tip_low": [
+    335.0,
+    2600,
+    95
+   ],
+   "T1_tip_up": [
+    335.0,
+    2600,
+    225
+   ],
+   "T1_base": [
+    335.0,
+    2600,
+    60
+   ],
+   "T2_hub": [
+    985.0,
+    2600,
+    160
+   ],
+   "T2_tip_low": [
+    985.0,
+    2600,
+    95
+   ],
+   "T2_tip_up": [
+    985.0,
+    2600,
+    225
+   ],
+   "T2_base": [
+    985.0,
+    2600,
+    60
+   ],
+   "T3_hub": [
+    1635.0,
+    2600,
+    160
+   ],
+   "T3_tip_low": [
+    1635.0,
+    2600,
+    95
+   ],
+   "T3_tip_up": [
+    1635.0,
+    2600,
+    225
+   ],
+   "T3_base": [
+    1635.0,
+    2600,
+    60
+   ],
+   "ridge_c": [
+    0,
+    2600,
+    60
+   ],
+   "ridge_l": [
+    -1500,
+    2700,
+    55
+   ],
+   "ridge_r": [
+    1500,
+    2500,
+    58
+   ],
+   "gate_open_hinge": [
+    6,
+    -1,
+    0
+   ],
+   "gate_open_end_top": [
+    6,
+    2.6,
+    1.1
+   ],
+   "A_head_top": [
+    -0.01,
+    5.62,
+    1.75
+   ],
+   "A_head_c": [
+    -0.01,
+    5.62,
+    1.63
+   ],
+   "A_feet": [
+    -0.01,
+    5.62,
+    0
+   ],
+   "B_head_top": [
+    1.61,
+    6.3,
+    1.75
+   ],
+   "B_head_c": [
+    1.61,
+    6.3,
+    1.63
+   ],
+   "B_feet": [
+    1.61,
+    6.3,
+    0
+   ]
+  },
+  "behind": [
+   "A_head_top",
+   "A_head_c",
+   "B_head_top",
+   "B_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 568,
+   "along_x": 9636,
+   "horizon_y": 562
+  },
+  "points": {
+   "crop_edge_c_top": {
+    "x": 568,
+    "y": 675,
+    "where": "frame",
+    "depth": 7.34
+   },
+   "crop_edge_c_base": {
+    "x": 568,
+    "y": 888,
+    "where": "frame",
+    "depth": 7.34
+   },
+   "crop_edge_l_top": {
+    "x": -1290,
+    "y": 698,
+    "where": "outside",
+    "depth": 6.09
+   },
+   "crop_edge_r_top": {
+    "x": 2244,
+    "y": 654,
+    "where": "outside",
+    "depth": 9.0
+   },
+   "tram_x-24_near": {
+    "x": -15391,
+    "y": 1407,
+    "where": "outside",
+    "depth": 2.84
+   },
+   "tram_x-24_far": {
+    "x": 371,
+    "y": 572,
+    "where": "frame",
+    "depth": 229.77
+   },
+   "tram_x0_near": {
+    "x": 568,
+    "y": 868,
+    "where": "frame",
+    "depth": 7.83
+   },
+   "tram_x0_far": {
+    "x": 568,
+    "y": 572,
+    "where": "frame",
+    "depth": 234.76
+   },
+   "tram_x24_near": {
+    "x": 4099,
+    "y": 749,
+    "where": "outside",
+    "depth": 12.82
+   },
+   "tram_x24_far": {
+    "x": 757,
+    "y": 572,
+    "where": "frame",
+    "depth": 239.75
+   },
+   "tram_x48_near": {
+    "x": 5651,
+    "y": 696,
+    "where": "outside",
+    "depth": 17.8
+   },
+   "tram_x48_far": {
+    "x": 938,
+    "y": 571,
+    "where": "frame",
+    "depth": 244.74
+   },
+   "far_hedge_l": {
+    "x": -1290,
+    "y": 551,
+    "where": "outside",
+    "depth": 202.95
+   },
+   "far_hedge_c": {
+    "x": 568,
+    "y": 553,
+    "where": "frame",
+    "depth": 244.54
+   },
+   "far_hedge_r": {
+    "x": 1344,
+    "y": 553,
+    "where": "frame",
+    "depth": 267.41
+   },
+   "oak0_top": {
+    "x": 219,
+    "y": 416,
+    "where": "frame",
+    "depth": 237.35
+   },
+   "oak0_base": {
+    "x": 219,
+    "y": 572,
+    "where": "frame",
+    "depth": 237.35
+   },
+   "oak0_crown_l": {
+    "x": 152,
+    "y": 462,
+    "where": "frame",
+    "depth": 235.68
+   },
+   "oak0_crown_r": {
+    "x": 284,
+    "y": 464,
+    "where": "frame",
+    "depth": 239.01
+   },
+   "oak1_top": {
+    "x": 1273,
+    "y": 433,
+    "where": "frame",
+    "depth": 267.28
+   },
+   "oak1_base": {
+    "x": 1273,
+    "y": 571,
+    "where": "frame",
+    "depth": 267.28
+   },
+   "oak1_crown_l": {
+    "x": 1221,
+    "y": 473,
+    "where": "frame",
+    "depth": 265.62
+   },
+   "oak1_crown_r": {
+    "x": 1325,
+    "y": 475,
+    "where": "frame",
+    "depth": 268.95
+   },
+   "oak2_top": {
+    "x": 1798,
+    "y": 441,
+    "where": "frame",
+    "depth": 285.16
+   },
+   "oak2_base": {
+    "x": 1798,
+    "y": 570,
+    "where": "frame",
+    "depth": 285.16
+   },
+   "oak2_crown_l": {
+    "x": 1752,
+    "y": 479,
+    "where": "frame",
+    "depth": 283.5
+   },
+   "oak2_crown_r": {
+    "x": 1843,
+    "y": 480,
+    "where": "frame",
+    "depth": 286.83
+   },
+   "side_hedge_near": {
+    "x": 5651,
+    "y": 462,
+    "where": "outside",
+    "depth": 22.26
+   },
+   "side_hedge_mid": {
+    "x": 1439,
+    "y": 545,
+    "where": "frame",
+    "depth": 129.85
+   },
+   "side_hedge_far": {
+    "x": 1008,
+    "y": 553,
+    "where": "frame",
+    "depth": 257.01
+   },
+   "barn_near_ridge": {
+    "x": 1627,
+    "y": 467,
+    "where": "frame",
+    "depth": 149.51
+   },
+   "barn_far_ridge": {
+    "x": 1453,
+    "y": 482,
+    "where": "frame",
+    "depth": 178.86
+   },
+   "barn_near_eave_w": {
+    "x": 1526,
+    "y": 503,
+    "where": "frame",
+    "depth": 147.64
+   },
+   "barn_far_eave_w": {
+    "x": 1367,
+    "y": 513,
+    "where": "frame",
+    "depth": 176.99
+   },
+   "barn_near_base_w": {
+    "x": 1526,
+    "y": 578,
+    "where": "frame",
+    "depth": 147.64
+   },
+   "barn_far_base_w": {
+    "x": 1367,
+    "y": 575,
+    "where": "frame",
+    "depth": 176.99
+   },
+   "house_near_ridge": {
+    "x": 1826,
+    "y": 491,
+    "where": "frame",
+    "depth": 187.38
+   },
+   "house_far_ridge": {
+    "x": 1752,
+    "y": 495,
+    "where": "frame",
+    "depth": 199.12
+   },
+   "house_near_base": {
+    "x": 1773,
+    "y": 574,
+    "where": "frame",
+    "depth": 186.14
+   },
+   "house_near_eave": {
+    "x": 1773,
+    "y": 520,
+    "where": "frame",
+    "depth": 186.14
+   },
+   "bales_stack_top": {
+    "x": 1464,
+    "y": 547,
+    "where": "frame",
+    "depth": 138.93
+   },
+   "gateway_far_corner": {
+    "x": 2760,
+    "y": 608,
+    "where": "outside",
+    "depth": 51.6
+   },
+   "T0_hub": {
+    "x": 328,
+    "y": 443,
+    "where": "frame",
+    "depth": 2477.69
+   },
+   "T0_tip_low": {
+    "x": 328,
+    "y": 492,
+    "where": "frame",
+    "depth": 2477.69
+   },
+   "T0_tip_up": {
+    "x": 328,
+    "y": 395,
+    "where": "frame",
+    "depth": 2477.69
+   },
+   "T0_base": {
+    "x": 328,
+    "y": 518,
+    "where": "frame",
+    "depth": 2477.69
+   },
+   "T1_hub": {
+    "x": 810,
+    "y": 450,
+    "where": "frame",
+    "depth": 2612.83
+   },
+   "T1_tip_low": {
+    "x": 810,
+    "y": 495,
+    "where": "frame",
+    "depth": 2612.83
+   },
+   "T1_tip_up": {
+    "x": 810,
+    "y": 404,
+    "where": "frame",
+    "depth": 2612.83
+   },
+   "T1_base": {
+    "x": 810,
+    "y": 520,
+    "where": "frame",
+    "depth": 2612.83
+   },
+   "T2_hub": {
+    "x": 1244,
+    "y": 455,
+    "where": "frame",
+    "depth": 2747.98
+   },
+   "T2_tip_low": {
+    "x": 1244,
+    "y": 499,
+    "where": "frame",
+    "depth": 2747.98
+   },
+   "T2_tip_up": {
+    "x": 1244,
+    "y": 411,
+    "where": "frame",
+    "depth": 2747.98
+   },
+   "T2_base": {
+    "x": 1244,
+    "y": 522,
+    "where": "frame",
+    "depth": 2747.98
+   },
+   "T3_hub": {
+    "x": 1637,
+    "y": 460,
+    "where": "frame",
+    "depth": 2883.12
+   },
+   "T3_tip_low": {
+    "x": 1637,
+    "y": 502,
+    "where": "frame",
+    "depth": 2883.12
+   },
+   "T3_tip_up": {
+    "x": 1637,
+    "y": 419,
+    "where": "frame",
+    "depth": 2883.12
+   },
+   "T3_base": {
+    "x": 1637,
+    "y": 524,
+    "where": "frame",
+    "depth": 2883.12
+   },
+   "ridge_c": {
+    "x": 568,
+    "y": 519,
+    "where": "frame",
+    "depth": 2543.18
+   },
+   "ridge_l": {
+    "x": -646,
+    "y": 519,
+    "where": "outside",
+    "depth": 2329.13
+   },
+   "ridge_r": {
+    "x": 1594,
+    "y": 524,
+    "where": "frame",
+    "depth": 2757.24
+   },
+   "gate_open_hinge": {
+    "x": 42570,
+    "y": 9463,
+    "where": "outside",
+    "depth": 0.27
+   },
+   "gate_open_end_top": {
+    "x": 3552,
+    "y": 659,
+    "where": "outside",
+    "depth": 3.79
+   },
+   "A_head_top": {
+    "x": 565,
+    "y": 411,
+    "where": "frame",
+    "depth": 5.5,
+    "behind": {
+     "wall": "far hedgerow line (its oaks rise to 20 m)",
+     "at": [
+      -0.44,
+      250.0,
+      21.32
+     ]
+    }
+   },
+   "A_head_c": {
+    "x": 565,
+    "y": 451,
+    "where": "frame",
+    "depth": 5.5,
+    "behind": {
+     "wall": "far hedgerow line (its oaks rise to 20 m)",
+     "at": [
+      -0.44,
+      250.0,
+      15.98
+     ]
+    }
+   },
+   "A_feet": {
+    "x": 565,
+    "y": 998,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "B_head_top": {
+    "x": 1035,
+    "y": 434,
+    "where": "frame",
+    "depth": 6.5,
+    "behind": {
+     "wall": "field's east hedge (farmyard beyond)",
+     "at": [
+      60.0,
+      234.78,
+      18.07
+     ]
+    }
+   },
+   "B_head_c": {
+    "x": 1035,
+    "y": 468,
+    "where": "frame",
+    "depth": 6.5,
+    "behind": {
+     "wall": "field's east hedge (farmyard beyond)",
+     "at": [
+      60.0,
+      234.78,
+      13.6
+     ]
+    }
+   },
+   "B_feet": {
+    "x": 1035,
+    "y": 931,
+    "where": "frame",
+    "depth": 6.5
+   }
+  }
+ }
+}

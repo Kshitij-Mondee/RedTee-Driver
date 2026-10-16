@@ -1,0 +1,1249 @@
+{
+  "story": {
+    "arc": "Moving from subjective relational strain to objective factual collaboration",
+    "cast": [
+      {
+        "rig": "woman",
+        "name": "Manager",
+        "role": "feedback provider"
+      },
+      {
+        "rig": "man",
+        "name": "Colleague",
+        "role": "feedback recipient"
+      }
+    ],
+    "setting": "A stylized office environment",
+    "metaphor": "A meeting room whiteboard that extends into an infinite objective space"
+  },
+  "style": "story-cartoon",
+  "devices": [
+    {
+      "id": "tally_calendar",
+      "what": "An angular desk calendar that holds concrete tally marks instead of vague complaints",
+      "kind": "explain",
+      "beats": [
+        "b06",
+        "b07",
+        "b10",
+        "b14"
+      ]
+    },
+    {
+      "kind": "data",
+      "what": "A wide whiteboard tracking events from past errors to future collaborative plans",
+      "id": "timeline_board",
+      "beats": [
+        "b17",
+        "b18",
+        "b27",
+        "b28",
+        "b29",
+        "b30",
+        "b31",
+        "b33"
+      ]
+    },
+    {
+      "kind": "callback",
+      "what": "A visual thread between the manager and colleague that strains or heals",
+      "beats": [
+        "b01",
+        "b02",
+        "b21",
+        "b34"
+      ],
+      "id": "relationship_line"
+    },
+    {
+      "kind": "explain",
+      "what": "A thick, hand-drawn red marker stroke that aggressively crosses out absolute words",
+      "beats": [
+        "b09",
+        "b13",
+        "b19"
+      ],
+      "id": "red_marker"
+    },
+    {
+      "id": "torn_paper_join",
+      "beats": [
+        "b01",
+        "b05",
+        "b10",
+        "b14",
+        "b19",
+        "b25",
+        "b27"
+      ],
+      "kind": "join",
+      "what": "A torn paper wipe that reveals the objective truth beneath subjective layers"
+    }
+  ],
+  "chrome": {},
+  "concept": "Visualizing the contrast between abstract personality criticism, which is messy and subjective, and concrete observable behavior, which is clean, structured, and objective.",
+  "world": {
+    "stations": [
+      {
+        "h": 1080,
+        "w": 1920,
+        "x": 0,
+        "y": 0,
+        "id": "s_desk"
+      },
+      {
+        "h": 1080,
+        "x": 1920,
+        "id": "s_avatar_intro",
+        "w": 1920,
+        "y": 0
+      },
+      {
+        "id": "s_phrase",
+        "y": 0,
+        "w": 1920,
+        "x": 3840,
+        "h": 1080
+      },
+      {
+        "y": 0,
+        "x": 5760,
+        "id": "s_calendar",
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "id": "s_camera_lens",
+        "parent": "s_calendar",
+        "y": 270,
+        "h": 540,
+        "w": 960,
+        "x": 480,
+        "rect": {
+          "x": 480,
+          "y": 270,
+          "w": 960,
+          "h": 540
+        }
+      },
+      {
+        "x": 7680,
+        "w": 1920,
+        "h": 1080,
+        "y": 0,
+        "id": "s_words"
+      },
+      {
+        "x": 9600,
+        "w": 1920,
+        "id": "s_calendar_again",
+        "h": 1080,
+        "y": 0
+      },
+      {
+        "y": 0,
+        "h": 1080,
+        "id": "s_pocket1",
+        "w": 1920,
+        "x": 11520
+      },
+      {
+        "x": 13440,
+        "w": 1920,
+        "id": "s_quiz1",
+        "h": 1080,
+        "y": 0
+      },
+      {
+        "id": "s_meeting",
+        "y": 1080,
+        "h": 1080,
+        "w": 1920,
+        "x": 0
+      },
+      {
+        "w": 960,
+        "x": 480,
+        "id": "s_impact",
+        "h": 540,
+        "parent": "s_meeting",
+        "y": 270,
+        "rect": {
+          "h": 540,
+          "w": 960,
+          "y": 270,
+          "x": 480
+        }
+      },
+      {
+        "h": 1080,
+        "w": 1920,
+        "x": 1920,
+        "y": 1080,
+        "id": "s_timeline"
+      },
+      {
+        "y": 1080,
+        "id": "s_factual",
+        "x": 3840,
+        "w": 1920,
+        "h": 1080
+      },
+      {
+        "y": 1080,
+        "id": "s_shield",
+        "h": 1080,
+        "x": 5760,
+        "w": 1920
+      },
+      {
+        "x": 7680,
+        "w": 1920,
+        "h": 1080,
+        "y": 1080,
+        "id": "s_pocket2"
+      },
+      {
+        "w": 1920,
+        "x": 9600,
+        "h": 1080,
+        "y": 1080,
+        "id": "s_quiz2"
+      },
+      {
+        "id": "s_colleague_leaving",
+        "y": 1080,
+        "h": 1080,
+        "w": 1920,
+        "x": 11520
+      },
+      {
+        "y": 2160,
+        "id": "s_board",
+        "h": 1080,
+        "x": 0,
+        "w": 1920
+      },
+      {
+        "x": 480,
+        "w": 960,
+        "id": "s_future_plan",
+        "h": 540,
+        "parent": "s_board",
+        "y": 270,
+        "rect": {
+          "w": 960,
+          "y": 270,
+          "x": 480,
+          "h": 540
+        }
+      },
+      {
+        "h": 1080,
+        "x": 1920,
+        "w": 1920,
+        "y": 2160,
+        "id": "s_pocket3"
+      }
+    ]
+  },
+  "poster": {
+    "beat": "b07"
+  },
+  "brand": "",
+  "motifs": [],
+  "scenes": [
+    {
+      "shot": {
+        "size": "establishing"
+      },
+      "kind": "template",
+      "accent_on": "Negative attitude label",
+      "join_in": {
+        "meaning": "chapter",
+        "type": "torn"
+      },
+      "props": {
+        "left": {
+          "name": "Manager",
+          "emotion": "neutral",
+          "member": "woman"
+        },
+        "lines": [
+          {
+            "say": "negative attitude a problem",
+            "who": "left",
+            "text": "Negative attitude"
+          }
+        ],
+        "right": {
+          "name": "Colleague",
+          "emotion": "neutral",
+          "member": "man"
+        }
+      },
+      "template": "scenario.dialogue",
+      "station": "s_desk",
+      "beat": "b01",
+      "depth": "layered"
+    },
+    {
+      "kind": "template",
+      "station": "s_desk",
+      "template": "scenario.dialogue",
+      "keep": [
+        "left",
+        "right",
+        "lines"
+      ],
+      "shot": {
+        "size": "medium"
+      },
+      "accent_on": "Strained relationship line",
+      "beat": "b02",
+      "props": {
+        "left": {
+          "member": "woman",
+          "emotion": "neutral",
+          "name": "Manager"
+        },
+        "lines": [
+          {
+            "text": "...",
+            "say": "defensive immediately",
+            "who": "right"
+          }
+        ],
+        "right": {
+          "emotion": "surprised",
+          "name": "Colleague",
+          "member": "man"
+        }
+      },
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      }
+    },
+    {
+      "kind": "avatar",
+      "station": "s_avatar_intro",
+      "accent_on": "Presenter",
+      "join_in": {
+        "meaning": "shock",
+        "type": "cut"
+      },
+      "beat": "b03",
+      "props": {},
+      "shot": {
+        "size": "medium"
+      }
+    },
+    {
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "kind": "avatar",
+      "beat": "b04",
+      "station": "s_avatar_intro",
+      "props": {},
+      "accent_on": "Shift focus bracket"
+    },
+    {
+      "kind": "template",
+      "accent_on": "Personality trait box",
+      "props": {
+        "right": {
+          "tone": "pos",
+          "header": "Constructive",
+          "say": "constructive conversation",
+          "items": []
+        },
+        "left": {
+          "say": "personality trait",
+          "tone": "neg",
+          "header": "Personality trait",
+          "items": [
+            {
+              "text": "Negative attitude",
+              "say": "negative attitude"
+            }
+          ]
+        }
+      },
+      "station": "s_phrase",
+      "design": {
+        "continuity": "none",
+        "beat_sheet": [],
+        "elements": [
+          {
+            "name": "phrase_box"
+          },
+          {
+            "name": "red_box"
+          }
+        ],
+        "treatment": "story-cartoon",
+        "why_motion": "phrase slides into a red box",
+        "references": []
+      },
+      "template": "compare.two",
+      "beat": "b05",
+      "join_in": {
+        "type": "torn",
+        "meaning": "chapter"
+      }
+    },
+    {
+      "beat": "b06",
+      "join_in": {
+        "meaning": "shock",
+        "type": "cut"
+      },
+      "accent_on": "Tally calendar",
+      "kind": "blueprint",
+      "blueprint": "hero.character_moment",
+      "props": {
+        "bubble": "thought",
+        "moods": [
+          {
+            "say": "Watch what happens",
+            "emotion": "explaining"
+          }
+        ],
+        "name": "Manager",
+        "member": "woman",
+        "items": [
+          {
+            "icon": "calendar",
+            "label": "Interrupted 3 times",
+            "say": "interrupted three times"
+          }
+        ],
+        "side": "left"
+      },
+      "station": "s_calendar"
+    },
+    {
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "kind": "template",
+      "props": {
+        "say_title": "observable behavior",
+        "lines": [
+          {
+            "say": "specific actions or words",
+            "text": "Specific actions"
+          },
+          {
+            "text": "Capture it",
+            "say": "video camera could capture it"
+          }
+        ],
+        "title": "Observable behavior"
+      },
+      "accent_on": "Observable behavior definition",
+      "station": "s_camera_lens",
+      "beat": "b07",
+      "template": "document.page"
+    },
+    {
+      "accent_on": "Specific label",
+      "template": "compare.two",
+      "beat": "b08",
+      "station": "s_words",
+      "props": {
+        "left": {
+          "header": "Absolute",
+          "tone": "neg",
+          "say": "absolute",
+          "items": []
+        },
+        "right": {
+          "tone": "pos",
+          "say": "specific",
+          "header": "Specific",
+          "items": []
+        }
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "kind": "template"
+    },
+    {
+      "kind": "template",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "template": "compare.two",
+      "accent_on": "Red marker crossing out words",
+      "design": {
+        "continuity": "absolute words crossed out",
+        "beat_sheet": [],
+        "elements": [
+          {
+            "name": "red_marker"
+          }
+        ],
+        "treatment": "story-cartoon",
+        "why_motion": "words crossed out with thick red marker",
+        "references": []
+      },
+      "station": "s_words",
+      "beat": "b09",
+      "props": {
+        "right": {
+          "items": [],
+          "tone": "neg",
+          "header": "Less accurate",
+          "say": "less accurate"
+        },
+        "left": {
+          "header": "Absolute words",
+          "items": [
+            {
+              "say": "always",
+              "text": "Always"
+            },
+            {
+              "text": "Never",
+              "say": "never"
+            }
+          ],
+          "tone": "neg",
+          "say": "absolute words"
+        }
+      }
+    },
+    {
+      "blueprint": "hero.character_moment",
+      "kind": "blueprint",
+      "props": {
+        "moods": [
+          {
+            "emotion": "neutral",
+            "say": "observable actions helps"
+          }
+        ],
+        "bubble": "thought",
+        "items": [
+          {
+            "label": "Observable actions",
+            "say": "observable actions",
+            "icon": "calendar"
+          }
+        ],
+        "name": "Manager",
+        "side": "left",
+        "member": "woman"
+      },
+      "join_in": {
+        "type": "torn",
+        "meaning": "chapter"
+      },
+      "design": {
+        "why_motion": "Thought bubble pops",
+        "references": [],
+        "elements": [
+          {
+            "name": "bubble"
+          },
+          {
+            "name": "tally_marks"
+          }
+        ],
+        "treatment": "story-cartoon",
+        "continuity": "bubble leaves",
+        "beat_sheet": []
+      },
+      "accent_on": "Concrete tally marks",
+      "station": "s_calendar_again",
+      "beat": "b10"
+    },
+    {
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "props": {
+        "say_kicker": "pocket rule",
+        "say_title": "Critique the action",
+        "kicker": "The pocket rule",
+        "title": "Critique the action"
+      },
+      "kind": "template",
+      "station": "s_pocket1",
+      "template": "title.card",
+      "beat": "b11",
+      "accent_on": "Pocket rule text"
+    },
+    {
+      "template": "quiz.question",
+      "station": "s_quiz1",
+      "props": {
+        "question": "Which targets observable behavior?",
+        "options": [
+          {
+            "say": "never seem to care",
+            "text": "A: Never seem to care"
+          },
+          {
+            "text": "B: Submitted it late",
+            "say": "submitted it late"
+          }
+        ],
+        "say_question": "targets observable behavior"
+      },
+      "kind": "template",
+      "accent_on": "Option B",
+      "join_in": {
+        "meaning": "chapter",
+        "type": "cut"
+      },
+      "beat": "b12"
+    },
+    {
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "beat": "b13",
+      "station": "s_quiz1",
+      "props": {
+        "explanation": "Submitted the report two days after the deadline",
+        "why_not": "It assumes they do not care.",
+        "question": "Which targets observable behavior?",
+        "tempting": 0,
+        "options": [
+          {
+            "text": "A: Never seem to care"
+          },
+          {
+            "text": "B: Submitted it late"
+          }
+        ],
+        "answer": 1,
+        "say_why_not": "assumes they do not care",
+        "say_answer": "correct answer is B",
+        "say_explanation": "submitted the report two days after the deadline"
+      },
+      "template": "quiz.answer",
+      "kind": "template",
+      "accent_on": "Correct answer green highlight"
+    },
+    {
+      "kind": "blueprint",
+      "accent_on": "Tally calendar",
+      "join_in": {
+        "type": "torn",
+        "meaning": "chapter"
+      },
+      "blueprint": "hero.character_moment",
+      "beat": "b14",
+      "station": "s_meeting",
+      "props": {
+        "name": "Colleague",
+        "items": [
+          {
+            "icon": "calendar",
+            "say": "client pitch",
+            "label": "Client pitch"
+          }
+        ],
+        "side": "left",
+        "bubble": "thought",
+        "moods": [
+          {
+            "say": "interrupted three times",
+            "emotion": "neutral"
+          }
+        ],
+        "member": "man"
+      }
+    },
+    {
+      "accent_on": "Question mark",
+      "template": "title.card",
+      "kind": "template",
+      "station": "s_meeting",
+      "beat": "b15",
+      "props": {
+        "say_title": "Why does it matter",
+        "title": "Why does it matter?"
+      },
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      }
+    },
+    {
+      "beat": "b16",
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into"
+      },
+      "accent_on": "Objective impact arrow",
+      "blueprint": "hero.hub",
+      "station": "s_impact",
+      "kind": "blueprint",
+      "props": {
+        "satellites": [
+          {
+            "label": "Objective impact",
+            "say": "objective impact"
+          },
+          {
+            "say": "task or team",
+            "label": "Task or team"
+          }
+        ],
+        "signals": [
+          {
+            "to": 0,
+            "say": "links directly"
+          }
+        ],
+        "hub": {
+          "say": "observed behavior",
+          "label": "Observed behavior"
+        }
+      }
+    },
+    {
+      "kind": "blueprint",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "props": {
+        "label": "Presentation time",
+        "stops": [
+          {
+            "tone": "neg",
+            "say": "lost ten minutes",
+            "value": 90
+          }
+        ],
+        "kind": "ring"
+      },
+      "accent_on": "10-minute segment",
+      "blueprint": "hero.meter",
+      "beat": "b17",
+      "station": "s_timeline"
+    },
+    {
+      "blueprint": "hero.character_moment",
+      "beat": "b18",
+      "station": "s_timeline",
+      "props": {
+        "moods": [
+          {
+            "say": "helps the recipient",
+            "emotion": "neutral"
+          }
+        ],
+        "items": [
+          {
+            "icon": "timeline",
+            "say": "objective consequences",
+            "label": "Objective consequences"
+          }
+        ],
+        "member": "man",
+        "side": "left",
+        "name": "Colleague",
+        "bubble": "thought"
+      },
+      "kind": "blueprint",
+      "accent_on": "Objective consequences timeline",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      }
+    },
+    {
+      "design": {
+        "continuity": "theatrical face leaves",
+        "beat_sheet": [],
+        "treatment": "story-cartoon",
+        "why_motion": "theatrical face crossed out, replaced by clean graph",
+        "references": [],
+        "elements": [
+          {
+            "name": "face"
+          },
+          {
+            "name": "graph"
+          }
+        ]
+      },
+      "beat": "b19",
+      "join_in": {
+        "type": "torn",
+        "meaning": "chapter"
+      },
+      "template": "compare.two",
+      "props": {
+        "right": {
+          "tone": "pos",
+          "say": "strictly factual",
+          "header": "Strictly factual",
+          "items": []
+        },
+        "left": {
+          "tone": "neg",
+          "items": [],
+          "say": "emotional disaster",
+          "header": "Emotional disaster"
+        }
+      },
+      "accent_on": "Factual graph",
+      "station": "s_factual",
+      "kind": "template"
+    },
+    {
+      "beat": "b20",
+      "blueprint": "hero.meter",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "kind": "blueprint",
+      "accent_on": "Moderate dip line",
+      "props": {
+        "label": "Impact",
+        "kind": "bar",
+        "stops": [
+          {
+            "value": 50,
+            "say": "strictly factual",
+            "tone": "neutral"
+          }
+        ]
+      },
+      "station": "s_factual"
+    },
+    {
+      "props": {
+        "lines": [
+          {
+            "say": "avoid it to protect feelings",
+            "text": "Avoid it"
+          },
+          {
+            "text": "Protect feelings",
+            "say": "objective facts protect feelings"
+          }
+        ],
+        "say_title": "objective facts",
+        "title": "Objective facts"
+      },
+      "accent_on": "Metallic shield",
+      "station": "s_shield",
+      "kind": "template",
+      "template": "document.page",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "beat": "b21"
+    },
+    {
+      "props": {
+        "say_title": "behavior and its business impact",
+        "kicker": "The pocket rule",
+        "title": "State behavior and impact",
+        "say_kicker": "pocket rule"
+      },
+      "beat": "b22",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "template": "title.card",
+      "accent_on": "Pocket rule text",
+      "kind": "template",
+      "station": "s_pocket2"
+    },
+    {
+      "accent_on": "Lost the client text",
+      "props": {
+        "right": {
+          "items": [],
+          "say": "lost the client",
+          "header": "Lost the client"
+        },
+        "left": {
+          "say": "missed the deadline",
+          "header": "Missed the deadline",
+          "items": []
+        }
+      },
+      "kind": "template",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "template": "compare.two",
+      "station": "s_quiz2",
+      "beat": "b23"
+    },
+    {
+      "station": "s_quiz2",
+      "kind": "template",
+      "props": {
+        "right": {
+          "tone": "neg",
+          "header": "Impact",
+          "items": [
+            {
+              "say": "consequence",
+              "text": "Consequence"
+            }
+          ],
+          "say": "losing the client"
+        },
+        "left": {
+          "items": [
+            {
+              "text": "Missing deadline",
+              "say": "Missing the deadline"
+            }
+          ],
+          "header": "Observable behavior",
+          "say": "observable behavior"
+        }
+      },
+      "accent_on": "Consequence link",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "template": "compare.two",
+      "beat": "b24"
+    },
+    {
+      "kind": "blueprint",
+      "join_in": {
+        "meaning": "chapter",
+        "type": "torn"
+      },
+      "props": {
+        "member": "man",
+        "bubble": "thought",
+        "name": "Colleague",
+        "moods": [
+          {
+            "say": "leaves early every day",
+            "emotion": "neutral"
+          }
+        ],
+        "items": [
+          {
+            "icon": "leave",
+            "label": "Leaves early",
+            "say": "frame the feedback"
+          }
+        ]
+      },
+      "blueprint": "hero.character_moment",
+      "station": "s_colleague_leaving",
+      "accent_on": "Empty brackets",
+      "beat": "b25"
+    },
+    {
+      "props": {
+        "left": {
+          "items": [
+            {
+              "text": "Left at four",
+              "say": "left at four o'clock twice this week"
+            }
+          ],
+          "header": "Specific action",
+          "say": "specific action"
+        },
+        "right": {
+          "items": [
+            {
+              "say": "finish the report alone",
+              "text": "Finished alone"
+            }
+          ],
+          "say": "objective impact",
+          "header": "Objective impact"
+        }
+      },
+      "accent_on": "Specific action and objective impact",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "template": "compare.two",
+      "kind": "template",
+      "beat": "b26",
+      "station": "s_colleague_leaving"
+    },
+    {
+      "kind": "template",
+      "join_in": {
+        "meaning": "chapter",
+        "type": "torn"
+      },
+      "beat": "b27",
+      "station": "s_board",
+      "template": "timeline",
+      "props": {
+        "events": [
+          {
+            "label": "Feedback delivered",
+            "say": "feedback is delivered",
+            "when": "Past"
+          },
+          {
+            "label": "Now what",
+            "say": "Now what",
+            "when": "Future"
+          }
+        ]
+      },
+      "accent_on": "Now what label"
+    },
+    {
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "accent_on": "Endless loop arrow",
+      "props": {
+        "waypoints": [
+          {
+            "label": "Past errors",
+            "say": "past errors"
+          },
+          {
+            "say": "unproductive argument",
+            "label": "Argument"
+          }
+        ]
+      },
+      "beat": "b28",
+      "kind": "blueprint",
+      "station": "s_board",
+      "design": {
+        "why_motion": "endless loop on past dates",
+        "references": [],
+        "treatment": "story-cartoon",
+        "elements": [
+          {
+            "name": "circular_arrow"
+          },
+          {
+            "name": "figures"
+          }
+        ],
+        "continuity": "none",
+        "beat_sheet": []
+      },
+      "blueprint": "hero.journey"
+    },
+    {
+      "template": "timeline",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "kind": "template",
+      "station": "s_board",
+      "props": {
+        "events": [
+          {
+            "when": "Past",
+            "label": "Past event",
+            "say": "past event"
+          },
+          {
+            "when": "Present",
+            "label": "Grounds conversation",
+            "say": "grounds the conversation"
+          }
+        ]
+      },
+      "accent_on": "Grounds conversation dot",
+      "beat": "b29"
+    },
+    {
+      "kind": "template",
+      "station": "s_board",
+      "template": "timeline",
+      "accent_on": "Future arrow",
+      "beat": "b30",
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "props": {
+        "events": [
+          {
+            "say": "pivot",
+            "when": "Past",
+            "label": "Pivot"
+          },
+          {
+            "label": "Next pitch",
+            "when": "Future",
+            "say": "next pitch"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "blueprint",
+      "join_in": {
+        "meaning": "into",
+        "type": "zoom"
+      },
+      "accent_on": "Upward trajectory arrow",
+      "props": {
+        "waypoints": [
+          {
+            "say": "future actions",
+            "label": "Future actions"
+          },
+          {
+            "say": "planning session",
+            "label": "Planning session"
+          }
+        ],
+        "shape": "climb"
+      },
+      "station": "s_future_plan",
+      "beat": "b31",
+      "blueprint": "hero.journey"
+    },
+    {
+      "join_in": {
+        "type": "continue",
+        "meaning": "time"
+      },
+      "props": {
+        "right": {
+          "emotion": "neutral",
+          "name": "Colleague",
+          "member": "man"
+        },
+        "lines": [
+          {
+            "text": "How can we approach this?",
+            "say": "how can we approach this",
+            "who": "left"
+          }
+        ],
+        "left": {
+          "emotion": "explaining",
+          "member": "woman",
+          "name": "Manager"
+        }
+      },
+      "accent_on": "Manager speech bubble",
+      "beat": "b32",
+      "template": "scenario.dialogue",
+      "station": "s_future_plan",
+      "kind": "template"
+    },
+    {
+      "props": {
+        "left": {
+          "name": "Manager",
+          "emotion": "neutral",
+          "member": "woman"
+        },
+        "right": {
+          "emotion": "explaining",
+          "member": "man",
+          "name": "Colleague"
+        },
+        "lines": [
+          {
+            "text": "Propose approach",
+            "say": "propose a different approach",
+            "who": "right"
+          }
+        ]
+      },
+      "station": "s_future_plan",
+      "accent_on": "Colleague whiteboard drawing",
+      "kind": "template",
+      "template": "scenario.dialogue",
+      "beat": "b33",
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      }
+    },
+    {
+      "props": {
+        "title": "Relationship stays intact",
+        "say_title": "relationship stays intact",
+        "subtitle": "Work actually improves",
+        "say_subtitle": "work actually improves this time"
+      },
+      "join_in": {
+        "meaning": "time",
+        "type": "continue"
+      },
+      "kind": "template",
+      "accent_on": "Healthy green handshake",
+      "template": "title.card",
+      "station": "s_future_plan",
+      "beat": "b34"
+    },
+    {
+      "accent_on": "Pocket rule text",
+      "beat": "b35",
+      "station": "s_pocket3",
+      "props": {},
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "kind": "avatar"
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "why": "A pale open establishing the awkward baseline without heavy contrast",
+      "accent": "red (conflict)",
+      "band": "light",
+      "break": false
+    },
+    {
+      "from": "b06",
+      "accent": "green (factual specific)",
+      "break": true,
+      "why": "A dark break for the key mechanism of observable behavior, bringing sharp focus",
+      "band": "dark"
+    },
+    {
+      "from": "b14",
+      "why": "A slightly richer middle as we map objective business impacts",
+      "band": "mid",
+      "break": false,
+      "accent": "blue (objective impact)"
+    },
+    {
+      "band": "light",
+      "from": "b30",
+      "break": true,
+      "accent": "green (collaboration)",
+      "why": "A lift at the close for the collaborative payoff and clear future path"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "concept": "One long white sheet of monoline drawings. Every item is a single grey dashed outline until the harm question decides it; then its outline redraws in its class colour (public = accent blue, internal = accent2 amber, confidential = accent3 magenta) and keeps that colour wherever it goes. The film opens and closes on the same email with the customer list attached.",
+  "world": "One white sheet, stations left to right: desk (the laptop email, b01 and b13), board (b02, b03), shelf (b04 to b06), vault (b07, b08), sort (b09, b10), travel (b11), rule (b12). The camera pans right as the lesson advances and pans all the way back to the desk for the payoff.",
+  "devices": [
+    {
+      "id": "class_line",
+      "what": "the class lives in the outline colour: an item's single outline redraws from grey dashed (unclassified) into its class colour on the spoken class word; public = accent, internal = accent2, confidential = accent3, held the whole film",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b04",
+        "b05",
+        "b07",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "mail_screen",
+      "what": "the laptop email with the customer list attached and the cursor on Send; opens the film and returns at the payoff with the attachment in the confidential colour",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b13"
+      ]
+    },
+    {
+      "id": "trays",
+      "what": "three outline trays in the class colours, labelled on their front edges; the items drop into them",
+      "kind": "list",
+      "beats": [
+        "b09",
+        "b10"
+      ]
+    },
+    {
+      "id": "harm_mark",
+      "what": "the harm question drawn as one line question mark that hovers over an item and decides its class",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b07",
+        "b12"
+      ]
+    },
+    {
+      "id": "handoff",
+      "what": "join material: the next station's white field grows in from the last item's outline (handoff) at section changes; camera pans along the sheet otherwise",
+      "kind": "join",
+      "beats": [
+        "b03",
+        "b07",
+        "b09",
+        "b11"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "open on bare white, only ink and grey lines"
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "why": "confidential is the key mechanism: warm field2 tint, the accent3 line carries the frame"
+    },
+    {
+      "from": "b09",
+      "band": "light",
+      "why": "check and transfer back on white"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "why": "payoff on white; the lift is the confidential line and the approved channel lit"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hook",
+      "treatment": "the email on the laptop, cursor on Send, a pause",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "laptop email, customer list attachment in grey dashed outline, cursor glides to Send and stops"
+        }
+      ]
+    },
+    {
+      "id": "promise",
+      "treatment": "presenter beside three class labels in their colours",
+      "beats": [
+        {
+          "beat": "b02",
+          "line": "presenter; three outlined labels draw in their class colours on their words"
+        }
+      ]
+    },
+    {
+      "id": "bridge",
+      "treatment": "the harm question over a document; file type and folder fade",
+      "beats": [
+        {
+          "beat": "b03",
+          "line": "a dashed document under a large line question mark; a file type badge and a folder fade back on not the file type, not the folder"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "one shelf: press release turns public, meeting notes turn internal, notes stop at the door",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "press release page gets an approved tick, outline redraws in public blue, slides out through an open arc"
+        },
+        {
+          "beat": "b05",
+          "line": "meeting notes arrive beside it, outline redraws internal amber on Internal"
+        },
+        {
+          "beat": "b06",
+          "line": "the notes glide to the building door outline and stop at the threshold; Stays inside"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "the customer list turns confidential, then its handling route",
+      "beats": [
+        {
+          "beat": "b07",
+          "line": "the customer list from b01 returns, rows of names as lines; the question mark hovers; outline redraws confidential magenta"
+        },
+        {
+          "beat": "b08",
+          "line": "the list travels one protected line to one named recipient, rests in a locked folder, a paper copy shreds and a file deletes"
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "treatment": "three dashed items over three trays; pause; they drop in",
+      "beats": [
+        {
+          "beat": "b09",
+          "line": "job advert, org chart, payroll file arrive dashed above three empty class trays; a pause ring"
+        },
+        {
+          "beat": "b10",
+          "line": "each drops into its tray and takes its colour; the org chart hovers over public then settles in internal"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "one document morphs page to folder to screen, keeping its line colour",
+      "beats": [
+        {
+          "beat": "b11",
+          "line": "one confidential outline morphs page to folder to screen, magenta throughout"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "treatment": "dashed item steps up a class; arrow to its owner",
+      "beats": [
+        {
+          "beat": "b12",
+          "line": "a dashed item steps up from internal to confidential colour; an arrow draws to its owner"
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "treatment": "the opening email returns, attachment confidential, cursor moves to the approved channel",
+      "beats": [
+        {
+          "beat": "b13",
+          "line": "the opening email; attachment now magenta; cursor leaves Send for an approved channel option and an Ask the owner note"
+        }
+      ]
+    }
+  ]
+}

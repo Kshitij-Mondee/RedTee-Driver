@@ -1,0 +1,189 @@
+{
+  "about": "Shuttle defaults (D-135). Reviewers are the other family (design section 5): the first alias whose provider key is in .env is used; LOOM_SHUTTLE_SKEPTIC / LOOM_SHUTTLE_CRITIC override. Lead aliases are Claude Code's (it resolves them to the current model); Opus leads only in subscription mode (D-119).",
+  "reviewers": {
+    "skeptic": [
+      "gemini-3.8-flash",
+      "gpt-6-luna",
+      "claude-sonnet-5-5"
+    ],
+    "critic": [
+      "gemini-3.8-flash",
+      "gpt-6.1-sol",
+      "claude-sonnet-5-5"
+    ]
+  },
+  "lead": {
+    "default": "sonnet",
+    "allowed": {
+      "subscription": [
+        "sonnet",
+        "opus"
+      ],
+      "api": [
+        "sonnet"
+      ]
+    },
+    "storyboard": {
+      "api": [
+        "opus"
+      ]
+    },
+    "storyboard_about": "D-164 (Kshitij, 2026-10-12: run Shuttle on the real API, Opus 5.5 for the storyboard, Sonnet for everything else): the models a preset may give P5 beyond `allowed`, per mode; on the API, Opus leads P5 only (--preset sonnet-only), never another phase, the run's lead or the build lead (D-119)",
+    "planning": {
+      "api": [
+        "opus"
+      ]
+    },
+    "planning_about": "D-167 (Kshitij, 2026-10-13: \"Planning opus 5.5, sonnet 5.5 manager and the above three models doing the scene writing\"): a preset may give the planning phases (any group inside P1 to P5) a model listed here, per mode; on the API, Opus plans (--preset opus-plan), never P6 to P11, the run's lead or the build lead"
+  },
+  "model_ids": {
+    "about": "Claude Code aliases pinned to full model ids: the CLI's `sonnet` served claude-sonnet-5 on 2026-10-08 while the price table and the request meant Sonnet 5.5 (L-323; D-142 for Relay). The lead's --model and every sub-agent's model go through this map.",
+    "sonnet": "claude-sonnet-5-5",
+    "opus": "claude-opus-5-5",
+    "haiku": "claude-haiku-4-5"
+  },
+  "lead_by_group": {
+    "about": "The lead's model per session group when it differs from the run's --lead. The Opus run spent $59.35 of $71.27 in the P7 to P9 session (the build: kit, beats, compose, check) against $3.37 for planning and $7.27 for critique and render, so the build runs on Sonnet while Opus plans and judges (D-145). --build-lead opus|sonnet|same overrides it for one run.",
+    "P7-P9": "sonnet"
+  },
+  "model_presets": {
+    "about": "Named model plans for a run (--preset). Each sets the lead and the per-phase leads (keys are phases or ranges, as lead_by_group) and replaces lead_by_group for that run; a session never mixes models (launch.split_by_model). Sub-agents keep their own models (Sonnet); the skeptic and the critic stay the other family (Gemini). With the loom runner (D-165) a preset may also name any models.json alias and set the sub-agents' models: `agents` maps a sub-agent name (or \"*\") to an alias.",
+    "sonnet-only": {
+      "about": "Kshitij, 2026-10-10: everything on Sonnet except the storyboard (P5) on Opus; Opus nowhere else. P5 runs as its own session; P10 has no judge and fix split (one model).",
+      "lead": "sonnet",
+      "lead_by_group": {
+        "P5": "opus"
+      }
+    },
+    "opus-plan": {
+      "about": "Kshitij, 2026-10-10, after rating https-private-v2 an 8 (the narration and the teaching were the gap; the teaching plan and the script were Sonnet's under sonnet-only): \"make opus the default for the storyboarding and the lesson script and planning\". Opus leads the planning, P1 to P5 (brief, facts, teaching plan, persona and script, outline and storyboard); Sonnet leads everything after (narration, kit, beats, check, review, render). Planning cost about $1.30 of $16.50 on Sonnet.",
+      "lead": "sonnet",
+      "lead_by_group": {
+        "P1-P5": "opus"
+      }
+    },
+    "gemini-pro": {
+      "about": "D-165: a whole Shuttle run on Gemini 3.1 Pro (the lead in every phase and every sub-agent), the loom runner only; the skeptic and the critic then come from another family (Claude). A combination to compare, never a default.",
+      "lead": "gemini-3.1-pro",
+      "lead_by_group": {},
+      "agents": {
+        "*": "gemini-3.1-pro"
+      }
+    },
+    "scenes-sonnet": {
+      "about": "D-166 scene-writer comparison: Sonnet leads every phase; the scene authors, clip authors and fixers run on claude-sonnet-5-5 (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {},
+      "agents": {
+        "scene-author": "claude-sonnet-5-5",
+        "clip-author": "claude-sonnet-5-5",
+        "fixer": "claude-sonnet-5-5"
+      }
+    },
+    "scenes-gpt-6.1-sol": {
+      "about": "D-166 scene-writer comparison: Sonnet leads every phase; the scene authors, clip authors and fixers run on gpt-6.1-sol (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {},
+      "agents": {
+        "scene-author": "gpt-6.1-sol",
+        "clip-author": "gpt-6.1-sol",
+        "fixer": "gpt-6.1-sol"
+      }
+    },
+    "scenes-gpt-5.6-terra": {
+      "about": "D-166 scene-writer comparison: Sonnet leads every phase; the scene authors, clip authors and fixers run on gpt-5.6-terra (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {},
+      "agents": {
+        "scene-author": "gpt-5.6-terra",
+        "clip-author": "gpt-5.6-terra",
+        "fixer": "gpt-5.6-terra"
+      }
+    },
+    "scenes-gpt-6-luna": {
+      "about": "D-166 scene-writer comparison: Sonnet leads every phase; the scene authors, clip authors and fixers run on gpt-6-luna (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {},
+      "agents": {
+        "scene-author": "gpt-6-luna",
+        "clip-author": "gpt-6-luna",
+        "fixer": "gpt-6-luna"
+      }
+    },
+    "scenes-gemini-3.8-flash": {
+      "about": "D-166 scene-writer comparison: Sonnet leads every phase; the scene authors, clip authors and fixers run on gemini-3.8-flash (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {},
+      "agents": {
+        "scene-author": "gemini-3.8-flash",
+        "clip-author": "gemini-3.8-flash",
+        "fixer": "gemini-3.8-flash"
+      }
+    },
+    "scenes-qwen3.8-max": {
+      "about": "D-168: the five-style test's fourth arm: Sonnet leads every phase; the scene authors, clip authors and fixers run on qwen3.8-max (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {},
+      "agents": {
+        "scene-author": "qwen3.8-max",
+        "clip-author": "qwen3.8-max",
+        "fixer": "qwen3.8-max"
+      }
+    },
+    "opus-storyboard-sol-code": {
+      "about": "Kshitij, 2026-10-16 (the layout guard trial): \"Keep the opus storyboarding, sonnet everything else and gpt sol for coding\". Opus leads the storyboard (P5 alone, as sonnet-only, D-164); Sonnet leads every other phase; every sub-agent that writes code (scene authors, clip authors, fixers and the kit builder) runs on gpt-6.1-sol (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {
+        "P5": "opus"
+      },
+      "agents": {
+        "scene-author": "gpt-6.1-sol",
+        "clip-author": "gpt-6.1-sol",
+        "fixer": "gpt-6.1-sol",
+        "kit-builder": "gpt-6.1-sol"
+      }
+    },
+    "opus-plan-sol-code": {
+      "about": "Kshitij, 2026-10-16 (the four style test lessons): \"use gpt sol for writing visual code. Sonnet for rest and opus for storyboarding and planning\". Opus leads the planning, P1 to P5 (brief, facts, teaching plan, persona and script, outline and storyboard); Sonnet leads every other phase; every sub-agent that writes code (scene authors, clip authors, fixers and the kit builder) runs on gpt-6.1-sol (the loom runner only).",
+      "lead": "sonnet",
+      "lead_by_group": {
+        "P1-P5": "opus"
+      },
+      "agents": {
+        "scene-author": "gpt-6.1-sol",
+        "clip-author": "gpt-6.1-sol",
+        "fixer": "gpt-6.1-sol",
+        "kit-builder": "gpt-6.1-sol"
+      }
+    }
+  },
+  "default_preset": {
+    "about": "The preset a run uses when it names no --preset, --lead or --build-lead, per mode: subscription and api opus-plan (Opus plans P1 to P5, Sonnet leads P6 to P11; D-158, D-167).",
+    "subscription": "opus-plan",
+    "api": "opus-plan"
+  },
+  "session_split": "mixed",
+  "session_split_about": "L-373: 'mixed' runs P1 to P4 and P5 to P6 in one session each, then one session per phase from P7 (the measured run after D-148 spent its lead calls on session overhead in the small planning phases and restarted P5 and P6 separately on each storyboard reopen). 'phase' runs one per phase (D-148: the P7 to P9 session of v2 reached 314 thousand tokens); 'group' keeps the first split (P1-P4, P5-P6, P7-P9, P10-P11). Each session lists only its phases' tools. A lead_by_group key is a range of phases and applies to every session inside it.",
+  "max_turns_per_session": 120,
+  "session_retries": 1,
+  "max_sessions_per_phase": 6,
+  "pictures": {
+    "about": "D-148: the pixels a contact-sheet overview (a sweep of up to 9 beats) is sent at. Empty means the model's own limit (about 1.15 million pixels), what the lead saw before D-148. A smaller value saves about half of each picture's tokens and is a cut made for cost: set it as the default only after a shadow run shows the lead catches the same defects with it (CLAUDE.md rule 13).",
+    "overview_px": null
+  },
+  "reopen_cap": 3,
+  "allowed_builtin_tools": [
+    "Read",
+    "Glob",
+    "Grep",
+    "Agent",
+    "Task"
+  ],
+  "price_note": "subscription mode logs the list price of every call as notional USD (the CLI's own costUSD); it is not a bill",
+  "budget_limits": {
+    "about": "per-phase and per-sub-agent limits the rails enforce beside the lesson's --budget; units usd, tokens, calls; e.g. {\"phases\": {\"P8\": {\"usd\": 4}}, \"agents\": {\"shuttle-scene-author\": {\"calls\": 400}}}; empty = no limit beyond the lesson's",
+    "phases": {},
+    "agents": {}
+  },
+  "reviewers_about": "The skeptic (P2) and the critic (P10): the first model with a key whose provider is not the lead's (a Claude lead gets Gemini or OpenAI, a Gemini lead gets OpenAI or Claude; D-165)."
+}

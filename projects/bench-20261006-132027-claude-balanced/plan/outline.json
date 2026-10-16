@@ -1,0 +1,522 @@
+{
+  "concept": "One person, one desk, one glowing skill icon. Sam's skill fades on screen, then is rebuilt by closing the notes, trying, checking and coming back, until the same desk returns with the icon bright and one small miss. Every idea is a change in a state we can see on that desk: the icon's glow, the notepad's gap list, the calendar's marked days.",
+  "world": "Sam's desk and the wall behind it (laptop, notepad, sticky week calendar, a glowing skill icon). Governing metaphor tested: a glowing icon as skill strength. It fits structure (one icon, one reading), change (glow dims and lifts), scale (day to week) and is safe (no false claim, no numbers). Side stations are things pinned to that wall: a fade curve board, two timeline strips, a plan-card table. Diagram beats are drawn as objects on that wall, not cards on a void.",
+  "look": "story-cartoon (illustrated, classic treatment: warm paper ground, ink outline, grain, springy pop entrances, hard cuts). Newer treatments are recorded as alternatives, not applied.",
+  "devices": [
+    {
+      "id": "skill_icon",
+      "what": "The glowing skill icon on Sam's desk. Its glow is the one reading of how well the skill is held: full at the start, dull a week on, lifted at each visit, full again at the payoff. Held and relabelled, never redrawn.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b05",
+        "b06",
+        "b08",
+        "b15",
+        "b40",
+        "b41"
+      ]
+    },
+    {
+      "id": "fade_curve",
+      "what": "A hand-drawn fade line on a pinned board with unmarked axes, steep first then flat, labels on the steep and the flat part. Reused as the base of the twin timelines and returns for the early-visit callback.",
+      "kind": "data",
+      "beats": [
+        "b05",
+        "b06",
+        "b07",
+        "b15"
+      ]
+    },
+    {
+      "id": "twin_timelines",
+      "what": "Two stacked strips for the same effort drawn as the same amount of colour: one thick block on day one, several thin slices on later days. The skill line is held and its state changes (shoots up and slides down, versus lifted at each slice).",
+      "kind": "explain",
+      "beats": [
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "gap_list",
+      "what": "The notepad's gap list: one missed step per line, stamped on each phrase, then crossed off across later days. It is a list as an object. It is the callback for the practice beats.",
+      "kind": "list",
+      "beats": [
+        "b20",
+        "b21",
+        "b25",
+        "b31",
+        "b34",
+        "b40"
+      ]
+    },
+    {
+      "id": "week_calendar",
+      "what": "The sticky week calendar. The ten-minute blocks, the later-day try and the real task all land on it, so the viewer's own week at the end is the same object Sam used.",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b04",
+        "b32",
+        "b33",
+        "b36",
+        "b37",
+        "b38",
+        "b39"
+      ]
+    },
+    {
+      "id": "torn_page_join",
+      "what": "Join device: a torn paper edge for the 'a week later' time jumps. Today's fallback is a hard cut with the on-screen time label. Handoff joins (the held object stays, its state changes) carry the beats inside a topic.",
+      "kind": "join",
+      "beats": [
+        "b02",
+        "b16",
+        "b40"
+      ]
+    }
+  ],
+  "join_material": "Handoff of the held desk inside a topic (continue). Torn paper edge for time jumps (fallback: hard cut plus label). Chapter boundaries are hard cuts, or a black narration card at the one turn (b26).",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "amber glow on the skill icon",
+      "why": "Pale open. The one saturated amber is at full strength and means 'skill held'."
+    },
+    {
+      "from": "b02",
+      "band": "mid",
+      "break": true,
+      "accent": "amber, dull",
+      "why": "Shock of a week later: the same desk drops a step in value and the icon goes dull."
+    },
+    {
+      "from": "b03",
+      "band": "light",
+      "accent": "amber on the ten-minute blocks",
+      "why": "Presenter promise returns to a pale, calm frame. Amber stays the meaning 'skill held'."
+    },
+    {
+      "from": "b05",
+      "band": "mid",
+      "accent": "amber icon dimming",
+      "why": "The fade is the topic. Amber fades with the line and nothing else is loud."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "accent": "amber on the skill line",
+      "why": "Richer middle. Same effort is drawn as same colour; the amber line shows the lasting."
+    },
+    {
+      "from": "b16",
+      "band": "mid",
+      "accent": "teal on the closed notes and the check",
+      "why": "Second hue enters once, and means 'try and check', kept all lesson."
+    },
+    {
+      "from": "b18",
+      "band": "dark",
+      "break": true,
+      "accent": "none, a blank screen",
+      "why": "Dark break for the key mechanism: the blank. Familiar but not known is the shock."
+    },
+    {
+      "from": "b20",
+      "band": "mid",
+      "accent": "teal on the gap list lines",
+      "why": "Flood of teal at the turn: the check turns the blank into a list of next steps."
+    },
+    {
+      "from": "b26",
+      "band": "dark",
+      "break": true,
+      "accent": "none, black narration card",
+      "why": "Black card marks the turn to the viewer's own decision."
+    },
+    {
+      "from": "b27",
+      "band": "light",
+      "accent": "teal on the chosen plan, B",
+      "why": "The quiz sits on a calm pale frame so the choice is readable."
+    },
+    {
+      "from": "b29",
+      "band": "mid",
+      "accent": "teal on the three step cards",
+      "why": "Peak section, richest middle: the worked step is the most colour in the film."
+    },
+    {
+      "from": "b36",
+      "band": "light",
+      "accent": "teal on the try marker",
+      "why": "The viewer's own week: lighter and open, teal marks the try."
+    },
+    {
+      "from": "b40",
+      "band": "light",
+      "accent": "amber icon at full glow",
+      "why": "Lift at the close. Colour was withheld, so the full amber glow returns now as the payoff."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec1_fading",
+      "treatment": "Story-cartoon desk scenes for the hook, then one pinned board where the icon and curve change state. Expressive on b01 and b02; calm and productive on the curve. Camera cut.",
+      "accent_on": "the skill icon glow",
+      "world": "Sam's desk, then the wall behind it (sticky calendar, curve board)",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Training day. Wide establishing: Sam at the desk, laptop, full notepad, smiling, the amber icon glowing. Story role: establish, with the trouble not yet visible. Sam is small in a detailed place.",
+          "builder": "title.card",
+          "device": "skill_icon",
+          "join": "open",
+          "intent": "establishing"
+        },
+        {
+          "beat": "b02",
+          "line": "A week later. Same desk and same angle, notepad open and untouched, blank screen with a blinking cursor, icon dull. Medium shot, story role: something wrong. This frame returns at b40.",
+          "builder": "document.page",
+          "device": "skill_icon",
+          "join": "time (torn page, fallback hard cut and label)",
+          "intent": "shock"
+        },
+        {
+          "beat": "b03",
+          "line": "Presenter, used sparingly, beside a small calendar where ten-minute blocks drop on separate days ahead of a task marker. Medium shot, story role: promise.",
+          "builder": "avatar",
+          "device": "week_calendar",
+          "join": "cut (new world: stage)"
+        },
+        {
+          "beat": "b04",
+          "line": "The sticky week calendar pinned on Sam's wall; the pinned notes blur a little day to day. Medium, story role: bridge to the viewer's own experience ('you have been Sam').",
+          "builder": "calendar.plan",
+          "device": "week_calendar",
+          "join": "continue (held calendar)"
+        },
+        {
+          "beat": "b05",
+          "line": "Close on the icon on the desk: bright on day one, dims as the days pass, a faint fade line tracing against them. Story role: mechanism begins.",
+          "builder": "hero.meter",
+          "device": "skill_icon",
+          "join": "cut (into the object)",
+          "intent": "change over time"
+        },
+        {
+          "beat": "b06",
+          "line": "Same board held: the line drops steeply early then flattens, labels sit on the steep and flat parts and the icon dims to match. Close shot.",
+          "builder": "hero.meter",
+          "device": "fade_curve",
+          "join": "continue (same station, new state)"
+        },
+        {
+          "beat": "b07",
+          "line": "The curve held with unmarked axes and one small tag 'Shape, not figures'. Rest on a finished frame.",
+          "builder": "timeline",
+          "device": "fade_curve",
+          "join": "continue",
+          "intent": "rest"
+        },
+        {
+          "beat": "b08",
+          "line": "Back to the desk: Sam leans back, hands off the keyboard, icon dim, a coin hovers over the desk for 'left to chance'. Medium, story role: consequence.",
+          "builder": "title.card",
+          "device": "skill_icon",
+          "join": "cut (meanwhile, back at the desk)"
+        }
+      ]
+    },
+    {
+      "id": "sec2_spacing",
+      "treatment": "Diagram world drawn as two paper strips on the wall, productive and calm. Motion only on the skill line (shoots up, slides down, lifts at each slice). Hold the layout and change its state.",
+      "accent_on": "the amber skill line",
+      "world": "Two timeline strips pinned on the wall, with Sam's desk edge visible for continuity",
+      "beats": [
+        {
+          "beat": "b09",
+          "line": "Two strips for the same ten minutes: one thick block on day one, several thin slices later, drawn as equal amounts of colour. Wide shot, story role: setup, the parts.",
+          "builder": "timeline",
+          "device": "twin_timelines",
+          "join": "cut (chapter)"
+        },
+        {
+          "beat": "b10",
+          "line": "On the one-block strip the skill line shoots up after the block and stays high the next day. Label 'Sharp tomorrow'. Medium.",
+          "builder": "hero.meter",
+          "device": "twin_timelines",
+          "join": "continue",
+          "intent": "change over time"
+        },
+        {
+          "beat": "b11",
+          "line": "Same strip, state changed: the line slides down after its peak with no further lifts, steeper than the other strip. Dark ink for the slide. Medium.",
+          "builder": "hero.meter",
+          "device": "twin_timelines",
+          "join": "continue"
+        },
+        {
+          "beat": "b12",
+          "line": "The spread strip: a small lift at each thin slice, the line staying above the one-block line. Close shot as each lift lands on its words.",
+          "builder": "hero.meter",
+          "device": "twin_timelines",
+          "join": "continue"
+        },
+        {
+          "beat": "b13",
+          "line": "Block on the left tagged 'Block feels serious', slices on the right tagged 'Spread usually lasts'. Equals side by side. Refute the misconception.",
+          "builder": "compare.two",
+          "device": "twin_timelines",
+          "join": "continue"
+        },
+        {
+          "beat": "b14",
+          "line": "The name 'The spacing effect' written over the spread strip, both lines still visible, spread on top. Held and calm.",
+          "builder": "definition",
+          "device": "twin_timelines",
+          "join": "continue",
+          "intent": "rest"
+        },
+        {
+          "beat": "b15",
+          "line": "The first fade curve returns with its steep early stretch highlighted and a small visit marker set in it. A callback to the spoken recall prompt.",
+          "builder": "recap",
+          "device": "fade_curve",
+          "join": "cut (callback to b06)",
+          "intent": "callback"
+        }
+      ]
+    },
+    {
+      "id": "sec3_retrieval",
+      "treatment": "Back in the story world, the longest section (slowdown). Sam is the subject in nearly every beat, with props changing state: jars, notepad, path, plan cards. Expressive on the blank (b18), calm on definitions. Teal is the try and check colour.",
+      "accent_on": "the closed notes and the gap list (teal)",
+      "world": "Sam's desk a week on, then the notepad, then a path landscape, then a plan table for the quiz",
+      "beats": [
+        {
+          "beat": "b16",
+          "line": "A week on, Sam re-watches the recording, nodding, thought bubble 'I know this'. Medium, story role: the tempting move.",
+          "builder": "hero.character_moment",
+          "device": "skill_icon",
+          "join": "time (torn page, fallback hard cut)"
+        },
+        {
+          "beat": "b17",
+          "line": "Two labelled jars beside Sam: one full of familiar glow, one empty labelled 'knowing'. Text sits on the jars.",
+          "builder": "compare.two",
+          "join": "continue",
+          "intent": "refute"
+        },
+        {
+          "beat": "b18",
+          "line": "Sam shuts the recording, the software opens on an empty form, hands hover over the keys, an empty thought bubble. Close shot and a dark value break: this is the key mechanism.",
+          "builder": "hero.character_moment",
+          "device": "gap_list",
+          "join": "shock (cut)",
+          "intent": "blank"
+        },
+        {
+          "beat": "b19",
+          "line": "'Retrieval practice' named beside Sam's shut notes and the open blank software. Calm.",
+          "builder": "definition",
+          "join": "cut",
+          "intent": "rest"
+        },
+        {
+          "beat": "b20",
+          "line": "Sam compares the screen to the recording. The gap list on the notepad fills in, one missed step stamped per phrase. Close on the notepad. Teal flood.",
+          "builder": "document.page",
+          "device": "gap_list",
+          "join": "continue (held notepad)"
+        },
+        {
+          "beat": "b21",
+          "line": "Two arrows on the notepad, 'try first' then 'check', with the gap list beside them, then 'fill the gaps'. Wide, the order is the point.",
+          "builder": "process.flow",
+          "device": "gap_list",
+          "join": "continue"
+        },
+        {
+          "beat": "b22",
+          "line": "Glum Sam at the gap list, bubble 'this is not working', then a teal 'somewhat hard' band opens around the effort reading on a gauge. Medium.",
+          "builder": "hero.meter",
+          "join": "cut",
+          "intent": "refute by state change"
+        },
+        {
+          "beat": "b23",
+          "line": "A smooth easy path beside a slightly uphill path; the name 'Desirable difficulty' lettered over the uphill one. World change to a path landscape.",
+          "builder": "compare.two",
+          "join": "cut (new world: path)"
+        },
+        {
+          "beat": "b24",
+          "line": "The uphill path with a sheer cliff beyond it, crossed out, next to the manageable slope with a checkpoint flag. Wide.",
+          "builder": "hero.journey",
+          "join": "continue (same landscape)",
+          "intent": "limit"
+        },
+        {
+          "beat": "b25",
+          "line": "Recap strip on the notepad that replays the lesson's own pictures: re-watch crossed out, try then check ticked, a few misses marked normal.",
+          "builder": "recap",
+          "device": "gap_list",
+          "join": "cut (callback to b20)",
+          "intent": "callback"
+        },
+        {
+          "beat": "b26",
+          "line": "Black narration card turn: 'Your turn'. Sam small at the desk, a new approval tool on screen, three blank plan cards waiting.",
+          "builder": "title.card",
+          "join": "cut (chapter, black card)",
+          "intent": "turn"
+        },
+        {
+          "beat": "b27",
+          "line": "Three plan cards slide in, one per option, each with a small picture: a screen, a notepad with calendar, a single big block. Hold for the pause.",
+          "builder": "quiz.question",
+          "join": "cut"
+        },
+        {
+          "beat": "b28",
+          "line": "Card B lights up with a tick, card A dims with 'familiar, not known', card C fades away.",
+          "builder": "quiz.answer",
+          "device": "gap_list",
+          "join": "continue (same cards)"
+        }
+      ]
+    },
+    {
+      "id": "sec4_the_step",
+      "treatment": "Worked example on the original blank task: three step cards beside the form, filled in on their words. The densest, richest section. Motion where steps change state; list and calendar stay calm.",
+      "accent_on": "the active step card (teal)",
+      "world": "Sam's desk and the original blank form, with the calendar on the wall",
+      "beats": [
+        {
+          "beat": "b29",
+          "line": "The blank form from the hook returns on Sam's screen with three empty step cards beside it. Medium, story role: setup of the worked step.",
+          "builder": "document.page",
+          "join": "cut (chapter, callback to b18)",
+          "intent": "callback"
+        },
+        {
+          "beat": "b30",
+          "line": "Card one fills in: notes and recording shut, Sam fills the form from memory and a few steps appear. Medium.",
+          "builder": "list.steps",
+          "join": "continue (held cards)"
+        },
+        {
+          "beat": "b31",
+          "line": "Card two fills in and the gap list shows the missed steps, one line each, on the notepad. Close on the list.",
+          "builder": "list.steps",
+          "device": "gap_list",
+          "join": "continue"
+        },
+        {
+          "beat": "b32",
+          "line": "Card three fills in: a small calendar shows the try on a later day with empty days between.",
+          "builder": "calendar.plan",
+          "device": "week_calendar",
+          "join": "cut (meanwhile, calendar on the wall)"
+        },
+        {
+          "beat": "b33",
+          "line": "The later-day marker attaches to a real task card in Sam's work week, so no extra session is needed.",
+          "builder": "calendar.plan",
+          "device": "week_calendar",
+          "join": "continue"
+        },
+        {
+          "beat": "b34",
+          "line": "The gap list shrinks across two later days, lines crossed off until one remains. Close on the notepad.",
+          "builder": "document.page",
+          "device": "gap_list",
+          "join": "time (days pass)",
+          "intent": "change over time"
+        },
+        {
+          "beat": "b35",
+          "line": "The three step cards stacked beside the quiz card B, matching its contents. A callback to the quiz.",
+          "builder": "recap",
+          "join": "cut (callback to b28)",
+          "intent": "callback"
+        }
+      ]
+    },
+    {
+      "id": "sec5_own_week",
+      "treatment": "Split screen with Sam on the left and the viewer's blank week on the right. The same week calendar as Sam's, then the payoff scene as the opening frame returning, changed. Presenter only on the close.",
+      "accent_on": "the try marker (teal), then the amber icon at the payoff",
+      "world": "The viewer's blank week calendar, then Sam's original desk",
+      "beats": [
+        {
+          "beat": "b36",
+          "line": "Split screen: Sam on the left, a blank week calendar on the right for the viewer, label 'Your latest training'. Medium.",
+          "builder": "compare.two",
+          "device": "week_calendar",
+          "join": "cut (chapter)"
+        },
+        {
+          "beat": "b37",
+          "line": "On the blank week one day gets a task marker for a task that already uses the skill. Close.",
+          "builder": "calendar.plan",
+          "device": "week_calendar",
+          "join": "continue",
+          "intent": "change over time"
+        },
+        {
+          "beat": "b38",
+          "line": "A short try marker lands on the task day, a notes icon stays closed beside it, then a check mark follows. Close.",
+          "builder": "calendar.plan",
+          "device": "week_calendar",
+          "join": "continue"
+        },
+        {
+          "beat": "b39",
+          "line": "Two calendar entries side by side: an eye icon labelled 're-read', and a pencil over closed notes labelled 'retrieval'.",
+          "builder": "compare.two",
+          "device": "week_calendar",
+          "join": "cut",
+          "intent": "distinguish"
+        },
+        {
+          "beat": "b40",
+          "line": "Payoff: the hook's desk at the same angle as b02. Sam types, pauses at one step, checks the notepad and carries on. The icon is at full amber glow. Same frame, changed.",
+          "builder": "hero.character_moment",
+          "device": "skill_icon",
+          "join": "time (torn page, fallback hard cut), a match to b02",
+          "intent": "payoff"
+        },
+        {
+          "beat": "b41",
+          "line": "Presenter beside four words appearing in turn, with Sam's bright icon on the desk behind. Hold on a finished frame.",
+          "builder": "avatar",
+          "device": "skill_icon",
+          "join": "continue (held desk)",
+          "intent": "rest"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "Newer treatment: unfold entrances and a camera push into the object in place of pop entrances and cuts. Not chosen, since brief.look is story-cartoon and the classic treatment is the default.",
+    "Icon style: 'duotone' (a soft colour blob behind) in place of the seed's 'disc' for the skill icon.",
+    "Join alternative: a motif or scroll join in place of the torn page if the pack gets it. Today the fallback is a hard cut with a time label.",
+    "Quiz: plan cards as a three-slot swap (a swap-slot device) in place of sliding cards.",
+    "Fade curve beats (b05 to b07) as one hero.meter instrument across all three beats, in place of the meter then timeline mix."
+  ],
+  "open_questions": [
+    "Does Sam have a designed rig with the poses needed (smiling, frown, leaning back, glum, typing)? If not, the missing poses fall back to back views, hands on keys and desk-only frames, and b08, b16, b18, b22 and b40 change the most.",
+    "Is the teal second hue acceptable next to the amber? It must stay the single meaning 'try and check' all lesson.",
+    "Allocation says b07, b21 and b29 are template beats. I held them as productive rests and did not add motion to them. Confirm no extra motion is wanted.",
+    "I did not check that hero.meter supports two pointers or a held skill line on two strips for b10 to b12. If it does not, those beats go bespoke, as in L-24. I did not fetch props at this altitude.",
+    "Not verified: the animatic render and the script's timings. The outline follows the 540 s plan, and the allocation estimate is about 423 s."
+  ]
+}

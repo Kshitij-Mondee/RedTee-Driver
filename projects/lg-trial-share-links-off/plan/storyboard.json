@@ -1,0 +1,1682 @@
+{
+  "style": "whiteboard",
+  "concept": "A link is a key that travels. One marker world: the budget draft sits inside three rough rings (anyone with the link, people in the company, named people), and the same hand-drawn forward arrow shows how far a link reaches on each setting; the key is drawn early and handed back at the end.",
+  "world": {
+    "stations": [
+      {
+        "id": "hook",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "presenter",
+        "x": 2400,
+        "y": 0
+      },
+      {
+        "id": "rings",
+        "x": 4800,
+        "y": 0
+      },
+      {
+        "id": "access",
+        "x": 0,
+        "y": 1600
+      },
+      {
+        "id": "travel",
+        "x": 2400,
+        "y": 1600
+      },
+      {
+        "id": "quiz",
+        "x": 4800,
+        "y": 1600
+      },
+      {
+        "id": "checklist",
+        "x": 0,
+        "y": 3200
+      },
+      {
+        "id": "takeback",
+        "x": 2400,
+        "y": 3200
+      },
+      {
+        "id": "payoff",
+        "x": 4800,
+        "y": 3200
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "a link is a key that travels; named people is a door that checks who you are",
+    "setting": "one white board, marker only",
+    "arc": "a link reaches a stranger; three rings explain who can open it; view versus edit; a forward travels to the edge of each ring; checks before and after; the budget link redrawn safely",
+    "cast": [
+      {
+        "name": "Mia",
+        "member": "woman",
+        "skin": 1,
+        "cloth": "accent2",
+        "role": "presenter, seen only in b03 and b25"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "budget_doc",
+      "what": "the one budget draft page (kit part budget_page), the same page every time",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b04",
+        "b09",
+        "b10",
+        "b11",
+        "b21",
+        "b24"
+      ]
+    },
+    {
+      "id": "link_key",
+      "what": "one rough hand-drawn key standing for the link (kit part link_key): drawn, handed on, crossed out and returned",
+      "kind": "callback",
+      "beats": [
+        "b04",
+        "b05",
+        "b22",
+        "b24"
+      ]
+    },
+    {
+      "id": "three_rings",
+      "what": "three concentric rough rings around the page (kit part access_rings) with the door and the name list (kit part name_list); one board gains a ring per beat",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b24"
+      ]
+    },
+    {
+      "id": "forward_line",
+      "what": "the bent marker forward arrow from one holder to the next (engine W.arrow, ink), the same arrow every time the link travels",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b24"
+      ]
+    },
+    {
+      "id": "pocket_rule",
+      "what": "a pocket rule written as one line under the board with one accent underline",
+      "kind": "rest",
+      "beats": [
+        "b08",
+        "b17",
+        "b25"
+      ]
+    },
+    {
+      "id": "board_wipe",
+      "what": "the wipe join (dir right) at each section turn; camera pans and continue joins inside a section",
+      "kind": "join",
+      "beats": [
+        "b09",
+        "b13",
+        "b20"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "a clean white board, ink with one accent mark per beat"
+    },
+    {
+      "from": "b13",
+      "band": "mid",
+      "why": "the key mechanism, how a link travels: the rings carry light hachure and the board is at its fullest"
+    },
+    {
+      "from": "b20",
+      "band": "light",
+      "why": "the close lifts back to a clean board for the checks and the payoff"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "budget_page",
+        "what": "The budget draft as a rough hand-drawn page (portrait, folded top right corner), its title Budget draft written by the engine hand at the top, three scribbled figure lines below (marks, no digits). Opts {w, h}. States: plain; edited (one figure line gets a pencil change mark drawn on it, via setState('edited', t, {pen})). Ink only; the caller chooses an accent pen for the edit mark.",
+        "beats": [
+          "b01",
+          "b02",
+          "b04",
+          "b09",
+          "b10",
+          "b11",
+          "b21",
+          "b24"
+        ],
+        "states": [
+          "plain",
+          "edited"
+        ]
+      },
+      {
+        "id": "link_key",
+        "what": "One rough hand key (round bow with a hole, a shaft, two teeth), drawn by the engine hand in one group, about 160 by 70 at size 1. Opts {w, h, pen}. States: drawn; crossed (a single cross stroke over it, pen chosen by the caller). The same key in every beat.",
+        "beats": [
+          "b04",
+          "b05",
+          "b22",
+          "b24"
+        ],
+        "states": [
+          "drawn",
+          "crossed"
+        ]
+      },
+      {
+        "id": "access_rings",
+        "what": "Three concentric rough rings (hand circles, not perfect) centred on a point: anyone (widest), company (middle), named (inner, small). Each ring is drawn separately on its own cue: showRing(name, t, {by}). A label for each ring written beside it to the right with a short leader (Anyone with the link, People in the company, Named people), written only when the caller asks: label(name, t). The inner ring carries a small door on its right edge: door states shut or open. Optional light hachure inside a ring (hatch(name, t)), at most one ring hatched at a time. Must work at full board size (outer radius about 380) and as a small muted recall sketch (outer radius about 90, no labels). Exposes each ring's centre and radius so callers can place pictograms inside, outside and at the edge.",
+        "beats": [
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b12",
+          "b13",
+          "b14",
+          "b15",
+          "b16",
+          "b17",
+          "b24"
+        ],
+        "states": [
+          "shut",
+          "open"
+        ]
+      },
+      {
+        "id": "name_list",
+        "what": "A short rough list card: three rows, each a small person mark (Lucide user at marker weight) and a scribbled line, no written names. States: check(i, t) draws a small tick beside row i; strike(i, t) strikes row i through. Sits beside the inner ring's door.",
+        "beats": [
+          "b07",
+          "b16",
+          "b22",
+          "b24"
+        ],
+        "states": [
+          "plain",
+          "checked",
+          "struck"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "hook",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "stranger_q",
+      "story_role": "hook",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the stranger arriving after the three teammates is the whole hook",
+        "elements": [
+          {
+            "name": "page",
+            "what": "kit budget_page, left of centre, about 300 by 400"
+          },
+          {
+            "name": "team",
+            "what": "three Lucide user pictograms right of the page, drawn one after another"
+          },
+          {
+            "name": "team_label",
+            "what": "Three teammates written under them"
+          },
+          {
+            "name": "stranger_box",
+            "what": "a rough box far right holding a fourth user pictogram facing the page"
+          },
+          {
+            "name": "stranger_q",
+            "what": "a written question mark beside the fourth figure, accent pen"
+          },
+          {
+            "name": "stranger_label",
+            "what": "A stranger? written under the box"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "budget link",
+            "element": "page",
+            "action": "page drawn, Budget draft written",
+            "motion": "engine draw and write"
+          },
+          {
+            "t_anchor": "three teammates",
+            "element": "team",
+            "action": "three pictograms drawn, label written",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "a stranger",
+            "element": "stranger_box",
+            "action": "box and figure drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "reading it",
+            "element": "stranger_q",
+            "action": "question mark in accent, then the label",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "everything stays for b02 on the same board"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "hook",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "team",
+        "team_label",
+        "stranger_box",
+        "stranger_q",
+        "stranger_label"
+      ],
+      "accent_on": "forward_arrow",
+      "story_role": "setup",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the link travelling, holder to holder, is the cause",
+        "elements": [
+          {
+            "name": "second_figure",
+            "what": "one user pictogram between the team and the stranger box, slightly lower"
+          },
+          {
+            "name": "forward_arrow",
+            "what": "bent marker arrow from the last teammate to the second figure and on to the stranger box, in two hops; accent pen (the stranger question mark goes back to ink here so the accent is on one thing)"
+          },
+          {
+            "name": "travelled_words",
+            "what": "The link travelled written under the arrow, ink"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "How did it get there",
+            "element": "second_figure",
+            "action": "second figure drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Nobody hacked anything",
+            "element": "forward_arrow",
+            "action": "first hop drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "simply travelled",
+            "element": "forward_arrow",
+            "action": "second hop to the stranger, then the words written",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "the hook board ends here; the camera pans to the presenter"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "avatar",
+      "station": "presenter",
+      "join_in": {
+        "type": "camera"
+      },
+      "story_role": "setup",
+      "props": {
+        "title": "Three quick choices"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "rings",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "key",
+      "story_role": "setup",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the key being handed to another holder makes the analogy",
+        "elements": [
+          {
+            "name": "page",
+            "what": "kit budget_page, small (about 150 by 200), centred at about x 760 y 500 where the rings will go, with a door outline drawn on it"
+          },
+          {
+            "name": "key",
+            "what": "kit link_key, accent pen, just right of the page"
+          },
+          {
+            "name": "holder",
+            "what": "one user pictogram to the right at about x 1250"
+          },
+          {
+            "name": "handoff_arrow",
+            "what": "short bent arrow from the key toward the holder"
+          },
+          {
+            "name": "key_words",
+            "what": "A link is a key written top right, as a heading"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "paste links",
+            "element": "page",
+            "action": "page drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "as a key",
+            "element": "key",
+            "action": "key drawn in accent, words written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "whoever holds it",
+            "element": "handoff_arrow",
+            "action": "arrow to the holder, holder drawn",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "page and key stay for b05; the holder, arrow and heading leave"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "rings",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "key"
+      ],
+      "accent_on": "anyone_underline",
+      "story_role": "setup",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the widest ring is drawn as it is named",
+        "elements": [
+          {
+            "name": "rings",
+            "what": "kit access_rings centred on the page; only the anyone ring drawn now (outer radius about 380)"
+          },
+          {
+            "name": "crowd",
+            "what": "five or six user pictograms scattered in the widest band"
+          },
+          {
+            "name": "anyone_label",
+            "what": "Anyone with the link written right of the ring with a short leader"
+          },
+          {
+            "name": "anyone_underline",
+            "what": "accent underline under the label"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "anyone with the link",
+            "element": "rings",
+            "action": "anyone ring drawn, label written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "Whoever holds it",
+            "element": "crowd",
+            "action": "pictograms drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "no sign-in needed",
+            "element": "anyone_underline",
+            "action": "underline",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "rings, crowd and label stay; b06 adds the middle ring"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "rings",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "key",
+        "rings",
+        "crowd",
+        "anyone_label"
+      ],
+      "accent_on": "edge_mark",
+      "story_role": "setup",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the middle ring separates company from outsiders",
+        "elements": [
+          {
+            "name": "company_ring",
+            "what": "kit access_rings company ring shown (middle radius about 250)"
+          },
+          {
+            "name": "company_people",
+            "what": "three or four user pictograms inside the company band"
+          },
+          {
+            "name": "company_label",
+            "what": "People in the company written right with a leader, under the first label"
+          },
+          {
+            "name": "edge_mark",
+            "what": "a short accent bar on the company ring where an outsider pictogram stops outside it"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "people in the company",
+            "element": "company_ring",
+            "action": "middle ring drawn, label written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "Anyone signed in",
+            "element": "company_people",
+            "action": "pictograms drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Outsiders stay out",
+            "element": "edge_mark",
+            "action": "edge mark drawn beside an outside pictogram",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "all stay; b07 adds the inner ring"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "rings",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "key",
+        "rings",
+        "crowd",
+        "anyone_label",
+        "company_ring",
+        "company_people",
+        "company_label"
+      ],
+      "accent_on": "door",
+      "story_role": "turn",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the door checking a list is where the key analogy breaks",
+        "elements": [
+          {
+            "name": "named_ring",
+            "what": "kit access_rings named ring (inner radius about 130) around the page"
+          },
+          {
+            "name": "door",
+            "what": "the inner ring's door, accent pen"
+          },
+          {
+            "name": "list",
+            "what": "kit name_list beside the door, outside the inner ring"
+          },
+          {
+            "name": "named_label",
+            "what": "Named people written right with a leader, under the second label"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "named people",
+            "element": "named_ring",
+            "action": "inner ring drawn, label written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "the door checks you",
+            "element": "door",
+            "action": "door drawn in accent, list drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Only accounts you added",
+            "element": "list",
+            "action": "the three rows ticked one by one",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "all stay for b08"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "rings",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "key",
+        "rings",
+        "crowd",
+        "anyone_label",
+        "company_ring",
+        "company_people",
+        "company_label",
+        "named_ring",
+        "door",
+        "list",
+        "named_label"
+      ],
+      "accent_on": "rule_underline",
+      "story_role": "payoff",
+      "intent": "rest",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the order of the rings becomes the rule",
+        "elements": [
+          {
+            "name": "narrow_arrow",
+            "what": "arrow down the three labels from the first to the third, with Widest to narrowest written beside it"
+          },
+          {
+            "name": "rule_words",
+            "what": "Pick the narrowest that works written right column, lower"
+          },
+          {
+            "name": "rule_underline",
+            "what": "accent underline under the rule (the door returns to ink before this so one accent shows)"
+          },
+          {
+            "name": "company_note",
+            "what": "Check your company's rules, muted pen, small, under the rule"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Widest to narrowest",
+            "element": "narrow_arrow",
+            "action": "arrow and words",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "Pick the narrowest",
+            "element": "rule_words",
+            "action": "rule written, then underlined",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "Your company may set rules",
+            "element": "company_note",
+            "action": "note written in muted",
+            "motion": "write"
+          }
+        ],
+        "continuity": "the section ends; everything is wiped at b09"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "access",
+      "join_in": {
+        "type": "wipe",
+        "dir": "right"
+      },
+      "accent_on": "read_only_underline",
+      "story_role": "setup",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "a hand reaching in and the page staying the same shows read only",
+        "elements": [
+          {
+            "name": "page",
+            "what": "kit budget_page large on the left (about 320 by 430)"
+          },
+          {
+            "name": "eye",
+            "what": "Lucide eye at marker weight right of the page, top row"
+          },
+          {
+            "name": "view_words",
+            "what": "View written as a heading beside the eye"
+          },
+          {
+            "name": "reach",
+            "what": "Lucide hand reaching toward the page, then a short arrow that stops at the page edge"
+          },
+          {
+            "name": "read_only",
+            "what": "Read only written beside View"
+          },
+          {
+            "name": "read_only_underline",
+            "what": "accent underline under Read only"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "what can they do",
+            "element": "page",
+            "action": "page drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "With view",
+            "element": "eye",
+            "action": "eye drawn, View written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "cannot change",
+            "element": "reach",
+            "action": "hand and arrow; Read only written and underlined",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "page, eye, View and Read only stay; the hand leaves"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "access",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "eye",
+        "view_words",
+        "read_only"
+      ],
+      "accent_on": "edit_mark",
+      "story_role": "turn",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "one change appearing on every copy is the meaning of edit",
+        "elements": [
+          {
+            "name": "pencil",
+            "what": "Lucide pencil beside a second row under the View row"
+          },
+          {
+            "name": "edit_words",
+            "what": "Edit written beside the pencil, Changes the original after it"
+          },
+          {
+            "name": "edit_mark",
+            "what": "budget_page edited state: the change mark on one figure line, accent pen"
+          },
+          {
+            "name": "copies",
+            "what": "three small rough pages bottom right, each gaining the same change mark in ink"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Edit is different",
+            "element": "pencil",
+            "action": "pencil drawn, Edit written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "change the original",
+            "element": "edit_mark",
+            "action": "change mark on the page in accent",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Everyone sees",
+            "element": "copies",
+            "action": "three small pages, the mark repeated on each",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "all stay for b11"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "access",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "eye",
+        "view_words",
+        "read_only",
+        "pencil",
+        "edit_words",
+        "edit_mark"
+      ],
+      "accent_on": "copy_underline",
+      "story_role": "reveal",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "a copy leaving the viewed page shows what view does not stop",
+        "elements": [
+          {
+            "name": "copy_arrow",
+            "what": "arrow from the page to a second rough sheet under the eye row"
+          },
+          {
+            "name": "second_sheet",
+            "what": "a small rough sheet with scribbled lines"
+          },
+          {
+            "name": "copy_words",
+            "what": "View is not copy-proof written beside the sheet"
+          },
+          {
+            "name": "copy_underline",
+            "what": "accent underline under it (the edit mark is ink from here)"
+          },
+          {
+            "name": "tool_note",
+            "what": "depends on the tool, muted, small"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "where people slip",
+            "element": "copy_arrow",
+            "action": "arrow drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "View protects",
+            "element": "second_sheet",
+            "action": "sheet drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "may not stop copying",
+            "element": "copy_words",
+            "action": "words written, underlined, note in muted",
+            "motion": "write"
+          }
+        ],
+        "continuity": "page, eye, View, pencil and Edit stay for b12"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "access",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "eye",
+        "view_words",
+        "pencil",
+        "edit_words"
+      ],
+      "accent_on": "view_first_underline",
+      "story_role": "payoff",
+      "intent": "rest",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the decision is written beside the two rows, and the rings come back as a recall",
+        "elements": [
+          {
+            "name": "view_first",
+            "what": "a hand tick and View first written right of the View row"
+          },
+          {
+            "name": "view_first_underline",
+            "what": "accent underline under View first"
+          },
+          {
+            "name": "edit_if",
+            "what": "Edit only if they must written right of the Edit row with a written question mark"
+          },
+          {
+            "name": "recall_rings",
+            "what": "kit access_rings small (outer radius about 90), muted, bottom right, no labels"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "start with view",
+            "element": "view_first",
+            "action": "tick and words, underline",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "Edit only when",
+            "element": "edit_if",
+            "action": "words and question mark",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "three doors",
+            "element": "recall_rings",
+            "action": "three small rings drawn in muted",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "section ends; wiped at b13"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "travel",
+      "join_in": {
+        "type": "wipe",
+        "dir": "right"
+      },
+      "accent_on": "forward_arrow",
+      "story_role": "setup",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the forward is a movement from one holder to another",
+        "elements": [
+          {
+            "name": "rings",
+            "what": "kit access_rings centred at about x 700 y 500; only the company ring drawn now, light hachure inside"
+          },
+          {
+            "name": "team",
+            "what": "three user pictograms inside the company ring, left"
+          },
+          {
+            "name": "manager",
+            "what": "one user pictogram elsewhere inside the ring, right"
+          },
+          {
+            "name": "forward_arrow",
+            "what": "bent accent arrow from a teammate to the manager"
+          },
+          {
+            "name": "note_words",
+            "what": "Company link and Forwarded once written in the right column"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "set to the company",
+            "element": "rings",
+            "action": "company ring and team drawn, Company link written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "forwards it",
+            "element": "forward_arrow",
+            "action": "arrow from a teammate",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "a manager elsewhere",
+            "element": "manager",
+            "action": "manager drawn at the arrow head, Forwarded once written",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "rings, team, manager and arrow stay; the words leave at b14"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "travel",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "rings",
+        "team",
+        "manager",
+        "forward_arrow"
+      ],
+      "accent_on": "edge_stop",
+      "story_role": "reveal",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the second forward stops at the edge of the ring",
+        "elements": [
+          {
+            "name": "small_page",
+            "what": "a tiny rough page opened beside the manager"
+          },
+          {
+            "name": "forward2",
+            "what": "ink arrow from the manager toward the ring edge, ending at the edge"
+          },
+          {
+            "name": "edge_stop",
+            "what": "short accent bar across the arrow head on the company ring (the first forward arrow is ink from here)"
+          },
+          {
+            "name": "outsider",
+            "what": "user pictogram just outside the ring, a small turn-back arrow"
+          },
+          {
+            "name": "permission_words",
+            "what": "The link is the permission and Edge of the company written in the right column"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "She opens it",
+            "element": "small_page",
+            "action": "page drawn beside the manager",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "is the permission",
+            "element": "permission_words",
+            "action": "words written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "only inside the company",
+            "element": "forward2",
+            "action": "arrow to the edge, stop bar in accent, outsider and turn-back",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "all drawings stay; the words leave at b15"
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "travel",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "rings",
+        "team",
+        "manager",
+        "forward_arrow",
+        "small_page",
+        "forward2",
+        "edge_stop",
+        "outsider"
+      ],
+      "accent_on": "forward3",
+      "story_role": "turn",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the same arrow running off the board is the absence of an edge",
+        "elements": [
+          {
+            "name": "anyone_ring",
+            "what": "kit access_rings anyone ring drawn around the company ring"
+          },
+          {
+            "name": "forward3",
+            "what": "accent arrow continuing from the stop point, past the company ring and the anyone ring, to the board border"
+          },
+          {
+            "name": "no_edge_words",
+            "what": "Anyone with the link: no edge written in the right column"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Anyone with the link",
+            "element": "anyone_ring",
+            "action": "outer ring drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "no such edge",
+            "element": "forward3",
+            "action": "arrow runs off, words written",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "rings and holders stay; forward3 and its words leave at b16"
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "station": "travel",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "rings",
+        "team",
+        "manager",
+        "forward_arrow",
+        "small_page",
+        "anyone_ring"
+      ],
+      "accent_on": "door",
+      "story_role": "reveal",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the door checking the list and staying shut is the mechanism",
+        "elements": [
+          {
+            "name": "named_ring",
+            "what": "kit access_rings named ring drawn around the three teammates, door on its edge"
+          },
+          {
+            "name": "door",
+            "what": "the inner ring door, accent pen, state shut"
+          },
+          {
+            "name": "list",
+            "what": "kit name_list beside the door"
+          },
+          {
+            "name": "forward4",
+            "what": "ink arrow from the manager to the door"
+          },
+          {
+            "name": "shut_cross",
+            "what": "an ink cross at the door where the arrow ends, not next to the accent door stroke"
+          },
+          {
+            "name": "named_words",
+            "what": "Named people and Not on the list written in the right column"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Same forward",
+            "element": "named_ring",
+            "action": "inner ring and door drawn, Named people written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "asks who she is",
+            "element": "forward4",
+            "action": "arrow to the door, list rows checked",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "it stays shut",
+            "element": "shut_cross",
+            "action": "cross at the door, Not on the list written",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "rings, door, list and holders stay for b17"
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "travel",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "rings",
+        "team",
+        "manager",
+        "anyone_ring",
+        "named_ring",
+        "door",
+        "list",
+        "forward4",
+        "shut_cross"
+      ],
+      "accent_on": "rule_underline",
+      "story_role": "payoff",
+      "intent": "rest",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "a small note of a listed person showing the page on qualifies the rule",
+        "elements": [
+          {
+            "name": "shoulder_note",
+            "what": "a small rough box top right: two user pictograms side by side, one holding a tiny page toward the other"
+          },
+          {
+            "name": "rule_words",
+            "what": "The link travels. A name does not. written as two lines in the right column, lower"
+          },
+          {
+            "name": "rule_underline",
+            "what": "accent underline under A name does not (the door is ink from here)"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "show it on",
+            "element": "shoulder_note",
+            "action": "note drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "The link travels",
+            "element": "rule_words",
+            "action": "first line written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "A name does not",
+            "element": "rule_underline",
+            "action": "second line written and underlined",
+            "motion": "write and draw"
+          }
+        ],
+        "continuity": "the board is left for the quiz board by a camera pan"
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "bespoke",
+      "station": "quiz",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "pause_ring",
+      "story_role": "practice",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the question and each option are written as they are said, so the board develops with the voice and nothing idles",
+        "elements": [
+          {
+            "name": "quiz_head",
+            "what": "Your turn written as the board heading top left"
+          },
+          {
+            "name": "question",
+            "what": "the question in two handwritten lines under the heading: Three teammates need to read the budget, not change it. / Which setting, and which permission?"
+          },
+          {
+            "name": "options",
+            "what": "three option rows down the left two thirds, each a hand-drawn letter circle and words: A Anyone with the link, edit / B People in the company, view / C Named people, view"
+          },
+          {
+            "name": "pause_ring",
+            "what": "accent: a hand-drawn ring with a small clock face and the words Pause and decide, right side of the board"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your turn",
+            "element": "quiz_head",
+            "action": "heading written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "three teammates need to read the budget",
+            "element": "question",
+            "action": "question line one written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "Which setting, and which permission",
+            "element": "question",
+            "action": "question line two written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "Which setting, and which permission",
+            "element": "options",
+            "action": "rows A, B, C written one after another, letter circles drawn first",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "Pause, and decide",
+            "element": "pause_ring",
+            "action": "ring drawn, clock hand sweeps slowly through the pause, words written inside; no answer shown",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "heading, question and the three option rows stay for b19; pause_ring leaves at the join"
+      }
+    },
+    {
+      "beat": "b19",
+      "kind": "bespoke",
+      "station": "quiz",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "holds_underline",
+      "story_role": "practice",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the answer is marked on the same board as it is said: ring on C, A and B struck, a note written by B",
+        "elements": [
+          {
+            "name": "answer_ring",
+            "what": "an ink hand loop drawn around option C Named people, view, with a tick beside it"
+          },
+          {
+            "name": "strikes",
+            "what": "a single light strike line through options A and B, which fade to a lighter ink"
+          },
+          {
+            "name": "forward_note",
+            "what": "a handwritten note with a small arrow pointing at option B: a forward reaches everyone signed in"
+          },
+          {
+            "name": "holds_line",
+            "what": "handwritten line under option C: Named people holds it to three"
+          },
+          {
+            "name": "holds_underline",
+            "what": "accent underline under holds it to three"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Named people, with view",
+            "element": "answer_ring",
+            "action": "loop drawn around C, tick drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "The company setting sounds close",
+            "element": "strikes",
+            "action": "A struck and faded; B gets a short pointer arrow",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "one forward opens it to everyone signed in",
+            "element": "forward_note",
+            "action": "note written by B, then B struck and faded",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "Named people holds it to three",
+            "element": "holds_underline",
+            "action": "line written under C, then accent underline drawn under holds it to three",
+            "motion": "write and draw"
+          }
+        ],
+        "continuity": "takes quiz_head, question and options held from b18 (same board, same positions); everything leaves at b20's wipe"
+      }
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "station": "checklist",
+      "join_in": {
+        "type": "wipe",
+        "dir": "right"
+      },
+      "accent_on": "list_underline",
+      "story_role": "setup",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "each check is ticked as it is said",
+        "elements": [
+          {
+            "name": "check_head",
+            "what": "Before you share written as the board heading top left"
+          },
+          {
+            "name": "checks",
+            "what": "four rows down the left half: a small rough box and the words Right file?, Narrowest setting?, View unless edit?, Who is on the list?"
+          },
+          {
+            "name": "ticks",
+            "what": "an ink hand tick in each box on its spoken words"
+          },
+          {
+            "name": "list_underline",
+            "what": "accent underline under Who is on the list?"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "four quick checks",
+            "element": "check_head",
+            "action": "heading written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "Right file",
+            "element": "checks",
+            "action": "rows one, two, three written and ticked on their words",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "who is on the list",
+            "element": "list_underline",
+            "action": "row four written, ticked, underlined",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "heading, rows and ticks stay for b21"
+      }
+    },
+    {
+      "beat": "b21",
+      "kind": "bespoke",
+      "station": "checklist",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "check_head",
+        "checks",
+        "ticks"
+      ],
+      "accent_on": "magnifier",
+      "story_role": "setup",
+      "design": {
+        "treatment": "hybrid",
+        "why_motion": "the magnifier over the page shows looking inside",
+        "elements": [
+          {
+            "name": "page",
+            "what": "kit budget_page right half, about 260 by 350"
+          },
+          {
+            "name": "magnifier",
+            "what": "Lucide search at marker weight over the page, accent pen"
+          },
+          {
+            "name": "inside_words",
+            "what": "Inside the file written above the page"
+          },
+          {
+            "name": "tabs",
+            "what": "three small rough tabs right of the page: Pages, Comments, Version history"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "look inside the file",
+            "element": "magnifier",
+            "action": "page, magnifier, Inside the file",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "Other pages",
+            "element": "tabs",
+            "action": "the three tabs drawn and written on their words",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "camera pans to the take-back board"
+      }
+    },
+    {
+      "beat": "b22",
+      "kind": "bespoke",
+      "station": "takeback",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "key_cross",
+      "story_role": "turn",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "taking the key back is the action",
+        "elements": [
+          {
+            "name": "until_head",
+            "what": "Until when written as the heading"
+          },
+          {
+            "name": "key",
+            "what": "kit link_key in ink, centre left"
+          },
+          {
+            "name": "key_cross",
+            "what": "link_key crossed state, the cross in accent"
+          },
+          {
+            "name": "sender",
+            "what": "one user pictogram left"
+          },
+          {
+            "name": "return_arrow",
+            "what": "arrow from the key back to the sender"
+          },
+          {
+            "name": "list",
+            "what": "kit name_list right, one row struck through"
+          },
+          {
+            "name": "off_words",
+            "what": "Link off or narrower and Remove names written under the key and the list"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "until when",
+            "element": "until_head",
+            "action": "heading written, key drawn",
+            "motion": "write and draw"
+          },
+          {
+            "t_anchor": "take the key back",
+            "element": "key_cross",
+            "action": "cross over the key, arrow back to the sender",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Switch it off",
+            "element": "off_words",
+            "action": "Link off or narrower written",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "remove names",
+            "element": "list",
+            "action": "list drawn, one row struck, Remove names written",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "heading, key and sender stay for b23"
+      }
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "station": "takeback",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "until_head",
+        "key",
+        "key_cross",
+        "sender",
+        "return_arrow"
+      ],
+      "accent_on": "old_link_mark",
+      "story_role": "setup",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "an old link found and ticked off in a list",
+        "elements": [
+          {
+            "name": "shared_list",
+            "what": "a rough list card right: three rows, each a small page mark and a scribbled line"
+          },
+          {
+            "name": "review_words",
+            "what": "Review what you shared written above the list"
+          },
+          {
+            "name": "old_link_mark",
+            "what": "accent strike and tick on the second row (the key cross is ink from here)"
+          },
+          {
+            "name": "calendar",
+            "what": "Lucide calendar under the list at marker weight, Expiry date written beside it"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "list what you have shared",
+            "element": "shared_list",
+            "action": "list drawn, words written",
+            "motion": "draw and write"
+          },
+          {
+            "t_anchor": "find old links",
+            "element": "old_link_mark",
+            "action": "row two marked",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "expiry date",
+            "element": "calendar",
+            "action": "calendar drawn, Expiry date written",
+            "motion": "draw and write"
+          }
+        ],
+        "continuity": "camera pans to the payoff board"
+      }
+    },
+    {
+      "beat": "b24",
+      "kind": "bespoke",
+      "station": "payoff",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "door",
+      "story_role": "payoff",
+      "intent": "callback",
+      "design": {
+        "treatment": "motion",
+        "why_motion": "the opening story redrawn with the safe settings, the forward stopping at the door",
+        "elements": [
+          {
+            "name": "rings",
+            "what": "kit access_rings centred at about x 640 y 500, all three rings drawn quickly, outer two in muted"
+          },
+          {
+            "name": "page",
+            "what": "kit budget_page small at the centre"
+          },
+          {
+            "name": "team",
+            "what": "three user pictograms inside the inner ring"
+          },
+          {
+            "name": "door",
+            "what": "the inner ring door, shut, accent pen"
+          },
+          {
+            "name": "forward_arrow",
+            "what": "ink arrow from outside toward the door, stopping short of it"
+          },
+          {
+            "name": "key",
+            "what": "kit link_key small beside a sender pictogram at bottom left"
+          },
+          {
+            "name": "settings",
+            "what": "Named people, View only, Switched off after written down the right column, each with an ink tick"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back to the budget",
+            "element": "rings",
+            "action": "rings, page and team drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Named people, view only",
+            "element": "settings",
+            "action": "first two lines written and ticked",
+            "motion": "write"
+          },
+          {
+            "t_anchor": "switched off after",
+            "element": "key",
+            "action": "third line, key beside the sender",
+            "motion": "write and draw"
+          },
+          {
+            "t_anchor": "stops at the door",
+            "element": "forward_arrow",
+            "action": "arrow stops at the shut accent door",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "camera pans to the presenter for the close"
+      }
+    },
+    {
+      "beat": "b25",
+      "kind": "avatar",
+      "station": "presenter",
+      "join_in": {
+        "type": "camera"
+      },
+      "story_role": "payoff",
+      "props": {
+        "title": "Narrowest door. View first. Switch off."
+      }
+    }
+  ]
+}

@@ -1,0 +1,954 @@
+{
+  "title": "Workplace Decision Standards for Corporate Teams",
+  "sections": [
+    {
+      "id": "sec1_urgency_vs_impact",
+      "title": "Urgency Versus Impact"
+    },
+    {
+      "title": "The Decision Filter",
+      "id": "sec2_decision_filter"
+    },
+    {
+      "title": "Escalation Versus Trade-Offs",
+      "id": "sec3_escalation_vs_tradeoffs"
+    },
+    {
+      "title": "Resolving Task Collisions",
+      "id": "sec4_resolving_collisions"
+    },
+    {
+      "id": "sec5_stakeholder_alignment",
+      "title": "Aligning With Stakeholders"
+    }
+  ],
+  "wpm_target": 140,
+  "beats": [
+    {
+      "treatment_hint": "avatar",
+      "job": "hook",
+      "on_screen": [
+        "Maya",
+        "Urgent formatting",
+        "Client billing report"
+      ],
+      "animate_score": 0.1,
+      "id": "b01",
+      "concepts": [
+        "everyday workplace tension",
+        "conflicting deadlines"
+      ],
+      "change_over_time": false,
+      "hypothetical": true,
+      "visual_intent": "Presenter stands beside an illustrated workstation display. An employee profile card labelled Maya appears beside two flashing inbox items with competing timestamps.",
+      "section": "sec1_urgency_vs_impact",
+      "grounding": [
+        {
+          "claim": "Everyday workplace scenario with colliding deadlines",
+          "hypothetical": true
+        }
+      ],
+      "delivery": "Warm and direct, pausing after the opening dilemma.",
+      "narration": [
+        "Say this is Maya at her desk.",
+        "It is nine on Tuesday morning.",
+        "A partner team pings her for urgent formatting.",
+        "Her client billing report is due at five.",
+        "Which task moves first?",
+        "She freezes."
+      ]
+    },
+    {
+      "narration": [
+        "When priorities stall, what happens around her?",
+        "Downstream colleagues wait with empty hands.",
+        "Project timelines grind to a halt.",
+        "Delaying decisions creates severe operational bottlenecks.",
+        "Workflows idle."
+      ],
+      "section": "sec1_urgency_vs_impact",
+      "id": "b02",
+      "visual_intent": "Split workflow sequence showing Maya motionless between incoming channels. Grey queue blocks pile up behind her while downstream team avatars visibly stall with pause icons.",
+      "animate_score": 0.6,
+      "concepts": [
+        "downstream workflow stalls",
+        "operational bottlenecks"
+      ],
+      "change_over_time": true,
+      "grounding": [
+        {
+          "fact": "F4",
+          "claim": "Delaying priority decisions creates operational bottlenecks and idles downstream workflows"
+        }
+      ],
+      "on_screen": [
+        "Operational bottlenecks",
+        "Workflows idle"
+      ],
+      "job": "orient",
+      "delivery": "Serious and steady, highlighting the cost of inaction.",
+      "treatment_hint": "motion"
+    },
+    {
+      "delivery": "Crisp and rhythmic, illustrating the mental strain.",
+      "visual_intent": "Desktop interface showing rapid alternating switches between spreadsheet columns and slide decks. An error counter increments upward as an output throughput gauge drops into amber.",
+      "on_screen": [
+        "Context switching",
+        "Reduces throughput",
+        "Delivery errors"
+      ],
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "fact": "F5",
+          "claim": "Unresolved queues cause context switching, reducing throughput and raising errors"
+        }
+      ],
+      "concepts": [
+        "context switching",
+        "throughput penalties"
+      ],
+      "change_over_time": true,
+      "id": "b03",
+      "job": "demonstrate",
+      "animate_score": 0.6,
+      "section": "sec1_urgency_vs_impact",
+      "narration": [
+        "Maya tries to juggle both tasks at once.",
+        "She formats two slides, then inspects invoice data.",
+        "That constant context switching reduces throughput.",
+        "Delivery errors multiply with every switch.",
+        "Focus shatters quickly."
+      ]
+    },
+    {
+      "concepts": [
+        "urgency versus operational impact",
+        "deadline proximity"
+      ],
+      "misconception": "The request that arrives most recently or with the loudest urgency always has the highest operational priority.",
+      "treatment_hint": "motion",
+      "on_screen": [
+        "Deadline proximity",
+        "Operational impact"
+      ],
+      "change_over_time": true,
+      "delivery": "Firm and candid on the misconception warning.",
+      "id": "b04",
+      "animate_score": 0.5,
+      "narration": [
+        "Here is where people slip.",
+        "It is not the loudest incoming ping.",
+        "Deadline proximity feels urgent, but urgency misleadingly dominates.",
+        "Operational impact matters far more than mere noise.",
+        "Loud is not important."
+      ],
+      "visual_intent": "Comparison frame where a pulsing red alert badge over chat dims, while an organizational impact indicator over the billing report expands with network connectors.",
+      "job": "refute",
+      "section": "sec1_urgency_vs_impact",
+      "grounding": [
+        {
+          "fact": "F2",
+          "claim": "Evaluating operational impact takes precedence over deadline proximity alone"
+        }
+      ]
+    },
+    {
+      "change_over_time": false,
+      "narration": [
+        "Watch how these two ideas differ.",
+        "Urgency describes the time sensitivity of a deadline.",
+        "Impact describes operational consequence to the organization.",
+        "That has a name.",
+        "The urgency impact balance.",
+        "Separate time from consequence."
+      ],
+      "animate_score": 0.2,
+      "job": "define",
+      "on_screen": [
+        "Time sensitivity",
+        "Operational consequence"
+      ],
+      "treatment_hint": "template",
+      "id": "b05",
+      "concepts": [
+        "urgency definition",
+        "impact definition"
+      ],
+      "section": "sec1_urgency_vs_impact",
+      "visual_intent": "Two-column comparison card contrasting time sensitivity symbolized by a clock against organizational consequence symbolized by an enterprise network chart.",
+      "delivery": "Measured and clear, pausing between definitions.",
+      "grounding": [
+        {
+          "claim": "Urgency describes time sensitivity while impact describes organizational consequence",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "change_over_time": false,
+      "delivery": "Decisive and memorable, delivering the pocket rule.",
+      "id": "b06",
+      "narration": [
+        "When incoming tasks collide, pause before picking.",
+        "Evaluating operational impact outranks deadline proximity alone.",
+        "Look beyond the blinking clock.",
+        "Choose impact before deadline proximity."
+      ],
+      "section": "sec1_urgency_vs_impact",
+      "job": "consolidate",
+      "visual_intent": "Summary card displaying a balanced scale where operational impact outweighs clock urgency, highlighted by an imperative rule badge.",
+      "concepts": [
+        "operational impact prioritization"
+      ],
+      "grounding": [
+        {
+          "claim": "Operational impact takes precedence over deadline proximity when tasks collide",
+          "fact": "F2"
+        }
+      ],
+      "treatment_hint": "template",
+      "animate_score": 0.2,
+      "on_screen": [
+        "Choose impact before deadline proximity"
+      ]
+    },
+    {
+      "concepts": [
+        "systematic decision filter",
+        "triage sequence"
+      ],
+      "section": "sec2_decision_filter",
+      "narration": [
+        "Watch Maya organize her disordered queue.",
+        "She avoids relying on gut instinct.",
+        "How does she sequence conflicting work cleanly?",
+        "A systematic decision filter orders competing work.",
+        "Three filters guide every choice."
+      ],
+      "delivery": "Forward-leaning, setting up the framework.",
+      "treatment_hint": "motion",
+      "animate_score": 0.3,
+      "id": "b07",
+      "on_screen": [
+        "Systematic decision filter",
+        "Three filters"
+      ],
+      "change_over_time": false,
+      "visual_intent": "Three-chamber horizontal evaluation pipeline labelled Dependency, Consequence, and Effort appears with unsorted task tokens entering the intake funnel.",
+      "grounding": [
+        {
+          "fact": "F3",
+          "claim": "A systematic decision filter orders competing work"
+        }
+      ],
+      "job": "orient"
+    },
+    {
+      "animate_score": 0.6,
+      "change_over_time": true,
+      "grounding": [
+        {
+          "claim": "Decision filter assesses external dependency to prevent downstream bottlenecks",
+          "fact": "F3"
+        },
+        {
+          "claim": "Delaying priority decisions stalls dependent workflows",
+          "fact": "F4"
+        }
+      ],
+      "id": "b08",
+      "on_screen": [
+        "External dependency",
+        "Idling workflows"
+      ],
+      "delivery": "Direct and deliberate, emphasizing team connection.",
+      "visual_intent": "Close-up of Gate 1 labelled External Dependency. A task card moves through, triggering a glowing link that unlocks an idling downstream team icon.",
+      "narration": [
+        "First gate: external dependency.",
+        "Is another colleague blocked on this output?",
+        "When downstream teammates wait, their deliverables stop completely.",
+        "Clearing external dependency releases idling workflows immediately.",
+        "Unblock others first."
+      ],
+      "treatment_hint": "motion",
+      "concepts": [
+        "external dependency",
+        "unblocking downstream workflows"
+      ],
+      "job": "sequence",
+      "section": "sec2_decision_filter"
+    },
+    {
+      "grounding": [
+        {
+          "claim": "Filter orders work by assessing business consequence and required effort",
+          "fact": "F3"
+        }
+      ],
+      "treatment_hint": "motion",
+      "delivery": "Analytical and calm, weighing the trade-off.",
+      "animate_score": 0.6,
+      "concepts": [
+        "business consequence",
+        "required effort"
+      ],
+      "on_screen": [
+        "Business consequence",
+        "Required effort"
+      ],
+      "change_over_time": true,
+      "id": "b09",
+      "section": "sec2_decision_filter",
+      "job": "sequence",
+      "narration": [
+        "Second gate: business consequence.",
+        "What breaks across the business if this slips?",
+        "Third gate: required effort.",
+        "Weigh the time needed to finish execution.",
+        "Consequence always outranks quick effort."
+      ],
+      "visual_intent": "The task card advances through Gate 2 labelled Business Consequence and Gate 3 labelled Required Effort, with weighing scales balancing organizational fallout against required hours."
+    },
+    {
+      "narration": [
+        "Now watch Maya apply these gates.",
+        "The partner team wants slide formatting in two hours.",
+        "Her client billing report enables invoicing for the firm.",
+        "Billing carries massive business consequence.",
+        "The billing report moves first."
+      ],
+      "job": "demonstrate",
+      "concepts": [
+        "worked example filter evaluation"
+      ],
+      "animate_score": 0.7,
+      "section": "sec2_decision_filter",
+      "delivery": "Pragmatic, walking through the live case.",
+      "change_over_time": true,
+      "treatment_hint": "motion",
+      "visual_intent": "Maya's task board reorders dynamically: the Client Billing Report card illuminates with high business consequence and locks into priority slot 1, while formatting slides shift to slot 2.",
+      "grounding": [
+        {
+          "claim": "Evaluating operational impact and consequence resolves competing tasks",
+          "fact": "F2"
+        },
+        {
+          "claim": "Systematic filter sequences tasks by consequence",
+          "fact": "F3"
+        }
+      ],
+      "on_screen": [
+        "Slide formatting",
+        "Client billing report",
+        "Business consequence"
+      ],
+      "id": "b10"
+    },
+    {
+      "on_screen": [
+        "Evaluation filters",
+        "External dependency",
+        "Business consequence",
+        "Required effort"
+      ],
+      "delivery": "Brisk, checking retention before moving on.",
+      "visual_intent": "Summary overview card showcasing all three filter gates in sequence, with Gate 1 highlighted in gold to reinforce dependency priority.",
+      "section": "sec2_decision_filter",
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Recall the three evaluation filters: external dependency, business consequence, and effort. Notice which criterion takes immediate priority when downstream colleagues are blocked."
+      },
+      "narration": [
+        "Recall our three evaluation filters.",
+        "External dependency, business consequence, and required effort.",
+        "Which criterion takes priority when colleagues are blocked?",
+        "External dependency always clears the line first.",
+        "Filter dependency, consequence, effort."
+      ],
+      "treatment_hint": "template",
+      "animate_score": 0.2,
+      "job": "consolidate",
+      "concepts": [
+        "three-part filter recall"
+      ],
+      "grounding": [
+        {
+          "fact": "F3",
+          "claim": "Decision filter orders work by assessing dependency, consequence, and effort"
+        },
+        {
+          "fact": "F4",
+          "claim": "Clearing downstream dependencies prevents workflow stalls"
+        }
+      ],
+      "id": "b11",
+      "change_over_time": false
+    },
+    {
+      "job": "orient",
+      "section": "sec3_escalation_vs_tradeoffs",
+      "delivery": "Thoughtful, questioning the instinctive habit.",
+      "on_screen": [
+        "Pinging manager",
+        "Review delays"
+      ],
+      "animate_score": 0.3,
+      "grounding": [
+        {
+          "claim": "Escalating routine trade-offs introduces review delays",
+          "fact": "F8"
+        }
+      ],
+      "concepts": [
+        "managerial escalation reflex",
+        "review delays"
+      ],
+      "visual_intent": "Maya hovers her cursor over an instant messaging thread to her manager. An amber review delay clock begins ticking above the conversation thread.",
+      "id": "b12",
+      "treatment_hint": "motion",
+      "change_over_time": false,
+      "narration": [
+        "Maya hesitates at her keyboard.",
+        "Her reflex is pinging her manager for permission.",
+        "Why not pass every schedule conflict upstairs?",
+        "Escalating routine decisions introduces severe review delays.",
+        "It stalls momentum unnecessarily."
+      ]
+    },
+    {
+      "misconception": "Every task conflict requires managerial escalation to ensure safe procedural compliance.",
+      "job": "refute",
+      "delivery": "Candid warning on the managerial overhead trap.",
+      "treatment_hint": "template",
+      "on_screen": [
+        "Supervisory capacity",
+        "Low-risk decisions"
+      ],
+      "change_over_time": false,
+      "id": "b13",
+      "section": "sec3_escalation_vs_tradeoffs",
+      "concepts": [
+        "supervisory capacity",
+        "low-risk trade-offs"
+      ],
+      "narration": [
+        "Here is where people slip.",
+        "Escalating feels risk-free to individual employees.",
+        "It seems like safe procedural compliance.",
+        "Yet it consumes supervisory capacity on low-risk decisions.",
+        "Managers need room for real crises."
+      ],
+      "visual_intent": "Graphic of a supervisory inbox overflowing with trivial scheduling tickets, causing a managerial capacity battery gauge to drain into critical red.",
+      "animate_score": 0.2,
+      "grounding": [
+        {
+          "fact": "F8",
+          "claim": "Escalating routine trade-offs consumes supervisory capacity on low-risk decisions"
+        }
+      ]
+    },
+    {
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "Routine trade-offs involve managing schedule adjustments within existing authority"
+        }
+      ],
+      "section": "sec3_escalation_vs_tradeoffs",
+      "delivery": "Slow and precise, defining the boundary clearly.",
+      "id": "b14",
+      "concepts": [
+        "routine trade-offs",
+        "employee authority"
+      ],
+      "visual_intent": "Branching decision diagram illuminating the green left path: routine adjustments between standard tasks connect directly to an Employee Authority badge.",
+      "on_screen": [
+        "Routine trade-offs",
+        "Existing authority"
+      ],
+      "change_over_time": true,
+      "narration": [
+        "Here is the tricky part.",
+        "Where does your personal authority actually stop?",
+        "Routine trade-offs involve managing schedule adjustments.",
+        "Standard deliverables sit within your existing authority.",
+        "Own routine scheduling locally."
+      ],
+      "treatment_hint": "motion",
+      "animate_score": 0.5,
+      "job": "distinguish"
+    },
+    {
+      "concepts": [
+        "genuine escalation triggers",
+        "contractual and compliance limits"
+      ],
+      "treatment_hint": "motion",
+      "narration": [
+        "What marks genuine escalation triggers?",
+        "Escalate when conflicting demands breach contractual commitments.",
+        "Or when requests violate compliance standards.",
+        "Or when work exceeds allocated resource limits.",
+        "Those boundaries demand escalation."
+      ],
+      "id": "b15",
+      "animate_score": 0.5,
+      "section": "sec3_escalation_vs_tradeoffs",
+      "job": "define",
+      "delivery": "Firm and definitive on true non-negotiables.",
+      "visual_intent": "The right branch of the diagram lights up in red, displaying three distinct hazard threshold icons: Contract Commitments, Compliance Standards, and Resource Limits.",
+      "grounding": [
+        {
+          "fact": "F7",
+          "claim": "Genuine escalation triggers occur when demands breach contracts, compliance, or resource limits"
+        }
+      ],
+      "change_over_time": true,
+      "on_screen": [
+        "Escalation triggers",
+        "Contractual commitments",
+        "Compliance standards",
+        "Resource limits"
+      ]
+    },
+    {
+      "job": "consolidate",
+      "section": "sec3_escalation_vs_tradeoffs",
+      "narration": [
+        "Keep this dividing line razor-sharp.",
+        "If compliance and contracts remain safe, decide independently.",
+        "Protect managerial capacity for high-risk exceptions.",
+        "Manage routine trade-offs, escalate compliance breaches."
+      ],
+      "concepts": [
+        "escalation boundaries summary"
+      ],
+      "treatment_hint": "template",
+      "animate_score": 0.2,
+      "change_over_time": false,
+      "delivery": "Crisp and authoritative, sealing the rule.",
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "Routine trade-offs stay within employee authority while compliance breaches require escalation"
+        },
+        {
+          "claim": "Escalation boundaries protect supervisory capacity",
+          "fact": "F8"
+        }
+      ],
+      "id": "b16",
+      "visual_intent": "Dual-pane reference layout contrasting Routine Trade-Offs (managed independently) against Escalation Triggers (elevated to leadership).",
+      "on_screen": [
+        "Manage routine trade-offs",
+        "Escalate compliance breaches"
+      ]
+    },
+    {
+      "treatment_hint": "template",
+      "narration": [
+        "Now you.",
+        "Two tasks compete for your afternoon.",
+        "A partner team requests urgent formatting in two hours.",
+        "Your client billing report impacts invoicing at five.",
+        "Neither task violates compliance or contracts.",
+        "Option A: escalate immediately to your manager.",
+        "Option B: drop the billing report for slides.",
+        "Option C: prioritise billing, adjust schedule, notify partners.",
+        "Pause the video and decide."
+      ],
+      "concepts": [
+        "prioritization scenario check"
+      ],
+      "change_over_time": false,
+      "job": "check",
+      "grounding": [
+        {
+          "claim": "Evaluation scenario testing prioritization against escalation",
+          "hypothetical": true
+        }
+      ],
+      "visual_intent": "Quiz interface displaying the dilemma details above three clickable options A, B, and C, with a calm 4-second circular timer graphic.",
+      "recall": {
+        "tempting_wrong": "Option A: escalate immediately to your manager",
+        "takeaway": "Evaluate operational impact over deadline proximity, and handle routine trade-offs within your authority without burdening managers.",
+        "answer": "Option C: prioritise billing, adjust schedule, notify partners",
+        "prompt": "You are juggling two tasks: an urgent slide formatting request from a partner team due in two hours, and a weekly client billing report due by end of day that directly affects invoicing. Neither task violates compliance standards or contracts. What is your correct action?",
+        "options": [
+          "Option A: escalate immediately to your manager",
+          "Option B: drop the billing report for slides",
+          "Option C: prioritise billing, adjust schedule, notify partners"
+        ],
+        "kind": "quiz"
+      },
+      "pause_after_s": 4,
+      "id": "b17",
+      "section": "sec3_escalation_vs_tradeoffs",
+      "delivery": "Clear, focused setup, followed by silent countdown.",
+      "hypothetical": true,
+      "animate_score": 0.1,
+      "on_screen": [
+        "Option A: escalate to manager",
+        "Option B: drop billing report",
+        "Option C: prioritise billing"
+      ]
+    },
+    {
+      "section": "sec3_escalation_vs_tradeoffs",
+      "delivery": "Warmly affirming the correct choice and unpacking the error.",
+      "treatment_hint": "template",
+      "id": "b18",
+      "concepts": [
+        "quiz feedback",
+        "trade-off ownership"
+      ],
+      "visual_intent": "Option C illuminates in vibrant green while Option A greys out, displaying an explanatory callout highlighting supervisory capacity preservation.",
+      "narration": [
+        "Option C is correct.",
+        "Prioritise the billing report based on business consequence.",
+        "Adjust formatting delivery within your existing authority.",
+        "Why is Option A tempting but wrong?",
+        "Escalating consumes supervisory capacity on low-risk trade-offs.",
+        "Take ownership of routine decisions."
+      ],
+      "change_over_time": true,
+      "on_screen": [
+        "Option C is correct",
+        "Business consequence",
+        "Supervisory capacity"
+      ],
+      "grounding": [
+        {
+          "claim": "Evaluating operational impact and consequence resolves competing tasks",
+          "fact": "F2"
+        },
+        {
+          "fact": "F6",
+          "claim": "Routine trade-offs fall within existing authority"
+        },
+        {
+          "fact": "F8",
+          "claim": "Escalating routine decisions consumes supervisory capacity"
+        }
+      ],
+      "animate_score": 0.4,
+      "job": "consolidate"
+    },
+    {
+      "delivery": "Engaged, setting the scene for a complex collision.",
+      "on_screen": [
+        "Compliance audit log",
+        "Conflicting deliverables"
+      ],
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "concepts": [
+        "cross-functional task collision",
+        "schedule shifts"
+      ],
+      "visual_intent": "Maya's sprint board receives an unexpected high-priority card labeled Compliance Audit Log, crowding the in-flight tasks and creating a visual deadlock.",
+      "narration": [
+        "At two in the afternoon, a new collision hits.",
+        "A compliance audit log request lands on her board.",
+        "Now three conflicting deliverables compete for Maya's hours.",
+        "Which deliverable moves into production first?",
+        "Schedules collide without warning."
+      ],
+      "section": "sec4_resolving_collisions",
+      "job": "orient",
+      "id": "b19",
+      "animate_score": 0.5,
+      "change_over_time": true,
+      "grounding": [
+        {
+          "claim": "Cross-functional scheduling collision scenario",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "on_screen": [
+        "Triage sequence",
+        "Verify deadlines",
+        "Shared dependencies",
+        "Confirm task ownership"
+      ],
+      "concepts": [
+        "structured triage sequence",
+        "task ownership verification"
+      ],
+      "section": "sec4_resolving_collisions",
+      "delivery": "Structured and methodical, pacing each step.",
+      "visual_intent": "A three-step checklist animates vertically: 1. Verify Deadlines, 2. Identify Shared Dependencies, 3. Confirm Task Ownership, each accompanied by an operational icon.",
+      "change_over_time": false,
+      "grounding": [
+        {
+          "claim": "Structured triage sequence verifies deadlines, dependencies, and task ownership",
+          "fact": "F11"
+        }
+      ],
+      "narration": [
+        "How do you resolve colliding tasks systematically?",
+        "Run a structured triage sequence.",
+        "First, verify deadlines.",
+        "Second, identify shared dependencies across teams.",
+        "Third, confirm task ownership.",
+        "Keep your triage lightweight."
+      ],
+      "job": "sequence",
+      "treatment_hint": "motion",
+      "animate_score": 0.3
+    },
+    {
+      "delivery": "Energized and practical, demonstrating the sorting actions.",
+      "id": "b21",
+      "treatment_hint": "motion",
+      "narration": [
+        "Maya runs the triage sequence.",
+        "She confirms task ownership first.",
+        "The audit log belongs to security, not her team.",
+        "A shared dependency ties billing to finance invoicing.",
+        "The slides have no downstream blocker.",
+        "Dependencies dictate the exact sequence."
+      ],
+      "change_over_time": true,
+      "visual_intent": "The project board re-sorts: the audit card routes to the Security swimlane, billing locks into first position with a finance link, and formatting slides move into second position.",
+      "concepts": [
+        "cross-functional worked example"
+      ],
+      "on_screen": [
+        "Task ownership: security",
+        "Shared dependency: finance",
+        "Exact sequence"
+      ],
+      "section": "sec4_resolving_collisions",
+      "job": "demonstrate",
+      "animate_score": 0.7,
+      "grounding": [
+        {
+          "fact": "F11",
+          "claim": "Triage sequence verifies dependencies and task ownership to resolve conflicts"
+        },
+        {
+          "fact": "F3",
+          "claim": "Addressing external dependencies unblocks downstream teams"
+        },
+        {
+          "claim": "Delaying priority decisions stalls dependent workflows",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "narration": [
+        "Never spend more time sorting than doing work.",
+        "Keep triage fast, lightweight, and decisive.",
+        "Confirm ownership and dependencies before touching a file.",
+        "Confirm ownership and dependencies first."
+      ],
+      "change_over_time": false,
+      "id": "b22",
+      "visual_intent": "Summary graphic emphasizing high execution speed over excessive planning, featuring the rule banner across the base.",
+      "concepts": [
+        "lightweight triage pocket rule"
+      ],
+      "section": "sec4_resolving_collisions",
+      "job": "consolidate",
+      "delivery": "Brisk, cementing the pragmatic guideline.",
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Triage sequence must remain lightweight to avoid categorizing overhead",
+          "fact": "F11"
+        }
+      ],
+      "on_screen": [
+        "Lightweight triage",
+        "Confirm ownership and dependencies first"
+      ]
+    },
+    {
+      "section": "sec5_stakeholder_alignment",
+      "id": "b23",
+      "animate_score": 0.2,
+      "treatment_hint": "motion",
+      "narration": [
+        "Maya chose the billing report.",
+        "Yet the partner team still expects slides by noon.",
+        "What happens if she stays completely silent?",
+        "Ignoring partners damages professional relationships rapidly.",
+        "Silence destroys stakeholder trust."
+      ],
+      "change_over_time": false,
+      "concepts": [
+        "stakeholder communication tension"
+      ],
+      "on_screen": [
+        "Partner team",
+        "Stakeholder trust"
+      ],
+      "visual_intent": "Close-up of Maya's messaging client addressed to the partner team, with a blinking cursor beside a ticking 11:30 AM deadline notification.",
+      "job": "orient",
+      "delivery": "Empathetic colleague tone, framing the social dilemma.",
+      "grounding": [
+        {
+          "claim": "Preserving stakeholder trust requires communication",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "grounding": [
+        {
+          "claim": "Clear communication requires prompt notification of revised schedule and operational rationale",
+          "fact": "F9"
+        },
+        {
+          "fact": "F10",
+          "claim": "Notifying stakeholders before deadline preserves operational trust and allows plan adjustment"
+        }
+      ],
+      "job": "demonstrate",
+      "visual_intent": "Message thread animates with Maya's outgoing update: displaying the revised schedule timestamp and bulleted operational rationale connecting to billing invoicing.",
+      "treatment_hint": "motion",
+      "on_screen": [
+        "Revised schedule",
+        "Operational rationale",
+        "Preserves operational trust"
+      ],
+      "delivery": "Clear and instructive on professional communication.",
+      "narration": [
+        "Maya notifies her stakeholders before the deadline passes.",
+        "She provides a revised schedule promptly.",
+        "Crucially, she explains the operational rationale.",
+        "Early notice preserves operational trust across departments.",
+        "Partners can adjust dependent plans easily.",
+        "Explain the operational rationale clearly."
+      ],
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "section": "sec5_stakeholder_alignment",
+      "id": "b24",
+      "concepts": [
+        "operational rationale",
+        "preserving stakeholder trust"
+      ]
+    },
+    {
+      "concepts": [
+        "modular partial delivery",
+        "timeline negotiation"
+      ],
+      "treatment_hint": "motion",
+      "narration": [
+        "How can she soften the schedule shift?",
+        "Pair revised timelines with modular partial delivery.",
+        "For modular work, early components deliver standalone value.",
+        "Maya delivers three completed title slides right now.",
+        "Partial delivery maintains steady progress."
+      ],
+      "delivery": "Resourceful, revealing the win-win compromise.",
+      "animate_score": 0.6,
+      "section": "sec5_stakeholder_alignment",
+      "on_screen": [
+        "Revised timelines",
+        "Partial delivery",
+        "Standalone value"
+      ],
+      "job": "demonstrate",
+      "change_over_time": true,
+      "id": "b25",
+      "visual_intent": "Slide deck card visibly splits into two modules: Phase 1 title slides show a sent checkmark, while Phase 2 deck displays a confirmed 2:00 PM delivery time.",
+      "grounding": [
+        {
+          "fact": "F12",
+          "claim": "Revised timeline is more effective when paired with partial delivery for modular work"
+        }
+      ]
+    },
+    {
+      "job": "payoff",
+      "grounding": [
+        {
+          "fact": "F2",
+          "claim": "Evaluating operational impact over deadline proximity clears bottlenecks smoothly"
+        },
+        {
+          "claim": "Preventing priority delays stops downstream stalls",
+          "fact": "F4"
+        },
+        {
+          "fact": "F6",
+          "claim": "Routine trade-offs resolved within authority preserve supervisory capacity"
+        }
+      ],
+      "delivery": "Warm and satisfied, completing the narrative arc.",
+      "on_screen": [
+        "Billing report shipped",
+        "Partial delivery",
+        "Bottleneck cleared"
+      ],
+      "visual_intent": "Wide workplace view showing Maya's cleared desk, positive acknowledgement pings from finance and partner leads, and a fluid, green workflow status indicator across the board.",
+      "concepts": [
+        "payoff resolution",
+        "clearing bottlenecks"
+      ],
+      "section": "sec5_stakeholder_alignment",
+      "narration": [
+        "Return to Maya's desk at end of day.",
+        "The high-impact billing report shipped on time.",
+        "The partner team moved forward using partial delivery.",
+        "No downstream bottleneck stalled the floor.",
+        "Her manager never had to step in.",
+        "The bottleneck cleared completely."
+      ],
+      "id": "b26",
+      "treatment_hint": "motion",
+      "change_over_time": true,
+      "animate_score": 0.7
+    },
+    {
+      "job": "consolidate",
+      "narration": [
+        "Tomorrow morning, audit your active task list.",
+        "Sequence by dependency, consequence, and effort.",
+        "Own your routine trade-offs with confidence.",
+        "Notify affected stakeholders early.",
+        "Evaluate impact, communicate early, deliver."
+      ],
+      "section": "sec5_stakeholder_alignment",
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "delivery": "Confident, collegial outro empowering immediate application.",
+      "grounding": [
+        {
+          "claim": "Prioritize work by dependency and consequence, resolve routine trade-offs, and communicate early",
+          "fact": "F2"
+        },
+        {
+          "fact": "F3",
+          "claim": "Decision filter sequences by dependency, consequence, and effort"
+        },
+        {
+          "fact": "F9",
+          "claim": "Prompt communication with operational rationale preserves trust"
+        }
+      ],
+      "visual_intent": "Presenter returns on camera with a supportive closing gesture. The final pocket rule appears in prominent typography across the lower third.",
+      "id": "b27",
+      "concepts": [
+        "transfer practice prompt",
+        "core pocket rule"
+      ],
+      "on_screen": [
+        "Audit active task list",
+        "Sequence by dependency",
+        "Evaluate impact, communicate early, deliver"
+      ],
+      "change_over_time": false
+    }
+  ]
+}

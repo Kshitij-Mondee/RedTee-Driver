@@ -1,0 +1,61 @@
+{
+  "source": "check",
+  "routed": {
+    "script": {},
+    "storyboard": {
+      "b02": [
+        {
+          "beat": "b02",
+          "code": "text_overflow",
+          "detail": "text does not fit at the label floor (30px): \"Repeat\"",
+          "source": "probe",
+          "count": 1
+        },
+        {
+          "beat": "b02",
+          "code": "text_overflow",
+          "detail": "text does not fit at the label floor (30px): \"Confused\"",
+          "source": "probe",
+          "count": 1
+        }
+      ],
+      "b06": [
+        {
+          "beat": "b06",
+          "code": "text_overflow",
+          "detail": "text does not fit at the label floor (30px): \"Differently?\"",
+          "source": "probe",
+          "count": 1
+        }
+      ],
+      "b11": [
+        {
+          "beat": "b11",
+          "code": "check",
+          "detail": "b11: 9.8s with nothing developing on screen (from 90.9s); reveal the next idea on its words",
+          "source": "check",
+          "count": 1
+        }
+      ]
+    },
+    "scene": {
+      "b05": [
+        {
+          "beat": "b05",
+          "code": "content_overlap",
+          "detail": "at 39.099 s: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+          "source": "hf",
+          "count": 2
+        },
+        {
+          "beat": "b05",
+          "code": "content_overlap",
+          "detail": "at 43.839 s: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+          "source": "hf",
+          "count": 4
+        }
+      ]
+    },
+    "engine": {}
+  }
+}

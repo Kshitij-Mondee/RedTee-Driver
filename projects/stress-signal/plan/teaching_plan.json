@@ -1,0 +1,118 @@
+{
+ "title": "Why a work message can feel like a threat",
+ "performance": "the next time a message spikes their stress, the viewer names it as the body's alarm and takes a short pause before replying",
+ "audience": {
+  "level": "practitioner",
+  "assumed_prior": "has felt a racing heart before a tough email; no physiology",
+  "why": "the brief's audience is office staff in any role; the knowledge sheet assumes no prior terms",
+  "motivation": "voluntary; wants to stay clear-headed when work gets tense",
+  "context": "laptop or phone, often muted, so captions and on-screen labels carry the terms"
+ },
+ "genre": "conceptual",
+ "strategy": {
+  "name": "scenario_led",
+  "rationale": "one ordinary moment at a desk carries the whole mechanism, so every idea is seen happening to someone before it is named",
+  "signature_move": "freeze one worker's moment, open it up to show the alarm running inside her, then replay the moment with a pause"
+ },
+ "misconceptions": [
+  {
+   "belief": "a strong reaction to an email means I am overreacting or bad at my job",
+   "why_tempting": "nothing physical is happening, so the racing heart feels out of proportion",
+   "refuted_in": "sec2",
+   "source_anchor": "knowledge F8, F9, F12"
+  }
+ ],
+ "arc": {
+  "hook": {
+   "kind": "scenario",
+   "sketch": "Say a message lands marked urgent. Before you have read the second line, your heart is already racing. Why?"
+  },
+  "promise": "in one minute: what that alarm is, and one move that helps",
+  "bridge_from_prior": "sec1 starts from the racing heart every viewer has felt before a tough message",
+  "sections": [
+   {
+    "id": "sec1",
+    "goal": "the viewer can explain what the fast stress response does in the body",
+    "bloom": "understand",
+    "concepts": ["stress response", "adrenaline", "cortisol"],
+    "energy": "build",
+    "carrier": "the worker lit from inside, labels pinned to her body as each hormone is named, a status panel whose slower jobs switch off one per word",
+    "recap_after": false
+   },
+   {
+    "id": "sec2",
+    "goal": "the viewer can explain why a message can set off an alarm built for physical danger",
+    "bloom": "understand",
+    "concepts": ["short physical danger", "psychological pressure"],
+    "energy": "peak",
+    "carrier": "a burst behind her at the moment of alarm, then the pressures of the day closing in around her",
+    "recap_after": false
+   },
+   {
+    "id": "sec3",
+    "goal": "the viewer can use a short pause before replying to a message that set off the alarm",
+    "bloom": "apply",
+    "concepts": ["pause"],
+    "energy": "steady",
+    "carrier": "the same desk replayed calm: the alarm settles, the reply goes out on purpose",
+    "recap_after": true
+   }
+  ],
+  "payoff": "the same urgent message again: this time she notices the alarm, pauses, and replies on purpose"
+ },
+ "practice_ladder": [
+  {"stage": "worked", "where": "sec3", "what": "the worker notices the alarm, pauses, then replies"},
+  {"stage": "independent", "where": "payoff", "what": "the viewer is asked to try one pause on their next tense message"}
+ ],
+ "pacing": {
+  "target_duration_s": 60,
+  "words_per_minute": 145,
+  "slowdown_at": ["why a message sets off the alarm"],
+  "recall_moments": [
+   {"after_section": "sec2", "kind": "recall_prompt", "prompt_sketch": "So that racing heart is not a fault. It is the alarm doing its job, a little too well."}
+  ]
+ },
+ "transfer_tasks": [
+  "on your next tense message, notice the alarm and take one slow pause before you reply"
+ ],
+ "persona": {
+  "voice": "the mentor persona: a calm colleague who has felt this too",
+  "delivery_notes": "quick and close in the hook, slower on why a message sets the alarm off, warm on the last line"
+ },
+ "framework_audit": {
+  "gagne": {
+   "attention": "hook: the urgent message and the racing heart",
+   "objective": "promise: what the alarm is and one move that helps",
+   "recall_prior": "sec1 starts from the racing heart the viewer has felt",
+   "present": "sections in order: what it does, why it fires, what to do",
+   "guidance": "signature move: freeze the moment, open it up, replay it",
+   "practice": "worked pause in sec3",
+   "feedback": "the replay shows the alarm settling after the pause",
+   "assess": "recall prompt after sec2",
+   "transfer": "transfer task: one pause on the next tense message"
+  },
+  "merrill": {
+   "problem_centered": "one worker's urgent message is the running problem",
+   "activation": "sec1 opens from the viewer's own racing heart",
+   "demonstration": "the alarm is shown running inside her before it is named",
+   "application": "the worked pause in sec3",
+   "integration": "the transfer task puts it in the viewer's next tense message"
+  },
+  "mayer": {
+   "coherence": "one worker, one metaphor (an alarm), no side stories",
+   "signalling": "one slowdown on why a message sets the alarm off",
+   "redundancy": "screen shows labels and the status panel; narration explains",
+   "contiguity": "each label appears as it is spoken",
+   "segmenting": "three short sections, one idea each",
+   "pre_training": "the alarm is named before the hormones"
+  },
+  "arcs": {
+   "attention": "the urgent message",
+   "relevance": "every office worker has felt this",
+   "confidence": "one small move, shown working",
+   "satisfaction": "the replay ends calm"
+  },
+  "bloom_path": "understand -> understand -> apply"
+ },
+ "flags": []
+}

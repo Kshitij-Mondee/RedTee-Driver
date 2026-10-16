@@ -1,0 +1,567 @@
+{
+ "id": "micro_body",
+ "name": "Inside the body and the microscopic",
+ "purpose": "health and hygiene, wellbeing science (stress, sleep, breathing, digestion), food safety and infection control, how learning changes the brain, biology for non-specialists",
+ "styles_common": [
+  "glow-flat",
+  "flat 2D editorial",
+  "painterly",
+  "2.5D lit layers"
+ ],
+ "scenes": [
+  {
+   "id": "bloodstream",
+   "aliases": [
+    "bloodstream",
+    "blood vessel",
+    "inside a blood vessel",
+    "blood cells",
+    "circulation"
+   ],
+   "what": "inside a small artery about 60 micrometres across, looking along it: red blood cells tumbling through clear straw-yellow plasma, a white blood cell rolling along the wall, platelets drifting, the vessel's paved lining curving all round",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "the stress response (adrenaline and cortisol carried in the blood), how the immune system responds to infection, oxygen delivery and fitness, vaccines, why hydration and sleep matter",
+   "plan": [
+    "ABSTRACT (scale-free, no floor plan): a view along the inside of a vessel; the composition is set directly in frame terms and was not plan-checked.",
+    "The vessel: a small artery (an arteriole) with an inside diameter of about 60 micrometres, running straight away from the camera and curving gently up and to the right far ahead.",
+    "Scale at the reference depth (where the vessel's inside diameter just fills the frame's height): 1 micrometre = 18 px, so a red cell there is about 135 px across and a neutrophil about 215 px. Nearer things are larger, farther ones smaller, in true perspective.",
+    "Real blood is crowded (red cells are about 45 percent of its volume); this set shows them far sparser, a few dozen in view, so the place reads and leaves room."
+   ],
+   "camera": "A view from inside the vessel, slightly below its centre line, looking along it; one-point perspective with the vanishing point (the far opening) at x 1150, y 470. The wall's lining runs out of all four edges of the frame and recedes toward that point. A moderate wide lens: about 60 degrees across.",
+   "composition": "The vessel wall wraps the whole frame: its lining of long, flat cells (each about 10 micrometres wide and 30 to 50 long, an oval bulge at its nucleus) recedes in a paved pattern toward the far opening, a soft glowing ring at x 1150, y 470 about 120 px across. The wall is brightest near that opening and darker and redder toward the frame's edges. Red blood cells fill the lumen at three depths: two near ones, out of focus and cropped by the lower right corner (about 420 px across, x 1500 to 2100, y 760 to 1180, one face-on showing its dimple, one edge-on showing its dumbbell profile); a loose stream at the reference depth (about 135 px across) running from the lower centre up toward the opening, mostly right of centre (x 900 to 1700, y 350 to 900); and small far ones (40 px down to 15 px) converging on the opening. A white blood cell (a neutrophil, about 215 px, round with a ruffled surface and a slightly flattened contact patch) rolls along the lower left wall at x 520, y 860, a little in front of the reference depth. Six or seven platelets (40 to 50 px flat ovals) drift between the red cells. Focal point: the stream of red cells pouring toward the far opening. Free zones for narrators and mascots: (1) the open lumen left of centre from x 160 to 820, y 160 to 640, plain straw-yellow plasma against the lit wall; (2) the upper right lumen from x 1350 to 1800, y 110 to 320; no cell crosses either.",
+   "light": "No daylight: a soft warm-white glow comes from the far opening, as if light shines through the vessel ahead. Every red cell has a bright rim on its side toward the opening and a soft, translucent shade on its near face, its dimple a little darker; the white cell is pale cream with a pearly highlight. The wall's lining is lit pink-cream near the opening and falls to a deeper red toward the frame edges. The plasma is clear pale straw-yellow with a faint haze that thickens toward the opening (lm-atmos). Only tiny contact shadows where the white cell touches the wall.",
+   "far": "The vessel's lining all round with its paved cells, the glowing far opening, the far and reference-depth red cells and platelets, and the white cell on the wall.",
+   "mid": "Nothing between the narrators' zones and the camera; the red cells at the reference depth are in the far layer so they can drift as one group.",
+   "near": "The two big out-of-focus red cells at the lower right corner (x 1500 to 2100, y 760 to 1180), cropped by the frame; they touch no free zone.",
+   "motifs_here": "biconcave red blood cells, a wet glossy sheen on every surface, soft translucent tissue lit from within, tiny drifting specks in the fluid, the empty scale-bar slot in the lower right corner",
+   "details": [
+    "one red cell folded slightly as it brushes the wall, showing how flexible it is",
+    "the white cell's ruffled edge flattened where it touches the wall",
+    "a small clump of three platelets stuck together",
+    "the lining's cell borders as fine darker lines, each cell's nucleus a soft oval bulge",
+    "tiny drifting specks (proteins too small to see properly) as faint dots in the plasma",
+    "a darker branch opening in the upper wall where a smaller vessel leaves"
+   ],
+   "keep_first": "If space is short, keep the folded red cell, the white cell's contact patch, the platelet clump and the cell borders; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "brick",
+    "wall",
+    "glass",
+    "paper",
+    "fabric2"
+   ],
+   "slots": [
+    "slot_scale_bar (the scale bar's label, lower right, about x 1620 to 1820, y 1000 to 1040; the bar itself is drawn as a plain line 180 px long, which is 10 micrometres at the reference depth)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the lower wall at the reference depth, where the white cell rolls, about y 960)",
+    "anchor_far_opening (the vanishing point, about x 1150, y 470)",
+    "anchor_white_cell (the neutrophil's centre, about x 520, y 860)",
+    "anchor_cell_stream (the middle of the red cell stream, about x 1250, y 620)",
+    "anchor_free_left (the centre of the left free zone, about x 490, y 400)",
+    "anchor_free_upper_right (the centre of the upper right free zone, about x 1575, y 215)"
+   ],
+   "variants": [
+    "stress: the stream faster, the cells streaked with motion lines, the wall a deeper red, small accent-coloured specks of hormone in the plasma",
+    "infection: two white cells on the wall, one squeezing out between lining cells, a few rod bacteria in the plasma",
+    "capillary: the same lining but only 8 micrometres wide, red cells passing in single file and bending to fit"
+   ],
+   "avoid": [
+    "red cells drawn as spheres, balls or rings with a hole",
+    "red plasma (it is pale straw-yellow; only the cells are red)",
+    "a white cell smaller than a red cell (it is about one and a half times as wide)",
+    "veins, valves or a heart in view",
+    "a cell or the far opening behind a narrator's free zone"
+   ],
+   "objects": [
+    "red blood cell",
+    "white blood cell",
+    "platelet",
+    "vessel lining",
+    "plasma",
+    "scale bar"
+   ],
+   "uses": [
+    "the stress response: adrenaline and cortisol carried in the blood to every organ",
+    "a white blood cell leaves the vessel to fight an infection (the infection variant)",
+    "why fitness and hydration matter: red cells carrying oxygen",
+    "how a vaccine trains the immune system",
+    "a mascot rides the bloodstream to explain circulation"
+   ],
+   "reuse": "high"
+  },
+  {
+   "id": "skin_surface",
+   "aliases": [
+    "skin surface",
+    "skin up close",
+    "germs on skin",
+    "hand hygiene",
+    "skin bacteria"
+   ],
+   "what": "the skin on the back of a hand seen as a landscape under strong magnification: a pavement of flat overlapping surface cells crossed by fine furrows, a hair rising from its opening, a sweat duct opening with a bead of sweat, and colonies of bacteria in the furrows",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "hand hygiene and infection control, how washing with soap works, skin care and dermatitis at work (wet work, gloves), why germs spread by touch",
+   "plan": [
+    "ABSTRACT (scale-free, no floor plan): a low, oblique view across the surface of the skin; the composition is set directly in frame terms and was not plan-checked.",
+    "Scale at the reference depth (the middle of the frame, where the hair stands): 1 micrometre = 5 px. So a surface cell there is 150 to 250 px across, the hair about 375 px thick, a round skin bacterium about 5 px (they show as clusters, never singly), and the sweat duct opening about 200 px across. Nearer things are larger, farther ones smaller, in true perspective.",
+    "A flu virus (about 0.1 micrometre) would be half a pixel at this scale: viruses are not drawn here."
+   ],
+   "camera": "A low view skimming across the skin's surface toward the hair, as if from a few cell-widths above it; the surface recedes to a soft, out-of-focus edge (its horizon) at about y 380. Gentle one-point perspective with the vanishing point at x 900, y 380. About 50 degrees across.",
+   "composition": "The skin surface fills the lower 65 percent: a pavement of flat, many-sided plates (corneocytes) overlapping like roof tiles, their edges slightly lifted, getting smaller and softer toward the horizon at y 380. A diamond pattern of furrows crosses it: two main furrows run from the lower corners toward the horizon (from about x 0, y 1000 to x 760, y 400, and from about x 1920, y 960 to x 1080, y 400), with finer ones crossing between them; each furrow is a shallow valley about 2 to 3 plates wide where the plates fold down. The hair rises from its round opening right of centre (the opening at x 1380, y 640, about 420 px across with a raised rim of plates); the shaft, about 375 px thick and covered in overlapping cuticle scales, rises and leans left, leaving the top of the frame at about x 1200. The sweat duct opening sits in the left foreground (x 420, y 820, about 230 px across) holding a domed bead of sweat that reflects the light. Bacteria live in the furrows: clusters of round cocci like tiny bunches of grapes (each cluster 30 to 60 px across) and a few groups of rods, thickest along the main furrows' floors and around the hair's opening. Above the horizon: soft, bright, out-of-focus air. Focal point: the hair rising out of its opening. Free zones for narrators and mascots: (1) the soft air above the horizon from x 140 to 1000, y 60 to 330; (2) the open plates in the lower centre from x 700 to 1180, y 700 to 1000, a clear stretch of pavement without bacteria; nothing tall crosses either.",
+   "light": "A soft, warm-white light from the upper left, as if from a lamp over the hand: each plate's raised edge catches a thin bright line on its upper left side and casts a tiny soft shadow to the lower right; the furrows are in soft shade. The sweat bead has one bright highlight at its upper left and a glowing rim. The hair shaft is lit on its left with its scales' edges glinting. The bacteria clusters are a slightly darker, translucent green with small highlights. The far surface fades into a pale haze (lm-atmos).",
+   "far": "The air above, the far surface fading to its horizon, the whole pavement of plates with its furrows, the bacteria colonies, the hair's opening and the sweat duct opening with its bead.",
+   "mid": "The hair shaft as its own group (so it can sway).",
+   "near": "One large plate edge, lifted and out of focus, across the lower left corner (about x 0 to 300, y 940 to 1080); it touches no free zone.",
+   "motifs_here": "a wet glossy sheen (the sweat bead and the sebum), soft translucent tissue lit from within, tiny drifting specks (a few flakes in the air), the empty scale-bar slot in the lower right corner",
+   "details": [
+    "one plate curling up at its edge, about to flake off",
+    "a thin film of oil (sebum) around the base of the hair, with a rainbow sheen",
+    "a rod-shaped bacterium pinched in the middle, dividing",
+    "a fleck of grime (a dark irregular particle) lodged in a furrow",
+    "a few loose flakes drifting in the air above the surface"
+   ],
+   "keep_first": "If space is short, keep the curling plate, the sebum film, the dividing bacterium and the grime fleck; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "wall",
+    "fabric2",
+    "wood",
+    "glass",
+    "plant"
+   ],
+   "slots": [
+    "slot_scale_bar (the scale bar's label, lower right, about x 1620 to 1820, y 1000 to 1040; the bar itself is a plain line 250 px long, which is 50 micrometres at the reference depth)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the skin surface at the reference depth, about y 700)",
+    "anchor_hair (the hair's opening, about x 1380, y 640)",
+    "anchor_sweat (the bead of sweat, about x 420, y 800)",
+    "anchor_bacteria (the thickest colony, in the left main furrow, about x 460, y 640)",
+    "anchor_free_air (the centre of the air free zone, about x 570, y 195)",
+    "anchor_free_plates (the centre of the clear pavement zone, about x 940, y 850)"
+   ],
+   "variants": [
+    "soap: a layer of foam bubbles over the surface, soap film lifting bacteria clusters and the grime fleck off the plates into the water",
+    "after_washing: the surface wet and shining, far fewer bacteria, the grime gone",
+    "dry_skin: plates lifting and cracking along the furrows, a red irritated tone (for dermatitis from wet work)",
+    "gloved: the edge of a nitrile glove's smooth surface lying over half the frame"
+   ],
+   "avoid": [
+    "bacteria the size of the skin plates, or with faces",
+    "viruses drawn at this scale",
+    "a smooth, plastic-looking skin: the surface is a pavement of overlapping plates",
+    "pores drawn as big black holes everywhere: there is one sweat duct opening in view",
+    "blood or wounds"
+   ],
+   "objects": [
+    "skin surface cells",
+    "skin furrows",
+    "hair",
+    "sweat duct opening",
+    "skin bacteria",
+    "scale bar"
+   ],
+   "uses": [
+    "how germs sit in the skin's furrows and why a quick rinse misses them",
+    "how soap lifts dirt and bacteria (the soap variant)",
+    "skin care for wet work and gloves (the dry_skin and gloved variants)",
+    "a mascot germ explains how it travels from a door handle to a face",
+    "the skin as the body's first barrier"
+   ],
+   "reuse": "high"
+  },
+  {
+   "id": "lungs",
+   "aliases": [
+    "lungs",
+    "air sacs",
+    "alveoli",
+    "inside the lungs",
+    "breathing",
+    "airways"
+   ],
+   "what": "deep inside the lungs at the end of the airways: a small duct opening into a cluster of rounded air sacs, their thin walls laced with a net of capillaries carrying red blood cells, a cleaner cell crawling on one wall and a few specks of dust in the air",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "breathing and fitness, respiratory infections and how they spread, air quality and fine particle pollution at work, smoking and vaping, why ventilation and masks matter",
+   "plan": [
+    "ABSTRACT (scale-free, no floor plan): a view from inside an alveolar duct into the air sacs around it; the composition is set directly in frame terms and was not plan-checked.",
+    "Scale at the reference depth (the back wall of the central air sac): 1 micrometre = 4 px. So an air sac (alveolus) there is about 800 px across, a capillary in its wall about 24 to 32 px wide, a red cell in it about 30 px, the cleaner cell (an alveolar macrophage, about 20 micrometres) about 80 px, and a fine pollution particle (PM2.5) up to 10 px. Nearer things are larger, farther ones smaller, in true perspective.",
+    "The air sacs' walls are thinner than shown here would allow; the capillary net is drawn as a clear single layer so it reads."
+   ],
+   "camera": "A view from inside a small air duct, looking into the open mouth of one air sac with others opening around it; gentle one-point perspective with the vanishing point at the back of the central sac, x 1000, y 520. About 60 degrees across.",
+   "composition": "The central air sac is the focal shape: a rounded, cup-like chamber whose open mouth (a soft rim) frames the middle of the frame from about x 560 to 1440 and y 140 to 900, its back wall a curved bowl at the reference depth. Around it, the mouths of neighbouring sacs open like the cells of a honeycomb: one at the upper left (x -100 to 480, y -60 to 420), one at the lower left (x 60 to 520, y 640 to 1180), one at the right (x 1480 to 2060, y 260 to 840), each a darker, deeper cup. The thin walls between sacs are pink and translucent, laced with a dense net of capillaries (tubes 24 to 32 px wide at the reference depth, thicker nearer) in which red blood cells travel in single file as small biconcave discs; the net is brightest red on the central sac's back wall. A cleaner cell (an alveolar macrophage: an irregular, ruffled, pale cell about 80 px, with one dark particle inside it) crawls on the central sac's lower wall at x 860, y 770. Six to eight specks of dust and soot (dark irregular particles 4 to 10 px) float in the air in the central sac and the duct. At the upper right, the small airway that feeds this duct leaves the frame as a darker round tunnel (x 1500 to 1800, y -40 to 200). Free zones for narrators and mascots: (1) the open air inside the central sac's mouth from x 700 to 1280, y 230 to 560 (only a single dust speck there, which the narrator may cover); (2) the duct's open air at the lower right from x 1250 to 1800, y 760 to 1020.",
+   "light": "No daylight: a soft, cool white glow fills the air in the sacs, brightest at the back of the central sac, as if light comes through the thin walls. The walls are lit pink with a wet sheen and translucent edges where they are thinnest; the capillary net glows red where it faces the light. The macrophage is pale and pearly with a soft highlight on its upper ruffles. The neighbouring sacs and the airway are deeper and dimmer. A faint haze in the air (lm-atmos).",
+   "far": "The central sac's back wall with its capillary net, the neighbouring sacs, the airway tunnel at the upper right, and the dust specks deep in the sac.",
+   "mid": "The cleaner cell on the lower wall, and the dust specks near the sac's mouth.",
+   "near": "The thin rims of the duct's own wall at the frame's left and bottom edges, out of focus (about x 0 to 160 and y 1000 to 1080); they touch no free zone.",
+   "motifs_here": "biconcave red blood cells (in the capillaries), a fine capillary with red cells in single file, a wet glossy sheen on every surface, soft translucent tissue lit from within, tiny drifting specks in the fluid, the empty scale-bar slot in the lower right corner",
+   "details": [
+    "a capillary where two red cells pass side by side only because it widens at a junction",
+    "a thin film of fluid lining the walls, catching highlights",
+    "the cleaner cell's ruffled edge reaching toward a soot particle",
+    "a small opening (a pore) between two neighbouring sacs",
+    "brighter red (oxygen-rich) blood on one side of the net, darker on the other"
+   ],
+   "keep_first": "If space is short, keep the cleaner cell with its particle, the fluid film, the pore and the two shades of blood; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "wall",
+    "brick",
+    "glass",
+    "paper",
+    "ceiling"
+   ],
+   "slots": [
+    "slot_scale_bar (the scale bar's label, lower right, about x 1620 to 1820, y 1000 to 1040; the bar itself is a plain line 200 px long, which is 50 micrometres at the reference depth)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the central sac's lower wall at the reference depth, about y 820)",
+    "anchor_sac_centre (the back of the central air sac, about x 1000, y 520)",
+    "anchor_macrophage (the cleaner cell, about x 860, y 770)",
+    "anchor_capillary (a capillary on the central sac's back wall, about x 1120, y 470)",
+    "anchor_airway (the airway tunnel, about x 1650, y 80)",
+    "anchor_free_sac (the centre of the sac's free zone, about x 990, y 395)",
+    "anchor_free_duct (the centre of the duct's free zone, about x 1525, y 890)"
+   ],
+   "variants": [
+    "polluted: many more dust and soot specks, two macrophages full of dark particles, a greyer tint on the walls",
+    "infection: a few virus-filled cells (swollen, pale) on the walls and fluid pooling in the lower part of the sac",
+    "exercise: the capillaries fuller, the red cells brighter and closer together"
+   ],
+   "avoid": [
+    "lungs drawn as two pink balloons or a tree of tubes: this is the inside of the air sacs",
+    "smoke as a cartoon cloud: pollution shows as real particles",
+    "red cells as spheres or rings with a hole",
+    "a speck, the macrophage or a capillary junction inside a free zone, beyond the one allowed speck",
+    "gore or tar-black lungs"
+   ],
+   "objects": [
+    "air sac",
+    "capillary net",
+    "red blood cell",
+    "alveolar macrophage",
+    "dust particles",
+    "airway",
+    "scale bar"
+   ],
+   "uses": [
+    "where the air we breathe meets the blood (oxygen in, carbon dioxide out)",
+    "fine dust and fumes at work reach the deepest part of the lungs (the polluted variant)",
+    "how a respiratory infection takes hold (the infection variant)",
+    "why fitness improves breathing (the exercise variant)",
+    "the case for ventilation, masks and quitting smoking"
+   ],
+   "reuse": "medium"
+  },
+  {
+   "id": "gut",
+   "aliases": [
+    "gut",
+    "gut microbes",
+    "microbiome",
+    "intestine",
+    "inside the gut",
+    "digestion"
+   ],
+   "what": "a cutaway through the lining of the large intestine: the living wall of column-shaped cells at the bottom, a thick clear layer of firm mucus above it, and above that the looser outer mucus where the gut's bacteria live among fibres of digested food",
+   "shots": [
+    "wide"
+   ],
+   "for": "the gut microbiome and wellbeing (diet, fibre, stress), food safety and food poisoning, why antibiotics should be used carefully, digestion for non-specialists",
+   "plan": [
+    "ABSTRACT (a cutaway, no floor plan): a straight-on cross-section of the gut's lining, with the cut face toward the camera and the top surfaces of each layer receding a little behind it like a diorama; the composition is set directly in frame terms and was not plan-checked.",
+    "Scale (on the cut face): 1 micrometre = 6 px. So a lining cell is about 25 micrometres tall (150 px) and 6 to 8 wide (36 to 48 px), the inner mucus layer about 100 micrometres thick (600 px; real measurements range from 50 to 300), a rod-shaped bacterium about 1 by 2 to 3 micrometres (6 by 12 to 18 px) and a round one about 6 px.",
+    "In life the outer layer holds far more bacteria than can be drawn: this set shows a dense, readable crowd, not the true count."
+   ],
+   "camera": "A straight-on view of the cut face, no tilt; the top surfaces of the layers recede slightly behind it toward a soft horizon about 60 px above each layer's front edge (a gentle diorama view, vanishing point x 960, y 200).",
+   "composition": "Three bands across the whole width. Bottom (y 930 to 1080): the lining, a row of tall column-shaped cells (about 150 px tall, 36 to 48 px wide) standing side by side, each with a darker oval nucleus near its base and a fine fuzzy brush border along its top edge; every fourth or fifth is a goblet cell, swollen at the top with pale mucus granules; two crypt openings (round pits about 270 px across) dip into the lining at x 420 and x 1440. Middle (y 330 to 930): the inner mucus layer, a firm, clear, slightly blue-grey gel with faint horizontal layering (sheets laid down from below), and fresh mucus welling out of the goblet cells into it; it is empty of bacteria. Top (y 0 to 330): the outer mucus layer, looser and cloudier, holding the gut's bacteria: a dense crowd of rods (some in short chains, a few with thin whip-like tails), round cocci in pairs and clusters, and a few curved forms, thickest near the top of the frame and thinning to a ragged lower edge at about y 330 where the inner layer stops them; long fibres of digested plant food (pale, twisted ribbons up to 600 px long) lie among them. Focal point: the boundary at y 330 where the crowd of bacteria meets the clear inner layer. Free zones for narrators and mascots: (1) the clear inner mucus from x 140 to 1780, y 420 to 840 (open, calm, and the place for labels); (2) the lumen corner at the top left from x 0 to 400, y 0 to 140 (a few fibres only).",
+   "light": "No daylight: a soft, warm-white light from above, as if through the food stream, falls on the outer layer so its bacteria have bright upper edges and translucent shade below; the inner mucus is lit evenly with a gentle glossy sheen on its receding top surface; the lining cells glow pink-cream from within, with darker nuclei. Small contact shadows only.",
+   "far": "The receding top surfaces of all three layers, the lining cells and the crypts, the inner mucus with its layering, the outer mucus with its bacteria and food fibres.",
+   "mid": "The bacteria nearest the cut face, as their own group (so they can move as a crowd).",
+   "near": "Nothing in front: both free zones stay open.",
+   "motifs_here": "a wet glossy sheen on every surface, soft translucent tissue lit from within, tiny drifting specks in the fluid, the empty scale-bar slot in the lower right corner",
+   "details": [
+    "one rod bacterium pinched in the middle as it divides",
+    "a goblet cell releasing a fresh bubble of mucus into the inner layer",
+    "a short chain of round bacteria like a string of beads",
+    "a bacterium with a long whip-like tail (a flagellum) at the crowd's edge",
+    "a lining cell being shed from the top of the row, its place closing behind it"
+   ],
+   "keep_first": "If space is short, keep the dividing rod, the goblet cell's mucus bubble, the chain and the tailed bacterium; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "glass",
+    "wall",
+    "fabric2",
+    "plant",
+    "wood"
+   ],
+   "slots": [
+    "slot_scale_bar (the scale bar's label, lower right, about x 1620 to 1820, y 1030 to 1070, drawn on a pale backing over the lining; the bar itself is a plain line 120 px long, which is 20 micrometres)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the top of the lining cells, about y 930)",
+    "anchor_boundary (the edge where the bacteria stop, about x 960, y 330)",
+    "anchor_crypt_left (the left crypt opening, about x 420, y 940)",
+    "anchor_crypt_right (the right crypt opening, about x 1440, y 940)",
+    "anchor_crowd (the middle of the bacteria crowd, about x 1100, y 170)",
+    "anchor_free_mucus (the centre of the inner mucus free zone, about x 960, y 630)"
+   ],
+   "variants": [
+    "food_poisoning: a band of invading rod bacteria (drawn in the accent colour) pushing through a thinned inner layer toward the lining",
+    "antibiotics: the outer layer emptied to a few scattered bacteria, fibres left behind",
+    "high_fibre: more food fibres and a thicker, busier crowd of bacteria"
+   ],
+   "avoid": [
+    "bacteria with faces, or as big as the lining cells",
+    "bacteria inside the clear inner layer in the main set (it is normally free of them)",
+    "a cartoon pipe or a tube of goo: this is a section through living tissue",
+    "food drawn as whole recognisable food (only digested fibres)",
+    "gore"
+   ],
+   "objects": [
+    "gut lining cells",
+    "goblet cells",
+    "crypts",
+    "inner mucus layer",
+    "outer mucus layer",
+    "gut bacteria",
+    "food fibres",
+    "scale bar"
+   ],
+   "uses": [
+    "the microbiome as a living community and how diet and fibre feed it",
+    "how food poisoning bacteria break through the gut's defences (the food_poisoning variant)",
+    "why antibiotics are used only when needed (the antibiotics variant)",
+    "the gut and stress: how wellbeing reaches the digestive system",
+    "food safety training: what the body is up against"
+   ],
+   "reuse": "medium"
+  },
+  {
+   "id": "neurons",
+   "aliases": [
+    "neurons",
+    "brain cells",
+    "inside the brain",
+    "synapses",
+    "neural connections",
+    "nerve cells"
+   ],
+   "what": "a small patch of the brain's outer layer seen up close: a few branching neurons with spiny dendrites and one long axon, a star-shaped support cell touching a capillary, and connections where an axon meets a dendrite",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "how learning and practice change the brain (spacing, retrieval, habits), sleep and memory, stress and attention, why breaks matter for focus",
+   "plan": [
+    "ABSTRACT (scale-free, no floor plan): a view into a slab of brain tissue; the composition is set directly in frame terms and was not plan-checked.",
+    "Scale at the reference depth (the middle neuron): 1 micrometre = 4 px. So a neuron's cell body is 60 to 100 px, a dendrite 2 to 12 px thick, a spine 4 to 8 px, the capillary about 28 px wide with red cells about 30 px.",
+    "Real brain tissue is packed solid with cell branches; this set thins it to three neurons, one support cell and one capillary in a deep, dark space so the connections read."
+   ],
+   "camera": "A view into the tissue with a soft depth of field: the middle neuron sharp, others softer in front and behind; no strong perspective (a long lens, about 30 degrees across). The tissue's top surface (the brain's surface) runs across the top of the frame as a faint lighter band at about y 60.",
+   "composition": "The middle neuron is the focal shape: a pyramid-shaped cell body (about 90 px, its nucleus a paler round shape inside) at x 1100, y 600; its main (apical) dendrite rises straight up from the body's tip toward the surface band, branching near the top of the frame; four or five basal dendrites spread out sideways and down from its base, each branching twice and studded along its length with tiny spines like buds on a twig; its single thin axon leaves the base and runs down and to the left, wrapped in short segments of pale myelin with small gaps between them, and leaves the frame at about x 700, y 1080. A second neuron, softer and farther back, sits at the upper right (body at x 1600, y 300) with its dendrites reaching toward the first; an axon from it crosses to the middle neuron's right basal dendrite and ends in a small swollen knob touching a spine at x 1330, y 690: the synapse, with a faint glow in the narrow gap. A third neuron, nearest and out of focus, crosses the lower right corner (its body cropped by the frame, x 1700 to 2100, y 820 to 1180). A capillary crosses the left side from top to bottom in a gentle S (about 28 px wide, from x 380, y -40 to x 300, y 1120) with red cells in single file inside it; a star-shaped support cell (astrocyte) at x 560, y 520 reaches its fine branches out, two of them ending in little flattened feet on the capillary. Focal point: the synapse where the second neuron's axon meets the middle neuron's spine. Free zones for narrators and mascots: (1) the dark open space at the lower left between the capillary and the axon, from x 420 to 900, y 700 to 1000; (2) the open space at the top left from x 450 to 950, y 120 to 380 (only fine, faint branches far behind).",
+   "light": "No daylight: the neurons are drawn as softly self-lit, translucent shapes against a deep blue-violet background, as if the tissue glows faintly from within; edges brighter than centres (a rim light), the nucleus paler. The myelin segments are pale and pearly. The synapse carries one small, soft accent-coloured glow in its gap. The capillary and its red cells are dimmer, warmer reds. The far branches fade into the dark (lm-atmos).",
+   "far": "The deep background with faint, out-of-focus branches, the second neuron at the upper right, the capillary with its red cells, the support cell and its feet, the surface band at the top.",
+   "mid": "The middle neuron with its dendrites, spines and axon, and the second neuron's axon ending at the synapse.",
+   "near": "The third neuron, out of focus, cropped by the lower right corner (x 1700 to 2100, y 820 to 1180); it touches no free zone.",
+   "motifs_here": "biconcave red blood cells (in the capillary), a fine capillary with red cells in single file, soft translucent tissue lit from within, tiny drifting specks in the fluid, the empty scale-bar slot in the lower right corner",
+   "details": [
+    "spines of different shapes along the dendrites: thin ones, stubby ones and mushroom-shaped ones",
+    "a tiny gap (a node) between two myelin segments on the axon, glowing slightly",
+    "a second, fainter synapse on the apical dendrite higher up",
+    "the support cell's foot pressed flat against the capillary wall",
+    "a few tiny drifting specks in the space between cells"
+   ],
+   "keep_first": "If space is short, keep the spine shapes, the node, the support cell's foot and the second synapse; drop the rest of the small things before adding anything else.",
+   "dominant": [
+    "fabric",
+    "ceiling",
+    "paper",
+    "brick",
+    "light"
+   ],
+   "slots": [
+    "slot_scale_bar (the scale bar's label, lower right, about x 1440 to 1640, y 1000 to 1040, clear of the third neuron; the bar itself is a plain line 200 px long, which is 50 micrometres at the reference depth)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the lower edge of the middle neuron's basal dendrites, about y 820)",
+    "anchor_neuron (the middle neuron's cell body, about x 1100, y 600)",
+    "anchor_synapse (the synapse on the spine, about x 1330, y 690)",
+    "anchor_axon (the middle neuron's axon, about x 880, y 860)",
+    "anchor_capillary (the capillary, about x 360, y 520)",
+    "anchor_free_low (the centre of the lower left free zone, about x 660, y 850)",
+    "anchor_free_high (the centre of the upper left free zone, about x 700, y 250)"
+   ],
+   "variants": [
+    "firing: a bright pulse travelling along the axon, jumping from gap to gap between the myelin segments, and the synapse flashing",
+    "strengthened: after practice, the spine at the synapse larger and mushroom-shaped and two new spines nearby (learning)",
+    "tired: the scene dimmer and slightly hazier (for sleep and fatigue)"
+   ],
+   "avoid": [
+    "a cartoon brain with folds, or a glowing computer network: these are real cell shapes",
+    "lightning bolts for signals",
+    "neurons as perfect stars with straight spokes",
+    "any branch or glow crossing a free zone",
+    "gore"
+   ],
+   "objects": [
+    "neuron",
+    "dendritic spines",
+    "axon and myelin",
+    "synapse",
+    "astrocyte",
+    "capillary",
+    "red blood cell",
+    "scale bar"
+   ],
+   "uses": [
+    "how practice strengthens connections (spaced repetition, retrieval practice)",
+    "why sleep matters for memory",
+    "stress hormones and attention: why a calm mind learns better",
+    "habit formation as well-worn connections",
+    "why short breaks restore focus"
+   ],
+   "reuse": "medium"
+  }
+ ],
+ "cast": [
+  {
+   "id": "cells",
+   "role": "red and white blood cells, skin and lining cells as characters (C11), drawn at their real shapes"
+  },
+  {
+   "id": "microbes",
+   "role": "bacteria and viruses as characters (C11); a virus character is shown only with a scale note, since it is far smaller than any cell"
+  },
+  {
+   "id": "molecules",
+   "role": "soap, water, oxygen and hormone molecules as characters (C11), always marked as symbols, never as real-size objects"
+  },
+  {
+   "id": "guide",
+   "role": "a tiny original narrator or mascot (C9) who travels through the body"
+  }
+ ],
+ "assets": {
+  "core": [
+   "red blood cell (face-on and edge-on)",
+   "white blood cell",
+   "bacteria (cocci clusters, rods, chains)",
+   "scale bar with label slot",
+   "capillary with single-file red cells",
+   "neuron with spines",
+   "mucus and fluid sheen (lm-texture)"
+  ],
+  "common": [
+   "platelets",
+   "macrophage",
+   "dust and soot particles",
+   "soap bubbles and foam",
+   "hair shaft",
+   "magnifier frame (for cutting from the everyday view)"
+  ],
+  "optional": [
+   "virus (with a scale note)",
+   "DNA strand",
+   "nerve impulse pulse",
+   "hormone specks"
+  ]
+ },
+ "aliases": [
+  "inside the body",
+  "the human body",
+  "microscopic",
+  "under the microscope",
+  "micro world",
+  "body"
+ ],
+ "brief": 2,
+ "identity": {
+  "place": "The inside of one healthy adult body, seen at true microscopic scale. Every set is a real tissue of the same body: the blood in a small artery, the skin on the back of a hand, the air sacs deep in the lungs, the lining of the large intestine, and a patch of the brain's outer layer. Each is drawn as a believable, softly lit place with the real shapes and the real relative sizes of what is there, simplified only by leaving out clutter: real tissue is packed far more densely than these sets show, and each scene says so.",
+  "architecture": [
+   "blood: red blood cells as biconcave discs about 7.5 micrometres across and about 2 micrometres thick at the rim (thinner in the dimpled centre), never spheres or doughnuts with a hole; white blood cells larger and round (a neutrophil about 12 micrometres) with a ruffled surface; platelets as small flat ovals 2 to 3 micrometres; the fluid (plasma) clear and pale straw-yellow",
+   "vessel walls: lined with one layer of thin, flat cells (endothelium) elongated along the flow, each with an oval bulge where its nucleus sits, fitted together like long paving stones; the smallest vessels (capillaries) only 5 to 10 micrometres wide, so red cells pass in single file",
+   "skin: the surface layer is a pavement of flat, many-sided dead cells (corneocytes) about 30 to 50 micrometres across and less than 1 micrometre thick, overlapping like roof tiles and lifting at their edges before they flake off; crossed by a diamond pattern of fine furrows; hairs about 75 micrometres thick rising from their openings with overlapping scales on the shaft; sweat duct openings about 20 to 50 micrometres across",
+   "lungs: hundreds of millions of air sacs (alveoli), each about 200 micrometres across, opening off small ducts like the cells of a honeycomb; their walls very thin and filled with a dense net of capillaries; alveolar macrophages (cleaner cells about 20 micrometres across) crawling on the inner surface",
+   "large intestine: a lining of tall column-shaped cells with a fuzzy top edge (the brush border), mucus-making goblet cells among them, and the openings of tube-shaped pits (crypts); above it a firm inner mucus layer, normally free of bacteria, and above that a looser outer mucus layer where the gut's bacteria live",
+   "brain: neurons with cell bodies about 15 to 25 micrometres across, long branching dendrites studded with tiny spines (about 1 to 2 micrometres), one thin axon each, wrapped in places by a segmented fatty sheath (myelin) with small gaps; star-shaped support cells (astrocytes) touching the capillaries"
+  ],
+  "materials": "wet, glossy, translucent living tissue: soft pinks, creams and reds, pale straw-yellow fluids, clear gels, a few cooler blues and violets in the brain and the lungs. Nothing is hard-edged or metallic. Palette families in this world (the set palette was named for rooms): fluids, mucus and the wet sheen on surfaces are glass; the main tissue surfaces and vessel walls are wall; a second tissue or a cell type that must read apart from the walls is fabric2; red blood cells and blood-filled capillaries are brick; white blood cells, macrophages and pale cells are paper; bacteria are plant; neurons and their branches are fabric; the deep background beyond the tissue is ceiling (for an enclosed, dark place) or sky (for an open, lit one); hair and keratin plates are wood; one small signal (a virus, a nerve impulse, a pollutant particle) is accent; a soft inner glow is light",
+  "inhabited": [
+   "life in motion: cells caught mid-tumble, a white cell squeezing through a gap, bacteria dividing (one rod pinched in the middle), a cell flake lifting",
+   "the body's work: oxygen-rich and oxygen-poor blood (brighter and darker red) in neighbouring vessels, mucus being made, a hair growing, a cleaner cell carrying a swallowed particle",
+   "wear and repair: a damaged patch of lining being repaired, a skin flake curling away, a spent platelet clump",
+   "traces from outside: a speck of dust in the lungs, a fibre of food in the gut, a smear of grime on the skin"
+  ],
+  "scale": [
+   "1 micrometre is one thousandth of a millimetre; a human hair is about 75 micrometres thick",
+   "a red blood cell is about 7.5 micrometres across; a capillary 5 to 10 micrometres; a neutrophil about 12; an alveolar macrophage about 20; a platelet 2 to 3",
+   "a skin surface cell is 30 to 50 micrometres across; a common skin bacterium (a round coccus) about 1 micrometre; a gut bacterium (a rod) about 1 by 2 to 3 micrometres; a flu virus about 0.1 micrometre, too small to see at any scale used here",
+   "an alveolus is about 200 micrometres across; a fine air pollution particle (PM2.5) is up to 2.5 micrometres",
+   "a neuron's cell body is about 15 to 25 micrometres; a dendritic spine 1 to 2 micrometres; the colon's inner mucus layer about 100 micrometres thick (measurements range from 50 to 300)",
+   "each scene states its own scale (pixels per micrometre) and keeps it for everything in the picture"
+  ],
+  "default_light": "There is no daylight inside the body. Every set uses a soft, even, warm-white light that seems to come through the thin tissue itself, brightest at the far opening or the centre of the space, so each surface shows a gentle glossy highlight on the side toward that glow and a soft translucent shade on the other; no hard cast shadows except small contact shadows where things touch.",
+  "motifs": "Use at least three of these in every scene so the sets belong to one body (each scene names the ones its camera can see): biconcave red blood cells wherever blood shows, a fine capillary with red cells in single file, a wet glossy sheen on every surface, soft translucent tissue lit from within, tiny drifting specks in the fluid, the empty scale-bar slot in the lower right corner.",
+  "avoid": [
+   "red blood cells as spheres, balls or doughnuts with a hole; bacteria with faces; viruses drawn as big spiky balls next to cells (they are about 75 times smaller than a red cell)",
+   "neon sci-fi glow, circuitry or a cyber look",
+   "gore: no cut flesh, no wounds, no blood spatter",
+   "cells of the wrong size for the scene's stated scale",
+   "real brand names, letters or numbers (the scale bar's number is a slot)",
+   "people in the sets (the cast is separate)"
+  ],
+  "outside": "There is no outside: each set is enclosed tissue or a space within it."
+ },
+ "research": "Microscopic sizes checked on 2026-10-15 (red and white blood cells, platelets and capillaries; skin surface cells, skin bacteria, hair and sweat ducts; alveoli and alveolar macrophages; intestinal villi, brush border and the colon's mucus layers; neuron cell bodies and dendrites). Sources and what was not verified: docs/research/2026-10-13-sets-micro_body.md.",
+ "objects": {
+  "red blood cell": "a biconcave disc about 7.5 micrometres across: round in face view with a shallow dimple in the middle (darker there because it is thinner), about 2 micrometres thick at its rounded rim and about 1 micrometre at the centre, so edge-on it looks like a short dumbbell; smooth, glossy, red; no nucleus, no hole; flexible, so it bends when it squeezes past something",
+  "white blood cell": "a neutrophil about 12 micrometres across: a round, pale cream cell with a softly ruffled, slightly bumpy surface; where it touches a wall it flattens into a contact patch; through its translucent body a faint lobed nucleus (three or four connected lobes) shows",
+  "platelet": "a small flat oval about 2 to 3 micrometres long and less than 1 thick, pale straw to pale pink, smooth; a few stuck together in a small clump",
+  "vessel lining": "the inside wall of the vessel: one layer of thin, flat cells (endothelium) about 10 micrometres wide and 30 to 50 long, all elongated along the flow, fitted edge to edge like long paving stones with fine darker borders, each with a soft oval bulge where its nucleus sits; glossy and wet",
+  "plasma": "the fluid of the blood: clear and pale straw-yellow (never red), with a faint haze and a few tiny drifting specks",
+  "scale bar": "a plain horizontal line of a stated length in pixels with a short upright tick at each end, in the lower right corner, with an empty slot rect beside it for its label (no numbers drawn)",
+  "skin surface cells": "the dead flat cells (corneocytes) of the skin's surface: many-sided plates (mostly five or six sides) 30 to 50 micrometres across and less than 1 micrometre thick, overlapping like roof tiles in layers, their edges slightly raised; pale cream to beige, matte with a faint sheen",
+  "skin furrows": "the fine criss-cross lines of the skin: shallow valleys a few plates wide where the surface folds down, crossing in a diamond pattern, slightly shaded",
+  "hair": "a hair about 75 micrometres thick rising at an angle from a round opening ringed by raised plates: a long cylinder covered in overlapping, slightly lifted scales (the cuticle) like roof slates or a pine cone's surface, pale brown, glossy",
+  "sweat duct opening": "a small round opening about 40 micrometres across in the skin's surface (its size on the surface was not measured directly), with a slightly raised rim of plates, holding a clear, domed bead of sweat that reflects the light",
+  "skin bacteria": "skin bacteria: round cocci about 1 micrometre across in grape-like clusters of tens to hundreds, and a few small groups of short rods; pale green-grey and translucent, sitting in the furrows and around the hair",
+  "air sac": "an alveolus: a rounded, cup-shaped chamber about 200 micrometres across, open on one side to a small duct, sharing thin walls with its neighbours like the cells of a honeycomb; the walls pink, thin and translucent, with a wet film on their inner surface",
+  "capillary net": "a dense mesh of capillaries in the air sacs' walls: smooth tubes 6 to 8 micrometres wide joining and branching in a net, filled with red blood cells passing in single file and bending to fit",
+  "alveolar macrophage": "a cleaner cell about 20 micrometres across: irregular and pale, with ruffled, reaching edges and a few small dark particles visible inside it",
+  "dust particles": "fine particles of dust and soot: dark grey irregular specks 1 to 10 micrometres across (the finest, PM2.5, are up to 2.5 micrometres), some in small clumps",
+  "airway": "the end of a small airway (a bronchiole about 0.5 mm across): a round tunnel with a smooth, slightly ridged lining, darker and deeper than the air sacs",
+  "gut lining cells": "the lining of the large intestine: tall column-shaped cells about 25 micrometres tall and 6 to 8 wide standing side by side in one layer, each with an oval nucleus near its base and a fine, fuzzy brush border along its top",
+  "goblet cells": "mucus-making cells among the lining cells: the same height, but swollen at the top like a goblet, full of pale round mucus granules, releasing mucus from their tops",
+  "crypts": "the openings of the tube-shaped pits that dip down into the lining, each about 45 micrometres across, ringed by lining and goblet cells",
+  "inner mucus layer": "a firm, clear gel about 100 micrometres thick lying on the lining, very faintly layered in horizontal sheets, normally free of bacteria; slightly blue-grey and glossy",
+  "outer mucus layer": "a looser, cloudier gel above the inner layer where the gut's bacteria live",
+  "gut bacteria": "the gut's bacteria: rods about 1 micrometre wide and 2 to 3 long (some in short chains, a few with a thin whip-like tail), round cocci about 1 micrometre in pairs and clusters, and a few slightly curved forms; translucent green-grey with small highlights",
+  "food fibres": "fibres of digested plant food: pale, twisted, ribbon-like strands up to about 100 micrometres long, some frayed at the ends",
+  "neuron": "a pyramidal neuron: a cell body shaped like a rounded pyramid 15 to 25 micrometres tall with a pale round nucleus inside; one thick main dendrite rising from its tip and branching; several thinner dendrites spreading from its base, each branching and tapering; one thin axon leaving the base",
+  "dendritic spines": "tiny protrusions 1 to 2 micrometres long along the dendrites, of three kinds: thin ones, short stubby ones and mushroom-shaped ones with a round head on a narrow neck",
+  "axon and myelin": "the neuron's single thin output fibre, about 1 micrometre thick, wrapped in places by pale, pearly sausage-shaped sheaths (myelin) with small bare gaps (nodes) between them; it branches near its end into small knobs",
+  "synapse": "the meeting point of an axon's small swollen ending and a dendrite's spine, separated by a gap too narrow to see at this scale, drawn as a hairline with a faint glow",
+  "astrocyte": "a star-shaped support cell about 20 micrometres across with many fine, branching, slightly fuzzy arms, some ending in small flattened feet pressed against a capillary",
+  "capillary": "a small blood vessel about 7 micrometres wide, a smooth translucent tube with red blood cells inside it in single file"
+ },
+ "batches": [
+  [
+   "bloodstream",
+   "lungs",
+   "neurons"
+  ],
+  [
+   "skin_surface",
+   "gut"
+  ]
+ ]
+}

@@ -1,0 +1,179 @@
+{
+  "title": "The hidden cost of the quick question",
+  "wpm_target": 145,
+  "sections": [
+    {"id": "intro", "title": "Quick question?", "role": "hook"},
+    {"id": "sec1", "title": "One question, traced", "role": "what it is"},
+    {"id": "sec2", "title": "A whole morning", "role": "how it works, why it matters"},
+    {"id": "sec3", "title": "Change the timing", "role": "habits, then payoff"}
+  ],
+  "beats": [
+    {
+      "id": "b01", "section": "intro", "job": "hook", "delivery": "warm",
+      "narration": ["Say you are deep in a plan.", "A message lands. Quick question?", "It takes a minute to answer.", "So why, by lunch,", "is the plan where you left it?"],
+      "on_screen": ["Quick question?", "by lunch"],
+      "visual_intent": "an editorial page: one piece of work, the plan, sits half written in a held slot at the centre; a small paper slip slides in at the edge carrying Quick question?; it is answered, and the page's time strip runs on to lunch while the plan stays exactly as it was",
+      "change_over_time": true, "animate_score": 0.5, "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [{"claim": "the worker, the plan, the message and the one-minute answer are an invented, typical example", "hypothetical": true}]
+    },
+    {
+      "id": "b02", "section": "intro", "job": "orient", "delivery": "calm",
+      "narration": ["The minute is the visible part.", "Let's find the hidden one,", "and what a team can do."],
+      "on_screen": ["visible", "hidden"],
+      "visual_intent": "a two-column ledger is ruled onto the page beside the slot, headed visible and hidden; one small accent unit drops into visible on minute, the hidden column stays empty and waiting",
+      "change_over_time": false, "animate_score": 0.3, "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [{"claim": "an interruption costs more than the time spent answering it", "fact": "F4"}]
+    },
+    {
+      "id": "b03", "section": "sec1", "job": "define", "delivery": "neutral",
+      "narration": ["To answer, you put the plan down.", "That swap costs something.", "In experiments, people are slower", "and make more mistakes after a switch.", "Switch cost."],
+      "on_screen": ["switch cost"],
+      "visual_intent": "the held slot swaps: the plan slides out and the question slides in; on switch cost, the first unit is stamped into the hidden column and lettered; the visible column is unchanged",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [{"claim": "after a switch people are slower and make more errors than when repeating the same task (laboratory finding)", "fact": "F1"}]
+    },
+    {
+      "id": "b04", "section": "sec1", "job": "define", "delivery": "calm",
+      "narration": ["Then you come back, but not really.", "You hunt for where you were.", "That is resumption lag."],
+      "on_screen": ["where you were", "resumption lag"],
+      "visual_intent": "the plan slides back into the slot greyed and out of register; a small search mark moves over its lines until it finds where you were; a second, longer unit is stamped into the hidden column, lettered resumption lag",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [{"claim": "after an interruption there is a delay before a person is productive again while they work out where they were, called the resumption lag", "fact": "F4"}]
+    },
+    {
+      "id": "b05", "section": "sec1", "job": "define", "delivery": "calm",
+      "narration": ["And part of your mind stays on the question.", "That is attention residue.", "The next thing you do suffers."],
+      "on_screen": ["attention residue"],
+      "visual_intent": "a faint ghost of the message slip stays printed over the corner of the plan; a third, pale unit is stamped into the hidden column, lettered attention residue",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [{"claim": "after switching away from an unfinished task, part of attention tends to stay on it and performance on the next task tends to be worse", "fact": "F6"}]
+    },
+    {
+      "id": "b06", "section": "sec1", "job": "refute", "delivery": "neutral",
+      "misconception": "I can answer while still writing, so there is no switch",
+      "narration": ["Answering while you write?", "That is still switching,", "and every switch goes in the hidden column."],
+      "on_screen": ["still switching"],
+      "visual_intent": "the slot flickers between the plan and the message several times, never holding both; each flick stamps a small unit into the hidden column",
+      "change_over_time": true, "animate_score": 0.8, "treatment_hint": "motion",
+      "grounding": [{"claim": "for two demanding tasks, what feels like multitasking is mostly rapid switching, and each switch carries a cost", "fact": "F3"}]
+    },
+    {
+      "id": "b07", "section": "sec1", "job": "consolidate", "delivery": "calm",
+      "narration": ["One quick question.", "A minute you see,", "and a column you don't.", "Keep both in mind."],
+      "on_screen": ["visible", "hidden"],
+      "visual_intent": "the finished ledger for one question rests: one small unit under visible, the stamped units under hidden; the two column heads take the accent in turn",
+      "change_over_time": false, "animate_score": 0.2, "treatment_hint": "template",
+      "hypothetical": true,
+      "recall": {"kind": "recall_prompt", "prompt": "Keep the two columns in mind: visible and hidden. Watch which one grows."},
+      "grounding": [{"claim": "the cost has a visible part (answering) and a hidden part (switching and getting back in)", "fact": "F4"}, {"claim": "the sizes of the units on the ledger are illustrative", "hypothetical": true}]
+    },
+    {
+      "id": "b08", "section": "sec2", "job": "scenario", "delivery": "neutral",
+      "narration": ["Now a whole morning.", "Say five questions, a minute each,", "and a few more to get back in.", "The real figure varies."],
+      "on_screen": ["a whole morning", "varies"],
+      "visual_intent": "the page becomes the morning as a grid of time units; the first question stamps one accent unit and, beside it, a short run of ink units for getting back in; a small margin note reads varies",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [{"claim": "five questions, a minute each and a few more to get back in, are illustrative sizes", "hypothetical": true}, {"claim": "there is no single reliable figure for recovery time; it varies", "fact": "F18"}]
+    },
+    {
+      "id": "b09", "section": "sec2", "job": "demonstrate", "delivery": "brisk",
+      "narration": ["Visible, one unit. Hidden, a run.", "Again. And again."],
+      "on_screen": [],
+      "visual_intent": "the stamps speed up question by question, each one accent unit followed by its ink run; the grid fills from the top while the plan's own units, the real work, barely advance",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [{"claim": "the morning's questions and their unit counts are illustrative", "hypothetical": true}]
+    },
+    {
+      "id": "b10", "section": "sec2", "job": "relate", "delivery": "neutral",
+      "narration": ["Field studies of office workers", "found work fragmented, much like this."],
+      "on_screen": ["fragmented"],
+      "visual_intent": "the same grid: the plan's units now sit scattered in small pieces between the question runs, none of them joined",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "grounding": [{"claim": "field observation found office information workers' work highly fragmented, with frequent switching", "fact": "F7"}]
+    },
+    {
+      "id": "b11", "section": "sec2", "job": "refute", "delivery": "neutral",
+      "misconception": "if I answer fast and catch up, the cost disappears",
+      "narration": ["Going faster does not fix it.", "In one experiment, people sped up,", "and reported more stress.", "The cost moved."],
+      "on_screen": ["faster", "more stress"],
+      "visual_intent": "the hidden runs compress as the worker races, but their stamps relabel one by one from time to stress; the hidden column keeps its height",
+      "change_over_time": true, "animate_score": 0.7, "treatment_hint": "motion",
+      "grounding": [{"claim": "in one experiment, interrupted people worked faster but reported more stress, frustration and effort", "fact": "F8"}]
+    },
+    {
+      "id": "b12", "section": "sec2", "job": "relate", "delivery": "warm",
+      "narration": ["Now switch seats.", "For the asker, it is one small message,", "and it gets them unstuck.", "The hidden column lands on someone else.", "Nobody is careless. Now is just the default."],
+      "on_screen": ["unstuck", "someone else"],
+      "visual_intent": "the spread turns like a magazine page: on the left the asker's page holds one small accent unit and their work moves a step on unstuck; on the right the interrupted page holds the whole hidden pile; a thin line carries the message across",
+      "change_over_time": true, "animate_score": 0.5, "treatment_hint": "motion",
+      "grounding": [{"claim": "interrupting a colleague often helped the asker get unstuck quickly, while the cost fell on the person interrupted", "fact": "F11"}, {"claim": "questions between colleagues are often valuable", "fact": "F17"}]
+    },
+    {
+      "id": "b13", "section": "sec2", "job": "check", "delivery": "calm",
+      "narration": ["Now you.", "Say those questions arrived together,", "at one agreed time.", "Which column shrinks?", "Pause, and decide."],
+      "on_screen": ["one agreed time", "Which column shrinks?"],
+      "visual_intent": "the morning grid with all five slips gathered at one slot at its edge; both column heads, visible and hidden, carry a question mark; nothing moves through the pause",
+      "change_over_time": false, "animate_score": 0.2, "treatment_hint": "template",
+      "hypothetical": true,
+      "pause_after_s": 4,
+      "recall": {"kind": "pause_predict", "prompt": "If the same questions arrived together at one agreed time, which column shrinks: visible or hidden?", "answer": "hidden: the answers take the same minutes, but there is one switch and one return instead of one for every question", "tempting_wrong": "visible: it feels like fewer interruptions means less answering, but the answering is the same; only the switching is saved"},
+      "grounding": [{"claim": "the batching scenario is illustrative", "hypothetical": true}]
+    },
+    {
+      "id": "b14", "section": "sec3", "job": "practice", "delivery": "neutral",
+      "narration": ["The hidden one.", "Same answers, same minutes.", "But one switch, and one return.", "Every question still gets asked.", "It is timing, not silence."],
+      "on_screen": ["one switch", "timing, not silence"],
+      "visual_intent": "the five slips slide into one batch slot; the visible units stay exactly as they were; the five hidden runs collapse into a single run and the plan's scattered units rejoin into one long block; each slip gets a small tick as answered",
+      "change_over_time": true, "animate_score": 0.9, "treatment_hint": "motion",
+      "hypothetical": true,
+      "misconception": "the fix is to ask fewer questions",
+      "grounding": [{"claim": "sending questions together reduces how often the other person has to switch", "fact": "F16"}, {"claim": "the aim is to change when non-urgent questions arrive, not to stop asking them", "fact": "F17"}, {"claim": "the unit sizes are illustrative", "hypothetical": true}]
+    },
+    {
+      "id": "b15", "section": "sec3", "job": "practice", "delivery": "neutral",
+      "narration": ["So, three habits.", "One. Batch non-urgent questions,", "and answer at agreed times."],
+      "on_screen": ["batch", "agreed times"],
+      "visual_intent": "the morning layout becomes the habits' board; a first label, batch, pins to the batch slot on its word, and agreed times marks two set points on the time strip",
+      "change_over_time": false, "animate_score": 0.4, "treatment_hint": "template",
+      "grounding": [{"claim": "collecting non-urgent questions and sending them together reduces switching", "fact": "F16"}, {"claim": "teams agree how quickly non-urgent messages are answered so they can be answered in batches", "fact": "F15"}, {"claim": "checking messages at set times was linked to less stress in one study", "fact": "F13"}]
+    },
+    {
+      "id": "b16", "section": "sec3", "job": "practice", "delivery": "neutral",
+      "narration": ["Two. Agree focus time,", "with a route for the truly urgent.", "One team tried quiet hours.", "Many felt more productive.", "Then the habit faded. Keep it up."],
+      "on_screen": ["focus time", "urgent route"],
+      "visual_intent": "a block of the morning grid is shaded as focus time with a narrow open lane at its edge for urgent; the shading thins on faded, then is re-inked on keep it up",
+      "change_over_time": true, "animate_score": 0.5, "treatment_hint": "motion",
+      "grounding": [{"claim": "teams agree which channel means urgent", "fact": "F15"}, {"claim": "in one team's trial of quiet periods many reported better productivity, and the habit faded after the trial ended", "fact": "F12"}]
+    },
+    {
+      "id": "b17", "section": "sec3", "job": "practice", "delivery": "neutral",
+      "narration": ["Three. Before you switch,", "note where you are, and what comes next.", "In experiments, that cut attention residue."],
+      "on_screen": ["where you are", "what comes next"],
+      "visual_intent": "callback to b04: before the plan leaves the slot, a small note is clipped to it reading where you are and what comes next; the ghost of the message over the plan fades on residue",
+      "change_over_time": true, "animate_score": 0.5, "treatment_hint": "motion",
+      "grounding": [{"claim": "a brief ready-to-resume note before switching reduced attention residue in experiments", "fact": "F14"}]
+    },
+    {
+      "id": "b18", "section": "sec3", "job": "payoff", "delivery": "warm",
+      "narration": ["Back to your morning.", "Same questions, held for the agreed time.", "By lunch, the plan has moved."],
+      "on_screen": ["by lunch"],
+      "visual_intent": "the hook's page returns from the same angle: the slips stack in the batch slot, the hidden column holds one short run, and the plan in the held slot is now visibly further written",
+      "change_over_time": true, "animate_score": 0.6, "treatment_hint": "motion",
+      "hypothetical": true,
+      "recall": {"kind": "recall_prompt", "prompt": "Each habit shrinks the hidden column, never the visible one."},
+      "grounding": [{"claim": "the returned morning is the illustrative example handled with the habits", "hypothetical": true}]
+    },
+    {
+      "id": "b19", "section": "sec3", "job": "payoff", "delivery": "warm",
+      "narration": ["Next time, ask first:", "does it need an answer now?", "If not, batch it.", "And take one habit to your team."],
+      "on_screen": ["Now, or batch it?"],
+      "visual_intent": "a new slip, Quick question?, hovers at the edge of the page; on batch it the slip settles into the batch slot instead of the held slot, and the plan stays in place",
+      "change_over_time": false, "animate_score": 0.3, "treatment_hint": "template",
+      "grounding": [{"claim": "non-urgent questions can be held and sent together; urgent ones are still asked at once", "fact": "F16"}, {"claim": "a team can agree habits such as response times and an urgent route", "fact": "F15"}]
+    }
+  ]
+}

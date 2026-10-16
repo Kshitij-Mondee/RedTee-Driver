@@ -1,0 +1,3 @@
+primitive_runtime_every_cover_join_hides_the_incoming_beat_until_its_middle, run with LOOM_TEST_RUNTIME=../Video-Engine-oldtree/runtime (the pre-session runtime, 2026-10-08):
+FAIL: iris, wipe, dip, fade, torn, page, scroll, motif, ... : the incoming element (no entrance) visible before the cover's middle (e.g. 'iris: at 3.88s (cover 3.45..4.00) X2 visible=1')
+On today's runtime: PASS (10 cover kinds, 20 samples). The claude fork b12 'to whom' label is not a cover case: it is b12's own element with words and no entrance, drawn above b12's own black card (see the warning check no_entrance_words).

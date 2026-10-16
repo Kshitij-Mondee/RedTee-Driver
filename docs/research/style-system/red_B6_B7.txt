@@ -1,0 +1,29 @@
+B6 and B7, red runs and causes (2026-10-08).
+
+B6 vendor_art_comes_only_from_approved_sets_and_builds_clean
+  Before: FAIL ('e2kit', {... 'licence': "CC0 1.0 (Loom's own)" ...}). Decision: the SOURCES entry was wrong, not the
+  test. `licence` is a closed value that tools/fetch_assets.py writes into LICENSE.txt and `loom art` prints;
+  provenance moved to a new `origin` field. Behind it, e2gen (model output, "NOT cleared for client use") sat in the
+  approved list and any lesson could embed it. It is now `cleared: false`; loom/vendor_art.resolve(ref, lesson=True)
+  refuses it and compose passes lesson=True, so the E2 bake-off lab page still works. The test now also asserts the
+  refusal (red on the old code: resolve() had no lesson parameter).
+  After: PASS (5 approved sets, all MIT/CC0 with a verified source; ['e2gen'] lab-only, refused in a lesson).
+
+B6 mock_llm_client_disconnect_is_quiet
+  Before: FAIL the abandoned request was never recorded. Cause measured (scratch b6_rst.py, 5 trials each): closing
+  with RST straight after sendall, the server read 0 of 5 requests (Windows discards unread bytes on a reset); waiting
+  until the server has read the request, 5 of 5 were recorded with delivered False. The server is right; the test
+  raced. The test now waits for the read (m._state.seq) before hanging up and asserts delivered is False.
+  After: PASS 3 of 3 runs.
+
+B6 environment-only, now named skips (each confirmed on this PC):
+  vision_lab_runs_end_to_end..., vision_lab_prepare_keeps_stills...: ModuleNotFoundError cv2 (the pod installs it);
+  vision_lab_finds_weights...: os.symlink raises WinError 1314 (no Developer Mode);
+  primitive_material_covered_mid_clear_ends, primitive_material_moves_between: no libcairo-2.dll.
+
+B7 tools/skill_sync.py
+  The tool did not exist (backup: tools/skill_sync.py exists False), so both tests are red on the old tree.
+  The drift test also fails with a plain line diff in place of normalize() (blank lines ignored only): the installed
+  package then reads as drift because of the location line, which shows the test tells the two apart.
+  Live run against the account folder (%APPDATA%/Claude/local-agent-mode-sessions/skills-plugin/.../skills):
+  "skills: 16 repo skill(s) and their account copies agree" (the packages installed at 01:37 today).

@@ -1,0 +1,532 @@
+{
+  "_about": "How a SET (a place, in depth layers) is drawn in each style, for Claude Design. Source for the set-style blocks in the end-to-end prompts written by tools/world_packs.py (docs/assets/world_prompts/). Styles are never ranked against each other (D-122); each has its own purpose. Palettes: 'bases' are hand-chosen per style; shade, deep shade and highlight are derived by the strengths in 'derive' (loom/set_styles.py palette(): a shade is the base multiplied toward the style's shadow colour, a highlight the base screened toward its light colour, so every style's shadows and lights share one temperature), so every hex in a style is distinct and the intake can tell each material and tone apart. Edit here, then run py tools/world_packs.py.",
+  "families": {
+    "wall": "main wall surfaces",
+    "wall2": "a feature wall, a painted panel, a partition",
+    "brick": "bare brick walls (red-brown masonry and its mortar)",
+    "floor": "floor and ground",
+    "ceiling": "ceiling, soffits, beams seen from below",
+    "wood": "timber furniture, doors, trims, beams",
+    "fabric": "main upholstery, carpets, curtains",
+    "fabric2": "second soft material: cushions, rugs, coats",
+    "metal": "steel frames, columns, chair bases, fittings",
+    "brass": "brass and warm metal fittings (lamp bases, handles, hooks)",
+    "glass": "windows, glass walls, glasses on a table (may use fill-opacity)",
+    "plant": "leaves and stems",
+    "paper": "paper, whiteboards, labels, lamp shades",
+    "screen": "screens switched off or dark device faces",
+    "exterior": "buildings and land seen through windows",
+    "sky": "sky through windows",
+    "accent": "a strong signal colour for the few small things that carry it in life (a sprinkler pipe, a fire extinguisher) or one chosen object; never a large area",
+    "ink": "outlines and the darkest details (single value)",
+    "light": "the key light's colour, for light shapes at opacity (single value)",
+    "shadow": "the cast shadow colour, for shadow shapes at opacity (single value)",
+    "haze": "the atmosphere colour, for depth haze at opacity (single value)"
+  },
+  "singles": [
+    "ink",
+    "light",
+    "shadow",
+    "haze"
+  ],
+  "styles": {
+    "flat_editorial": {
+      "name": "Flat 2D vector, editorial",
+      "character_block": "S1",
+      "packs": [
+        "corporate-clean",
+        "editorial-paper",
+        "presenter-pop"
+      ],
+      "for": "corporate explainers, policy, process and product lessons; calm, adult, considered",
+      "render": [
+        "Real perspective, simplified: one- or two-point, every receding edge goes to its vanishing point; furniture keeps true proportions (no bloated, rounded 'app illustration' furniture, no corporate-Memphis distortion).",
+        "Volumes are built from 3 to 4 flat, OPAQUE tone planes (base, shade, highlight, and the deep shade in contact corners). No outlines, no transparency or multiply effects for form (glass is the exception: it may show what is behind it through fill-opacity); where two planes of the same material meet, separate them by a change of tone, not a line. No shape and no gap between shapes smaller than 8 px at 1080p, so nothing thin reads as a stray line.",
+        "Graphic economy with intent: a window is a frame, panes and the light it throws; a chair is seat, back, base and the shadow it casts. Every object keeps its one or two most telling details (the brass foot of a lamp, the seam on a cushion, the cable from a laptop).",
+        "Strong negative space by design: large calm planes (walls, floor) against clusters of detail; the composition reads as a magazine spread, not a catalogue.",
+        "Small real detail follows the 8 px rule: brick courses as shade-tone bands at least 8 px tall (one band per course where a course is 8 px or more, otherwise one band per two to four courses, mortar left out); glazing bars at least 8 px; anything that would be thinner (a pen, stitching, a distant cable) is left out rather than drawn thin."
+      ],
+      "light": "One key light (the window, on the side named in the scene). Light that falls on a surface is drawn as an opaque shape in that surface's hi tone with crisp edges (window-pane patterns on the floor and table); cast shadows as opaque shapes in that surface's shade tone, all falling the same way; contact shadows in the deep tone. No gradients, no transparency.",
+      "texture": "None. The style lives on flat, clean planes.",
+      "depth": "Far layer: two tones per object (base and shade), lower contrast; one haze rectangle in lm-atmos over the far layer at 0.25 opacity (with glass, the only transparency this style uses). Mid: full tones. Near: full tones and the clearest edges.",
+      "quality_bar": "Feature illustration in a serious business magazine: calm, precise, adult, with one idea of light that makes the room feel like a specific afternoon.",
+      "reject": [
+        "clip-art furniture (generic shapes that could be any chair or any desk)",
+        "every surface the same value, so nothing comes forward",
+        "a centred, symmetrical, straight-on room with no depth",
+        "rounded, inflated or pastel 'app onboarding' styling",
+        "shadows that fall in different directions",
+        "an empty, sterile room with no sign anyone works there",
+        "objects with no cast shadow, which look copied and pasted in"
+      ],
+      "derive": {
+        "shade": 0.3,
+        "deep": 0.55,
+        "hi": 0.4
+      },
+      "bases": {
+        "wall": "#ECE7DF",
+        "wall2": "#3E5B4F",
+        "floor": "#B7B0A4",
+        "ceiling": "#F4F1EC",
+        "wood": "#C9A77C",
+        "fabric": "#4F6D8A",
+        "fabric2": "#C8B9A3",
+        "metal": "#2F3437",
+        "glass": "#CFE0E8",
+        "plant": "#5E8A5A",
+        "paper": "#FBFAF7",
+        "screen": "#22303C",
+        "exterior": "#9DB0BD",
+        "sky": "#DCE6EC",
+        "accent": "#B5402F",
+        "ink": "#1B2430",
+        "light": "#FFF3D6",
+        "shadow": "#33415C",
+        "haze": "#E9EEF2",
+        "brick": "#A65E46",
+        "brass": "#B8924A"
+      }
+    },
+    "story_cartoon": {
+      "name": "2D story cartoon",
+      "character_block": "S2",
+      "packs": [
+        "story-cartoon"
+      ],
+      "for": "narrative scenarios and behaviour change: a place where a scene of people happens",
+      "render": [
+        "Perspective is real but pushed a little: slightly stronger convergence and a lower camera than life, so rooms feel like a stage for acting. Furniture has appeal: gentle taper, a little weight at the base, never balloon-like.",
+        "A confident ink outline with VARIED weight in lm-outline: 5 px on silhouettes of near objects, 3 px on mid, 2 px on far, 1.5 to 2 px on inner details; tapered ends where lines meet. Far-layer outlines may be in the shadow colour instead of ink.",
+        "Two-tone cel shading (base and shade) with a crisp terminator; thin highlights (lm-hi) on edges that face the window; deep shade in contact corners (under the table, where wall meets floor).",
+        "Lived in: things are slightly askew, a chair is pulled out, papers overlap, a cable loops; every object looks owned.",
+        "Cheat props a little closer together and toward the camera so the room is never empty; backgrounds are characters too, but their patterns never merge with where a person will stand."
+      ],
+      "light": "A warm key from the window drawn as cel light shapes; cast shadows as flat shapes in the shadow colour at 0.22 to 0.3 opacity with crisp edges; a soft bounce of warm light on the floor below the window.",
+      "texture": "Optional paper tooth on walls and floor as sparse vector specks in lm-texture (3 to 4 percent); wood grain as 2 or 3 inked strokes per board, not a pattern.",
+      "depth": "Far: thinner lines, fewer details, toward haze. Mid: full treatment. Near: the boldest line weight, one or two foreground objects that frame the shot (a plant, a chair back) cropped by the frame edge.",
+      "quality_bar": "Background layout and paint of a contemporary studio's animated short for adults: warm, specific, a place with history, still clear enough for characters to read in front of it.",
+      "reject": [
+        "children's television styling: primary colours, bouncy wobble on everything, toy-like furniture",
+        "uniform line weight",
+        "a room so busy the middle third cannot hold two characters",
+        "flat ambient light with no window direction",
+        "objects floating above the floor (no contact shadow)",
+        "a high horizon over a large empty floor"
+      ],
+      "derive": {
+        "shade": 0.35,
+        "deep": 0.6,
+        "hi": 0.4
+      },
+      "bases": {
+        "wall": "#EADFCB",
+        "wall2": "#5E9C8F",
+        "floor": "#B99C76",
+        "ceiling": "#F3ECE0",
+        "wood": "#A8774A",
+        "fabric": "#5B7A99",
+        "fabric2": "#8A6A85",
+        "metal": "#4A4642",
+        "glass": "#CBDDD8",
+        "plant": "#6E9F4A",
+        "paper": "#FBF7EF",
+        "screen": "#2F3A3A",
+        "exterior": "#A9B7A5",
+        "sky": "#E5EDE6",
+        "accent": "#A9442A",
+        "ink": "#2A221C",
+        "light": "#FFF0C8",
+        "shadow": "#50607A",
+        "haze": "#EFE7DA",
+        "brick": "#A8603F",
+        "brass": "#B98D3E"
+      }
+    },
+    "lit_25d": {
+      "name": "2.5D lit layers",
+      "character_block": "S3",
+      "packs": [
+        "cinematic-dawn",
+        "cinematic-noir"
+      ],
+      "for": "cinematic moments, mood, emphasis: the camera pushes through depth and the light can change",
+      "render": [
+        "A layout painter's room in vector layers: accurate two-point perspective, a clear value plan (light, middle, dark masses) before colour, and depth that the parallax camera can travel through.",
+        "Every depth layer (far, mid, near) is split so the engine can relight it: the base shapes in local colour (outside the classed groups, as the contract says), then <g class=\"lm-shadow\"> form and cast shadows, <g class=\"lm-light\"> key-light shapes, <g class=\"lm-hi\"> thin bright rim edges on silhouettes against the window, <g class=\"lm-atmos\"> haze and light shafts.",
+        "Materials read through light, not line: no outlines; edges come from value change. Glass reflects the window as one or two pale shapes; a satin floor shows a faint sheen under the window light, as a lighter low-opacity shape.",
+        "Light setups are sibling groups inside each depth layer, each holding its own lm-shadow, lm-light, lm-hi and lm-atmos groups: id=\"setup_day\" first (the main delivery: the scene's light). After I approve it, add id=\"setup_evening\" (low sun, long shadows, lamps on) and id=\"setup_night\" (window dark, lamps and screens are the lights) in the same file. The base shapes are shared. In this style a variant that only changes the light (evening, night) IS a setup, not a separate file; a variant that moves objects is a separate file.",
+        "Paint what is behind every object: the wall and floor continue complete under the furniture of the mid and near layers, so a parallax move never shows a hole; the far layer runs past the frame into the overscan."
+      ],
+      "light": "One warm key with believable cast shadows (window panes projected on the floor and table, stretched by perspective), a cool fill from the opposite side, light shafts as long transparent polygons in lm-atmos (2-stop linear gradients allowed there, light to transparent). Shadows are cool and coloured, never grey.",
+      "texture": "Very little: a soft gradient across large walls in lm-atmos only. No noise.",
+      "depth": "Aerial perspective: the far layer is lighter, cooler and lower in contrast, with haze over it at the amount the scene's Light paragraph states (0.3 to 0.45 for a deep space when it states none); the near layer is darkest and may be partly silhouetted against the light.",
+      "quality_bar": "A feature-animation colour key translated into clean vector layers: the light tells you the time of day and the mood before anything moves.",
+      "reject": [
+        "flat ambient light, or light with no single direction",
+        "grey or black shadows instead of coloured ones",
+        "no value hierarchy (the eye has nowhere to land)",
+        "light setups that change the furniture or layout (only light may change)",
+        "outlines",
+        "holes or exposed edges when layers slide"
+      ],
+      "derive": {
+        "shade": 0.45,
+        "deep": 0.7,
+        "hi": 0.55
+      },
+      "bases": {
+        "wall": "#E8D2BC",
+        "wall2": "#3D5A55",
+        "floor": "#9E8A78",
+        "ceiling": "#EFDCC8",
+        "wood": "#B7865A",
+        "fabric": "#4E5F7A",
+        "fabric2": "#B49A86",
+        "metal": "#3A3236",
+        "glass": "#BFD3DA",
+        "plant": "#557A52",
+        "paper": "#FFF4E6",
+        "screen": "#2B2F3D",
+        "exterior": "#C9A99A",
+        "sky": "#F7C9A0",
+        "accent": "#B74C2F",
+        "ink": "#2B1E2F",
+        "light": "#FFD9A0",
+        "shadow": "#3B3550",
+        "haze": "#F3D9C0",
+        "brick": "#A0583F",
+        "brass": "#C2903F"
+      }
+    },
+    "painterly": {
+      "name": "Painterly, gouache in vector",
+      "character_block": "S4",
+      "packs": [],
+      "for": "reflective, human and historical stories; wellbeing; values; moments that should feel felt",
+      "render": [
+        "Paint the masses first: a clear value structure of light, middle and dark shapes, then colour with temperature shifts (warm light, cool shadow, warm bounce). Perspective is correct but drawn by hand, with no ruler-perfect edges.",
+        "Edges are lost and found: some silhouettes dissolve into the wall behind them, others are crisp where the light hits; contours are shaped like brush strokes (tapered, slightly irregular paths), never a uniform outline.",
+        "Gouache surface: flat, opaque strokes that follow the form, with a few dry-brush edges where a stroke runs out; detail is suggested by 2 or 3 strokes (the books on a shelf are a rhythm of coloured marks, not drawn books). Suggestion never removes structure: a chair still has its seat, back and legs in the right places.",
+        "Simplify by distance: near objects get the most strokes, the far wall is a few broad planes.",
+        "A limited palette per scene: at most five of the families carry the picture (the scene names them when it matters); the others appear only as small notes. Hard edges only at the focal point; edges soften toward the frame's sides. Keep each file under the size budget: fewer, larger brush strokes rather than many tiny ones."
+      ],
+      "light": "Afternoon light painted as warm opaque strokes on surfaces it touches; shadows are cool and transparent-looking (shadow colour at 0.25 to 0.35 with brush-shaped edges); light spills and bounces (warm on the floor under the window, warm reflected light under the table edge). Direct low sun is warm; daylight that is only sky light (the room away from the sun patches) reads cool and slightly blue; lamps read orange. Keep those three apart.",
+      "texture": "In lm-texture only, made of vector marks: brush streaks that follow surfaces (brick courses, wood grain, the weave of a rug), dry-brush flecks at stroke ends, a sparse paper grain. Dense where the light is, almost none in shadow. Never a noise overlay across the whole frame.",
+      "depth": "Far: broad, softer, cooler, fewer strokes. Mid: full painting. Near: the boldest strokes and the warmest lights, a foreground object partly out of the frame.",
+      "quality_bar": "An illustrator's gouache painting for a thoughtful picture book or editorial cover for adults: you can feel the hand and the light, and the room still reads clearly at a glance.",
+      "reject": [
+        "airbrushed digital smoothness (perfect gradients, plastic sheen)",
+        "a noise or grain overlay on everything",
+        "uniform outlines",
+        "every edge equally sharp",
+        "muddy colour (shadows made by adding grey instead of shifting temperature)",
+        "fiddly detail everywhere, or strident colours fighting each other"
+      ],
+      "derive": {
+        "shade": 0.42,
+        "deep": 0.66,
+        "hi": 0.5
+      },
+      "bases": {
+        "wall": "#E2D6C2",
+        "wall2": "#4F6B5C",
+        "floor": "#A08C74",
+        "ceiling": "#EAE0D0",
+        "wood": "#A87A52",
+        "fabric": "#556F8C",
+        "fabric2": "#C2A58A",
+        "metal": "#3E3A38",
+        "glass": "#B8CCCF",
+        "plant": "#61804F",
+        "paper": "#F6EEDF",
+        "screen": "#2E3438",
+        "exterior": "#9FA7A0",
+        "sky": "#D9DFD8",
+        "accent": "#B5532E",
+        "ink": "#2A2522",
+        "light": "#FBE3B0",
+        "shadow": "#3F4A66",
+        "haze": "#E4DED2",
+        "brick": "#9E5A40",
+        "brass": "#B08A48"
+      }
+    },
+    "ink_wash": {
+      "name": "Hand-drawn ink and wash",
+      "character_block": "S5",
+      "packs": [
+        "whiteboard"
+      ],
+      "for": "informal, thinking-aloud lessons; reflection; a sketchbook voice",
+      "render": [
+        "A skilled illustrator's location sketch: perspective drawn by eye but sound, line drives the drawing, with real variation in weight and a slight natural wobble (no ruler-perfect lines, no shaky jitter either).",
+        "Ink in lm-outline: the near objects in a 3 to 4 px line, the far wall in 1.5 px; lines overshoot slightly at corners; some edges are left open where the light hits.",
+        "Wash in two or three transparent tones per material, laid loosely and not filling to the line everywhere; the paper (wall or paper colour) is left untouched where the light is strongest.",
+        "Hatching or a darker wash only in the shadow side and under things.",
+        "Work outside-in: the big silhouettes and the few large dark shapes first, detail last; one decisive line, not five; heavier lines on near objects, overlaps and the undersides of forms; the wash never repeats what the ink already says."
+      ],
+      "light": "Light is the paper left white; shadow is a cool wash in the shadow colour at 0.2 to 0.3 opacity, with hatching in the deepest places.",
+      "texture": "Paper fibres as sparse fine vector strokes in lm-texture; wash edges a little irregular (blooms) on 2 or 3 large areas.",
+      "depth": "Far: thin line, almost no wash. Mid: line and wash. Near: the strongest line and the darkest wash.",
+      "quality_bar": "A page from a professional illustrator's sketchbook of a real office: loose, confident, specific.",
+      "reject": [
+        "uniform, mechanical line weight",
+        "every area washed (no paper left)",
+        "jittery 'hand-drawn filter' wobble",
+        "children's doodle simplification",
+        "a heavy outline on every object, or equal detail everywhere"
+      ],
+      "derive": {
+        "shade": 0.28,
+        "deep": 0.5,
+        "hi": 0.35
+      },
+      "bases": {
+        "wall": "#F2EEE6",
+        "wall2": "#C9CFCB",
+        "floor": "#DAD3C6",
+        "ceiling": "#F5F2EC",
+        "wood": "#D2BFA4",
+        "fabric": "#B7C2CC",
+        "fabric2": "#D9CDBE",
+        "metal": "#8C8A86",
+        "glass": "#E3EAEC",
+        "plant": "#B9C7A8",
+        "paper": "#FBF9F4",
+        "screen": "#6E747A",
+        "exterior": "#D7DAD6",
+        "sky": "#ECEFEE",
+        "accent": "#B44A35",
+        "ink": "#1E1C1A",
+        "light": "#FFF8E8",
+        "shadow": "#6C7486",
+        "haze": "#F1EEE8",
+        "brick": "#D9B3A3",
+        "brass": "#D8C49A"
+      }
+    },
+    "line_art": {
+      "name": "Line art",
+      "character_block": "S6",
+      "packs": [
+        "line-art",
+        "engineering"
+      ],
+      "for": "technical, minimal and elegant lessons; process and systems in a real place",
+      "render": [
+        "An architect's interior drawing: precise two-point perspective and THREE line weights by depth, all in lm-outline: 3 px for the nearest and cut edges, 2 px for the middle ground, 1 px for the far ground. Single confident strokes; corners overlap very slightly rather than falling short.",
+        "Fills only as the faint material tints of the palette on large planes (wall, floor, glass) so the drawing is not paper-white; no shading except a light hatch in the deepest corners.",
+        "Detail hierarchy by line density: the focal area is drawn completely (chair mechanisms, table joints), the rest is drawn with fewer lines.",
+        "Overlaps are shown by line breaks (a 4 px gap where a near line crosses a far one)."
+      ],
+      "light": "Implied only: the shadow side of each object gets the heavier line; cast shadows as an open hatch at 45 degrees in the shadow colour.",
+      "texture": "None.",
+      "depth": "Far: 1 px lines in the shadow colour instead of ink. Mid and near: ink.",
+      "quality_bar": "A presentation drawing from a good architecture practice: clean, exact, quietly beautiful.",
+      "reject": [
+        "sketchy, choppy or wobbly lines",
+        "every line the same weight",
+        "corners that fall short of meeting",
+        "heavy fills",
+        "perspective errors (every receding line must meet its vanishing point)"
+      ],
+      "derive": {
+        "shade": 0.15,
+        "deep": 0.3,
+        "hi": 0.25
+      },
+      "bases": {
+        "wall": "#F7F6F3",
+        "wall2": "#ECEFF1",
+        "floor": "#F1EEE8",
+        "ceiling": "#FAF9F7",
+        "wood": "#F0E8DC",
+        "fabric": "#E8EDF2",
+        "fabric2": "#F1EBE3",
+        "metal": "#E2E3E4",
+        "glass": "#EDF4F7",
+        "plant": "#E6EFE2",
+        "paper": "#FFFFFF",
+        "screen": "#D9DFE4",
+        "exterior": "#EFF0F0",
+        "sky": "#F4F7F9",
+        "accent": "#2563EB",
+        "ink": "#1A1D22",
+        "light": "#FFFBF0",
+        "shadow": "#C3C9D3",
+        "haze": "#F5F4F1",
+        "brick": "#F2E4DE",
+        "brass": "#F0E7D2"
+      }
+    },
+    "isometric": {
+      "name": "Isometric",
+      "character_block": "S7",
+      "packs": [],
+      "for": "systems, processes and whole places seen from above; how a floor or a workflow is laid out",
+      "render": [
+        "True isometric on a 2:1 grid (30 degree axes), no perspective, no vanishing points; one base grid unit of 64 px so every prop sits on whole units.",
+        "Rooms are cutaways: the floor and two back walls, the two front walls cut at a low height (about 1/4 of the wall) so the inside is visible; the cut edge is shown as a clean band in the deep shade.",
+        "Three tones per volume: top face highlight (lit), left face base, right face shade; an optional 1.5 px outline in the deep tone of each material (not black).",
+        "Scale for small figures: people are 80 to 160 px tall, so furniture is drawn to that scale and kept simple but exact.",
+        "Show material thickness: walls have a visible thickness band at the cut, windows have reveals, tables have edges; one shadow type and one shadow angle throughout; no screen or multiply effects."
+      ],
+      "light": "Fixed light from top left: top faces lightest, right faces darkest; cast shadows as flat parallelograms to the right on the floor at 0.2 opacity.",
+      "texture": "None; floor tiles or planks as a grid of thin lines in the floor shade.",
+      "depth": "Not layered by distance: deliver the room as one isometric group plus a separate group per piece of furniture (so the engine can sort and animate them).",
+      "quality_bar": "A clean, detailed isometric illustration for an annual report or a product page: precise, legible, generous with small true details.",
+      "reject": [
+        "any perspective or wrong angle",
+        "mixed grid sizes",
+        "black outlines",
+        "toy-like rounded blocks",
+        "paper-thin walls"
+      ],
+      "derive": {
+        "shade": 0.34,
+        "deep": 0.58,
+        "hi": 0.4
+      },
+      "bases": {
+        "wall": "#E9EDF3",
+        "wall2": "#5B7FA6",
+        "floor": "#C7CFDA",
+        "ceiling": "#F2F4F8",
+        "wood": "#D2A878",
+        "fabric": "#4A6FA5",
+        "fabric2": "#E0B66B",
+        "metal": "#39424E",
+        "glass": "#BFE0EE",
+        "plant": "#4FA36A",
+        "paper": "#FFFFFF",
+        "screen": "#253041",
+        "exterior": "#A9C1D6",
+        "sky": "#DDEBF5",
+        "accent": "#F2994A",
+        "ink": "#1F2937",
+        "light": "#FFF5D9",
+        "shadow": "#2E3A59",
+        "haze": "#EEF2F7",
+        "brick": "#B8694F",
+        "brass": "#D4A84E"
+      }
+    },
+    "glow_flat": {
+      "name": "Glow-flat",
+      "character_block": "S8",
+      "packs": [
+        "glow-flat",
+        "flat-cosmos"
+      ],
+      "for": "science, technology and big-idea explainers; places after dark lit by screens and lamps",
+      "render": [
+        "Bright, simplified geometric shapes on a dark ground; perspective simplified but correct; shapes have designed asymmetry, not template roundness.",
+        "No outlines. Flat fills with a rim of light (lm-hi) on the edges that face a light source.",
+        "Light sources are the subject: screens, lamps, windows of the city. Glow in lm-glow only, around light sources and on the surfaces they hit (concentric shapes stepping down in opacity 0.35, 0.2, 0.1, or a two-stop radial gradient).",
+        "Few, large shapes; details only where the light falls.",
+        "The emitter is the focal point; lit and reflective surfaces (a desk top, glass, a polished floor) become secondary sources; light falls off radially, and detail and clarity drop away from the light. Design the darks on purpose: night is not a darker daytime picture."
+      ],
+      "light": "Night: the room is lit by its sources. Each source throws a pool of its colour on the nearest surfaces; everything else falls into the dark wall and floor tones.",
+      "texture": "None, or a few faint star-like specks of light in a window view.",
+      "depth": "Far: darker and bluer; the city through windows as flat lit window grids. Near: the darkest silhouettes against the glow.",
+      "quality_bar": "A polished science-channel style frame of a room at night: luminous, calm, readable, original (nothing resembling any existing channel's look or characters).",
+      "reject": [
+        "neon on everything",
+        "glow on surfaces with no light source",
+        "outlines",
+        "a muddy dark with no clear light shapes",
+        "night drawn as a darker copy of the day scene"
+      ],
+      "derive": {
+        "shade": 0.3,
+        "deep": 0.55,
+        "hi": 0.35
+      },
+      "bases": {
+        "wall": "#1E2A44",
+        "wall2": "#2C3B63",
+        "floor": "#141C30",
+        "ceiling": "#18223A",
+        "wood": "#6A4E52",
+        "fabric": "#3B4F86",
+        "fabric2": "#6B5B95",
+        "metal": "#2A3350",
+        "glass": "#34507A",
+        "plant": "#2F7A6B",
+        "paper": "#E8ECF8",
+        "screen": "#7FD3FF",
+        "exterior": "#24325A",
+        "sky": "#0E1426",
+        "accent": "#FFC857",
+        "ink": "#0A0F1E",
+        "light": "#FFE6A3",
+        "shadow": "#070B16",
+        "haze": "#3A4A7A",
+        "brick": "#5A2E3A",
+        "brass": "#C9A24A"
+      }
+    },
+    "semi_real": {
+      "name": "Semi-realistic editorial",
+      "character_block": "S9",
+      "packs": [],
+      "for": "presenter and interview backgrounds, waist-up and close shots, serious subjects",
+      "render": [
+        "Natural, credible rooms: correct perspective at a real camera height, real materials and proportions; simplified, never photoreal.",
+        "Form through tone planes with soft light falloff: 2-stop linear gradients are allowed on walls, floor and large furniture planes, in the material's own base to shade tones.",
+        "Behind a presenter the set must read as a background: the zone where a head and shoulders will sit is calm and slightly darker or lighter than the person will be; detail lives at the edges of the frame.",
+        "Depth of field by simplification: the far layer is reduced to soft-edged planes (as if out of focus), the mid layer is crisp.",
+        "The background tells the subject's story and sits well behind them (simplified and softened as if out of focus); it is never dramatically darker than the person; a practical lamp glows on the key-light side."
+      ],
+      "light": "A soft key from a large window, gentle shadows (shadow colour at 0.15 to 0.25), practical lamps glowing faintly; light falloff with distance.",
+      "texture": "Subtle material texture only where it sells the material (wood grain lines at low contrast, fabric weave on one cushion).",
+      "depth": "Far: soft, simplified, lighter. Mid: crisp. Near: often empty so a person can stand there.",
+      "quality_bar": "An editorial illustration that could pass as the set of a well-produced corporate film or interview: credible, calm, expensive-looking.",
+      "reject": [
+        "an attempt at photorealism",
+        "busy detail behind where the head will be",
+        "plastic gradients on everything",
+        "uncanny over-rendering"
+      ],
+      "derive": {
+        "shade": 0.36,
+        "deep": 0.6,
+        "hi": 0.4
+      },
+      "bases": {
+        "wall": "#E4DFD6",
+        "wall2": "#6B7F7A",
+        "floor": "#9C948A",
+        "ceiling": "#EEEAE3",
+        "wood": "#B08960",
+        "fabric": "#44566E",
+        "fabric2": "#BFB2A2",
+        "metal": "#2E3136",
+        "glass": "#C3D3DA",
+        "plant": "#587A50",
+        "paper": "#F7F5F0",
+        "screen": "#1F262D",
+        "exterior": "#A7B3BA",
+        "sky": "#D8E2E8",
+        "accent": "#2F5D8A",
+        "ink": "#1C1E21",
+        "light": "#FFF0D2",
+        "shadow": "#2E3A4F",
+        "haze": "#E6E9EA",
+        "brick": "#9A5843",
+        "brass": "#A88442"
+      }
+    }
+  },
+  "layout_rules": [
+    "Layout is cinematography: the camera height, angle and staging are decided before any rendering. Plan every set as far, mid and near ground, and leave clear space for the characters on the floor and around their heads, with breathing room on the side they will face.",
+    "Prefer a low horizon (seated or standing eye height, never a high bird's-eye) so the room is not mostly empty floor and character sizes read clearly.",
+    "Lead the eye with the architecture (a walkway, a table edge, a row of columns, the light pattern) to one focal point; the squint test must still show that focal point and the free space for the characters.",
+    "Keep the backgrounds' values and patterns apart from where characters will stand: no busy pattern or high-contrast edge behind a head.",
+    "Every receding edge goes to its vanishing point; furniture rotated to the room gets its own vanishing points on the same horizon.",
+    "Parallax: draw the walls and floor complete behind the furniture (no holes when layers slide), run the far layer past the frame edges into the overscan, and keep the near layer to one or two framing objects.",
+    "Cast shadows and contact shadows on everything that touches a surface; without them objects look pasted in."
+  ],
+  "_research": "Craft rules checked against professional sources on 2026-10-09 (layout: Disney Animation's layout process page, brentandmax.com background tutorials, RMCAD background design; flat: IBM Design Language illustration guides; gouache: Robert Brindley on bristle.studio, James Gurney's blog; ink: Chris Wilson studio, Marc Taro Holmes; line: 30X40 Design Workshop via protradecraft; isometric: IBM isometric guide, Corel; night light: Clip Studio tips). URLs in docs/research/2026-10-09-set-references.md."
+}

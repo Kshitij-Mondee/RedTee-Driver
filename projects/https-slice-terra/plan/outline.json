@@ -1,0 +1,234 @@
+{
+  "concept": "One request, one board. A login form leaves a browser card and crosses a plain path to a server card, past a slate watcher box that copies whatever passes into its tray. The board never changes layout; each section adds one thing (a certificate, key slots, the key as a lens, a failed name row) and the watcher's tray shows what it learned: readable fields, two useless values, then only noise. A second station, an address bar to the right, carries the habit. The padlock that appears open on the promise closes in blue on the payoff, on the opening frame.",
+  "world": "Plain light corporate field (pack mesh off, dot grid on): station 'board' (the HTTPS path board, fixed layout) and station 'bar' (a large generic address bar) to its right. No people, no sets, no presenter.",
+  "look": "corporate-clean classic flat: white cards with offset shadow, navy ink, slate context, one blue for the named thing (Submit, then the shared key, then the closing padlock), teal ticks, one red cross in the check.",
+  "devices": [
+    {
+      "id": "packet_morph",
+      "what": "The form packet: a small card with two readable rows that morphs into a row of slate scrambled blocks when it passes the key, and back at the far end. Same object every crossing.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "watcher_tray",
+      "what": "The tray under the watcher box: the measure of exposure. Readable copy in s1, two copied values beside an empty key slot in s3, the same noise in s4 and the payoff.",
+      "kind": "data",
+      "beats": [
+        "b02",
+        "b07",
+        "b08",
+        "b11"
+      ]
+    },
+    {
+      "id": "cert_card",
+      "what": "The certificate card: domain row, key row, dates row and an authority seal; teal ticks stamp row by row, it shrinks to a ticked badge, re-lights on the recall, and its name row turns red in the check.",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b09"
+      ]
+    },
+    {
+      "id": "key_slots",
+      "what": "Swap slots: one at each end of the path and one by the watcher. Matching blue keys drop into the end slots only; the watcher's stays empty. The end keys then act as the lens the packet passes through.",
+      "kind": "explain",
+      "beats": [
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b12"
+      ]
+    },
+    {
+      "id": "padlock",
+      "what": "One generic padlock: open above the path on the promise, carries the meaning labels at the address bar, closes in blue on the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b03"
+      ]
+    },
+    {
+      "id": "board_camera",
+      "what": "Join device: continue joins on the held board with a camera push to the part the voice names and a pull back to wide; hard cuts only at the check, the habit station and the payoff return.",
+      "kind": "join",
+      "beats": [
+        "b02",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    }
+  ],
+  "join_material": "none beyond camera and continue on the held board (editorial family: no material wipes)",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "the Submit button, then the readable packet",
+      "why": "Pale open on an everyday action; the only loud thing is data in plain sight."
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the certificate card, then teal ticks",
+      "why": "The field deepens a step (field2 band behind the board) as the mechanism starts."
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "break": true,
+      "accent": "the two blue keys at the ends only",
+      "why": "Key mechanism: everything but the end slots and the watcher's empty slot drops to slate, so the blue keys are the only colour."
+    },
+    {
+      "from": "b10",
+      "band": "mid",
+      "break": false,
+      "accent": "the key as a lens, then the scrambled packet",
+      "why": "The transformation: readable to noise and back."
+    }
+  ],
+  "sections": [
+    {
+      "id": "s1_exposed",
+      "treatment": "bespoke on the held board, establishing then a push to the watcher",
+      "accent_on": "submit then packet",
+      "world": "board",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "board, establishing: Submit presses, the readable packet leaves the browser toward the watcher box",
+          "builder": "bespoke",
+          "device": "packet_morph",
+          "join": "cut"
+        },
+        {
+          "beat": "b02",
+          "line": "board, medium push on the watcher: the packet passes, the watcher copies it into its tray, both readable",
+          "builder": "bespoke",
+          "device": "watcher_tray",
+          "join": "continue"
+        },
+        {
+          "beat": "b03",
+          "line": "board, wide pull: layout holds, an open padlock draws in above the path as the promise",
+          "builder": "bespoke",
+          "device": "padlock",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "s2_identity",
+      "treatment": "bespoke on the held board, certificate as an object that travels server to browser",
+      "accent_on": "cert_card then ticks",
+      "world": "board",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "board, medium: request arrow right, certificate card slides back to the browser, authority seal stamps",
+          "builder": "bespoke",
+          "device": "cert_card",
+          "join": "camera"
+        },
+        {
+          "beat": "b05",
+          "line": "board, close on the certificate: three teal ticks stamp one per phrase",
+          "builder": "bespoke",
+          "device": "cert_card",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "s3_key",
+      "treatment": "bespoke on the held board, key slots as swap slots, values crossing past the watcher",
+      "accent_on": "key_slots",
+      "world": "board",
+      "beats": [
+        {
+          "beat": "b06",
+          "line": "board, wide: certificate shrinks to a ticked badge, empty key slots appear at each end and by the watcher",
+          "builder": "bespoke",
+          "device": "key_slots",
+          "join": "continue"
+        },
+        {
+          "beat": "b07",
+          "line": "board, medium on the watcher: two value tokens cross, the watcher copies both, its key slot stays empty",
+          "builder": "bespoke",
+          "device": "watcher_tray",
+          "join": "continue"
+        },
+        {
+          "beat": "b08",
+          "line": "board, wide: matching blue keys drop into the end slots only",
+          "builder": "bespoke",
+          "device": "key_slots",
+          "join": "continue"
+        },
+        {
+          "beat": "b09",
+          "line": "board, close on the badge beside the browser key: its three ticks re-light, recall pause",
+          "builder": "bespoke",
+          "device": "cert_card",
+          "join": "continue",
+          "intent": "callback"
+        }
+      ]
+    },
+    {
+      "id": "s4_scramble",
+      "treatment": "bespoke on the held board, the packet morph through the key lens",
+      "accent_on": "packet",
+      "world": "board",
+      "beats": [
+        {
+          "beat": "b10",
+          "line": "board, close on the browser end: path becomes a protected tube, the form passes the key and morphs to scrambled blocks",
+          "builder": "bespoke",
+          "device": "packet_morph",
+          "join": "continue"
+        },
+        {
+          "beat": "b11",
+          "line": "board, medium on the watcher: the scrambled blocks pass, the tray copy is the same noise",
+          "builder": "bespoke",
+          "device": "watcher_tray",
+          "join": "continue"
+        },
+        {
+          "beat": "b12",
+          "line": "board, medium on the server end: the blocks pass the server key and turn readable",
+          "builder": "bespoke",
+          "device": "packet_morph",
+          "join": "continue"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "b13 as a quiz.question template over the blurred board (classic quiz chrome) instead of drawn option cards on the board",
+    "b15 and b16 as their planned templates (definition, compare.two) instead of drawn labels on the address bar",
+    "b18 with a short skia glow behind the padlock as it closes"
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,145 @@
+# Shuttle rails: red runs (2026-10-08 11:07), tests/suites/shuttle_rails.py on mutated code
+
+## mutation: a beat file counts as accepted when it exists (the first rule)
+- agents_shuttle_a_draft_is_not_an_accepted_beat: RED (AssertionError: ({'scenes_gate': 'pass', 'errors': []}, {'phase': 'P8', 'name': 'beats', 'status': 'accepted', 'missing': []}))
+
+## mutation: a lenient compose still demands every Manim file (the old bridge)
+- pipeline_lenient_compose_skips_clip_files_not_written_yet: RED (LoomError: b06: Manim scene file not found: C:\Users\Admin\AppData\Local\Temp\loomagents_cjk0rcuy\scenes\b06.py)
+
+## mutation: loom-mcp's first stdio handling (prints to stderr, stdin shared with children)
+- agents_shuttle_server_children_never_touch_the_protocol: RED (AssertionError: ('OK \n', 'CHILD READ 6\nchild-err'))
+
+## mutation: the mock prices an image by its base64 length
+- mock_llm_streams_anthropic_events_and_prices_images_like_the_api: RED (AssertionError: ('tool_use', 200094))
+
+## mutation: the mock answers a stream request as plain JSON
+- mock_llm_streams_anthropic_events_and_prices_images_like_the_api: RED (IndexError: list index out of range)
+
+## mutation: no rails at all (the old code: nothing refused a lead)
+- agents_shuttle_out_of_phase_tool_is_refused: RED (AssertionError: None)
+- agents_shuttle_approval_pauses_the_run: RED (AssertionError: AssertionError)
+- agents_shuttle_budget_stops_writes: RED (AssertionError: None)
+- agents_shuttle_ownership_refuses_foreign_files: RED (TypeError: argument of type 'NoneType' is not iterable)
+- agents_shuttle_reopen_invalidates_later_phases: RED (AssertionError: None)
+
+## mutation: the waiting rule removed
+- agents_shuttle_approval_pauses_the_run: RED (AssertionError: None)
+
+## mutation: reopen marks nothing stale
+- agents_shuttle_reopen_invalidates_later_phases: RED (AssertionError: {'P1': 'accepted', 'P2': 'accepted', 'P3': 'accepted', 'P4': 'accepted', 'P5': 'accepted', 'P6': 'waiting', 'P7': 'accepted', 'P8': 'accepted', 'P9': 'accepted', 'P10': 'open', 'P11': 'waiting'})
+
+## mutation: no budget limit
+- agents_shuttle_budget_stops_writes: RED (AssertionError: None)
+
+## mutation: a token may write any file
+- agents_shuttle_ownership_refuses_foreign_files: RED (TypeError: argument of type 'NoneType' is not iterable)
+
+## mutation: submit_kit without the preview
+- pipeline_shuttle_kit_gate_red_and_green: RED (AssertionError: {'accepted': True, 'errors': [], 'warnings': ["b05: the kit part 'board' is declared for this beat but the scene does not use it"], 'next': 'done: stop here'})
+
+## mutation: the child keeps the parent's environment
+- agents_shuttle_subscription_env_has_no_key: RED (AssertionError: ['ANTHROPIC_BASE_URL', 'CLAUDECODE', 'CLAUDE_AGENT_SDK_MCP_NO_PREFIX', 'CLAUDE_AGENT_SDK_VERSION', 'CLAUDE_CODE_ACCOUNT_UUID', 'CLAUDE_CODE_CHILD_SESSION', 'CLAUDE_CODE_DESKTOP_APP_VERSION', 'CLAUDE_CODE_DISABLE_CRON', ')
+
+## mutation: the hook allows everything
+- agents_shuttle_hook_denies_writes_outside_loom_mcp: RED (TypeError: argument of type 'NoneType' is not iterable)
+
+## mutation: the claude target drifts from the source
+- agents_shuttle_agents_targets_agree: RED (AssertionError: ('shuttle-clip-author', {'name': 'shuttle-clip-author', 'description': "Writes ONE Manim clip (a maths or diagram beat) from the lead's brief, renders a draft with render_clip, looks at the frames and submits it. Use in )
+
+## mutation: sub-agent calls logged as the lead's
+- agents_shuttle_stream_logs_real_models_and_guards_the_key: RED (AssertionError: [{'at': '2026-10-08T11:07:32', 'pipeline': 'shuttle', 'mode': 'subscription', 'group': 'P1-P4', 'phase': 'P1', 'agent': 'lead', 'role': 'shuttle lead', 'provider': 'anthropic', 'model': 'claude-sonnet-5', 'input': 9600, )
+
+## the same tests on the real code
+- agents_shuttle_a_draft_is_not_an_accepted_beat: GREEN (three drafts kept P8 open; four accepted files closed it; a later draft reopened the question)
+- agents_shuttle_agents_targets_agree: GREEN (6 sub-agents, tools/model/maxTurns equal in both targets, every tool known to rails and server)
+- agents_shuttle_approval_pauses_the_run: GREEN (refused before the animatic; waiting refuses writes and names the command; a timed approval with notes ends it)
+- agents_shuttle_budget_stops_writes: GREEN (lesson USD stop refuses writes and delegation, reads answer; a sub-agent's call cap stops; the stream guard kills)
+- agents_shuttle_hook_denies_writes_outside_loom_mcp: GREEN (11 decisions, strict mode, and the stdin/stdout contract in a subprocess)
+- agents_shuttle_out_of_phase_tool_is_refused: GREEN (submit_storyboard, compose and render refused on an empty lesson, naming P1; the refusal logged with the lead's model)
+- agents_shuttle_ownership_refuses_foreign_files: GREEN (own beat passes; another beat, a lead tool, another agent's tool, a second writer, a lead-thread token refused; collect closes)
+- agents_shuttle_reopen_invalidates_later_phases: GREEN (P5..P11 stale, plan approval voided, token revoked, version kept; P5 back on a passing submit, P6 on a new approval; cap 3)
+- agents_shuttle_server_children_never_touch_the_protocol: GREEN (the child read 0 bytes of the protocol's stdin; its output went to the log; stdout carried only the protocol)
+- agents_shuttle_stream_logs_real_models_and_guards_the_key: GREEN (2 calls logged with real models and agents; wrong key source killed; a usage limit read as exit 5)
+- agents_shuttle_subscription_env_has_no_key: GREEN (subscription child has 0 ANTHROPIC_/CLAUDE leaks; api child has the key and no base URL)
+- mock_llm_streams_anthropic_events_and_prices_images_like_the_api: GREEN (streamed tool call reassembled; an image read as 1694 input tokens; streaming still refused by default)
+- pipeline_lenient_compose_skips_clip_files_not_written_yet: GREEN (the lenient compose skipped the missing b06.py and rendered b14; the strict compose still refuses it)
+- pipeline_shuttle_kit_gate_red_and_green: GREEN (unseen, static-red and changed kits refused; the previewed kit accepted (real lab strip))
+
+
+# Fixes from the Opus run (2026-10-08 evening, L-318 to L-323, L-332, D-144): each new test on the code before its fix
+Method: the old text of the changed function put back by a script (scratchpad red_*.py), the test run, the file restored
+and compared byte for byte ("restored: True" each time). Appended; the entries above stay as they were.
+
+## old: the rate-limit branch that only notes "rejected" (launch.py, L-318)
+- agents_shuttle_stream_stops_on_a_rejected_window_with_overage: RED ((None, 'rate limit: {"status": "rejected", ... "isUsingOverage": true, "overageInUse": true}'): not killed, as in the Opus run)
+## old: one reconcile row for the session total (L-323)
+- agents_shuttle_reconcile_fills_sub_agent_output_per_model: RED (a single 'reconcile' agent row, no per-model tokens)
+## old: no pinned model ids (L-323)
+- agents_shuttle_pins_full_model_ids_and_counts_a_resumed_session_once: RED by construction (agents.model_id did not exist; the CLI's `sonnet` served claude-sonnet-5)
+## old: the props gate without int or index checks (L-321)
+- check_template_indexes_count_from_zero: RED (AssertionError: [] : answer 2 of 2 options passed)
+## old: the whole snapshot under one lock, the server's engine lock for the whole call
+- agents_shuttle_snapshots_run_in_parallel_on_private_builds: RED (the pictures ran one after the other: (621970.375, 621971.875), (621972.328, 621973.843))
+## old: reopen marks every later phase stale (L-332)
+- agents_shuttle_reopen_opens_only_what_changed: RED (stale ['P5', 'P6', 'P7', 'P8', 'P9', 'P10', 'P11'])
+## old: scene-author P8 only, fixer 8 turns and 24 calls (L-320)
+- agents_shuttle_a_rewrite_after_p8_needs_no_reopen: RED (the scene-author works in P8; the lesson is in P10)
+## old: the critic judges every sheet each pass (L-322)
+- agents_shuttle_critic_rejudges_only_what_changed: RED (pass 2 returned both findings again, no `reviewed`)
+## old: no pilot (L-319)
+- agents_shuttle_pilot_pair_comes_before_the_other_beats: RED (a beat outside the pilot was delegated before the pilot passed)
+## the run's own files (L-319, no mutation needed)
+- pipeline_pilot_check_catches_the_kit_that_cannot_carry_continuity: the first kit and b02/b03 (17:42 bundle) FAIL the pilot (10 errors, first: hf layout content_overlap @ 9.696); the shipped kit and beats PASS
+- pipeline_kit_preview_names_a_part_drawing_outside_its_parent: a part drawing into the station is named; the shipped kit: none. Note (L-334): the first kit's parts did NOT draw outside their parent; the pilot is what catches the run's real failure
+## old: the lead's settings without the isolation (L-316 for Shuttle), real CLI on the mock
+- agents_shuttle_lead_reads_the_engine_claude_md_and_nothing_of_the_persons: RED (the person's CLAUDE.md reached the lead: '- **graphify** ...')
+## the same tests on the new code: GREEN, 30 of 30 in the Shuttle, cc and new suites (22:2x), the isolation test after
+
+# D-148 (2026-10-09): less context for the lead. Each new test (tests/suites/shuttle_context.py) against a mutation
+# that restores the old behaviour (scratch script red_d147.py, run in this session):
+## old: delegate returns the whole brief as the spawn prompt
+- agents_shuttle_hands_over_by_reference: RED (the spawn prompt was the brief: "THE LEAD'S BRIEF: ...")
+## old: loom-mcp lists every tool in every session
+- agents_shuttle_a_session_lists_only_its_tools: RED (the P1 list held catalog_search, patch_script, kit_preview, strips ...)
+## old: the four session groups
+- agents_shuttle_one_session_per_phase_and_a_reopen_is_not_a_failed_try: RED (every session was 'P5-P6')
+## old: no guard on a session past its phases
+- agents_shuttle_a_session_ends_when_its_phase_is_behind_it: RED (the session was never ended: killed None)
+## old: collect takes one token
+- agents_shuttle_a_check_round_is_three_lead_turns: RED (collect('all') collected nothing)
+## old: one picture size
+- agents_shuttle_pictures_at_the_size_the_judgment_needs: RED (overview and full both 776x1480)
+## old: the kit task names no library place
+- agents_kit_brief_offers_the_library_and_never_requires_it: RED (no library block in the kit task)
+## the same tests on the new code: GREEN, 7 of 7
+## D-148 follow-up (Kshitij: "hopefully none of these upgrades actually bring down the quality of the video"): the sweep
+## stays at the size the lead saw before (a smaller one is a setting, CLAUDE.md rule 13), and no sub-agent writes before
+## it has read its whole brief. The two tests rewritten; red runs (scratch script red_d148b.py):
+- agents_shuttle_pictures_at_the_size_the_judgment_needs: RED with the sweep cut to 600k pixels by default (the earlier
+  default; the "old: one picture size" red above was for the first version of this test)
+- agents_shuttle_hands_over_by_reference: RED with no read-before-write guard (lab_snapshot allowed before any read)
+- both GREEN on the new code
+## D-148 S0 rerun found a launcher crash: state.json read while loom-mcp replaced it (Windows PermissionError)
+- agents_a_state_file_being_replaced_does_not_stop_the_launcher: RED with the old read_json (PermissionError on the
+  first refused open) and RED with the old guards (the PermissionError raised out of Stream.guards); GREEN with both fixes
+- agents_a_launcher_that_fails_kills_its_session: RED with run_session as before (the session was not killed: 0 kills);
+  GREEN with the kill (the crashed S0 launcher had left claude -p and loom-mcp running; they were stopped by hand)
+## L-364: the render's capture browser timed out loading its page (S0, twice in P11; the same segment loaded on retry)
+- pipeline_render_resumes_once_after_a_capture_page_timeout: RED with loom/render.py as before (render failed, no
+  retry); GREEN with one resumed retry at a 180 s page-load allowance (another failure still raised at once)
+## D-148 follow-up, L-369 (Kshitij: "It should load them only when needed. Check it out."): a captured session start listed
+## Claude Code's five own sub-agents and all six Shuttle ones in every session, and the toolbox menu in P1 to P4 and P11
+- agents_shuttle_a_session_lists_only_its_agents_and_its_menu: RED with no agent denies; RED with the menu given to
+  every session whatever its phase; GREEN with both (the capture after the change: P1 lists only the researcher, no menu)
+
+# The cost fixes after feedback-shuttle-v3 (R-44; L-372 to L-377), each new test against the old behaviour:
+- pipeline_a_beat_that_empties_a_held_element_is_an_error: RED with the held-element audit off (runtime/world.js
+  Wd.auditHeld commented out for the run, restored): no error for any of the three cases
+- agents_shuttle_sub_agents_send_edits_not_whole_files: RED with edits ignored ("the edited draft is not the whole-file result")
+- agents_shuttle_a_session_starts_with_its_status_and_notes: RED with no status or notes in the start message
+- agents_shuttle_opus_judges_and_sonnet_fixes_in_p10: RED with no judge and fix split
+- pipeline_render_verification_runs_in_parallel_and_says_what_was_slow: a correctness test of the parallel version (4
+  frames, the one with a missing part flagged); on v3's film the verification took 87 s against 38 min in the run
+- all GREEN on the new code
+- agents_shuttle_sonnet_only_preset_uses_opus_for_the_storyboard_only (D-153): RED with no split by model (the
+  P5-P6 session ran on Sonnet: the storyboard would never reach Opus); GREEN with launch.split_by_model

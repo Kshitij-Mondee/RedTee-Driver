@@ -1,0 +1,5 @@
+{
+ "_note": "The off-frame ratchet (loom/checks/film.py offframe_baseline): beats of finished lessons that were already off frame when the element pass was added. Measured 2026-10-07 on sandbox copies of the nine finished lessons recomposed with the current runtime (tools/lesson_sandbox.py; summary docs/research/bench-fix/finished_lessons_probe.json): 0 beats. Every beat the post-mortem's prototype flagged (groupthink-trap 6 beats, phishing-report b05 b16, quick-question-cost b03 b10, stress-signal b10, mfa-explained b07 b10) was looked at frame by frame (tools/node/foreign_view.mjs) and was an instrument error, fixed in tools/node/probe.mjs: the magnify lens measured without its clip-path, elements leaving on their own motion (an envelope flying out, a fan sliding off), ownership by DOM group instead of by element, and an empty station svg counted as paint. A lesson listed here keeps its listed beats as warnings and fails on any other; never add a lesson that is being made.",
+ "recorded": "2026-10-07",
+ "lessons": {}
+}

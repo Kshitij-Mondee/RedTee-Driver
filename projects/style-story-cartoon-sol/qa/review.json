@@ -1,0 +1,19 @@
+{
+  "findings": [
+    {
+      "file": "scenes/b06.js",
+      "severity": "minor",
+      "problem": "The frame remains visually static and identical to b05 settled from arrive (42.67s) through develop (44.64s) before the checkmarks appear on the pad.",
+      "fix": "In scenes/b06.js, trigger the first pad tick and Maya's nod earlier at ctx.cue('dinner claimed twice') so the beat shows visual progression during develop.",
+      "beat": "b06"
+    },
+    {
+      "file": "scenes/_kit.js",
+      "severity": "minor",
+      "problem": "The ceiling hook above the hallway fork is visible hanging empty on the wall throughout b07, well before the question sign drops in b09.",
+      "fix": "In scenes/_kit.js, keep the hook hidden by default in door_path and show it only when dim is true or when question_sign is mounted.",
+      "beat": "b07"
+    }
+  ],
+  "verdict": "ship"
+}

@@ -1,0 +1,1325 @@
+{
+  "style": "editorial-paper",
+  "concept": "One magazine feature about one morning: the work you are doing (the plan) sits in a held slot on an editorial page, and a two-column ledger beside it, visible and hidden, accounts for every quick question as units you can count; the page keeps returning, changing state on the spoken word, and typeset pages (headline, term card, table, quiz, habit) print over it or beside it like a magazine's sidebars.",
+  "story": {
+    "metaphor": "a ledger: the quick question entered as a cost, one column for what everyone sees and one for what nobody sees",
+    "setting": "two editorial pages on warm paper: the working page (the plan in its slot, the ledger, a time strip running to lunch) and the morning page (the same morning as a grid of time units, with the question slips piling in the margin)",
+    "arc": "hook: the plan unchanged by lunch; setup: the ledger is ruled; turn: one question traced into three hidden parts; reveal: a whole morning, the hidden runs outgrow the visible units, the cost moves to stress and lands on someone else; practice: the viewer predicts which column shrinks; payoff: the same working page returns with the questions batched and the plan further written",
+    "cast": [],
+    "note": "No figure is drawn (decision for the brief's open question): the viewer is 'you', seen only through the work, the slips and the ledger. Editorial pack, D-102: no code-drawn people. The asker in b12 is shown by their page, not their face."
+  },
+  "devices": [
+    {
+      "id": "slot",
+      "kind": "explain",
+      "what": "the plan held in one slot on the working page (Loom.slot, frame none, rect [200, 150, 760, 780]); it is swapped out for the question and back on the cue words, flickers when you 'answer while writing', and returns as a typeset page (document.page in exactly that rect) for the hunt, the note and the payoff",
+      "beats": [
+        "b01",
+        "b03",
+        "b04",
+        "b06",
+        "b16",
+        "b17",
+        "b18"
+      ]
+    },
+    {
+      "id": "ledger",
+      "kind": "data",
+      "what": "the two-column ledger, Visible and Hidden, ruled beside the slot; every cost is a unit stamped on its spoken term (Loom.data.stamp cells): ink units for what you see, red runs for what you do not, each run lettered on the thing; it returns set in type (b07) and in the payoff with one short run",
+      "beats": [
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b16",
+        "b17",
+        "b18"
+      ]
+    },
+    {
+      "id": "morning_grid",
+      "kind": "data",
+      "what": "the same split applied to a whole morning: a unit grid read like a page (row by row is time), each question stamps one ink unit and a red run, the question slips pile in the margin (Loom.data.pile, counter to five, the spoken hypothetical), runs compress and relabel, then collapse into one",
+      "beats": [
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15"
+      ]
+    },
+    {
+      "id": "overprint",
+      "kind": "rest",
+      "what": "a typeset card (term, quiz, habit) prints over the held page while the page steps back under a paper veil (a template with keep); the page comes forward again untouched in the next beat",
+      "beats": [
+        "b05",
+        "b13",
+        "b15"
+      ]
+    },
+    {
+      "id": "time_strip",
+      "kind": "callback",
+      "what": "a thin time strip across the top of both pages with 'Lunch' at its end; it runs to lunch in the hook, carries the morning in section two, and returns in the payoff with focus time and the agreed time marked on it",
+      "beats": [
+        "b01",
+        "b03",
+        "b08",
+        "b16",
+        "b18"
+      ]
+    },
+    {
+      "id": "fill",
+      "kind": "join",
+      "what": "join material (fill, every family): a paper object from the frame grows to become the next page; the question slip becomes the headline (b02), the batch tray becomes the closing question (b19). No torn paper or page turns: editorial pack",
+      "beats": [
+        "b02",
+        "b19"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "accent",
+      "why": "pale open: warm paper, the plan as the one dark slab, the slip the only accent"
+    },
+    {
+      "from": "b08",
+      "band": "mid",
+      "accent": "accent",
+      "why": "the morning page is the densest and richest stretch: the mechanism and the data"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "break": true,
+      "accent": "accent",
+      "why": "the red peaks once: the freed cells fill with red hatch as the cost moves to stress; the most red in the film, kept for that one turn"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "accent": "accent",
+      "why": "the check: a pale card over a veiled page, nothing moves through the pause"
+    },
+    {
+      "from": "b14",
+      "band": "mid",
+      "accent": "accent",
+      "why": "the answer runs on the morning page: the red runs collapse, so red visibly drains out of the frame"
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "accent": "accent",
+      "why": "lift for the habits and the close: the opening page returns with almost no red on it"
+    }
+  ],
+  "motifs": [
+    {
+      "name": "slip",
+      "desc": "the question slip: a small surface-coloured paper note with an offset shadow, 'Quick question?' set in the body face, ink; the same drawing in b01, b03, b06 (flicker), b08 to b14 (the pile and the batch) and b16 (the tray)"
+    },
+    {
+      "name": "red_unit",
+      "desc": "a hidden-cost unit: a square cell stamped in the accent, flat; a run is several in a row; the meaning of red never changes: hidden cost only"
+    },
+    {
+      "name": "ink_unit",
+      "desc": "a visible-cost unit: the same square cell in solid ink, the minute you see"
+    },
+    {
+      "name": "plan_page",
+      "desc": "the plan: an ink page with an accent4 header band, notebook-pen icon and the title 'The plan', lines in the field colour; drawn by bespoke beats to match document.page (side left) exactly so the template beats sit in the same rect"
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "spread",
+        "x": 0,
+        "y": 0,
+        "note": "the working page: strip y 100 to 140 (x 200 to 1720, 'Lunch' label right end); slot 'work' [200, 150, 760, 780]; ledger x 1040 to 1760, headers y 160 to 230, header rule y 250, column rule x 1400; visible cells from (1060, 280), hidden cells from (1450, 280), cell 48, gap 8, a run per row every 120 px; footnote [1040, 880, 720, 36]; tray (b16 on) [1040, 760, 720, 110]. b01, b03 to b07, b16 to b18"
+      },
+      {
+        "id": "headline",
+        "x": 0,
+        "y": -1300,
+        "note": "the feature's headline page, above the working page: reached by the fill joins (b02 headline, b19 closing question, the bookend); b03 pans DOWN from it into the page"
+      },
+      {
+        "id": "morning",
+        "x": 2400,
+        "y": 0,
+        "note": "the morning page, to the right (later, the whole morning): strip y 100 to 140; morning_grid 12 x 6 cells, cell 88, gap 10, x 200 to 1376, y 180 to 768; margin x 1480 to 1820 holds the margin note (top), the slips pile (middle) and, from b14, the batch slot [1480, 690, 340, 190]. b08 to b15"
+      }
+    ]
+  },
+  "poster": {
+    "beat": "b09"
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "scene": "b01",
+      "station": "spread",
+      "join_in": {
+        "type": "cut"
+      },
+      "subject": "the plan, held in its slot, as a quick question lands on it",
+      "world": "the working page",
+      "motion_is": "content",
+      "register": "expressive",
+      "shot": {
+        "size": "establishing"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "hook",
+      "accent_on": "slip: the question mark of 'Quick question?' (the accent marks the question that starts the hidden cost)",
+      "props": {
+        "plan_title": "The plan",
+        "plan_lines": [
+          "Goals for the quarter",
+          "Who owns each step",
+          "Risks we still carry",
+          "Next: the budget"
+        ],
+        "slip_text": "Quick question?",
+        "end_label": "Lunch"
+      },
+      "design": {
+        "treatment": "An editorial page on warm paper, held still (camera static). Left: the plan in the slot (Loom.slot 'work', frame none, rect [200, 150, 760, 780]) drawn as the plan_page motif: ink page, accent4 header with notebook-pen icon and 'The plan', four lines; line 4 'Next: the budget' is half written, a thin caret at its end. Top: the time strip, a hairline with short ticks from x 200 to 1720, a small ink marker at the left. Right half: bare paper on purpose (the ledger is ruled there in b03); composed negative space, not a drifting block. A slip lands on the plan's top right corner, is answered with a small tick, and the strip's marker runs to 'Lunch' while the plan, and its caret, do not move. The stillness of the plan against the running strip IS the hook.",
+        "why_motion": "two things change and carry the question: time runs along the strip to lunch while the work stays exactly where it was; the contrast between them is the puzzle the lesson answers",
+        "elements": [
+          "strip: the time strip (structure; marker, ticks, 'Lunch' label at the right end)",
+          "work: the slot holding the plan page (four lines, caret on line 4)",
+          "slip: the question slip, box [760, 190, 420, 150], overlapping the page's top right corner (it is the fill box of b02's join, so it must end the beat exactly there)",
+          "answer tick: a small ink tick stamped on the slip",
+          "caret: a thin ink caret at the end of line 4"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say you are deep in a plan",
+            "element": "work",
+            "action": "the plan page settles into the slot (slot first show), its lines present; the caret holds at the end of line 4 (a blink by Loom.tl.set at fixed times, period-locked, no timers); the strip draws left to right underneath the line, quiet staging",
+            "motion": "settle; draw"
+          },
+          {
+            "t_anchor": "A message lands",
+            "element": "slip",
+            "action": "slides in from the right edge and lands on the plan's top right corner, a soft offset shadow under it",
+            "motion": "slide in (ease out), paper sfx"
+          },
+          {
+            "t_anchor": "Quick question",
+            "element": "slip text",
+            "action": "'Quick question?' prints on the slip; the question mark is set in the accent",
+            "motion": "unmask ltr"
+          },
+          {
+            "t_anchor": "It takes a minute to answer",
+            "element": "strip marker + answer tick",
+            "action": "the marker steps one tick right (one small step, the minute); a small ink tick stamps on the slip: answered",
+            "motion": "value travel; stamp"
+          },
+          {
+            "t_anchor": "So why, by lunch",
+            "element": "strip marker",
+            "action": "the marker runs on along the strip to its end (about 2 s, editorial ease); 'Lunch' sets at the right end as it arrives",
+            "motion": "value travel; unmask"
+          },
+          {
+            "t_anchor": "is the plan where you left it",
+            "element": "caret / line 4",
+            "action": "nothing in the plan moves: the caret is exactly where it was; a thin ink underline draws under line 4 to point at it, then hold",
+            "motion": "draw; hold"
+          }
+        ],
+        "continuity": "Geometry is a contract for the whole lesson: slot rect [200, 150, 760, 780] equals document.page (side left) so b04, b17 and b18 land in the same place; the plan_page drawing must match document.page's look (ink page r 18, accent4 header 92 px, icon, title, body lines at y 130 + i x 118 inside the page). The slip ends at [760, 190, 420, 150] with its tick: b02 grows a fill from that box. Name elements exactly: strip, work, slip.",
+        "references": [
+          "docs/research/vision/2026-10-05-tedEd-full-conclusions.md section 7 (hold the layout, change its state; text on things) and section 8 (the editorial museum plane, -Tw81EQYV_Y; the ink-on-paper saffron film)",
+          "docs/styles/demos/lab/lab_slot__corporate-clean.jpg (one held panel, contents change on the cue)",
+          "packs/styles/editorial-paper.json reads_as (Vox-like editorial: warm paper, ink, one red accent, serif display)"
+        ]
+      },
+      "rationale": "The hook as one ordinary picture: the work held still while time runs; no person drawn, the viewer is 'you'."
+    },
+    {
+      "beat": "b02",
+      "kind": "template",
+      "template": "title.card",
+      "station": "headline",
+      "join_in": {
+        "type": "fill",
+        "box": [
+          760,
+          190,
+          420,
+          150
+        ],
+        "token": "surface",
+        "meaning": "into",
+        "dur": 0.7
+      },
+      "subject": "the feature's headline",
+      "world": "the headline page",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "setup",
+      "accent_on": "title: the word hidden",
+      "props": {
+        "kicker": "Quick question?",
+        "title": "The visible part, and the hidden one",
+        "say_title": "the visible part",
+        "subtitle": "Where the rest goes, and what a team can do",
+        "say_subtitle": "what a team can do",
+        "align": "center"
+      },
+      "rationale": "Fill join (the lesson's join material): the question slip from b01 grows to fill the frame in its own paper colour and becomes the headline page; the question literally becomes the subject. A typeset headline, one idea per spread. The kicker echoes the slip's words."
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "scene": "b03",
+      "station": "spread",
+      "join_in": {
+        "type": "camera",
+        "meaning": "into"
+      },
+      "subject": "the slot swapping the plan for the question, and the first hidden cost stamped",
+      "world": "the working page",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "wide"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "setup",
+      "accent_on": "hidden run 1: the two red units lettered 'switch cost'",
+      "props": {
+        "visible_header": "Visible",
+        "hidden_header": "Hidden",
+        "answer_label": "the answer",
+        "switch_label": "switch cost",
+        "note": "In experiments: slower, more mistakes",
+        "footnote": "Unit sizes are illustrative"
+      },
+      "design": {
+        "treatment": "The camera pans down from the headline into the working page, which is re-set exactly as b01 left it (no entrance: the plan in the slot with its caret, the answered slip on its corner, the strip with its marker set back at the first tick, because we now trace that one question). As the pan lands, the ledger is ruled in the bare right half: a header rule and a column rule draw, 'Visible' and 'Hidden' drop in the display serif with the seed's underline label. Then the slot swaps on the spoken words and the first hidden cost is stamped as units. Static camera after the pan.",
+        "why_motion": "the swap is the event being taught (the plan put down for the question), and the cost appears as units at the moment it is named; both are changes over time",
+        "elements": [
+          "ledger: header rule, column rule, headers Visible and Hidden (structure)",
+          "visible_units: one ink unit with the label 'the answer'",
+          "work: the slot, swapping the plan out and the question in",
+          "hidden_units: three dashed empty run outlines (rows 1 to 3), then row 1 stamped with two red units and lettered 'switch cost'",
+          "note: a small caption tag beside the dashed rows, 'In experiments: slower, more mistakes'",
+          "footnote: 'Unit sizes are illustrative' (caption, muted), the hypothetical framing on the page"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "(camera arrival, before the first word)",
+            "element": "ledger",
+            "action": "rules draw (header rule left to right, column rule top down), headers drop",
+            "motion": "draw; drop"
+          },
+          {
+            "t_anchor": "To answer",
+            "element": "visible_units",
+            "action": "one ink unit stamps under Visible; 'the answer' letters beneath it",
+            "motion": "stamp; unmask"
+          },
+          {
+            "t_anchor": "you put the plan down",
+            "element": "work",
+            "action": "Loom.slot show, how slide, dir down: the plan slides down out of the slot, and the slip (enlarged to the slot, the same drawing) slides in; the corner slip travels into the slot as it does, so there is only ever one slip",
+            "motion": "slot slide"
+          },
+          {
+            "t_anchor": "That swap costs something",
+            "element": "hidden_units",
+            "action": "three dashed empty run outlines draw in the Hidden column (rows 1 to 3): a cost with parts, not yet named",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "In experiments",
+            "element": "note",
+            "action": "the caption tag settles beside the dashed rows on a short leader",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Switch cost",
+            "element": "hidden_units row 1 + footnote",
+            "action": "two red units stamp into row 1 and 'switch cost' letters under them with the accent underline; the footnote fades in at the foot of the ledger",
+            "motion": "stamp (cadence 0.4 s per unit); unmask"
+          }
+        ],
+        "continuity": "Re-set from b01 by drawing, not holding (b02 was another station). Names for later holds: strip, ledger, visible_units, hidden_units, footnote, work (the slot). The slot ends holding the slip; it is NOT kept by b04 and leaves (recede) while b04's plan page settles into the same rect. Hidden rows 2 and 3 stay dashed and empty until b06.",
+        "references": [
+          "docs/styles/demos/lab/lab_slot__corporate-clean.jpg (slide swap, the old content leaves before the new arrives)",
+          "docs/styles/demos/lab/lab_data_objects__engineering.jpg (units stamped in reading order)",
+          "docs/research/vision/2026-10-05-tedEd-full-conclusions.md section 7 items 6 and 7 (lists and numbers are objects; text on things)"
+        ]
+      },
+      "rationale": "Hybrid allocation, built bespoke: the signature move (show the swap, put its cost on the ledger, then name it). The dashed rows pre-reserve space so nothing re-lays out later."
+    },
+    {
+      "beat": "b04",
+      "kind": "template",
+      "template": "document.page",
+      "station": "spread",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "strip",
+        "ledger",
+        "visible_units",
+        "hidden_units",
+        "note",
+        "footnote"
+      ],
+      "subject": "the plan, back in its slot, as you hunt for where you were",
+      "world": "the working page",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium",
+        "move": "push",
+        "zoom": 1.05
+      },
+      "story_role": "turn",
+      "accent_on": "line 4 'Next: the budget' when the highlight finds it",
+      "props": {
+        "kind": "notes",
+        "title": "The plan",
+        "side": "left",
+        "mode": "highlight",
+        "backplate": false,
+        "lines": [
+          {
+            "text": "Goals for the quarter",
+            "say": "you come back"
+          },
+          {
+            "text": "Who owns each step",
+            "say": "but not really"
+          },
+          {
+            "text": "Risks we still carry",
+            "say": "You hunt for"
+          },
+          {
+            "text": "Next: the budget",
+            "say": "where you were"
+          }
+        ]
+      },
+      "rationale": "Template allocation used as a SHOW, not a card: document.page lands in the slot's exact rect, so the plan slides back into its place, and the highlight moving down its lines on the words IS the hunt for where you were (resumption lag). The ledger stays fully visible beside it (keep, backplate off): visible and hidden side by side. The term is named in the voice and the caption here, and set in type in b07. A gentle push (1.05) toward the page keeps the ledger in frame."
+    },
+    {
+      "beat": "b05",
+      "kind": "template",
+      "template": "definition",
+      "station": "spread",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "page",
+        "line_1",
+        "line_2",
+        "line_3",
+        "line_4",
+        "strip",
+        "ledger",
+        "visible_units",
+        "hidden_units",
+        "note",
+        "footnote"
+      ],
+      "subject": "attention residue, as a term printed over the dimmed page",
+      "world": "the working page",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "accent_on": "term: Attention residue",
+      "props": {
+        "kicker": "Hidden column",
+        "term": "Attention residue",
+        "say_term": "attention residue",
+        "definition": "After you switch away, part of your attention tends to stay on the task you left.",
+        "say_definition": "part of your mind stays on the question",
+        "example": "The next thing you do suffers.",
+        "say_example": "The next thing you do suffers"
+      },
+      "rationale": "Overprint device: the page steps back under the paper veil (keep, default backplate) and the term card prints over it; the page dimming while the term speaks of attention left elsewhere is the picture. Every page element is kept so b06 brings it forward untouched."
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "scene": "b06",
+      "station": "spread",
+      "join_in": {
+        "type": "continue"
+      },
+      "subject": "the slot flickering between the plan and the question, each flick a hidden unit",
+      "world": "the working page",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "medium"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "turn",
+      "accent_on": "hidden_units row 4: the small red units lettered 'still switching'",
+      "props": {
+        "lag_label": "resumption lag",
+        "residue_label": "attention residue",
+        "flick_label": "still switching"
+      },
+      "design": {
+        "treatment": "The veil recedes and the page comes forward unchanged (hold every kept element). As it clears, before the first word, the ledger catches up with the two terms just defined: rows 2 and 3 of the Hidden column stamp (row 2: four red units, the longest run, lettered 'resumption lag'; row 3: two red units at half opacity, lettered 'attention residue'), and a faint ghost of the slip (opacity 0.15) prints over the plan's top right corner, the residue made visible. Then the slot flickers: the plan page and the question slip alternate in the slot rect by hard swaps, never both at once; each flick stamps one small red unit into row 4.",
+        "why_motion": "the misconception is that answering while writing is doing both; the flicker shows it is switching back and forth, and each switch lands on the ledger as it happens",
+        "elements": [
+          "held: page and lines (the plan from b04), strip, ledger, visible_units, hidden_units, note, footnote",
+          "hidden_units rows 2 and 3 stamped and lettered (catch-up)",
+          "ghost: the slip at 0.15 opacity over the plan's corner",
+          "flick: the slip drawn over the slot rect, toggled with the page by Loom.tl.set",
+          "hidden_units row 4: three small red units lettered 'still switching'",
+          "Hidden header underline in the accent"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "(the continue join, before the first word)",
+            "element": "hidden_units rows 2 and 3 + ghost",
+            "action": "rows 2 and 3 stamp (0.15 s apart) with their labels; the ghost slip fades in over the plan's corner; done before the narration starts",
+            "motion": "stamp; reveal"
+          },
+          {
+            "t_anchor": "Answering while you write",
+            "element": "flick 1",
+            "action": "hard swap: slip shows, plan hides; then back to the plan; one small red unit stamps in row 4",
+            "motion": "hard swap (no tween), stamp"
+          },
+          {
+            "t_anchor": "That is still switching",
+            "element": "flick 2 and 3 + label",
+            "action": "two more hard swaps, each state held at least 0.4 s (under 3 Hz: motion safety), each stamping a row 4 unit; 'still switching' letters under row 4",
+            "motion": "hard swap; stamp; unmask"
+          },
+          {
+            "t_anchor": "every switch goes in the hidden column",
+            "element": "Hidden header",
+            "action": "the accent underline under 'Hidden' draws left to right; the slot ends on the plan; hold",
+            "motion": "draw; hold"
+          }
+        ],
+        "continuity": "Holds b05's kept elements by name (page, line_1 to line_4, strip, ledger, visible_units, hidden_units, note, footnote). The flicker is NOT Loom.slot (its reading floor would slow it into a swap); it toggles visibility at cue times. b07 keeps nothing: everything leaves in reading order under its backplate.",
+        "references": [
+          "docs/research/vision/2026-10-05-tedEd-full-conclusions.md section 7 item 4 (one held object changes by swaps on the word)",
+          "skills/lnd/lnd-explainer-craft section 1 move 13 (expected, then actual, swapped into the same place)"
+        ]
+      },
+      "rationale": "The refutation drawn: the slot never holds both. The catch-up stamps rows 2 and 3 as the page returns, so the ledger holds all three named parts before the table in b07 (a compromise forced by b04 and b05 being templates; logged)."
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "spread",
+      "join_in": {
+        "type": "continue"
+      },
+      "subject": "the finished ledger for one question, set in type",
+      "world": "the working page",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "reveal",
+      "accent_on": "verdict: Keep both in mind",
+      "props": {
+        "kicker": "One quick question",
+        "mode": "columns",
+        "left": {
+          "header": "Visible",
+          "say": "A minute you see",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "The minute spent answering",
+              "say": "A minute you see"
+            }
+          ]
+        },
+        "right": {
+          "header": "Hidden",
+          "say": "and a column",
+          "tone": "neutral",
+          "items": [
+            {
+              "text": "Switch cost",
+              "say": "and a column"
+            },
+            {
+              "text": "Resumption lag",
+              "say": "column you don't"
+            },
+            {
+              "text": "Attention residue",
+              "say": "you don't"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "Keep both in mind",
+          "say": "Keep both in mind"
+        }
+      },
+      "rationale": "Consolidation as the ledger set in type, the editorial table; the drawn page leaves under the backplate so two ledgers never overlap. Left block then right block (comparison grammar); the verdict stamps last, the recall prompt."
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "scene": "b08",
+      "station": "morning",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "subject": "a whole morning as a grid of time units, the first question stamped into it",
+      "world": "the morning page",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "wide"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "reveal",
+      "accent_on": "the first red run (three units) lettered 'hidden'",
+      "props": {
+        "note": "Say. The real figure varies.",
+        "visible_label": "visible",
+        "hidden_label": "hidden",
+        "pile_label": "questions, say"
+      },
+      "design": {
+        "treatment": "Hard cut to the morning page: the same strip across the top, and the morning as a unit grid (12 x 6 cells, read row by row like a page: time). Neutral cells are muted outlines. The plan's own work fills cells in accent4 green (the plan's colour, its header band) as the strip's marker advances. Each question stamps one ink unit then a red run of three (the spoken hypothetical 'a few more'), and its slip drops onto a pile in the margin whose counter rides on top (Loom.data.pile, unit box, count 5, from 0 to 5, label 'questions, say'; this beat takes it to 1). A margin note in the caption face states the hypothetical. Static camera.",
+        "why_motion": "the morning is time passing; the grid filling in reading order with the plan's cells, then the first question's ink and red cells, is the accumulation the lesson is about",
+        "elements": [
+          "strip: the time strip (structure, same drawing as the working page)",
+          "morning_grid: 72 cells; work cells green, visible ink, hidden red (Loom.data.stamp style cells, flat)",
+          "slips: the pile of question slips in the margin with its counter",
+          "tags 'visible' and 'hidden' lettered on the first question's units",
+          "margin_note: 'Say. The real figure varies.'"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now a whole morning",
+            "element": "strip + morning_grid",
+            "action": "the strip draws; the neutral grid makes one calm reveal; green work cells fill the first row in reading order as the marker moves",
+            "motion": "draw; reveal; value travel"
+          },
+          {
+            "t_anchor": "Say five questions",
+            "element": "slips",
+            "action": "the first slip drops onto the pile, counter 0 to 1",
+            "motion": "pile (one eased progress)"
+          },
+          {
+            "t_anchor": "a minute each",
+            "element": "morning_grid",
+            "action": "one ink unit stamps at the current time cell; tag 'visible' letters on it",
+            "motion": "stamp; unmask"
+          },
+          {
+            "t_anchor": "and a few more to get back in",
+            "element": "morning_grid",
+            "action": "three red units stamp after it, one by one (0.4 s cadence); tag 'hidden' letters on the run",
+            "motion": "stamp cadence; unmask"
+          },
+          {
+            "t_anchor": "The real figure varies",
+            "element": "margin_note",
+            "action": "the note prints in the margin, italic caption face",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "Names held through b14: strip, morning_grid, slips, margin_note (and tags). The grid's cell order is the morning's time; later beats stamp into the next free cells in reading order. The grid records which cells are which so b10 can lens them, b11 compress them and b14 re-flow them.",
+        "references": [
+          "docs/styles/demos/lab/lab_data_objects__engineering.jpg (stamp grid and pile with its counter)",
+          "docs/research/vision/2026-10-05-tedEd-full-conclusions.md section 7 item 6 (a grid of units stamped, a counter on a pile)"
+        ]
+      },
+      "rationale": "Chapter boundary as a hard cut (D-112). The grid applies section one's split to the whole morning; every size is framed by the narration ('Say') and the margin note."
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "scene": "b09",
+      "station": "morning",
+      "join_in": {
+        "type": "continue"
+      },
+      "subject": "questions two to five stamped faster and faster into the morning",
+      "world": "the morning page",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "wide"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "reveal",
+      "accent_on": "the red runs as they stamp",
+      "design": {
+        "treatment": "Hold the page. Questions two to five arrive faster each time: a slip drops on the pile (counter to 5), one ink unit, a red run of three, with only one or two green work cells between questions. The tags from b08 clear on the first words (the narrator stops naming the parts; the stamps carry it: faded worked example). The strip's marker keeps moving.",
+        "why_motion": "accumulation is the content: the red outgrows the ink while the green barely advances, and the acceleration is the morning getting away",
+        "elements": [
+          "held: strip, morning_grid, slips, margin_note",
+          "questions two to five: ink unit + red run each",
+          "slip pile counter rising to 5"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Visible, one unit",
+            "element": "question 2 ink unit + slip",
+            "action": "the b08 tags clear; slip 2 drops (counter 2); the ink unit stamps",
+            "motion": "stamp; pile"
+          },
+          {
+            "t_anchor": "Hidden, a run",
+            "element": "question 2 red run",
+            "action": "three red units stamp",
+            "motion": "stamp cadence"
+          },
+          {
+            "t_anchor": "Again",
+            "element": "question 3",
+            "action": "slip 3 (counter 3), ink unit, red run, quicker (cadence 0.25 s)",
+            "motion": "stamp, accelerate"
+          },
+          {
+            "t_anchor": "And again",
+            "element": "questions 4 and 5",
+            "action": "slips 4 and 5 (counter 5), each with its ink unit and red run, quickest (cadence 0.15 s); green work cells in between stay one or two long",
+            "motion": "stamp, accelerate"
+          }
+        ],
+        "continuity": "Holds all b08 names. Ends with five questions in the grid: five ink units, five red runs of three, short green fragments between them.",
+        "references": [
+          "docs/styles/demos/lab/lab_data_objects__engineering.jpg"
+        ]
+      },
+      "rationale": "Short brisk beat on a held layout: the rhythm curve (accelerate) is the meaning."
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "scene": "b10",
+      "station": "morning",
+      "join_in": {
+        "type": "continue"
+      },
+      "subject": "the plan's work cut into small pieces between the question runs",
+      "world": "the morning page",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "insert"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "reveal",
+      "accent_on": "the lens on the green fragments, lettered 'fragmented'",
+      "props": {
+        "lens_label": "fragmented",
+        "source_tag": "Field studies"
+      },
+      "design": {
+        "treatment": "Hold the grid. A magnifier (Loom.magnify) opens on the row where the green work cells sit in one- and two-cell pieces between red runs, with a leader line to a lens placed over empty paper in the lower margin; the lens shows the pieces enlarged, none touching. 'fragmented' is lettered on the lens rim, and a small caption tag 'Field studies' sits at the leader's root.",
+        "why_motion": "the lens opening on the pieces is the act of looking closely that the field studies did; the fragmentation is already in the grid, the lens makes it legible",
+        "elements": [
+          "held: strip, morning_grid, slips, margin_note",
+          "lens: Loom.magnify on the fragmented row",
+          "label 'fragmented' on the lens",
+          "tag 'Field studies'"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Field studies of office workers",
+            "element": "tag + lens",
+            "action": "the source tag settles; the lens opens on its leader line",
+            "motion": "settle; iris"
+          },
+          {
+            "t_anchor": "found work fragmented",
+            "element": "lens label",
+            "action": "'fragmented' letters on the lens rim",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "much like this",
+            "element": "lens",
+            "action": "hold",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "The lens and its tags are not held: they leave at b11's join. The grid is held.",
+        "references": [
+          "docs/styles/demos/lab/lab_magnify__engineering.jpg (lens on a leader line over a detail)",
+          "docs/primitives/magnify.md"
+        ]
+      },
+      "rationale": "F7 as one line of field observation, laid over the scene that enacts it (annotate in place, not a cut to a chart)."
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "scene": "b11",
+      "station": "morning",
+      "join_in": {
+        "type": "continue"
+      },
+      "subject": "the hidden runs compressed by hurrying, the freed space refilled as stress",
+      "world": "the morning page",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "wide"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "turn",
+      "accent_on": "the red hatched stress cells",
+      "props": {
+        "from_label": "time",
+        "to_label": "stress",
+        "source_tag": "One experiment"
+      },
+      "design": {
+        "treatment": "Hold the grid. Each red run carries a small badge (a Loom.slot, frame badge) reading 'time'. When people speed up, every red run squeezes to about half its width toward its start (the units narrow, one progress drives all five); the freed cells immediately refill with red hatch, so the red total on the page does not shrink. Each badge relabels from 'time' to 'stress'. A caption tag 'One experiment' marks it as a single lab finding.",
+        "why_motion": "the misconception is that hurrying removes the cost; the change shows the cost changing form while its size stays, which only a before and after in place can show",
+        "elements": [
+          "held: strip, morning_grid, slips, margin_note",
+          "badges on the five red runs: 'time' then 'stress' (Loom.slot relabel)",
+          "red hatch cells (stress) filling the freed space",
+          "tag 'One experiment'"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Going faster does not fix it",
+            "element": "badges",
+            "action": "the five 'time' badges settle on the red runs",
+            "motion": "settle (tight stagger)"
+          },
+          {
+            "t_anchor": "people sped up",
+            "element": "red runs",
+            "action": "all runs squeeze to half width together (1.0 s, editorial ease); the tag 'One experiment' settles",
+            "motion": "transform (one progress)"
+          },
+          {
+            "t_anchor": "reported more stress",
+            "element": "stress cells",
+            "action": "the freed cells refill with red hatch",
+            "motion": "fill (unmask ltr per run)"
+          },
+          {
+            "t_anchor": "The cost moved",
+            "element": "badges",
+            "action": "each badge relabels 'time' to 'stress' (slot relabel), staggered left to right; hold",
+            "motion": "relabel"
+          }
+        ],
+        "continuity": "Hatch and badges stay on the grid through b14. The red area after this beat equals the red area before it.",
+        "references": [
+          "docs/primitives/slot.md (relabel: same state, new words)",
+          "skills/lnd/lnd-explainer-craft section 1 move 2 (the label on the object; the gap between label and thing is the lesson)"
+        ]
+      },
+      "rationale": "The value script's one break: the most red in the film, at the moment the cost moves rather than disappears."
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "scene": "b12",
+      "station": "morning",
+      "join_in": {
+        "type": "continue"
+      },
+      "subject": "two pages side by side: the asker's one small message, and the hidden pile on the interrupted page",
+      "world": "the morning page, opened into a two-page spread",
+      "motion_is": "content",
+      "register": "expressive",
+      "shot": {
+        "size": "establishing"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "turn",
+      "accent_on": "the red runs on the right page as the message line reaches them",
+      "props": {
+        "asker_title": "Their work",
+        "unstuck_label": "unstuck",
+        "someone_label": "someone else"
+      },
+      "design": {
+        "treatment": "Switch seats without a cut: the held morning (grid, strip, pile) travels right and scales to about 0.55 to become the right-hand page, and a gutter rule draws down the middle: a magazine spread. The asker's page settles on the left: a smaller sheet, 'Their work', with one green work bar stopped at a point and one ink unit (their minute writing the message). A thin ink line carries a slip from the left page to the right page's grid. The asker's bar advances a step; the red runs on the right page take the accent once as the line arrives. Then rest on the finished spread.",
+        "why_motion": "the asymmetry is a transaction: one small unit leaves one page and the cost arrives on the other; showing who gives what to whom is the explanation",
+        "elements": [
+          "held: strip, morning_grid, slips, margin_note (travelled to the right page)",
+          "gutter: the spread's fold",
+          "asker_page: their work bar and one ink unit",
+          "message_line: the thin line carrying a slip across",
+          "labels 'unstuck' (left) and 'someone else' (right)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now switch seats",
+            "element": "held morning + gutter + asker_page",
+            "action": "the morning travels right and shrinks (m.travel, 1.1 s, editorial ease); the gutter draws; the asker's page settles left",
+            "motion": "travel; draw; settle"
+          },
+          {
+            "t_anchor": "one small message",
+            "element": "asker ink unit",
+            "action": "one ink unit stamps on the asker's page",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "it gets them unstuck",
+            "element": "asker work bar",
+            "action": "the green bar extends one step; 'unstuck' letters on it",
+            "motion": "grow-x; unmask"
+          },
+          {
+            "t_anchor": "The hidden column lands on someone else",
+            "element": "message_line",
+            "action": "the line draws from the left page into the right page's grid carrying a small slip; the red runs flash to full accent once; 'someone else' letters on the right page",
+            "motion": "draw (value travel); emphasis; unmask"
+          },
+          {
+            "t_anchor": "Nobody is careless",
+            "element": "spread",
+            "action": "rest on the finished spread; nothing new arrives",
+            "motion": "rest"
+          }
+        ],
+        "continuity": "b13 keeps strip, morning_grid, slips, margin_note (still at their reduced right-page transform); asker_page, gutter and message_line leave at b13's join. b14 travels the grid back to full size.",
+        "references": [
+          "skills/lnd/lnd-explainer-craft section 1 move 3 (show the transaction: who gives what to whom)",
+          "docs/research/2026-10-01-channels-compared.md (split screens with one vertical line)"
+        ]
+      },
+      "rationale": "The seat flip as a magazine spread opening, inside the same station, so the morning is literally the same object; no blame drawn, only where the units land."
+    },
+    {
+      "beat": "b13",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "morning",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "strip",
+        "morning_grid",
+        "slips",
+        "margin_note"
+      ],
+      "subject": "the check: which column shrinks if the questions arrive together",
+      "world": "the morning page",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "accent_on": "the question",
+      "props": {
+        "kicker": "Now you",
+        "question": "If those questions arrived together, at one agreed time, which column shrinks?",
+        "say_question": "Say those questions arrived together",
+        "options": [
+          {
+            "text": "Visible",
+            "say": "Which column shrinks"
+          },
+          {
+            "text": "Hidden",
+            "say": "Which column shrinks"
+          }
+        ],
+        "pause_label": "Pause and decide"
+      },
+      "rationale": "Overprint device: the question prints over the veiled morning (keep), so the thing asked about sits behind it; options arrive as peers, the pause ring runs through the 4 s pause, no answer shown. It also serves as the card that closes the chapter, so b14 can continue on the same page."
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "scene": "b14",
+      "station": "morning",
+      "join_in": {
+        "type": "continue",
+        "meaning": "chapter"
+      },
+      "subject": "the morning re-packed: five slips in one batch, one red run, the plan's work joined into one block",
+      "world": "the morning page",
+      "motion_is": "content",
+      "register": "expressive",
+      "shot": {
+        "size": "wide"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "reveal",
+      "accent_on": "the single red run beside the batch",
+      "props": {
+        "answer_label": "hidden",
+        "same_label": "same minutes",
+        "batch_label": "agreed time",
+        "rule": "timing, not silence"
+      },
+      "design": {
+        "treatment": "The veil recedes and the held morning travels back to full size (it was the right page). The answer is played on the grid itself: the same five ink units, one red run instead of five, the green work closed up into one long block. A batch slot (Loom.slot, frame card) opens in the margin under the pile, labelled 'agreed time'; the five slips move from the pile into it. The re-pack is a re-flow: cells travel to their new reading-order places (red runs first collapse into one, then the ink units gather at the agreed time, then the green pieces close up), so nothing pops and the counts can be checked by eye. Static camera.",
+        "why_motion": "the answer is a transformation of the picture the viewer predicted on: the same units moved, only the hidden ones removed; seeing them move is the proof that the visible column is unchanged",
+        "elements": [
+          "held: strip, morning_grid, slips, margin_note",
+          "a box mark on the red cells reading 'hidden' (seed mark: box)",
+          "batch_slot with the five slips",
+          "the single red run",
+          "the green block",
+          "the rule 'timing, not silence' lettered on the batch slot"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The hidden one",
+            "element": "morning_grid + mark",
+            "action": "the grid travels back to full size (0.9 s) as the veil clears; a box mark draws round the red cells with the label 'hidden'",
+            "motion": "travel; draw"
+          },
+          {
+            "t_anchor": "Same answers, same minutes",
+            "element": "ink units",
+            "action": "the five ink units take a brief emphasis together; 'same minutes' letters beside them",
+            "motion": "emphasis; unmask"
+          },
+          {
+            "t_anchor": "But one switch, and one return",
+            "element": "batch_slot + re-flow",
+            "action": "the batch slot opens; the five slips slide in; the five red runs collapse into one run beside the gathered ink units; the green fragments close up into one long block (1.6 s, editorial ease, one progress)",
+            "motion": "slot show; travel (re-flow)"
+          },
+          {
+            "t_anchor": "Every question still gets asked",
+            "element": "slips in the batch",
+            "action": "each slip gets a small tick, left to right",
+            "motion": "stamp (tight stagger)"
+          },
+          {
+            "t_anchor": "It is timing, not silence",
+            "element": "batch_slot",
+            "action": "the slot relabels from 'agreed time' to 'timing, not silence'; hold",
+            "motion": "relabel"
+          }
+        ],
+        "continuity": "Ends with: five ink units together at the agreed time, one red run of three, one long green block, five ticked slips in the batch slot. b15 keeps strip, morning_grid, batch_slot. The working page in b16 mirrors this end state in its ledger.",
+        "references": [
+          "docs/primitives/slot.md (stamp, relabel)",
+          "docs/research/vision/2026-10-05-tedEd-full-conclusions.md section 7 item 4 (hold the layout, change its state)",
+          "skills/lnd/lnd-explainer-craft section 1 move 13 (expected, then actual, in the same place)"
+        ]
+      },
+      "rationale": "Opens section three by continuing from the quiz card (the card is the chapter marker), because the answer must be played on the very picture the viewer predicted on."
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "template": "list.steps",
+      "station": "morning",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "strip",
+        "morning_grid",
+        "batch_slot"
+      ],
+      "subject": "habit one: batch the non-urgent",
+      "world": "the morning page",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "accent_on": "title: One, batch the non-urgent",
+      "props": {
+        "kicker": "Three habits",
+        "title": "One: batch the non-urgent",
+        "say_title": "Batch non-urgent questions",
+        "marker": "tick",
+        "items": [
+          {
+            "text": "Hold non-urgent questions for one batch",
+            "say": "Batch non-urgent questions"
+          },
+          {
+            "text": "Answer them at agreed times",
+            "say": "answer at agreed times"
+          }
+        ]
+      },
+      "rationale": "Overprint device: the habit prints over the re-packed morning it describes (keep), so the habit reads as the picture just seen, not a tip."
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "scene": "b16",
+      "station": "spread",
+      "join_in": {
+        "type": "camera",
+        "meaning": "time"
+      },
+      "subject": "the opening page again, with focus time shaded on its time strip and an urgent lane left open",
+      "world": "the working page",
+      "intent": "callback",
+      "motion_is": "content",
+      "register": "productive",
+      "shot": {
+        "size": "establishing"
+      },
+      "depth": "flat",
+      "light": "even",
+      "story_role": "payoff",
+      "accent_on": "focus_block on the strip (the hatch and its label); red stays only on the one short run",
+      "props": {
+        "focus_label": "focus time",
+        "urgent_label": "urgent route",
+        "trial_tag": "One team's trial",
+        "tray_label": "agreed time"
+      },
+      "design": {
+        "treatment": "The camera pans back left to the opening page, re-set from the same angle as b01 (callback): the plan in the slot (as in b01, caret on line 4), the strip, the ledger at right now holding the batched morning (Visible: five ink units; Hidden: one short red run of three lettered 'one switch, one return'), and a tray at the foot of the ledger, labelled 'agreed time', with the five ticked slips stacked in it. On that page the habit is drawn on the strip: a block of the morning is shaded in ink hatch and lettered 'focus time', with a narrow open lane at its edge lettered 'urgent route'. The hatch thins when the habit fades and is re-inked on 'Keep it up'.",
+        "why_motion": "focus time is a block of the strip; its fading and re-inking is the one grounded claim about upkeep (F12), shown as a change of state on the held page",
+        "elements": [
+          "re-set: strip, work (slot with the plan), ledger, visible_units (five), hidden_units (one run), footnote",
+          "tray: [1040, 760, 720, 110] with five stacked ticked slips (b19's fill box)",
+          "focus_block: ink hatch over part of the strip, label 'focus time'",
+          "urgent lane: a narrow gap at the block's edge, label 'urgent route'",
+          "tag: 'One team's trial' (caption) under the block"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "(camera arrival)",
+            "element": "the page",
+            "action": "already set: no entrances; the pan lands on it",
+            "motion": "camera pan (join)"
+          },
+          {
+            "t_anchor": "Agree focus time",
+            "element": "focus_block",
+            "action": "the hatch fills a block of the strip left to right; 'focus time' letters on it",
+            "motion": "unmask ltr; unmask"
+          },
+          {
+            "t_anchor": "a route for the truly urgent",
+            "element": "urgent lane",
+            "action": "a narrow lane opens at the block's right edge (the hatch parts); 'urgent route' letters beside it",
+            "motion": "unmask; reveal"
+          },
+          {
+            "t_anchor": "One team tried quiet hours",
+            "element": "tag",
+            "action": "the caption tag settles under the block",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Then the habit faded",
+            "element": "focus_block",
+            "action": "the hatch thins to about 0.25 opacity (1.2 s)",
+            "motion": "recolour (fade of the hatch only)"
+          },
+          {
+            "t_anchor": "Keep it up",
+            "element": "focus_block",
+            "action": "the hatch re-inks to full, left to right; hold",
+            "motion": "unmask ltr"
+          }
+        ],
+        "continuity": "Names held by b17 and b18 (keep): strip, ledger, visible_units, hidden_units, footnote, tray, focus_block. The slot 'work' is not kept by b17: it recedes while b17's note page settles in the same rect. The tray must stay at [1040, 760, 720, 110]: b19's fill grows from it.",
+        "references": [
+          "skills/lnd/lnd-visual-storyteller section 2 (payoff: the establishing framing returns, changed)",
+          "docs/research/vision/2026-10-05-tedEd-full-conclusions.md section 7 item 10 (returning sets, bookends)"
+        ]
+      },
+      "rationale": "Hybrid allocation, built bespoke because the opening page must be drawn before the two template beats can sit in it. The pan back left reads as returning to the start of the story."
+    },
+    {
+      "beat": "b17",
+      "kind": "template",
+      "template": "document.page",
+      "station": "spread",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "strip",
+        "ledger",
+        "visible_units",
+        "hidden_units",
+        "footnote",
+        "tray",
+        "focus_block"
+      ],
+      "subject": "a ready-to-resume note written in the slot before the switch",
+      "world": "the working page",
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "practice",
+      "accent_on": "the note's two lines as they are written",
+      "props": {
+        "kind": "notes",
+        "title": "Before you switch",
+        "say_title": "Before you switch",
+        "side": "left",
+        "mode": "appear",
+        "backplate": false,
+        "lines": [
+          {
+            "text": "Where you are: the budget totals",
+            "say": "note where you are"
+          },
+          {
+            "text": "What comes next: check the owners",
+            "say": "what comes next"
+          }
+        ]
+      },
+      "rationale": "Habit three as the object itself, in the slot where the plan sits (callback to b04's 'where you were'): the note is written line by line on the words. The page around it stays at full strength (keep, backplate off)."
+    },
+    {
+      "beat": "b18",
+      "kind": "template",
+      "template": "document.page",
+      "station": "spread",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "strip",
+        "ledger",
+        "visible_units",
+        "hidden_units",
+        "footnote",
+        "tray",
+        "focus_block"
+      ],
+      "subject": "the plan, further written by lunch",
+      "world": "the working page",
+      "intent": "callback",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "establishing",
+        "move": "push",
+        "zoom": 1.04
+      },
+      "story_role": "payoff",
+      "accent_on": "line 5 'Next steps, agreed' as the highlight reaches it",
+      "props": {
+        "kind": "notes",
+        "title": "The plan",
+        "side": "left",
+        "mode": "highlight",
+        "backplate": false,
+        "lines": [
+          {
+            "text": "Goals for the quarter",
+            "say": "Back to your morning"
+          },
+          {
+            "text": "Who owns each step",
+            "say": "Same questions"
+          },
+          {
+            "text": "Risks we still carry",
+            "say": "held for the agreed time"
+          },
+          {
+            "text": "The budget, drafted",
+            "say": "By lunch"
+          },
+          {
+            "text": "Next steps, agreed",
+            "say": "the plan has moved"
+          }
+        ]
+      },
+      "rationale": "The callback: the hook's page from the same angle, the plan back in its slot with two more lines than in b01, the highlight running all the way down (in b04 it hunted; here it moves on), beside a ledger with one short run and the batched slips in the tray. A gentle push (1.04) mirrors the hook's stillness with a small step forward."
+    },
+    {
+      "beat": "b19",
+      "kind": "template",
+      "template": "title.card",
+      "station": "headline",
+      "join_in": {
+        "type": "fill",
+        "box": [
+          1040,
+          760,
+          720,
+          110
+        ],
+        "token": "surface",
+        "meaning": "into",
+        "dur": 0.7
+      },
+      "subject": "the closing question",
+      "world": "the headline page",
+      "intent": "callback",
+      "register": "expressive",
+      "motion_is": "staging",
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "payoff",
+      "accent_on": "title: Now, or batch it?",
+      "props": {
+        "kicker": "Next time",
+        "say_kicker": "Next time",
+        "title": "Now, or batch it?",
+        "say_title": "If not, batch it",
+        "subtitle": "And take one habit to your team",
+        "say_subtitle": "take one habit to your team",
+        "align": "center"
+      },
+      "rationale": "Bookend of the join material: the batch tray grows into the headline page where the lesson's headline stood in b02, now carrying the one question to ask next time."
+    }
+  ]
+}

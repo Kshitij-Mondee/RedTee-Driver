@@ -1,0 +1,85 @@
+{
+  "title": "The 3-2-1 backup rule: why one copy is never enough",
+  "genre": "teaching",
+  "grounding_posture": "faithful",
+  "audience": {
+    "who": "corporate employees, mostly non-technical, who keep work files on a laptop",
+    "knows": "that backups exist; assumes a file saved on the laptop or synced somewhere is safe",
+    "cares_about": "not losing a week of work or a deliverable the day before it is due"
+  },
+  "outcome": "After watching, you can look at where your important work files live, say whether they would survive a dead drive, a stolen bag or ransomware, and fix the gap with three copies, on two kinds of storage, one kept offsite.",
+  "through_line": "One copy is a single point of failure; each extra copy guards against a different way of losing it, so the rule is not about having more copies but about copies that cannot all fail together.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "One work file, the only copy, on one laptop the day before it is due; the drive fails. The viewer recognises the assumption that the file is simply there."
+    },
+    {
+      "role": "promise",
+      "what": "A three-number rule makes that loss survivable: 3-2-1."
+    },
+    {
+      "role": "build",
+      "what": "Three copies: the original plus two backups, so one failure never leaves zero."
+    },
+    {
+      "role": "build",
+      "what": "Two kinds of storage: copies on different media or devices, so one fault cannot take them all."
+    },
+    {
+      "role": "build",
+      "what": "One offsite: a copy kept somewhere else, commonly the cloud, so fire, theft or ransomware in one place leaves a copy untouched."
+    },
+    {
+      "role": "check",
+      "what": "The viewer judges a setup (laptop plus a USB drive carried in the same bag) and spots which part of the rule it breaks."
+    },
+    {
+      "role": "payoff",
+      "what": "Back to the opening file: the same failure strikes and the work survives because the rule is in place."
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "The 3-2-1 rule: three copies of the data, on two different types of storage, with one copy offsite",
+      "from_user": true
+    },
+    {
+      "what": "A single copy is a single point of failure (hardware failure, loss or theft, accidental deletion, ransomware)",
+      "from_user": true
+    },
+    {
+      "what": "Copies kept on the same device or in the same place can be lost together",
+      "from_user": true
+    },
+    {
+      "what": "Cloud storage as a common way to keep the offsite copy",
+      "from_user": true
+    }
+  ],
+  "must_avoid": [
+    "statistics on data loss or drive failure rates without a source",
+    "naming or endorsing specific backup vendors or products",
+    "deep technical detail (RAID, backup software settings, incremental versus full backups)",
+    "teacher-like, childish or scare-tactic tone",
+    "opening by explaining the term or listing an agenda",
+    "a presenter or person on screen: the requester asked for pure motion graphics"
+  ],
+  "example_posture": "One running example the whole lesson returns to: a single work file (a report) on an employee's laptop, followed through a copy, a second device, the cloud, and a failure it survives. Ordinary office situations, no hacker drama.",
+  "visual_direction": "Pure motion graphics on the style's plain light field, the system itself in motion: the file as a clear object copied to a second device and to the cloud, one copy visibly placed offsite, a failure shown and survived. Crisp shapes, clear labels, purposeful motion; each of the rule's three numbers shown large when named and tied to its picture.",
+  "voice_note": "A capable colleague who has watched someone lose a week of work: calm, practical, a little dry. No scare tactics, no lecturing.",
+  "open_questions": [
+    "Does the organisation already back up laptops centrally? The lesson stays general and about personal practice unless told otherwise.",
+    "The topic has no source document: must_cover is from the request and is grounded by the knowledge sheet in P2."
+  ],
+  "provenance": {
+    "inferred": [
+      "audience",
+      "outcome",
+      "through_line",
+      "arc_plan (no source; built from the request's topic and notes)",
+      "example_posture (a report on a laptop)",
+      "check scenario (USB drive in the same bag)"
+    ]
+  }
+}

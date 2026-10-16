@@ -1,0 +1,151 @@
+{
+  "title": "Feedback that changes behaviour, not just feelings",
+  "performance": "Given a piece of feedback they are about to give, the viewer can restate it as a specific behaviour, its concrete impact, and a closing question, instead of a vague or person-directed verdict",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "has given or received informal feedback at work; knows the vague, person-directed kind feels unsatisfying but has not named why it does not change anything",
+    "why": "the brief targets corporate employees already giving feedback to peers or reports in regular one-to-ones and reviews, not someone learning what feedback is from scratch",
+    "motivation": "semi-required L&D viewing; not deeply invested going in, but stands to gain from a noticeably better outcome at their next real feedback conversation",
+    "context": "desk or phone, likely with sound, a short corporate training clip watched in one sitting"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "the brief specifies one running workplace moment returned to twice; the three-part shape lands only after the viewer watches the vague version fail, not before",
+    "signature_move": "show the vague verdict land and change nothing, then rebuild the same moment step by step: name the behaviour, then its impact, then ask a question"
+  },
+  "misconceptions": [
+    {
+      "belief": "if feedback states the problem clearly and firmly, it will change what the person does next time",
+      "why_tempting": "it feels direct and honest, and the receiver often reacts right away (apologises, looks uncomfortable), so it looks like it worked",
+      "refuted_in": "sec1",
+      "source_anchor": "knowledge sheet F5, F6, F7 (vague or character-directed feedback does not identify a repeatable action, and reacting in the moment is not the same as changing it)"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "A teammate's confusing status update gets one piece of feedback: 'you need to communicate better.' Next week's update is just as confusing."
+    },
+    "promise": "By the end, you can turn that same moment into feedback that actually changes what happens next time",
+    "bridge_from_prior": "sec1 opens from feedback the viewer has already given or received that felt vague or personal, the 'you need to be more organised' kind everyone recognises",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain the difference between a specific behaviour and a vague or character-directed judgement",
+        "bloom": "understand",
+        "concepts": [
+          "specific behaviour",
+          "character vs behaviour",
+          "vague feedback"
+        ],
+        "energy": "build",
+        "carrier": "scenario",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can follow the procedure of naming a behaviour's concrete impact and closing with a question instead of a verdict",
+        "bloom": "apply",
+        "concepts": [
+          "concrete impact",
+          "closing question",
+          "conversation vs verdict"
+        ],
+        "energy": "peak",
+        "carrier": "worked example",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can summarise the three-part shape in order: behaviour, impact, question",
+        "bloom": "understand",
+        "concepts": [
+          "behaviour, impact, question (in order)"
+        ],
+        "energy": "rest",
+        "carrier": "comparison",
+        "recap_after": false
+      }
+    ],
+    "payoff": "Back to the same teammate: the behaviour, its impact, then a question. The reply lands, and next week's update is clear."
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "the teammate's status update, broken then rebuilt, every step of the three-part shape narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "sec3 end (check)",
+      "what": "two feedback lines on the same moment; the viewer picks which is likely to change next week's update before the narrator says which"
+    },
+    {
+      "stage": "independent",
+      "where": "payoff",
+      "what": "the viewer sees the rebuilt feedback land and connects it to the shape before the narrator restates it"
+    }
+  ],
+  "pacing": {
+    "requested_s": 120,
+    "target_duration_s": 120,
+    "words_per_minute": 150,
+    "slowdown_at": [
+      "ends with a question, not a verdict"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec3",
+        "kind": "quiz",
+        "prompt_sketch": "Same moment, two lines: 'You're disorganised, you need to communicate better' versus 'When the update skipped the blocker, I couldn't tell if we were on track. What got left out?' Which is more likely to change next week's update?",
+        "answer": "The second one: it names the behaviour and its impact, and ends with a question",
+        "tempting_wrong": "the first line feels direct and honest, and the person usually reacts right away, but reacting in the moment is not the same as knowing what to do differently next time"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "The next time you are about to say someone needs to 'improve X' or 'be more Y', stop and name the specific thing they did, what it affected, and ask what they noticed"
+  ],
+  "persona": {
+    "voice": "a mentor who has given plenty of feedback that did not land before finding this shape; plain, warm, direct, never lecturing",
+    "delivery_notes": "warm and plain on the broken example, matter-of-fact when naming the three parts, curious tone on the closing question, brisk on the recap"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the teammate's status update and the feedback that changed nothing",
+      "objective": "promise: you can turn that same moment into feedback that changes what happens next",
+      "recall_prior": "bridge_from_prior: sec1 opens from vague feedback the viewer has already given or received",
+      "present": "sec1 (behaviour vs character) before sec2 (impact and question): dependency order",
+      "guidance": "signature_move plus the worked teammate example rebuilt step by step in sec2",
+      "practice": "practice_ladder worked/faded/independent; faded stage is the sec3 quiz",
+      "feedback": "quiz answer explained, including why the tempting character-directed line is wrong",
+      "assess": "payoff: the viewer sees the rebuilt feedback land before the narrator restates the shape",
+      "transfer": "transfer_tasks: apply the shape the next time the viewer is about to say someone needs to 'improve X'"
+    },
+    "merrill": {
+      "problem_centered": "the teammate's confusing status update IS the running problem, not an abstract rule",
+      "activation": "sec1 bridges from vague feedback the viewer has already given or received",
+      "demonstration": "sec1-sec2 show the vague verdict failing, then rebuild the same moment step by step",
+      "application": "the sec3 quiz makes the viewer choose which line works before the narrator says which",
+      "integration": "payoff and transfer_tasks hand the three-part shape back to the viewer's own next conversation"
+    },
+    "mayer": {
+      "coherence": "one running example (the teammate's status update) throughout; no tour of other feedback techniques",
+      "signalling": "one slowdown, on the shift from verdict to a closing question",
+      "redundancy": "on screen holds the three labels (behaviour, impact, question) only; narration explains each",
+      "contiguity": "each part of the shape appears on screen as it is spoken",
+      "segmenting": "two short build sections, one idea each, plus a one-line consolidation",
+      "pre_training": "sec1 names 'behaviour' and distinguishes it from character before sec2 asks the viewer to add impact and a question to it"
+    },
+    "arcs": {
+      "attention": "the teammate's status update stuck in the same confusing pattern",
+      "relevance": "told in terms of the viewer's own next feedback conversation, not an abstract rule",
+      "confidence": "the shape is rebuilt in front of the viewer before the quiz asks them to choose",
+      "satisfaction": "the payoff shows the same moment fixed and the question landing"
+    },
+    "bloom_path": "understand -> apply -> understand (consolidation)"
+  },
+  "series": null,
+  "flags": []
+}

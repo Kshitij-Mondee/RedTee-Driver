@@ -1,0 +1,419 @@
+{
+  "title": "Feedback That Changes Behaviour",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "The Warm Nod"
+    },
+    {
+      "id": "s2",
+      "title": "Rebuild the Comment"
+    },
+    {
+      "id": "s3",
+      "title": "Spot the Usable One"
+    },
+    {
+      "id": "s4",
+      "title": "Check Before Saying"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s1",
+      "job": "hook",
+      "narration": [
+        "Say you just watched a weak presentation.",
+        "Afterwards you tell her, you're a natural presenter.",
+        "She nods, warm and grateful.",
+        "Next week, she reads slides aloud again."
+      ],
+      "on_screen": [
+        "Natural presenter",
+        "Next week"
+      ],
+      "visual_intent": "Cartoon office, two colleagues. A speech bubble 'natural presenter' leaves one, the other smiles and nods. A calendar page flips to next week: she is back at the same slide-reading pose, nothing changed.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The scene of the colleague, the weak talk and the repeat next week is an imagined example",
+          "hypothetical": true
+        },
+        {
+          "claim": "'You are a natural presenter' describes the person and gives nothing specific to act on",
+          "fact": "F3"
+        },
+        {
+          "claim": "A receiver can be warm in the moment and still change nothing",
+          "fact": "F12"
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "warm, unhurried, a small pause after the nod",
+      "concepts": [
+        "warm in the moment, no change later"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "s1",
+      "job": "refute",
+      "narration": [
+        "So what is she left holding?",
+        "A kind feeling, and nothing to repeat.",
+        "Here is where people slip.",
+        "A warm nod is not change."
+      ],
+      "on_screen": [
+        "A kind feeling",
+        "Nothing to repeat"
+      ],
+      "visual_intent": "Same office frame held. Her open hands hold a glowing heart; beside it an empty slot where an action should be. The nod icon is set next to a flat line labelled change, and the two do not match.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "General praise tells the person how you feel, not what to repeat or change",
+          "fact": "F2"
+        },
+        {
+          "claim": "A comment about the person gives nothing specific to act on",
+          "fact": "F3"
+        },
+        {
+          "claim": "Warm and agreeable in the moment does not mean any change follows",
+          "fact": "F12"
+        }
+      ],
+      "misconception": "A warm nod means the feedback worked.",
+      "concepts": [
+        "feeling, not action"
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "s1",
+      "job": "orient",
+      "narration": [
+        "We'll keep that exact comment.",
+        "We rebuild it in under two minutes.",
+        "Then you check your own."
+      ],
+      "on_screen": [
+        "Under two minutes"
+      ],
+      "visual_intent": "Presenter-narrator beside the board from the same office; the 'natural presenter' bubble pinned on the board, ready to be taken apart.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Promise: the same comment is rebuilt in under two minutes, with a self-check afterwards",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "s2",
+      "job": "demonstrate",
+      "narration": [
+        "You read the slides aloud,",
+        "for most of the talk.",
+        "Anyone could have seen that.",
+        "That has a name. The observed action."
+      ],
+      "on_screen": [
+        "Observed action",
+        "Read the slides aloud"
+      ],
+      "visual_intent": "On one board, the old bubble fades and the first piece of the new comment appears in colour: 'read the slides aloud'. Only it is highlighted. After the phrase, the label 'Observed action' sits right beside it.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Feedback about a specific action is something the receiver can see, recall and do differently",
+          "fact": "F4"
+        },
+        {
+          "claim": "A useful description sticks to what an observer could see or hear, such as reading the slides aloud",
+          "fact": "F5"
+        }
+      ],
+      "delivery": "slower, calm, this is the first named part",
+      "concepts": [
+        "observed action"
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "s2",
+      "job": "demonstrate",
+      "narration": [
+        "Now, what did it do to the room?",
+        "The room looked at their phones.",
+        "That is the effect.",
+        "Only what you saw, never a guess."
+      ],
+      "on_screen": [
+        "Effect",
+        "Room looked at phones"
+      ],
+      "visual_intent": "Same board. Beside the first piece, the room fills in: small figures glance down at phones. The second piece 'room looked at phones' lights up, the first dims, and the label 'Effect' sits beside it.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Describing the effect on others or the work helps the receiver see why it matters, for example the room looking at phones",
+          "fact": "F6"
+        },
+        {
+          "claim": "An effect stated from your own observation is harder to dispute than a verdict on the person",
+          "fact": "F7"
+        }
+      ],
+      "delivery": "calm, a short pause before 'never a guess'",
+      "concepts": [
+        "effect"
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "s2",
+      "job": "demonstrate",
+      "narration": [
+        "Last, one thing for next time.",
+        "Next week, open with the one decision,",
+        "you need from us.",
+        "That is the next step."
+      ],
+      "on_screen": [
+        "Next step",
+        "One decision"
+      ],
+      "visual_intent": "Same board. A third piece appears to the right: 'open with one decision', with a small arrow pointing to next week's calendar page. The label 'Next step' sits beside it while the other two dim.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A clear next step names one concrete thing to do next time, such as opening with the one decision you need from us",
+          "fact": "F8"
+        }
+      ],
+      "concepts": [
+        "next step"
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "s2",
+      "job": "consolidate",
+      "narration": [
+        "Three pieces, one comment, one board.",
+        "Action, effect, next step."
+      ],
+      "on_screen": [
+        "Action",
+        "Effect",
+        "Next step"
+      ],
+      "visual_intent": "The three coloured pieces slide together on the board into one sentence-shaped comment, the three labels underneath in order. The old 'natural presenter' bubble is shown small beside it for contrast.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Feedback with an action, its effect and a next step is more actionable than a feeling or a judgement alone (a practical structure taught under different names)",
+          "fact": "F9"
+        }
+      ],
+      "delivery": "brisker, the pocket rule lands clearly",
+      "concepts": [
+        "three parts together"
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "s3",
+      "job": "check",
+      "narration": [
+        "Now you, which could she act on tomorrow?",
+        "One, you're a natural presenter.",
+        "Two, your slides were weak, be better prepared.",
+        "Three, action, effect, next step."
+      ],
+      "on_screen": [
+        "1 Natural presenter",
+        "2 Slides were weak",
+        "3 Action, effect, next step"
+      ],
+      "visual_intent": "Three speech bubbles from the same colleague stacked on the board, each appearing as it is spoken: a heart bubble, a frowning bubble, and the rebuilt three-colour comment. No answer marked.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Personal and general versions give nothing to act on; the three-part version is more actionable",
+          "fact": "F9"
+        },
+        {
+          "claim": "The 'natural presenter' option describes the person",
+          "fact": "F3"
+        }
+      ],
+      "pause_after_s": 4,
+      "recall": {
+        "id": "r1",
+        "kind": "quiz",
+        "prompt": "After a weak presentation, which comment could the presenter act on tomorrow?",
+        "options": [
+          "You're a natural presenter, great job.",
+          "Your slides were weak, you need to be better prepared.",
+          "You read the slides aloud for most of the talk, the room looked at their phones, next week open with the one decision you need from us."
+        ]
+      },
+      "delivery": "your turn: question, then silence",
+      "concepts": [
+        "compare versions"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "s3",
+      "job": "check",
+      "narration": [
+        "Three.",
+        "It holds action, effect, and one next step.",
+        "One feels kind, but it only describes her.",
+        "Kind is not the same as usable."
+      ],
+      "on_screen": [
+        "Action, effect, next step",
+        "Describes her"
+      ],
+      "visual_intent": "Bubble three is ringed and the three coloured pieces glow in order. Bubble one gets a tag 'describes her', pointing at the presenter figure rather than at anything she did. The heart bubble stays visible, sitting beside the ringed one.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The third version has an action, an effect and a next step, so it is more actionable",
+          "fact": "F9"
+        },
+        {
+          "claim": "The first version describes the person and gives nothing specific to act on",
+          "fact": "F3"
+        }
+      ],
+      "concepts": [
+        "which version could be acted on"
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "s4",
+      "job": "consolidate",
+      "narration": [
+        "Before you say it, ask three things.",
+        "Could someone have seen or heard it?",
+        "Is the effect stated?",
+        "Could they do the step tomorrow?"
+      ],
+      "on_screen": [
+        "Seen or heard?",
+        "Effect stated?",
+        "Step tomorrow?"
+      ],
+      "visual_intent": "A three-line checklist beside the board, one tick-box appearing per question. Each box lines up with its coloured piece of the comment: action, effect, next step.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A draft can be checked by asking if the action could be seen or heard, if the effect is stated, and if the step could be done tomorrow (a practical tool, not a validated instrument)",
+          "fact": "F10"
+        }
+      ],
+      "concepts": [
+        "three checks"
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "s4",
+      "job": "practice",
+      "narration": [
+        "Now pick one comment you owe this week.",
+        "Rewrite it with the same three parts.",
+        "Then run the three checks."
+      ],
+      "on_screen": [
+        "One comment",
+        "Three parts",
+        "Three checks"
+      ],
+      "visual_intent": "The board wipes to a blank draft card with three empty coloured slots, a cursor waiting in the first slot, and the checklist faint beside it.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The viewer applies action, effect and next step plus the three checks to their own comment",
+          "fact": "F10"
+        }
+      ],
+      "pause_after_s": 3,
+      "recall": {
+        "id": "r2",
+        "kind": "recall_prompt",
+        "prompt": "Before you say it: could someone have seen or heard the action, is the effect stated, could they do the step tomorrow?"
+      },
+      "delivery": "your turn: a real pause at the end",
+      "concepts": [
+        "transfer to own comment"
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "s4",
+      "job": "payoff",
+      "narration": [
+        "Back to that talk.",
+        "This time, you say the rebuilt version.",
+        "Next week, she opens with the decision.",
+        "The nod now has something behind it."
+      ],
+      "on_screen": [
+        "Next week",
+        "Decision"
+      ],
+      "visual_intent": "The opening office again. The colleague gives the three-part comment; the presenter nods. Calendar flips to next week: she opens with a single decision slide, the room looks up. A before and after of the room beside her.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The delivered rebuilt comment and the presenter's changed opening next week are an imagined continuation of the same example",
+          "hypothetical": true
+        },
+        {
+          "claim": "A comment with action, effect and next step gives the receiver something to act on",
+          "fact": "F9"
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "warm, closing, unhurried",
+      "concepts": [
+        "payoff"
+      ]
+    }
+  ]
+}

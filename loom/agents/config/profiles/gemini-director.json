@@ -1,0 +1,32 @@
+{
+ "name": "gemini-director",
+ "description": "A fair second look at Gemini 3.1 Pro as the visual director: it plans and storyboards (1M window, the full reading fits easily), but Sonnet writes the script (so beats are not all rated static, L-240) and the scenes; Sol keeps the facts; Haiku is the picture critic (another family than the storyboard).",
+ "roles": {
+  "brief": "gemini-3.1-pro",
+  "knowledge": "gpt-6.1-sol",
+  "skeptic": "claude-haiku-4-5",
+  "pedagogy": "gemini-3.1-pro",
+  "persona_pick": "gemini-3.5-flash-lite",
+  "script": "claude-sonnet-5-5",
+  "storyboard_outline": "gemini-3.1-pro",
+  "storyboard": "gemini-3.1-pro",
+  "scene": "claude-sonnet-5-5",
+  "critic": "claude-haiku-4-5",
+  "tweak": "claude-haiku-4-5"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

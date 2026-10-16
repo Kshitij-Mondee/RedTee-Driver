@@ -1,0 +1,147 @@
+{
+  "topic": "The 3-2-1 backup rule: why one copy is never enough",
+  "scope_note": "The 3-2-1 backup rule for non-technical employees who keep work files on a laptop. General personal practice only. No product names, no statistics, no RAID or backup-type detail, no extensions of the rule.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "The 3-2-1 backup rule says to keep 3 copies of your data, on 2 different types of storage, with 1 copy offsite.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [
+        "3",
+        "2",
+        "1"
+      ],
+      "reference_hint": "US-CERT (CISA) 'Data Backup Options' guidance; widely repeated in vendor-neutral backup guidance"
+    },
+    {
+      "id": "F2",
+      "statement": "The 3 copies are counted as the original data plus 2 backups.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "numbers": [
+        "3",
+        "2"
+      ],
+      "reference_hint": "Common reading of the rule in public guidance",
+      "caveat": "Sources phrase the count slightly differently, so the script should say 'the original plus two backups' and stay with that wording."
+    },
+    {
+      "id": "F3",
+      "statement": "The rule is usually credited to the photographer Peter Krogh, who described it in his book on digital asset management for photographers.",
+      "kind": "history",
+      "confidence": "mainstream",
+      "numbers": [],
+      "reference_hint": "Peter Krogh, The DAM Book: Digital Asset Management for Photographers (2005)",
+      "caveat": "Attribution is common but not essential to the lesson; the script may omit it, and if used should say 'usually credited to'."
+    },
+    {
+      "id": "F4",
+      "statement": "A single copy of a file is a single point of failure: if that one copy is lost, the data is gone.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Basic reliability principle; CISA and NCSC backup guidance"
+    },
+    {
+      "id": "F5",
+      "statement": "Common causes of data loss include hardware failure, a lost or stolen device, accidental deletion, malware such as ransomware, and fire or flood.",
+      "kind": "finding",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "CISA 'Data Backup Options'; UK NCSC guidance on backing up your data"
+    },
+    {
+      "id": "F6",
+      "statement": "Different types of storage fail in different ways, so keeping copies on two different types of storage means one kind of fault is unlikely to remove every copy.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "reference_hint": "Rationale given for the 'two media' part of the rule in public backup guidance",
+      "caveat": "This is the rule's rationale, not a guarantee: two faults at once can still happen. Say 'unlikely', not 'impossible'."
+    },
+    {
+      "id": "F7",
+      "statement": "Copies kept on the same device, or in the same place, can be lost together by one event such as a drive failure, a theft, a fire or a flood.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "CISA 'Data Backup Options'; UK NCSC backup guidance"
+    },
+    {
+      "id": "F8",
+      "statement": "An offsite copy is stored in a different location from the original, so an event at the original location does not reach it.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "CISA 'Data Backup Options'"
+    },
+    {
+      "id": "F9",
+      "statement": "Cloud storage is a common way to keep the offsite copy, because the data is held in a different location from your own devices.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "CISA 'Data Backup Options'; UK NCSC guidance on cloud backup"
+    },
+    {
+      "id": "F10",
+      "statement": "Ransomware can encrypt or damage backups that stay connected to the infected computer or network, so guidance advises keeping at least one backup offline or disconnected.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "CISA #StopRansomware Guide; UK NCSC 'Offline backups in an online world' and ransomware guidance",
+      "caveat": "Guidance says disconnected or offline backups reduce the risk, not that any backup is immune; avoid 'ransomware-proof'."
+    },
+    {
+      "id": "F11",
+      "statement": "A file-sync service mirrors changes, so a deletion or an encrypted file can be copied to the synced location too; a sync alone is therefore not the same as a backup.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "numbers": [],
+      "reference_hint": "General point in public backup guidance; the sheet author did not verify a specific CISA or NCSC passage",
+      "caveat": "Many sync services keep version history or a recycle bin, which can help recover files; the claim is only that sync by itself should not be assumed to be a backup. Not verified against one primary source."
+    },
+    {
+      "id": "F12",
+      "statement": "Guidance advises testing that you can actually restore your files from a backup, because a backup you have never restored from may not work.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "CISA #StopRansomware Guide; UK NCSC backup guidance"
+    }
+  ],
+  "not_claimed": [
+    "Any statistic on how often drives fail or how many people lose data; none is claimed.",
+    "That a file saved on the laptop, or synced to a folder, is automatically a backup.",
+    "That 3-2-1 makes data loss impossible or ransomware harmless.",
+    "That cloud storage alone satisfies the whole rule: it covers the offsite copy only.",
+    "That the rule requires a specific product, vendor, or technology.",
+    "That more copies always means safer; copies that can fail together add little.",
+    "Extensions such as 3-2-1-1-0, RAID, or incremental versus full backups: out of scope, not claimed.",
+    "That the organisation already backs up laptops centrally: unknown, not claimed."
+  ],
+  "terms": [
+    {
+      "term": "single point of failure",
+      "definition": "One thing whose loss means everything depending on it is lost."
+    },
+    {
+      "term": "offsite",
+      "definition": "A copy kept in a different location from the original."
+    },
+    {
+      "term": "backup",
+      "definition": "A separate copy of data kept so it can be restored if the original is lost."
+    },
+    {
+      "term": "sync",
+      "definition": "A service that mirrors a folder across devices or the cloud; changes, including deletions, are copied."
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (five-style test, D-167)",
+    "note": ""
+  }
+}

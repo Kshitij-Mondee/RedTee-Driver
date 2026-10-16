@@ -1,0 +1,690 @@
+{
+ "scene": "pharmacy",
+ "camera_spec": {
+  "camera": {
+   "x": 2.8,
+   "y": -0.8,
+   "eye": 1.6,
+   "yaw": 8,
+   "hfov": 55,
+   "horizon_pct": 45
+  },
+  "walls": [
+   {
+    "name": "pharmacy back wall (sage)",
+    "axis": "y",
+    "at": 5.4
+   },
+   {
+    "name": "public area left wall",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "consultation room side wall",
+    "axis": "x",
+    "at": 5.4
+   }
+  ],
+  "points": {
+   "back_l_floor": [
+    0,
+    5.4,
+    0
+   ],
+   "back_r_ceil": [
+    5.4,
+    5.4,
+    2.7
+   ],
+   "back_r_floor": [
+    5.4,
+    5.4,
+    0
+   ],
+   "open_l_head": [
+    0.4,
+    5.4,
+    2.1
+   ],
+   "open_r_head": [
+    2.0,
+    5.4,
+    2.1
+   ],
+   "open_r_floor": [
+    2.0,
+    5.4,
+    0
+   ],
+   "open_l_floor": [
+    0.4,
+    5.4,
+    0
+   ],
+   "disp_shelf_l_top": [
+    0.4,
+    8.0,
+    2.0
+   ],
+   "disp_shelf_r_bot": [
+    2.0,
+    8.0,
+    0.3
+   ],
+   "disp_bench_front": [
+    1.2,
+    7.0,
+    0.9
+   ],
+   "counter_l_top": [
+    0.4,
+    3.8,
+    1.05
+   ],
+   "counter_r_top": [
+    5.4,
+    3.8,
+    1.05
+   ],
+   "counter_l_floor": [
+    0.4,
+    3.8,
+    0
+   ],
+   "counter_r_floor": [
+    5.4,
+    3.8,
+    0
+   ],
+   "low_l_top": [
+    4.05,
+    3.8,
+    0.76
+   ],
+   "low_r_top": [
+    5.05,
+    3.8,
+    0.76
+   ],
+   "ph_head_top": [
+    3.5,
+    4.4,
+    1.72
+   ],
+   "ph_head_c": [
+    3.5,
+    4.4,
+    1.6
+   ],
+   "ph_feet": [
+    3.5,
+    4.4,
+    0
+   ],
+   "pt_head_top": [
+    2.7,
+    3.2,
+    1.68
+   ],
+   "pt_head_c": [
+    2.7,
+    3.2,
+    1.56
+   ],
+   "pt_feet": [
+    2.7,
+    3.2,
+    0
+   ],
+   "tech_head_top": [
+    4.55,
+    4.6,
+    1.3
+   ],
+   "tech_head_c": [
+    4.55,
+    4.6,
+    1.18
+   ],
+   "tech_seat": [
+    4.55,
+    4.6,
+    0.48
+   ],
+   "queue_l_top": [
+    0.7,
+    5.4,
+    2.6
+   ],
+   "queue_r_bot": [
+    1.7,
+    5.4,
+    2.18
+   ],
+   "cons_wall_l_floor": [
+    5.4,
+    3.8,
+    0
+   ],
+   "cons_wall_l_ceil": [
+    5.4,
+    3.8,
+    2.7
+   ],
+   "cons_door_l_head": [
+    5.7,
+    3.8,
+    2.1
+   ],
+   "cons_door_r_floor": [
+    6.7,
+    3.8,
+    0
+   ],
+   "cons_wall_r": [
+    7.6,
+    3.8,
+    0
+   ],
+   "cons_side_far_floor": [
+    5.4,
+    5.4,
+    0
+   ],
+   "ph_head_l": [
+    3.4,
+    4.4,
+    1.6
+   ],
+   "ph_head_r": [
+    3.6,
+    4.4,
+    1.6
+   ],
+   "pt_head_l": [
+    2.6,
+    3.2,
+    1.56
+   ],
+   "pt_head_r": [
+    2.8,
+    3.2,
+    1.56
+   ],
+   "tech_head_l": [
+    4.45,
+    4.6,
+    1.18
+   ],
+   "tech_head_r": [
+    4.65,
+    4.6,
+    1.18
+   ],
+   "counter_mid_top": [
+    3.0,
+    3.8,
+    1.05
+   ],
+   "card_reader": [
+    3.9,
+    3.75,
+    1.1
+   ],
+   "ceiling_c": [
+    3.0,
+    3.0,
+    2.7
+   ],
+   "floor_at_patient": [
+    2.7,
+    3.2,
+    0
+   ],
+   "bag_l_bot": [
+    3.1,
+    3.7,
+    1.05
+   ],
+   "bag_r_top": [
+    3.3,
+    3.7,
+    1.3
+   ],
+   "gel_station_top": [
+    2.1,
+    1.6,
+    1.2
+   ],
+   "gel_station_base": [
+    2.1,
+    1.6,
+    0
+   ],
+   "counter_top_at_pharmacist": [
+    3.5,
+    3.8,
+    1.05
+   ],
+   "consult_door_threshold": [
+    6.2,
+    3.8,
+    0
+   ]
+  },
+  "behind": [
+   "ph_head_top",
+   "ph_head_c",
+   "ph_head_l",
+   "ph_head_r",
+   "pt_head_top",
+   "pt_head_c",
+   "pt_head_l",
+   "pt_head_r",
+   "tech_head_top",
+   "tech_head_c",
+   "tech_head_l",
+   "tech_head_r"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 701,
+   "along_x": 14082,
+   "horizon_y": 486
+  },
+  "points": {
+   "back_l_floor": {
+    "x": -206,
+    "y": 999,
+    "where": "overscan",
+    "depth": 5.75
+   },
+   "back_r_ceil": {
+    "x": 1446,
+    "y": 174,
+    "where": "frame",
+    "depth": 6.5
+   },
+   "back_r_floor": {
+    "x": 1446,
+    "y": 940,
+    "where": "frame",
+    "depth": 6.5
+   },
+   "open_l_head": {
+    "x": -69,
+    "y": 327,
+    "where": "overscan",
+    "depth": 5.81
+   },
+   "open_r_head": {
+    "x": 454,
+    "y": 333,
+    "where": "frame",
+    "depth": 6.03
+   },
+   "open_r_floor": {
+    "x": 454,
+    "y": 975,
+    "where": "frame",
+    "depth": 6.03
+   },
+   "open_l_floor": {
+    "x": -69,
+    "y": 994,
+    "where": "overscan",
+    "depth": 5.81
+   },
+   "disp_shelf_l_top": {
+    "x": 167,
+    "y": 398,
+    "where": "frame",
+    "depth": 8.38
+   },
+   "disp_shelf_r_bot": {
+    "x": 528,
+    "y": 765,
+    "where": "frame",
+    "depth": 8.6
+   },
+   "disp_bench_front": {
+    "x": 304,
+    "y": 658,
+    "where": "frame",
+    "depth": 7.5
+   },
+   "counter_l_top": {
+    "x": -358,
+    "y": 726,
+    "where": "outside",
+    "depth": 4.22
+   },
+   "counter_r_top": {
+    "x": 1686,
+    "y": 692,
+    "where": "frame",
+    "depth": 4.92
+   },
+   "counter_l_floor": {
+    "x": -358,
+    "y": 1185,
+    "where": "outside",
+    "depth": 4.22
+   },
+   "counter_r_floor": {
+    "x": 1686,
+    "y": 1086,
+    "where": "overscan",
+    "depth": 4.92
+   },
+   "low_l_top": {
+    "x": 1193,
+    "y": 814,
+    "where": "frame",
+    "depth": 4.73
+   },
+   "low_r_top": {
+    "x": 1562,
+    "y": 804,
+    "where": "frame",
+    "depth": 4.87
+   },
+   "ph_head_top": {
+    "x": 949,
+    "y": 444,
+    "where": "frame",
+    "depth": 5.25,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      3.63,
+      5.4,
+      1.74
+     ]
+    }
+   },
+   "ph_head_c": {
+    "x": 949,
+    "y": 486,
+    "where": "frame",
+    "depth": 5.25,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      3.63,
+      5.4,
+      1.6
+     ]
+    }
+   },
+   "ph_feet": {
+    "x": 949,
+    "y": 1048,
+    "where": "frame",
+    "depth": 5.25
+   },
+   "pt_head_top": {
+    "x": 654,
+    "y": 449,
+    "where": "frame",
+    "depth": 3.95,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      2.65,
+      5.4,
+      1.72
+     ]
+    }
+   },
+   "pt_head_c": {
+    "x": 654,
+    "y": 505,
+    "where": "frame",
+    "depth": 3.95,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      2.65,
+      5.4,
+      1.54
+     ]
+    }
+   },
+   "pt_feet": {
+    "x": 654,
+    "y": 1234,
+    "where": "outside",
+    "depth": 3.95
+   },
+   "tech_head_top": {
+    "x": 1284,
+    "y": 585,
+    "where": "frame",
+    "depth": 5.59,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      4.81,
+      5.4,
+      1.26
+     ]
+    }
+   },
+   "tech_head_c": {
+    "x": 1284,
+    "y": 625,
+    "where": "frame",
+    "depth": 5.59,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      4.81,
+      5.4,
+      1.12
+     ]
+    }
+   },
+   "tech_seat": {
+    "x": 1284,
+    "y": 855,
+    "where": "frame",
+    "depth": 5.59
+   },
+   "queue_l_top": {
+    "x": 32,
+    "y": 171,
+    "where": "frame",
+    "depth": 5.85
+   },
+   "queue_r_bot": {
+    "x": 359,
+    "y": 307,
+    "where": "frame",
+    "depth": 5.99
+   },
+   "cons_wall_l_floor": {
+    "x": 1686,
+    "y": 1086,
+    "where": "overscan",
+    "depth": 4.92
+   },
+   "cons_wall_l_ceil": {
+    "x": 1686,
+    "y": 73,
+    "where": "frame",
+    "depth": 4.92
+   },
+   "cons_door_l_head": {
+    "x": 1790,
+    "y": 300,
+    "where": "frame",
+    "depth": 4.96
+   },
+   "cons_door_r_floor": {
+    "x": 2125,
+    "y": 1065,
+    "where": "overscan",
+    "depth": 5.1
+   },
+   "cons_wall_r": {
+    "x": 2412,
+    "y": 1051,
+    "where": "outside",
+    "depth": 5.22
+   },
+   "cons_side_far_floor": {
+    "x": 1446,
+    "y": 940,
+    "where": "frame",
+    "depth": 6.5
+   },
+   "ph_head_l": {
+    "x": 914,
+    "y": 486,
+    "where": "frame",
+    "depth": 5.23,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      3.52,
+      5.4,
+      1.6
+     ]
+    }
+   },
+   "ph_head_r": {
+    "x": 984,
+    "y": 486,
+    "where": "frame",
+    "depth": 5.26,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      3.75,
+      5.4,
+      1.6
+     ]
+    }
+   },
+   "pt_head_l": {
+    "x": 606,
+    "y": 505,
+    "where": "frame",
+    "depth": 3.93,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      2.49,
+      5.4,
+      1.54
+     ]
+    }
+   },
+   "pt_head_r": {
+    "x": 701,
+    "y": 505,
+    "where": "frame",
+    "depth": 3.96,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      2.8,
+      5.4,
+      1.54
+     ]
+    }
+   },
+   "tech_head_l": {
+    "x": 1252,
+    "y": 625,
+    "where": "frame",
+    "depth": 5.58,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      4.69,
+      5.4,
+      1.12
+     ]
+    }
+   },
+   "tech_head_r": {
+    "x": 1315,
+    "y": 624,
+    "where": "frame",
+    "depth": 5.6,
+    "behind": {
+     "wall": "pharmacy back wall (sage)",
+     "at": [
+      4.92,
+      5.4,
+      1.12
+     ]
+    }
+   },
+   "counter_mid_top": {
+    "x": 782,
+    "y": 707,
+    "where": "frame",
+    "depth": 4.58
+   },
+   "card_reader": {
+    "x": 1141,
+    "y": 684,
+    "where": "frame",
+    "depth": 4.66
+   },
+   "ceiling_c": {
+    "x": 799,
+    "y": -49,
+    "where": "overscan",
+    "depth": 3.79
+   },
+   "floor_at_patient": {
+    "x": 654,
+    "y": 1234,
+    "where": "outside",
+    "depth": 3.95
+   },
+   "bag_l_bot": {
+    "x": 825,
+    "y": 711,
+    "where": "frame",
+    "depth": 4.5
+   },
+   "bag_r_top": {
+    "x": 907,
+    "y": 608,
+    "where": "frame",
+    "depth": 4.53
+   },
+   "gel_station_top": {
+    "x": 129,
+    "y": 810,
+    "where": "frame",
+    "depth": 2.28
+   },
+   "gel_station_base": {
+    "x": 129,
+    "y": 1781,
+    "where": "outside",
+    "depth": 2.28
+   },
+   "counter_top_at_pharmacist": {
+    "x": 981,
+    "y": 704,
+    "where": "frame",
+    "depth": 4.65
+   },
+   "consult_door_threshold": {
+    "x": 1960,
+    "y": 1073,
+    "where": "overscan",
+    "depth": 5.03
+   }
+  }
+ }
+}

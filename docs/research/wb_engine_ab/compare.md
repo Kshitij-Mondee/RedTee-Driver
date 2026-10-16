@@ -1,0 +1,22 @@
+# Run comparison: wb-prioritise-engine, wb-prioritise-classic
+
+Written by `py tools/run_compare.py`.
+
+| phase | wb-prioritise-engine: min / calls / in M (cached) / out k / USD (lead+sub) / looks / checks | wb-prioritise-classic: min / calls / in M (cached) / out k / USD (lead+sub) / looks / checks |
+| --- | --- | --- |
+| P8 | 120 / 115 / 4.58 (81%) / 70 / 3.37 (0.32+3.04) / 55 / 1 | 122 / 185 / 6.64 (83%) / 123 / 4.86 (0.59+4.26) / 80 / 1 |
+| P9 | 112 / 13 / 0.52 (94%) / 2 / 0.19 (0.15+0.04) / 0 / 5 | 111 / 41 / 1.49 (93%) / 16 / 0.70 (0.44+0.26) / 0 / 8 |
+| P10 | 23 / 48 / 1.09 (89%) / 18 / 0.65 (0.47+0.19) / 0 / 0 | 24 / 41 / 1.01 (80%) / 16 / 0.78 (0.47+0.31) / 0 / 0 |
+| P11 | 6 / 3 / 0.06 (67%) / 1 / 0.07 (0.07+0.00) / 0 / 0 | 6 / 4 / 0.12 (96%) / 1 / 0.05 (0.05+0.00) / 0 / 0 |
+| other (reviewers) | 25 calls, 0.36 | 35 calls, 0.42 |
+| **total** | **127 min wall, 204 calls, 6.2 M in, 90 k out, $4.64, 55 looks, 6 checks** | **128 min wall, 306 calls, 9.3 M in, 156 k out, $6.81, 80 looks, 9 checks** |
+
+Engine time per phase (the three longest tools, minutes summed across parallel callers):
+
+- wb-prioritise-engine: P8 lab_snapshot 16.6, pilot_check 0.5, submit_scene 0.4; P9 check 6.6; P10 critic_review 7.0, submit_review 0.0; P11 render 5.5
+- wb-prioritise-classic: P8 lab_snapshot 23.9, submit_scene 0.7, pilot_check 0.5; P9 check 7.3; P10 critic_review 5.8, submit_review 0.0; P11 render 5.5
+
+Checks (errors, and their kinds):
+
+- wb-prioritise-engine: 20:14 13 {'caption_hold': 13}; 21:43 0 {}; 21:54 0 {}; 22:00 0 {}; 22:05 0 {}
+- wb-prioritise-classic: 20:20 13 {'caption_hold': 13}; 21:43 0 {}; 21:55 0 {}; 22:01 0 {}; 22:07 0 {}

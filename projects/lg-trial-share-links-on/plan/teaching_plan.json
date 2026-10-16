@@ -1,0 +1,186 @@
+{
+  "title": "Who can open your link: sharing files safely",
+  "performance": "given a document they need to share from cloud storage, the viewer can choose the narrowest link setting that works, pick view or edit on purpose, say who a forwarded link would reach, and switch access off when the job is done",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "knows how to press Share and paste a link; has never looked closely at what each link setting allows",
+    "why": "the brief says corporate employees who share documents daily and do not know what each setting does",
+    "motivation": "wants to get a file to colleagues quickly without having to explain a mix-up later",
+    "context": "watching on a laptop at work or in a short learning slot, with captions, first-language or fluent English"
+  },
+  "genre": "mixed",
+  "strategy": {
+    "name": "analogy_led",
+    "rationale": "the brief's through-line is that a link is a key that travels: the familiar key maps cleanly onto the broad link settings, and the knowledge sheet gives the point where the key stops working (named people checks the account, F12)",
+    "signature_move": "Show the key for one setting, say who can walk in, then name the setting; at named people show the door checking the person, not the key."
+  },
+  "misconceptions": [
+    {
+      "belief": "only the people I send the link to can open it",
+      "why_tempting": "I sent it to three people, so it feels like a private message",
+      "refuted_in": "sec3",
+      "source_anchor": "F10, F11"
+    },
+    {
+      "belief": "people in the company just means my team",
+      "why_tempting": "colleagues feel like a small, known group",
+      "refuted_in": "sec1",
+      "source_anchor": "F3, F5"
+    },
+    {
+      "belief": "view only means nobody can take the content",
+      "why_tempting": "the word view sounds like looking, not keeping",
+      "refuted_in": "sec2",
+      "source_anchor": "F9"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine you send a budget link to three teammates. A week later, someone you have never met is reading it."
+    },
+    "promise": "three quick choices before you press Share keep that from happening: who, what they can do, and until when",
+    "bridge_from_prior": "sec1 starts from the Share link the viewer already pastes into emails and chats every week",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can explain who each of the three link settings lets in, from anyone with the link to named people",
+        "bloom": "understand",
+        "concepts": [
+          "link setting",
+          "anyone with the link",
+          "people in the company",
+          "named people"
+        ],
+        "energy": "build",
+        "carrier": "comparison",
+        "recap_after": false
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can explain what a person holding the link can do with view and with edit",
+        "bloom": "understand",
+        "concepts": [
+          "view",
+          "edit",
+          "comment"
+        ],
+        "energy": "rest",
+        "carrier": "worked example",
+        "recap_after": true
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can use the three settings to say who a link forwarded once would reach",
+        "bloom": "apply",
+        "concepts": [
+          "holder",
+          "forward",
+          "account check"
+        ],
+        "energy": "peak",
+        "carrier": "process",
+        "recap_after": true
+      },
+      {
+        "id": "sec4",
+        "goal": "the viewer can follow the before-sharing checks and the steps that end access",
+        "bloom": "apply",
+        "concepts": [
+          "before-sharing checks",
+          "switch off",
+          "review",
+          "expiry"
+        ],
+        "energy": "rest",
+        "carrier": "checklist",
+        "recap_after": false
+      }
+    ],
+    "payoff": "return to the budget link: the same file goes to the same three teammates, named, view only, switched off afterwards, and nobody else ever opens it"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec3",
+      "what": "the budget link followed through each setting and one forward, every step narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "sec3 end",
+      "what": "a quiz: three teammates need to read the budget draft, choose the setting and permission"
+    },
+    {
+      "stage": "independent",
+      "where": "sec4 and payoff",
+      "what": "the viewer runs the checks on their own next file before the narrator replays the ending"
+    }
+  ],
+  "pacing": {
+    "requested_s": 210,
+    "target_duration_s": 210,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "a forwarded link",
+      "named people"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec2",
+        "kind": "recall_prompt",
+        "prompt_sketch": "Keep the three doors in mind: anyone, the company, named people. Next we send the link on."
+      },
+      {
+        "after_section": "sec3",
+        "kind": "quiz",
+        "prompt_sketch": "Three teammates need to read the budget draft, not change it: which setting and which permission?",
+        "answer": "named people, view: the narrowest setting that works, and read-only because they only need to read",
+        "tempting_wrong": "people in the company, because they are all colleagues: but a forward would then open it for anyone signed in to the company, not just the three"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "the next time you press Share on a real file, ask three questions before you paste the link: who could end up holding this, view or edit, and when will I switch it off"
+  ],
+  "persona": {
+    "voice": "a calm colleague who has seen a link travel too far once, and says so lightly",
+    "delivery_notes": "even and unhurried; slower and lower on the forwarded link and on named people; brisk and light on the checklist; a short pause before the quiz question"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the budget link read by a stranger",
+      "objective": "promise: three choices before you press Share",
+      "recall_prior": "bridge: the Share link the viewer pastes every week",
+      "present": "sec1 to sec4 in order: who, what they can do, how it travels, how to end it",
+      "guidance": "signature move on each setting; key picture then the name",
+      "practice": "quiz after sec3; recall_prompt after sec2",
+      "feedback": "quiz answer explains why the company setting is the tempting wrong choice",
+      "assess": "payoff: the viewer picks setting and permission before the narrator does",
+      "transfer": "transfer task: the three questions on the next real file"
+    },
+    "merrill": {
+      "problem_centered": "the budget link and its three teammates are the running problem",
+      "activation": "bridge from the Share link the viewer already uses",
+      "demonstration": "sec1 to sec3 show the key at each setting, then one forward",
+      "application": "the quiz makes the viewer choose setting and permission",
+      "integration": "payoff and transfer task hand the three questions back"
+    },
+    "mayer": {
+      "coherence": "one document, one forward, no side stories",
+      "signalling": "two slowdowns only, on the forward and on named people",
+      "redundancy": "screen shows the picture and a few written words; narration explains",
+      "contiguity": "each ring, permission and tick appears as it is spoken",
+      "segmenting": "four short sections, one idea each",
+      "pre_training": "sec1 names the three settings before the forward is traced"
+    },
+    "arcs": {
+      "attention": "the stranger reading the budget",
+      "relevance": "every employee shares links weekly",
+      "confidence": "the key picture before any decision",
+      "satisfaction": "the opening link is shared safely at the end"
+    },
+    "bloom_path": "understand -> understand -> apply -> apply"
+  },
+  "series": null,
+  "flags": []
+}

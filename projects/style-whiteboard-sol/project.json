@@ -1,0 +1,60 @@
+{
+  "id": "style-whiteboard-sol",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "Running a meeting that ends with decisions",
+  "sources": [],
+  "request": {
+    "audience": "corporate employees",
+    "genre": "teaching",
+    "length_min": 1.75,
+    "style": "whiteboard",
+    "persona": null,
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.708,
+      "calibrated": true
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "presenter",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "A hand-drawn whiteboard explainer for working adults: the trainer's board, one marker colour, simple people and props drawn as the narration needs them; practical how-to steps, not theory.",
+    "mix_as": "ceiling"
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  },
+  "isolated": true,
+  "sliced_from": {
+    "lesson": "style-whiteboard",
+    "beats": [
+      "b01",
+      "b02",
+      "b03",
+      "b04",
+      "b05",
+      "b06",
+      "b07",
+      "b08",
+      "b09",
+      "b10",
+      "b11",
+      "b12",
+      "b13",
+      "b14"
+    ],
+    "t0": 0.0,
+    "t1": 128.592,
+    "clone": true
+  }
+}

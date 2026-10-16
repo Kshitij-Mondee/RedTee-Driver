@@ -1,0 +1,668 @@
+{
+ "scene": "booking_desk",
+ "camera_spec": {
+  "camera": {
+   "x": 8.3,
+   "y": 1.4,
+   "eye": 1.3,
+   "yaw": -48,
+   "hfov": 50,
+   "horizon_pct": 48
+  },
+  "walls": [
+   {
+    "name": "window wall (x 0)",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "far wall (y 7.0)",
+    "axis": "y",
+    "at": 7.0
+   }
+  ],
+  "points": {
+   "corner_floor": [
+    0,
+    7,
+    0
+   ],
+   "corner_ceiling": [
+    0,
+    7,
+    2.9
+   ],
+   "win_jamb_far_sill": [
+    0,
+    6.4,
+    0.9
+   ],
+   "win_jamb_far_head": [
+    0,
+    6.4,
+    2.6
+   ],
+   "win_mull_1_sill": [
+    0,
+    4.9,
+    0.9
+   ],
+   "win_mull_2_sill": [
+    0,
+    3.4,
+    0.9
+   ],
+   "win_mull_2_head": [
+    0,
+    3.4,
+    2.6
+   ],
+   "win_near_sill": [
+    0,
+    1.9,
+    0.9
+   ],
+   "felt_TL": [
+    0.6,
+    7,
+    2.15
+   ],
+   "felt_BL": [
+    0.6,
+    7,
+    0.8
+   ],
+   "felt_TR": [
+    4.6,
+    7,
+    2.15
+   ],
+   "felt_BR": [
+    4.6,
+    7,
+    0.8
+   ],
+   "clock1": [
+    1.0,
+    7,
+    2.45
+   ],
+   "clock2": [
+    1.8,
+    7,
+    2.45
+   ],
+   "clock3": [
+    2.6,
+    7,
+    2.45
+   ],
+   "cab_L_top": [
+    4.9,
+    6.6,
+    0.75
+   ],
+   "cab_R_top": [
+    6.5,
+    6.6,
+    0.75
+   ],
+   "cab_R_floor": [
+    6.5,
+    6.6,
+    0
+   ],
+   "wb_TL": [
+    4.95,
+    7,
+    2.1
+   ],
+   "wb_BR": [
+    5.8,
+    7,
+    1.45
+   ],
+   "far_floor_x6": [
+    6,
+    7,
+    0
+   ],
+   "far_ceiling_x6": [
+    6,
+    7,
+    2.9
+   ],
+   "deskA_near_R": [
+    4.8,
+    3.6,
+    0.73
+   ],
+   "deskA_far_R": [
+    4.8,
+    4.4,
+    0.73
+   ],
+   "deskA_far_R_floor": [
+    4.8,
+    4.4,
+    0
+   ],
+   "deskA_near_R_floor": [
+    4.8,
+    3.6,
+    0
+   ],
+   "deskB_far_L": [
+    1.6,
+    4.4,
+    0.73
+   ],
+   "deskC_near_R": [
+    4.8,
+    2.8,
+    0.73
+   ],
+   "deskC_near_R_floor": [
+    4.8,
+    2.8,
+    0
+   ],
+   "deskC_near_L": [
+    1.6,
+    2.8,
+    0.73
+   ],
+   "felt_screen_end_top": [
+    4.8,
+    3.6,
+    1.2
+   ],
+   "felt_screen_L_top": [
+    1.6,
+    3.6,
+    1.2
+   ],
+   "agent_chair_back_top": [
+    4.0,
+    5.25,
+    1.05
+   ],
+   "agent_head_top": [
+    4.0,
+    5.0,
+    1.32
+   ],
+   "agent_head_c": [
+    4.0,
+    5.0,
+    1.2
+   ],
+   "agent_seat": [
+    4.0,
+    4.95,
+    0.47
+   ],
+   "agent_feet": [
+    4.0,
+    4.6,
+    0
+   ],
+   "lead_head_top": [
+    4.7,
+    5.7,
+    1.75
+   ],
+   "lead_head_c": [
+    4.7,
+    5.7,
+    1.62
+   ],
+   "lead_feet": [
+    4.7,
+    5.7,
+    0
+   ],
+   "headset_hook": [
+    4.75,
+    4.0,
+    0.7
+   ],
+   "deskA_top_mid": [
+    4.4,
+    4.2,
+    0.73
+   ],
+   "mon_A1_TL": [
+    3.45,
+    3.85,
+    1.18
+   ],
+   "mon_A2_BR": [
+    4.55,
+    3.85,
+    0.83
+   ],
+   "window_view_far": [
+    -200,
+    60,
+    0
+   ],
+   "chairC_back_top_R": [
+    4.25,
+    2.2,
+    1.0
+   ],
+   "chairC_back_top_L": [
+    3.75,
+    2.2,
+    1.0
+   ],
+   "chairC_base": [
+    4.0,
+    2.35,
+    0
+   ],
+   "label1_TL": [
+    0.85,
+    7,
+    2.27
+   ],
+   "label1_BR": [
+    1.15,
+    7,
+    2.2
+   ],
+   "label2_TL": [
+    1.6500000000000001,
+    7,
+    2.27
+   ],
+   "label2_BR": [
+    1.95,
+    7,
+    2.2
+   ],
+   "label3_TL": [
+    2.45,
+    7,
+    2.27
+   ],
+   "label3_BR": [
+    2.75,
+    7,
+    2.2
+   ]
+  },
+  "behind": [
+   "agent_head_top",
+   "agent_head_c",
+   "lead_head_top",
+   "lead_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 3246,
+   "along_x": -894,
+   "horizon_y": 518
+  },
+  "points": {
+   "corner_floor": {
+    "x": 671,
+    "y": 788,
+    "where": "frame",
+    "depth": 9.92
+   },
+   "corner_ceiling": {
+    "x": 671,
+    "y": 186,
+    "where": "frame",
+    "depth": 9.92
+   },
+   "win_jamb_far_sill": {
+    "x": 562,
+    "y": 605,
+    "where": "frame",
+    "depth": 9.51
+   },
+   "win_jamb_far_head": {
+    "x": 562,
+    "y": 237,
+    "where": "frame",
+    "depth": 9.51
+   },
+   "win_mull_1_sill": {
+    "x": 246,
+    "y": 615,
+    "where": "frame",
+    "depth": 8.51
+   },
+   "win_mull_2_sill": {
+    "x": -156,
+    "y": 628,
+    "where": "overscan",
+    "depth": 7.51
+   },
+   "win_mull_2_head": {
+    "x": -156,
+    "y": 162,
+    "where": "overscan",
+    "depth": 7.51
+   },
+   "win_near_sill": {
+    "x": -681,
+    "y": 645,
+    "where": "outside",
+    "depth": 6.5
+   },
+   "felt_TL": {
+    "x": 745,
+    "y": 334,
+    "where": "frame",
+    "depth": 9.47
+   },
+   "felt_BL": {
+    "x": 745,
+    "y": 627,
+    "where": "frame",
+    "depth": 9.47
+   },
+   "felt_TR": {
+    "x": 1494,
+    "y": 249,
+    "where": "frame",
+    "depth": 6.5
+   },
+   "felt_BR": {
+    "x": 1494,
+    "y": 677,
+    "where": "frame",
+    "depth": 6.5
+   },
+   "clock1": {
+    "x": 798,
+    "y": 260,
+    "where": "frame",
+    "depth": 9.17
+   },
+   "clock2": {
+    "x": 915,
+    "y": 242,
+    "where": "frame",
+    "depth": 8.58
+   },
+   "clock3": {
+    "x": 1050,
+    "y": 222,
+    "where": "frame",
+    "depth": 7.98
+   },
+   "cab_L_top": {
+    "x": 1505,
+    "y": 707,
+    "where": "frame",
+    "depth": 6.01
+   },
+   "cab_R_top": {
+    "x": 2097,
+    "y": 753,
+    "where": "overscan",
+    "depth": 4.82
+   },
+   "cab_R_floor": {
+    "x": 2097,
+    "y": 1074,
+    "where": "overscan",
+    "depth": 4.82
+   },
+   "wb_TL": {
+    "x": 1594,
+    "y": 254,
+    "where": "frame",
+    "depth": 6.24
+   },
+   "wb_BR": {
+    "x": 1874,
+    "y": 463,
+    "where": "frame",
+    "depth": 5.6
+   },
+   "far_floor_x6": {
+    "x": 1950,
+    "y": 1009,
+    "where": "overscan",
+    "depth": 5.46
+   },
+   "far_ceiling_x6": {
+    "x": 1950,
+    "y": -85,
+    "where": "overscan",
+    "depth": 5.46
+   },
+   "deskA_near_R": {
+    "x": 603,
+    "y": 807,
+    "where": "frame",
+    "depth": 4.07
+   },
+   "deskA_far_R": {
+    "x": 910,
+    "y": 773,
+    "where": "frame",
+    "depth": 4.61
+   },
+   "deskA_far_R_floor": {
+    "x": 910,
+    "y": 1099,
+    "where": "overscan",
+    "depth": 4.61
+   },
+   "deskA_near_R_floor": {
+    "x": 603,
+    "y": 1175,
+    "where": "overscan",
+    "depth": 4.07
+   },
+   "deskB_far_L": {
+    "x": 296,
+    "y": 686,
+    "where": "frame",
+    "depth": 6.99
+   },
+   "deskC_near_R": {
+    "x": 203,
+    "y": 850,
+    "where": "frame",
+    "depth": 3.54
+   },
+   "deskC_near_R_floor": {
+    "x": 203,
+    "y": 1275,
+    "where": "outside",
+    "depth": 3.54
+   },
+   "deskC_near_L": {
+    "x": -238,
+    "y": 717,
+    "where": "overscan",
+    "depth": 5.92
+   },
+   "felt_screen_end_top": {
+    "x": 603,
+    "y": 569,
+    "where": "frame",
+    "depth": 4.07
+   },
+   "felt_screen_L_top": {
+    "x": 51,
+    "y": 550,
+    "where": "frame",
+    "depth": 6.45
+   },
+   "agent_chair_back_top": {
+    "x": 954,
+    "y": 608,
+    "where": "frame",
+    "depth": 5.77
+   },
+   "agent_head_top": {
+    "x": 886,
+    "y": 511,
+    "where": "frame",
+    "depth": 5.6,
+    "behind": {
+     "wall": "far wall (y 7.0)",
+     "at": [
+      1.61,
+      7.0,
+      1.33
+     ]
+    }
+   },
+   "agent_head_c": {
+    "x": 886,
+    "y": 555,
+    "where": "frame",
+    "depth": 5.6,
+    "behind": {
+     "wall": "far wall (y 7.0)",
+     "at": [
+      1.61,
+      7.0,
+      1.14
+     ]
+    }
+   },
+   "agent_seat": {
+    "x": 872,
+    "y": 825,
+    "where": "frame",
+    "depth": 5.57
+   },
+   "agent_feet": {
+    "x": 767,
+    "y": 1020,
+    "where": "frame",
+    "depth": 5.34
+   },
+   "lead_head_top": {
+    "x": 1252,
+    "y": 352,
+    "where": "frame",
+    "depth": 5.55,
+    "behind": {
+     "wall": "far wall (y 7.0)",
+     "at": [
+      3.61,
+      7.0,
+      1.89
+     ]
+    }
+   },
+   "lead_head_c": {
+    "x": 1252,
+    "y": 400,
+    "where": "frame",
+    "depth": 5.55,
+    "behind": {
+     "wall": "far wall (y 7.0)",
+     "at": [
+      3.61,
+      7.0,
+      1.72
+     ]
+    }
+   },
+   "lead_feet": {
+    "x": 1252,
+    "y": 1000,
+    "where": "frame",
+    "depth": 5.55
+   },
+   "headset_hook": {
+    "x": 752,
+    "y": 801,
+    "where": "frame",
+    "depth": 4.38
+   },
+   "deskA_top_mid": {
+    "x": 732,
+    "y": 764,
+    "where": "frame",
+    "depth": 4.77
+   },
+   "mon_A1_TL": {
+    "x": 401,
+    "y": 566,
+    "where": "frame",
+    "depth": 5.24
+   },
+   "mon_A2_BR": {
+    "x": 640,
+    "y": 737,
+    "where": "frame",
+    "depth": 4.43
+   },
+   "window_view_far": {
+    "x": -57,
+    "y": 532,
+    "where": "overscan",
+    "depth": 194.01
+   },
+   "chairC_back_top_R": {
+    "x": -269,
+    "y": 693,
+    "where": "outside",
+    "depth": 3.55
+   },
+   "chairC_back_top_L": {
+    "x": -328,
+    "y": 676,
+    "where": "outside",
+    "depth": 3.92
+   },
+   "chairC_base": {
+    "x": -207,
+    "y": 1217,
+    "where": "outside",
+    "depth": 3.83
+   },
+   "label1_TL": {
+    "x": 777,
+    "y": 303,
+    "where": "frame",
+    "depth": 9.28
+   },
+   "label1_BR": {
+    "x": 819,
+    "y": 314,
+    "where": "frame",
+    "depth": 9.06
+   },
+   "label2_TL": {
+    "x": 892,
+    "y": 289,
+    "where": "frame",
+    "depth": 8.69
+   },
+   "label2_BR": {
+    "x": 939,
+    "y": 300,
+    "where": "frame",
+    "depth": 8.47
+   },
+   "label3_TL": {
+    "x": 1023,
+    "y": 272,
+    "where": "frame",
+    "depth": 8.09
+   },
+   "label3_BR": {
+    "x": 1077,
+    "y": 283,
+    "where": "frame",
+    "depth": 7.87
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+B4 blank beat, red runs on the code before the change (2026-10-08). The current suite file was run with loom/ and
+tools/node/probe.mjs taken from ../Video-Engine-backup-2026-10-08.
+
+check_a_beat_whose_own_elements_are_off_frame_or_absent_is_blank (gemini b15, b16, b30, b31 probe rows):
+  FAIL AssertionError: ([], {'min_text_px': {}, 'off_frame_beats': ['b16', 'b31'], 'off_frame_baselined': [],
+  'measured_beats': 4, 'lines_seen': 9}, [... words cut ..., off frame ...])
+  The old checks saw cut words and off-frame elements, but no blank beat (no blank_beats stat at all).
+
+check_probe_counts_a_beats_own_elements_in_the_frame (built lesson, real browser):
+  FAIL AssertionError: {'beat': 'b1', 't': 3.15, 'n': 0, 'n_own': 0, 'els': 3, ..., 'off': [sat_1 share 1, hub share 1], ...}
+  The old probe has no own_measured / own_in_frame / absent, and the never-visible 'note' is not reported at all.
+
+After: both PASS ("gemini ['b16', 'b31'] blank, b15 and b30 quiet"; "b1 0 of 3 own elements in the frame (off frame,
+off frame, not visible); b2 1 of 1").
+- check_ledger_gives_film_defects_their_own_kinds now also covers 'blank beat' and the blind blank-beat measure: on loom/ledger.py before, both map to 'other' (FAIL); after PASS.
+
+tools/frame_review.py frame timing (found while reviewing the claude fork, 2026-10-08): the tile labelled 90.0 s
+matched the video at 91.0 s (mean difference 0.36, against 164 at 90.0). The fps filter's default rounding emits the
+last input frame of each 2 s slot. check_frame_review_frames_stand_at_their_labels on a 6 s video changing colour
+every 0.5 s: the backup's filter (fps=1/2) gives ['green', 'yellow', 'white']; on the backup tree the test fails with
+AttributeError (no extract()); after the fix (fps=1/2:round=up) PASS ['red', 'black', 'blue'], the video at 0, 2, 4 s.

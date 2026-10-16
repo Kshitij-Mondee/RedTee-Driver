@@ -1,0 +1,145 @@
+{
+  "_note": "Recorded by loom.checks.gates.record_baseline: film-check errors finished lessons already had when the checks were added (2026-10-07). Each is a warning for that lesson only; a new error, or any error in another lesson, still fails. Shrinks as lessons are fixed; never add a lesson that is being made.",
+  "recorded": "2026-10-08",
+  "projects": {
+    "blameless-postmortem": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 4 minutes; set pacing.requested_s to 240 and plan to it"
+      ],
+      "storyboard": [
+        "b01: b01.js kit.peep draws 'engineer' as peep 'woman', skin 0, cloth accent2, but b15 (scenario.dialogue props.right) drew them as peep 'woman', skin 2, cloth accent2: one person, one look (put them in story.cast)",
+        "b15: template 'scenario.dialogue' draws its own people and room on station 'st_meeting', which the bespoke beats b16 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away",
+        "people appear in this lesson (Engineer, Manager, On-call engineer, engineer) but story.cast is empty: list each person once with a fixed look {name, rig or member, skin, cloth}, and draw them by that look in every beat (template person props may say cast: \"<name>\")"
+      ]
+    },
+    "feedback-that-lands": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 6 minutes; set pacing.requested_s to 360 and plan to it"
+      ]
+    },
+    "groupthink-trap": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 2.5 minutes; set pacing.requested_s to 150 and plan to it"
+      ],
+      "narration": [
+        "narration runs 195s but the request asks for about 150s (at most 195s): the script must lose about 23 % of its words"
+      ],
+      "vocab": [
+        "lesson_vocabulary: b20 (bespoke) draws words the lesson never uses ['thu']: \"Thu\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b20 (bespoke) draws words the lesson never uses ['tue']: \"Tue\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact"
+      ]
+    },
+    "mfa-explained": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 2.5 minutes; set pacing.requested_s to 150 and plan to it"
+      ],
+      "script": [
+        "script runs ~196s but the request asks for about 150s (at most 195s); cut about 84 words or whole beats to the requested length"
+      ]
+    },
+    "mfa-story": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 2.5 minutes; set pacing.requested_s to 150 and plan to it"
+      ],
+      "script": [
+        "script runs ~200s but the request asks for about 150s (at most 195s); cut about 95 words or whole beats to the requested length"
+      ],
+      "scenes": [
+        "b01.js: writes words the lesson never uses ['unknown']: \"unknown state  \". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+        "b08.js: writes words the lesson never uses ['file']: \"A file was shared with you\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail"
+      ],
+      "narration": [
+        "narration runs 197s but the request asks for about 150s (at most 195s): the script must lose about 24 % of its words"
+      ],
+      "vocab": [
+        "lesson_vocabulary: b07 (bespoke) draws words the lesson never uses ['lower']: \"99.22% lower\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b08 (bespoke) draws words the lesson never uses ['file']: \"A file was shared with you\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b08 (bespoke) draws words the lesson never uses ['inbox']: \"Inbox\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact"
+      ]
+    },
+    "phishing-report": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 6 minutes; set pacing.requested_s to 360 and plan to it"
+      ],
+      "script": [
+        "script runs ~488s but the request asks for about 360s (at most 468s); cut about 246 words or whole beats to the requested length"
+      ],
+      "storyboard": [
+        "b13: b13.js ctx.character draws security team as rig 'tess', skin 0, top default, but story.cast fixes rig 'pip', skin not fixed, top default"
+      ],
+      "scenes": [
+        "b13: b13.js ctx.character draws security team as rig 'tess', skin 0, top default, but story.cast fixes rig 'pip', skin not fixed, top default",
+        "b19.js: writes words the lesson never uses ['should', 'yourcomp']: \"should be  yourcomp\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+        "b19.js: writes words the lesson never uses ['should', 'yourcompany']: \"should be  yourcompany.example\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail"
+      ],
+      "vocab": [
+        "lesson_vocabulary: b17 (bespoke) draws words the lesson never uses ['drv', 'lnk']: \"lnk.example/shared-drv\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b17 (bespoke) draws words the lesson never uses ['yourcompeny']: \"<it-support@yourcompeny.example>\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b19 (bespoke) draws words the lesson never uses ['should', 'yourcompany']: \"should be  yourcompany.example\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact"
+      ]
+    },
+    "quick-question-cost": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 2.5 minutes; set pacing.requested_s to 150 and plan to it"
+      ],
+      "storyboard": [
+        "b04: shot zoom 1.05 on a template beat (document.page): a template lays out in the whole 1920x1080 frame and the runtime ignores focus and zoom on it (shot_framing_ignored). Drop shot.focus/zoom here; to frame part of a picture, make the beat bespoke and draw inside the frame",
+        "b18: shot zoom 1.04 on a template beat (document.page): a template lays out in the whole 1920x1080 frame and the runtime ignores focus and zoom on it (shot_framing_ignored). Drop shot.focus/zoom here; to frame part of a picture, make the beat bespoke and draw inside the frame"
+      ]
+    },
+    "spacing-sticks": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 4 minutes; set pacing.requested_s to 240 and plan to it"
+      ],
+      "storyboard": [
+        "b08: document.page props.person draws 'maya' as peep 'woman', skin 0, cloth accent, but b02 (hero.character_moment props) drew them as peep 'woman', skin 0, cloth accent4: one person, one look (put them in story.cast)",
+        "people appear in this lesson (Maya) but story.cast is empty: list each person once with a fixed look {name, rig or member, skin, cloth}, and draw them by that look in every beat (template person props may say cast: \"<name>\")"
+      ],
+      "vocab": [
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['bok']: \"BOK\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['dax']: \"DAX\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['fep']: \"FEP\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['kip']: \"KIP\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['lom']: \"LOM\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['riz']: \"RIZ\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['wug']: \"WUG\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b05 (bespoke) draws words the lesson never uses ['zef']: \"ZEF\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact",
+        "lesson_vocabulary: b10 (bespoke) draws words the lesson never uses ['nothing']: \"Recall: nothing\". Every word on screen comes from the script, the storyboard or the knowledge sheet; an invented detail is an invented fact"
+      ]
+    },
+    "stress-signal": {
+      "pedagogy": [
+        "pacing.requested_s is missing: the request asks for 1 minutes; set pacing.requested_s to 60 and plan to it"
+      ]
+    },
+    "bench-20261006-132027-claude-balanced": {
+      "storyboard": [
+        "b16: blueprint 'hero.character_moment' draws its own people and room on station 'desk', which the bespoke beats b20, b30, b31, b34 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away",
+        "b18: blueprint 'hero.character_moment' draws its own people and room on station 'desk', which the bespoke beats b20, b30, b31, b34 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away",
+        "b40: blueprint 'hero.character_moment' draws its own people and room on station 'desk', which the bespoke beats b20, b30, b31, b34 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away"
+      ]
+    },
+    "bench-20261006-151439-budget": {
+      "storyboard": [
+        "b09: template 'scenario.dialogue' draws its own people and room on station 'listening_table', which the bespoke beats b08 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away"
+      ]
+    },
+    "bench-20261006-151439-budget-fix1007": {
+      "storyboard": [
+        "b09: template 'scenario.dialogue' draws its own people and room on station 'listening_table', which the bespoke beats b08 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away"
+      ]
+    },
+    "feedback-relay-v2": {
+      "storyboard": [
+        "b02: template 'scenario.dialogue' draws its own people and room on station 'meeting_room', which the bespoke beats b01, b17 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away",
+        "b06: blueprint 'hero.character_moment' draws its own people and room on station 'replay', which the bespoke beats b07, b08, b09, b10, b11 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away"
+      ]
+    },
+    "feedback-shuttle-s1": {
+      "storyboard": [
+        "b02: blueprint 'hero.character_moment' draws its own people and room on station 'desk', which the bespoke beats b13 draw: the story's world would change look for one beat (one_world). Draw this beat in the station (bespoke, composing the lesson kit), or put it on its own station as a deliberate cut-away"
+      ]
+    }
+  },
+  "_note_r46": "2026-10-10 (R-46): the one_world check (loom/checks/story.py world_checks) was added; the errors finished lessons already had were added here by hand, listed in docs/research/2026-10-10-relay-upgrade.md"
+}

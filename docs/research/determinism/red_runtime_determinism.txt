@@ -1,0 +1,136 @@
+Scale origins and the GSAP ticker race: measurements, red runs and the fix (L-289, L-290, D-134), 2026-10-08
+Runtime before the fix: a copy of runtime/ taken before any change in this work. Chrome: chrome-headless-shell
+152.0.7977.30 (HyperFrames' own). GSAP 3.15.0 (node_modules/gsap/gsap-core.js, CSSPlugin.js).
+
+1. L-270 reproduced
+- lab_places on story-cartoon (WS6 keys stripped), 4 renders, seek to 3.0 s: the only differing memo was on ava's
+  inner group (lm-in < lm-life < lm-mv < ava): "124.00 317.67" or "124.00 318.06"; its getBBox at 3.0 s was the same
+  in every run (35.763, 88.078, 176.508, 458.762).
+
+2. Why the memo varied (the ticker race)
+- gsap-core.js _attemptInitTween: a tween's first render is queued (lazy) when _lastRenderedFrame !== _ticker.frame;
+  _lastRenderedFrame is set in Timeline.updateRoot on every ticker tick. Before the first rAF tick the two differ, so
+  every first render made by the build waits in the queue; after one tick they match and each is written at once.
+- Forced with GSAP's own API before Loom.boot: "ticked" = gsap.ticker.tick(); "unticked" = pause the global timeline,
+  then tick (the frame counter moves, the root renders nothing). lab_places:
+    ticked    rig parts right after boot: rotate(0.00 178 540), ... head rotate(...)   memo 317.67
+    unticked  rig parts right after boot: no transform (their start pose still queued)   memo 318.06
+  L-270's 6 of 10 at 318.06 were the unticked state: the build usually beat the first rAF.
+- The race reached the build's own measurements: ava's walker getBBox at build was x 57.7, w 284.6 (start pose: arms
+  out) or x 108, w 184 (no pose). With her feet at x 120 the figure check said "left side at x -22" (ticked) or nothing
+  (unticked). The frames show the posed figure, so the unticked runs missed a real crop.
+
+3. What the race did NOT do: frames under one seek order
+- GSAP re-measures a fromTo's origin when the playhead first enters it (_initTween rebuilds the from-state tween), so
+  the build-time memo was overwritten before any frame of the reveal: the pop fixture (ava pop, a second rig stamp),
+  forced ticked and unticked, same seek order: identical hashes at 0.5, 1.1, 1.25, 1.45, 1.7, 3.0 s.
+
+4. What did vary: the seek order (the real defect)
+- The origin was measured at whatever time first entered the tween. Fixture tests/suites/runtime_determinism.py
+  _REVEAL (ava pops at 1.0 s while raising her arm to wave; a card stamps at 1.0 s while its line settles 160 px up).
+  Origins on the runtime before the fix (GSAP memo; matrix origin agrees in these orders):
+    frame by frame from 0.5 s   ava (196.72, 460.35)   card (300, 255.91)
+    jump straight to 1.1 s      ava (249.00, 459.87)   card (300, 228.83)
+    3.0 s first, then back      ava (196.37, 443.58)   card (300, 195.00)
+  Frame hashes at 1.1, 1.25 and 1.45 s differed between all three orders. Computed displacement at 1.1 s (origin
+  difference x |1 - scale|): ava 52.3 px x 0.17 = about 9 px; card 60.9 px x 0.13 = about 8 px.
+  Breathing alone (no wave) moved the origin about 0.4 px between orders and still changed the hashes.
+- Where orders differ in production: HyperFrames renders in parallel workers and resumable segments (loom/render.py
+  --workers, --resume), each worker's first seek lands at its segment start; the trailer seeks the lesson by its edit
+  list (out of order); the frame review and the tests seek out of order.
+
+5. Red runs of the new tests on the runtime before the fix (LOOM_TEST_RUNTIME=<copy>)
+  FAIL  primitive_runtime_a_scaled_reveal_draws_the_same_frames_whatever_was_seeked_first: the same frame differs
+        with what was seeked before it: 1.1 s: frame by frame f81873dc (origins [196.72, 460.35], [300, 255.91]),
+        jump in d31a3496 (origins [249, 459.87], [300, 228.83]), later first 8e7d68da (origins [196.37, 443.58],
+        [300, 195]); 1.25 s and 1.45 s likewise
+  FAIL  primitive_runtime_the_build_does_not_depend_on_whether_gsap_ticked_before_boot: the figure check depends on
+        the ticker: ticked ['b1: character "ava" (ava) is cut off at the frame: left side at x -22 in station space
+        (move its feet in, or lower its scale)'], unticked []
+
+6. The fix and which half closes which test
+- boot.js: the master timeline has defaults { lazy: false } (trailer.js: its own timeline too).
+- core.js: Loom.tween records the start of every tween with transformOrigin, svgOrigin, scale, rotation or skew;
+  Loom.settleOrigins(tl) seeks to each start + 0.1 ms in time order, then to -1 s and 0 s. boot.js calls it after the
+  clocks (element lives decide what is drawn) and before the shader layers (no GL draws in the pass).
+- Half fixes (each a copy of the fixed runtime with one half removed):
+    lazy: false only     seek-order test FAIL (same origins as before)   ticker test PASS
+    origin pass only     seek-order test PASS, drawn about ava (180.00, 461.13): the queued start pose leaked into
+                         the pass                                          ticker test FAIL
+    both                 PASS, drawn about ava (180.99, 460.46), card (300, 274.94); the drawings' centres at 1.0 s
+                         on a fresh page: (180.99, 460.46), (300, 275)
+- GSAP's data-svg-origin is written only when GSAP measures; after a seek back it names the LAST tween measured on
+  that element (after the fix: ava's memo at 1.1 s was her exit's origin while the frame used the pop's). The test
+  reads the origin from the matrix: a scale s about (ox, oy) is matrix(s 0 0 s ox(1-s) oy(1-s)).
+
+7. The golden byte test (tests/suites/style_system.py) and the pass
+- First version of the pass ended with seek(0) from the last start: corporate-clean lab_places then drew the office
+  place at opacity 0 at 3.0 s (it is hidden and shown by two Loom.set at 0 s). Arriving at an instant from a later time
+  GSAP applies that instant's zero-duration tweens in reverse order and does not re-apply them going forward. The same
+  on the runtime WITHOUT this fix, seeking 10, 0, 3 s: office opacity 0; seeking 10, 0.5, 3 s: 1 (L-290, OPEN).
+  The pass now ends at -1 s then 0 s (arriving from before, as a fresh page does): lab_places byte-identical again.
+- lab_tpl_definition then differed only by GSAP's inline "transform-origin: 0px 0px" on two inner groups whose exit
+  the pass had initialised (GSAP writes it with every SVG origin; it is the SVG default). Screenshots at 3.0 s of all
+  11 golden pairs: identical with and without the fix (11 of 11 hashes equal).
+- The golden now leaves out that inline write as well as the memo, on both sides: re-recorded with record_golden from
+  Video-Engine-backup-2026-10-08/runtime plus physics.js, brush.js and orbs.js (namespaces added after WS6; no lab
+  scene here calls them). That composed runtime first reproduced all 11 earlier hashes with the memo-only
+  normalisation. Errors and element counts unchanged in all 11 pairs. The earlier golden is kept below by its bytes:
+    corporate-clean lab_places 153650 -> 153434, lab_tpl_definition 4758 -> 4596, lab_story_set 13815 -> 13626,
+    cinematic-noir 131709 -> 131493, 4567 -> 4405, 11839 -> 11650, glow-flat 166275 -> 166059, 5297 -> 5135,
+    16241 -> 16052, story-cartoon lab_places 164820 -> 164604, lab_tpl_definition 5174 -> 5012.
+
+8. The question as asked: N natural renders (nothing forced), mid-reveal frame hashes at 1.1, 1.25, 1.45 s
+    runtime before   frame by frame   10 of 10 renders: f81873dc 9e64a330 7958d3a6
+    runtime before   jump in          10 of 10 renders: d31a3496 dc474e76 35f6d19b   (differs from the line above)
+    fixed runtime    frame by frame   10 of 10 renders: dedfb00a 9fbb3d73 8ff7f762
+    fixed runtime    jump in          10 of 10 renders: dedfb00a 9fbb3d73 8ff7f762
+  Repeating one seek order never changed a frame (the ticker race moved only what the build measured); changing the
+  order did, and no longer does.
+
+9. A real lesson: the claude-balanced fork (bench-20261006-151439-claude-balanced-fix1007, 474 s, 608 tweens), a
+   scratch copy of its build with the runtime swapped (the project's build untouched); 30 of its 31 pop and stamp
+   reveals, 0.1 s in; the hash of every animated group's transform (no screenshots)
+    boot                                   before 696 ms (1025 ms under load)   after 2157 ms (1956 ms), 224 origin starts
+    errors in Loom.report                  17 and 17 (the build's own)
+    forward path vs a fresh jump per time  before 16 of 30 differ                after 0 of 30
+    forward vs backward (latest first)     before 30 of 30 differ                after 1 of 30
+  The one left: talk_after_marker at 450.58 s, reached from 458.2 then 455.8 s, its entrance and exit both running:
+  opacity 0.7914 against 0.8751 on BOTH runtimes; on the fixed runtime its matrix too (translate 8.53, 1.42 against
+  4.13, -3.52; on the old one the matrix agreed and four other groups' memos did not). GSAP renders a backward seek in
+  reverse order (L-302, OPEN; L-290 is the same for sets).
+
+10. Not this change: tests/suites/primitives_libraries.py primitive_brush_paints_the_same_marks_and_reveals_them_in_order
+  fails with HYPERFRAMES_BROWSER_PATH set ("two loads painted different pixels"): lab_brush's layer index 2 (the
+  watercolour fill, fill + fillBleed) paints a different image on every load, on the fixed runtime, on the runtime
+  without boot.js and core.js's changes, and on each half fix. Flagged as its own task. The full suite otherwise:
+  252 passed, 1 failed (context_check's test count in STATE.md, since set), 26 skipped (cairo, OpenCV, and 19 browser
+  tests that read HYPERFRAMES_BROWSER_PATH only: run again with it set, 16 of 17 passed, the brush one as above).
+
+11. 2026-10-15: R-32's open points checked, backward seeks fixed (L-449, D-172)
+- Backward seeks, the fixture _BACK in tests/suites/runtime_determinism.py, each frame reached fresh and backward.
+  Without Loom.forwardOnly (today's runtime, the boot call removed):
+    3.0 s after 5, 0      sets0 opacity 0 (fresh 1)          3.0 s after 5, 2   sets2 opacity 0 (fresh 1)
+    1.75 s after 3        overlap 0.75 (fresh 0.8); origins matrix(0.825,0,0,0.825,35,71.75) (fresh 0.75, 50, 102.5)
+    1.75 s after 5, 1.6   markup: the 2 s set pair still applied (fresh: never applied)
+  With it: all four equal (the world's whole markup and each element's computed opacity and transform). Kept apart:
+  GSAP reverts a set crossed backward to the computed value it recorded (inline opacity 1, same picture); and with a
+  screenshot after every seek, identical markup came out 3 px apart (max 11 of 765), 0 px without the screenshots in
+  between: a raster artifact, so the test compares the page.
+- The claude fork (today's runtime with and without the three fixes; a fresh copy of its build): 30 reveals, forward
+  against backward arrival: 30 of 30 differ without, 0 of 30 with. Boot 630 ms without, 1369 ms with.
+- HyperFrames renders of the scaled-reveal fixture, PNG sequence (lossless), 120 frames:
+    1 against 8 workers, without the fixes   22 of 120 frames differ (the card, max 12 of 765)
+    1 against 8 workers, with them            3 of 120 (frames 46, 48, 105: at most 9 px, max 4 of 765), reproduced
+                                             exactly on a second pair of renders; the markup at those frames
+                                             (workers start at 45 and 105) is identical either way: raster
+  (HF_SEGMENT_FRAMES does not split a PNG-sequence render; worker count does.)
+- HyperFrames renders of the fork's trailer (trailer.build on a scratch copy, the project untouched), MP4 at CRF 0,
+  ffmpeg framemd5:
+    default plan (b01, b07, b18, b22, b47; every cut forward)   1 vs 8 workers: 1 of 752 differ without, 0 of 752 with
+    --beats b47,b22,b07,b01 (every cut backward)                26 of 683 without (43, 172 to 194, 490), 23 with
+                                                               (172 to 194: the title card's bar, 48 px, max 27); the
+                                                               trailer's markup at frame 180 and the lesson time
+                                                               (186.848 s) are identical sequential and from a worker
+                                                               starting at 171: raster, present before the fix
+- The brush fill (section 10) was fixed by its own run (Run 31, R-33); its test passes.

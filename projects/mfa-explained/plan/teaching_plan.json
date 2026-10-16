@@ -1,0 +1,121 @@
+{
+  "title": "Nothing to hand over: MFA and passkeys",
+  "performance": "On their own work and personal accounts, the viewer turns on a second factor where it is offered, picks a passkey when the choice appears, and refuses any sign-in prompt or code request they did not start",
+  "audience": {
+    "level": "beginner",
+    "assumed_prior": "types passwords every day; has met a texted code or a phone prompt at sign-in; has no picture of what travels between their screen and the site",
+    "why": "the brief's audience is all employees, non-technical; the knowledge sheet has to define factor, MFA and passkey from scratch",
+    "motivation": "required security awareness viewing; mild fatigue with security chores, real interest in not losing an account",
+    "context": "desk or phone, often with sound, mixed first languages; the picture must carry the mechanism without the words"
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "contrast_led",
+    "rationale": "the knowledge sheet defines each method by how it differs from the last: a password works for anyone (F2), a second factor needs what the thief lacks (F4), a typed code can be relayed (F9), a passkey answer only works for the asking site (F14). The difference IS the content",
+    "signature_move": "run the same login exchange again, change exactly one thing, show where the thief's attempt now succeeds or bounces, THEN name what changed"
+  },
+  "misconceptions": [
+    {"belief": "once MFA is on, a phishing page cannot get into my account",
+     "why_tempting": "the code comes to my own phone, so it feels like a lock only I hold",
+     "refuted_in": "sec2",
+     "source_anchor": "knowledge F9; not_claimed 'MFA stops all phishing'"},
+    {"belief": "texted codes can be phished, so they are not worth turning on",
+     "why_tempting": "the relay run in sec2 shows a code being stolen",
+     "refuted_in": "sec3",
+     "source_anchor": "knowledge F11, F6; not_claimed 'texted codes are useless'"},
+    {"belief": "an unexpected sign-in prompt is a glitch, and tapping Accept makes it go away",
+     "why_tempting": "prompts are routine, and repeated ones are annoying",
+     "refuted_in": "sec3",
+     "source_anchor": "knowledge F10, F18"}
+  ],
+  "arc": {
+    "hook": {"kind": "scenario", "sketch": "You type your password, and the site asks for a code from your phone. What did that second step just stop, and what can still get through?"},
+    "promise": "by the end you can tell which sign-ins a thief can borrow, and which leave them nothing to hand over",
+    "bridge_from_prior": "sec1 opens on the sign-in the viewer did this morning: a password typed, a code arriving",
+    "sections": [
+      {"id": "sec1", "goal": "the viewer can explain why a stolen password works for anyone and why a second factor stops that replay",
+       "bloom": "understand",
+       "concepts": ["password as something you know (F2)", "factor: know, have, are (F1)", "MFA (F1, F4)", "risk cut in Microsoft's study (F5)"],
+       "energy": "build",
+       "carrier": "diagram: one login exchange (device, line, site) run twice; the copied password travels in from a second device and opens the site, then the same replay bounces because the factor lives in the phone; ends on a meter that fills to a little over 99 percent, labelled with who measured it",
+       "recap_after": false},
+      {"id": "sec2", "goal": "the viewer can explain why a code typed into a fake page can be relayed while a passkey's answer cannot",
+       "bloom": "understand",
+       "concepts": ["fake login page in the middle (F9)", "relay while the code is still valid (F9)", "passkey: key kept on the device, signs a fresh challenge (F12, F13)", "the answer carries the asking page's address (F14)", "nothing to type, nothing to pass on (F15)"],
+       "energy": "peak",
+       "carrier": "comparison under a magnifier: the same exchange with a look-alike box spliced into the line, password and code passing straight through it; then the passkey run, where the signed answer is stamped with the fake's address and is refused at the real site",
+       "recap_after": true},
+      {"id": "sec3", "goal": "the viewer can apply three rules to their own sign-ins: turn a second factor on, pick a passkey when offered, refuse a prompt they did not start",
+       "bloom": "apply",
+       "concepts": ["any MFA beats none; text weakest, passkey strongest (F11, F16)", "the targeted-attack ladder: text code, phone prompt, security keys (F6, F7, F8)", "push bombing and unrequested codes (F10, F18)", "phishing-resistant is not unbreakable (F17)"],
+       "energy": "rest",
+       "carrier": "a short ladder of three rungs for the targeted-attack figures, then the opening sign-in screen returning with an unexpected prompt the viewer must decide on",
+       "recap_after": true}
+    ],
+    "payoff": "Back to the opening sign-in, now readable: the password could be copied, the code relayed, the passkey answer only fits the real site. The viewer refuses a prompt they did not start."
+  },
+  "practice_ladder": [
+    {"stage": "worked", "where": "sec1", "what": "runs one and two narrated end to end: copied password opens the site; with a phone factor the replay bounces"},
+    {"stage": "faded", "where": "end of sec1 into sec2", "what": "run three is set up (MFA on, a look-alike page) and the viewer predicts the outcome before it plays"},
+    {"stage": "independent", "where": "sec3 and payoff", "what": "an unexpected prompt appears on the opening screen; the viewer decides before the narrator says refuse"}
+  ],
+  "pacing": {
+    "target_duration_s": 150,
+    "words_per_minute": 140,
+    "slowdown_at": ["the passkey answer carries the address of the page that asked"],
+    "recall_moments": [
+      {"after_section": "sec1", "kind": "pause_predict",
+       "prompt_sketch": "MFA is on. You type your password and your code into a page that only looks real. Does the thief get in?",
+       "answer": "yes: the fake page passes both to the real site while the code is still valid (F9)"},
+      {"after_section": "sec2", "kind": "recall_prompt",
+       "prompt_sketch": "Remember run one: a copied password works from anywhere. A passkey answer is the opposite: it works in one place only."},
+      {"after_section": "sec3", "kind": "recall_prompt",
+       "prompt_sketch": "A prompt you did not start is the relay from run three, asking you to finish it."}
+    ]
+  },
+  "transfer_tasks": [
+    "This week, open the security settings of one work and one personal account and turn on the strongest second factor offered, a passkey if it is there",
+    "The next time a sign-in prompt or a code arrives that you did not ask for, refuse it and do not read the code to anyone"
+  ],
+  "persona": {
+    "voice": "the analyst: calm, exact, a little dry",
+    "delivery_notes": "finding first on each run, then the reason; a beat of silence before each run's outcome; slower on the address stamp; plain and unhurried on the three rules; never alarmed"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the everyday password-then-code moment and its open question",
+      "objective": "promise: tell which sign-ins a thief can borrow",
+      "recall_prior": "sec1 opens on this morning's sign-in",
+      "present": "sec1 to sec3 as four runs of one exchange",
+      "guidance": "signature move: same exchange, one change, then name it",
+      "practice": "pause_predict after sec1; the unexpected-prompt decision in sec3",
+      "feedback": "sec2 reveals the relay and says why the code felt safe",
+      "assess": "payoff: the viewer decides on the unexpected prompt before the narrator",
+      "transfer": "transfer_tasks: settings this week; refuse what you did not start"
+    },
+    "merrill": {
+      "problem_centered": "one sign-in, attacked four ways, runs through the whole lesson",
+      "activation": "bridge from the viewer's own daily password and code",
+      "demonstration": "each run shows the thief's attempt succeeding or bouncing before it is named",
+      "application": "predict run three; decide on the unexpected prompt",
+      "integration": "transfer tasks on the viewer's own accounts"
+    },
+    "mayer": {
+      "coherence": "no thief character, no breach stories; only the exchange and what travels on it",
+      "signalling": "one slowdown, on the address stamp; one saturated accent on whatever the voice names",
+      "redundancy": "screen carries labels and the two figures only; narration explains",
+      "contiguity": "each label sits on the token or box it names, appearing as it is spoken",
+      "segmenting": "four runs, one change each",
+      "pre_training": "sec1 names factor and MFA before the relay runs"
+    },
+    "arcs": {
+      "attention": "the open question about a step everyone already does",
+      "relevance": "their own accounts, work and personal",
+      "confidence": "two worked runs before any prediction",
+      "satisfaction": "the opening screen becomes readable and the viewer makes the call"
+    },
+    "bloom_path": "understand -> understand -> apply"
+  },
+  "series": null,
+  "flags": []
+}

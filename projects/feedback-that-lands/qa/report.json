@@ -1,0 +1,362 @@
+{
+  "ok": false,
+  "errors": [
+    "b04: text too small to read on screen at 37.3s: \"Update\" 2.5px (< 18 px at 1080p, after camera and scale)",
+    "b05: text too small to read on screen at 47.0s: \"Update\" 2.5px (< 18 px at 1080p, after camera and scale)",
+    "b06: text too small to read on screen at 57.3s: \"Update\" 7.4px (< 18 px at 1080p, after camera and scale)",
+    "b34: words cut by the frame edge at 313.9s: \"Situation\" at [1630, -37, 1779, 4] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+    "b36: words cut by the frame edge at 331.9s: \"Behaviour\" at [1766, 209, 1940, 251], \"Ask, then agree\" at [1766, 359, 2034, 401], \"If a date isn't confirmed,\" at [551, 1066, 939, 1119] (move or shrink the element, or declare a deliberate bleed with data-bleed)"
+  ],
+  "warnings": [
+    "compose: b04: camera pan between different worlds (st_host -> st_office) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b10: camera pan between different worlds (st_why -> st_corridor) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b11: camera pan between different worlds (st_corridor -> st_sum) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b22: camera pan between different worlds (st_room_a -> st_draft) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b26: camera pan between different worlds (st_draft -> st_room_b) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b29: camera pan between different worlds (st_room_b -> st_check) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b32: camera pan between different worlds (st_check -> st_room_c) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b42: camera pan between different worlds (st_practice -> st_well) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b45: camera pan between different worlds (st_well -> st_payoff) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b46: camera pan between different worlds (st_payoff -> st_host_end) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "b07: 6.7s static hold from 58.8s",
+    "b08: 5.2s static hold from 72.0s",
+    "b17: 6.4s static hold from 154.9s",
+    "b22: 5.5s static hold from 200.3s",
+    "b23: 6.2s static hold from 210.2s",
+    "b04: 9 chunks on screen (calendar, maya, monitor, report, tag_maya, tag_maya.0, tag_update, tag_update.0, update); the budget is ~5-6",
+    "b19: 11 chunks on screen (card, clock, maya, report, tag_afternoon, tag_afternoon.0, tag_room, tag_room.0, tag_work, tag_work.0, update); the budget is ~5-6",
+    "b26: 11 chunks on screen (card, daytile, maya, reply, reply_q, report, tag_day, tag_day.0, tag_reply, tag_reply.0, update); the budget is ~5-6",
+    "b45: 9 chunks on screen (frame_left, frame_right, maya, tag_afternoon, tag_afternoon.0, tag_late, tag_late.0, tag_thursday, tag_thursday.0); the budget is ~5-6",
+    "b06: \"What does she mean?\" is readable for 0.67s but 4 word(s) need 1.20s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b11: \"About them\" is readable for 0.74s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b26: \"Another day\" is readable for 0.56s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b26: \"Another day\" is readable for 0.56s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "b42: \"Then they know what to keep doing\" is readable for 1.92s but 7 word(s) need 2.10s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 0.702 is worse than the worst baseline lesson (0.4): it grew",
+    "b08: small text on screen at 80.6s: \"HERE IS WHY\" 25.8px (< 26 px)",
+    "b09: small text on screen at 89.5s: \"NOT EVERYONE\" 25.4px (< 26 px)",
+    "b16: small text on screen at 151.1s: \"THIRD, THE IMPACT\" 25.8px (< 26 px)",
+    "b17: small text on screen at 161.0s: \"FOURTH\" 25.4px (< 26 px)",
+    "b18: small text on screen at 169.7s: \"ONE THING\" 25.4px (< 26 px)",
+    "b23: small text on screen at 216.1s: \"IT FEELS PRECISE\" 25.4px (< 26 px)",
+    "b29: small text on screen at 265.6s: \"DECIDE BEFORE SHE DOES\" 25.4px (< 26 px)",
+    "b31: small text on screen at 288.2s: \"BE MORE CAREFUL\" 25.4px (< 26 px)"
+  ],
+  "stats": {
+    "reading_floor_short": 5,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 6.72
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 5.18
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 2.78
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.21
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.57
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 4.7
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 3.98
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.93
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 3.8
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 2.94
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 6.37
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 2.22
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b22",
+        "max_static_s": 5.52
+      },
+      {
+        "beat": "b23",
+        "max_static_s": 6.16
+      },
+      {
+        "beat": "b24",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b25",
+        "max_static_s": 3.74
+      },
+      {
+        "beat": "b26",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b27",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b28",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b29",
+        "max_static_s": 3.57
+      },
+      {
+        "beat": "b30",
+        "max_static_s": 4.52
+      },
+      {
+        "beat": "b31",
+        "max_static_s": 3.41
+      },
+      {
+        "beat": "b32",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b33",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b34",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b35",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b36",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b37",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b38",
+        "max_static_s": 0.58
+      },
+      {
+        "beat": "b39",
+        "max_static_s": 2.97
+      },
+      {
+        "beat": "b40",
+        "max_static_s": 2.82
+      },
+      {
+        "beat": "b41",
+        "max_static_s": 0.23
+      },
+      {
+        "beat": "b42",
+        "max_static_s": 2.64
+      },
+      {
+        "beat": "b43",
+        "max_static_s": 2.03
+      },
+      {
+        "beat": "b44",
+        "max_static_s": 1.16
+      },
+      {
+        "beat": "b45",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b46",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b47",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.111,
+      "template": 0.355,
+      "motion": 0.351,
+      "hybrid": 0.183,
+      "motion_effective": 0.442
+    },
+    "elements": {
+      "b01": 3,
+      "b02": 3,
+      "b03": 3,
+      "b04": 13,
+      "b05": 4,
+      "b06": 8,
+      "b07": 4,
+      "b08": 3,
+      "b09": 4,
+      "b10": 9,
+      "b11": 5,
+      "b12": 2,
+      "b13": 3,
+      "b14": 5,
+      "b15": 5,
+      "b16": 6,
+      "b17": 5,
+      "b18": 4,
+      "b19": 12,
+      "b20": 3,
+      "b21": 2,
+      "b22": 2,
+      "b23": 4,
+      "b24": 4,
+      "b25": 4,
+      "b26": 13,
+      "b27": 3,
+      "b28": 1,
+      "b29": 7,
+      "b30": 6,
+      "b31": 5,
+      "b32": 7,
+      "b33": 2,
+      "b34": 4,
+      "b35": 3,
+      "b36": 3,
+      "b37": 14,
+      "b38": 1,
+      "b39": 1,
+      "b40": 1,
+      "b41": 2,
+      "b42": 3,
+      "b43": 3,
+      "b44": 4,
+      "b45": 15,
+      "b46": 3,
+      "b47": 3
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.207,
+      "wallpaper_share": 0.0,
+      "template_share": 0.404,
+      "classic_share": 0.141,
+      "one_radius_share": 0.702,
+      "still_share": 0.478,
+      "labels_over_objects_share": 0.043,
+      "one_world_share": 0.348,
+      "lines_per_s": 5.58
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 92.6,
+        "b02": 73,
+        "b03": 28.7,
+        "b04": 2.5,
+        "b05": 2.5,
+        "b06": 7.4,
+        "b07": 28.7,
+        "b08": 25.8,
+        "b09": 25.4,
+        "b10": 35.2,
+        "b11": 41.8,
+        "b12": 73,
+        "b13": 41.8,
+        "b14": 26.7,
+        "b15": 27,
+        "b16": 25.8,
+        "b17": 25.4,
+        "b18": 25.4,
+        "b19": 27.9,
+        "b20": 27.9,
+        "b21": 27.9,
+        "b22": 73,
+        "b23": 25.4,
+        "b24": 41.8,
+        "b25": 36.1,
+        "b26": 27.9,
+        "b27": 27.9,
+        "b28": 27.9,
+        "b29": 25.4,
+        "b30": 36.1,
+        "b31": 25.4,
+        "b32": 29.5,
+        "b33": 29.5,
+        "b34": 33.6,
+        "b35": 27,
+        "b36": 40.2,
+        "b37": 68.9,
+        "b38": 69.7,
+        "b39": 62.3,
+        "b40": 62.3,
+        "b41": 62.3,
+        "b42": 36.1,
+        "b43": 41.8,
+        "b44": 36.1,
+        "b45": 29.5,
+        "b46": 28.7,
+        "b47": 28.7
+      }
+    }
+  },
+  "sheets": []
+}

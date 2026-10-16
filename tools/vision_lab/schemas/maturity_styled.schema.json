@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "maturity_styled",
+  "description": "One frame: its style first, then how professional and clean it is within that style, on one bar for every style (D-107, docs/research/golden/RATING_INTENT.md).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "what_is_shown",
+    "style",
+    "score",
+    "fails",
+    "to_reach_top",
+    "drivers",
+    "why",
+    "confidence"
+  ],
+  "properties": {
+    "what_is_shown": {
+      "type": "string"
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "corporate_flat",
+        "editorial_ui",
+        "infographic_diagram",
+        "cinematic_illustration",
+        "cartoon_character",
+        "isometric_3d",
+        "whiteboard_sketch",
+        "live_action_photo",
+        "mixed_other"
+      ]
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "1 not usable (slide-like, template, amateur); 2 weak; 3 acceptable but plain; 4 professional for its style; 5 excellent, top of its style."
+    },
+    "fails": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "string",
+        "enum": [
+          "slide_like",
+          "template_stock",
+          "default_shapes",
+          "clutter",
+          "empty_dead_space",
+          "inconsistent_style",
+          "low_finish",
+          "illegible_text",
+          "juvenile_tone",
+          "placeholder",
+          "none"
+        ]
+      }
+    },
+    "to_reach_top": {
+      "type": "string"
+    },
+    "drivers": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "enum": [
+          "drawing",
+          "people",
+          "colour",
+          "type",
+          "layout",
+          "density",
+          "slides",
+          "finish",
+          "light",
+          "depth",
+          "texture",
+          "composition"
+        ]
+      }
+    },
+    "why": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

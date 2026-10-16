@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "judge_film",
+  "description": "The whole-film verdict on a Loom render, written from the segment reviews and a low-frame-rate look at the whole film.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["film_id", "verdict", "summary", "dimension_means", "worst_segments", "systemic_issues", "strengths", "closest_reference_family", "gap_to_reference", "next_fixes", "confidence"],
+  "properties": {
+    "film_id": {"type": "string"},
+    "verdict": {"type": "string", "enum": ["ship", "fix", "rebuild"]},
+    "summary": {"type": "string"},
+    "dimension_means": {"type": "object", "additionalProperties": {"type": "number"}},
+    "worst_segments": {"type": "array", "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["segment_id", "why"], "properties": {"segment_id": {"type": "string"}, "why": {"type": "string"}}}},
+    "systemic_issues": {"type": "array", "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["issue", "segments", "fix_route", "severity"], "properties": {"issue": {"type": "string"}, "segments": {"type": "array", "items": {"type": "string"}}, "fix_route": {"type": "string", "enum": ["prop", "scene", "storyboard", "engine", "pack", "asset", "unknown"]}, "severity": {"type": "string", "enum": ["blocker", "major", "minor"]}}}},
+    "strengths": {"type": "array", "maxItems": 6, "items": {"type": "string"}},
+    "closest_reference_family": {"type": "string"},
+    "gap_to_reference": {"type": "array", "maxItems": 8, "items": {"type": "string"}},
+    "next_fixes": {"type": "array", "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["fix", "expected_effect", "segments"], "properties": {"fix": {"type": "string"}, "expected_effect": {"type": "string"}, "segments": {"type": "array", "items": {"type": "string"}}}}},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+  }
+}

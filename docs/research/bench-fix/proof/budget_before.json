@@ -1,0 +1,131 @@
+{
+ "id": "bench-20261006-151439-budget",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine-sandbox\\before\\bench-20261006-151439-budget",
+ "beats": 26,
+ "check_errors": 80,
+ "check_warnings": 48,
+ "blurred": {
+  "beats": [
+   "b22"
+  ],
+  "of": 26
+ },
+ "foreign": {
+  "beats": [
+   "b01",
+   "b02",
+   "b03",
+   "b12",
+   "b13"
+  ],
+  "of": 26,
+  "measured": 25
+ },
+ "off_frame": {
+  "errors": 5,
+  "first": [
+   "b14: words cut by the frame edge at 205.4s: \"Workflow\" at [-90, 102, 266, 204], \"adjustments\" at [-131, 202, 306, 304] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b17: words cut by the frame edge at 248.5s: \"Which response addresses the missed mile\" at [-431, -14, 1613, 125], \"You need to be more\" at [-228, 382, 407, 471], \"committed.\" at [-228, 471, 118, 560] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b23: words cut by the frame edge at 336.9s: \"Onboarding schedule\" at [-347, 498, 237, 578] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b14: off frame at 205.4s: badge 'early_flag' 100% outside the frame (1 word(s) wholly off); \"Anchor\" wholly outside the frame at [-1334, 202, -1148, 276] (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+   "b17: off frame at 248.5s: text 'kicker' 100% outside the frame (1 word(s) wholly off); text 'question' 26% outside the frame; card 'option_A' 42% outside the frame (1 word(s) wholly off) (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b12",
+   "b15"
+  ],
+  "of": 14,
+  "worst": 2.77
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 0
+ },
+ "empty": {
+  "errors": 0,
+  "first": []
+ },
+ "kinds": {
+  "runtime held_missing": 34,
+  "runtime text_overflow": 16,
+  "runtime icon_missing": 5,
+  "hf layout content_overlap": 5,
+  "foreign_pixels": 5,
+  "runtime text_outside_element": 3,
+  "words_cut": 3,
+  "runtime unknown_token": 2,
+  "off_frame": 2,
+  "runtime tight_inset": 1,
+  "nothing developing": 1,
+  "hf layout text_box_overflow": 1,
+  "other": 1,
+  "blurred_beat": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 2,
+   "kinds": {
+    "length": 2
+   },
+   "first": [
+    "pacing.target_duration_s is 360s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~398s but the request asks for about 120s (at most 156s); cut about 553 words or whole beats to the requested length",
+    "26 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 21,
+   "kinds": {
+    "keep missing": 9,
+    "cast": 8,
+    "avatar props": 2,
+    "focus on frame layout": 1,
+    "template cap": 1
+   },
+   "first": [
+    "b01: avatar props ['case_labels', 'layout'] are not presenter props (avatar_props_unknown; it reads: card, cast, cloth, frame_fill, frame_r, kicker, member, name, role_label, say_title, side, talk_emotion, title, title_cue). The presenter never draws them: put that content in a template beat",
+    "b26: avatar props ['labels', 'layout', 'rule'] are not presenter props (avatar_props_unknown; it reads: card, cast, cloth, frame_fill, frame_r, kicker, member, name, role_label, say_title, side, talk_emotion, title, title_cue). The presenter never draws them: put that content in a template beat",
+    "b17: shot focus [720, 170, 1000, 760] on a template beat (quiz.question): a template lays out in the whole 1920x1080 frame and the runtime ignores focus and zoom on it (shot_framing_ignored). Drop shot.focus/zoom here; to frame part of a picture, make the beat bespoke and draw inside the frame",
+    "b03: keep names ['phrasing_board', 'phrasing_base'] but the previous beat b02 (definition) cannot provide them: its template draws only these elements: definition, example, kicker, rule, template_backplate, term, term_icon. A kept name must be an element that beat really drew (or kept); a template's design.elements are not drawn. Drop them from keep (held_missing)",
+    "b04: keep names ['phrasing_board', 'phrasing_base'] but the previous beat b03 (compare.two) cannot provide them: its template draws only these elements: kicker, right_panel|left_panel, right|left_item_N, template_backplate, title, verdict. A kept name must be an element that beat really drew (or kept); a template's design.elements are not drawn. Drop them from keep (held_missing)"
+   ]
+  },
+  "scenes": {
+   "errors": 10,
+   "kinds": {
+    "cast": 7,
+    "invented words": 1,
+    "ctx.held(['early_flag', 'held_habit']) b": 1,
+    "ctx.held(['meeting_table', 'jordan', 'ca": 1
+   },
+   "first": [
+    "b06.js: writes words the lesson never uses ['cognitive', 'pattern']: \"COGNITIVE PATTERN\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+    "b14.js: ctx.held(['early_flag', 'held_habit']) but the previous beat b13 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b23.js: ctx.held(['meeting_table', 'jordan', 'cast_jordan', 'colleague', 'cast_colleague']) but the previous beat b22 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b08: b08.js kit.peep draws Jordan as peep 'man', skin 0, cloth muted, but b06 (b06.js kit.peep) drew them as peep 'man', skin 0, cloth accent3: one person, one look (fix the skin and clothes in story.cast)",
+    "b11: b11.js kit.peep draws 'colleague' as peep 'man', skin 0, cloth field2, but b08 (b08.js kit.peep) drew them as peep 'woman', skin 1, cloth surface2: one person, one look (put them in story.cast)"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 384s but the request asks for about 120s (at most 156s): the script must lose about 69 % of its words"
+   ]
+  }
+ }
+}

@@ -1,0 +1,753 @@
+{
+ "scene": "branch",
+ "camera_spec": {
+  "camera": {
+   "x": 2.8,
+   "y": 2.6,
+   "eye": 1.62,
+   "yaw": 14,
+   "hfov": 58,
+   "horizon_pct": 44
+  },
+  "walls": [
+   {
+    "name": "far wall",
+    "axis": "y",
+    "at": 18.0
+   },
+   {
+    "name": "street wall with windows (left)",
+    "axis": "x",
+    "at": 0.0
+   },
+   {
+    "name": "wall behind the counter (right)",
+    "axis": "x",
+    "at": 10.0
+   }
+  ],
+  "points": {
+   "far_left_floor": [
+    0,
+    18,
+    0
+   ],
+   "far_right_floor": [
+    10.0,
+    18,
+    0
+   ],
+   "far_left_top": [
+    0,
+    18,
+    6.0
+   ],
+   "far_right_top": [
+    10.0,
+    18,
+    6.0
+   ],
+   "w1_near_sill": [
+    0,
+    10.5,
+    1.2
+   ],
+   "w1_far_head": [
+    0,
+    12.5,
+    5.0
+   ],
+   "w2_near_sill": [
+    0,
+    14.5,
+    1.2
+   ],
+   "w2_far_head": [
+    0,
+    16.5,
+    5.0
+   ],
+   "w1_far_sill": [
+    0,
+    12.5,
+    1.2
+   ],
+   "w2_far_sill": [
+    0,
+    16.5,
+    1.2
+   ],
+   "counter_front_y5": [
+    7.4,
+    5.0,
+    1.05
+   ],
+   "counter_front_y16": [
+    7.4,
+    16.0,
+    1.05
+   ],
+   "counter_front_y5_floor": [
+    7.4,
+    5.0,
+    0
+   ],
+   "counter_front_y16_floor": [
+    7.4,
+    16.0,
+    0
+   ],
+   "screen_top_y5": [
+    7.8,
+    5.0,
+    2.2
+   ],
+   "screen_top_y16": [
+    7.8,
+    16.0,
+    2.2
+   ],
+   "div_y7.8": [
+    7.8,
+    7.8,
+    2.2
+   ],
+   "div_y9.4": [
+    7.8,
+    9.4,
+    2.2
+   ],
+   "div_y11": [
+    7.8,
+    11.0,
+    2.2
+   ],
+   "div_y12.6": [
+    7.8,
+    12.6,
+    2.2
+   ],
+   "div_y14.2": [
+    7.8,
+    14.2,
+    2.2
+   ],
+   "div_y9.4_counter": [
+    7.8,
+    9.4,
+    1.05
+   ],
+   "div_y11_counter": [
+    7.8,
+    11.0,
+    1.05
+   ],
+   "low_pos_far_top": [
+    7.4,
+    15.2,
+    0.85
+   ],
+   "staff_door_far_L": [
+    8.4,
+    18,
+    2.1
+   ],
+   "staff_door_far_R_floor": [
+    9.3,
+    18,
+    0
+   ],
+   "rwall_panel_y8_top": [
+    10.0,
+    8.0,
+    2.8
+   ],
+   "rwall_panel_y17.4_bot": [
+    10.0,
+    17.4,
+    1.0
+   ],
+   "far_clock": [
+    4.0,
+    18,
+    4.0
+   ],
+   "far_door_L": [
+    2.0,
+    18,
+    0
+   ],
+   "far_door_R_top": [
+    3.0,
+    18,
+    2.1
+   ],
+   "teller_head_top": [
+    8.55,
+    10.2,
+    1.6
+   ],
+   "teller_head_c": [
+    8.55,
+    10.2,
+    1.48
+   ],
+   "teller_seat": [
+    8.6,
+    10.2,
+    0.75
+   ],
+   "cust_head_top": [
+    6.95,
+    10.2,
+    1.72
+   ],
+   "cust_head_c": [
+    6.95,
+    10.2,
+    1.6
+   ],
+   "cust_feet": [
+    6.95,
+    10.2,
+    0
+   ],
+   "queue_head_top": [
+    4.2,
+    9.4,
+    1.66
+   ],
+   "queue_head_c": [
+    4.2,
+    9.4,
+    1.54
+   ],
+   "queue_feet": [
+    4.2,
+    9.4,
+    0
+   ],
+   "staff_head_top": [
+    3.9,
+    13.2,
+    1.78
+   ],
+   "staff_head_c": [
+    3.9,
+    13.2,
+    1.66
+   ],
+   "staff_feet": [
+    3.9,
+    13.2,
+    0
+   ],
+   "stanchion_near": [
+    5.0,
+    8.6,
+    0.95
+   ],
+   "stanchion_far": [
+    5.0,
+    12.6,
+    0.95
+   ],
+   "stanchion_near_floor": [
+    5.0,
+    8.6,
+    0
+   ],
+   "bench_near_seat": [
+    0.5,
+    14.6,
+    0.45
+   ],
+   "bench_far_seat": [
+    0.5,
+    16.4,
+    0.45
+   ],
+   "bench_far_floor": [
+    0.5,
+    16.4,
+    0
+   ],
+   "stanchion_mid": [
+    5.0,
+    10.6,
+    0.95
+   ],
+   "stanchion_mid_floor": [
+    5.0,
+    10.6,
+    0
+   ],
+   "stanchion_far_floor": [
+    5.0,
+    12.6,
+    0
+   ],
+   "counter_front_y9.4_floor": [
+    7.4,
+    9.4,
+    0
+   ],
+   "counter_front_y11_top": [
+    7.4,
+    11.0,
+    1.05
+   ],
+   "tray_y10.2": [
+    7.6,
+    10.2,
+    1.05
+   ],
+   "pendant_y9": [
+    4.5,
+    9.0,
+    4.0
+   ],
+   "pendant_y13": [
+    4.5,
+    13.0,
+    4.0
+   ],
+   "pendant_y17": [
+    4.5,
+    17.0,
+    4.0
+   ]
+  },
+  "behind": [
+   "teller_head_top",
+   "teller_head_c",
+   "cust_head_top",
+   "cust_head_c",
+   "queue_head_top",
+   "queue_head_c",
+   "staff_head_top",
+   "staff_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 528,
+   "along_x": 7906,
+   "horizon_y": 475
+  },
+  "points": {
+   "far_left_floor": {
+    "x": 178,
+    "y": 672,
+    "where": "frame",
+    "depth": 14.27
+   },
+   "far_right_floor": {
+    "x": 1298,
+    "y": 643,
+    "where": "frame",
+    "depth": 16.68
+   },
+   "far_left_top": {
+    "x": 178,
+    "y": -57,
+    "where": "overscan",
+    "depth": 14.27
+   },
+   "far_right_top": {
+    "x": 1298,
+    "y": 21,
+    "where": "frame",
+    "depth": 16.68
+   },
+   "w1_near_sill": {
+    "x": -187,
+    "y": 579,
+    "where": "overscan",
+    "depth": 6.99
+   },
+   "w1_far_head": {
+    "x": -32,
+    "y": -180,
+    "where": "outside",
+    "depth": 8.93
+   },
+   "w2_near_sill": {
+    "x": 68,
+    "y": 542,
+    "where": "frame",
+    "depth": 10.87
+   },
+   "w2_far_head": {
+    "x": 138,
+    "y": 18,
+    "where": "frame",
+    "depth": 12.81
+   },
+   "w1_far_sill": {
+    "x": -32,
+    "y": 557,
+    "where": "overscan",
+    "depth": 8.93
+   },
+   "w2_far_sill": {
+    "x": 138,
+    "y": 532,
+    "where": "frame",
+    "depth": 12.81
+   },
+   "counter_front_y5": {
+    "x": 2914,
+    "y": 762,
+    "where": "outside",
+    "depth": 3.44
+   },
+   "counter_front_y16": {
+    "x": 1110,
+    "y": 545,
+    "where": "frame",
+    "depth": 14.11
+   },
+   "counter_front_y5_floor": {
+    "x": 2914,
+    "y": 1290,
+    "where": "outside",
+    "depth": 3.44
+   },
+   "counter_front_y16_floor": {
+    "x": 1110,
+    "y": 674,
+    "where": "frame",
+    "depth": 14.11
+   },
+   "screen_top_y5": {
+    "x": 3050,
+    "y": 191,
+    "where": "outside",
+    "depth": 3.54
+   },
+   "screen_top_y16": {
+    "x": 1156,
+    "y": 405,
+    "where": "frame",
+    "depth": 14.21
+   },
+   "div_y7.8": {
+    "x": 1955,
+    "y": 315,
+    "where": "overscan",
+    "depth": 6.26
+   },
+   "div_y9.4": {
+    "x": 1671,
+    "y": 347,
+    "where": "frame",
+    "depth": 7.81
+   },
+   "div_y11": {
+    "x": 1482,
+    "y": 368,
+    "where": "frame",
+    "depth": 9.36
+   },
+   "div_y12.6": {
+    "x": 1346,
+    "y": 383,
+    "where": "frame",
+    "depth": 10.91
+   },
+   "div_y14.2": {
+    "x": 1244,
+    "y": 395,
+    "where": "frame",
+    "depth": 12.47
+   },
+   "div_y9.4_counter": {
+    "x": 1671,
+    "y": 602,
+    "where": "frame",
+    "depth": 7.81
+   },
+   "div_y11_counter": {
+    "x": 1482,
+    "y": 581,
+    "where": "frame",
+    "depth": 9.36
+   },
+   "low_pos_far_top": {
+    "x": 1144,
+    "y": 575,
+    "where": "frame",
+    "depth": 13.34
+   },
+   "staff_door_far_L": {
+    "x": 1142,
+    "y": 424,
+    "where": "frame",
+    "depth": 16.3
+   },
+   "staff_door_far_R_floor": {
+    "x": 1231,
+    "y": 645,
+    "where": "frame",
+    "depth": 16.52
+   },
+   "rwall_panel_y8_top": {
+    "x": 2369,
+    "y": 182,
+    "where": "outside",
+    "depth": 6.98
+   },
+   "rwall_panel_y17.4_bot": {
+    "x": 1326,
+    "y": 542,
+    "where": "frame",
+    "depth": 16.1
+   },
+   "far_clock": {
+    "x": 669,
+    "y": 205,
+    "where": "frame",
+    "depth": 15.23
+   },
+   "far_door_L": {
+    "x": 431,
+    "y": 665,
+    "where": "frame",
+    "depth": 14.75
+   },
+   "far_door_R_top": {
+    "x": 552,
+    "y": 420,
+    "where": "frame",
+    "depth": 14.99
+   },
+   "teller_head_top": {
+    "x": 1699,
+    "y": 479,
+    "where": "frame",
+    "depth": 8.77,
+    "behind": {
+     "wall": "wall behind the counter (right)",
+     "at": [
+      10.0,
+      12.12,
+      1.59
+     ]
+    }
+   },
+   "teller_head_c": {
+    "x": 1699,
+    "y": 503,
+    "where": "frame",
+    "depth": 8.77,
+    "behind": {
+     "wall": "wall behind the counter (right)",
+     "at": [
+      10.0,
+      12.12,
+      1.44
+     ]
+    }
+   },
+   "teller_seat": {
+    "x": 1708,
+    "y": 647,
+    "where": "frame",
+    "depth": 8.78
+   },
+   "cust_head_top": {
+    "x": 1412,
+    "y": 455,
+    "where": "frame",
+    "depth": 8.38,
+    "behind": {
+     "wall": "wall behind the counter (right)",
+     "at": [
+      10.0,
+      15.79,
+      1.79
+     ]
+    }
+   },
+   "cust_head_c": {
+    "x": 1412,
+    "y": 479,
+    "where": "frame",
+    "depth": 8.38,
+    "behind": {
+     "wall": "wall behind the counter (right)",
+     "at": [
+      10.0,
+      15.79,
+      1.59
+     ]
+    }
+   },
+   "cust_feet": {
+    "x": 1412,
+    "y": 810,
+    "where": "frame",
+    "depth": 8.38
+   },
+   "queue_head_top": {
+    "x": 888,
+    "y": 465,
+    "where": "frame",
+    "depth": 6.94,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      5.97,
+      18.0,
+      1.71
+     ]
+    }
+   },
+   "queue_head_c": {
+    "x": 888,
+    "y": 495,
+    "where": "frame",
+    "depth": 6.94,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      5.97,
+      18.0,
+      1.44
+     ]
+    }
+   },
+   "queue_feet": {
+    "x": 888,
+    "y": 880,
+    "where": "frame",
+    "depth": 6.94
+   },
+   "staff_head_top": {
+    "x": 714,
+    "y": 449,
+    "where": "frame",
+    "depth": 10.55,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      4.4,
+      18.0,
+      1.85
+     ]
+    }
+   },
+   "staff_head_c": {
+    "x": 714,
+    "y": 469,
+    "where": "frame",
+    "depth": 10.55,
+    "behind": {
+     "wall": "far wall",
+     "at": [
+      4.4,
+      18.0,
+      1.68
+     ]
+    }
+   },
+   "staff_feet": {
+    "x": 714,
+    "y": 741,
+    "where": "frame",
+    "depth": 10.55
+   },
+   "stanchion_near": {
+    "x": 1146,
+    "y": 658,
+    "where": "frame",
+    "depth": 6.35
+   },
+   "stanchion_far": {
+    "x": 912,
+    "y": 589,
+    "where": "frame",
+    "depth": 10.24
+   },
+   "stanchion_near_floor": {
+    "x": 1146,
+    "y": 917,
+    "where": "frame",
+    "depth": 6.35
+   },
+   "bench_near_seat": {
+    "x": 158,
+    "y": 658,
+    "where": "frame",
+    "depth": 11.09
+   },
+   "bench_far_seat": {
+    "x": 208,
+    "y": 633,
+    "where": "frame",
+    "depth": 12.83
+   },
+   "bench_far_floor": {
+    "x": 208,
+    "y": 694,
+    "where": "frame",
+    "depth": 12.83
+   },
+   "stanchion_mid": {
+    "x": 1002,
+    "y": 615,
+    "where": "frame",
+    "depth": 8.29
+   },
+   "stanchion_mid_floor": {
+    "x": 1002,
+    "y": 813,
+    "where": "frame",
+    "depth": 8.29
+   },
+   "stanchion_far_floor": {
+    "x": 912,
+    "y": 749,
+    "where": "frame",
+    "depth": 10.24
+   },
+   "counter_front_y9.4_floor": {
+    "x": 1593,
+    "y": 839,
+    "where": "frame",
+    "depth": 7.71
+   },
+   "counter_front_y11_top": {
+    "x": 1415,
+    "y": 582,
+    "where": "frame",
+    "depth": 9.26
+   },
+   "tray_y10.2": {
+    "x": 1532,
+    "y": 591,
+    "where": "frame",
+    "depth": 8.54
+   },
+   "pendant_y9": {
+    "x": 986,
+    "y": -147,
+    "where": "outside",
+    "depth": 6.62
+   },
+   "pendant_y13": {
+    "x": 817,
+    "y": 83,
+    "where": "frame",
+    "depth": 10.5
+   },
+   "pendant_y17": {
+    "x": 739,
+    "y": 189,
+    "where": "frame",
+    "depth": 14.38
+   }
+  }
+ }
+}

@@ -1,0 +1,256 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b03: camera pan between different worlds (office -> corridor) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "compose: b08: camera pan between different worlds (inside -> hall) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "compose: b10: camera pan between different worlds (hall -> corridor) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "compose: b12: camera pan between different worlds (corridor -> bedroom) would show the seam; using the style's seam join, a fade (set join_in.continuous: true if they join up)",
+    "runtime part_drawn_again: b04: draws kit part \"keycard\" again as \"list_sheet\" while it holds \"keycard\" (the keycard b03 drew, still on screen), elsewhere on screen: a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"door\" again as \"door_row\" while it holds \"door_shop\" (the door b03 drew, still on screen), elsewhere on screen: a second door is fine only when the film shows two; to change the held one use ctx.held(\"door_shop\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"attempt_one\" while it holds \"keycard\" (the keycard b03 drew, still on screen), elsewhere on screen: a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"attempt_two\" while it holds \"keycard\" (the keycard b03 drew, still on screen), elsewhere on screen: a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime part_drawn_again: b05: draws kit part \"keycard\" again as \"attempt_three\" while it holds \"keycard\" (the keycard b03 drew, still on screen), elsewhere on screen: a second keycard is fine only when the film shows two; to change the held one use ctx.held(\"keycard\").handle",
+    "runtime unknown_exit: fade",
+    "runtime unknown_exit: fade",
+    "b12: 7.1s static hold from 97.0s",
+    "b10: 8 chunks on screen (card_shop, card_work, copied_shop_card, door_shop, door_work, label_manager, label_unique, vault); the budget is ~5-6",
+    "b13: 8 chunks on screen (action_report, fresh_card, mfa_label, password_vault, phone_mfa, replace_label, report_label, vault_label); the budget is ~5-6",
+    "b06: \"reused\" is readable for 0.53s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 0.364 is above the baseline median (0.2)",
+    "variety: labels_over_objects_share = 0.429 is above the baseline median (0.375) (beats: b03, b04, b05, b06, b10, b11)",
+    "b03: value script says 'mid' but the frames measure brightness 0.11 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'light' but the frames measure brightness 0.30 (band 0.55 to 1.00); regrade the beat or change the script",
+    "tone: lesson brightness 0.13 against the pack's reference 0.37 (dark_void_single_light, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson saturation 0.48 against the pack's reference 0.30 (dark_void_single_light, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson dark_share 0.93 against the pack's reference 0.37 (dark_void_single_light, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 1,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 1.46
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.89
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 4.03
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.23
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.31
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0,
+        "declared": "rest"
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 2.09
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.98,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 2.19
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.45
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 7.06
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.082,
+      "template": 0.121,
+      "motion": 0.798,
+      "hybrid": 0.0,
+      "motion_effective": 0.798
+    },
+    "elements": {
+      "b01": 6,
+      "b02": 7,
+      "b03": 5,
+      "b04": 2,
+      "b05": 6,
+      "b06": 1,
+      "b07": 7,
+      "b08": 5,
+      "b09": 7,
+      "b10": 9,
+      "b11": 5,
+      "b12": 2,
+      "b13": 13,
+      "b14": 8
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.203,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.2,
+      "one_radius_share": 0.364,
+      "still_share": 0.429,
+      "labels_over_objects_share": 0.429,
+      "one_world_share": 0.5,
+      "lines_per_s": 5.93
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 64681,
+      "layout_samples": 264,
+      "texts": 314,
+      "contrast_checked": 268,
+      "errors": 0,
+      "warnings": 0
+    },
+    "nodes": 3104,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 28.7,
+        "b02": 35.7,
+        "b03": 32,
+        "b04": 32,
+        "b05": 32,
+        "b06": 32,
+        "b07": 29.5,
+        "b08": 88.5,
+        "b09": 63.9,
+        "b10": 28.7,
+        "b11": 28.7,
+        "b12": 63,
+        "b13": 29.5,
+        "b14": 29.6
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 14,
+      "lines_seen": 58,
+      "blank_beats": [],
+      "blank_measured": 13
+    },
+    "foreign": {
+      "measured_beats": 14,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 83,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0568,
+        "b02": 0.0649,
+        "b03": 0.0369,
+        "b04": 0.0404,
+        "b05": 0.0524,
+        "b06": 0.0257,
+        "b07": 0.0276,
+        "b08": 0.0494,
+        "b09": 0.0545,
+        "b10": 0.0486,
+        "b11": 0.0429,
+        "b12": 0.0386,
+        "b13": 0.0873,
+        "b14": 0.0569
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.01,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 14,
+      "sharpness": {
+        "b01": 1.009,
+        "b02": 0.695,
+        "b03": 0.991,
+        "b04": 1.213,
+        "b05": 1.01,
+        "b06": 1.229,
+        "b07": 1.08,
+        "b08": 1.0,
+        "b09": 1.023,
+        "b10": 1.033,
+        "b11": 0.981,
+        "b12": 1.068,
+        "b13": 1.123,
+        "b14": 1.1
+      },
+      "blurred_beats": [],
+      "blur_measured": 14
+    },
+    "tone": {
+      "value_script_beats": 14,
+      "tone_vs_reference": {
+        "brightness": 0.127,
+        "saturation": 0.48,
+        "dark_share": 0.929,
+        "light_share": 0.0
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-cinematic-noir-terra\\qa\\sheets\\b14.jpg"
+  ],
+  "build_hash": "38c5ba0a7739802b"
+}

@@ -1,0 +1,26 @@
+{
+ "title": "Loom 3D model library: reusable, token-coloured models (2026-10-08)",
+ "out": "docs/styles/demos/2026-10-08_models3d_reel.mp4",
+ "music": {"mood": "calm_focus", "root_midi": 50},
+ "segments": [
+  {"kind": "three", "scene": "models_mfa", "style": "corporate-clean", "from": 0.0, "to": 7.0, "label": "Three models in one shot", "sub": "phone, security_key and padlock from assets/models3d, driven by their keys"},
+  {"kind": "three", "scene": "model_turntable", "style": "corporate-clean", "from": 0.0, "to": 5.0, "label": "laptop", "sub": "the lid opens, the screen wakes on a sign-in page (words from params)",
+   "params": {"model": "laptop", "opts": {"screen": {"kind": "login", "title": "Sign in to Workspace", "field1": "name@company.com", "field2": "Password", "button": "Continue"}}, "states": [{"key": "lid", "from": 0.05, "to": 1, "at": 0.6, "dur": 1.4}, {"key": "wake", "from": 0, "to": 1, "at": 1.6, "dur": 0.6}], "elevation": 18, "turn": 1.2}},
+  {"kind": "three", "scene": "model_turntable", "style": "cinematic-noir", "from": 0.0, "to": 5.0, "label": "server_rack", "sub": "units light from the bottom up; one goes to alert and slides out",
+   "params": {"model": "server_rack", "opts": {"units": 8, "alertUnit": 3}, "states": [{"key": "load", "from": 0, "to": 1, "at": 0.6, "dur": 1.2}, {"key": "alert", "from": 0, "to": 1, "at": 2.2, "dur": 0.5}, {"key": "slide", "from": 0, "to": 1, "at": 2.9, "dur": 0.9}], "turn": 1.2}},
+  {"kind": "three", "scene": "model_turntable", "style": "editorial-paper", "from": 0.0, "to": 5.0, "label": "envelope", "sub": "the flap opens and the letter rises out",
+   "params": {"model": "envelope", "opts": {"letter": {"title": "Invoice overdue", "lines": 5}, "seal": "bad"}, "states": [{"key": "open", "from": 0, "to": 1, "at": 1.0, "dur": 0.8}, {"key": "letter", "from": 0, "to": 1, "at": 1.9, "dur": 1.2}], "turn": 1.0}},
+  {"kind": "three", "scene": "model_turntable", "style": "glow-flat", "from": 0.0, "to": 5.0, "label": "desk_set", "sub": "a workstation built from the monitor model; the chair is pushed back, the screen left locked",
+   "params": {"model": "desk_set", "opts": {"screen": {"kind": "lock", "title": "Screen locked", "line": "Press any key"}}, "states": [{"key": "wake", "from": 0, "to": 1, "at": 0.8, "dur": 0.6}, {"key": "chair", "from": 0, "to": 1, "at": 2.0, "dur": 1.2}], "elevation": 20, "turn": 1.0}},
+  {"kind": "three", "scene": "model_turntable", "style": "engineering", "from": 0.0, "to": 5.0, "label": "globe", "sub": "pins rise at the given places as the globe turns",
+   "params": {"model": "globe", "opts": {"pins": [[51.5, 0], [40.7, -74], [19, 72.8], [1.3, 103.8]]}, "states": [{"key": "spin", "from": 0, "to": 2.0, "at": 0, "dur": 5}, {"key": "pins", "from": 0, "to": 1, "at": 1.4, "dur": 1.6}], "turn": 0.8}},
+  {"kind": "three", "scene": "model_turntable", "style": "corporate-clean", "from": 0.0, "to": 5.0, "label": "bar_chart", "sub": "bars grow in order, the last one in the accent; labels from params",
+   "params": {"model": "bar_chart", "opts": {"values": [0.32, 0.48, 0.41, 0.66, 0.92], "labels": ["Q1", "Q2", "Q3", "Q4", "Q5"], "highlight": 4}, "states": [{"key": "grow", "from": 0, "to": 1, "at": 0.6, "dur": 1.8}], "elevation": 18, "turn": 1.0}},
+  {"kind": "three", "scene": "model_turntable", "style": "flat-cosmos", "from": 0.0, "to": 5.0, "label": "lightbulb", "sub": "the filament glows and the bulb blooms",
+   "params": {"model": "lightbulb", "opts": {}, "states": [{"key": "on", "from": 0, "to": 1, "at": 1.8, "dur": 0.8}], "turn": 1.0}},
+  {"kind": "three", "scene": "model_turntable", "style": "story-cartoon", "from": 0.0, "to": 5.0, "label": "shield", "sub": "an embossed tick; a crack opens across the face when protection fails",
+   "params": {"model": "shield", "opts": {"mark": "check"}, "states": [{"key": "crack", "from": 0, "to": 1, "at": 2.2, "dur": 1.2}], "turn": 1.0}},
+  {"kind": "three", "scene": "model_turntable", "style": "presenter-pop", "from": 0.0, "to": 5.0, "label": "coin_stack", "sub": "coins drop in, stack by stack",
+   "params": {"model": "coin_stack", "opts": {"stacks": [8, 12, 5]}, "states": [{"key": "fill", "from": 0, "to": 1, "at": 0.5, "dur": 2.4}], "elevation": 16, "turn": 1.0}}
+ ]
+}

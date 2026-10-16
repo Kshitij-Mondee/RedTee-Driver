@@ -1,0 +1,102 @@
+{
+ "title": "Nothing to hand over: MFA and passkeys",
+ "genre": "explainer",
+ "audience": {
+  "who": "all employees in a security awareness programme, non-technical, every role and seniority",
+  "knows": "uses passwords daily, has probably been asked for a texted code or an app prompt, has no picture of what happens between typing and getting in",
+  "cares_about": "not losing a work or personal account, not being the way in, not being given another chore without a reason"
+ },
+ "outcome": "Turn on a second factor wherever an account offers one, pick a passkey when it is offered, and refuse any code request or sign-in prompt they did not start themselves",
+ "through_line": "A password is a secret anyone can copy and replay; a second factor adds something the thief does not have, which stops most takeovers, but a typed code can still be relayed through a fake page, while a passkey only answers the real site, so there is nothing to hand over",
+ "arc_plan": [
+  {
+   "role": "hook",
+   "what": "The moment everyone knows: you type your password, the site asks for a code. Open on that exchange and ask what the second step actually changes, and what it still lets through"
+  },
+  {
+   "role": "what it is",
+   "what": "Name the parts plainly: a factor is a kind of proof (something you know, something you have, something you are). A password is one factor; MFA asks for two different kinds. Define each term once, in one plain sentence, after the picture"
+  },
+  {
+   "role": "how it works",
+   "what": "The mechanism, in three runs of the same login exchange: (1) password only, a stolen password is replayed from anywhere and works; (2) password plus a code from the phone, the replay fails because the thief lacks the phone; (3) a fake login page sits in the middle and passes the password and the code to the real site as the victim types them. Then the passkey run: the phone or key signs an answer tied to the real site's address, the fake page gets an answer that is no use anywhere else"
+  },
+  {
+   "role": "why it matters",
+   "what": "What the knowledge sheet supports about how much a second factor reduces account takeover, with its limits stated; why unexpected prompts and code requests are the attacker asking you to finish the login for them; that any second factor beats none"
+  },
+  {
+   "role": "payoff",
+   "what": "Back to the opening exchange, now readable. Three actions in one breath: turn it on, choose a passkey when offered, refuse what you did not start. Close on the through-line: nothing to hand over"
+  }
+ ],
+ "must_cover": [
+  {
+   "what": "what a password proves, and why a copied password works for anyone, anywhere",
+   "from_user": true
+  },
+  {
+   "what": "what a second factor adds: a different kind of proof the thief does not hold, such as a phone, a security key or a fingerprint",
+   "from_user": true
+  },
+  {
+   "what": "how a phishing page relays a typed password and a one-time code to the real site in real time",
+   "from_user": true
+  },
+  {
+   "what": "why a passkey cannot be relayed: it is tied to the real site, and the secret never leaves the device",
+   "from_user": true
+  },
+  {
+   "what": "how much MFA reduces account takeover, only as the reviewed knowledge sheet states it, with its source and limits",
+   "from_knowledge": true
+  },
+  {
+   "what": "never approve a sign-in prompt or share a code you did not ask for",
+   "from_knowledge": true
+  },
+  {
+   "what": "a texted or app code is still far better than a password alone; a passkey is the stronger choice when offered",
+   "from_knowledge": true
+  }
+ ],
+ "must_avoid": [
+  "any statistic, percentage or study not in the approved knowledge sheet",
+  "vendor marketing figures stated as fact",
+  "saying passkeys or MFA make an account unbreakable",
+  "jargon before the picture: protocol names, cryptography terms, standards bodies",
+  "the hooded hacker, green code rain, alarms, red flashing screens",
+  "real brands, apps or companies as the login being attacked",
+  "company-specific setup steps or tools the requester has not named",
+  "telling people texted codes are worthless",
+  "blaming the person who was phished",
+  "a list of security tips beyond the three actions"
+ ],
+ "example_posture": "One invented employee, Maya, and one invented thief at another desk, both framed as hypothetical ('say', 'imagine'). The thief is an ordinary person seen from behind at a plain desk, never a hooded hacker. One invented work login page at login.yourwork.example and one invented look-alike page. No real services, apps, brands or breaches.",
+ "visual_direction": "Story-led and concrete. Two desks, Maya's and the thief's, and the screens on them: a real-looking sign-in page, a real-looking phone, large in the frame, so the viewer reads what Maya reads. The lesson is one story in four turns: the stolen password works; a code on Maya's phone stops it; a look-alike page passes her code on as she types; a passkey on her phone checks the address and gives the fake page nothing. Split screen when both desks matter at once. The address bar is the hero of the passkey turn, shown large. Figures drawn as plain bars beside the story, labelled with who measured them. At most four template beats; no cards that explain a term over a dimmed scene. Light and warm, type large.",
+ "voice_note": "The analyst colleague telling a short case story: calm, exact, a little dry, finding first and the limit straight after. Never alarmed. About two and a half minutes.",
+ "grounding_posture": "faithful",
+ "open_questions": [
+  "Does the company use a particular second factor or passkey rollout? Until told, the lesson stays generic and names no tool.",
+  "Is there a route to report an unexpected sign-in prompt? The lesson will not invent one."
+ ],
+ "provenance": {
+  "inferred": [
+   "audience.knows",
+   "audience.cares_about",
+   "outcome",
+   "through_line wording",
+   "arc_plan hook and payoff",
+   "must_cover[4-6] (to be established in the knowledge stage)",
+   "must_avoid beyond no invented statistics",
+   "example_posture",
+   "visual_direction beyond the magnifier and the cutaway",
+   "voice_note",
+   "open_questions"
+  ]
+ },
+ "revision": {
+  "of": "mfa-explained",
+  "why": "requester review 2026-10-06: concept not explained the right way, wrong style; see projects/mfa-explained/REVIEW_2026-10-06.md"
+ }
+}

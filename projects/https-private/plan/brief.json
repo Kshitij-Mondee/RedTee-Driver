@@ -1,0 +1,108 @@
+{
+  "title": "How HTTPS keeps your data private",
+  "genre": "teaching",
+  "audience": {
+    "who": "corporate employees who use the web, email and work apps daily, with no networking background",
+    "knows": "that the padlock in the browser means something and public wifi is risky; not how a page travels from a server to them",
+    "cares_about": "not leaking their login or work data, knowing when a site can be trusted, explaining the padlock to a colleague"
+  },
+  "outcome": "After watching, the viewer can explain in plain words what happens between their browser and a site before any data is sent (the site proves who it is, a shared secret key is agreed, then everything is scrambled), and what the padlock does and does not promise.",
+  "through_line": "HTTPS makes a hostile network harmless in three moves: the site proves who it is, the two sides agree a secret key nobody else can learn, and everything after travels scrambled; the padlock means a private connection to the site it claims, not that the site is good.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "A login leaves a browser for a server across a shared network; the viewer sees that anyone on the path could read plain data.",
+      "source_anchor": "knowledge: plain HTTP sends data readable by anyone on the path"
+    },
+    {
+      "role": "promise",
+      "what": "Name what the viewer will be able to explain: how the same trip stays private in three moves, and what the padlock really promises.",
+      "source_anchor": "knowledge: what HTTPS provides (confidentiality, integrity, server authentication)"
+    },
+    {
+      "role": "bridge",
+      "what": "Before secret data goes anywhere, the two sides open a short conversation (the handshake) so the browser knows who it talks to and both agree how to scramble.",
+      "source_anchor": "knowledge: the TLS handshake happens before application data"
+    },
+    {
+      "role": "build",
+      "what": "Move one, identity: the server presents its certificate; the browser checks the issuer it already trusts, that the name matches the address, and that it is in date.",
+      "source_anchor": "knowledge: certificates, certificate authorities, browser validation"
+    },
+    {
+      "role": "build",
+      "what": "Move two, the shared key: the two sides agree a secret session key over the open network without sending it in a usable form.",
+      "source_anchor": "knowledge: key exchange establishes a shared session key"
+    },
+    {
+      "role": "build",
+      "what": "Move three, scrambled traffic: the same login now travels unreadable, only the two ends can unscramble it, tampering is noticed; the padlock appears.",
+      "source_anchor": "knowledge: symmetric encryption of data in transit and integrity protection"
+    },
+    {
+      "role": "check",
+      "what": "The viewer sees a different site and a few connection situations (valid certificate, certificate for the wrong address) and decides which is private and which the browser should warn about.",
+      "source_anchor": "knowledge: browser warnings on invalid certificates; the elements established in the build"
+    },
+    {
+      "role": "payoff",
+      "what": "Return to the opening login: the packets still pass the watcher, who now sees noise; close on what the padlock means and does not mean.",
+      "source_anchor": "knowledge: limits of the padlock; HTTPS does not mean the site is honest or safe"
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "Plain HTTP data can be read by anyone able to see traffic on its path",
+      "from_knowledge": true
+    },
+    {
+      "what": "HTTPS is HTTP carried inside TLS; a handshake runs before data is sent",
+      "from_knowledge": true
+    },
+    {
+      "what": "The server proves identity with a certificate from a certificate authority the browser trusts; the browser checks issuer, address match and validity",
+      "from_knowledge": true
+    },
+    {
+      "what": "The two sides agree a shared session key without sending it readable across the network",
+      "from_knowledge": true
+    },
+    {
+      "what": "After the handshake data is encrypted with that key, so only the two ends can read it, and alteration in transit is detected",
+      "from_knowledge": true
+    },
+    {
+      "what": "What the padlock means and does not mean: private connection to the claimed site, not a guarantee the site is honest or safe",
+      "from_knowledge": true
+    }
+  ],
+  "must_avoid": [
+    "statistics, adoption figures, dates or version numbers without a source on the approved sheet",
+    "deep mathematics, named algorithms or key lengths beyond the sheet; no jargon dump",
+    "claiming HTTPS makes a site safe, trustworthy or free of phishing or malware",
+    "claiming HTTPS hides which site you visit, or protects data once it reaches the server",
+    "invented attacks, real company or brand names",
+    "an agenda opening, or opening by explaining a term; a lecture or teacher's tone",
+    "a tour of every TLS feature; one handshake, one running login, three moves",
+    "people, presenters, cinematic sets, hand-drawn or textured looks"
+  ],
+  "example_posture": "One running example: an employee's login travelling from a browser to a fictional site across a shared network with a passive watcher on the path, shown open first, then private. The check uses a different fictional site so the viewer transfers rather than recalls.",
+  "visual_direction": "Pure motion graphics on the plain light field: the system itself in motion, crisp shapes, clear labels. A browser and a server at either end with packets visibly travelling, readable when plain and visibly scrambled when private. A credential presented and checked step by step against clear criteria. Two sides combining something to reach a shared secret a watcher in the middle cannot reproduce. The same login retold from plain to protected so the change reads from the picture. The padlock appearing as the outcome. One loud thing at a time, purposeful motion, no characters.",
+  "voice_note": "An analyst: precise, calm, a little dry; explains the mechanism step by step and says plainly what each part does and does not promise. Speaks to a capable colleague, short sentences, plain words.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "How much of the key exchange should be mechanism versus result? Assumed the idea and the result, not the maths, at two minutes.",
+    "Should TLS version or handshake message names appear on screen? Assumed no, unless the sheet supports it and the script needs them.",
+    "Persona analyst with no presenter: assumed narration only."
+  ],
+  "provenance": {
+    "inferred": [
+      "audience.knows and audience.cares_about (request gave only 'corporate employees')",
+      "outcome and through_line (topic only)",
+      "example_posture: one login on a shared network with a passive watcher",
+      "arc_plan wording and source_anchors: anchors point at knowledge the P2 fact-finder must establish",
+      "must_avoid entries beyond the genre's refusals and the request's notes",
+      "visual_direction from the request notes (pure motion graphics, no presenter, clean field)"
+    ]
+  }
+}

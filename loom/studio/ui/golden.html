@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Set Rating</title>
+<style>
+  /* one neutral grey on purpose: the surround must not flatter or punish any frame */
+  :root { --bg:#2b2b2b; --panel:#232323; --line:#3c3c3c; --ink:#ececec; --dim:#a3a3a3; --accent:#ececec; --on:#4a4a4a; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink);
+    font: 15px/1.45 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  .wrap { max-width:1180px; margin:0 auto; padding:18px 16px 24px; min-height:100%; display:flex; flex-direction:column; gap:14px; }
+  header { display:flex; justify-content:space-between; align-items:baseline; gap:12px; color:var(--dim); font-size:13px; }
+  header b { color:var(--ink); font-weight:600; }
+  .bar { height:3px; background:var(--line); border-radius:2px; overflow:hidden; }
+  .bar i { display:block; height:100%; width:0; background:var(--dim); transition:width .2s; }
+  .stage { background:var(--panel); border:1px solid var(--line); border-radius:6px; display:flex; align-items:center;
+    justify-content:center; padding:10px; }
+  .stage img { width:100%; height:auto; display:block; image-rendering:auto; }
+  .scale { display:grid; grid-template-columns:repeat(5, 1fr); gap:8px; }
+  .scale button { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:10px 8px;
+    cursor:pointer; text-align:left; font:inherit; min-height:64px; }
+  .scale button:hover { border-color:var(--dim); }
+  .scale button.on { background:var(--on); border-color:var(--ink); }
+  .scale .n { font-size:20px; font-weight:650; margin-right:6px; }
+  .scale .t { font-weight:600; }
+  .scale .d { display:block; color:var(--dim); font-size:12.5px; margin-top:2px; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; align-items:center; color:var(--dim); font-size:13px; }
+  .tags button { background:transparent; color:var(--dim); border:1px solid var(--line); border-radius:999px; padding:4px 10px;
+    cursor:pointer; font:inherit; font-size:13px; }
+  .tags button.on { background:var(--on); color:var(--ink); border-color:var(--dim); }
+  .tags kbd, .keys kbd { font:11px ui-monospace, monospace; color:var(--dim); border:1px solid var(--line); border-radius:3px; padding:0 4px; margin-left:4px; }
+  .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  input[type=text], textarea { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:8px 10px; font:inherit; }
+  textarea { width:100%; min-height:40px; resize:vertical; }
+  .btn { background:var(--on); color:var(--ink); border:1px solid var(--dim); border-radius:6px; padding:9px 16px; font:inherit; cursor:pointer; }
+  .btn.ghost { background:transparent; border-color:var(--line); color:var(--dim); }
+  .keys { color:var(--dim); font-size:12.5px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:22px; max-width:760px; margin:6vh auto 0; }
+  .card h1 { font-size:22px; margin:0 0 10px; font-weight:650; }
+  .card p, .card li { color:#d2d2d2; }
+  .card ol { padding-left:20px; }
+  .err { color:#f0b0a0; font-size:13px; min-height:18px; }
+  .hidden { display:none !important; }
+  @media (max-width:720px) { .scale { grid-template-columns:repeat(5, minmax(0,1fr)); } .scale .d { display:none; } .scale button { min-height:48px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section id="start" class="card">
+    <h1>How mature does this frame look?</h1>
+    <p>You will see about 66 still frames from explainer videos, one at a time, in random order. Some are from studios,
+      some are ours, some from other tools. Nothing tells you which is which; please do not try to guess.</p>
+    <ol>
+      <li>Rate the <b>picture</b>, not the topic: would it hold up in a course for adult professionals?</li>
+      <li>Go with your first impression, about 5 to 8 seconds each. The whole set takes about 10 minutes.</li>
+      <li>Every frame has been made the same small size and cropped at the bottom the same way. Ignore blur and cropping.</li>
+      <li>The tags are optional: tick what drove your score most, if anything stands out.</li>
+    </ol>
+    <div class="row" style="margin-top:14px">
+      <label for="rater" class="keys">Your name</label>
+      <input id="rater" type="text" value="kshitij" autocomplete="off" style="width:180px">
+      <button id="go" class="btn">Start</button>
+    </div>
+    <div id="startErr" class="err"></div>
+  </section>
+
+  <section id="rate" class="hidden" style="display:flex;flex-direction:column;gap:12px">
+    <header><span>Frame <b id="pos">1</b> of <b id="tot">66</b></span><span id="saved"></span></header>
+    <div class="bar"><i id="prog"></i></div>
+    <div class="stage"><img id="img" alt="frame to rate"></div>
+    <div class="scale" id="scale"></div>
+    <div class="tags" id="tags"><span>What drove it (optional):</span></div>
+    <div id="noteRow" class="hidden"><textarea id="note" placeholder="A note on this frame (optional). Esc to close."></textarea></div>
+    <div class="row" style="justify-content:space-between">
+      <div class="keys"><kbd>1</kbd>-<kbd>5</kbd> rate and move on &nbsp; <kbd>&larr;</kbd> back &nbsp; <kbd>&rarr;</kbd> skip ahead (only to a rated one) &nbsp; <kbd>N</kbd> note</div>
+      <div class="row"><button id="back" class="btn ghost">Back</button></div>
+    </div>
+    <div id="err" class="err"></div>
+  </section>
+
+  <section id="end" class="card hidden">
+    <h1>Done. Thank you.</h1>
+    <p>Your ratings are saved on this computer in <code>docs/research/golden/ratings/</code>. You can close this tab,
+      or go back to change any frame; the latest score for a frame is the one that counts.</p>
+    <p class="keys">To see the summary, run <code>py -m loom golden report</code> in Git Bash.</p>
+    <button id="review" class="btn ghost">Go back to the last frame</button>
+  </section>
+</div>
+<script>
+const SCALE = [
+  [1, "Childish", "toy-like, a kids' app or a school slide"],
+  [2, "Amateur", "clearly made by a beginner"],
+  [3, "Passable", "nothing wrong, nothing good"],
+  [4, "Professional", "would ship in a paid corporate course"],
+  [5, "Studio", "broadcast or top-channel quality"],
+];
+const TAGKEYS = "asdfghjk";
+const TAGLABEL = { drawing: "drawing / shapes", people: "people", colour: "colour", type: "type", layout: "layout",
+                   density: "empty or cluttered", slides: "looks like slides", finish: "polish / finish" };
+let S = { rater: "", entries: [], done: {}, tags: [], i: 0, sel: new Set(), shownAt: 0, busy: false };
+const $ = (id) => document.getElementById(id);
+
+function show(id) { for (const s of ["start", "rate", "end"]) $(s).classList.toggle("hidden", s !== id); }
+
+async function start() {
+  const r = $("rater").value.trim();
+  $("startErr").textContent = "";
+  try {
+    const res = await fetch("/api/session?rater=" + encodeURIComponent(r));
+    const j = await res.json();
+    if (!res.ok) throw new Error(j.error || res.status);
+    Object.assign(S, { rater: r, entries: j.entries, done: j.done, tags: j.tags });
+    try { localStorage.setItem("golden.rater", r); } catch (e) {}
+    buildControls();
+    const first = S.entries.findIndex((e) => !S.done[e]);
+    if (first < 0) { show("end"); return; }
+    show("rate"); go(first);
+  } catch (e) { $("startErr").textContent = "Could not start: " + e.message; }
+}
+
+function buildControls() {
+  const sc = $("scale"); sc.innerHTML = "";
+  for (const [n, t, d] of SCALE) {
+    const b = document.createElement("button");
+    b.dataset.n = n; b.innerHTML = `<span class="n">${n}</span><span class="t">${t}</span><span class="d">${d}</span>`;
+    b.onclick = () => rate(n); sc.appendChild(b);
+  }
+  const tg = $("tags"); tg.querySelectorAll("button").forEach((b) => b.remove());
+  S.tags.forEach((t, k) => {
+    const b = document.createElement("button"); b.dataset.t = t;
+    b.innerHTML = `${TAGLABEL[t] || t}<kbd>${TAGKEYS[k].toUpperCase()}</kbd>`;
+    b.onclick = () => toggle(t); tg.appendChild(b);
+  });
+}
+
+function go(i) {
+  S.i = Math.max(0, Math.min(S.entries.length - 1, i));
+  const e = S.entries[S.i], prev = S.done[e];
+  S.sel = new Set(prev ? prev.tags : []);
+  $("note").value = prev ? prev.note || "" : "";
+  $("noteRow").classList.toggle("hidden", !(prev && prev.note));
+  $("pos").textContent = S.i + 1; $("tot").textContent = S.entries.length;
+  $("prog").style.width = (100 * Object.keys(S.done).length / S.entries.length) + "%";
+  $("saved").textContent = prev ? "rated " + prev.score + " (press a number to change)" : "";
+  document.querySelectorAll("#scale button").forEach((b) => b.classList.toggle("on", prev && +b.dataset.n === prev.score));
+  paintTags();
+  const img = $("img"); img.onload = () => { S.shownAt = performance.now(); };
+  img.src = "/f/" + e + ".jpg";
+  for (const k of [1, 2]) { const n = S.entries[S.i + k]; if (n) { const p = new Image(); p.src = "/f/" + n + ".jpg"; } }
+}
+
+function paintTags() { document.querySelectorAll("#tags button").forEach((b) => b.classList.toggle("on", S.sel.has(b.dataset.t))); }
+function toggle(t) { S.sel.has(t) ? S.sel.delete(t) : S.sel.add(t); paintTags(); }
+
+async function rate(n) {
+  if (S.busy) return; S.busy = true; $("err").textContent = "";
+  const e = S.entries[S.i];
+  const body = { rater: S.rater, entry: e, score: n, tags: [...S.sel], note: $("note").value.trim(),
+                 ms: Math.round(performance.now() - S.shownAt) };
+  try {
+    const res = await fetch("/api/rate", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const j = await res.json();
+    if (!res.ok) throw new Error(j.error || res.status);
+    S.done[e] = { score: n, tags: body.tags, note: body.note };
+    const next = S.entries.findIndex((x, k) => k > S.i && !S.done[x]);
+    const any = S.entries.findIndex((x) => !S.done[x]);
+    if (next >= 0) go(next); else if (any >= 0) go(any); else { $("prog").style.width = "100%"; show("end"); }
+  } catch (err) { $("err").textContent = "Not saved: " + err.message + ". Is the server still running?"; }
+  finally { S.busy = false; }
+}
+
+document.addEventListener("keydown", (ev) => {
+  if ($("rate").classList.contains("hidden")) { if (ev.key === "Enter" && !$("start").classList.contains("hidden")) start(); return; }
+  if (document.activeElement === $("note")) { if (ev.key === "Escape") $("note").blur(); return; }
+  if (ev.key >= "1" && ev.key <= "5") { ev.preventDefault(); rate(+ev.key); return; }
+  if (ev.key === "ArrowLeft" || ev.key === "Backspace") { ev.preventDefault(); go(S.i - 1); return; }
+  if (ev.key === "ArrowRight") { if (S.done[S.entries[S.i]]) go(S.i + 1); return; }
+  if (ev.key === "n" || ev.key === "N") { ev.preventDefault(); $("noteRow").classList.remove("hidden"); $("note").focus(); return; }
+  const k = TAGKEYS.indexOf(ev.key.toLowerCase());
+  if (k >= 0 && S.tags[k]) toggle(S.tags[k]);
+});
+$("go").onclick = start;
+$("back").onclick = () => go(S.i - 1);
+$("review").onclick = () => { show("rate"); go(S.entries.length - 1); };
+try { const r = localStorage.getItem("golden.rater"); if (r) $("rater").value = r; } catch (e) {}
+</script>
+</body>
+</html>

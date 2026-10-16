@@ -1,0 +1,391 @@
+{
+  "title": "Feedback that changes behaviour, not just feelings",
+  "wpm_target": 150,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "The vague verdict",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Behaviour, not person",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Impact and question",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "The shape, applied",
+      "role": "check"
+    },
+    {
+      "id": "payoff",
+      "title": "Feedback that lands",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "Priya gives a status update to her team.",
+        "It leaves everyone confused.",
+        "Her manager's feedback:",
+        "\"You need to communicate better.\""
+      ],
+      "on_screen": [
+        "\"Communicate better.\""
+      ],
+      "visual_intent": "Presenter introduces the moment; behind her, Priya mid-update, her manager delivers the vague line",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "a manager telling someone to communicate better without naming what they said or did is a common example of vague feedback",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "calm"
+    },
+    {
+      "id": "b02",
+      "section": "hook",
+      "job": "scenario",
+      "narration": [
+        "Next week,",
+        "same update,",
+        "same confusion,",
+        "nothing has changed."
+      ],
+      "on_screen": [
+        "Next week: same confusion"
+      ],
+      "visual_intent": "replay of the same update, visually identical to the first, undercutting the idea that the feedback worked",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "vague feedback does not identify which specific action to repeat, change or stop, so it tends not to change what happens next time",
+          "fact": "F6"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "hook",
+      "job": "orient",
+      "narration": [
+        "By the end of this, you can fix that.",
+        "Same moment, different feedback.",
+        "That's what changes what happens next."
+      ],
+      "on_screen": [
+        "Same moment. Different feedback."
+      ],
+      "visual_intent": "Presenter to camera states the promise, no scene behind her yet",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "grounding": [],
+      "delivery": "warm"
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "distinguish",
+      "narration": [
+        "\"Communicate better\" isn't a behaviour.",
+        "It's a verdict on who she is,",
+        "not on what she did."
+      ],
+      "on_screen": [
+        "Verdict, not behaviour"
+      ],
+      "visual_intent": "the vague phrase breaks into two labels: a character verdict and a specific action, the verdict highlighted as the wrong read",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "feedback aimed at a person's character rather than their behaviour is commonly heard as a judgement of identity and tends to trigger defensiveness",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "A behaviour is what she actually said or did.",
+        "Here: the timeline and the blockers,",
+        "written in the same paragraph.",
+        "That's a behaviour."
+      ],
+      "on_screen": [
+        "Behaviour: what was said or done"
+      ],
+      "visual_intent": "the character-verdict label fades; a specific behaviour label pulled from the actual update replaces it",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a behaviour means an observable action, as distinct from an inferred trait, motive or label",
+          "fact": "F2"
+        },
+        {
+          "claim": "the first part of feedback names a specific, observable behaviour rather than a trait or character judgement",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "Vague feedback like this doesn't say what to change.",
+        "It only makes her feel judged.",
+        "She still won't know what to do differently."
+      ],
+      "on_screen": [
+        "Doesn't say what to change"
+      ],
+      "visual_intent": "the vague verdict sits next to a question mark reading 'what do I do differently', a small frown icon beside it",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "because vague or character-directed feedback does not identify a specific, repeatable action, it tends not to change what the person does next time, even when it changes how they feel",
+          "fact": "F7"
+        }
+      ],
+      "misconception": "if feedback states the problem clearly and firmly, it will change what the person does next time"
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "sequence",
+      "narration": [
+        "Now add the impact.",
+        "\"Because the timeline and blockers were mixed in,",
+        "I couldn't tell what was blocking us.\""
+      ],
+      "on_screen": [
+        "Impact: what it affected"
+      ],
+      "visual_intent": "the behaviour label grows a second line underneath: the concrete impact, joined to it by a short connecting arrow",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "describing the concrete impact of a behaviour helps the other person understand why it matters, not only that someone is unhappy",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Then end with a question:",
+        "\"What got left out, from your side?\""
+      ],
+      "on_screen": [
+        "Then: a question"
+      ],
+      "visual_intent": "a third line appears under behaviour and impact, completing a three-part on-screen sequence",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "ending feedback with a question invites the other person to add context and take part in deciding what happens next",
+          "fact": "F8"
+        },
+        {
+          "claim": "a closing question that asks what the other person noticed turns the exchange into a two-way conversation rather than a verdict",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "relate",
+      "narration": [
+        "A verdict ends the conversation.",
+        "A question starts one.",
+        "One invites her in."
+      ],
+      "on_screen": [
+        "Verdict ends it. Question starts it."
+      ],
+      "visual_intent": "split screen: a closed-door icon over the verdict line, an open-door icon over the question line",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "a feedback conversation that only states a verdict can feel one-sided to the receiver even when the content is accurate",
+          "fact": "F12"
+        },
+        {
+          "claim": "inviting the other person's view before agreeing on a next step increases the chance the change is something they can actually do",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "consolidate",
+      "narration": [
+        "Behaviour.",
+        "Impact.",
+        "Question.",
+        "In that order."
+      ],
+      "on_screen": [
+        "Behaviour, then impact, then question"
+      ],
+      "visual_intent": "the three-part shape assembles fully on screen and holds for a beat, as the reusable sequence",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a widely taught way to structure workplace feedback is in three parts, in this order: behaviour, impact, question",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "Same moment, two replies.",
+        "A: \"You're disorganized, you need to communicate better.\"",
+        "B: \"When the blockers were mixed into the timeline,",
+        "I couldn't tell what was blocking us.",
+        "What got left out?\"",
+        "Which one changes next week's update?"
+      ],
+      "on_screen": [
+        "A: the verdict",
+        "B: behaviour, impact, question"
+      ],
+      "visual_intent": "two feedback lines appear side by side, A the verdict, B the three-part shape; narration pauses before the reveal",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "quiz",
+        "options": [
+          "A: the verdict",
+          "B: behaviour, impact, question"
+        ],
+        "prompt": "Which reply is more likely to change next week's update?"
+      },
+      "grounding": [],
+      "hypothetical": true
+    },
+    {
+      "id": "b12",
+      "section": "sec3",
+      "job": "check",
+      "narration": [
+        "B.",
+        "It names the behaviour, the impact, and asks.",
+        "A hands down a verdict, so nothing moves."
+      ],
+      "on_screen": [
+        "B: names it, shows impact, asks"
+      ],
+      "visual_intent": "B highlighted and broken into its three labelled parts; A fades with the question mark from earlier",
+      "change_over_time": true,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "recall": {
+        "kind": "quiz_answer",
+        "answer": "B",
+        "why_wrong_tempting": "A feels direct and honest, and the person often reacts right away, but reacting isn't the same as knowing what to change"
+      },
+      "grounding": [
+        {
+          "claim": "the first line feels direct and even changes how someone feels in the moment, but it does not identify a specific, repeatable action",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Back to Priya.",
+        "Her manager tries it:",
+        "\"When the blockers were mixed into the timeline,",
+        "I couldn't tell what was blocking us.",
+        "What got left out, from your side?\"",
+        "She can finally answer."
+      ],
+      "on_screen": [
+        "The shape, used"
+      ],
+      "visual_intent": "replay the opening moment; the manager delivers the three-part feedback this time, Priya leans in to answer",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a widely taught way to structure feedback is behaviour, impact, then a question that invites the other person's view",
+          "fact": "F1"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b14",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "Next week's update is clear.",
+        "Same person.",
+        "Different feedback.",
+        "Name the behaviour, show the impact, then ask.",
+        "Try it on your next one."
+      ],
+      "on_screen": [
+        "Name it. Show impact. Ask."
+      ],
+      "visual_intent": "presenter returns to camera to close; behind her, a clean version of the now-clear update",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "a widely taught way to structure workplace feedback is in three parts, in this order: behaviour, impact, question",
+          "fact": "F1"
+        }
+      ],
+      "delivery": "warm"
+    }
+  ]
+}

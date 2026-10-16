@@ -1,0 +1,3 @@
+primitive_runtime_travel_names_a_wrong_target_at_build, on runtime/motion.js before the travel target check (2026-10-07; found on the claude fork's check: b01 tween_threw, b46 scene_threw):
+AssertionError: a wrong travel target still throws: [{'code': 'scene_threw', 'beat': 'b1', 'msg': "b1: Cannot read properties of null (reading '__pos')"}, {'code': 'tween_threw', 'beat': 'b1', 'msg': "b1: Cannot read properties of undefined (reading 'setAttribute')"}]
+After the fix: PASS (two motion_target errors naming b1; the rest of the scene built)

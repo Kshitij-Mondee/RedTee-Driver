@@ -1,0 +1,35 @@
+{
+ "name": "claude-cc-opus-sb",
+ "description": "Relay on the claude.ai subscription through Claude Code headless (claude -p), Opus on the storyboard only (Kshitij, 2026-10-08, D-142): Opus 5.5 writes the storyboard outline and the storyboard; Sonnet 5.5 writes everything else that is written (brief, facts, teaching plan, persona, script, kit, scenes, clips, tweaks); Gemini 3.8 Flash is the skeptic and the critic (another family, real API cost). Claude calls bill the subscription and are logged at list price as notional.",
+ "opus_storyboard": "Kshitij, 2026-10-08, D-142: 'use opus 5.5 only for storyboarding, make sonnet 5.5 write the code'",
+ "roles": {
+  "brief": "cc-sonnet",
+  "knowledge": "cc-sonnet",
+  "skeptic": "gemini-3.8-flash",
+  "pedagogy": "cc-sonnet",
+  "persona_pick": "cc-sonnet",
+  "script": "cc-sonnet",
+  "storyboard_outline": "cc-opus",
+  "storyboard": "cc-opus",
+  "scene": "cc-sonnet",
+  "kit": "cc-sonnet",
+  "clip": "cc-sonnet",
+  "critic": "gemini-3.8-flash",
+  "tweak": "cc-sonnet"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

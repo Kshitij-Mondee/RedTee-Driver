@@ -1,0 +1,515 @@
+{
+ "scene": "counting_house",
+ "camera_spec": {
+  "camera": {
+   "x": 4.4,
+   "y": 0.4,
+   "eye": 1.6,
+   "yaw": -14.0,
+   "hfov": 55,
+   "horizon_pct": 46.0
+  },
+  "walls": [
+   {
+    "name": "far wall (plaster over a pitch-pine dado, y 8.5)",
+    "axis": "y",
+    "at": 8.5
+   },
+   {
+    "name": "right wall (the partition to the wages passage, x 6.0)",
+    "axis": "x",
+    "at": 6.0
+   },
+   {
+    "name": "window wall (x 0)",
+    "axis": "x",
+    "at": 0
+   }
+  ],
+  "points": {
+   "far_L_floor": [
+    0,
+    8.5,
+    0
+   ],
+   "far_R_floor": [
+    6.0,
+    8.5,
+    0
+   ],
+   "far_L_top": [
+    0,
+    8.5,
+    3.6
+   ],
+   "far_R_top": [
+    6.0,
+    8.5,
+    3.6
+   ],
+   "dado_far_L": [
+    0,
+    8.5,
+    1.2
+   ],
+   "dado_far_R": [
+    6.0,
+    8.5,
+    1.2
+   ],
+   "desk_near_L": [
+    1.0,
+    5.0,
+    1.1
+   ],
+   "desk_near_R": [
+    4.0,
+    5.0,
+    1.1
+   ],
+   "desk_far_L": [
+    1.0,
+    5.8,
+    1.15
+   ],
+   "desk_far_R": [
+    4.0,
+    5.8,
+    1.15
+   ],
+   "desk_leg_near_L": [
+    1.05,
+    5.05,
+    0
+   ],
+   "desk_leg_near_R": [
+    3.95,
+    5.05,
+    0
+   ],
+   "C_head_top": [
+    2.3,
+    6.25,
+    1.68
+   ],
+   "C_head_centre": [
+    2.3,
+    6.25,
+    1.55
+   ],
+   "C_feet": [
+    2.3,
+    6.25,
+    0
+   ],
+   "C_stool_seat": [
+    2.3,
+    6.35,
+    0.8
+   ],
+   "M_head_top": [
+    1.5,
+    4.35,
+    1.75
+   ],
+   "M_head_centre": [
+    1.5,
+    4.35,
+    1.62
+   ],
+   "M_feet": [
+    1.5,
+    4.35,
+    0
+   ],
+   "K_head_top": [
+    4.9,
+    8.0,
+    1.7
+   ],
+   "K_head_centre": [
+    4.9,
+    8.0,
+    1.57
+   ],
+   "K_feet": [
+    4.9,
+    8.0,
+    0
+   ],
+   "safe_top_L": [
+    0.15,
+    8.0,
+    1.2
+   ],
+   "safe_top_R": [
+    0.95,
+    8.0,
+    1.2
+   ],
+   "clock": [
+    3.9,
+    8.5,
+    2.6
+   ],
+   "notice_L": [
+    3.0,
+    8.5,
+    2.2
+   ],
+   "notice_R": [
+    3.5,
+    8.5,
+    1.8
+   ],
+   "press_top": [
+    3.4,
+    8.15,
+    1.25
+   ],
+   "gas_pendant": [
+    2.5,
+    5.4,
+    2.4
+   ],
+   "win2_far_sill": [
+    0,
+    4.6,
+    0.9
+   ],
+   "win2_far_head": [
+    0,
+    4.6,
+    2.9
+   ],
+   "right_wall_far_top": [
+    6.0,
+    8.5,
+    3.6
+   ],
+   "press_stand_floor": [
+    3.4,
+    8.15,
+    0
+   ],
+   "hatch_L_bottom": [
+    4.6,
+    8.5,
+    0.9
+   ],
+   "hatch_R_top": [
+    5.2,
+    8.5,
+    1.3
+   ],
+   "hatch_shelf_front": [
+    4.9,
+    8.3,
+    0.9
+   ],
+   "wage_tray": [
+    4.4,
+    8.2,
+    0.95
+   ],
+   "ledger_near": [
+    2.0,
+    5.25,
+    1.12
+   ]
+  },
+  "behind": [
+   "C_head_top",
+   "C_head_centre",
+   "M_head_top",
+   "M_head_centre",
+   "K_head_top",
+   "K_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1420,
+   "along_x": -6436,
+   "horizon_y": 497
+  },
+  "points": {
+   "far_L_floor": {
+    "x": 483,
+    "y": 827,
+    "where": "frame",
+    "depth": 8.92
+   },
+   "far_R_floor": {
+    "x": 1827,
+    "y": 892,
+    "where": "frame",
+    "depth": 7.47
+   },
+   "far_L_top": {
+    "x": 483,
+    "y": 83,
+    "where": "frame",
+    "depth": 8.92
+   },
+   "far_R_top": {
+    "x": 1827,
+    "y": 3,
+    "where": "frame",
+    "depth": 7.47
+   },
+   "dado_far_L": {
+    "x": 483,
+    "y": 579,
+    "where": "frame",
+    "depth": 8.92
+   },
+   "dado_far_R": {
+    "x": 1827,
+    "y": 596,
+    "where": "frame",
+    "depth": 7.47
+   },
+   "desk_near_L": {
+    "x": 197,
+    "y": 671,
+    "where": "frame",
+    "depth": 5.29
+   },
+   "desk_near_R": {
+    "x": 1253,
+    "y": 699,
+    "where": "frame",
+    "depth": 4.56
+   },
+   "desk_far_L": {
+    "x": 354,
+    "y": 634,
+    "where": "frame",
+    "depth": 6.06
+   },
+   "desk_far_R": {
+    "x": 1277,
+    "y": 652,
+    "where": "frame",
+    "depth": 5.34
+   },
+   "desk_leg_near_L": {
+    "x": 224,
+    "y": 1051,
+    "where": "frame",
+    "depth": 5.32
+   },
+   "desk_leg_near_R": {
+    "x": 1235,
+    "y": 1135,
+    "where": "overscan",
+    "depth": 4.62
+   },
+   "C_head_top": {
+    "x": 774,
+    "y": 473,
+    "where": "frame",
+    "depth": 6.18,
+    "behind": {
+     "wall": "far wall (plaster over a pitch-pine dado, y 8.5)",
+     "at": [
+      1.49,
+      8.5,
+      1.71
+     ]
+    }
+   },
+   "C_head_centre": {
+    "x": 774,
+    "y": 512,
+    "where": "frame",
+    "depth": 6.18,
+    "behind": {
+     "wall": "far wall (plaster over a pitch-pine dado, y 8.5)",
+     "at": [
+      1.49,
+      8.5,
+      1.53
+     ]
+    }
+   },
+   "C_feet": {
+    "x": 774,
+    "y": 974,
+    "where": "frame",
+    "depth": 6.18
+   },
+   "C_stool_seat": {
+    "x": 784,
+    "y": 732,
+    "where": "frame",
+    "depth": 6.28
+   },
+   "M_head_top": {
+    "x": 204,
+    "y": 436,
+    "where": "frame",
+    "depth": 4.53,
+    "behind": {
+     "wall": "window wall (x 0)",
+     "at": [
+      0.0,
+      6.39,
+      1.83
+     ]
+    }
+   },
+   "M_head_centre": {
+    "x": 204,
+    "y": 489,
+    "where": "frame",
+    "depth": 4.53,
+    "behind": {
+     "wall": "window wall (x 0)",
+     "at": [
+      0.0,
+      6.39,
+      1.63
+     ]
+    }
+   },
+   "M_feet": {
+    "x": 204,
+    "y": 1148,
+    "where": "overscan",
+    "depth": 4.53
+   },
+   "K_head_top": {
+    "x": 1551,
+    "y": 471,
+    "where": "frame",
+    "depth": 7.25,
+    "behind": {
+     "wall": "far wall (plaster over a pitch-pine dado, y 8.5)",
+     "at": [
+      4.93,
+      8.5,
+      1.71
+     ]
+    }
+   },
+   "K_head_centre": {
+    "x": 1551,
+    "y": 504,
+    "where": "frame",
+    "depth": 7.25,
+    "behind": {
+     "wall": "far wall (plaster over a pitch-pine dado, y 8.5)",
+     "at": [
+      4.93,
+      8.5,
+      1.57
+     ]
+    }
+   },
+   "K_feet": {
+    "x": 1551,
+    "y": 904,
+    "where": "frame",
+    "depth": 7.25
+   },
+   "safe_top_L": {
+    "x": 458,
+    "y": 585,
+    "where": "frame",
+    "depth": 8.4
+   },
+   "safe_top_R": {
+    "x": 621,
+    "y": 587,
+    "where": "frame",
+    "depth": 8.21
+   },
+   "clock": {
+    "x": 1301,
+    "y": 266,
+    "where": "frame",
+    "depth": 7.98
+   },
+   "notice_L": {
+    "x": 1095,
+    "y": 362,
+    "where": "frame",
+    "depth": 8.2
+   },
+   "notice_R": {
+    "x": 1208,
+    "y": 451,
+    "where": "frame",
+    "depth": 8.08
+   },
+   "press_top": {
+    "x": 1175,
+    "y": 580,
+    "where": "frame",
+    "depth": 7.76
+   },
+   "gas_pendant": {
+    "x": 740,
+    "y": 219,
+    "where": "frame",
+    "depth": 5.31
+   },
+   "win2_far_sill": {
+    "x": -207,
+    "y": 748,
+    "where": "overscan",
+    "depth": 5.14
+   },
+   "win2_far_head": {
+    "x": -207,
+    "y": 30,
+    "where": "overscan",
+    "depth": 5.14
+   },
+   "right_wall_far_top": {
+    "x": 1827,
+    "y": 3,
+    "where": "frame",
+    "depth": 7.47
+   },
+   "press_stand_floor": {
+    "x": 1175,
+    "y": 877,
+    "where": "frame",
+    "depth": 7.76
+   },
+   "hatch_L_bottom": {
+    "x": 1468,
+    "y": 662,
+    "where": "frame",
+    "depth": 7.81
+   },
+   "hatch_R_top": {
+    "x": 1618,
+    "y": 569,
+    "where": "frame",
+    "depth": 7.67
+   },
+   "hatch_shelf_front": {
+    "x": 1546,
+    "y": 668,
+    "where": "frame",
+    "depth": 7.54
+   },
+   "wage_tray": {
+    "x": 1420,
+    "y": 655,
+    "where": "frame",
+    "depth": 7.57
+   },
+   "ledger_near": {
+    "x": 557,
+    "y": 664,
+    "where": "frame",
+    "depth": 5.29
+   }
+  }
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "cases": [
+  {
+   "label": "checkout failure (the source lesson)",
+   "params": {
+    "outcome": "The checkout failure",
+    "say_outcome": "checkout failed",
+    "conditions": [
+     {
+      "label": "No checkout test",
+      "say": "no automated test",
+      "icon": "flask-conical"
+     },
+     {
+      "label": "Staging setting differs",
+      "say": "staging setting",
+      "icon": "sliders-horizontal"
+     },
+     {
+      "label": "Unwatched alert",
+      "say": "alert was unwatched",
+      "icon": "bell-off"
+     }
+    ],
+    "summary": "Several conditions",
+    "say_summary": "Several conditions"
+   }
+  },
+  {
+   "label": "workplace safety: a fall",
+   "params": {
+    "outcome": "The slip and fall",
+    "say_outcome": "The fall",
+    "conditions": [
+     {
+      "label": "Wet floor",
+      "say": "floor was wet",
+      "icon": "droplets"
+     },
+     {
+      "label": "No warning sign",
+      "say": "no warning sign",
+      "icon": "triangle-alert"
+     },
+     {
+      "label": "Failed corridor light",
+      "say": "light had failed",
+      "icon": "lightbulb-off"
+     }
+    ],
+    "summary": "Together, not alone",
+    "say_summary": "Together",
+    "say_emphasis": "all three"
+   }
+  },
+  {
+   "label": "customer churn: a lost account",
+   "params": {
+    "outcome": "The lost account",
+    "say_outcome": "client did not leave",
+    "conditions": [
+     {
+      "label": "Slow support replies",
+      "say": "Support replies",
+      "icon": "headset"
+     },
+     {
+      "label": "Renewal price rise",
+      "say": "renewal price",
+      "icon": "trending-up"
+     },
+     {
+      "label": "Feature never shipped",
+      "say": "feature they asked for",
+      "icon": "package-x"
+     },
+     {
+      "label": "No account owner",
+      "say": "nobody owned",
+      "icon": "user-x"
+     }
+    ],
+    "summary": "All four pushed",
+    "say_summary": "All four"
+   }
+  },
+  {
+   "label": "project delays: a late launch",
+   "params": {
+    "outcome": "The late launch",
+    "say_outcome": "late launch",
+    "conditions": [
+     {
+      "label": "Unclear scope",
+      "say": "scope was unclear",
+      "icon": "file-question"
+     },
+     {
+      "label": "Only one reviewer",
+      "say": "only one person",
+      "icon": "user"
+     },
+     {
+      "label": "Vendor slipped",
+      "say": "vendor slipped",
+      "icon": "truck"
+     },
+     {
+      "label": "Late sign off",
+      "say": "sign off",
+      "icon": "clock"
+     },
+     {
+      "label": "Test environment down",
+      "say": "environment",
+      "icon": "server-off"
+     }
+    ],
+    "summary": "Every cause counts",
+    "say_summary": "Every cause"
+   }
+  },
+  {
+   "label": "burnout: only two conditions",
+   "params": {
+    "outcome": "Burnout",
+    "say_outcome": "Burnout",
+    "conditions": [
+     {
+      "label": "Long hours",
+      "say": "long hours",
+      "icon": "clock"
+     },
+     {
+      "label": "No recovery time",
+      "say": "no recovery",
+      "icon": "battery-low"
+     }
+    ]
+   }
+  },
+  {
+   "label": "six-word labels everywhere (type-floor stress)",
+   "params": {
+    "outcome": "Client left after repeated service failures",
+    "say_outcome": "client left",
+    "conditions": [
+     {
+      "label": "Requested feature never shipped after launch",
+      "say": "feature never shipped",
+      "icon": "package-x"
+     },
+     {
+      "label": "Unacknowledged infrastructure alerts ignored for weeks",
+      "say": "alerts ignored",
+      "icon": "bell-off"
+     },
+     {
+      "label": "Support replies took several days each",
+      "say": "support replies",
+      "icon": "headset"
+     }
+    ],
+    "summary": "Every one of these pushed them",
+    "say_summary": "pushed them"
+   }
+  }
+ ]
+}

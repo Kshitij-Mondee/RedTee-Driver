@@ -1,0 +1,97 @@
+{
+ "id": "bench-20261006-151439-gemini-balanced-fix1007",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-gemini-balanced-fix1007",
+ "beats": 35,
+ "check_errors": 16,
+ "check_warnings": 52,
+ "blurred": {
+  "beats": [],
+  "of": 35
+ },
+ "foreign": {
+  "beats": [],
+  "of": 35,
+  "measured": 34
+ },
+ "off_frame": {
+  "errors": 0,
+  "first": []
+ },
+ "late_lead": {
+  "beats": [
+   "b16",
+   "b31"
+  ],
+  "of": 32,
+  "worst": 1.23
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 0
+ },
+ "empty": {
+  "errors": 0,
+  "first": []
+ },
+ "kinds": {
+  "runtime text_overflow": 6,
+  "hf contrast contrast_aa_failure": 4,
+  "runtime held_missing": 3,
+  "runtime icon_missing": 3
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 2,
+   "kinds": {
+    "length": 2
+   },
+   "first": [
+    "pacing.target_duration_s is 270s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~299s but the request asks for about 120s (at most 156s); cut about 342 words or whole beats to the requested length",
+    "35 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 14,
+   "kinds": {
+    "allocation": 4,
+    "cast": 4,
+    "nested w/h": 3,
+    "placeholder": 1,
+    "keep missing": 1,
+    "template cap": 1
+   },
+   "first": [
+    "b02: props.lines[0].text = '...' has no words: a slot that is meant to look empty is an item {\"empty\": true} (compare.two items, document.page lines), never punctuation on screen",
+    "station s_camera_lens: a nested station's own space is always one frame (1920x1080); its size inside 's_calendar' is rect.w/h. Drop w/h (960x540): the runtime ignores them (station_size_ignored) and a layout written for them lands somewhere else",
+    "station s_impact: a nested station's own space is always one frame (1920x1080); its size inside 's_meeting' is rect.w/h. Drop w/h (960x540): the runtime ignores them (station_size_ignored) and a layout written for them lands somewhere else",
+    "station s_future_plan: a nested station's own space is always one frame (1920x1080); its size inside 's_board' is rect.w/h. Drop w/h (960x540): the runtime ignores them (station_size_ignored) and a layout written for them lands somewhere else",
+    "b02: keep names ['left', 'right', 'lines'] but the previous beat b01 (scenario.dialogue) cannot provide them: its template draws only these elements: N_name, N_person, caption, line_N, setting, template_backplate. A kept name must be an element that beat really drew (or kept); a template's design.elements are not drawn. Drop them from keep (held_missing)"
+   ]
+  },
+  "scenes": {
+   "errors": 0,
+   "kinds": {},
+   "first": []
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 306s but the request asks for about 120s (at most 156s): the script must lose about 61 % of its words"
+   ]
+  }
+ }
+}

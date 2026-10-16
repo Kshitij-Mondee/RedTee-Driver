@@ -1,0 +1,121 @@
+{
+ "id": "bench-20261006-151439-claude-balanced-fix1007",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-claude-balanced-fix1007",
+ "beats": 54,
+ "check_errors": 33,
+ "check_warnings": 117,
+ "blurred": {
+  "beats": [],
+  "of": 54
+ },
+ "foreign": {
+  "beats": [],
+  "of": 54,
+  "measured": 54
+ },
+ "off_frame": {
+  "errors": 12,
+  "first": [
+   "b01: off frame at 6.8s: character 'priya' cropped 247 px at the top and 0 px at the sides; character 'dev' cropped 267 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+   "b04: off frame at 28.0s: character 'replayed_meeting' cropped 387 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+   "b07: off frame at 54.5s: character 'dev' cropped 487 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+   "b10: off frame at 83.3s: character 'dev' cropped 994 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+   "b20: off frame at 170.1s: character 'dev' cropped 379 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)",
+   "b21: off frame at 180.6s: character 'sam_left' cropped 62 px at the top and 0 px at the sides; character 'sam_right' cropped 59 px at the top and 0 px at the sides (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b41"
+  ],
+  "of": 28,
+  "worst": 1.23
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 5
+ },
+ "empty": {
+  "errors": 0,
+  "first": []
+ },
+ "kinds": {
+  "off_frame": 12,
+  "runtime held_missing": 7,
+  "runtime unknown_motion_setting": 3,
+  "runtime held_needs_same_station": 3,
+  "runtime scene_threw": 2,
+  "runtime unknown_token": 2,
+  "runtime tween_threw": 1,
+  "runtime text_spill": 1,
+  "runtime text_overflow": 1,
+  "hf layout content_overlap": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 3,
+   "kinds": {
+    "length": 3
+   },
+   "first": [
+    "pacing.target_duration_s is 600s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it",
+    "the plan says no length was requested ('no requested length'), but the request asks for 2 minutes (120s): set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~485s but the request asks for about 120s (at most 156s); cut about 689 words or whole beats to the requested length",
+    "54 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 25,
+   "kinds": {
+    "cast": 18,
+    "allocation": 5,
+    "placeholder": 2
+   },
+   "first": [
+    "b11: props.lines[1].text = 'Behaviour, Effect, Request: three empty slots' describes the slot instead of filling it ('empty' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b27: props.lines[2].text = 'Request: still empty' describes the slot instead of filling it ('empty' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b23: allocation says hybrid but this is a plain template: give it its motion layer (shot.move push or pull, or a `continue` join that keeps and builds on the previous picture), or make it a blueprint or bespoke scene",
+    "b27: allocation says hybrid but this is a plain template: give it its motion layer (shot.move push or pull, or a `continue` join that keeps and builds on the previous picture), or make it a blueprint or bespoke scene",
+    "b34: allocation says hybrid but this is a plain template: give it its motion layer (shot.move push or pull, or a `continue` join that keeps and builds on the previous picture), or make it a blueprint or bespoke scene"
+   ]
+  },
+  "scenes": {
+   "errors": 22,
+   "kinds": {
+    "cast": 15,
+    "ctx.held(['dev']) but the previous beat ": 2,
+    "ctx.held(['Priya', 'Dev']) but the previ": 1,
+    "ctx.held(['captions']) but the previous ": 1,
+    "ctx.held(['specific_sentence', 'old_line": 1,
+    "ctx.held('slot_one_words') but the previ": 1,
+    "ctx.held('desk') but the previous beat b": 1
+   },
+   "first": [
+    "b02.js: ctx.held(['Priya', 'Dev']) but the previous beat b01 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b07.js: ctx.held(['dev']) but the previous beat b06 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b10.js: ctx.held(['dev']) but the previous beat b09 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b13.js: ctx.held(['captions']) but the previous beat b12 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b18.js: ctx.held(['specific_sentence', 'old_line']) but the previous beat b17 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 474s but the request asks for about 120s (at most 156s): the script must lose about 75 % of its words"
+   ]
+  }
+ }
+}

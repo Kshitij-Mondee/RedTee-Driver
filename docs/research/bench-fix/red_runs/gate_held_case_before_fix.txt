@@ -1,0 +1,3 @@
+pipeline_held_case_only_warns_in_the_scenes_gate_as_at_runtime, on loom/checks/gates.py before the change (2026-10-07; found on the claude fork's scenes gate: b02 refused for holding "Priya" where b01 drew "priya", which the runtime takes):
+ValueError: not enough values to unpack (expected 2, got 1)   (the gate returned the case-only name as a held_missing ERROR)
+After: PASS (case-only: a warning; a name never drawn: an error)

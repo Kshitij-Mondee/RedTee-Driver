@@ -1,0 +1,909 @@
+{
+ "scene": "departure_gate",
+ "camera_spec": {
+  "camera": {
+   "x": 7.4,
+   "y": -1.0,
+   "eye": 1.6,
+   "yaw": -30,
+   "hfov": 55,
+   "horizon_pct": 44
+  },
+  "walls": [
+   {
+    "name": "airside glass wall (x 0)",
+    "axis": "x",
+    "at": 0
+   },
+   {
+    "name": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+    "axis": "y",
+    "at": 9.0
+   },
+   {
+    "name": "end wall of timber slats (y 13)",
+    "axis": "y",
+    "at": 13
+   }
+  ],
+  "points": {
+   "glass_y3_floor": [
+    0,
+    3,
+    0
+   ],
+   "glass_y3_transom": [
+    0,
+    3,
+    3.0
+   ],
+   "glass_corner_floor": [
+    0,
+    13,
+    0
+   ],
+   "glass_corner_top": [
+    0,
+    13,
+    5.0
+   ],
+   "reader_top": [
+    1.2,
+    8.4,
+    1.1
+   ],
+   "reader_base": [
+    1.2,
+    8.4,
+    0
+   ],
+   "pod_L_top": [
+    2.4,
+    6.8,
+    1.07
+   ],
+   "pod_mid_top": [
+    3.7,
+    6.8,
+    1.07
+   ],
+   "pod_R_top": [
+    5.0,
+    6.8,
+    1.07
+   ],
+   "pod_L_floor": [
+    2.4,
+    6.8,
+    0
+   ],
+   "pod_R_floor": [
+    5.0,
+    6.8,
+    0
+   ],
+   "back_L_top": [
+    1.9,
+    9.0,
+    2.4
+   ],
+   "back_R_top": [
+    7.2,
+    9,
+    2.4
+   ],
+   "back_L_floor": [
+    1.9,
+    9.0,
+    0
+   ],
+   "back_R_floor": [
+    7.2,
+    9,
+    0
+   ],
+   "pax_head_top": [
+    4.35,
+    6.3,
+    1.75
+   ],
+   "pax_head_c": [
+    4.35,
+    6.3,
+    1.62
+   ],
+   "pax_feet": [
+    4.35,
+    6.3,
+    0
+   ],
+   "agent_head_top": [
+    4.35,
+    8.2,
+    1.75
+   ],
+   "agent_head_c": [
+    4.35,
+    8.2,
+    1.62
+   ],
+   "agent_feet": [
+    4.35,
+    8.2,
+    0
+   ],
+   "seat_head_top": [
+    6.26,
+    5.45,
+    1.3
+   ],
+   "seat_head_c": [
+    6.26,
+    5.45,
+    1.18
+   ],
+   "seat_seat": [
+    6.26,
+    5.25,
+    0.45
+   ],
+   "seat_feet": [
+    6.26,
+    4.7,
+    0
+   ],
+   "rowF_L_front": [
+    6.0,
+    5.0,
+    0.45
+   ],
+   "rowF_R_front": [
+    8.08,
+    5.0,
+    0.45
+   ],
+   "rowF_L_back": [
+    6.0,
+    5.66,
+    0.83
+   ],
+   "rowF_R_back": [
+    8.08,
+    5.66,
+    0.83
+   ],
+   "rowF_L_floor": [
+    6.0,
+    5.0,
+    0
+   ],
+   "rowF_R_floor": [
+    8.08,
+    5.0,
+    0
+   ],
+   "door_L_floor": [
+    0,
+    10.4,
+    0
+   ],
+   "door_L_top": [
+    0,
+    10.4,
+    2.4
+   ],
+   "door_R_floor": [
+    0,
+    12.2,
+    0
+   ],
+   "door_R_top": [
+    0,
+    12.2,
+    2.4
+   ],
+   "jet_nose": [
+    -6,
+    9,
+    -0.6
+   ],
+   "jet_cockpit_top": [
+    -7.8,
+    9,
+    1.0
+   ],
+   "jet_door_top": [
+    -10.5,
+    10.95,
+    1.3
+   ],
+   "jet_door_sill": [
+    -10.5,
+    10.95,
+    -0.6
+   ],
+   "bridge_rotunda_top": [
+    -5,
+    11.3,
+    2.8
+   ],
+   "bridge_rot_floor": [
+    -5,
+    11.3,
+    -4
+   ],
+   "scr_TL": [
+    5.2,
+    9,
+    2.3
+   ],
+   "scr_BR": [
+    6.4,
+    9,
+    1.95
+   ],
+   "signbox_TL": [
+    2.4,
+    8.0,
+    3.3
+   ],
+   "signbox_BR": [
+    5.0,
+    8.0,
+    2.9
+   ],
+   "ceiling_far": [
+    3,
+    13,
+    5.0
+   ],
+   "band_b": [
+    1.4,
+    3,
+    0
+   ],
+   "band_c": [
+    0.4,
+    10,
+    0
+   ],
+   "band_d": [
+    1.4,
+    10,
+    0
+   ],
+   "sun_edge_near": [
+    3.0,
+    4.0,
+    0
+   ],
+   "sun_edge_far": [
+    3.0,
+    8.0,
+    0
+   ],
+   "mic_on_pod": [
+    4.6,
+    7.1,
+    1.07
+   ],
+   "pod_P2_ledge": [
+    4.35,
+    6.95,
+    1.07
+   ],
+   "seat2_head_top": [
+    6.78,
+    5.45,
+    1.3
+   ],
+   "rowF_L_arm": [
+    6.0,
+    5.1,
+    0.62
+   ],
+   "bins_TL": [
+    3.0,
+    1.6,
+    1.0
+   ],
+   "bins_TR": [
+    3.8,
+    1.6,
+    1.0
+   ],
+   "bins_BR": [
+    3.8,
+    1.6,
+    0
+   ],
+   "cabin_bag": [
+    7.1,
+    4.6,
+    0.55
+   ],
+   "glass_y6_floor": [
+    0,
+    6,
+    0
+   ],
+   "glass_y6_transom": [
+    0,
+    6,
+    3.0
+   ],
+   "glass_y9_transom": [
+    0,
+    9,
+    3.0
+   ],
+   "glass_y9_floor": [
+    0,
+    9,
+    0
+   ],
+   "door_mid_floor": [
+    0,
+    11.3,
+    0
+   ],
+   "endwall_top_R": [
+    11,
+    13,
+    5.0
+   ],
+   "queue_spot": [
+    4.35,
+    4.6,
+    0
+   ],
+   "sun_patch_far_glass": [
+    0,
+    8,
+    0
+   ],
+   "gatenum_TL": [
+    4.45,
+    8.0,
+    3.25
+   ],
+   "gatenum_BR": [
+    4.95,
+    8.0,
+    2.95
+   ],
+   "mon2_top_L": [
+    4.4,
+    7.45,
+    1.05
+   ],
+   "mon2_top_R": [
+    4.9,
+    7.45,
+    1.05
+   ],
+   "signbox_BL": [
+    2.4,
+    8.0,
+    2.9
+   ],
+   "signbox_TR": [
+    5.0,
+    8.0,
+    3.3
+   ]
+  },
+  "behind": [
+   "pax_head_top",
+   "pax_head_c",
+   "agent_head_top",
+   "agent_head_c",
+   "seat_head_top",
+   "seat_head_c",
+   "seat2_head_top"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 2025,
+   "along_x": -2234,
+   "horizon_y": 475
+  },
+  "points": {
+   "glass_y3_floor": {
+    "x": -175,
+    "y": 887,
+    "where": "overscan",
+    "depth": 7.16
+   },
+   "glass_y3_transom": {
+    "x": -175,
+    "y": 115,
+    "where": "overscan",
+    "depth": 7.16
+   },
+   "glass_corner_floor": {
+    "x": 1029,
+    "y": 662,
+    "where": "frame",
+    "depth": 15.82
+   },
+   "glass_corner_top": {
+    "x": 1029,
+    "y": 79,
+    "where": "frame",
+    "depth": 15.82
+   },
+   "reader_top": {
+    "x": 850,
+    "y": 557,
+    "where": "frame",
+    "depth": 11.24
+   },
+   "reader_base": {
+    "x": 850,
+    "y": 738,
+    "where": "frame",
+    "depth": 11.24
+   },
+   "pod_L_top": {
+    "x": 874,
+    "y": 581,
+    "where": "frame",
+    "depth": 9.25
+   },
+   "pod_mid_top": {
+    "x": 1109,
+    "y": 589,
+    "where": "frame",
+    "depth": 8.6
+   },
+   "pod_R_top": {
+    "x": 1382,
+    "y": 598,
+    "where": "frame",
+    "depth": 7.95
+   },
+   "pod_L_floor": {
+    "x": 874,
+    "y": 794,
+    "where": "frame",
+    "depth": 9.25
+   },
+   "pod_R_floor": {
+    "x": 1382,
+    "y": 846,
+    "where": "frame",
+    "depth": 7.95
+   },
+   "back_L_top": {
+    "x": 998,
+    "y": 346,
+    "where": "frame",
+    "depth": 11.41
+   },
+   "back_R_top": {
+    "x": 1976,
+    "y": 307,
+    "where": "overscan",
+    "depth": 8.76
+   },
+   "back_L_floor": {
+    "x": 998,
+    "y": 734,
+    "where": "frame",
+    "depth": 11.41
+   },
+   "back_R_floor": {
+    "x": 1976,
+    "y": 812,
+    "where": "overscan",
+    "depth": 8.76
+   },
+   "pax_head_top": {
+    "x": 1197,
+    "y": 440,
+    "where": "frame",
+    "depth": 7.85,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      3.22,
+      9.0,
+      1.81
+     ]
+    }
+   },
+   "pax_head_c": {
+    "x": 1197,
+    "y": 470,
+    "where": "frame",
+    "depth": 7.85,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      3.22,
+      9.0,
+      1.63
+     ]
+    }
+   },
+   "pax_feet": {
+    "x": 1197,
+    "y": 851,
+    "where": "frame",
+    "depth": 7.85
+   },
+   "agent_head_top": {
+    "x": 1341,
+    "y": 446,
+    "where": "frame",
+    "depth": 9.49,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      4.08,
+      9.0,
+      1.76
+     ]
+    }
+   },
+   "agent_head_c": {
+    "x": 1341,
+    "y": 471,
+    "where": "frame",
+    "depth": 9.49,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      4.08,
+      9.0,
+      1.62
+     ]
+    }
+   },
+   "agent_feet": {
+    "x": 1341,
+    "y": 786,
+    "where": "frame",
+    "depth": 9.49
+   },
+   "seat_head_top": {
+    "x": 1630,
+    "y": 565,
+    "where": "frame",
+    "depth": 6.16,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      5.63,
+      9.0,
+      1.13
+     ]
+    }
+   },
+   "seat_head_c": {
+    "x": 1630,
+    "y": 601,
+    "where": "frame",
+    "depth": 6.16,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      5.63,
+      9.0,
+      0.95
+     ]
+    }
+   },
+   "seat_seat": {
+    "x": 1619,
+    "y": 830,
+    "where": "frame",
+    "depth": 5.98
+   },
+   "seat_feet": {
+    "x": 1584,
+    "y": 1011,
+    "where": "frame",
+    "depth": 5.51
+   },
+   "rowF_L_front": {
+    "x": 1519,
+    "y": 835,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "rowF_R_front": {
+    "x": 2323,
+    "y": 912,
+    "where": "outside",
+    "depth": 4.86
+   },
+   "rowF_L_back": {
+    "x": 1564,
+    "y": 695,
+    "where": "frame",
+    "depth": 6.47
+   },
+   "rowF_R_back": {
+    "x": 2291,
+    "y": 737,
+    "where": "outside",
+    "depth": 5.43
+   },
+   "rowF_L_floor": {
+    "x": 1519,
+    "y": 976,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "rowF_R_floor": {
+    "x": 2323,
+    "y": 1083,
+    "where": "outside",
+    "depth": 4.86
+   },
+   "door_L_floor": {
+    "x": 864,
+    "y": 693,
+    "where": "frame",
+    "depth": 13.57
+   },
+   "door_L_top": {
+    "x": 864,
+    "y": 367,
+    "where": "frame",
+    "depth": 13.57
+   },
+   "door_R_floor": {
+    "x": 983,
+    "y": 670,
+    "where": "frame",
+    "depth": 15.13
+   },
+   "door_R_top": {
+    "x": 983,
+    "y": 378,
+    "where": "frame",
+    "depth": 15.13
+   },
+   "jet_nose": {
+    "x": 167,
+    "y": 739,
+    "where": "frame",
+    "depth": 15.36
+   },
+   "jet_cockpit_top": {
+    "x": 34,
+    "y": 543,
+    "where": "frame",
+    "depth": 16.26
+   },
+   "jet_door_top": {
+    "x": 50,
+    "y": 504,
+    "where": "frame",
+    "depth": 19.3
+   },
+   "jet_door_sill": {
+    "x": 50,
+    "y": 685,
+    "where": "frame",
+    "depth": 19.3
+   },
+   "bridge_rotunda_top": {
+    "x": 458,
+    "y": 344,
+    "where": "frame",
+    "depth": 16.85
+   },
+   "bridge_rot_floor": {
+    "x": 458,
+    "y": 1088,
+    "where": "overscan",
+    "depth": 16.85
+   },
+   "scr_TL": {
+    "x": 1545,
+    "y": 343,
+    "where": "frame",
+    "depth": 9.76
+   },
+   "scr_BR": {
+    "x": 1792,
+    "y": 405,
+    "where": "frame",
+    "depth": 9.16
+   },
+   "signbox_TL": {
+    "x": 990,
+    "y": 171,
+    "where": "frame",
+    "depth": 10.29
+   },
+   "signbox_BR": {
+    "x": 1457,
+    "y": 209,
+    "where": "frame",
+    "depth": 8.99
+   },
+   "ceiling_far": {
+    "x": 1371,
+    "y": 37,
+    "where": "frame",
+    "depth": 14.32
+   },
+   "band_b": {
+    "x": 48,
+    "y": 932,
+    "where": "frame",
+    "depth": 6.46
+   },
+   "band_c": {
+    "x": 880,
+    "y": 702,
+    "where": "frame",
+    "depth": 13.03
+   },
+   "band_d": {
+    "x": 1005,
+    "y": 711,
+    "where": "frame",
+    "depth": 12.53
+   },
+   "sun_edge_near": {
+    "x": 590,
+    "y": 927,
+    "where": "frame",
+    "depth": 6.53
+   },
+   "sun_edge_far": {
+    "x": 1087,
+    "y": 770,
+    "where": "frame",
+    "depth": 9.99
+   },
+   "mic_on_pod": {
+    "x": 1316,
+    "y": 591,
+    "where": "frame",
+    "depth": 8.41
+   },
+   "pod_P2_ledge": {
+    "x": 1252,
+    "y": 591,
+    "where": "frame",
+    "depth": 8.41
+   },
+   "seat2_head_top": {
+    "x": 1801,
+    "y": 569,
+    "where": "frame",
+    "depth": 5.9,
+    "behind": {
+     "wall": "podium back wall (y 9.0, x 1.9 to 7.2, 2.4 m high)",
+     "at": [
+      6.44,
+      9.0,
+      1.13
+     ]
+    }
+   },
+   "rowF_L_arm": {
+    "x": 1526,
+    "y": 777,
+    "where": "frame",
+    "depth": 5.98
+   },
+   "bins_TL": {
+    "x": -80,
+    "y": 724,
+    "where": "overscan",
+    "depth": 4.45
+   },
+   "bins_TR": {
+    "x": 133,
+    "y": 748,
+    "where": "frame",
+    "depth": 4.05
+   },
+   "bins_BR": {
+    "x": 133,
+    "y": 1203,
+    "where": "overscan",
+    "depth": 4.05
+   },
+   "cabin_bag": {
+    "x": 1897,
+    "y": 862,
+    "where": "frame",
+    "depth": 5.0
+   },
+   "glass_y6_floor": {
+    "x": 411,
+    "y": 777,
+    "where": "frame",
+    "depth": 9.76
+   },
+   "glass_y6_transom": {
+    "x": 411,
+    "y": 211,
+    "where": "frame",
+    "depth": 9.76
+   },
+   "glass_y9_transom": {
+    "x": 750,
+    "y": 266,
+    "where": "frame",
+    "depth": 12.36
+   },
+   "glass_y9_floor": {
+    "x": 750,
+    "y": 714,
+    "where": "frame",
+    "depth": 12.36
+   },
+   "door_mid_floor": {
+    "x": 927,
+    "y": 681,
+    "where": "frame",
+    "depth": 14.35
+   },
+   "endwall_top_R": {
+    "x": 2767,
+    "y": -132,
+    "where": "outside",
+    "depth": 10.32
+   },
+   "queue_spot": {
+    "x": 1006,
+    "y": 938,
+    "where": "frame",
+    "depth": 6.37
+   },
+   "sun_patch_far_glass": {
+    "x": 654,
+    "y": 732,
+    "where": "frame",
+    "depth": 11.49
+   },
+   "gatenum_TL": {
+    "x": 1347,
+    "y": 147,
+    "where": "frame",
+    "depth": 9.27
+   },
+   "gatenum_BR": {
+    "x": 1446,
+    "y": 199,
+    "where": "frame",
+    "depth": 9.02
+   },
+   "mon2_top_L": {
+    "x": 1300,
+    "y": 590,
+    "where": "frame",
+    "depth": 8.82
+   },
+   "mon2_top_R": {
+    "x": 1403,
+    "y": 594,
+    "where": "frame",
+    "depth": 8.57
+   },
+   "signbox_BL": {
+    "x": 990,
+    "y": 242,
+    "where": "frame",
+    "depth": 10.29
+   },
+   "signbox_TR": {
+    "x": 1457,
+    "y": 127,
+    "where": "frame",
+    "depth": 8.99
+   }
+  }
+ }
+}

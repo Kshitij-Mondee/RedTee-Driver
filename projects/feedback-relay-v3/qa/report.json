@@ -1,0 +1,231 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "b07: 5.0s static hold from 76.1s",
+    "b03: 8 chunks on screen (b03_cloud, b03_dev, b03_manager, b03_room_back, b03_room_front, engaged_ring, impression_label, thought_bubble); the budget is ~5-6",
+    "b06: 11 chunks on screen (board, board_frame, camera_icon, chair_icon, label_behaviour, label_effect, line1, line2, note_model, table_edge, tag_agreed); the budget is ~5-6",
+    "b09: 10 chunks on screen (ask_first_label, clock_tag, coffee_back, coffee_front, dev, dev_bubble, door_sign, manager, manager_bubble, pennant_calm); the budget is ~5-6",
+    "b12: 9 chunks on screen (dev, dev_bubble, fuzzy_cloud, good_terms_note, manager, meeting_room_back, meeting_room_front, sheet, sheet_label); the budget is ~5-6",
+    "variety: one_radius_share = 0.465 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.9 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b03, b05, b06, b09, b11)",
+    "variety: labels_over_objects_share = 0.7 is worse than the worst baseline lesson (0.5): it grew (beats: _kit, b02, b03, b06, b09, b11, b12)",
+    "lc layout content_overlap @ 49: b05 \"one-word answers on vendors\" and b05 \"one-word answers on vendors\" overlap at [425, 156, 1172, 252] from 49 to 49 s (a passing crossing (under 500 ms)) [board / board]",
+    "lc layout content_overlap @ 49: b05 \"observed behaviour\" and b05 \"observed behaviour\" overlap at [1390, 187, 1608, 230] from 49 to 49 s (a passing crossing (under 500 ms)) [board / board]",
+    "lc layout content_overlap @ 56.5: b06 \"we lost your view\" and b06 \"we lost your view\" overlap at [425, 356, 854, 452] from 56.5 to 56.5 s (a passing crossing (under 500 ms)) [board / board]",
+    "lc layout content_overlap @ 56.5: b06 \"effect\" and b06 \"effect\" overlap at [1466, 387, 1532, 430] from 56.5 to 56.5 s (a passing crossing (under 500 ms)) [board / board]",
+    "lc layout text_redrawn @ 56: b06: b06 draws again 4 text(s) b05 still shows (\"one-word answers on vendors\", \"we lost your view\", \"observed behaviour\"): carry the element (hold it) instead of redrawing it, from 56 to 58 s [board]",
+    "b04: value script says 'mid' but the frames measure brightness 0.83 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.82 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.82 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson saturation 0.14 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 1.85
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 2.72
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.7
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 2.08
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.96
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 5.04
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.42
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 2.1
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 1.64
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 3.3
+      }
+    ],
+    "allocation": {
+      "avatar": 0.107,
+      "template": 0.491,
+      "motion": 0.402,
+      "hybrid": 0.0,
+      "motion_effective": 0.402
+    },
+    "elements": {
+      "b01": 6,
+      "b02": 2,
+      "b03": 8,
+      "b04": 5,
+      "b05": 3,
+      "b06": 13,
+      "b07": 5,
+      "b08": 6,
+      "b09": 10,
+      "b10": 7,
+      "b11": 6,
+      "b12": 9
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.174,
+      "wallpaper_share": 0.0,
+      "template_share": 0.167,
+      "classic_share": 1.0,
+      "one_radius_share": 0.465,
+      "still_share": 0.9,
+      "labels_over_objects_share": 0.7,
+      "one_world_share": 0.2,
+      "lines_per_s": 7.93
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 43332,
+      "layout_samples": 281,
+      "texts": 356,
+      "contrast_checked": 220,
+      "errors": 0,
+      "warnings": 5
+    },
+    "nodes": 2881,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 32.8,
+        "b02": 32.8,
+        "b03": 32.8,
+        "b04": 35.2,
+        "b05": 35.2,
+        "b06": 32.8,
+        "b07": 34.4,
+        "b08": 41.8,
+        "b09": 32.8,
+        "b10": 34.4,
+        "b11": 32.8,
+        "b12": 38.5
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 12,
+      "lines_seen": 55,
+      "blank_beats": [],
+      "blank_measured": 12
+    },
+    "foreign": {
+      "measured_beats": 12,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 80,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.1056,
+        "b02": 0.1196,
+        "b03": 0.1259,
+        "b04": 0.0978,
+        "b05": 0.1287,
+        "b06": 0.132,
+        "b07": 0.075,
+        "b08": 0.0902,
+        "b09": 0.0951,
+        "b10": 0.0734,
+        "b11": 0.0775,
+        "b12": 0.107
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 12,
+      "sharpness": {
+        "b01": 1.15,
+        "b02": 1.077,
+        "b03": 1.037,
+        "b04": 0.907,
+        "b05": 1.04,
+        "b06": 0.827,
+        "b07": 1.015,
+        "b08": 1.005,
+        "b09": 1.156,
+        "b10": 0.932,
+        "b11": 1.293,
+        "b12": 0.985
+      },
+      "blurred_beats": [],
+      "blur_measured": 12
+    },
+    "tone": {
+      "value_script_beats": 12,
+      "tone_vs_reference": {
+        "brightness": 0.738,
+        "saturation": 0.143,
+        "dark_share": 0.0,
+        "light_share": 0.5
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-relay-v3\\qa\\sheets\\b12.jpg"
+  ],
+  "build_hash": "383d80bbec777405"
+}

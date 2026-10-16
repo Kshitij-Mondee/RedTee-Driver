@@ -1,0 +1,202 @@
+{
+  "topic": "How HTTPS keeps your data private",
+  "scope_note": "Conceptual level for non-specialist employees: what travels, how identity is checked, how a shared key is agreed, how data is protected, and what the padlock does and does not mean. No encryption maths, no cipher names, no statistics.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Plain HTTP sends a request and its reply as ordinary readable text, with no encryption.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "HTTP specification, RFC 9110"
+    },
+    {
+      "id": "F2",
+      "statement": "Data sent over plain HTTP can be read, and even changed, by anyone who can see the network path between the browser and the server, such as the operator of a shared Wi-Fi network or a router along the way.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "caveat": "The watcher needs access to some point on the path. Say 'anyone on the path', not 'anyone on the internet'."
+    },
+    {
+      "id": "F3",
+      "statement": "HTTPS is the same web request carried inside a protected channel set up by a protocol called TLS.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "TLS 1.3 is specified in RFC 8446"
+    },
+    {
+      "id": "F4",
+      "statement": "A certificate is a signed statement that ties a domain name to a public key. It is signed by a certificate authority (CA), an organisation that browsers and operating systems are set up to trust.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "X.509 and Web PKI; CA/Browser Forum baseline requirements"
+    },
+    {
+      "id": "F5",
+      "statement": "At the start of a connection the server sends its certificate and the browser checks three things: the signature chains back to a certificate authority the browser trusts, the domain name matches the site being visited, and the certificate is within its validity dates.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "caveat": "Browsers also do other checks, such as revocation. The three checks are the ones the lesson needs."
+    },
+    {
+      "id": "F6",
+      "statement": "The server also has to prove during the handshake that it holds the private key matching the certificate, so copying someone else's certificate is not enough to pass as that site.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "RFC 8446, server authentication in the TLS handshake"
+    },
+    {
+      "id": "F7",
+      "statement": "In the current version of TLS, version 1.3, the browser and server each contribute a temporary value and combine them, using a method called ephemeral Diffie-Hellman, so both arrive at the same shared session key without that key ever being sent across the network.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [
+        "1.3"
+      ],
+      "reference_hint": "Diffie and Hellman (1976); RFC 8446",
+      "caveat": "Version specific. Older TLS versions could instead send a secret encrypted under the server's public key. Say 'in modern HTTPS' and do not claim every connection works this way."
+    },
+    {
+      "id": "F8",
+      "statement": "A watcher who records every value exchanged during the key agreement still cannot work out the session key in any practical amount of time.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "numbers": [],
+      "caveat": "This rests on maths problems that are believed to be hard, not proven impossible. Say 'cannot practically work it out', not 'it is impossible'."
+    },
+    {
+      "id": "F9",
+      "statement": "The server signs the key agreement using its certificate's key, so a impostor sitting in the middle cannot pass as the real site without failing the browser's checks.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "RFC 8446, CertificateVerify and Finished messages",
+      "caveat": "Holds when the browser has done its certificate check and no trusted CA has been compromised."
+    },
+    {
+      "id": "F10",
+      "statement": "The session key is a symmetric key: the same key scrambles the data at one end and unscrambles it at the other.",
+      "kind": "definition",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Standard cryptography textbooks"
+    },
+    {
+      "id": "F11",
+      "statement": "Symmetric encryption is used for the bulk of the data because it is much faster than the public-key methods used for the identity check and key agreement.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "caveat": "State it as a direction, 'much faster', and give no ratio."
+    },
+    {
+      "id": "F12",
+      "statement": "Once the session key is in place, everything the browser and server send, including form contents such as a password, travels as scrambled bytes. A watcher can still copy those bytes but cannot read them.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "RFC 8446, record protection"
+    },
+    {
+      "id": "F13",
+      "statement": "The same protection also lets each side detect if data was altered on the way, so tampering shows up as an error instead of passing silently.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "RFC 8446, authenticated encryption of records"
+    },
+    {
+      "id": "F14",
+      "statement": "The padlock means the connection to the site is encrypted and the browser has checked that the server holds a valid certificate for that exact domain name.",
+      "kind": "definition",
+      "confidence": "mainstream",
+      "numbers": [],
+      "caveat": "Browsers have changed the icon and wording over time, but the meaning is the same. Say 'the browser's secure-connection indicator' if the exact icon varies."
+    },
+    {
+      "id": "F15",
+      "statement": "The padlock does not mean the site is honest or safe, because anyone, including a scammer, can obtain a valid certificate for a domain name they control, including a lookalike name.",
+      "kind": "caution",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Browser vendor and CA/Browser Forum guidance that certificates do not vouch for site content"
+    },
+    {
+      "id": "F16",
+      "statement": "HTTPS protects data only while it travels. Once it reaches the server it is decrypted, and what the site's owner then does with it is not controlled by the padlock.",
+      "kind": "caution",
+      "confidence": "established",
+      "numbers": [],
+      "reference_hint": "Standard security guidance"
+    },
+    {
+      "id": "F17",
+      "statement": "HTTPS hides the page contents and what you type, but the network can usually still see which site name you are connecting to, so it does not hide your visit completely.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "numbers": [],
+      "caveat": "Newer techniques such as Encrypted Client Hello can hide more but are not universal. Mention only if the lesson needs the limit; say 'usually'."
+    },
+    {
+      "id": "F18",
+      "statement": "If the certificate check fails, for example the name does not match, the certificate has expired or the signer is not trusted, the browser by default shows a full-page warning and does not load the site until the user chooses to proceed.",
+      "kind": "practice",
+      "confidence": "established",
+      "numbers": [],
+      "caveat": "Behaviour varies by browser and by organisation policy. Some sites tell browsers to refuse any override. Say 'by default' and do not claim the user can never proceed."
+    },
+    {
+      "id": "F19",
+      "statement": "Before entering something sensitive, look at the address bar: confirm the domain name is exactly the one you expect and that the browser shows no certificate warning.",
+      "kind": "practice",
+      "confidence": "mainstream",
+      "numbers": [],
+      "caveat": "A habit, not a guarantee. It reduces risk from lookalike sites, but a lookalike with a valid certificate still shows a padlock, so the name matters more than the icon."
+    }
+  ],
+  "terms": [
+    {
+      "term": "watcher",
+      "definition": "Anyone positioned on the network path who can see the data passing by. The lesson's one recurring character."
+    },
+    {
+      "term": "certificate",
+      "definition": "A signed statement tying a domain name to a public key, issued by a certificate authority."
+    },
+    {
+      "term": "certificate authority",
+      "definition": "An organisation that browsers trust to sign certificates; abbreviated CA."
+    },
+    {
+      "term": "session key",
+      "definition": "The shared secret key the browser and server both derive for one connection, used to scramble and unscramble the data."
+    },
+    {
+      "term": "encrypt",
+      "definition": "To scramble data with a key so only someone with the key can read it."
+    },
+    {
+      "term": "TLS",
+      "definition": "The protocol that sets up the protected channel under HTTPS."
+    }
+  ],
+  "not_claimed": [
+    "The padlock means the site is trustworthy, honest or safe.",
+    "HTTPS hides which site you are visiting entirely.",
+    "The key is sent to the server, locked or not, so the watcher could in theory pick it up.",
+    "HTTPS protects data after it has reached the server, or stops the site itself misusing it.",
+    "HTTPS makes a device immune to malware, phishing or a compromised computer.",
+    "Encryption is unbreakable in principle; the claim is only that it is not practical to break.",
+    "Any figure about key lengths, speed ratios, or the share of sites using HTTPS."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (https-private on Shuttle via API, 2026-10-12)",
+    "note": ""
+  }
+}

@@ -1,0 +1,33 @@
+{
+ "id": "phishing-report",
+ "created": "2026-10-02T13:16:02",
+ "engine": "loom",
+ "mode": "topic",
+ "topic": "Spotting and reporting phishing: how employees recognise a phishing email or message and what to do in the first minutes (report it, do not click, and what to do if you already clicked)",
+ "sources": [],
+ "request": {
+  "audience": "all employees of a mid-size company, mixed technical skill; adults who have seen boring security trainings",
+  "genre": "policy",
+  "length_min": 6.0,
+  "style": "cinematic-noir",
+  "persona": "analyst",
+  "voice": {
+   "provider": "kokoro",
+   "voice": "am_michael",
+   "speed": 0.84,
+   "calibrated": true
+  },
+  "captions": true,
+  "avatar": {
+   "provider": "presenter",
+   "member": "woman"
+  },
+  "mix": "cinema",
+  "notes": "Corporate L&D, compliance-adjacent but not preachy. Cinema mix: drawn worlds, data pictures, real geography where it helps, meaningful joins, hold-and-transform. Presenter bookends. Keep every statistic sourced and conservative; prefer behaviours over scary numbers."
+ },
+ "models": {
+  "plan": "claude-opus-5-5",
+  "build": "claude-sonnet-5-5",
+  "tweak": "claude-haiku-4-5-20251001"
+ }
+}

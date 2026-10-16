@@ -1,0 +1,186 @@
+{
+  "id": "presenter-pop",
+  "name": "Presenter Pop",
+  "reads_as": "A presenter-documentary page: pale sage ground, big flat diagrams that fill the frame, saturated cobalt and orange, tight lime label pills with a pointer, a bold geometric sans, verdict badges (tick, cross). For explainers built on one diagram that builds and returns, sources on screen, and a host or proxy character.",
+  "look_family": "editorial",
+  "fits": [
+    "explainer",
+    "change",
+    "comparison",
+    "strategy",
+    "product"
+  ],
+  "avoid_for": [
+    "sombre topics",
+    "long dense text"
+  ],
+  "palette": {
+    "field": "#E7EBE2",
+    "field2": "#D3DACB",
+    "surface": "#FFFFFF",
+    "surface2": "#F2F5EE",
+    "ink": "#121829",
+    "muted": "#4F5869",
+    "line": "#121829",
+    "accent": "#2350E6",
+    "accent2": "#D2461F",
+    "accent3": "#C6F432",
+    "accent4": "#7A5CF0",
+    "pos": "#2E9E55",
+    "neg": "#D93A3A",
+    "shadow": "#B8C0B0",
+    "onAccent": "#FFFFFF"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400
+      ]
+    },
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 500,
+        "file": "inter-latin-500-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 700,
+        "file": "inter-latin-700-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      120,
+      180
+    ],
+    "hero": [
+      104,
+      160
+    ],
+    "title": [
+      64,
+      96
+    ],
+    "lead": [
+      36,
+      44
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      26,
+      32
+    ],
+    "caption": [
+      22,
+      26
+    ]
+  },
+  "shape": {
+    "radius": 4,
+    "stroke": 4,
+    "shading": "flat",
+    "shadow": "none"
+  },
+  "motion": {
+    "personality": "snappy",
+    "enter": 0.36,
+    "move": 0.3,
+    "exit": 0.22,
+    "stagger": 0.06,
+    "draw": 0.7,
+    "count": 0.9,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "grid",
+    "density": 0.6
+  },
+  "captions": {
+    "bg": "rgba(18,24,41,0.92)",
+    "fg": "surface",
+    "active": "accent3",
+    "radius": 6,
+    "font": "body",
+    "size": 36,
+    "weight": 700,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 2.2
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2A1E17",
+      "#4A2F1D",
+      "#1C1A1E",
+      "#6B4226",
+      "#8A5A33"
+    ],
+    "cloth": "accent",
+    "hair": "ink",
+    "ink": "ink",
+    "paper": "surface",
+    "mouth": "accent2",
+    "extra": "muted",
+    "extras": "people",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. Change it here, never per lesson."
+  },
+  "join_default": "cut",
+  "seam_join": "cut",
+  "join_note": "Plain and quick: a cut between topics is right; continue inside a topic; covers (dip, fade, wipe, iris) only at a section change, if at all.",
+  "music": {
+    "mood": "upbeat",
+    "root_midi": 50
+  },
+  "fx": {
+    "background": "paper",
+    "intensity": 0.35,
+    "grain": 0,
+    "vignette": 0.1,
+    "colors": [
+      "accent",
+      "accent3",
+      "accent2"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish."
+  }
+}

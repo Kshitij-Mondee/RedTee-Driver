@@ -1,0 +1,3997 @@
+{
+ "batch": "maya_story_parts_v6",
+ "base_slots": {
+  "surface": "#FFFFFF",
+  "surface2": "#E6E6E6",
+  "field2": "#CFCFCF",
+  "muted": "#8A8A8A",
+  "line": "#606060",
+  "ink": "#101010"
+ },
+ "assets": [
+  {
+   "file": "maya/pelvis.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "pelvis",
+   "view": "front",
+   "parent": null,
+   "pivot": [
+    500,
+    1040
+   ],
+   "z": 70,
+   "slots": [],
+   "anchors": [
+    "anchor_waist",
+    "anchor_hip_r",
+    "anchor_hip_l",
+    "anchor_seat"
+   ],
+   "description": "Pelvis and chino waistband with fly; root of the rig."
+  },
+  {
+   "file": "maya/torso.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "torso",
+   "view": "front",
+   "parent": "pelvis",
+   "pivot": [
+    500,
+    1000
+   ],
+   "z": 80,
+   "slots": [],
+   "anchors": [
+    "anchor_waist",
+    "anchor_neck_base",
+    "anchor_shoulder_r",
+    "anchor_shoulder_l",
+    "anchor_chest",
+    "anchor_badge"
+   ],
+   "description": "Knit sweater body with ribbed hem and the back of the shirt collar. Draws above the thighs."
+  },
+  {
+   "file": "maya/neck.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "neck",
+   "view": "front",
+   "parent": "torso",
+   "pivot": [
+    500,
+    624
+   ],
+   "z": 90,
+   "slots": [],
+   "anchors": [
+    "anchor_neck_base",
+    "anchor_neck"
+   ],
+   "description": "Neck with under-chin shadow."
+  },
+  {
+   "file": "maya/hair_back.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hair_back",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    330
+   ],
+   "z": 100,
+   "slots": [],
+   "anchors": [
+    "anchor_hair"
+   ],
+   "description": "Curly puff built from 12 directional clumps over a shade layer, top-left highlight band and three loose curls."
+  },
+  {
+   "file": "maya/head.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "head",
+   "view": "front",
+   "parent": "neck",
+   "pivot": [
+    500,
+    578
+   ],
+   "z": 110,
+   "slots": [],
+   "anchors": [
+    "anchor_neck",
+    "anchor_head_top",
+    "anchor_hair",
+    "anchor_brow_l",
+    "anchor_brow_r",
+    "anchor_eye_l",
+    "anchor_eye_r",
+    "anchor_eye_line",
+    "anchor_mouth",
+    "anchor_ear_l",
+    "anchor_ear_r"
+   ],
+   "description": "Face, ears, nose, blush and front hairline with scrunchie; features mount on its anchors."
+  },
+  {
+   "file": "maya/eye_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_l",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    459,
+    463
+   ],
+   "z": 122,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_l"
+   ],
+   "description": "Left eye (viewer side), attentive rest."
+  },
+  {
+   "file": "maya/eye_l_open.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_l",
+   "variant": "open",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    459,
+    463
+   ],
+   "z": 122,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_l"
+   ],
+   "description": "Eye state open."
+  },
+  {
+   "file": "maya/eye_l_half.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_l",
+   "variant": "half",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    459,
+    463
+   ],
+   "z": 122,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_l"
+   ],
+   "description": "Eye state half."
+  },
+  {
+   "file": "maya/eye_l_closed.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_l",
+   "variant": "closed",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    459,
+    463
+   ],
+   "z": 122,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_l"
+   ],
+   "description": "Eye state closed."
+  },
+  {
+   "file": "maya/eye_l_wide.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_l",
+   "variant": "wide",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    459,
+    463
+   ],
+   "z": 122,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_l"
+   ],
+   "description": "Eye state wide."
+  },
+  {
+   "file": "maya/eye_l_squint.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_l",
+   "variant": "squint",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    459,
+    463
+   ],
+   "z": 122,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_l"
+   ],
+   "description": "Eye state squint."
+  },
+  {
+   "file": "maya/brow_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_l",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    457,
+    425
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_l"
+   ],
+   "description": "Brow, soft rest shape."
+  },
+  {
+   "file": "maya/brow_l_neutral.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_l",
+   "variant": "neutral",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    457,
+    425
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_l"
+   ],
+   "description": "Brow state neutral."
+  },
+  {
+   "file": "maya/brow_l_raised.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_l",
+   "variant": "raised",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    457,
+    425
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_l"
+   ],
+   "description": "Brow state raised."
+  },
+  {
+   "file": "maya/brow_l_frown.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_l",
+   "variant": "frown",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    457,
+    425
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_l"
+   ],
+   "description": "Brow state frown."
+  },
+  {
+   "file": "maya/brow_l_worried.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_l",
+   "variant": "worried",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    457,
+    425
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_l"
+   ],
+   "description": "Brow state worried."
+  },
+  {
+   "file": "maya/brow_l_one_up.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_l",
+   "variant": "one_up",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    457,
+    425
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_l"
+   ],
+   "description": "Brow state one_up (left arches high, right drops skeptical; use as a pair)."
+  },
+  {
+   "file": "maya/eye_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_r",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    541,
+    463
+   ],
+   "z": 123,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_r"
+   ],
+   "description": "Right eye (viewer side), attentive rest."
+  },
+  {
+   "file": "maya/eye_r_open.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_r",
+   "variant": "open",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    541,
+    463
+   ],
+   "z": 123,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_r"
+   ],
+   "description": "Eye state open."
+  },
+  {
+   "file": "maya/eye_r_half.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_r",
+   "variant": "half",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    541,
+    463
+   ],
+   "z": 123,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_r"
+   ],
+   "description": "Eye state half."
+  },
+  {
+   "file": "maya/eye_r_closed.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_r",
+   "variant": "closed",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    541,
+    463
+   ],
+   "z": 123,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_r"
+   ],
+   "description": "Eye state closed."
+  },
+  {
+   "file": "maya/eye_r_wide.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_r",
+   "variant": "wide",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    541,
+    463
+   ],
+   "z": 123,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_r"
+   ],
+   "description": "Eye state wide."
+  },
+  {
+   "file": "maya/eye_r_squint.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "eye_r",
+   "variant": "squint",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    541,
+    463
+   ],
+   "z": 123,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_r"
+   ],
+   "description": "Eye state squint."
+  },
+  {
+   "file": "maya/brow_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_r",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    543,
+    425
+   ],
+   "z": 121,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_r"
+   ],
+   "description": "Brow, soft rest shape."
+  },
+  {
+   "file": "maya/brow_r_neutral.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_r",
+   "variant": "neutral",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    543,
+    425
+   ],
+   "z": 121,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_r"
+   ],
+   "description": "Brow state neutral."
+  },
+  {
+   "file": "maya/brow_r_raised.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_r",
+   "variant": "raised",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    543,
+    425
+   ],
+   "z": 121,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_r"
+   ],
+   "description": "Brow state raised."
+  },
+  {
+   "file": "maya/brow_r_frown.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_r",
+   "variant": "frown",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    543,
+    425
+   ],
+   "z": 121,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_r"
+   ],
+   "description": "Brow state frown."
+  },
+  {
+   "file": "maya/brow_r_worried.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_r",
+   "variant": "worried",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    543,
+    425
+   ],
+   "z": 121,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_r"
+   ],
+   "description": "Brow state worried."
+  },
+  {
+   "file": "maya/brow_r_one_up.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "brow_r",
+   "variant": "one_up",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    543,
+    425
+   ],
+   "z": 121,
+   "slots": [],
+   "anchors": [
+    "anchor_brow_r"
+   ],
+   "description": "Brow state one_up (left arches high, right drops skeptical; use as a pair)."
+  },
+  {
+   "file": "maya/mouth.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Closed attentive mouth; default."
+  },
+  {
+   "file": "maya/mouth_MBP.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "MBP",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme MBP."
+  },
+  {
+   "file": "maya/mouth_AI.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "AI",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme AI."
+  },
+  {
+   "file": "maya/mouth_E.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "E",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme E."
+  },
+  {
+   "file": "maya/mouth_O.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "O",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme O."
+  },
+  {
+   "file": "maya/mouth_U.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "U",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme U."
+  },
+  {
+   "file": "maya/mouth_FV.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "FV",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme FV."
+  },
+  {
+   "file": "maya/mouth_L.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "L",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme L."
+  },
+  {
+   "file": "maya/mouth_WQ.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "WQ",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme WQ."
+  },
+  {
+   "file": "maya/mouth_smile_talk.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "smile_talk",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Lip-sync viseme smile_talk."
+  },
+  {
+   "file": "maya/mouth_neutral.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "neutral",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth neutral with its cheek lines."
+  },
+  {
+   "file": "maya/face_neutral.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "neutral",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression neutral as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_listening.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "listening",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth listening with its cheek lines."
+  },
+  {
+   "file": "maya/face_listening.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "listening",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression listening as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_smile.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "smile",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth smile with its cheek lines."
+  },
+  {
+   "file": "maya/face_smile.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "smile",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression smile as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_laugh.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "laugh",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth laugh with its cheek lines."
+  },
+  {
+   "file": "maya/face_laugh.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "laugh",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression laugh as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_surprise.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "surprise",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth surprise with its cheek lines."
+  },
+  {
+   "file": "maya/face_surprise.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "surprise",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression surprise as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_concern.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "concern",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth concern with its cheek lines."
+  },
+  {
+   "file": "maya/face_concern.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "concern",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression concern as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_doubt.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "doubt",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth doubt with its cheek lines."
+  },
+  {
+   "file": "maya/face_doubt.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "doubt",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression doubt as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_focus.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "focus",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth focus with its cheek lines."
+  },
+  {
+   "file": "maya/face_focus.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "focus",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression focus as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_realisation.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "realisation",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth realisation with its cheek lines."
+  },
+  {
+   "file": "maya/face_realisation.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "realisation",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression realisation as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_frustration.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "frustration",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth frustration with its cheek lines."
+  },
+  {
+   "file": "maya/face_frustration.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "frustration",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression frustration as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_relief.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "relief",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth relief with its cheek lines."
+  },
+  {
+   "file": "maya/face_relief.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "relief",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression relief as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/mouth_pride.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "pride",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "Expression mouth pride with its cheek lines."
+  },
+  {
+   "file": "maya/face_pride.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "variant": "pride",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    500,
+    463
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [
+    "anchor_eye_line"
+   ],
+   "description": "Expression pride as one swap (brows, lids, cheeks, mouth); replaces brow_l, brow_r, eye_l, eye_r and mouth."
+  },
+  {
+   "file": "maya/earring_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "earring_l",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    406,
+    516
+   ],
+   "z": 130,
+   "slots": [],
+   "anchors": [
+    "anchor_ear_l"
+   ],
+   "description": "Left gold hoop; pivot at the lobe for swing."
+  },
+  {
+   "file": "maya/earring_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "earring_r",
+   "view": "front",
+   "parent": "head",
+   "pivot": [
+    594,
+    516
+   ],
+   "z": 131,
+   "slots": [],
+   "anchors": [
+    "anchor_ear_r"
+   ],
+   "description": "Right gold hoop; pivot at the lobe for swing."
+  },
+  {
+   "file": "maya/collar.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "collar",
+   "view": "front",
+   "parent": "torso",
+   "pivot": [
+    500,
+    624
+   ],
+   "z": 140,
+   "slots": [],
+   "anchors": [
+    "anchor_neck_base",
+    "anchor_lanyard"
+   ],
+   "description": "Sweater neckline, shirt collar points and lanyard; drawn over the neck."
+  },
+  {
+   "file": "maya/badge.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "badge",
+   "view": "front",
+   "parent": "collar",
+   "pivot": [
+    500,
+    790
+   ],
+   "z": 150,
+   "slots": [
+    "slot_badge_name",
+    "slot_badge_role",
+    "slot_badge_photo"
+   ],
+   "anchors": [
+    "anchor_badge_clip"
+   ],
+   "description": "ID badge with photo, name and role slots; hangs from the lanyard."
+  },
+  {
+   "file": "maya/deltoid_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_r",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_r",
+    "ratio": 0.5,
+    "angle": 0
+   },
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 165,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r"
+   ],
+   "description": "Right sweater shoulder drawn for an upper-arm angle of 0\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_r_45.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_r",
+   "variant": "45",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_r",
+    "ratio": 0.5,
+    "angle": 45
+   },
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 165,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r"
+   ],
+   "description": "Right sweater shoulder drawn for an upper-arm angle of 45\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_r_90.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_r",
+   "variant": "90",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_r",
+    "ratio": 0.5,
+    "angle": 90
+   },
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 165,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r"
+   ],
+   "description": "Right sweater shoulder drawn for an upper-arm angle of 90\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_r_135.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_r",
+   "variant": "135",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_r",
+    "ratio": 0.5,
+    "angle": 135
+   },
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 165,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r"
+   ],
+   "description": "Right sweater shoulder drawn for an upper-arm angle of 135\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_r_170.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_r",
+   "variant": "170",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_r",
+    "ratio": 0.5,
+    "angle": 170
+   },
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 165,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r"
+   ],
+   "description": "Right sweater shoulder drawn for an upper-arm angle of 170\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/upper_arm_r_foreshort.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "upper_arm_r",
+   "variant": "foreshort",
+   "view": "front",
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 160,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r",
+    "anchor_elbow_r"
+   ],
+   "description": "Right upper arm foreshortened toward camera (elbow forward), for hand-to-face poses; the forearm mounts at its elbow anchor."
+  },
+  {
+   "file": "maya/elbow_fold_r_foreshort.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "foreshort",
+   "view": "front",
+   "parent": "upper_arm_r",
+   "pivot": [
+    352,
+    860
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for the foreshortened elbow (seen end-on, so it keeps the round elbow)."
+  },
+  {
+   "file": "maya/upper_arm_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "upper_arm_r",
+   "view": "front",
+   "parent": "torso",
+   "pivot": [
+    360,
+    684
+   ],
+   "z": 160,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_r",
+    "anchor_elbow_r"
+   ],
+   "description": "Right upper arm; root is a plain rounded cap hidden under the deltoid."
+  },
+  {
+   "file": "maya/elbow_fold_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": 0
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right elbow at rest: no pad, only a faint sleeve crease; bridging side lines keep the outline closed for small bends. Pick the nearest elbow_fold variant for bent arms (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_out45.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "out45",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": 45
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of 45\u00b0 (swinging out from the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_out90.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "out90",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": 90
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of 90\u00b0 (swinging out from the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_out135.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "out135",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": 135
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of 135\u00b0 (swinging out from the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_in45.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "in45",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": -45
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of -45\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_in90.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "in90",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": -90
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of -90\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_in135.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "in135",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": -135
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of -135\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_r_in160.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "variant": "in160",
+   "view": "front",
+   "follow": {
+    "part": "forearm_r",
+    "ratio": 0.5,
+    "angle": -160
+   },
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r"
+   ],
+   "description": "Right sleeve fold for a forearm bend of -160\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/forearm_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "forearm_r",
+   "view": "front",
+   "parent": "upper_arm_r",
+   "pivot": [
+    348,
+    950
+   ],
+   "z": 170,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_r",
+    "anchor_wrist_r"
+   ],
+   "description": "Right forearm, sweater sleeve."
+  },
+  {
+   "file": "maya/cuff_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "cuff_r",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 190,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r"
+   ],
+   "description": "Right ribbed cuff; draws above the hand to hide the wrist join."
+  },
+  {
+   "file": "maya/thigh_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "thigh_r",
+   "view": "front",
+   "parent": "pelvis",
+   "pivot": [
+    437,
+    1105
+   ],
+   "z": 10,
+   "slots": [],
+   "anchors": [
+    "anchor_hip_r",
+    "anchor_knee_r"
+   ],
+   "description": "Right thigh, chinos, standing length."
+  },
+  {
+   "file": "maya/thigh_r_seated.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "thigh_r",
+   "variant": "seated",
+   "view": "front",
+   "parent": "pelvis",
+   "pivot": [
+    437,
+    1105
+   ],
+   "z": 35,
+   "slots": [],
+   "anchors": [
+    "anchor_hip_r",
+    "anchor_knee_r"
+   ],
+   "description": "Right thigh foreshortened for sitting; draws above the shin, which mounts at its knee."
+  },
+  {
+   "file": "maya/shin_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "shin_r",
+   "view": "front",
+   "parent": "thigh_r",
+   "pivot": [
+    432,
+    1500
+   ],
+   "z": 8,
+   "slots": [],
+   "anchors": [
+    "anchor_knee_r",
+    "anchor_ankle_r"
+   ],
+   "description": "Right shin with chino hem; its top tucks under the thigh, which draws above it, so the straight leg reads as one trouser leg."
+  },
+  {
+   "file": "maya/foot_r.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "foot_r",
+   "view": "front",
+   "parent": "shin_r",
+   "pivot": [
+    434,
+    1846
+   ],
+   "z": 6,
+   "slots": [],
+   "anchors": [
+    "anchor_ankle_r",
+    "anchor_floor_r"
+   ],
+   "description": "Right ankle and canvas trainer; sole sits on the floor line."
+  },
+  {
+   "file": "maya/hand_r_relaxed.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "relaxed",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, relaxed."
+  },
+  {
+   "file": "maya/hand_r_open.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "open",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, open."
+  },
+  {
+   "file": "maya/hand_r_point.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "point",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, point."
+  },
+  {
+   "file": "maya/hand_r_thumb_up.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "thumb_up",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, thumb up."
+  },
+  {
+   "file": "maya/hand_r_fist.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "fist",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, fist."
+  },
+  {
+   "file": "maya/hand_r_pinch.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "pinch",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, pinch."
+  },
+  {
+   "file": "maya/hand_r_holding_phone.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "holding_phone",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, holding phone."
+  },
+  {
+   "file": "maya/hand_r_holding_cup.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "holding_cup",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [
+    "slot_cup"
+   ],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, holding cup."
+  },
+  {
+   "file": "maya/hand_r_holding_paper.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "holding_paper",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [
+    "slot_paper"
+   ],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, holding paper."
+  },
+  {
+   "file": "maya/hand_r_holding_pen.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "holding_pen",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, holding pen."
+  },
+  {
+   "file": "maya/hand_r_typing.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "typing",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, typing."
+  },
+  {
+   "file": "maya/hand_r_count_1.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "count_1",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, count 1."
+  },
+  {
+   "file": "maya/hand_r_count_2.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "count_2",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, count 2."
+  },
+  {
+   "file": "maya/hand_r_count_3.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "count_3",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, count 3."
+  },
+  {
+   "file": "maya/hand_r_count_4.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "count_4",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, count 4."
+  },
+  {
+   "file": "maya/hand_r_count_5.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "count_5",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, count 5."
+  },
+  {
+   "file": "maya/hand_r_ok.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "ok",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, ok."
+  },
+  {
+   "file": "maya/hand_r_wave.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "wave",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, wave."
+  },
+  {
+   "file": "maya/hand_r_palm_up_offer.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "palm_up_offer",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, palm up offer."
+  },
+  {
+   "file": "maya/hand_r_palm_out_stop.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "palm_out_stop",
+   "view": "front",
+   "parent": "forearm_r",
+   "pivot": [
+    350,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "Right hand, palm out stop."
+  },
+  {
+   "file": "maya/deltoid_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_l",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_l",
+    "ratio": 0.5,
+    "angle": 0
+   },
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 205,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l"
+   ],
+   "description": "Left sweater shoulder drawn for an upper-arm angle of 0\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_l_45.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_l",
+   "variant": "45",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_l",
+    "ratio": 0.5,
+    "angle": -45
+   },
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 205,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l"
+   ],
+   "description": "Left sweater shoulder drawn for an upper-arm angle of -45\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_l_90.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_l",
+   "variant": "90",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_l",
+    "ratio": 0.5,
+    "angle": -90
+   },
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 205,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l"
+   ],
+   "description": "Left sweater shoulder drawn for an upper-arm angle of -90\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_l_135.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_l",
+   "variant": "135",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_l",
+    "ratio": 0.5,
+    "angle": -135
+   },
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 205,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l"
+   ],
+   "description": "Left sweater shoulder drawn for an upper-arm angle of -135\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/deltoid_l_170.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_l",
+   "variant": "170",
+   "view": "front",
+   "follow": {
+    "part": "upper_arm_l",
+    "ratio": 0.5,
+    "angle": -170
+   },
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 205,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l"
+   ],
+   "description": "Left sweater shoulder drawn for an upper-arm angle of -170\u00b0. Owned by the torso; pick the variant nearest the arm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/upper_arm_l_foreshort.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "upper_arm_l",
+   "variant": "foreshort",
+   "view": "front",
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 200,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l",
+    "anchor_elbow_l"
+   ],
+   "description": "Left upper arm foreshortened toward camera (elbow forward), for hand-to-face poses; the forearm mounts at its elbow anchor."
+  },
+  {
+   "file": "maya/elbow_fold_l_foreshort.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "foreshort",
+   "view": "front",
+   "parent": "upper_arm_l",
+   "pivot": [
+    648,
+    860
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for the foreshortened elbow (seen end-on, so it keeps the round elbow)."
+  },
+  {
+   "file": "maya/upper_arm_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "upper_arm_l",
+   "view": "front",
+   "parent": "torso",
+   "pivot": [
+    640,
+    684
+   ],
+   "z": 200,
+   "slots": [],
+   "anchors": [
+    "anchor_shoulder_l",
+    "anchor_elbow_l"
+   ],
+   "description": "Left upper arm; root is a plain rounded cap hidden under the deltoid."
+  },
+  {
+   "file": "maya/elbow_fold_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": 0
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left elbow at rest: no pad, only a faint sleeve crease; bridging side lines keep the outline closed for small bends. Pick the nearest elbow_fold variant for bent arms (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_out45.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "out45",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": -45
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of -45\u00b0 (swinging out from the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_out90.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "out90",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": -90
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of -90\u00b0 (swinging out from the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_out135.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "out135",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": -135
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of -135\u00b0 (swinging out from the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_in45.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "in45",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": 45
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of 45\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_in90.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "in90",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": 90
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of 90\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_in135.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "in135",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": 135
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of 135\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/elbow_fold_l_in160.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "variant": "in160",
+   "view": "front",
+   "follow": {
+    "part": "forearm_l",
+    "ratio": 0.5,
+    "angle": 160
+   },
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 215,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l"
+   ],
+   "description": "Left sleeve fold for a forearm bend of 160\u00b0 (folding across the body): outer elbow contour, inner crease. Pick the variant nearest the forearm angle and turn it by half the difference (follow)."
+  },
+  {
+   "file": "maya/forearm_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "forearm_l",
+   "view": "front",
+   "parent": "upper_arm_l",
+   "pivot": [
+    652,
+    950
+   ],
+   "z": 210,
+   "slots": [],
+   "anchors": [
+    "anchor_elbow_l",
+    "anchor_wrist_l"
+   ],
+   "description": "Left forearm, sweater sleeve."
+  },
+  {
+   "file": "maya/cuff_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "cuff_l",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 230,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l"
+   ],
+   "description": "Left ribbed cuff; draws above the hand to hide the wrist join."
+  },
+  {
+   "file": "maya/thigh_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "thigh_l",
+   "view": "front",
+   "parent": "pelvis",
+   "pivot": [
+    563,
+    1105
+   ],
+   "z": 40,
+   "slots": [],
+   "anchors": [
+    "anchor_hip_l",
+    "anchor_knee_l"
+   ],
+   "description": "Left thigh, chinos, standing length."
+  },
+  {
+   "file": "maya/thigh_l_seated.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "thigh_l",
+   "variant": "seated",
+   "view": "front",
+   "parent": "pelvis",
+   "pivot": [
+    563,
+    1105
+   ],
+   "z": 65,
+   "slots": [],
+   "anchors": [
+    "anchor_hip_l",
+    "anchor_knee_l"
+   ],
+   "description": "Left thigh foreshortened for sitting; draws above the shin, which mounts at its knee."
+  },
+  {
+   "file": "maya/shin_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "shin_l",
+   "view": "front",
+   "parent": "thigh_l",
+   "pivot": [
+    568,
+    1500
+   ],
+   "z": 38,
+   "slots": [],
+   "anchors": [
+    "anchor_knee_l",
+    "anchor_ankle_l"
+   ],
+   "description": "Left shin with chino hem; its top tucks under the thigh, which draws above it, so the straight leg reads as one trouser leg."
+  },
+  {
+   "file": "maya/foot_l.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "foot_l",
+   "view": "front",
+   "parent": "shin_l",
+   "pivot": [
+    566,
+    1846
+   ],
+   "z": 36,
+   "slots": [],
+   "anchors": [
+    "anchor_ankle_l",
+    "anchor_floor_l"
+   ],
+   "description": "Left ankle and canvas trainer; sole sits on the floor line."
+  },
+  {
+   "file": "maya/hand_l_relaxed.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "relaxed",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, relaxed."
+  },
+  {
+   "file": "maya/hand_l_open.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "open",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, open."
+  },
+  {
+   "file": "maya/hand_l_point.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "point",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, point."
+  },
+  {
+   "file": "maya/hand_l_thumb_up.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "thumb_up",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, thumb up."
+  },
+  {
+   "file": "maya/hand_l_fist.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "fist",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, fist."
+  },
+  {
+   "file": "maya/hand_l_pinch.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "pinch",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, pinch."
+  },
+  {
+   "file": "maya/hand_l_holding_phone.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "holding_phone",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, holding phone."
+  },
+  {
+   "file": "maya/hand_l_holding_cup.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "holding_cup",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [
+    "slot_cup"
+   ],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, holding cup."
+  },
+  {
+   "file": "maya/hand_l_holding_paper.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "holding_paper",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [
+    "slot_paper"
+   ],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, holding paper."
+  },
+  {
+   "file": "maya/hand_l_holding_pen.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "holding_pen",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, holding pen."
+  },
+  {
+   "file": "maya/hand_l_typing.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "typing",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, typing."
+  },
+  {
+   "file": "maya/hand_l_count_1.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "count_1",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, count 1."
+  },
+  {
+   "file": "maya/hand_l_count_2.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "count_2",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, count 2."
+  },
+  {
+   "file": "maya/hand_l_count_3.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "count_3",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, count 3."
+  },
+  {
+   "file": "maya/hand_l_count_4.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "count_4",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, count 4."
+  },
+  {
+   "file": "maya/hand_l_count_5.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "count_5",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, count 5."
+  },
+  {
+   "file": "maya/hand_l_ok.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "ok",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, ok."
+  },
+  {
+   "file": "maya/hand_l_wave.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "wave",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, wave."
+  },
+  {
+   "file": "maya/hand_l_palm_up_offer.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "palm_up_offer",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, palm up offer."
+  },
+  {
+   "file": "maya/hand_l_palm_out_stop.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "palm_out_stop",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand, palm out stop."
+  },
+  {
+   "file": "maya/hand_l_point_raised.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "point_raised",
+   "view": "front",
+   "parent": "forearm_l",
+   "pivot": [
+    650,
+    1186
+   ],
+   "z": 220,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "Left hand pointing, unmirrored for an arm raised across to screen right."
+  },
+  {
+   "file": "props/tote.svg",
+   "kind": "prop",
+   "character": "maya",
+   "part": "tote",
+   "parent": "torso",
+   "pivot": [
+    562.6,
+    634.8
+   ],
+   "z": 85,
+   "slots": [],
+   "anchors": [
+    "anchor_tote_handle",
+    "anchor_strap"
+   ],
+   "description": "Canvas tote with leather straps, hanging from the left shoulder in the idle."
+  },
+  {
+   "file": "props/chair.svg",
+   "kind": "prop",
+   "part": "chair",
+   "parent": null,
+   "pivot": [
+    500,
+    1900
+   ],
+   "z": 0,
+   "slots": [],
+   "anchors": [
+    "anchor_seat",
+    "anchor_floor"
+   ],
+   "description": "Swivel office chair in base slots; seat anchor meets the pelvis seat anchor when seated.",
+   "base_slots": [
+    "surface",
+    "surface2",
+    "ink",
+    "muted",
+    "line"
+   ]
+  },
+  {
+   "file": "props/desk.svg",
+   "kind": "prop",
+   "part": "desk",
+   "parent": null,
+   "pivot": [
+    500,
+    1900
+   ],
+   "z": 152,
+   "slots": [],
+   "anchors": [
+    "anchor_desk_top",
+    "anchor_floor"
+   ],
+   "description": "Office desk with modesty panel, base slots.",
+   "base_slots": [
+    "muted",
+    "ink",
+    "line",
+    "surface2",
+    "surface"
+   ]
+  },
+  {
+   "file": "props/laptop.svg",
+   "kind": "prop",
+   "part": "laptop",
+   "parent": null,
+   "pivot": [
+    500,
+    1232
+   ],
+   "z": 240,
+   "slots": [],
+   "anchors": [
+    "anchor_desk_top"
+   ],
+   "description": "Laptop seen from behind the lid, base slots.",
+   "base_slots": [
+    "surface2",
+    "ink",
+    "muted"
+   ]
+  },
+  {
+   "file": "maya/upper_arm_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "upper_arm_l",
+   "view": "34front",
+   "parent": "torso",
+   "pivot": [
+    612.4,
+    684
+   ],
+   "z": 1,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front upper arm l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/forearm_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "forearm_l",
+   "view": "34front",
+   "parent": "upper_arm_l",
+   "pivot": [
+    617.6,
+    950
+   ],
+   "z": 2,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front forearm l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/elbow_fold_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_l",
+   "view": "34front",
+   "parent": "upper_arm_l",
+   "pivot": [
+    612.4,
+    684
+   ],
+   "z": 3,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front elbow fold l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/hand_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "view": "34front",
+   "parent": "forearm_l",
+   "pivot": [
+    625.2,
+    1186
+   ],
+   "z": 4,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front hand l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/cuff_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "cuff_l",
+   "view": "34front",
+   "parent": "forearm_l",
+   "pivot": [
+    617.6,
+    950
+   ],
+   "z": 5,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front cuff l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/foot_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "foot_l",
+   "view": "34front",
+   "parent": "shin_l",
+   "pivot": [
+    550.6,
+    1846
+   ],
+   "z": 10,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front foot l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/shin_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "shin_l",
+   "view": "34front",
+   "parent": "thigh_l",
+   "pivot": [
+    559.1,
+    1500
+   ],
+   "z": 12,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front shin l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/thigh_l_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "thigh_l",
+   "view": "34front",
+   "parent": "pelvis",
+   "pivot": [
+    551.6,
+    1105
+   ],
+   "z": 14,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front thigh l, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/foot_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "foot_r",
+   "view": "34front",
+   "parent": "shin_r",
+   "pivot": [
+    442.5,
+    1846
+   ],
+   "z": 20,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front foot r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/shin_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "shin_r",
+   "view": "34front",
+   "parent": "thigh_r",
+   "pivot": [
+    447.7,
+    1500
+   ],
+   "z": 22,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front shin r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/thigh_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "thigh_r",
+   "view": "34front",
+   "parent": "pelvis",
+   "pivot": [
+    448.4,
+    1105
+   ],
+   "z": 24,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front thigh r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/pelvis_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "pelvis",
+   "view": "34front",
+   "parent": null,
+   "pivot": [
+    500,
+    1040
+   ],
+   "z": 70,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front pelvis, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/torso_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "torso",
+   "view": "34front",
+   "parent": "pelvis",
+   "pivot": [
+    500,
+    1000
+   ],
+   "z": 80,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front torso, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/neck_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "neck",
+   "view": "34front",
+   "parent": "torso",
+   "pivot": [
+    496.6,
+    624
+   ],
+   "z": 90,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front neck, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/hair_back_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hair_back",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    497.7,
+    578
+   ],
+   "z": 100,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front hair back, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/head_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "head",
+   "view": "34front",
+   "parent": "neck",
+   "pivot": [
+    497.7,
+    578
+   ],
+   "z": 110,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front head, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/face_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "face",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    497.7,
+    578
+   ],
+   "z": 120,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front face, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/mouth_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front mouth, attentive rest; swap for the _34front visemes when she talks."
+  },
+  {
+   "file": "maya/scrunchie_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "scrunchie",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    497.7,
+    578
+   ],
+   "z": 125,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front scrunchie, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/earrings_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "earrings",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    497.7,
+    578
+   ],
+   "z": 130,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front earrings, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/collar_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "collar",
+   "view": "34front",
+   "parent": "torso",
+   "pivot": [
+    500,
+    1000
+   ],
+   "z": 140,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front collar, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/upper_arm_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "upper_arm_r",
+   "view": "34front",
+   "parent": "torso",
+   "pivot": [
+    383,
+    684
+   ],
+   "z": 160,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front upper arm r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/deltoid_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "deltoid_r",
+   "view": "34front",
+   "parent": "torso",
+   "pivot": [
+    500,
+    1000
+   ],
+   "z": 165,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front deltoid r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/forearm_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "forearm_r",
+   "view": "34front",
+   "parent": "upper_arm_r",
+   "pivot": [
+    368.6,
+    950
+   ],
+   "z": 170,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front forearm r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/elbow_fold_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "elbow_fold_r",
+   "view": "34front",
+   "parent": "upper_arm_r",
+   "pivot": [
+    383,
+    684
+   ],
+   "z": 175,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front elbow fold r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/hand_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "view": "34front",
+   "parent": "forearm_r",
+   "pivot": [
+    379.4,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front hand r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/cuff_r_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "cuff_r",
+   "view": "34front",
+   "parent": "forearm_r",
+   "pivot": [
+    368.6,
+    950
+   ],
+   "z": 190,
+   "slots": [],
+   "anchors": [],
+   "description": "3/4 front cuff r, projected from the 3D proxy; same rig name and parent as the front."
+  },
+  {
+   "file": "maya/mouth_MBP_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "MBP",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme MBP, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_AI_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "AI",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme AI, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_E_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "E",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme E, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_O_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "O",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme O, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_U_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "U",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme U, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_FV_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "FV",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme FV, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_L_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "L",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme L, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_WQ_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "WQ",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme WQ, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/mouth_smile_talk_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "mouth",
+   "variant": "smile_talk",
+   "view": "34front",
+   "parent": "head",
+   "pivot": [
+    544.8,
+    551
+   ],
+   "z": 124,
+   "slots": [],
+   "anchors": [
+    "anchor_mouth"
+   ],
+   "description": "3/4 front lip-sync viseme smile_talk, foreshortened to the turned face."
+  },
+  {
+   "file": "maya/hand_r_relaxed_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "relaxed",
+   "view": "34front",
+   "parent": "forearm_r",
+   "pivot": [
+    379.4,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "3/4 front right hand, relaxed; swaps for hand_r_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_r_open_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "open",
+   "view": "34front",
+   "parent": "forearm_r",
+   "pivot": [
+    379.4,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "3/4 front right hand, open; swaps for hand_r_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_r_point_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "point",
+   "view": "34front",
+   "parent": "forearm_r",
+   "pivot": [
+    379.4,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "3/4 front right hand, point; swaps for hand_r_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_r_palm_up_offer_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_r",
+   "variant": "palm_up_offer",
+   "view": "34front",
+   "parent": "forearm_r",
+   "pivot": [
+    379.4,
+    1186
+   ],
+   "z": 180,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_r",
+    "anchor_grip"
+   ],
+   "description": "3/4 front right hand, palm up offer; swaps for hand_r_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_l_relaxed_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "relaxed",
+   "view": "34front",
+   "parent": "forearm_l",
+   "pivot": [
+    625.2,
+    1186
+   ],
+   "z": 4,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "3/4 front left hand, relaxed; swaps for hand_l_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_l_open_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "open",
+   "view": "34front",
+   "parent": "forearm_l",
+   "pivot": [
+    625.2,
+    1186
+   ],
+   "z": 4,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "3/4 front left hand, open; swaps for hand_l_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_l_point_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "point",
+   "view": "34front",
+   "parent": "forearm_l",
+   "pivot": [
+    625.2,
+    1186
+   ],
+   "z": 4,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "3/4 front left hand, point; swaps for hand_l_34front at the same wrist."
+  },
+  {
+   "file": "maya/hand_l_palm_up_offer_34front.svg",
+   "kind": "character_part",
+   "character": "maya",
+   "part": "hand_l",
+   "variant": "palm_up_offer",
+   "view": "34front",
+   "parent": "forearm_l",
+   "pivot": [
+    625.2,
+    1186
+   ],
+   "z": 4,
+   "slots": [],
+   "anchors": [
+    "anchor_wrist_l",
+    "anchor_grip"
+   ],
+   "description": "3/4 front left hand, palm up offer; swaps for hand_l_34front at the same wrist."
+  },
+  {
+   "file": "maya/turn_side.svg",
+   "kind": "character",
+   "character": "maya",
+   "part": "turnaround",
+   "variant": "side",
+   "view": "side",
+   "parent": null,
+   "pivot": [
+    500,
+    1900
+   ],
+   "z": 0,
+   "slots": [],
+   "anchors": [
+    "anchor_feet"
+   ],
+   "description": "Turnaround side view, standing neutral, same height lines as the front."
+  },
+  {
+   "file": "maya/turn_34back.svg",
+   "kind": "character",
+   "character": "maya",
+   "part": "turnaround",
+   "variant": "34back",
+   "view": "34back",
+   "parent": null,
+   "pivot": [
+    500,
+    1900
+   ],
+   "z": 0,
+   "slots": [],
+   "anchors": [
+    "anchor_feet"
+   ],
+   "description": "Turnaround 34back view, standing neutral, same height lines as the front."
+  },
+  {
+   "file": "maya/turn_back.svg",
+   "kind": "character",
+   "character": "maya",
+   "part": "turnaround",
+   "variant": "back",
+   "view": "back",
+   "parent": null,
+   "pivot": [
+    500,
+    1900
+   ],
+   "z": 0,
+   "slots": [],
+   "anchors": [
+    "anchor_feet"
+   ],
+   "description": "Turnaround back view, standing neutral, same height lines as the front."
+  }
+ ]
+}

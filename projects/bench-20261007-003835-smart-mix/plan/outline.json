@@ -1,0 +1,257 @@
+{
+  "concept": "One imagined status update, told with the same two outlined colleagues throughout: a vague line is revised in place into something a colleague can act on, then the next step is agreed and left open for a later look. Nothing is shown as already changed.",
+  "world": "A neutral stage, no governing metaphor (none passed structural fit, change and safety): a plain meeting room with one table, one status board and one quiet corner, drawn as a place with props. The same table returns at the end, changed only by the agreed action card sitting between the colleagues.",
+  "look": "story-cartoon, warm paper ground, ink outline, small posed people from designed rigs (pip and tess, giver and colleague, no invented names), hand-lettered signs, round speech bubbles, halftone texture, calm faces with no exaggerated reactions. Plain diagram-led version kept as a full alternative.",
+  "devices": [
+    {
+      "id": "revision_bubble",
+      "what": "The giver's speech bubble is held at the table and revised in place (swap slot): 'I felt dismissed' stays visible, then the action line and the effect line replace and extend it. The feeling is kept, never crossed out.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b03",
+        "b04",
+        "b05",
+        "b06"
+      ]
+    },
+    {
+      "id": "spotlight_line",
+      "what": "One line at a time is bright with the single accent; every other line and bubble is dimmed to the field. The accent moves to the line the narration names, then the old line returns to the field family.",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b10"
+      ]
+    },
+    {
+      "id": "proposal_card",
+      "what": "A hand-lettered sign 'Finish the handover first' replaces the label bubble and is held on the table across beats, relabelled (question mark, 'action + situation', 'agreed', 'look for') on the spoken word.",
+      "kind": "explain",
+      "beats": [
+        "b07",
+        "b08",
+        "b10",
+        "b11",
+        "b14"
+      ]
+    },
+    {
+      "id": "table_callback",
+      "what": "The opening table and the same two colleagues come back at the payoff, calm, with the action card between them and the later update still empty.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b14"
+      ]
+    },
+    {
+      "id": "note_tiles",
+      "what": "Four plain note tiles on a desk arrive on their words for the viewer's own preparation, with a separate reporting signpost kept apart. Each tile is an object, never a bullet or an icon grid.",
+      "kind": "list",
+      "beats": [
+        "b13"
+      ]
+    },
+    {
+      "id": "handoff_field",
+      "what": "Join material: handoff, the next field grows in from the held object. Section boundaries are hard cuts or a card, handoff only inside a topic.",
+      "kind": "join",
+      "beats": [
+        "b05",
+        "b13"
+      ]
+    }
+  ],
+  "join_material": "handoff",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "one warm accent on the giver's bubble",
+      "why": "Pale, quiet open on the unanswered question."
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "break": false,
+      "accent": "accent on the 'No action named' slot",
+      "why": "Richer middle where the problem and the revision sit; colour moves with the line being discussed."
+    },
+    {
+      "from": "b08",
+      "band": "dark",
+      "break": true,
+      "accent": "accent on 'action + situation'",
+      "why": "The single dark break is the actionability check, the key mechanism and the one emphasised moment; everything else on the board is dimmed."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "break": false,
+      "accent": "accent withheld on both wording cards until the answer, then on B only",
+      "why": "Colour withheld so the marking after the pause is an event."
+    },
+    {
+      "from": "b11",
+      "band": "light",
+      "break": false,
+      "accent": "none on the 'look for' box, which stays an empty outline",
+      "why": "Lift for follow-up and payoff, with colour deliberately withheld from any outcome so no success is implied."
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "break": false,
+      "accent": "accent on the action card only",
+      "why": "Closing lift: the opening table returns, calm, the change still unseen."
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec1",
+      "treatment": "Story cartoon at the table. Hold the revision bubble and change its state on the word. Productive calm in the middle, expressive only on the opener. Camera is a slow push inside a place, cuts between places.",
+      "accent_on": "the line currently discussed (bubble, then action line, then effect line)",
+      "world": "Meeting room table, then a quiet corner away from the table for 'privately'.",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Establishing wide of the meeting room: giver and colleague at the table after a status update, 'I felt dismissed' large in a bubble, the colleague's question mark hanging over them unanswered. Subject: the vague line. Hook, story role hook.",
+          "builder": "bespoke (ctx.scenery room, designed rigs pip and tess); option 'acting pair'; alternatives 'illustrated bust' (hero.character_moment) and 'plain diagram' (dialogue cards)",
+          "device": "table_callback",
+          "join": "cut, meaning shock (opening frame)"
+        },
+        {
+          "beat": "b02",
+          "line": "Wide, same two colleagues, the vague bubble held while three hand-lettered signs Act on, Next step, Revisit arrive on their words along a faint path on the table. Subject: the promise.",
+          "builder": "template process.flow (hybrid: held bubble, slow push)",
+          "device": "revision_bubble",
+          "join": "continue, meaning time"
+        },
+        {
+          "beat": "b03",
+          "line": "Medium: 'I felt dismissed' bubble lit, beside it an empty action slot left visibly blank with 'No action named'; the feeling stays, nothing crossed out. Subject: feeling versus action. Planned as drawn, upgrade_reason: a blank slot beside a held bubble has no template.",
+          "builder": "bespoke (swap slot beside held bubble); alternative 'plain diagram' compare.two columns Feeling and No action named",
+          "device": "revision_bubble",
+          "join": "continue, meaning into",
+          "intent": "rest"
+        },
+        {
+          "beat": "b04",
+          "line": "Close on the bubble: the vague line is revised in place into 'Spoke before I finished' shown in its update setting (the handover on the status board), then 'Lost my place' added beneath; active line bright, rest dimmed. Subject: observed action and effect, content motion.",
+          "builder": "bespoke (held bubble, swap slot, status board prop); alternative 'illustrated bust' with dialogue card",
+          "device": "spotlight_line",
+          "join": "continue, meaning into"
+        },
+        {
+          "beat": "b05",
+          "line": "Wide: the two revised lines get pill labels, Observed behaviour then Impact, each on its word; a character-label bubble drifts out of frame; the colleagues are then shown alone in the quiet corner, away from the table and team. Subject: naming plus a respectful setting.",
+          "builder": "template document.page highlight mode (hybrid: held revised lines, push) then handoff to the corner",
+          "device": "handoff_field",
+          "join": "handoff, meaning meanwhile"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "Same pair, same table, evolving conversation. Sec2 is the peak: held proposal card relabelled on the word, one dark break for the actionability check, then a calm two card wording check as two separate scenes with a planned 3 second silent hold between them.",
+      "accent_on": "the proposal card and the 'action + situation' words",
+      "world": "Back at the table for the conversation (b06 to b08), then the next status update setting seen from the viewer's seat (b09, b10).",
+      "beats": [
+        {
+          "beat": "b06",
+          "line": "Medium: the colleague's reply bubble 'I thought you had finished' appears beside the revised lines; the giver's interpretation line shifts to make room, description checked not defended, 'Their perspective' pill on its word. Subject: the recipient's account. Chapter boundary.",
+          "builder": "bespoke (held revision bubble plus reply bubble)",
+          "device": "revision_bubble",
+          "join": "cut, meaning chapter"
+        },
+        {
+          "beat": "b07",
+          "line": "Medium: a sign 'Finish the handover first' replaces the label bubble as the proposed next step; a small check asks 'Feasible in their role?'; a blocked path beside it is marked 'support', not a louder demand. One concise caveat, no new scenario.",
+          "builder": "bespoke (swap slot, held card, blocked path prop)",
+          "device": "proposal_card",
+          "join": "continue, meaning time"
+        },
+        {
+          "beat": "b08",
+          "line": "Close on the held proposal card: question mark placed on it for the clear yes, then 'action + situation' lights up and a crossed out label bubble reads 'not a label'. The one emphasised moment of the film, dark break. Planned as drawn, upgrade_reason: the held card plus struck label needs a built scene, not a definition card.",
+          "builder": "bespoke (held card, dimmed table, one accent); alternative 'plain diagram' definition template",
+          "device": "spotlight_line",
+          "join": "continue, meaning into",
+          "intent": "rest"
+        },
+        {
+          "beat": "b09",
+          "line": "POV at the next status update: two unmarked wording cards, A 'You're inconsiderate' and B 'Wait until I finish', side by side, no correct marker; pause hold of 3 seconds after the narration. Practice, subject: the two wordings.",
+          "builder": "template quiz.question",
+          "device": "proposal_card",
+          "join": "cut, meaning shock (a jolt into the check)",
+          "intent": "hold"
+        },
+        {
+          "beat": "b10",
+          "line": "Same two cards held: B highlighted with its action and situation parts marked, A dims with a question mark over the colleague, small note 'a proposal to discuss'. Takeaway 'Action plus situation, not a label'.",
+          "builder": "template quiz.answer",
+          "device": "proposal_card",
+          "join": "continue, meaning into"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "Light, calm lift. A light follow-up diagram with the same colleagues, then the viewer's own preparation, then the opening table returns. No success is animated and the 'look for' box stays empty.",
+      "accent_on": "the agreed action; none on the 'look for' box",
+      "world": "A plain board with an arrow from the agreement to the later update, then a desk of note tiles, then the opening table.",
+      "beats": [
+        {
+          "beat": "b11",
+          "line": "Overhead light diagram: the two colleagues agree out loud, an arrow draws to the next update, where the agreed action sits as 'Look for: handover finished' in an empty outline box, not ticked. Subject: the follow-up. Chapter boundary.",
+          "builder": "blueprint hero.journey (waypoints Agreed, Next update, Look for) with small posed pair; alternative 'plain diagram' process.flow",
+          "device": "proposal_card",
+          "join": "cut, meaning chapter",
+          "intent": "process_hold"
+        },
+        {
+          "beat": "b12",
+          "line": "Insert: the handshake sits beside the later update where the 'look for' box stays empty; a second note sits over any future improvement. Two equals: Agreement is not change, Later change is not proof of cause. No success animated.",
+          "builder": "template compare.two (pairs mode, empty side left as an outline on purpose)",
+          "device": "proposal_card",
+          "join": "continue, meaning time"
+        },
+        {
+          "beat": "b13",
+          "line": "Medium on a desk: four note tiles arrive one per spoken item, Action and effect, Your question, Feasible action, Look for; a separate small signpost 'reporting process' stays apart for harassment, misconduct and safety risks.",
+          "builder": "template list.steps (hybrid, tiles as desk objects)",
+          "device": "note_tiles",
+          "join": "handoff, meaning meanwhile"
+        },
+        {
+          "beat": "b14",
+          "line": "Establishing: the opening table returns, same two colleagues calm, the handover action card between them, the later update still an empty outline; Describe, Ask, Agree, Revisit arrive in order as signs. Payoff, story role payoff.",
+          "builder": "avatar (allocation honoured; presenter bookend with the table station held behind)",
+          "device": "table_callback",
+          "join": "cut, meaning era",
+          "intent": "callback"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "Plain diagram-led version: the same dialogue as flat dialogue cards, with a reaction to action contrast (compare.two), a proposed action to follow up arrow (process.flow), same check, same caveats, same sequence.",
+    "Illustrated bust version of b01, b04 and b06 using hero.character_moment or scenario.dialogue with the same lines, switchable per beat.",
+    "Acting pair (pip and tess rigs) is the planned primary; busts and plain diagram stay as options."
+  ],
+  "open_questions": [
+    "Viewing context is unspecified: captions and a legible anchor per beat are assumed, no interactive player is assumed.",
+    "The 3 second silent hold in b09 relies on pass 2 sizing the pause; the pause is a hold, not an interactive stop.",
+    "b14 is allocated as avatar (presenter bookend) while the script wants the opening table with the same colleagues: pass 2 should confirm whether the avatar is a presenter beside the table or the table scene counts as the bookend.",
+    "Designed rigs only for people (no figures drawn from imagination). If a needed pose is missing (listening, agreeing handshake), pass 2 falls back to a non figurative treatment such as the card and sign alone.",
+    "b12 shows an empty box on purpose: confirm the compare.two empty side does not read as broken before render.",
+    "Not verified: no frames or timings have been viewed; knowledge sheet references are not retrieved, and the exchange and agreement are illustrative and imagined."
+  ]
+}

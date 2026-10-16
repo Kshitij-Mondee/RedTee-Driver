@@ -1,0 +1,65 @@
+node_modules/
+models/
+.env
+__pycache__/
+*.pyc
+projects/*/audio/cache/
+projects/*/build/
+projects/*/qa/frames/
+projects/*/media/redtee/
+projects/*/renders/*.mp4
+loom.config.json
+cache/
+
+# model bench outputs (D-115): local comparison runs
+bench/
+
+# ---- GitHub push rules (2026-10-16, docs/prompts/2026-10-16-push-to-redtee-driver.md) ----
+# no rendered video or audio anywhere
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.ogg
+*.flac
+# archives (reference bundles and raw drops)
+*.zip
+# secrets and local config
+.env
+loom.config.json
+.claude/settings.local.json
+# reference material we study but never republish (CLAUDE.md rule 11)
+docs/research/vision/inbox/
+# copies of rendered films (blind test sets)
+docs/research/**/blind/
+docs/research/**/blind4/
+# lessons go in as plans only: project.json, plan/, scenes/ code, the run log and small text reports
+/projects/*/*
+!/projects/*/project.json
+!/projects/*/RUN_LOG.md
+!/projects/*/plan/
+!/projects/*/scenes/
+!/projects/*/logs/
+/projects/*/logs/*
+!/projects/*/logs/decisions.jsonl
+!/projects/*/logs/shuttle/
+/projects/*/logs/shuttle/*
+!/projects/*/logs/shuttle/report.md
+!/projects/*/qa/
+/projects/*/qa/*
+!/projects/*/qa/review.json
+!/projects/*/qa/report.json
+!/projects/*/qa/defects.json
+# no lesson images (frames, sheets, snapshots of rendered films)
+/projects/**/*.jpg
+/projects/**/*.jpeg
+/projects/**/*.png
+/projects/**/*.gif
+/projects/**/*.webp
+# blind-test answer keys (would reveal an unrated pair)
+*blind_KEY*

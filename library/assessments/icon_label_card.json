@@ -1,0 +1,66 @@
+{
+ "form": "icon_label_card",
+ "decision": "defer",
+ "confidence": "medium",
+ "topic_independent": true,
+ "idea": "a rounded card pairing one icon with a short label, naming a single item among peers",
+ "outline": [
+  "solid surface backing rect (crisp) so nothing drawn beneath shows through",
+  "sketched rounded outline, stroke token carrying valence",
+  "icon (plain or in a disc), left of or above the label",
+  "one or two line label, vertically centred in the remaining space"
+ ],
+ "variation_seen": [
+  "orientation: icon-left row (b16, b23, b28) versus icon-top tile (b19, b20)",
+  "icon treatment: plain kit.icon (b16, b19) versus Loom.th.iconDisc (b20, b23, b28)",
+  "size and corner radius: 440x120 r24, 300x260, 432x240 r18, 560x140 r18, 560x146 r12",
+  "valence on the frame: muted thin versus accent4 thick (b16), neg stroke (b19), default ink elsewhere",
+  "label lines 1 or 2, role lead/label/body, sizes 30 to 40",
+  "extras riding on the card: a cross mark (b19), an owner chip row (b28)",
+  "but b20, b23 and b28 are the same three conditions (same icons, near-same words) re-drawn in three layouts, so the real distinct uses are about three, all in one lesson and one style"
+ ],
+ "future_uses": [
+  {
+   "topic": "phishing awareness",
+   "shows": "red-flag cards: mail icon 'unknown sender', link icon 'mismatched URL', clock icon 'urgent deadline'"
+  },
+  {
+   "topic": "onboarding a new tool",
+   "shows": "feature tiles: one icon plus the feature name per card in a row of three or four"
+  },
+  {
+   "topic": "project risk management",
+   "shows": "risk factor cards that later receive a tick or an owner, like the conditions here"
+  },
+  {
+   "topic": "customer service process",
+   "shows": "process step cards along a flow, each with a step icon and a two-word label"
+  }
+ ],
+ "params_sketch": {
+  "content": [
+   "label"
+  ],
+  "adjustable": [
+   "w",
+   "h",
+   "icon",
+   "layout (row | tile)",
+   "iconStyle (plain | disc)",
+   "frame (stroke token + width, for valence)",
+   "maxLines",
+   "radius"
+  ]
+ },
+ "slots_sketch": [
+  "icon (a caller may draw a custom glyph or a peep instead)",
+  "badge corner (tick, cross, chip)",
+  "footer row (owner chip or sub-label)"
+ ],
+ "reason": "The idea is genuinely topic-independent, but the five uses are one lesson in one style and three of them are the same three conditions re-drawn, so the evidence is about three distinct uses with a two-layout, two-icon-style spread that no lesson has yet shown it wants to share. Each copy is three or four kit calls, so a component saves little today; the one recurring fix (a crisp solid backing under a sketched outline) is worth capturing once a second or third lesson confirms which layout and icon treatment actually recur.",
+ "merge_into": null,
+ "revisit_when": {
+  "uses": 12,
+  "lessons": 3
+ }
+}

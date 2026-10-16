@@ -1,0 +1,140 @@
+# RedTee blueprints available through the bridge (generated)
+
+Use in a storyboard scene: `{"kind": "redtee", "blueprint": "<id>", "props": {...all text params...}, "order_cues": ["spoken words for reveal 0", ...]}`.
+Text and list params MUST be supplied (defaults are sample content). `order_cues[i]` is the spoken anchor for the i-th reveal group.
+
+- `agent.autonomy_ladder` (levels; staging) best for: each level adds, not a replacement, level 0 to level 5, autonomy, rungs. params: title:str, levels:list, flag:str
+- `agent.autonomy_track` (levels; staging) best for: where the market is, a catalog not a ladder, higher is not better, which level are we, autonomy. params: title:str, levels:list, flag:str
+- `agent.dilemma_object` (dilemma_fork; staging) best for: powerful and unreliable, capability and risk, dilemma, agentic, two faces of one thing. params: trait:str, trait_note:str, gain:dict, cost:dict, reveal_ms:number, stagger_ms:number, draw_ms:number
+- `agent.dilemma_scale` (dilemma_fork; staging) best for: powerful and unreliable, capability and risk, dilemma, agentic, measured from one zero. params: trait:str, trait_note:str, gain:dict, cost:dict, reveal_ms:number, stagger_ms:number, draw_ms:number
+- `agent.loop_handback` (cycle; staging) best for: not a list, the list that closes, what travels, hands it onward, spar loop. params: title:str, stages:list, return_label:str, handoffs:list
+- `agent.loop_spiral` (cycle; staging) best for: not a repeat, the same stage again, the return is the point, spar loop, four capabilities. params: title:str, stages:list, return_label:str, next_label:str
+- `agent.tool_rail` (tool_reach; staging) best for: one shared interface, one interface many taps, screen interface, one agent, agentic. params: agent:str, tools:list, verb:str, page:int
+- `agent.tool_reach` (tool_reach; staging) best for: a reach per tool, calls the tools, one agent one tool, one agent, coordinator. params: agent:str, tools:list, verb:str, page:int
+- `concept.cycle_influence` (cycle; staging) best for: cycle, loop, feedback, virtuous_cycle, vicious_cycle. params: steps:list, direction:str
+- `concept.decomposition_tree` (task_decomposition; staging) best for: task decomposition, break down a goal, subtasks, plan and execute, agentic planning. params: loop:bool, callouts:list
+- `concept.fishbone` (root_cause; staging) best for: root cause, why it happened, ishikawa, fishbone, contributing factors. params: problem:str, causes:list, examples:list
+- `concept.forces_balance` (relationship; staging) best for: trade_off, tradeoff, competing, pressures, tension. params: center:str, forces:list
+- `concept.framework_quadrant` (matrix2x2; staging) best for: vals, matrix2x2, positioning, framework. params: x_label:str, y_label:str, quadrants:list, x_lo:str, x_hi:str, y_lo:str, y_hi:str, highlight:number
+- `concept.funnel` (funnel; staging) best for: funnel, pipeline, conversion, drop_off, filtering. params: stages:list
+- `concept.gauge_dial` (quantity; staging) best for: single_value, metric, level, score, proportion. params: value:float, min:float, max:float, label:str, unit:str, lo_label:str, hi_label:str
+- `concept.hub_spoke` (relationship; staging) best for: stakeholders, ecosystem, hub, spokes, radial. params: center:str, spokes:list
+- `concept.iceberg` (structure; staging) best for: what you see and what you do not, visible versus hidden, beneath the surface, the tip of the iceberg, surface versus underlying. params: visible:list, hidden:list
+- `concept.journey_path` (journey; staging) best for: journey, customer journey, learner path, milestones, stages of. params: stops:list, start_label:str
+- `concept.labeled_diagram` (labeled_diagram; staging) best for: labeled_diagram, annotate, anatomy, components. params: center:str, labels:list
+- `concept.lifecycle_cycle` (cycle; staging) best for: family_life_cycle, cycle, stages, lifecycle. params: stages:list
+- `concept.mapping_bridge` (mapping; staging) best for: mapping, correspondence, maps_to, translate_between, this_is_that. params: left_title:str, right_title:str, pairs:list
+- `concept.matrix_2x2` (comparison; staging) best for: matrix, quadrant, 2x2, four_quadrants, effort_impact. params: x_label:str, y_label:str, x_lo:str, x_hi:str, y_lo:str, y_hi:str, quadrants:list, items:list
+- `concept.neighbourhood_query` (neighbourhood; staging) best for: close, meaning, space, nearest, query. params: items:list, query:str, query_x:number, query_y:number, top_k:number, axis_note:str
+- `concept.next_token_loop` (next_token_prediction; staging) best for: next token prediction, autoregressive, how llms generate, language model loop, attention weights. params: loop:bool, callouts:list
+- `concept.onion_rings` (concentric; staging) best for: concentric, layers of, circles of influence, defence in depth, levels of abstraction. params: core:str, rings:list
+- `concept.prefill_decode` (inference_phases; staging) best for: prefill, decode, inference phases, kv cache, streaming reply. params: loop:bool, callouts:list
+- `concept.pyramid_hierarchy` (hierarchy; staging) best for: maslow, hierarchy, needs, pyramid. params: tiers:list
+- `concept.rag_grounding` (retrieval_augmented_generation; staging) best for: rag, retrieval augmented generation, grounding, citations, vector search. params: loop:bool, callouts:list
+- `concept.segmentation_split` (segmentation; staging) best for: slice a market into segments, who the groups are, customer types, four_bases, four_lenses. params: segments:list, style:enum
+- `concept.stat_callout_row` (quantity; staging) best for: two to four headline numbers, big numbers in a row, key figures, at a glance, stats. params: stats:list
+- `concept.target_bullseye` (goal; staging) best for: goal, target, objective, okr, aiming for. params: goal:str, subgoals:list
+- `cs.graph_traversal` (graph_traversal; staging) best for: traversal, path, route, shortest path, search. params: nodes:list, edges:list, path:list, directed:bool
+- `explain.acronym_expand` (acronym; staging) best for: acronym, mnemonic, stands for, smart goals, raci. params: letters:list, words:list, glosses:list
+- `explain.agenda` (agenda; staging) best for: agenda, what we will cover, topics, outline, in this video. params: title:str, items:list
+- `explain.before_after` (transformation; staging) best for: before and after, transformation, old way new way, was vs now, improvement. params: before_label:str, after_label:str, pains:list, wins:list
+- `explain.chat_exchange` (conversation; staging) best for: chat, conversation, ai reply, dialogue with ai, hallucination example. params: title:str, bubbles:list, stamp:str, stamp_on:int, stamp_tone:str
+- `explain.checklist` (checklist; staging) best for: checklist, readiness, requirements, make sure, before you start. params: title:str, items:list
+- `explain.did_you_know` (fun_fact; staging) best for: did you know, fun fact, surprising, trivia, curiosity. params: fact:str, source:str
+- `explain.doc_mock` (document; staging) best for: email, follow-up, draft, document, proposal. params: doc_title:str, fields:list, lines:list, pins:list
+- `explain.doc_redline` (doc_review; staging) best for: edit the draft, redline, review a document, verify the email, annotate. params: doc_title:str, lines:list, verdict:str
+- `explain.dos_donts` (dos_donts; staging) best for: do and don't, dos and don'ts, best practices, etiquette, allowed and forbidden. params: dos:list, donts:list
+- `explain.effort_split` (effort_split; staging) best for: ninety percent, 90/10, 80/20, division of labor, who does what share. params: left_pct:float, left_label:str, left_items:list, right_label:str, right_items:list, takeaway:str
+- `explain.faq_card` (faq; staging) best for: faq, common question, people ask, you might wonder, frequently asked. params: question:str, answer:str
+- `explain.feature_matrix` (feature_matrix; staging) best for: comparison matrix, capability grid, which option, feature table, side by side capabilities. params: options:list, rows:list
+- `explain.key_takeaway` (takeaway; staging) best for: takeaway, bottom line, conclusion, recap, the point. params: kicker:str, takeaway:str, proofs:list
+- `explain.kpi_tiles` (kpi_dashboard; staging) best for: kpi, dashboard, metrics, scoreboard, quarterly numbers. params: title:str, tiles:list
+- `explain.maturity_levels` (maturity; staging) best for: maturity model, levels, adoption stages, skill ladder, where are you. params: levels:list, current:int, marker:str
+- `explain.pitfall_shield` (pitfall; staging) best for: pitfall, gotcha, common mistake, watch out, heads up. params: kicker:str, pitfall:str, why:str, shield:str
+- `explain.podium` (ranking; staging) best for: top 3, ranking, winners, podium, leaderboard. params: first:str, second:str, third:str, values:list
+- `explain.prompt_anatomy` (prompt; staging) best for: prompt, prompting, how to ask, instruction anatomy, role context task. params: title:str, segments:list
+- `explain.question_spark` (hook; staging) best for: hook, what if, opening question, kickoff, launch. params: question:str, promise:str
+- `explain.recap_rail` (recap; staging) best for: recap, summary rail, what we covered, so far, review. params: title:str, points:list
+- `explain.role_cards` (roles; staging) best for: who does what, roles, responsibilities, raci, team structure. params: roles:list
+- `explain.split_meter` (split; staging) best for: ninety ten, 80 20, split of effort, share of time, division of labor. params: title:str, left_label:str, left_pct:float, left_caption:str, right_label:str, right_caption:str
+- `explain.stat_shift` (improvement; staging) best for: used to take, now takes, faster, reduced from, improvement. params: kicker:str, before_value:str, before_label:str, after_value:str, after_label:str, delta:str
+- `explain.step_ladder` (procedure; staging) best for: steps, procedure, quickstart, setup, how to. params: steps:list, checkpoints:list, goal:str
+- `explain.term_card` (obligation; staging) best for: policy, compliance, regulation, must, never. params: term:str, tag:str, definition:str, obligation:str, consequence:str
+- `explain.token_split` (sequence_split; staging) best for: tokens, tokenization, subword, chunk boundaries, boundaries. params: source:str, units:list, caption:str, show_index:bool
+- `explain.truth_check` (fact_check; staging) best for: hallucination, verify the claim, fact check, is that true, the ai said. params: claim_label:str, claim:str, source_label:str, source:str, verdict:str, match:bool
+- `explain.worked_example` (worked_example; staging) best for: worked example, solve, calculation, step by step solution, practice problem. params: problem:str, steps:list, answer:str
+- `explain.zoom_stat` (big_stat; staging) best for: stat, big number, metric, kpi, percentage. params: kicker:str, value:str, fraction:float, caption:str
+- `fin.amortization_split` (amortization; staging) best for: amortization, loan payment, principal and interest, mortgage, emi. params: principal:number, rate:number, years:number, prefix:str
+- `fin.balance_scale` (accounting_equation; staging) best for: accounting equation, assets equal liabilities plus equity, balance sheet balances, double entry, two sides of the ledger. params: assets:dict, right:list
+- `fin.breakeven_chart` (cvp_breakeven; staging) best for: breakeven analysis, cost volume profit, fixed vs variable cost, revenue vs cost, contribution margin. params: fixed_cost:number, price:number, var_cost:number, max_units:number, unit_label:str
+- `fin.cashflow_ladder` (cashflow_ladder; staging) best for: cash flow, inflows and outflows, investment then returns, npv timeline, payback. params: flows:list, prefix:str
+- `fin.dupont_tree` (ratio_decomposition; staging) best for: DuPont analysis, ROE decomposition, ratio drivers, margin turnover leverage, break a metric into parts. params: root:dict, children:list
+- `fin.index_race` (index_race; staging) best for: compare growth, indexed to 100, which grew faster, stocks vs bonds, relative performance. params: series:list
+- `fin.payoff_diagram` (option_payoff; staging) best for: option payoff, call option, put option, hockey stick, strike price. params: kind:enum, strike:number, premium:number, label:str
+- `fin.ratio_bars` (ratio_bars; staging) best for: ratios, ratio analysis, roe, current ratio, margin. params: items:list, suffix:str, title:str
+- `fin.risk_return_scatter` (risk_return_scatter; staging) best for: risk vs return, asset classes compared, efficient frontier, tradeoff map, portfolio choices. params: assets:list, frontier:list, x_label:str, y_label:str
+- `fin.rule_of_72` (rule_of_72; staging) best for: rule of 72, doubling time, how long to double, compound growth shortcut, years to double. params: rate:number, start:number, prefix:str
+- `fin.stack_split` (stack_split; staging) best for: revenue breakdown, cost structure, where the money goes, profit margin, income statement. params: revenue:dict, costs:list, prefix:str
+- `fin.tax_brackets` (tax_brackets; staging) best for: marginal tax, tax brackets, progressive tax, effective vs marginal rate, how income is taxed. params: income:number, brackets:list, prefix:str
+- `fin.tornado` (sensitivity; staging) best for: sensitivity, tornado, what moves the answer, drivers, assumptions. params: factors:list, base_label:str, unit:str, title:str
+- `fin.waterfall` (waterfall_bridge; staging) best for: waterfall chart, bridge chart, revenue to net income, where the money went, profit walk. params: start:dict, steps:list, end_label:str
+- `gen.analogy_map` (analogy; staging) best for: analogy, is_like, like_a, just_like, metaphor. params: source:str, target:str, pairs:list
+- `gen.bar_chart` (chart; staging) best for: ranking, comparison, distribution, chart, data_chart. params: series:list, sort:bool
+- `gen.calc_buildup` (calc_buildup; staging) best for: worked example, build up, running total, line items, sum to total. params: rows:list, total:dict, title:str
+- `gen.cause_effect` (cause_effect; staging) best for: cause, effect, cause_effect, leads_to, because. params: stages:list, direction:enum
+- `gen.comparison_split` (comparison; staging) best for: comparison, vs, pros_cons, before_after, two_column. params: a_title:str, b_title:str, a_items:list, b_items:list
+- `gen.count_up` (kpi; staging) best for: kpi, stat, big_number, metric, callout. params: value:number, label:str, prefix:str, suffix:str
+- `gen.cycle` (cycle; staging) best for: cycle, loop, iteration, feedback. params: steps:list
+- `gen.decision_flow` (decision; staging) best for: decision, if_then, yes_no, choose, branch. params: question:str, yes:str, no:str
+- `gen.fanout_verdict` (fanout_verdict; staging) best for: eval, evaluation, graders, judges, review board. params: source:str, source_note:str, tracks:list, footer:str
+- `gen.funnel` (funnel; staging) best for: funnel, conversion, drop-off, drop off, narrowing. params: stages:list, title:str
+- `gen.icon_row` (icon_row; staging) best for: features, pillars, toolkit, capabilities, principles. params: items:list, icon_anim:enum
+- `gen.image_link` (image_link; staging) best for: leads to, becomes, flows into, transformation, connection. params: a:dict, b:dict, link:dict, caption:str
+- `gen.layered_stack` (stack; staging) best for: stack, layers, layered, levels, tiers. params: layers:list
+- `gen.line_trend` (trend; staging) best for: trend, growth, time_series, line. params: values:list, x_labels:list
+- `gen.myth_fact` (myth_fact; staging) best for: myth, misconception, common mistake, actually, in reality. params: myth:str, fact:str, myth_label:str, fact_label:str
+- `gen.network_grow` (neural_network; staging) best for: neural network, neurons, forward_pass, machine learning, deep learning. params: layers:list, loop:bool
+- `gen.process_flow` (process; staging) best for: process, steps, procedure, five_steps, workflow. params: steps:list, direction:enum
+- `gen.proportion_gauge` (proportion; staging) best for: proportion, share, percentage, gauge, progress. params: pct:number, label:str
+- `gen.quadrant` (scatter_quadrant; staging) best for: matrix2x2, positioning, prioritization, scatter_quadrant. params: x_label:str, y_label:str, points:list
+- `gen.quiz_card` (quiz; staging) best for: quiz, quick check, recall, predict, pause. params: kicker:str, question:str, options:list, answer:str, note:str
+- `gen.section_mark` (section_mark; staging) best for: section, chapter, divider, part, progress. params: number:str, label:str, part:number, of:number, kicker:str
+- `gen.spectrum` (spectrum; staging) best for: spectrum, continuum, scale, sliding_scale, range. params: left:str, right:str, points:list
+- `gen.tension_balance` (tradeoff; staging) best for: tradeoff, trade-off, tension, balance between, versus. params: left:dict, right:dict, note:str
+- `gen.timeline` (timeline; staging) best for: timeline, history, roadmap, milestones, evolution. params: events:list
+- `gen.tree_grow` (hierarchy; staging) best for: hierarchy, tree, taxonomy, org, breakdown. params: root:str, children:list
+- `gen.venn_overlap` (venn; staging) best for: venn, overlap, intersection, in_common, commonality. params: a:str, b:str, shared:str
+- `logic.truth_table` (truth_table; staging) best for: truth table, boolean, logic gate, and or not, proposition. params: headers:list, rows:list, title:str
+- `math.equation_steps` (equation_steps; staging) best for: equation, derivation, solve, algebra, steps. params: steps:list, title:str, terms:list
+- `math.formula_anatomy` (formula_anatomy; staging) best for: formula, equation breakdown, what each symbol means, term by term, anatomy of the formula. params: terms:list, title:str
+- `math.fraction_blocks` (fraction_blocks; staging) best for: fraction, part of a whole, numerator denominator, three eighths, shaded parts. params: numerator:int, denominator:int, label:str
+- `math.number_line_jump` (number_line_jump; staging) best for: skip counting, repeated addition, number line hops, adding the same amount, multiples. params: start:number, jumps:list, label:str
+- `math.percent_grid` (percent_grid; staging) best for: percent, out of one hundred, percentage as squares, hundred grid, proportion of a whole. params: percent:int, label:str
+- `math.slope_triangle` (slope_triangle; staging) best for: slope, rise over run, gradient of a line, steepness, rate of change on a graph. params: rise_label:str, run_label:str, slope_label:str, rise:int, run:int, show_formula:bool
+- `math.venn_two` (venn_two; staging) best for: set membership, two sets built up, intersection of sets, both conditions at once, common multiples. params: left:dict, right:dict, middle:str
+- `motif.agent_loop_live` (agent_tool_loop; staging) best for: agent using tools, tool use, tool calls, orchestration, agent loop. params: loop:bool, callouts:list
+- `motif.building_blocks` (foundation_motif; staging) best for: foundation, fundamentals, basics, building blocks, structure. params: levels:int
+- `motif.capability_orbit` (capabilities; staging) best for: capabilities, uses, ways to use, applications, skills. params: count:number, core:enum
+- `motif.compass` (direction_motif; staging) best for: strategy, direction, vision, mission, goal. params: heading_deg:number
+- `motif.gears` (process_motif; staging) best for: process, system, workflow, operations, mechanism. params: teeth:int
+- `motif.lesson_bloom` (opener_bloom; staging) best for: lesson opener, opening, welcome, organic growth, bloom. params: loop:bool, callouts:list
+- `motif.section_stinger` (section_stinger; staging) best for: section break, chapter divider, transition, stinger, act break. params: loop:bool, callouts:list
+- `product.assembly_line` (assembly_line; staging) best for: assembly line, pipeline, conveyor, factory, production. params: title:str, input:str, stations:list, outputs:list
+- `product.cost_meter` (cost_compare; staging) best for: cost, price, per minute, budget, savings. params: left_label:str, left_value:str, left_amount:float, right_label:str, right_value:str, right_amount:float, badge:str
+- `product.feature_spotlight` (feature_hero; staging) best for: flagship feature, spotlight, hero feature, the one thing, headline capability. params: feature:str, sub:str, benefits:list
+- `product.layer_zoom` (layer_detail; staging) best for: inside a layer, layer detail, zoom, internals, deep dive. params: layers:list, focus:int, internals:list, note:str
+- `product.scope_map` (scope; staging) best for: in scope, out of scope, scope, boundary, we build. params: inside_label:str, outside_label:str, inside:list, outside:list
+- `scene.dialogue` (dialogue; staging) best for: dialogue, conversation, talking, discussion, debate. params: left:dict, right:dict, turns:list, skin:enum, life_signs:bool
+- `scene.persona_quote` (persona_quote; staging) best for: quote, testimonial, expert says, persona, voice of. params: speaker:dict, quote:str, skin:enum
+- `scene.story_beats` (story_beats; staging) best for: story, scenario, anecdote, mini case, what happened. params: setting:str, moments:list, cast:str, emotion:str, skin:enum
+- `stats.axes` (axes; staging) best for: distributions, correlation, trend, relationship. params: x_label:str, y_label:str, scatter:bool
+- `stats.confidence_interval` (interval; staging) best for: a range the answer probably lies in, margin of error, an estimate with a range, confidence_interval, estimation. params: label:str, lo:number, hi:number, mean:number, dom_lo:number, dom_hi:number
+- `stats.decision_number_line` (decision_rule; staging) best for: reject or fail to reject, where the p value falls, the decision rule, decision_rule, significance. params: reject_label:str, fail_label:str, p_value:number, alpha:number
+- `stats.error_matrix_2x2` (decision_matrix; staging) best for: the four possible test outcomes, type I and type II error, false positive and false negative, four_outcomes, type_errors. params: col_labels:list, row_labels:list, cell_labels:list, highlight:enum
+- `stats.histogram_build` (histogram_build; staging) best for: histogram, frequency of bins, distribution of counts, how the data piles up, grouped counts. params: bins:list, marker:dict
+- `stats.normal_tail` (distribution; staging) best for: p-value, rejection region, significance, normal curve, rare_events. params: label:str, z_crit:number, tail:enum, alpha:number, shade:bool
+- `stats.number_line` (number_line; staging) best for: a value on a number line, where a number sits in a range, a threshold on a line, number_line, threshold. params: mark:number, dom_lo:number, dom_hi:number, shade_lo:number, shade_hi:number
+- `stats.scatter_fit` (scatter_fit; staging) best for: scatter plot, correlation, line of best fit, least squares, trend through points. params: points:list, x_label:str, y_label:str, show_fit:bool
+- `stats.t_vs_z_overlay` (distribution_comparison; staging) best for: t curve against the normal curve, why t has fatter tails, small sample versus large, z_vs_t, distributions. params: z_label:str, t_label:str, df:int
+- `stats.tailed_tests` (distribution; staging) best for: one tailed or two tailed, which tail are we testing, left right or both tails, tailed_tests. params: titles:list, alpha:number
+- `stats.two_distributions` (error_tradeoff; staging) best for: the trade between the two error types, power versus significance, two overlapping curves, type_errors, type1_vs_type2. params: h0_label:str, ha_label:str, crit_label:str, sep:number, z_crit:number, show:enum, worse:enum

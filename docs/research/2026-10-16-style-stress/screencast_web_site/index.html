@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fieldnote: notes your team can find</title>
+<link rel="stylesheet" href="styles.css">
+<script>/* a script the capture must strip: it would change the page after load */ document.addEventListener("DOMContentLoaded", () => { document.body.dataset.js = "ran"; });</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#"><img src="logo.svg" alt="Fieldnote logo"> Fieldnote</a>
+  <nav class="main"><a href="#features" id="nav-product">Product</a><a href="#pricing" id="nav-pricing">Pricing</a><a href="#faq">Questions</a></nav>
+  <a class="signin" href="#">Sign in</a>
+  <a class="btn ghost" href="#pricing">See plans</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="kicker">Team notes</div>
+    <h1>Notes your team can find again.</h1>
+    <p class="lead">Fieldnote keeps meeting notes, decisions and how-tos in one searchable place, sorted by project.</p>
+  </div>
+  <form class="signup" id="signup" onsubmit="return false">
+    <h2>Start a workspace</h2>
+    <p>Free for teams of up to 5.</p>
+    <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="name@company.com"></div>
+    <div class="field"><label for="size">Team size</label><select id="size" name="size"><option>2 to 5 people</option><option>6 to 20 people</option></select></div>
+    <label class="check"><input type="checkbox" id="updates"> Send me product updates</label>
+    <button class="btn primary" id="create" type="submit">Create workspace</button>
+  </form>
+</div></section>
+
+<section class="features" id="features"><div class="wrap">
+  <h2>What it does</h2>
+  <div class="cards">
+    <div class="card" id="card-search"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f6b5c" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Search every note</h3><p>Find a decision by a word in it, a person or a date.</p></div>
+    <div class="card" id="card-projects"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f6b5c" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg></div><h3>Sorted by project</h3><p>Each project keeps its own notes, owners and history.</p></div>
+    <div class="card" id="card-decisions"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f6b5c" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg></div><h3>Decisions stand out</h3><p>Mark a line as a decision and it joins the project's log.</p></div>
+  </div>
+</div></section>
+
+<section class="pricing" id="pricing"><div class="wrap plans" id="plans">
+  <h2>Plans</h2>
+  <div class="switch" id="billing"><span class="m">Monthly</span><span class="y" id="yearly">Yearly, save 20%</span></div>
+  <div class="tiers">
+    <div class="tier"><h3>Starter</h3><div class="price"><span class="mo">0</span><span class="yr">0</span> <small>per person</small></div><ul><li>Up to 5 people</li><li>1 project</li></ul></div>
+    <div class="tier best" id="tier-team"><h3>Team</h3><div class="price"><span class="mo">8</span><span class="yr">6.40</span> <small>per person a month</small></div><ul><li>Unlimited projects</li><li>Decision log</li></ul></div>
+    <div class="tier"><h3>Company</h3><div class="price"><span class="mo">14</span><span class="yr">11.20</span> <small>per person a month</small></div><ul><li>Single sign-on</li><li>Audit history</li></ul></div>
+  </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <details><summary>Can we bring notes from another tool?</summary><p>Yes: import a folder of documents and Fieldnote sorts them by project.</p></details>
+  <details><summary>Who can see a project?</summary><p>Only the people you add to it, and the workspace owners.</p></details>
+</div></section>
+
+<footer><div class="wrap"><span>Fieldnote, a stand-in site for a screencast test</span><span>Terms and privacy</span></div></footer>
+</body>
+</html>

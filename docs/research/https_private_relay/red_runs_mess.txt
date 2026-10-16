@@ -1,0 +1,12 @@
+Red runs for the held-parts fix (2026-10-12), tests/suites/held_parts.py, before the change was applied.
+Runtime test against the unchanged runtime (LOOM_TEST_RUNTIME=<copy of runtime/>):
+  FAIL primitive_runtime_a_held_kit_part_keeps_its_handle_and_a_copy_is_refused: driving the held board threw (no handle
+  on the held element): b2: Cannot read properties of undefined (reading 'setState')
+Against the patched copy: PASS. runtime_film_defects' 22 primitive_runtime_ tests pass on the patched copy.
+Task test against the unchanged loom/:
+  FAIL check_a_scene_task_says_what_is_on_screen_and_how_to_drive_it: box or maker not found back along keep:
+  {'name': 'board_el', 'kind': 'kept by b10'}
+Against the patched copy: PASS.
+The patched runtime on https-private-relay's own build (probe): 19 errors, part_drawn_twice in b03 b04 b06 b07 b08 b09
+b10 b11 b12 and kept_element_redrawn in b04 b07 b11 b12 (board, cert, key_slots, copy, packet); 12 part_drawn_again
+warnings (second packets, cert badge, key slot pieces). The unchanged runtime raised none of them.

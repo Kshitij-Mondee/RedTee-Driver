@@ -1,0 +1,460 @@
+{
+  "title": "Public, internal, confidential: how our data classification works",
+  "wpm_target": 150,
+  "sections": [
+    {
+      "id": "hook",
+      "title": "The pause before Send",
+      "role": "hook"
+    },
+    {
+      "id": "promise",
+      "title": "Three classes",
+      "role": "promise"
+    },
+    {
+      "id": "bridge",
+      "title": "One question",
+      "role": "bridge"
+    },
+    {
+      "id": "sec1",
+      "title": "Public and internal",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Confidential and how to handle it",
+      "role": "build"
+    },
+    {
+      "id": "check",
+      "title": "Sort three",
+      "role": "check"
+    },
+    {
+      "id": "sec3",
+      "title": "The class travels",
+      "role": "build"
+    },
+    {
+      "id": "apply",
+      "title": "When unsure",
+      "role": "apply"
+    },
+    {
+      "id": "payoff",
+      "title": "Back to Send",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "hook",
+      "job": "hook",
+      "narration": [
+        "Say your cursor is on Send.",
+        "A customer list is attached,",
+        "going to a contractor who started this week.",
+        "You pause."
+      ],
+      "on_screen": [
+        "Send"
+      ],
+      "visual_intent": "A monoline laptop screen with an email: an attachment icon labelled customer list, a cursor hovering over Send, then stopping.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "a customer list emailed to a new contractor",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "promise",
+      "job": "orient",
+      "narration": [
+        "Good instinct.",
+        "Everything you handle has a class:",
+        "public, internal or confidential."
+      ],
+      "on_screen": [
+        "Public",
+        "Internal",
+        "Confidential"
+      ],
+      "visual_intent": "The presenter speaks beside three outlined labels, each in its class colour, appearing as each class is named.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "public class",
+          "fact": "F2"
+        },
+        {
+          "claim": "internal class",
+          "fact": "F3"
+        },
+        {
+          "claim": "confidential class",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "bridge",
+      "job": "define",
+      "narration": [
+        "One question sorts it.",
+        "Who could be harmed if it got out?",
+        "Not the file type, not the folder."
+      ],
+      "on_screen": [
+        "Harm?"
+      ],
+      "visual_intent": "A large question mark over a document outline; a file-type badge and a folder icon fade back as the narration says they do not decide.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "concepts": [
+        "harm question"
+      ],
+      "grounding": [
+        {
+          "claim": "classes sorted by harm of disclosure",
+          "fact": "F1"
+        },
+        {
+          "claim": "class decided by content and harm, not format or location",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "A published press release?",
+        "It was approved for release, so anyone may read it.",
+        "Public. Share it freely."
+      ],
+      "on_screen": [
+        "Public"
+      ],
+      "visual_intent": "A monoline press release page gets an approved tick, its outline turns the public colour and it slides out to the open world.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "public means approved for release to anyone",
+          "fact": "F2"
+        },
+        {
+          "claim": "published press release is public",
+          "fact": "F6"
+        },
+        {
+          "claim": "public can be shared freely once approved",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "distinguish",
+      "narration": [
+        "Your team's meeting notes?",
+        "Nothing alarming, but they are meant for colleagues.",
+        "Internal."
+      ],
+      "on_screen": [
+        "Internal"
+      ],
+      "visual_intent": "A meeting notes page sits beside the press release; its outline turns the internal colour as internal is said.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "internal is for employees, limited harm",
+          "fact": "F3"
+        },
+        {
+          "claim": "meeting notes are internal",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "refute",
+      "narration": [
+        "Harmless is not the same as approved.",
+        "Internal stays inside unless its release is approved."
+      ],
+      "on_screen": [
+        "Stays inside"
+      ],
+      "visual_intent": "The internal notes move toward the outline of the building's door and stop at it; they stay inside.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "misconception": "if it looks harmless it is fine to share outside",
+      "grounding": [
+        {
+          "claim": "public only once approved; harmless is not approval",
+          "fact": "F10"
+        },
+        {
+          "claim": "internal not sent outside without approval",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Now the customer list.",
+        "It holds customers' personal details.",
+        "If it got out, real people could be harmed.",
+        "Confidential."
+      ],
+      "on_screen": [
+        "Confidential"
+      ],
+      "visual_intent": "The opening customer list returns, rows of names drawn as lines; the harm question is applied and its outline turns the confidential colour.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "confidential: significant harm, need to know",
+          "fact": "F4"
+        },
+        {
+          "claim": "customer personal data is confidential",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "sequence",
+      "narration": [
+        "So it goes only to named people who need it,",
+        "through approved, protected channels.",
+        "It is stored with access limited,",
+        "and shredded or securely deleted when done."
+      ],
+      "on_screen": [
+        "Named people who need it",
+        "Approved channels",
+        "Limited access",
+        "Shred or delete"
+      ],
+      "visual_intent": "The confidential list travels one protected line to a single named recipient, rests in a locked folder outline, then a paper copy is shredded and a file deleted.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "delivery": "slower here",
+      "grounding": [
+        {
+          "claim": "only named people with need, via approved protected channels",
+          "fact": "F14"
+        },
+        {
+          "claim": "stored with limited access",
+          "fact": "F15"
+        },
+        {
+          "claim": "shred paper, securely delete files",
+          "fact": "F16"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "check",
+      "job": "check",
+      "narration": [
+        "Try three.",
+        "A posted job advert.",
+        "The org chart.",
+        "The payroll file."
+      ],
+      "on_screen": [
+        "Job advert",
+        "Org chart",
+        "Payroll file"
+      ],
+      "visual_intent": "Three uncoloured outline items appear one by one above three empty trays in the class colours.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "answer": "public, internal, confidential"
+      },
+      "grounding": [
+        {
+          "claim": "posted job advert is public",
+          "fact": "F6"
+        },
+        {
+          "claim": "org chart is internal",
+          "fact": "F7"
+        },
+        {
+          "claim": "payroll is confidential",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "check",
+      "job": "practice",
+      "narration": [
+        "Public, internal, confidential.",
+        "The org chart looks harmless,",
+        "but it stays internal unless its release was approved."
+      ],
+      "on_screen": [
+        "Public",
+        "Internal",
+        "Confidential"
+      ],
+      "visual_intent": "Each item drops into its tray and takes the class colour; the org chart hovers over public, then settles in internal.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "misconception": "org chart looks harmless so it is public",
+      "grounding": [
+        {
+          "claim": "job advert public",
+          "fact": "F6"
+        },
+        {
+          "claim": "org chart internal",
+          "fact": "F7"
+        },
+        {
+          "claim": "payroll confidential",
+          "fact": "F8"
+        },
+        {
+          "claim": "public only once approved",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec3",
+      "job": "relate",
+      "narration": [
+        "The class travels with the information:",
+        "on paper, in a folder or on a screen."
+      ],
+      "on_screen": [
+        "Paper",
+        "Folder",
+        "Screen"
+      ],
+      "visual_intent": "One confidential document turns from a printed page to a folder to a screen, its outline keeping the confidential colour throughout.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "label travels with information across formats",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "apply",
+      "job": "consolidate",
+      "narration": [
+        "Not sure?",
+        "Treat it as the higher class,",
+        "and ask its owner.",
+        "Our own policy decides each case."
+      ],
+      "on_screen": [
+        "Go higher",
+        "Ask the owner"
+      ],
+      "visual_intent": "The rule large: an item with a dashed, uncertain outline steps up one class colour and an arrow points to an owner icon.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "delivery": "warm",
+      "grounding": [
+        {
+          "claim": "when unsure treat as higher class and ask owner",
+          "fact": "F18"
+        },
+        {
+          "claim": "the owner decides the class",
+          "fact": "F17"
+        },
+        {
+          "claim": "organisation's own policy overrides",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "payoff",
+      "job": "payoff",
+      "narration": [
+        "So, that email.",
+        "The list is confidential.",
+        "Does the contractor need it?",
+        "If so, use an approved, protected channel.",
+        "If unsure, ask the list's owner first."
+      ],
+      "on_screen": [
+        "Need it?",
+        "Approved channel",
+        "Ask the owner"
+      ],
+      "visual_intent": "The opening email returns; the attachment's outline now shows the confidential colour, the cursor leaves Send and moves to a protected channel option.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "customer list is confidential",
+          "fact": "F8"
+        },
+        {
+          "claim": "need to know and approved protected channel",
+          "fact": "F14"
+        },
+        {
+          "claim": "ask the owner when unsure",
+          "fact": "F18"
+        }
+      ]
+    }
+  ]
+}

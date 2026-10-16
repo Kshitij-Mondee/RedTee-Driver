@@ -1,0 +1,873 @@
+{
+  "style": "story-cartoon",
+  "concept": "Priya's confusing status update gets a vague verdict that changes nothing; the same moment later gets a three-part reply (behaviour, impact, question) and it lands. The shape is built piece by piece on its own station, then recalled by name at the quiz and the payoff.",
+  "chrome": {
+    "section_labels": false
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "two-person scene",
+        "note": "Priya (screen left) and her manager (screen right). The team status meeting at the hook, replayed as a one-to-one desk moment at the payoff. Same station id both times: the callback IS the return to this place."
+      },
+      {
+        "id": "shape",
+        "x": 2200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the feedback's anatomy",
+        "note": "A paper card that grows one labelled row at a time: behaviour, then impact, then question. Visited three times (b04-b05, b07-b08, b10) via camera joins back to it."
+      },
+      {
+        "id": "reaction",
+        "x": 2200,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "cutaway",
+        "note": "Priya alone, a short thought-bubble beat between the first two shape_card visits."
+      },
+      {
+        "id": "doors",
+        "x": 3000,
+        "y": 1300,
+        "w": 1920,
+        "h": 1080,
+        "zone": "cutaway",
+        "note": "A plain two-column beat between the second and third shape_card visits: verdict closes, question opens."
+      },
+      {
+        "id": "quiz",
+        "x": 4400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "stopping check",
+        "note": "Two replies to the same moment, nothing else in frame."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "None: a literal workplace moment, told twice.",
+    "setting": "A team status meeting, then (replayed) a one-to-one desk conversation.",
+    "arc": "Vague verdict changes nothing -> the shape is built (behaviour, impact, question) -> named in a quiz -> the same moment, fixed.",
+    "cast": [
+      {
+        "name": "Priya",
+        "member": "woman",
+        "skin": 1,
+        "cloth": "cloth",
+        "role": "gives the update and receives the feedback; screen left throughout"
+      },
+      {
+        "name": "Manager",
+        "member": "man",
+        "skin": 3,
+        "cloth": "cloth2",
+        "role": "gives the feedback; screen right throughout, the viewer's stand-in"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "desk_scene",
+      "what": "The team status update and the one-to-one feedback moment: Priya and her manager, same two looks, same screen sides, reused at the hook, its time-skip replay, and the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b13"
+      ]
+    },
+    {
+      "id": "shape_card",
+      "what": "A paper card that grows one labelled row at a time: behaviour, then impact, then question, held on one station across its beats so it reads as one card, not three.",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b07",
+        "b08",
+        "b10"
+      ]
+    },
+    {
+      "id": "shape_words",
+      "what": "The words behaviour, impact, question, once built, recalled by name (not by redrawing the card) at the quiz and the payoff, so the viewer recognises the shape in a new scene kind.",
+      "kind": "callback",
+      "beats": [
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "page_turn",
+      "what": "The one join material for this lesson: a page turn at the two section boundaries (hook into sec1, sec2 into sec3).",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b11"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "the quoted vague line, 'Communicate better.'",
+      "why": "a pale, flat open matches feedback that fixes nothing"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the word 'behaviour' as sec1 names and defines it",
+      "why": "a richer middle as the real mechanism is taught"
+    },
+    {
+      "from": "b06",
+      "band": "dark",
+      "break": true,
+      "accent": "withheld; Priya's unspoken question carries no accent",
+      "why": "a brief dark beat isolates the misconception before the fix is built"
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "break": false,
+      "accent": "the impact label, then the question label, each as it is named",
+      "why": "back to the working band as the shape is assembled piece by piece"
+    },
+    {
+      "from": "b11",
+      "band": "mid",
+      "break": false,
+      "accent": "withheld through the pause; then on option B's wording once the answer is spoken",
+      "why": "both replies hold equal weight until the spoken answer"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "break": false,
+      "accent": "the three-part reply, then the close card's three words",
+      "why": "a lift at the payoff mirrors the hook's pale open, now resolved"
+    }
+  ],
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "desk",
+      "props": {
+        "kicker": "The vague verdict",
+        "card": {
+          "lines": [
+            "\"You need to communicate better.\""
+          ]
+        }
+      },
+      "subject": "The presenter sets up Priya's status update and the vague verdict",
+      "world": "direct to camera, the quote on a card beside her",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "hook",
+      "depth": "flat",
+      "light": "even"
+    },
+    {
+      "beat": "b02",
+      "kind": "blueprint",
+      "blueprint": "hero.character_moment",
+      "station": "desk",
+      "props": {
+        "cast": "Priya",
+        "member": "woman",
+        "cloth": "cloth",
+        "side": "left",
+        "bubble": "memory",
+        "prop": "calendar",
+        "day_label": "Next week",
+        "say_day": "Next week",
+        "items": [
+          {
+            "icon": "repeat",
+            "label": "Repeat",
+            "say": "same update"
+          },
+          {
+            "icon": "frown",
+            "label": "Confused",
+            "say": "same confusion"
+          }
+        ],
+        "moods": [
+          {
+            "emotion": "neutral",
+            "say": "Next week"
+          }
+        ],
+        "caption": "Next week: same confusion",
+        "say_caption": "same confusion"
+      },
+      "subject": "The same update, replayed a week on, nothing changed",
+      "world": "Priya's memory of the same meeting",
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "dip",
+        "meaning": "time"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "day_label"
+    },
+    {
+      "beat": "b03",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "desk",
+      "props": {
+        "kicker": "The fix",
+        "left": {
+          "header": "Same moment",
+          "say": "same moment"
+        },
+        "right": {
+          "header": "Different feedback",
+          "say": "different feedback"
+        },
+        "mode": "columns"
+      },
+      "subject": "The presenter's promise, framed as the two things that stay and change",
+      "world": "a plain two-column beat, no scene behind it",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "header_right"
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "shape",
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "behaviour_label",
+      "subject": "The vague phrase splits into two labels",
+      "world": "a paper card, away from the two-person scene",
+      "design": {
+        "treatment": "The quoted phrase 'Communicate better' arrives on a plain card, then splits into two labels: a character verdict (coloured wrong/neg, struck) and a specific behaviour (the correct read, dim until b05 fills it in).",
+        "why_motion": "the split IS the teaching point: one phrase reads two ways",
+        "elements": [
+          {
+            "name": "phrase_card",
+            "label": "the base card"
+          },
+          {
+            "name": "verdict_label",
+            "label": "a verdict on who she is (wrong)"
+          },
+          {
+            "name": "behaviour_label",
+            "label": "a specific behaviour (right, dim)"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "isn't a behaviour",
+            "element": "phrase_card",
+            "action": "the quoted phrase arrives, then splits",
+            "motion": "split into two labels"
+          },
+          {
+            "t_anchor": "verdict on who she is",
+            "element": "verdict_label",
+            "action": "the wrong read, struck",
+            "motion": "settle, coloured neg"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "phrase_card",
+            "verdict_label",
+            "behaviour_label"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "shape",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "phrase_card"
+      ],
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "behaviour_label",
+      "subject": "Behaviour, defined from Priya's actual update",
+      "world": "the same card, continued",
+      "design": {
+        "treatment": "The verdict label fades; the behaviour label replaces it with the concrete detail: 'timeline and blockers, one paragraph.'",
+        "elements": [
+          {
+            "name": "behaviour_label",
+            "label": "timeline and blockers, same paragraph"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the timeline and the blockers",
+            "element": "behaviour_label",
+            "action": "the concrete detail arrives",
+            "motion": "reveal, replacing the verdict"
+          },
+          {
+            "t_anchor": "that's a behaviour",
+            "element": "behaviour_label",
+            "action": "label confirmed",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "phrase_card"
+          ],
+          "travelling": [],
+          "retiring": [
+            "verdict_label"
+          ],
+          "incoming": [
+            "behaviour_label"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "blueprint",
+      "blueprint": "hero.character_moment",
+      "station": "reaction",
+      "props": {
+        "cast": "Priya",
+        "member": "woman",
+        "cloth": "cloth",
+        "side": "left",
+        "bubble": "thought",
+        "items": [
+          {
+            "icon": "help-circle",
+            "label": "Differently?",
+            "say": "what to do differently"
+          }
+        ],
+        "moods": [
+          {
+            "emotion": "surprised",
+            "say": "only makes her feel judged"
+          }
+        ]
+      },
+      "subject": "Priya's unspoken question",
+      "world": "a short cutaway, Priya alone",
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even"
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "shape",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "impact_label",
+      "subject": "Impact grows under behaviour",
+      "world": "the same card, camera returns",
+      "design": {
+        "treatment": "Camera returns to the card: the phrase_card and behaviour_label from b05 are still there. A second line grows under behaviour: the concrete impact, joined by a short connecting arrow.",
+        "elements": [
+          {
+            "name": "phrase_card",
+            "label": "the base card, restated"
+          },
+          {
+            "name": "behaviour_label",
+            "label": "timeline and blockers, same paragraph, restated"
+          },
+          {
+            "name": "impact_label",
+            "label": "couldn't tell what was blocking us"
+          },
+          {
+            "name": "connector_arrow_1",
+            "label": "links behaviour to impact"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "add the impact",
+            "element": "impact_label",
+            "action": "the impact line grows in under behaviour",
+            "motion": "grow, connector draws"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "phrase_card",
+            "behaviour_label"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "impact_label",
+            "connector_arrow_1"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "shape",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "phrase_card",
+        "behaviour_label",
+        "impact_label",
+        "connector_arrow_1"
+      ],
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "question_label",
+      "subject": "A third line completes the card: the question",
+      "world": "the same card, continued",
+      "design": {
+        "treatment": "A third line appears under impact: the closing question, completing the three-part card.",
+        "elements": [
+          {
+            "name": "question_label",
+            "label": "what got left out, from your side?"
+          },
+          {
+            "name": "connector_arrow_2",
+            "label": "links impact to question"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "end with a question",
+            "element": "question_label",
+            "action": "the question line settles under impact",
+            "motion": "grow, connector draws"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "phrase_card",
+            "behaviour_label",
+            "impact_label",
+            "connector_arrow_1"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "question_label",
+            "connector_arrow_2"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "doors",
+      "props": {
+        "left": {
+          "header": "Verdict",
+          "say": "verdict",
+          "valence": "neg",
+          "verdict": "wrong",
+          "icon": "door-closed",
+          "items": [
+            {
+              "text": "ends the conversation",
+              "say": "ends the conversation"
+            }
+          ]
+        },
+        "right": {
+          "header": "Question",
+          "say": "question",
+          "valence": "pos",
+          "verdict": "right",
+          "icon": "door-open",
+          "items": [
+            {
+              "text": "starts one",
+              "say": "starts one"
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "subject": "A verdict ends it; a question starts one",
+      "world": "a plain two-column cutaway",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even"
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "shape",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "intent": "rest",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "phrase_card",
+      "subject": "The full three-part card, assembled and held",
+      "world": "the same card, now complete",
+      "design": {
+        "treatment": "Camera returns once more: behaviour, impact and question (all built in b05, b07, b08) sit together on the one card and hold for a beat, the lesson's own reusable device seen whole.",
+        "elements": [
+          {
+            "name": "phrase_card",
+            "label": "the base card, restated"
+          },
+          {
+            "name": "behaviour_label",
+            "label": "timeline and blockers, same paragraph"
+          },
+          {
+            "name": "impact_label",
+            "label": "couldn't tell what was blocking us"
+          },
+          {
+            "name": "connector_arrow_1",
+            "label": "links behaviour to impact"
+          },
+          {
+            "name": "question_label",
+            "label": "what got left out, from your side?"
+          },
+          {
+            "name": "connector_arrow_2",
+            "label": "links impact to question"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "in that order",
+            "element": "phrase_card",
+            "action": "the complete card holds",
+            "motion": "settle, no new motion"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "phrase_card",
+            "behaviour_label",
+            "impact_label",
+            "connector_arrow_1",
+            "question_label",
+            "connector_arrow_2"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": []
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "quiz",
+      "props": {
+        "question": "Which reply is more likely to change next week's update?",
+        "say_question": "which one changes next week's update",
+        "options": [
+          {
+            "text": "You're disorganized, you need to communicate better.",
+            "say": "you're disorganized, you need to communicate better"
+          },
+          {
+            "text": "Names the behaviour, shows impact, then asks.",
+            "say": "when the blockers were mixed into the timeline"
+          }
+        ],
+        "pause_label": "Pause and decide"
+      },
+      "subject": "Two replies to the same moment",
+      "world": "its own plain space, nothing else in frame",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even"
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "template": "quiz.answer",
+      "station": "quiz",
+      "props": {
+        "question": "Which reply is more likely to change next week's update?",
+        "options": [
+          {
+            "text": "You're disorganized, you need to communicate better."
+          },
+          {
+            "text": "Names the behaviour, shows impact, then asks."
+          }
+        ],
+        "answer": 2,
+        "say_answer": "B",
+        "explanation": "It names the specific behaviour, its impact, and asks a question she can act on.",
+        "say_explanation": "it names the behaviour, the impact, and asks",
+        "tempting": 1,
+        "why_not": "It feels direct and honest, but it does not say what to change.",
+        "say_why_not": "a verdict, so nothing moves"
+      },
+      "subject": "B names it, shows impact, and asks",
+      "world": "the same quiz space, held",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "option_b_wording"
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "desk",
+      "props": {},
+      "subject": "Back to Priya: the three-part reply lands",
+      "world": "the same station as b01, now one-to-one",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "question_line",
+      "design": {
+        "treatment": "Priya and her manager, same two looks and sides as b01, now at a one-to-one desk. The manager delivers the three-part reply; Priya leans in and can finally answer.",
+        "elements": [
+          {
+            "name": "priya_bust",
+            "label": "Priya, screen left, leaning in"
+          },
+          {
+            "name": "manager_bust",
+            "label": "Manager, screen right, explaining"
+          },
+          {
+            "name": "reply_bubble_1",
+            "label": "the blockers were mixed into the timeline"
+          },
+          {
+            "name": "reply_bubble_2",
+            "label": "couldn't tell what was blocking us"
+          },
+          {
+            "name": "reply_bubble_3",
+            "label": "what got left out, from your side?"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "the blockers were mixed into the timeline",
+            "element": "reply_bubble_1",
+            "action": "manager's first line lands",
+            "motion": "bubble appears"
+          },
+          {
+            "t_anchor": "i couldn't tell what was blocking us",
+            "element": "reply_bubble_2",
+            "action": "manager's second line lands",
+            "motion": "bubble appears"
+          },
+          {
+            "t_anchor": "what got left out",
+            "element": "reply_bubble_3",
+            "action": "manager's closing question lands",
+            "motion": "bubble appears"
+          },
+          {
+            "t_anchor": "she can finally answer",
+            "element": "priya_bust",
+            "action": "Priya leans in, relieved",
+            "motion": "pose and emotion change, no new line"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "priya_bust",
+            "manager_bust",
+            "reply_bubble_1",
+            "reply_bubble_2",
+            "reply_bubble_3"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "avatar",
+      "station": "desk",
+      "props": {
+        "title": "Name it. Show impact. Ask.",
+        "kicker": "Try it next",
+        "card": {
+          "lines": [
+            "Behaviour.",
+            "Impact.",
+            "Question."
+          ]
+        }
+      },
+      "subject": "The presenter closes, the shape restated",
+      "world": "direct to camera",
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "even"
+    }
+  ]
+}

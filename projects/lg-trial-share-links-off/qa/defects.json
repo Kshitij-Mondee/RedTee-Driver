@@ -1,0 +1,67 @@
+{
+  "source": "check",
+  "routed": {
+    "script": {},
+    "storyboard": {
+      "b03": [
+        {
+          "beat": "b03",
+          "code": "wb_face",
+          "detail": "b03: \"Who\" in presenter_card_1 (presenter_card_1) is set in patrick hand: on a whiteboard engine board every word is written by the engine (board.write) or is a heading in the display face (board.heading)",
+          "source": "probe",
+          "count": 1
+        },
+        {
+          "beat": "b03",
+          "code": "wb_face",
+          "detail": "b03: \"What they can do\" in presenter_card_2 (presenter_card_2) is set in patrick hand: on a whiteboard engine board every word is written by the engine (board.write) or is a heading in the display face (board.heading)",
+          "source": "probe",
+          "count": 1
+        },
+        {
+          "beat": "b03",
+          "code": "wb_face",
+          "detail": "b03: \"Until when\" in presenter_card_3 (presenter_card_3) is set in patrick hand: on a whiteboard engine board every word is written by the engine (board.write) or is a heading in the display face (board.heading)",
+          "source": "probe",
+          "count": 1
+        }
+      ]
+    },
+    "kit": {},
+    "scene": {
+      "b18": [
+        {
+          "beat": "b18",
+          "code": "line_through_text",
+          "detail": "at 166 s: b18 \"A Anyone with the link, edit\": a line of strike_a (b19) runs through its letters at [173, 483, 549, 535] from 166 to 175 s; give the words room (move or shorten them, or move the line) [choice_words_A / strike_a] (an element b18 drew and b19 holds: b19 changes its state or draws over it) [b18 owns one of the two: its line, or its element still on screen]",
+          "source": "lc",
+          "count": 1
+        },
+        {
+          "beat": "b18",
+          "code": "line_through_text",
+          "detail": "at 173 s: b18 \"B People in the company, view\": a line of strike_b (b19) runs through its letters at [173, 588, 585, 640] from 173 to 175 s; give the words room (move or shorten them, or move the line) [choice_words_B / strike_b] (an element b18 drew and b19 holds: b19 changes its state or draws over it) [b18 owns one of the two: its line, or its element still on screen]",
+          "source": "lc",
+          "count": 1
+        }
+      ],
+      "b19": [
+        {
+          "beat": "b19",
+          "code": "line_through_text",
+          "detail": "at 166 s: b18 \"A Anyone with the link, edit\": a line of strike_a (b19) runs through its letters at [173, 483, 549, 535] from 166 to 175 s; give the words room (move or shorten them, or move the line) [choice_words_A / strike_a] (an element b18 drew and b19 holds: b19 changes its state or draws over it) [b19 owns one of the two: its line, or its element still on screen]",
+          "source": "lc",
+          "count": 1
+        },
+        {
+          "beat": "b19",
+          "code": "line_through_text",
+          "detail": "at 173 s: b18 \"B People in the company, view\": a line of strike_b (b19) runs through its letters at [173, 588, 585, 640] from 173 to 175 s; give the words room (move or shorten them, or move the line) [choice_words_B / strike_b] (an element b18 drew and b19 holds: b19 changes its state or draws over it) [b19 owns one of the two: its line, or its element still on screen]",
+          "source": "lc",
+          "count": 1
+        }
+      ]
+    },
+    "engine": {}
+  }
+}

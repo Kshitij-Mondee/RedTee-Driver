@@ -1,0 +1,32 @@
+{
+ "name": "smart-mix",
+ "description": "Recommended (bench 2026-10-06 evidence): Sol plans the lesson (cheapest accepted brief, knowledge and pedagogy), Sonnet writes everything visual (script, storyboard, scenes: it rated beats as pictures, drew the most scenes, had the fewest check errors per beat, and cost about $0.06 a scene), and the checkers come from another family (Gemini Flash skeptic and picture critic).",
+ "roles": {
+  "brief": "gpt-6.1-sol",
+  "knowledge": "gpt-6.1-sol",
+  "skeptic": "gemini-3.8-flash",
+  "pedagogy": "gpt-6.1-sol",
+  "persona_pick": "gpt-6-luna",
+  "script": "claude-sonnet-5-5",
+  "storyboard_outline": "claude-sonnet-5-5",
+  "storyboard": "claude-sonnet-5-5",
+  "scene": "claude-sonnet-5-5",
+  "critic": "gemini-3.8-flash",
+  "tweak": "claude-haiku-4-5"
+ },
+ "effort": {
+  "brief": "medium",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

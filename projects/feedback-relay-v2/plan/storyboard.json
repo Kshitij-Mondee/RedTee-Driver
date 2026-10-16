@@ -1,0 +1,1543 @@
+{
+  "style": "story-cartoon",
+  "concept": "One comment, one meeting. A single chat bubble over the same cartoon meeting room changes state part by part: vague and warm, then behaviour, then effect, then one step. The viewer watches the same object get fixed, tries a faded version on Dev's call, then sees the opening frame return changed: next week Sam lets Priya finish.",
+  "chrome": {
+    "section_labels": false
+  },
+  "motifs": [
+    {
+      "name": "comment_bubble",
+      "desc": "The one chat bubble holding the comment; its words swap in place, earlier versions fade to a ghost behind."
+    },
+    {
+      "name": "three_slots",
+      "desc": "Behaviour (accent3 teal), effect (field2 sand), one step (accent4 sage): fixed tints wherever they appear."
+    }
+  ],
+  "world": {
+    "stations": [
+      {
+        "id": "meeting_room",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "home",
+        "note": "The meeting room cutaway. Hook (b01, b02) and payoff (b17, the b01 frame returns)."
+      },
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 1400,
+        "w": 1920,
+        "h": 1080,
+        "zone": "you",
+        "note": "Below the room: the viewer's own desk. Down is deeper, into you."
+      },
+      {
+        "id": "desk_bubble",
+        "parent": "desk",
+        "rect": {
+          "x": 1000,
+          "y": 120,
+          "w": 720,
+          "h": 405
+        },
+        "note": "The memory bubble at the viewer's desk; b04 zooms into it."
+      },
+      {
+        "id": "presenter",
+        "x": 2400,
+        "y": 1400,
+        "w": 1920,
+        "h": 1080,
+        "zone": "presenter",
+        "note": "Presenter bookends b05 and b18."
+      },
+      {
+        "id": "replay",
+        "x": 2400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "worked example",
+        "note": "The same meeting replayed, right of home: s2 and s3 fix the comment here, beats b06 to b11."
+      },
+      {
+        "id": "tiles",
+        "x": 4800,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "consolidate",
+        "note": "The three parts lifted off the bubble as tiles (b12)."
+      },
+      {
+        "id": "dev_call",
+        "x": 7200,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "check",
+        "note": "Dev's video call and the answer cards (b13 to b15)."
+      },
+      {
+        "id": "calendar_desk",
+        "x": 9600,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "apply",
+        "note": "A desk calendar with a sticky note (b16)."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "none: the real meeting room, the thing taught is literally a sentence said there",
+    "setting": "A warm story-cartoon office meeting room, held across the film, with short excursions to the viewer's desk, Dev's call and a desk calendar.",
+    "arc": "A nice comment changes nothing (hook), a label makes it worse (turn), the comment gains behaviour, effect and one step (demonstration), the viewer tries a new case (practice), the same meeting next week shows Priya finishing (payoff).",
+    "cast": [
+      {
+        "name": "Sam",
+        "member": "man",
+        "skin": 2,
+        "cloth": "cloth",
+        "role": "colleague who cuts people off; always screen left of Priya, faces right"
+      },
+      {
+        "name": "Priya",
+        "member": "woman",
+        "skin": 3,
+        "cloth": "cloth2",
+        "role": "colleague who gets cut off; always screen right, faces left (flip)"
+      },
+      {
+        "name": "Manager",
+        "member": "elder_woman",
+        "skin": 0,
+        "cloth": "accent3",
+        "role": "gives Sam the comment; screen left of Sam in b01, beside him in b10"
+      },
+      {
+        "name": "Dev",
+        "member": "man",
+        "skin": 1,
+        "cloth": "muted",
+        "role": "starts a call without the agenda in the check (b13)"
+      },
+      {
+        "name": "You",
+        "member": "woman",
+        "skin": 1,
+        "cloth": "accent3",
+        "role": "the viewer at their own desk (b03)"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "comment_bubble",
+      "what": "THE comment: one chat bubble whose contents swap in place. Vague words in grey, then each part arrives in its own calm tint, the earlier version fading to a ghost behind it. Text lives on this object.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b03",
+        "b04",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b17"
+      ]
+    },
+    {
+      "id": "meeting_room",
+      "what": "The same meeting room cutaway (Sam, Priya, the manager, two muted background colleagues), its state changed: emptying, a week later, replayed, next week in full colour.",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b07",
+        "b09",
+        "b11",
+        "b17"
+      ]
+    },
+    {
+      "id": "three_slots",
+      "what": "Three slot objects: behaviour (accent3), effect (field2), one step (accent4). They open at the end of the bubble, lift off as tiles, reappear on the answer cards, the sticky note and beside the presenter.",
+      "kind": "list",
+      "beats": [
+        "b08",
+        "b10",
+        "b11",
+        "b12",
+        "b14",
+        "b15",
+        "b16",
+        "b18"
+      ]
+    },
+    {
+      "id": "week_step",
+      "what": "Stepped time: a small wall calendar in the meeting room flips one page, next week, and the room is re-staged in one step. The failure in the hook (carried by the b02 time join) and the success in the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b17"
+      ]
+    },
+    {
+      "id": "tick_card",
+      "what": "Answer cards with three tick discs (observable, real effect, one step). Ticks drop on their words; a missing tick stays an empty dashed disc.",
+      "kind": "other",
+      "beats": [
+        "b13",
+        "b14",
+        "b15"
+      ]
+    },
+    {
+      "id": "paper_turn",
+      "what": "The one join material: a page turn of the paper ground at section boundaries (b06, b13, b16); inside a topic the comment bubble carries across (continue, handoff).",
+      "kind": "join",
+      "beats": [
+        "b06",
+        "b13",
+        "b16"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "none: the vague bubble in warm cream",
+      "why": "Pale open; the comment looks pleasant and harmless."
+    },
+    {
+      "from": "b02",
+      "band": "light",
+      "break": false,
+      "accent": "Priya's cut-off bubble edge",
+      "why": "Same pale room a week later; the only loud thing is the interruption."
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the empty slot on the right",
+      "why": "Close on the bubble, slightly richer as we look inside it."
+    },
+    {
+      "from": "b06",
+      "band": "dark",
+      "break": true,
+      "accent": "the Dominating label",
+      "why": "Dark break for the key misconception: a judgement closes Sam down."
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "break": true,
+      "accent": "spoke over Priya in the bubble",
+      "why": "Colour floods back at the turn: the first concrete part of the comment."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "break": false,
+      "accent": "the part being added now",
+      "why": "The accent always marks the newest part; settled parts keep their calm tints."
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "break": false,
+      "accent": "the empty agenda slot",
+      "why": "New small scene for the check; calm so the viewer can think."
+    },
+    {
+      "from": "b16",
+      "band": "light",
+      "break": false,
+      "accent": "the vague line on the sticky note",
+      "why": "The viewer's own desk, quiet, practical."
+    },
+    {
+      "from": "b17",
+      "band": "light",
+      "break": true,
+      "accent": "Priya's completed bubble",
+      "why": "Lift at the close: colour withheld from the meeting room arrives in full."
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "meeting_room",
+        "what": "The meeting room set: Loom.place.meeting cutaway with a long table (near face field2), surface2 wall, a window, a door, chairs in muted (never accent), a small wall calendar on the left wall. Room is slightly desaturated until state next_week_full. Named people are placed by the scene as peep busts behind the table edge (not part of the kit).",
+        "states": [
+          "emptying",
+          "week_later",
+          "replay",
+          "next_week_full"
+        ],
+        "beats": [
+          "b01",
+          "b07",
+          "b09",
+          "b10",
+          "b11",
+          "b17"
+        ],
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "id": "comment_bubble",
+        "what": "The comment: a chat-style bubble (seed bubble chat, round shape, ink outline, surface fill) with a soft tail, Nunito body text. Holds up to three part slots in a row of lines: behaviour (accent3 tint), effect (field2 tint), one step (accent4 tint). The newest part carries an accent underline; settled parts keep their tint only. A ghost layer shows the previous wording at 15 % opacity behind. Vague state reads: Great energy in there today (muted ink on cream).",
+        "states": [
+          "vague",
+          "grey",
+          "behaviour",
+          "gap",
+          "effect",
+          "step_open",
+          "complete",
+          "ghost"
+        ],
+        "beats": [
+          "b01",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b17"
+        ],
+        "size": [
+          900,
+          300
+        ]
+      },
+      {
+        "id": "wall_calendar",
+        "what": "A small paper wall calendar with an accent3 header band; its page flips once in stepped time (two drawings, no tween) from this week to next week, with the hand-lettered words Next week on the new page.",
+        "states": [
+          "this_week",
+          "next_week"
+        ],
+        "beats": [
+          "b01",
+          "b17"
+        ],
+        "size": [
+          220,
+          240
+        ]
+      }
+    ],
+    "notes": "People are never kit parts: Sam, Priya, the manager and Dev are peep busts with their cast look."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "meeting_room",
+      "subject": "The manager tells Sam great energy in there today; Sam beams and nods while Priya gathers half-filled notes.",
+      "world": "meeting room with Sam, Priya and the comment bubble",
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "story_role": "hook",
+      "register": "expressive",
+      "motion_is": "content",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "comment_bubble",
+      "design": {
+        "treatment": "Story-cartoon wide of the meeting room as people leave. The manager (left) leans to Sam (centre left); the comment bubble drops in over Sam with overshoot; Sam beams and nods; Priya (right) gathers notes that are only half written.",
+        "why_motion": "The hook is a moment in time: a nice line lands and a person reacts. The reaction is the content.",
+        "elements": [
+          "meeting_room (kit, state emptying), full frame",
+          "Manager: kit.peep elder_woman, skin 0, cloth accent3, x 420, bust centre y 640, size 520",
+          "Sam: kit.peep man, skin 2, cloth cloth, x 820, y 640, size 560",
+          "Priya: kit.peep woman, skin 3, cloth cloth2, flip, x 1380, y 650, size 520, notepad with three lines written and the rest empty",
+          "comment_bubble (kit, state vague): rect 560 110 860 230, tail to Sam",
+          "two background colleagues via ctx.crowd, muted, walking out of the door at x 1700"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Imagine",
+            "element": "meeting_room",
+            "action": "room on screen, background colleagues drift to the door and out",
+            "motion": "crowd walk, 1.6 s"
+          },
+          {
+            "t_anchor": "a manager tells Sam",
+            "element": "Manager",
+            "action": "leans in toward Sam, hand to his shoulder",
+            "motion": "lean 0.34 s, spring snappy"
+          },
+          {
+            "t_anchor": "great energy in there today",
+            "element": "comment_bubble",
+            "action": "drops in over Sam, words print in warm cream",
+            "motion": "m.drop with overshoot, text reveal"
+          },
+          {
+            "t_anchor": "Sam beams",
+            "element": "Sam",
+            "action": "face to happy",
+            "motion": "emotion swap"
+          },
+          {
+            "t_anchor": "and nods",
+            "element": "Sam",
+            "action": "nods twice; Priya glances down at her half-filled notes",
+            "motion": "nod 0.6 s; Priya head tilt"
+          }
+        ],
+        "continuity": "Positions fix the 180-degree line for the lesson: Sam left of Priya. The meeting_room kit and the wall calendar (this_week) return in b17 at the same framing. b02 is a template on the same station, so nothing is held by name; the time join carries the week jump.",
+        "references": [
+          "outline s1_vague b01",
+          "story-cartoon guide s6 two-shot and s8 cast continuity",
+          "seed bubble chat, entrance drop"
+        ]
+      },
+      "option": "bespoke_meeting",
+      "alternatives": {
+        "scenario_dialogue": {
+          "kind": "template",
+          "template": "scenario.dialogue",
+          "note": "The manager and Sam on the meeting setting, the comment as the manager's line."
+        }
+      },
+      "rationale": "Named people are drawn as peep busts everywhere (not the sam rig, which the style guide keeps for background crowds), so each name has one drawing system across templates and bespoke beats."
+    },
+    {
+      "beat": "b02",
+      "kind": "template",
+      "station": "meeting_room",
+      "template": "scenario.dialogue",
+      "subject": "A week later Sam cuts Priya off again.",
+      "world": "meeting room, one week later",
+      "props": {
+        "left": {
+          "cast": "Sam",
+          "member": "man",
+          "emotion": "explaining",
+          "cloth": "cloth"
+        },
+        "right": {
+          "cast": "Priya",
+          "member": "woman",
+          "emotion": "explaining",
+          "cloth": "cloth2"
+        },
+        "lines": [
+          {
+            "who": "right",
+            "text": "So I think",
+            "say": "Next week",
+            "emotion": "explaining"
+          },
+          {
+            "who": "left",
+            "text": "Quick point",
+            "say": "cuts Priya off",
+            "emotion": "explaining"
+          }
+        ],
+        "setting": "meeting",
+        "caption": "Nothing changed",
+        "say_caption": "Nothing changed"
+      },
+      "join_in": {
+        "type": "dip",
+        "meaning": "time",
+        "dur": 0.5
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "setup",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "Priya's cut-off bubble",
+      "option": "scenario_dialogue",
+      "alternatives": {
+        "bespoke_continuation": {
+          "kind": "bespoke",
+          "note": "A continuation of b01: the wall calendar flips (stepped time), Sam's hand up mid-sentence, Priya's bubble cut off, the old comment greying beside them."
+        }
+      },
+      "rationale": "A dip join (meaning time) carries the week jump and clears b01's comment bubble, so no residual bubble sits behind Sam's 'Quick point'. The dialogue shows the interruption, Priya's line ends unfinished. Both lines are three words or fewer so the two bubbles stay small and clear of each other. No name props: the cast is known from b01 and the template drew the names as labels under the desk."
+    },
+    {
+      "beat": "b03",
+      "kind": "blueprint",
+      "station": "desk",
+      "blueprint": "hero.character_moment",
+      "subject": "The viewer at their own desk remembering the same nice, empty comment.",
+      "world": "the viewer's desk",
+      "props": {
+        "cast": "You",
+        "member": "woman",
+        "cloth": "accent3",
+        "side": "left",
+        "bubble": "memory",
+        "items": [
+          {
+            "icon": "thumbs-up",
+            "say": "You have been"
+          }
+        ],
+        "moods": [
+          {
+            "emotion": "happy",
+            "say": "been Sam"
+          }
+        ],
+        "caption": "You have been Sam",
+        "say_caption": "You have been Sam",
+        "prop": "desk"
+      },
+      "join_in": {
+        "type": "camera",
+        "meaning": "into",
+        "dir": "down"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "register": "expressive",
+      "motion_is": "content",
+      "accent_on": "the memory bubble",
+      "upgrade_reason": "The bridge is a person, the viewer, sitting where Sam sat with the same empty bubble; a title slide would lose the identification the line asks for.",
+      "option": "character_moment",
+      "alternatives": {
+        "bespoke_morph": {
+          "kind": "bespoke",
+          "note": "A shape morph: cartoon Sam morphs into a viewer silhouette at a desk, the same bubble above."
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "template",
+      "station": "desk_bubble",
+      "template": "compare.two",
+      "subject": "Inside the comment: it feels good but gives nothing to repeat.",
+      "world": "inside the memory bubble",
+      "props": {
+        "title": "Why did nothing change?",
+        "say_title": "why did nothing change",
+        "left": {
+          "header": "Feels good",
+          "say": "feel good",
+          "valence": "pos",
+          "icon": "heart",
+          "items": [
+            {
+              "text": "Great energy in there today",
+              "say": "vague praise"
+            }
+          ]
+        },
+        "right": {
+          "header": "Nothing to repeat",
+          "say": "nothing to repeat",
+          "valence": "neg",
+          "icon": "hand",
+          "items": [
+            {
+              "empty": true
+            }
+          ]
+        },
+        "mode": "columns"
+      },
+      "join_in": {
+        "type": "zoom",
+        "meaning": "into",
+        "dur": 0.5
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "the empty slot under Nothing to repeat",
+      "option": "compare_two",
+      "alternatives": {
+        "bespoke_closeup": {
+          "kind": "bespoke",
+          "note": "The bubble large, a warm glow tagged Feels good on the left, an empty hand reaching and finding nothing to grip on the right."
+        }
+      },
+      "rationale": "The empty right-hand slot is the empty hand: nothing to hold on to. A short 0.5 s zoom so the b03 character on the left edge has cleared frame before the comparison reveals."
+    },
+    {
+      "beat": "b05",
+      "kind": "avatar",
+      "station": "presenter",
+      "props": {
+        "title": "Fix it",
+        "kicker": "Stay with Sam"
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "setup",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "presenter",
+      "option": "avatar_plate",
+      "alternatives": {
+        "avatar_paper": {
+          "kind": "avatar",
+          "note": "Presenter on the plain paper ground."
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "blueprint",
+      "station": "replay",
+      "blueprint": "hero.character_moment",
+      "subject": "A label, Dominating, lands on Sam and he closes down.",
+      "world": "meeting room replayed, dark ground",
+      "props": {
+        "cast": "Sam",
+        "member": "man",
+        "name": "Sam",
+        "cloth": "cloth",
+        "side": "left",
+        "bubble": "thought",
+        "moods": [
+          {
+            "emotion": "neutral",
+            "say": "Here is the tricky part"
+          },
+          {
+            "emotion": "surprised",
+            "say": "defensiveness"
+          }
+        ],
+        "items": [
+          {
+            "icon": "tag",
+            "say": "Dominating"
+          },
+          {
+            "icon": "gavel",
+            "say": "a judgement"
+          },
+          {
+            "icon": "shield",
+            "say": "defensiveness"
+          }
+        ],
+        "caption": "Dominating is a judgement",
+        "say_caption": "it is a judgement",
+        "prop": "none"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dir": "left"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "turn",
+      "register": "expressive",
+      "motion_is": "content",
+      "light": "key",
+      "accent_on": "the Dominating label",
+      "upgrade_reason": "The misconception is refuted by a reaction: the label arrives and Sam's face changes on defensiveness; the change over time is the argument.",
+      "option": "character_moment",
+      "alternatives": {
+        "scenario_dialogue": {
+          "kind": "template",
+          "template": "scenario.dialogue",
+          "note": "The manager says you were dominating, Sam reacts."
+        },
+        "narration_card": {
+          "kind": "bespoke",
+          "note": "A black narration card: Labels bring defensiveness."
+        }
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "replay",
+      "subject": "The comment swaps word by word into the behaviour: in that meeting, you spoke over Priya.",
+      "world": "meeting room replayed",
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "depth": "layered",
+      "accent_on": "spoke over Priya",
+      "design": {
+        "treatment": "Two-shot of Sam (left) and Priya (right) in the replayed room. The Dominating tag peels off Sam. The comment bubble above swaps word by word into In that meeting, you spoke over Priya; Sam's small bubble slides over Priya's to show the overlap the words name. A luggage tag A behaviour ties on.",
+        "why_motion": "The skill is the change of the comment itself; watching the label leave and the words arrive is the demonstration.",
+        "elements": [
+          "meeting_room (kit, state replay), muted",
+          "Sam: kit.peep man, skin 2, cloth cloth, x 700, y 640, size 560",
+          "Priya: kit.peep woman, skin 3, cloth cloth2, flip, x 1300, y 650, size 520, with a small speech bubble",
+          "label_tag: a tag reading Dominating on Sam's chest, peels off",
+          "comment_bubble (kit, vague to behaviour): rect 480 90 960 240",
+          "behaviour_tag: luggage tag A behaviour, accent3, tied to the first slot"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "say what he did",
+            "element": "label_tag",
+            "action": "peels off Sam and drops out of frame",
+            "motion": "rotate and fall 0.5 s"
+          },
+          {
+            "t_anchor": "In that meeting",
+            "element": "comment_bubble",
+            "action": "vague words fade to ghost, In that meeting, types in",
+            "motion": "swap slot, text reveal"
+          },
+          {
+            "t_anchor": "you spoke over Priya",
+            "element": "comment_bubble",
+            "action": "words spoke over Priya arrive with an accent underline; Sam's small bubble slides over Priya's",
+            "motion": "reveal, underline draws 0.8 s; bubble slide 0.34 s"
+          },
+          {
+            "t_anchor": "mid-point",
+            "element": "Priya",
+            "action": "her small bubble shows a break; Priya's face to surprised",
+            "motion": "emotion swap"
+          },
+          {
+            "t_anchor": "You could have heard it",
+            "element": "comment_bubble",
+            "action": "a connector draws from the underlined words down into the overlapping bubbles",
+            "motion": "m.draw 0.8 s, head lands at 0.9"
+          },
+          {
+            "t_anchor": "That is a behaviour",
+            "element": "behaviour_tag",
+            "action": "drops onto the first slot, slot fills accent3",
+            "motion": "m.drop with overshoot"
+          }
+        ],
+        "continuity": "Held from b06: none by name (blueprint). Incoming: room, Sam, Priya, bubble, tags. Held into b08: comment_bubble (behaviour state), behaviour_tag. Retiring: label_tag, connector at the end.",
+        "references": [
+          "outline s2_behaviour b07",
+          "guide s6 two-shot, 180-degree line",
+          "seed label underline, entrance drop"
+        ]
+      },
+      "option": "swap_slot",
+      "alternatives": {
+        "brush_note": {
+          "kind": "bespoke",
+          "tools": [
+            "brush"
+          ],
+          "note": "Newer: the comment as a paper sticky note rewritten by hand with the brush markup recipe."
+        },
+        "character_moment": {
+          "kind": "blueprint",
+          "blueprint": "hero.character_moment",
+          "note": "The comment as Sam's speech bubble items."
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "replay",
+      "subject": "The rewritten comment holds with a dashed empty slot after it.",
+      "world": "close on the comment over the replayed room",
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "close",
+        "move": "push"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "content",
+      "intent": "hold",
+      "accent_on": "the dashed empty slot",
+      "upgrade_reason": "The check holds the same comment object so the gap is literally its next state; a page template would break the object the viewer is watching.",
+      "design": {
+        "treatment": "The camera pushes into the comment bubble. The behaviour part sits in its teal slot; after it a dashed empty slot appears and pulses slowly. A tag Still missing? drops beside it.",
+        "why_motion": "A recall prompt on the object itself: the empty slot is the question.",
+        "elements": [
+          "comment_bubble (kit, state gap), centred, scaled 1.4 by the push",
+          "gap_slot: dashed outline slot after the behaviour line (revealed, never drawn)",
+          "missing_tag: luggage tag Still missing?, ink on surface"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now you",
+            "element": "comment_bubble",
+            "action": "camera pushes in until the bubble fills the middle third",
+            "motion": "Loom.cam.push 1.2 s, editorial ease"
+          },
+          {
+            "t_anchor": "still missing",
+            "element": "gap_slot",
+            "action": "dashed slot reveals and pulses slowly",
+            "motion": "reveal 0.4 s, scale 1.0 to 1.04 every 1.6 s"
+          },
+          {
+            "t_anchor": "missing",
+            "element": "missing_tag",
+            "action": "tag drops on its string beside the slot",
+            "motion": "m.drop with overshoot"
+          }
+        ],
+        "continuity": "Held from b07: comment_bubble, behaviour_tag. Retiring: Sam and Priya soften behind the push. Held into b09: comment_bubble with gap_slot.",
+        "references": [
+          "outline s2_behaviour b08",
+          "teaching plan recall prompt after s2"
+        ]
+      },
+      "option": "held_bubble",
+      "alternatives": {
+        "document_page": {
+          "kind": "template",
+          "template": "document.page",
+          "note": "The comment line and an empty ruled line after it."
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "replay",
+      "subject": "The gap fills with the effect: Priya could not finish her point.",
+      "world": "meeting room replayed, comment over the two-shot",
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "pull"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "depth": "layered",
+      "accent_on": "Priya could not finish her point",
+      "design": {
+        "treatment": "The camera eases back to the two-shot. The dashed slot fills with Priya could not finish her point in the sand tint with the accent underline; the behaviour part settles to teal only. Priya's half bubble hangs with a trailing break. A guess bubble with a question mark over Sam pops and fades.",
+        "why_motion": "The effect is what happened in the scene; the slot filling while Priya's bubble breaks ties words to event.",
+        "elements": [
+          "meeting_room (kit, state replay)",
+          "comment_bubble (kit, state effect), rect 480 90 960 300, ghost of the vague version behind",
+          "Priya: kit.peep woman, skin 3, cloth cloth2, flip, x 1300, y 650, size 520, half bubble with a trailing break",
+          "Sam: kit.peep man, skin 2, cloth cloth, x 700, y 640, size 560",
+          "effect_tag: luggage tag Effect, field2",
+          "guess_bubble: small dashed thought bubble with a question mark over Sam"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Priya could not finish",
+            "element": "comment_bubble",
+            "action": "gap slot fills with Priya could not finish her point, accent underline; behaviour underline retires",
+            "motion": "swap slot, text reveal; camera pull 1.0 s"
+          },
+          {
+            "t_anchor": "her point",
+            "element": "Priya",
+            "action": "her half bubble hangs, its trailing dots fade one by one",
+            "motion": "stagger fade 0.07 s"
+          },
+          {
+            "t_anchor": "what happened",
+            "element": "effect_tag",
+            "action": "drops onto the second slot",
+            "motion": "m.drop with overshoot"
+          },
+          {
+            "t_anchor": "not a guess at motives",
+            "element": "guess_bubble",
+            "action": "pops in over Sam, then fades out",
+            "motion": "m.pop, fade 0.26 s"
+          }
+        ],
+        "continuity": "Held from b08: comment_bubble, gap_slot (filled now). Incoming: Sam, Priya, effect_tag, guess_bubble. Retiring: missing_tag, guess_bubble. Held into b10: comment_bubble with two parts.",
+        "references": [
+          "outline s3_effect_step b09",
+          "knowledge F7, F8 as phrased in the script"
+        ]
+      },
+      "option": "swap_slot",
+      "alternatives": {
+        "character_moment": {
+          "kind": "blueprint",
+          "blueprint": "hero.character_moment",
+          "note": "Priya with her unfinished point fading."
+        }
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "replay",
+      "subject": "A long list shrinks to one small step that Sam and the manager agree.",
+      "world": "meeting room, Sam and the manager side by side at the table",
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "medium",
+        "move": "none"
+      },
+      "story_role": "reveal",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "the one small step slot",
+      "design": {
+        "treatment": "A third sage slot opens at the end of the comment. A long scrolling to-do list drops beside it, then collapses to a single line that slides into the slot, labelled One small step. Below, the manager and Sam sit side by side; the manager asks, Sam explains, both lean in on agree.",
+        "why_motion": "The idea is a reduction, many to one; the list visibly shrinking is that idea.",
+        "elements": [
+          "comment_bubble (kit, state step_open), rect 360 80 1200 300",
+          "long_list: a paper to-do list with six short hand-lettered lines (Listen more, Talk less, Take notes, Ask first, Wait, Summarise), illustrative",
+          "step_line: the one surviving line, labelled One small step, accent underline",
+          "Manager: kit.peep elder_woman, skin 0, cloth accent3, x 640, y 700, size 480",
+          "Sam: kit.peep man, skin 2, cloth cloth, x 1220, y 700, size 480, flip toward the manager"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "One small step",
+            "element": "comment_bubble",
+            "action": "third slot opens in sage after the effect line",
+            "motion": "unfold 0.42 s"
+          },
+          {
+            "t_anchor": "beats a long list",
+            "element": "long_list",
+            "action": "drops beside the bubble and scrolls, then collapses to one line",
+            "motion": "m.drop, scroll 1.0 s, lines fold up 0.07 s stagger"
+          },
+          {
+            "t_anchor": "a long list",
+            "element": "step_line",
+            "action": "the last line slides into the step slot, labelled One small step",
+            "motion": "slide 0.34 s"
+          },
+          {
+            "t_anchor": "Ask how Sam saw it",
+            "element": "Manager",
+            "action": "face to explaining, leans toward Sam",
+            "motion": "emotion swap, lean"
+          },
+          {
+            "t_anchor": "saw it",
+            "element": "Sam",
+            "action": "face to explaining",
+            "motion": "emotion swap"
+          },
+          {
+            "t_anchor": "then agree it",
+            "element": "Sam",
+            "action": "both lean in and smile, the step slot settles between them",
+            "motion": "faces to happy, lean 0.34 s"
+          }
+        ],
+        "continuity": "Held from b09: comment_bubble. Retiring: Priya, effect_tag, long_list at the end. Incoming: Manager, Sam side by side. Held into b11: comment_bubble with three slots.",
+        "references": [
+          "outline s3_effect_step b10",
+          "knowledge F9, F10, F12 as phrased in the script"
+        ]
+      },
+      "option": "list_collapse",
+      "alternatives": {
+        "physics_jar": {
+          "kind": "bespoke",
+          "tools": [
+            "physics"
+          ],
+          "note": "Physics priorityJar: the long list's items tip out until one remains."
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "replay",
+      "subject": "The complete comment reread: behaviour, effect, one step, each lighting as it is said.",
+      "world": "meeting room with the held comment, vague version as a ghost",
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "wide",
+        "move": "push"
+      },
+      "story_role": "payoff",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "the part being read",
+      "design": {
+        "treatment": "The complete comment sits large over the meeting room, three parts in their calm tints; each lights with the accent underline as it is read, then settles. The vague first version is a faint ghost behind. A slow push ends on the bubble.",
+        "why_motion": "The reread is the integration: the eye follows the parts in order, on the words.",
+        "elements": [
+          "meeting_room (kit, state replay), muted",
+          "comment_bubble (kit, state complete), rect 260 120 1400 420",
+          "ghost_vague: Great energy in there today at 15 % behind",
+          "Sam: kit.peep man, skin 2, cloth cloth, x 700, y 780, size 420",
+          "Priya: kit.peep woman, skin 3, cloth cloth2, flip, x 1240, y 790, size 400"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "You spoke over Priya mid-point",
+            "element": "comment_bubble",
+            "action": "behaviour part lights, accent underline",
+            "motion": "underline draws 0.8 s"
+          },
+          {
+            "t_anchor": "so she could not finish",
+            "element": "comment_bubble",
+            "action": "effect part lights; behaviour settles to teal",
+            "motion": "underline draws 0.8 s"
+          },
+          {
+            "t_anchor": "Next time",
+            "element": "comment_bubble",
+            "action": "step slot fills with let her finish first",
+            "motion": "text reveal"
+          },
+          {
+            "t_anchor": "let her finish first",
+            "element": "comment_bubble",
+            "action": "step part lights; camera completes the push",
+            "motion": "underline 0.8 s; Loom.cam.push 2.4 s"
+          }
+        ],
+        "continuity": "Held from b10: comment_bubble. Incoming: Sam and Priya back in their places (Sam left, Priya right), ghost_vague. Handoff to b12: the three tinted parts lift off the bubble.",
+        "references": [
+          "outline s3_effect_step b11"
+        ]
+      },
+      "option": "held_bubble",
+      "alternatives": {
+        "skia_arrival": {
+          "kind": "skia",
+          "note": "Newer: a blur-to-sharp arrival of the complete comment (one hero light moment)."
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "template",
+      "station": "tiles",
+      "template": "recap",
+      "subject": "The three parts as tiles: Behaviour, Effect, One step.",
+      "world": "paper ground",
+      "props": {
+        "items": [
+          {
+            "label": "Behaviour",
+            "icon": "eye",
+            "say": "Behaviour"
+          },
+          {
+            "label": "Effect",
+            "icon": "arrow-right",
+            "say": "effect"
+          },
+          {
+            "label": "One step",
+            "icon": "footprints",
+            "say": "one step"
+          }
+        ],
+        "rule": "One useful shape, others exist",
+        "say_rule": "others exist"
+      },
+      "join_in": {
+        "type": "handoff",
+        "meaning": "into",
+        "via": "three_slots"
+      },
+      "shot": {
+        "size": "insert"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "the token being named",
+      "option": "recap",
+      "alternatives": {
+        "icon_grid": {
+          "kind": "template",
+          "template": "icon.grid",
+          "note": "The three parts with dim blank tiles beside them."
+        }
+      },
+      "rationale": "The rule line keeps 'others exist' visible; the faint blank tiles from the outline are not something recap draws, so the rule carries that idea."
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "dev_call",
+      "subject": "Dev starts a call without the agenda; three comments to choose from.",
+      "world": "Dev's video call",
+      "upgrade_reason": "quiz.question lays three options in a 2-column grid (A and C left, B alone right) and exposes no layout prop; the critic flagged the imbalance twice, so this check is drawn as one even column of three equal cards.",
+      "design": {
+        "treatment": "A wide frame split into two balanced halves. Left half (x 120 to 860): a small video-call tile with Dev's cartoon figure and an empty agenda slot (a dashed outline labelled 'Agenda' with nothing in it), kicker 'Now you' above and the question line below it. Right half (x 980 to 1800): three equal answer cards, same width (820) and height (150), in ONE vertical column, evenly spaced 40 px apart and vertically centred on the frame, each with its letter disc (A, B, C) and its text. No card is marked or favoured. A small pause ring with 'Pause and decide' settles under the column at the end.",
+        "why_motion": "Each card slides in from the right on its own spoken letter so the learner hears and reads each option once, as peers; the column then rests through the pause.",
+        "elements": [
+          {
+            "name": "kicker",
+            "what": "'Now you', top of the left half"
+          },
+          {
+            "name": "call_tile",
+            "what": "video-call tile with Dev (cast rig) and an empty dashed agenda slot labelled 'Agenda'"
+          },
+          {
+            "name": "question",
+            "what": "'Dev starts a call without the agenda. Which comment would you give?' under the tile"
+          },
+          {
+            "name": "card_a",
+            "what": "card A: 'Be more organised', top of the right column"
+          },
+          {
+            "name": "card_b",
+            "what": "card B: 'Send it the day before', middle of the right column, same size as A and C"
+          },
+          {
+            "name": "card_c",
+            "what": "card C: 'Be more prepared', bottom of the right column"
+          },
+          {
+            "name": "pause_ring",
+            "what": "pause ring with 'Pause and decide' under the column, centred on it"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now you",
+            "element": "kicker",
+            "action": "drops in",
+            "motion": "short fade and rise"
+          },
+          {
+            "t_anchor": "Dev starts a call without the agenda",
+            "element": "call_tile",
+            "action": "tile opens, agenda slot draws empty",
+            "motion": "scale from 0.96, dashed outline draws"
+          },
+          {
+            "t_anchor": "Dev starts a call without the agenda",
+            "element": "question",
+            "action": "question line prints",
+            "motion": "unmask left to right"
+          },
+          {
+            "t_anchor": "be more organised",
+            "element": "card_a",
+            "action": "slides into the top slot",
+            "motion": "ease out from the right, 0.4 s"
+          },
+          {
+            "t_anchor": "send it round the day before",
+            "element": "card_b",
+            "action": "slides into the middle slot",
+            "motion": "same ease, same distance"
+          },
+          {
+            "t_anchor": "be more prepared",
+            "element": "card_c",
+            "action": "slides into the bottom slot",
+            "motion": "same ease, same distance"
+          },
+          {
+            "t_anchor": "be more prepared",
+            "element": "pause_ring",
+            "action": "ring appears and counts down through the pause",
+            "motion": "stroke drains over pause_after_s"
+          }
+        ],
+        "continuity": "Enters on a page turn (chapter). Held into b14: none (b14 is the quiz.answer template on the same station, which redraws question and the three options; the column order A, B, C top to bottom matches its A, B, C). Retiring at the end: pause_ring. Dev keeps the cast look from earlier beats.",
+        "references": [
+          "quiz.question (same content, one-column layout)",
+          "critic fix for b13: balanced options"
+        ]
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dir": "left"
+      },
+      "shot": {
+        "size": "wide"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "the question",
+      "option": "quiz_column",
+      "alternatives": {
+        "quiz_question": {
+          "kind": "template",
+          "template": "quiz.question",
+          "note": "The template version (2-column grid of options)."
+        },
+        "dialogue_then_quiz": {
+          "kind": "template",
+          "template": "scenario.dialogue",
+          "note": "Dev's call as a dialogue first, then quiz.question."
+        }
+      },
+      "rationale": "Critic fix: the three options as one even column of equal cards on the right, balanced by Dev's call tile and the question on the left. Option texts use the script's on-screen lines; the narration carries B's fuller observation. Not verified: how b14's quiz.answer grid reads after this column; order A, B, C is kept so the answer maps cleanly."
+    },
+    {
+      "beat": "b14",
+      "kind": "template",
+      "station": "dev_call",
+      "template": "quiz.answer",
+      "subject": "B is right: observable, real effect, one step.",
+      "world": "Dev's video call",
+      "props": {
+        "question": "Dev starts a call without the agenda. Which comment would you give?",
+        "options": [
+          {
+            "text": "Be more organised"
+          },
+          {
+            "text": "Send it the day before"
+          },
+          {
+            "text": "Be more prepared"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "It is B",
+        "explanation": "Observable behaviour, a real effect, and one step Dev could try.",
+        "say_explanation": "Observable"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "close"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "card B",
+      "option": "quiz_answer",
+      "alternatives": {
+        "compare_two": {
+          "kind": "template",
+          "template": "compare.two",
+          "note": "B against C with verdict right and wrong."
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "bespoke",
+      "station": "dev_call",
+      "subject": "Card C has behaviour and effect, but no step: be more prepared is circled.",
+      "world": "Dev's video call, answer card close",
+      "join_in": {
+        "type": "continue"
+      },
+      "shot": {
+        "size": "close",
+        "move": "none"
+      },
+      "story_role": "turn",
+      "register": "productive",
+      "motion_is": "content",
+      "accent_on": "be more prepared",
+      "tools": [
+        "brush"
+      ],
+      "upgrade_reason": "The tempting wrong answer is refuted by marking it: a hand-drawn circle on the vague step and an empty third tick, which a quiz template cannot draw.",
+      "design": {
+        "treatment": "Card C slides forward on the paper ground. Its behaviour and effect parts get tick discs; then a brush circle paints round be more prepared and the third disc stays an empty dashed disc, tagged No step.",
+        "why_motion": "The mark is the teaching: the viewer sees exactly which part is missing as it is said.",
+        "elements": [
+          "card_c: paper card with C: Skipped agenda, decision slipped, be more prepared, parts tinted behaviour accent3, effect field2",
+          "tick_behaviour: tick disc on the behaviour part, pos",
+          "tick_effect: tick disc on the effect part, pos",
+          "empty_disc: dashed empty disc on the step part (revealed, never drawn)",
+          "brush_circle: Loom.brush markup circle round be more prepared, accent",
+          "no_step_tag: luggage tag No step"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "C is tempting",
+            "element": "card_c",
+            "action": "slides forward and settles centre",
+            "motion": "slide 0.34 s"
+          },
+          {
+            "t_anchor": "tempting",
+            "element": "tick_behaviour",
+            "action": "tick disc drops on behaviour, then tick_effect on effect",
+            "motion": "m.drop, 0.07 s stagger"
+          },
+          {
+            "t_anchor": "but has no step",
+            "element": "brush_circle",
+            "action": "brush circle paints round be more prepared; empty_disc reveals",
+            "motion": "brush stroke 0.8 s"
+          },
+          {
+            "t_anchor": "no step",
+            "element": "no_step_tag",
+            "action": "tag drops beside the empty disc",
+            "motion": "m.drop with overshoot"
+          }
+        ],
+        "continuity": "Follows quiz.answer on the same station: nothing held by name; card C is redrawn in the same text and place it had as option C. Retires whole at the page turn into b16.",
+        "references": [
+          "outline s4_check b15",
+          "teaching plan tempting_wrong C"
+        ]
+      },
+      "option": "quiz_plus_brush",
+      "alternatives": {
+        "quiz_answer_alone": {
+          "kind": "template",
+          "template": "quiz.answer",
+          "note": "quiz.answer alone, with tempting C and its why not note."
+        }
+      }
+    },
+    {
+      "beat": "b16",
+      "kind": "template",
+      "station": "calendar_desk",
+      "template": "document.page",
+      "subject": "A sticky note with a vague comment you owe, and the three parts to rewrite it.",
+      "world": "the viewer's desk calendar",
+      "props": {
+        "kind": "notes",
+        "variant": "paper",
+        "title": "One comment you owe",
+        "say_title": "one comment you owe",
+        "lines": [
+          {
+            "text": "Great energy in there today",
+            "say": "Pick one comment"
+          },
+          {
+            "text": "What they did",
+            "say": "rewrite it"
+          },
+          {
+            "text": "What it led to",
+            "say": "before you say"
+          },
+          {
+            "text": "One thing to try",
+            "say": "say it"
+          }
+        ],
+        "mode": "highlight",
+        "side": "center"
+      },
+      "join_in": {
+        "type": "page",
+        "meaning": "chapter",
+        "dir": "left"
+      },
+      "shot": {
+        "size": "insert"
+      },
+      "story_role": "practice",
+      "register": "productive",
+      "motion_is": "staging",
+      "accent_on": "the vague line",
+      "option": "document_page",
+      "alternatives": {
+        "brush_strike": {
+          "kind": "bespoke",
+          "tools": [
+            "brush"
+          ],
+          "note": "A pen strikes the vague line and the three tinted slots appear beneath."
+        }
+      }
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "meeting_room",
+      "subject": "Back to Sam and the same meeting with the comment bubble: next week Sam lets Priya finish.",
+      "world": "meeting room with Sam, Priya and the comment bubble, next week",
+      "join_in": {
+        "type": "camera",
+        "meaning": "time"
+      },
+      "shot": {
+        "size": "establishing",
+        "move": "none"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "content",
+      "depth": "layered",
+      "light": "even",
+      "accent_on": "Priya's completed bubble",
+      "design": {
+        "treatment": "The b01 wide frame returns. A split: left half the old vague bubble greyed, right half the complete new comment. On next week the wall calendar flips one page in stepped time, the split clears and the room arrives in full colour; Sam waits, hand lowered, while Priya's bubble completes in full.",
+        "why_motion": "The payoff is a change over time in the same place; before, after and next week must be seen in sequence.",
+        "elements": [
+          "meeting_room (kit, state replay to next_week_full), same framing as b01",
+          "comment_bubble (kit): grey vague copy left, complete copy right",
+          "wall_calendar (kit, this_week to next_week)",
+          "Sam: kit.peep man, skin 2, cloth cloth, x 820, y 640, size 560, listening",
+          "Priya: kit.peep woman, skin 3, cloth cloth2, flip, x 1380, y 650, size 520",
+          "priya_bubble: Priya's speech bubble completing in full, accent edge; tag Sam lets Priya finish"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back to Sam",
+            "element": "meeting_room",
+            "action": "b01 frame on screen; split line draws down the middle",
+            "motion": "m.draw 0.8 s"
+          },
+          {
+            "t_anchor": "same meeting",
+            "element": "comment_bubble",
+            "action": "left: the vague bubble greys",
+            "motion": "fade to grey 0.4 s"
+          },
+          {
+            "t_anchor": "new comment",
+            "element": "comment_bubble",
+            "action": "right: the complete comment drops in, three tints",
+            "motion": "m.drop with overshoot"
+          },
+          {
+            "t_anchor": "Next week",
+            "element": "wall_calendar",
+            "action": "page flips to Next week; split clears; room arrives in full colour",
+            "motion": "stepped time, one step; colour lift 0.6 s"
+          },
+          {
+            "t_anchor": "he lets Priya finish",
+            "element": "priya_bubble",
+            "action": "Priya speaks, her bubble fills to the end; Sam nods, hand lowered; tag Sam lets Priya finish drops",
+            "motion": "bubble grows 1.2 s; m.drop tag"
+          },
+          {
+            "t_anchor": "not certain",
+            "element": "Sam",
+            "action": "Sam stays listening, small nod; frame rests",
+            "motion": "nod 0.6 s"
+          }
+        ],
+        "continuity": "Callback of b01: same station, framing, positions and kit states (meeting_room, wall_calendar, comment_bubble). Incoming from b16: nothing held. The full colour is withheld until here (value_script break).",
+        "references": [
+          "outline s5_apply_payoff b17",
+          "b01 framing",
+          "guide s7 stepped time"
+        ]
+      },
+      "option": "split_and_step",
+      "alternatives": {
+        "compare_then_timeline": {
+          "kind": "template",
+          "template": "compare.two",
+          "note": "Before and after as compare.two, then a timeline to next week."
+        }
+      }
+    },
+    {
+      "beat": "b18",
+      "kind": "avatar",
+      "station": "presenter",
+      "props": {
+        "title": "Three parts",
+        "kicker": "Before you say it",
+        "card": {
+          "lines": [
+            "What happened",
+            "What it caused",
+            "One step"
+          ],
+          "say": "Say what happened"
+        }
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "shot": {
+        "size": "medium"
+      },
+      "story_role": "payoff",
+      "register": "expressive",
+      "motion_is": "staging",
+      "accent_on": "the line being said",
+      "option": "avatar_plate",
+      "alternatives": {
+        "recap": {
+          "kind": "template",
+          "template": "recap",
+          "props": {
+            "kicker": "Before you say it",
+            "title": "Three parts",
+            "items": [
+              {
+                "label": "What happened",
+                "say": "Say what happened"
+              },
+              {
+                "label": "What it caused",
+                "say": "Say what it caused"
+              },
+              {
+                "label": "One step",
+                "say": "Offer one step"
+              }
+            ]
+          },
+          "note": "The three phrases as a full-frame recap, which balances the frame if the presenter plate cannot. The gate rejects it while the allocation fixes b18 as avatar. Use it if the allocation changes."
+        }
+      },
+      "rationale": "The allocation fixes this beat as an avatar. Avatar props are only title, kicker and a card of up to 3 lines, with no focus or zoom, so the storyboard has no setting that moves the card off the left of the plate. I tried switching to the recap template and the gate rejected it (allocation says avatar). The empty right panel is most likely the presenter slot rendering without a presenter. This is reported to the engine route and not verified. The recap alternative is ready so a switch is one step if the allocation changes."
+    }
+  ],
+  "poster": {
+    "beat": "b11"
+  }
+}

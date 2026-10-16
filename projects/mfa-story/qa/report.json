@@ -1,0 +1,273 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "b06: 5.5s static hold from 37.5s",
+    "b07: 6.0s static hold from 48.9s",
+    "b15: 6.4s static hold from 133.5s",
+    "b02: 11 chunks on screen (label_maya, label_other, leak_chip, phone, portrait_maya, portrait_maya_1_rig, screen_maya, screen_other, tag_leaked, tag_leaked.0, thief); the budget is ~5-6",
+    "b08: 10 chunks on screen (big_addr, fake_page, label_maya, label_other, message, phone, portrait_maya, portrait_maya_2_rig, real_page, thief); the budget is ~5-6",
+    "b14: 9 chunks on screen (big_addr, fake_page_pk, label_maya, label_other, phone, portrait_maya, portrait_maya_3_rig, real_page_wait, thief); the budget is ~5-6",
+    "b17: 8 chunks on screen (label_maya, label_other, phone, portrait_maya, portrait_maya_4_rig, prompt_stack, real_page, thief); the budget is ~5-6",
+    "variety: one_radius_share = 0.625 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 1.0 is worse than the worst baseline lesson (0.636): it grew (beats: b01, b02, b03, b04, b05, b06, b07, b08)",
+    "variety: labels_over_objects_share = 0.4 is above the baseline median (0.375) (beats: b06, b08, b09, b13, b15, b17, b19, b21)",
+    "variety: the seed's camera habit is 'push' but 20 of 20 bespoke beats have no camera move",
+    "hf layout content_overlap @ 116.207: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(6) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 26.59: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 26.59: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 26.59: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 26.59: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 26.59: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout container_overflow @ 36.869: Element extends outside a clipping layout container. [#lm-join-cover > path:nth-of-type(1)]",
+    "hf layout content_overlap @ 115.878: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(6) > svg:nth-of-type(1) > g:nth-]",
+    "hf contrast contrast_aa_failure @ 4.097: Contrast is 2.32:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div > div:nth-of-type(2) > div > ]",
+    "hf contrast contrast_aa_failure @ 45.062: Contrast is 2.35:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div > div:nth-of-type(17) > div >]",
+    "hf contrast contrast_aa_failure @ 94.22: Contrast is 2.54:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div > div:nth-of-type(35) > div >]",
+    "hf contrast contrast_aa_failure @ 94.22: Contrast is 2.54:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div > div:nth-of-type(35) > div >]",
+    "hf contrast contrast_aa_failure @ 143.378: Contrast is 2.29:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div > div:nth-of-type(54) > div >]",
+    "hf contrast contrast_aa_failure @ 192.535: Contrast is 2.43:1; WCAG AA requires 3:1. [div > div:nth-of-type(4) > div > div:nth-of-type(73) > div >]",
+    "b01: small text on screen at 7.3s: \"login.yourwork.example\" 23.8px, \"YourWork\" 25.4px (< 26 px)",
+    "b02: small text on screen at 15.8s: \"login.yourwork.example\" 23.8px, \"login.yourwork.example\" 23.8px, \"YourWork\" 25.4px (< 26 px)",
+    "b03: small text on screen at 21.6s: \"login.yourwork.example\" 23.8px, \"login.yourwork.example\" 23.8px, \"YourWork\" 25.4px (< 26 px)",
+    "b04: small text on screen at 26.4s: \"login.yourwork.example\" 23.8px, \"482 913\" 24.6px, \"YourWork\" 25.4px (< 26 px)",
+    "b05: small text on screen at 36.2s: \"login.yourwork.example\" 23.8px, \"login.yourwork.example\" 23.8px, \"482 913\" 24.6px (< 26 px)",
+    "b06: small text on screen at 47.4s: \"Your sign-in code\" 22.1px, \"YourWork\" 23.8px, \"Password\" 24.6px (< 26 px)",
+    "b08: small text on screen at 71.8s: \"login.yourwork\" 23.8px, \"-help\" 23.8px, \".example\" 23.8px (< 26 px)",
+    "b09: small text on screen at 79.4s: \"login.yourwork\" 23.8px, \"-help\" 23.8px, \".example\" 23.8px (< 26 px)",
+    "b10: small text on screen at 92.2s: \"login.yourwork\" 23.8px, \"-help\" 23.8px, \".example\" 23.8px (< 26 px)",
+    "b11: small text on screen at 99.3s: \"login.yourwork\" 23.8px, \"-help\" 23.8px, \".example\" 23.8px (< 26 px)",
+    "b13: small text on screen at 119.0s: \"login.yourwork.example\" 23.8px, \"YourWork\" 25.4px (< 26 px)",
+    "b14: small text on screen at 131.4s: \"login.yourwork\" 23.8px, \"-help\" 23.8px, \".example\" 23.8px (< 26 px)",
+    "b17: small text on screen at 166.0s: \"login.yourwork.example\" 23.8px, \"YourWork\" 23.8px, \"YourWork\" 25.4px (< 26 px)",
+    "b18: small text on screen at 172.8s: \"login.yourwork.example\" 23.8px, \"YourWork\" 25.4px (< 26 px)",
+    "b19: small text on screen at 181.1s: \"for YourWork\" 20.5px, \"Use your passkey\" 22.1px, \"482 913\" 24.6px (< 26 px)",
+    "b21: small text on screen at 194.4s: \"login.yourwork.example\" 23.8px, \"YourWork\" 25.4px (< 26 px)"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 2.3
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 1.12
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 3.1
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 5.48
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 6.02
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 3.65
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.57
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.95
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 2.78
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 1.92
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 6.4
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 3.58
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b18",
+        "max_static_s": 1.07
+      },
+      {
+        "beat": "b19",
+        "max_static_s": 2.04
+      },
+      {
+        "beat": "b20",
+        "max_static_s": 2.41
+      },
+      {
+        "beat": "b21",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.047,
+      "motion": 0.953,
+      "hybrid": 0.0,
+      "motion_effective": 0.953
+    },
+    "elements": {
+      "b01": 9,
+      "b02": 14,
+      "b03": 3,
+      "b04": 1,
+      "b05": 1,
+      "b06": 8,
+      "b07": 10,
+      "b08": 14,
+      "b09": 1,
+      "b10": 2,
+      "b11": 4,
+      "b12": 8,
+      "b13": 5,
+      "b14": 16,
+      "b15": 9,
+      "b16": 2,
+      "b17": 11,
+      "b19": 10,
+      "b20": 4,
+      "b21": 8
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.25,
+      "pop_settle_share": 0.139,
+      "wallpaper_share": 0.0,
+      "template_share": 0.048,
+      "classic_share": 0.364,
+      "one_radius_share": 0.625,
+      "still_share": 1.0,
+      "labels_over_objects_share": 0.4,
+      "one_world_share": 0.5,
+      "lines_per_s": 4.73
+    },
+    "sfx_events": 50,
+    "sample_text_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 23.8,
+        "b02": 23.8,
+        "b03": 23.8,
+        "b04": 23.8,
+        "b05": 23.8,
+        "b06": 22.1,
+        "b07": 27.9,
+        "b08": 23.8,
+        "b09": 23.8,
+        "b10": 23.8,
+        "b11": 23.8,
+        "b12": 29.5,
+        "b13": 23.8,
+        "b14": 23.8,
+        "b15": 27.9,
+        "b16": 27.9,
+        "b17": 23.8,
+        "b18": 23.8,
+        "b19": 20.5,
+        "b20": 36.1,
+        "b21": 23.8
+      }
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.078,
+        "b02": 0.1387,
+        "b03": 0.1444,
+        "b04": 0.1127,
+        "b05": 0.1387,
+        "b06": 0.0588,
+        "b07": 0.084,
+        "b08": 0.1594,
+        "b09": 0.1549,
+        "b10": 0.1487,
+        "b11": 0.1578,
+        "b12": 0.0719,
+        "b13": 0.0875,
+        "b14": 0.1394,
+        "b15": 0.0597,
+        "b16": 0.0743,
+        "b17": 0.1051,
+        "b18": 0.1051,
+        "b19": 0.0688,
+        "b20": 0.036,
+        "b21": 0.0764
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15
+      },
+      "measured_beats": 21
+    },
+    "tone": {
+      "value_script_beats": 21
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b17.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b18.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b19.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b20.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\mfa-story\\qa\\sheets\\b21.jpg"
+  ]
+}

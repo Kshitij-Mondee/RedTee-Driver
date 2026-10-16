@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loom Studio</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --ink: #151a22; --muted: #5b6573; --line: #dfe3e8; --soft: #eef1f5;
+    --accent: #2457d6; --accent-ink: #ffffff; --ok: #137a4c; --ok-bg: #e5f4ec; --fix: #a15c00; --fix-bg: #fdf1e1;
+    --bad: #b42323; --radius: 10px; --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 1px 3px rgba(16, 24, 40, .08);
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 14px; color: var(--ink);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); }
+  header { display: flex; align-items: center; gap: 24px; padding: 0 20px; height: 56px; background: var(--panel); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+  header h1 { font-size: 16px; margin: 0; letter-spacing: .01em; }
+  header h1 span { color: var(--muted); font-weight: 500; }
+  nav button { background: none; border: 0; padding: 18px 4px; margin-right: 16px; font: inherit; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
+  nav button.on { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+  main { display: grid; grid-template-columns: 240px minmax(380px, 1fr) minmax(420px, 1.25fr); gap: 16px; padding: 16px; align-items: start; }
+  main.lessons { grid-template-columns: 320px 1fr; }
+  main[hidden] { display: none; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
+  .panel h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 12px; }
+  .panel h3 { font-size: 14px; margin: 18px 0 8px; }
+  .list button { display: block; width: 100%; text-align: left; background: none; border: 1px solid transparent; border-radius: 8px; padding: 10px; font: inherit; cursor: pointer; }
+  .list button:hover { background: var(--soft); }
+  .list button.on { background: #eaf0fd; border-color: #c9d6f8; }
+  .list small { display: block; color: var(--muted); margin-top: 2px; }
+  label { display: block; font-weight: 600; margin: 10px 0 4px; }
+  .hint { color: var(--muted); font-weight: 400; font-size: 12px; }
+  input[type=text], select, textarea { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: #fff; }
+  textarea { min-height: 56px; resize: vertical; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+  .colour { display: grid; grid-template-columns: 110px 36px 1fr auto; gap: 8px; align-items: center; margin: 6px 0; }
+  .colour input[type=color] { width: 36px; height: 32px; border: 1px solid var(--line); border-radius: 6px; padding: 2px; background: #fff; }
+  .colour .keep { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  button.btn { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 9px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+  button.btn.sec { background: var(--soft); color: var(--ink); }
+  button.btn:disabled { opacity: .5; cursor: not-allowed; }
+  .bar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .matrix { display: grid; gap: 8px; }
+  .style { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .style .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .chip { font-size: 12px; font-weight: 700; border-radius: 99px; padding: 2px 9px; }
+  .chip.ok { background: var(--ok-bg); color: var(--ok); }
+  .chip.fix { background: var(--fix-bg); color: var(--fix); }
+  .issue { font-size: 12px; color: var(--muted); margin-top: 6px; display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+  .issue button { font-size: 12px; padding: 4px 8px; }
+  .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; border: 1px solid rgba(0,0,0,.15); }
+  .preview img, .frames img { width: 100%; border-radius: 8px; border: 1px solid var(--line); display: block; }
+  .preview figure { margin: 0 0 14px; }
+  .preview figcaption { font-size: 12px; color: var(--muted); margin: 4px 0; }
+  .status { font-size: 12px; color: var(--muted); margin-top: 8px; min-height: 18px; }
+  .err { color: var(--bad); font-size: 12px; white-space: pre-wrap; }
+  .locked { background: #fff7e6; border: 1px solid #f3d9a4; color: #7a4b00; padding: 8px 10px; border-radius: 8px; margin-bottom: 10px; font-size: 12px; }
+  .logo-box { display: flex; align-items: center; gap: 12px; }
+  .logo-box img { height: 40px; background: var(--soft); border-radius: 6px; padding: 4px; }
+  pre.log { background: #0f141b; color: #cfd8e3; padding: 10px; border-radius: 8px; max-height: 180px; overflow: auto; font-size: 11px; white-space: pre-wrap; }
+  .empty { color: var(--muted); text-align: center; padding: 40px 10px; }
+  .styles-pick { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 6px 0; }
+  .styles-pick label { font-weight: 400; margin: 0; display: flex; gap: 6px; align-items: center; }
+  @media (max-width: 1100px) { main, main.lessons { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Loom Studio <span>· looks and brands</span></h1>
+  <nav><button id="tab-brands" class="on">Brand kits</button><button id="tab-lessons">Lessons</button></nav>
+</header>
+
+<main id="view-brands">
+  <section class="panel">
+    <h2>Brand kits</h2>
+    <div class="list" id="brand-list"></div>
+    <h3>New brand</h3>
+    <input type="text" id="new-name" placeholder="Company or team name">
+    <div class="bar"><button class="btn sec" id="new-brand">Create</button></div>
+    <div class="err" id="new-err"></div>
+  </section>
+
+  <section class="panel" id="editor"><div class="empty">Pick a brand kit, or create one.</div></section>
+
+  <section class="panel">
+    <h2>Works on every style?</h2>
+    <p class="hint" style="margin-top:-6px">Each style keeps its own look; your brand swaps colours, fonts and adds the logo. Contrast is checked for every style.</p>
+    <div class="matrix" id="matrix"></div>
+    <h3>Preview</h3>
+    <div class="styles-pick" id="preview-styles"></div>
+    <div class="bar"><button class="btn" id="preview-btn" disabled>Render preview frames</button></div>
+    <div class="status" id="preview-status"></div>
+    <div class="preview" id="preview"></div>
+  </section>
+</main>
+
+<main id="view-lessons" class="lessons" hidden>
+  <section class="panel">
+    <h2>Lessons</h2>
+    <div class="list" id="lesson-list"></div>
+  </section>
+  <section class="panel" id="lesson-panel"><div class="empty">Pick a lesson to change its look.</div></section>
+</main>
+
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const api = async (method, url, body) => {
+  const r = await fetch(url, { method, headers: { "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+};
+const ROLES = [["primary", "Primary", "Main highlight: kickers, key shapes"], ["secondary", "Secondary", "Second accent: terms, values"],
+  ["tertiary", "Tertiary", "Positive / progress colour"], ["text", "Text", "Body text (leave to the style unless you must)"],
+  ["background", "Background", "Canvas (changes the style a lot)"]];
+const FONT_ROLES = [["display", "Headings"], ["body", "Body"], ["label", "Labels and captions"]];
+let S = { styles: [], fonts: {}, brand: null, lint: {}, dirty: false, lessons: [], lesson: null, brands: [] };
+
+async function boot() {
+  [S.styles, S.fonts] = await Promise.all([api("GET", "/api/styles"), api("GET", "/api/fonts")]);
+  $("#preview-styles").innerHTML = S.styles.map((s) => `<label><input type="checkbox" value="${s.id}" checked> ${esc(s.name)}</label>`).join("");
+  await loadBrands();
+  $("#tab-brands").onclick = () => tab("brands"); $("#tab-lessons").onclick = () => tab("lessons");
+  $("#new-brand").onclick = createBrand; $("#preview-btn").onclick = preview;
+}
+function tab(t) {
+  $("#tab-brands").classList.toggle("on", t === "brands"); $("#tab-lessons").classList.toggle("on", t === "lessons");
+  $("#view-brands").hidden = t !== "brands"; $("#view-lessons").hidden = t !== "lessons";
+  if (t === "lessons") loadLessons();
+}
+
+/* ---------------- brands ---------------- */
+async function loadBrands(select) {
+  S.brands = await api("GET", "/api/brands");
+  $("#brand-list").innerHTML = S.brands.length ? S.brands.map((b) => `<button data-id="${b.id}" class="${S.brand && S.brand.id === b.id ? "on" : ""}">${esc(b.name)}<small>${b.id}${b.locks && b.locks.locked ? " · locked" : ""}</small></button>`).join("") : `<div class="empty">No brand kits yet.</div>`;
+  document.querySelectorAll("#brand-list button").forEach((el) => el.onclick = () => openBrand(el.dataset.id));
+  if (select) openBrand(select);
+}
+async function createBrand() {
+  const name = $("#new-name").value.trim(); $("#new-err").textContent = "";
+  const id = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+  if (!id) { $("#new-err").textContent = "Give the brand a name."; return; }
+  try { await api("POST", "/api/brands", { id, name }); $("#new-name").value = ""; await loadBrands(id); }
+  catch (e) { $("#new-err").textContent = e.message; }
+}
+async function openBrand(id) {
+  const r = await api("GET", `/api/brands/${id}`);
+  S.brand = r.brand; S.lint = r.lint; S.logoUrl = r.logo_url; S.dirty = false;
+  document.querySelectorAll("#brand-list button").forEach((el) => el.classList.toggle("on", el.dataset.id === id));
+  renderEditor(); renderMatrix(); renderPreviews(r.previews || {});
+  $("#preview-btn").disabled = false;
+}
+function locked(field) { const L = S.brand.locks || {}; return !!L.locked && (L.fields || []).includes(field); }
+function renderEditor() {
+  const b = S.brand, L = b.locks || {};
+  const fontOpts = (cur) => `<option value="">Keep the style's font</option>` + Object.keys(S.fonts).map((f) => `<option ${cur === f ? "selected" : ""}>${esc(f)}</option>`).join("");
+  $("#editor").innerHTML = `
+    <h2>Brand kit</h2>
+    ${L.locked ? `<div class="locked">Locked by ${esc(L.by || "someone")} (${esc(L.at || "")}). ${esc((L.fields || []).join(", "))} cannot change until it is unlocked.</div>` : ""}
+    <label>Name</label><input type="text" id="b-name" value="${esc(b.name)}">
+    <h3>Colours <span class="hint">leave a role on "style" to keep each style's own colour</span></h3>
+    ${ROLES.map(([k, t, h]) => { const v = (b.colors || {})[k]; return `
+      <div class="colour" title="${esc(h)}"><span>${t}</span>
+        <input type="color" data-role="${k}" value="${v || "#888888"}" ${v ? "" : "disabled"} ${locked("colors") ? "disabled" : ""}>
+        <input type="text" data-hex="${k}" value="${v || ""}" placeholder="style" ${locked("colors") ? "disabled" : ""}>
+        <label class="keep"><input type="checkbox" data-keep="${k}" ${v ? "" : "checked"} ${locked("colors") ? "disabled" : ""}> style</label></div>`; }).join("")}
+    <h3>Fonts</h3>
+    <div class="grid2">${FONT_ROLES.map(([k, t]) => { const f = (b.fonts || {})[k] || {}; return `<div><label>${t}</label><select data-font="${k}" ${locked("fonts") ? "disabled" : ""}>${fontOpts(f.family)}</select></div>`; }).join("")}</div>
+    <h3>Logo</h3>
+    <div class="logo-box">${S.logoUrl ? `<img src="${S.logoUrl}" alt="logo">` : `<span class="hint">No logo yet (SVG or PNG, up to 2 MB)</span>`}
+      <input type="file" id="b-logo" accept=".svg,.png" ${locked("logo") ? "disabled" : ""}></div>
+    <label>Logo for dark backgrounds <span class="hint">optional: without it, dark styles show the logo on a small white plate</span></label>
+    <input type="file" id="b-logo-dark" accept=".svg,.png" ${locked("logo") || !b.logo ? "disabled" : ""}>${(b.logo || {}).file_dark ? ` <span class="hint">uploaded: ${esc(b.logo.file_dark)}</span>` : ""}
+    <div class="grid2">
+      <div><label>Placement</label><select id="b-place" ${locked("logo") ? "disabled" : ""}>${["top-right", "bottom-right", "bottom-left", "top-left"].map((p) => `<option ${(b.logo || {}).placement === p ? "selected" : ""}>${p}</option>`).join("")}</select></div>
+      <div><label>Show</label><select id="b-show" ${locked("logo") ? "disabled" : ""}><option value="always" ${(b.logo || {}).show !== "intro_outro" ? "selected" : ""}>Always</option><option value="intro_outro" ${(b.logo || {}).show === "intro_outro" ? "selected" : ""}>Start and end only</option></select></div>
+      <div><label>Height <span class="hint" id="b-h-val">${(b.logo || {}).height || 56}px</span></label><input type="range" id="b-height" min="24" max="96" value="${(b.logo || {}).height || 56}" ${locked("logo") ? "disabled" : ""}></div>
+    </div>
+    <h3>House rules</h3>
+    <div class="grid2"><div><label>Captions</label><select id="b-cap"><option value="">Lesson decides</option><option value="on" ${(b.rules || {}).captions === "on" ? "selected" : ""}>Always on</option><option value="off" ${(b.rules || {}).captions === "off" ? "selected" : ""}>Always off</option></select></div></div>
+    <label>Notes for creators</label><textarea id="b-notes">${esc((b.rules || {}).notes || "")}</textarea>
+    <div class="bar"><button class="btn" id="b-save">Save</button><button class="btn sec" id="b-lock">${L.locked ? "Unlock" : "Lock brand"}</button></div>
+    <div class="status" id="b-status"></div><div class="err" id="b-err"></div>`;
+  const touch = () => { S.dirty = true; $("#b-status").textContent = "Unsaved changes: the matrix shows them live."; liveLint(); };
+  document.querySelectorAll("[data-role]").forEach((el) => el.oninput = () => { const k = el.dataset.role; $(`[data-hex=${k}]`).value = el.value.toUpperCase(); collect(); touch(); });
+  document.querySelectorAll("[data-hex]").forEach((el) => el.onchange = () => { const k = el.dataset.hex, v = el.value.trim(); if (/^#[0-9a-fA-F]{6}$/.test(v)) { $(`[data-role=${k}]`).value = v; $(`[data-role=${k}]`).disabled = false; $(`[data-keep=${k}]`).checked = false; } collect(); touch(); });
+  document.querySelectorAll("[data-keep]").forEach((el) => el.onchange = () => { const k = el.dataset.keep; $(`[data-role=${k}]`).disabled = el.checked; if (el.checked) $(`[data-hex=${k}]`).value = ""; else if (!$(`[data-hex=${k}]`).value) $(`[data-hex=${k}]`).value = $(`[data-role=${k}]`).value.toUpperCase(); collect(); touch(); });
+  document.querySelectorAll("[data-font], #b-place, #b-show, #b-cap, #b-notes, #b-name").forEach((el) => el.onchange = () => { collect(); touch(); });
+  const hcap = () => { const top = $("#b-place").value.startsWith("top"); $("#b-height").max = top ? 56 : 96; if (+$("#b-height").value > +$("#b-height").max) $("#b-height").value = $("#b-height").max; $("#b-h-val").textContent = $("#b-height").value + "px" + (top ? " (max 56 at the top: it stays above the content)" : ""); };
+  $("#b-place").addEventListener("change", hcap); hcap();
+  $("#b-height").oninput = () => { hcap(); collect(); touch(); };
+  $("#b-logo").onchange = (ev) => uploadLogo(ev, "logo"); $("#b-logo-dark").onchange = (ev) => uploadLogo(ev, "logo_dark"); $("#b-save").onclick = save; $("#b-lock").onclick = toggleLock;
+}
+function collect() {
+  const b = S.brand;
+  b.name = $("#b-name").value.trim() || b.id;
+  b.colors = {}; ROLES.forEach(([k]) => { const v = $(`[data-hex=${k}]`).value.trim(); b.colors[k] = $(`[data-keep=${k}]`).checked || !/^#[0-9a-fA-F]{6}$/.test(v) ? null : v.toUpperCase(); });
+  b.fonts = {}; FONT_ROLES.forEach(([k]) => { const f = $(`[data-font=${k}]`).value; b.fonts[k] = f ? { family: f, weight: k === "display" ? 700 : k === "label" ? 600 : 400 } : null; });
+  if (b.logo) Object.assign(b.logo, { placement: $("#b-place").value, show: $("#b-show").value, height: +$("#b-height").value });
+  b.rules = { captions: $("#b-cap").value || null, notes: $("#b-notes").value };
+}
+let lintTimer = null;
+function liveLint() {
+  clearTimeout(lintTimer);
+  lintTimer = setTimeout(async () => {
+    try { const r = await api("POST", `/api/brands/${S.brand.id}/lint`, S.brand); if (r.errors && r.errors.length) { $("#b-err").textContent = r.errors.join("\n"); return; } $("#b-err").textContent = ""; S.lint = r.lint; renderMatrix(); }
+    catch (e) { $("#b-err").textContent = e.message; }
+  }, 250);
+}
+async function save() {
+  collect(); $("#b-err").textContent = "";
+  try { const r = await api("PUT", `/api/brands/${S.brand.id}`, S.brand); S.lint = r.lint; S.dirty = false; $("#b-status").textContent = "Saved."; renderMatrix(); loadBrands(); }
+  catch (e) { $("#b-err").textContent = e.message; }
+}
+async function toggleLock() {
+  const lock = !(S.brand.locks || {}).locked;
+  const by = lock ? (prompt("Your name (recorded on the lock):", "") || "studio") : "studio";
+  try { await api("POST", `/api/brands/${S.brand.id}/${lock ? "lock" : "unlock"}`, { by }); await openBrand(S.brand.id); loadBrands(); }
+  catch (e) { $("#b-err").textContent = e.message; }
+}
+async function uploadLogo(ev, kind) {
+  const f = ev.target.files[0]; if (!f) return;
+  const data = await new Promise((res) => { const r = new FileReader(); r.onload = () => res(r.result.split(",")[1]); r.readAsDataURL(f); });
+  try { const r = await api("POST", `/api/brands/${S.brand.id}/upload`, { kind, filename: f.name, data }); S.brand = r.brand; if (kind === "logo") S.logoUrl = r.logo_url + "&t=" + Date.now(); renderEditor(); $("#b-status").textContent = "Logo uploaded and saved."; }
+  catch (e) { $("#b-err").textContent = e.message; }
+}
+function renderMatrix() {
+  const ids = Object.keys(S.lint || {});
+  $("#matrix").innerHTML = ids.map((st) => { const r = S.lint[st]; return `
+    <div class="style"><div class="top"><strong>${esc(r.name || st)}</strong><span class="chip ${r.ok ? "ok" : "fix"}">${r.ok ? "Works" : r.issues.length + " to fix"}</span></div>
+      ${r.issues.map((i, n) => `<div class="issue"><span title="${esc(i.msg)}">${esc(i.human || i.msg)}</span>${i.fix ? `<button class="btn sec" data-fix="${st}:${n}">Use <span class="swatch" style="background:${i.fix.to}"></span> ${i.fix.to} for ${i.fix.role}</button>` : ""}</div>`).join("")}
+    </div>`; }).join("");
+  document.querySelectorAll("[data-fix]").forEach((el) => el.onclick = () => { const [st, n] = el.dataset.fix.split(":"); const fx = S.lint[st].issues[+n].fix; S.brand.colors[fx.role] = fx.to; renderEditor(); S.dirty = true; $("#b-status").textContent = `Applied ${fx.to} to ${fx.role} (unsaved). It changes the colour for every style, so check the others.`; liveLint(); });
+}
+function renderPreviews(grids) {
+  const ids = Object.keys(grids || {}).filter((k) => grids[k]);
+  $("#preview").innerHTML = ids.length ? ids.map((st) => `<figure><figcaption>${esc(st)}</figcaption><img src="/files?path=${encodeURIComponent(grids[st])}&t=${Date.now()}" alt="${esc(st)} preview"></figure>`).join("") : `<div class="hint">No preview yet. Save, then render the frames.</div>`;
+}
+async function preview() {
+  if (S.dirty) await save();
+  const styles = [...document.querySelectorAll("#preview-styles input:checked")].map((i) => i.value);
+  $("#preview-btn").disabled = true; $("#preview-status").textContent = `Rendering ${styles.length} style(s)… about 10 seconds each.`;
+  try {
+    const { job } = await api("POST", `/api/brands/${S.brand.id}/preview`, { styles });
+    const j = await poll(job, (j) => $("#preview-status").textContent = `Rendering… ${j.status}`);
+    const res = j.result || {}; const grids = {}; let errs = [];
+    Object.entries(res).forEach(([st, r]) => { grids[st] = r.grid; errs = errs.concat((r.errors || []).map((e) => `${st}: ${e}`)); });
+    renderPreviews(grids);
+    $("#preview-status").innerHTML = j.status === "done" ? (errs.length ? `<span class="err">${esc(errs.join("\n"))}</span>` : "Rendered. Every frame passed the layout and text checks.") : `<span class="err">Preview failed.</span><pre class="log">${esc(j.log)}</pre>`;
+  } catch (e) { $("#preview-status").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  $("#preview-btn").disabled = false;
+}
+async function poll(id, onTick) {
+  for (;;) { const j = await api("GET", `/api/jobs/${id}`); onTick && onTick(j); if (j.status !== "running") return j; await new Promise((r) => setTimeout(r, 1500)); }
+}
+
+/* ---------------- lessons ---------------- */
+async function loadLessons() {
+  S.lessons = await api("GET", "/api/lessons");
+  S.brands = await api("GET", "/api/brands");
+  $("#lesson-list").innerHTML = S.lessons.map((l) => `<button data-id="${l.id}" class="${S.lesson === l.id ? "on" : ""}">${esc(l.title || l.id)}<small>${esc(l.id)} · ${esc(l.style)}${l.brand ? " + " + esc(l.brand) : ""}${l.fork ? " · copy" : ""}</small></button>`).join("");
+  document.querySelectorAll("#lesson-list button").forEach((el) => el.onclick = () => openLesson(el.dataset.id));
+}
+function openLesson(id) {
+  S.lesson = id; const l = S.lessons.find((x) => x.id === id);
+  document.querySelectorAll("#lesson-list button").forEach((el) => el.classList.toggle("on", el.dataset.id === id));
+  $("#lesson-panel").innerHTML = `
+    <h2>${esc(l.title || l.id)}</h2>
+    <div class="grid2">
+      <div><label>Style</label><select id="l-style">${S.styles.map((s) => `<option value="${s.id}" ${s.id === l.style ? "selected" : ""}>${esc(s.name)}</option>`).join("")}</select><div class="hint" id="l-reads"></div></div>
+      <div><label>Brand</label><select id="l-brand"><option value="">No brand</option>${S.brands.map((b) => `<option value="${b.id}" ${b.id === l.brand ? "selected" : ""}>${esc(b.name)}</option>`).join("")}</select></div>
+    </div>
+    <label><input type="checkbox" id="l-fork" ${l.fork ? "" : "checked"}> Make a copy (keep the original lesson as it is)</label>
+    <div id="l-warn"></div>
+    <div class="bar"><button class="btn" id="l-apply">Apply look</button><button class="btn sec" id="l-render">Render video</button></div>
+    <div class="status" id="l-status">No AI is used: the lesson is recomposed in the new look, then every beat's layout and text are measured.</div>
+    <div class="frames" id="l-frames"></div>`;
+  const reads = async () => {
+    const s = S.styles.find((x) => x.id === $("#l-style").value); $("#l-reads").textContent = s ? s.reads_as : "";
+    const bid = $("#l-brand").value; $("#l-apply").disabled = false; $("#l-warn").innerHTML = "";
+    if (!bid) return;
+    try {
+      const r = await api("GET", `/api/brands/${bid}`); const m = r.lint[$("#l-style").value];
+      if (m && !m.ok) { $("#l-apply").disabled = true; $("#l-warn").innerHTML = `<span class="err">This brand is not readable in ${esc(m.name)} yet: ${esc(m.issues.map((i) => i.human || i.msg).join("; "))}. Fix it in Brand kits (one click applies the suggested shade), then come back.</span>`; }
+    } catch (e) { $("#l-warn").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  };
+  $("#l-style").onchange = reads; $("#l-brand").onchange = reads; reads();
+  $("#l-apply").onclick = () => restyle(l);
+  $("#l-render").onclick = () => renderLesson(S.lesson);
+}
+async function restyle(l) {
+  const style = $("#l-style").value, brand = $("#l-brand").value, fork = $("#l-fork").checked;
+  const fork_as = fork ? `_${l.id.replace(/^_+/, "")}-${style}${brand ? "-" + brand : ""}`.slice(0, 60) : null;
+  $("#l-apply").disabled = true; $("#l-status").textContent = "Recomposing and checking… about 20-60 seconds.";
+  try {
+    const { job } = await api("POST", `/api/lessons/${l.id}/restyle`, { style, brand, fork_as });
+    const j = await poll(job, () => {});
+    const r = j.result || {};
+    if (j.status !== "done" || r.error) { $("#l-status").innerHTML = `<span class="err">${esc(r.error || "Restyle failed.")}</span><pre class="log">${esc(j.log)}</pre>`; }
+    else {
+      const bad = r.failing_beats || [];
+      $("#l-status").innerHTML = (bad.length ? `<span class="err">${bad.length} beat(s) need a small fix in this look: ${esc(bad.join(", "))}. Tweak tasks were written: ${esc((r.tweak_tasks || []).join(", "))}.</span>` : "Every beat passed the layout and text checks in the new look.")
+        + (r.manim && r.manim.length ? `<div class="hint">Animated charts (Manim): ${r.manim.map(m => esc(m.beat) + " " + (m.how === "rendered" ? "redrawn" : "reused") + (m.quality === "draft" ? " as a quick draft" : "")).join(", ")}.${r.manim.some(m => m.quality === "draft") ? " Drafts are redrawn at full quality when you render." : ""}</div>`
+           : (r.manim_beats && r.manim_beats.length ? `<div class="hint">Manim beats ${esc(r.manim_beats.join(", "))} re-render in the new colours${r.manim_available ? "" : " once Manim is installed"}.</div>` : ""))
+        + `<div class="hint">Lesson: ${esc(r.project)}. Render it when you are happy with the frames.</div>`;
+      $("#l-frames").innerHTML = r.frames ? `<img src="/files?path=${encodeURIComponent(r.frames)}&t=${Date.now()}" alt="frames">` : "";
+      $("#l-render").textContent = `Render ${r.project}`; $("#l-render").onclick = () => renderLesson(r.project);
+      loadLessons();
+    }
+  } catch (e) { $("#l-status").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  $("#l-apply").disabled = false;
+}
+async function renderLesson(id) {
+  $("#l-render").disabled = true; $("#l-status").textContent = `Full check, then render of ${id}. This takes a few minutes; you can keep working.`;
+  try {
+    const { job } = await api("POST", `/api/lessons/${id}/render`, {});
+    const j = await poll(job, (j) => $("#l-status").textContent = `Rendering ${id}… (${j.step || "starting"})`);
+    const r = j.result || {};
+    $("#l-status").innerHTML = j.status === "done" && r.mp4 ? `Rendered. <a href="/files?path=${encodeURIComponent(r.mp4)}" target="_blank">Open the video</a>` : `<span class="err">${esc((r.errors || []).join("\n") || "Render failed.")}</span><pre class="log">${esc(j.log)}</pre>`;
+  } catch (e) { $("#l-status").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  $("#l-render").disabled = false;
+}
+boot().catch((e) => document.body.insertAdjacentHTML("afterbegin", `<div class="err" style="padding:16px">${esc(e.message)}</div>`));
+</script>
+</body>
+</html>

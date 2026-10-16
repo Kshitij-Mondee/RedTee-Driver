@@ -1,0 +1,453 @@
+{
+ "scene": "coaching_room",
+ "camera_spec": {
+  "camera": {
+   "x": 2.75,
+   "y": 0.2,
+   "eye": 1.2,
+   "yaw": -24,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "back wall",
+    "axis": "y",
+    "at": 4.0
+   },
+   {
+    "name": "left wall",
+    "axis": "x",
+    "at": 0.0
+   },
+   {
+    "name": "right wall",
+    "axis": "x",
+    "at": 3.0
+   }
+  ],
+  "points": {
+   "back_left_floor": [
+    0,
+    4.0,
+    0
+   ],
+   "back_right_floor": [
+    3.0,
+    4.0,
+    0
+   ],
+   "left_wall_floor_y1": [
+    0,
+    1.0,
+    0
+   ],
+   "left_wall_floor_y2": [
+    0,
+    2.0,
+    0
+   ],
+   "left_wall_floor_y0.5": [
+    0,
+    0.5,
+    0
+   ],
+   "felt_TL": [
+    0.9,
+    4.0,
+    2.0
+   ],
+   "felt_BR": [
+    2.7,
+    4.0,
+    0.8
+   ],
+   "felt_TR": [
+    2.7,
+    4.0,
+    2.0
+   ],
+   "felt_BL": [
+    0.9,
+    4.0,
+    0.8
+   ],
+   "screen_near_top": [
+    0,
+    2.85,
+    1.5
+   ],
+   "screen_near_bot": [
+    0,
+    2.85,
+    0.95
+   ],
+   "screen_far_top": [
+    0,
+    3.8,
+    1.5
+   ],
+   "screen_far_bot": [
+    0,
+    3.8,
+    0.95
+   ],
+   "plant_corner_top": [
+    0.25,
+    3.75,
+    0.75
+   ],
+   "plant_corner_floor": [
+    0.25,
+    3.75,
+    0
+   ],
+   "table_centre_top": [
+    1.45,
+    2.5,
+    0.73
+   ],
+   "table_front_edge": [
+    1.45,
+    2.05,
+    0.73
+   ],
+   "table_left_edge": [
+    1.0,
+    2.5,
+    0.73
+   ],
+   "table_right_edge": [
+    1.9,
+    2.5,
+    0.73
+   ],
+   "table_back_edge": [
+    1.45,
+    2.95,
+    0.73
+   ],
+   "agent_head_top": [
+    1.55,
+    3.3,
+    1.32
+   ],
+   "agent_head_c": [
+    1.55,
+    3.3,
+    1.2
+   ],
+   "agent_seat": [
+    1.55,
+    3.25,
+    0.46
+   ],
+   "agent_feet": [
+    1.5,
+    2.95,
+    0
+   ],
+   "coach_head_top": [
+    2.4,
+    2.6,
+    1.32
+   ],
+   "coach_head_c": [
+    2.4,
+    2.6,
+    1.2
+   ],
+   "coach_seat": [
+    2.45,
+    2.6,
+    0.46
+   ],
+   "coach_feet": [
+    2.15,
+    2.6,
+    0
+   ],
+   "agent_chair_back_top": [
+    1.6,
+    3.5,
+    0.85
+   ],
+   "coach_chair_back_top": [
+    2.68,
+    2.6,
+    0.85
+   ],
+   "laptop": [
+    1.55,
+    2.45,
+    0.85
+   ],
+   "right_wall_floor_y4": [
+    3.0,
+    4.0,
+    0
+   ],
+   "right_wall_top_y4": [
+    3.0,
+    4.0,
+    2.1
+   ],
+   "shelf_left": [
+    0.0,
+    0.9,
+    0.9
+   ]
+  },
+  "behind": [
+   "agent_head_top",
+   "agent_head_c",
+   "coach_head_top",
+   "coach_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1781,
+   "along_x": -3182,
+   "horizon_y": 497
+  },
+  "points": {
+   "back_left_floor": {
+    "x": 572,
+    "y": 979,
+    "where": "frame",
+    "depth": 4.59
+   },
+   "back_right_floor": {
+    "x": 1931,
+    "y": 1154,
+    "where": "overscan",
+    "depth": 3.37
+   },
+   "left_wall_floor_y1": {
+    "x": -1221,
+    "y": 1693,
+    "where": "outside",
+    "depth": 1.85
+   },
+   "left_wall_floor_y2": {
+    "x": -228,
+    "y": 1298,
+    "where": "outside",
+    "depth": 2.76
+   },
+   "left_wall_floor_y0.5": {
+    "x": -2205,
+    "y": 2086,
+    "where": "outside",
+    "depth": 1.39
+   },
+   "felt_TL": {
+    "x": 897,
+    "y": 148,
+    "where": "frame",
+    "depth": 4.22
+   },
+   "felt_BR": {
+    "x": 1752,
+    "y": 708,
+    "where": "frame",
+    "depth": 3.49
+   },
+   "felt_TR": {
+    "x": 1752,
+    "y": 74,
+    "where": "frame",
+    "depth": 3.49
+   },
+   "felt_BL": {
+    "x": 897,
+    "y": 671,
+    "where": "frame",
+    "depth": 4.22
+   },
+   "screen_near_top": {
+    "x": 213,
+    "y": 340,
+    "where": "frame",
+    "depth": 3.54
+   },
+   "screen_near_bot": {
+    "x": 213,
+    "y": 627,
+    "where": "frame",
+    "depth": 3.54
+   },
+   "screen_far_top": {
+    "x": 521,
+    "y": 371,
+    "where": "frame",
+    "depth": 4.41
+   },
+   "screen_far_bot": {
+    "x": 521,
+    "y": 601,
+    "where": "frame",
+    "depth": 4.41
+   },
+   "plant_corner_top": {
+    "x": 596,
+    "y": 692,
+    "where": "frame",
+    "depth": 4.26
+   },
+   "plant_corner_floor": {
+    "x": 596,
+    "y": 1016,
+    "where": "frame",
+    "depth": 4.26
+   },
+   "table_centre_top": {
+    "x": 783,
+    "y": 826,
+    "where": "frame",
+    "depth": 2.63
+   },
+   "table_front_edge": {
+    "x": 598,
+    "y": 887,
+    "where": "frame",
+    "depth": 2.22
+   },
+   "table_left_edge": {
+    "x": 525,
+    "y": 805,
+    "where": "frame",
+    "depth": 2.81
+   },
+   "table_right_edge": {
+    "x": 1080,
+    "y": 851,
+    "where": "frame",
+    "depth": 2.45
+   },
+   "table_back_edge": {
+    "x": 918,
+    "y": 782,
+    "where": "frame",
+    "depth": 3.04
+   },
+   "agent_head_top": {
+    "x": 1051,
+    "y": 430,
+    "where": "frame",
+    "depth": 3.32,
+    "behind": {
+     "wall": "back wall",
+     "at": [
+      1.28,
+      4.0,
+      1.35
+     ]
+    }
+   },
+   "agent_head_c": {
+    "x": 1051,
+    "y": 497,
+    "where": "frame",
+    "depth": 3.32,
+    "behind": {
+     "wall": "back wall",
+     "at": [
+      1.28,
+      4.0,
+      1.2
+     ]
+    }
+   },
+   "agent_seat": {
+    "x": 1041,
+    "y": 914,
+    "where": "frame",
+    "depth": 3.27
+   },
+   "agent_feet": {
+    "x": 946,
+    "y": 1229,
+    "where": "outside",
+    "depth": 3.02
+   },
+   "coach_head_top": {
+    "x": 1478,
+    "y": 402,
+    "where": "frame",
+    "depth": 2.33,
+    "behind": {
+     "wall": "back wall",
+     "at": [
+      2.2,
+      4.0,
+      1.39
+     ]
+    }
+   },
+   "coach_head_c": {
+    "x": 1478,
+    "y": 497,
+    "where": "frame",
+    "depth": 2.33,
+    "behind": {
+     "wall": "back wall",
+     "at": [
+      2.2,
+      4.0,
+      1.2
+     ]
+    }
+   },
+   "coach_seat": {
+    "x": 1519,
+    "y": 1086,
+    "where": "overscan",
+    "depth": 2.31
+   },
+   "coach_feet": {
+    "x": 1284,
+    "y": 1405,
+    "where": "outside",
+    "depth": 2.44
+   },
+   "agent_chair_back_top": {
+    "x": 1114,
+    "y": 682,
+    "where": "frame",
+    "depth": 3.48
+   },
+   "coach_chair_back_top": {
+    "x": 1717,
+    "y": 787,
+    "where": "frame",
+    "depth": 2.22
+   },
+   "laptop": {
+    "x": 829,
+    "y": 751,
+    "where": "frame",
+    "depth": 2.54
+   },
+   "right_wall_floor_y4": {
+    "x": 1931,
+    "y": 1154,
+    "where": "overscan",
+    "depth": 3.37
+   },
+   "right_wall_top_y4": {
+    "x": 1931,
+    "y": 4,
+    "where": "overscan",
+    "depth": 3.37
+   },
+   "shelf_left": {
+    "x": -1377,
+    "y": 811,
+    "where": "outside",
+    "depth": 1.76
+   }
+  }
+ }
+}

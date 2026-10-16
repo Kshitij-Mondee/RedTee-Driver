@@ -1,0 +1,415 @@
+{
+  "title": "Feedback That Changes What People Do",
+  "wpm_target": 140,
+  "sections": [
+    {
+      "id": "s1_gap",
+      "title": "Why vague fails"
+    },
+    {
+      "id": "s2_three_parts",
+      "title": "Three parts"
+    },
+    {
+      "id": "s3_check",
+      "title": "Quick check"
+    },
+    {
+      "id": "s4_timing_talk",
+      "title": "Timing and talk"
+    },
+    {
+      "id": "s5_your_turn",
+      "title": "Your turn"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s1_gap",
+      "job": "hook",
+      "narration": [
+        "Say a manager tells Dev,",
+        "'Great job, just be a bit more engaged.'",
+        "Dev glows. Nothing changes."
+      ],
+      "on_screen": [
+        "be a bit more engaged"
+      ],
+      "visual_intent": "Story cartoon meeting room, two colleagues across a table. The remark appears as a fuzzy cloud over Dev, who glows warm; by the last phrase the glow drains and the cloud just hangs there, unchanged.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Dev and the manager are an illustrative scene, not a real case",
+          "hypothetical": true
+        },
+        {
+          "claim": "Dev glows at the remark and nothing changes afterwards",
+          "hypothetical": true
+        }
+      ],
+      "concepts": [
+        "F2"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "s1_gap",
+      "job": "orient",
+      "narration": [
+        "Same meeting, same remark.",
+        "By the end, Dev can act on it.",
+        "Think of your last feedback.",
+        "Did anyone do anything different?"
+      ],
+      "on_screen": [
+        "same remark",
+        "same meeting"
+      ],
+      "visual_intent": "The same meeting room held steady with the cloud over Dev. Then the viewer's own moment: a second faint speech bubble, empty, floats beside the first, as a question left open.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Promise: the same remark will be reworked so Dev can act on it (illustrative scene)",
+          "hypothetical": true
+        },
+        {
+          "claim": "Viewer is asked to recall their own last feedback moment",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "s1_gap",
+      "job": "define",
+      "narration": [
+        "Here is where people slip.",
+        "Warm and vague tends to leave little to act on.",
+        "'Engaged' is an impression.",
+        "Dev knows how he came across,",
+        "not what to do Tuesday."
+      ],
+      "on_screen": [
+        "engaged",
+        "an impression",
+        "Tuesday"
+      ],
+      "visual_intent": "The fuzzy cloud held over Dev; the word 'engaged' sits inside it and is circled. Beside Dev a thought bubble shows a question mark, then an empty calendar square labelled Tuesday.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "misconception": "A warm, vague remark is the kind way to give feedback and tells the person what to do.",
+      "grounding": [
+        {
+          "claim": "Vague or purely pleasant feedback is comfortable but gives little to act on, tends to",
+          "fact": "F2"
+        },
+        {
+          "claim": "A label like 'engaged' describes an impression; the person cannot tell what to change",
+          "fact": "F4"
+        },
+        {
+          "claim": "Dev's reaction in the scene",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "s2_three_parts",
+      "job": "demonstrate",
+      "narration": [
+        "First, drop the label.",
+        "Say what a camera would capture.",
+        "In the meeting, Dev gave one-word answers on vendors.",
+        "That is observed behaviour."
+      ],
+      "on_screen": [
+        "observed behaviour",
+        "one-word answers on vendors"
+      ],
+      "visual_intent": "One board built up by additions. The cloud shrinks away and a first line is written in its place: 'one-word answers on vendors', with a small camera icon beside it. Then the label 'observed behaviour' appears next to that line, highlighted.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Observable behaviour is what a camera or recording would capture: what was said or done",
+          "fact": "F5"
+        },
+        {
+          "claim": "Describing behaviour without guessing motive gives something specific to recognise",
+          "fact": "F6"
+        },
+        {
+          "claim": "Dev's one-word answers on vendors is an illustrative example",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "s2_three_parts",
+      "job": "demonstrate",
+      "narration": [
+        "Next, say what it cost the team.",
+        "We lost your view before we decided.",
+        "That is the effect."
+      ],
+      "on_screen": [
+        "effect",
+        "we lost your view"
+      ],
+      "visual_intent": "On the same board a second line is added under the first: 'we lost your view', with a small empty chair-in-the-discussion icon. The label 'effect' appears beside it and lights up while the first line dims.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Stating the effect on the work or team explains why it matters",
+          "fact": "F7"
+        },
+        {
+          "claim": "The lost view is an illustrative effect",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "s2_three_parts",
+      "job": "demonstrate",
+      "narration": [
+        "Then a small step, agreed together.",
+        "Next meeting, could you share a view first?",
+        "That is the next step.",
+        "One common model, not the only one."
+      ],
+      "on_screen": [
+        "next step",
+        "agreed together"
+      ],
+      "visual_intent": "A third line is added to the board: 'share a view first' with a small speech bubble. The label 'next step' appears beside it, then the two colleagues' hands meet over the board to show agreement. All three lines now sit stacked, the cloud gone.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "A specific next step is a small action to try at the next opportunity, such as the next meeting",
+          "fact": "F8"
+        },
+        {
+          "claim": "A step agreed together tends to work better than one imposed",
+          "fact": "F9"
+        },
+        {
+          "claim": "Three parts are one common model; others exist",
+          "fact": "F13"
+        },
+        {
+          "claim": "The step shown is an illustrative example",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "s3_check",
+      "job": "check",
+      "narration": [
+        "Now you. Which one can they act on?",
+        "A: 'Be a stronger team player.'",
+        "B: 'Today, your one-word answers lost us your view,",
+        "so next time, share first.'"
+      ],
+      "on_screen": [
+        "A: a stronger team player",
+        "B: lost us your view"
+      ],
+      "visual_intent": "Split-screen choice card on warm paper: two speech bubbles side by side, A on the left and B on the right, equal weight, no answer marked. Then a held still frame while the viewer decides.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "pause_after_s": 4,
+      "recall": {
+        "type": "quiz",
+        "question": "Which remark could a colleague act on?",
+        "options": [
+          "A: 'Be a stronger team player.'",
+          "B: 'Today, your one-word answers lost us your view, so next time, share first.'"
+        ]
+      },
+      "grounding": [
+        {
+          "claim": "A and B are invented illustrative remarks for the quiz",
+          "hypothetical": true
+        },
+        {
+          "claim": "A label gives the person nothing specific to act on",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "s3_check",
+      "job": "check",
+      "narration": [
+        "B, because you can picture it.",
+        "A feels kinder, but it is a label."
+      ],
+      "on_screen": [
+        "B",
+        "a label"
+      ],
+      "visual_intent": "The answer card: B's bubble lifts and glows with a small camera icon beside it; A's bubble turns to a fuzzy cloud, the same cloud from the opening.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "B names observed behaviour a camera could capture",
+          "fact": "F5"
+        },
+        {
+          "claim": "A is a label describing an impression, not an action",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "s4_timing_talk",
+      "job": "demonstrate",
+      "narration": [
+        "Pick a calm, private moment, soon after.",
+        "Then ask how it felt to him.",
+        "He may know context you do not.",
+        "Soon, private, ask first."
+      ],
+      "on_screen": [
+        "calm",
+        "private",
+        "soon after",
+        "ask first"
+      ],
+      "visual_intent": "A quiet one-to-one scene: the two colleagues side by side with a coffee each. A speech bubble with a question mark comes from the manager, then the bubble passes to Dev as it is his turn to speak.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Feedback soon after the event is easier to connect to what happened; calm and private is better than public",
+          "fact": "F10"
+        },
+        {
+          "claim": "Feedback works better as a two-way conversation; they may know context you do not",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "s5_your_turn",
+      "job": "practice",
+      "narration": [
+        "Now you. Take feedback you were about to give.",
+        "Could a recording show it?",
+        "Write behaviour, effect, next step.",
+        "Pick a moment this week."
+      ],
+      "on_screen": [
+        "behaviour",
+        "effect",
+        "next step"
+      ],
+      "visual_intent": "The presenter speaks straight to camera beside an empty three-line board, three blank labelled slots waiting to be filled.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "pause_after_s": 3,
+      "recall": {
+        "type": "recall_prompt",
+        "prompt": "Run your own remark past the camera test: could a recording show it?"
+      },
+      "grounding": [
+        {
+          "claim": "Observable behaviour is what a recording would capture",
+          "fact": "F5"
+        },
+        {
+          "claim": "The three parts structure: behaviour, effect, next step",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "s5_your_turn",
+      "job": "refute",
+      "narration": [
+        "Specific is not harsh.",
+        "Said with care, it protects the relationship."
+      ],
+      "on_screen": [
+        "specific, not harsh"
+      ],
+      "visual_intent": "The two colleagues side by side again, relaxed, the three-line board between them; a small heart-shaped sticky note and the board lines sit together on the table, kind and specific in one frame.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "misconception": "Being specific is harsh: kind and effective pull in opposite directions.",
+      "grounding": [
+        {
+          "claim": "Specific feedback delivered with care can protect the relationship while prompting change",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "s5_your_turn",
+      "job": "payoff",
+      "narration": [
+        "Back in the meeting, Dev hears three parts.",
+        "Next meeting, he shares a view first.",
+        "They are still on good terms.",
+        "The glow was never the point.",
+        "The change was."
+      ],
+      "on_screen": [
+        "three parts",
+        "good terms"
+      ],
+      "visual_intent": "Return to the opening meeting room, same seats. Before: Dev silent under the fuzzy cloud. After: Dev speaks up with a clear bubble, the manager nods, and the cloud is gone. A before and after of the same scene.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Dev shares a view in the next meeting and the relationship is intact, an illustrative outcome",
+          "hypothetical": true
+        },
+        {
+          "claim": "Specific, caring feedback can keep the relationship while prompting change",
+          "fact": "F12"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+caption_hold suite, 2026-10-15: run on the tree before the check (loom/ copied, the caption-hold additions stripped from film.py and qa.py)
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Temp\claude\C--Users-Admin-Desktop-Video-Engine\3a582545-341f-42d7-b356-d8a5e819e4f9\scratchpad\run_one.py", line 6, in <module>
+    print("PASS", m.check_caption_hold_reports_short_cues_by_beat_with_a_ratchet_and_a_red_zero())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine\tests/suites/caption_hold.py", line 39, in check_caption_hold_reports_short_cues_by_beat_with_a_ratchet_and_a_red_zero
+    E, W, S = F.caption_hold_checks(mf, None, lesson="no-such-lesson")
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'loom.checks.film' has no attribute 'caption_hold_checks'
+loom from C:\Users/Admin/AppData/Local/Temp/claude/C--Users-Admin-Desktop-Video-Engine/3a582545-341f-42d7-b356-d8a5e819e4f9/scratchpad/oldtree\loom\__init__.py
+FAIL
+
+and on the tree after it:
+loom from C:\Users/Admin/Desktop/Video-Engine\loom\__init__.py
+PASS short cues by beat and time; baseline ratchets; pace thresholds; captions off quiet; blind measure red; wired into check
+
+mutants (each a copy of the new tree with one line changed; the test must fail on each):
+- need = T["caption_min_s"] (the spoken + 0.6 s clause dropped): FAIL, AssertionError on the b03 cue held 2.86 s of 3.10 s
+- `if known:` (every short beat of a baselined lesson excused, growth unchecked): FAIL, AssertionError (no "new since the baseline" error)
+- caption_hold left out of the defect router (loom/agents/router.py ENGINE_CODES and _CHECK_CODES): FAIL, AssertionError (the line was coded "check" and owned by the bespoke beat's scene author)

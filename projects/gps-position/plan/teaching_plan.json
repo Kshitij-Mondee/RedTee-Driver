@@ -1,0 +1,198 @@
+{
+  "title": "How GPS knows where you are",
+  "performance": "Explain to a colleague, in a few sentences, how a phone turns satellite signals into a position: timed broadcasts, distance from travel time, intersecting spheres, a fourth satellite for the phone's clock, and the relativity correction to the satellites' clocks.",
+  "audience": {
+    "level": "beginner",
+    "assumed_prior": "Uses a map app daily; knows satellites orbit Earth and that nothing is faster than light; no geometry or physics beyond school memories.",
+    "why": "Corporate employees with no technical brief; the request asks for a general explainer, so every term is shown before it is named.",
+    "motivation": "Curiosity about a tool they rely on every day, and the pleasure of an elegant answer they can repeat.",
+    "context": "Watched at a desk or on a phone between tasks, sound on, captions available; one sitting of about four minutes."
+  },
+  "genre": "conceptual",
+  "strategy": {
+    "name": "question_led",
+    "rationale": "The topic has one genuine puzzle at its heart (the phone sends nothing, yet knows where it is), and the facts (F1 to F16) answer it as a chain where each step raises the next question: what is broadcast, how far, where exactly, why the clock fails, why the satellite clocks drift.",
+    "signature_move": "Ask the next question in the phone's own case, show the mechanism running on screen, then name the idea just used in one plain sentence."
+  },
+  "misconceptions": [
+    {
+      "belief": "The phone sends a signal up and the satellites track it",
+      "why_tempting": "Most everyday wireless (calls, messages) is two-way, and 'satellite tracking' is a common phrase",
+      "refuted_in": "s1"
+    },
+    {
+      "belief": "Three satellites are enough",
+      "why_tempting": "School geometry and many simplified explanations stop at three circles",
+      "refuted_in": "s3"
+    },
+    {
+      "belief": "Relativity is a theoretical curiosity with no practical effect",
+      "why_tempting": "It sounds remote from daily life",
+      "refuted_in": "s4"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "question",
+      "sketch": "Night, a city, a phone opens a map and the blue dot appears. Pull back to orbit: the phone has told no one where it is. So how does it know?"
+    },
+    "promise": "In four minutes: the whole chain from a satellite's broadcast to that blue dot, and why it all comes down to keeping time honest.",
+    "bridge_from_prior": "You already know two things that do the work: satellites circle the Earth, and nothing is faster than light. GPS is built from just those two.",
+    "sections": [
+      {
+        "id": "s1",
+        "goal": "the viewer can state what each satellite broadcasts and that the phone only listens",
+        "bloom": "remember",
+        "concepts": [
+          "satellite broadcasts its position (F1)",
+          "and the time of sending from atomic clocks (F2)",
+          "the receiver is passive (F3)",
+          "about two dozen satellites, about 20,200 km up, about 12 h orbit (F17, F18)"
+        ],
+        "energy": "build",
+        "carrier": "Earth and the constellation on visible orbits; one satellite's broadcast as an expanding wavefront carrying a position and a time stamp toward the phone",
+        "recap_after": false
+      },
+      {
+        "id": "s2",
+        "goal": "the viewer can explain how travel time becomes a distance and a sphere of possible positions",
+        "bloom": "understand",
+        "concepts": [
+          "radio travels at about 300,000 km/s (F4)",
+          "distance = travel time x speed of light (F5)",
+          "about 0.07 s from overhead (F6)",
+          "one distance = a sphere around the satellite (F7)"
+        ],
+        "energy": "steady",
+        "carrier": "the signal travelling satellite to phone with a timer on the phone, then the distance swept out as a sphere (a circle in the flat picture) centred on the satellite",
+        "recap_after": false
+      },
+      {
+        "id": "s3",
+        "goal": "the viewer can apply the intersecting-circles picture to show why a fourth satellite is needed to fix the phone's clock",
+        "bloom": "apply",
+        "concepts": [
+          "two spheres meet in a circle, three in two points (F7)",
+          "in principle three would do with a perfect clock (F8)",
+          "the phone's clock is cheap quartz, every distance shifted the same (F9)",
+          "four unknowns, four satellites (F10)"
+        ],
+        "energy": "peak",
+        "carrier": "one diagram that builds: circles added one at a time until one point lights; then the phone's clock shown off, all circles swollen by the same amount and failing to meet, and a fourth circle pulling them back to one point",
+        "recap_after": true
+      },
+      {
+        "id": "s4",
+        "goal": "the viewer can explain why the satellites' clocks need a relativity correction and what happens without it",
+        "bloom": "understand",
+        "concepts": [
+          "1 microsecond of error ~ 300 m (F11)",
+          "speed slows orbit clocks about 7 microseconds a day (F12)",
+          "weaker gravity speeds them about 45 a day (F13)",
+          "net gain about 38 a day (F14)",
+          "uncorrected: roughly 10 km a day of build-up (F15)",
+          "clock rate set lower before launch (F16)"
+        ],
+        "energy": "build",
+        "carrier": "two clocks side by side, ground and orbit, drifting apart as the day counter runs; the blue dot sliding away across the map; then the pre-set rate and the clocks back in step",
+        "recap_after": false
+      },
+      {
+        "id": "s5",
+        "goal": "the viewer can summarize the full chain as one timing story",
+        "bloom": "understand",
+        "concepts": [
+          "the chain recapped: broadcast, travel time, spheres, fourth satellite, corrected clocks",
+          "the position is an estimate with real-world error (F20)"
+        ],
+        "energy": "rest",
+        "carrier": "the diagram returns and replays in brief, then pulls back to the city and the blue dot",
+        "recap_after": false
+      }
+    ],
+    "payoff": "The blue dot is the answer to a timing problem solved continuously: listen, time, intersect, fix the clock, and trust clocks that were set for relativity before they left the ground."
+  },
+  "practice_ladder": [
+    {
+      "step": "worked",
+      "what": "The narrator walks one phone through the full chain on screen (s1 to s3)."
+    },
+    {
+      "step": "faded",
+      "what": "pause_predict after three circles meet: with the phone's clock off, what would you need? The viewer predicts; the fourth satellite is the reveal."
+    },
+    {
+      "step": "independent",
+      "what": "Transfer task: retell the chain to a colleague in four steps."
+    }
+  ],
+  "pacing": {
+    "target_duration_s": 240,
+    "requested_s": 240,
+    "words_per_minute": 145,
+    "slowdown_at": [
+      "s3 the fourth satellite and the clock error",
+      "s4 the two relativity effects pulling in opposite directions"
+    ],
+    "recall_moments": [
+      {
+        "kind": "pause_predict",
+        "after_section": "s3",
+        "where": "inside s3, after the three circles fail to meet because the phone clock is off, before the fourth satellite appears",
+        "prompt": "The phone's clock is off, so every circle is wrong by the same amount. What would fix it?"
+      },
+      {
+        "kind": "recall_prompt",
+        "after_section": "s3",
+        "where": "start of s4",
+        "prompt": "Remember the timer that turned travel time into distance? Now ask how good the satellites' own clocks are."
+      },
+      {
+        "kind": "recall_prompt",
+        "after_section": "s4",
+        "where": "the recap in s5",
+        "prompt": "The chain in one breath: broadcast, travel time, spheres, a fourth satellite, corrected clocks."
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "Explain to a colleague why a phone needs at least four satellites, not three.",
+    "When the blue dot jumps in a city of tall buildings, name which step of the chain is being disturbed (signals reflected or blocked, F20)."
+  ],
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: the blue dot appearing and the question of how",
+      "objective": "promise line after the hook",
+      "recall_prior": "bridge_from_prior: satellites orbit, light is fastest",
+      "present": "sections s1 to s4",
+      "guidance": "signature_move and the one building diagram in s2 and s3",
+      "practice": "pause_predict in s3; practice_ladder",
+      "feedback": "the reveal of the fourth satellite explains why the clock error is shared by every circle",
+      "assess": "absent as a formal test: a four-minute explainer within the stopping-check budget; the recap recall_prompt in s5 stands in",
+      "transfer": "payoff, transfer_tasks, recall_prompts at s4 and s5"
+    },
+    "merrill": {
+      "problem_centred": "one phone's question (where am I) runs through every section",
+      "activation": "bridge_from_prior and the everyday blue dot",
+      "demonstration": "the mechanism shown running in s1 to s4",
+      "application": "pause_predict in s3 and the retell transfer task",
+      "integration": "transfer task on the blue dot jumping between tall buildings"
+    },
+    "mayer": {
+      "coherence": "no GPS feature list or uses; only the chain",
+      "signalling": "the accent on one element at a time: the wavefront, the circle, the lit point, the clocks",
+      "redundancy": "captions on; on-screen words limited to labels and numbers, not narration text",
+      "contiguity": "numbers sit on the object they describe (the time stamp on the wavefront, the drift on the clock)",
+      "segmenting": "five sections, each one question",
+      "pre_training": "s1 names the parts (satellite, broadcast, time stamp, phone) before the mechanism"
+    },
+    "arcs": {
+      "attention": "the hook question and the cosmic zoom from the city to orbit",
+      "relevance": "the everyday blue dot they use daily",
+      "confidence": "one step at a time with the same phone, each step named after it is seen",
+      "satisfaction": "the chain closes on the blue dot; the relativity reveal as the elegant twist"
+    },
+    "bloom_path": "remember -> understand -> apply -> understand -> understand"
+  },
+  "flags": []
+}

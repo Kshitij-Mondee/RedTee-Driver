@@ -1,0 +1,23 @@
+== after bench-20261006-151439-openai-balanced-fix1007: compose with today's runtime
+composed 52 scenes, 682.9s -> C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-openai-balanced-fix1007\build\index.html
+mix: 682.9s, music=warm_curious, -> C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-openai-balanced-fix1007\audio\mix.wav
+== after bench-20261006-151439-openai-balanced-fix1007: full check
+check: runtime probe ...
+check: hyperframes check ...
+check: contact sheets ...
+check: 286 error(s), 132 warning(s); sheets in C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-openai-balanced-fix1007\qa\sheets
+   check: check failed with 286 error(s): see C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-openai-balanced-fix1007\qa\report.json
+{"check_errors": 286, "blurred": {"beats": [], "of": 52}, "foreign": {"beats": [], "of": 52, "measured": 52}, "late_lead": {"beats": ["b16"], "of": 48, "worst": 1.07}, "dim_off": {"moments": [], "of": 0}}
+== after bench-20261006-151439-claude-balanced-fix1007: compose with today's runtime
+[warn] b21: camera pan between different worlds (board -> split) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b22: camera pan between different worlds (split -> board) would show the seam; using a dip (set join_in.continuous: true if they join up)
+[warn] b31: camera pan between different worlds (board -> timing) would show the seam; using a dip (set join_in.continuous: true if they join up)
+composed 54 scenes, 474.3s -> C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-claude-balanced-fix1007\build\index.html
+mix: 474.3s, music=warm_curious, -> C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-claude-balanced-fix1007\audio\mix.wav
+== after bench-20261006-151439-claude-balanced-fix1007: full check
+check: runtime probe ...
+check: hyperframes check ...
+check: contact sheets ...
+check: 30 error(s), 124 warning(s); sheets in C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-claude-balanced-fix1007\qa\sheets
+   check: check failed with 30 error(s): see C:\Users\Admin\Desktop\Video-Engine\projects\bench-20261006-151439-claude-balanced-fix1007\qa\report.json
+{"check_errors": 30, "blurred": {"beats": [], "of": 54}, "foreign": {"beats": [], "of": 54, "measured": 54}, "late_lead": {"beats": ["b41"], "of": 28, "worst": 1.23}, "dim_off": {"moments": [], "of": 5}}

@@ -1,0 +1,298 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b06: camera pan between different worlds (room -> desk) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b07: camera pan between different worlds (desk -> room) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b14: camera pan between different worlds (corner -> desk) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "b16: 8 chunks on screen (agenda, asha, ben, clock, end_tag, extra_left, extra_right, praise_bubble); the budget is ~5-6",
+    "b03: \"Next step\" is readable for 0.48s but 2 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 1.0 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.688 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b05, b08, b09, b10, b11)",
+    "hf layout content_overlap @ 29.706: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 29.706: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 29.943: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (8 of 9 show one text))",
+    "hf layout content_overlap @ 81.037: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 81.037: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.077: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 85.315: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 91.494: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(4) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout rotation_pivot_drift @ 8.897: Rotating element's bounding-box center drifts 1176px across rotation — it is not spinning about its own center (check transformOrigin/svgOrigin). [g.lm-in > g:nth-of-type(4)]",
+    "hf layout content_overlap @ 10.456: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 19.962: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 28.993: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout rotation_pivot_drift @ 109.728: Rotating element's bounding-box center drifts 1176px across rotation — it is not spinning about its own center (check transformOrigin/svgOrigin). [g.lm-in > g:nth-of-type(3)]",
+    "hf layout content_overlap @ 29.706: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 71.294: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 71.294: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 71.294: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 71.294: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 120.011: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(2) > g:nth-of-type(2) > g:nth-of-typ]",
+    "b04: value script says 'mid' but the frames measure brightness 0.73 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.73 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.74 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.74 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.72 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.71 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.75 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b15: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson saturation 0.15 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.94 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 1,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 0.5,
+        "declared": "rest"
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 2.47,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 2.38
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.67
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 0.3
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.032,
+      "template": 0.543,
+      "motion": 0.425,
+      "hybrid": 0.0,
+      "motion_effective": 0.425
+    },
+    "elements": {
+      "b01": 8,
+      "b02": 4,
+      "b03": 7,
+      "b04": 6,
+      "b05": 9,
+      "b06": 2,
+      "b07": 5,
+      "b08": 8,
+      "b09": 5,
+      "b10": 6,
+      "b11": 6,
+      "b12": 1,
+      "b13": 10,
+      "b14": 4,
+      "b15": 1,
+      "b16": 10
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.062,
+      "pop_settle_share": 0.141,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.167,
+      "one_radius_share": 1.0,
+      "still_share": 0.688,
+      "labels_over_objects_share": 0.25,
+      "one_world_share": 0.25,
+      "lines_per_s": 8.63
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 51.6,
+        "b02": 41.3,
+        "b03": 34.4,
+        "b04": 44.4,
+        "b05": 42.6,
+        "b06": 50.2,
+        "b07": 37.7,
+        "b08": 37.7,
+        "b09": 37.7,
+        "b10": 31.1,
+        "b11": 35.2,
+        "b12": 35.2,
+        "b13": 37.7,
+        "b14": 42.6,
+        "b15": 38.5,
+        "b16": 28
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 16,
+      "lines_seen": 69,
+      "blank_beats": [],
+      "blank_measured": 15
+    },
+    "foreign": {
+      "measured_beats": 16,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 92,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0749,
+        "b02": 0.081,
+        "b03": 0.0548,
+        "b04": 0.0768,
+        "b05": 0.071,
+        "b06": 0.0815,
+        "b07": 0.1233,
+        "b08": 0.1271,
+        "b09": 0.1409,
+        "b10": 0.1532,
+        "b11": 0.1686,
+        "b12": 0.1853,
+        "b13": 0.1477,
+        "b14": 0.106,
+        "b15": 0.1345,
+        "b16": 0.1037
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 16,
+      "sharpness": {
+        "b01": 1.053,
+        "b02": 1.131,
+        "b03": 1.034,
+        "b04": 1.082,
+        "b05": 1.134,
+        "b06": 1.082,
+        "b07": 1.128,
+        "b08": 1.032,
+        "b09": 1.101,
+        "b10": 1.044,
+        "b11": 1.218,
+        "b12": 1.2,
+        "b13": 1.025,
+        "b14": 1.132,
+        "b15": 1.191,
+        "b16": 1.175
+      },
+      "blurred_beats": [],
+      "blur_measured": 16
+    },
+    "tone": {
+      "value_script_beats": 16,
+      "tone_vs_reference": {
+        "brightness": 0.74,
+        "saturation": 0.153,
+        "dark_share": 0.0,
+        "light_share": 0.938
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-v3\\qa\\sheets\\b16.jpg"
+  ],
+  "build_hash": "59ec610af016e895"
+}

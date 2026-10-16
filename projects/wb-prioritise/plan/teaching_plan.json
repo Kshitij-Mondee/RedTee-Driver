@@ -1,0 +1,178 @@
+{
+  "title": "When everything feels urgent: sort it, then act",
+  "performance": "given a list of competing work requests, the viewer can place each by impact and effort, do the quick wins first, schedule the big ones, and decline or defer the rest with a reasoned sentence",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "knows their own job and tools; feels overloaded; has no simple sorting method",
+    "why": "corporate employees, general audience, no prerequisite",
+    "motivation": "wants to stop working in arrival order and stop letting important work slip",
+    "context": "desktop or phone, sound on, short break between tasks"
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "one person's real-feeling Monday list carries every idea; the matrix is only named once the tasks have landed on the board",
+    "signature_move": "place a task from the running list on the board, act on it, THEN name the zone and the rule just used"
+  },
+  "misconceptions": [
+    {
+      "belief": "the request that feels most urgent is the most important one",
+      "why_tempting": "deadlines and pings are loud; research on the mere urgency effect suggests we lean toward the nearer deadline",
+      "refuted_in": "sec1",
+      "source_anchor": "F7, F8"
+    },
+    {
+      "belief": "saying no to a colleague or manager is just refusing",
+      "why_tempting": "it feels like letting someone down",
+      "refuted_in": "sec3",
+      "source_anchor": "F11, F12, F13"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Monday, four requests, every one flagged urgent; she starts at the top of the inbox."
+    },
+    "promise": "two questions per task turn the pile into an order you can defend",
+    "bridge_from_prior": "from the inbox order the viewer already works in, to an order chosen on purpose",
+    "sections": [
+      {
+        "id": "sec1",
+        "goal": "the viewer can classify a task by impact and effort and explain why urgency is a separate question",
+        "bloom": "understand",
+        "concepts": [
+          "impact",
+          "effort",
+          "urgent is not important"
+        ],
+        "energy": "build",
+        "carrier": "the board: two axes drawn, tasks placed as notes",
+        "recap_after": false,
+        "facts": [
+          "F1",
+          "F2",
+          "F7",
+          "F8"
+        ]
+      },
+      {
+        "id": "sec2",
+        "goal": "the viewer can use a task's zone to pick its action: quick wins now, major projects scheduled in a block, fill-ins batched, thankless tasks declined",
+        "bloom": "apply",
+        "concepts": [
+          "quick wins",
+          "major projects",
+          "fill-ins",
+          "thankless tasks"
+        ],
+        "energy": "peak",
+        "carrier": "the same board, zones named and actions written beside them",
+        "recap_after": true,
+        "facts": [
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F15"
+        ]
+      },
+      {
+        "id": "sec3",
+        "goal": "the viewer can use a reply that ties a no or later to a priority and offers a concrete alternative",
+        "bloom": "apply",
+        "concepts": [
+          "no tied to priorities",
+          "later with a date or trade",
+          "ask which task gives way"
+        ],
+        "energy": "rest",
+        "carrier": "a reply drafted beside the board",
+        "recap_after": false,
+        "facts": [
+          "F11",
+          "F12",
+          "F13"
+        ]
+      }
+    ],
+    "payoff": "a new request lands; the viewer places it before the narrator does; the opening list now stands in order, with the habit of re-sorting when work arrives (F14)"
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "sec1-sec2",
+      "what": "the four Monday tasks placed and acted on, every step narrated"
+    },
+    {
+      "stage": "faded",
+      "where": "sec3",
+      "what": "the meeting invite with no purpose: zone given, the viewer hears the reply shape"
+    },
+    {
+      "stage": "independent",
+      "where": "check before payoff",
+      "what": "a new request from her manager arrives; the viewer places it before the reveal"
+    }
+  ],
+  "pacing": {
+    "requested_s": 105,
+    "target_duration_s": 105,
+    "words_per_minute": 150,
+    "slowdown_at": [
+      "the four zone actions"
+    ],
+    "recall_moments": [
+      {
+        "after_section": "sec3",
+        "kind": "quiz",
+        "prompt_sketch": "Her manager asks for a big new analysis by Friday. Where does it go, and what does she say?",
+        "answer": "high impact, high effort: schedule it in a block and ask which existing task gives way",
+        "tempting_wrong": "do it right now because it is urgent and from the manager"
+      }
+    ]
+  },
+  "transfer_tasks": [
+    "before starting tomorrow, put your next three requests on the two questions and do one quick win first"
+  ],
+  "persona": {
+    "voice": "a capable colleague talking a peer through their own Monday, calm and a little wry about the urgent label",
+    "delivery_notes": "brisk on the setup, slower on the four actions, warm on saying no"
+  },
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook: every request flagged urgent",
+      "objective": "promise: an order you can defend",
+      "recall_prior": "the inbox order the viewer already uses",
+      "present": "board built in dependency order: axes, tasks, zones, actions, reply",
+      "guidance": "signature move on each Monday task",
+      "practice": "faded reply in sec3; quiz after sec3",
+      "feedback": "quiz answer explained with the tempting wrong",
+      "assess": "viewer places the new request first",
+      "transfer": "transfer task for tomorrow morning"
+    },
+    "merrill": {
+      "problem_centered": "her Monday list is the running problem",
+      "activation": "starts from arrival order",
+      "demonstration": "each task placed before the zone is named",
+      "application": "the manager's request in the check",
+      "integration": "re-sort habit and transfer task"
+    },
+    "mayer": {
+      "coherence": "one running example, one board",
+      "signalling": "one slowdown on the four actions",
+      "redundancy": "board shows short labels only; narration explains",
+      "contiguity": "each note lands as it is named",
+      "segmenting": "three short sections",
+      "pre_training": "impact and effort named before the zones"
+    },
+    "arcs": {
+      "attention": "the all-urgent Monday",
+      "relevance": "the viewer's own queue",
+      "confidence": "worked tasks before the check",
+      "satisfaction": "the opening list solved"
+    },
+    "bloom_path": "understand -> apply -> apply"
+  },
+  "series": null,
+  "flags": []
+}

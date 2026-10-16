@@ -1,0 +1,36 @@
+{
+  "id": "ab-mfa-explained-on",
+  "created": "2026-10-06T04:28:47",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How multi-factor authentication stops most account takeovers, and why phishing-resistant passkeys go further",
+  "sources": [],
+  "request": {
+    "audience": "all employees, non-technical, in a corporate security awareness programme",
+    "genre": "explainer",
+    "length_min": 2.5,
+    "style": "dark-technical",
+    "persona": "analyst",
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.7
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "none",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "Technical but plain. Show the mechanism running: what a password proves, what a second factor adds, how a phishing page relays codes, why a passkey cannot be relayed. Use a magnifier on the login exchange and a cutaway of the phone or key. No invented statistics."
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  }
+}

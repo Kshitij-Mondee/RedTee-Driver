@@ -1,0 +1,32 @@
+{
+ "name": "claude-balanced",
+ "description": "Anthropic only: Sonnet plans, writes the storyboard and the scenes; Haiku for the small roles.",
+ "roles": {
+  "brief": "claude-sonnet-5-5",
+  "knowledge": "claude-sonnet-5-5",
+  "skeptic": "claude-haiku-4-5",
+  "pedagogy": "claude-sonnet-5-5",
+  "persona_pick": "claude-haiku-4-5",
+  "script": "claude-sonnet-5-5",
+  "storyboard_outline": "claude-sonnet-5-5",
+  "storyboard": "claude-sonnet-5-5",
+  "scene": "claude-sonnet-5-5",
+  "critic": "claude-haiku-4-5",
+  "tweak": "claude-haiku-4-5"
+ },
+ "effort": {
+  "brief": "high",
+  "knowledge": "medium",
+  "pedagogy": "high",
+  "script": "high",
+  "storyboard_outline": "high",
+  "storyboard": "high",
+  "scene": "medium",
+  "critic": "medium",
+  "skeptic": "low",
+  "persona_pick": "low",
+  "tweak": "low"
+ },
+ "escalate": {},
+ "limits": {}
+}

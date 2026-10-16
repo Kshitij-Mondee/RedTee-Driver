@@ -1,0 +1,239 @@
+{
+  "topic": "How HTTPS keeps your data private",
+  "scope_note": "Plain-language mechanism of HTTPS for non-technical employees: what travels in the open over HTTP, the TLS handshake (identity, shared key), encrypted and integrity-protected data, and what the padlock does and does not mean. No statistics, dates, versions, algorithm names or key lengths.",
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "With plain HTTP, the data between browser and server is sent unprotected, so anyone who can see traffic on its path can read it.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 9110 (HTTP semantics) defines HTTP; HTTP itself specifies no encryption."
+    },
+    {
+      "id": "F2",
+      "statement": "The path between a browser and a server passes through other parties, such as the local network (for example shared wifi) and the networks of internet providers, and any of them could in principle observe unprotected traffic.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": ""
+    },
+    {
+      "id": "F3",
+      "statement": "Anything a passive watcher on the path can read in plain HTTP, including a login name and password typed into a form, is exposed to that watcher.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "Applies to a form submitted over plain HTTP; the lesson's login is a fictional example.",
+      "numbers": [],
+      "reference_hint": ""
+    },
+    {
+      "id": "F4",
+      "statement": "HTTPS is HTTP carried inside a TLS connection: the same web requests and responses, wrapped in a protective layer.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 9110 and RFC 8446 (TLS)."
+    },
+    {
+      "id": "F5",
+      "statement": "Before any web data is sent over HTTPS, the browser and server run a handshake, a short exchange that sets up the protection.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 8446 (TLS)."
+    },
+    {
+      "id": "F6",
+      "statement": "In the handshake the server proves its identity by presenting a digital certificate that ties the site's name to its public key.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Say 'ties the name to a key' only if the script needs it; the core idea is that the certificate is the server's proof of identity.",
+      "numbers": [],
+      "reference_hint": "RFC 5280 (X.509 certificates) and RFC 8446."
+    },
+    {
+      "id": "F7",
+      "statement": "A certificate is issued by a certificate authority, an organisation that browsers and operating systems are set up to trust.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "CA/Browser Forum practice; browser and operating system trust stores."
+    },
+    {
+      "id": "F8",
+      "statement": "The browser checks that the certificate chains back to an authority it already trusts (a trusted root), that is, that a trusted issuer vouches for it.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Chains may pass through intermediate authorities; for a two-minute lesson 'traces back to an authority the browser trusts' is enough.",
+      "numbers": [],
+      "reference_hint": "RFC 5280 certification path validation."
+    },
+    {
+      "id": "F9",
+      "statement": "The browser checks that the name on the certificate matches the address the user asked for.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 9110 and RFC 6125 (verifying server identity in TLS)."
+    },
+    {
+      "id": "F10",
+      "statement": "The browser checks that the certificate is within its validity dates, so an expired certificate fails the check.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 5280."
+    },
+    {
+      "id": "F11",
+      "statement": "If a certificate is invalid, for example expired, issued for a different name, or not traced to a trusted authority, the browser shows a warning and does not silently proceed.",
+      "kind": "practice",
+      "confidence": "established",
+      "caveat": "Users can sometimes choose to continue past a warning, which is unwise; the lesson should say the warning means stop and not that the browser blocks every case.",
+      "numbers": [],
+      "reference_hint": ""
+    },
+    {
+      "id": "F12",
+      "statement": "During the handshake the two sides agree a shared secret session key by a key exchange, without sending that key across the network in readable form.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "State the result and the idea; do not describe the mathematics. Avoid saying the key 'is encrypted and sent'.",
+      "numbers": [],
+      "reference_hint": "Diffie and Hellman (key agreement); RFC 8446."
+    },
+    {
+      "id": "F13",
+      "statement": "A watcher who records the whole key exchange still cannot work out the session key from what they saw.",
+      "kind": "mechanism",
+      "confidence": "mainstream",
+      "caveat": "True for a passive watcher when the key exchange is used as designed with current, sound parameters; the claim rests on computational difficulty, not on secrecy of the messages. Say 'cannot practically work out'.",
+      "numbers": [],
+      "reference_hint": "Diffie and Hellman (key agreement); RFC 8446."
+    },
+    {
+      "id": "F14",
+      "statement": "After the handshake, the browser and server encrypt the web data with that shared session key, using the same key at both ends (symmetric encryption).",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 8446."
+    },
+    {
+      "id": "F15",
+      "statement": "Encrypted data looks like unreadable noise to a watcher on the path, and only the two ends that hold the session key can turn it back into readable data.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Say 'only the two ends', meaning the browser and the server it connected to.",
+      "numbers": [],
+      "reference_hint": "RFC 8446."
+    },
+    {
+      "id": "F16",
+      "statement": "TLS also protects integrity: if data is altered in transit, the receiving end detects the change and the connection fails rather than accepting it.",
+      "kind": "mechanism",
+      "confidence": "established",
+      "caveat": "Integrity means tampering is detected, not that it is prevented; an attacker can still disrupt the connection.",
+      "numbers": [],
+      "reference_hint": "RFC 8446."
+    },
+    {
+      "id": "F17",
+      "statement": "HTTPS provides three things: confidentiality (others cannot read the data), integrity (changes are detected) and server authentication (the browser checks it is talking to the site it asked for).",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": "RFC 8446."
+    },
+    {
+      "id": "F18",
+      "statement": "The padlock means the connection to the domain shown is private and the certificate checks passed; it says nothing about whether the site's owner is honest.",
+      "kind": "definition",
+      "confidence": "established",
+      "caveat": "Browser padlock icons and wording change between browsers and over time; speak of 'the padlock or secure indicator' and the meaning, not the icon design.",
+      "numbers": [],
+      "reference_hint": ""
+    },
+    {
+      "id": "F19",
+      "statement": "A site with HTTPS can still be a phishing site or host malware, because a certificate shows the connection is private to that domain, not that the domain is trustworthy.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "Certificates for a look-alike domain can be obtained, so check the address itself, not only the padlock.",
+      "numbers": [],
+      "reference_hint": ""
+    },
+    {
+      "id": "F20",
+      "statement": "HTTPS does not hide which site or server you connect to from the network, because the destination address is visible to the networks in between.",
+      "kind": "caution",
+      "confidence": "mainstream",
+      "caveat": "The server's IP address is always visible; the site name is often also visible during the handshake. Some newer extensions can hide the name but are not universal, so say 'the network can still see which site you are talking to', not 'which pages'.",
+      "numbers": [],
+      "reference_hint": "RFC 8446 (server name in the handshake); RFC 9110."
+    },
+    {
+      "id": "F21",
+      "statement": "HTTPS protects data only while it travels between the browser and the server; once the data reaches the server, the site's owner and systems have it in readable form and HTTPS says nothing about how they handle it.",
+      "kind": "caution",
+      "confidence": "established",
+      "caveat": "",
+      "numbers": [],
+      "reference_hint": ""
+    }
+  ],
+  "not_claimed": [
+    "The padlock means the site is safe, honest or trustworthy.",
+    "HTTPS makes a site free of phishing or malware.",
+    "HTTPS hides which sites you visit from the network or your employer.",
+    "HTTPS protects data after it reaches the server or on the server's side.",
+    "The session key is sent to the server in readable form, or is locked up and sent for the server to open, as the only way to share it (do not claim a specific method).",
+    "Encryption stops all attacks; integrity checking only detects tampering.",
+    "Any statistics, adoption percentages, dates, version numbers or key lengths."
+  ],
+  "terms": [
+    {
+      "term": "HTTPS",
+      "definition": "HTTP carried inside a TLS connection."
+    },
+    {
+      "term": "TLS",
+      "definition": "The protection layer that provides identity checking, encryption and tamper detection for a connection."
+    },
+    {
+      "term": "handshake",
+      "definition": "The short exchange before any web data is sent in which identity is checked and a shared key is agreed."
+    },
+    {
+      "term": "certificate",
+      "definition": "A digital document that proves a server's identity, issued by a certificate authority."
+    },
+    {
+      "term": "certificate authority",
+      "definition": "An organisation that browsers are set up to trust, which issues certificates."
+    },
+    {
+      "term": "session key",
+      "definition": "The secret key the two ends agree in the handshake and use to encrypt the data for that connection."
+    },
+    {
+      "term": "encryption",
+      "definition": "Scrambling data so only holders of the key can read it."
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended per Kshitij (sonnet-only motion-graphics run, 2026-10-10)",
+    "note": ""
+  }
+}

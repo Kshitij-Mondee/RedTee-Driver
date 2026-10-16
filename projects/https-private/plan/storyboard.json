@@ -1,0 +1,1837 @@
+{
+  "style": "corporate-clean",
+  "concept": "One system diagram on the plain light field, held for the whole lesson: the browser window at left, the server at right, a short path of network nodes between them with a watcher on one node. The same login packet makes the trip again and again while the system changes state on the spoken word: readable and copied, then wrapped in TLS, the certificate checked row by row, two signals crossing to become one identical key at each end, the packet scrambled to noise and back, the padlock closing beside the address. A step bar along the bottom lights the three moves. The check moves to a quiz on the same field; the close replays the opening trip, now as noise.",
+  "chrome": {
+    "section_labels": false
+  },
+  "fx": {
+    "enabled": false
+  },
+  "join_material": "cut",
+  "world": {
+    "stations": [
+      {
+        "id": "system",
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the held system stage",
+        "note": "Browser window left (about x 110 to 630, y 150 to 700), server right (about x 1430 to 1810, y 170 to 700), the network path at about y 430 between them with four nodes, the watcher on the second node (about x 1000), the watcher panel space above the path (about y 150 to 330), the certificate check panel space centre (about x 660 to 1300, y 150 to 640) for b05 to b07, the step bar along the bottom (about y 770 to 880). Nothing readable below y 930 (captions)."
+      },
+      {
+        "id": "check",
+        "x": 2400,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "zone": "the quiz",
+        "note": "quiz.question then quiz.answer on the plain field, b15 and b16."
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "None: the literal system, browser to server, shown as a clean diagram that changes state.",
+    "setting": "A plain light field: one browser, one server, the shared network between them.",
+    "arc": "A login crosses shared wifi readable and is copied; three moves make it private: the certificate proves who, a key exchange agrees a key the watcher cannot work out, the key scrambles the login to noise; the padlock means that private trip, not a verdict on the site; checked on a quiz; the opening trip replayed as noise.",
+    "cast": []
+  },
+  "devices": [
+    {
+      "id": "system_rig",
+      "what": "The held system: browser window (address bar, padlock slot, key slot), network path of four nodes, server box (name label, key slot, data store). Never redrawn; it changes state.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b17"
+      ]
+    },
+    {
+      "id": "step_bar",
+      "what": "Three step tiles along the bottom (1 Prove who, 2 Agree a key, 3 Scramble): appear in b03, each lights as its move starts, all three in b17.",
+      "kind": "list",
+      "beats": [
+        "b03",
+        "b04",
+        "b08",
+        "b11",
+        "b17"
+      ]
+    },
+    {
+      "id": "login_packet",
+      "what": "The one login packet that travels the path: plain readable, wrapped in TLS, scrambled to noise, tampered and rejected, noise again at the close.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b04",
+        "b11",
+        "b12",
+        "b17"
+      ]
+    },
+    {
+      "id": "watcher_panel",
+      "what": "What the watcher on the path holds: the readable password, then two recorded signals and a question mark, then noise. A callback each time.",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b10",
+        "b12",
+        "b17"
+      ]
+    },
+    {
+      "id": "certificate_card",
+      "what": "The certificate card with three check rows (Issuer, Name, Date) that tick in turn; one fails into the warning.",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b06",
+        "b07"
+      ]
+    },
+    {
+      "id": "cut_join",
+      "what": "The one join material: hard cuts only at the opening, into the check (b15) and back to the held system for the close (b17); every other join continues the held stage.",
+      "kind": "join",
+      "beats": [
+        "b01",
+        "b15",
+        "b17"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "the plain packet, then the watcher",
+      "why": "a pale open on the exposed login"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the element the move names: TLS wrap, certificate rows, the key, the noise",
+      "why": "a slightly richer middle while the three moves are taught"
+    },
+    {
+      "from": "b15",
+      "band": "light",
+      "accent": "none in the question; the right option's mark in the answer",
+      "why": "options weigh the same until the answer"
+    },
+    {
+      "from": "b17",
+      "band": "light",
+      "break": true,
+      "accent": "the padlock settling",
+      "why": "a lift at the payoff: the same trip, now private"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "browser_window",
+        "what": "A clean flat browser window card (surface, r 20, offset shadow, ink title strip with three small muted dots). Address bar with the address text as a parameter (default login.example.com; a scheme prefix that can read http:// or https://), a padlock slot just left of the address, a content area that shows a small login form (two fields: user and password, a Log in button in muted, not blue). A key slot at the window's lower right edge (shared with the key part). Can show a warning panel over its content area (surface card, a neg cross mark, ink text Warning, a muted line Name does not match) that stops the packet. Exports anchors: address, padlock, key_slot, packet_out (the right edge where the path starts), check_panel origin.",
+        "states": [
+          "login_form",
+          "http",
+          "https",
+          "warning",
+          "lookalike_address"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b17"
+        ],
+        "size": [
+          520,
+          550
+        ]
+      },
+      {
+        "id": "server_box",
+        "what": "The server: a flat rack of three stacked units in surface with surface2 edges and small muted status dots (no blue), its name label login.example.com on a white pill hanging below it, a key slot at its left edge, and a small data store drum below or behind it (accent3 slate) that can be outlined dashed as not covered. Exports anchors: packet_in (left edge), key_slot, data_store, cert_out.",
+        "states": [
+          "idle",
+          "receiving",
+          "data_store_outlined"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b17"
+        ],
+        "size": [
+          380,
+          530
+        ]
+      },
+      {
+        "id": "network_path",
+        "what": "The path between browser and server: a 3 px line in line token with four round nodes (surface2 discs, 2 px line edge); the first node labelled Shared wifi (label 28 px muted). A method to move a token along it from either end (positions 0 to 1). A trip_band state: the line between the two ends thickens to a solid band (accent when named, ink otherwise) for the private trip. Exports node anchors node1 to node4 and a point at any position.",
+        "states": [
+          "plain",
+          "trip_band"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b17"
+        ],
+        "size": [
+          760,
+          120
+        ]
+      },
+      {
+        "id": "watcher",
+        "what": "The passive watcher: an ink disc on node 2 with a white Lucide eye icon (eye can be closed, open, or pulse once), and its panel above the node (surface card, r 20, title Watcher in muted) that shows one of: copied (a copy of the packet with user and password readable in mono ink), signals (the two recorded signal chips, slate and amber, and a dashed key slot holding a large ink question mark), noise (a block of scrambled mono glyphs from a fixed seeded string, muted). Never a person, never a face.",
+        "states": [
+          "hidden",
+          "eye_open",
+          "copied",
+          "signals",
+          "noise"
+        ],
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b17"
+        ],
+        "size": [
+          340,
+          420
+        ]
+      },
+      {
+        "id": "login_packet",
+        "what": "The login packet: a small card token (about 200 x 120) that travels the path. States: plain (title Login, two mono lines user: alex and password: harbour, readable), wrapped (the same card inside a 4 px accent outline with a TLS tab), noise (the card's text replaced by a seeded block of scrambled mono glyphs, a morph from plain to noise and back as it passes through a key), altered (one glyph block in the noise swaps to a visibly different block), rejected (a neg cross mark on it, it dims and stops). Accent only when the narration names it.",
+        "states": [
+          "plain",
+          "wrapped",
+          "noise",
+          "altered",
+          "rejected"
+        ],
+        "beats": [
+          "b01",
+          "b02",
+          "b04",
+          "b07",
+          "b11",
+          "b12",
+          "b17"
+        ],
+        "size": [
+          220,
+          140
+        ]
+      },
+      {
+        "id": "certificate_card",
+        "what": "A certificate card (surface, r 20, a small ribbon seal in accent3) with the site name login.example.com as its title and three rows: Issuer (Trusted authority), Name (login.example.com), Date (a short validity bar with a today marker inside its range: no digits). Each row has a mark slot at its right: empty, tick (kit.mark yes), cross (kit.mark no). Row highlight state puts the row label in accent while it is spoken. A small form to travel from the server to the browser, and a large form (about 620 x 420) in the check panel space. A thin line can join the Name row to the browser's address.",
+        "states": [
+          "small",
+          "in_panel",
+          "row_issuer",
+          "row_name",
+          "row_date",
+          "tick_issuer",
+          "tick_name",
+          "tick_date",
+          "name_fail",
+          "all_pass"
+        ],
+        "beats": [
+          "b05",
+          "b06",
+          "b07"
+        ],
+        "size": [
+          620,
+          420
+        ]
+      },
+      {
+        "id": "key_exchange",
+        "what": "The key exchange parts: an own mark at each end that never leaves (a small square chip: slate at the browser, amber at the server), a travelling signal chip in the same two colours (the browser's slate signal goes right, the server's amber signal goes left), an empty dashed key slot at each end, and the key: one key shape with a notched bit pattern, IDENTICAL at both ends, which forms where a received signal meets that side's own mark. Key states: empty, forming, named (accent fill), held (ink fill). The key itself is never drawn on the path.",
+        "states": [
+          "slots_empty",
+          "own_marks",
+          "signals_travel",
+          "combine",
+          "key_named",
+          "key_held"
+        ],
+        "beats": [
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b17"
+        ],
+        "size": [
+          160,
+          100
+        ]
+      },
+      {
+        "id": "padlock",
+        "what": "A small flat padlock beside the address in the browser bar (about 44 px in the bar; a larger 96 px form for the close): open (shackle up, muted) and closed (shackle down, accent when named, ink when held), with a close motion.",
+        "states": [
+          "open",
+          "closed_named",
+          "closed_held"
+        ],
+        "beats": [
+          "b13",
+          "b14",
+          "b17"
+        ],
+        "size": [
+          96,
+          96
+        ]
+      },
+      {
+        "id": "step_bar",
+        "what": "Three step tiles in one row along the bottom (about 1200 wide, centre x 960, y 780 to 870): 1 Prove who, 2 Agree a key, 3 Scramble, each a white card with a numbered disc. States per tile: hidden, shown (neutral), named (accent fill, white text, while spoken), done (ink disc with a pos tick, card neutral). All three can show done together.",
+        "states": [
+          "hidden",
+          "shown",
+          "named",
+          "done",
+          "all_done"
+        ],
+        "beats": [
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13",
+          "b14",
+          "b17"
+        ],
+        "size": [
+          1200,
+          90
+        ]
+      }
+    ],
+    "notes": "No people, no presenter, no faces anywhere. Corporate-clean tokens only (guide s2): one blue element or one blue family per settled frame, the one the narration names; everything else ink, muted, line, surface, surface2, accent3 slate. The two key-exchange colours are slate (accent3) and amber (accent2); the key turns blue only when named. pos and neg only as kit.mark ticks and crosses and tags under 300 x 60. Labels 28 px or larger, body weight 500, names 700; Lucide icons only; radii by role (20 cards, 14 bezels, 10 tags, 6 inner fields). Every word on screen is the lesson's: login.example.com and the look-alike login-example.co are fictional illustration addresses; user: alex and password: harbour are illustration values. Noise glyphs come from a fixed seeded string (Loom.rng), never Math.random."
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "system",
+      "subject": "A login crosses shared wifi in plain text",
+      "world": "the system stage on the plain light field",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "hook",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "packet",
+      "design": {
+        "treatment": "The browser window settles at left with its login form, the server at right, the path draws between them with Shared wifi on its first node; the plain login packet leaves the browser and travels the path to the server.",
+        "why_motion": "the trip across the network is the thing being taught",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s1 board (IBM Carbon motion, Atlassian low-fidelity UI)",
+          "scenes_examples/style_corporate_clean_request_route.js (one carrier on a route)"
+        ],
+        "elements": [
+          {
+            "name": "browser",
+            "label": "browser_window login_form, address http://login.example.com"
+          },
+          {
+            "name": "server",
+            "label": "server_box idle"
+          },
+          {
+            "name": "path",
+            "label": "network_path plain, node1 Shared wifi"
+          },
+          {
+            "name": "packet",
+            "label": "login_packet plain: Login, user: alex, password: harbour"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say you log in",
+            "element": "browser",
+            "action": "browser window settles with the login form",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "on shared wifi",
+            "element": "path",
+            "action": "the path draws from browser to server, Shared wifi label on node 1; server settles",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Your password crosses the network",
+            "element": "packet",
+            "action": "the plain packet leaves the browser and travels the path",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "to the server",
+            "element": "packet",
+            "action": "the packet arrives at the server",
+            "motion": "travel end"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "packet"
+          ],
+          "retiring": [],
+          "incoming": [
+            "browser",
+            "server",
+            "path",
+            "packet"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "packet"
+      ],
+      "subject": "Any watcher on the path can read it",
+      "world": "the same stage, the watcher revealed",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "watcher",
+      "design": {
+        "treatment": "The packet replays its trip; as it crosses node 2 the watcher's eye disc appears on that node and a copy of the packet peels up into the watcher panel, where user and password read plainly under the title Plain HTTP: readable. The watcher is the one loud thing.",
+        "why_motion": "the copying happens in transit; the copy rising off the path is the exposure",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s9 (UI and objects)"
+        ],
+        "elements": [
+          {
+            "name": "watcher",
+            "label": "watcher eye_open on node 2"
+          },
+          {
+            "name": "watcher_panel",
+            "label": "watcher copied: Plain HTTP: readable, user: alex, password: harbour"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Over plain HTTP",
+            "element": "packet",
+            "action": "the packet returns to the browser and sets off again; the address scheme reads http://",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "any watcher",
+            "element": "watcher",
+            "action": "the eye disc appears on node 2 as the packet reaches it",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "can read it",
+            "element": "watcher_panel",
+            "action": "a copy of the packet rises into the watcher panel; the password reads plainly",
+            "motion": "travel up and reveal"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "packet"
+          ],
+          "travelling": [
+            "packet"
+          ],
+          "retiring": [
+            "packet",
+            "watcher_panel"
+          ],
+          "incoming": [
+            "watcher",
+            "watcher_panel"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher"
+      ],
+      "subject": "Three moves, named in order",
+      "world": "the same stage, the step bar arrives",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "step_bar",
+      "design": {
+        "treatment": "The watcher panel and packet have gone; the step bar's three tiles arrive one by one along the bottom as spoken, each blue while named then neutral; the system stays above.",
+        "why_motion": "the three moves arrive in the order they will be taught",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s10 (list.steps settings)"
+        ],
+        "elements": [
+          {
+            "name": "step_bar",
+            "label": "step_bar: 1 Prove who, 2 Agree a key, 3 Scramble"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "three moves",
+            "element": "step_bar",
+            "action": "the bar's row space appears",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "prove who",
+            "element": "step_bar",
+            "action": "tile 1 Prove who arrives named, then shown",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "agree a key",
+            "element": "step_bar",
+            "action": "tile 2 Agree a key arrives named, then shown",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "scramble",
+            "element": "step_bar",
+            "action": "tile 3 Scramble arrives named, then shown",
+            "motion": "reveal"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "step_bar"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar"
+      ],
+      "subject": "HTTPS is HTTP inside TLS, opened by a handshake",
+      "world": "the same stage, a new packet waits",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "tls_wrap",
+      "design": {
+        "treatment": "Tile 1 lights. A new plain packet appears at the browser and the address scheme turns to https://; a TLS outline closes around the packet with the label HTTPS = HTTP inside TLS; two small Hello chips cross between browser and server along the path while the packet waits, labelled Handshake first.",
+        "why_motion": "the wrap and the hello happen in order before any data moves",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s4 (shape language)"
+        ],
+        "elements": [
+          {
+            "name": "packet",
+            "label": "login_packet plain then wrapped at the browser"
+          },
+          {
+            "name": "tls_wrap",
+            "label": "the TLS outline with label HTTPS = HTTP inside TLS"
+          },
+          {
+            "name": "hello",
+            "label": "two Hello chips crossing, label Handshake first"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "HTTPS is web traffic",
+            "element": "packet",
+            "action": "tile 1 named; a new plain packet appears at the browser; address reads https://",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "wrapped in TLS",
+            "element": "tls_wrap",
+            "action": "the TLS outline closes around the packet, label appears",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "opens with a handshake",
+            "element": "hello",
+            "action": "Hello chips cross browser to server and back; the packet waits",
+            "motion": "travel"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar"
+          ],
+          "travelling": [],
+          "retiring": [
+            "hello"
+          ],
+          "incoming": [
+            "packet",
+            "tls_wrap",
+            "hello"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "packet",
+        "tls_wrap"
+      ],
+      "subject": "The server presents its certificate",
+      "world": "the same stage, the check panel opens",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "cert",
+      "design": {
+        "treatment": "Tile 1 is named. A small certificate card slides out of the server and travels the path to the browser; the browser lifts it into the check panel in the centre, where it grows to its large form with its three rows still unmarked. The watcher dims to quiet behind.",
+        "why_motion": "the certificate is handed from server to browser: the direction is the meaning",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s9"
+        ],
+        "elements": [
+          {
+            "name": "cert",
+            "label": "certificate_card small then in_panel, title login.example.com"
+          },
+          {
+            "name": "check_panel",
+            "label": "the browser's check panel space in the centre"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Move one, identity",
+            "element": "step_bar",
+            "action": "tile 1 named again",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "presents a certificate",
+            "element": "cert",
+            "action": "the small card leaves the server and travels to the browser",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "its proof of who it is",
+            "element": "cert",
+            "action": "the card lifts into the check panel and grows to the large form",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "packet",
+            "tls_wrap"
+          ],
+          "travelling": [
+            "cert"
+          ],
+          "retiring": [],
+          "incoming": [
+            "cert",
+            "check_panel"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "packet",
+        "tls_wrap",
+        "cert",
+        "check_panel"
+      ],
+      "subject": "Issuer, name and date, checked in turn",
+      "world": "the check panel, three rows ticking",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "the row being spoken",
+      "design": {
+        "treatment": "On the large certificate each row lights blue while spoken and takes a tick: Issuer with Trusted authority; Name with a thin line drawn to the browser's address, the two names matching; Date with the today marker sliding inside the validity bar. Only one row is blue at a time.",
+        "why_motion": "three checks in sequence; each tick lands on its word",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s4 (tick and cross)"
+        ],
+        "elements": [
+          {
+            "name": "tick_issuer",
+            "label": "Issuer row: Trusted authority, tick"
+          },
+          {
+            "name": "tick_name",
+            "label": "Name row joined to the address, tick"
+          },
+          {
+            "name": "tick_date",
+            "label": "Date row: today marker within range, tick"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The browser checks three things",
+            "element": "cert",
+            "action": "the three rows show, marks empty",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "a trusted authority issued it",
+            "element": "tick_issuer",
+            "action": "Issuer row named, tick",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "the name matches the address",
+            "element": "tick_name",
+            "action": "a line draws from the Name row to the address; tick",
+            "motion": "draw then pop"
+          },
+          {
+            "t_anchor": "it has not expired",
+            "element": "tick_date",
+            "action": "today marker slides inside the bar; tick",
+            "motion": "move then pop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "packet",
+            "tls_wrap",
+            "cert",
+            "check_panel"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "tick_issuer",
+            "tick_name",
+            "tick_date"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "packet",
+        "tls_wrap",
+        "cert",
+        "check_panel",
+        "tick_issuer",
+        "tick_name",
+        "tick_date"
+      ],
+      "subject": "Fail any one, and the browser warns",
+      "world": "the check panel, one row failing",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "warning",
+      "design": {
+        "treatment": "The Name tick turns to a cross; the browser's warning panel covers its content (Warning, Name does not match, label One fails: warning) and the waiting packet is stopped where it is. At the very end the warning, certificate and packet leave, and tile 1 settles as done.",
+        "why_motion": "the failure is a state change that stops the trip",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s9 (outcome colours)"
+        ],
+        "elements": [
+          {
+            "name": "name_cross",
+            "label": "Name row cross (kit.mark no)"
+          },
+          {
+            "name": "warning",
+            "label": "browser_window warning: Warning, Name does not match; label One fails: warning"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Fail any one",
+            "element": "name_cross",
+            "action": "the Name tick swaps to a cross",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "the browser warns you",
+            "element": "warning",
+            "action": "the warning panel covers the browser content; the packet stops and shows rejected",
+            "motion": "reveal"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar"
+          ],
+          "travelling": [],
+          "retiring": [
+            "packet",
+            "tls_wrap",
+            "cert",
+            "check_panel",
+            "tick_issuer",
+            "tick_name",
+            "tick_date",
+            "name_cross",
+            "warning"
+          ],
+          "incoming": [
+            "name_cross",
+            "warning"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar"
+      ],
+      "subject": "Both ends need the same secret",
+      "world": "the system, two empty key slots",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "setup",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "key_slots",
+      "design": {
+        "treatment": "Tile 2 is named, tile 1 shows done. An empty dashed key slot opens at the browser and another at the server; the watcher's eye opens on the path between them.",
+        "why_motion": "the problem is set: two empty slots, an open eye in between",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s4 (dashed means not yet)"
+        ],
+        "elements": [
+          {
+            "name": "key_slots",
+            "label": "key_exchange slots_empty at browser and server"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Move two, a shared key",
+            "element": "step_bar",
+            "action": "tile 2 named; tile 1 done",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "Both ends need the same secret",
+            "element": "key_slots",
+            "action": "an empty dashed slot opens at each end",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "with the network watching",
+            "element": "watcher",
+            "action": "the eye opens once",
+            "motion": "pulse"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar"
+          ],
+          "travelling": [],
+          "retiring": [],
+          "incoming": [
+            "key_slots"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "key_slots"
+      ],
+      "subject": "A key exchange: the key never travels",
+      "world": "the system, signals crossing",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "key",
+      "design": {
+        "treatment": "Each end shows its own mark that stays home (slate at the browser, amber at the server). A slate signal leaves the browser and an amber signal leaves the server; they cross at the watcher's node and arrive at the far ends. At each end the received signal meets that side's own mark and the slot fills with the same notched key, blue as it lands. The key is never drawn on the path.",
+        "why_motion": "the exchange is the idea: what crosses is not the key, and the key forms only at the ends",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s7 (m.converge, m.travel)"
+        ],
+        "elements": [
+          {
+            "name": "own_marks",
+            "label": "key_exchange own_marks, slate left, amber right"
+          },
+          {
+            "name": "signals",
+            "label": "key_exchange signals_travel, slate right-bound, amber left-bound"
+          },
+          {
+            "name": "key_browser",
+            "label": "key at the browser, key_named"
+          },
+          {
+            "name": "key_server",
+            "label": "the identical key at the server, key_named"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "They run a key exchange",
+            "element": "own_marks",
+            "action": "each end shows its own mark beside its slot",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "The key itself never travels",
+            "element": "signals",
+            "action": "the two signals leave and cross on the path, past the watcher",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "in a form a watcher can use",
+            "element": "key_browser",
+            "action": "at each end signal and own mark combine; both slots fill with the identical key",
+            "motion": "converge"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots"
+          ],
+          "travelling": [
+            "signals"
+          ],
+          "retiring": [
+            "own_marks",
+            "signals"
+          ],
+          "incoming": [
+            "own_marks",
+            "signals",
+            "key_browser",
+            "key_server"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "key_slots",
+        "key_browser",
+        "key_server"
+      ],
+      "subject": "The watcher recorded it all and still has no key",
+      "world": "the system, the watcher's panel",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "intent": "process_hold",
+      "accent_on": "key_browser",
+      "design": {
+        "treatment": "The watcher panel opens above node 2 holding the two recorded signal chips and a dashed key slot with a large ink question mark, labelled Watcher: no key; the two ends keep their matching keys, which settle from blue to ink at the end of the beat. A short held frame.",
+        "why_motion": "a held comparison: what the watcher has against what the ends have",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s6 (one focal point)"
+        ],
+        "elements": [
+          {
+            "name": "watcher_panel",
+            "label": "watcher signals: two chips and a question mark, label Watcher: no key"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Even someone who recorded all of it",
+            "element": "watcher_panel",
+            "action": "the panel opens with copies of the two signals",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "cannot practically work the key out",
+            "element": "watcher_panel",
+            "action": "the question mark lands in the dashed key slot; the end keys settle to ink",
+            "motion": "pop then recolour"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots",
+            "key_browser",
+            "key_server"
+          ],
+          "travelling": [],
+          "retiring": [
+            "watcher_panel"
+          ],
+          "incoming": [
+            "watcher_panel"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "key_slots",
+        "key_browser",
+        "key_server"
+      ],
+      "subject": "The key scrambles the login; only the ends unscramble it",
+      "world": "the system, the packet through the keys",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "packet",
+      "design": {
+        "treatment": "Tile 3 is named, tile 2 shows done. A plain login packet passes through the browser's key and morphs into a block of noise, travels the path past the watcher, and passes through the server's identical key to become readable Login text again at the server.",
+        "why_motion": "scramble and unscramble are transformations in transit",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s7"
+        ],
+        "elements": [
+          {
+            "name": "packet",
+            "label": "login_packet plain, then noise, then plain at the server"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Move three",
+            "element": "step_bar",
+            "action": "tile 3 named; tile 2 done",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "scrambles the login with that key",
+            "element": "packet",
+            "action": "the plain packet passes the browser key and morphs to noise",
+            "motion": "morph"
+          },
+          {
+            "t_anchor": "Only the two ends",
+            "element": "packet",
+            "action": "the noise packet travels the path past the watcher",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "can unscramble it",
+            "element": "packet",
+            "action": "it passes the server key and reads Login again",
+            "motion": "morph"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots",
+            "key_browser",
+            "key_server"
+          ],
+          "travelling": [
+            "packet"
+          ],
+          "retiring": [
+            "packet"
+          ],
+          "incoming": [
+            "packet"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "key_slots",
+        "key_browser",
+        "key_server"
+      ],
+      "subject": "The watcher sees noise; tampering is caught",
+      "world": "the system, a second packet altered",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "noise_packet",
+      "design": {
+        "treatment": "A noise packet crosses; the watcher panel copies it and shows only noise under Watcher: noise. A second noise packet has one glyph block altered as it passes node 3; at the server it takes a cross and stops, with the tag Tampering detected.",
+        "why_motion": "both facts happen in transit: the copy and the change",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s9 (outcome colours)"
+        ],
+        "elements": [
+          {
+            "name": "noise_packet",
+            "label": "login_packet noise"
+          },
+          {
+            "name": "watcher_noise",
+            "label": "watcher noise panel, label Watcher: noise"
+          },
+          {
+            "name": "tamper_packet",
+            "label": "login_packet altered then rejected"
+          },
+          {
+            "name": "tamper_tag",
+            "label": "neg tag Tampering detected by the server"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The watcher sees only noise",
+            "element": "watcher_noise",
+            "action": "a noise packet crosses; the panel copies it and shows noise",
+            "motion": "travel and reveal"
+          },
+          {
+            "t_anchor": "any change in transit",
+            "element": "tamper_packet",
+            "action": "a second packet's glyph block is altered at node 3",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "is detected",
+            "element": "tamper_tag",
+            "action": "at the server the packet takes a cross and stops; the tag appears",
+            "motion": "pop"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots",
+            "key_browser",
+            "key_server"
+          ],
+          "travelling": [
+            "noise_packet",
+            "tamper_packet"
+          ],
+          "retiring": [
+            "noise_packet",
+            "watcher_noise",
+            "tamper_packet",
+            "tamper_tag"
+          ],
+          "incoming": [
+            "noise_packet",
+            "watcher_noise",
+            "tamper_packet",
+            "tamper_tag"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "key_slots",
+        "key_browser",
+        "key_server"
+      ],
+      "subject": "The padlock means a private trip to the named site",
+      "world": "the browser bar, the padlock closing",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "reveal",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "padlock",
+      "design": {
+        "treatment": "The padlock closes beside the address in the browser bar; the path between the ends becomes a solid trip band; a verified-name chip login.example.com sits beside the address with the padlock between them, under the label Padlock: private trip, claimed site.",
+        "why_motion": "the padlock's meaning is assembled from what the lesson built: the trip and the name",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s9"
+        ],
+        "elements": [
+          {
+            "name": "padlock",
+            "label": "padlock closed_named beside the address"
+          },
+          {
+            "name": "trip_band",
+            "label": "network_path trip_band, ink"
+          },
+          {
+            "name": "name_pair",
+            "label": "address and verified name chip side by side, label Padlock: private trip, claimed site"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now the padlock",
+            "element": "padlock",
+            "action": "the padlock closes beside the address",
+            "motion": "close"
+          },
+          {
+            "t_anchor": "a private trip",
+            "element": "trip_band",
+            "action": "the path becomes a solid band between the ends",
+            "motion": "grow"
+          },
+          {
+            "t_anchor": "the site named in the address",
+            "element": "name_pair",
+            "action": "the verified name chip settles beside the address; label appears",
+            "motion": "settle"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots",
+            "key_browser",
+            "key_server"
+          ],
+          "travelling": [],
+          "retiring": [
+            "name_pair"
+          ],
+          "incoming": [
+            "padlock",
+            "trip_band",
+            "name_pair"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "system",
+      "keep": [
+        "browser",
+        "server",
+        "path",
+        "watcher",
+        "step_bar",
+        "key_slots",
+        "key_browser",
+        "key_server",
+        "padlock",
+        "trip_band"
+      ],
+      "subject": "Not a verdict on the site; it covers the trip only",
+      "world": "the same system, a look-alike address",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "story_role": "turn",
+      "depth": "flat",
+      "light": "even",
+      "accent_on": "trip_band",
+      "design": {
+        "treatment": "A tag Not a verdict on the site appears by the padlock; the address swaps to the look-alike login-example.co and the padlock stays closed; the trip band turns blue with the label Covers the trip only, while the server's data store below it is outlined dashed in muted, outside the band.",
+        "why_motion": "the padlock staying shut on a fake address is the refutation",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s4 (dashed means not covered)"
+        ],
+        "elements": [
+          {
+            "name": "verdict_tag",
+            "label": "tag Not a verdict on the site"
+          },
+          {
+            "name": "lookalike",
+            "label": "browser_window lookalike_address login-example.co"
+          },
+          {
+            "name": "covers_tag",
+            "label": "label Covers the trip only on the trip band"
+          },
+          {
+            "name": "data_store",
+            "label": "server_box data_store_outlined, dashed muted"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "It is not a verdict on the site",
+            "element": "verdict_tag",
+            "action": "the tag appears by the padlock",
+            "motion": "reveal"
+          },
+          {
+            "t_anchor": "phishing sites can have one",
+            "element": "lookalike",
+            "action": "the address swaps to the look-alike; the padlock stays closed",
+            "motion": "swap"
+          },
+          {
+            "t_anchor": "It covers the trip",
+            "element": "covers_tag",
+            "action": "the trip band turns blue; label appears",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "not what the site does with your data",
+            "element": "data_store",
+            "action": "the data store is outlined dashed, outside the band",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": {
+          "held": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots",
+            "key_browser",
+            "key_server",
+            "padlock",
+            "trip_band"
+          ],
+          "travelling": [],
+          "retiring": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "step_bar",
+            "key_slots",
+            "key_browser",
+            "key_server",
+            "padlock",
+            "trip_band",
+            "verdict_tag",
+            "lookalike",
+            "covers_tag",
+            "data_store"
+          ],
+          "incoming": [
+            "verdict_tag",
+            "lookalike",
+            "covers_tag",
+            "data_store"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "station": "check",
+      "template": "quiz.question",
+      "props": {
+        "question": "Which gets your password?",
+        "say_question": "Which gets your password",
+        "options": [
+          {
+            "text": "Valid certificate, exact address",
+            "say": "A: valid certificate"
+          },
+          {
+            "text": "Trusted issuer, different name",
+            "say": "B: trusted issuer"
+          },
+          {
+            "text": "No certificate",
+            "say": "C: no certificate"
+          }
+        ]
+      },
+      "join_in": {
+        "type": "cut",
+        "meaning": "chapter"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice"
+    },
+    {
+      "beat": "b16",
+      "kind": "template",
+      "station": "check",
+      "template": "quiz.answer",
+      "props": {
+        "question": "Which gets your password?",
+        "options": [
+          {
+            "text": "Valid certificate, exact address"
+          },
+          {
+            "text": "Trusted issuer, different name"
+          },
+          {
+            "text": "No certificate"
+          }
+        ],
+        "answer": 0,
+        "say_answer": "A. All three checks pass",
+        "explanation": "All three pass.",
+        "say_explanation": "All three checks pass",
+        "tempting": 1,
+        "why_not": "Name fails, so the browser warns.",
+        "say_why_not": "B fails on name",
+        "also": 2,
+        "also_why": "Readable by anyone.",
+        "say_also_why": "C is readable by anyone"
+      },
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "story_role": "practice"
+    },
+    {
+      "beat": "b17",
+      "kind": "bespoke",
+      "station": "system",
+      "subject": "The same login, now private",
+      "world": "the opening stage replayed",
+      "shot": {
+        "size": "wide",
+        "move": "none"
+      },
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "story_role": "payoff",
+      "depth": "flat",
+      "light": "even",
+      "intent": "callback",
+      "accent_on": "padlock",
+      "design": {
+        "treatment": "The opening stage returns: browser with the login form at https://login.example.com, path, server, watcher on node 2. The login packet travels as noise past the watcher, whose panel copies only noise. The three step tiles light done one by one as spoken, and the padlock settles closed beside the address, blue, in a held final frame.",
+        "why_motion": "the callback shows the same trip changed by everything taught",
+        "references": [
+          "docs/styles/guides/corporate-clean.md s13 (polish checklist)"
+        ],
+        "elements": [
+          {
+            "name": "browser",
+            "label": "browser_window login_form https://login.example.com"
+          },
+          {
+            "name": "server",
+            "label": "server_box idle"
+          },
+          {
+            "name": "path",
+            "label": "network_path plain"
+          },
+          {
+            "name": "watcher",
+            "label": "watcher eye_open on node 2"
+          },
+          {
+            "name": "packet",
+            "label": "login_packet noise"
+          },
+          {
+            "name": "watcher_panel",
+            "label": "watcher noise panel"
+          },
+          {
+            "name": "step_bar",
+            "label": "step_bar shown then all_done"
+          },
+          {
+            "name": "padlock",
+            "label": "padlock closed_named, larger form beside the address"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Back at the login",
+            "element": "browser",
+            "action": "the opening stage settles: browser, path, server, watcher, step bar",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "the watcher now sees only noise",
+            "element": "packet",
+            "action": "the noise packet travels past the watcher; the panel copies noise",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Prove who",
+            "element": "step_bar",
+            "action": "tile 1 done",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "agree a key",
+            "element": "step_bar",
+            "action": "tile 2 done",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "scramble",
+            "element": "step_bar",
+            "action": "tile 3 done",
+            "motion": "recolour"
+          },
+          {
+            "t_anchor": "what the padlock stands for",
+            "element": "padlock",
+            "action": "the padlock closes and settles beside the address; final hold",
+            "motion": "close"
+          }
+        ],
+        "continuity": {
+          "held": [],
+          "travelling": [
+            "packet"
+          ],
+          "retiring": [],
+          "incoming": [
+            "browser",
+            "server",
+            "path",
+            "watcher",
+            "packet",
+            "watcher_panel",
+            "step_bar",
+            "padlock"
+          ]
+        }
+      }
+    }
+  ]
+}

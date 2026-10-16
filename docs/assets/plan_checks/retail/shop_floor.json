@@ -1,0 +1,603 @@
+{
+ "scene": "shop_floor",
+ "camera_spec": {
+  "camera": {
+   "x": 0.0,
+   "y": -1.5,
+   "eye": 1.15,
+   "yaw": 0,
+   "hfov": 55,
+   "horizon_pct": 52
+  },
+  "walls": [
+   {
+    "name": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+    "axis": "y",
+    "at": 16.0
+   },
+   {
+    "name": "left side wall of the store",
+    "axis": "x",
+    "at": -10.0
+   },
+   {
+    "name": "right side wall of the store",
+    "axis": "x",
+    "at": 12.0
+   }
+  ],
+  "points": {
+   "gl_far_face_top": [
+    -1.0,
+    12,
+    1.6
+   ],
+   "gl_far_face_floor": [
+    -1.0,
+    12,
+    0
+   ],
+   "gr_far_face_top": [
+    1.0,
+    12,
+    1.6
+   ],
+   "gr_far_face_floor": [
+    1.0,
+    12,
+    0
+   ],
+   "chiller_top_l": [
+    -3,
+    15.1,
+    2.0
+   ],
+   "chiller_top_r": [
+    3,
+    15.1,
+    2.0
+   ],
+   "back_wall_top": [
+    0,
+    16,
+    4.5
+   ],
+   "back_floor_c": [
+    0,
+    16,
+    0
+   ],
+   "light_row_far": [
+    0,
+    14,
+    3.6
+   ],
+   "staff_head_top": [
+    0.6,
+    2.3,
+    1.72
+   ],
+   "staff_head_c": [
+    0.6,
+    2.3,
+    1.6
+   ],
+   "staff_head_chin": [
+    0.6,
+    2.3,
+    1.48
+   ],
+   "staff_feet": [
+    0.6,
+    2.3,
+    0
+   ],
+   "cust_head_top": [
+    -0.5,
+    2.6,
+    1.66
+   ],
+   "cust_head_c": [
+    -0.5,
+    2.6,
+    1.54
+   ],
+   "cust_head_chin": [
+    -0.5,
+    2.6,
+    1.42
+   ],
+   "cust_feet": [
+    -0.5,
+    2.6,
+    0
+   ],
+   "gl_mid_top": [
+    -1.0,
+    6,
+    1.6
+   ],
+   "gr_mid_top": [
+    1.0,
+    6,
+    1.6
+   ],
+   "gl_y3_top": [
+    -1.0,
+    3,
+    1.6
+   ],
+   "gr_y3_top": [
+    1.0,
+    3,
+    1.6
+   ],
+   "band_l_bot": [
+    -3.5,
+    16,
+    4.0
+   ],
+   "band_r_top": [
+    3.5,
+    16,
+    4.5
+   ],
+   "wall_eaves_c": [
+    0,
+    16,
+    5.0
+   ],
+   "cross_aisle_far_floor_l": [
+    -4,
+    13.0,
+    0
+   ],
+   "chiller_front_l_floor": [
+    -3,
+    15.1,
+    0
+   ],
+   "chiller_front_r_floor": [
+    3,
+    15.1,
+    0
+   ],
+   "end_cap_far_l_top": [
+    -1.0,
+    12.0,
+    1.6
+   ],
+   "end_cap_far_l_out": [
+    -2.1,
+    12.0,
+    1.6
+   ],
+   "end_cap_far_r_out": [
+    2.1,
+    12.0,
+    1.6
+   ],
+   "tray_on_floor": [
+    0.85,
+    2.7,
+    0.25
+   ],
+   "spill_c": [
+    0.0,
+    4.6,
+    0
+   ],
+   "wet_sign": [
+    0.2,
+    4.0,
+    0.6
+   ],
+   "wet_sign_floor": [
+    0.2,
+    4.0,
+    0
+   ],
+   "near_bay_end_l_top": [
+    -1.0,
+    1.25,
+    1.6
+   ],
+   "near_bay_end_r_top": [
+    1.0,
+    1.25,
+    1.6
+   ],
+   "near_bay_end_l_floor": [
+    -1.0,
+    1.25,
+    0
+   ],
+   "near_bay_end_r_floor": [
+    1.0,
+    1.25,
+    0
+   ],
+   "near_bay_start_l_top": [
+    -1.0,
+    0,
+    1.6
+   ],
+   "near_bay_start_r_top": [
+    1.0,
+    0,
+    1.6
+   ],
+   "light_row_mid": [
+    0,
+    6,
+    3.6
+   ],
+   "staff_ray_at_gondola": [
+    1.0,
+    4.83,
+    1.7
+   ],
+   "cust_ray_at_gondola": [
+    -1.0,
+    6.7,
+    1.69
+   ],
+   "basket": [
+    0.3,
+    14.7,
+    0
+   ],
+   "shelf_right_at_staff": [
+    1.0,
+    2.3,
+    1.1
+   ],
+   "shelf_left_at_customer": [
+    -1.0,
+    2.6,
+    1.1
+   ]
+  },
+  "behind": [
+   "staff_head_top",
+   "staff_head_c",
+   "staff_head_chin",
+   "cust_head_top",
+   "cust_head_c",
+   "cust_head_chin"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 960,
+   "along_x": "at infinity (parallel to the frame)",
+   "horizon_y": 562
+  },
+  "points": {
+   "gl_far_face_top": {
+    "x": 823,
+    "y": 500,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "gl_far_face_floor": {
+    "x": 823,
+    "y": 719,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "gr_far_face_top": {
+    "x": 1097,
+    "y": 500,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "gr_far_face_floor": {
+    "x": 1097,
+    "y": 719,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "chiller_top_l": {
+    "x": 627,
+    "y": 467,
+    "where": "frame",
+    "depth": 16.6
+   },
+   "chiller_top_r": {
+    "x": 1293,
+    "y": 467,
+    "where": "frame",
+    "depth": 16.6
+   },
+   "back_wall_top": {
+    "x": 960,
+    "y": 209,
+    "where": "frame",
+    "depth": 17.5
+   },
+   "back_floor_c": {
+    "x": 960,
+    "y": 683,
+    "where": "frame",
+    "depth": 17.5
+   },
+   "light_row_far": {
+    "x": 960,
+    "y": 270,
+    "where": "frame",
+    "depth": 15.5
+   },
+   "staff_head_top": {
+    "x": 1251,
+    "y": 285,
+    "where": "frame",
+    "depth": 3.8,
+    "behind": {
+     "wall": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+     "at": [
+      2.76,
+      16.0,
+      3.78
+     ]
+    }
+   },
+   "staff_head_c": {
+    "x": 1251,
+    "y": 343,
+    "where": "frame",
+    "depth": 3.8,
+    "behind": {
+     "wall": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+     "at": [
+      2.76,
+      16.0,
+      3.22
+     ]
+    }
+   },
+   "staff_head_chin": {
+    "x": 1251,
+    "y": 401,
+    "where": "frame",
+    "depth": 3.8,
+    "behind": {
+     "wall": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+     "at": [
+      2.76,
+      16.0,
+      2.67
+     ]
+    }
+   },
+   "staff_feet": {
+    "x": 1251,
+    "y": 1120,
+    "where": "overscan",
+    "depth": 3.8
+   },
+   "cust_head_top": {
+    "x": 735,
+    "y": 332,
+    "where": "frame",
+    "depth": 4.1,
+    "behind": {
+     "wall": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+     "at": [
+      -2.13,
+      16.0,
+      3.33
+     ]
+    }
+   },
+   "cust_head_c": {
+    "x": 735,
+    "y": 386,
+    "where": "frame",
+    "depth": 4.1,
+    "behind": {
+     "wall": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+     "at": [
+      -2.13,
+      16.0,
+      2.81
+     ]
+    }
+   },
+   "cust_head_chin": {
+    "x": 735,
+    "y": 440,
+    "where": "frame",
+    "depth": 4.1,
+    "behind": {
+     "wall": "back wall above the chillers (the 1.6 m gondola tops are passed at 1.7 to 2.2 m)",
+     "at": [
+      -2.13,
+      16.0,
+      2.3
+     ]
+    }
+   },
+   "cust_feet": {
+    "x": 735,
+    "y": 1079,
+    "where": "frame",
+    "depth": 4.1
+   },
+   "gl_mid_top": {
+    "x": 714,
+    "y": 451,
+    "where": "frame",
+    "depth": 7.5
+   },
+   "gr_mid_top": {
+    "x": 1206,
+    "y": 451,
+    "where": "frame",
+    "depth": 7.5
+   },
+   "gl_y3_top": {
+    "x": 550,
+    "y": 377,
+    "where": "frame",
+    "depth": 4.5
+   },
+   "gr_y3_top": {
+    "x": 1370,
+    "y": 377,
+    "where": "frame",
+    "depth": 4.5
+   },
+   "band_l_bot": {
+    "x": 591,
+    "y": 261,
+    "where": "frame",
+    "depth": 17.5
+   },
+   "band_r_top": {
+    "x": 1329,
+    "y": 209,
+    "where": "frame",
+    "depth": 17.5
+   },
+   "wall_eaves_c": {
+    "x": 960,
+    "y": 156,
+    "where": "frame",
+    "depth": 17.5
+   },
+   "cross_aisle_far_floor_l": {
+    "x": 451,
+    "y": 708,
+    "where": "frame",
+    "depth": 14.5
+   },
+   "chiller_front_l_floor": {
+    "x": 627,
+    "y": 689,
+    "where": "frame",
+    "depth": 16.6
+   },
+   "chiller_front_r_floor": {
+    "x": 1293,
+    "y": 689,
+    "where": "frame",
+    "depth": 16.6
+   },
+   "end_cap_far_l_top": {
+    "x": 823,
+    "y": 500,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "end_cap_far_l_out": {
+    "x": 673,
+    "y": 500,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "end_cap_far_r_out": {
+    "x": 1247,
+    "y": 500,
+    "where": "frame",
+    "depth": 13.5
+   },
+   "tray_on_floor": {
+    "x": 1333,
+    "y": 957,
+    "where": "frame",
+    "depth": 4.2
+   },
+   "spill_c": {
+    "x": 960,
+    "y": 909,
+    "where": "frame",
+    "depth": 6.1
+   },
+   "wet_sign": {
+    "x": 1027,
+    "y": 746,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "wet_sign_floor": {
+    "x": 1027,
+    "y": 947,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "near_bay_end_l_top": {
+    "x": 289,
+    "y": 260,
+    "where": "frame",
+    "depth": 2.75
+   },
+   "near_bay_end_r_top": {
+    "x": 1631,
+    "y": 260,
+    "where": "frame",
+    "depth": 2.75
+   },
+   "near_bay_end_l_floor": {
+    "x": 289,
+    "y": 1333,
+    "where": "outside",
+    "depth": 2.75
+   },
+   "near_bay_end_r_floor": {
+    "x": 1631,
+    "y": 1333,
+    "where": "outside",
+    "depth": 2.75
+   },
+   "near_bay_start_l_top": {
+    "x": -269,
+    "y": 8,
+    "where": "outside",
+    "depth": 1.5
+   },
+   "near_bay_start_r_top": {
+    "x": 2189,
+    "y": 8,
+    "where": "outside",
+    "depth": 1.5
+   },
+   "light_row_mid": {
+    "x": 960,
+    "y": -41,
+    "where": "overscan",
+    "depth": 7.5
+   },
+   "staff_ray_at_gondola": {
+    "x": 1251,
+    "y": 401,
+    "where": "frame",
+    "depth": 6.33
+   },
+   "cust_ray_at_gondola": {
+    "x": 735,
+    "y": 440,
+    "where": "frame",
+    "depth": 8.2
+   },
+   "basket": {
+    "x": 994,
+    "y": 693,
+    "where": "frame",
+    "depth": 16.2
+   },
+   "shelf_right_at_staff": {
+    "x": 1445,
+    "y": 586,
+    "where": "frame",
+    "depth": 3.8
+   },
+   "shelf_left_at_customer": {
+    "x": 510,
+    "y": 584,
+    "where": "frame",
+    "depth": 4.1
+   }
+  }
+ }
+}

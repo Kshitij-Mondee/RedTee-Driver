@@ -1,0 +1,555 @@
+{
+  "title": "How HTTPS keeps your data private",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "intro",
+      "title": "A password on shared wifi",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Move one: prove who",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "Move two: agree a key",
+      "role": "peak"
+    },
+    {
+      "id": "sec3",
+      "title": "Move three: scramble",
+      "role": "rest"
+    },
+    {
+      "id": "check",
+      "title": "Which one gets the password",
+      "role": "check"
+    },
+    {
+      "id": "close",
+      "title": "The same trip, now private",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "intro",
+      "job": "scenario",
+      "narration": [
+        "Say you log in on shared wifi.",
+        "Your password crosses the network to the server."
+      ],
+      "on_screen": [
+        "Login"
+      ],
+      "visual_intent": "Browser at left, server at right on the clean field, a row of network nodes between them; a packet reading 'user, password' in plain text travels left to right.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "an illustrative login on shared wifi",
+          "hypothetical": true
+        },
+        {
+          "claim": "the path between browser and server passes through other parties such as the local network",
+          "fact": "F2"
+        }
+      ],
+      "delivery": "even and unhurried",
+      "concepts": [
+        "plain HTTP"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "intro",
+      "job": "hook",
+      "narration": [
+        "Over plain HTTP,",
+        "any watcher can read it."
+      ],
+      "on_screen": [
+        "Plain HTTP: readable"
+      ],
+      "visual_intent": "A watcher marker sits on one node of the path and copies the packet; the copied text 'password' is plainly readable in the watcher's panel. The watcher is the one loud thing.",
+      "change_over_time": true,
+      "animate_score": 0.75,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "plain HTTP data is readable by anyone who can see traffic on its path",
+          "fact": "F1"
+        },
+        {
+          "claim": "a login typed into a plain HTTP form is exposed to a passive watcher",
+          "fact": "F3"
+        }
+      ],
+      "misconception": "the network between you and the site is private",
+      "concepts": [
+        "plain HTTP"
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "intro",
+      "job": "orient",
+      "narration": [
+        "HTTPS makes it private in three moves:",
+        "prove who, agree a key, scramble."
+      ],
+      "on_screen": [
+        "1 Prove who",
+        "2 Agree a key",
+        "3 Scramble"
+      ],
+      "visual_intent": "Three labelled steps appear in order along the bottom as spoken, ready to be lit one at a time through the lesson; the browser and server stay in place above.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "HTTPS provides confidentiality, integrity and server authentication",
+          "fact": "F17"
+        }
+      ],
+      "delivery": "clear, a beat on each of the three"
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "HTTPS is web traffic wrapped in TLS,",
+        "and it opens with a handshake."
+      ],
+      "on_screen": [
+        "HTTPS = HTTP inside TLS",
+        "Handshake first"
+      ],
+      "visual_intent": "The packet is wrapped in a protective outline that reads TLS; browser and server exchange a short hello before the packet moves. Step 1 is lit.",
+      "change_over_time": true,
+      "animate_score": 0.55,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "HTTPS is HTTP carried inside a TLS connection",
+          "fact": "F4"
+        },
+        {
+          "claim": "a handshake runs before any web data is sent",
+          "fact": "F5"
+        }
+      ],
+      "concepts": [
+        "handshake"
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "Move one, identity.",
+        "The server presents a certificate:",
+        "its proof of who it is."
+      ],
+      "on_screen": [
+        "Certificate"
+      ],
+      "visual_intent": "A certificate card with the site's name travels from the server to the browser; the browser lifts it into a checking panel.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the server proves its identity with a digital certificate",
+          "fact": "F6"
+        }
+      ],
+      "concepts": [
+        "certificate"
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "demonstrate",
+      "narration": [
+        "The browser checks three things:",
+        "a trusted authority issued it,",
+        "the name matches the address,",
+        "and it has not expired."
+      ],
+      "on_screen": [
+        "Issuer",
+        "Name",
+        "Date"
+      ],
+      "visual_intent": "On the certificate in the checking panel three rows tick in turn as spoken: issuer traced to a trusted authority, the name beside the typed address, the dates against today. Each tick is the accent while spoken.",
+      "change_over_time": true,
+      "animate_score": 0.75,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a certificate authority is an organisation browsers trust",
+          "fact": "F7"
+        },
+        {
+          "claim": "the certificate chains back to a trusted authority",
+          "fact": "F8"
+        },
+        {
+          "claim": "the name on it matches the address asked for",
+          "fact": "F9"
+        },
+        {
+          "claim": "it is within its validity dates",
+          "fact": "F10"
+        }
+      ],
+      "concepts": [
+        "certificate authority",
+        "issuer, name and date checks"
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec1",
+      "job": "consolidate",
+      "narration": [
+        "Fail any one, and the browser warns you."
+      ],
+      "on_screen": [
+        "One fails: warning"
+      ],
+      "visual_intent": "One row (the name) turns to a cross and a warning panel stops the packet at the browser; then the three checks all tick again and the first step stays lit.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "if a certificate is invalid the browser shows a warning and does not silently proceed",
+          "fact": "F11"
+        }
+      ],
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Issuer, name, date: three checks before a single byte of the login moves."
+      },
+      "delivery": "level and exact"
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "Move two, a shared key.",
+        "Both ends need the same secret, with the network watching."
+      ],
+      "on_screen": [
+        "Shared key"
+      ],
+      "visual_intent": "Step 2 lights. An empty key slot appears at the browser and at the server; the watcher sits on the path between them, eye open.",
+      "change_over_time": false,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the two sides agree a shared secret session key in the handshake",
+          "fact": "F12"
+        }
+      ],
+      "concepts": [
+        "session key"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "demonstrate",
+      "narration": [
+        "They run a key exchange.",
+        "The key itself never travels",
+        "in a form a watcher can use."
+      ],
+      "on_screen": [
+        "Key exchange"
+      ],
+      "visual_intent": "Two different coloured signals cross the path in opposite directions; at each end the received signal combines with that side's own, and both slots fill with the identical key. The key is never drawn on the path.",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the key is agreed without being sent across the network in readable form",
+          "fact": "F12"
+        }
+      ],
+      "delivery": "slower and plain; let the key land",
+      "misconception": "the key is simply sent across, perhaps locked, and a watcher could grab it",
+      "concepts": [
+        "key exchange",
+        "shared secret"
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2",
+      "job": "consolidate",
+      "narration": [
+        "Even someone who recorded all of it",
+        "cannot practically work the key out."
+      ],
+      "on_screen": [
+        "Watcher: no key"
+      ],
+      "visual_intent": "The watcher's panel holds the two recorded signals and a question mark where the key would be; the two ends hold the matching key. A short held beat.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a watcher who records the whole key exchange still cannot practically work out the session key",
+          "fact": "F13"
+        }
+      ],
+      "delivery": "slower, plain, with the hedge audible"
+    },
+    {
+      "id": "b11",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Move three.",
+        "The browser scrambles the login with that key.",
+        "Only the two ends can unscramble it."
+      ],
+      "on_screen": [
+        "Scramble"
+      ],
+      "visual_intent": "Step 3 lights. The plain login packet passes through the key at the browser and becomes a block of noise, travels the path, and is turned back into readable text by the same key at the server.",
+      "change_over_time": true,
+      "animate_score": 0.85,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "data is encrypted with the shared session key, the same key at both ends",
+          "fact": "F14"
+        },
+        {
+          "claim": "only the two ends can turn it back into readable data",
+          "fact": "F15"
+        }
+      ],
+      "concepts": [
+        "encryption"
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "The watcher sees only noise,",
+        "and any change in transit is detected."
+      ],
+      "on_screen": [
+        "Watcher: noise",
+        "Tampering detected"
+      ],
+      "visual_intent": "The watcher's panel now fills with unreadable noise. A second packet is altered on the path and the server end rejects it with a clear mark.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "encrypted data looks like unreadable noise to a watcher on the path",
+          "fact": "F15"
+        },
+        {
+          "claim": "tampering in transit is detected by the receiving end",
+          "fact": "F16"
+        }
+      ],
+      "concepts": [
+        "integrity"
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec3",
+      "job": "define",
+      "narration": [
+        "Now the padlock:",
+        "a private trip to the site named in the address."
+      ],
+      "on_screen": [
+        "Padlock: private trip, claimed site"
+      ],
+      "visual_intent": "A padlock closes beside the address in the browser frame; the address and the verified name sit side by side with the padlock between them.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "the padlock means the connection to the domain shown is private and the certificate checks passed",
+          "fact": "F18"
+        }
+      ],
+      "concepts": [
+        "padlock"
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec3",
+      "job": "refute",
+      "narration": [
+        "It is not a verdict on the site;",
+        "phishing sites can have one.",
+        "It covers the trip,",
+        "not what the site does with your data."
+      ],
+      "on_screen": [
+        "Not a verdict on the site",
+        "Covers the trip only"
+      ],
+      "visual_intent": "The padlock sits on a look-alike address with a mark that it is still only a private trip; the path section between browser and server is highlighted while the server's data store beyond it is outlined as not covered.",
+      "change_over_time": false,
+      "animate_score": 0.45,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a site with HTTPS can still be a phishing site",
+          "fact": "F19"
+        },
+        {
+          "claim": "HTTPS protects data only while it travels between browser and server",
+          "fact": "F21"
+        }
+      ],
+      "misconception": "the padlock means the site is safe and honest",
+      "concepts": [
+        "limits of HTTPS"
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "check",
+      "job": "check",
+      "narration": [
+        "A different site.",
+        "A: valid certificate, exact address.",
+        "B: trusted issuer, different name.",
+        "C: no certificate.",
+        "Which gets your password? Pause and decide."
+      ],
+      "on_screen": [
+        "Which gets your password?",
+        "A: valid, exact address",
+        "B: trusted issuer, different name",
+        "C: no certificate"
+      ],
+      "visual_intent": "Three option cards on the clean field, each with a small certificate or open-path icon, held still through the pause.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "question": "Which connection should carry your password?",
+        "options": [
+          "A: a valid certificate for the exact address",
+          "B: a certificate from a trusted authority, but for a different name",
+          "C: no certificate, plain HTTP"
+        ],
+        "answer": "A",
+        "tempting_wrong": "B"
+      },
+      "grounding": [
+        {
+          "claim": "an illustrative second site for transfer",
+          "hypothetical": true
+        },
+        {
+          "claim": "the browser checks issuer, name and date",
+          "fact": "F9"
+        }
+      ],
+      "delivery": "brisk setup, then silence"
+    },
+    {
+      "id": "b16",
+      "section": "check",
+      "job": "consolidate",
+      "narration": [
+        "A. All three checks pass.",
+        "B fails on name, so the browser warns.",
+        "C is readable by anyone."
+      ],
+      "on_screen": [
+        "A: all three pass",
+        "B: name fails",
+        "C: readable"
+      ],
+      "visual_intent": "A is marked right and its three ticks light; B shows the name tick turn to a cross with the browser warning; C shows the plain packet readable to the watcher. Correct is carried by the mark, not only colour.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "the name on the certificate must match the address",
+          "fact": "F9"
+        },
+        {
+          "claim": "an invalid certificate triggers a browser warning",
+          "fact": "F11"
+        },
+        {
+          "claim": "plain HTTP is readable on the path",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "close",
+      "job": "payoff",
+      "narration": [
+        "Back at the login:",
+        "the watcher now sees only noise.",
+        "Prove who, agree a key, scramble.",
+        "That is what the padlock stands for."
+      ],
+      "on_screen": [
+        "Prove who",
+        "Agree a key",
+        "Scramble"
+      ],
+      "visual_intent": "The opening scene replayed on the same path: the login packet now travels as noise past the watcher; the three steps light together along the bottom and the padlock settles at the browser. Calm, a held final frame.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "HTTPS provides confidentiality, integrity and server authentication",
+          "fact": "F17"
+        },
+        {
+          "claim": "encrypted data looks like noise to a watcher",
+          "fact": "F15"
+        }
+      ],
+      "delivery": "level and exact; short and done"
+    }
+  ]
+}

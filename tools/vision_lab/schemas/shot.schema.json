@@ -1,0 +1,709 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "shot",
+  "description": "One shot of one video, seen by the vision model. Times are seconds from the start of the SHOT unless a field says video time. Every claim is something visible in the frames or clip given. Measured numbers (cuts, motion, palette) come from the code and are not repeated here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "shot_id",
+    "transition_in",
+    "frame",
+    "style",
+    "characters",
+    "text_on_screen",
+    "motion_events",
+    "camera",
+    "narration_link",
+    "teaching",
+    "visual_idea",
+    "craft",
+    "flaws",
+    "loom_map",
+    "confidence"
+  ],
+  "properties": {
+    "shot_id": {
+      "type": "string"
+    },
+    "transition_in": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "how",
+        "carries_over"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "first_shot",
+            "hard_cut",
+            "match_cut",
+            "dissolve",
+            "fade_through_black",
+            "fade_through_color",
+            "wipe",
+            "iris",
+            "morph",
+            "object_transform",
+            "zoom_through",
+            "pan_continuous",
+            "whip",
+            "page_turn",
+            "none_continuous",
+            "other",
+            "unclear"
+          ]
+        },
+        "how": {
+          "type": "string",
+          "description": "One sentence: what moves or changes to get from the previous picture to this one."
+        },
+        "carries_over": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          },
+          "description": "Things that persist across the join (a character, a shape, a colour, a line). Empty if nothing."
+        }
+      }
+    },
+    "frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "setting",
+        "subject",
+        "shot_size",
+        "composition",
+        "subject_box",
+        "depth_layers",
+        "element_count",
+        "negative_space",
+        "focal_cue"
+      ],
+      "properties": {
+        "setting": {
+          "type": "string",
+          "description": "Where we are, in a few words (a cell interior, a 1600s port, an abstract field)."
+        },
+        "subject": {
+          "type": "string",
+          "description": "What the eye lands on first."
+        },
+        "shot_size": {
+          "type": "string",
+          "enum": [
+            "extreme_wide",
+            "wide",
+            "medium",
+            "close",
+            "extreme_close",
+            "insert",
+            "overhead",
+            "pov",
+            "diagram_full",
+            "text_card",
+            "abstract"
+          ]
+        },
+        "composition": {
+          "type": "string",
+          "enum": [
+            "centered",
+            "rule_of_thirds",
+            "symmetric",
+            "diagonal",
+            "frame_within_frame",
+            "negative_space_heavy",
+            "crowded",
+            "split_screen",
+            "other"
+          ]
+        },
+        "subject_box": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "[x0, y0, x1, y1] of the main subject as fractions of the frame (0..1), at the shot's middle keyframe."
+        },
+        "depth_layers": {
+          "type": "integer",
+          "description": "Visible planes of depth (1 = flat; background + midground + foreground = 3)."
+        },
+        "element_count": {
+          "type": "integer",
+          "description": "Distinct drawn things a viewer would name at the middle keyframe."
+        },
+        "negative_space": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "focal_cue": {
+          "type": "string",
+          "enum": [
+            "contrast",
+            "colour_accent",
+            "size",
+            "motion",
+            "light",
+            "leading_lines",
+            "isolation",
+            "character_gaze",
+            "none"
+          ]
+        }
+      }
+    },
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "technique",
+        "outline",
+        "shading",
+        "texture",
+        "background",
+        "palette_mood",
+        "accent_use",
+        "detail_level",
+        "notes"
+      ],
+      "properties": {
+        "technique": {
+          "type": "string",
+          "enum": [
+            "flat_vector",
+            "textured_flat",
+            "cutout_collage",
+            "painterly",
+            "watercolor",
+            "line_art",
+            "chalk_or_board",
+            "layered_2_5d",
+            "3d_render",
+            "stop_motion_look",
+            "photo_mixed",
+            "isometric",
+            "pixel",
+            "other"
+          ]
+        },
+        "outline": {
+          "type": "string",
+          "enum": [
+            "none",
+            "thin_dark",
+            "thick_dark",
+            "coloured",
+            "sketchy",
+            "mixed"
+          ]
+        },
+        "shading": {
+          "type": "string",
+          "enum": [
+            "none",
+            "flat_cel",
+            "soft_gradient",
+            "texture_brush",
+            "halftone",
+            "rim_light",
+            "mixed"
+          ]
+        },
+        "texture": {
+          "type": "string",
+          "enum": [
+            "none",
+            "paper",
+            "grain",
+            "brush",
+            "noise",
+            "halftone",
+            "mixed"
+          ]
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "solid",
+            "gradient",
+            "abstract_shapes",
+            "illustrated_scene",
+            "pattern",
+            "void_dark",
+            "photo"
+          ]
+        },
+        "palette_mood": {
+          "type": "string",
+          "description": "A few words: warm muted earth, cold night blues with one orange."
+        },
+        "accent_use": {
+          "type": "string",
+          "description": "How a saturated or contrasting colour is used to point at the important thing, or 'none'."
+        },
+        "detail_level": {
+          "type": "string",
+          "enum": [
+            "minimal",
+            "moderate",
+            "rich"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Anything about the drawing language a designer would need to copy the LOOK (not the picture): shapes, corner style, line weight, how light is drawn."
+        }
+      }
+    },
+    "characters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "count",
+        "design",
+        "acting"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "design": {
+          "type": "string",
+          "description": "Proportions (head-to-body), face (eyes, mouth), hands, how simplified. 'none' if no characters."
+        },
+        "acting": {
+          "type": "string",
+          "description": "What they do and how emotion reads (pose, gesture, expression, timing). 'none' if no characters."
+        }
+      }
+    },
+    "text_on_screen": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "words",
+          "height_frac",
+          "position",
+          "enters",
+          "seconds_visible"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "title",
+              "label",
+              "number",
+              "quote",
+              "list",
+              "caption",
+              "diagram_text",
+              "ui_text",
+              "signage",
+              "credits"
+            ]
+          },
+          "words": {
+            "type": "integer",
+            "description": "How many words (do NOT copy the words)."
+          },
+          "height_frac": {
+            "type": "number",
+            "description": "Cap height of the text as a fraction of the frame height."
+          },
+          "position": {
+            "type": "string",
+            "enum": [
+              "top",
+              "center",
+              "bottom",
+              "left",
+              "right",
+              "on_object",
+              "follows_object"
+            ]
+          },
+          "enters": {
+            "type": "string",
+            "enum": [
+              "already_there",
+              "cut",
+              "fade",
+              "type_on",
+              "write_on",
+              "pop",
+              "slide",
+              "unmask",
+              "other"
+            ]
+          },
+          "seconds_visible": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "motion_events": {
+      "type": "array",
+      "maxItems": 16,
+      "description": "Everything that changes inside the shot, in time order. Times in seconds from the shot start.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "t",
+          "dur",
+          "type",
+          "what",
+          "easing",
+          "meaning"
+        ],
+        "properties": {
+          "t": {
+            "type": "number"
+          },
+          "dur": {
+            "type": "number"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "draw_on",
+              "morph",
+              "transform_into",
+              "pop_in",
+              "scale_in",
+              "slide_in",
+              "fade_in",
+              "wipe_in",
+              "unfold",
+              "grow",
+              "path_follow",
+              "rotate",
+              "bounce",
+              "particle",
+              "character_act",
+              "lip_sync",
+              "walk_cycle",
+              "secondary_motion",
+              "ambient_loop",
+              "colour_change",
+              "light_change",
+              "exit_fade",
+              "exit_slide",
+              "exit_scale",
+              "other"
+            ]
+          },
+          "what": {
+            "type": "string"
+          },
+          "easing": {
+            "type": "string",
+            "enum": [
+              "linear",
+              "smooth",
+              "snappy",
+              "springy",
+              "held_then_fast",
+              "slow_drift",
+              "stepped",
+              "unclear"
+            ]
+          },
+          "meaning": {
+            "type": "string",
+            "enum": [
+              "content",
+              "staging",
+              "ambient",
+              "emphasis",
+              "transition"
+            ],
+            "description": "content = the motion IS the idea (a cause, a process); staging = how things arrive; ambient = life; emphasis = pointing; transition = getting to the next shot."
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "code",
+              "seen"
+            ],
+            "description": "code = one of the measured real movements (give its id in code_event); seen = seen in the clip with no measured id"
+          },
+          "code_event": {
+            "type": "string",
+            "description": "the measured movement id (m1, m2, ...) when source is code, else ''"
+          }
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "move",
+        "speed",
+        "motivation"
+      ],
+      "properties": {
+        "move": {
+          "type": "string",
+          "enum": [
+            "static",
+            "push_in",
+            "pull_out",
+            "pan_left",
+            "pan_right",
+            "tilt_up",
+            "tilt_down",
+            "truck",
+            "rotate",
+            "parallax",
+            "follow",
+            "zoom_through",
+            "shake",
+            "multiple"
+          ]
+        },
+        "speed": {
+          "type": "string",
+          "enum": [
+            "none",
+            "slow",
+            "medium",
+            "fast"
+          ]
+        },
+        "motivation": {
+          "type": "string",
+          "description": "Why the camera moves (follows the subject, reveals scale, enters an object), or 'static'."
+        }
+      }
+    },
+    "narration_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gist",
+        "relation",
+        "sync",
+        "sync_offset_s",
+        "key_word_hit"
+      ],
+      "properties": {
+        "gist": {
+          "type": "string",
+          "description": "What is being SAID in this shot, paraphrased in at most 20 words. Never copy a sentence."
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "literal",
+            "metaphor",
+            "diagram",
+            "character_enactment",
+            "symbol",
+            "text_echo",
+            "data_viz",
+            "map",
+            "contrast_pair",
+            "abstract_mood",
+            "none"
+          ]
+        },
+        "sync": {
+          "type": "string",
+          "enum": [
+            "visual_leads",
+            "coincides",
+            "visual_lags",
+            "unrelated",
+            "no_speech"
+          ]
+        },
+        "sync_offset_s": {
+          "type": "number",
+          "description": "Only what you SEE in the frames: how far the key visual change is from the key word (negative = picture first). Code measures this separately; never write 0 by default."
+        },
+        "key_word_hit": {
+          "type": "string",
+          "description": "The one spoken word or short phrase (max 4 words) that the key visual change lands on, or ''."
+        }
+      }
+    },
+    "teaching": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "function",
+        "how_it_teaches"
+      ],
+      "properties": {
+        "function": {
+          "type": "string",
+          "enum": [
+            "hook",
+            "question",
+            "context",
+            "define",
+            "explain_mechanism",
+            "example",
+            "analogy",
+            "contrast",
+            "data",
+            "story_beat",
+            "recap",
+            "transition",
+            "call_to_action",
+            "credits"
+          ]
+        },
+        "how_it_teaches": {
+          "type": "string",
+          "description": "One or two sentences: what the viewer understands because of THIS picture that words alone would not give."
+        }
+      }
+    },
+    "visual_idea": {
+      "type": "string",
+      "description": "The creative idea of the shot in one sentence, as a general device: 'an abstract process shown as workers on an assembly line'. Generalise; do not retell the specific story."
+    },
+    "craft": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      },
+      "description": "Specific, transferable techniques that make this shot work (each one sentence, observable)."
+    },
+    "flaws": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "string"
+      },
+      "description": "Anything that does not work (rare in this corpus; leave empty rather than invent)."
+    },
+    "loom_map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shot_size",
+        "move",
+        "join_in",
+        "depth",
+        "story_role",
+        "motion_is"
+      ],
+      "properties": {
+        "shot_size": {
+          "type": "string",
+          "enum": [
+            "establishing",
+            "wide",
+            "medium",
+            "close",
+            "insert",
+            "overhead",
+            "pov"
+          ]
+        },
+        "move": {
+          "type": "string",
+          "enum": [
+            "none",
+            "push",
+            "pull",
+            "pan",
+            "other"
+          ]
+        },
+        "join_in": {
+          "type": "string",
+          "enum": [
+            "cut",
+            "camera",
+            "travel",
+            "zoom",
+            "canvas",
+            "continue",
+            "iris",
+            "wipe",
+            "dip",
+            "fade",
+            "morph",
+            "other"
+          ]
+        },
+        "depth": {
+          "type": "string",
+          "enum": [
+            "flat",
+            "layered",
+            "iso",
+            "3d"
+          ]
+        },
+        "story_role": {
+          "type": "string",
+          "enum": [
+            "hook",
+            "setup",
+            "turn",
+            "reveal",
+            "payoff",
+            "practice",
+            "none"
+          ]
+        },
+        "motion_is": {
+          "type": "string",
+          "enum": [
+            "content",
+            "staging"
+          ]
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overall",
+        "unsure_about"
+      ],
+      "properties": {
+        "overall": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "unsure_about": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "string"
+          },
+          "description": "Field names you guessed at."
+        }
+      }
+    }
+  }
+}

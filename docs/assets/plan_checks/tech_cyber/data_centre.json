@@ -1,0 +1,453 @@
+{
+ "scene": "data_centre",
+ "camera_spec": {
+  "camera": {
+   "x": 0.15,
+   "y": -2.6,
+   "eye": 1.62,
+   "yaw": 0,
+   "hfov": 55,
+   "horizon_pct": 44
+  },
+  "walls": [
+   {
+    "name": "far end door",
+    "axis": "y",
+    "at": 7.2
+   },
+   {
+    "name": "left rack fronts",
+    "axis": "x",
+    "at": -0.9
+   },
+   {
+    "name": "right rack fronts",
+    "axis": "x",
+    "at": 0.9
+   }
+  ],
+  "points": {
+   "near_door_L_top": [
+    -0.9,
+    0,
+    2.1
+   ],
+   "near_door_R_top": [
+    0.9,
+    0,
+    2.1
+   ],
+   "near_door_L_floor": [
+    -0.9,
+    0,
+    0
+   ],
+   "far_door_L_floor": [
+    -0.9,
+    7.2,
+    0
+   ],
+   "far_door_R_top": [
+    0.9,
+    7.2,
+    2.1
+   ],
+   "far_door_stile_top": [
+    0,
+    7.2,
+    2.1
+   ],
+   "far_door_stile_floor": [
+    0,
+    7.2,
+    0
+   ],
+   "far_wall_L": [
+    -0.9,
+    9.6,
+    0
+   ],
+   "far_wall_R_top": [
+    0.9,
+    9.6,
+    3.6
+   ],
+   "rackL_front_near_top": [
+    -0.9,
+    0,
+    2.0
+   ],
+   "rackL_front_far_top": [
+    -0.9,
+    7.2,
+    2.0
+   ],
+   "rackL_front_near_floor": [
+    -0.9,
+    0,
+    0
+   ],
+   "rackR_front_near_top": [
+    0.9,
+    0,
+    2.0
+   ],
+   "rackR_front_far_top": [
+    0.9,
+    7.2,
+    2.0
+   ],
+   "rackR_front_near_floor": [
+    0.9,
+    0,
+    0
+   ],
+   "roof_near_L": [
+    -0.9,
+    0,
+    2.2
+   ],
+   "roof_far_R": [
+    0.9,
+    7.2,
+    2.2
+   ],
+   "open_rack_near_top": [
+    -0.9,
+    3.0,
+    2.0
+   ],
+   "open_rack_far_floor": [
+    -0.9,
+    3.6,
+    0
+   ],
+   "open_rack_mid": [
+    -0.9,
+    3.3,
+    1.2
+   ],
+   "tray_above_roof_near": [
+    0,
+    0.5,
+    2.7
+   ],
+   "tray_above_roof_far": [
+    0,
+    7.2,
+    2.7
+   ],
+   "tech_head_top": [
+    -0.25,
+    3.3,
+    1.76
+   ],
+   "tech_head_c": [
+    -0.25,
+    3.3,
+    1.64
+   ],
+   "tech_feet": [
+    -0.25,
+    3.3,
+    0
+   ],
+   "visitor_head_top": [
+    0.35,
+    4.8,
+    1.68
+   ],
+   "visitor_head_c": [
+    0.35,
+    4.8,
+    1.56
+   ],
+   "visitor_feet": [
+    0.35,
+    4.8,
+    0
+   ],
+   "tile_perf_y3": [
+    0,
+    3.0,
+    0
+   ],
+   "card_reader": [
+    0.95,
+    7.2,
+    1.1
+   ],
+   "near_leafL_outer_top": [
+    -1.8,
+    -0.05,
+    2.1
+   ],
+   "near_leafR_outer_top": [
+    1.8,
+    -0.05,
+    2.1
+   ],
+   "far_wall_floor_x0": [
+    0,
+    9.6,
+    0
+   ],
+   "open_rack_door_folded_far_edge": [
+    -0.92,
+    4.2,
+    1.0
+   ]
+  },
+  "behind": [
+   "tech_head_top",
+   "tech_head_c",
+   "visitor_head_top",
+   "visitor_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 960,
+   "along_x": "at infinity (parallel to the frame)",
+   "horizon_y": 475
+  },
+  "points": {
+   "near_door_L_top": {
+    "x": 215,
+    "y": 135,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "near_door_R_top": {
+    "x": 1492,
+    "y": 135,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "near_door_L_floor": {
+    "x": 215,
+    "y": 1624,
+    "where": "outside",
+    "depth": 2.6
+   },
+   "far_door_L_floor": {
+    "x": 762,
+    "y": 780,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "far_door_R_top": {
+    "x": 1101,
+    "y": 385,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "far_door_stile_top": {
+    "x": 932,
+    "y": 385,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "far_door_stile_floor": {
+    "x": 932,
+    "y": 780,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "far_wall_L": {
+    "x": 801,
+    "y": 720,
+    "where": "frame",
+    "depth": 12.2
+   },
+   "far_wall_R_top": {
+    "x": 1073,
+    "y": 176,
+    "where": "frame",
+    "depth": 12.2
+   },
+   "rackL_front_near_top": {
+    "x": 215,
+    "y": 206,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "rackL_front_far_top": {
+    "x": 762,
+    "y": 404,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "rackL_front_near_floor": {
+    "x": 215,
+    "y": 1624,
+    "where": "outside",
+    "depth": 2.6
+   },
+   "rackR_front_near_top": {
+    "x": 1492,
+    "y": 206,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "rackR_front_far_top": {
+    "x": 1101,
+    "y": 404,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "rackR_front_near_floor": {
+    "x": 1492,
+    "y": 1624,
+    "where": "outside",
+    "depth": 2.6
+   },
+   "roof_near_L": {
+    "x": 215,
+    "y": 64,
+    "where": "frame",
+    "depth": 2.6
+   },
+   "roof_far_R": {
+    "x": 1101,
+    "y": 366,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "open_rack_near_top": {
+    "x": 614,
+    "y": 350,
+    "where": "frame",
+    "depth": 5.6
+   },
+   "open_rack_far_floor": {
+    "x": 648,
+    "y": 957,
+    "where": "frame",
+    "depth": 6.2
+   },
+   "open_rack_mid": {
+    "x": 632,
+    "y": 606,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "tray_above_roof_near": {
+    "x": 871,
+    "y": -167,
+    "where": "outside",
+    "depth": 3.1
+   },
+   "tray_above_roof_far": {
+    "x": 932,
+    "y": 272,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "tech_head_top": {
+    "x": 835,
+    "y": 431,
+    "where": "frame",
+    "depth": 5.9,
+    "behind": {
+     "wall": "far end door",
+     "at": [
+      -0.51,
+      7.2,
+      1.85
+     ]
+    }
+   },
+   "tech_head_c": {
+    "x": 835,
+    "y": 469,
+    "where": "frame",
+    "depth": 5.9,
+    "behind": {
+     "wall": "far end door",
+     "at": [
+      -0.51,
+      7.2,
+      1.65
+     ]
+    }
+   },
+   "tech_feet": {
+    "x": 835,
+    "y": 982,
+    "where": "frame",
+    "depth": 5.9
+   },
+   "visitor_head_top": {
+    "x": 1010,
+    "y": 460,
+    "where": "frame",
+    "depth": 7.4,
+    "behind": {
+     "wall": "far end door",
+     "at": [
+      0.41,
+      7.2,
+      1.7
+     ]
+    }
+   },
+   "visitor_head_c": {
+    "x": 1010,
+    "y": 490,
+    "where": "frame",
+    "depth": 7.4,
+    "behind": {
+     "wall": "far end door",
+     "at": [
+      0.41,
+      7.2,
+      1.54
+     ]
+    }
+   },
+   "visitor_feet": {
+    "x": 1010,
+    "y": 879,
+    "where": "frame",
+    "depth": 7.4
+   },
+   "tile_perf_y3": {
+    "x": 911,
+    "y": 1009,
+    "where": "frame",
+    "depth": 5.6
+   },
+   "card_reader": {
+    "x": 1111,
+    "y": 573,
+    "where": "frame",
+    "depth": 9.8
+   },
+   "near_leafL_outer_top": {
+    "x": -450,
+    "y": 128,
+    "where": "outside",
+    "depth": 2.55
+   },
+   "near_leafR_outer_top": {
+    "x": 2153,
+    "y": 128,
+    "where": "overscan",
+    "depth": 2.55
+   },
+   "far_wall_floor_x0": {
+    "x": 937,
+    "y": 720,
+    "where": "frame",
+    "depth": 12.2
+   },
+   "open_rack_door_folded_far_edge": {
+    "x": 670,
+    "y": 643,
+    "where": "frame",
+    "depth": 6.8
+   }
+  }
+ }
+}

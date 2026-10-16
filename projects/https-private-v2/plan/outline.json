@@ -1,0 +1,281 @@
+{
+  "concept": "One system diagram on the plain light field, held for the whole lesson: the browser window at left, the server at right, a short path of network nodes between them with a watcher sitting on one node. The same login packet makes the trip again and again while the system changes state on the spoken word: readable and copied, then wrapped in TLS, the certificate checked row by row, two signals crossing to become one identical key at each end, the packet scrambled to noise and back, the padlock closing beside the address. A step bar along the bottom lights the three moves. The check moves to a quiz on the same field; the close replays the opening trip, now as noise.",
+  "world": "A single clean motion graphics stage on the corporate-clean light field: browser left, path with nodes and watcher centre, server right, step bar along the bottom; a second station for the quiz.",
+  "look": "corporate-clean, flat shapes, no sets, no people",
+  "devices": [
+    {
+      "id": "system_rig",
+      "what": "The held system: browser window (address bar, padlock slot, key slot), network path of four nodes, server box (name label, key slot, data store). Never redrawn; it changes state.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b17"
+      ]
+    },
+    {
+      "id": "step_bar",
+      "what": "Three step tiles along the bottom (1 Prove who, 2 Agree a key, 3 Scramble): appear in b03, each lights as its move starts, all three in b17.",
+      "kind": "list",
+      "beats": [
+        "b03",
+        "b04",
+        "b08",
+        "b11",
+        "b17"
+      ]
+    },
+    {
+      "id": "login_packet",
+      "what": "The one login packet that travels the path: plain readable, wrapped in TLS, scrambled to noise, tampered and rejected, noise again at the close.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b04",
+        "b11",
+        "b12",
+        "b17"
+      ]
+    },
+    {
+      "id": "watcher_panel",
+      "what": "What the watcher on the path holds: the readable password, then two recorded signals and a question mark, then noise. A callback each time.",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b10",
+        "b12",
+        "b17"
+      ]
+    },
+    {
+      "id": "certificate_card",
+      "what": "The certificate card with three check rows (Issuer, Name, Date) that tick in turn; one fails into the warning.",
+      "kind": "explain",
+      "beats": [
+        "b05",
+        "b06",
+        "b07"
+      ]
+    },
+    {
+      "id": "cut_join",
+      "what": "The one join material: hard cuts only at the opening, into the check (b15) and back to the held system for the close (b17); every other join continues the held stage.",
+      "kind": "join",
+      "beats": [
+        "b01",
+        "b15",
+        "b17"
+      ]
+    }
+  ],
+  "join_material": "cut",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "accent": "the plain packet, then the watcher",
+      "why": "a pale open on the exposed login"
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "accent": "the element the move names: TLS wrap, certificate rows, the key, the noise",
+      "why": "a slightly richer middle while the three moves are taught"
+    },
+    {
+      "from": "b15",
+      "band": "light",
+      "accent": "none in the question; the right option's mark in the answer",
+      "why": "options weigh the same until the answer"
+    },
+    {
+      "from": "b17",
+      "band": "light",
+      "break": true,
+      "accent": "the padlock settling",
+      "why": "a lift at the payoff: the same trip, now private"
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "treatment": "The held system appears; a plain packet travels and is copied by the watcher; the step bar appears.",
+      "accent_on": "packet then watcher",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "A plain login packet crosses from browser to server.",
+          "builder": "bespoke",
+          "device": "system_rig",
+          "join": "cut"
+        },
+        {
+          "beat": "b02",
+          "line": "The watcher copies it and the password reads plainly.",
+          "builder": "bespoke",
+          "device": "watcher_panel",
+          "join": "continue"
+        },
+        {
+          "beat": "b03",
+          "line": "Three step tiles appear along the bottom.",
+          "builder": "bespoke",
+          "device": "step_bar",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "TLS wrap and handshake, then the certificate travels and its three rows tick; one fails into a warning.",
+      "accent_on": "the row being checked",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "The packet is wrapped in TLS and a hello is exchanged.",
+          "builder": "bespoke",
+          "device": "login_packet",
+          "join": "continue"
+        },
+        {
+          "beat": "b05",
+          "line": "The certificate card travels to the browser's check panel.",
+          "builder": "bespoke",
+          "device": "certificate_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b06",
+          "line": "Issuer, name and date tick in turn.",
+          "builder": "bespoke",
+          "device": "certificate_card",
+          "join": "continue"
+        },
+        {
+          "beat": "b07",
+          "line": "The name row fails and the browser warns.",
+          "builder": "bespoke",
+          "device": "certificate_card",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "Empty key slots at both ends, two signals cross, both slots fill with the identical key; the watcher holds only the signals.",
+      "accent_on": "the key",
+      "beats": [
+        {
+          "beat": "b08",
+          "line": "Step two lights; empty key slots at both ends.",
+          "builder": "bespoke",
+          "device": "system_rig",
+          "join": "continue"
+        },
+        {
+          "beat": "b09",
+          "line": "Two signals cross and combine into the same key at each end.",
+          "builder": "bespoke",
+          "device": "system_rig",
+          "join": "continue"
+        },
+        {
+          "beat": "b10",
+          "line": "The watcher has the signals and a question mark.",
+          "builder": "bespoke",
+          "device": "watcher_panel",
+          "join": "continue",
+          "intent": "process_hold"
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "The packet is scrambled to noise and back; tampering is rejected; the padlock closes; its limits are marked.",
+      "accent_on": "noise, then the padlock",
+      "beats": [
+        {
+          "beat": "b11",
+          "line": "The key scrambles the packet to noise and back.",
+          "builder": "bespoke",
+          "device": "login_packet",
+          "join": "continue"
+        },
+        {
+          "beat": "b12",
+          "line": "The watcher sees noise; an altered packet is rejected.",
+          "builder": "bespoke",
+          "device": "watcher_panel",
+          "join": "continue"
+        },
+        {
+          "beat": "b13",
+          "line": "The padlock closes beside the address.",
+          "builder": "bespoke",
+          "device": "system_rig",
+          "join": "continue"
+        },
+        {
+          "beat": "b14",
+          "line": "Look-alike address with a padlock; only the trip is covered.",
+          "builder": "bespoke",
+          "device": "system_rig",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "treatment": "Quiz on the plain field: three peer options, a pause, then the answer.",
+      "beats": [
+        {
+          "beat": "b15",
+          "line": "Which connection gets the password: A, B or C.",
+          "builder": "quiz.question",
+          "device": "cut_join",
+          "join": "cut"
+        },
+        {
+          "beat": "b16",
+          "line": "A is right; B fails on name; C is readable.",
+          "builder": "quiz.answer",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "treatment": "The opening trip replayed: noise past the watcher, three steps lit, padlock settles.",
+      "accent_on": "the padlock",
+      "beats": [
+        {
+          "beat": "b17",
+          "line": "The opening login replays as noise; all three steps light.",
+          "builder": "bespoke",
+          "device": "system_rig",
+          "join": "cut",
+          "intent": "callback"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "A three.js padlock model for b13 and b17 (rejected: the brief asks for flat motion graphics; the padlock reads as a small flat icon beside the address).",
+    "A three.js device_shot laptop for b01 (rejected: the request asks for pure motion graphics on the plain field, no sets)."
+  ],
+  "open_questions": []
+}

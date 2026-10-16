@@ -1,0 +1,334 @@
+{
+  "title": "How HTTPS Keeps Your Data Private",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s1_exposed",
+      "title": "Exposed"
+    },
+    {
+      "id": "s2_identity",
+      "title": "Identity"
+    },
+    {
+      "id": "s3_key",
+      "title": "Shared key"
+    },
+    {
+      "id": "s4_scramble",
+      "title": "Scrambled data"
+    },
+    {
+      "id": "s5_check",
+      "title": "The check"
+    },
+    {
+      "id": "s6_habit",
+      "title": "The habit"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s1_exposed",
+      "job": "hook",
+      "narration": [
+        "Imagine you press Submit on a login form.",
+        "A watcher sits on the path.",
+        "What does it see?"
+      ],
+      "on_screen": [
+        "Submit",
+        "Watcher"
+      ],
+      "visual_intent": "One light board: a browser card on the left with a login form and a Submit button, a server card on the right, a path between them with a router box and a watcher marker on it. On Submit, a packet carrying the readable form fields leaves the browser along the path.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "A form submission crosses the path with a watcher on it (illustrative)",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "s1_exposed",
+      "job": "define",
+      "narration": [
+        "Plain web traffic is readable text.",
+        "Anyone on the path can copy it."
+      ],
+      "on_screen": [
+        "Readable text",
+        "Copy"
+      ],
+      "visual_intent": "The packet passes the watcher, which duplicates it; the copy shows the same readable form fields, held beside the original so both read identically.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Plain HTTP traffic is readable text",
+          "fact": "F1"
+        },
+        {
+          "claim": "Anyone on the path can read it",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "s1_exposed",
+      "job": "orient",
+      "narration": [
+        "Follow this request, and see why it turns to noise."
+      ],
+      "on_screen": [
+        "Padlock"
+      ],
+      "visual_intent": "The same board holds still; a small open padlock icon appears above the path, promising the outcome, without changing the layout.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Promise of the lesson's outcome: the padlock and what it protects",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "s2_identity",
+      "job": "demonstrate",
+      "narration": [
+        "The browser asks the server to identify itself.",
+        "It sends a certificate, signed by an authority."
+      ],
+      "on_screen": [
+        "Certificate",
+        "Certificate authority"
+      ],
+      "visual_intent": "A request arrow runs from browser to server; a certificate card slides back to the browser showing a domain name and a key, and an authority seal appears on the words 'signed by'.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A certificate ties a domain name to a public key and is signed by a certificate authority",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "s2_identity",
+      "job": "sequence",
+      "narration": [
+        "The browser checks three things:",
+        "signer trusted, name matches, in date."
+      ],
+      "on_screen": [
+        "Signer trusted",
+        "Name matches",
+        "In date"
+      ],
+      "visual_intent": "On the certificate card at the browser, three ticks appear one at a time beside signer, name and dates, each on its phrase.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Browser checks that the signature chains to a trusted authority, the name matches and the certificate is within its dates",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "s3_key",
+      "job": "demonstrate",
+      "narration": [
+        "Next, both ends need a shared key.",
+        "In modern HTTPS, it is never sent."
+      ],
+      "on_screen": [
+        "Shared key"
+      ],
+      "visual_intent": "The certificate card shrinks to a ticked badge; an empty key slot appears at each end of the path, with the watcher still between them.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "In modern HTTPS the shared session key is agreed without being sent across the network",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "s3_key",
+      "job": "demonstrate",
+      "narration": [
+        "Each side sends a temporary value.",
+        "The watcher copies both,",
+        "yet cannot practically work out the key."
+      ],
+      "on_screen": [
+        "Temporary value",
+        "Watcher"
+      ],
+      "visual_intent": "Two small value tokens cross the path in opposite directions; the watcher copies each into a tray, and a blank key slot stays empty beside the watcher.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Each side contributes a temporary value and they combine them into the shared key",
+          "fact": "F7"
+        },
+        {
+          "claim": "A watcher who records every value cannot practically work out the key",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "s3_key",
+      "job": "demonstrate",
+      "narration": [
+        "Both ends reach the same key."
+      ],
+      "on_screen": [
+        "Same key"
+      ],
+      "visual_intent": "Matching keys appear in the slots at browser and server only; the watcher's slot remains empty.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Both ends reach the same session key",
+          "fact": "F7"
+        },
+        {
+          "claim": "Watcher cannot practically work out the key",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "s3_key",
+      "job": "check",
+      "narration": [
+        "Those checks are why the key is trusted.",
+        "Name them."
+      ],
+      "on_screen": [
+        "Three checks"
+      ],
+      "visual_intent": "The ticked badge enlarges beside the keys and its three ticks re-light in turn, tying the key to the passed check.",
+      "change_over_time": true,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "pause_after_s": 2,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "Name the three certificate checks.",
+        "answer": "Signer trusted, name matches, in date."
+      },
+      "grounding": [
+        {
+          "claim": "Server signs the key agreement with its certificate's key, so an impostor fails the checks",
+          "fact": "F9"
+        },
+        {
+          "claim": "Three certificate checks recalled",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "s4_scramble",
+      "job": "demonstrate",
+      "narration": [
+        "HTTPS is that request inside a protected channel.",
+        "The key scrambles the form."
+      ],
+      "on_screen": [
+        "HTTPS",
+        "Scrambled with the key"
+      ],
+      "visual_intent": "The form data block at the browser, readable, passes through the key and turns into scrambled blocks as it leaves.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "HTTPS is the same web request carried inside a protected TLS channel",
+          "fact": "F3"
+        },
+        {
+          "claim": "The shared key scrambles the data at one end and unscrambles it at the other",
+          "fact": "F10"
+        },
+        {
+          "claim": "Form contents such as a password travel as scrambled bytes",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "s4_scramble",
+      "job": "demonstrate",
+      "narration": [
+        "The watcher copies the bytes,",
+        "but cannot read them."
+      ],
+      "on_screen": [
+        "Noise",
+        "Watcher"
+      ],
+      "visual_intent": "Scrambled blocks travel past the watcher, whose copy is the same unreadable pattern.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A watcher can copy the scrambled bytes but cannot read them",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "s4_scramble",
+      "job": "demonstrate",
+      "narration": [
+        "The server unscrambles it with the same key."
+      ],
+      "on_screen": [
+        "Unscrambled"
+      ],
+      "visual_intent": "At the server the scrambled blocks pass the key and turn readable again.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The same key unscrambles the data at the far end",
+          "fact": "F10"
+        }
+      ]
+    }
+  ]
+}

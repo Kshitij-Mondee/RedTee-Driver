@@ -1,0 +1,438 @@
+{
+ "scene": "incident_room",
+ "camera_spec": {
+  "camera": {
+   "x": 2.55,
+   "y": 0.3,
+   "eye": 1.25,
+   "yaw": 0,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "left wall",
+    "axis": "x",
+    "at": 0.0
+   },
+   {
+    "name": "end wall (screen)",
+    "axis": "y",
+    "at": 6.0
+   },
+   {
+    "name": "right wall (window)",
+    "axis": "x",
+    "at": 5.1
+   }
+  ],
+  "points": {
+   "end_left_floor": [
+    0,
+    6,
+    0
+   ],
+   "end_right_floor": [
+    5.1,
+    6,
+    0
+   ],
+   "end_left_top": [
+    0,
+    6,
+    3.2
+   ],
+   "end_right_top": [
+    5.1,
+    6,
+    3.2
+   ],
+   "screen_L_top": [
+    1.72,
+    6,
+    1.88
+   ],
+   "screen_R_bot": [
+    3.38,
+    6,
+    0.95
+   ],
+   "laptop_A": [
+    3.0,
+    3.4,
+    0.85
+   ],
+   "laptop_B": [
+    2.1,
+    4.0,
+    0.85
+   ],
+   "left_wall_y5.2": [
+    0,
+    5.2,
+    1.5
+   ],
+   "win_near_sill": [
+    5.1,
+    1.2,
+    0.9
+   ],
+   "win_far_head": [
+    5.1,
+    5.6,
+    2.7
+   ],
+   "win_far_sill": [
+    5.1,
+    5.6,
+    0.9
+   ],
+   "win_near_head": [
+    5.1,
+    1.2,
+    2.7
+   ],
+   "table_near_L": [
+    1.95,
+    1.4,
+    0.74
+   ],
+   "table_near_R": [
+    3.15,
+    1.4,
+    0.74
+   ],
+   "table_far_L": [
+    1.95,
+    4.6,
+    0.74
+   ],
+   "table_far_R": [
+    3.15,
+    4.6,
+    0.74
+   ],
+   "puck": [
+    2.55,
+    3.0,
+    0.78
+   ],
+   "im_head_top": [
+    0.75,
+    5.3,
+    1.78
+   ],
+   "im_head_c": [
+    0.75,
+    5.3,
+    1.66
+   ],
+   "im_feet": [
+    0.75,
+    5.3,
+    0
+   ],
+   "a_head_top": [
+    3.6,
+    3.4,
+    1.32
+   ],
+   "a_head_c": [
+    3.6,
+    3.4,
+    1.2
+   ],
+   "a_seat": [
+    3.65,
+    3.4,
+    0.47
+   ],
+   "b_head_top": [
+    1.6,
+    4.0,
+    1.32
+   ],
+   "b_head_c": [
+    1.6,
+    4.0,
+    1.2
+   ],
+   "b_seat": [
+    1.55,
+    4.0,
+    0.47
+   ],
+   "chair_near_L_back": [
+    1.45,
+    2.0,
+    0.9
+   ],
+   "chair_near_R_back": [
+    3.65,
+    2.0,
+    0.9
+   ],
+   "chair_far_L_back": [
+    1.45,
+    4.4,
+    0.9
+   ],
+   "chair_far_R_back": [
+    3.65,
+    4.2,
+    0.9
+   ]
+  },
+  "behind": [
+   "im_head_top",
+   "im_head_c",
+   "a_head_top",
+   "a_head_c",
+   "b_head_top",
+   "b_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 960,
+   "along_x": "at infinity (parallel to the frame)",
+   "horizon_y": 497
+  },
+  "points": {
+   "end_left_floor": {
+    "x": 135,
+    "y": 901,
+    "where": "frame",
+    "depth": 5.7
+   },
+   "end_right_floor": {
+    "x": 1785,
+    "y": 901,
+    "where": "frame",
+    "depth": 5.7
+   },
+   "end_left_top": {
+    "x": 135,
+    "y": -134,
+    "where": "overscan",
+    "depth": 5.7
+   },
+   "end_right_top": {
+    "x": 1785,
+    "y": -134,
+    "where": "overscan",
+    "depth": 5.7
+   },
+   "screen_L_top": {
+    "x": 691,
+    "y": 293,
+    "where": "frame",
+    "depth": 5.7
+   },
+   "screen_R_bot": {
+    "x": 1229,
+    "y": 594,
+    "where": "frame",
+    "depth": 5.7
+   },
+   "laptop_A": {
+    "x": 1228,
+    "y": 735,
+    "where": "frame",
+    "depth": 3.1
+   },
+   "laptop_B": {
+    "x": 736,
+    "y": 696,
+    "where": "frame",
+    "depth": 3.7
+   },
+   "left_wall_y5.2": {
+    "x": 0,
+    "y": 403,
+    "where": "frame",
+    "depth": 4.9
+   },
+   "win_near_sill": {
+    "x": 6185,
+    "y": 1214,
+    "where": "outside",
+    "depth": 0.9
+   },
+   "win_far_head": {
+    "x": 1847,
+    "y": -8,
+    "where": "overscan",
+    "depth": 5.3
+   },
+   "win_far_sill": {
+    "x": 1847,
+    "y": 619,
+    "where": "frame",
+    "depth": 5.3
+   },
+   "win_near_head": {
+    "x": 6185,
+    "y": -2474,
+    "where": "outside",
+    "depth": 0.9
+   },
+   "table_near_L": {
+    "x": -46,
+    "y": 1352,
+    "where": "outside",
+    "depth": 1.1
+   },
+   "table_near_R": {
+    "x": 1966,
+    "y": 1352,
+    "where": "outside",
+    "depth": 1.1
+   },
+   "table_far_L": {
+    "x": 703,
+    "y": 716,
+    "where": "frame",
+    "depth": 4.3
+   },
+   "table_far_R": {
+    "x": 1217,
+    "y": 716,
+    "where": "frame",
+    "depth": 4.3
+   },
+   "puck": {
+    "x": 960,
+    "y": 818,
+    "where": "frame",
+    "depth": 2.7
+   },
+   "im_head_top": {
+    "x": 296,
+    "y": 301,
+    "where": "frame",
+    "depth": 5.0,
+    "behind": {
+     "wall": "end wall (screen)",
+     "at": [
+      0.5,
+      6.0,
+      1.85
+     ]
+    }
+   },
+   "im_head_c": {
+    "x": 296,
+    "y": 346,
+    "where": "frame",
+    "depth": 5.0,
+    "behind": {
+     "wall": "end wall (screen)",
+     "at": [
+      0.5,
+      6.0,
+      1.72
+     ]
+    }
+   },
+   "im_feet": {
+    "x": 296,
+    "y": 958,
+    "where": "frame",
+    "depth": 5.0
+   },
+   "a_head_top": {
+    "x": 1585,
+    "y": 455,
+    "where": "frame",
+    "depth": 3.1,
+    "behind": {
+     "wall": "end wall (screen)",
+     "at": [
+      4.48,
+      6.0,
+      1.38
+     ]
+    }
+   },
+   "a_head_c": {
+    "x": 1585,
+    "y": 527,
+    "where": "frame",
+    "depth": 3.1,
+    "behind": {
+     "wall": "end wall (screen)",
+     "at": [
+      4.48,
+      6.0,
+      1.16
+     ]
+    }
+   },
+   "a_seat": {
+    "x": 1614,
+    "y": 961,
+    "where": "frame",
+    "depth": 3.1
+   },
+   "b_head_top": {
+    "x": 487,
+    "y": 462,
+    "where": "frame",
+    "depth": 3.7,
+    "behind": {
+     "wall": "end wall (screen)",
+     "at": [
+      1.09,
+      6.0,
+      1.36
+     ]
+    }
+   },
+   "b_head_c": {
+    "x": 487,
+    "y": 522,
+    "where": "frame",
+    "depth": 3.7,
+    "behind": {
+     "wall": "end wall (screen)",
+     "at": [
+      1.09,
+      6.0,
+      1.17
+     ]
+    }
+   },
+   "b_seat": {
+    "x": 462,
+    "y": 886,
+    "where": "frame",
+    "depth": 3.7
+   },
+   "chair_near_L_back": {
+    "x": -233,
+    "y": 876,
+    "where": "overscan",
+    "depth": 1.7
+   },
+   "chair_near_R_back": {
+    "x": 2153,
+    "y": 876,
+    "where": "overscan",
+    "depth": 1.7
+   },
+   "chair_far_L_back": {
+    "x": 465,
+    "y": 654,
+    "where": "frame",
+    "depth": 4.1
+   },
+   "chair_far_R_back": {
+    "x": 1480,
+    "y": 662,
+    "where": "frame",
+    "depth": 3.9
+   }
+  }
+ }
+}

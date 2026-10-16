@@ -1,0 +1,4 @@
+primitive_tpl_a_compare_panel_is_never_after_its_own_items, on runtime/templates/core.js before the change (2026-10-08; found by looking at the openai fork's render: b20 and b36 items with no panel):
+AssertionError: right panel at 888.22s after its item at 886.92s
+  FAIL  primitive_tpl_a_compare_panel_is_never_after_its_own_items: right panel at 888.22s after its item at 886.92s
+After: PASS (panel at 886.77s, item 886.92s, header word 888.30s); the other 10 template tests pass.

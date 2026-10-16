@@ -1,0 +1,234 @@
+{
+  "id": "blueprint",
+  "name": "Blueprint",
+  "reads_as": "A technical drawing drafted live in white on deep cyanotype blue: a faint drafting grid, parts drawn in drafting order (centre lines, outlines with the sheet behind them, detail, hidden edges, hatching), dimensions with live amber figures, numbered balloons and a title block, all lettered in a single-stroke technical hand by one quiet glowing nib. Two registers: calm teaching sheets (a few large cards, connectors, revision clouds, a tracing overlay, general notes) for explaining, and dense detail sheets for how a thing is built or moves. Cyan for the part the narration names, amber for measures, coral or mint for a verdict. For engineers and technical staff: systems, architecture, failure modes, protocols, change control, how a thing is built.",
+  "look_family": "technical",
+  "guide": "docs/styles/guides/blueprint.md",
+  "fits": [
+    "engineering",
+    "system design",
+    "architecture",
+    "failure modes",
+    "protocols",
+    "infrastructure",
+    "how a thing is built",
+    "technical onboarding",
+    "change control"
+  ],
+  "avoid_for": [
+    "soft skills",
+    "people stories",
+    "warm consumer onboarding",
+    "children",
+    "wellbeing"
+  ],
+  "palette": {
+    "field": "#11376B",
+    "field2": "#0C2C59",
+    "surface": "#16437F",
+    "surface2": "#0F3263",
+    "ink": "#F2F6FC",
+    "muted": "#A9C1E3",
+    "line": "#DCE8F7",
+    "accent": "#7FE3FF",
+    "accent2": "#FFC65C",
+    "accent3": "#FF8A7A",
+    "accent4": "#7DE8B5",
+    "pos": "#7DE8B5",
+    "neg": "#FF8A7A",
+    "shadow": "#071D3D",
+    "onAccent": "#0A2A55",
+    "caption_active": "#FFC65C"
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "roles": {
+      "label": "mono",
+      "caption": "mono"
+    },
+    "faces": [
+      {
+        "family": "Space Grotesk",
+        "weight": 500,
+        "file": "space-grotesk-latin-500-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Space Grotesk",
+        "weight": 700,
+        "file": "space-grotesk-latin-700-normal.woff2",
+        "pkg": "@fontsource/space-grotesk"
+      },
+      {
+        "family": "Inter",
+        "weight": 400,
+        "file": "inter-latin-400-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "file": "inter-latin-600-normal.woff2",
+        "pkg": "@fontsource/inter"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 400,
+        "file": "jetbrains-mono-latin-400-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      },
+      {
+        "family": "JetBrains Mono",
+        "weight": 700,
+        "file": "jetbrains-mono-latin-700-normal.woff2",
+        "pkg": "@fontsource/jetbrains-mono"
+      }
+    ]
+  },
+  "type": {
+    "display": [
+      100,
+      144
+    ],
+    "hero": [
+      88,
+      128
+    ],
+    "title": [
+      56,
+      80
+    ],
+    "lead": [
+      32,
+      40
+    ],
+    "body": [
+      30,
+      36
+    ],
+    "label": [
+      24,
+      28
+    ],
+    "caption": [
+      20,
+      24
+    ]
+  },
+  "shape": {
+    "radius": 4,
+    "stroke": 2.5,
+    "shading": "line",
+    "shadow": "none"
+  },
+  "motion": {
+    "personality": "calm",
+    "enter": 0.5,
+    "move": 0.4,
+    "exit": 0.3,
+    "stagger": 0.08,
+    "draw": 1.1,
+    "count": 1.2,
+    "overshoot": false
+  },
+  "ambient": {
+    "kind": "none",
+    "_note": "the drafting grid is the fx blueprint background (one shader layer that follows the world), not DOM nodes: a per-dot ambient made a page of 96,163 nodes and checks 50 times slower (docs/research/2026-10-10-why-checks-are-slow.md)"
+  },
+  "captions": {
+    "bg": "rgba(7,29,61,0.9)",
+    "fg": "ink",
+    "active": "caption_active",
+    "radius": 4,
+    "font": "body",
+    "size": 34,
+    "weight": 600,
+    "top": 950
+  },
+  "icons": {
+    "stroke": 1.9
+  },
+  "characters": {
+    "skin": [
+      "#F1CCA7",
+      "#D19B72",
+      "#A36B47",
+      "#744A31"
+    ],
+    "hair_colors": [
+      "#2B2420",
+      "#4A3426",
+      "#6B4A2E",
+      "#1E1E24"
+    ],
+    "cloth": "accent",
+    "hair": "shadow",
+    "ink": "shadow",
+    "paper": "ink",
+    "mouth": "accent3",
+    "extras": "silhouette",
+    "_extras_note": "what a background person is (D-100): people = the cast's rigs in muted clothes; silhouette = the grey bean; none = no crowd. A blueprint is about the system: people are rare and stay small. Change it here, never per lesson."
+  },
+  "roles": {
+    "kicker": "accent2",
+    "chapter_kicker": "accent2",
+    "term": "accent",
+    "stat_value": "accent2",
+    "date": "muted",
+    "quiz_letter": "onAccent",
+    "ui_mark": "accent3",
+    "link": "accent",
+    "button": "accent",
+    "me_bubble": "surface",
+    "person_cloth": "surface",
+    "turn_card": "shadow",
+    "avatar": [
+      "accent",
+      "accent2"
+    ]
+  },
+  "join_default": "camera",
+  "seam_join": "cut",
+  "join_note": "One sheet, one camera: pan and zoom across the drawing inside a topic (continue); a cut between topics; a wipe only at a section change, like turning to the next sheet.",
+  "music": {
+    "mood": "calm_focus",
+    "root_midi": 47
+  },
+  "fx": {
+    "background": "cyanotype",
+    "intensity": 1.0,
+    "grain": 0,
+    "vignette": 0.32,
+    "colors": [
+      "accent",
+      "accent2",
+      "accent4"
+    ],
+    "_grain_note": "D-100: grain is off or near-off by default; per-pixel noise reads as grit after H.264 on a 1080p MP4 (L-173). A lesson may set storyboard fx.grain to choose a film finish.",
+    "_background_why": "2026-10-16: cyanotype paper (mottled blues, fibres, fold creases, bleached edges) replaces the drafting grid, after Kshitij: the blueprint lost its wow next to lemo-opuscar's sheet; the engine's translucent part paper shows it through"
+  },
+  "pace": {
+    "sparse_edges": 0.01,
+    "_why": "dark-field pack: thin white lines on deep blue measure low edge density by design, as dark-technical (D-112)"
+  }
+}

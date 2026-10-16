@@ -1,0 +1,57 @@
+tests/suites/style_system.py after the L-276 follow-up (L-286, 2026-10-08): the places' set decorations follow the pack.
+The runtime before the change was copied to the session scratchpad (runtime_before) before any edit.
+
+1. primitive_style_every_role_and_material_site_follows_the_pack, 35 sites (18 before, 7 place sites and 10 object
+   kinds added), on the runtime BEFORE (LOOM_TEST_RUNTIME=<copy of runtime/ before the change>):
+  FAIL  did not reach: ['window_lights (b19, #1D3579)', 'vessel (b20, #791D35)', 'cells (b21, #35791D)',
+        'leds (b22, #4A8E22)', 'cables (b23, #8E224A)', 'chart (b24, #224A8E)', 'safety_line (b25, #5B9F33)']
+  Red on exactly the seven place sites. The ten object kinds (objects.document ... objects.lock) passed on the old
+  runtime too: materials.objects was already read for every kind (objects.js:72); only the pack values were missing.
+
+2. The same test on the runtime AFTER:
+  PASS  35 call sites follow the pack (caption_active; probe colours for plant, pot, window_lights, vessel, cells,
+        leds, cables, chart, safety_line); none used them without the keys
+
+3. primitive_style_untouched_packs_draw_byte_identical_to_before on the runtime AFTER:
+  PASS  11 pack and scene pairs byte-identical to the runtime before WS6
+  (lab_places at 3.0 s builds all five places, so the vessel, cells, LEDs, cables, chart and safety line are in
+  those hashes; the night window is not.)
+
+4. One-off, for the night window the golden set never draws: every place (the flat office and the meeting room at
+   night: true), plus all 12 object kinds, in each of the five guided packs AS SHIPPED BEFORE THIS CHANGE (none set
+   the new keys), lm-world outerHTML at 1.0 s, old runtime against new:
+  corporate-clean 4794ce5269f085ab = 4794ce5269f085ab  186160 bytes  18 elements  no errors  SAME
+  story-cartoon   828be6dd0b5d2370 = 828be6dd0b5d2370  199115 bytes  18 elements  no errors  SAME
+  glow-flat       41593e52e0cc4e6f = 41593e52e0cc4e6f  200879 bytes  18 elements  no errors  SAME
+  cinematic-noir  51549147ffed5301 = 51549147ffed5301  159364 bytes  18 elements  no errors  SAME
+  whiteboard      d4b668b7f10a1196 = d4b668b7f10a1196  923710 bytes  18 elements  no errors  SAME
+  (both sides drew: 18 elements and over 150 kB each, L-269)
+
+5. Shares measured on full-size lab frames (scenes_examples/lab/lab_set_decor.js at 18.0 s, the warehouse), pixels
+   within 3 (corporate) or 10 (glow) code values of the package tone and its light and dark faces:
+  corporate-clean accent3 packages: 17.1 % at tolerance 10, which counted the line-coloured uprights (line #6B7A93 is
+    within 10 of accent3 #64748B); 13.2 % at tolerance 3 (line pixels alone 2.7 %). Inside accent3's 3 to 15 %. Kept.
+  glow-flat muted packages: 13.9 %, over muted's "under 10 %" (guide s2). Changed to surface (sets, field family).
+
+6. Strips looked at, before and after, per pack (each compared only with itself, D-122):
+  docs/styles/demos/guides/<id>/lab_set_decor__<id>.jpg (after) and lab_set_decor__<id>__before.jpg.
+
+7. Later the same morning (10:14) another session changed runtime/core.js, boot.js and trailer.js (GSAP lazy: false,
+   Loom.settleOrigins; its comments cite L-286, an id this work had logged at 10:11). With those files the golden test
+   fails in all 11 pairs (lab_tpl_definition +54 bytes in each pack). Isolated on copies of the session-start runtime:
+  start runtime + this work's places.js and style.js only     PASS  11 pack and scene pairs byte-identical
+  start runtime + the other session's core, boot, trailer only FAIL  (the same 11 pairs as the full suite)
+  The call-site test still passes on the runtime with both changes (35 sites). The other session was sent a message about both.
+
+8. Resolved by that session (its L-289, L-290, D-134, R-31; docs/research/determinism/red_runtime_determinism.txt
+   section 7): its pass now ends at -1 s then 0 s, _world_hash also strips GSAP's inline "transform-origin: 0px 0px",
+   and style_system_golden.json was re-recorded from the pre-WS6 backup. Re-run here afterwards:
+  current runtime (both changes)                          PASS  golden, 11 pairs;  PASS  call sites, 35
+  start runtime + this work's places.js and style.js only PASS  golden, 11 pairs
+
+9. Lessons, compose and check on scratch copies, with this change (B) and without it (A: an engine copy whose only
+   differences were places.js, style.js and the five packs as they were):
+  mfa-story (corporate-clean)       A 1 error, 60 warnings   B 1 error, 60 warnings   same lines (b10 blank beat)
+  phishing-report (cinematic-noir)  A 59 errors, 62 warnings B 59 errors, 62 warnings same lines; builds share core.js and boot.js
+  feedback-that-lands               the HyperFrames check timed out on both sides: unverified
+  None of the errors is about colour; the blank-beat gate (L-277) is newer than these lessons' stored reports.

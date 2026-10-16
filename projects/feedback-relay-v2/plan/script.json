@@ -1,0 +1,512 @@
+{
+  "title": "Feedback That Changes Behaviour",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s1_vague",
+      "title": "Why vague fails"
+    },
+    {
+      "id": "s2_behaviour",
+      "title": "Name the behaviour"
+    },
+    {
+      "id": "s3_effect_step",
+      "title": "Effect and next step"
+    },
+    {
+      "id": "s4_check",
+      "title": "Check yourself"
+    },
+    {
+      "id": "s5_apply_payoff",
+      "title": "Apply and payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "s1_vague",
+      "job": "hook",
+      "narration": [
+        "Imagine a manager tells Sam,",
+        "great energy in there today.",
+        "Sam beams, and nods."
+      ],
+      "on_screen": [
+        "Great energy in there today"
+      ],
+      "visual_intent": "A cartoon meeting room emptying out. A manager touches Sam's shoulder, and the comment appears as a speech bubble above Sam, who grins and nods while Priya gathers her notes behind him.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "Sam, the manager and the meeting are an illustrative scene",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "concepts": [
+        "vague praise"
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "s1_vague",
+      "job": "scenario",
+      "narration": [
+        "Next week, Sam cuts Priya off again.",
+        "Nothing changed."
+      ],
+      "on_screen": [
+        "Nothing changed"
+      ],
+      "visual_intent": "The same meeting room, one week later: Sam's hand is up mid-sentence as Priya's speech bubble is cut off. The old comment bubble fades to grey beside it.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Sam repeats the habit the following week",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "s1_vague",
+      "job": "orient",
+      "narration": [
+        "You have been Sam."
+      ],
+      "on_screen": [
+        "You have been Sam"
+      ],
+      "visual_intent": "The cartoon Sam slowly turns into a silhouette of the viewer at their own desk, holding a similar nice-but-empty comment bubble.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The viewer has received vague feedback before",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b04",
+      "section": "s1_vague",
+      "job": "refute",
+      "narration": [
+        "So why did nothing change?",
+        "Warm, vague praise tends to feel good,",
+        "but gives you nothing to repeat."
+      ],
+      "on_screen": [
+        "Feels good",
+        "Nothing to repeat"
+      ],
+      "visual_intent": "The comment bubble sits large. A warm glow labelled with the feeling appears on the left; on the right an empty hand reaches towards the bubble and finds nothing to grip.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Vague feedback tends to give nothing specific to repeat or change",
+          "fact": "F2"
+        },
+        {
+          "claim": "Warm general praise can feel good without saying which action to keep",
+          "fact": "F3"
+        }
+      ],
+      "misconception": "Warm, general praise is enough to change what someone does."
+    },
+    {
+      "id": "b05",
+      "section": "s1_vague",
+      "job": "transition",
+      "narration": [
+        "Stay with Sam, and you will fix that comment."
+      ],
+      "on_screen": [],
+      "visual_intent": "The presenter turns towards the frozen meeting scene, gesturing at the comment bubble, as if inviting the viewer to work on it together.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "The lesson promises a usable rewrite of Sam's comment",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b06",
+      "section": "s2_behaviour",
+      "job": "refute",
+      "narration": [
+        "Here is the tricky part.",
+        "Dominating feels honest,",
+        "but it is a judgement,",
+        "and labels are more likely to bring defensiveness."
+      ],
+      "on_screen": [
+        "Dominating",
+        "Judgement"
+      ],
+      "visual_intent": "The word dominating is stamped on Sam's chest as a label. Sam's cartoon arms fold and his face tightens, a defensive wall rising between him and the speaker.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A label is a judgement about the person, not a behaviour",
+          "fact": "F5"
+        },
+        {
+          "claim": "Character-aimed feedback is more likely to trigger defensiveness",
+          "fact": "F6"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "Naming the person's character is clearer and more honest than describing what happened."
+    },
+    {
+      "id": "b07",
+      "section": "s2_behaviour",
+      "job": "demonstrate",
+      "narration": [
+        "So say what he did.",
+        "In that meeting, you spoke over Priya mid-point.",
+        "You could have heard it. That is a behaviour."
+      ],
+      "on_screen": [
+        "In that meeting, you spoke over Priya",
+        "A behaviour"
+      ],
+      "visual_intent": "The vague bubble morphs word by word into the new comment over the replayed scene, with the words spoke over Priya highlighted as Sam's bubble overlaps Priya's. The label stamp peels off Sam.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Feedback is easier to act on when it describes specific observed behaviour in a particular situation",
+          "fact": "F4"
+        },
+        {
+          "claim": "A behaviour is something that could be seen or heard",
+          "fact": "F5"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b08",
+      "section": "s2_behaviour",
+      "job": "check",
+      "narration": [
+        "Now you.",
+        "What is that comment still missing?"
+      ],
+      "on_screen": [
+        "Still missing?"
+      ],
+      "visual_intent": "The rewritten comment holds still on screen with a blank, dashed gap after it. A slow pulse on the gap while the viewer thinks.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Prompt to predict what the comment lacks",
+          "hypothetical": true
+        }
+      ],
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "pause_predict",
+        "prompt": "Sam's comment now says what he did. What does it still not say?"
+      }
+    },
+    {
+      "id": "b09",
+      "section": "s3_effect_step",
+      "job": "demonstrate",
+      "narration": [
+        "Priya could not finish her point.",
+        "That is what happened, not a guess at motives."
+      ],
+      "on_screen": [
+        "Priya could not finish her point"
+      ],
+      "visual_intent": "The dashed gap fills with the effect, highlighted. In the scene, Priya's half-finished bubble hangs with a trailing break, and the earlier version fades behind the new line.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Describing the effect shows the receiver why it matters",
+          "fact": "F7"
+        },
+        {
+          "claim": "State the effect as what happened, not as an assumption about motives",
+          "fact": "F8"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "Guessing at motives is more honest than naming what happened."
+    },
+    {
+      "id": "b10",
+      "section": "s3_effect_step",
+      "job": "demonstrate",
+      "narration": [
+        "One small step beats a long list.",
+        "Ask how Sam saw it, then agree it."
+      ],
+      "on_screen": [
+        "One small step"
+      ],
+      "visual_intent": "A third highlighted slot opens at the end of the comment. A long scrolling to-do list shrinks to a single line as Sam and the speaker sit side by side, the step shared between them.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Ending with one concrete next step gives the receiver something specific to try",
+          "fact": "F9"
+        },
+        {
+          "claim": "One small next step is easier to act on than a long list",
+          "fact": "F10"
+        },
+        {
+          "claim": "Asking the receiver's view helps agree a step they will own",
+          "fact": "F12"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "A thorough list of changes is more helpful than one small step."
+    },
+    {
+      "id": "b11",
+      "section": "s3_effect_step",
+      "job": "consolidate",
+      "narration": [
+        "You spoke over Priya mid-point,",
+        "so she could not finish.",
+        "Next time, could you let her finish first?"
+      ],
+      "on_screen": [
+        "Spoke over Priya mid-point",
+        "She could not finish",
+        "Let her finish first"
+      ],
+      "visual_intent": "The complete comment sits large over the meeting scene, its three parts in three calm colours that light up one at a time as each is read. The vague first version is a faint ghost behind it.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The comment now names behaviour, effect and one step",
+          "fact": "F14"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b12",
+      "section": "s3_effect_step",
+      "job": "consolidate",
+      "narration": [
+        "Behaviour, effect, one step.",
+        "One useful shape, and others exist."
+      ],
+      "on_screen": [
+        "Behaviour",
+        "Effect",
+        "One step"
+      ],
+      "visual_intent": "The three coloured parts lift off the comment and line up as three labelled tiles, with a few faint blank tiles of other shapes sitting dimly beside them.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Behaviour, effect and next step is one useful structure; others exist",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "s4_check",
+      "job": "check",
+      "narration": [
+        "Now you.",
+        "Dev starts a call without the agenda.",
+        "A: be more organised.",
+        "B: you skipped the agenda, so the decision slipped,",
+        "so send it round the day before.",
+        "C: same, but be more prepared."
+      ],
+      "on_screen": [
+        "A: be more organised",
+        "B: send it the day before",
+        "C: be more prepared"
+      ],
+      "visual_intent": "A small new cartoon scene of Dev at a call with an empty agenda slot, above three answer cards that slide in one by one as each is read, no answer marked.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Dev and the call are an illustrative scenario",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 3,
+      "recall": {
+        "kind": "quiz",
+        "role": "question",
+        "options": [
+          "A: Thanks for your effort today, but you need to be more organised.",
+          "B: You started the call without the agenda, so the decision slipped to next week. Could you send it round the day before next time?",
+          "C: You started without the agenda and the decision slipped to next week. Please be more prepared."
+        ]
+      }
+    },
+    {
+      "id": "b14",
+      "section": "s4_check",
+      "job": "check",
+      "narration": [
+        "It is B.",
+        "Observable. Real effect. One step to try."
+      ],
+      "on_screen": [
+        "Observable",
+        "Real effect",
+        "One step"
+      ],
+      "visual_intent": "Card B lifts forward and gets three ticks, one per question, as its behaviour, effect and step parts light up. A and C slide back.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A rewrite can be checked by asking whether it is observable, has a real effect and offers one step",
+          "fact": "F14"
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 2
+    },
+    {
+      "id": "b15",
+      "section": "s4_check",
+      "job": "refute",
+      "narration": [
+        "C is tempting, but has no step."
+      ],
+      "on_screen": [
+        "No step"
+      ],
+      "visual_intent": "Card C comes back with its behaviour and effect parts ticked, then the phrase be more prepared is circled with a blank third tick beside it.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A vague instruction is not a concrete next step the person could try",
+          "fact": "F9"
+        }
+      ],
+      "hypothetical": true,
+      "misconception": "Naming behaviour and effect is enough without a concrete step."
+    },
+    {
+      "id": "b16",
+      "section": "s5_apply_payoff",
+      "job": "practice",
+      "narration": [
+        "Now yours.",
+        "Pick one comment you owe this week,",
+        "and rewrite it before you say it."
+      ],
+      "on_screen": [
+        "One comment you owe",
+        "Rewrite it"
+      ],
+      "visual_intent": "A desk calendar with a single sticky note reading a vague comment; a pen crosses it out and starts the same three coloured slots beneath it.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The viewer rewrites a real comment using the three parts",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "s5_apply_payoff",
+      "job": "payoff",
+      "narration": [
+        "Back to Sam, same meeting, new comment.",
+        "Next week, he lets Priya finish.",
+        "Specific feedback makes change easier, not certain."
+      ],
+      "on_screen": [
+        "Next week",
+        "Sam lets Priya finish"
+      ],
+      "visual_intent": "A before and after split of the same meeting scene, then a simple timeline to next week: Sam waits with his hand lowered while Priya's bubble completes in full.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Sam's habit shifts next week after the reworked comment",
+          "hypothetical": true
+        },
+        {
+          "claim": "Specific feedback makes change easier but does not guarantee it",
+          "fact": "F13"
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b18",
+      "section": "s5_apply_payoff",
+      "job": "consolidate",
+      "narration": [
+        "Say what happened.",
+        "Say what it caused.",
+        "Offer one step."
+      ],
+      "on_screen": [
+        "What happened",
+        "What it caused",
+        "One step"
+      ],
+      "visual_intent": "The presenter holds up three fingers, one at a time, with the three short phrases appearing beside them over the calm meeting room.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Closing rule: behaviour, effect, one step",
+          "fact": "F13"
+        }
+      ]
+    }
+  ]
+}

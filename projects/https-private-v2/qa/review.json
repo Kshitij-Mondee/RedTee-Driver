@@ -1,0 +1,77 @@
+{
+  "verdict": "ship",
+  "findings": [
+    {
+      "beat": "b07",
+      "severity": "blocker",
+      "problem": "packet_rejected straddles the browser warning card and the certificate card; red stroke collides with cert border",
+      "fix": "Rejected packet placed inside the Warning panel; elements recede before the join",
+      "status": "fixed",
+      "reason": "Verified in contact sheet, no overlap"
+    },
+    {
+      "beat": "b01",
+      "severity": "major",
+      "problem": "travelling packet covers half of the 'Shared wifi' label at about 4 s",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "A moving packet passing a path label for under a second is expected; kit label already 28 px and a kit change would reopen P7 for a transient"
+    },
+    {
+      "beat": "b15",
+      "severity": "major",
+      "problem": "arrival frame blank",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Only the first frame of the quiz template entrance; frames at 105.3 to 110.5 s show title and each option arriving on its spoken cue, as designed"
+    },
+    {
+      "beat": "b17",
+      "severity": "minor",
+      "problem": "server missing at arrival",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Held system builds in over the first second; frames at 131.9 and 132.8 s show the full rig"
+    },
+    {
+      "beat": "b15",
+      "severity": "minor",
+      "problem": "Pause and decide pill overflows container",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "No container card exists; the pill sits cleanly below option C"
+    },
+    {
+      "beat": "b04",
+      "severity": "minor",
+      "problem": "TLS packet covered the browser form in b04 and b05",
+      "fix": "Packet moved above the path, faded as the certificate arrives",
+      "status": "fixed",
+      "reason": "Verified in contact sheet"
+    },
+    {
+      "beat": "b12",
+      "severity": "minor",
+      "problem": "noise packet over path label, watcher panel stacks overlapped",
+      "fix": "Packet raised, watcher panel moved",
+      "status": "fixed",
+      "reason": "Overlap warning gone; dense but readable"
+    },
+    {
+      "beat": "b08",
+      "severity": "minor",
+      "problem": "b07 cert and warning fading over b08 arrival",
+      "fix": "b07 elements recede before the join",
+      "status": "fixed",
+      "reason": "b08 arrival is clean"
+    },
+    {
+      "beat": "b11",
+      "severity": "minor",
+      "problem": "step bar tiles flash blank blue under 0.3 s at the 2-to-3 transition",
+      "fix": "none",
+      "status": "accepted",
+      "reason": "Kit step_bar label swap transient; fixing needs a third P7 reopen for a cosmetic flash"
+    }
+  ]
+}

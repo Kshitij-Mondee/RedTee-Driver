@@ -1,0 +1,314 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "b04: \"Hello\" is readable for 0.68s but 1 word(s) need 0.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: one_radius_share = 0.404 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 1.0 is worse than the worst baseline lesson (0.636): it grew (beats: _kit, b01, b02, b03, b04, b05, b06, b07)",
+    "variety: the seed's camera habit is 'pan' but 16 of 16 bespoke beats have no camera move",
+    "hf layout content_overlap @ 69.273: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(1) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 69.273: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(3) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 69.273: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(3) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 69.273: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(2) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 69.273: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(2) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 70.439: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(2) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 70.439: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(3) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 70.439: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(3) > g:nth-of-typ] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 90.498: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 93.53: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 93.53: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-] (not seen: one text is under an opaque layer at every sampled point (9 of 9 show one text))",
+    "hf layout content_overlap @ 19.592: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 19.592: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 27.056: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(1) > g:nth-of-typ]",
+    "hf layout content_overlap @ 27.056: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(1) > g:nth-of-typ]",
+    "hf layout content_overlap @ 80.702: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 80.702: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 80.702: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 10.729: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 10.729: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 18.426: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(2) > g:nth-of-typ]",
+    "hf layout content_overlap @ 18.426: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(2) > g:nth-of-typ]",
+    "hf layout content_overlap @ 19.359: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(3) > g:nth-of-typ]",
+    "hf layout content_overlap @ 19.359: Two text blocks overlap and may render unreadable. [g.lm-in > g:nth-of-type(1) > g:nth-of-type(3) > g:nth-of-typ]",
+    "hf layout content_overlap @ 28.689: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 28.689: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 73.704: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 80.235: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 83.034: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 83.034: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 83.034: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 84.9: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 84.9: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 84.9: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 84.9: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 84.9: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 132.948: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(1) > svg:nth-of-type(1) > g:nth-]",
+    "b01: small text on screen at 6.5s: \"User\" 25.4px, \"Password\" 25.4px, \"Shared wifi\" 25.4px (< 26 px)",
+    "b02: small text on screen at 11.4s: \"user: alex\" 18.9px, \"password: harbour\" 18.9px, \"Login\" 24.6px (< 26 px)",
+    "b03: small text on screen at 18.9s: \"User\" 25.4px, \"Password\" 25.4px, \"Shared wifi\" 25.4px (< 26 px)",
+    "b04: small text on screen at 26.3s: \"TLS\" 18px, \"user: alex\" 18.9px, \"password: harbour\" 18.9px (< 26 px)",
+    "b05: small text on screen at 33.8s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b06: small text on screen at 43.6s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b07: small text on screen at 47.2s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b08: small text on screen at 55.0s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b09: small text on screen at 62.9s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b10: small text on screen at 69.5s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b11: small text on screen at 78.1s: \"user: alex\" 18px, \"password: harbour\" 18px, \"Login\" 23px (< 26 px)",
+    "b12: small text on screen at 84.3s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b13: small text on screen at 89.9s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b14: small text on screen at 100.0s: \"User\" 25.4px, \"Password\" 25.4px (< 26 px)",
+    "b15: small text on screen at 114.8s: \"YOUR TURN\" 25.4px (< 26 px)",
+    "b17: small text on screen at 137.4s: \"%!%>^>@%/=~@~&>&^\" 18.9px, \"?|@|:|~==#<?;<>$|\" 18.9px, \"@>@=^%;/:=#!;++?^\" 18.9px (< 26 px)",
+    "b06: the same frame as b05 (difference 1.37 < 1.5): a new beat needs a visible change",
+    "b09: the same frame as b08 (difference 1.48 < 1.5): a new beat needs a visible change",
+    "b04: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.93 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b13: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b14: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 1,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.6
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.04
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 0.45
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 1.57
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 1.2
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 1.66
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 0.51
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 1.93
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.81
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 1.22,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.75
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.54
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 1.31
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 2.31
+      },
+      {
+        "beat": "b15",
+        "max_static_s": 4.93
+      },
+      {
+        "beat": "b16",
+        "max_static_s": 3.21
+      },
+      {
+        "beat": "b17",
+        "max_static_s": 1.76
+      }
+    ],
+    "allocation": {
+      "avatar": 0.0,
+      "template": 0.218,
+      "motion": 0.782,
+      "hybrid": 0.0,
+      "motion_effective": 0.782
+    },
+    "elements": {
+      "b01": 4,
+      "b02": 3,
+      "b03": 3,
+      "b04": 9,
+      "b05": 4,
+      "b06": 6,
+      "b07": 4,
+      "b08": 3,
+      "b09": 4,
+      "b10": 1,
+      "b11": 1,
+      "b12": 8,
+      "b13": 3,
+      "b14": 9,
+      "b15": 6,
+      "b16": 7,
+      "b17": 7
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.152,
+      "wallpaper_share": 0.0,
+      "template_share": 0.118,
+      "classic_share": 0.783,
+      "one_radius_share": 0.404,
+      "still_share": 1.0,
+      "labels_over_objects_share": 0.25,
+      "one_world_share": 0.062,
+      "lines_per_s": 16.69
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 25.4,
+        "b02": 18.9,
+        "b03": 25.4,
+        "b04": 18,
+        "b05": 25.4,
+        "b06": 25.4,
+        "b07": 25.4,
+        "b08": 25.4,
+        "b09": 25.4,
+        "b10": 25.4,
+        "b11": 18,
+        "b12": 25.4,
+        "b13": 25.4,
+        "b14": 25.4,
+        "b15": 25.4,
+        "b16": 36.1,
+        "b17": 18.9
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 17,
+      "lines_seen": 229,
+      "blank_beats": [],
+      "blank_measured": 17
+    },
+    "foreign": {
+      "measured_beats": 17,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 82,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0481,
+        "b02": 0.0622,
+        "b03": 0.0559,
+        "b04": 0.0752,
+        "b05": 0.0748,
+        "b06": 0.0695,
+        "b07": 0.0751,
+        "b08": 0.0562,
+        "b09": 0.0635,
+        "b10": 0.0733,
+        "b11": 0.0724,
+        "b12": 0.0864,
+        "b13": 0.087,
+        "b14": 0.0813,
+        "b15": 0.0532,
+        "b16": 0.0592,
+        "b17": 0.0707
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 2,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 17,
+      "sharpness": {
+        "b01": 1.309,
+        "b02": 1.226,
+        "b03": 1.274,
+        "b04": 1.374,
+        "b05": 1.213,
+        "b06": 1.228,
+        "b07": 1.172,
+        "b08": 1.152,
+        "b09": 1.157,
+        "b10": 1.252,
+        "b11": 1.913,
+        "b12": 1.039,
+        "b13": 1.317,
+        "b14": 1.225,
+        "b15": 1.146,
+        "b16": 1.022,
+        "b17": 1.2
+      },
+      "blurred_beats": [],
+      "blur_measured": 17
+    },
+    "tone": {
+      "value_script_beats": 17
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b14.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b15.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b16.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\https-private\\qa\\sheets\\b17.jpg"
+  ],
+  "build_hash": "4d085a3d368339f7"
+}

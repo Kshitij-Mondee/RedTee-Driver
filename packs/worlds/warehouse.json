@@ -1,0 +1,531 @@
+{
+ "id": "warehouse",
+ "name": "Warehouse and logistics",
+ "purpose": "forklift and pedestrian safety, manual handling, picking accuracy, loading-dock safety, near-miss reporting, shift briefings and handover",
+ "styles_common": [
+  "flat 2D editorial",
+  "2D story cartoon",
+  "isometric",
+  "2.5D lit layers"
+ ],
+ "scenes": [
+  {
+   "id": "aisle",
+   "aliases": [
+    "racking aisle",
+    "warehouse aisle",
+    "main gangway",
+    "aisle end"
+   ],
+   "what": "the end of a racking block on a main gangway: aisle mouths between tall racking runs on the left, a barrier-fenced walkway along the south wall on the right, and a zebra crossing joining them",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "forklift and pedestrian safety, near misses, traffic routes, racking damage, housekeeping, escorting visitors",
+   "plan": [
+    "Metres: x to the right across the gangway, y away from the camera (east, along the gangway), z up. The gangway runs 60 m from the camera to the east gable wall (y 60).",
+    "Left (x 0): the ends of back-to-back racking runs, each 2.4 m deep, with 3.0 m aisles between them running away to the left: run Z from y -4.4 to -2.0, aisle 0 from -2.0 to 1.0, run A from 1.0 to 3.4, aisle 1 from 3.4 to 6.4, run B from 6.4 to 8.8, then a 2.0 m fenced pedestrian route from 8.8 to 10.8 (2 m mesh panels on both sides, leading left through the block to the pick aisles), run C from 10.8 to 13.2, aisle 2 from 13.2 to 16.2, and so on to the gable. Racking levels every 1.8 m to the top beam at 7.2 m, loads to about 8.7 m.",
+    "Gangway: x 0 to 4.5, plain concrete, with a yellow line along each edge. A yellow stop line across the mouth of aisle 1, 0.5 m inside the run ends.",
+    "Walkway: x 4.6 to 5.8, edged by a yellow line at x 4.6, fenced from the gangway by a yellow tubular barrier 1.1 m high on that line (posts every 2 m), with a gap from y 9.0 to 10.6.",
+    "Zebra crossing: broad white bars from x 0 to 4.55, y 9.0 to 10.6, from the barrier gap to the mouth of the fenced pedestrian route.",
+    "Right wall (x 5.8): the south wall, precast panel to 2.4 m, ribbed cladding above; the frame's columns stand just inside it at y 0.4, 7.9, 15.4, 22.9, 30.4 and every 7.5 m on. A fire point at y 14: two extinguishers on a bracket (handles 1.0 m), the red extinguisher sign above at 2.0 m, a red manual call point at y 15, 1.4 m.",
+    "Convex mirror (0.6 m across) on run A's far corner at the aisle 1 mouth, 2.5 m up, facing the gangway. Load notices 0.6 by 0.4 m on each run end at 2.0 to 2.4 m.",
+    "Cast: one person on the walkway at (5.2, 2.4); one person on the crossing at (2.4, 9.8); a truck (a separate prop) can come out of aisle 1 to (1.0, 4.9). Heads 1.75 m.",
+    "Camera: x 1.9, y -7.0, standing eye height 1.6 m, turned 5 degrees right of the gangway's line; lens about 60 degrees across; no tilt; horizon at 46 percent."
+   ],
+   "camera": "Standing eye height 1.6 m in the gangway, turned 5 degrees toward the walkway; a slightly wide lens, about 60 degrees across; no tilt, verticals stay vertical. One-point perspective with a slight turn: horizon at y 497 (46 percent); every line along the gangway (the run ends' line, the floor lines, the barrier rails, the wall's panel joint, the roof-light strips) runs to a vanishing point at x 815 on the horizon; lines across the gangway (the crossing's bars, the stop line, beam ends) are almost level (their vanishing point is far off-frame right, x about 19966).",
+   "composition": "A deep view down the gangway to the gable wall, which sits small just left of centre (x 767 to 912, its foot at y 537, its 12 m top at y 238). Left third: the ends of the racking runs step away toward the vanishing point, each a narrow upright face with dark aisle mouths between them: the nearest run's end is cropped at the left edge (x -240 to 156); aisle 0's mouth from x 156 to 408 at the floor; run A's end from x 408 to 503 (floor at y 838 to 758; its first beam at y about 454 to 464; it runs out of the top of the frame); aisle 1's mouth from x 503 to 574 (floor y 758 to 699); run B's end x 574 to 611; the fenced pedestrian route's mouth x 611 to 634 (mesh tops at y about 455); then run C and the next runs, shrinking toward x 767. Upper middle: the underside of the roof recedes to the gable: the liner, the rafters, a roof-light strip (at y about 110 over x 827) and rows of high-bay lights, visible from about 25 m away; nearer, the racking and the cladding run out of the top. Right third: the walkway and the wall: the walkway's yellow line enters at the bottom right (x 1678, y 1007) and runs to the vanishing point; the barrier's top rail enters off the right edge and passes x 1527, y 631 and x 978, y 527; the wall's foot comes in at x 1845, y 918, the panel joint at 2.4 m runs from the top right (x 1705, y 315 at y 0) to x 990, y 461 at 30 m; wall columns stand at x 1617 (floor y 843), 1222 (y 672), 1087 (y 614) and 1020 (y 585). The crossing lies across the gangway in the middle distance, its near edge from x 613, y 665 to x 1088, y 661 and its far edge from x 632, y 650 to x 1064, y 647, with the barrier gap at its right end (x 1064 to 1088). The fire point stands on the wall just before the third column: extinguisher handles at x 1117, y 544, the red sign from x 1117 to 1121, y 453 to 477, the call point at x 1106, y 512. Focal point: the crossing and the mouth of aisle 1 with its mirror (x 526, y 349). Free zones for the cast: (1) standing on the walkway behind the barrier, full length (head top x 1385, y 471; feet x 1385, y 772), the head against the plain precast panel of the wall between two columns (behind point on the wall at y 4.1, 1.6 to 1.8 m up; the columns are at x 1617 and 1222, more than 160 px away); (2) standing on the crossing in the middle of the gangway, full length (head top x 864, y 482; feet x 864, y 655), the head against the plain lower band of the far gable wall (x 853 to 875 lies inside the gable's x 767 to 912; the nearest wall column is at x 917); (3) the truck zone at the mouth of aisle 1 (its floor point x 687, y 723; a truck's guard top reaches about y 419), kept empty of anything drawn.",
+   "light": "Even, cool white light from the high-bay lights overhead and soft daylight from the roof-light strips: light from almost straight above. Shadows are short: a contact shadow under every pallet and barrier post, the underside of each beam and pallet a step darker, the aisle mouths darker inside than the gangway (the racking blocks the overhead light), the floor of the gangway brightest down its middle with a soft sheen of the lights in the polished slab. No direct sun. The gable at 60 m is softened by haze, about 0.25; the racking far down the gangway paler and bluer than the near runs. Nothing glows except the high-bay lights (small bright discs far down the gangway) and the call point's small indicator.",
+   "far": "The shell and everything at the edges of the gangway: the floor slab with its joints, lines, stop line, crossing, walkway pictograms and tyre marks; the south wall with its columns and the fire point; the roof underside with roof lights, high-bay lights and the red sprinkler main; the gable wall; the racking runs from run A onward with their loads, beams, protectors, load notices and location labels; the mesh panels of the pedestrian route; the convex mirror on run A.",
+   "mid": "The yellow tubular barrier along the walkway, from the right edge to the far distance, with its gap at the crossing: the person on the walkway stands behind it.",
+   "near": "Only the end of the nearest racking run (run Z) at the left edge, cropped by it (x -240 to 156), with its upright protector at the foot and the edge of its load notice; it hides no cast zone.",
+   "motifs_here": "the deep blue-green racking uprights with dark grey beams and load notices, the yellow walkway line with a walking-person pictogram, the yellow tubular barrier, stretch-wrapped tan cartons on pine pallets, the two-band wall, a convex mirror, the red sprinkler main and the high-bay lights",
+   "details": [
+    "a convex mirror on run A's far corner at the aisle 1 mouth, angled so a driver leaving the aisle sees along the gangway",
+    "a broad yellow stop line across the mouth of aisle 1, with black tyre marks curving out of the aisle into the gangway",
+    "yellow steel upright protectors at the foot of every run end, the one on run A dented and scuffed to bare metal",
+    "a load notice board on every run end (slot) and small location labels along each beam (no characters)",
+    "white walking-person pictograms on the walkway, one just before the crossing",
+    "the fire point on the precast panel: two extinguishers on a bracket, the red extinguisher sign above, a red call point beside"
+   ],
+   "keep_first": "If space is short, keep the mirror, the stop line, the dented protector and the fire point; drop the location labels and the tyre marks first.",
+   "dominant": [
+    "floor",
+    "wall",
+    "wall2",
+    "metal",
+    "paper",
+    "brass"
+   ],
+   "slots": [
+    "slot_load_notice_a (run A's load notice, a narrow quadrilateral from x 450, y 344 to x 473, y 425)",
+    "slot_load_notice_b (run B's load notice, x 589, y 402 to x 598, y 451)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor at the crossing, where the person on it stands, about y 655)",
+    "anchor_stand_walkway (feet on the walkway, about x 1385, y 772)",
+    "anchor_stand_crossing (feet on the crossing, about x 864, y 655)",
+    "anchor_truck (the floor in the gangway at the mouth of aisle 1, where a truck coming out stands, about x 687, y 723)",
+    "anchor_mirror (the mirror's centre, about x 526, y 349)"
+   ],
+   "variants": [
+    "night shift: the roof lights dark, the high-bay lights the only light, the gable and the roof in deeper shadow",
+    "housekeeping hazard: a pallet with a broken board left in the gangway just short of the crossing, a coil of stretch film on the floor beside it",
+    "damaged racking: run A's front upright bent at the foot, its protector crushed, the bay offloaded and fenced off with red-and-white barrier tape"
+   ],
+   "avoid": [
+    "a forklift or any truck drawn in the main set",
+    "racking seen square-on, or run ends with no protectors or no load notice",
+    "a column, the fire point, a mirror or a run end behind either head",
+    "anything stored on the walkway or on the crossing",
+    "the crossing leading to a blank racking face instead of the fenced route",
+    "a wall column inside the walkway (they stand just inside the cladding)"
+   ],
+   "objects": [
+    "pallet racking",
+    "pallet",
+    "pallet load",
+    "rack protection",
+    "load notice",
+    "location label",
+    "pedestrian barrier",
+    "floor markings",
+    "mesh panel",
+    "convex mirror",
+    "fire point",
+    "high-bay light",
+    "safety sign"
+   ],
+   "uses": [
+    "a forklift reverses out of an aisle as someone takes a shortcut off the walkway (a near miss)",
+    "escorting a visitor along the walkway and over the crossing",
+    "spotting and reporting a damaged rack upright",
+    "a housekeeping walk: spotting a pallet left in a gangway",
+    "why the mirror and the stop line are at the aisle end"
+   ],
+   "reuse": "high",
+   "checked": "plan"
+  },
+  {
+   "id": "picking",
+   "aliases": [
+    "pick face",
+    "order picking",
+    "picking lane"
+   ],
+   "what": "a 3 m wide working lane between two runs of pallet racking, where reach trucks put pallets away and pickers pick from the floor-level pallets, seen from inside the lane toward its bright open end at the main gangway",
+   "shots": [
+    "mid",
+    "wide"
+   ],
+   "for": "picking accuracy and pick errors, manual handling at floor-level pick faces, scanning and checking locations, lane discipline",
+   "plan": [
+    "Seen from above, metres: x runs across the lane from the front of the left pick face (x 0) to the front of the right pick face (x 3.0); y runs along the lane away from the camera, south, to the run ends at y 42. Beyond them lie the main gangway (y 42 to 46.5, 4.5 m), the yellow tubular barrier on the walkway's edge (y 46.6, 1.1 m high), the 1.2 m walkway and the south wall (y 47.8: precast panel to 2.4 m, ribbed cladding above). No wall column falls in this lane's line.",
+    "Both sides are back-to-back runs of adjustable pallet racking: uprights every 2.8 m along the lane (y 0, 2.8, 5.6, 8.4 and on; bays 2.7 m clear, three Euro pallets side by side, short side to the lane), beams at 1.8, 3.6, 5.4 and 7.2 m, loads up to about 8.7 m. The floor level is the pick face: pallets standing on the floor, their front edges on x 0 and x 3.0, loads about 1.55 m high; the levels above hold full reserve pallets.",
+    "A yellow stop line 0.2 m wide across the lane at y 41.5, 0.5 m inside the run ends. Yellow upright protectors at the run ends at the far mouth.",
+    "The part-picked pallet: on the right face at y 1.9 to 2.7, its cartons taken down to about 0.6 m, one carton opened with its flaps folded back.",
+    "A part-filled roll cage (0.7 by 0.8 m, 1.8 m high) parked against the right face at x 2.3 to 3.0, y 12.0 to 12.8.",
+    "High-bay lights hang at 11 m in a row along the middle of the lane; the roof (12 m) shows only beyond about 28 m, where the loads drop below the top of the frame.",
+    "Cast: picker A standing in the lane 1 m from the left face at (1.0, 3.0), turned toward the left face to scan a location label; head top 1.75 m. Picker B at the right face at (2.5, 2.2), bending to lift a carton from the part-picked pallet, seen in profile facing right; bent head about 1.0 to 1.2 m.",
+    "Camera: x 0.9, y -4.0, eye height 1.3 m (a little below a standing picker's eye), turned 4 degrees left of the lane's line; lens about 50 degrees across; no tilt; the horizon at 50 percent of the frame height."
+   ],
+   "camera": "Eye height 1.3 m in the lane, a little below a standing picker's eye line, turned 4 degrees toward the left pick face; a normal lens, about 50 degrees across; no tilt, verticals stay vertical. One-point perspective: horizon at y 540 (50 percent); every line along the lane (beam fronts, the pallet rows, the floor's edges and joints) runs to a vanishing point at x 1104 on the horizon; lines across the lane (the stop line, a beam's end, the bottom edges of the pallets seen front-on) are level (their vanishing point is far off-frame left, x about -28481).",
+   "composition": "A deep, narrow view down the lane to its bright open end, just right of centre: the end opening runs from x 1064 to x 1199, its floor at y 598 (the stop line across it at y 599) and the tops of the end loads at y about 208; through it show the pale gangway floor, the yellow barrier's top rail at y 548, the precast panel's top joint at y 496 and the ribbed cladding above. Left: the left pick face recedes from the left edge: its nearest upright at x 646 (first beam at y 286, the upright running out of the bottom), the next at x 833 (floor y 931, first beam y 390), then x 911 (floor y 818), 955, 982, 1001 and closer and closer toward the end. Right: the right pick face, wider, recedes from beyond the right edge: uprights at x 1757 (floor y 943, first beam y 385), 1564 (floor y 824, first beam y 431), 1459, 1393, 1347, 1314 toward the end. The upper levels and their loads rise out of the top of the frame on both sides; only above the far end, between about x 1040 and 1260 and above y 208, a narrow wedge of the roof shows, with a few high-bay lights as small bright discs. The part-picked pallet stands at the right face's foot (its front at x 1810, its lowered top at y 775); the roll cage stands against the right face further down (x 1286 to 1365, top at y about 476, feet at y about 705). Focal point: picker A against the end opening. Free zones for the cast: (1) picker A standing in the lane, full length (head top x 1134, y 407; head from x 1101 to 1166; feet x 1134, y 924; the scanner hand about x 1060, y 584), the head seen inside the bright end opening against the plain ribbed cladding of the far wall (behind points on the wall 2.9 to 4.6 m up, above the panel joint), at least 33 px clear of both run ends; the panel joint and the barrier fall behind the shoulders and chest and are hidden by them; (2) picker B bending at the right face, full length in profile (head top about x 1648, y 574, head from x 1610 to 1686; feet x 1596, y 980), the bent head seen against the plain stretch-wrapped floor-level load of the next bay (behind points on the right face 3.6 to 4.7 m along, 0.9 to 1.2 m up), between the uprights at x 1757 and x 1564 (more than 45 px clear of each).",
+   "light": "Even, cool white light from the row of high-bay lights over the lane, softened by daylight from the roof-light strips: light from almost straight above. Shadows are short: a contact shadow under every pallet, the underside of every beam and the lower edge of every load a step darker, the floor of the lane a little dimmer than the gangway beyond (the tall racking blocks the light from the side). The end opening is the brightest area of the frame: the gangway floor and the far wall there are lit by more lights and the roof-light strips, softened by haze about 0.15 at 50 m. The floor carries a soft sheen of the lights down its middle. Nothing glows except the high-bay lights.",
+   "far": "The shell and everything at the edges: the lane floor with its joints and the stop line; both pick faces (uprights, bracing, beams, location labels, the floor-level pallets and the reserve loads above); the far end opening with the gangway, the barrier, the walkway, the wall and the end-of-run protectors; the wedge of roof with high-bay lights; the part-picked pallet; the roll cage.",
+   "mid": "Nothing: the pickers stand in the open lane in front of the far layer.",
+   "near": "Nothing: the nearest bay of the left face, cropped by the left edge, belongs to the far layer and hides no cast zone.",
+   "motifs_here": "the deep blue-green racking uprights with dark grey beams, tan cartons wrapped in clear stretch film on pale pine pallets, the two-band wall seen through the lane end, the yellow barrier and stop line at the end, the high-bay lights over the far end",
+   "details": [
+    "a location label (slot) on the front beam above every floor-level pallet, a plain bar block where the barcode would be",
+    "the part-picked pallet on the right face, its cartons taken down to about 0.6 m, one carton cut open with its flaps folded back",
+    "the cut film of the part-picked pallet bunched and tucked under the pallet's top board, not trailing on the floor",
+    "a part-filled roll cage parked against the right face further down the lane, its mesh sides and four castors visible",
+    "the yellow stop line across the far end of the lane and the dented yellow protector at the foot of one end upright",
+    "one reserve pallet on the first level with a plain white pallet label (slot-sized rectangle, empty) facing the lane"
+   ],
+   "keep_first": "If space is short, keep the location labels, the part-picked pallet, the stop line and the roll cage; drop the dented protector and the reserve pallet label first.",
+   "dominant": [
+    "floor",
+    "wall2",
+    "metal",
+    "wood",
+    "paper"
+   ],
+   "slots": [
+    "slot_location_label_b (the location label on the beam above the part-picked pallet, a small quadrilateral from x 1828, y 368 to x 1810, y 406)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor where picker A stands, about y 924)",
+    "anchor_stand_lane (picker A's feet, about x 1134, y 924)",
+    "anchor_stand_face (picker B's feet at the right face, about x 1596, y 980)",
+    "anchor_pick_pallet (the lowered top of the part-picked pallet, about x 1810, y 775)",
+    "anchor_label_a (the location label above the floor-level pallet in front of picker A, about x 854, y 416)"
+   ],
+   "variants": [
+    "night shift: the roof-light wedge dark, the high-bay lights the only light, the end opening a little less bright",
+    "high pick: a pair of yellow mobile steps with a top handrail standing in front of the left face at the first bay, its feet on the floor",
+    "replenishment: the part-picked pallet gone and the floor location empty, the beam and its location label above the bare floor"
+   ],
+   "avoid": [
+    "a reach truck or any truck drawn in the set (trucks are separate props)",
+    "a run end, an upright, a mirror, a light or the roll cage beside either head",
+    "people climbing racking, or anything leaning on the racking",
+    "pallets overhanging the beams, or loads higher than the next beam allows",
+    "the lane seen square-on from the side, or racking without its upper levels",
+    "a dead-end lane: the far end stays open to the gangway"
+   ],
+   "objects": [
+    "pallet racking",
+    "pallet",
+    "pallet load",
+    "carton",
+    "location label",
+    "rack protection",
+    "floor markings",
+    "pedestrian barrier",
+    "roll cage",
+    "high-bay light"
+   ],
+   "uses": [
+    "a picker scans the wrong location and checks the label again (a pick error and how to catch it)",
+    "lifting a carton from a low floor-level pallet with bent knees and the load close",
+    "a picker steps back out of the lane when a reach truck needs to come in to replenish",
+    "why a part-picked pallet's film is cut away and tucked, not left trailing",
+    "a team leader walks the lane to check a reported damaged label"
+   ],
+   "reuse": "high",
+   "checked": "plan"
+  },
+  {
+   "id": "loading_dock",
+   "aliases": [
+    "dock",
+    "dock door",
+    "dock leveller",
+    "goods in",
+    "goods out"
+   ],
+   "what": "the inside of the dock face on the north wall: insulated dock doors in a row, the middle one open onto a trailer backed into its shelter with the leveller's lip resting on the trailer bed, the doors either side closed, marked lanes on the floor in front of each",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "loading-bay safety: trailer creep and drive-away, restraint and key control, forklifts entering trailers, leveller hazards, goods in and goods out",
+   "plan": [
+    "Seen from above, metres: x runs along the north wall to the right; y runs from the camera toward the wall, whose inside face is at y 10. Doors 3.0 m wide and 3.0 m high on 3.75 m centres: door B (closed) x 0 to 3.0, pier 1 x 3.0 to 3.75, door A (open) x 3.75 to 6.75, pier 2 x 6.75 to 7.5, door C (closed) x 7.5 to 10.5, pier 3, door D (closed) x 11.25 to 14.25. The wall: precast panel to 2.4 m, ribbed cladding above; the frame's columns (0.4 m) stand in every second pier, at x -0.375 and x 7.125, on the wall's inside face.",
+    "Each door has a dock leveller in a pit in front of it, 2.0 m wide and 2.5 m long (door A's from x 4.25 to 6.25, y 7.5 to 10.0), its deck flush with the floor when stored; door A's leveller is in use: its deck sits almost level, sloping very slightly up to the trailer bed, and its 0.4 m lip rests on the trailer bed just beyond the door. Every door's control panel (0.25 by 0.5 m, from 1.15 to 1.65 m up) sits on the pier to its left: door A's on pier 1 (x 3.25 to 3.5); door C's on the face of the column in pier 2.",
+    "Door A is a vertical-lift door: open, its panels stand flat against the wall above the opening, from 3.0 to 6.2 m, with the driver's keys on a hook on the bottom rail at about 3.25 m. A dock lamp on a swing arm, fixed to the column in pier 2 at 2.4 m, is turned into the opening (lamp head at x 6.4, 2.3 m up).",
+    "Through door A: the dark grey curtains of the dock shelter at the edges of the opening, then the trailer's interior, 2.48 m wide (x 4.01 to 6.49) and 2.7 m high, its floor level with the dock floor, running 13.6 m away; from this camera the far front end is hidden by the opening's left edge, and its floor and right inside wall are what show.",
+    "Floor: yellow lane lines running 15 m back from each door's jambs; a yellow hatched strip 0.75 m wide between neighbouring lanes, in front of each pier. Two outbound pallet loads staged in lane C at x 8.0 to 9.8, y 5.6 to 6.8. Yellow steel guards at the foot of every door jamb and round each column. A yellow warning sign with a forklift pictogram on pier 1 at about 2.2 m.",
+    "Cast: the dock operative standing on the floor just inside lane A's left line, beside the left edge of door A's leveller pit, at (3.85, 6.9), facing the trailer; head top 1.75 m. A forklift (a separate prop) waits in lane A at about (5.25, 3.5).",
+    "Camera: x 0.6, y -2.5, standing eye height 1.6 m, turned 22 degrees right of straight at the wall; lens about 55 degrees across; no tilt; the horizon at 48 percent of the frame height."
+   ],
+   "camera": "Standing eye height 1.6 m in the marshalling area, looking at the dock wall at an angle, turned 22 degrees toward the right; 35 mm lens, about 55 degrees across; no tilt, verticals stay vertical. Two-point perspective: horizon at y 518 (48 percent); lines running toward the wall (the lane lines, the leveller's sides, the trailer's floor and walls) run to a vanishing point at x 215 on the horizon; lines along the wall (the door heads, the floor line, the panel joint at 2.4 m) run gently down to the right toward a vanishing point far off-frame right (x about 5524).",
+   "composition": "The dock wall crosses the frame from left to right, its foot falling gently from y 778 at the left edge to y 695 at the right, the door heads at y about 291 at the left to 364 at the right, the top of the frame cutting the cladding at about 5 m. Left: closed door B from x 110 to 597, with a frame column at the left edge (x 39); pier 1 from x 597 to 706 with door A's control panel (x 635 to 672, y 511 to 584) and the forklift warning sign above it (about x 654, y 430). Centre left, the focal point: open door A from x 706 to 1095 (its head at y 316 to 333), the raised door panels above it running out of the top, the keys hanging at about x 911, y 289; inside it the trailer's dark interior from x 731 to 1047 (its rear floor edge at y 743 to 728, its roof edge at y 364 to 374), its right inside wall running away to the left; the leveller deck in front of it from x 775 to 1202 along the floor (near corners at x 897, y 796 and x 1202, y 777). Pier 2 at x 1095 to 1183 is filled by the column, with door C's panel on it (x 1128 to 1157, y 512 to 578) and the dock lamp's arm reaching into door A's top right corner (lamp head about x 1070, y 423). Right: closed door C from x 1183 to 1502, pier 3 with door D's panel (about x 1545, y 542), door D from x 1575 to 1840; the two staged pallet loads in lane C stand in front of door C's right half and door D (x 1646 to 1885, tops at y 527, feet at y about 805). Lane A's yellow lines run from door A's jambs down and off the bottom right. Free zones for the cast: (1) the dock operative standing beside the leveller, full length (head top x 866, y 491; head from x 846 to 885; feet x 866, y 815), the head seen inside door A's opening against the plain, dim right inside wall of the trailer 4 to 5 m in (behind points 1.5 to 1.9 m up), more than 110 px from both edges of the trailer's interior and 175 px from the control panel; (2) the forklift zone in lane A, its floor point x 1481, y 922 (a truck's overhead guard reaches about y 380), kept empty of anything drawn.",
+   "light": "Even, cool white light from the high-bay lights overhead, softened by daylight from the roof-light strips, falling from almost straight above: short contact shadows under the pallets and at the foot of the jamb guards, the door heads and the shelter casting a soft shadow just inside the opening. Through door A the trailer is dark, lit only by the dock lamp: a warm cone from the lamp head into the trailer, its pool on the trailer floor 2 to 5 m in and on its left wall; the right inside wall behind the operative's head stays dim and even. No daylight comes through the closed doors. The control panel's green lamp glows small; nothing else glows except the dock lamp.",
+   "far": "The shell and everything at it: the floor with lane lines, hatched strips, leveller pits and tyre marks; the dock wall with doors B, C and D closed and door A open, its raised panels and the keys; the piers with the column, the control panels, the sign and the jamb guards; the dock shelter curtains and the trailer's interior seen through door A; the dock lamp; door A's leveller and lip; the two staged pallet loads in lane C.",
+   "mid": "Nothing: the operative stands in front of the far layer and the forklift is a separate prop placed in lane A.",
+   "near": "Nothing: the foreground floor of lane A is kept clear for the forklift.",
+   "motifs_here": "the two-band wall (precast panel below, ribbed cladding above), deep blue-green dock doors, yellow lane lines and hatching, tan cartons in stretch film on pale pine pallets, the high-bay light from above",
+   "details": [
+    "the driver's keys hanging from a hook on the bottom rail of the raised door A, high out of reach",
+    "door A's control panel: a grey box with up, down and stop buttons, a red mushroom emergency stop and two round lamps at its top, the green one lit and the red one dark",
+    "yellow-and-black hazard stripes along the edges of every leveller pit and across the lip of door A's leveller",
+    "the dock lamp on its jointed swing arm, turned into the trailer, its warm pool on the trailer floor",
+    "a delivery note in a clear plastic sleeve tucked into the film of a staged pallet load (a plain pale page, no characters)",
+    "scuffed yellow guards at the foot of every door jamb and round the column, one bent",
+    "faint black tyre marks curving into lane A and over the leveller"
+   ],
+   "keep_first": "If space is short, keep the keys, the control panel with its lamps, the leveller's stripes and the dock lamp; drop the tyre marks and the bent guard first.",
+   "dominant": [
+    "wall",
+    "wall2",
+    "floor",
+    "metal",
+    "brass",
+    "wood"
+   ],
+   "slots": [],
+   "anchors": [
+    "anchor_floor_y (the floor where the dock operative stands, about y 815)",
+    "anchor_stand_operative (the operative's feet beside the leveller, about x 866, y 815)",
+    "anchor_truck (the floor in lane A where a forklift waits, about x 1481, y 922)",
+    "anchor_panel_a (the centre of door A's control panel, about x 654, y 548)",
+    "anchor_lip (the middle of the leveller's lip on the trailer bed, about x 890, y 734)"
+   ],
+   "variants": [
+    "door closed: door A down, its panels drawn, the leveller stored flush with the floor, the shelter and trailer unseen, the panel's red lamp lit and the green dark",
+    "creep: the trailer crept forward, a dark gap of about 0.3 m between the leveller's lip and the trailer bed, the lip hanging, the panel's red lamp lit",
+    "night shift: the roof lights dark, the high-bay lights and the dock lamp the only light"
+   ],
+   "avoid": [
+    "a forklift or any truck drawn in the set (trucks are separate props)",
+    "the trailer's interior edges, the door jambs, the lamp or the control panel behind the operative's head",
+    "a dock door with windows, or doors on uneven centres",
+    "daylight through the open door (the shelter and trailer seal it)",
+    "anything stored on a leveller or in lane A",
+    "livery, words or numbers on the trailer or anywhere else"
+   ],
+   "objects": [
+    "dock door",
+    "dock leveller",
+    "dock control panel",
+    "dock shelter",
+    "trailer",
+    "dock lamp",
+    "rack protection",
+    "floor markings",
+    "pallet",
+    "pallet load",
+    "safety sign",
+    "high-bay light"
+   ],
+   "uses": [
+    "a dock operative checks the restraint lamp and the leveller lip before a forklift enters the trailer (a trailer creep check)",
+    "key control: the driver's keys hang on the raised door until loading is done",
+    "a gap opens between the trailer and the dock as the trailer creeps: stop, signal, report",
+    "a forklift driver checks the trailer floor before driving onto the leveller",
+    "closing the door and storing the leveller after a trailer leaves"
+   ],
+   "reuse": "high",
+   "checked": "plan"
+  },
+  {
+   "id": "shift_board",
+   "aliases": [
+    "shift briefing",
+    "briefing area",
+    "start of shift briefing",
+    "safety board"
+   ],
+   "what": "the fenced shift-briefing area on the shop floor in front of the two-storey welfare and office block, where a long board of the day's plan, the safety cross and near-miss cards hangs on the block's wall beside the shed's plain gable",
+   "shots": [
+    "wide",
+    "mid"
+   ],
+   "for": "start-of-shift briefings, near-miss reporting and review, safety messages, handover between shifts, welcoming a new starter",
+   "plan": [
+    "Seen from above, metres: x runs along the welfare block's north face to the right (east); y runs from the camera toward that face, which is at y 8. The shed's east gable wall meets it at a right angle at x 10 and runs back toward the camera (an inside corner at x 10, y 8). The block: two storeys of painted blockwork, ground floor to 3.0 m, first floor 3.0 to 6.0 m with a long strip of office windows from 3.9 to 5.1 m, a flat top at 6.2 m. The gable: precast panel to 2.4 m, ribbed cladding above.",
+    "On the block face: the door into the welfare block at x 0.5 to 1.5 (2.1 m high, a narrow vision panel, a deep blue-green frame); a fire point beside it (two extinguishers at x 2.1, handles 1.0 m, the red extinguisher sign above at 2.0 m, a red call point at x 2.6, 1.4 m); the briefing board from x 3.0 to 7.0, 0.9 to 2.1 m up, in three parts: the safety cross (x 3.0 to 4.4), a whiteboard of the day's plan (x 4.4 to 5.9) and the near-miss board of pinned cards (x 5.9 to 7.0). From x 7.0 to the corner the wall is plain.",
+    "The briefing area: the floor from x -1.0 to 10 and y 2.5 to 8, edged with a yellow line and painted a pale grey-green; a yellow tubular barrier 1.1 m high along its north edge (y 2.5) from x -1.0 to 8.6, ending in a capped post; the opening between x 8.8 and 10 leads onto a walkway along the gable, edged by a yellow line at x 8.8.",
+    "Cast: the shift lead standing at the board's right end at (7.6, 7.2), facing the group; two operatives standing in the area facing the board at (6.6, 4.0) and (8.0, 3.6); heads 1.75 m. More of the shift can stand further left, in front of the board's left half.",
+    "Camera: x -1.0, y -2.0, outside the barrier, standing eye height 1.6 m, turned 38 degrees right of straight at the block face; lens about 55 degrees across; no tilt; the horizon at 48 percent of the frame height."
+   ],
+   "camera": "Standing eye height 1.6 m, just outside the briefing area's barrier, looking into the corner at an angle, turned 38 degrees toward the gable; 35 mm lens, about 55 degrees across; no tilt, verticals stay vertical. Two-point perspective: horizon at y 518 (48 percent); lines along the block face (the board's top and bottom edges, the floor line, the window strip, the barrier) run to a vanishing point at x 3320 on the horizon, off-frame right; lines along the gable (its floor line, the panel joint at 2.4 m, the walkway line) run to a vanishing point at x -481, off-frame left.",
+   "composition": "The inside corner stands right of centre (x 1276, from the floor at y 720 up out of the top of the frame). Left of it the block face runs to the left edge: the welfare door at the left edge (its right jamb at x 140, its head at y about 414); the fire point at x 263 (extinguisher handles y 632, sign y 443) with the call point at x 356, y 555; the briefing board from x 424 (top y 429, bottom y 643) to x 981 (top y 446, bottom y 619): the safety cross from x 424 to 647, the whiteboard from x 647 to 851 and the near-miss board from x 851 to 981; then plain wall from x 981 to the corner. Above, the first-floor window strip crosses the upper frame (its top at y about 37 near the corner), the block's flat top just above the frame. Right of the corner the gable wall comes toward the camera and out of the right edge: its panel joint at 2.4 m rises from y 418 at the corner, and its foot falls from y 720 to beyond the right edge. The barrier crosses the lower middle from the left edge, passing x 821 at top-rail height y 689 and x 1459 at y 646, to its capped end post at x 1895, y 616; the walkway's yellow line runs from x 1913, y 826 back to the corner. Focal point: the shift lead beside the board. Free zones for the cast: (1) the shift lead standing at the board's right end, full length (head top x 1124, y 496; head from x 1112 to 1135; feet x 1124, y 754), the head against the plain block wall between the board's end and the corner (behind points 8.2 to 8.5 m along it, 1.5 to 1.8 m up), more than 130 px from both; (2) an operative standing in the area facing the board, behind the barrier (head top x 1410, y 489; feet x 1410, y 832; the barrier's top rail crosses at about hip height), the head against the plain precast panel of the gable (behind points 6.6 to 6.8 m along it, 1.5 to 1.8 m up), 120 px right of the corner; (3) a second operative further right (head top x 1635, y 491; feet x 1635, y 815), the head against the gable's precast panel (behind points 4.8 to 4.9 m along it). Further operatives can be placed in front of the board's left half, seen from behind.",
+   "light": "Even, cool white light from the high-bay lights overhead, softened by daylight from the roof-light strips, falling from almost straight above: short contact shadows under the barrier's posts and the people's places, a thin shadow under the board's bottom edge and under the window sills. The inside corner is a little darker than the open wall. The first-floor windows show the brighter offices behind the glass: pale, warm-white panes with dim shapes of ceiling lights, no figures. Nothing glows except the call point's small indicator.",
+   "far": "The shell and everything on it: the floor of the area with its painted surface and yellow edge lines, the walkway line along the gable; the welfare block's face with the door, the fire point, the briefing board and the first-floor window strip; the gable wall with its panel joint and cladding; the inside corner.",
+   "mid": "The yellow tubular barrier along the area's north edge, from the left edge to its capped end post: the operatives stand behind it.",
+   "near": "Nothing: the camera looks over the barrier into the open area.",
+   "motifs_here": "the two-band wall of the gable (precast panel below, ribbed cladding above), the yellow tubular barrier, the yellow floor lines, deep blue-green on the welfare door's frame and the board's edging",
+   "details": [
+    "the safety cross: a cross-shaped grid of 31 small squares, most filled green, two amber and one red, with no numbers",
+    "the near-miss board: a dozen pinned cards (slot) in three columns, a few with a green dot sticker",
+    "a whiteboard with the day's plan (slot) and a tray of markers and a magnetic eraser on its bottom ledge",
+    "a hi-vis vest hanging on a coat hook beside the welfare door",
+    "worn paint on the floor where people stand in front of the board",
+    "the fire point by the door: two extinguishers on a bracket, the red extinguisher sign above, the red call point beside"
+   ],
+   "keep_first": "If space is short, keep the safety cross, the near-miss cards, the whiteboard and the fire point; drop the worn paint and the hi-vis vest first.",
+   "dominant": [
+    "wall",
+    "floor",
+    "brass",
+    "paper",
+    "wall2",
+    "metal"
+   ],
+   "slots": [
+    "slot_plan_board (the whiteboard, a quadrilateral with corners x 647, y 436; x 851, y 442; x 851, y 625; x 647, y 634)",
+    "slot_near_miss (the near-miss board, a quadrilateral with corners x 851, y 442; x 981, y 446; x 981, y 619; x 851, y 625)"
+   ],
+   "anchors": [
+    "anchor_floor_y (the floor where the operatives stand, about y 832)",
+    "anchor_stand_lead (the shift lead's feet, about x 1124, y 754)",
+    "anchor_stand_op1 (the first operative's feet, about x 1410, y 832)",
+    "anchor_stand_op2 (the second operative's feet, about x 1635, y 815)",
+    "anchor_board (the middle of the whiteboard, about x 753, y 534)"
+   ],
+   "variants": [
+    "night shift: the first-floor offices dark, the window strip a dark reflective band, the high-bay lights the only light",
+    "empty: the area clear at the end of a shift, a single near-miss card on the floor below the board"
+   ],
+   "avoid": [
+    "a meeting room or classroom set-up (no chairs, no tables)",
+    "the board, the door, the corner or the fire point behind any head",
+    "words or numbers on the board, the cards or the safety cross",
+    "a TV screen hung in front of the office windows",
+    "the barrier missing between the briefing area and the truck routes",
+    "racking, trucks or stored goods inside the briefing area"
+   ],
+   "objects": [
+    "briefing board",
+    "pedestrian barrier",
+    "floor markings",
+    "fire point",
+    "welfare block",
+    "safety sign",
+    "high-bay light"
+   ],
+   "uses": [
+    "a shift lead runs the start-of-shift briefing at the board",
+    "an operative reports a near miss and it goes on the board",
+    "reviewing last week's near misses and what changed",
+    "a new starter is welcomed and paired with a buddy at the briefing",
+    "handover between the day and night shift leads"
+   ],
+   "reuse": "high",
+   "checked": "plan"
+  }
+ ],
+ "cast": [
+  {
+   "id": "warehouse_operative",
+   "role": "warehouse operatives and pickers (hi-vis vest, safety boots, gloves, a wrist or handheld scanner)"
+  },
+  {
+   "id": "forklift_driver",
+   "role": "forklift and reach-truck drivers (drawn with their truck props)"
+  },
+  {
+   "id": "shift_lead",
+   "role": "shift lead or team leader with a radio and a tablet"
+  },
+  {
+   "id": "dock_operative",
+   "role": "goods-in and goods-out dock operatives"
+  },
+  {
+   "id": "driver",
+   "role": "a visiting lorry driver in their own hi-vis, kept to the drivers' waiting area and walkways"
+  },
+  {
+   "id": "visitor_hi_vis",
+   "role": "a visitor in a visitor vest, escorted"
+  }
+ ],
+ "assets": {
+  "core": [
+   "pallet racking bay (one bay, with beams, location labels and a load notice slot)",
+   "Euro pallet (empty and loaded)",
+   "cartons (open, closed, stacked, stretch-wrapped)",
+   "counterbalance forklift (with a separate mast and forks)",
+   "reach truck",
+   "hand pallet truck",
+   "handheld scanner (screen slot)",
+   "hi-vis vest",
+   "safety boots and gloves",
+   "roll cage"
+  ],
+  "common": [
+   "yellow pedestrian barrier",
+   "convex mirror",
+   "dock leveller, dock control panel and dock lamp",
+   "vehicle keys on a ring",
+   "shift briefing board (slots)",
+   "radio",
+   "first-aid sign and kit",
+   "fire extinguisher and call point",
+   "spill kit",
+   "clipboard with a pick list (slot)"
+  ],
+  "optional": [
+   "lorry and trailer (no livery)",
+   "mobile steps",
+   "wheel chock",
+   "conveyor segment"
+  ]
+ },
+ "aliases": [
+  "warehouse",
+  "depot",
+  "distribution centre",
+  "logistics centre",
+  "fulfilment centre"
+ ],
+ "brief": 2,
+ "identity": {
+  "place": "A single-storey regional distribution centre on an edge-of-town business park in a temperate country, about ten years old, run by a wholesaler of household and hardware goods (boxed kettles and toasters, paint tins, garden tools, bedding) for about 120 people over two shifts. One steel portal-frame shed about 140 m long and 85 m deep, 12 m clear to the underside of the roof steel: twelve dock doors along the north wall, blocks of pallet racking in the middle, the packing and despatch area at the east end, and a two-storey block of offices and welfare rooms built inside the shed in the south-east corner, with the shift-briefing area in front of it.",
+  "architecture": [
+   "walls in two bands: a pale grey precast concrete panel from the floor to 2.4 m (lifting sockets and panel joints visible), then pale grey-white insulated profiled steel cladding with vertical ribs up to the eaves at about 12.5 m",
+   "the portal frame's grey steel I-section columns stand just inside the walls every 7.5 m; inside the shed only a few internal columns, all of them standing within racking runs, so no gangway or aisle has a column in it",
+   "the roof seen from below: grey liner sheet on purlins, the frame's rafters, long strips of translucent roof light (about one tenth of the roof), rows of round LED high-bay lights hung at about 11 m, and the sprinkler mains painted red running along under the roof",
+   "the floor: one power-floated pale grey concrete slab, smooth and slightly glossy, cut by thin saw-cut joints in a grid about 6 m square, with faint black tyre marks along the truck routes",
+   "routes marked on the floor, never only painted where people walk among trucks: yellow lines 100 mm wide edge the pedestrian walkways, which carry a white walking-person pictogram every 10 m and are fenced from truck routes by yellow tubular steel barriers about 1.1 m high; where a walkway must cross a truck route there is a zebra crossing of broad white bars with a gap in the barrier on each side",
+   "pallet racking in long back-to-back runs: uprights painted deep blue-green, beams dark steel grey, levels every 1.8 m, three pallets to a bay, a load notice board on every run end and steel protectors round the uprights that trucks pass",
+   "the dock face: deep blue-green insulated vertical-lift doors in the north wall, each with a dock leveller in a pit in front of it, a padded dock shelter outside, red and green lights facing the driver outside, and a control panel with its own red and green restraint lamps on the pier beside it inside"
+  ],
+  "materials": "Pale grey concrete and cladding; painted and galvanised steel; deep blue-green as the company's colour (racking uprights, dock doors, the welfare block's door frames); tan corrugated cardboard cartons, many of them wrapped in glossy clear stretch film on pale pine pallets; black rubber (dock bumpers, wheels, mats). Families: the racking's deep blue-green and the dock doors in wall2; pale pine pallets in wood hi and tan cartons in wood; stretch film as soft glass highlights. Safety colours are used only where they are in life, and they map to the palette like this: safety yellow (floor lines, barriers, upright protectors, warning signs, hazard stripes) is drawn in the brass family; black on hazard stripes in metal deep; blue mandatory signs in the fabric family; green safe-condition signs and green lights in plant hi; red fire equipment, prohibition rings and red lights in accent; white sign grounds and floor pictograms in paper.",
+  "inhabited": [
+   "work in progress: part-picked pallets, a roll cage half full, cartons with their tops cut open at the pick face, a roll of stretch film left on a pallet",
+   "the paperwork of the place, all as empty slots: load notices, location labels on every beam, a printed pick list on a clipboard, a delivery note in a plastic sleeve",
+   "safety kit where it really is: extinguishers on brackets with their red signs, red manual call points, a green first-aid sign, convex mirrors at blind corners, a spill kit in a yellow bin",
+   "wear: scuffed and dented upright protectors, black tyre marks at the turns, a corner of a floor line worn grey, a pallet with a broken top board set aside"
+  ],
+  "scale": [
+   "a person is about 1.75 m tall; the clear height is 12 m, about seven people; a person in a 3 m aisle has racking more than four times their height either side",
+   "racking: uprights 80 to 100 mm wide in frames 1.1 m deep; back-to-back runs 2.4 m deep (two frames with a 0.2 m gap); bays 2.7 m between uprights holding three Euro pallets side by side; the first beam at 1.8 m, then 3.6, 5.4 and 7.2 m, loads up to about 8.7 m; the floor level holds pallets on the floor",
+   "a Euro pallet is 1.2 m by 0.8 m and 0.144 m high; a pallet load of cartons is about 1.2 to 1.4 m high above it",
+   "aisles between racking runs 3.0 m (reach trucks); the main gangways 4.5 m (counterbalance trucks); walkways 1.2 m between their lines; a counterbalance truck is about 1.2 m wide and 2.4 m long to the fork face, its overhead guard about 2.15 m high",
+   "dock doors 3.0 m wide and 3.0 m high on 3.75 m centres (two to each 7.5 m frame bay, a frame column in every second pier); the dock floor 1.2 m above the yard; a leveller 2.0 m wide and 2.5 m long with a 0.4 m hinged lip",
+   "a roll cage about 0.8 by 0.7 m and 1.8 m tall; a briefing board 4.0 m wide with its bottom at 0.9 m",
+   "extinguisher handles about 1.0 m above the floor; manual call points about 1.4 m; signs at about 2.0 to 2.4 m; exit signs above exit doors at about 2.3 m"
+  ],
+  "default_light": "Even, cool white light from the rows of LED high-bay lights high overhead, softened by daylight from the roof-light strips: light falls from almost straight above, so shadows are short and lie close under things (a contact shadow under each pallet, the underside of each beam darker, the floor of a deep aisle a little dimmer than the gangway). At the dock face an open door is sealed by its shelter onto a trailer, so no daylight comes in; a dock lamp on a swing arm lights the trailer's interior.",
+  "outside": "Seen only through an open dock door: the dark interior of a parked trailer and, around its edge, the padded dock shelter; never a landmark or a sign.",
+  "motifs": "Use at least three of these in every scene so the sets belong to one place (each scene names the ones its camera can see): deep blue-green racking uprights with dark grey beams, yellow walkway lines with a white walking-person pictogram, a yellow tubular barrier, tan cartons wrapped in clear stretch film on pale pine pallets, the two-band wall (precast panel below, ribbed cladding above), a convex mirror, the red sprinkler main and the rows of high-bay lights.",
+  "avoid": [
+   "a generic grey box with no character, or a cluttered, unsafe warehouse (the site is well run; the lessons are about people's choices in it)",
+   "real brands, logos, words or numbers on cartons, signs, labels or vehicles",
+   "people in the sets (the cast is separate); forklifts and other trucks are separate props unless a scene says one is parked",
+   "a walkway with no barrier where trucks pass close, a crossing with no gap in the barrier, or anything stored on a walkway, a crossing or in front of a fire point or exit",
+   "racking that is too short, too few levels, unloaded beams floating with no uprights, pallets overhanging the beams, or pallets stacked on top of the racking",
+   "safety signs with words; every sign is a pictogram in its ISO 7010 shape and colour",
+   "a wall, column or barrier in the middle of an aisle or gangway"
+  ]
+ },
+ "research": [
+  "https://www.hse.gov.uk/pubns/priced/hsg136.pdf (HSE HSG136 workplace transport safety, read 2026-10-15)",
+  "https://www.hse.gov.uk/pubns/priced/hsg76.pdf (HSE HSG76 warehousing and storage, read in part 2026-10-15)",
+  "https://www.hse.gov.uk/WORKPLACETRANSPORT/sitebased.htm (HSE: chocks, restraints, signals and key safes at loading bays, read 2026-10-15)",
+  "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.176 (OSHA materials handling, read 2026-10-15)",
+  "racking, aisle, dock, panel, briefing-board and sign facts from search summaries, each listed with its URL in docs/research/2026-10-13-sets-warehouse.md (2026-10-15)"
+ ],
+ "objects": {
+  "pallet racking": "adjustable pallet racking: upright frames of two perforated steel uprights (80 to 100 mm wide, a row of small teardrop slots up the face) 1.1 m apart, joined by horizontal and diagonal bracing in a zigzag, each upright on a small base plate bolted to the floor; pairs of box-section beams (about 0.1 m deep) hooked into the uprights by end connectors with a locking pin, one beam at the front and one at the back of each level; bays 2.7 m between uprights with three pallets side by side; levels at 1.8, 3.6, 5.4 and 7.2 m; two frames back to back with a 0.2 m gap make a run 2.4 m deep, tied across by short spacers. Uprights deep blue-green, beams dark steel grey. Pallets sit on the two beams, their front edge just proud of the front beam; nothing overhangs the back",
+  "pallet": "a Euro pallet: 1.2 by 0.8 m and 0.144 m high, pale pine: five top deck boards, three lengthwise bottom boards, nine square blocks between, so fork openings show on both the short and long sides; stamped marks as plain rectangles, no characters",
+  "pallet load": "tan corrugated cartons in a stable column-stacked or brick-bonded block the size of the pallet, about 1.2 to 1.4 m high, wrapped in clear glossy stretch film that shows as soft diagonal bands and highlights over the cartons; a plain white label rectangle (slot) on the face",
+  "carton": "a corrugated cardboard box with its fluting visible at cut edges, flaps meeting along the top with a strip of brown tape, slightly soft corners; open cartons with their flaps folded back and the goods inside as plain shapes; no print, no words",
+  "rack protection": "yellow steel upright protectors: an angled or U-shaped guard about 0.4 m high bolted to the floor round the foot of each exposed upright, with black hazard stripes; at each run end a low yellow steel rail at about 0.4 m across the end, on two posts, so a truck cannot strike the end frame",
+  "load notice": "a rigid white sign about 0.6 by 0.4 m fixed to the run's end frame at about 2.0 to 2.4 m, with a thin coloured border and empty panels for the bay and level loads (slot); no characters",
+  "location label": "a small white label about 0.15 by 0.05 m on the front face of a beam at each pallet position, with a plain bar block where a barcode would be (no characters); at floor level the label sits on the beam above or on a post",
+  "pedestrian barrier": "a yellow tubular steel barrier about 1.1 m high: round posts on square base plates bolted to the floor every 2 m, a top rail and a mid rail between them, a low kick rail near the floor; joints are rounded elbows, never sharp corners; it stops with a capped post on each side of a gap",
+  "floor markings": "painted on the concrete: solid yellow lines 100 mm wide edging walkways and gangways; a white walking-person pictogram (about 0.6 m tall) inside a walkway every 10 m; a zebra crossing of white bars 0.5 m wide with 0.5 m gaps laid across the route; a broad yellow stop line 0.2 m wide; worn paler where wheels run, never letters",
+  "mesh panel": "a steel mesh fence panel 2 m high and about 1 m wide: a square-tube frame painted dark grey, filled with welded mesh of about 50 by 100 mm, on posts with base plates; the racking and its loads show faintly through it",
+  "convex mirror": "a round convex safety mirror about 0.6 m across in a red-and-white or yellow-and-black plastic rim, on a short steel arm with a clamp; its face shows a curved, reduced, bright reflection of the gangway (no people)",
+  "fire point": "a wall-mounted bracket holding two fire extinguishers side by side (red cylinders about 0.6 m tall with a black hose and a squeeze handle, handles at about 1.0 m); above them a red square sign with a white extinguisher pictogram at about 2.0 m; beside them a red manual call point, a small square box about 90 mm across with a white window panel, at 1.4 m",
+  "high-bay light": "a round LED high-bay light about 0.4 m across, a finned dark aluminium body with a white diffuser underneath, hung on a short chain or rod from the roof steel at about 11 m, in regular rows; seen from below as a bright disc",
+  "safety sign": "an ISO 7010 pictogram sign, shape and colour by type and never any words: warning, a yellow triangle with rounded corners, a black border band and a black pictogram; mandatory, a solid blue disc with a white pictogram; prohibition, a white disc with a red ring and a red diagonal bar over a black pictogram; safe condition, a green square with a white pictogram; fire equipment, a red square with a white pictogram. Rigid panels about 0.2 to 0.4 m, screwed flat to a wall or post",
+  "roll cage": "a steel roll container about 0.8 m long, 0.7 m wide and 1.8 m high: a flat steel base deck on four castors (two swivelling, two fixed, about 0.13 m wheels), three sides of galvanised welded wire mesh in a round-tube frame, the fourth side a hinged mesh gate or open; seen side-on, a tall mesh box on a low wheeled base, never a solid box",
+  "dock door": "an insulated sectional door 3.0 m wide and 3.0 m high in the deep blue-green of the company: four horizontal steel-faced panels about 0.75 m tall with fine joints between them, no windows, running in steel guide tracks at both jambs; a vertical-lift door, so when open its panels stand flat against the wall above the opening; a black rubber seal along its bottom edge; a key hook (a small steel hook) on the inside of the bottom rail",
+  "dock leveller": "a steel ramp deck 2.0 m wide and 2.5 m long, its top a chequer-plate pattern, set in a concrete pit in front of the door so that when stored it lies flush with the floor; a hinged lip 0.4 m deep along its outer edge that folds down when stored and swings out to rest on the trailer bed when in use; yellow-and-black hazard stripes painted along both sides of the pit and across the lip",
+  "dock control panel": "a grey steel wall box about 0.25 m wide, 0.5 m tall and 0.15 m deep, fixed to the pier beside the door at 1.15 to 1.65 m: two round indicator lamps at its top (red and green, only one lit at a time), below them three square push buttons (door up, door down, leveller), and a red mushroom-headed emergency stop on a yellow backing near the bottom; a cable conduit running up the wall from it",
+  "dock shelter": "seen from inside only at the edges of the open door: thick dark grey fabric curtains hanging down both sides and across the top of the opening outside the wall, pressed against the trailer's rear corners to seal the gap",
+  "trailer": "the inside of a box trailer backed into the dock: a box 2.48 m wide and 2.7 m high inside, 13.6 m long, its floor of dark hardwood boards level with the dock floor, its walls lined with pale grey plywood panels with a line of load-strap rails along them, its rear frame of steel corner posts; dim inside except where a lamp shines; no livery, no words",
+  "dock lamp": "a loading-dock lamp: a round steel lamp head about 0.25 m across with a short cowl, on a jointed steel swing arm about 1.0 m long fixed by a bracket to the wall or column at about 2.4 m, so it can be turned into the open door to light the trailer; a cable runs along the arm",
+  "briefing board": "a long wall-mounted board 4.0 m wide and 1.2 m tall, fixed with its bottom edge at 0.9 m, in three framed parts with deep blue-green aluminium edging: a safety cross (a white panel with a cross-shaped grid of 31 small squares coloured by day: green, amber or red, no numbers), a whiteboard with a narrow ledge along its bottom for markers and an eraser, and a cork or magnetic board of pinned cards in neat columns",
+  "welfare block": "a two-storey block built inside the shed: painted pale grey blockwork walls with visible block coursing, a door 1.0 by 2.1 m with a narrow vertical vision panel in a deep blue-green steel frame, a long strip of first-floor office windows (aluminium frames, about 1.2 m tall) along its face, a flat top at 6.2 m edged with a steel guard rail"
+ },
+ "batches": [
+  [
+   "aisle",
+   "picking"
+  ],
+  [
+   "loading_dock",
+   "shift_board"
+  ]
+ ]
+}

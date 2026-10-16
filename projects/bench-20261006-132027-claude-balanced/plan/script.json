@@ -1,0 +1,1122 @@
+{
+  "title": "Sam and the training that faded",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "sec1_fading",
+      "title": "Fading"
+    },
+    {
+      "id": "sec2_spacing",
+      "title": "Spacing"
+    },
+    {
+      "id": "sec3_retrieval",
+      "title": "Retrieval"
+    },
+    {
+      "id": "sec4_the_step",
+      "title": "The step"
+    },
+    {
+      "id": "sec5_own_week",
+      "title": "Your week"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "sec1_fading",
+      "job": "hook",
+      "narration": [
+        "Imagine Sam, a full day of new software training.",
+        "Sam nods along, takes notes, feels ready.",
+        "Everyone says it went well.",
+        "Sam leaves with a full notepad."
+      ],
+      "on_screen": [
+        "Training day"
+      ],
+      "visual_intent": "Cartoon Sam at a desk with a laptop and a full notepad, smiling, a bright skill icon glowing on the desk.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam and the training day are an illustrative scene",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "section": "sec1_fading",
+      "job": "hook",
+      "narration": [
+        "A week later, Sam opens the software.",
+        "The cursor blinks.",
+        "Sam cannot remember where to start.",
+        "The notes are right there.",
+        "They do not help."
+      ],
+      "on_screen": [
+        "A week later"
+      ],
+      "visual_intent": "Same desk, a week on: the notepad lies open but untouched, Sam frowns at a blank screen with a blinking cursor, the skill icon dull.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam is stuck a week after training",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "sec1_fading",
+      "job": "orient",
+      "narration": [
+        "By the end, you will know what Sam could have done.",
+        "Say, ten minutes, spread over a few days.",
+        "Then the training is still there,",
+        "when the real task arrives.",
+        "And you can do the same for your next training."
+      ],
+      "on_screen": [
+        "Ten minutes",
+        "A few days"
+      ],
+      "visual_intent": "Presenter beside a small calendar where short ten-minute blocks appear on separate days, ahead of a task marker.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Ten minutes is an illustrative amount of practice",
+          "hypothetical": true
+        },
+        {
+          "claim": "Practice spread over several days usually lasts longer",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "section": "sec1_fading",
+      "job": "transition",
+      "narration": [
+        "You have been Sam, haven't you?",
+        "You sat through good training.",
+        "Then the real task showed up, and half of it was gone.",
+        "So watch what happens to the learning."
+      ],
+      "on_screen": [],
+      "visual_intent": "A sticky week calendar on Sam's desk; the training notes pinned on it blur a little from day to day.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Viewer's own half-lost training is a shared experience",
+          "hypothetical": true
+        },
+        {
+          "claim": "Learning fades when not revisited",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "section": "sec1_fading",
+      "job": "demonstrate",
+      "narration": [
+        "Look at the skill icon on Sam's desk.",
+        "Day one, it is bright.",
+        "Sam knows the steps.",
+        "Then the days pass, and nothing revisits it.",
+        "The icon starts to fade."
+      ],
+      "on_screen": [
+        "Day one"
+      ],
+      "visual_intent": "The skill icon on Sam's desk starts bright and visibly dims, a faint fade line tracing its brightness against the days.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Memory for new material fades when not revisited",
+          "fact": "F1"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "sec1_fading",
+      "job": "define",
+      "narration": [
+        "Notice where it drops fastest.",
+        "Right after the training.",
+        "Then the fading slows down.",
+        "Day by day, less is lost."
+      ],
+      "on_screen": [
+        "Fastest early",
+        "Then slower"
+      ],
+      "visual_intent": "The fade line drops steeply on the first days then flattens, labels sitting on the steep part and the flat part of the curve; the icon dims to match.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Forgetting is fastest soon after learning and slows down",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec1_fading",
+      "job": "quantify",
+      "narration": [
+        "That is the shape. Steep first, then gentle.",
+        "No exact figures here.",
+        "They vary with the person and the material.",
+        "So we keep to the shape."
+      ],
+      "on_screen": [
+        "Shape, not figures"
+      ],
+      "visual_intent": "The curve held on screen with its axes left unmarked, no numbers on either axis, one small tag saying the rate varies.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Rate varies by material, person and how well it was learned, so no figures",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec1_fading",
+      "job": "consolidate",
+      "narration": [
+        "And Sam did nothing after the training.",
+        "Nothing brought the skill back.",
+        "So whether it stuck was left to chance.",
+        "Fading is fastest early."
+      ],
+      "on_screen": [
+        "Left to chance"
+      ],
+      "visual_intent": "Sam leaning back, hands off the keyboard, while the icon sits dim at the bottom of the curve; a coin hovers over the desk.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "One session with no follow-up leaves later remembering to chance",
+          "fact": "F12"
+        },
+        {
+          "claim": "Fading is fastest early",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2_spacing",
+      "job": "orient",
+      "narration": [
+        "Now say Sam has ten minutes of practice.",
+        "Two ways to spend them.",
+        "All at once, today.",
+        "Or in short visits, on later days."
+      ],
+      "on_screen": [
+        "One block",
+        "Short visits"
+      ],
+      "visual_intent": "Two timelines stacked, same total effort drawn as the same amount of colour: one thick block on day one, and several thin slices on later days.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Ten minutes of practice is an illustrative amount",
+          "hypothetical": true
+        },
+        {
+          "claim": "Same practice can be one block or spread over sessions",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "sec2_spacing",
+      "job": "demonstrate",
+      "narration": [
+        "Cram it into one block, and it feels great.",
+        "Sam is sharp tomorrow.",
+        "Good for a test soon after.",
+        "Cramming does work for that."
+      ],
+      "on_screen": [
+        "Sharp tomorrow"
+      ],
+      "visual_intent": "On the one-block timeline the skill line shoots up after the block and stays high for the next day.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Cramming can feel productive and can help for a test soon after",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "sec2_spacing",
+      "job": "demonstrate",
+      "narration": [
+        "But look past tomorrow.",
+        "After that block, it fades faster.",
+        "Nothing lifts it again."
+      ],
+      "on_screen": [
+        "Fades faster"
+      ],
+      "visual_intent": "The one-block line slides down after its peak with no further lifts, the slope steeper than the other timeline.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Cramming tends to fade faster",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "sec2_spacing",
+      "job": "demonstrate",
+      "narration": [
+        "Spread the same effort, and each visit lifts it.",
+        "Short visits, on later days.",
+        "Each one catches the fade.",
+        "The skill stays higher."
+      ],
+      "on_screen": [
+        "Each visit lifts it"
+      ],
+      "visual_intent": "On the second timeline the skill line gets a small lift at each thin slice and stays above the one-block line.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Spread practice usually gives better long-term retention",
+          "fact": "F3"
+        },
+        {
+          "claim": "Repeat attempts on later days with gaps",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "sec2_spacing",
+      "job": "refute",
+      "narration": [
+        "Here is where people slip.",
+        "One big block feels like the serious option.",
+        "It is not the one that lasts.",
+        "For lasting, spread usually wins."
+      ],
+      "on_screen": [
+        "Block feels serious",
+        "Spread usually lasts"
+      ],
+      "visual_intent": "The big block on the left labelled as feeling serious, next to the spread slices on the right labelled with the word usually.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "misconception": "One focused block of practice is the best way to make it stick.",
+      "grounding": [
+        {
+          "claim": "Spread practice usually beats one block for lasting retention",
+          "fact": "F3"
+        },
+        {
+          "claim": "Cramming feels productive",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "sec2_spacing",
+      "job": "define",
+      "narration": [
+        "That has a name. The spacing effect.",
+        "Same amount of practice, spread over sessions.",
+        "It usually lasts longer.",
+        "And we give no ideal gap."
+      ],
+      "on_screen": [
+        "The spacing effect"
+      ],
+      "visual_intent": "The name appears over the spread timeline, the two lines still visible, the spread one on top.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The spacing effect: spread practice usually gives better retention than one block",
+          "fact": "F3"
+        },
+        {
+          "claim": "No ideal gap claimed",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "sec2_spacing",
+      "job": "consolidate",
+      "narration": [
+        "Remember where the icon dropped fastest?",
+        "Those early days are when a visit helps most.",
+        "Same effort. Spread it out."
+      ],
+      "on_screen": [
+        "Early visits help most"
+      ],
+      "visual_intent": "The first fading curve returns, its steep early stretch highlighted, a small visit marker placed in that stretch.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Forgetting is fastest soon after learning",
+          "fact": "F2"
+        },
+        {
+          "claim": "Spread practice usually lasts",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "sec3_retrieval",
+      "job": "scenario",
+      "narration": [
+        "Back to Sam, a week on.",
+        "Sam decides to review.",
+        "Opens the recording.",
+        "Watches it again, start to finish.",
+        "Everything looks familiar."
+      ],
+      "on_screen": [
+        "Looks familiar"
+      ],
+      "visual_intent": "Sam watches the training recording on a screen, nodding, a thought bubble reading I know this.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam re-watches the recording and it feels familiar",
+          "hypothetical": true
+        },
+        {
+          "claim": "Re-watching feels familiar and easy",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "sec3_retrieval",
+      "job": "refute",
+      "narration": [
+        "Here is the tricky part.",
+        "Familiar is not the same as knowing.",
+        "Easy re-watching can fool you.",
+        "It feels like progress."
+      ],
+      "on_screen": [
+        "Familiar is not knowing"
+      ],
+      "visual_intent": "Two labelled jars side by side next to Sam: one filled with a familiar glow, one empty labelled knowing.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "misconception": "If I re-watch until it feels familiar and easy, I know it.",
+      "grounding": [
+        {
+          "claim": "Familiarity from re-watching can be mistaken for knowing",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b18",
+      "section": "sec3_retrieval",
+      "job": "demonstrate",
+      "narration": [
+        "So Sam closes the screen.",
+        "Opens the software, tries the task.",
+        "Blank. Not a single step comes.",
+        "Familiar, yes. Known, no."
+      ],
+      "on_screen": [
+        "Blank"
+      ],
+      "visual_intent": "Sam shuts the recording, the software opens on an empty form, Sam's hands hover over the keys with nothing to type.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam tries the task from memory and cannot start",
+          "hypothetical": true
+        },
+        {
+          "claim": "Familiarity is mistaken for knowing",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b19",
+      "section": "sec3_retrieval",
+      "job": "define",
+      "narration": [
+        "Closed screen. Trying it from memory.",
+        "That has a name. Retrieval practice.",
+        "Do the task, or explain it,",
+        "without looking at anything."
+      ],
+      "on_screen": [
+        "Retrieval practice"
+      ],
+      "visual_intent": "The name appears next to Sam's closed notes and open blank software, with the notes shown shut.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Retrieval practice is recalling from memory without looking, such as doing the task from memory",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "sec3_retrieval",
+      "job": "demonstrate",
+      "narration": [
+        "Then comes the part people skip.",
+        "Sam opens the recording, and checks.",
+        "Each miss goes on the notepad.",
+        "One step. Another. Another."
+      ],
+      "on_screen": [
+        "Check the misses"
+      ],
+      "visual_intent": "Sam compares screen and recording; a gap list on the notepad fills in one missed step per phrase.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Recall before checking, with feedback afterwards, helps",
+          "fact": "F6"
+        },
+        {
+          "claim": "Sam lists the missed steps",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "section": "sec3_retrieval",
+      "job": "relate",
+      "narration": [
+        "Why try first, then look?",
+        "Because the trying is what strengthens it.",
+        "Trying usually beats re-watching.",
+        "Looking afterwards fills the gaps."
+      ],
+      "on_screen": [
+        "Try first",
+        "Then check"
+      ],
+      "visual_intent": "Two arrows on the notepad: try first, then check, in that order, with the gap list beside them.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Recall usually strengthens memory more than re-watching, strongest before checking",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b22",
+      "section": "sec3_retrieval",
+      "job": "refute",
+      "narration": [
+        "Now Sam feels bad.",
+        "Shaky, and some answers wrong.",
+        "Is that failure?",
+        "No. Somewhat hard is the working zone."
+      ],
+      "on_screen": [
+        "Somewhat hard works"
+      ],
+      "visual_intent": "Sam looks glum at a gap list with several entries; a speech bubble says this is not working, then a green zone band labelled somewhat hard appears around Sam's effort level.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "misconception": "If my recall attempt is shaky or I get answers wrong, it is not working.",
+      "grounding": [
+        {
+          "claim": "Recall that feels somewhat hard, even with misses, tends to help more than effortless recall",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "sec3_retrieval",
+      "job": "define",
+      "narration": [
+        "Effortless feels like progress.",
+        "Often it is not.",
+        "A few misses help more than none.",
+        "That has a name. Desirable difficulty."
+      ],
+      "on_screen": [
+        "Desirable difficulty"
+      ],
+      "visual_intent": "An easy-looking smooth path beside a slightly uphill path, with the name over the uphill one.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Somewhat hard recall helps more; called desirable difficulty",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "sec3_retrieval",
+      "job": "distinguish",
+      "narration": [
+        "One limit. Keep it manageable.",
+        "An impossible task with no checking helps nobody.",
+        "Hard enough to stretch you.",
+        "Not so hard you quit."
+      ],
+      "on_screen": [
+        "Keep it manageable"
+      ],
+      "visual_intent": "The uphill path with a sheer cliff drawn beyond it, crossed out, next to the manageable slope with a checkpoint flag.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Difficulty must stay manageable; impossible tasks without feedback do not help",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b25",
+      "section": "sec3_retrieval",
+      "job": "consolidate",
+      "narration": [
+        "Re-watching feels familiar.",
+        "Familiar is not knowing.",
+        "Try first, then check.",
+        "A few misses means it is working."
+      ],
+      "on_screen": [
+        "Try, then check"
+      ],
+      "visual_intent": "Recap strip on the notepad: re-watch crossed out, try then check ticked, a few misses marked as normal.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Familiarity is not knowing",
+          "fact": "F7"
+        },
+        {
+          "claim": "Recall before check helps more than re-watching",
+          "fact": "F6"
+        },
+        {
+          "claim": "Some misses are fine",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b26",
+      "section": "sec3_retrieval",
+      "job": "transition",
+      "narration": [
+        "Now you.",
+        "Say Sam just finished a short training.",
+        "It covers a new approval tool.",
+        "Which plan lasts weeks later?"
+      ],
+      "on_screen": [
+        "Your turn"
+      ],
+      "visual_intent": "Sam at the desk with a new approval tool on screen, three blank plan cards waiting on the side.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Approval tool variation is an illustrative scene",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b27",
+      "section": "sec3_retrieval",
+      "job": "check",
+      "narration": [
+        "Plan A, re-watch the recording tonight.",
+        "Until it feels easy.",
+        "Plan B, try it tomorrow from memory,",
+        "check what you missed, repeat on a later day.",
+        "Plan C, one long block of practice today.",
+        "Pause, and decide."
+      ],
+      "on_screen": [
+        "A. Re-watch tonight",
+        "B. Try tomorrow, check, repeat later",
+        "C. One long block today"
+      ],
+      "visual_intent": "Three plan cards slide in one per option, each with a small picture: a screen, a notepad with a calendar, a single big block.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "quiz",
+        "stage": "question"
+      },
+      "grounding": [
+        {
+          "claim": "Options are an illustrative decision in a fresh variation",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b28",
+      "section": "sec3_retrieval",
+      "job": "check",
+      "narration": [
+        "Plan B.",
+        "Plan A only feels like knowing.",
+        "Recall, then a check, spread over days, usually lasts."
+      ],
+      "on_screen": [
+        "B",
+        "Familiar is not knowing"
+      ],
+      "visual_intent": "Card B lights up with a tick, card A dims with a tag familiar, not known; the other card fades away.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "pause_after_s": 2,
+      "recall": {
+        "kind": "quiz",
+        "stage": "answer"
+      },
+      "grounding": [
+        {
+          "claim": "Re-watching feels easy and the feeling is mistaken for knowing",
+          "fact": "F7"
+        },
+        {
+          "claim": "Recall usually beats re-watching",
+          "fact": "F6"
+        },
+        {
+          "claim": "Spread attempts on later days usually last",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b29",
+      "section": "sec4_the_step",
+      "job": "orient",
+      "narration": [
+        "So what does Sam do on the original task?",
+        "The one that went blank.",
+        "Three steps. Watch them."
+      ],
+      "on_screen": [
+        "Three steps"
+      ],
+      "visual_intent": "The blank form from the hook returns on Sam's screen, three empty step cards lined up beside it.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam returns to the original task",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b30",
+      "section": "sec4_the_step",
+      "job": "sequence",
+      "narration": [
+        "Step one. Close it, and try.",
+        "Sam shuts the notes and the recording.",
+        "Then does the task from memory.",
+        "Slowly. A few steps come."
+      ],
+      "on_screen": [
+        "Close it, try it"
+      ],
+      "visual_intent": "Card one fills in; the notes and recording shut, and Sam fills the form from memory, a few steps appearing.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Close the material, try to do it from memory",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b31",
+      "section": "sec4_the_step",
+      "job": "sequence",
+      "narration": [
+        "Step two. Check the misses.",
+        "Sam opens the recording, and compares.",
+        "Each missed step goes on the gap list.",
+        "That list is the next try's focus."
+      ],
+      "on_screen": [
+        "Check the misses"
+      ],
+      "visual_intent": "Card two fills in; the gap list shows the missed steps, each one a line on the notepad.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Then check what you missed",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b32",
+      "section": "sec4_the_step",
+      "job": "sequence",
+      "narration": [
+        "Step three. Come back on a later day.",
+        "Same short try, with a gap between.",
+        "Not all at once."
+      ],
+      "on_screen": [
+        "Come back later"
+      ],
+      "visual_intent": "Card three fills in; a small calendar shows the try marked on a later day, with empty days between.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Repeat the short recall attempt on later days with gaps",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b33",
+      "section": "sec4_the_step",
+      "job": "relate",
+      "narration": [
+        "Tie it to work that already happens.",
+        "Use the tool on a real task,",
+        "a few days after training.",
+        "No extra session to find."
+      ],
+      "on_screen": [
+        "Use it on a real task"
+      ],
+      "visual_intent": "On the calendar, the later-day marker is attached to a real task card in Sam's work week.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Recall attempts can be tied to real work a few days after training",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b34",
+      "section": "sec4_the_step",
+      "job": "demonstrate",
+      "narration": [
+        "Second try, a few days on.",
+        "Fewer misses.",
+        "Next one, fewer still.",
+        "Exact days matter less than having a spread."
+      ],
+      "on_screen": [
+        "Fewer misses"
+      ],
+      "visual_intent": "The gap list on the notepad shrinks across two later days, lines crossing off until only one remains.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Any spaced schedule usually beats none; exact timing is not fixed",
+          "fact": "F10"
+        },
+        {
+          "claim": "Sam's misses shrink over later tries",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b35",
+      "section": "sec4_the_step",
+      "job": "consolidate",
+      "narration": [
+        "That closed-book try?",
+        "Same as the better plan.",
+        "Close it, try it, check it."
+      ],
+      "on_screen": [
+        "Close it, try it, check it"
+      ],
+      "visual_intent": "Three step cards stacked side by side with the quiz card B beside them, matching their contents.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Close, try from memory, check what was missed",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b36",
+      "section": "sec5_own_week",
+      "job": "practice",
+      "narration": [
+        "Now your week.",
+        "Think of your latest training.",
+        "What tool or skill came out of it?",
+        "Hold that one in mind."
+      ],
+      "on_screen": [
+        "Your latest training"
+      ],
+      "visual_intent": "Split screen: Sam on the left, a blank week calendar on the right for the viewer.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Viewer picks a tool or skill from their own recent training",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b37",
+      "section": "sec5_own_week",
+      "job": "practice",
+      "narration": [
+        "Pick one real task, a few days from now.",
+        "One that uses the skill anyway.",
+        "You are not adding work.",
+        "You are using work you have."
+      ],
+      "on_screen": [
+        "One real task"
+      ],
+      "visual_intent": "On the blank calendar one day gets a task marker that uses the skill.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Tie the recall attempt to work that already happens",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b38",
+      "section": "sec5_own_week",
+      "job": "practice",
+      "narration": [
+        "That is your later day.",
+        "Before you open any notes, try from memory.",
+        "Then check what you missed."
+      ],
+      "on_screen": [
+        "Try from memory first"
+      ],
+      "visual_intent": "A short try marker appears on the task day, a notes icon stays closed beside it, then a check mark follows.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Try from memory first, then check what you missed",
+          "fact": "F9"
+        },
+        {
+          "claim": "Do it a few days after training on a real task",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b39",
+      "section": "sec5_own_week",
+      "job": "distinguish",
+      "narration": [
+        "Here is the test.",
+        "Are you trying, or just looking?",
+        "Looking again is a re-read.",
+        "Trying first, then checking, is retrieval."
+      ],
+      "on_screen": [
+        "Trying or looking?"
+      ],
+      "visual_intent": "Two calendar entries side by side: one an eye icon labelled re-read, the other a pencil over closed notes labelled retrieval.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Re-reading feels familiar but is not the same as knowing",
+          "fact": "F7"
+        },
+        {
+          "claim": "Recall without looking is retrieval practice",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b40",
+      "section": "sec5_own_week",
+      "job": "payoff",
+      "narration": [
+        "Back to Sam, a week on.",
+        "Same desk, same software.",
+        "Sam starts the task, and misses one step.",
+        "Checks it, and carries on."
+      ],
+      "on_screen": [
+        "A week on"
+      ],
+      "visual_intent": "The hook's desk scene returns with the same angle: Sam types through the task, pauses at one step, checks the notepad, continues; the skill icon is bright.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "hypothetical": true,
+      "grounding": [
+        {
+          "claim": "Sam resolves the original situation",
+          "hypothetical": true
+        }
+      ]
+    },
+    {
+      "id": "b41",
+      "section": "sec5_own_week",
+      "job": "payoff",
+      "narration": [
+        "Take this to work.",
+        "Close it, try it, check it,",
+        "and come back another day."
+      ],
+      "on_screen": [
+        "Close it",
+        "Try it",
+        "Check it",
+        "Come back another day"
+      ],
+      "visual_intent": "Presenter beside four words appearing in turn, with Sam's bright icon on the desk behind.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Close it, try from memory, check, repeat on later days",
+          "fact": "F9"
+        },
+        {
+          "claim": "Repeat on later days",
+          "fact": "F10"
+        }
+      ]
+    }
+  ]
+}

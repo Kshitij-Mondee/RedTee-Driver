@@ -1,0 +1,331 @@
+{
+  "concept": "One request, one board. A single login form travels from a browser card to a server card across an open path, past a slate router box that is the watcher. The board never changes layout: each step adds one thing to it (a certificate, two keys, a scrambled packet), and the watcher's copy tray tells the viewer what it has learned at every step: readable text, two useless values, no key, only noise. The padlock that opens on the promise closes on the payoff.",
+  "world": "The HTTPS path board: a flat light corporate field with a faint dot grid; browser card left (a form with a Submit button), server card right, a thin path line between them, and a slate router box mid-path with a small watcher mark and a copy tray under it. A second station, the address bar, is a large generic browser address bar with a padlock, used for the habit section. No people, no textures, no sets.",
+  "look": "Classic treatment: flat rounded cards with soft shadows on the plain light field, angular edges and box marks from the tech seed, things draw in, the camera pans and pushes along the board. Newer treatment kept as an alternative: glass panels and a skia glow on the padlock close.",
+  "devices": [
+    {
+      "id": "packet_morph",
+      "what": "The form packet: a card of readable fields (user, password) that shape-morphs into a row of scrambled blocks when it passes the key, and back again at the far end. Same object every time it crosses.",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b02",
+        "b10",
+        "b11",
+        "b12",
+        "b18"
+      ]
+    },
+    {
+      "id": "watcher_tray",
+      "what": "The tray under the router box that holds the watcher's copy: readable fields in s1, two copied values and an empty key slot in s3, the same noise in s4 and the payoff. The tray is the measure of exposure.",
+      "kind": "data",
+      "beats": [
+        "b02",
+        "b07",
+        "b08",
+        "b11",
+        "b18"
+      ]
+    },
+    {
+      "id": "cert_card",
+      "what": "The certificate card: site name, expiry and issuer rows with an authority seal; ticks stamp in teal one row at a time, it shrinks to a ticked badge, re-lights on recall, and its name row turns red in the check.",
+      "kind": "list",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b09",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "key_slots",
+      "what": "Swap slots: one empty key slot at each end and one by the watcher. Matching blue keys drop into the end slots only; the watcher's slot stays empty. The key then sits on the path ends as the lens the packet passes through.",
+      "kind": "explain",
+      "beats": [
+        "b06",
+        "b07",
+        "b08",
+        "b10",
+        "b12"
+      ]
+    },
+    {
+      "id": "padlock",
+      "what": "One generic padlock above the path: appears open on the promise, becomes the object the habit labels hang on, closes on the payoff.",
+      "kind": "callback",
+      "beats": [
+        "b03",
+        "b15",
+        "b16",
+        "b17",
+        "b18"
+      ]
+    },
+    {
+      "id": "path_camera",
+      "what": "Join device: the camera pans along the path and pushes into the part that matters (browser end, watcher box, server end, certificate), then pulls back to the wide board. Hard cuts only at the check and the habit station.",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b05",
+        "b07",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b17"
+      ]
+    }
+  ],
+  "join_material": "Camera continue along the held board (pan and push into the part the voice names); hard cuts at section changes that leave the board (s5 quiz, s6 address bar) and back to the opening wide for the payoff.",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "the readable packet leaving the browser",
+      "why": "Pale open: an everyday, plain moment; the only loud thing is the data in plain sight."
+    },
+    {
+      "from": "b04",
+      "band": "mid",
+      "break": false,
+      "accent": "the certificate card, then the ticks in teal",
+      "why": "The middle gets richer: surfaces deepen a step as the mechanism starts."
+    },
+    {
+      "from": "b07",
+      "band": "dark",
+      "break": true,
+      "accent": "the two blue keys appearing at the ends only",
+      "why": "Dark break for the key mechanism: the field drops to navy so the blue keys and the watcher's empty slot are the only things that read; this is the idea viewers must remember."
+    },
+    {
+      "from": "b09",
+      "band": "mid",
+      "break": false,
+      "accent": "the ticked badge re-lighting",
+      "why": "Back to the middle band; the recall ties key to identity check."
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "break": true,
+      "accent": "none until the answer; then the red name row and the lit warning card",
+      "why": "The check opens up and goes pale so the viewer thinks; colour is withheld from the options."
+    },
+    {
+      "from": "b15",
+      "band": "light",
+      "break": false,
+      "accent": "the padlock and its labels",
+      "why": "Rest section, calm and open."
+    },
+    {
+      "from": "b18",
+      "band": "light",
+      "break": false,
+      "accent": "the padlock closing (blue), the watcher's noise left grey",
+      "why": "The lift at the close: the opening frame returns brighter, colour held back until the padlock closes."
+    }
+  ],
+  "sections": [
+    {
+      "id": "s1_exposed",
+      "treatment": "Bespoke kit station: the path board, wide. Productive register with an expressive open: the packet draws along the path. Entry: open on the board.",
+      "accent_on": "the readable packet and its copy",
+      "world": "path board, wide",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "Path board, WIDE establishing: form on the browser card, Submit presses, the readable packet draws out along the path toward the slate router box with the watcher mark. Something is wrong: the path is open. story_role hook.",
+          "builder": "bespoke kit station path_board",
+          "device": "packet_morph",
+          "join": "open (fade up from field)",
+          "intent": "establishing with something wrong"
+        },
+        {
+          "beat": "b02",
+          "line": "Path board, MEDIUM on the router box: the packet passes, the box duplicates it into the watcher tray; original and copy sit side by side, both readable. Labels 'Readable text' on the packet, 'Copy' on the tray.",
+          "builder": "bespoke kit station path_board",
+          "device": "watcher_tray",
+          "join": "continue (camera push to watcher)"
+        },
+        {
+          "beat": "b03",
+          "line": "Path board, WIDE, held: the layout stays; an open generic padlock draws in above the path and the watcher's copy softens slightly. Promise beat. Upgraded from template: the promise is a state of the same board, not a card.",
+          "builder": "bespoke kit station path_board (upgrade from template)",
+          "device": "padlock",
+          "join": "continue (camera pull back)",
+          "intent": "promise; title.card left-aligned over the board is the alternative"
+        }
+      ]
+    },
+    {
+      "id": "s2_identity",
+      "treatment": "Same board, camera on the browser and server halves. Productive, calm. Certificate as an object with fields; ticks stamp on their phrases.",
+      "accent_on": "the certificate card, ticks in teal (pos meaning: passed)",
+      "world": "path board, browser to server half",
+      "beats": [
+        {
+          "beat": "b04",
+          "line": "Path board, MEDIUM across browser and server: a request arrow runs right; a certificate card slides back to the browser carrying a site name; an authority seal stamps on 'certificate authority'.",
+          "builder": "bespoke kit station path_board",
+          "device": "cert_card",
+          "join": "continue (camera pan, time: next step)"
+        },
+        {
+          "beat": "b05",
+          "line": "Certificate card, CLOSE (zoom enters the object): three rows, name, expiry, issuer; a teal tick stamps beside each on its phrase.",
+          "builder": "bespoke kit station path_board",
+          "device": "cert_card",
+          "join": "continue (camera push into the card)"
+        }
+      ]
+    },
+    {
+      "id": "s3_key",
+      "treatment": "Same board in the dark break: navy field, light cards. The slow section. Swap slots and tokens; no maths, no formulas.",
+      "accent_on": "the shared key (blue), which keeps meaning 'the shared secret' all film",
+      "world": "path board, wide, dark band",
+      "beats": [
+        {
+          "beat": "b06",
+          "line": "Path board, WIDE: the certificate card shrinks to a ticked badge by the browser; empty key slots draw in at each end, watcher still between them. Label 'Shared key' on the empty slot.",
+          "builder": "bespoke kit station path_board",
+          "device": "key_slots",
+          "join": "continue (camera pull back)"
+        },
+        {
+          "beat": "b07",
+          "line": "Path board, MEDIUM on the watcher, field dims to navy: two small value tokens cross in opposite directions; the router box copies each into its tray; its own key slot stays empty.",
+          "builder": "bespoke kit station path_board",
+          "device": "watcher_tray",
+          "join": "continue (camera push to watcher)",
+          "intent": "dark break, slowdown"
+        },
+        {
+          "beat": "b08",
+          "line": "Path board, WIDE: matching blue keys drop into the slots at browser and server only; the watcher's slot stays empty, its tray holds two useless values. Label 'Same key'.",
+          "builder": "bespoke kit station path_board",
+          "device": "key_slots",
+          "join": "continue (camera pull back)"
+        },
+        {
+          "beat": "b09",
+          "line": "Ticked badge, CLOSE beside the browser key: the badge enlarges and its three ticks re-light in turn, tying the key to the passed check. Recall moment. Upgraded from template: the recall happens on the object it recalls.",
+          "builder": "bespoke kit station path_board (upgrade from template)",
+          "device": "cert_card",
+          "join": "continue (camera push into badge)",
+          "intent": "recall prompt"
+        }
+      ]
+    },
+    {
+      "id": "s4_scramble",
+      "treatment": "Same board, field lifts back to light. Camera travels the path left to right with the packet: browser end, watcher, server end. Shape morph of readable to scrambled is the motion.",
+      "accent_on": "the key and the scrambled blocks it makes",
+      "world": "path board, travelling along the path",
+      "beats": [
+        {
+          "beat": "b10",
+          "line": "Browser end, CLOSE: the readable form packet passes through the blue key and morphs into scrambled blocks as it leaves. Labels 'HTTPS' on the path, 'Encryption' on the key.",
+          "builder": "bespoke kit station path_board",
+          "device": "packet_morph",
+          "join": "continue (camera pan to browser end)"
+        },
+        {
+          "beat": "b11",
+          "line": "Watcher, MEDIUM: scrambled blocks pass the router box; its tray copy is the same noise; a small label shows the server address still visible, content not.",
+          "builder": "bespoke kit station path_board",
+          "device": "watcher_tray",
+          "join": "continue (camera pan with the packet)"
+        },
+        {
+          "beat": "b12",
+          "line": "Server end, MEDIUM then pull to WIDE: blocks pass the server's key and morph back to readable fields; a reply packet travels back scrambled and turns readable at the browser. Label 'Both ways' on the path.",
+          "builder": "bespoke kit station path_board",
+          "device": "packet_morph",
+          "join": "continue (camera pan to server, then pull back)"
+        }
+      ]
+    },
+    {
+      "id": "s5_check",
+      "treatment": "Hard cut to the check: quiz.question over the blurred board (automatic backplate) with a second server card whose certificate shows a different name; then back to the board for the answer, drawn on the certificate.",
+      "accent_on": "withheld on the question; on the answer, the red name row and the lit warning option",
+      "world": "path board with a new server, pale",
+      "beats": [
+        {
+          "beat": "b13",
+          "line": "Quiz station, WIDE: quiz.question over the blurred path board, kicker 'Your turn', the stem names a certificate for a different site; three options (Continue quietly, Warn you, Switch to plain) appear on their phrases, none marked; pause bar runs.",
+          "builder": "template quiz.question",
+          "device": "cert_card",
+          "join": "cut (chapter)",
+          "intent": "stopping check"
+        },
+        {
+          "beat": "b14",
+          "line": "Path board, CLOSE on the new server's certificate card: the name row's tick turns red; the three options sit as flags on the board, 'Warn you' lights, 'Continue quietly' dims with a note that scrambling alone leaves the far end unknown. Label 'Identity check' on the red row.",
+          "builder": "bespoke kit station path_board",
+          "device": "cert_card",
+          "join": "cut (back to the board, answer)",
+          "intent": "feedback on the tempting option"
+        }
+      ]
+    },
+    {
+      "id": "s6_habit",
+      "treatment": "Hard cut to the address bar station, rest register: a large generic address bar with the padlock; labels added by state, text on the objects. Then hard cut back to the opening wide for the payoff.",
+      "accent_on": "the padlock; teal for what it shows, slate for what it does not",
+      "world": "address bar station, then the path board wide",
+      "beats": [
+        {
+          "beat": "b15",
+          "line": "Address bar station, MEDIUM: a wide generic address bar with the padlock; two teal flag labels attach to the padlock on their phrases, 'Encrypted' and 'Certificate matched'. Upgraded from template: the definition hangs on the padlock it defines.",
+          "builder": "bespoke kit station address_bar (upgrade from template)",
+          "device": "padlock",
+          "join": "cut (chapter)"
+        },
+        {
+          "beat": "b16",
+          "line": "Address bar station, MEDIUM, held layout: two slate 'does not show' flags are added on the other side, 'Owner honest?' and 'After it arrives'; a small server card inset shows the form readable again on arrival. Upgraded from template: same station, state change.",
+          "builder": "bespoke kit station address_bar (upgrade from template)",
+          "device": "padlock",
+          "join": "continue"
+        },
+        {
+          "beat": "b17",
+          "line": "Address bar, CLOSE (push into the site name): the name is highlighted letter by letter and gets a tick; then an empty warning banner slot draws under the bar and gets the second tick. Labels 'Exact site name', 'Certificate warning'.",
+          "builder": "bespoke kit station address_bar",
+          "device": "padlock",
+          "join": "continue (camera push into the bar)",
+          "intent": "practice, pov"
+        },
+        {
+          "beat": "b18",
+          "line": "Path board, WIDE, the opening frame back: same form, path, watcher; Submit, the packet crosses as scrambled blocks, the watcher tray fills with noise, and the padlock above the path closes in blue.",
+          "builder": "bespoke kit station path_board",
+          "device": "packet_morph",
+          "join": "cut (callback to the opening frame)",
+          "intent": "payoff: opening frame changed"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "Newer treatment: glass panels (design seed) for the browser and server cards, and a short skia glow as the padlock closes in b18; the classic flat cards stay the default.",
+    "b03 as a left-aligned title.card ('One request' / 'What the padlock means') over the board backplate, instead of the drawn promise state.",
+    "b13 drawn on the board (option flags beside the failed certificate) instead of quiz.question, for full one-board continuity.",
+    "b15 and b16 as compare.two (Shows / Does not show, neutral valence) instead of the drawn address bar station."
+  ],
+  "open_questions": [
+    "No chapter device is planned (hard cuts only), since the board is held for most of the film; confirm this is acceptable for a two minute lesson.",
+    "The dark break in s3 drops the corporate-clean field to navy for about 13 s; unverified how the pack's card tokens read on a dark field, so pass 2 should check the frame or fall back to a dimmed mid band.",
+    "The watcher is drawn as a slate router box with a small eye-like mark, not a person (brief: no people); the mark design is unverified."
+  ]
+}

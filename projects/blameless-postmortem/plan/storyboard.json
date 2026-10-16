@@ -1,0 +1,1304 @@
+{
+  "style": "whiteboard",
+  "concept": "One long whiteboard that runs through a single invented incident: moving right is moving forward through the lesson and the night, moving down is looking closer (at the engineer, under the rule, into the system). The meeting room drawn from above opens and closes the film with the same geometry, first with every head on the engineer, finally with every head on the board. Motifs: the room's turning heads, the engineer's thought bubble, and the three invented conditions, which appear on the timeline, converge as arrows, become the quiz, stand beside the struck card, turn into owned fixes and end up on the board.",
+  "chrome": {
+    "section_labels": true
+  },
+  "motifs": [
+    {
+      "name": "incident_note",
+      "desc": "the 'Orders stopped' note: stamped in b01, flies onto the room's whiteboard in b02 (travel join), echoed at the end of the timeline in b13 and on the board in b28"
+    },
+    {
+      "name": "room_heads",
+      "desc": "the meeting room from above with its turning heads: b02 (turn to the engineer) and b28 (same geometry, turn to the board)"
+    },
+    {
+      "name": "three_conditions",
+      "desc": "no checkout test, staging setting differs, unwatched alert: timeline screens b12, arrows b20, quiz b21-b22, standing beside the card b23, fixes b24-b25, board b28. Same icons throughout (flask-conical, sliders-horizontal, bell-off/bell)"
+    },
+    {
+      "name": "thought_bubble",
+      "desc": "what the engineer knows: fades unsaid in b05, returns as the icon that opens step one in b10"
+    }
+  ],
+  "music": {
+    "mood": "calm_focus",
+    "level": 0.08
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "st_night",
+        "x": 0,
+        "y": 0,
+        "note": "b01: late night at the desk; the incident starts"
+      },
+      {
+        "id": "st_room",
+        "x": 2300,
+        "y": 0,
+        "note": "b02: the meeting room from above, next morning"
+      },
+      {
+        "id": "st_host",
+        "x": 4600,
+        "y": 0,
+        "note": "b03: the presenter steps in"
+      },
+      {
+        "id": "st_why",
+        "x": 6900,
+        "y": 0,
+        "note": "b04: section 1 opener"
+      },
+      {
+        "id": "st_bubble",
+        "x": 6900,
+        "y": 1400,
+        "note": "b05: below the opener = a closer look at the engineer"
+      },
+      {
+        "id": "st_cost",
+        "x": 9200,
+        "y": 1400,
+        "note": "b06: to the right = what follows from it"
+      },
+      {
+        "id": "st_define",
+        "x": 9200,
+        "y": 0,
+        "note": "b07: back up = the principle"
+      },
+      {
+        "id": "st_stays",
+        "x": 11500,
+        "y": 0,
+        "note": "b08: one half of the split card"
+      },
+      {
+        "id": "st_goes",
+        "x": 13600,
+        "y": 0,
+        "note": "b09: the other half, right next door"
+      },
+      {
+        "id": "st_rule",
+        "x": 16100,
+        "y": 0,
+        "note": "b10: step one, the ground rule written across the top of the board"
+      },
+      {
+        "id": "st_timeline",
+        "x": 16100,
+        "y": 1400,
+        "note": "b11-b13: under the rule, the night rebuilt left to right"
+      },
+      {
+        "id": "st_sofar",
+        "x": 18400,
+        "y": 1400,
+        "note": "b14: two of three steps"
+      },
+      {
+        "id": "st_meeting",
+        "x": 20700,
+        "y": 0,
+        "note": "b15-b16: back in the meeting, the first blaming remark and its rewrite"
+      },
+      {
+        "id": "st_turn",
+        "x": 23000,
+        "y": 0,
+        "note": "b17-b18: the viewer's rewrite"
+      },
+      {
+        "id": "st_system",
+        "x": 23000,
+        "y": 1400,
+        "note": "b19-b20: below = deeper, into the system"
+      },
+      {
+        "id": "st_quiz",
+        "x": 25300,
+        "y": 700,
+        "note": "b21-b22: the stopping check"
+      },
+      {
+        "id": "st_actions",
+        "x": 27600,
+        "y": 0,
+        "note": "b23-b25: the action card, the fixes, their owners"
+      },
+      {
+        "id": "st_yours",
+        "x": 29900,
+        "y": 0,
+        "note": "b26-b27: the viewer's own incident, then the three steps"
+      },
+      {
+        "id": "st_room_after",
+        "x": 32200,
+        "y": 0,
+        "note": "b28: the same room, later: drawn with b02's exact geometry"
+      },
+      {
+        "id": "st_outro",
+        "x": 34500,
+        "y": 0,
+        "note": "b29: the presenter closes"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "scene": "b01",
+      "station": "st_night",
+      "join_in": {
+        "type": "cut"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "Late night at a desk, side view, whiteboard sketch. Left half: the on-call engineer (peep woman, cloth accent2) at an open laptop, a window with a crescent moon behind. Right half: a sketched panel for the made-up online store with a live orders line that ticks along steadily, then drops and runs flat. No numbers, no axis values, no times anywhere (the knowledge sheet has none, and the incident is invented).",
+        "why_motion": "The incident is an event: a change goes out and a running flow of orders stops. The line changing from ticking to flat IS what the viewer must see; a still of a flat line would not show that it was running a second ago.",
+        "elements": [
+          "desk: desk line, open laptop, window with a moon icon, x 120-900, y 260-900",
+          "engineer: peep woman, cloth accent2, seated at the laptop; neutral, swaps to surprised at the flatline",
+          "change_tag: small sticky tag on the laptop screen reading 'Routine change', with a rocket icon as the deploy button",
+          "store_panel: sketched panel x 1040-1800, y 240-760, header 'Online store' with a store icon, a baseline and an empty plot area (no axis labels)",
+          "orders_line: hand-drawn line inside store_panel, small label 'Orders' at its left end",
+          "incident_note (MOTIF via ctx.motif('incident_note', ...)): stamp-style note 'Orders stopped' with a shopping-cart icon, x 1180-1660, y 790-890; b02 adopts it"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "on-call engineer",
+            "element": "desk + engineer",
+            "action": "desk reveals, engineer settles 0.1 s after it",
+            "motion": "reveal + settle"
+          },
+          {
+            "t_anchor": "routine change",
+            "element": "change_tag",
+            "action": "drops onto the laptop screen; the rocket button presses (scale 1 to 0.92 to 1)",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "made-up online store",
+            "element": "store_panel + orders_line",
+            "action": "panel assembles left to right, then the orders line starts drawing left to right with small regular ticks (running flow)",
+            "motion": "assemble, then value travel"
+          },
+          {
+            "t_anchor": "stops taking orders",
+            "element": "orders_line + engineer",
+            "action": "the line falls to the baseline and runs flat (about 0.8 s, ease-out); engineer swaps to surprised as it lands",
+            "motion": "value travel"
+          },
+          {
+            "t_anchor": "stops taking orders",
+            "element": "incident_note",
+            "action": "stamps the instant the line is flat (delay = the flatline's own duration, from the same setting)",
+            "motion": "stamp"
+          }
+        ],
+        "continuity": "Creates the motif incident_note, which b02 adopts and flies onto the room's whiteboard during the travel join. Everything else retires."
+      },
+      "rationale": "Hook: the invented incident as one event, flow then flat. 'Say' framing is in the narration."
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "scene": "b02",
+      "station": "st_room",
+      "join_in": {
+        "type": "travel",
+        "via": "incident_note"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The meeting room from above, plan-view whiteboard sketch filling the frame. Room geometry (shared with b28, which must redraw it identically): walls x 100-1860, y 90-900 with a door gap on the bottom wall at x 300-420; oval table centred (800,500), 760x300, hachure fill surface2; six heads (top-down: a hachured hair disc r 44 with a small nose tick showing facing) at (480,330), (800,300), (1120,330), (1120,670), (800,700) and the engineer at (470,660); the whiteboard face-on along the right wall at x 1440-1840, y 180-780 (surface fill, ink frame). The engineer's head carries an accent2 ring (the same colour as b01's cloth) and a small label 'engineer'. At the end every head points at the engineer and the frame holds, frozen.",
+        "why_motion": "The room's attention moving onto one person is the hook's content. Watching the heads swing, one by one, is the feeling the lesson is about; a still of heads already turned would lose the turn.",
+        "elements": [
+          "room: walls and door gap, hand-drawn strokes",
+          "table: the oval table",
+          "board: the whiteboard on the right wall, empty except for incident_note",
+          "heads: the five other heads as ONE group of peers; each rotates about its own centre (explicit origin in station coords, not fill-box); initial facing toward the table centre",
+          "engineer: the engineer's head at (470,660) with accent2 ring and label 'engineer'",
+          "caption: 'Every head turns', kicker style, centred at y 840 inside the room",
+          "incident_note: the motif from b01 (ctx.adopt)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Next morning",
+            "element": "incident_note",
+            "action": "adopt the motif; travelTo the board (about x 1470, y 220, scale 0.6) so it lands pinned on the whiteboard as the camera settles",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "Next morning",
+            "element": "room + table + board",
+            "action": "strokes draw (draw duration), board last",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "the post-mortem opens",
+            "element": "heads + engineer",
+            "action": "the heads pop as peers (tight stagger), all facing the table centre; the engineer's ring settles with them",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "Every head in the room",
+            "element": "heads",
+            "action": "each head rotates to face the engineer, one at a time clockwise from the top-left head, about 0.3 s apart, each turn about 0.45 s ease-in-out",
+            "motion": "value travel"
+          },
+          {
+            "t_anchor": "turns to the engineer",
+            "element": "engineer + caption",
+            "action": "as the last head locks on, thin dashed sight lines draw from every head to the engineer together, and the caption settles; then nothing moves until the cut (the frozen moment)",
+            "motion": "draw + settle, then hold"
+          }
+        ],
+        "continuity": "Adopts incident_note from b01 and pins it on the board. b28 redraws this exact room at st_room_after, starting from this frozen end state, and turns the heads to the board."
+      },
+      "rationale": "The signature image of the hook; its geometry is reused by the payoff so the before and after are the same room."
+    },
+    {
+      "beat": "b03",
+      "kind": "avatar",
+      "station": "st_host",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "member": "man",
+        "side": "right",
+        "cloth": "accent",
+        "kicker": "Blameless post-mortems",
+        "title": "Three steps toward the system",
+        "title_cue": "three steps"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "template",
+      "template": "title.card",
+      "station": "st_why",
+      "join_in": {
+        "type": "canvas"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "What blame costs",
+        "say_kicker": "why do the heads turn",
+        "title": "Finding the culprit feels like accountability?",
+        "say_title": "Finding the culprit",
+        "subtitle": "Watch what it costs",
+        "say_subtitle": "Watch what it costs"
+      },
+      "rationale": "Section 1 divider; canvas join clears the intro before the question lands."
+    },
+    {
+      "beat": "b05",
+      "kind": "blueprint",
+      "blueprint": "hero.character_moment",
+      "station": "st_bubble",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "props": {
+        "member": "woman",
+        "name": "On-call engineer",
+        "cloth": "accent2",
+        "side": "left",
+        "prop": "desk",
+        "bubble": "thought",
+        "moods": [
+          {
+            "emotion": "explaining",
+            "say": "The engineer knows"
+          },
+          {
+            "emotion": "neutral",
+            "say": "every head turned"
+          }
+        ],
+        "items": [
+          {
+            "icon": "monitor",
+            "label": "Deploy screen",
+            "say": "deploy screen",
+            "fade_say": "less of it"
+          },
+          {
+            "icon": "wrench",
+            "label": "Tried first",
+            "say": "tried first",
+            "fade_say": "gets said"
+          }
+        ]
+      },
+      "rationale": "Camera moves DOWN from the opener = a closer look at the person. What she holds arrives, then fades unsaid: the loss is a change over time."
+    },
+    {
+      "beat": "b06",
+      "kind": "template",
+      "template": "process.flow",
+      "station": "st_cost",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "shot": {
+        "move": "push"
+      },
+      "props": {
+        "steps": [
+          {
+            "label": "Expect blame",
+            "say": "expect blame",
+            "icon": "triangle-alert"
+          },
+          {
+            "label": "Share less",
+            "say": "share less",
+            "icon": "message-circle"
+          },
+          {
+            "label": "Problems stay hidden",
+            "say": "Problems stay hidden",
+            "icon": "eye-off"
+          },
+          {
+            "label": "Team learns less",
+            "say": "learns less",
+            "icon": "book-x"
+          }
+        ]
+      },
+      "rationale": "Hybrid: a causal chain whose connectors draw into each consequence, plus one gentle push. Grounded in F3 wording."
+    },
+    {
+      "beat": "b07",
+      "kind": "template",
+      "template": "definition",
+      "station": "st_define",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "term": "Blameless post-mortem",
+        "say_term": "A blameless post-mortem",
+        "definition": "Examines the system, the conditions and the decisions, without punishing the people involved.",
+        "say_definition": "examines the system",
+        "icon": "scan-search"
+      },
+      "rationale": "Definition after the cost is felt (never as an opener). F1."
+    },
+    {
+      "beat": "b08",
+      "kind": "template",
+      "template": "list.steps",
+      "station": "st_stays",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "shot": {
+        "move": "push"
+      },
+      "props": {
+        "kicker": "Where it slips",
+        "title": "Blameless does not mean nobody owns anything",
+        "say_title": "Blameless does not mean",
+        "marker": "tick",
+        "items": [
+          {
+            "text": "The engineer still gives a full account",
+            "say": "full account"
+          },
+          {
+            "text": "The team still owns the fixes",
+            "say": "owns the fixes"
+          }
+        ]
+      },
+      "rationale": "Hybrid: first half of the split card (what stays, ticked) with a gentle push. F2."
+    },
+    {
+      "beat": "b09",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "st_goes",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "mode": "columns",
+        "left": {
+          "header": "What goes",
+          "say": "What goes",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Punishment for an honest mistake",
+              "say": "punishment for an honest mistake"
+            }
+          ]
+        },
+        "right": {
+          "header": "Reckless acts",
+          "say": "Reckless acts",
+          "tone": "neutral",
+          "icon": "door-open",
+          "items": [
+            {
+              "text": "Handled elsewhere",
+              "say": "go elsewhere"
+            }
+          ]
+        }
+      },
+      "rationale": "The other half of the split card, one short pan right. F2 and its caveat."
+    },
+    {
+      "beat": "b10",
+      "kind": "template",
+      "template": "title.card",
+      "station": "st_rule",
+      "join_in": {
+        "type": "canvas"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "icon": "message-circle",
+        "say_icon": "fading bubble",
+        "kicker": "Step one",
+        "say_kicker": "Step one",
+        "title": "To learn and fix the system, not to blame",
+        "say_title": "To learn and fix",
+        "subtitle": "The lead says it before anyone discusses the incident",
+        "say_subtitle": "Before anyone discusses",
+        "panel": true
+      },
+      "rationale": "Section 2 divider and recall: the bubble icon returns first, the ground rule prints last as the header of the board. F13, F5."
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "scene": "b11",
+      "station": "st_timeline",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The whiteboard under the ground rule. A slim header strip keeps the rule visible at the top; a timeline spine draws left to right across the night, with three empty moment markers, each with an empty small-screen frame above it waiting to be filled in b12. Sketch strokes, calm.",
+        "why_motion": "Rebuilding the night in order is a sequence being laid down: the spine drawing left to right is the order of events itself, and the markers can only exist once the line reaches them.",
+        "elements": [
+          "rule_header: slim strip x 160-1760, y 96-166, muted ink, text 'To learn and fix the system, not to blame' at label size",
+          "step_tag: kicker 'Step two' at x 160, y 196",
+          "spine: hand-drawn line x 200-1720 at y 640, a moon icon at its left end, an arrowhead at its right end",
+          "markers: three moment ticks on the spine at x 520, 960, 1400 (one group of peers)",
+          "frames: three empty small-screen outlines 300x200 above the markers (y 380-580), dashed muted stroke, each with a small eye icon at its top-left corner",
+          "caption: 'as they saw it then', label size, centred at y 790"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Step two",
+            "element": "rule_header + step_tag",
+            "action": "rule_header reveals quietly (it is the frame); step_tag drops",
+            "motion": "reveal + drop"
+          },
+          {
+            "t_anchor": "rebuild the night",
+            "element": "spine",
+            "action": "draws left to right (draw duration); the moon pops as the stroke starts",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "in order",
+            "element": "markers",
+            "action": "each tick pops at the moment the stroke's head passes its x (timed from the draw, not a separate delay)",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "as each person saw it then",
+            "element": "frames + caption",
+            "action": "frames unmask top-down, left to right, 0.12 s apart; caption settles",
+            "motion": "unmask + settle"
+          }
+        ],
+        "continuity": "Every element is held into b12 and b13 (keep). Use exactly these element names."
+      },
+      "rationale": "Camera moves DOWN from the rule = the detail under the header."
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "scene": "b12",
+      "station": "st_timeline",
+      "keep": [
+        "rule_header",
+        "step_tag",
+        "spine",
+        "markers",
+        "frames",
+        "caption"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The held timeline fills in: at each moment, the small screen shows only what that person could see then. No clock times (none are in the script).",
+        "why_motion": "Each moment is added in time order as it is narrated; the timeline filling left to right IS the reconstruction.",
+        "elements": [
+          "screen_1: inside frame 1 (x 370-670, y 380-580): a code-review window sketch with a pos tick, label 'review passed'",
+          "screen_2: inside frame 2 (x 810-1110): a staging dashboard sketch with a pos status dot, label 'staging green'",
+          "screen_3: inside frame 3 (x 1250-1550): a smartphone outline with an empty notification area and a bell-off icon, label 'no alert'",
+          "sense_ticks: three small pos ticks just under each marker (y 670-710), one group of peers"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "passed code review",
+            "element": "screen_1",
+            "action": "settles into frame 1",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Staging looked green",
+            "element": "screen_2",
+            "action": "settles into frame 2",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "showed no alert",
+            "element": "screen_3",
+            "action": "settles into frame 3",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Each move made sense",
+            "element": "sense_ticks",
+            "action": "pop as peers, tight stagger",
+            "motion": "pop"
+          }
+        ],
+        "continuity": "Keeps all of b11. Everything here plus b11's elements is held into b13."
+      },
+      "rationale": "The view from then, one screen per moment. F8, F9; details are the invented incident's."
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "scene": "b13",
+      "station": "st_timeline",
+      "keep": [
+        "rule_header",
+        "step_tag",
+        "spine",
+        "markers",
+        "frames",
+        "caption",
+        "screen_1",
+        "screen_2",
+        "screen_3",
+        "sense_ticks"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The hindsight answer, drawn in grey as a dashed card, hovers at 'now' (the right end) and is carried back along the night, stopping above each screen: it is on none of them. Slowdown 1: slower hops, lots of air.",
+        "why_motion": "Hindsight is knowledge moving backwards in time. Carrying the answer from now back along the night and finding it on no screen IS the refutation; a static card would only assert it.",
+        "elements": [
+          "hindsight_card: dashed muted card 320x90 reading 'Obvious now', resting position x 1400-1720, y 200-290",
+          "miss_marks: a small grey ban icon at the top-right corner of each frame, one per frame",
+          "term: 'hindsight bias' in the display face, accent colour, under the card's resting position (x 1400-1760, y 300-360)",
+          "outcome: small neg stamp 'Orders stopped' at the right end of the spine (x 1580-1800, y 680-740)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "looks obvious now",
+            "element": "hindsight_card",
+            "action": "drops into its resting position above the right end of the spine",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "not on anyone's screen",
+            "element": "hindsight_card + miss_marks",
+            "action": "the card hops right to left, dipping toward frame 3, then 2, then 1 (each hop about 0.5 s, ease-in-out); at each dip that frame's miss_mark pops; then the card lifts back to rest",
+            "motion": "value travel + pop"
+          },
+          {
+            "t_anchor": "hindsight bias",
+            "element": "term",
+            "action": "unmasks left to right under the card",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "a bad ending",
+            "element": "outcome",
+            "action": "stamps at the right end of the spine",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "why each move made sense",
+            "element": "sense_ticks (held)",
+            "action": "the three ticks pulse once, left to right (scale 1 to 1.15 to 1, 0.12 s apart); no new element",
+            "motion": "emphasis"
+          }
+        ],
+        "continuity": "Keeps everything from b11 and b12. All of it retires at the camera move to b14."
+      },
+      "rationale": "F6, F7, F8. Right to left here means backwards in time, which is exactly the claim."
+    },
+    {
+      "beat": "b14",
+      "kind": "template",
+      "template": "list.steps",
+      "station": "st_sofar",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "So far",
+        "marker": "number",
+        "items": [
+          {
+            "text": "Say the rule",
+            "say": "say the rule"
+          },
+          {
+            "text": "Rebuild it as they saw it",
+            "say": "rebuild it as they saw it"
+          }
+        ]
+      },
+      "rationale": "Brisk recap of steps one and two; two numbered rows (the third arrives in section 3)."
+    },
+    {
+      "beat": "b15",
+      "kind": "template",
+      "template": "scenario.dialogue",
+      "station": "st_meeting",
+      "join_in": {
+        "type": "canvas"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "props": {
+        "left": {
+          "member": "man",
+          "name": "Manager",
+          "emotion": "explaining",
+          "cloth": "accent3"
+        },
+        "right": {
+          "member": "woman",
+          "name": "Engineer",
+          "emotion": "neutral",
+          "cloth": "accent2"
+        },
+        "setting": "meeting",
+        "lines": [
+          {
+            "who": "left",
+            "text": "Why did you ship without checking?",
+            "say": "why did you ship",
+            "emotion": "explaining"
+          }
+        ],
+        "caption": "The first blaming remark",
+        "say_caption": "first blaming remark"
+      },
+      "rationale": "Section 3 opens back in the meeting (canvas join). The bubble line_1 is held into b16."
+    },
+    {
+      "beat": "b16",
+      "kind": "bespoke",
+      "scene": "b16",
+      "station": "st_meeting",
+      "keep": [
+        "line_1"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The manager's bubble from b15 stays exactly where it was (held line_1: ink fill, x 540, y 150, w 560, h 170 in station coords, tail down-left). The characters leave. The bubble is crossed out, the better question is written beside it, and under each question what it gets you.",
+        "why_motion": "The rewrite is an edit made in front of the viewer: one question is struck and replaced, and each one's yield follows from it. Seeing the replacement happen teaches the move.",
+        "elements": [
+          "strike: one hand-drawn neg stroke across line_1, from about (560,232) to (1080,220)",
+          "what_q: a bubble the same size as line_1 (560x150, accent2 fill, tail down-right) at x 1180, y 150, text 'What did the deploy screen show you?' in field colour",
+          "gets_name: a card at x 600-1040, y 470-590: short arrow drawn down from line_1, user icon, text 'a name', muted",
+          "gets_fix: a card at x 1240-1680, y 470-590: short arrow drawn down from what_q, wrench icon, text 'something to fix', accent4 frame"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Here is the rewrite",
+            "element": "strike",
+            "action": "draws across line_1 (line_1 itself does not move)",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "What did the deploy screen show you",
+            "element": "what_q",
+            "action": "unmasks left to right like handwriting",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "gets a name",
+            "element": "gets_name",
+            "action": "its arrow draws down from line_1, then the card settles",
+            "motion": "draw + settle"
+          },
+          {
+            "t_anchor": "gets something to fix",
+            "element": "gets_fix",
+            "action": "its arrow draws down from what_q, then the card stamps (the consequence)",
+            "motion": "draw + stamp"
+          }
+        ],
+        "continuity": "keep line_1 from b15 (held, never animated). Everything retires at the camera move to b17."
+      },
+      "rationale": "F12. The rewrite happens on the very bubble the room just heard."
+    },
+    {
+      "beat": "b17",
+      "kind": "template",
+      "template": "title.card",
+      "station": "st_turn",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "Your turn",
+        "say_kicker": "Your turn",
+        "title": "Who approved this?",
+        "say_title": "Who approved this",
+        "subtitle": "Rewrite it in your head",
+        "say_subtitle": "Rewrite it in your head"
+      },
+      "rationale": "Faded practice: the question sits alone through the 2 s pause, with space to think."
+    },
+    {
+      "beat": "b18",
+      "kind": "template",
+      "template": "compare.two",
+      "station": "st_turn",
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "mode": "columns",
+        "left": {
+          "header": "Who approved this?",
+          "say": "Maybe",
+          "tone": "neg",
+          "items": [
+            {
+              "text": "Gets a name",
+              "say": "Maybe"
+            }
+          ]
+        },
+        "right": {
+          "header": "Ask how instead",
+          "say": "how did the change",
+          "tone": "pos",
+          "items": [
+            {
+              "text": "How did the change get through?",
+              "say": "get through"
+            }
+          ]
+        },
+        "verdict": {
+          "text": "What made it easy to do, and hard to catch?",
+          "say": "what made it easy"
+        }
+      },
+      "rationale": "The model rewrite in the same left-who / right-how grammar as b16, then the through-line question stamps after a hold (slowdown 2). F11, F12."
+    },
+    {
+      "beat": "b19",
+      "kind": "bespoke",
+      "scene": "b19",
+      "station": "st_system",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The start of the system diagram: the failed checkout at the centre, the engineer to its left, and the tempting single arrow between them, labelled human error. The arrow is drawn, found wanting, and erased; three question marks show where the real causes will appear.",
+        "why_motion": "The refutation is an erasure: a single arrow drawn, then retracted, leaving room for several causes. Removing it on screen is the argument.",
+        "elements": [
+          "failed_checkout: node centred (960,520), about 300x260: shopping-cart icon with a neg cross mark, label 'Checkout failed'",
+          "engineer: small peep head-and-shoulders (woman, cloth accent2) at x 220-500, y 380-660, label 'engineer'",
+          "blame_arrow: one thick ink arrow from the checkout's left edge to the engineer's right edge, with 'human error' written above it (same element)",
+          "note: 'explains little', muted, under the arrow at about y 700",
+          "probes: three small '?' marks, one group of peers, at (430,250), (430,770) and (1540,520)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Stop at the engineer",
+            "element": "failed_checkout + engineer",
+            "action": "the checkout settles first (it must exist before anything points at it), the engineer settles 0.15 s later",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "human error",
+            "element": "blame_arrow",
+            "action": "draws from the checkout INTO the engineer; its label unmasks with it",
+            "motion": "draw + unmask"
+          },
+          {
+            "t_anchor": "explains little",
+            "element": "note + blame_arrow",
+            "action": "note settles; the arrow dims to 40% opacity (on a wrapper, not the animated node)",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Keep asking",
+            "element": "blame_arrow + engineer + note",
+            "action": "the arrow un-draws back toward the checkout (retracts to its source); engineer and note sink out",
+            "motion": "undo + sink"
+          },
+          {
+            "t_anchor": "conditions appear",
+            "element": "probes",
+            "action": "pop as peers, tight stagger",
+            "motion": "pop"
+          }
+        ],
+        "continuity": "failed_checkout and probes are held into b20 (keep). Keep their positions exactly as given."
+      },
+      "rationale": "Camera moves DOWN from the rewrite = deeper, into the system. F11; never ends on human error as the finding."
+    },
+    {
+      "beat": "b20",
+      "kind": "bespoke",
+      "scene": "b20",
+      "station": "st_system",
+      "keep": [
+        "failed_checkout",
+        "probes"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "Three conditions arrive from different parts of the system, each at a probe position, and each grows an arrow into the failed checkout. Several arrows converge where one used to point at a person.",
+        "why_motion": "Causes combining is a convergence: each condition appears as it is named and its arrow grows into the failure, so the viewer watches one cause become several.",
+        "elements": [
+          "cond_test: node at (430,250): flask-conical icon, label 'no checkout test'",
+          "cond_staging: node at (430,770): sliders-horizontal icon, label 'staging setting differs'",
+          "cond_alert: node at (1540,520): bell-off icon, label 'unwatched alert'",
+          "arrows: three ink arrows, each from its condition node's edge to the checkout's edge (edge to edge, drawn on a layer under the nodes)",
+          "several: label 'several conditions', stamped under the checkout at about (960,700)"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "no automated test",
+            "element": "cond_test + arrow 1",
+            "action": "node settles over probe 1 (the probe scales to 0 as the node lands), then its arrow draws INTO the checkout",
+            "motion": "settle + draw"
+          },
+          {
+            "t_anchor": "lacked production's payment setting",
+            "element": "cond_staging + arrow 2",
+            "action": "same, over probe 2",
+            "motion": "settle + draw"
+          },
+          {
+            "t_anchor": "unwatched dashboard",
+            "element": "cond_alert + arrow 3",
+            "action": "same, over probe 3",
+            "motion": "settle + draw"
+          },
+          {
+            "t_anchor": "Several conditions",
+            "element": "several",
+            "action": "stamps after a short hold",
+            "motion": "stamp"
+          },
+          {
+            "t_anchor": "Do not stop at the first",
+            "element": "arrows",
+            "action": "all three arrows pulse once together (peers, simultaneous); no new element",
+            "motion": "emphasis"
+          }
+        ],
+        "continuity": "Keeps failed_checkout and probes from b19. The three condition icons and labels are reused in b23, b24 and b28; keep them identical."
+      },
+      "rationale": "F10. The only three invented conditions, now converging."
+    },
+    {
+      "beat": "b21",
+      "kind": "template",
+      "template": "quiz.question",
+      "station": "st_quiz",
+      "join_in": {
+        "type": "canvas"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "Quick check",
+        "question": "Which finding still lands on the engineer?",
+        "say_question": "Three findings from our meeting",
+        "options": [
+          {
+            "text": "No automated test on checkout",
+            "say": "A, no automated test"
+          },
+          {
+            "text": "Root cause: a deploy step was missed",
+            "say": "B, root cause"
+          },
+          {
+            "text": "Alert went to an unwatched dashboard",
+            "say": "C, the alert went"
+          }
+        ]
+      },
+      "rationale": "The question frames the three cards (it prints as the narrator introduces the findings), then the 4 s pause ring."
+    },
+    {
+      "beat": "b22",
+      "kind": "template",
+      "template": "quiz.answer",
+      "station": "st_quiz",
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "question": "Which finding still lands on the engineer?",
+        "options": [
+          {
+            "text": "No automated test on checkout"
+          },
+          {
+            "text": "Root cause: a deploy step was missed"
+          },
+          {
+            "text": "Alert went to an unwatched dashboard"
+          }
+        ],
+        "answer": 1,
+        "say_answer": "It is B",
+        "explanation": "Only fix: be more careful.",
+        "say_explanation": "only fix is",
+        "why_not": "Like A, it points at the system.",
+        "say_why_not": "and C point at the system",
+        "tempting": 2
+      },
+      "rationale": "F10, F11, F15. The tempting wrong answer ('none, nobody is named') is not an option, so it lives in the explanation."
+    },
+    {
+      "beat": "b23",
+      "kind": "bespoke",
+      "scene": "b23",
+      "station": "st_actions",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "An action-item card reading 'be more careful', shown beside the three conditions from b20, still standing. A training tag is clipped on, then the whole card is struck through.",
+        "why_motion": "The refutation happens on the card: it is written, set against what is still standing, and struck out. The strike is the change the viewer must see.",
+        "elements": [
+          "action_card: card x 200-900, y 300-700, header strip 'Action item' with an empty checkbox, surface fill",
+          "card_text: 'be more careful' written inside the card (lead size)",
+          "conditions: the three conditions from b20 as small standing nodes, same icons and labels (flask-conical 'no checkout test', sliders-horizontal 'staging setting differs', bell-off 'unwatched alert'), stacked at x 1200-1760, y 240, 440, 640",
+          "standing_label: 'conditions still standing', label size, under them at about y 820",
+          "training_tag: small tag 'Training' clipped to the card's lower edge, x 620-880, y 660-720",
+          "strike: one neg hand-drawn stroke from (220,650) to (880,330) across card and tag"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "your action card",
+            "element": "action_card",
+            "action": "settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "be more careful",
+            "element": "card_text",
+            "action": "unmasks left to right like handwriting",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Every condition",
+            "element": "conditions",
+            "action": "pop as peers, tight stagger",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "still be standing",
+            "element": "standing_label",
+            "action": "settles",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "Training can help",
+            "element": "training_tag",
+            "action": "drops onto the card's edge",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "never alone",
+            "element": "strike",
+            "action": "draws across card and tag; the card (on a wrapper) dims to 55%; the conditions stay at full ink",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "Section 4 opens with the conditions the viewer just sorted. Everything retires as b24's list arrives on the same station."
+      },
+      "rationale": "Hybrid given as a bespoke scene: F14, F15, misconception 4 refuted on the card itself."
+    },
+    {
+      "beat": "b24",
+      "kind": "template",
+      "template": "list.steps",
+      "station": "st_actions",
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "title": "Change the system instead",
+        "say_title": "Change the system instead",
+        "marker": "icon",
+        "items": [
+          {
+            "text": "Add a checkout test",
+            "say": "Add a checkout test",
+            "icon": "flask-conical"
+          },
+          {
+            "text": "Match the staging setting",
+            "say": "Match the staging setting",
+            "icon": "sliders-horizontal"
+          },
+          {
+            "text": "Route the alert to on-call",
+            "say": "Route the alert",
+            "icon": "bell"
+          }
+        ]
+      },
+      "rationale": "One fix per condition, each row carrying its condition's icon. Rows are held into b25."
+    },
+    {
+      "beat": "b25",
+      "kind": "bespoke",
+      "scene": "b25",
+      "station": "st_actions",
+      "keep": [
+        "title",
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "productive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The three fix rows from b24 stay exactly where they are. In the free right-hand part of each row, an owner chip arrives, then a short progress track fills to done and its checkbox ticks, one row after another.",
+        "why_motion": "Follow-through is a change over time: each fix goes from owned to done. The fill reaching its end IS 'tracked to done'.",
+        "elements": [
+          "status_1, status_2, status_3: one block per held row. Read the held row (E.x, E.y, E.w, E.h); list.steps draws its card across the left 78% of E.w, so place the block at x = E.x + 0.8*E.w, width about 0.2*E.w, vertically centred on the row. Each block holds: an owner chip (user-round icon + 'Owner', label size), a short track (about 200 px) and a checkbox"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "a named owner",
+            "element": "status_1..3",
+            "action": "owner chips pop as peers top to bottom (tight stagger), each with its empty track and empty checkbox",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "track it to done",
+            "element": "status_1..3 tracks + checkboxes",
+            "action": "track 1 fills left to right (count duration); its checkbox ticks the instant it is full (delay = the fill's own duration); tracks 2 and 3 start 0.35 s after the previous one (overlapping)",
+            "motion": "value travel + stamp"
+          }
+        ],
+        "continuity": "keep title and item_1..item_3 from b24 (held, no animation). All retires at the camera move to b26."
+      },
+      "rationale": "F16. No owner names are shown: none are in the script."
+    },
+    {
+      "beat": "b26",
+      "kind": "template",
+      "template": "document.page",
+      "station": "st_yours",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kind": "form",
+        "side": "center",
+        "title": "Your incident",
+        "say_title": "an incident you remember",
+        "mode": "appear",
+        "lines": [
+          {
+            "text": "Step one:"
+          },
+          {
+            "text": "Step two:"
+          },
+          {
+            "text": "Step three:"
+          }
+        ]
+      },
+      "rationale": "A blank three-step form for the viewer's own incident; the slots stay empty through the 3 s pause."
+    },
+    {
+      "beat": "b27",
+      "kind": "template",
+      "template": "recap",
+      "station": "st_yours",
+      "join_in": {
+        "type": "continue"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": "The three steps",
+        "items": [
+          {
+            "label": "The rule",
+            "say": "The rule",
+            "icon": "scroll-text"
+          },
+          {
+            "label": "The timeline",
+            "say": "The timeline as they saw it",
+            "icon": "history"
+          },
+          {
+            "label": "What, not who",
+            "say": "What made it easy",
+            "icon": "search"
+          }
+        ],
+        "rule": "One fix, with its owner",
+        "say_rule": "one fix, with its owner"
+      },
+      "rationale": "The answers land where the blank form was (continue). Recap labels are capped at 3 words, so step three reads 'What, not who'."
+    },
+    {
+      "beat": "b28",
+      "kind": "bespoke",
+      "scene": "b28",
+      "station": "st_room_after",
+      "join_in": {
+        "type": "canvas"
+      },
+      "register": "expressive",
+      "motion_is": "content",
+      "design": {
+        "treatment": "The same meeting room from above, redrawn with b02's exact geometry. Room geometry (shared with b28, which must redraw it identically): walls x 100-1860, y 90-900 with a door gap on the bottom wall at x 300-420; oval table centred (800,500), 760x300, hachure fill surface2; six heads (top-down: a hachured hair disc r 44 with a small nose tick showing facing) at (480,330), (800,300), (1120,330), (1120,670), (800,700) and the engineer at (470,660); the whiteboard face-on along the right wall at x 1440-1840, y 180-780 (surface fill, ink frame). It starts in b02's frozen end state (every head on the engineer), then every head swings to the whiteboard, where the three conditions each carry an owned, ticked fix.",
+        "why_motion": "The payoff is the same attention moving somewhere else. The heads turning from the person to the board, with the same gesture as the hook, IS the lesson's before and after.",
+        "elements": [
+          "room: walls, door gap and oval table, as b02",
+          "board: the whiteboard at x 1440-1840, y 180-780, with the small 'Orders stopped' note at its top (as b02 left it)",
+          "heads: the five other heads as one group of peers, starting rotated toward the engineer",
+          "engineer: the engineer's head at (470,660) with accent2 ring and label 'engineer'",
+          "board_fixes: three rows on the board under the note, each: the condition's icon (flask-conical, sliders-horizontal, bell-off), a short fix label ('checkout test', 'staging setting', 'alert to on-call'), an owner chip (user-round icon) and a pos tick",
+          "caption: 'each fix has an owner', kicker style, centred at y 840"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Same room",
+            "element": "room + board",
+            "action": "strokes draw quickly (about 0.6 s), board last",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Same engineer",
+            "element": "heads + engineer",
+            "action": "heads pop as peers already facing the engineer (b02's end state); the ring settles",
+            "motion": "pop"
+          },
+          {
+            "t_anchor": "every head faces the board",
+            "element": "heads",
+            "action": "each head rotates to face the board, one at a time in the same clockwise order and with the same stagger and turn duration as b02; dashed sight lines draw from each head to the board",
+            "motion": "value travel + draw"
+          },
+          {
+            "t_anchor": "each fix has an owner",
+            "element": "board_fixes + caption",
+            "action": "the three rows unmask top-down on the board; their ticks pop together as peers; caption settles",
+            "motion": "unmask + pop + settle"
+          }
+        ],
+        "continuity": "Same geometry, element names and colours as b02 so the viewer reads it as the same room. Nothing is held (another station)."
+      },
+      "rationale": "Payoff: the hook's gesture reversed. Placed to the right of everything = later in time, and a canvas join marks the new section."
+    },
+    {
+      "beat": "b29",
+      "kind": "avatar",
+      "station": "st_outro",
+      "join_in": {
+        "type": "camera"
+      },
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "member": "man",
+        "side": "left",
+        "cloth": "accent",
+        "kicker": "The pocket rule",
+        "title": "What made it easy, hard to catch.",
+        "title_cue": "Not who slipped"
+      }
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "concept": "One running cartoon story, Priya and Dev in one meeting room with one wall board. The vague sentence is rebuilt on that board one slot at a time, then the same meeting is replayed with the rebuilt sentence. One loud thing per frame; the rule is large when it is named.",
+  "world": "A single office meeting room with a wall board (the station). Sub-worlds: Dev's side of the table (bridge), a dark camera viewfinder feed (behaviour), the split room (effect), the board plus a wall calendar (request), a card table (check), a quiet desk with a sticky note (apply), then the opening room again (payoff). The metaphor passes structure, change, scale and safety: the board holds the sentence, its slots change state, and the room is cheap to replay.",
+  "look": "story-cartoon, illustrated, wobbly outline on warm paper with grain. Classic treatment: hard cuts, black narration cards at turns, springy pops on people only. The newer material joins (torn, page, scroll, motif) are kept as alternatives.",
+  "devices": [
+    {
+      "id": "board_sentence",
+      "what": "The wall board held as one station. Three slots (behaviour, effect, request) change state across sections: empty, lit, filled, joined. The same layout, a continue join each time.",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b11",
+        "b16",
+        "b17",
+        "b22",
+        "b25",
+        "b27",
+        "b28",
+        "b29",
+        "b32",
+        "b45",
+        "b47",
+        "b48",
+        "b49",
+        "b53",
+        "b54"
+      ]
+    },
+    {
+      "id": "camera_frame",
+      "what": "A corner camera and its viewfinder frame. It enters the room as an object, shows only what was said, when and to whom, and lets attitude bubbles drift out of frame. Reused as an icon beside slot one and on the worksheet.",
+      "kind": "explain",
+      "beats": [
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b24",
+        "b25",
+        "b42"
+      ]
+    },
+    {
+      "id": "fade_and_stay",
+      "what": "The vague remark fades to grey while the specific one stays sharp and solid. It is first the ghost of the first meeting, then the old label, then card A. Fading means 'not usable'; staying means 'something to act on'.",
+      "kind": "callback",
+      "beats": [
+        "b04",
+        "b08",
+        "b15",
+        "b18",
+        "b32",
+        "b37"
+      ]
+    },
+    {
+      "id": "calendar_marker",
+      "what": "A wall calendar with two markers: 'next meeting' and 'talk after it', joined by a thin line. The check-back is an object, not a phrase. It returns on the worksheet and in the payoff.",
+      "kind": "data",
+      "beats": [
+        "b29",
+        "b30",
+        "b31",
+        "b44",
+        "b46",
+        "b49",
+        "b52",
+        "b53"
+      ]
+    },
+    {
+      "id": "rule_card",
+      "what": "The named rule, large and alone on the paper ground with its icon. It is the only loud thing in the frame. It returns as the pocket rules and is the rest frame after each section.",
+      "kind": "rest",
+      "beats": [
+        "b14",
+        "b19",
+        "b26",
+        "b33",
+        "b39"
+      ]
+    }
+  ],
+  "join_material": "handoff: the board (and the sentence on it) is the object that carries across cuts. Chapter boundaries are hard cuts or a black narration card; gradual joins stay inside a topic; the zoom into the viewfinder enters the object. Fallback for cartoon joins today is a plain cut.",
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "break": false,
+      "accent": "none yet, accent withheld",
+      "why": "Pale open. The tense room reads through posture, not colour."
+    },
+    {
+      "from": "b06",
+      "band": "mid",
+      "break": false,
+      "accent": "empty checklist ('No action') and the question marks",
+      "why": "Richer middle for the problem. The accent sits on what is missing."
+    },
+    {
+      "from": "b11",
+      "band": "light",
+      "break": false,
+      "accent": "slot one lit",
+      "why": "Clean board for the rebuild. The accent now means 'the live part'."
+    },
+    {
+      "from": "b12",
+      "band": "dark",
+      "break": true,
+      "accent": "viewfinder frame and the spoken lines inside it",
+      "why": "Dark break for the key mechanism, the camera test. It is the one dark stretch (b12 to b13) and a black narration card enters it."
+    },
+    {
+      "from": "b14",
+      "band": "light",
+      "break": false,
+      "accent": "the rule words 'Observable behaviour'",
+      "why": "Back to pale for the named rule. It is large and alone."
+    },
+    {
+      "from": "b20",
+      "band": "mid",
+      "break": false,
+      "accent": "the word 'Effect' on the right half of the split",
+      "why": "Build energy. The accent follows the narration."
+    },
+    {
+      "from": "b27",
+      "band": "mid",
+      "break": false,
+      "accent": "empty slot three, then 'Let her finish'",
+      "why": "The request is the missing piece the accent points at."
+    },
+    {
+      "from": "b32",
+      "band": "light",
+      "break": true,
+      "accent": "the whole joined sentence, one flood of accent",
+      "why": "The turn. Three slots become one sentence beside the faded old line. This is the one moment of full colour in the middle."
+    },
+    {
+      "from": "b34",
+      "band": "mid",
+      "break": false,
+      "accent": "the card being discussed",
+      "why": "Check section. The accent follows the card in focus: highlights are one accent with numbered positions, not three hues."
+    },
+    {
+      "from": "b40",
+      "band": "light",
+      "break": true,
+      "accent": "none, sticky note only",
+      "why": "Calm rest for the viewer's own drafting."
+    },
+    {
+      "from": "b47",
+      "band": "mid",
+      "break": false,
+      "accent": "the rebuilt sentence in the bubble",
+      "why": "The opening frame returns, changed. The sentence now carries the accent."
+    },
+    {
+      "from": "b51",
+      "band": "light",
+      "break": false,
+      "accent": "warm lift on the room and the 'talk after' marker",
+      "why": "Lift at the close. Tension visibly lower. Colour withheld until here."
+    }
+  ],
+  "sections": [
+    {
+      "id": "bridge",
+      "treatment": "Story scene in the cartoon meeting room. Small posed figures, emotion in posture. Expressive on b01 to b04; the problem cards (b06 to b10) stay calm, with Dev in the room holding the objects. Shot sizes step: wide, medium, close.",
+      "accent_on": "what is missing for Dev (empty checklist, empty content slot), never the tone",
+      "world": "Meeting room, then Dev's side of the table, then the wall board",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "WIDE establishing, story_role hook. The room empties, papers left; Priya and Dev stay facing each other, blank board on the wall. Something wrong: a pushed-back chair, stiff shoulders.",
+          "builder": "bespoke scene (motion)",
+          "device": "board_sentence",
+          "join": "open on the scene",
+          "intent": "establish the tense room"
+        },
+        {
+          "beat": "b02",
+          "line": "MEDIUM two-shot from three-quarter view. Priya smiles warmly; the sentence appears on the board and as her bubble in plain hand-lettered ink, no accent.",
+          "builder": "bespoke scene (motion)",
+          "device": "board_sentence",
+          "join": "continue"
+        },
+        {
+          "beat": "b03",
+          "line": "MEDIUM on Dev, a springy warm nod; then Priya walks out with a small pale glow over her head. The false 'it worked' signal.",
+          "builder": "bespoke scene (motion)",
+          "join": "continue"
+        },
+        {
+          "beat": "b04",
+          "line": "WIDE, same room and same seating. The tense meeting replays over a faded ghost of the first, so the repeat is obvious. The ghost is the fade device's first use.",
+          "builder": "bespoke scene (motion)",
+          "device": "fade_and_stay",
+          "join": "time: next meeting",
+          "intent": "the repeat"
+        },
+        {
+          "beat": "b05",
+          "line": "MEDIUM presenter beside the board, old sentence faint behind, speaking to camera. story_role promise.",
+          "builder": "avatar",
+          "device": "board_sentence",
+          "join": "chapter: hard cut to presenter, board carried over (handoff)"
+        },
+        {
+          "beat": "b06",
+          "line": "CLOSE on Dev, small, holding a heavy card marked Judgement. Beside it an empty checklist with no lines to tick; the accent sits on the empty list.",
+          "builder": "compare.two",
+          "join": "hard cut, back into the story world"
+        },
+        {
+          "beat": "b07",
+          "line": "MEDIUM Dev with question marks floating, a meeting timeline strip beneath. Each 'How?' and 'Which moment?' hovers over a different moment, none chosen.",
+          "builder": "bespoke scene (motion)",
+          "join": "continue"
+        },
+        {
+          "beat": "b08",
+          "line": "CLOSE on Dev's nod drawn large. A thin faint arrow from it toward the next meeting fades out: weak sign. The fade device is used for 'not usable'.",
+          "builder": "hero.meter",
+          "device": "fade_and_stay",
+          "join": "continue",
+          "intent": "refute: a nod is not proof"
+        },
+        {
+          "beat": "b09",
+          "line": "MEDIUM wall-mounted tone dial turned to warm, with an empty content slot beside it. Tone present, content missing.",
+          "builder": "compare.two",
+          "join": "continue",
+          "intent": "tone vs content"
+        },
+        {
+          "beat": "b10",
+          "line": "CLOSE on Dev. The label is stamped onto his chest, and behind the polite smile his shoulders tense. Expressive but brief.",
+          "builder": "bespoke scene (motion)",
+          "join": "continue"
+        },
+        {
+          "beat": "b11",
+          "line": "MEDIUM on the wall board: the old sentence on top, three empty slots beneath, the first one lit with the accent. This is the rebuild station.",
+          "builder": "document.page",
+          "device": "board_sentence",
+          "join": "chapter: hard cut to the board"
+        }
+      ]
+    },
+    {
+      "id": "behaviour",
+      "treatment": "Board rebuild. Productive and calm on definitions; the camera sequence is the one dark, motion-led stretch. Slot one is filled word by word on the held board. The pause_predict at b16 is a held frame with the slot blinking.",
+      "accent_on": "slot one, the viewfinder frame and the rule words",
+      "world": "Camera viewfinder feed (dark), then the wall board",
+      "beats": [
+        {
+          "beat": "b12",
+          "line": "MEDIUM then CLOSE: a camera in the corner of the room. The camera zooms into its viewfinder (a zoom enters the object). Captions show who, to whom and when. Black narration card for the turn.",
+          "builder": "bespoke scene (motion)",
+          "device": "camera_frame",
+          "join": "chapter: zoom enters the viewfinder",
+          "intent": "key mechanism"
+        },
+        {
+          "beat": "b13",
+          "line": "CLOSE inside the viewfinder, dark band. Three thought bubbles (attitude, motive, intent) drift out of the frame and fade. They are not observations.",
+          "builder": "bespoke scene (motion)",
+          "device": "fade_and_stay",
+          "join": "continue"
+        },
+        {
+          "beat": "b14",
+          "line": "CLOSE: 'Observable behaviour' large and alone, the camera icon beside it. Back to the pale band. The camera test is named.",
+          "builder": "definition",
+          "device": "rule_card",
+          "join": "hard cut to pale"
+        },
+        {
+          "beat": "b15",
+          "line": "MEDIUM: the word 'dismissive' wobbles and gains a question mark, drifting away from the solid camera frame. 'A guess' lands.",
+          "builder": "compare.two",
+          "device": "fade_and_stay",
+          "join": "continue",
+          "intent": "refute: a label is a guess about motive"
+        },
+        {
+          "beat": "b16",
+          "line": "MEDIUM wide board, slot one blinking empty, the viewfinder paused around the room. Hold the frame for the viewer to predict. Calm, no motion.",
+          "builder": "document.page",
+          "device": "board_sentence",
+          "join": "hold layout, state change (continue)",
+          "intent": "pause_predict"
+        },
+        {
+          "beat": "b17",
+          "line": "MEDIUM split: the viewfinder shows Sam presenting and Dev cutting in twice, while slot one fills word by word on the board. The accent sits on the filled words.",
+          "builder": "bespoke scene (motion)",
+          "device": "camera_frame",
+          "join": "continue",
+          "intent": "worked answer"
+        },
+        {
+          "beat": "b18",
+          "line": "MEDIUM on the board: the old line 'be more professional' fades to grey and disappears while the specific sentence stays sharp and solid. This is the lesson's signature fade and stay.",
+          "builder": "bespoke scene (motion)",
+          "device": "fade_and_stay",
+          "join": "continue",
+          "intent": "fade and stay"
+        },
+        {
+          "beat": "b19",
+          "line": "CLOSE: 'Describe what a camera would see', large and alone with the camera icon. The rest frame ends the section.",
+          "builder": "title.card",
+          "device": "rule_card",
+          "join": "hard cut",
+          "intent": "pocket rule"
+        }
+      ]
+    },
+    {
+      "id": "effect",
+      "treatment": "Before and after of the same room. Split frame with the same seating on both sides. The recall moment wipes the board to blank. Productive, calm.",
+      "accent_on": "the word 'Effect' and the clause 'I lost track of her point'",
+      "world": "The meeting room (split), then the wall board",
+      "beats": [
+        {
+          "beat": "b20",
+          "line": "MEDIUM: the board with slot one filled; Dev shrugs, a small 'So what?' bubble pops. Chapter hard cut to a mid band.",
+          "builder": "bespoke scene (motion)",
+          "device": "board_sentence",
+          "join": "chapter: hard cut",
+          "intent": "so what"
+        },
+        {
+          "beat": "b21",
+          "line": "WIDE split of the same room. Left: Sam presenting smoothly. Right: Sam cut off mid-slide and Priya looking lost. 'Effect' lands in the accent on the right.",
+          "builder": "bespoke scene (motion)",
+          "join": "time: after the second interruption",
+          "intent": "before and after"
+        },
+        {
+          "beat": "b22",
+          "line": "CLOSE on Priya, her thought thread untangling into a second clause that attaches to the board sentence: 'I lost track of her point.'",
+          "builder": "bespoke scene (motion)",
+          "device": "board_sentence",
+          "join": "continue"
+        },
+        {
+          "beat": "b23",
+          "line": "MEDIUM: two cards. 'What others think' is crossed out and 'What you felt' is ticked, with a springy pop on the tick. Motion layer breaks the run of templates.",
+          "builder": "compare.two",
+          "join": "continue",
+          "intent": "refute: do not speculate"
+        },
+        {
+          "beat": "b24",
+          "line": "MEDIUM: the board wiped blank with the camera icon alone in the centre, for the recall prompt. Calm hold.",
+          "builder": "title.card",
+          "device": "camera_frame",
+          "join": "hard cut",
+          "intent": "recall_prompt"
+        },
+        {
+          "beat": "b25",
+          "line": "MEDIUM: the board restored and the camera icon links back to slot one, which lights up. The test protects part one.",
+          "builder": "document.page",
+          "device": "board_sentence",
+          "join": "continue",
+          "intent": "callback"
+        },
+        {
+          "beat": "b26",
+          "line": "CLOSE: 'What happened, what it did', large beside the first two filled slots. Rest frame.",
+          "builder": "title.card",
+          "device": "rule_card",
+          "join": "hard cut",
+          "intent": "pocket rule"
+        }
+      ]
+    },
+    {
+      "id": "request",
+      "treatment": "Same board, third slot. Calendar markers carry the check-back as objects. Productive on the refutation and the timeline. The sentence joining is the only expressive beat.",
+      "accent_on": "slot three, the action and the 'talk after' marker",
+      "world": "Wall board with the wall calendar",
+      "beats": [
+        {
+          "beat": "b27",
+          "line": "MEDIUM: the board with two slots filled and the third empty; Dev looks at the empty slot. Motion layer breaks the template run.",
+          "builder": "document.page",
+          "device": "board_sentence",
+          "join": "chapter: hard cut, mid band",
+          "intent": "what next"
+        },
+        {
+          "beat": "b28",
+          "line": "CLOSE: 'Stop interrupting' in slot three, with an empty box beside it labelled 'a gap'. Half a request.",
+          "builder": "document.page",
+          "device": "board_sentence",
+          "join": "continue",
+          "intent": "refute: stop-only"
+        },
+        {
+          "beat": "b29",
+          "line": "MEDIUM on the board with the wall calendar: the empty box fills with 'Let her finish', written beside the next meeting marker on the calendar.",
+          "builder": "bespoke scene (motion)",
+          "device": "calendar_marker",
+          "join": "continue",
+          "intent": "say what to do instead"
+        },
+        {
+          "beat": "b30",
+          "line": "CLOSE on the calendar: a second marker lands right after the meeting, 'talk after it', linked to the request by a thin line.",
+          "builder": "bespoke scene (motion)",
+          "device": "calendar_marker",
+          "join": "continue",
+          "intent": "check back"
+        },
+        {
+          "beat": "b31",
+          "line": "WIDE: a timeline runs outward from the meeting with a soon-after zone shaded and a smaller later marker for calm or privacy. Productive, calm.",
+          "builder": "timeline",
+          "device": "calendar_marker",
+          "join": "meanwhile: timing aside",
+          "intent": "timing"
+        },
+        {
+          "beat": "b32",
+          "line": "MEDIUM: the three slots slide together into one sentence while the old faded line sits grey beside it for comparison. One full colour flood on the sentence.",
+          "builder": "bespoke scene (motion)",
+          "device": "fade_and_stay",
+          "join": "hard cut, light band",
+          "intent": "the turn"
+        },
+        {
+          "beat": "b33",
+          "line": "CLOSE: 'What to do' on a solid card, 'what to stop' on a faded one. Rest frame.",
+          "builder": "title.card",
+          "device": "rule_card",
+          "join": "hard cut",
+          "intent": "pocket rule"
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "treatment": "Card table: three equal cards on the board, all the same size. The quiz holds with no answer shown, then the answer lands. Failures fade and stay in grey; the highlights are one accent with numbered positions.",
+      "accent_on": "the card in focus, then its three parts",
+      "world": "Card table over the board",
+      "beats": [
+        {
+          "beat": "b34",
+          "line": "MEDIUM: three cards slide onto the board one at a time, A and B read with their text. Motion layer breaks the template run.",
+          "builder": "compare.two",
+          "join": "chapter: black narration card, hard cut",
+          "intent": "set up the check"
+        },
+        {
+          "beat": "b35",
+          "line": "MEDIUM: all three cards side by side, equal size, letters large, no answer shown. Hold for the pause.",
+          "builder": "quiz.question",
+          "join": "continue",
+          "intent": "stopping check"
+        },
+        {
+          "beat": "b36",
+          "line": "MEDIUM: card C lifts forward; three highlights mark behaviour, effect and request in its text, all in the one accent with numbered positions.",
+          "builder": "quiz.answer",
+          "device": "board_sentence",
+          "join": "continue"
+        },
+        {
+          "beat": "b37",
+          "line": "MEDIUM: card A fades to grey while an empty action box stays beside it. Warmth is tone, tone is not enough.",
+          "builder": "compare.two",
+          "device": "fade_and_stay",
+          "join": "continue",
+          "intent": "refute: tempting warm version"
+        },
+        {
+          "beat": "b38",
+          "line": "MEDIUM: card B with 'rude' circled as a label, and the stop part drawn as half of a complete request.",
+          "builder": "document.page",
+          "join": "continue",
+          "intent": "refute: label and half a request"
+        },
+        {
+          "beat": "b39",
+          "line": "CLOSE: three slots drawn large and all filled, as a checklist. Rest frame.",
+          "builder": "list.steps",
+          "device": "rule_card",
+          "join": "hard cut",
+          "intent": "pocket rule"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "treatment": "Rest section. Calm desk and worksheet. The worksheet is the board station, shown as a document, a list and a calendar page, so it is not one template three times running. Little motion; the screen stays calm while the viewer writes.",
+      "accent_on": "the slot being asked about",
+      "world": "A quiet desk with a sticky note, then the worksheet",
+      "beats": [
+        {
+          "beat": "b40",
+          "line": "WIDE then MEDIUM: a calm desk with a single sticky note, a name turned away from camera. The board waits empty. Light band; the sticky note is the only object.",
+          "builder": "bespoke scene (hybrid)",
+          "join": "chapter: hard cut to the desk",
+          "intent": "pick one conversation"
+        },
+        {
+          "beat": "b41",
+          "line": "MEDIUM: the three-slot shape on the board with unnamed outlines of other shapes ghosted beside it. One common shape, not the only one. Model names are not invented.",
+          "builder": "icon.grid",
+          "join": "continue",
+          "intent": "F13 caveat"
+        },
+        {
+          "beat": "b42",
+          "line": "CLOSE: worksheet slot one highlighted, the viewfinder frame around it. Motion layer breaks the template run.",
+          "builder": "document.page",
+          "device": "camera_frame",
+          "join": "continue"
+        },
+        {
+          "beat": "b43",
+          "line": "CLOSE: worksheet slot two highlighted beside slot one, as a list item.",
+          "builder": "list.steps",
+          "join": "continue (same layout, new state)"
+        },
+        {
+          "beat": "b44",
+          "line": "CLOSE: slot three highlighted with a small calendar marker beside it.",
+          "builder": "calendar.plan",
+          "device": "calendar_marker",
+          "join": "continue"
+        },
+        {
+          "beat": "b45",
+          "line": "MEDIUM: all three slots side by side with blinking cursors. The screen is calm; hold for the pause.",
+          "builder": "document.page",
+          "device": "board_sentence",
+          "join": "continue",
+          "intent": "independent practice pause"
+        },
+        {
+          "beat": "b46",
+          "line": "CLOSE on the desk: the sticky note gets a tick and a date-free calendar marker. Gentle motion.",
+          "builder": "bespoke scene (hybrid)",
+          "device": "calendar_marker",
+          "join": "continue"
+        }
+      ]
+    },
+    {
+      "id": "payoff_scene",
+      "treatment": "The opening frame returns, changed. Expressive story register, same room and same seating as b01 to b04. The only change is the sentence on the board and the room tension. Colour is held until here, then the band lifts.",
+      "accent_on": "the rebuilt sentence in the bubble, then the 'talk after' marker",
+      "world": "The opening meeting room",
+      "beats": [
+        {
+          "beat": "b47",
+          "line": "WIDE: the opening frame replayed. Same tension, but the board now carries the rebuilt sentence instead of the old one.",
+          "builder": "bespoke scene (motion)",
+          "device": "board_sentence",
+          "join": "chapter: motif return to the opening frame (cut fallback)",
+          "intent": "payoff: opening frame back, changed"
+        },
+        {
+          "beat": "b48",
+          "line": "MEDIUM two-shot: Priya speaks; 'interrupted Sam twice' and 'I lost track' appear in the bubble in the order spoken.",
+          "builder": "bespoke scene (motion)",
+          "device": "board_sentence",
+          "join": "continue"
+        },
+        {
+          "beat": "b49",
+          "line": "CLOSE on the bubble: the request and the check-back appear, each beside its calendar marker.",
+          "builder": "bespoke scene (motion)",
+          "device": "calendar_marker",
+          "join": "continue"
+        },
+        {
+          "beat": "b50",
+          "line": "CLOSE on Dev's hands writing the action in a notebook, in contrast to the earlier empty nod.",
+          "builder": "bespoke scene (motion)",
+          "join": "cut, new subject"
+        },
+        {
+          "beat": "b51",
+          "line": "WIDE, same room and seating as the opening: Sam presents to the end, Dev holds back, then speaks. Tension visibly lower. Lift in the value band.",
+          "builder": "bespoke scene (motion)",
+          "join": "time: next meeting",
+          "intent": "the visible change"
+        },
+        {
+          "beat": "b52",
+          "line": "MEDIUM: Priya and Dev talk briefly in the empty room; Dev's nod now has a clear expression, with the 'talk after' marker.",
+          "builder": "bespoke scene (motion)",
+          "device": "calendar_marker",
+          "join": "time: afterwards"
+        },
+        {
+          "beat": "b53",
+          "line": "MEDIUM: the calendar marker beside the sentence on the board, plain and calm. 'No guarantee' sits quietly beside it.",
+          "builder": "recap",
+          "device": "calendar_marker",
+          "join": "hard cut",
+          "intent": "honest close"
+        },
+        {
+          "beat": "b54",
+          "line": "MEDIUM presenter to camera, the rebuilt sentence on the board behind. Close on 'go and say yours'.",
+          "builder": "avatar",
+          "device": "board_sentence",
+          "join": "hard cut to presenter, board carried over (handoff)",
+          "intent": "handoff to the viewer"
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    "Newer treatment: material joins (page turn, torn paper, motif) between chapters instead of hard cuts and black narration cards. Kept as an option, not the default.",
+    "Newer treatment: the board sentence as one continuous camera move entering each slot (hero.portal) instead of cuts. Kept as an option.",
+    "Classic: the pocket rules as plain title cards (chosen). Alternative: the rule as a tilted stamp or a brush label.",
+    "Alternative: the check section as three drawn cards on the board (chosen) or a quiz layout alone."
+  ],
+  "open_questions": [
+    "Casting: the pack asks for small, minimal-face figures unless a designed rig exists. Is there a rig for Priya, Dev and Sam? If not, plan back and three-quarter views, hands and posture for close beats (b03, b10, b50), not big faces.",
+    "Allocation estimate is 444 s against the 600 s target in the teaching plan. Apply (b45) and the check pauses may need held time; this is for pass 2 to resolve, not invented here.",
+    "Hybrid beats b23, b27, b34, b37, b40, b42 and b46 are drawn as a template with a motion layer inside. Pass 2 should confirm each has real motion to carry; b37 may fall back to template.",
+    "Not verified: no source documents exist (topic mode); all example wording is the script's own and not checked against a source. No catalogue props were read in this pass, so builder choices are by family only."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "_about": "E2 bake-off (D-102): one corporate beat, same motion, four art sources; six E1 frames as anchors",
+  "version": 1,
+  "seed": 202,
+  "repeats": 3,
+  "frame": {
+    "width": 640,
+    "height": 360,
+    "keep_top": 0.86,
+    "reencode_crf": 26,
+    "_why": "every frame is brought to the 640x360 of the reference videos; sources above 360p are re-encoded once with h264 so compression is not a tell; the bottom 14% is cut from EVERY frame because Loom renders burn in captions and the references have none"
+  },
+  "roots": {
+    "docs": [
+      "C:/Users/Admin/Documents",
+      "~/Documents"
+    ],
+    "engine": [
+      "."
+    ]
+  },
+  "items": [
+    {
+      "key": "e2_a_wide",
+      "class": "e2_a",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_a_wide.png"
+    },
+    {
+      "key": "e2_a_two_shot",
+      "class": "e2_a",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_a_two_shot.png"
+    },
+    {
+      "key": "e2_a_lean_push",
+      "class": "e2_a",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_a_lean_push.png"
+    },
+    {
+      "key": "e2_b_wide",
+      "class": "e2_b",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_b_wide.png"
+    },
+    {
+      "key": "e2_b_two_shot",
+      "class": "e2_b",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_b_two_shot.png"
+    },
+    {
+      "key": "e2_b_lean_push",
+      "class": "e2_b",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_b_lean_push.png"
+    },
+    {
+      "key": "e2_d_wide",
+      "class": "e2_d",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_d_wide.png"
+    },
+    {
+      "key": "e2_d_two_shot",
+      "class": "e2_d",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_d_two_shot.png"
+    },
+    {
+      "key": "e2_d_lean_push",
+      "class": "e2_d",
+      "src": "engine:docs/research/golden/sets/e2/frames/e2_d_lean_push.png"
+    },
+    {
+      "key": "ref_kurz_office_three",
+      "class": "anchor_reference",
+      "src": "docs:Kurzgesagt-In a Nutshell/videoplayback (1).mp4",
+      "t": 290
+    },
+    {
+      "key": "ref_crayon_meeting",
+      "class": "anchor_reference",
+      "src": "docs:Crayon Capital/videoplayback (2).mp4",
+      "t": 252.5
+    },
+    {
+      "key": "ref_teded_greek_town",
+      "class": "anchor_reference",
+      "src": "docs:Ted-Ed/videoplayback (1).mp4",
+      "t": 215
+    },
+    {
+      "key": "ref_kurz_desk_papers",
+      "class": "anchor_reference",
+      "src": "docs:Kurzgesagt-In a Nutshell/videoplayback (1).mp4",
+      "t": 440
+    },
+    {
+      "key": "rej_feed_office_stand",
+      "class": "anchor_rejected",
+      "src": "engine:projects/feedback-that-lands/renders/feedback-that-lands.mp4",
+      "t": 35
+    },
+    {
+      "key": "new_phish_b19_close",
+      "class": "anchor_new",
+      "src": "engine:projects/phishing-report/qa/frames/166.67.png"
+    }
+  ]
+}

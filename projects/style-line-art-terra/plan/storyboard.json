@@ -1,0 +1,904 @@
+{
+  "style": "line-art",
+  "title": "Public, internal, confidential: how our data classification works",
+  "concept": "One long white sheet of monoline drawings. Every item is a single grey dashed outline until the harm question decides it; then its outline redraws in its class colour (public = accent blue, internal = accent2 amber, confidential = accent3 magenta) and keeps that colour wherever it goes. The film opens and closes on the same email with the customer list attached.",
+  "world": {
+    "stations": [
+      {
+        "id": "desk",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "board",
+        "x": 2400,
+        "y": 0
+      },
+      {
+        "id": "shelf",
+        "x": 4800,
+        "y": 0
+      },
+      {
+        "id": "vault",
+        "x": 7200,
+        "y": 0
+      },
+      {
+        "id": "sort",
+        "x": 9600,
+        "y": 0
+      },
+      {
+        "id": "travel",
+        "x": 12000,
+        "y": 0
+      },
+      {
+        "id": "rule",
+        "x": 14400,
+        "y": 0
+      }
+    ]
+  },
+  "story": {
+    "metaphor": "the class is the colour of an item's outline, and it travels with the item",
+    "setting": "a white technical sheet, stations left to right",
+    "arc": "a pause before Send, the three classes by example, a check, the rule, back to Send done right",
+    "cast": [
+      {
+        "name": "Owner",
+        "rig": "tess",
+        "role": "the list's owner, who decides its class (b12)"
+      },
+      {
+        "name": "Recipient",
+        "rig": "pip",
+        "role": "the one named person who needs the list (b08)"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "class_line",
+      "what": "the class lives in the outline colour: an item's single outline redraws from grey dashed (unclassified) into its class colour on the spoken class word; public = accent, internal = accent2, confidential = accent3, held the whole film",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b04",
+        "b05",
+        "b07",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "mail_screen",
+      "what": "the laptop email with the customer list attached and the cursor on Send; opens the film and returns at the payoff with the attachment in the confidential colour",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b13"
+      ]
+    },
+    {
+      "id": "trays",
+      "what": "three outline trays in the class colours, labelled on their front edges; the items drop into them",
+      "kind": "list",
+      "beats": [
+        "b09",
+        "b10"
+      ]
+    },
+    {
+      "id": "harm_mark",
+      "what": "the harm question drawn as one line question mark that hovers over an item and decides its class",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b07",
+        "b12"
+      ]
+    },
+    {
+      "id": "handoff",
+      "what": "join material: the next station's white field grows in from the last item's outline (handoff) at section changes; camera pans along the sheet otherwise",
+      "kind": "join",
+      "beats": [
+        "b03",
+        "b07",
+        "b09",
+        "b11"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light",
+      "why": "open on bare white, only ink and grey lines"
+    },
+    {
+      "from": "b07",
+      "band": "mid",
+      "why": "confidential is the key mechanism: warm field2 tint, the accent3 line carries the frame"
+    },
+    {
+      "from": "b09",
+      "band": "light",
+      "why": "check and transfer back on white"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "why": "payoff on white; the lift is the confidential line and the approved channel lit"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "item",
+        "what": "a monoline document outline (stroke 3, radius 16, no fill, warm white inside) with a variant per lesson item: press_release (headline bar, body lines, a small 'Press release' label), meeting_notes (bullets, 'Meeting notes'), customer_list (table of name rows drawn as short lines, 'Customer list'), job_advert ('Job advert'), org_chart (a small tree of boxes, 'Org chart'), payroll ('Payroll file'), plain. State: class none (grey muted dashed outline), public (accent), internal (accent2), confidential (accent3); setClass(cls, t) redraws the outline in the new colour along its path over about 0.6 s. Optional small tick mark (pos) for approved. The label is SVG text in ink on the page, at least label size.",
+        "beats": [
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "mail",
+        "what": "a monoline laptop (open, front view) whose screen shows an email: To field reading 'Contractor (new)', a subject line, an attachment chip with a page icon reading 'Customer list' whose outline takes a class colour, a Send button, a pointer cursor that can glide and stop; optional second option row 'Approved channel' with a small padlock, and a note 'Ask the owner'. States: plain (attachment dashed grey), classified (attachment accent3), channel (cursor on Approved channel, Send dimmed).",
+        "beats": [
+          "b01",
+          "b13"
+        ]
+      },
+      {
+        "id": "trays",
+        "what": "three open outline trays side by side, outline in accent / accent2 / accent3, labels Public, Internal, Confidential on their front edges; empty or holding items (an item can be placed into a tray and sinks a little).",
+        "beats": [
+          "b09",
+          "b10"
+        ]
+      },
+      {
+        "id": "harm_mark",
+        "what": "a large single-line question mark in ink that draws on, can hover over a point and fade; a small 'Harm?' label under it.",
+        "beats": [
+          "b03",
+          "b07",
+          "b12"
+        ]
+      },
+      {
+        "id": "handling",
+        "what": "the confidential handling props, monoline: a protected channel (a line with a small padlock at its middle that draws from A to B), a folder outline with a padlock that can close, a shredder outline that a page feeds into and leaves as strips, and a file icon that deletes (outline erases to a dashed ghost then gone).",
+        "beats": [
+          "b08"
+        ]
+      },
+      {
+        "id": "door",
+        "what": "a building outline seen from the front with an open doorway (the threshold line marked), ink line, the outside space beyond it plain white; used for 'stays inside'.",
+        "beats": [
+          "b06"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "cut"
+      },
+      "shot": {
+        "size": "medium",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "hook"
+      },
+      "accent_on": "cursor",
+      "design": {
+        "subject": "an email about to be sent with a customer list attached",
+        "treatment": "the laptop email in ink lines centre frame; slow push in toward the Send button",
+        "why_motion": "the cursor travelling to Send and stopping is the pause the lesson is about",
+        "elements": [
+          "laptop",
+          "email",
+          "attachment",
+          "send_btn",
+          "cursor"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Say your cursor is on Send",
+            "element": "laptop",
+            "action": "lines draw on, email fields print, cursor glides toward Send",
+            "motion": "draw 1.0 s, cam push slow"
+          },
+          {
+            "t_anchor": "A customer list is attached",
+            "element": "attachment",
+            "action": "the Customer list chip draws in grey dashed outline",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "contractor who started this week",
+            "element": "email",
+            "action": "the To field 'Contractor (new)' underlines in ink",
+            "motion": "underline draw"
+          },
+          {
+            "t_anchor": "You pause",
+            "element": "cursor",
+            "action": "cursor stops just above Send, holds",
+            "motion": "ease to rest"
+          }
+        ],
+        "continuity": "b13 returns to this exact layout on the desk station"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "avatar",
+      "station": "board",
+      "join_in": {
+        "type": "camera"
+      },
+      "props": {
+        "title": "Everything you handle has a class",
+        "card": {
+          "title": "Everything you handle has a class",
+          "lines": [
+            "Public",
+            "Internal",
+            "Confidential"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "board",
+      "join_in": {
+        "type": "canvas"
+      },
+      "shot": {
+        "size": "medium",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "setup"
+      },
+      "accent_on": "qmark",
+      "design": {
+        "subject": "a document under the harm question",
+        "treatment": "one dashed document centre; a large line question mark draws above it; a file type badge and a folder outline sit either side and fade back",
+        "why_motion": "the badge and folder fading is the claim that they do not decide",
+        "elements": [
+          "doc",
+          "qmark",
+          "harm_label",
+          "type_badge",
+          "folder"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "One question sorts it",
+            "element": "doc",
+            "action": "plain dashed document draws, with a file type badge left and a folder outline right",
+            "motion": "draw stagger"
+          },
+          {
+            "t_anchor": "Who could be harmed if it got out",
+            "element": "qmark",
+            "action": "question mark draws above the doc; Harm? prints under it",
+            "motion": "draw 1.0 s"
+          },
+          {
+            "t_anchor": "Not the file type",
+            "element": "type_badge",
+            "action": "badge greys and fades back",
+            "motion": "fade to 20 %"
+          },
+          {
+            "t_anchor": "not the folder",
+            "element": "folder",
+            "action": "folder greys and fades back",
+            "motion": "fade to 20 %"
+          }
+        ],
+        "continuity": "the question mark is the harm_mark device; it returns in b07 and b12"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "shelf",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "wide",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "setup"
+      },
+      "accent_on": "press_release",
+      "design": {
+        "subject": "a published press release",
+        "treatment": "press release page right of centre on a long ink baseline; a tick stamps; outline redraws blue; the page slides right toward an open arc at the frame edge",
+        "why_motion": "the outline redrawing in its class colour on the word is the class being decided",
+        "elements": [
+          "baseline",
+          "press_release",
+          "tick",
+          "open_arc"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "A published press release",
+            "element": "baseline",
+            "action": "a long ink baseline draws across the frame",
+            "motion": "draw 0.8 s"
+          },
+          {
+            "t_anchor": "A published press release",
+            "element": "press_release",
+            "action": "dashed press release page draws on the baseline",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "approved for release",
+            "element": "tick",
+            "action": "a small tick draws on the corner",
+            "motion": "draw 0.4 s"
+          },
+          {
+            "t_anchor": "Public",
+            "element": "press_release",
+            "action": "outline redraws in accent along its path",
+            "motion": "line redraw 0.6 s"
+          },
+          {
+            "t_anchor": "Share it freely",
+            "element": "press_release",
+            "action": "page slides right toward the open arc and rests by it, still in frame",
+            "motion": "move 0.8 s"
+          }
+        ],
+        "continuity": "baseline and press_release are held into b05"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "shelf",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "baseline",
+        "press_release"
+      ],
+      "shot": {
+        "size": "wide",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "setup"
+      },
+      "accent_on": "notes",
+      "design": {
+        "subject": "a team's meeting notes",
+        "treatment": "meeting notes page arrives left of the held public press release; outline redraws amber on Internal",
+        "why_motion": "two items side by side, two colours: the contrast is the lesson",
+        "elements": [
+          "baseline",
+          "notes",
+          "colleagues"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your team's meeting notes",
+            "element": "baseline",
+            "action": "held from b04, unchanged",
+            "motion": "none"
+          },
+          {
+            "t_anchor": "Your team's meeting notes",
+            "element": "notes",
+            "action": "dashed notes page draws on the baseline left of the press release",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "meant for colleagues",
+            "element": "colleagues",
+            "action": "a small row of three line person heads draws under the notes",
+            "motion": "stagger draw"
+          },
+          {
+            "t_anchor": "Internal",
+            "element": "notes",
+            "action": "outline redraws in accent2",
+            "motion": "line redraw 0.6 s"
+          }
+        ],
+        "continuity": "notes and baseline held into b06; colleagues and press release leave"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "shelf",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "baseline",
+        "notes"
+      ],
+      "shot": {
+        "size": "wide",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "turn"
+      },
+      "accent_on": "threshold",
+      "design": {
+        "subject": "internal notes stopping at the office door",
+        "treatment": "a building outline draws around the notes, doorway on the right; the notes glide to the threshold and stop; Stays inside prints on the wall",
+        "why_motion": "the move that stops at the door is the rule",
+        "elements": [
+          "building",
+          "threshold",
+          "stays_label"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Harmless is not the same as approved",
+            "element": "building",
+            "action": "building outline draws around the notes; no tick appears on the notes",
+            "motion": "draw 1.0 s"
+          },
+          {
+            "t_anchor": "Internal stays inside",
+            "element": "notes",
+            "action": "notes glide right and stop at the threshold line",
+            "motion": "move, ease out, no bounce"
+          },
+          {
+            "t_anchor": "unless its release is approved",
+            "element": "stays_label",
+            "action": "Stays inside prints on the wall above the doorway; threshold line thickens",
+            "motion": "print"
+          }
+        ],
+        "continuity": "section ends; b07 changes station"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "vault",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "medium",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "reveal"
+      },
+      "accent_on": "customer_list",
+      "design": {
+        "subject": "the customer list with personal details",
+        "treatment": "the customer list from b01 large centre, rows of names as short lines; the question mark hovers; the outline redraws magenta",
+        "why_motion": "the same question decides the hook's file in front of the viewer",
+        "elements": [
+          "customer_list",
+          "rows",
+          "qmark",
+          "people_row"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Now the customer list",
+            "element": "customer_list",
+            "action": "dashed customer list draws, same look as the b01 attachment page",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "personal details",
+            "element": "rows",
+            "action": "name rows print as lines one by one",
+            "motion": "stagger 0.09"
+          },
+          {
+            "t_anchor": "real people could be harmed",
+            "element": "qmark",
+            "action": "question mark hovers over the list; a row of small line people draws beside it",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Confidential",
+            "element": "customer_list",
+            "action": "outline redraws in accent3",
+            "motion": "line redraw 0.6 s"
+          }
+        ],
+        "continuity": "customer_list held into b08"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "vault",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "customer_list"
+      ],
+      "shot": {
+        "size": "wide",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "setup"
+      },
+      "accent_on": "channel",
+      "design": {
+        "subject": "the route a confidential file takes",
+        "treatment": "a left to right route: the list travels one locked line to the Recipient (cast, pip rig, with a name tag), rests in a locked folder, then a paper copy feeds the shredder and a file icon deletes; each step's label sits on its thing",
+        "why_motion": "handling is a route the item takes; each stop is said as it is reached",
+        "elements": [
+          "channel",
+          "recipient",
+          "folder",
+          "shredder",
+          "file_icon",
+          "labels"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "named people who need it",
+            "element": "recipient",
+            "action": "Recipient draws at the right end with a name tag; label Named people who need it",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "approved, protected channels",
+            "element": "channel",
+            "action": "a line with a padlock draws from list to recipient; a small copy of the list travels it; label Approved channels",
+            "motion": "path travel 1.0 s"
+          },
+          {
+            "t_anchor": "stored with access limited",
+            "element": "folder",
+            "action": "the list slides into a folder outline; its padlock closes; label Limited access",
+            "motion": "move, lock snap without overshoot"
+          },
+          {
+            "t_anchor": "shredded",
+            "element": "shredder",
+            "action": "a paper copy feeds the shredder and leaves as strips",
+            "motion": "draw strips"
+          },
+          {
+            "t_anchor": "securely deleted",
+            "element": "file_icon",
+            "action": "a file icon erases to a dashed ghost then gone; label Shred or delete",
+            "motion": "erase 0.6 s"
+          }
+        ],
+        "continuity": "everything leaves at the section change"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "sort",
+      "join_in": {
+        "type": "camera"
+      },
+      "intent": "process_hold",
+      "shot": {
+        "size": "wide",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "practice"
+      },
+      "accent_on": "pause_ring",
+      "design": {
+        "subject": "three everyday items to sort",
+        "treatment": "three empty trays across the bottom in their colours; three dashed items arrive one by one in a row above them, labelled; a small pause ring runs through the silent pause",
+        "why_motion": "items in grey over coloured trays is the question; the pause is the learner's turn",
+        "elements": [
+          "trays",
+          "job_advert",
+          "org_chart",
+          "payroll",
+          "pause_ring"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Try three",
+            "element": "trays",
+            "action": "three trays draw, labels Public, Internal, Confidential",
+            "motion": "draw stagger"
+          },
+          {
+            "t_anchor": "A posted job advert",
+            "element": "job_advert",
+            "action": "dashed job advert drops in above, label on it",
+            "motion": "enter 0.55 s"
+          },
+          {
+            "t_anchor": "The org chart",
+            "element": "org_chart",
+            "action": "dashed org chart drops in",
+            "motion": "enter"
+          },
+          {
+            "t_anchor": "The payroll file",
+            "element": "payroll",
+            "action": "dashed payroll file drops in; a small pause ring then counts through the 3 s pause",
+            "motion": "enter, ring sweep"
+          }
+        ],
+        "continuity": "trays and the three items held into b10, not yet placed; the items sit in a row above the trays in the order payroll, job advert, org chart so their position gives no answer"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "sort",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "trays",
+        "job_advert",
+        "org_chart",
+        "payroll"
+      ],
+      "shot": {
+        "size": "wide",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "practice"
+      },
+      "accent_on": "org_chart",
+      "design": {
+        "subject": "the three items sorted into their classes",
+        "treatment": "each held item drops into its tray and takes its colour on its class word; the org chart drifts over Public, hovers, then settles in Internal",
+        "why_motion": "the hover then settle is the misconception corrected in motion",
+        "elements": [
+          "trays",
+          "job_advert",
+          "org_chart",
+          "payroll"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Public",
+            "element": "job_advert",
+            "action": "drops into Public tray, outline redraws accent",
+            "motion": "drop, ease, no bounce"
+          },
+          {
+            "t_anchor": "internal",
+            "element": "org_chart",
+            "action": "moves over the Public tray and hovers",
+            "motion": "move 0.4 s"
+          },
+          {
+            "t_anchor": "confidential",
+            "element": "payroll",
+            "action": "drops into Confidential tray, outline redraws accent3",
+            "motion": "drop"
+          },
+          {
+            "t_anchor": "looks harmless",
+            "element": "org_chart",
+            "action": "still hovering over Public",
+            "motion": "small hover"
+          },
+          {
+            "t_anchor": "it stays internal",
+            "element": "org_chart",
+            "action": "moves across and settles into Internal, outline redraws accent2",
+            "motion": "move 0.6 s"
+          }
+        ],
+        "continuity": "section ends"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "travel",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "medium",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "setup"
+      },
+      "accent_on": "morph_item",
+      "design": {
+        "subject": "one confidential document on paper, in a folder, on a screen",
+        "treatment": "one magenta outline that morphs from a printed page to a folder to a laptop screen showing the same page, moving left to right; each earlier form stays as a faint ghost with its label",
+        "why_motion": "the outline keeps its colour while its form changes: the class travels",
+        "elements": [
+          "morph_item",
+          "paper_label",
+          "folder_label",
+          "screen_label"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The class travels with the information",
+            "element": "morph_item",
+            "action": "a confidential page draws in accent3",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "on paper",
+            "element": "paper_label",
+            "action": "Paper prints under it",
+            "motion": "print"
+          },
+          {
+            "t_anchor": "in a folder",
+            "element": "morph_item",
+            "action": "page outline morphs into a folder outline, still accent3; Folder prints",
+            "motion": "path morph 0.6 s"
+          },
+          {
+            "t_anchor": "on a screen",
+            "element": "morph_item",
+            "action": "folder morphs into a screen showing the page, still accent3; Screen prints",
+            "motion": "path morph 0.6 s"
+          }
+        ],
+        "continuity": "standalone"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "rule",
+      "join_in": {
+        "type": "camera"
+      },
+      "shot": {
+        "size": "medium",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "payoff"
+      },
+      "accent_on": "owner_arrow",
+      "design": {
+        "subject": "an unsure item and its owner",
+        "treatment": "a dashed item under the question mark; a small two step ladder of colour (internal amber, confidential magenta) beside it; the item steps up to the higher class colour; an arrow draws to the Owner (cast, tess rig) with Ask the owner on the arrow",
+        "why_motion": "the step up and the arrow are the two actions of the rule",
+        "elements": [
+          "unsure_item",
+          "qmark",
+          "steps",
+          "go_higher",
+          "owner",
+          "owner_arrow",
+          "policy_note"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Not sure",
+            "element": "unsure_item",
+            "action": "dashed item with the question mark over it",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Treat it as the higher class",
+            "element": "unsure_item",
+            "action": "item steps up from the amber step to the magenta step, outline redraws accent3; Go higher prints",
+            "motion": "move up 0.5 s, line redraw"
+          },
+          {
+            "t_anchor": "ask its owner",
+            "element": "owner_arrow",
+            "action": "Owner appears right; arrow draws from item to Owner; Ask the owner on the arrow",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Our own policy decides each case",
+            "element": "policy_note",
+            "action": "a small page outline labelled Our policy draws under the Owner",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "camera then pans all the way back to the desk"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "desk",
+      "join_in": {
+        "type": "camera"
+      },
+      "intent": "callback",
+      "shot": {
+        "size": "medium",
+        "depth": "flat",
+        "light": "even",
+        "story_role": "payoff"
+      },
+      "accent_on": "attachment",
+      "design": {
+        "subject": "the same email, sent the right way",
+        "treatment": "the b01 email exactly; the attachment outline redraws magenta; a Need it? note; the cursor leaves Send for an Approved channel option with a padlock; Ask the owner note under it",
+        "why_motion": "the same cursor taking a different path is the behaviour change",
+        "elements": [
+          "laptop",
+          "email",
+          "attachment",
+          "send_btn",
+          "cursor",
+          "need_note",
+          "channel_option",
+          "owner_note"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "So, that email",
+            "element": "laptop",
+            "action": "the b01 layout redraws, cursor still over Send",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "The list is confidential",
+            "element": "attachment",
+            "action": "attachment outline redraws accent3",
+            "motion": "line redraw"
+          },
+          {
+            "t_anchor": "Does the contractor need it",
+            "element": "need_note",
+            "action": "Need it? prints beside the To field",
+            "motion": "print"
+          },
+          {
+            "t_anchor": "approved, protected channel",
+            "element": "cursor",
+            "action": "Send dims; cursor glides to the Approved channel option with a padlock, which outlines in accent",
+            "motion": "move 0.6 s"
+          },
+          {
+            "t_anchor": "ask the list's owner first",
+            "element": "owner_note",
+            "action": "Ask the owner prints under the option",
+            "motion": "print"
+          }
+        ],
+        "continuity": "mirrors b01"
+      }
+    }
+  ]
+}

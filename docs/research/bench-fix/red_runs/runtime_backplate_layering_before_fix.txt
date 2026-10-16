@@ -1,0 +1,3 @@
+primitive_runtime_words_under_a_backplate_are_marked_as_layering, on runtime/world.js before the cover marks (2026-10-07; found by checking quick-question-cost on the new code vs the pre-session code: 3 new content_overlap errors at b05):
+AssertionError: b1's words under b2's backplate are not marked: {'texts': 2, 'marked': 0}
+After: PASS (own beat {'texts': 2, 'marked': 0}; under the backplate {'texts': 2, 'marked': 2})

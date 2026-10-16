@@ -1,0 +1,1788 @@
+{
+  "generated_by": "tools/node/catalog.mjs (do not hand-edit)",
+  "templates": {
+    "title.card": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Opener, section divider or payoff title. Kicker drops, title prints (unmask), subtitle settles, optional hero icon irises open. The block is vertically centred. Spectacle is allowed here (expressive register).",
+      "job": [
+        "orient",
+        "transition",
+        "consolidate",
+        "hook",
+        "payoff"
+      ],
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str",
+          "max_words": 4
+        },
+        "say_kicker": {
+          "type": "anchor"
+        },
+        "title": {
+          "type": "str",
+          "required": true,
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "subtitle": {
+          "type": "str",
+          "max_words": 16
+        },
+        "say_subtitle": {
+          "type": "anchor"
+        },
+        "icon": {
+          "type": "icon"
+        },
+        "say_icon": {
+          "type": "anchor"
+        },
+        "align": {
+          "type": "enum",
+          "choices": [
+            "center",
+            "left"
+          ],
+          "default": "center"
+        },
+        "accent": {
+          "type": "token",
+          "default": "accent"
+        },
+        "panel": {
+          "type": "bool",
+          "default": false
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "definition": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Define one term. The term drops in, a rule draws, the definition prints line by line (unmask), an optional concrete example settles last. The block is vertically centred. Restrained register: nothing moves in the reading zone after it lands.",
+      "job": [
+        "define"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str",
+          "max_words": 4
+        },
+        "term": {
+          "type": "str",
+          "required": true,
+          "max_words": 5
+        },
+        "say_term": {
+          "type": "anchor",
+          "required": true
+        },
+        "definition": {
+          "type": "str",
+          "required": true,
+          "max_words": 28
+        },
+        "say_definition": {
+          "type": "anchor",
+          "required": true
+        },
+        "example": {
+          "type": "str",
+          "max_words": 22
+        },
+        "say_example": {
+          "type": "anchor"
+        },
+        "icon": {
+          "type": "icon"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "list.steps": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "An ordered procedure or checklist (3-6 items). Title first, then each item settles ON its spoken words, its number/tick arriving WITH it (never as its own step).",
+      "job": [
+        "sequence",
+        "consolidate"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "items": {
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "required": true,
+          "of": {
+            "text": {
+              "type": "str",
+              "required": true,
+              "max_words": 12
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        },
+        "marker": {
+          "type": "enum",
+          "choices": [
+            "number",
+            "tick",
+            "icon"
+          ],
+          "default": "number"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "compare.two": {
+      "chrome": [
+        "Myth",
+        "Fact"
+      ],
+      "promoted_from_design": null,
+      "doc": "Two sides as equals (before/after, do/don't, myth/fact, A vs B). The first side's panel is on screen by the lead time (its header marked ON its words), the other converges on its header's words; rows reveal on their words; an optional verdict stamps last after a hold. mode 'pairs' reveals row by row across both sides; 'columns' left block then right block. Per side: `valence` (pos/neg/neutral) only COLOURS the side; `verdict` (right/wrong) draws a tick or a cross, so use it only when one side is the correct answer and the other is not. `tone` is deprecated: it maps to valence and draws no mark. An item with `empty: true` is a blank slot (a dashed rule, no words): never write placeholder words like 'blank'. `stance: myth` tags a side MYTH and strikes its header; `stance: fact` tags it FACT (a myth/fact contrast says which is which).",
+      "job": [
+        "distinguish"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "left": {
+          "type": "obj",
+          "required": true,
+          "of": {
+            "header": {
+              "type": "str",
+              "required": true,
+              "max_words": 4
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "valence": {
+              "type": "enum",
+              "choices": [
+                "pos",
+                "neg",
+                "neutral"
+              ]
+            },
+            "verdict": {
+              "type": "enum",
+              "choices": [
+                "right",
+                "wrong",
+                "none"
+              ]
+            },
+            "tone": {
+              "type": "enum",
+              "choices": [
+                "neg",
+                "pos",
+                "neutral"
+              ],
+              "deprecated": "use valence (colour only); tone draws no mark"
+            },
+            "stance": {
+              "type": "enum",
+              "choices": [
+                "myth",
+                "fact",
+                "none"
+              ]
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "items": {
+              "type": "list",
+              "max": 4,
+              "of": {
+                "text": {
+                  "type": "str",
+                  "max_words": 10
+                },
+                "say": {
+                  "type": "anchor"
+                },
+                "empty": {
+                  "type": "bool"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "obj",
+          "required": true,
+          "of": {
+            "header": {
+              "type": "str",
+              "required": true,
+              "max_words": 4
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "valence": {
+              "type": "enum",
+              "choices": [
+                "pos",
+                "neg",
+                "neutral"
+              ]
+            },
+            "verdict": {
+              "type": "enum",
+              "choices": [
+                "right",
+                "wrong",
+                "none"
+              ]
+            },
+            "tone": {
+              "type": "enum",
+              "choices": [
+                "neg",
+                "pos",
+                "neutral"
+              ],
+              "deprecated": "use valence (colour only); tone draws no mark"
+            },
+            "stance": {
+              "type": "enum",
+              "choices": [
+                "myth",
+                "fact",
+                "none"
+              ]
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "items": {
+              "type": "list",
+              "max": 4,
+              "of": {
+                "text": {
+                  "type": "str",
+                  "max_words": 10
+                },
+                "say": {
+                  "type": "anchor"
+                },
+                "empty": {
+                  "type": "bool"
+                }
+              }
+            }
+          }
+        },
+        "verdict": {
+          "type": "obj",
+          "of": {
+            "text": {
+              "type": "str",
+              "max_words": 10
+            },
+            "say": {
+              "type": "anchor"
+            }
+          }
+        },
+        "mode": {
+          "type": "enum",
+          "choices": [
+            "pairs",
+            "columns"
+          ],
+          "default": "columns"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "process.flow": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A process that runs (3-5 steps). The rail exists first; step 1 settles; each connector DRAWS INTO the next step, which then arrives - all on the spoken words. Optional token travels the chain as each step is named (value travel: the motion IS the process).",
+      "job": [
+        "sequence",
+        "relate"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "steps": {
+          "type": "list",
+          "min": 2,
+          "max": 5,
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 4
+            },
+            "sub": {
+              "type": "str",
+              "max_words": 8
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "icon": {
+              "type": "icon"
+            }
+          }
+        },
+        "token": {
+          "type": "obj",
+          "of": {
+            "icon": {
+              "type": "icon"
+            },
+            "label": {
+              "type": "str",
+              "max_words": 2
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "stat.hero": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "ONE number that matters. Kicker drops, the figure counts up from zero and lands ON the spoken number, caption settles. The number must be grounded (source or knowledge sheet).",
+      "job": [
+        "quantify"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str",
+          "max_words": 4
+        },
+        "value": {
+          "type": "number",
+          "required": true
+        },
+        "decimals": {
+          "type": "int",
+          "default": 0
+        },
+        "prefix": {
+          "type": "str"
+        },
+        "suffix": {
+          "type": "str"
+        },
+        "say": {
+          "type": "anchor",
+          "required": true
+        },
+        "caption": {
+          "type": "str",
+          "max_words": 16
+        },
+        "say_caption": {
+          "type": "anchor"
+        },
+        "icon": {
+          "type": "icon"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "document.page": {
+      "chrome": [
+        "Myth",
+        "Fact"
+      ],
+      "promoted_from_design": null,
+      "doc": "A page the learner recognises (notes, an email, a policy excerpt, a form). The page is on screen by the lead time (its title marked ON its words), then each line appears or is HIGHLIGHTED on its words (reading along). A line with `empty: true` is a blank ruled slot (no words), shown with the page: use it for a missing reply, a blank field or an unwritten line, never placeholder words like 'blank'. Every other line needs `text`. The lines are the page's followers: they leave with it. Optional character beside it. Name it 'page' so later beats can keep it (storyboard keep: [\"page\"]). `stance: myth` tags the page MYTH and strikes its title (a claim the lesson refutes); `stance: fact` tags it FACT.",
+      "job": [
+        "demonstrate",
+        "scenario",
+        "define"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kind": {
+          "type": "enum",
+          "choices": [
+            "notes",
+            "email",
+            "policy",
+            "form"
+          ],
+          "default": "notes"
+        },
+        "title": {
+          "type": "str",
+          "required": true,
+          "max_words": 6
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "lines": {
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "required": true,
+          "of": {
+            "text": {
+              "type": "str",
+              "max_words": 9
+            },
+            "say": {
+              "type": "anchor"
+            },
+            "empty": {
+              "type": "bool"
+            }
+          }
+        },
+        "mode": {
+          "type": "enum",
+          "choices": [
+            "appear",
+            "highlight"
+          ],
+          "default": "highlight"
+        },
+        "stance": {
+          "type": "enum",
+          "choices": [
+            "myth",
+            "fact",
+            "none"
+          ]
+        },
+        "side": {
+          "type": "enum",
+          "choices": [
+            "left",
+            "center"
+          ],
+          "default": "left"
+        },
+        "variant": {
+          "type": "enum",
+          "choices": [
+            "card",
+            "paper"
+          ]
+        },
+        "person": {
+          "type": "obj",
+          "of": {
+            "cast": {
+              "type": "str",
+              "max_words": 3
+            },
+            "member": {
+              "type": "enum",
+              "choices": [
+                "woman",
+                "man",
+                "girl",
+                "boy",
+                "elder_woman",
+                "elder_man"
+              ],
+              "required": true
+            },
+            "emotion": {
+              "type": "enum",
+              "choices": [
+                "neutral",
+                "happy",
+                "surprised",
+                "explaining"
+              ]
+            },
+            "name": {
+              "type": "str",
+              "max_words": 3
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "calendar.plan": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A schedule the learner will copy into their own calendar. The calendar frame and day columns appear, then each entry DROPS onto its day ON its words and ticks. Use for spaced practice plans, deadlines, onboarding weeks.",
+      "job": [
+        "practice",
+        "sequence"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str",
+          "max_words": 4
+        },
+        "title": {
+          "type": "str",
+          "max_words": 8
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "days": {
+          "type": "list",
+          "min": 3,
+          "max": 7,
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            }
+          }
+        },
+        "entries": {
+          "type": "list",
+          "min": 1,
+          "max": 5,
+          "required": true,
+          "of": {
+            "day": {
+              "type": "int",
+              "required": true
+            },
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "quiz.question": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A stopping check, part 1 of 2. The question prints, the options arrive as PEERS (tight stagger, no option favoured), then a pause ring counts down through the script's silent pause_after_s. The answer is NEVER shown here; quiz.answer follows in the next beat.",
+      "job": [
+        "check"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str",
+          "default": "Your turn",
+          "chrome": true
+        },
+        "question": {
+          "type": "str",
+          "required": true,
+          "max_words": 18
+        },
+        "say_question": {
+          "type": "anchor",
+          "required": true
+        },
+        "options": {
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "required": true,
+          "of": {
+            "text": {
+              "type": "str",
+              "required": true,
+              "max_words": 10
+            },
+            "say": {
+              "type": "anchor"
+            }
+          }
+        },
+        "pause_label": {
+          "type": "str",
+          "default": "Pause and decide",
+          "chrome": true
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "quiz.answer": {
+      "chrome": [
+        "Why not"
+      ],
+      "promoted_from_design": null,
+      "doc": "A stopping check, part 2 of 2. The options return (held look), the right one is marked ON the spoken answer and the others dim; the tempting wrong option gets its own 'why not' note. Feedback is the teaching.",
+      "job": [
+        "check"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "question": {
+          "type": "str",
+          "required": true,
+          "max_words": 18
+        },
+        "options": {
+          "type": "list",
+          "min": 2,
+          "max": 4,
+          "required": true,
+          "of": {
+            "text": {
+              "type": "str",
+              "required": true,
+              "max_words": 10
+            }
+          }
+        },
+        "answer": {
+          "type": "int",
+          "required": true,
+          "index_of": "options"
+        },
+        "say_answer": {
+          "type": "anchor",
+          "required": true
+        },
+        "explanation": {
+          "type": "str",
+          "required": true,
+          "max_words": 22
+        },
+        "say_explanation": {
+          "type": "anchor",
+          "required": true
+        },
+        "tempting": {
+          "type": "int",
+          "index_of": "options",
+          "not": [
+            "answer"
+          ]
+        },
+        "why_not": {
+          "type": "str",
+          "max_words": 16,
+          "requires": "tempting"
+        },
+        "say_why_not": {
+          "type": "anchor",
+          "requires": "why_not"
+        },
+        "also": {
+          "type": "int",
+          "index_of": "options",
+          "not": [
+            "answer",
+            "tempting"
+          ]
+        },
+        "also_why": {
+          "type": "str",
+          "max_words": 14,
+          "requires": "also"
+        },
+        "say_also_why": {
+          "type": "anchor",
+          "requires": "also_why"
+        },
+        "takeaway": {
+          "type": "str",
+          "max_words": 12
+        },
+        "say_takeaway": {
+          "type": "anchor",
+          "requires": "takeaway"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "chart.bars": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Compare quantities. Axis and baseline first, then bars GROW from zero in axis order, each ON its spoken value, value label with its bar. Every value must be grounded. Optional highlight marks the bar that matters.",
+      "job": [
+        "quantify",
+        "distinguish"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "unit": {
+          "type": "str",
+          "max_words": 3
+        },
+        "max": {
+          "type": "number"
+        },
+        "series": {
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "required": true,
+          "of": {
+            "cat": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "value": {
+              "type": "number",
+              "required": true
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "label": {
+              "type": "str"
+            }
+          }
+        },
+        "highlight": {
+          "type": "int",
+          "index_of": "series"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "scenario.dialogue": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Two characters in a moment (manager/employee, customer/agent...). Characters settle in, then speech bubbles appear ON their lines, alternating sides; the speaker leans in, the listener reacts. For scenario_led teaching and misconception moments. Lines are SHORT (the narration carries the rest).",
+      "job": [
+        "scenario",
+        "demonstrate",
+        "hook",
+        "refute"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "props": {
+        "left": {
+          "type": "obj",
+          "required": true,
+          "of": {
+            "cast": {
+              "type": "str",
+              "max_words": 3
+            },
+            "member": {
+              "type": "enum",
+              "choices": [
+                "woman",
+                "man",
+                "girl",
+                "boy",
+                "elder_woman",
+                "elder_man"
+              ],
+              "required": true
+            },
+            "name": {
+              "type": "str",
+              "max_words": 3
+            },
+            "emotion": {
+              "type": "enum",
+              "choices": [
+                "neutral",
+                "happy",
+                "surprised",
+                "explaining"
+              ]
+            },
+            "cloth": {
+              "type": "token"
+            }
+          }
+        },
+        "right": {
+          "type": "obj",
+          "required": true,
+          "of": {
+            "cast": {
+              "type": "str",
+              "max_words": 3
+            },
+            "member": {
+              "type": "enum",
+              "choices": [
+                "woman",
+                "man",
+                "girl",
+                "boy",
+                "elder_woman",
+                "elder_man"
+              ],
+              "required": true
+            },
+            "name": {
+              "type": "str",
+              "max_words": 3
+            },
+            "emotion": {
+              "type": "enum",
+              "choices": [
+                "neutral",
+                "happy",
+                "surprised",
+                "explaining"
+              ]
+            },
+            "cloth": {
+              "type": "token"
+            }
+          }
+        },
+        "lines": {
+          "type": "list",
+          "min": 1,
+          "max": 4,
+          "required": true,
+          "of": {
+            "who": {
+              "type": "enum",
+              "choices": [
+                "left",
+                "right"
+              ],
+              "required": true
+            },
+            "text": {
+              "type": "str",
+              "required": true,
+              "max_words": 12
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "emotion": {
+              "type": "enum",
+              "choices": [
+                "neutral",
+                "happy",
+                "surprised",
+                "explaining"
+              ]
+            }
+          }
+        },
+        "setting": {
+          "type": "enum",
+          "choices": [
+            "none",
+            "desk",
+            "meeting",
+            "call"
+          ],
+          "default": "desk"
+        },
+        "caption": {
+          "type": "str",
+          "max_words": 8
+        },
+        "say_caption": {
+          "type": "anchor"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "recap": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Consolidate: 3-5 tokens (icon + short label) light up one by one ON their words, joined by a thread that draws through them. Ends on the pocket rule if given (stamp). An item without an icon shows a check mark, which reads as 'do this': for a mistake or a myth give it an icon that says so (for example circle-x).",
+      "job": [
+        "consolidate",
+        "payoff"
+      ],
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "items": {
+          "type": "list",
+          "min": 2,
+          "max": 5,
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        },
+        "rule": {
+          "type": "str",
+          "max_words": 12
+        },
+        "say_rule": {
+          "type": "anchor"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "icon.grid": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A set of PEERS (3-6 members of one category). They pop left to right with a tight stagger ON their words; peers never get a serial slow build (that implies rank).",
+      "job": [
+        "orient",
+        "distinguish",
+        "consolidate"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "items": {
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "required": true,
+          "of": {
+            "icon": {
+              "type": "icon",
+              "required": true
+            },
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 4
+            },
+            "sub": {
+              "type": "str",
+              "max_words": 8
+            },
+            "say": {
+              "type": "anchor"
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "cycle": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A loop that returns (3-6 stages). Nodes arrive clockwise from twelve ON their words; each arc draws as its pair exists; the CLOSING arc draws last - a loop is only a loop once it closes.",
+      "job": [
+        "sequence",
+        "relate"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "nodes": {
+          "type": "list",
+          "min": 3,
+          "max": 6,
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        },
+        "center": {
+          "type": "str",
+          "max_words": 3
+        },
+        "say_center": {
+          "type": "anchor"
+        },
+        "say_close": {
+          "type": "anchor"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "timeline": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Events in time. The spine draws left to right first, then events settle in date order ON their words, each tick with its label.",
+      "job": [
+        "sequence"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "events": {
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "required": true,
+          "of": {
+            "when": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 8
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "quote": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A line worth hearing exactly: the quote mark drops, the words print (unmask), attribution settles last. Only for genuine quotes from the source or a clearly framed invented line ('imagine someone says').",
+      "job": [
+        "hook",
+        "define",
+        "scenario"
+      ],
+      "register": "productive",
+      "motion_is": "staging",
+      "props": {
+        "quote": {
+          "type": "str",
+          "required": true,
+          "max_words": 30
+        },
+        "say": {
+          "type": "anchor",
+          "required": true
+        },
+        "attribution": {
+          "type": "str",
+          "max_words": 8
+        },
+        "say_attribution": {
+          "type": "anchor"
+        }
+      },
+      "defaults": {},
+      "example": null
+    }
+  },
+  "blueprints": {
+    "hero.meter": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "An instrument whose reading changes over time (memory strength, risk, progress, confidence). Instrument law: the scale exists first with the pointer at its MINIMUM or start value, then the pointer TRAVELS to each stop ON its words (instrument speed), the reading is marked the instant it stops, the number is named last. kind ring | bar | gauge. Optional target band = supplied context, thin and early.",
+      "job": [
+        "quantify",
+        "relate",
+        "demonstrate"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "kind": {
+          "type": "enum",
+          "choices": [
+            "ring",
+            "bar",
+            "gauge"
+          ],
+          "default": "ring"
+        },
+        "label": {
+          "type": "str",
+          "required": true,
+          "max_words": 4
+        },
+        "unit": {
+          "type": "str",
+          "default": ""
+        },
+        "show_value": {
+          "type": "bool",
+          "default": false
+        },
+        "start": {
+          "type": "number",
+          "default": 0
+        },
+        "min": {
+          "type": "number",
+          "default": 0
+        },
+        "max": {
+          "type": "number",
+          "default": 100
+        },
+        "stops": {
+          "type": "list",
+          "min": 1,
+          "max": 6,
+          "required": true,
+          "of": {
+            "value": {
+              "type": "number",
+              "required": true
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "note": {
+              "type": "str",
+              "max_words": 6
+            },
+            "tone": {
+              "type": "enum",
+              "choices": [
+                "pos",
+                "neg",
+                "neutral"
+              ]
+            }
+          }
+        },
+        "target": {
+          "type": "number"
+        },
+        "target_label": {
+          "type": "str",
+          "max_words": 3
+        },
+        "icon": {
+          "type": "icon"
+        },
+        "anchor": {
+          "type": "enum",
+          "choices": [
+            "center",
+            "left",
+            "right"
+          ],
+          "default": "center"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "hero.character_moment": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "One character in a moment, with a thought or memory bubble whose contents CHANGE over time (ideas arriving, fading, being recalled). The character's expression changes on cue. Illustrative and warm: ideal for hooks, scenarios and making an abstract process personal. bubble items: each arrives ON its say and may fade ON its fade_say (fading = forgetting / doubt).",
+      "job": [
+        "hook",
+        "scenario",
+        "demonstrate",
+        "refute"
+      ],
+      "register": "expressive",
+      "motion_is": "content",
+      "props": {
+        "cast": {
+          "type": "str",
+          "max_words": 3
+        },
+        "member": {
+          "type": "enum",
+          "choices": [
+            "woman",
+            "man",
+            "girl",
+            "boy",
+            "elder_woman",
+            "elder_man"
+          ],
+          "required": true
+        },
+        "name": {
+          "type": "str",
+          "max_words": 3
+        },
+        "cloth": {
+          "type": "token",
+          "default": "accent"
+        },
+        "side": {
+          "type": "enum",
+          "choices": [
+            "left",
+            "right"
+          ],
+          "default": "left"
+        },
+        "moods": {
+          "type": "list",
+          "max": 4,
+          "of": {
+            "emotion": {
+              "type": "enum",
+              "choices": [
+                "neutral",
+                "happy",
+                "surprised",
+                "explaining"
+              ],
+              "required": true
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        },
+        "bubble": {
+          "type": "enum",
+          "choices": [
+            "thought",
+            "speech",
+            "memory"
+          ],
+          "default": "thought"
+        },
+        "items": {
+          "type": "list",
+          "min": 1,
+          "max": 5,
+          "required": true,
+          "of": {
+            "icon": {
+              "type": "icon",
+              "required": true
+            },
+            "label": {
+              "type": "str",
+              "max_words": 3
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "fade_say": {
+              "type": "anchor"
+            }
+          }
+        },
+        "caption": {
+          "type": "str",
+          "max_words": 8
+        },
+        "say_caption": {
+          "type": "anchor"
+        },
+        "prop": {
+          "type": "enum",
+          "choices": [
+            "none",
+            "desk",
+            "calendar",
+            "laptop"
+          ],
+          "default": "desk"
+        },
+        "day_label": {
+          "type": "str",
+          "max_words": 3
+        },
+        "say_day": {
+          "type": "anchor"
+        },
+        "days": {
+          "type": "list",
+          "max": 4,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "hero.journey": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A traveller moves along a path through waypoints (days, stages, attempts) ON their words. The route draws ahead of the traveller, each waypoint stamps as it is reached, and its label settles. Use for schedules, progressions, customer journeys. The motion of the traveller IS the sequence.",
+      "job": [
+        "sequence",
+        "demonstrate",
+        "practice"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "traveller": {
+          "type": "obj",
+          "of": {
+            "icon": {
+              "type": "icon"
+            },
+            "cast": {
+              "type": "str",
+              "max_words": 3
+            },
+            "member": {
+              "type": "enum",
+              "choices": [
+                "woman",
+                "man",
+                "girl",
+                "boy",
+                "elder_woman",
+                "elder_man"
+              ]
+            }
+          }
+        },
+        "waypoints": {
+          "type": "list",
+          "min": 2,
+          "max": 6,
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 4
+            },
+            "sub": {
+              "type": "str",
+              "max_words": 6
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        },
+        "shape": {
+          "type": "enum",
+          "choices": [
+            "wave",
+            "straight",
+            "climb"
+          ],
+          "default": "wave"
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "hero.hub": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "A system with a centre and satellites (a GDS and airlines, a manager and a team, a brain and its cues). The hub irises open, spokes draw OUT to each satellite ON its word, satellites pop, and signals travel along spokes to show flow.",
+      "job": [
+        "relate",
+        "orient",
+        "demonstrate"
+      ],
+      "register": "productive",
+      "motion_is": "content",
+      "props": {
+        "kicker": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str",
+          "max_words": 9
+        },
+        "say_title": {
+          "type": "anchor"
+        },
+        "hub": {
+          "type": "obj",
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        },
+        "satellites": {
+          "type": "list",
+          "min": 2,
+          "max": 8,
+          "required": true,
+          "of": {
+            "label": {
+              "type": "str",
+              "required": true,
+              "max_words": 3
+            },
+            "icon": {
+              "type": "icon"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            }
+          }
+        },
+        "signals": {
+          "type": "list",
+          "max": 8,
+          "of": {
+            "to": {
+              "type": "int",
+              "required": true,
+              "index_of": "satellites"
+            },
+            "say": {
+              "type": "anchor",
+              "required": true
+            },
+            "inbound": {
+              "type": "bool"
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    },
+    "hero.portal": {
+      "chrome": [],
+      "promoted_from_design": null,
+      "doc": "Draws a frame (screen, lens or card) that the NEXT station is nested inside, so a 'zoom' join flies the camera through it - an infinite-canvas move that reads as going deeper. The next station must declare parent = this station and rect = this portal's rect. Optional label and surrounding context icons.",
+      "job": [
+        "transition",
+        "orient",
+        "relate"
+      ],
+      "register": "expressive",
+      "motion_is": "staging",
+      "props": {
+        "kind": {
+          "type": "enum",
+          "choices": [
+            "screen",
+            "lens",
+            "card"
+          ],
+          "default": "screen"
+        },
+        "rect": {
+          "type": "list",
+          "required": true,
+          "min": 4,
+          "max": 4
+        },
+        "label": {
+          "type": "str",
+          "max_words": 6
+        },
+        "say_label": {
+          "type": "anchor"
+        },
+        "context": {
+          "type": "list",
+          "max": 4,
+          "of": {
+            "icon": {
+              "type": "icon",
+              "required": true
+            },
+            "label": {
+              "type": "str",
+              "max_words": 3
+            },
+            "say": {
+              "type": "anchor"
+            }
+          }
+        }
+      },
+      "defaults": {},
+      "example": null
+    }
+  },
+  "components": {},
+  "avatar": {
+    "doc": "A code-drawn presenter in a disc beside a kicker and title; with `card`, up to three short lines (or one rule) fill the empty side and the disc steps back.",
+    "props": {
+      "member": {
+        "type": "enum",
+        "choices": [
+          "woman",
+          "man",
+          "girl",
+          "boy",
+          "elder_woman",
+          "elder_man"
+        ],
+        "default": "woman"
+      },
+      "cast": {
+        "type": "str",
+        "max_words": 3
+      },
+      "side": {
+        "type": "enum",
+        "choices": [
+          "left",
+          "right"
+        ],
+        "default": "left"
+      },
+      "kicker": {
+        "type": "str",
+        "max_words": 4
+      },
+      "title": {
+        "type": "str",
+        "max_words": 12
+      },
+      "say_title": {
+        "type": "anchor"
+      },
+      "title_cue": {
+        "type": "anchor",
+        "deprecated": "say_title"
+      },
+      "card": {
+        "type": "obj",
+        "of": {
+          "title": {
+            "type": "str",
+            "max_words": 6
+          },
+          "lines": {
+            "type": "list",
+            "max": 3,
+            "of": {
+              "text": {
+                "type": "str",
+                "required": true,
+                "max_words": 9
+              },
+              "say": {
+                "type": "anchor"
+              }
+            }
+          },
+          "rule": {
+            "type": "str",
+            "max_words": 12
+          },
+          "say": {
+            "type": "anchor"
+          }
+        }
+      },
+      "name": {
+        "type": "str",
+        "max_words": 3
+      },
+      "role_label": {
+        "type": "str",
+        "max_words": 5
+      },
+      "cloth": {
+        "type": "token"
+      },
+      "talk_emotion": {
+        "type": "enum",
+        "choices": [
+          "neutral",
+          "happy",
+          "surprised",
+          "explaining"
+        ]
+      },
+      "frame_r": {
+        "type": "number"
+      },
+      "frame_fill": {
+        "type": "token"
+      }
+    }
+  }
+}

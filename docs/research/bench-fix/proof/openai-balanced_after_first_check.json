@@ -1,0 +1,113 @@
+{
+ "id": "bench-20261006-151439-openai-balanced-fix1007",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\bench-20261006-151439-openai-balanced-fix1007",
+ "beats": 52,
+ "check_errors": 292,
+ "check_warnings": 135,
+ "blurred": {
+  "beats": [],
+  "of": 52
+ },
+ "foreign": {
+  "beats": [],
+  "of": 52,
+  "measured": 52
+ },
+ "off_frame": {
+  "errors": 2,
+  "first": [
+   "b02: words cut by the frame edge at 23.1s: \"Imagine that information was available t\" at [-516, 160, 2200, 380], \"colleague, but you booked a review witho\" at [-365, 342, 2051, 562] (move or shrink the element, or declare a deliberate bleed with data-bleed)",
+   "b02: off frame at 23.1s: text 'scene_error_fallback' 29% outside the frame (move or shrink it so it sits inside the frame, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b16"
+  ],
+  "of": 48,
+  "worst": 1.07
+ },
+ "dim_off": {
+  "moments": [],
+  "of": 0
+ },
+ "empty": {
+  "errors": 1,
+  "first": [
+   "runtime held_missing: b06: no element \"empty_action_space\" in previous scene"
+  ]
+ },
+ "kinds": {
+  "runtime held_missing": 268,
+  "runtime text_spill": 7,
+  "runtime icon_missing": 6,
+  "runtime text_outside_element": 3,
+  "runtime text_overflow": 2,
+  "hf layout content_overlap": 2,
+  "runtime scene_threw": 1,
+  "nothing developing": 1,
+  "words_cut": 1,
+  "off_frame": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 3,
+   "kinds": {
+    "length": 3
+   },
+   "first": [
+    "pacing.target_duration_s is 480s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it",
+    "the plan says no length was requested ('no requested length'), but the request asks for 2 minutes (120s): set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 3,
+   "kinds": {
+    "script runs ~675s against a 480s plan (x": 1,
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~675s against a 480s plan (x1.41); re-cut it",
+    "script runs ~675s but the request asks for about 120s (at most 156s); cut about 1098 words or whole beats to the requested length",
+    "52 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 103,
+   "kinds": {
+    "focus on frame layout": 51,
+    "keep missing": 39,
+    "allocation": 7,
+    "placeholder": 4,
+    "template cap": 2
+   },
+   "first": [
+    "b27: props.title = 'Sample, not universal' describes the slot instead of filling it ('Sample' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b27: props.lines[1].text = 'Sample lines, not a universal script' describes the slot instead of filling it ('Sample' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b29: props.right.items[0].text = '________' has no words: a slot that is meant to look empty is an item {\"empty\": true} (compare.two items, document.page lines), never punctuation on screen",
+    "b30: props.title = 'Sample completion' describes the slot instead of filling it ('Sample' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b01: shot focus [0, 0, 1920, 960] on a avatar beat (avatar): a avatar lays out in the whole 1920x1080 frame and the runtime ignores focus and zoom on it (shot_framing_ignored). Drop shot.focus/zoom here; to frame part of a picture, make the beat bespoke and draw inside the frame"
+   ]
+  },
+  "scenes": {
+   "errors": 1,
+   "kinds": {
+    "ctx.held(['desk_world', 'draft', 'file_g": 1
+   },
+   "first": [
+    "b02.js: ctx.held(['desk_world', 'draft', 'file_gap', 'page', 'review_strip']) but the previous beat b01 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 683s but the request asks for about 120s (at most 156s): the script must lose about 82 % of its words"
+   ]
+  }
+ }
+}

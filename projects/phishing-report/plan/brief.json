@@ -1,0 +1,78 @@
+{
+  "title": "Spot it, report it: the first minutes with a phishing message",
+  "genre": "policy",
+  "audience": {
+    "who": "all employees of a mid-size company, mixed technical skill",
+    "knows": "a work inbox and chat; has sat through boring security trainings and expects another",
+    "cares_about": "not being the person who let something in, not being made to feel stupid, getting on with the day"
+  },
+  "outcome": "When a message pushes them to act fast, the viewer spots the signs, reports it through the company's report button or channel without clicking or replying, and if they already clicked, reports it at once instead of hiding it",
+  "through_line": "A phishing message only works if you hurry and stay quiet; a short pause to check the signs and a quick report beat it, and a report made after a click still protects everyone",
+  "arc_plan": [
+    {"role": "why it matters", "what": "The presenter opens, then hands to one ordinary employee at a busy moment as a message lands that demands action now; we push into the message and stop on the moment of choice. Why it matters is told through what an early report lets the security team do for everyone else, as the knowledge sheet states it"},
+    {"role": "the rule", "what": "The four behaviours the requester set, stated plainly and large: look for the signs, do not click or reply, report it with the company's report button or channel, and if you already clicked, report immediately and do not hide it", "source_anchor": "requester interview (from_user); no company policy text supplied"},
+    {"role": "what it looks like at work", "what": "The same message held still while the signs reveal themselves on it one at a time: the pressure to hurry, a sender that does not match who it claims to be, a link that leads somewhere else, an unexpected attachment, a request for a password or a payment. Then the employee reports it, and the screen changes state to show it handled"},
+    {"role": "the grey areas", "what": "Two harder cases the knowledge sheet supports: a message that seems to come from a known colleague or supplier, and one that arrives by text or chat instead of email. The move when unsure is the same: do not act on it, report it"},
+    {"role": "what to do and who to ask", "what": "A change of time to a second employee who already clicked. The fork: hiding it versus reporting it at once and saying what was clicked. The report route is the company's own button or channel, named generically until the company supplies it"},
+    {"role": "check", "what": "A fresh, different message is shown and the viewer decides before the answer: which signs, and what is the first move. The presenter closes on the through-line in one breath"}
+  ],
+  "must_cover": [
+    {"what": "the pressure sign: urgency, a deadline or a threat to make you act before you think", "from_user": true},
+    {"what": "the mismatch signs: a sender or a link that does not match who or where it claims to be", "from_user": true},
+    {"what": "the request signs: an unexpected attachment, or a request for credentials or a payment", "from_user": true},
+    {"what": "do not click the link, open the attachment or reply", "from_user": true},
+    {"what": "report it with the company's report button or channel", "from_user": true},
+    {"what": "if you already clicked, report immediately and do not hide it", "from_user": true},
+    {"what": "why a quick report matters: what the security team can do with it for everyone else", "from_knowledge": true}
+  ],
+  "must_avoid": [
+    "fear tactics: alarms, red flashing screens, doom music, scary headline numbers",
+    "the hooded hacker, dark rooms of code, faceless villains",
+    "blaming or shaming the person who clicked",
+    "preaching, scolding, 'you must' lectures",
+    "cartoony mascots",
+    "any figure, cost, incident or date not in the reviewed knowledge sheet",
+    "real company names, brands or real people as senders or targets",
+    "disciplinary or legal consequences the company has not stated",
+    "a report step the company has not named (a specific mailbox, phone number or tool)",
+    "more than the four behaviours; no list of ten tips"
+  ],
+  "example_posture": "Invented ordinary employees in moments adults recognise (between meetings, end of a long day), framed as hypothetical ('say'). Messages are invented and generic in kind (a delivery notice, a supplier invoice, a password reset, a senior person asking for an urgent payment) with made-up names that cannot belong to a real organisation. The person who clicked is competent and busy, never foolish.",
+  "visual_direction": "Cinematic and restrained. A drawn office world that holds and transforms instead of cutting away: the same inbox becomes the evidence board as the signs appear on it. The camera pushes into the message to enter it; a dip marks the change of time before the already-clicked story. Ordinary employees as simple drawn figures acting the moment; the presenter only at start and end. Any sourced figure drawn as a picture (a counter, an as-many-people grid, bars), never a headline. A real map only if the knowledge sheet gives a geographic point that changes understanding. The four behaviours as large plain text. Reporting shown as relief and a calm state change, not a victory.",
+  "voice_note": "A precise, calm analyst colleague who respects the viewer's time and intelligence; dry, never alarmed, never moralising. Warmest on the already-clicked segment: plain, steady, no blame. About six minutes, so each sign gets a beat but none is laboured.",
+  "grounding_posture": "faithful",
+  "look": {
+    "story": "cinematic",
+    "people": "acting",
+    "note": "From the user (Kshitij): cinema mix; drawn worlds that hold and transform, numbers drawn as pictures, real maps where geography matters, joins that carry meaning. No cartoony mascots. Code-drawn presenter as bookends only; inside, ordinary employees as simple figures, never a hooded hacker. Must not preach or scare.",
+    "from_user": true
+  },
+  "open_questions": [
+    "The policy genre asks for the rule word for word, but this is topic mode with no policy document, so the posture is faithful at most. If the company has a written phishing or reporting policy, send it and the rule segment will show it verbatim.",
+    "What is the company's report button or channel called, and where does it sit? Until supplied, the lesson names it generically.",
+    "Is there a faster route for 'I already clicked' (a phone line, an out-of-hours contact)? The lesson will not invent one.",
+    "Does a reporter get a reply or confirmation after reporting? The lesson will not promise one unless told."
+  ],
+  "provenance": {
+    "from_user": [
+      "genre, length, audience.who",
+      "the rule segment and must_cover[0-5]",
+      "look",
+      "must_avoid: preaching, scaring, mascots, hacker cliche",
+      "no numbers in the brief; statistics go to the knowledge stage"
+    ],
+    "inferred": [
+      "audience.knows",
+      "audience.cares_about",
+      "outcome",
+      "through_line",
+      "arc_plan scenario and grey-area cases",
+      "must_cover[6]",
+      "other must_avoid entries",
+      "example_posture",
+      "visual_direction beyond the look note",
+      "voice_note",
+      "look.people as acting"
+    ]
+  }
+}

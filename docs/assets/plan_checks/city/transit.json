@@ -1,0 +1,681 @@
+{
+ "scene": "transit",
+ "camera_spec": {
+  "camera": {
+   "x": 1.25,
+   "y": -1.8,
+   "eye": 1.3,
+   "yaw": -6,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+    "axis": "y",
+    "at": 3.0
+   }
+  ],
+  "points": {
+   "L_bench_back_top_wall": [
+    0.05,
+    3.0,
+    1.35
+   ],
+   "L_bench_back_top_aisle": [
+    0.95,
+    3.0,
+    1.35
+   ],
+   "L_bench_front_wall": [
+    0.05,
+    2.45,
+    0.45
+   ],
+   "L_bench_front_aisle": [
+    0.95,
+    2.45,
+    0.45
+   ],
+   "L_bench_plinth_aisle_floor": [
+    0.95,
+    2.5,
+    0
+   ],
+   "P1_head_top": [
+    0.3,
+    2.85,
+    1.3
+   ],
+   "P1_head_centre": [
+    0.3,
+    2.85,
+    1.17
+   ],
+   "P1_seat": [
+    0.3,
+    2.7,
+    0.45
+   ],
+   "P1_feet": [
+    0.3,
+    2.2,
+    0
+   ],
+   "P2_head_top": [
+    0.74,
+    2.85,
+    1.3
+   ],
+   "P2_head_centre": [
+    0.74,
+    2.85,
+    1.17
+   ],
+   "P2_seat": [
+    0.74,
+    2.7,
+    0.45
+   ],
+   "P2_feet": [
+    0.74,
+    2.2,
+    0
+   ],
+   "R_bench_back_top_aisle": [
+    1.5,
+    3.0,
+    1.35
+   ],
+   "R_bench_back_top_wall": [
+    2.4,
+    3.0,
+    1.35
+   ],
+   "R_bench_front_aisle": [
+    1.5,
+    2.45,
+    0.45
+   ],
+   "P3_head_top": [
+    2.15,
+    2.85,
+    1.3
+   ],
+   "P3_head_centre": [
+    2.15,
+    2.85,
+    1.17
+   ],
+   "P3_seat": [
+    2.15,
+    2.7,
+    0.45
+   ],
+   "ceiling_L_far": [
+    0,
+    6.0,
+    2.25
+   ],
+   "ceiling_R_far": [
+    2.45,
+    6.0,
+    2.25
+   ],
+   "pole_vestibule": [
+    1.25,
+    1.2,
+    0
+   ],
+   "pole_vestibule_top": [
+    1.25,
+    1.2,
+    2.25
+   ],
+   "floor_aisle_far": [
+    1.22,
+    6.0,
+    0
+   ],
+   "L_win1_near_bottom": [
+    0,
+    1.0,
+    0.85
+   ],
+   "L_win1_far_bottom": [
+    0,
+    2.9,
+    0.85
+   ],
+   "L_win1_near_top": [
+    0,
+    1.0,
+    2.0
+   ],
+   "L_pillar_far_top": [
+    0,
+    3.6,
+    2.0
+   ],
+   "L_pillar_far_bottom": [
+    0,
+    3.6,
+    0.85
+   ],
+   "L_beyond_back_edge": [
+    0,
+    3.2,
+    1.25
+   ],
+   "L_backboard_near": [
+    0,
+    -1.2,
+    1.3
+   ],
+   "L_backboard_far": [
+    0,
+    -0.4,
+    0.6
+   ],
+   "R_door_near_jamb_floor": [
+    2.45,
+    0.0,
+    0
+   ],
+   "R_door_far_jamb_floor": [
+    2.45,
+    1.3,
+    0
+   ],
+   "R_door_far_jamb_top": [
+    2.45,
+    1.3,
+    2.0
+   ],
+   "R_win_near_bottom": [
+    2.45,
+    1.5,
+    0.85
+   ],
+   "R_pillar_near_top": [
+    2.45,
+    2.9,
+    2.0
+   ],
+   "R_pillar_far_top": [
+    2.45,
+    3.6,
+    2.0
+   ],
+   "R_beyond_back_edge": [
+    2.45,
+    3.25,
+    1.25
+   ],
+   "grab_rail_L_near": [
+    0.95,
+    0.5,
+    1.9
+   ],
+   "grab_rail_L_far": [
+    0.95,
+    6.0,
+    1.9
+   ],
+   "grab_rail_R_far": [
+    1.5,
+    6.0,
+    1.9
+   ],
+   "P3_feet": [
+    2.15,
+    2.2,
+    0
+   ],
+   "floor_wheelchair_space": [
+    0.6,
+    -0.8,
+    0
+   ],
+   "door_floor_mid": [
+    2.3,
+    0.65,
+    0
+   ],
+   "L_bench_back_bottom_wall": [
+    0.05,
+    3.0,
+    0.45
+   ],
+   "slot_map_L": [
+    0.95,
+    -0.0,
+    2.2
+   ],
+   "route_map_strip_L": [
+    0,
+    3.0,
+    2.05
+   ],
+   "route_map_strip_R": [
+    0,
+    6.0,
+    2.05
+   ],
+   "validator_top": [
+    1.25,
+    1.2,
+    1.35
+   ],
+   "validator_bottom": [
+    1.25,
+    1.2,
+    1.05
+   ],
+   "newspaper": [
+    1.75,
+    2.7,
+    0.47
+   ],
+   "stop_button": [
+    1.25,
+    1.2,
+    1.55
+   ],
+   "wheelchair_sign": [
+    2.45,
+    1.45,
+    1.1
+   ]
+  },
+  "behind": [
+   "P1_head_top",
+   "P1_head_centre",
+   "P2_head_top",
+   "P2_head_centre",
+   "P3_head_top",
+   "P3_head_centre"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": 1154,
+   "along_x": -16586,
+   "horizon_y": 497
+  },
+  "points": {
+   "L_bench_back_top_wall": {
+    "x": 700,
+    "y": 478,
+    "where": "frame",
+    "depth": 4.9
+   },
+   "L_bench_back_top_aisle": {
+    "x": 1038,
+    "y": 478,
+    "where": "frame",
+    "depth": 4.81
+   },
+   "L_bench_front_wall": {
+    "x": 643,
+    "y": 857,
+    "where": "frame",
+    "depth": 4.35
+   },
+   "L_bench_front_aisle": {
+    "x": 1023,
+    "y": 865,
+    "where": "frame",
+    "depth": 4.26
+   },
+   "L_bench_plinth_aisle_floor": {
+    "x": 1025,
+    "y": 1053,
+    "where": "frame",
+    "depth": 4.31
+   },
+   "P1_head_top": {
+    "x": 781,
+    "y": 497,
+    "where": "frame",
+    "depth": 4.72,
+    "behind": {
+     "wall": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+     "at": [
+      0.27,
+      3.0,
+      1.3
+     ]
+    }
+   },
+   "P1_head_centre": {
+    "x": 781,
+    "y": 548,
+    "where": "frame",
+    "depth": 4.72,
+    "behind": {
+     "wall": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+     "at": [
+      0.27,
+      3.0,
+      1.17
+     ]
+    }
+   },
+   "P1_seat": {
+    "x": 769,
+    "y": 839,
+    "where": "frame",
+    "depth": 4.57
+   },
+   "P1_feet": {
+    "x": 722,
+    "y": 1085,
+    "where": "overscan",
+    "depth": 4.08
+   },
+   "P2_head_top": {
+    "x": 952,
+    "y": 497,
+    "where": "frame",
+    "depth": 4.68,
+    "behind": {
+     "wall": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+     "at": [
+      0.72,
+      3.0,
+      1.3
+     ]
+    }
+   },
+   "P2_head_centre": {
+    "x": 952,
+    "y": 548,
+    "where": "frame",
+    "depth": 4.68,
+    "behind": {
+     "wall": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+     "at": [
+      0.72,
+      3.0,
+      1.17
+     ]
+    }
+   },
+   "P2_seat": {
+    "x": 945,
+    "y": 843,
+    "where": "frame",
+    "depth": 4.53
+   },
+   "P2_feet": {
+    "x": 919,
+    "y": 1091,
+    "where": "overscan",
+    "depth": 4.03
+   },
+   "R_bench_back_top_aisle": {
+    "x": 1251,
+    "y": 477,
+    "where": "frame",
+    "depth": 4.75
+   },
+   "R_bench_back_top_wall": {
+    "x": 1612,
+    "y": 477,
+    "where": "frame",
+    "depth": 4.65
+   },
+   "R_bench_front_aisle": {
+    "x": 1264,
+    "y": 870,
+    "where": "frame",
+    "depth": 4.2
+   },
+   "P3_head_top": {
+    "x": 1522,
+    "y": 497,
+    "where": "frame",
+    "depth": 4.53,
+    "behind": {
+     "wall": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+     "at": [
+      2.18,
+      3.0,
+      1.3
+     ]
+    }
+   },
+   "P3_head_centre": {
+    "x": 1522,
+    "y": 550,
+    "where": "frame",
+    "depth": 4.53,
+    "behind": {
+     "wall": "the high seat backs of both facing benches (y 3.0; left bench x 0.05 to 0.95, right bench x 1.5 to 2.4; tops 1.35 m)",
+     "at": [
+      2.18,
+      3.0,
+      1.17
+     ]
+    }
+   },
+   "P3_seat": {
+    "x": 1535,
+    "y": 855,
+    "where": "frame",
+    "depth": 4.38
+   },
+   "ceiling_L_far": {
+    "x": 860,
+    "y": 275,
+    "where": "frame",
+    "depth": 7.89
+   },
+   "ceiling_R_far": {
+    "x": 1445,
+    "y": 267,
+    "where": "frame",
+    "depth": 7.63
+   },
+   "pole_vestibule": {
+    "x": 1154,
+    "y": 1300,
+    "where": "outside",
+    "depth": 2.98
+   },
+   "pole_vestibule_top": {
+    "x": 1154,
+    "y": -90,
+    "where": "overscan",
+    "depth": 2.98
+   },
+   "floor_aisle_far": {
+    "x": 1147,
+    "y": 806,
+    "where": "frame",
+    "depth": 7.76
+   },
+   "L_win1_near_bottom": {
+    "x": 359,
+    "y": 781,
+    "where": "frame",
+    "depth": 2.92
+   },
+   "L_win1_far_bottom": {
+    "x": 671,
+    "y": 670,
+    "where": "frame",
+    "depth": 4.8
+   },
+   "L_win1_near_top": {
+    "x": 359,
+    "y": 54,
+    "where": "frame",
+    "depth": 2.92
+   },
+   "L_pillar_far_top": {
+    "x": 732,
+    "y": 262,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "L_pillar_far_bottom": {
+    "x": 732,
+    "y": 648,
+    "where": "frame",
+    "depth": 5.5
+   },
+   "L_beyond_back_edge": {
+    "x": 700,
+    "y": 515,
+    "where": "frame",
+    "depth": 5.1
+   },
+   "L_backboard_near": {
+    "x": -2033,
+    "y": 497,
+    "where": "outside",
+    "depth": 0.73
+   },
+   "L_backboard_far": {
+    "x": -368,
+    "y": 1344,
+    "where": "outside",
+    "depth": 1.52
+   },
+   "R_door_near_jamb_floor": {
+    "x": 2490,
+    "y": 1937,
+    "where": "outside",
+    "depth": 1.66
+   },
+   "R_door_far_jamb_floor": {
+    "x": 1906,
+    "y": 1307,
+    "where": "outside",
+    "depth": 2.96
+   },
+   "R_door_far_jamb_top": {
+    "x": 1906,
+    "y": 60,
+    "where": "frame",
+    "depth": 2.96
+   },
+   "R_win_near_bottom": {
+    "x": 1859,
+    "y": 760,
+    "where": "frame",
+    "depth": 3.16
+   },
+   "R_pillar_near_top": {
+    "x": 1643,
+    "y": 213,
+    "where": "frame",
+    "depth": 4.55
+   },
+   "R_pillar_far_top": {
+    "x": 1578,
+    "y": 251,
+    "where": "frame",
+    "depth": 5.24
+   },
+   "R_beyond_back_edge": {
+    "x": 1608,
+    "y": 516,
+    "where": "frame",
+    "depth": 4.9
+   },
+   "grab_rail_L_near": {
+    "x": 914,
+    "y": 20,
+    "where": "frame",
+    "depth": 2.32
+   },
+   "grab_rail_L_far": {
+    "x": 1082,
+    "y": 355,
+    "where": "frame",
+    "depth": 7.79
+   },
+   "grab_rail_R_far": {
+    "x": 1214,
+    "y": 354,
+    "where": "frame",
+    "depth": 7.73
+   },
+   "P3_feet": {
+    "x": 1584,
+    "y": 1114,
+    "where": "overscan",
+    "depth": 3.88
+   },
+   "floor_wheelchair_space": {
+    "x": 19,
+    "y": 2753,
+    "where": "outside",
+    "depth": 1.06
+   },
+   "door_floor_mid": {
+    "x": 1991,
+    "y": 1527,
+    "where": "outside",
+    "depth": 2.33
+   },
+   "L_bench_back_bottom_wall": {
+    "x": 700,
+    "y": 817,
+    "where": "frame",
+    "depth": 4.9
+   },
+   "slot_map_L": {
+    "x": 848,
+    "y": -414,
+    "where": "outside",
+    "depth": 1.82
+   },
+   "route_map_strip_L": {
+    "x": 681,
+    "y": 215,
+    "where": "frame",
+    "depth": 4.9
+   },
+   "route_map_strip_R": {
+    "x": 860,
+    "y": 321,
+    "where": "frame",
+    "depth": 7.89
+   },
+   "validator_top": {
+    "x": 1154,
+    "y": 466,
+    "where": "frame",
+    "depth": 2.98
+   },
+   "validator_bottom": {
+    "x": 1154,
+    "y": 651,
+    "where": "frame",
+    "depth": 2.98
+   },
+   "newspaper": {
+    "x": 1363,
+    "y": 843,
+    "where": "frame",
+    "depth": 4.42
+   },
+   "stop_button": {
+    "x": 1154,
+    "y": 342,
+    "where": "frame",
+    "depth": 2.98
+   },
+   "wheelchair_sign": {
+    "x": 1870,
+    "y": 616,
+    "where": "frame",
+    "depth": 3.11
+   }
+  }
+ }
+}

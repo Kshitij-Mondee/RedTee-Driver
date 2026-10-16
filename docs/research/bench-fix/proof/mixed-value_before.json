@@ -1,0 +1,155 @@
+{
+ "id": "bench-20261006-151439-mixed-value",
+ "dir": "C:\\Users\\Admin\\Desktop\\Video-Engine-sandbox\\before\\bench-20261006-151439-mixed-value",
+ "beats": 44,
+ "check_errors": 151,
+ "check_warnings": 67,
+ "blurred": {
+  "beats": [
+   "b10",
+   "b12"
+  ],
+  "of": 44
+ },
+ "foreign": {
+  "beats": [
+   "b08",
+   "b09",
+   "b10",
+   "b11",
+   "b12",
+   "b13",
+   "b15",
+   "b16",
+   "b17",
+   "b18",
+   "b19",
+   "b20",
+   "b21",
+   "b22",
+   "b25",
+   "b43",
+   "b44"
+  ],
+  "of": 44,
+  "measured": 44
+ },
+ "off_frame": {
+  "errors": 1,
+  "first": [
+   "b25: words cut by the frame edge at 258.7s: \"Which draft names an action and occasion\" at [-363, 166, 2283, 398], \"Would that work for you, or is there a c\" at [-394, 48, 2530, 276], \"we should account for?\" at [-394, 236, 967, 463] (move or shrink the element, or declare a deliberate bleed with data-bleed)"
+  ]
+ },
+ "late_lead": {
+  "beats": [
+   "b30",
+   "b34"
+  ],
+  "of": 37,
+  "worst": 6.89
+ },
+ "dim_off": {
+  "moments": [
+   "b06 spotlight 61.79s on frame 0",
+   "b15 spotlight 154.88s on frame 0",
+   "b17 spotlight 175.76s on frame 0",
+   "b20 light 205.07s on frame 0",
+   "b24 light 245.73s on frame 0",
+   "b28 light 296.35s on frame 0",
+   "b31 light 329.95s on frame 0",
+   "b33 spotlight 348.06s on frame 0",
+   "b35 light 371.38s on frame 0",
+   "b36 spotlight 383.53s on frame 0",
+   "b37 light 392.94s on frame 0",
+   "b38 spotlight 406.08s on frame 0"
+  ],
+  "of": 13
+ },
+ "empty": {
+  "errors": 1,
+  "first": [
+   "b30: empty frame for 1 sampled moment(s) from 314.3s to 314.3s (edge density < 0.003) while the voice is speaking; something the words are about must be on screen (or declare intent: rest / hold, or punctuation for a run of 1.2 s or less)"
+  ]
+ },
+ "kinds": {
+  "hf layout content_overlap": 80,
+  "foreign_pixels": 17,
+  "runtime text_overflow": 14,
+  "runtime held_missing": 12,
+  "runtime icon_missing": 11,
+  "other": 4,
+  "runtime text_outside_element": 3,
+  "nothing developing": 2,
+  "blurred_beat": 2,
+  "runtime unknown_token": 1,
+  "runtime scene_threw": 1,
+  "runtime tight_inset": 1,
+  "text_too_small": 1,
+  "words_cut": 1,
+  "empty_frame": 1
+ },
+ "gates": {
+  "pedagogy": {
+   "errors": 3,
+   "kinds": {
+    "length": 3
+   },
+   "first": [
+    "pacing.target_duration_s is 480s but the request asks for about 120s (allowed 90 to 156); plan to the requested length",
+    "pacing.requested_s is missing: the request asks for 2 minutes; set pacing.requested_s to 120 and plan to it",
+    "the plan says no length was requested ('supplied no target length'), but the request asks for 2 minutes (120s): set pacing.requested_s to 120 and plan to it"
+   ]
+  },
+  "script": {
+   "errors": 2,
+   "kinds": {
+    "length": 1,
+    "beat cap": 1
+   },
+   "first": [
+    "script runs ~469s but the request asks for about 120s (at most 156s); cut about 698 words or whole beats to the requested length",
+    "44 beats for a 2-minute request; at most 20 (about 8 beats a minute, +25 %): merge or cut beats"
+   ]
+  },
+  "storyboard": {
+   "errors": 21,
+   "kinds": {
+    "allocation": 13,
+    "placeholder": 7,
+    "template cap": 1
+   },
+   "first": [
+    "b04: props.left.items[0].text = 'Blank: yours, kept private' describes the slot instead of filling it ('Blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b04: props.right.items[0].text = 'Blank: yours, kept private' describes the slot instead of filling it ('Blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b08: props.lines[1].text = 'Action for next time: empty' describes the slot instead of filling it ('empty' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b17: props.lines[2].text = 'Request: blank' describes the slot instead of filling it ('blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot",
+    "b18: props.right.items[0].text = 'Blank strip' describes the slot instead of filling it ('Blank' is a note to the author, and the template prints it). Write the real words, or use an item {\"empty\": true} for a deliberately empty slot"
+   ]
+  },
+  "scenes": {
+   "errors": 9,
+   "kinds": {
+    "invented words": 6,
+    "ctx.held(['update_message', 'draft_sheet": 1,
+    "ctx.held(['draft_sheet', 'draft', 'updat": 1,
+    "ctx.held(['situation_strip', 'consequenc": 1
+   },
+   "first": [
+    "b09.js: ctx.held(['update_message', 'draft_sheet', 'broad_request_strip']) but the previous beat b08 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b09.js: writes words the lesson never uses ['communicative']: \"Please be more communicative.\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+    "b11.js: ctx.held(['draft_sheet', 'draft', 'update_message', 'update', 'situation_strip', 'situation', 'planning_note']) but the previous beat b10 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts",
+    "b11.js: writes words the lesson never uses ['release', 'yesterday']: \"In yesterday's release planning meeting,\". Every word on screen comes from this beat's narration, the storyboard or the knowledge sheet; a fallback never invents a detail",
+    "b13.js: ctx.held(['situation_strip', 'consequence_strip', 'update_message', 'planning_note']) but the previous beat b12 draws no element of that name (held_missing): take only what it really drew, or draw it yourself; never invent a fallback with new facts"
+   ]
+  },
+  "narration": {
+   "errors": 1,
+   "kinds": {
+    "length": 1
+   },
+   "first": [
+    "narration runs 478s but the request asks for about 120s (at most 156s): the script must lose about 75 % of its words"
+   ]
+  }
+ }
+}

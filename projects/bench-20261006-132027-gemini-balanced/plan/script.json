@@ -1,0 +1,550 @@
+{
+  "title": "Workplace Essentials: Time Management",
+  "sections": [
+    {
+      "id": "sec_distinction",
+      "title": "Urgent Versus Important"
+    },
+    {
+      "id": "sec_quadrants",
+      "title": "The Four Quadrants"
+    },
+    {
+      "title": "Decline Low Priority Work",
+      "id": "sec_decline"
+    },
+    {
+      "title": "Schedule Important Tasks",
+      "id": "sec_review"
+    }
+  ],
+  "beats": [
+    {
+      "grounding": [
+        {
+          "claim": "office worker overwhelmed by emails",
+          "hypothetical": true
+        }
+      ],
+      "job": "hook",
+      "on_screen": [
+        "overwhelming"
+      ],
+      "id": "b01",
+      "change_over_time": false,
+      "section": "sec_distinction",
+      "narration": [
+        "Imagine logging off late.",
+        "You are exhausted by endless urgent emails.",
+        "Your core project is completely untouched.",
+        "You stare at tomorrow's overflowing inbox.",
+        "You dread this cycle.",
+        "It feels overwhelming."
+      ],
+      "animate_score": 0.1,
+      "visual_intent": "A weary office worker sits at a dark desk illuminated only by a laptop screen showing an overflowing email inbox.",
+      "treatment_hint": "any",
+      "delivery": "warm"
+    },
+    {
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "busy but not productive"
+        }
+      ],
+      "section": "sec_distinction",
+      "on_screen": [
+        "busy, but not productive"
+      ],
+      "narration": [
+        "You are incredibly busy, but not productive.",
+        "We need a reliable method.",
+        "We must separate priorities from mere distractions.",
+        "We can break this cycle today."
+      ],
+      "treatment_hint": "avatar",
+      "job": "orient",
+      "delivery": "calm",
+      "visual_intent": "The presenter speaks directly to the camera, standing in a brightly lit, organized workspace.",
+      "animate_score": 0.2,
+      "id": "b02",
+      "change_over_time": false
+    },
+    {
+      "narration": [
+        "Picture your busy desk.",
+        "A phone rings loudly right next to you.",
+        "Beside it sits a long-term strategy document.",
+        "Which one gets your attention first?"
+      ],
+      "delivery": "calm",
+      "change_over_time": false,
+      "on_screen": [
+        "strategy document"
+      ],
+      "id": "b03",
+      "grounding": [
+        {
+          "claim": "phone vs document",
+          "hypothetical": true
+        }
+      ],
+      "animate_score": 0.1,
+      "treatment_hint": "any",
+      "job": "relate",
+      "visual_intent": "A split screen comparing a ringing desk phone vibrating on the left and a neat strategy document on the right.",
+      "section": "sec_distinction"
+    },
+    {
+      "treatment_hint": "any",
+      "change_over_time": false,
+      "concepts": [
+        "F8"
+      ],
+      "on_screen": [
+        "short completion windows"
+      ],
+      "visual_intent": "Focus shifts to the ringing phone as the strategy document fades slightly into the background.",
+      "grounding": [
+        {
+          "fact": "F8",
+          "claim": "people prioritize tasks with short completion windows"
+        }
+      ],
+      "misconception": "Urgent tasks with short deadlines are always the most important ones to do first.",
+      "id": "b04",
+      "delivery": "calm",
+      "job": "define",
+      "section": "sec_distinction",
+      "animate_score": 0.1,
+      "narration": [
+        "You likely reach for the ringing phone.",
+        "Why do we do that?",
+        "We have a strong psychological tendency.",
+        "We prioritize tasks with short completion windows."
+      ]
+    },
+    {
+      "job": "define",
+      "visual_intent": "A bold label appears over the phone, reinforcing its category as urgent work.",
+      "delivery": "calm",
+      "concepts": [
+        "F1"
+      ],
+      "animate_score": 0.1,
+      "section": "sec_distinction",
+      "change_over_time": false,
+      "narration": [
+        "The phone clearly requires immediate action.",
+        "It serves the priorities of other people.",
+        "That has a specific name.",
+        "We call it urgent work."
+      ],
+      "grounding": [
+        {
+          "fact": "F1",
+          "claim": "urgent tasks require immediate action and serve others"
+        }
+      ],
+      "treatment_hint": "any",
+      "on_screen": [
+        "urgent work"
+      ],
+      "id": "b05"
+    },
+    {
+      "narration": [
+        "Now consider the strategy document.",
+        "It contributes directly to your long-term goals.",
+        "It builds your core professional values.",
+        "That is important work."
+      ],
+      "change_over_time": false,
+      "id": "b06",
+      "grounding": [
+        {
+          "fact": "F2",
+          "claim": "important tasks contribute to long-term goals and values"
+        }
+      ],
+      "on_screen": [
+        "important work"
+      ],
+      "animate_score": 0.1,
+      "visual_intent": "The split screen shifts focus back to the strategy document as a new label highlights it.",
+      "job": "define",
+      "treatment_hint": "any",
+      "section": "sec_distinction",
+      "concepts": [
+        "F2"
+      ],
+      "delivery": "calm"
+    },
+    {
+      "id": "b07",
+      "delivery": "neutral",
+      "concepts": [
+        "F3"
+      ],
+      "section": "sec_quadrants",
+      "change_over_time": false,
+      "narration": [
+        "We map these ideas together.",
+        "We divide tasks into four distinct categories.",
+        "They are based on urgency and importance.",
+        "This is the Eisenhower framework."
+      ],
+      "treatment_hint": "motion",
+      "job": "sequence",
+      "on_screen": [
+        "four distinct categories",
+        "Eisenhower framework"
+      ],
+      "animate_score": 0.2,
+      "grounding": [
+        {
+          "claim": "framework divides tasks into 4 categories",
+          "fact": "F3"
+        }
+      ],
+      "visual_intent": "A blank two by two grid appears on screen with axes labeled Urgent and Important."
+    },
+    {
+      "narration": [
+        "Let us draw a grid on screen.",
+        "Quadrant one is both urgent and important.",
+        "A vital server crashes right now.",
+        "You must manage these crises immediately."
+      ],
+      "visual_intent": "The top left box of the grid highlights as a task card reading Server Crash slides into it.",
+      "id": "b08",
+      "animate_score": 0.2,
+      "section": "sec_quadrants",
+      "job": "quantify",
+      "on_screen": [
+        "Quadrant one"
+      ],
+      "grounding": [
+        {
+          "fact": "F4",
+          "claim": "Quadrant 1 is urgent and important, manage immediately"
+        }
+      ],
+      "delivery": "neutral",
+      "concepts": [
+        "F4"
+      ],
+      "change_over_time": false,
+      "treatment_hint": "motion"
+    },
+    {
+      "on_screen": [
+        "Quadrant two"
+      ],
+      "id": "b09",
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "fact": "F5",
+          "claim": "Quadrant 2 is important but not urgent, schedule it"
+        }
+      ],
+      "job": "quantify",
+      "delivery": "neutral",
+      "concepts": [
+        "F5"
+      ],
+      "narration": [
+        "Quadrant two is important, but not urgent.",
+        "This is your core project work.",
+        "You should schedule this for a specific time.",
+        "This is where real progress happens."
+      ],
+      "section": "sec_quadrants",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "visual_intent": "The top right box highlights. A task card reading Strategy Document slides into it."
+    },
+    {
+      "change_over_time": false,
+      "narration": [
+        "Quadrant three is urgent, but not important.",
+        "Think of a sudden meeting invite.",
+        "These tasks are best delegated to others.",
+        "They distract from your main goals."
+      ],
+      "section": "sec_quadrants",
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "Quadrant 3 is urgent but not important, delegate"
+        }
+      ],
+      "job": "quantify",
+      "on_screen": [
+        "Quadrant three"
+      ],
+      "visual_intent": "The bottom left box highlights. A task card reading Meeting Invite slides into it.",
+      "treatment_hint": "motion",
+      "animate_score": 0.2,
+      "id": "b10",
+      "concepts": [
+        "F6"
+      ],
+      "delivery": "neutral"
+    },
+    {
+      "narration": [
+        "Quadrant four is neither urgent nor important.",
+        "Endless web browsing fits perfectly here.",
+        "These tasks drain your valuable time.",
+        "You should eliminate them entirely."
+      ],
+      "grounding": [
+        {
+          "fact": "F7",
+          "claim": "Quadrant 4 is neither urgent nor important, eliminate"
+        }
+      ],
+      "job": "quantify",
+      "concepts": [
+        "F7"
+      ],
+      "delivery": "neutral",
+      "section": "sec_quadrants",
+      "on_screen": [
+        "Quadrant four"
+      ],
+      "treatment_hint": "motion",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "visual_intent": "The bottom right box highlights. A task card reading Web Browsing slides in, then vanishes in a puff of smoke.",
+      "id": "b11"
+    },
+    {
+      "delivery": "neutral",
+      "animate_score": 0.2,
+      "visual_intent": "The grid fades out, replaced by a close up of an email inbox receiving a new message.",
+      "change_over_time": false,
+      "id": "b12",
+      "narration": [
+        "Let us test this model.",
+        "An inbox message appears on your screen.",
+        "A colleague asks for a quick favour.",
+        "They need it right away."
+      ],
+      "on_screen": [
+        "quick favour"
+      ],
+      "section": "sec_decline",
+      "treatment_hint": "any",
+      "grounding": [
+        {
+          "claim": "colleague asking for quick favour",
+          "hypothetical": true
+        }
+      ],
+      "job": "transition"
+    },
+    {
+      "grounding": [
+        {
+          "claim": "checking quadrant of quick favour",
+          "hypothetical": true
+        }
+      ],
+      "on_screen": [
+        "Quadrant one",
+        "quadrant three"
+      ],
+      "pause_after_s": 3,
+      "recall": {
+        "question": "Where does a colleague's quick favor belong?",
+        "tempting_wrong": "Quadrant 1, because it feels like you must do it right away.",
+        "type": "quiz",
+        "answer": "Quadrant 3, because it is urgent to them but not important to your goals."
+      },
+      "visual_intent": "The email message remains on screen with two large buttons floating below it, prompting a choice.",
+      "treatment_hint": "any",
+      "id": "b13",
+      "job": "check",
+      "narration": [
+        "Now you.",
+        "Where does a colleague's quick favour belong?",
+        "Quadrant one, or quadrant three?",
+        "Pause, and decide."
+      ],
+      "change_over_time": false,
+      "section": "sec_decline",
+      "animate_score": 0.1,
+      "delivery": "neutral"
+    },
+    {
+      "change_over_time": false,
+      "section": "sec_decline",
+      "animate_score": 0.2,
+      "visual_intent": "The Quadrant three button turns green and expands, while Quadrant one disappears.",
+      "narration": [
+        "Quadrant three.",
+        "It is urgent to them,",
+        "but not important to your goals.",
+        "It feels exactly like quadrant one.",
+        "But it is entirely different."
+      ],
+      "grounding": [
+        {
+          "fact": "F6",
+          "claim": "urgent to them but not important to goals"
+        }
+      ],
+      "delivery": "calm",
+      "concepts": [
+        "F6"
+      ],
+      "job": "check",
+      "treatment_hint": "any",
+      "on_screen": [
+        "Quadrant three"
+      ],
+      "id": "b14"
+    },
+    {
+      "animate_score": 0.1,
+      "visual_intent": "The email reply window opens. A shield icon appears over the inbox, blocking incoming distractions.",
+      "job": "refute",
+      "id": "b15",
+      "narration": [
+        "Here is where people slip.",
+        "It is not required to say yes.",
+        "It is about politely protecting your time.",
+        "Declining protects time for important work.",
+        "You must guard your focus."
+      ],
+      "grounding": [
+        {
+          "fact": "F9",
+          "claim": "politely declining protects time for important work"
+        }
+      ],
+      "on_screen": [
+        "Declining protects time"
+      ],
+      "treatment_hint": "any",
+      "delivery": "calm",
+      "concepts": [
+        "F9"
+      ],
+      "section": "sec_decline",
+      "change_over_time": false
+    },
+    {
+      "id": "b16",
+      "visual_intent": "A typed reply appears in the email window, highlighting the phrase about current project commitments.",
+      "animate_score": 0.2,
+      "job": "demonstrate",
+      "treatment_hint": "any",
+      "change_over_time": false,
+      "narration": [
+        "How do you decline gracefully?",
+        "Clearly state your current project commitments.",
+        "Say they prevent taking on new tasks.",
+        "Offer to review it next month instead.",
+        "Keep your response simple and direct."
+      ],
+      "grounding": [
+        {
+          "claim": "state current project commitments prevent taking new tasks",
+          "fact": "F10"
+        }
+      ],
+      "section": "sec_decline",
+      "on_screen": [
+        "current project commitments"
+      ],
+      "delivery": "neutral",
+      "concepts": [
+        "F10"
+      ]
+    },
+    {
+      "on_screen": [
+        "specific time"
+      ],
+      "change_over_time": false,
+      "delivery": "warm",
+      "concepts": [
+        "F5"
+      ],
+      "grounding": [
+        {
+          "claim": "important but not urgent tasks should be scheduled for specific time",
+          "fact": "F5"
+        }
+      ],
+      "narration": [
+        "We return to your workload.",
+        "Look at tomorrow's calendar right now.",
+        "Identify your most important task.",
+        "Schedule it for a specific time.",
+        "Protect that block of time fiercely."
+      ],
+      "job": "consolidate",
+      "animate_score": 0.2,
+      "visual_intent": "The email inbox is swiped away, replaced by a clean daily calendar view populating with a blocked out time slot.",
+      "id": "b17",
+      "section": "sec_review",
+      "treatment_hint": "any"
+    },
+    {
+      "treatment_hint": "any",
+      "narration": [
+        "Do this before checking emails.",
+        "Picture leaving the office on time.",
+        "Your critical project is complete.",
+        "Your tomorrow is already perfectly planned.",
+        "You are back in control."
+      ],
+      "section": "sec_review",
+      "on_screen": [
+        "planned"
+      ],
+      "job": "payoff",
+      "grounding": [
+        {
+          "claim": "employee leaving on time with completed project",
+          "hypothetical": true
+        }
+      ],
+      "animate_score": 0.1,
+      "visual_intent": "The office worker from the beginning is now shown smiling, putting on their coat, and leaving a bright office.",
+      "delivery": "warm",
+      "id": "b18",
+      "change_over_time": false
+    },
+    {
+      "id": "b19",
+      "narration": [
+        "Separate the urgent from the important.",
+        "Reclaim control over your workday."
+      ],
+      "job": "payoff",
+      "section": "sec_review",
+      "grounding": [
+        {
+          "hypothetical": true,
+          "claim": "separate urgent from important to reclaim workday"
+        }
+      ],
+      "on_screen": [
+        "Separate the urgent from the important"
+      ],
+      "change_over_time": false,
+      "treatment_hint": "avatar",
+      "animate_score": 0.1,
+      "visual_intent": "The presenter reappears to deliver the final pocket rule directly to the camera.",
+      "delivery": "warm"
+    }
+  ],
+  "wpm_target": 145
+}

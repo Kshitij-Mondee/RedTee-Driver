@@ -1,0 +1,4 @@
+primitive_runtime_thrown_scene_card_sits_in_the_frame, run on runtime/world.js before the fallback-card fix (2026-10-07, found on the openai fork's check: b02 card 29 % outside the frame):
+AssertionError: the focused beat's fallback card leaves the frame: [-589, 109, 2273, 614]
+  FAIL  primitive_runtime_thrown_scene_card_sits_in_the_frame
+After the fix: PASS (focused beat card at [151, 350, 1769, 730]; unfocused at [97, 388, 1823, 600])

@@ -1,0 +1,20 @@
+{
+ "title": "Loom styles reel: one engine, many looks",
+ "out": "docs/styles/demos/2026-09-30_styles_reel.mp4",
+ "music": {"mood": "upbeat", "root_midi": 50},
+ "segments": [
+  {"kind": "lab", "scene": "lab_fx", "style": "flat-cosmos", "from": 0.2, "to": 3.0, "label": "Flat Cosmos + shader layer", "sub": "living nebula, grain, vignette, light sweep (WebGL, runtime/fx.js)"},
+  {"kind": "lab", "scene": "lab_depth", "style": "cinematic-noir", "from": 0.4, "to": 3.6, "fx": {}, "label": "2.5D depth stage: Cinematic Noir", "sub": "layers, aerial perspective, depth of field, bloom, light cone, push-in"},
+  {"kind": "lab", "scene": "lab_depth", "style": "cinematic-dawn", "from": 0.4, "to": 3.4, "fx": {}, "label": "2.5D depth stage: Cinematic Dawn", "sub": "the same stage code, a different style pack"},
+  {"kind": "lab", "scene": "lab_characters", "style": "corporate-clean", "from": 0.1, "to": 3.5, "label": "2D characters", "sub": "rigged: poses, walk, wave, point, blink, lip sync from word timings"},
+  {"kind": "lab", "scene": "lab_iso", "style": "cinematic-noir", "from": 0.0, "to": 3.4, "label": "SVG isometric kit", "sub": "boxes extrude, flows draw, painter's order, token shading"},
+  {"kind": "three", "scene": "isometric_office", "style": "corporate-clean", "from": 0.2, "to": 3.2, "label": "Three.js isometric diorama", "sub": "true iso camera, soft shadows, spring build, slow orbit"},
+  {"kind": "three", "scene": "device_turn", "style": "engineering", "from": 0.0, "to": 3.0, "label": "Three.js product shot", "sub": "a device on a spring, lit by a room environment"},
+  {"kind": "skia", "scene": "hero_orb", "style": "flat-cosmos", "from": 0.3, "to": 3.3, "label": "Skia hero moment", "sub": "SkSL light, frosted glass, blur-to-sharp type, motion blur"},
+  {"kind": "skia", "scene": "cinematic_25d", "style": "dark-technical", "from": 0.4, "to": 3.4, "label": "Skia 2.5D cinematic", "sub": "parallax, bloom, haze, depth of field, film grain"},
+  {"kind": "lab", "scene": "lab_show_it_in_use", "style": "engineering", "from": 0.6, "to": 4.0, "label": "Engineering UI: show it in use", "sub": "a simulated product: window, typing, tap, toast"},
+  {"kind": "lab", "scene": "lab_springs", "style": "whiteboard", "from": 0.0, "to": 2.4, "label": "Whiteboard", "sub": "hand-drawn (Rough.js), springs clamped by the style"},
+  {"kind": "lab", "scene": "lab_orchestrate", "style": "line-art", "from": 0.1, "to": 3.1, "label": "Line art", "sub": "orchestrated build: parent first, centre-out stagger"},
+  {"kind": "lab", "scene": "lab_lottie", "style": "flat-cosmos", "from": 0.0, "to": 2.2, "label": "Lottie, re-coloured to the style", "sub": "a designer animation seeked by the timeline"}
+ ]
+}

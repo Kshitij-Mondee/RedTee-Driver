@@ -1,0 +1,150 @@
+{
+  "pacing": {
+    "slowdown_at": "sec_quadrants",
+    "words_per_minute": 145,
+    "recall_moments": [
+      {
+        "answer": "Quadrant 3, because it is urgent to them but not important to your goals.",
+        "after_section": "sec_quadrants",
+        "tempting_wrong": "Quadrant 1, because it feels like you must do it right away.",
+        "type": "quiz",
+        "question": "Where does a colleague's quick favor belong?"
+      }
+    ],
+    "target_duration_s": 240
+  },
+  "strategy": {
+    "rationale": "Shows the framework in action with a running example of a daily workload, allowing practitioners to map it to their own roles.",
+    "signature_move": "Demonstrate categorising a task, then fade support until the learner handles a new task independently.",
+    "name": "worked_example_led"
+  },
+  "genre": "procedural",
+  "audience": {
+    "motivation": "Wants a reliable method to handle overflowing inboxes without working late.",
+    "context": "Corporate office environments where constant requests from colleagues interrupt core projects.",
+    "assumed_prior": "Basic workplace norms and the experience of having too much to do",
+    "level": "practitioner",
+    "why": "Improving productivity and reducing daily stress"
+  },
+  "title": "Workplace Essentials: Time Management",
+  "framework_audit": {
+    "gagne": {
+      "attention": "hook",
+      "present": "sec_distinction and sec_quadrants",
+      "practice": "recall_moments quiz",
+      "guidance": "practice_ladder",
+      "transfer": "transfer_tasks",
+      "recall_prior": "bridge_from_prior"
+    },
+    "merrill": {
+      "activation": "bridge_from_prior",
+      "demonstration": "animation in sec_quadrants",
+      "problem_centred": "overwhelmed employee scenario in hook",
+      "integration": "transfer_tasks",
+      "application": "sec_decline and practice_ladder"
+    },
+    "mayer": {
+      "redundancy": "avoiding verbatim text reading",
+      "segmenting": "rest energy at sec_review",
+      "signalling": "highlighting quadrants on screen",
+      "contiguity": "text and graphics aligned in sec_quadrants",
+      "pre_training": "sec_distinction defines terms before the framework",
+      "coherence": "avoids unnecessary dialogue"
+    },
+    "arcs": {
+      "satisfaction": "leaving on time in payoff",
+      "relevance": "mapped directly to a busy employee's inbox",
+      "attention": "scenario hook of end-of-day rush",
+      "confidence": "clear visual categories in quadrants"
+    },
+    "bloom_path": "remember -> understand -> apply -> apply"
+  },
+  "misconceptions": [
+    {
+      "why_tempting": "They require immediate action and often relate to other people's priorities, creating psychological pressure.",
+      "belief": "Urgent tasks with short deadlines are always the most important ones to do first.",
+      "refuted_in": "sec_distinction"
+    }
+  ],
+  "flags": [],
+  "practice_ladder": [
+    {
+      "description": "The narrator completely sorts a sample inbox into the four quadrants.",
+      "step": "worked_example"
+    },
+    {
+      "description": "A colleague asks for a quick favor, and the viewer predicts the quadrant.",
+      "step": "faded_example"
+    },
+    {
+      "description": "The viewer must draft the polite reply declining the task to protect a core priority.",
+      "step": "independent_practice"
+    }
+  ],
+  "transfer_tasks": [
+    "The next time you plan tomorrow's workload, identify your single most important task and block it on your calendar before checking emails."
+  ],
+  "performance": "Prioritises daily tasks using the Eisenhower framework to reduce end-of-day rush.",
+  "arc": {
+    "bridge_from_prior": "Connects the familiar feeling of being busy but unproductive to the need for distinguishing urgent from important tasks.",
+    "promise": "You will learn a reliable method to separate true priorities from mere distractions.",
+    "payoff": "Returns to the opening scenario, showing the employee leaving on time with their critical project complete and tomorrow scheduled.",
+    "sections": [
+      {
+        "id": "sec_distinction",
+        "recap_after": "none",
+        "energy": "build",
+        "goal": "the viewer can define urgent and important tasks",
+        "concepts": [
+          "F8",
+          "F1",
+          "F2"
+        ],
+        "carrier": "A split screen comparing a ringing phone with a long-term goal document, shifting focus between them",
+        "bloom": "remember"
+      },
+      {
+        "bloom": "understand",
+        "carrier": "A 2x2 grid drawing on screen with task cards visually sliding into each appropriate box",
+        "id": "sec_quadrants",
+        "recap_after": "none",
+        "concepts": [
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F7"
+        ],
+        "energy": "steady",
+        "goal": "the viewer can classify tasks into the four quadrants of the Eisenhower framework"
+      },
+      {
+        "carrier": "An inbox message appearing on screen, replaced by a typed reply that politely declines the request",
+        "bloom": "apply",
+        "recap_after": "none",
+        "energy": "peak",
+        "goal": "the viewer can follow the framework to decline a low-priority task",
+        "id": "sec_decline",
+        "concepts": [
+          "F9",
+          "F10"
+        ]
+      },
+      {
+        "recap_after": "none",
+        "carrier": "A calendar view populating with blocked out time slots for priority projects",
+        "id": "sec_review",
+        "bloom": "apply",
+        "energy": "rest",
+        "goal": "the viewer can schedule important tasks before urgent demands arrive",
+        "concepts": [
+          "F5"
+        ]
+      }
+    ],
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine logging off late, exhausted by urgent emails, yet your core project is untouched. You stare at tomorrow's overflowing inbox, dreading the same cycle again."
+    }
+  }
+}

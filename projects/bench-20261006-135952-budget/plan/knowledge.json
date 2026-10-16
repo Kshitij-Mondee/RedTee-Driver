@@ -1,0 +1,144 @@
+{
+  "facts": [
+    {
+      "caveat": "Immediate operational crises with severe near-term penalties must still be addressed before lower-urgency tasks.",
+      "confidence": "mainstream",
+      "terms": [
+        "urgency",
+        "impact"
+      ],
+      "id": "F1",
+      "kind": "definition",
+      "statement": "Urgency describes the time sensitivity of a deadline, whereas impact describes the operational value or consequence to the wider organization."
+    },
+    {
+      "id": "F2",
+      "caveat": "Operational emergencies with immediate penalties must still be addressed before strategic work can proceed.",
+      "terms": [
+        "task collision",
+        "operational impact"
+      ],
+      "confidence": "mainstream",
+      "statement": "When incoming tasks collide, evaluating operational impact takes precedence over deadline proximity alone.",
+      "kind": "practice"
+    },
+    {
+      "kind": "practice",
+      "id": "F3",
+      "confidence": "mainstream",
+      "caveat": "Filters must align with team-level operating agreements and local service-level expectations.",
+      "statement": "A systematic decision filter orders competing work by assessing external dependency, business consequence, and required effort.",
+      "terms": [
+        "decision filter",
+        "dependency"
+      ]
+    },
+    {
+      "kind": "mechanism",
+      "terms": [
+        "bottleneck",
+        "downstream workflow"
+      ],
+      "id": "F4",
+      "confidence": "established",
+      "statement": "Delaying a priority decision creates operational bottlenecks by stalling dependent colleagues and idling downstream workflows."
+    },
+    {
+      "statement": "Unresolved task queues lead to frequent context switching, which reduces individual throughput and increases delivery errors.",
+      "kind": "mechanism",
+      "id": "F5",
+      "terms": [
+        "context switching",
+        "throughput"
+      ],
+      "confidence": "established"
+    },
+    {
+      "kind": "definition",
+      "id": "F6",
+      "confidence": "established",
+      "terms": [
+        "routine trade-off",
+        "authority"
+      ],
+      "statement": "Routine trade-offs involve managing schedule adjustments between standard deliverables within an employee's existing authority."
+    },
+    {
+      "statement": "Genuine escalation triggers occur when conflicting demands breach contractual commitments, violate compliance standards, or exceed allocated resource limits.",
+      "terms": [
+        "escalation trigger",
+        "compliance"
+      ],
+      "kind": "definition",
+      "confidence": "established",
+      "id": "F7"
+    },
+    {
+      "kind": "caution",
+      "confidence": "established",
+      "id": "F8",
+      "statement": "Escalating routine operational trade-offs to managers introduces review delays and consumes supervisory capacity on low-risk decisions.",
+      "terms": [
+        "escalation",
+        "supervisory capacity"
+      ]
+    },
+    {
+      "terms": [
+        "stakeholder communication",
+        "operational rationale"
+      ],
+      "statement": "Clear communication of priority choices requires informing affected stakeholders promptly of the revised schedule and the operational rationale.",
+      "id": "F9",
+      "confidence": "established",
+      "kind": "practice"
+    },
+    {
+      "kind": "mechanism",
+      "terms": [
+        "stakeholder trust",
+        "dependent plans"
+      ],
+      "id": "F10",
+      "confidence": "established",
+      "statement": "Notifying affected stakeholders before a deadline passes preserves operational trust and allows partners to adjust dependent plans."
+    },
+    {
+      "kind": "practice",
+      "statement": "A structured triage sequence resolves conflicts by verifying deadlines, identifying shared dependencies, and confirming task ownership.",
+      "confidence": "mainstream",
+      "id": "F11",
+      "terms": [
+        "triage sequence",
+        "task ownership"
+      ],
+      "caveat": "Triage sequences must remain lightweight to avoid spending more time categorizing work than completing it."
+    },
+    {
+      "statement": "Communicating a revised delivery timeline is more effective when paired with an offer of alternative support or partial delivery.",
+      "kind": "practice",
+      "id": "F12",
+      "terms": [
+        "partial delivery",
+        "timeline negotiation"
+      ],
+      "confidence": "mainstream",
+      "caveat": "Partial delivery is feasible only for modular work where early components provide standalone value."
+    }
+  ],
+  "topic": "Workplace Decision Standards for Corporate Teams",
+  "scope_note": "Operational prioritization and decision criteria for corporate team members navigating colliding workflows. Covers distinguishing urgency from impact, identifying escalation triggers versus routine trade-offs, preventing downstream bottlenecks, and cross-team communication.",
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended bench (topic mode)",
+    "note": "Initial draft based on conservative corporate decision-making and operational workflow principles."
+  },
+  "not_claimed": [
+    "Multitasking allows employees to complete multiple complex tasks simultaneously without cognitive penalty.",
+    "The person who submits a request most recently or communicates most urgently always has the highest operational priority.",
+    "Every task conflict requires managerial intervention to ensure procedural compliance.",
+    "All urgent requests carry high organizational impact.",
+    "Prioritization frameworks eliminate the need to negotiate timelines directly with colleagues.",
+    "Employees have fixed learning styles that dictate how they process workplace procedures."
+  ]
+}

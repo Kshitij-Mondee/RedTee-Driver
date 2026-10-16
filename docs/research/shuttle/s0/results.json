@@ -1,0 +1,353 @@
+{
+  "started": "2026-10-09 21:59:48",
+  "cases": [
+    {
+      "case": "skip a gate: in P1 the storyboard tool is not listed (Claude Code refuses it, loom-mcp never sees it) and a listed tool out of order is refused naming P1",
+      "ok": true,
+      "observed": {
+        "accept_phase_P5": "P1 is not accepted: stage brief is pending",
+        "storyboard_reached_the_server_in_P1": false
+      }
+    },
+    {
+      "case": "the mixed split (L-373): P1 to P4 twice (before and after the facts approval), P5 to P6 once (its reopen inside it), then one session per phase; none for P7 (no kit); each listing only its tools",
+      "ok": true,
+      "observed": {
+        "P1-P4": [
+          27,
+          27
+        ],
+        "P5-P6": [
+          33
+        ],
+        "P8": [
+          38
+        ],
+        "P9": [
+          37
+        ],
+        "P10": [
+          41,
+          41
+        ],
+        "P11": [
+          34
+        ]
+      }
+    },
+    {
+      "case": "the fixers sent edits, not whole files (L-377), and the edited beats were accepted",
+      "ok": true,
+      "observed": {
+        "edits_in_stream": true
+      }
+    },
+    {
+      "case": "hand-over by reference: every sub-agent read its own brief; the lead's delegate replies carry no engine context",
+      "ok": true,
+      "observed": {
+        "sub_agents_that_read_their_brief": 7,
+        "delegate_reply_chars": [
+          941,
+          3175,
+          1593
+        ],
+        "lead_results": 46
+      }
+    },
+    {
+      "case": "a check round is three lead turns: one delegate, the Agents, then collect('all') beside check (no compose call)",
+      "ok": true,
+      "observed": [
+        "delegate",
+        "collect"
+      ]
+    },
+    {
+      "case": "pictures by the judgment: three overview sweeps and one full close look, each with its cost",
+      "ok": true,
+      "observed": [
+        [
+          "overview",
+          9,
+          1531
+        ],
+        [
+          "overview",
+          9,
+          1531
+        ],
+        [
+          "overview",
+          6,
+          1531
+        ],
+        [
+          "full",
+          2,
+          1047
+        ]
+      ]
+    },
+    {
+      "case": "no file tools: the lead's Write never runs (Claude Code has no such tool in the session)",
+      "ok": true,
+      "observed": "a Write tool_use is in the stream; plan/brief.json is the gate's: Right after their next training, the viewer schedules three "
+    },
+    {
+      "case": "the lead writes no beat: its submit_scene is refused",
+      "ok": true,
+      "observed": "submit_scene is written by a scene-author sub-agent: delegate('scene-author', ...) gives it an owner token, and it passes that token as `owner` (the lead never writes a beat, the kit or the fact sheet itself)"
+    },
+    {
+      "case": "a sub-agent cannot write another beat: b05's token refused for b10",
+      "ok": true,
+      "observed": "beat b10 is not this token's (it owns b05)"
+    },
+    {
+      "case": "a sub-agent without its token is denied by the hook (Claude Code reported its type)",
+      "ok": true,
+      "observed": {
+        "tool": "mcp__loom__submit_scene",
+        "agent": "shuttle-scene-author",
+        "why": "submit_scene: pass your owner token as `owner` (the brief from the lead names it)"
+      }
+    },
+    {
+      "case": "the storyboard is reopened once, only P5 stale, the plan approval voided",
+      "ok": true,
+      "observed": {
+        "at": "2026-10-09T22:00:03.988403",
+        "phase": "P5",
+        "reason": "S0: after the animatic, b03 is re-cut (scripted reopen)",
+        "by": "lead",
+        "beats": null,
+        "stale": [
+          "P5"
+        ],
+        "later": "each later phase re-checks itself: it opens only if something it depends on changes",
+        "versions": {
+          "storyboard": "167e210a0a",
+          "outline": "0eaf0b3f8d"
+        },
+        "approvals_voided": [
+          "plan",
+          "final"
+        ],
+        "tokens_revoked": []
+      }
+    },
+    {
+      "case": "the budget stops the run once (exit 4), and a raised budget resumes it",
+      "ok": true,
+      "observed": [
+        {
+          "event": "budget_stop",
+          "detail": "usd 41.69 of 25.0 used for the lesson",
+          "why": null
+        },
+        {
+          "event": "session_killed",
+          "detail": null,
+          "why": "budget: usd 41.69 of 25.0 used for the lesson"
+        }
+      ]
+    },
+    {
+      "case": "three approvals pause the run (exit 3): facts, plan, final",
+      "ok": true,
+      "observed": [
+        "facts",
+        "plan",
+        "final"
+      ]
+    },
+    {
+      "case": "every phase accepted at the end (exit 0)",
+      "ok": true,
+      "observed": {
+        "P1": "accepted",
+        "P2": "accepted",
+        "P3": "accepted",
+        "P4": "accepted",
+        "P5": "accepted",
+        "P6": "accepted",
+        "P7": "accepted",
+        "P8": "accepted",
+        "P9": "accepted",
+        "P10": "accepted",
+        "P11": "accepted"
+      }
+    },
+    {
+      "case": "seven sub-agents (facts, two scenes, two clips, two fixers) worked through owner tokens, each accepted and collected",
+      "ok": true,
+      "observed": {
+        "own-fact-finder-1": [
+          "collected",
+          [
+            "submit_knowledge"
+          ],
+          0
+        ],
+        "own-scene-author-b05-1": [
+          "collected",
+          [
+            "submit_scene"
+          ],
+          1
+        ],
+        "own-scene-author-b10-1": [
+          "collected",
+          [
+            "submit_scene"
+          ],
+          1
+        ],
+        "own-clip-author-b06-1": [
+          "collected",
+          [
+            "submit_clip"
+          ],
+          1
+        ],
+        "own-clip-author-b14-1": [
+          "collected",
+          [
+            "submit_clip"
+          ],
+          1
+        ],
+        "own-fixer-b05-1": [
+          "collected",
+          [
+            "submit_scene"
+          ],
+          1
+        ],
+        "own-fixer-b10-1": [
+          "collected",
+          [
+            "submit_scene"
+          ],
+          1
+        ]
+      }
+    },
+    {
+      "case": "every model call is in the ledger with its real model; sub-agents' calls carry their agent",
+      "ok": true,
+      "observed": {
+        "calls": 78,
+        "agents": [
+          "lead",
+          "shuttle-clip-author",
+          "shuttle-fact-finder",
+          "shuttle-fixer",
+          "shuttle-scene-author"
+        ],
+        "models": [
+          "claude-sonnet-5-5",
+          "mock-gem",
+          "mock-strong"
+        ]
+      }
+    },
+    {
+      "case": "every tool call is in the decision ledger with the caller's model",
+      "ok": true,
+      "observed": {
+        "tool_calls": 58,
+        "with_model": 58,
+        "models": [
+          "claude-sonnet-5-5"
+        ]
+      }
+    },
+    {
+      "case": "the first check fails, two fixers fix their beats in P9, the second check passes",
+      "ok": true,
+      "observed": [
+        "fail",
+        "pass"
+      ]
+    },
+    {
+      "case": "the hook's caller records reach the server (sub-agent identity cross-checked)",
+      "ok": true,
+      "observed": {
+        "calls_with_hook_record": 58,
+        "calls": 58
+      }
+    },
+    {
+      "case": "no real provider was reached (every request answered by the mock)",
+      "ok": true,
+      "observed": {
+        "requests": 78,
+        "by_provider": {
+          "anthropic": 76,
+          "openai": 1,
+          "gemini": 1
+        },
+        "unmatched": []
+      }
+    }
+  ],
+  "codes": [
+    {
+      "after": "run (P1 to the facts approval)",
+      "code": 3,
+      "current": "P2",
+      "waiting": "facts",
+      "stop": null,
+      "requests": 14,
+      "s": 3
+    },
+    {
+      "after": "resume after facts",
+      "code": 3,
+      "current": "P6",
+      "waiting": "plan",
+      "stop": null,
+      "requests": 29,
+      "s": 27
+    },
+    {
+      "after": "resume after plan",
+      "code": 4,
+      "current": "P10",
+      "waiting": null,
+      "stop": "budget",
+      "requests": 69,
+      "s": 329
+    },
+    {
+      "after": "resume with a raised budget",
+      "code": 3,
+      "current": "P11",
+      "waiting": "final",
+      "stop": null,
+      "requests": 78,
+      "s": 989
+    },
+    {
+      "after": "resume after final",
+      "code": 0,
+      "current": null,
+      "waiting": null,
+      "stop": null,
+      "requests": 78,
+      "s": 990
+    }
+  ],
+  "requests": 78,
+  "unmatched": [],
+  "remaining_steps": [],
+  "by_provider": {
+    "anthropic": 76,
+    "openai": 1,
+    "gemini": 1
+  },
+  "seconds": 990
+}

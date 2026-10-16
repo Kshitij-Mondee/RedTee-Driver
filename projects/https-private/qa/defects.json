@@ -1,0 +1,30 @@
+{
+  "source": "check",
+  "routed": {
+    "script": {},
+    "storyboard": {},
+    "kit": {},
+    "scene": {
+      "b07": [
+        {
+          "beat": "b07",
+          "code": "check",
+          "detail": "b07: blank beat at 47.2s: none of its 4 own element(s) is seen in the frame while the voice speaks (icon 'name_cross' paints nothing, connector 'warning.lead' paints nothing, label 'warning' paints nothing, icon 'glyph_no' paints nothing); the beat's picture is off frame or absent (lay it out inside",
+          "source": "check",
+          "count": 1
+        }
+      ]
+    },
+    "engine": {
+      "b07": [
+        {
+          "beat": "b07",
+          "code": "foreign_pixels",
+          "detail": "b07: foreign pixels at 47.2s: 11666 px of other beats' pictures on screen (from b01 10928 px, b05 10928 px, b02 10928 px, b04 10928 px; box [792, 172, 1387, 573]). An element outlived its beat or showed before it; every element belongs to the beats that own or hold it",
+          "source": "check",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

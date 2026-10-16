@@ -1,0 +1,39 @@
+{
+  "id": "style-line-art",
+  "created": "2026-10-13T17:24:20",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How our data classification works: public, internal, confidential",
+  "sources": [],
+  "request": {
+    "audience": "corporate employees",
+    "genre": "teaching",
+    "length_min": 1.75,
+    "style": "line-art",
+    "persona": null,
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.781,
+      "calibrated": true
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "presenter",
+      "member": "woman"
+    },
+    "mix": {
+      "avatar": 0.1,
+      "template": 0.5,
+      "motion": 0.4
+    },
+    "notes": "Clean monoline drawings on white space: documents, folders and screens as outlines whose colour marks the class; a calm policy and process explainer with real everyday examples of each class.",
+    "mix_as": "ceiling"
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  },
+  "isolated": true
+}

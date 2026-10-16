@@ -1,0 +1,496 @@
+"""The API agent pipeline (D-115), proven against mock providers that speak the real wire protocols
+(loom/agents/llm/mock_server.py). No network, no keys. Each test can fail: the guards are exercised both ways."""
+from __future__ import annotations
+
+import json
+import os
+import re
+import shutil
+import sys
+import tempfile
+from contextlib import contextmanager
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+
+from loom.agents import tools as T  # noqa: E402
+from loom.agents.budget import Budget  # noqa: E402
+from loom.agents.conductor import Conductor  # noqa: E402
+from loom.agents.llm import registry as R  # noqa: E402
+from loom.agents.llm.mock_server import MockLLM  # noqa: E402
+from loom.agents.llm.types import Message, Request, ToolSpec  # noqa: E402
+from loom.agents.runtime import AgentSpec, run_agent  # noqa: E402
+from loom.project import Project  # noqa: E402
+from loom.util import read_json, write_json  # noqa: E402
+
+DEMO = ROOT / "projects" / "spacing-sticks"
+
+
+@contextmanager
+def mock_env(script, models=None):
+    keep = {k: os.environ.get(k) for k in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "GEMINI_API_KEY", "LOOM_ANTHROPIC_BASE", "LOOM_OPENAI_BASE",
+                                           "LOOM_GEMINI_BASE", "LOOM_TEST_FAST_RETRY", "LOOM_ENV_FILE")}
+    with MockLLM(script=script, models=models) as m:
+        os.environ.update(ANTHROPIC_API_KEY="test-key", OPENAI_API_KEY="test-key", GEMINI_API_KEY="test-key", LOOM_TEST_FAST_RETRY="1",
+                          LOOM_ENV_FILE=str(ROOT / "no-such.env"), LOOM_ANTHROPIC_BASE=m.anthropic_base, LOOM_OPENAI_BASE=m.openai_base,
+                          LOOM_GEMINI_BASE=m.gemini_base)
+        try:
+            yield m
+        finally:
+            for k, v in keep.items():
+                if v is None:
+                    os.environ.pop(k, None)
+                else:
+                    os.environ[k] = v
+
+
+@contextmanager
+def fresh_project():
+    d = Path(tempfile.mkdtemp(prefix="loomagents_"))
+    try:
+        cfg = read_json(DEMO / "project.json")
+        cfg["id"] = "agents-test"
+        write_json(d / "project.json", cfg)
+        write_json(d / "state.json", {"stages": {}})
+        for sub in ("plan", "audio", "scenes", "build", "qa", "renders", "tasks", "sources", "media", "logs"):
+            (d / sub).mkdir()
+        yield Project(d)
+    finally:
+        shutil.rmtree(d, ignore_errors=True)
+
+
+DEMO_CAST = [{"name": "Maya", "member": "woman", "skin": 0, "cloth": "accent4"}]
+
+
+def cast_storyboard(p):
+    """A project that copied the demo's plan gets a story.cast in its storyboard: what a mock agent writes must pass
+    today's gates, and people need one look each (RC18, 2026-10-07; the demo's own two looks of Maya are baselined)."""
+    f = p.path("plan/storyboard.json")
+    if f.exists():
+        d = read_json(f)
+        if not (d.get("story") or {}).get("cast"):
+            d["story"] = dict(d.get("story") or {}, cast=DEMO_CAST)
+            write_json(f, d)
+    # and its plan states the request's length (RC15); the demo's plan predates that rule (baselined for the demo only)
+    t = p.path("plan/teaching_plan.json")
+    if t.exists():
+        d = read_json(t)
+        if "requested_s" not in (d.get("pacing") or {}):
+            d["pacing"]["requested_s"] = float(read_json(DEMO / "project.json")["request"].get("length_min") or 4) * 60
+            write_json(t, d)
+
+
+def restamp(p):
+    """After a demo state.json is copied over a project that cast_storyboard edited: re-record the stages it marks done,
+    so the edited plan reads as the accepted artifact (not as a hand edit with stale stages after it)."""
+    from loom import flow
+    for row in flow.status(p):
+        if (p.stage_info(row["stage"]) or {}).get("status") == "done":
+            flow.mark_done(p, row["stage"], passed=True)
+
+
+def _plan(name):
+    d = read_json(DEMO / "plan" / f"{name}.json")
+    if name == "storyboard" and not (d.get("story") or {}).get("cast"):
+        # the storyboard a mock agent submits must pass today's gates: people need a cast with one look each (RC18,
+        # 2026-10-07). The demo predates that gate (its two looks of Maya are in loom/checks/film_baseline.json)
+        d["story"] = dict(d.get("story") or {}, cast=DEMO_CAST)
+    if name == "teaching_plan" and "requested_s" not in (d.get("pacing") or {}):
+        # a plan must state the request's length (RC15, 2026-10-07); the demo's predates that rule
+        d["pacing"]["requested_s"] = float(read_json(DEMO / "project.json")["request"].get("length_min") or 4) * 60
+    return d
+
+
+def _outline():
+    sc = _plan("script")
+    beats = [b["id"] for b in sc["beats"]]
+    secs = []
+    for b in sc["beats"]:
+        if not secs or secs[-1]["id"] != b["section"]:
+            secs.append({"id": b["section"], "treatment": "held board", "beats": []})
+        secs[-1]["beats"].append({"beat": b["id"], "line": f"show {b['id']} on the board"})
+    return {"concept": "A forgetting curve we can bend, drawn as one held graph", "world": "a calm desk and one board",
+            "devices": [{"id": "curve", "what": "the held forgetting curve, relabelled on the word", "kind": "explain", "beats": beats[1:4]},
+                        {"id": "plan", "what": "a calendar slot that swaps entries", "kind": "list", "beats": beats[-4:-1]},
+                        {"id": "handoff", "what": "one join material: handoff", "kind": "join", "beats": []}],
+            "join_material": "handoff",
+            "value_script": [{"from": beats[0], "band": "light"}, {"from": beats[len(beats) // 2], "band": "mid", "break": True, "why": "the mechanism"}],
+            "sections": secs}
+
+
+def _submit(tool, artifact, provider=None):
+    st = {"match": {"tool_available": tool}, "reply": {"tool": tool, "args": {"artifact": artifact}}}
+    if provider:
+        st["match"]["provider"] = provider
+    return st
+
+
+def agents_mock_pipeline_plans_a_lesson_through_every_gate():
+    """brief -> knowledge (+ skeptic, human gate recorded as unattended) -> pedagogy -> persona pick -> script (first
+    submission breaks the dash rule and is repaired from the gate's errors) -> allocation (code) -> outline ->
+    storyboard, across the three wire protocols (profile `mock`: OpenAI, Anthropic and Gemini mocks)."""
+    bad_script = json.loads(json.dumps(_plan("script")).replace("training", "training " + chr(0x2014) + " really", 1))
+    script = [
+        {"match": {"tool_available": "submit_brief"}, "reply": {"tool": "get_skill_section", "args": {"skill": "lnd-creative-director", "section_id": "The Production Brief"}}},
+        _submit("submit_brief", _plan("brief")),
+        _submit("submit_knowledge", _plan("knowledge")),
+        _submit("submit_skeptic_verdict", {"verdict": "pass", "checked": [f["id"] for f in _plan("knowledge")["facts"]][:5], "findings": []}),
+        _submit("submit_teaching_plan", _plan("teaching_plan")),
+        _submit("submit_persona_pick", {"pick": "mentor", "why": "Warm, practical colleague; the brief asks for no jargon."}),
+        _submit("submit_script", bad_script),
+        _submit("submit_script", _plan("script")),
+        _submit("submit_outline", _outline()),
+        _submit("submit_storyboard", _plan("storyboard")),
+        # the look round: the storyboard sees its animatic and says it stands (WS5, 2026-10-07)
+        {"match": {"tool_available": "storyboard_stands"}, "reply": {"tool": "storyboard_stands", "args": {"note": "every panel shows its line"}}},
+    ]
+    with fresh_project() as p, mock_env(script) as m:
+        b = Budget(5.0, ledger=p.path("logs/bench_calls.jsonl"))
+        code = Conductor(p, "mock", b, approve_knowledge_as="agent, unattended (test)").run("storyboard")
+        run = read_json(p.path("logs/agents_run.json"))
+        st = {t["role"]: t for t in run["tasks"]}
+        assert code == 0, (code, [(t["role"], t["status"], t["errors"][:2], t["note"]) for t in run["tasks"]])
+        for stage in ("brief", "knowledge", "pedagogy", "persona", "script", "allocate", "storyboard"):
+            assert p.stage_info(stage).get("status") == "done", (stage, p.stage_info(stage))
+        assert st["script"]["repairs"] == 1, st["script"]                     # repaired from the gate's own errors
+        assert read_json(p.path("plan/knowledge.json"))["review"]["by"].startswith("agent, unattended")
+        provs = {r["provider"] for r in m.requests}
+        assert provs == {"openai", "anthropic"} or provs >= {"openai", "anthropic"}, provs
+        assert not m.unmatched, m.unmatched[:2]
+        calls = [json.loads(l) for l in p.path("logs/llm_calls.jsonl").read_text().splitlines()]
+        assert len(calls) == len(m.requests) and all(c["usd"] >= 0 for c in calls)
+        assert abs(sum(c["usd"] for c in calls) - b.spent) < 1e-6 * max(1, len(calls)), (sum(c["usd"] for c in calls), b.spent)   # each line rounds to 1e-6
+        # the skill section really came back as data, not an error
+        tr = Path(st["brief"]["trace"]).read_text()
+        assert '"name": "get_skill_section"' in tr and '"error": null' in tr, tr[:400]
+        # no key ever reaches a log
+        for f in p.path("logs").rglob("*"):
+            if f.is_file():
+                assert "test-key" not in f.read_text(errors="ignore"), f
+    return f"{len(m.requests)} calls over {len(provs)} wire protocols; 7 stages done; script repaired once; ${b.spent:.4f} booked"
+
+
+def agents_guards_hold_allowlist_loop_and_repairs():
+    """A role cannot use another role's tool; the same call three times stops the task; a submit that keeps failing
+    stops after the repair limit with status `rejected` (never silently accepted)."""
+    script = [
+        {"match": {"tool_available": "submit_persona_pick"}, "reply": {"tool": "submit_brief", "args": {"artifact": {}}}},     # not allowed
+        {"match": {"tool_available": "submit_persona_pick"}, "reply": {"tool": "submit_persona_pick", "args": {"artifact": {"pick": "nobody", "why": "x"}}}, "repeat": 5},
+    ]
+    with fresh_project() as p, mock_env(script) as m:
+        ctx = T.ToolContext(p, "persona_pick", "persona")
+        res = run_agent(AgentSpec("persona_pick", "mock-small", limits={"repairs": 1, "turns": 6}), ctx, "pick", Budget(1.0))
+        tr = Path(res.trace).read_text()
+        assert "is not available to the persona_pick role" in tr, tr[:300]
+        assert res.status == "rejected" and res.repairs >= 1, (res.status, res.note, res.repairs)
+        assert not p.path("plan/persona.json").exists()
+    script2 = [{"match": {"tool_available": "submit_brief"}, "reply": {"tool": "get_style_pack", "args": {}}, "repeat": 6},
+               {"match": {"tool_available": "submit_brief"}, "reply": {"tool": "list_skill_sections", "args": {"skill": "lnd-creative-director"}}, "repeat": 6}]
+    with fresh_project() as p, mock_env(script2) as m:
+        res = run_agent(AgentSpec("brief", "mock-strong"), T.ToolContext(p, "brief", "brief"), "brief", Budget(1.0))
+        assert res.note.startswith("loop on") and res.status == "limits", (res.status, res.note)
+    return "foreign tool refused; looping stopped at the third identical call; failing submits end as rejected"
+
+
+def agents_budget_refuses_before_sending():
+    """A call whose worst case could cross the budget is never sent (0 requests reach the server); with room, it is."""
+    with fresh_project() as p, mock_env([_submit("submit_persona_pick", {"pick": "mentor", "why": "fits"})]) as m:
+        res = run_agent(AgentSpec("persona_pick", "mock-small"), T.ToolContext(p, "persona_pick", "persona"), "pick", Budget(0.0001))
+        assert res.status == "budget" and len(m.requests) == 0, (res.status, len(m.requests))
+        res = run_agent(AgentSpec("persona_pick", "mock-small"), T.ToolContext(p, "persona_pick", "persona"), "pick", Budget(1.0))
+        assert res.status == "accepted" and len(m.requests) == 1, (res.status, res.note)
+        b = Budget(1.0, {"anthropic": 0.00001})
+        res = run_agent(AgentSpec("persona_pick", "mock-small"), T.ToolContext(p, "persona_pick", "persona"), "pick", b)
+        assert res.status == "budget" and "anthropic cap" in res.note, res.note
+    return "tiny run cap: 0 requests sent; provider cap names the provider; with room the call goes through"
+
+
+def agents_adapters_round_trip_tools_cache_and_retry():
+    """Each adapter against its wire protocol: a tool call, the tool result sent back, a final answer, cached tokens
+    read on the second call, and a scripted 429 retried."""
+    out = []
+    sysblk = ["You are a test. " * 400]
+    for alias, prov in (("mock-small", "anthropic"), ("mock-strong", "openai"), ("mock-gem", "gemini")):
+        script = [{"match": {"provider": prov}, "reply": {"error": {"http": 429, "retry_after": 0}}},
+                  {"match": {"provider": prov}, "reply": {"tool": "lookup", "args": {"q": "spacing"}}},
+                  {"match": {"provider": prov, "last_tool_result_contains": "found"}, "reply": {"text": "done"}}]
+        with mock_env(script) as m:
+            mm = R.model(alias)
+            P = R.provider_for(mm)
+            tools = [ToolSpec("lookup", "look up", {"type": "object", "properties": {"q": {"type": "string"}}, "required": ["q"]})]
+            msgs = [Message("user", "find it")]
+            r1 = P.complete(Request(mm["id"], sysblk, msgs, tools))
+            assert r1.tool_calls and r1.tool_calls[0].name == "lookup" and r1.tool_calls[0].args == {"q": "spacing"}, r1
+            msgs += [Message("assistant", r1.text, tool_calls=r1.tool_calls, extra=r1.extra),
+                     Message("tool", "found it", tool_call_id=r1.tool_calls[0].id, name="lookup")]
+            r2 = P.complete(Request(mm["id"], sysblk, msgs, tools))
+            assert r2.text == "done" and r2.stop == "end", (r2.text, r2.stop)
+            assert r2.usage.cached > 0, f"{prov}: no cached tokens on the second call ({r2.usage})"
+            assert len(m.requests) == 3 and m.requests[0]["status"] == 429, [r["status"] for r in m.requests]
+            out.append(f"{prov} cached {r2.usage.cached}")
+    return "; ".join(out)
+
+
+def agents_profiles_refuse_opus_storyboards_and_unknown_models():
+    """Kshitij: Opus never writes the storyboard. A profile that tries is refused before any spend."""
+    tmp = R.CONFIG / "profiles" / "_tmp_opus.json"
+    P = read_json(R.CONFIG / "profiles" / "mixed-value.json")
+    P["roles"]["storyboard"] = "claude-opus-5-5"
+    write_json(tmp, P)
+    try:
+        try:
+            R.profile("_tmp_opus")
+            raise AssertionError("an Opus storyboard profile was accepted")
+        except AssertionError:
+            raise
+        except Exception as e:  # noqa: BLE001
+            assert "Opus may not write the storyboard" in str(e), e
+        P["roles"]["storyboard"] = "no-such-model"
+        write_json(tmp, P)
+        try:
+            R.profile("_tmp_opus")
+            raise AssertionError("an unknown model alias was accepted")
+        except AssertionError:
+            raise
+        except Exception as e:  # noqa: BLE001
+            assert "unknown model alias" in str(e), e
+    finally:
+        tmp.unlink(missing_ok=True)
+    for n in R.profiles():
+        R.profile(n)
+    return f"{len(R.profiles())} shipped profiles load; Opus storyboard and unknown alias refused"
+
+
+def agents_role_cards_cite_real_sections_and_fit_their_budget():
+    """Every `skill#Section` a role card cites resolves through get_skill_section, and every card stays under its
+    token cap (the efficiency claim, measured)."""
+    bad, sizes = [], {}
+    for f in sorted(T.ROLES.glob("*.md")):
+        if f.name == "README.md":
+            continue
+        txt = f.read_text(encoding="utf-8")
+        sizes[f.stem] = int(len(txt) / 3.8)
+        for skill, sec in re.findall(r"`([A-Za-z_\-]+(?:/[\w\-/]+)?)#([^`]+)`", txt):
+            if T._skill_path(skill) is None or T.section_text(T._skill_path(skill), sec) is None:
+                bad.append(f"{f.stem}: {skill}#{sec}")
+    assert not bad, bad[:8]
+    over = {k: v for k, v in sizes.items() if v > 2000}
+    assert not over, over
+    assert re.search("[\u2013\u2014]", "".join(f.read_text(encoding="utf-8") for f in T.ROLES.glob("*.md"))) is None
+    return f"{len(sizes)} cards, largest {max(sizes.values())} tokens (est.), every cited section resolves"
+
+
+def agents_doctor_flags_models_a_provider_does_not_serve():
+    """doctor lists each provider's real models and fails when a profile names one it does not serve."""
+    from loom.agents import bench as B
+    served = {"anthropic": ["mock-small"], "openai": ["mock-strong"], "gemini": ["mock-gem"]}
+    tmp = R.CONFIG / "profiles" / "_tmp_doc.json"
+    write_json(tmp, read_json(R.CONFIG / "profiles" / "mock.json"))     # doctor skips the profile named "mock"
+    try:
+        with mock_env([], models=served):
+            assert B.doctor(["_tmp_doc"]) == 0
+        with mock_env([], models=dict(served, anthropic=["other"])):
+            assert B.doctor(["_tmp_doc"]) == 1
+    finally:
+        tmp.unlink(missing_ok=True)
+    return "all served: 0; a model the provider does not list: 1"
+
+
+def agents_scene_workers_fix_their_own_file_through_the_gate():
+    """Scene workers (Gemini protocol in the `mock` profile) run in parallel, one per missing bespoke beat; a scene with
+    Math.random is refused by the determinism gate and repaired; each worker can only write its own file."""
+    good = {b: (DEMO / "scenes" / f"{b}.js").read_text(encoding="utf-8") for b in ("b05", "b10")}
+    bad = good["b05"].replace("build(ctx", "build(ctx /* x */", 1) + "\nconst jitter = Math.random();\n"
+    script = [
+        {"match": {"provider": "gemini", "user_contains": "beat b05"}, "reply": {"tool": "submit_scene", "args": {"artifact": {"beat": "b05", "source": bad}}}},
+        {"match": {"provider": "gemini", "user_contains": "beat b05"}, "reply": {"tool": "submit_scene", "args": {"artifact": {"beat": "b05", "source": good["b05"]}}}},
+        {"match": {"provider": "gemini", "user_contains": "beat b10"}, "reply": {"tool": "submit_scene", "args": {"artifact": {"beat": "b05", "source": good["b10"]}}}},
+        {"match": {"provider": "gemini", "user_contains": "beat b10"}, "reply": {"tool": "submit_scene", "args": {"artifact": {"beat": "b10", "source": good["b10"]}}}},
+    ]
+    with fresh_project() as p, mock_env(script) as m:
+        for f in (DEMO / "plan").glob("*.json"):
+            shutil.copy2(f, p.path("plan") / f.name)
+        cast_storyboard(p)
+        shutil.copy2(DEMO / "audio" / "timings.json", p.path("audio/timings.json"))
+        for f in ("b06.py", "b14.py"):
+            shutil.copy2(DEMO / "scenes" / f, p.path("scenes") / f)
+        c = Conductor(p, "mock", Budget(2.0), scene_workers=2, require_snapshot=False)   # no browser here; the refusal has its own test
+        r = c.scenes()
+        rows = {t["beat"]: t for t in c.results}
+        assert r == "ok", (r, [(t["beat"], t["status"], t["errors"][:2]) for t in c.results])
+        assert rows["b05"]["repairs"] == 1 and rows["b10"]["repairs"] == 1, {k: (v["repairs"], v["errors"]) for k, v in rows.items()}
+        assert p.path("scenes/b05.js").read_text(encoding="utf-8").strip() == good["b05"].strip()
+        assert "Math.random" not in p.path("scenes/b05.js").read_text(encoding="utf-8")
+        assert {r["provider"] for r in m.requests} == {"gemini"}
+    return "2 parallel workers over the Gemini protocol; nondeterminism refused and repaired; a worker cannot write another beat"
+
+
+def agents_bench_reports_each_profile_and_names_the_skipped():
+    """The bench runs profiles into their own projects under one budget and writes REPORT.md; a profile whose key is
+    missing is listed as skipped, never silently absent."""
+    from loom.agents import bench as B
+    from loom.project import projects_root
+    script = [_submit("submit_brief", _plan("brief"))]
+    run_id = "test-bench"
+    with mock_env(script):
+        os.environ.pop("GEMINI_API_KEY", None)
+        try:
+            out = B.bench("why training fades", ["mock", "gemini-balanced"], until="brief", budget_usd=1.0, run_id=run_id)
+            rep = (out / "REPORT.md").read_text(encoding="utf-8")
+            res = read_json(out / "results.json")["results"]
+            assert res["mock"]["stages"]["brief"] == "done" and res["mock"]["exit"] == 0, res["mock"]
+            assert "skipped" in res["gemini-balanced"] and "gemini" in res["gemini-balanced"]["skipped"], res
+            assert "| gemini-balanced | skipped" in rep and "| mock | 0 |" in rep, rep[:600]
+        finally:
+            shutil.rmtree(ROOT / "bench" / run_id, ignore_errors=True)
+            for d in projects_root().glob(f"bench-{run_id}-*"):
+                shutil.rmtree(d, ignore_errors=True)
+    return "mock profile ran to the brief; gemini-balanced listed as skipped (no key)"
+
+
+def agents_errors_are_classified_and_auth_is_never_retried():
+    """A context-length 400 is ContextOverflow (never resent, L-209); a wrong key is AuthError and costs exactly one
+    request; a 529 is retried."""
+    from loom.agents.llm.anthropic import Anthropic
+    from loom.agents.llm.types import AuthError, ContextOverflow, Overloaded
+    a = Anthropic(base="http://127.0.0.1:9", key="x")
+    assert isinstance(a.error_from(400, {"error": {"message": "prompt is too long: 250000 tokens > 200000 maximum"}}, {}), ContextOverflow)
+    assert isinstance(a.error_from(529, {"error": {"type": "overloaded_error"}}, {}), Overloaded)
+    with mock_env([{"reply": {"text": "never"}}]) as m:
+        os.environ["ANTHROPIC_API_KEY"] = "wrong-key"
+        try:
+            R.provider_for(R.model("mock-small")).complete(Request("mock-small", ["s"], [Message("user", "hi")]))
+            raise AssertionError("a wrong key was accepted")
+        except AuthError:
+            pass
+        assert len(m.requests) == 1, len(m.requests)
+        assert "wrong-key" not in json.dumps(m.requests)
+    return "context overflow and overload classified; a wrong key: one request, no retry, key not echoed"
+
+def agents_chain_runs_from_a_storyboard_through_scenes_to_compose():
+    """The seam the per-stage tests do not cover (L-228): one Conductor.run carries a planned lesson through the scene
+    workers into compose. A copy of the demo with two bespoke scenes missing: the workers write them over the Gemini
+    protocol and compose builds the page. Fails if any stage between them is skipped or left pending."""
+    from loom import flow
+    good = {b: (DEMO / "scenes" / f"{b}.js").read_text(encoding="utf-8") for b in ("b05", "b10")}
+    script = [{"match": {"provider": "gemini", "user_contains": f"beat {b}"}, "reply": {"tool": "submit_scene", "args": {"artifact": {"beat": b, "source": good[b]}}}} for b in good]
+    with fresh_project() as p, mock_env(script) as m:
+        for sub in ("plan", "audio", "scenes", "media"):
+            if (DEMO / sub).exists():
+                shutil.rmtree(p.path(sub)); shutil.copytree(DEMO / sub, p.path(sub))
+        cast_storyboard(p)
+        for b in good:
+            p.path(f"scenes/{b}.js").unlink()
+        st = read_json(DEMO / "state.json")
+        for k in ("scenes", "compose", "check", "review", "render"):
+            st["stages"].pop(k, None)
+        write_json(p.path("state.json"), st)
+        restamp(p)
+        before = {r["stage"]: r["status"] for r in flow.status(p)}
+        assert before["scenes"] != "done", before
+        code = Conductor(p, "mock", Budget(2.0), scene_workers=2, require_snapshot=False).run("compose")
+        after = {r["stage"]: r["status"] for r in flow.status(p)}
+        assert code == 0, code
+        assert after["scenes"] == "done" and after["compose"] == "done", after
+        assert p.path("build/index.html").exists()
+        assert all(p.path(f"scenes/{b}.js").exists() for b in good)
+        assert len(m.requests) == 2, len(m.requests)
+    return "storyboard -> scenes (2 mock workers) -> compose in one run; build/index.html written"
+
+
+
+def agents_bench_fixes_send_what_each_model_accepts():
+    """The first real bench (2026-10-06) failed three ways; each fix is checked on the request body: Haiku 4.5 gets
+    budgeted thinking (it refuses adaptive), gpt-6 models with tools get reasoning_effort none (Chat Completions refuses
+    tools with reasoning), and a role with nothing submitted is forced onto its terminal tool on the last turns.
+    Controls: Sonnet still gets adaptive thinking; an OpenAI call without tools keeps its effort."""
+    from loom.agents.llm.anthropic import Anthropic
+    from loom.agents.llm.openai_chat import OpenAIChat
+    from loom.agents.llm.types import Message, Request, ToolSpec
+    tool = ToolSpec(name="submit_brief", description="x", parameters={"type": "object", "properties": {}})
+    msgs = [Message("user", "hi")]
+    hk = R.model("claude-haiku-4-5"); sn = R.model("claude-sonnet-5-5"); sol = R.model("gpt-6.1-sol")
+    caps = lambda m: {k: m[k] for k in ("thinking", "tools_reasoning") if k in m}
+    def body(prov, m, tools, effort="high"):
+        b = prov.build(Request(model=m["id"], system=["s"], messages=msgs, tools=tools, max_tokens=16000, effort=effort, caps=caps(m)))
+        return b[-1] if isinstance(b, tuple) else b
+    bh = body(Anthropic(), hk, [tool]); bs = body(Anthropic(), sn, [tool])
+    assert bh["thinking"]["type"] == "enabled" and 1024 <= bh["thinking"]["budget_tokens"] < 16000 and "output_config" not in bh, bh.get("thinking")
+    assert bs["thinking"] == {"type": "adaptive"}, bs.get("thinking")
+    # gpt-6.x go through the Responses API: tools AND reasoning in one request (Chat Completions refused both
+    # combinations in the real bench); the reasoning comes back encrypted and is replayed with the tool call
+    from loom.agents.llm.openai_responses import OpenAIResponses
+    assert type(R.provider_for(sol)).__name__ == "OpenAIResponses", type(R.provider_for(sol))
+    assert type(R.provider_for(R.model("mock-strong"))).__name__ != "OpenAIResponses"
+    bo = body(OpenAIResponses(), sol, [tool])
+    assert bo["reasoning"] == {"effort": "high"} and bo["tools"][0]["name"] == "submit_brief" and bo["store"] is False, bo
+    assert "reasoning.encrypted_content" in bo["include"] and bo["instructions"] == "s", bo
+    assert bo.get("stream") is True, "Responses calls stream, so a long reasoning call is not dropped as idle"
+    from loom.agents.llm.openai_responses import read_sse
+    evs = [{"type": "response.created", "response": {"id": "r"}}, {"type": "response.output_text.delta", "delta": "x"},
+           {"type": "response.completed", "response": {"id": "r", "status": "completed", "output": []}}]
+    lines = [l for e in evs for l in (f"event: {e['type']}\n".encode(), f"data: {json.dumps(e)}\n".encode(), b"\n")]
+    assert read_sse(lines) == (200, {"id": "r", "status": "completed", "output": []})
+    assert read_sse([b'data: {"type":"error","message":"bad"}\n', b"\n"])[0] == 400
+    assert read_sse([b'data: {"type":"response.created"}\n'])[0] == 502      # cut short: retryable, never a silent success
+    ex = {"id": "resp_1", "status": "completed", "model": sol["id"], "output": [
+        {"type": "reasoning", "id": "rs_1", "summary": [], "encrypted_content": "ENC"},
+        {"type": "function_call", "id": "fc_1", "call_id": "call_9", "name": "submit_brief", "arguments": "{\"artifact\": {}}", "status": "completed"}],
+        "usage": {"input_tokens": 100, "input_tokens_details": {"cached_tokens": 40}, "output_tokens": 50, "output_tokens_details": {"reasoning_tokens": 30}}}
+    rs = OpenAIResponses().parse(Request(model=sol["id"], system=[], messages=msgs), ex, 0.1)
+    assert rs.stop == "tool" and rs.tool_calls[0].id == "call_9" and rs.tool_calls[0].args == {"artifact": {}}, rs
+    assert rs.usage.cached == 40 and rs.usage.thinking == 30
+    nxt = body(OpenAIResponses(), sol, [tool]) if False else None
+    from loom.agents.llm.openai_responses import to_input
+    inp = to_input([Message("user", "hi"), Message("assistant", "", tool_calls=rs.tool_calls, extra=rs.extra),
+                    Message("tool", "{\"accepted\": true}", tool_call_id="call_9", name="submit_brief")])
+    assert [i.get("type") or i.get("role") for i in inp] == ["user", "reasoning", "function_call", "function_call_output"], inp
+    assert inp[1]["encrypted_content"] == "ENC" and "id" not in inp[2] and inp[3]["call_id"] == "call_9", inp
+    return "haiku budget thinking; sonnet adaptive; sol on the Responses API with tools and reasoning, encrypted reasoning replayed"
+
+
+def agents_every_planning_role_is_told_the_topic():
+    """L-232: the topic is in project.json, not in `request`, and no task message carried it; real models invented a
+    topic. Every role that plans from the request must see the topic string. Control: a project whose request alone is
+    sent (the old behaviour) does not contain it."""
+    from loom.agents.conductor import task_message
+    with fresh_project() as p:
+        cfg = read_json(p.path("project.json")); cfg["topic"] = "How to give feedback that changes behaviour, not just feelings"
+        write_json(p.path("project.json"), cfg)
+        from loom.project import Project as _P
+        q = _P(p.root) if hasattr(p, "root") else _P(p.path("."))
+        for f in ("brief", "knowledge", "teaching_plan"):
+            src = DEMO / "plan" / f"{f}.json"
+            if src.exists():
+                shutil.copy2(src, q.path(f"plan/{f}.json"))
+        for role in ("brief", "knowledge"):
+            msg = task_message(q, role, {})
+            assert cfg["topic"] in msg, (role, msg[:300])
+        assert cfg["topic"] not in json.dumps(q.request), "control: the request alone never carried the topic"
+    return "brief and knowledge task messages carry the topic; the request alone does not"
+
+
+def agents_the_requested_length_is_enforced_and_sent():
+    """L-236: agents planned 270 to 600 s for a 2-minute request and nothing stopped them. The pedagogy gate now holds
+    target_duration_s to the request, and the pedagogy task message states the length. Control: the plan at the
+    requested length passes."""
+    from loom.agents.conductor import task_message
+    from loom.checks.gates import check_pedagogy
+    with fresh_project() as p:
+        cfg = read_json(p.path("project.json")); cfg["request"]["length_min"] = 2; write_json(p.path("project.json"), cfg)
+        from loom.project import Project as _P
+        q = _P(p.root)
+        for f in ("brief", "knowledge", "teaching_plan"):
+            shutil.copy2(DEMO / "plan" / f"{f}.json", q.path(f"plan/{f}.json"))
+        tp = read_json(q.path("plan/teaching_plan.json"))
+        tp["pacing"]["target_duration_s"] = 600; write_json(q.path("plan/teaching_plan.json"), tp)
+        E, _ = check_pedagogy(q)
+        assert any("request asks for about 120s" in e for e in E), E
+        # the control plan states the request's length too (pacing.requested_s, RC15 2026-10-07)
+        tp["pacing"]["target_duration_s"] = 120; tp["pacing"]["requested_s"] = 120; write_json(q.path("plan/teaching_plan.json"), tp)
+        E2, _ = check_pedagogy(q)
+        assert not any("request asks" in e for e in E2), E2
+        assert "REQUESTED LENGTH: 2 minutes" in task_message(q, "pedagogy", {})
+    return "600 s refused for a 2-minute request, 120 s passes, the task says 2 minutes"
+

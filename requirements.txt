@@ -1,0 +1,13 @@
+numpy>=1.24
+pillow>=10
+jsonschema>=4
+kokoro-onnx>=0.4
+soundfile>=0.12
+fonttools>=4.40
+scipy>=1.10
+faster-whisper>=1.1   # the speech check in narrate (D-174); a local Whisper model (LOOM_ASR_MODEL, default small.en)
+# optional
+manim>=0.19        # Manim scenes
+skia-python>=138   # Skia clips (kind "skia"); Linux without libEGL: see docs/VISUALS_PLUS.md
+pdfplumber>=0.11   # source mode: PDF ingest
+python-docx>=1.1   # source mode: .docx ingest

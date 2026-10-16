@@ -1,0 +1,102 @@
+{
+  "title": "How GPS knows where you are",
+  "genre": "explainer",
+  "audience": {
+    "who": "Corporate employees across functions, most of whom use phone navigation daily",
+    "knows": "That their phone shows a blue dot on a map and that satellites are involved somewhere; not how a position is actually worked out",
+    "cares_about": "Understanding an everyday tool they rely on, in a few minutes, without maths homework; a satisfying 'so that is how it works' they can repeat to a colleague"
+  },
+  "outcome": "After watching, the viewer can explain in their own words how a phone turns satellite signals into a position: timed broadcasts, distance from travel time, intersecting spheres, a fourth satellite to fix the phone's clock, and why the satellites' clocks must be corrected for relativity.",
+  "through_line": "GPS is a timing system: every step of finding where you are comes down to measuring time very precisely, and every correction exists to keep that time honest.",
+  "arc_plan": [
+    {
+      "role": "hook",
+      "what": "The moment the viewer meets the thing: you open a map and the blue dot appears; the phone sends nothing up, so how does it know? Pose the question of what happens in between.",
+      "source_anchor": "from_user: request notes"
+    },
+    {
+      "role": "what it is",
+      "what": "A set of satellites on their orbits around Earth, each one continuously broadcasting where it is and the exact time by its onboard clock; the phone only listens.",
+      "source_anchor": "from_user: request notes (satellite broadcast content to be grounded by the knowledge sheet)"
+    },
+    {
+      "role": "how it works",
+      "what": "The mechanism shown running: the signal travels to the phone, travel time times the speed of light gives distance, one distance is a sphere, two intersect in a circle, three narrow to points, a fourth satellite solves for the phone's cheap clock error and pins one point.",
+      "source_anchor": "from_user: request notes"
+    },
+    {
+      "role": "why it matters",
+      "what": "Why the timing must be so exact: a tiny clock error becomes a large distance error; the satellites' own clocks tick at a different rate in orbit because of their speed and weaker gravity, and without the built-in correction positions would drift.",
+      "source_anchor": "from_user: request notes (rates and drift figures only as the knowledge sheet grounds them)"
+    },
+    {
+      "role": "payoff",
+      "what": "Return to the blue dot: it is the answer to a timing problem solved continuously; the through-line restated as the one idea to keep.",
+      "source_anchor": "from_user: request notes"
+    }
+  ],
+  "must_cover": [
+    {
+      "what": "Each satellite broadcasts its own position and the precise time of sending",
+      "from_user": true
+    },
+    {
+      "what": "The receiver (phone) only listens; it does not transmit to the satellites",
+      "from_user": true
+    },
+    {
+      "what": "Distance is computed from the signal's travel time at the speed of light",
+      "from_user": true
+    },
+    {
+      "what": "Spheres (circles in a 2D picture) of known distance intersect to narrow the position to one point",
+      "from_user": true
+    },
+    {
+      "what": "A fourth satellite is needed because the phone's clock is cheap and inaccurate; it solves for the clock error",
+      "from_user": true
+    },
+    {
+      "what": "Satellite clocks run at a different rate in orbit due to speed (special relativity) and weaker gravity (general relativity), and are corrected so positions do not drift",
+      "from_user": true
+    },
+    {
+      "what": "Why precision matters: a small timing error equals a large distance error at the speed of light",
+      "from_user": true
+    }
+  ],
+  "must_avoid": [
+    "Invented numbers: no orbit heights, satellite counts, clock offsets or error distances unless the knowledge sheet grounds them",
+    "Claiming the phone sends anything up to the satellites",
+    "Vendor or product claims as fact (no phone brands, no app names)",
+    "Feature lists of GPS uses in place of the mechanism",
+    "Jargon before the picture (pseudorange, ephemeris, trilateration named before they are shown)",
+    "More than one governing metaphor",
+    "Popular myths stated as fact (for example that relativity correction is a single exact figure without a source)",
+    "Teacher-like or childish tone"
+  ],
+  "example_posture": "The everyday moment first: one person's phone in one city at night, finding itself; the same phone carries every step so the viewer follows one problem through. Hypothetical numbers only inside explicit framing ('say the signal took...'), real numbers only from the sheet.",
+  "visual_direction": "A cosmic field at night: Earth, satellites on visible orbits, signals drawn as expanding wavefronts travelling to a single point on the ground. Distance shown as a growing sphere or circle; intersections building one at a time until one point lights. Clocks as instruments on the satellites and the phone, with their offset visible; the relativity part as two clocks side by side drifting apart, then corrected. One loud thing at a time; one diagram that builds and returns. A scale journey from orbit down to the phone and back fits.",
+  "voice_note": "Mentor: a capable colleague walking you through something they find genuinely elegant, calm and precise. Curious, not breathless; it lets a picture land before the next line, and never talks down.",
+  "grounding_posture": "faithful",
+  "open_questions": [
+    "Does the flat-cosmos style have a designed character kit? If not, the lesson uses no people (the phone alone carries the viewer), per the request.",
+    "Which real figures (orbit altitude, constellation size, clock rate offsets per day, drift per day) the knowledge sheet can ground; the script uses only those."
+  ],
+  "provenance": {
+    "inferred": [
+      "audience.knows",
+      "audience.cares_about",
+      "outcome wording",
+      "through_line",
+      "example_posture",
+      "visual_direction",
+      "must_avoid items beyond the genre's never-list"
+    ]
+  },
+  "look": {
+    "story": "cinematic",
+    "people": "either",
+    "note": "People only if the flat-cosmos style has a designed character kit; otherwise none. Kurzgesagt-like explainer."
+  }
+}

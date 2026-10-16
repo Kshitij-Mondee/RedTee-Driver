@@ -1,0 +1,519 @@
+{
+  "version": 1,
+  "lesson": "shuttle-s0",
+  "reopened_at": {
+    "P5": "2026-10-09T22:00:03.988403"
+  },
+  "evidence": {
+    "P1": "2026-10-09T21:59:50.261079",
+    "P3": "2026-10-09T21:59:52.991894",
+    "P4": "2026-10-09T21:59:53.469571",
+    "P5": "2026-10-09T22:00:04.320734",
+    "P8": "2026-10-09T22:03:21.593114",
+    "P9": "2026-10-09T22:05:14.622499"
+  },
+  "approval_void": {
+    "plan": "2026-10-09T22:00:03.988403",
+    "final": "2026-10-09T22:00:03.988403"
+  },
+  "tokens": {
+    "own-fact-finder-1": {
+      "agent": "fact-finder",
+      "model": "sonnet",
+      "beats": [],
+      "files": [
+        "plan/knowledge.json"
+      ],
+      "phases": [
+        "P2"
+      ],
+      "limits": {
+        "tool_calls": 30,
+        "max_turns": 12
+      },
+      "calls": 2,
+      "status": "collected",
+      "created": "2026-10-09T21:59:50.484022",
+      "phase": "P2",
+      "brief": "logs/shuttle/briefs/own-fact-finder-1.md",
+      "accepted": [
+        "submit_knowledge"
+      ],
+      "refused": 0,
+      "errors": [],
+      "snapshots": 0,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T21:59:51.163396"
+    },
+    "own-scene-author-b05-1": {
+      "agent": "scene-author",
+      "model": "sonnet",
+      "beats": [
+        "b05"
+      ],
+      "files": [
+        "scenes/b05.js"
+      ],
+      "phases": [
+        "P8",
+        "P9",
+        "P10"
+      ],
+      "limits": {
+        "tool_calls": 60,
+        "max_turns": 20
+      },
+      "calls": 4,
+      "status": "collected",
+      "created": "2026-10-09T22:00:17.662130",
+      "phase": "P8",
+      "brief": "logs/shuttle/briefs/own-scene-author-b05-1.md",
+      "accepted": [
+        "submit_scene"
+      ],
+      "refused": 1,
+      "errors": [],
+      "snapshots": 1,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T22:00:49.985707"
+    },
+    "own-scene-author-b10-1": {
+      "agent": "scene-author",
+      "model": "sonnet",
+      "beats": [
+        "b10"
+      ],
+      "files": [
+        "scenes/b10.js"
+      ],
+      "phases": [
+        "P8",
+        "P9",
+        "P10"
+      ],
+      "limits": {
+        "tool_calls": 60,
+        "max_turns": 20
+      },
+      "calls": 3,
+      "status": "collected",
+      "created": "2026-10-09T22:00:17.748534",
+      "phase": "P8",
+      "brief": "logs/shuttle/briefs/own-scene-author-b10-1.md",
+      "accepted": [
+        "submit_scene"
+      ],
+      "refused": 0,
+      "errors": [],
+      "snapshots": 1,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T22:00:49.985707"
+    },
+    "own-clip-author-b06-1": {
+      "agent": "clip-author",
+      "model": "sonnet",
+      "beats": [
+        "b06"
+      ],
+      "files": [
+        "scenes/b06.py"
+      ],
+      "phases": [
+        "P8",
+        "P9",
+        "P10"
+      ],
+      "limits": {
+        "tool_calls": 45,
+        "max_turns": 15
+      },
+      "calls": 3,
+      "status": "collected",
+      "created": "2026-10-09T22:00:17.768473",
+      "phase": "P8",
+      "brief": "logs/shuttle/briefs/own-clip-author-b06-1.md",
+      "accepted": [
+        "submit_clip"
+      ],
+      "refused": 0,
+      "errors": [],
+      "snapshots": 1,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T22:00:49.994070"
+    },
+    "own-clip-author-b14-1": {
+      "agent": "clip-author",
+      "model": "sonnet",
+      "beats": [
+        "b14"
+      ],
+      "files": [
+        "scenes/b14.py"
+      ],
+      "phases": [
+        "P8",
+        "P9",
+        "P10"
+      ],
+      "limits": {
+        "tool_calls": 45,
+        "max_turns": 15
+      },
+      "calls": 3,
+      "status": "collected",
+      "created": "2026-10-09T22:00:17.800195",
+      "phase": "P8",
+      "brief": "logs/shuttle/briefs/own-clip-author-b14-1.md",
+      "accepted": [
+        "submit_clip"
+      ],
+      "refused": 0,
+      "errors": [],
+      "snapshots": 1,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T22:00:49.996084"
+    },
+    "own-fixer-b05-1": {
+      "agent": "fixer",
+      "model": "sonnet",
+      "beats": [
+        "b05"
+      ],
+      "files": [
+        "scenes/b05.js"
+      ],
+      "phases": [
+        "P8",
+        "P9",
+        "P10"
+      ],
+      "limits": {
+        "tool_calls": 40,
+        "max_turns": 16
+      },
+      "calls": 3,
+      "status": "collected",
+      "created": "2026-10-09T22:02:54.561186",
+      "phase": "P9",
+      "brief": "logs/shuttle/briefs/own-fixer-b05-1.md",
+      "accepted": [
+        "submit_scene"
+      ],
+      "refused": 0,
+      "errors": [],
+      "snapshots": 1,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T22:03:21.873368"
+    },
+    "own-fixer-b10-1": {
+      "agent": "fixer",
+      "model": "sonnet",
+      "beats": [
+        "b10"
+      ],
+      "files": [
+        "scenes/b10.js"
+      ],
+      "phases": [
+        "P8",
+        "P9",
+        "P10"
+      ],
+      "limits": {
+        "tool_calls": 40,
+        "max_turns": 16
+      },
+      "calls": 3,
+      "status": "collected",
+      "created": "2026-10-09T22:02:54.662165",
+      "phase": "P9",
+      "brief": "logs/shuttle/briefs/own-fixer-b10-1.md",
+      "accepted": [
+        "submit_scene"
+      ],
+      "refused": 0,
+      "errors": [],
+      "snapshots": 1,
+      "findings": 0,
+      "brief_parts": 1,
+      "brief_read": [
+        1
+      ],
+      "collected": "2026-10-09T22:03:21.873368"
+    }
+  },
+  "budget": {
+    "usd": 200.0
+  },
+  "kit_preview": {},
+  "outline": {
+    "hash": "0eaf0b3f8d8966ee",
+    "script": "dab36e310f55d6fa",
+    "at": "2026-10-09T21:59:54.930310"
+  },
+  "animatic": {
+    "plan": {
+      "script": "7c73812ab042520e",
+      "storyboard": "1cce60ebe0725d76"
+    },
+    "sheets": 3,
+    "at": "2026-10-09T22:00:15.371686"
+  },
+  "critic": {
+    "build": "ebeecafbb1571d29",
+    "findings": 1,
+    "major": 0,
+    "model": "mock-gem",
+    "at": "2026-10-09T22:05:21.137484",
+    "sheets": {
+      "b01": "aeb80c59de63b415",
+      "b02": "fc1e245f0fbb9052",
+      "b03": "1fbf57c4aa60348d",
+      "b04": "77e70d1a2bafff8e",
+      "b05": "0ff680b8f1046e37",
+      "b06": "567dc76f769f4a51",
+      "b07": "f59ba38284846bad",
+      "b08": "70e535978026c9cf",
+      "b09": "5e3dd5d8ea43ddae",
+      "b10": "0e3f1c128ff0e40f",
+      "b11": "2a261be02b905be6",
+      "b12": "103d4dd7c84df515",
+      "b13": "cc1b5b83b23c8e99",
+      "b14": "56f33e0d3d1a65ba",
+      "b15": "ac3113746fdc5ab4",
+      "b16": "434654d3bf557801",
+      "b17": "73aa1f07070a2fcd",
+      "b18": "0eca896fab171612",
+      "b19": "4d8e3be4a9ad90a9",
+      "b20": "a8b1329518040936",
+      "b21": "5ffead79dd0913d3",
+      "b22": "806cfa07400bbbc6",
+      "b23": "ea07521c01cf248f",
+      "b24": "89c18c35fab4a98c"
+    },
+    "reviewed": [
+      "b01",
+      "b02",
+      "b03",
+      "b04",
+      "b05",
+      "b06",
+      "b07",
+      "b08",
+      "b09",
+      "b10",
+      "b11",
+      "b12",
+      "b13",
+      "b14",
+      "b15",
+      "b16",
+      "b17",
+      "b18",
+      "b19",
+      "b20",
+      "b21",
+      "b22",
+      "b23",
+      "b24"
+    ],
+    "passes": 1
+  },
+  "scope": {},
+  "pilot": {},
+  "reopens": [
+    {
+      "at": "2026-10-09T22:00:03.988403",
+      "phase": "P5",
+      "reason": "S0: after the animatic, b03 is re-cut (scripted reopen)",
+      "by": "lead",
+      "beats": null,
+      "stale": [
+        "P5"
+      ],
+      "later": "each later phase re-checks itself: it opens only if something it depends on changes",
+      "versions": {
+        "storyboard": "167e210a0a",
+        "outline": "0eaf0b3f8d"
+      },
+      "approvals_voided": [
+        "plan",
+        "final"
+      ],
+      "tokens_revoked": []
+    }
+  ],
+  "skeptic": [
+    {
+      "hash": "1b4829162b763efc",
+      "verdict": "pass",
+      "model": "mock-strong",
+      "status": "accepted",
+      "findings": 0,
+      "usd": 0.00962,
+      "at": "2026-10-09T21:59:51.406314"
+    }
+  ],
+  "looked": [
+    {
+      "what": "animatic",
+      "sheets": 3,
+      "at": "2026-10-09T22:00:03.512187",
+      "by": "lead"
+    },
+    {
+      "what": "animatic",
+      "sheets": 3,
+      "at": "2026-10-09T22:00:15.371686",
+      "by": "lead"
+    },
+    {
+      "beats": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09"
+      ],
+      "detail": "overview",
+      "about_tokens": 1531,
+      "what": "contact_sheet",
+      "at": "2026-10-09T22:05:19.541626",
+      "by": "lead"
+    },
+    {
+      "beats": [
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16",
+        "b17",
+        "b18"
+      ],
+      "detail": "overview",
+      "about_tokens": 1531,
+      "what": "contact_sheet",
+      "at": "2026-10-09T22:05:19.997784",
+      "by": "lead"
+    },
+    {
+      "beats": [
+        "b19",
+        "b20",
+        "b21",
+        "b22",
+        "b23",
+        "b24"
+      ],
+      "detail": "overview",
+      "about_tokens": 1531,
+      "what": "contact_sheet",
+      "at": "2026-10-09T22:05:20.373090",
+      "by": "lead"
+    },
+    {
+      "beats": [
+        "b05",
+        "b10"
+      ],
+      "detail": "full",
+      "about_tokens": 1047,
+      "what": "contact_sheet",
+      "at": "2026-10-09T22:05:20.699402",
+      "by": "lead"
+    }
+  ],
+  "reopen_cap": 3,
+  "scoped_cap": 8,
+  "waiting": null,
+  "stop": null,
+  "mode": "subscription",
+  "run": {
+    "mode": "subscription",
+    "lead": "sonnet",
+    "build_lead": null,
+    "approve_as": null,
+    "until": "P11",
+    "runner": "cli",
+    "split": "mixed",
+    "leads": {
+      "P1-P4": "sonnet",
+      "P5-P6": "sonnet",
+      "P7": "sonnet",
+      "P8": "sonnet",
+      "P9": "sonnet",
+      "P10": "sonnet",
+      "P11": "sonnet"
+    },
+    "at": "2026-10-09T22:16:18.039926"
+  },
+  "sessions": {
+    "P1-P4": "2f5aa2f3-ce6c-405a-b51b-fba777d9f20b",
+    "P5-P6": "08367e01-a0d5-40cb-a030-0ff7e8a3c89d",
+    "P8": "9b0ce771-889d-49f9-a968-92025ec7920c",
+    "P9": "8120e5e3-4a27-4f01-b361-306d17286ccb",
+    "P10": "89ff6f46-28bc-43ad-b274-4f3cbedeea86",
+    "P11": "f16d80c1-abde-4567-b319-6e99ebed727e"
+  },
+  "files": {
+    "scenes/b14.py": {
+      "hash": "05c8bfcdc23085bc",
+      "deps": {
+        "scene": "a36bef689067fdac"
+      },
+      "at": "2026-10-09T22:00:21.281966"
+    },
+    "scenes/b06.py": {
+      "hash": "6508790cd61e5800",
+      "deps": {
+        "scene": "351cac67bce898c3"
+      },
+      "at": "2026-10-09T22:00:21.341942"
+    },
+    "scenes/b10.js": {
+      "hash": "0bcace9bc712ebed",
+      "deps": {
+        "scene": "49cfedc05d998020"
+      },
+      "at": "2026-10-09T22:03:21.211773"
+    },
+    "scenes/b05.js": {
+      "hash": "20c2105b76d8f6d5",
+      "deps": {
+        "scene": "84178022dca1e81e"
+      },
+      "at": "2026-10-09T22:03:21.409659"
+    }
+  }
+}

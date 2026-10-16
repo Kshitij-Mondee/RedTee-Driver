@@ -1,0 +1,508 @@
+{
+ "scene": "quiet_room",
+ "camera_spec": {
+  "camera": {
+   "x": 0.45,
+   "y": 0.3,
+   "eye": 1.2,
+   "yaw": 30,
+   "hfov": 55,
+   "horizon_pct": 46
+  },
+  "walls": [
+   {
+    "name": "back wall",
+    "axis": "y",
+    "at": 4.2
+   },
+   {
+    "name": "north glazing (left)",
+    "axis": "x",
+    "at": 0.0
+   },
+   {
+    "name": "right wall",
+    "axis": "x",
+    "at": 3.6
+   }
+  ],
+  "points": {
+   "back_left_floor": [
+    0,
+    4.2,
+    0
+   ],
+   "back_right_floor": [
+    3.6,
+    4.2,
+    0
+   ],
+   "back_right_top": [
+    3.6,
+    4.2,
+    2.7
+   ],
+   "back_left_top": [
+    0,
+    4.2,
+    2.7
+   ],
+   "right_wall_floor_y1": [
+    3.6,
+    1.0,
+    0
+   ],
+   "right_wall_floor_y0.3": [
+    3.6,
+    0.3,
+    0
+   ],
+   "sofa_left_back_top": [
+    1.2,
+    4.15,
+    0.8
+   ],
+   "sofa_right_back_top": [
+    2.8,
+    4.15,
+    0.8
+   ],
+   "sofa_left_front_seat": [
+    1.2,
+    3.35,
+    0.43
+   ],
+   "sofa_right_front_seat": [
+    2.8,
+    3.35,
+    0.43
+   ],
+   "sofa_left_arm_top": [
+    1.2,
+    3.4,
+    0.62
+   ],
+   "sofa_right_arm_top": [
+    2.8,
+    3.4,
+    0.62
+   ],
+   "sofa_sitter_head_top": [
+    1.65,
+    3.9,
+    1.22
+   ],
+   "sofa_sitter_head_c": [
+    1.65,
+    3.9,
+    1.1
+   ],
+   "sofa_seat_L": [
+    1.65,
+    3.7,
+    0.43
+   ],
+   "sofa_sitter_feet": [
+    1.65,
+    3.1,
+    0
+   ],
+   "sofa_seat_R": [
+    2.35,
+    3.7,
+    0.43
+   ],
+   "arm_head_top": [
+    3.25,
+    2.45,
+    1.25
+   ],
+   "arm_head_c": [
+    3.25,
+    2.45,
+    1.13
+   ],
+   "arm_seat": [
+    3.1,
+    2.4,
+    0.42
+   ],
+   "arm_feet": [
+    2.7,
+    2.35,
+    0
+   ],
+   "arm_back_top": [
+    3.45,
+    2.45,
+    0.95
+   ],
+   "arm_front_left": [
+    2.7,
+    2.05,
+    0.42
+   ],
+   "table_centre": [
+    2.0,
+    2.75,
+    0.42
+   ],
+   "table_near_left": [
+    1.55,
+    2.5,
+    0.42
+   ],
+   "table_far_right": [
+    2.45,
+    3.0,
+    0.42
+   ],
+   "table_near_right": [
+    2.45,
+    2.5,
+    0.42
+   ],
+   "lamp_shade": [
+    3.3,
+    3.95,
+    1.45
+   ],
+   "lamp_base": [
+    3.3,
+    3.95,
+    0
+   ],
+   "felt_TL": [
+    0.9,
+    4.2,
+    2.0
+   ],
+   "felt_BR": [
+    3.1,
+    4.2,
+    0.9
+   ],
+   "shelf_left": [
+    1.0,
+    4.2,
+    2.15
+   ],
+   "shelf_right": [
+    2.6,
+    4.2,
+    2.15
+   ],
+   "pothos_tip": [
+    1.4,
+    4.1,
+    1.75
+   ],
+   "rug_far_left": [
+    0.9,
+    3.6,
+    0
+   ],
+   "rug_near_left": [
+    0.9,
+    1.6,
+    0
+   ],
+   "rug_near_right": [
+    3.0,
+    1.6,
+    0
+   ],
+   "right_wall_y2.4_top": [
+    3.6,
+    2.4,
+    2.7
+   ],
+   "right_wall_y2.4_floor": [
+    3.6,
+    2.4,
+    0
+   ]
+  },
+  "behind": [
+   "sofa_sitter_head_top",
+   "sofa_sitter_head_c",
+   "arm_head_top",
+   "arm_head_c"
+  ]
+ },
+ "camera_check": {
+  "vanishing": {
+   "along_y": -105,
+   "along_x": 4154,
+   "horizon_y": 497
+  },
+  "points": {
+   "back_left_floor": {
+    "x": -409,
+    "y": 1199,
+    "where": "outside",
+    "depth": 3.15
+   },
+   "back_right_floor": {
+    "x": 1250,
+    "y": 944,
+    "where": "frame",
+    "depth": 4.95
+   },
+   "back_right_top": {
+    "x": 1250,
+    "y": -62,
+    "where": "overscan",
+    "depth": 4.95
+   },
+   "back_left_top": {
+    "x": -409,
+    "y": -381,
+    "where": "outside",
+    "depth": 3.15
+   },
+   "right_wall_floor_y1": {
+    "x": 2970,
+    "y": 1511,
+    "where": "outside",
+    "depth": 2.18
+   },
+   "right_wall_floor_y0.3": {
+    "x": 4154,
+    "y": 1902,
+    "where": "outside",
+    "depth": 1.57
+   },
+   "sofa_left_back_top": {
+    "x": 326,
+    "y": 696,
+    "where": "frame",
+    "depth": 3.71
+   },
+   "sofa_right_back_top": {
+    "x": 1005,
+    "y": 660,
+    "where": "frame",
+    "depth": 4.51
+   },
+   "sofa_left_front_seat": {
+    "x": 425,
+    "y": 968,
+    "where": "frame",
+    "depth": 3.02
+   },
+   "sofa_right_front_seat": {
+    "x": 1207,
+    "y": 869,
+    "where": "frame",
+    "depth": 3.82
+   },
+   "sofa_left_arm_top": {
+    "x": 417,
+    "y": 846,
+    "where": "frame",
+    "depth": 3.06
+   },
+   "sofa_right_arm_top": {
+    "x": 1192,
+    "y": 774,
+    "where": "frame",
+    "depth": 3.86
+   },
+   "sofa_sitter_head_top": {
+    "x": 583,
+    "y": 487,
+    "where": "frame",
+    "depth": 3.72,
+    "behind": {
+     "wall": "back wall",
+     "at": [
+      1.75,
+      4.2,
+      1.22
+     ]
+    }
+   },
+   "sofa_sitter_head_c": {
+    "x": 583,
+    "y": 546,
+    "where": "frame",
+    "depth": 3.72,
+    "behind": {
+     "wall": "back wall",
+     "at": [
+      1.75,
+      4.2,
+      1.09
+     ]
+    }
+   },
+   "sofa_seat_L": {
+    "x": 616,
+    "y": 897,
+    "where": "frame",
+    "depth": 3.54
+   },
+   "sofa_sitter_feet": {
+    "x": 740,
+    "y": 1228,
+    "where": "outside",
+    "depth": 3.02
+   },
+   "sofa_seat_R": {
+    "x": 934,
+    "y": 861,
+    "where": "frame",
+    "depth": 3.89
+   },
+   "arm_head_top": {
+    "x": 1723,
+    "y": 469,
+    "where": "frame",
+    "depth": 3.26,
+    "behind": {
+     "wall": "right wall",
+     "at": [
+      3.6,
+      2.72,
+      1.26
+     ]
+    }
+   },
+   "arm_head_c": {
+    "x": 1723,
+    "y": 536,
+    "where": "frame",
+    "depth": 3.26,
+    "behind": {
+     "wall": "right wall",
+     "at": [
+      3.6,
+      2.72,
+      1.12
+     ]
+    }
+   },
+   "arm_seat": {
+    "x": 1690,
+    "y": 954,
+    "where": "frame",
+    "depth": 3.14
+   },
+   "arm_feet": {
+    "x": 1547,
+    "y": 1260,
+    "where": "outside",
+    "depth": 2.9
+   },
+   "arm_back_top": {
+    "x": 1795,
+    "y": 634,
+    "where": "frame",
+    "depth": 3.36
+   },
+   "arm_front_left": {
+    "x": 1710,
+    "y": 1042,
+    "where": "frame",
+    "depth": 2.64
+   },
+   "table_centre": {
+    "x": 1035,
+    "y": 993,
+    "where": "frame",
+    "depth": 2.9
+   },
+   "table_near_left": {
+    "x": 849,
+    "y": 1083,
+    "where": "overscan",
+    "depth": 2.46
+   },
+   "table_far_right": {
+    "x": 1171,
+    "y": 928,
+    "where": "frame",
+    "depth": 3.34
+   },
+   "table_near_right": {
+    "x": 1361,
+    "y": 992,
+    "where": "frame",
+    "depth": 2.91
+   },
+   "lamp_shade": {
+    "x": 1219,
+    "y": 396,
+    "where": "frame",
+    "depth": 4.59
+   },
+   "lamp_base": {
+    "x": 1219,
+    "y": 979,
+    "where": "frame",
+    "depth": 4.59
+   },
+   "felt_TL": {
+    "x": 161,
+    "y": 87,
+    "where": "frame",
+    "depth": 3.6
+   },
+   "felt_BR": {
+    "x": 1095,
+    "y": 614,
+    "where": "frame",
+    "depth": 4.7
+   },
+   "shelf_left": {
+    "x": 216,
+    "y": 17,
+    "where": "frame",
+    "depth": 3.65
+   },
+   "shelf_right": {
+    "x": 924,
+    "y": 103,
+    "where": "frame",
+    "depth": 4.45
+   },
+   "pothos_tip": {
+    "x": 432,
+    "y": 227,
+    "where": "frame",
+    "depth": 3.77
+   },
+   "rug_far_left": {
+    "x": 206,
+    "y": 1215,
+    "where": "overscan",
+    "depth": 3.08
+   },
+   "rug_near_left": {
+    "x": 605,
+    "y": 2135,
+    "where": "outside",
+    "depth": 1.35
+   },
+   "rug_near_right": {
+    "x": 2157,
+    "y": 1419,
+    "where": "outside",
+    "depth": 2.4
+   },
+   "right_wall_y2.4_top": {
+    "x": 1872,
+    "y": -318,
+    "where": "outside",
+    "depth": 3.39
+   },
+   "right_wall_y2.4_floor": {
+    "x": 1872,
+    "y": 1149,
+    "where": "overscan",
+    "depth": 3.39
+   }
+  }
+ }
+}

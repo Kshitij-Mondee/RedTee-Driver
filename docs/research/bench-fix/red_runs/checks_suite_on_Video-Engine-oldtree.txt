@@ -1,0 +1,114 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 129, in check_blurred_beat_is_measured_on_its_own_words_and_never_excused
+    s1, s2 = F.sharpness(d / "sharp.png", boxes), F.sharpness(d / "blur.png", boxes)
+             ^^^^^^^^^^^
+AttributeError: module 'loom.checks.film' has no attribute 'sharpness'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 152, in check_every_element_has_a_life_window
+    assert F.record_checks(ok) == ([], [], {"elements": 2, "without_life": 0}), F.record_checks(ok)
+           ^^^^^^^^^^^^^^^
+AttributeError: module 'loom.checks.film' has no attribute 'record_checks'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 338, in check_film_audit_reports_preshown_exit_none_foreign_blur_and_zero_denominators
+    assert [e["name"] for e in out["preshown"]] == ["card"], out["preshown"]
+                               ~~~^^^^^^^^^^^^
+KeyError: 'preshown'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 61, in check_foreign_pixels_report_other_beats_and_never_pass_blind
+    E, W, S = F.foreign_checks(bad, None, {"scenes": []}, man)
+              ^^^^^^^^^^^^^^^^
+AttributeError: module 'loom.checks.film' has no attribute 'foreign_checks'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 304, in check_ledger_gives_film_defects_their_own_kinds
+    assert got == cases, got
+           ^^^^^^^^^^^^
+AssertionError: {'b05: words cut by the frame edge at 2.0s: "x"': 'other', "b05: off frame at 3.0s: card 'x' 40% outside the frame": 'other', 'b07: foreign pixels at 4.0s: 900 px of other beats': 'other', "b08: blurred_beat: the beat's own words are blurred": 'other', 'b09: empty frame for 3 sampled moment(s)': 'other', 'element records: 2 of 9 element(s) have no life window': 'other'}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 257, in check_mark_done_over_a_rejection_is_logged
+    flow.mark_done(p, "pedagogy", reason="requester: fine with any length")
+TypeError: mark_done() got an unexpected keyword argument 'reason'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 87, in check_off_frame_rows_are_errors_ratcheted_for_old_lessons_and_a_blind_measure_is_red
+    E, W, S = F.screen_text_checks(pr, None, {"scenes": []}, lesson="no-such-lesson")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: screen_text_checks() got an unexpected keyword argument 'lesson'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 390, in check_probe_measures_foreign_pixels_on_a_built_lesson
+    assert set(rows) == {"b1", "b2"}, f"every beat measured: {out['stuck'].get('foreign_error') or rows}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: every beat measured: {}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 451, in check_probe_measures_off_frame_elements_words_and_figures
+    assert any(o["name"] == "card" and o["share"] > 0.15 for o in b1.get("off") or []), b1
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'beat': 'b1', 't': 3.15, 'n': 1, 'min_px': 34.4, 'small': [], 'cut': []}
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 235, in check_render_force_needs_a_reason_the_checked_build_and_no_thrown_scene
+    refused("", {"errors": ["b01: x"], "build_hash": h}, "--reason")
+AttributeError: module 'loom.flow' has no attribute 'force_render_allowed'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 165, in check_render_segments_carry_the_build_hash_and_stale_ones_are_dropped
+    from loom.render import stamp_segments
+ImportError: cannot import name 'stamp_segments' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-oldtree\loom\render.py)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 192, in check_render_verification_fails_above_ten_percent_and_on_zero
+    from loom.render import verify_failure
+ImportError: cannot import name 'verify_failure' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-oldtree\loom\render.py)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\run_tests.py", line 3288, in main
+    r = fn()
+        ^^^^
+  File "C:\Users\Admin\Desktop\Video-Engine-oldtree\tests\suites\checks_film_defects.py", line 274, in check_style_lint_measures_the_caption_pill
+    from loom.checks.style_lint import caption_ratios, lint_all, lint_style
+ImportError: cannot import name 'caption_ratios' from 'loom.checks.style_lint' (C:\Users\Admin\Desktop\Video-Engine-oldtree\loom\checks\style_lint.py)
+  FAIL  check_blurred_beat_is_measured_on_its_own_words_and_never_excused: module 'loom.checks.film' has no attribute 'sharpness'
+  FAIL  check_every_element_has_a_life_window: module 'loom.checks.film' has no attribute 'record_checks'
+  FAIL  check_film_audit_reports_preshown_exit_none_foreign_blur_and_zero_denominators: 'preshown'
+  FAIL  check_foreign_pixels_report_other_beats_and_never_pass_blind: module 'loom.checks.film' has no attribute 'foreign_checks'
+  FAIL  check_ledger_gives_film_defects_their_own_kinds: {'b05: words cut by the frame edge at 2.0s: "x"': 'other', "b05: off frame at 3.0s: card 'x' 40% outside the frame": 'other', 'b07: foreign pixels at 4.0s: 900 px of other beats': 'other', "b08: blurred_beat: the beat's own words are blurred": 'other', 'b09: empty frame for 3 sampled moment(s)': 'other', 'element records: 2 of 9 element(s) have no life window': 'other'}
+  FAIL  check_mark_done_over_a_rejection_is_logged: mark_done() got an unexpected keyword argument 'reason'
+  FAIL  check_off_frame_rows_are_errors_ratcheted_for_old_lessons_and_a_blind_measure_is_red: screen_text_checks() got an unexpected keyword argument 'lesson'
+  FAIL  check_probe_measures_foreign_pixels_on_a_built_lesson: every beat measured: {}
+  FAIL  check_probe_measures_off_frame_elements_words_and_figures: {'beat': 'b1', 't': 3.15, 'n': 1, 'min_px': 34.4, 'small': [], 'cut': []}
+  FAIL  check_render_force_needs_a_reason_the_checked_build_and_no_thrown_scene: module 'loom.flow' has no attribute 'force_render_allowed'
+  FAIL  check_render_segments_carry_the_build_hash_and_stale_ones_are_dropped: cannot import name 'stamp_segments' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-oldtree\loom\render.py)
+  FAIL  check_render_verification_fails_above_ten_percent_and_on_zero: cannot import name 'verify_failure' from 'loom.render' (C:\Users\Admin\Desktop\Video-Engine-oldtree\loom\render.py)
+  FAIL  check_style_lint_measures_the_caption_pill: cannot import name 'caption_ratios' from 'loom.checks.style_lint' (C:\Users\Admin\Desktop\Video-Engine-oldtree\loom\checks\style_lint.py)
+
+0 passed, 13 failed, 0 skipped  [subset: 13 of 190]

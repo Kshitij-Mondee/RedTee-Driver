@@ -1,0 +1,261 @@
+{
+  "concept": "One night, one key light: follow a leaked password as a lit key card through a dark building of doors, watch which doors it opens, then replay the same night with the two habits in place and watch every door hold.",
+  "world": "A night building told in a few dark places: the office where the 02:00 sign-in glows (office), a wall of doors labelled Shop and Work (corridor) with the inside of the Work door nested in it (inside), a long hall of doors beyond it (hall), Dana's dark bedroom with the phone on the nightstand (bedroom), and her desk in morning light (morning). The story moves right through the night; the bedroom and morning sit below it.",
+  "devices": [
+    {
+      "id": "keycard",
+      "what": "the password as a small lit key card, the one amber thing in the night: lifted out of the screen, copied onto a list, tried at doors; a fresh card per door in the replay",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b10",
+        "b11",
+        "b14"
+      ]
+    },
+    {
+      "id": "doors",
+      "what": "systems as doors in a dark wall: Shop and Work side by side, a corridor that opens one door after another, a heavier last door; a second lock under the first for MFA",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b14"
+      ]
+    },
+    {
+      "id": "login_screen",
+      "what": "the 02:00 work sign-in on a monitor in a dark office, opener and payoff: Login successful at the open, Access denied in the replay",
+      "kind": "callback",
+      "beats": [
+        "b01",
+        "b02",
+        "b14"
+      ]
+    },
+    {
+      "id": "bedside_phone",
+      "what": "Dana's phone on a dark nightstand: dark while she sleeps, then Approve? prompts, Deny pressed, MFA on in the morning",
+      "kind": "explain",
+      "beats": [
+        "b01",
+        "b11",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "dip_join",
+      "what": "join material: slow camera moves inside the night; a dip through black for a new place or time, a hard cut at a section boundary",
+      "kind": "join",
+      "beats": [
+        "b03",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "dark",
+      "why": "the cold open: one key light on the screen"
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "why": "rewind to the evening the password was reused, a touch warmer"
+    },
+    {
+      "from": "b04",
+      "band": "dark",
+      "why": "the mechanism: leaked, tried, spread; light spilling through doors is the harm"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "why": "morning light on the desk: the actions, the lesson's one lift"
+    },
+    {
+      "from": "b14",
+      "band": "dark",
+      "why": "the opening night replayed, calm: every door shut"
+    }
+  ],
+  "sections": [
+    {
+      "id": "open",
+      "treatment": "cold open on the 02:00 login, then the password lifts out of the screen as a key card",
+      "beats": [
+        {
+          "beat": "b01",
+          "line": "02:00, one key light on a work sign-in that succeeds; a dark bedroom inset where Dana's phone lies dark",
+          "kind": "bespoke",
+          "station": "office",
+          "join_in": {
+            "type": "cut"
+          }
+        },
+        {
+          "beat": "b02",
+          "line": "the password lifts out of the screen as a lit key card; the camera follows it toward a wall of closed doors",
+          "kind": "bespoke",
+          "station": "office",
+          "join_in": {
+            "type": "continue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec1",
+      "treatment": "one station, the wall of doors held while its state changes: reused, breached, tried, opened",
+      "beats": [
+        {
+          "beat": "b03",
+          "line": "months ago, at dusk: one card fits two doors, Shop and Work",
+          "kind": "bespoke",
+          "station": "corridor",
+          "join_in": {
+            "type": "camera"
+          }
+        },
+        {
+          "beat": "b04",
+          "line": "the Shop door is forced; the card is copied onto a long list that slides away into the dark; Work stays untouched",
+          "kind": "bespoke",
+          "station": "corridor",
+          "join_in": {
+            "type": "continue"
+          }
+        },
+        {
+          "beat": "b05",
+          "line": "a steady machine stream of cards tried against a row of login doors: credential stuffing",
+          "kind": "bespoke",
+          "station": "corridor",
+          "join_in": {
+            "type": "continue"
+          }
+        },
+        {
+          "beat": "b06",
+          "line": "Dana's card reaches the Work door and turns; the door opens a crack and light spills out",
+          "kind": "bespoke",
+          "station": "corridor",
+          "join_in": {
+            "type": "continue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "treatment": "through the open door: a normal-looking sign-in log, then a hall where doors open in sequence; the quiz holds on the open hall",
+      "beats": [
+        {
+          "beat": "b07",
+          "line": "inside: the sign-in log, where the 02:00 row looks like every daytime row; nothing flags it",
+          "kind": "bespoke",
+          "station": "inside",
+          "join_in": {
+            "type": "zoom"
+          }
+        },
+        {
+          "beat": "b08",
+          "line": "a hall of doors opening one after another, the light spreading; a heavier last door is tried: lateral movement",
+          "kind": "bespoke",
+          "station": "hall",
+          "join_in": {
+            "type": "camera"
+          }
+        },
+        {
+          "beat": "b09",
+          "line": "wide on the open hall; the two places the night could have stopped are marked; hold for the viewer to choose",
+          "kind": "bespoke",
+          "station": "hall",
+          "join_in": {
+            "type": "continue"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec3",
+      "treatment": "the same doors replayed with each habit in place: the card does not turn, the second lock holds, the prompt is denied",
+      "beats": [
+        {
+          "beat": "b10",
+          "line": "replay with two different cards: the copied Shop card does not turn the Work lock; a vault hands out a fresh card per door",
+          "kind": "bespoke",
+          "station": "corridor",
+          "join_in": {
+            "type": "camera"
+          }
+        },
+        {
+          "beat": "b11",
+          "line": "a stolen card turns the first lock, but a second lock below stays shut, waiting on Dana's phone: MFA",
+          "kind": "bespoke",
+          "station": "corridor",
+          "join_in": {
+            "type": "continue"
+          }
+        },
+        {
+          "beat": "b12",
+          "line": "on the dark nightstand, Approve? prompts light up again and again; Deny is pressed and reported",
+          "kind": "bespoke",
+          "station": "bedroom",
+          "join_in": {
+            "type": "camera"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec4",
+      "treatment": "morning light on Dana's desk: three plain actions as objects",
+      "beats": [
+        {
+          "beat": "b13",
+          "line": "morning light on the desk: a fresh card, the phone with MFA on, a report sent, each lit as it is named",
+          "kind": "bespoke",
+          "station": "morning",
+          "join_in": {
+            "type": "cut"
+          }
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "treatment": "the opening shot replayed: nothing opens",
+      "beats": [
+        {
+          "beat": "b14",
+          "line": "02:00 again: the leaked card fits nothing, the phone lights once and is denied, Access denied; the doors stay dark; slow pull back",
+          "kind": "bespoke",
+          "station": "office",
+          "join_in": {
+            "type": "cut"
+          }
+        }
+      ]
+    }
+  ]
+}

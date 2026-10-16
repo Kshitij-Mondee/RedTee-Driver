@@ -1,0 +1,113 @@
+{
+  "verdict": "ship",
+  "summary": "Session 4 P10 after the 4th P5 reopen (b13 quiz.answer props made 0-based). Lead looked at all 15 contact sheets before three critic passes; check passes (18 warnings). Final critic pass on the current build: 1 major (b05, accepted with measurement), 3 minors accepted.",
+  "findings": [
+    {
+      "beat": "b13",
+      "severity": "blocker",
+      "problem": "quiz.answer props 1-based (answer 2, tempting 1): no option marked, screen read 'Why not B?' while narration says B.",
+      "status": "fixed",
+      "fix": "Reopened P5 (cap raised by a person), patch_storyboard b13 answer 1, tempting 0. Contact sheet now shows B marked with a tick and 'Why not A?'."
+    },
+    {
+      "beat": "b07",
+      "severity": "major",
+      "problem": "Proactive tag over Leo's chin at b07 arrive (49.26 s).",
+      "status": "fixed",
+      "fix": "Fixer moved name_tag to y 750 (centre 1330,810) on Leo's chest above the table; seen on the sheet."
+    },
+    {
+      "beat": "b05",
+      "severity": "major",
+      "problem": "Critic (raised in passes 2 and 3): tag rests on the desk rail partly behind the 'Label: who he is' card in b05, then pops onto Leo's chest in b06.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "Measured on the contact sheets: the tag sits at about (1550, 700) in b05 settled and in b06, just above the leo_close table top (760) on Leo's lower chest; b06 holds b05's name_tag element across a continue join, so it cannot pop. The label card sits beside it, not over its word. Third pass on the same claim; frames win."
+    },
+    {
+      "beat": "b08",
+      "severity": "minor",
+      "problem": "Leo's mouth open while You speaks the impact line.",
+      "status": "fixed",
+      "fix": "Fixer set Leo neutral at the beat start with a brief surprised reaction as the call card lands; You explains. Seen on the sheet."
+    },
+    {
+      "beat": "b12",
+      "severity": "minor",
+      "problem": "Page-turn wedge visible at b12 arrive while narration starts.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "This is the designed page join (chapter into the check, device page_join); it lasts a fraction of a second and the cards arrive on their anchors."
+    },
+    {
+      "beat": "b14",
+      "severity": "minor",
+      "problem": "Lead's look: 'Tuesday: heads up' card overlapped the window.",
+      "status": "fixed",
+      "fix": "Fixer moved the sign; superseded by the next finding's fix."
+    },
+    {
+      "beat": "b14",
+      "severity": "major",
+      "problem": "Critic: pin label 'Tuesday' bisected by the planner's bottom border; heads-up sign above the Friday side; 'Two weeks later' tab near the planner edge.",
+      "status": "fixed",
+      "fix": "Fixer lifted tue_pin and its alert 88 px so the label sits inside the Tuesday column, and moved heads_up_sign to the left wall on the Tuesday side; seen on the sheet and the final critic pass raised nothing on b14. The 'Two weeks later' tab is the kit's flip state inside the header strip, left unchanged."
+    },
+    {
+      "beat": "b13",
+      "severity": "major",
+      "problem": "Critic: explanation card arrives at about 110.2 s, about 2 s before the cut, under the reading floor for 13 words (raised again as minor in pass 3).",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "The template reveals it on the say_explanation anchor 'B gives him an action', spoken at that moment; the card restates the three marks the viewer built over b07 to b11 and sees again in b15. Moving the anchor needs a P5 change and all 4 reopens are used. Lesson learned for next time: put say_explanation on an earlier phrase."
+    },
+    {
+      "beat": "b05",
+      "severity": "minor",
+      "problem": "Critic: left two thirds of the frame empty after the bubble exits.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "Leo's close (leo_close station) keeps Leo screen right on the 180 line with the wall as breathing room; the tag and its note are the subject. A layout change would break the b04 to b06 station continuity."
+    },
+    {
+      "beat": "b10",
+      "severity": "minor",
+      "problem": "Critic: 'Next step: midpoint check-in' sign floats left of the planner with no callout to the Tuesday pin.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "Moved there in session 4 to clear Leo's face and the answer bubble; it reads as a note on the wall beside the planner, and b14 now mirrors it on the same wall side."
+    },
+    {
+      "beat": "b04",
+      "severity": "minor",
+      "problem": "Critic: the Actions needle, pointing straight up, crosses the word 'Actions'.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "On the sheet the label sits above the dial and the needle stays inside the dial rim; at most a hairline touch on a label that is also spoken. The still needle is the point of the beat; not worth a scene change at this stage."
+    },
+    {
+      "beat": "b01",
+      "severity": "minor",
+      "problem": "Critic: presenter card sized for a list holds one quote line, leaving its lower part empty.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "Presenter avatar layout from the engine; the same card frame returns in b15 holding the three lines, so the empty card in b01 sets up the callback."
+    },
+    {
+      "beat": "b11",
+      "severity": "minor",
+      "problem": "Deviations from the plan's measures (lesson-wide, logged on b11 where the push was dropped).",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "No push in b11 (dropped in session 3, an accent bar walks under the cards instead); avatar 13.6 % against the 0.1 mix ceiling (presenter bookends b01 and b15 by design); narration 132 s against 120 s requested (1.10x, within 1.3x); templates 2 of 15 (b12, b13); storyboard reference and callback suggestions not addressed."
+    },
+    {
+      "beat": "b02",
+      "severity": "minor",
+      "problem": "Earlier minors: laptop slightly overlaps both chins in b02/b03/b14; static 'Next week' tab in every desk beat; Leo smiles with closed eyes on 'feels bad' in b02.",
+      "status": "accepted",
+      "fix": "none",
+      "reason": "Small and legible on the sheets; the laptop is the kit part shared with b14's callback and moving it would break the mirror framing; the tab is kit furniture; the closed-eye face is the agreed 'head sink' read from session 2 (the peep kit has no sad face)."
+    }
+  ]
+}

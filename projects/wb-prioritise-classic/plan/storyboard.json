@@ -1,0 +1,1059 @@
+{
+  "style": "whiteboard",
+  "story": {
+    "cast": [
+      {
+        "name": "Maya",
+        "role": "the office worker of the running example; never drawn as a person, present through her cards and her reply note"
+      }
+    ]
+  },
+  "world": {
+    "stations": [
+      {
+        "id": "open",
+        "x": 0,
+        "y": -1400
+      },
+      {
+        "id": "list",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "matrix",
+        "x": 2400,
+        "y": 0
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "task_cards",
+      "what": "Maya's four request cards (client reply, budget report, expenses, deck redesign): the same rough card all lesson, its state changes on the spoken word (urgent tag, tick, placed, later tag)",
+      "kind": "list",
+      "beats": [
+        "b02",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12",
+        "b13"
+      ]
+    },
+    {
+      "id": "matrix",
+      "what": "the impact and effort board: the two questions of b04 become its axis labels, four zones are named as each move is taught",
+      "kind": "explain",
+      "beats": [
+        "b04",
+        "b05",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b12"
+      ]
+    },
+    {
+      "id": "week_strip",
+      "what": "a hand-drawn Monday to Friday strip where big work becomes one solid block instead of scraps",
+      "kind": "data",
+      "beats": [
+        "b08",
+        "b12"
+      ]
+    },
+    {
+      "id": "reply_note",
+      "what": "a written reply note tied by an arrow to the budget report card, with a date and a smaller version under it",
+      "kind": "other",
+      "beats": [
+        "b10"
+      ]
+    },
+    {
+      "id": "board_pan",
+      "what": "one whiteboard: a camera pan to the next part of the board and back to the first list at the close",
+      "kind": "join",
+      "beats": [
+        "b04",
+        "b13"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "light"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "task_card",
+        "what": "Maya's request card on the whiteboard: a rough single-line rectangle about 300 x 84 px sized to its words, the task name in Patrick Hand lead (38 px) ink. One function draws any of the five cards (Client reply, Budget report, Expenses, Deck redesign, New analysis by Friday) as named elements. States, each drawn on its own element so it can arrive on a spoken word: an 'urgent' tag (a small rough box at the card's right end with the word urgent in ink label size, no colour); a tick box at the left (empty rough square, then a pos hand tick); a 'later' tag (muted words in a small rough box); the card may be held across beats and travel once to a new place (m.travel). No pills, no fills, no shadows.",
+        "beats": [
+          "b02",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12",
+          "b13"
+        ]
+      },
+      {
+        "id": "matrix_board",
+        "what": "The impact and effort board on the matrix station, in station coordinates: vertical axis from (200, 860) up to (200, 170) with an open hand arrow head, horizontal axis from (200, 860) to (1190, 860) with an open head; the axis labels are where b04 writes 'Impact?' (top of the vertical axis, x 120..420, y 100..170) and 'Effort?' (right end of the horizontal axis, x 1000..1200, y 870..925, above 930); two divider strokes at x 695 and y 515 make four zones, drawn as separate elements; four zone names written in Caveat title size in each zone's top corner (Quick wins top left, Major projects top right, Fill-ins bottom left, Thankless tasks bottom right), each with a short action line under it in Patrick Hand label muted (Do first, Block time, Batch, Decline or park); card slots: top left (250, 260), top right (745, 260), bottom left (250, 610), bottom right (745, 610), and a second top-right slot (745, 380) for the new card. The right column x 1260..1800 is left free for the week strip and notes. One marker line, hand arrows only.",
+        "beats": [
+          "b04",
+          "b05",
+          "b06",
+          "b07",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b12"
+        ]
+      },
+      {
+        "id": "week_strip",
+        "what": "A hand-drawn week strip in the matrix station's right column (x 1270..1790, y 150..330): five rough day cells Mon Tue Wed Thu Fri with the day names in label ink; states: scattered scraps (three small muted rough boxes across different days, labelled 'budget'), then one solid block (a rough rectangle over Tue and Wed with a hachure fill drawn outline first, labelled 'Budget report'), then a second block (over Thu and Fri, labelled 'New analysis'). The scraps are struck through, never erased.",
+        "beats": [
+          "b08",
+          "b12"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "open",
+      "props": {
+        "member": "woman",
+        "kicker": "Monday",
+        "title": "Four requests. All four say urgent.",
+        "card": {
+          "lines": [
+            "Client reply: urgent",
+            "Budget report: urgent",
+            "Expenses, deck: urgent"
+          ]
+        }
+      },
+      "join_in": {
+        "type": "cut"
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "list",
+      "join_in": {
+        "type": "fade"
+      },
+      "accent_on": "budget_box",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "Maya's Monday list drawn as four task_card rows in arrival order (deck redesign, expenses, client reply, budget report), each with its urgent tag; ticks run down on 'works down from the top' while a small clock beside the list turns to Friday; the budget report at the bottom keeps its empty tick box, circled in the accent.",
+        "why_motion": "the ticks running down in arrival order while the clock runs out IS the failure being shown",
+        "subject": "Maya's to-do list",
+        "elements": [
+          {
+            "name": "list_title",
+            "what": "Maya's Monday, Caveat title"
+          },
+          {
+            "name": "card_deck",
+            "what": "task_card Deck redesign"
+          },
+          {
+            "name": "card_expenses",
+            "what": "task_card Expenses"
+          },
+          {
+            "name": "card_reply",
+            "what": "task_card Client reply"
+          },
+          {
+            "name": "card_budget",
+            "what": "task_card Budget report"
+          },
+          {
+            "name": "urgent_tags",
+            "what": "the four urgent tags"
+          },
+          {
+            "name": "tick_deck",
+            "what": "pos tick"
+          },
+          {
+            "name": "tick_expenses",
+            "what": "pos tick"
+          },
+          {
+            "name": "tick_reply",
+            "what": "pos tick"
+          },
+          {
+            "name": "budget_box",
+            "what": "the empty tick box of the budget report, with the accent circle"
+          },
+          {
+            "name": "clock",
+            "what": "a hand-drawn clock icon at marker weight"
+          },
+          {
+            "name": "friday_label",
+            "what": "Friday, written under the clock"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "She works down",
+            "element": "list_title",
+            "action": "write 'Maya's Monday' heading top left",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "from the top",
+            "element": "tick_deck",
+            "action": "ticks drawn row by row, deck, expenses, client reply",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "By Friday",
+            "element": "clock",
+            "action": "clock drawn, Friday written under it",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "still waiting",
+            "element": "budget_box",
+            "action": "accent circle around the budget report's empty box",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "list_title, the four cards and their urgent tags and ticks are held into b03; the clock and Friday leave."
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "list",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "list_title",
+        "card_deck",
+        "card_expenses",
+        "card_reply",
+        "card_budget",
+        "urgent_tags",
+        "tick_deck",
+        "tick_expenses",
+        "tick_reply",
+        "budget_box"
+      ],
+      "accent_on": "label_matters",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "On the right half of the same board the word 'urgent' is written, then two hand arrows split it into 'how soon' and 'how much it matters'; under them a drawn balance tips down on the 'how soon' side, a small deadline flag on that pan.",
+        "why_motion": "the split and the tilt are the argument: urgency is one question, importance another, and we lean to the nearer deadline",
+        "subject": "the word urgent split in two, and a balance",
+        "elements": [
+          {
+            "name": "word_urgent",
+            "what": "urgent, Caveat title"
+          },
+          {
+            "name": "split_arrows",
+            "what": "two hand arrows"
+          },
+          {
+            "name": "label_soon",
+            "what": "how soon"
+          },
+          {
+            "name": "label_matters",
+            "what": "how much it matters, with the accent underline"
+          },
+          {
+            "name": "balance",
+            "what": "a drawn balance whose beam tips"
+          },
+          {
+            "name": "deadline_mark",
+            "what": "a small flag icon on the how soon pan"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Urgent says",
+            "element": "word_urgent",
+            "action": "write urgent in Caveat",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "how soon",
+            "element": "label_soon",
+            "action": "arrow then 'how soon'",
+            "motion": "draw then unmask"
+          },
+          {
+            "t_anchor": "how much it matters",
+            "element": "label_matters",
+            "action": "arrow then 'how much it matters', accent underline",
+            "motion": "draw then unmask"
+          },
+          {
+            "t_anchor": "nearer deadline",
+            "element": "balance",
+            "action": "balance drawn, beam tips to the how soon side",
+            "motion": "draw then rotate"
+          }
+        ],
+        "continuity": "the list stays as held; the camera pans away at b04 and returns to this station at b13."
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "q_impact",
+      "shot": {
+        "size": "medium"
+      },
+      "design": {
+        "treatment": "A clean part of the board: 'Impact?' written large where the vertical axis will top out, 'Effort?' written where the horizontal axis will end, each on its spoken question, with a short muted gloss under each (difference it makes, work it takes).",
+        "why_motion": "the two questions are written in the places they will hold as axes, so the next beat grows the board out of them",
+        "subject": "two questions on the board",
+        "elements": [
+          {
+            "name": "q_impact",
+            "what": "Impact?, Caveat title, accent underline"
+          },
+          {
+            "name": "q_effort",
+            "what": "Effort?, Caveat title"
+          },
+          {
+            "name": "gloss_impact",
+            "what": "difference it makes, muted label"
+          },
+          {
+            "name": "gloss_effort",
+            "what": "work it takes, muted label"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "How much difference",
+            "element": "q_impact",
+            "action": "write Impact? in Caveat title",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "How much work",
+            "element": "q_effort",
+            "action": "write Effort?",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "q_impact and q_effort are held into b05 as the axis labels; the glosses leave."
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort"
+      ],
+      "accent_on": "card_reply",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "matrix_board axes drawn into the held questions (impact up, effort across); the client reply task_card is drawn in the top-left slot on 'big impact, ten minutes'.",
+        "why_motion": "placing the first card on two axes is the move the lesson teaches",
+        "subject": "the impact and effort board",
+        "elements": [
+          {
+            "name": "axis_impact",
+            "what": "vertical axis, open hand arrow head"
+          },
+          {
+            "name": "axis_effort",
+            "what": "horizontal axis, open hand arrow head"
+          },
+          {
+            "name": "card_reply",
+            "what": "task_card Client reply in the top-left slot"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Impact runs up",
+            "element": "axis_impact",
+            "action": "vertical axis drawn up to Impact?",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "effort across",
+            "element": "axis_effort",
+            "action": "horizontal axis drawn out to Effort?",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "The client reply",
+            "element": "card_reply",
+            "action": "card drawn high left, words written",
+            "motion": "draw then unmask"
+          }
+        ],
+        "continuity": "axes, questions and card_reply held into b06."
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply"
+      ],
+      "accent_on": "card_budget",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "The other three task_cards drawn one by one in their slots on their names: budget report top right, expenses bottom left, deck redesign bottom right.",
+        "why_motion": "each card lands where its two answers put it, on the words that size it",
+        "subject": "the four cards placed",
+        "elements": [
+          {
+            "name": "card_budget",
+            "what": "task_card Budget report, top right"
+          },
+          {
+            "name": "card_expenses",
+            "what": "task_card Expenses, bottom left"
+          },
+          {
+            "name": "card_deck",
+            "what": "task_card Deck redesign, bottom right"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "The budget report",
+            "element": "card_budget",
+            "action": "card drawn top right",
+            "motion": "draw then unmask"
+          },
+          {
+            "t_anchor": "Expenses",
+            "element": "card_expenses",
+            "action": "card drawn bottom left",
+            "motion": "draw then unmask"
+          },
+          {
+            "t_anchor": "A deck redesign",
+            "element": "card_deck",
+            "action": "card drawn bottom right",
+            "motion": "draw then unmask"
+          }
+        ],
+        "continuity": "all four cards and the axes held into b07."
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply",
+        "card_budget",
+        "card_expenses",
+        "card_deck"
+      ],
+      "accent_on": "zone_quick",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "The two divider strokes draw on 'four zones'; the top-left zone is named 'Quick wins' with 'Do first' under it, and the client reply card gets its pos tick on 'hears back today'.",
+        "why_motion": "the zone and its act arrive together on the words",
+        "subject": "the quick wins zone",
+        "elements": [
+          {
+            "name": "divider_v",
+            "what": "vertical divider stroke"
+          },
+          {
+            "name": "divider_h",
+            "what": "horizontal divider stroke"
+          },
+          {
+            "name": "zone_quick",
+            "what": "Quick wins, Caveat, accent"
+          },
+          {
+            "name": "move_quick",
+            "what": "Do first, muted label"
+          },
+          {
+            "name": "tick_reply",
+            "what": "pos tick on the client reply card"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Four zones",
+            "element": "divider_v",
+            "action": "both dividers drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Quick wins",
+            "element": "zone_quick",
+            "action": "Quick wins written top left in accent, Do first under it in muted",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "hears back today",
+            "element": "tick_reply",
+            "action": "pos tick on the client reply card",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "everything held into b08."
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply",
+        "card_budget",
+        "card_expenses",
+        "card_deck",
+        "divider_v",
+        "divider_h",
+        "tick_reply",
+        "zone_quick",
+        "move_quick"
+      ],
+      "accent_on": "budget_block",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "Top right named 'Major projects' with 'Block time'; in the right column the week_strip is drawn with three scattered muted 'budget' scraps, the scraps struck through on 'switching tasks', and one solid Budget report block drawn over Tue and Wed, an arrow from the budget card to it. Quick wins goes back to ink so the accent moves to the block.",
+        "why_motion": "scraps becoming one block shows why big work is scheduled, not squeezed in",
+        "subject": "the week strip",
+        "elements": [
+          {
+            "name": "zone_major",
+            "what": "Major projects, Caveat ink"
+          },
+          {
+            "name": "move_major",
+            "what": "Block time, muted label"
+          },
+          {
+            "name": "week_strip",
+            "what": "week_strip kit part, day cells"
+          },
+          {
+            "name": "budget_scraps",
+            "what": "three small muted scraps"
+          },
+          {
+            "name": "scrap_strikes",
+            "what": "strike-through strokes on the scraps"
+          },
+          {
+            "name": "budget_block",
+            "what": "one block over Tue and Wed, accent outline"
+          },
+          {
+            "name": "budget_link",
+            "what": "hand arrow from the budget card to the block"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Major projects",
+            "element": "zone_major",
+            "action": "zone name and Block time written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "block time",
+            "element": "week_strip",
+            "action": "strip drawn with scattered scraps",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Switching tasks",
+            "element": "scrap_strikes",
+            "action": "scraps struck through",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "time and accuracy",
+            "element": "budget_block",
+            "action": "one block drawn over Tue and Wed, hatch after outline, arrow from the card",
+            "motion": "draw"
+          }
+        ],
+        "continuity": "everything held into b09."
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply",
+        "card_budget",
+        "card_expenses",
+        "card_deck",
+        "divider_v",
+        "divider_h",
+        "tick_reply",
+        "zone_quick",
+        "move_quick",
+        "zone_major",
+        "move_major",
+        "week_strip",
+        "budget_scraps",
+        "scrap_strikes",
+        "budget_block",
+        "budget_link"
+      ],
+      "accent_on": "later_tag",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "Bottom left named 'Fill-ins' with 'Batch', a hand bracket round the expenses card marked 'Fri, one slot'; bottom right named 'Thankless tasks' with 'Decline or park', the deck card gets its later tag on 'openly'.",
+        "why_motion": "each zone again gets its act and its name",
+        "subject": "the bottom two zones",
+        "elements": [
+          {
+            "name": "zone_fill",
+            "what": "Fill-ins, Caveat ink"
+          },
+          {
+            "name": "move_fill",
+            "what": "Batch, muted label"
+          },
+          {
+            "name": "batch_bracket",
+            "what": "hand bracket round expenses with 'Fri, one slot'"
+          },
+          {
+            "name": "zone_thankless",
+            "what": "Thankless tasks, Caveat ink"
+          },
+          {
+            "name": "move_thankless",
+            "what": "Decline or park, muted label"
+          },
+          {
+            "name": "later_tag",
+            "what": "task_card later tag on the deck card, accent box"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Fill-ins",
+            "element": "zone_fill",
+            "action": "zone name written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "one spare slot",
+            "element": "batch_bracket",
+            "action": "bracket drawn round expenses",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "Thankless tasks",
+            "element": "zone_thankless",
+            "action": "zone name written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "openly",
+            "element": "later_tag",
+            "action": "later tag drawn on the deck card",
+            "motion": "draw then unmask"
+          }
+        ],
+        "continuity": "the matrix, cards, zone names and week strip held into b10."
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply",
+        "card_budget",
+        "card_expenses",
+        "card_deck",
+        "divider_v",
+        "divider_h",
+        "tick_reply",
+        "zone_quick",
+        "zone_major",
+        "zone_fill",
+        "zone_thankless",
+        "later_tag",
+        "week_strip",
+        "budget_block"
+      ],
+      "accent_on": "reply_line",
+      "shot": {
+        "size": "medium"
+      },
+      "design": {
+        "treatment": "In the right column under the week strip a rough reply note is drawn, headed 'To: deck request' in muted; the line 'I'm on the budget report this week.' is written on 'tie it to your priority' with a hand arrow back to the budget card; then two option lines with small rough boxes: 'Next Thursday?' and 'Just two slides?'.",
+        "why_motion": "the no is built from the board: the arrow shows the reason is the priority already placed",
+        "subject": "Maya's reply note",
+        "elements": [
+          {
+            "name": "reply_note",
+            "what": "rough note outline with muted heading"
+          },
+          {
+            "name": "reply_line",
+            "what": "I'm on the budget report this week., accent underline"
+          },
+          {
+            "name": "reply_link",
+            "what": "hand arrow to the budget card"
+          },
+          {
+            "name": "option_date",
+            "what": "Next Thursday?"
+          },
+          {
+            "name": "option_smaller",
+            "what": "Just two slides?"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Saying no",
+            "element": "reply_note",
+            "action": "note outline drawn",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "budget report this week",
+            "element": "reply_line",
+            "action": "line written, arrow to the budget card",
+            "motion": "unmask then draw"
+          },
+          {
+            "t_anchor": "a date",
+            "element": "option_date",
+            "action": "Next Thursday? written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "a smaller version",
+            "element": "option_smaller",
+            "action": "Just two slides? written",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "the reply note leaves at b11; the matrix and week strip stay."
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply",
+        "card_budget",
+        "card_expenses",
+        "card_deck",
+        "divider_v",
+        "divider_h",
+        "tick_reply",
+        "zone_quick",
+        "zone_major",
+        "zone_fill",
+        "zone_thankless",
+        "later_tag",
+        "week_strip",
+        "budget_block"
+      ],
+      "accent_on": "q_where",
+      "intent": "process_hold",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "Your turn: a new task_card 'New analysis by Friday' is drawn in the right column, unplaced, with small muted notes 'big impact' and 'two days' under it; 'Where does it go?' written large under it; the board holds still through the pause so the viewer can place it.",
+        "why_motion": "the question is posed on the same board the viewer has just learned to read",
+        "subject": "the new request card",
+        "elements": [
+          {
+            "name": "card_new",
+            "what": "task_card New analysis by Friday"
+          },
+          {
+            "name": "new_notes",
+            "what": "big impact, two days, muted labels"
+          },
+          {
+            "name": "q_where",
+            "what": "Where does it go?, Caveat, accent"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Your turn",
+            "element": "card_new",
+            "action": "new card drawn in the right column",
+            "motion": "draw then unmask"
+          },
+          {
+            "t_anchor": "Big impact",
+            "element": "new_notes",
+            "action": "notes written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Where does it go",
+            "element": "q_where",
+            "action": "question written, accent",
+            "motion": "unmask"
+          }
+        ],
+        "continuity": "card_new held into b12 where it travels to the top-right slot; q_where leaves."
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "matrix",
+      "join_in": {
+        "type": "continue"
+      },
+      "keep": [
+        "q_impact",
+        "q_effort",
+        "axis_impact",
+        "axis_effort",
+        "card_reply",
+        "card_budget",
+        "card_expenses",
+        "card_deck",
+        "divider_v",
+        "divider_h",
+        "tick_reply",
+        "zone_quick",
+        "zone_major",
+        "zone_fill",
+        "zone_thankless",
+        "later_tag",
+        "week_strip",
+        "budget_block",
+        "card_new"
+      ],
+      "accent_on": "gives_way",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "On 'Major projects' the new card travels into the second top-right slot under the budget report; a second block 'New analysis' is drawn over Thu and Fri in the week strip; a hand arrow from the new card curves to the other cards and 'Which task gives way?' is written beside it.",
+        "why_motion": "placing it and seeing the week fill is the answer; the arrow makes the trade-off visible",
+        "subject": "the new card placed and the week filled",
+        "elements": [
+          {
+            "name": "second_block",
+            "what": "week strip block over Thu and Fri, New analysis"
+          },
+          {
+            "name": "giveway_arrow",
+            "what": "hand arrow from the new card to the other cards"
+          },
+          {
+            "name": "gives_way",
+            "what": "Which task gives way?, accent"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Major projects",
+            "element": "card_new",
+            "action": "card travels to the top-right second slot",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "She blocks time",
+            "element": "second_block",
+            "action": "block drawn over Thu and Fri",
+            "motion": "draw"
+          },
+          {
+            "t_anchor": "which task gives way",
+            "element": "gives_way",
+            "action": "arrow drawn, question written",
+            "motion": "draw then unmask"
+          }
+        ],
+        "continuity": "the camera pans back to the list station at b13; nothing is held across the pan."
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "list",
+      "join_in": {
+        "type": "camera"
+      },
+      "intent": "callback",
+      "accent_on": "quickwin_underline",
+      "shot": {
+        "size": "wide"
+      },
+      "design": {
+        "treatment": "Back on the first board: Maya's list redrawn in arrival order with task_cards, then on 'sort again' the rows travel into the board's order (client reply first with its tick, budget report with 'Tue-Wed', expenses with 'Fri', deck redesign with 'later'); 'Place it. Sort again.' written as the heading; 'Start with a quick win' written at the bottom and underlined in the accent.",
+        "why_motion": "the same list reordering itself is the payoff: the board decides the order",
+        "subject": "Maya's list, sorted again",
+        "elements": [
+          {
+            "name": "resort_title",
+            "what": "Place it. Sort again., Caveat title"
+          },
+          {
+            "name": "row_reply",
+            "what": "task_card Client reply with tick"
+          },
+          {
+            "name": "row_budget",
+            "what": "task_card Budget report"
+          },
+          {
+            "name": "row_expenses",
+            "what": "task_card Expenses"
+          },
+          {
+            "name": "row_deck",
+            "what": "task_card Deck redesign"
+          },
+          {
+            "name": "row_notes",
+            "what": "Tue-Wed, Fri, later, muted labels"
+          },
+          {
+            "name": "start_line",
+            "what": "Start with a quick win, Caveat"
+          },
+          {
+            "name": "quickwin_underline",
+            "what": "accent marker underline"
+          }
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "New request",
+            "element": "resort_title",
+            "action": "Place it. Sort again. written",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "sort again",
+            "element": "row_reply",
+            "action": "rows travel into the new order, notes written",
+            "motion": "travel"
+          },
+          {
+            "t_anchor": "start with one quick win",
+            "element": "start_line",
+            "action": "line written, accent underline",
+            "motion": "unmask then draw"
+          }
+        ],
+        "continuity": "last beat."
+      }
+    }
+  ]
+}

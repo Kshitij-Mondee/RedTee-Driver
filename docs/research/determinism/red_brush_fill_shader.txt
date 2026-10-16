@@ -1,0 +1,98 @@
+lab_brush's watercolour fill painted differently on every load: measurements, red runs and the fix (L-304), 2026-10-08
+Chrome: chrome-headless-shell 152.0.7977.30 (HyperFrames' own, WebGL on SwiftShader), the test harness's flags
+(--no-sandbox --enable-unsafe-swiftshader --allow-file-access-from-files). p5.brush 2.2.3, the standalone build
+node_modules/p5.brush/dist/brush.js (compose.VENDOR). Runtime before the fix: runtime/brush.js as it was this morning
+(L-282's scale ratio and state resets; L-289's origin pass present, and the task notes the defect predates it).
+Scripts: docs/research/determinism/brush_fill/ (brush_exp.py, brush_exp3.py, brush_exp4.py, brush_guard.py). They
+build the lab page from runtime/, so after the fix they measure the fixed runtime; to see the red again, revert the
+fixFillShader call in runtime/brush.js on a scratch copy.
+
+1. Reproduced
+- py tests/run_tests.py --browser --only primitive_brush_paints (HYPERFRAMES_BROWSER_PATH set):
+    FAIL  primitive_brush_paints_the_same_marks_and_reveals_them_in_order: two loads painted different pixels
+- 2 loads (brush_exp.py): the 8 layers' hashes agree except layer 2 (the watercolour fill). Between the two loads'
+  layer 2 PNGs: 9 pixels of 1,049,600 differ, max channel difference 26, alpha identical, all at the wash's lower left
+  edge: (607,414) (607,415) (604,417) (605,417) (607,418) (607,419) (606,420) (607,420) (607,421) in layer pixels.
+  A different random stream would move the whole wash, not 9 edge pixels.
+
+2. It is not an unseeded random
+- Math.random wrapped before any script: 4 calls per load, all from p5.brush's module init (its two streams O and X
+  and its two noise fields, `let O=U(Math.random()),X=U(Math.random()+":2")`, `t.noise=B(U(Math.random()))`,
+  `G=B(U(Math.random()+":2"))`), none during any bake. No Date, performance.now, crypto or timer in the bake path.
+- p5.brush's seed() resets O and X, clears the gaussian cache and runs its seed hooks (which refill the fill's
+  512-entry jitter tables Mn); noiseSeed() resets both noise fields. Loom.brush.bake calls both with the layer's seed.
+- 8 bakes of layer 2's draw in ONE page, one seed (brush_exp3.py), every 2D and WebGL call hashed with its arguments
+  (OffscreenCanvasRenderingContext2D included; p5.brush's masks are OffscreenCanvases):
+    2D call stream 3147162592 (42532 calls) and WebGL call stream 2136796162 (188 calls) on all 8 bakes;
+    outputs: 2788289471, 103736698, 2363391336, 3815893796, 3668013958, 3539866786, 3668013958, 3668013958.
+  With the 4 mask uploads (texSubImage2D from an OffscreenCanvas) read back: pixel-identical on all 8 bakes
+  (679442968, 4193164024, 2330909355, 1397342298), outputs still 5 different values.
+- gl.readPixels of the WebGL canvas at the end of each bake varies in step with the PNG (2780155599 with 3668013958,
+  2248647406 with 3539866786): the WebGL drawing itself differs, from identical calls and identical inputs.
+
+3. Sync points that did NOT make it deterministic (brush_exp4.py, 3 loads x 8 bakes each)
+    none                     page layer 2: 3 distinct of 3 loads; bakes 2..8: 3 distinct of 21
+    gl.finish after uploads  3 distinct of 3; 2 distinct of 21
+    gl.finish after blits    2 distinct of 3; 3 distinct of 21
+    gl.finish after draws    3 distinct of 3; 4 distinct of 21
+    finish + readPixels before the copy to the 2D canvas: 3 distinct of 3; 3 distinct of 21
+    brush_exp.py, no flags (4 loads): page layer 2 4 distinct of 4
+    --disable-accelerated-2d-canvas (4 loads): page layer 2 4 distinct of 4
+  A readPixels after EVERY draw, blit and clear (the bisection) made 5 of 6 bakes agree: the race depends on timing.
+
+4. The cause: derivatives after a non-uniform return in p5.brush's composite shader
+- The fragment shader that composites a mask onto the canvas (u_source, u_mask, u_isBrush) does, in order:
+    vec4 maskColor=texture(u_mask,maskUV);
+    if(maskColor.a==0.0){outColor=source;return;}
+    ...
+    if(!u_isBrush){ ... for 3x3 neighbours: float neighborAlpha=texture(u_mask,neighborUV).a*15.0;
+                    blurEdge+=smoothstep(EDGE_MIN,EDGE_MAX,length(vec2(dFdx(neighborAlpha),dFdy(neighborAlpha)))); ...
+                    mixIntensity=clamp(maskColor.a+blurEdge*0.1,0.0,1.0); }
+    vec3 bgColor=mix(vec3(1.0),source.rgb,source.a); outColor=vec4(spectral_mix(...),1.);
+- GLSL leaves dFdx/dFdy (and implicit-LOD texture()) undefined in non-uniform control flow. In a 2x2 quad on the
+  mask's edge, the lanes that returned early never computed neighborAlpha, so the lanes that went on take derivatives
+  of whatever those registers held: on SwiftShader that depends on which thread ran which quad before. Only fills take
+  this branch (u_isBrush false); strokes skip it, which is why pencil, marker, charcoal and pen were always identical.
+  The other derivative in the bundle (fwidth in the stroke-point shader) comes before its discard: uniform, fine.
+
+5. The proof before touching the repo (brush_exp4.py shader_patch): the return moved after the blur through a
+  shaderSource override, 4 loads x 8 bakes: page layer 2 1 distinct of 4 (2473040894); bakes 1 distinct of 28,
+  including the first bake after the pen layer; the other 7 layers' hashes unchanged (strokes untouched).
+
+6. Red runs on the runtime before the fix
+- New test primitive_brush_a_fill_bakes_the_same_pixels_every_time (8 bakes of the fill in one page, after a fill, a
+  pen line or a charcoal hatch; full-string hash) and the existing test, three times:
+    run 1  FAIL  ..._a_fill_bakes_...: one seed painted 5 different fills in 8 bakes: [822368820, 2667947150, 2560239021, 2758700722, 3668013958, 3668013958, 3668013958, 3668013958]
+           PASS  ..._paints_the_same_marks_and_reveals_them_in_order  (8 layers, identical across loads, all different; wipe closed at 0.1 s, open at 5.9 s)
+    run 2  FAIL  ..._a_fill_bakes_...: one seed painted 5 different fills in 8 bakes: [349638171, 1190867805, 3668013958, 4205000164, 3668013958, 3758630797, 3668013958, 3668013958]
+           FAIL  ..._paints_the_same_marks_and_reveals_them_in_order: two loads painted different pixels
+    run 3  FAIL  ..._a_fill_bakes_...: one seed painted 7 different fills in 8 bakes: [513036345, 2520871016, 3668013958, 2119093930, 1164802567, 2667947150, 3668013958, 3815893796]
+           FAIL  ..._paints_the_same_marks_and_reveals_them_in_order: two loads painted different pixels
+  The two-load test passed by chance in run 1: over the 9 unmodified loads measured in sections 1 and 3, layer 2
+  took 6 different values, three of them twice, so two loads agree now and then. A test of "same seed, same pixels" must repeat the bake many
+  times, not compare one pair.
+
+7. The fix: runtime/brush.js fixFillShader (called on the shared canvas before p5.brush's load). Loom asks for the
+  WebGL2 context with p5.brush's own attributes, so p5.brush gets this context back, and patches its shaderSource:
+  in the shader that has u_mask and dFdx/dFdy, the early return is removed and put back just before
+  "vec3 bgColor=...", after the blur. Every pixel now takes the derivatives in uniform control flow (the branch on
+  the uniform u_isBrush is uniform); a pixel with no mask still outputs the source, as before. If a future p5.brush
+  no longer has those two anchors in that shader, Loom.error("brush_shader_changed") names it.
+- Green, five runs: both tests PASS each time (the new one: "8 bakes of one fill after other layers, byte-identical;
+  the next seed differs").
+- Guard control (brush_guard.py): the bundle copied into the lab page with "maskColor.a==0.0" changed to "<=0.0":
+  errors ["brush_shader_changed: p5.brush's fill shader no longer matches Loom's derivative fix ..."]; the real bundle:
+  no errors, 8 layers, layer 2 identical across 2 loads.
+
+8. What the fix changes on screen
+- Fixed layer 2 against the old loads' layer 2: 2223 of 1,049,600 pixels differ (max channel 59), all on the wash's
+  outline (bbox 602,139 to 1043,471), the same 2223 against both old loads. Looked at (brush_fill/fill_compare.png,
+  fill_zoom.png at 8x): before, the left edge was hard with stray jagged pixels; after, it is the soft feathered edge
+  the blur was written to give. The wash's body is unchanged. The lab strip (lab_brush, editorial-paper, rendered to a
+  scratch folder): 6 frames, 0 problems, the wash behind "Check the facts" as before.
+- Not verified: the look on a real GPU. There the derivatives were undefined too (a driver may treat the returned
+  lanes as helpers or not), so the old look was never guaranteed either.
+
+9. Full suite after the fix
+- py tests/run_tests.py --browser (HYPERFRAMES_BROWSER_PATH set): 284 passed, 0 failed, 9 skipped (cairo missing: 6;
+  OpenCV missing: 2; no symlink rights: 1). py tools/context_check.py: OK (293 tests, 304 learnings).

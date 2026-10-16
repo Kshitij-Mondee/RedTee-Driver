@@ -1,0 +1,270 @@
+{
+  "title": "How GPS knows where you are",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "What the sky is saying",
+      "role": "hook and what it is"
+    },
+    {
+      "id": "s2",
+      "title": "From time to distance",
+      "role": "how it works"
+    },
+    {
+      "id": "s3",
+      "title": "Where the spheres meet",
+      "role": "how it works"
+    },
+    {
+      "id": "s4",
+      "title": "Clocks that run fast in orbit",
+      "role": "why it matters"
+    },
+    {
+      "id": "s5",
+      "title": "One timing story",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b08",
+      "section": "s1",
+      "job": "refute",
+      "narration": [
+        "Your phone only listens.",
+        "Nothing goes up.",
+        "The satellites never learn where you are."
+      ],
+      "on_screen": [],
+      "visual_intent": "Signals arrive at the phone on the ground; an arrow from the phone upward is drawn and fades out, nothing leaves it.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "receiver is passive",
+          "fact": "F3"
+        }
+      ],
+      "misconception": "the phone sends a signal up and the satellites track it"
+    },
+    {
+      "id": "b09",
+      "section": "s2",
+      "job": "sequence",
+      "narration": [
+        "A signal leaves, stamped with its sending time,",
+        "and heads for your phone."
+      ],
+      "on_screen": [],
+      "visual_intent": "One satellite fires a single pulse with its time stamp; the pulse travels down toward the phone.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "signal stamped with time of sending",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "s2",
+      "job": "quantify",
+      "narration": [
+        "It's a radio wave, moving at light speed:",
+        "about 300,000 kilometres a second."
+      ],
+      "on_screen": [
+        "about 300,000 km/s"
+      ],
+      "visual_intent": "The pulse in flight, the speed label riding beside it.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "radio waves travel at about 300,000 km/s",
+          "fact": "F4"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "s2",
+      "job": "quantify",
+      "narration": [
+        "From straight overhead,",
+        "the trip takes about 0.07 seconds."
+      ],
+      "on_screen": [
+        "about 0.07 s"
+      ],
+      "visual_intent": "A timer on the phone counts while the pulse completes its trip, stopping as it arrives.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "about 0.07 s from overhead",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "s2",
+      "job": "demonstrate",
+      "narration": [
+        "Your phone takes the arrival time,",
+        "subtracts the sending time,",
+        "and multiplies by the speed of light."
+      ],
+      "on_screen": [
+        "arrival",
+        "sending",
+        "x speed of light"
+      ],
+      "visual_intent": "The two times sit on the phone; the arrival minus the sending gives travel time, which multiplies into a distance, each step on its word.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "distance from travel time times speed of light",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "s2",
+      "job": "define",
+      "narration": [
+        "That gives a distance.",
+        "Not a direction: only a distance."
+      ],
+      "on_screen": [
+        "distance"
+      ],
+      "visual_intent": "A straight line from satellite to phone, labelled; a direction arrow is offered and struck out.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "ranging gives a distance only",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "s2",
+      "job": "define",
+      "narration": [
+        "So the phone sits somewhere on a sphere",
+        "around that satellite, at exactly that range."
+      ],
+      "on_screen": [],
+      "visual_intent": "The distance line sweeps around the satellite, drawing a full sphere (a circle in the flat picture) that grazes the Earth where the phone is.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "one distance places the receiver on a sphere",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "s3",
+      "job": "sequence",
+      "narration": [
+        "Add a second satellite.",
+        "Where the two spheres meet, they trace a circle."
+      ],
+      "on_screen": [],
+      "visual_intent": "A second satellite's sphere grows; where it crosses the first, a ring of overlap lights up.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "two spheres intersect in a circle",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b16",
+      "section": "s3",
+      "job": "sequence",
+      "narration": [
+        "A third sphere cuts that circle",
+        "at just two points."
+      ],
+      "on_screen": [],
+      "visual_intent": "A third sphere grows and the ring collapses to two bright points.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "a third sphere narrows to two points",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b17",
+      "section": "s3",
+      "job": "relate",
+      "narration": [
+        "One is usually far out in space.",
+        "The other, on the ground, is you.",
+        "In principle."
+      ],
+      "on_screen": [],
+      "visual_intent": "One point drifts into the void and dims; the other sits on Earth's surface over the city and glows.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "in principle three satellites suffice; one point is far from Earth",
+          "fact": "F8"
+        }
+      ],
+      "delivery": "a beat of hesitation on 'in principle'"
+    },
+    {
+      "id": "b18",
+      "section": "s3",
+      "job": "refute",
+      "narration": [
+        "Because all of this assumed",
+        "your phone knows the exact time.",
+        "It doesn't."
+      ],
+      "on_screen": [],
+      "visual_intent": "The glowing point flickers; the frame cuts in to the phone and its clock.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "three suffice only with a perfect receiver clock",
+          "fact": "F8"
+        }
+      ],
+      "misconception": "three satellites are enough"
+    }
+  ]
+}

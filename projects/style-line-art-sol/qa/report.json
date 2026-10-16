@@ -1,0 +1,234 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "compose: b02: camera pan between different worlds (desk -> board) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b04: camera pan between different worlds (board -> shelf) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b07: camera pan between different worlds (shelf -> vault) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b09: camera pan between different worlds (vault -> sort) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b11: camera pan between different worlds (sort -> travel) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b12: camera pan between different worlds (travel -> rule) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "compose: b13: camera pan between different worlds (rule -> desk) would show the seam; using the style's seam join, a cut (set join_in.continuous: true if they join up)",
+    "runtime part_drawn_again: b05: draws kit part \"item\" again as \"notes\" while it holds \"press_release\" (the item b04 drew, still on screen), elsewhere on screen: a second item is fine only when the film shows two; to change the held one use ctx.held(\"press_release\").handle",
+    "b08: 9 chunks on screen (Recipient, channel_label, disposal_label, file_icon, folder, folder_label, need_label, recipient_tag, shredder); the budget is ~5-6",
+    "b12: 9 chunks on screen (Owner, ask_owner_label, go_higher, owner_name, policy_label, policy_note, qmark, steps, unsure_item); the budget is ~5-6",
+    "variety: one_radius_share = 0.667 is worse than the worst baseline lesson (0.4): it grew",
+    "variety: still_share = 0.538 is above the baseline median (0.5) (beats: _kit, b01, b03, b05, b06, b08, b10)",
+    "b04: small text on screen at 33.6s: \"Press release\" 24.6px (< 26 px)",
+    "b05: small text on screen at 41.0s: \"Press release\" 24.6px, \"Meeting notes\" 24.6px (< 26 px)",
+    "b06: small text on screen at 49.3s: \"Meeting notes\" 24.6px (< 26 px)",
+    "b07: value script says 'mid' but the frames measure brightness 0.92 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.91 (band 0.30 to 0.70); regrade the beat or change the script"
+  ],
+  "stats": {
+    "reading_floor_short": 0,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 1.0
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 3.07
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 3.19
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 2.17
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 2.42
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 1.71,
+        "declared": "process_hold"
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 3.35
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.053,
+      "template": 0.544,
+      "motion": 0.403,
+      "hybrid": 0.0,
+      "motion_effective": 0.403
+    },
+    "elements": {
+      "b01": 1,
+      "b02": 6,
+      "b03": 4,
+      "b04": 3,
+      "b05": 2,
+      "b06": 1,
+      "b07": 4,
+      "b08": 16,
+      "b09": 5,
+      "b11": 10,
+      "b12": 14,
+      "b13": 1
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.009,
+      "wallpaper_share": 0.0,
+      "template_share": 0.0,
+      "classic_share": 0.0,
+      "one_radius_share": 0.667,
+      "still_share": 0.538,
+      "labels_over_objects_share": 0.154,
+      "one_world_share": 0.462,
+      "lines_per_s": 7.05
+    },
+    "sfx_events": 0,
+    "checker": "loom",
+    "loom_checker": {
+      "ms": 48007,
+      "layout_samples": 248,
+      "texts": 285,
+      "contrast_checked": 223,
+      "errors": 0,
+      "warnings": 0
+    },
+    "nodes": 1600,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 31.1,
+        "b02": 40.2,
+        "b03": 27.9,
+        "b04": 24.6,
+        "b05": 24.6,
+        "b06": 24.6,
+        "b07": 27.9,
+        "b08": 27.9,
+        "b09": 27.9,
+        "b10": 27.9,
+        "b11": 27.9,
+        "b12": 27.9,
+        "b13": 31.1
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 13,
+      "lines_seen": 39,
+      "blank_beats": [],
+      "blank_measured": 11
+    },
+    "foreign": {
+      "measured_beats": 13,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 67,
+      "without_life": 0,
+      "no_entrance_words": 0
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.1227,
+        "b02": 0.0575,
+        "b03": 0.0358,
+        "b04": 0.0344,
+        "b05": 0.0465,
+        "b06": 0.0448,
+        "b07": 0.0439,
+        "b08": 0.0746,
+        "b09": 0.0792,
+        "b10": 0.0626,
+        "b11": 0.048,
+        "b12": 0.0688,
+        "b13": 0.1309
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 13,
+      "sharpness": {
+        "b01": 1.255,
+        "b02": 1.039,
+        "b03": 1.293,
+        "b04": 1.358,
+        "b05": 1.361,
+        "b06": 1.308,
+        "b07": 1.195,
+        "b08": 1.285,
+        "b09": 1.286,
+        "b10": 1.02,
+        "b11": 1.288,
+        "b12": 1.208,
+        "b13": 1.186
+      },
+      "blurred_beats": [],
+      "blur_measured": 13
+    },
+    "tone": {
+      "value_script_beats": 13
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\style-line-art-sol\\qa\\sheets\\b13.jpg"
+  ],
+  "build_hash": "4c86ddca222e1e2e"
+}

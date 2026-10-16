@@ -1,0 +1,216 @@
+{
+  "title": "Feedback That Changes What Happens Next",
+  "performance": "Before a feedback conversation, the viewer rewrites a vague or feelings-only comment into one that names a specific observed behaviour, its impact, and a concrete next step agreed with the other person that they can act on this week.",
+  "audience": {
+    "level": "practitioner",
+    "assumed_prior": "Has given and received feedback at work, and has softened or blurred a message to keep the peace. Needs no definition of feedback.",
+    "why": "Corporate practitioners get expertise reversal: one short worked rebuild, then decisions handed to them quickly, trusted with density.",
+    "motivation": "Say the hard thing once, keep the relationship, and see the behaviour actually change.",
+    "context": "Peers, reports or managers in ordinary office work. Feedback flows in any direction (F12), so the running example is between peers."
+  },
+  "genre": "procedural",
+  "strategy": {
+    "name": "worked_example_led",
+    "rationale": "The outcome is a rewrite skill. One running comment is shown failing, rebuilt piece by piece, then the viewer does the same to a new comment and to their own. The three-part shape is named only after it is seen (F11, F14).",
+    "signature_move": "Replay the vague comment, mark what is missing, add behaviour, add impact, ask their view, agree a next step, name the shape, hand the next comment to the viewer."
+  },
+  "misconceptions": [
+    {
+      "belief": "If I get the tone right, warm enough or blunt enough, the feedback will land.",
+      "why_tempting": "Delivery is the part we worry about most, and a pleasant conversation feels like success.",
+      "evidence_that_breaks_it": "In the hook the conversation goes well and nothing changes. Tone alone does not decide whether behaviour changes (F13); the missing piece is a clear next action (F6, F7).",
+      "refuted_in": "s1",
+      "source": "knowledge F13, brief through_line"
+    },
+    {
+      "belief": "A label like careless or unclear tells the person what to fix.",
+      "why_tempting": "The label feels like a summary of many moments, so it seems efficient.",
+      "evidence_that_breaks_it": "A label is a judgement, not a behaviour, so the person is left guessing which action caused it (F4, F2). Swapping the label for the seen behaviour gives them something they can recognise (F3).",
+      "refuted_in": "s2",
+      "source": "knowledge F4, F2, F3"
+    },
+    {
+      "belief": "Giving the next step myself is faster and clearer than asking for their view.",
+      "why_tempting": "It feels decisive and saves time in the conversation.",
+      "evidence_that_breaks_it": "A next step the person helped shape is more likely to be attempted (F10), and asking their view first raises agreement and follow-through (F9).",
+      "refuted_in": "s2",
+      "source": "knowledge F9, F10, brief must_cover"
+    }
+  ],
+  "arc": {
+    "hook": {
+      "kind": "scenario",
+      "sketch": "Imagine Sam tells a teammate, Jo, that their project updates could be clearer, and Jo nods, thanks them and feels fine. Next Friday, Jo's update is just as foggy.",
+      "on_screen_essence": "Good talk. Same update.",
+      "answered_by": "payoff",
+      "note": "Sam and Jo are invented, peers, gender and seniority neutral, framed with 'imagine'."
+    },
+    "promise": "In two minutes you will rewrite Sam's exact comment so that Jo's next update comes out different.",
+    "bridge_from_prior": "You have had this conversation, on one side or the other: it felt fine, and nothing changed. Start from that memory.",
+    "sections": [
+      {
+        "id": "s1",
+        "goal": "the viewer can explain why the original comment changed nothing, because it gives a feeling and a label but no observable behaviour or next action.",
+        "bloom": "understand",
+        "concepts": [
+          "Feelings or character judgements rarely tell someone what to repeat or stop (F1)",
+          "An opinion such as 'this needs to be better' names no next action (F6)",
+          "Warm or blunt tone does not by itself decide whether behaviour changes (F13)"
+        ],
+        "energy": "build",
+        "carrier": "character_scene",
+        "on_screen_change": "Sam's original line, said in the office, freezes as a speech bubble; the words 'could be clearer' and 'I feel a bit lost' dim one at a time as each is shown to give Jo nothing to act on.",
+        "example": "Say the original line is: 'Your updates could be clearer, I sometimes feel a bit lost.'",
+        "est_s": 25,
+        "recap_after": false
+      },
+      {
+        "id": "s2",
+        "goal": "the viewer can build a rewrite of the same comment by adding the observed behaviour, its impact, and a next step agreed after asking the other person's view.",
+        "bloom": "apply",
+        "concepts": [
+          "A behaviour is what was directly seen or heard, not an inference about intent (F2, F4)",
+          "Naming the seen behaviour gives the person something they can recognise (F3)",
+          "Impact on the work or team gives a reason to change (F5)",
+          "Ask their view before fixing the next step (F9, F10)",
+          "A next step is concrete when it could start this week without further clarification (F8)",
+          "Behaviour, impact, agreed next step: a common practitioner shape, not a branded model (F11)"
+        ],
+        "energy": "steady",
+        "carrier": "board_build",
+        "on_screen_change": "On one board, the vague sentence is rebuilt in three slots that fill one at a time: behaviour, then impact, then next step. Only after all three are filled do the three labels appear.",
+        "example": "Say the rewrite is: 'In Monday's update the deadline change was at the very bottom, and the team planned around the old date. How do you see it? Could you try putting changes in the first line of Friday's update?'",
+        "est_s": 35,
+        "recap_after": true,
+        "recap": "Seen behaviour, its impact, a next step you agree together."
+      },
+      {
+        "id": "s3",
+        "goal": "the viewer can spot which of the three parts is missing from a new short comment from a different workplace moment.",
+        "bloom": "analyze",
+        "concepts": [
+          "Diagnose a comment against the three parts (F11)",
+          "A missing part can be added without a new conversation (F14)"
+        ],
+        "energy": "peak",
+        "carrier": "quiz_card",
+        "on_screen_change": "A new comment appears on a card with three empty checkboxes beside it; after the pause, behaviour and impact tick, next step stays empty and then fills with a rewritten line.",
+        "example": "Say a colleague tells someone: 'In Tuesday's handover you skipped the open tickets list, so the night team chased issues blind.'",
+        "est_s": 20,
+        "recap_after": false
+      },
+      {
+        "id": "s4",
+        "goal": "the viewer can judge whether the next-step sentence for one piece of feedback they owe this week is concrete enough to start this week, and sharpen it before the conversation.",
+        "bloom": "evaluate",
+        "concepts": [
+          "Concrete next step: could start this week without further clarification (F8)",
+          "Leave room to ask their view (F9)",
+          "Feedback can go to a peer or a manager, not only down (F12)"
+        ],
+        "energy": "rest",
+        "carrier": "character_scene",
+        "on_screen_change": "Back in the office, Sam's rewritten line is said; cut to Jo's next update arriving with the change in its first line, a small tick appearing on it.",
+        "est_s": 27,
+        "recap_after": false,
+        "note": "Includes the payoff beat; calm close, no new content."
+      }
+    ],
+    "payoff": "Back to Sam and Jo: Sam gives the rewritten comment, Jo suggests how to flag changes, and Jo's next update arrives with the deadline change in its first line. The hook's 'good talk, same update' becomes 'good talk, different update'."
+  },
+  "practice_ladder": [
+    {
+      "stage": "worked",
+      "where": "s2",
+      "what": "Full rebuild of Sam's comment, every part shown and named after it appears."
+    },
+    {
+      "stage": "faded",
+      "where": "s3",
+      "what": "Viewer diagnoses a new comment that already has behaviour and impact; they supply only the missing part."
+    },
+    {
+      "stage": "independent",
+      "where": "s4",
+      "what": "Viewer drafts and tests the next-step sentence for real feedback they owe this week."
+    }
+  ],
+  "pacing": {
+    "requested_s": 120,
+    "target_duration_s": 120,
+    "words_per_minute": 140,
+    "slowdown_at": [
+      "s2: the agreed next step, the hardest and most often skipped part"
+    ],
+    "recall_moments": [
+      {
+        "kind": "quiz",
+        "after_section": "s2",
+        "placed_in": "s3",
+        "prompt": "Which part is missing from this comment: 'In Tuesday's handover you skipped the open tickets list, so the night team chased issues blind.'?",
+        "options": [
+          "A softer, kinder tone",
+          "An agreed next step",
+          "The behaviour that was seen"
+        ],
+        "answer": "An agreed next step",
+        "tempting_wrong": "A softer, kinder tone: the belief that tone decides whether feedback lands (F13). The comment already names the behaviour and its impact; it stops before saying what to do next (F6, F7).",
+        "reveal": "Say the rewrite adds: 'What would help next time? Could you paste the open list into the handover from tonight?'"
+      },
+      {
+        "kind": "recall_prompt",
+        "after_section": "s3",
+        "placed_in": "s4",
+        "prompt": "Before you draft: what three parts does the comment need?",
+        "answer": "The behaviour seen, its impact, a next step you agree together."
+      }
+    ]
+  },
+  "transfer_tasks": [
+    {
+      "task": "Pick one piece of feedback you owe someone this week, a peer, a report or your manager. Write the next-step sentence first, as a question that invites their view, and test it: could they start it this week without asking what you mean? Then add the behaviour you saw and its impact.",
+      "where": "s4"
+    }
+  ],
+  "framework_audit": {
+    "gagne": {
+      "attention": "arc.hook",
+      "inform_objectives": "arc.promise",
+      "recall_prior": "arc.bridge_from_prior",
+      "present": "arc.sections[0], arc.sections[1]",
+      "guidance": "arc.sections[1].on_screen_change and pacing.slowdown_at",
+      "practice": "pacing.recall_moments[0]",
+      "feedback": "pacing.recall_moments[0].reveal",
+      "assess": "pacing.recall_moments[0]",
+      "transfer": "transfer_tasks[0]"
+    },
+    "merrill": {
+      "problem": "arc.hook (Sam and Jo, good talk, no change)",
+      "activation": "arc.bridge_from_prior",
+      "demonstration": "arc.sections[1]",
+      "application": "arc.sections[2] and pacing.recall_moments[0]",
+      "integration": "transfer_tasks[0] and arc.payoff"
+    },
+    "mayer": {
+      "segmenting": "arc.sections[1] fills one slot at a time",
+      "signaling": "arc.sections[1].on_screen_change, labels appear after slots fill",
+      "coherence": "one running example, one check example, no tour (brief must_avoid)",
+      "pretraining": "arc.sections[0] establishes what a behaviour is not before the rebuild",
+      "spatial_contiguity": "labels sit on the board beside the slot they name"
+    },
+    "arcs": {
+      "attention": "arc.hook",
+      "relevance": "audience.motivation and transfer_tasks[0]",
+      "confidence": "practice_ladder worked to faded to independent",
+      "satisfaction": "arc.payoff"
+    },
+    "bloom_path": "understand -> apply -> analyze -> evaluate"
+  },
+  "flags": [
+    "OPEN-QUESTION: no house feedback framework or company language was supplied; the plan uses the generic behaviour, impact, next-step shape (F11), presented as a useful shape, not a named or validated model.",
+    "OPEN-QUESTION: the brief asked whether the example should be upward or between peers; the plan uses peers (F12) and the transfer task names peers, reports and managers. Requester can switch the direction without changing the arc.",
+    "ILLUSTRATIVE: Sam, Jo and all their lines, plus the handover check comment, are invented and framed with 'say' or 'imagine'; no real people or statements.",
+    "UNVERIFIED: section timings (est_s) are estimates at 140 wpm; actual length depends on the script.",
+    "CAVEAT-CARRY: F1, F3, F5, F7, F9, F10, F11, F13 are practitioner principles without cited controlled studies; the script should not present them as research findings or add numbers."
+  ]
+}

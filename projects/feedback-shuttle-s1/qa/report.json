@@ -1,0 +1,261 @@
+{
+  "ok": false,
+  "errors": [
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Repeat\"",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Confused\"",
+    "runtime text_overflow: text does not fit at the label floor (30px): \"Differently?\"",
+    "b11: 9.8s with nothing developing on screen (from 90.9s); reveal the next idea on its words",
+    "hf layout content_overlap @ 39.099: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 39.099: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 43.839: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 43.839: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 43.839: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]",
+    "hf layout content_overlap @ 43.839: Two text blocks overlap and may render unreadable. [#lm-world > div:nth-of-type(2) > svg:nth-of-type(1) > g:nth-]"
+  ],
+  "warnings": [
+    "compose: b06: camera pan between different worlds (shape -> reaction) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b07: camera pan between different worlds (reaction -> shape) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b09: camera pan between different worlds (shape -> doors) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "compose: b10: camera pan between different worlds (doors -> shape) would show the seam; using a dip (set join_in.continuous: true if they join up)",
+    "runtime unanchored_reveal: b03: \"kicker\" has no 'say' anchor; placed at 0% of the speech",
+    "b06: 7.1s static hold from 46.3s",
+    "b12: \"Why not B? It feels direct and honest, but it does\" is readable for 2.02s but 16 word(s) need 4.80s (reading floor: fast in, then hold; cut words or hold it longer)",
+    "variety: still_share = 0.667 is worse than the worst baseline lesson (0.636): it grew (beats: b04, b05, b08, b13)",
+    "variety: labels_over_objects_share = 0.833 is worse than the worst baseline lesson (0.5): it grew (beats: b04, b05, b07, b08, b10)",
+    "variety: one_radius_share = 0.4 is above the baseline median (0.2)",
+    "variety: the seed's camera habit is 'push' but 4 of 6 bespoke beats have no camera move",
+    "hf layout rotation_pivot_drift @ 138.986: Rotating element's bounding-box center drifts 1128px across rotation — it is not spinning about its own center (check transformOrigin/svgOrigin). [g.lm-in > g:nth-of-type(1)]",
+    "b07: no_entrance_words: element 'behaviour_label' (card) shows \"Timeline and blockers, same paragraph\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b10: no_entrance_words: element 'behaviour_label' (card) shows \"Timeline and blockers, same paragraph\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b10: no_entrance_words: element 'impact_label' (card) shows \"I couldn't tell what was blocking us\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b10: no_entrance_words: element 'question_label' (card) shows \"What got left out, from your side?\" from the beat's start with no entrance: reveal it on its word (m.reveal, m.pop) or it sits over whatever came before",
+    "b04: value script says 'mid' but the frames measure brightness 0.77 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b05: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b06: value script says 'dark' but the frames measure brightness 0.75 (band 0.00 to 0.40); regrade the beat or change the script",
+    "b07: value script says 'mid' but the frames measure brightness 0.74 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b08: value script says 'mid' but the frames measure brightness 0.73 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b09: value script says 'mid' but the frames measure brightness 0.76 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b10: value script says 'mid' but the frames measure brightness 0.74 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b11: value script says 'mid' but the frames measure brightness 0.78 (band 0.30 to 0.70); regrade the beat or change the script",
+    "b12: value script says 'mid' but the frames measure brightness 0.79 (band 0.30 to 0.70); regrade the beat or change the script",
+    "tone: lesson brightness 0.76 against the pack's reference 0.60 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson saturation 0.13 against the pack's reference 0.39 (wobbly_outline_grain_flat, +/- 0.15); a reference measured on TED-Ed films, not a target: look at the frames before changing anything",
+    "tone: lesson light_share 0.93 against the pack's reference 0.37 (wobbly_outline_grain_flat, +/- 0.25); a reference measured on TED-Ed films, not a target: look at the frames before changing anything"
+  ],
+  "stats": {
+    "reading_floor_short": 1,
+    "double_exposures": 0,
+    "static_holds": [
+      {
+        "beat": "b01",
+        "max_static_s": 0.0
+      },
+      {
+        "beat": "b02",
+        "max_static_s": 2.92
+      },
+      {
+        "beat": "b03",
+        "max_static_s": 4.01
+      },
+      {
+        "beat": "b04",
+        "max_static_s": 2.51
+      },
+      {
+        "beat": "b05",
+        "max_static_s": 4.4
+      },
+      {
+        "beat": "b06",
+        "max_static_s": 7.13
+      },
+      {
+        "beat": "b07",
+        "max_static_s": 3.8
+      },
+      {
+        "beat": "b08",
+        "max_static_s": 2.04
+      },
+      {
+        "beat": "b09",
+        "max_static_s": 2.69
+      },
+      {
+        "beat": "b10",
+        "max_static_s": 3.72,
+        "declared": "rest"
+      },
+      {
+        "beat": "b11",
+        "max_static_s": 9.81
+      },
+      {
+        "beat": "b12",
+        "max_static_s": 4.39
+      },
+      {
+        "beat": "b13",
+        "max_static_s": 3.36
+      },
+      {
+        "beat": "b14",
+        "max_static_s": 0.0
+      }
+    ],
+    "allocation": {
+      "avatar": 0.152,
+      "template": 0.419,
+      "motion": 0.403,
+      "hybrid": 0.026,
+      "motion_effective": 0.416
+    },
+    "elements": {
+      "b01": 5,
+      "b02": 7,
+      "b03": 4,
+      "b04": 4,
+      "b06": 4,
+      "b07": 4,
+      "b08": 2,
+      "b09": 4,
+      "b10": 6,
+      "b11": 5,
+      "b12": 5,
+      "b13": 7,
+      "b14": 7
+    },
+    "variety": {
+      "pointer_pill_share": 0.0,
+      "hero_icon_rate": 0.0,
+      "pop_settle_share": 0.3,
+      "wallpaper_share": 0.0,
+      "template_share": 0.286,
+      "classic_share": 0.0,
+      "one_radius_share": 0.4,
+      "still_share": 0.667,
+      "labels_over_objects_share": 0.833,
+      "one_world_share": 0.333,
+      "lines_per_s": 3.95
+    },
+    "sfx_events": 0,
+    "sample_text_leaks": 0,
+    "vocabulary_leaks": 0,
+    "screen_text": {
+      "min_text_px": {
+        "b01": 34.4,
+        "b02": 32.8,
+        "b03": 34.4,
+        "b04": 51.6,
+        "b05": 49.2,
+        "b06": 32.8,
+        "b07": 49.2,
+        "b08": 49.2,
+        "b09": 41.8,
+        "b10": 49.2,
+        "b11": 34.4,
+        "b12": 41.8,
+        "b13": 41.8,
+        "b14": 34.4
+      },
+      "off_frame_beats": [],
+      "off_frame_baselined": [],
+      "measured_beats": 14,
+      "lines_seen": 62,
+      "blank_beats": [],
+      "blank_measured": 12
+    },
+    "foreign": {
+      "measured_beats": 14,
+      "foreign_beats": [],
+      "max_px": 0
+    },
+    "records": {
+      "elements": 64,
+      "without_life": 0,
+      "no_entrance_words": 4
+    },
+    "film": {
+      "edge_density": {
+        "b01": 0.0331,
+        "b02": 0.0612,
+        "b03": 0.032,
+        "b04": 0.0428,
+        "b05": 0.0334,
+        "b06": 0.038,
+        "b07": 0.0325,
+        "b08": 0.0491,
+        "b09": 0.0381,
+        "b10": 0.0474,
+        "b11": 0.0711,
+        "b12": 0.071,
+        "b13": 0.0758,
+        "b14": 0.05
+      },
+      "sparse_beats": 0,
+      "repeated_frames": 0,
+      "thresholds": {
+        "empty_edges": 0.003,
+        "sparse_edges": 0.02,
+        "same_frame": 1.5,
+        "text_min_px": 18,
+        "text_warn_px": 26,
+        "scale_warn": 2.0,
+        "rest_max_s": 20.0,
+        "punctuation_max_s": 1.2,
+        "max_hues": 2,
+        "hue_min_share": 0.015,
+        "tone_tol": 0.15,
+        "foreign_px": 300,
+        "blur_sharp": 0.3,
+        "blur_min_range": 24
+      },
+      "measured_beats": 14,
+      "sharpness": {
+        "b01": 1.051,
+        "b02": 0.859,
+        "b03": 0.957,
+        "b04": 0.907,
+        "b05": 0.892,
+        "b06": 1.3,
+        "b07": 1.03,
+        "b08": 0.721,
+        "b09": 1.031,
+        "b10": 0.725,
+        "b11": 1.031,
+        "b12": 0.942,
+        "b13": 0.707,
+        "b14": 0.979
+      },
+      "blurred_beats": [],
+      "blur_measured": 14
+    },
+    "tone": {
+      "value_script_beats": 14,
+      "tone_vs_reference": {
+        "brightness": 0.757,
+        "saturation": 0.133,
+        "dark_share": 0.0,
+        "light_share": 0.929
+      }
+    }
+  },
+  "sheets": [
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b01.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b02.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b03.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b04.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b05.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b06.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b07.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b08.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b09.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b10.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b11.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b12.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b13.jpg",
+    "C:\\Users\\Admin\\Desktop\\Video-Engine\\projects\\feedback-shuttle-s1\\qa\\sheets\\b14.jpg"
+  ],
+  "build_hash": "fa96a465fb8d2ea8"
+}

@@ -1,0 +1,102 @@
+{
+  "scope_note": "Focus on distinguishing urgent from important tasks and using the quadrants to prioritize daily work.",
+  "not_claimed": [
+    "Time management guarantees that all tasks will be completed.",
+    "Being constantly busy means a person is highly productive.",
+    "Multitasking is an effective way to complete important tasks faster."
+  ],
+  "review": {
+    "status": "approved",
+    "by": "agent, unattended bench (topic mode)",
+    "note": "Initial draft focusing on the Eisenhower framework as inferred from the brief."
+  },
+  "facts": [
+    {
+      "confidence": "established",
+      "terms": [
+        "urgent"
+      ],
+      "statement": "Urgent tasks require immediate action and often relate to the priorities of other people.",
+      "kind": "definition",
+      "id": "F1"
+    },
+    {
+      "terms": [
+        "important"
+      ],
+      "kind": "definition",
+      "confidence": "established",
+      "id": "F2",
+      "statement": "Important tasks contribute directly to long-term goals and core values."
+    },
+    {
+      "confidence": "established",
+      "terms": [
+        "Eisenhower framework"
+      ],
+      "statement": "The Eisenhower framework divides tasks into 4 distinct categories based on urgency and importance.",
+      "numbers": [
+        "4"
+      ],
+      "id": "F3",
+      "kind": "definition"
+    },
+    {
+      "statement": "Quadrant 1 includes tasks that are both urgent and important, which must be managed immediately.",
+      "numbers": [
+        "1"
+      ],
+      "id": "F4",
+      "confidence": "established",
+      "kind": "practice"
+    },
+    {
+      "kind": "practice",
+      "id": "F5",
+      "statement": "Quadrant 2 contains tasks that are important but not urgent, which should be scheduled for a specific time.",
+      "confidence": "established",
+      "numbers": [
+        "2"
+      ]
+    },
+    {
+      "confidence": "established",
+      "id": "F6",
+      "statement": "Quadrant 3 involves tasks that are urgent but not important, which are best delegated to others.",
+      "numbers": [
+        "3"
+      ],
+      "kind": "practice"
+    },
+    {
+      "statement": "Quadrant 4 consists of tasks that are neither urgent nor important, which should be eliminated.",
+      "kind": "practice",
+      "id": "F7",
+      "numbers": [
+        "4"
+      ],
+      "confidence": "established"
+    },
+    {
+      "caveat": "This tendency varies among individuals and contexts, but is a common cognitive bias.",
+      "kind": "finding",
+      "id": "F8",
+      "confidence": "mainstream",
+      "reference_hint": "Zhu, Yang, and Hsee (2018) on the mere urgency effect",
+      "statement": "People often have a psychological tendency to prioritize urgent tasks with short completion windows over important tasks."
+    },
+    {
+      "id": "F9",
+      "confidence": "established",
+      "statement": "Politely declining a low-priority request protects time for more important work.",
+      "kind": "practice"
+    },
+    {
+      "confidence": "established",
+      "id": "F10",
+      "kind": "example",
+      "statement": "A practical way to say no is to clearly state that current project commitments prevent taking on new tasks."
+    }
+  ],
+  "topic": "Time Management: The Eisenhower Framework"
+}

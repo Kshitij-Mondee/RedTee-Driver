@@ -1,0 +1,821 @@
+{
+  "style": "cinematic-noir",
+  "concept": "One night, one key light: follow a leaked password as a lit key card through a dark building of doors, watch which doors it opens, then replay the same night with the two habits in place and watch every door hold.",
+  "world": {
+    "stations": [
+      {
+        "id": "office",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "corridor",
+        "x": 2600,
+        "y": 0
+      },
+      {
+        "id": "inside",
+        "parent": "corridor",
+        "rect": {
+          "x": 1180,
+          "y": 260,
+          "w": 480,
+          "h": 270
+        }
+      },
+      {
+        "id": "hall",
+        "x": 5200,
+        "y": 0
+      },
+      {
+        "id": "bedroom",
+        "x": 2600,
+        "y": 1600
+      },
+      {
+        "id": "morning",
+        "x": 5200,
+        "y": 1600
+      }
+    ]
+  },
+  "story": {
+    "cast": [
+      {
+        "name": "Dana",
+        "note": "one fictional employee, never drawn as a figure: shown only through her screen, her phone, her desk (no S3 noir cast exists yet, style guide section 8)"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "id": "keycard",
+      "what": "the password as a small lit key card, the one amber thing in the night: lifted out of the screen, copied onto a list, tried at doors; a fresh card per door in the replay",
+      "kind": "explain",
+      "beats": [
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b10",
+        "b11",
+        "b14"
+      ]
+    },
+    {
+      "id": "doors",
+      "what": "systems as doors in a dark wall: Shop and Work side by side, a corridor that opens one door after another, a heavier last door; a second lock under the first for MFA",
+      "kind": "explain",
+      "beats": [
+        "b03",
+        "b04",
+        "b05",
+        "b06",
+        "b08",
+        "b09",
+        "b10",
+        "b11",
+        "b14"
+      ]
+    },
+    {
+      "id": "login_screen",
+      "what": "the 02:00 work sign-in on a monitor in a dark office, opener and payoff: Login successful at the open, Access denied in the replay",
+      "kind": "callback",
+      "beats": [
+        "b02",
+        "b14"
+      ]
+    },
+    {
+      "id": "bedside_phone",
+      "what": "Dana's phone on a dark nightstand: Approve? prompts, Deny pressed, MFA on in the morning, one denied prompt in the replay",
+      "kind": "explain",
+      "beats": [
+        "b11",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    },
+    {
+      "id": "dip_join",
+      "what": "join material: slow camera moves inside the night; a dip through black for a new place or time, a hard cut at a section boundary",
+      "kind": "join",
+      "beats": [
+        "b03",
+        "b12",
+        "b13",
+        "b14"
+      ]
+    }
+  ],
+  "value_script": [
+    {
+      "from": "b01",
+      "band": "dark",
+      "why": "the cold open: one key light on the screen"
+    },
+    {
+      "from": "b03",
+      "band": "mid",
+      "why": "rewind to the evening the password was reused, a touch warmer"
+    },
+    {
+      "from": "b04",
+      "band": "dark",
+      "why": "the mechanism: leaked, tried, spread; light spilling through doors is the harm"
+    },
+    {
+      "from": "b13",
+      "band": "light",
+      "why": "morning light on the desk: the actions, the lesson's one lift"
+    },
+    {
+      "from": "b14",
+      "band": "dark",
+      "why": "the opening night replayed, calm: every door shut"
+    }
+  ],
+  "kit": {
+    "parts": [
+      {
+        "id": "keycard",
+        "what": "the password as a physical key card about 220 x 140 px at its hero size, a notched edge (its 'teeth' are the password), a faint amber glow under 200 px across: the one accent in the frame. States: lit (amber edge and glow), copy (a duller duplicate, muted edge, for the list and the stream), dim (rejected: glow off), fresh (a different notch pattern, ink edge, issued by the vault). Drawable at several sizes and rotations.",
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b10",
+          "b11",
+          "b13",
+          "b14"
+        ]
+      },
+      {
+        "id": "door",
+        "what": "a door set in a dark wall, seen square on, surface and surface2 with a rim on the key side, a lock plate with a card slot, an optional small name plate (Inter, ink, 30 px or more). States: shut, turning (the card in the slot, the lock turns), cracked (open a hand's width, a hard wedge of ink key light spilling onto the floor), forced (askew on its hinges, a splintered edge, a neg mark), refused (the card in the slot does not turn, a small neg cross on the plate), second_lock (a second lock plate below the first, shut, with a small phone glyph waiting). A variant 'heavy' (wider, banded, a heavier lock) for the privileged last door. Must work at hero size (one door 360 px wide) and in a receding row (a corridor of 6 to 8 doors in perspective).",
+        "beats": [
+          "b02",
+          "b03",
+          "b04",
+          "b05",
+          "b06",
+          "b08",
+          "b09",
+          "b10",
+          "b11",
+          "b14"
+        ]
+      },
+      {
+        "id": "login_screen",
+        "what": "a monitor on a desk in a dark office, seen from a three-quarter front so its screen reads, a warm key light from a desk lamp (R2b), the screen a dark sign-in pane: work sign-in title, a username field reading dana, a password field that fills with dots, a status line. States: empty, typing (dots fill), success (status 'Login successful' in ink with a quiet tick), denied (status 'Access denied' in ink on a pos underline: the good outcome here). A clock reading 02:00 sits on the screen's top bar. Screen text 30 px or larger on screen.",
+        "beats": [
+          "b02",
+          "b14"
+        ]
+      },
+      {
+        "id": "bedside_phone",
+        "what": "a phone lying on a nightstand in a dark bedroom (a nightstand edge, a lamp off, a dark pillow edge at most: no person), screen up and tilted so it reads. States: dark, prompt (screen lights cool: 'Approve?' title with Approve and Deny buttons, Deny drawn so it can be the accent), denied (Deny pressed, then a small 'Reported' line in pos), mfa_on (a calm screen in daylight: 'MFA on' with a tick). Also drawable without the nightstand (on a desk, or as a small glyph on a lock). Prompt words 30 px or larger after scale.",
+        "beats": [
+          "b11",
+          "b12",
+          "b13",
+          "b14"
+        ]
+      },
+      {
+        "id": "password_vault",
+        "what": "a small password manager as a closed safe or vault box, surface with an ink rim, that slides out a fresh key card for each door (one card per door, each with its own notch pattern). States: closed, issuing (a card slides out), done. The label 'password manager' is drawn by the scene, not the part.",
+        "beats": [
+          "b10",
+          "b13"
+        ]
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "beat": "b01",
+      "kind": "avatar",
+      "station": "office",
+      "join_in": {
+        "type": "cut"
+      },
+      "props": {
+        "kicker": "Two in the morning",
+        "title": "Right password. So who logged in?",
+        "card": {
+          "title": "02:00",
+          "lines": [
+            "Login successful",
+            "Dana is asleep"
+          ]
+        }
+      }
+    },
+    {
+      "beat": "b02",
+      "kind": "bespoke",
+      "station": "office",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "keycard",
+      "design": {
+        "treatment": "the cold open picture: a night office on a depth stage, one desk lamp key light on a monitor that shows the 02:00 sign-in already succeeded; then the password becomes an object: a lit key card rises out of the password field into the dark and the camera follows it right toward a far wall of closed doors at the back of the stage; push 0.06, drift -26",
+        "why_motion": "turning the password into a thing the viewer can follow is the lesson's device",
+        "elements": [
+          "night_office",
+          "login_screen",
+          "login_status",
+          "clock",
+          "keycard",
+          "far_doors"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Nobody broke in",
+            "element": "login_status",
+            "action": "02:00 on the top bar, the dots filled, 'Login successful' under the key light; nothing forced, nothing broken",
+            "motion": "light on"
+          },
+          {
+            "t_anchor": "Follow that one password",
+            "element": "keycard",
+            "action": "the card lifts out of the password field and floats right, its amber edge the brightest thing",
+            "motion": "slow travel"
+          },
+          {
+            "t_anchor": "two habits",
+            "element": "far_doors",
+            "action": "a row of closed doors appears far back in the dark, the card turning toward them",
+            "motion": "push toward the doors"
+          }
+        ],
+        "continuity": "b03 is a camera move to the corridor, where the same keycard (kit) meets the doors; b14 replays this exact shot"
+      }
+    },
+    {
+      "beat": "b03",
+      "kind": "bespoke",
+      "station": "corridor",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "keycard",
+      "design": {
+        "treatment": "rewind to dusk: the wall of doors lit slightly warmer (mid band), two doors centred side by side with name plates Shop and Work, the card fitting each in turn; plain, no blame",
+        "why_motion": "one card fitting two doors shows reuse as a picture",
+        "elements": [
+          "door_wall",
+          "door_shop",
+          "door_work",
+          "keycard",
+          "rewind_tag"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Months ago",
+            "element": "rewind_tag",
+            "action": "a small accent4 kicker 'Months ago' on dark field top left",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "used one password twice",
+            "element": "keycard",
+            "action": "the card appears between the two doors",
+            "motion": "settle"
+          },
+          {
+            "t_anchor": "shopping site",
+            "element": "door_shop",
+            "action": "the card slides into the Shop lock, it turns, the card withdraws",
+            "motion": "turning state"
+          },
+          {
+            "t_anchor": "at work",
+            "element": "door_work",
+            "action": "the same card into the Work lock, it turns, withdraws",
+            "motion": "turning state"
+          }
+        ],
+        "continuity": "b04 to b06 continue here: hold door_wall, door_shop, door_work and keycard; the rewind_tag leaves at the end"
+      }
+    },
+    {
+      "beat": "b04",
+      "kind": "bespoke",
+      "station": "corridor",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "keycard",
+      "held": [
+        "door_wall",
+        "door_shop",
+        "door_work",
+        "keycard"
+      ],
+      "design": {
+        "treatment": "back to night (dark band): the Shop door is forced in shadow; the card is copied onto a long list sheet of other copy cards that slides away out of frame; the Work door stays dark and untouched",
+        "why_motion": "a breach elsewhere becoming a list that travels is the sequence the learner must see",
+        "elements": [
+          "door_wall",
+          "door_shop",
+          "door_work",
+          "keycard",
+          "breach_tag",
+          "list_sheet"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "shopping site is breached",
+            "element": "door_shop",
+            "action": "the Shop door goes to forced; a neg tag 'Shop: breached' on the dark side with a lead",
+            "motion": "state change"
+          },
+          {
+            "t_anchor": "never controlled it",
+            "element": "door_work",
+            "action": "the Work door stays shut and dim, untouched",
+            "motion": "hold"
+          },
+          {
+            "t_anchor": "lands in a list",
+            "element": "list_sheet",
+            "action": "a copy of the card drops onto a long sheet of copy cards",
+            "motion": "drop and settle"
+          },
+          {
+            "t_anchor": "Lists get shared",
+            "element": "list_sheet",
+            "action": "the sheet slides right and out, duplicated twice as it goes",
+            "motion": "slide"
+          }
+        ],
+        "continuity": "b05 holds door_wall, door_shop, door_work and keycard; door_shop stays forced; breach_tag and list_sheet leave"
+      }
+    },
+    {
+      "beat": "b05",
+      "kind": "bespoke",
+      "station": "corridor",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "term",
+      "held": [
+        "door_wall",
+        "door_shop",
+        "door_work",
+        "keycard"
+      ],
+      "design": {
+        "treatment": "the wall extends into a row of login doors; a machine-steady stream of copy cards is tried at each door, one after another, at an even indifferent rhythm; the term appears once while the stream runs",
+        "why_motion": "the automation is the definition: the even rhythm says no person chose her",
+        "elements": [
+          "door_wall",
+          "door_row",
+          "card_stream",
+          "door_shop",
+          "door_work",
+          "keycard",
+          "term"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "tries every leaked pair",
+            "element": "card_stream",
+            "action": "copy cards slide in from the left and stop at each lock in turn, each refused, steady tempo",
+            "motion": "metronomic loop"
+          },
+          {
+            "t_anchor": "credential stuffing",
+            "element": "term",
+            "action": "'credential stuffing' in ink, title role, on dark field above the row with an accent underline",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "Nobody chose Dana",
+            "element": "keycard",
+            "action": "Dana's lit card arrives in the stream like any other, heading for the Work door",
+            "motion": "travel"
+          }
+        ],
+        "continuity": "b06 holds door_wall, door_work, keycard and card_stream at rest; term leaves"
+      }
+    },
+    {
+      "beat": "b06",
+      "kind": "bespoke",
+      "station": "corridor",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "keycard",
+      "held": [
+        "door_wall",
+        "door_work",
+        "keycard",
+        "card_stream"
+      ],
+      "design": {
+        "treatment": "push in on the Work door: Dana's card turns the lock, the door opens a crack and a hard wedge of light spills across the floor; hold on the open door",
+        "why_motion": "the one turn that works is the consequence of reuse",
+        "elements": [
+          "door_wall",
+          "door_work",
+          "keycard",
+          "card_stream",
+          "spill",
+          "reused_tag"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "one reason",
+            "element": "door_work",
+            "action": "the card goes into the slot and turns",
+            "motion": "turning state"
+          },
+          {
+            "t_anchor": "password was reused",
+            "element": "spill",
+            "action": "the door cracks open, a wedge of ink light falls on the floor",
+            "motion": "light on"
+          },
+          {
+            "t_anchor": "reused",
+            "element": "reused_tag",
+            "action": "a neg tag 'reused' on the dark side, lead to the card",
+            "motion": "tag wipe"
+          }
+        ],
+        "continuity": "b07 zooms through the open crack into the nested station 'inside'"
+      }
+    },
+    {
+      "beat": "b07",
+      "kind": "bespoke",
+      "station": "inside",
+      "join_in": {
+        "type": "zoom"
+      },
+      "accent_on": "row_0200",
+      "intent": "rest",
+      "design": {
+        "treatment": "inside the door: a dark security desk, a lit sign-in log pane (Loom.ui doc or a bespoke table, 1100 px or wider, on a lit plane) listing sign-ins at 08:57, 12:14, 17:40 and 02:00, all user dana, all 'success', all the same ink; nothing flags the 02:00 row",
+        "why_motion": "the sameness is the point: a valid login looks normal",
+        "elements": [
+          "security_desk",
+          "log_pane",
+          "row_0200"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "looks like Dana",
+            "element": "log_pane",
+            "action": "the rows build in reading order",
+            "motion": "ui build"
+          },
+          {
+            "t_anchor": "harder to notice",
+            "element": "row_0200",
+            "action": "the 02:00 row gets a faint accent mark that fades again; no alert appears",
+            "motion": "slow mark sweep then fade"
+          }
+        ],
+        "continuity": "camera to the hall station next; nothing held"
+      }
+    },
+    {
+      "beat": "b08",
+      "kind": "bespoke",
+      "station": "hall",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "term",
+      "design": {
+        "treatment": "a long hall of doors receding in perspective from the first open door; one door after another opens in sequence down the line, each spilling its wedge of light; at the end a heavier banded door is tried",
+        "why_motion": "the light spreading door to door is lateral movement",
+        "elements": [
+          "hall_set",
+          "hall_doors",
+          "heavy_door",
+          "term",
+          "spread_light"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "other systems",
+            "element": "hall_doors",
+            "action": "doors 2, 3, 4 crack open in sequence, light wedges joining",
+            "motion": "staggered state change"
+          },
+          {
+            "t_anchor": "lateral movement",
+            "element": "term",
+            "action": "'lateral movement' in ink, title role, on the dark upper third with an accent underline",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "hunt for more access",
+            "element": "heavy_door",
+            "action": "the heavy door at the end is tried: its lock rattles, a neg edge",
+            "motion": "small push toward it"
+          }
+        ],
+        "continuity": "b09 continues: hold hall_set, hall_doors and heavy_door; the term leaves"
+      }
+    },
+    {
+      "beat": "b09",
+      "kind": "bespoke",
+      "station": "hall",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "mark_login",
+      "held": [
+        "hall_set",
+        "hall_doors",
+        "heavy_door"
+      ],
+      "intent": "process_hold",
+      "design": {
+        "treatment": "pull back wide on the hall of open doors; two numbered tags mark the two places the night could have stopped: 1 'Leaked password at the login' on the first door, 2 'Correct password, wrong person' on the moment past it; a quiet pause bar for the 2 s question",
+        "why_motion": "a held, finished frame for the viewer to choose",
+        "elements": [
+          "hall_set",
+          "hall_doors",
+          "heavy_door",
+          "mark_login",
+          "mark_wrong_person",
+          "question",
+          "pause_bar"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "many doors",
+            "element": "hall_set",
+            "action": "slow pull back to show every open door",
+            "motion": "dolly out"
+          },
+          {
+            "t_anchor": "which habit",
+            "element": "mark_login",
+            "action": "tag 1 on the first door, lead to its lock",
+            "motion": "tag wipe"
+          },
+          {
+            "t_anchor": "which door",
+            "element": "mark_wrong_person",
+            "action": "tag 2 beside it; the question 'Which habit shuts which door?' on dark field; pause bar runs through the silence",
+            "motion": "tag wipe, pause bar"
+          }
+        ],
+        "continuity": "camera back to the corridor for the replay"
+      }
+    },
+    {
+      "beat": "b10",
+      "kind": "bespoke",
+      "station": "corridor",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "vault",
+      "design": {
+        "treatment": "replay the leak with a different card per door: the vault issues a fresh card to Shop and another to Work; the Shop card is copied as before and tried at the Work door: refused, it does not turn",
+        "why_motion": "seeing the copied card fail at Work is the habit's proof",
+        "elements": [
+          "door_wall",
+          "door_shop",
+          "door_work",
+          "vault",
+          "card_shop",
+          "card_work",
+          "label_unique",
+          "label_manager"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "unique password for every account",
+            "element": "vault",
+            "action": "the vault slides out two different cards, one to each door; tag 'unique password'",
+            "motion": "issue"
+          },
+          {
+            "t_anchor": "opens only that site",
+            "element": "door_work",
+            "action": "the Shop card is copied and tried at Work: refused state, dims",
+            "motion": "turning fails"
+          },
+          {
+            "t_anchor": "password manager",
+            "element": "label_manager",
+            "action": "label 'password manager' beside the vault, lead to it",
+            "motion": "tag wipe"
+          }
+        ],
+        "continuity": "b11 holds door_wall and door_work"
+      }
+    },
+    {
+      "beat": "b11",
+      "kind": "bespoke",
+      "station": "corridor",
+      "join_in": {
+        "type": "continue"
+      },
+      "accent_on": "second_lock",
+      "held": [
+        "door_wall",
+        "door_work"
+      ],
+      "design": {
+        "treatment": "push in on the Work door: a stolen card turns the first lock, but a second lock below stays shut, a small phone glyph on it waiting for a code; the door holds",
+        "why_motion": "the first lock turning and the door still holding is MFA in one picture",
+        "elements": [
+          "door_wall",
+          "door_work",
+          "keycard",
+          "second_lock",
+          "term"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "multi-factor authentication",
+            "element": "second_lock",
+            "action": "a second lock plate appears below the first",
+            "motion": "light on"
+          },
+          {
+            "t_anchor": "or MFA",
+            "element": "term",
+            "action": "'MFA' in ink, title role, on dark field",
+            "motion": "unmask"
+          },
+          {
+            "t_anchor": "something more",
+            "element": "keycard",
+            "action": "the stolen card turns the first lock",
+            "motion": "turning state"
+          },
+          {
+            "t_anchor": "not enough",
+            "element": "second_lock",
+            "action": "the second lock stays shut; the door does not move",
+            "motion": "hold"
+          }
+        ],
+        "continuity": "a camera move down to the bedroom: the second lock's phone glyph is answered by the phone there"
+      }
+    },
+    {
+      "beat": "b12",
+      "kind": "bespoke",
+      "station": "bedroom",
+      "join_in": {
+        "type": "camera"
+      },
+      "accent_on": "deny_button",
+      "design": {
+        "treatment": "the dark bedroom: the phone on the nightstand lights cool with an Approve? prompt, again and again (three prompts stacking); Deny is pressed and a 'Reported' line appears; a 1 s pause for recall",
+        "why_motion": "the repetition is the attack; the press is the move",
+        "elements": [
+          "bedroom_set",
+          "phone",
+          "prompt_stack",
+          "deny_button",
+          "reported"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "approval requests",
+            "element": "prompt_stack",
+            "action": "first Approve? prompt lights the screen",
+            "motion": "light on"
+          },
+          {
+            "t_anchor": "again and again",
+            "element": "prompt_stack",
+            "action": "two more prompts stack, the screen pulsing on each",
+            "motion": "stagger"
+          },
+          {
+            "t_anchor": "did not start",
+            "element": "deny_button",
+            "action": "Deny carries the accent",
+            "motion": "glow on"
+          },
+          {
+            "t_anchor": "Deny it, and report it",
+            "element": "reported",
+            "action": "Deny pressed, the stack clears, 'Reported' in pos",
+            "motion": "press then reveal"
+          }
+        ],
+        "continuity": "cut to morning"
+      }
+    },
+    {
+      "beat": "b13",
+      "kind": "bespoke",
+      "station": "morning",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "action_report",
+      "design": {
+        "treatment": "morning light (the lesson's light band) on Dana's desk, a lit plane across it; three objects in a row, each lit as it is named with a plain label: a fresh key card 'Replace reused passwords', the phone in mfa_on state 'Turn on MFA', a sent report note 'Report odd prompts'",
+        "why_motion": "the actions arrive one by one as she says them",
+        "elements": [
+          "morning_desk",
+          "fresh_card",
+          "phone_mfa",
+          "action_report",
+          "labels"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "replace any work password",
+            "element": "fresh_card",
+            "action": "a fresh card comes out of the vault onto the desk; label",
+            "motion": "slide and settle"
+          },
+          {
+            "t_anchor": "Turn on MFA",
+            "element": "phone_mfa",
+            "action": "the phone shows MFA on; label",
+            "motion": "light on"
+          },
+          {
+            "t_anchor": "Report odd prompts",
+            "element": "action_report",
+            "action": "a report note slides off toward the security team; label in accent",
+            "motion": "slide"
+          }
+        ],
+        "continuity": "a cut back to the b02 office at night"
+      }
+    },
+    {
+      "beat": "b14",
+      "kind": "bespoke",
+      "station": "office",
+      "join_in": {
+        "type": "cut"
+      },
+      "accent_on": "login_status",
+      "intent": "callback",
+      "design": {
+        "treatment": "the b02 shot again, 02:00, one key light: the leaked card is tried and fits nothing, an inset of the dark nightstand phone lights once and is denied, the screen reads Access denied; the far doors stay dark and shut; slow pull back",
+        "why_motion": "the same night with nothing opening is the payoff",
+        "elements": [
+          "night_office",
+          "login_screen",
+          "login_status",
+          "clock",
+          "keycard",
+          "bedroom_inset",
+          "far_doors"
+        ],
+        "beat_sheet": [
+          {
+            "t_anchor": "Replay the night",
+            "element": "clock",
+            "action": "02:00 warms on as in b02",
+            "motion": "light on"
+          },
+          {
+            "t_anchor": "fits nothing",
+            "element": "keycard",
+            "action": "the copy card dims at the field; nothing turns",
+            "motion": "dim"
+          },
+          {
+            "t_anchor": "denied, and reported",
+            "element": "bedroom_inset",
+            "action": "the inset phone lights once, Deny, Reported",
+            "motion": "light on then off"
+          },
+          {
+            "t_anchor": "Every door stays shut",
+            "element": "login_status",
+            "action": "Access denied on the screen; far doors dark; pull back",
+            "motion": "dolly out"
+          }
+        ],
+        "continuity": "the last beat"
+      }
+    }
+  ]
+}

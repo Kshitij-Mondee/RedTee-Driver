@@ -1,0 +1,1514 @@
+{
+ "style": "story-cartoon",
+ "concept": "One meeting room drawn like a small paper stage set, five people behind one long table under a locked camera, and four private doubts (a checklist, a headset, a sealed envelope, a calendar page) folded in bubbles only the viewer can see: in the first meeting they stay folded while every hand goes up, weeks later they come true on the same objects, and in the rewound meeting each habit turns one doubt into a written note on the table, until the opening frame returns with all four said. Moving right is forward in time (the room, weeks later, the viewer's week); below is the naming page; the viewer's week holds Dana's room inside one meeting slot.",
+ "chrome": {
+  "section_labels": false
+ },
+ "poster": {
+  "beat": "b05"
+ },
+ "story": {
+  "metaphor": "none forced (soft skills): the meeting itself is the stage, and each private doubt is drawn as an object in a folded bubble only the viewer sees",
+  "setting": "one meeting room round one long table, a board on the left wall, a window on the right; once weeks later on a dark field; once the viewer's own week, which holds the room in one meeting slot",
+  "arc": "the vote first, then rewind to how it happened (leader first, a fast yes, four hidden doubts, each thinks they are alone, hands up); the doubts come true; the name; rewind; the same meeting with four habits, each bringing one doubt to the table; your turn; your week; the opening frame with the doubts on the table",
+  "cast": [
+   {
+    "name": "Dana",
+    "rig": "tess",
+    "role": "the leader: reasonable and well meaning, never a villain; the only named person"
+   },
+   {
+    "name": "the fast yes",
+    "rig": "pip",
+    "role": "the colleague beside Dana who agrees first; privately doubts the date"
+   },
+   {
+    "name": "the testing colleague",
+    "rig": "tess",
+    "role": "privately knows testing is not done"
+   },
+   {
+    "name": "the support colleague",
+    "rig": "pip",
+    "role": "privately knows support is not trained; the named critic in the replay"
+   },
+   {
+    "name": "the person by the window",
+    "rig": "tess",
+    "role": "privately knows the client has not seen it"
+   }
+  ]
+ },
+ "motifs": [
+  {
+   "name": "the four doubts",
+   "desc": "calendar page (the date), checklist (testing), headset (support), sealed envelope (client): folded in bubbles b01, seen b05, folded b06, sealed b07, failing b08 (motif 'doubts'), hanging b09, glimpsed b12, notes on the table b13 to b17, notes in the payoff b21"
+  },
+  {
+   "name": "the board",
+   "desc": "the team's shared surface, a Loom.slot whose words change on the spoken word: Dana's goal b03, blank b13, the premortem page b16, 'Nobody got braver' b17, the next meeting's prompt b19, the plain lesson b21"
+  },
+  {
+   "name": "the stamp and the plan",
+   "desc": "Agreed stamp b02 and b07, peeled b03, lifted in the rewind b12; the plan sheet drifts towards the board b04, comes back b12, becomes the amended plan b17 and lies where the stamp was in b21"
+  },
+  {
+   "name": "the room",
+   "desc": "one set bible (station note 'room'), drawn identically in 'room' and in 'meet'; the opening frame b01 returns changed in b21"
+  }
+ ],
+ "devices": [
+  {
+   "id": "the_room",
+   "kind": "explain",
+   "what": "one locked meeting room (the set bible) held across beats while its state changes on the word: hands, bubbles, board, plan, notes; reframed only by cuts (wide, medium left, close right, medium right), never by drifting",
+   "beats": [
+    "b01",
+    "b02",
+    "b03",
+    "b04",
+    "b05",
+    "b06",
+    "b07",
+    "b09",
+    "b12",
+    "b13",
+    "b14",
+    "b15",
+    "b16",
+    "b17",
+    "b19",
+    "b21"
+   ]
+  },
+  {
+   "id": "doubt_bubbles",
+   "kind": "explain",
+   "what": "four private doubts as drawn objects in folded wobble bubbles over the four colleagues; folded, open, folded and sealed are one outline morphing (Loom.morph.to), stepped on fours, with one red mark per doubt",
+   "beats": [
+    "b01",
+    "b05",
+    "b06",
+    "b07",
+    "b12"
+   ]
+  },
+  {
+   "id": "doubt_to_note",
+   "kind": "list",
+   "what": "each habit arrives as a teal tag or object on the thing that does it, and its doubt drops from the bubble to the table, the object's outline morphing into a note card with its one word; the notes collect in front of their owners where the stamp was",
+   "beats": [
+    "b13",
+    "b14",
+    "b15",
+    "b16",
+    "b17",
+    "b21"
+   ]
+  },
+  {
+   "id": "the_board",
+   "kind": "explain",
+   "what": "the board's writing area is a Loom.slot: the words on it are relabelled or swapped on the spoken word (goal, blank, premortem page, the plain lesson), so the team's shared surface carries the argument",
+   "beats": [
+    "b03",
+    "b13",
+    "b16",
+    "b17",
+    "b19",
+    "b21"
+   ]
+  },
+  {
+   "id": "stepped_vote",
+   "kind": "other",
+   "what": "the vote on fours: arms rise one per step, poses held between steps (Loom.stepped.on hz 6), the Agreed stamp lands; shown as the result b02, repeated with its cause b07, run backwards b12, and answered by cards written and turned at once b14 and b19",
+   "beats": [
+    "b02",
+    "b07",
+    "b12",
+    "b14",
+    "b19"
+   ]
+  },
+  {
+   "id": "torn_time",
+   "kind": "join",
+   "what": "the one join material: torn paper, used only for jumps in time, its edge read as a calendar page being torn off (the date doubt's own material); right is forward (b08, weeks later), left is back (b12, rewind)",
+   "beats": [
+    "b08",
+    "b12"
+   ]
+  }
+ ],
+ "value_script": [
+  {
+   "from": "b01",
+   "band": "light",
+   "accent": "accent (the doubts' red seams)",
+   "why": "a pale, quiet open: a paper room in near monochrome with colour withheld; the only saturated marks are the four thin red seams on the folded bubbles"
+  },
+  {
+   "from": "b03",
+   "band": "mid",
+   "accent": "accent2 (Dana's goal, the plan)",
+   "why": "the story proper sits slightly richer: the leader's goal in ochre on the board, then the doubts in red as they open (b05); b06 narrows the light to four pools inside this band"
+  },
+  {
+   "from": "b08",
+   "band": "dark",
+   "break": true,
+   "accent": "accent (the failure marks)",
+   "why": "the failure: the field drops to dark ink paper and only the red failure marks are saturated; the dark carries into the room after it (b09). The lesson's one dark break, kept for the consequence"
+  },
+  {
+   "from": "b10",
+   "band": "mid",
+   "accent": "accent2 (the term)",
+   "why": "the dip to black is the turn; the naming page and the notes come back up to paper, and the rewound meeting (b12 to b16) stays in this band while the notes arrive"
+  },
+  {
+   "from": "b17",
+   "band": "light",
+   "accent": "accent2 (the amended plan)",
+   "why": "the lift: the plan gets fixed and the room brightens back to the open's pale band for the practice"
+  },
+  {
+   "from": "b21",
+   "band": "light",
+   "break": true,
+   "accent": "accent (the four notes)",
+   "why": "colour withheld until the payoff: the four red notes sit together on the table in the lightest frame of the film, the ochre plan beside them"
+  }
+ ],
+ "references": [
+  "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+  "docs/research/vision/tedEd_2026-10/style_guide.md, family 'Wobbly hand outline over flat colour under grain or paper' (dot-eye figures, emotion from pose, labels on paper tags, state shown by colour swaps on an unchanged layout)",
+  "docs/research/vision/tedEd_2026-10/colour_and_tone.md (pale open, slightly richer middle, a lift at the close; one accent placed, not sized)",
+  "docs/research/crayon/2026-10-01-crayon-capital-study.md (open on the result, then rewind; bring the opening image back at the end; a black card at the turn)",
+  "docs/references/places/office.md (a composed room: furniture in a readable view, one window light, contact shadows; words live on a prop in the set)",
+  "docs/research/teded/2026-10-01-teded-study.md (a term card for each new word; one object transformed in place; rests on what must be read)"
+ ],
+ "world": {
+  "stations": [
+   {
+    "id": "room",
+    "x": 0,
+    "y": 0,
+    "note": "SET BIBLE (station coords 1920x1080; drawn IDENTICALLY wherever the room appears: 'room' in b01 to b07, b09, b12 to b17; 'meet' in b19 and b21). Walls and floor: ctx.scenery('room', 'set', {window: true, windowX: 1440, floor: 0.70}) (wall to y 756, window x 1440 to 1862, y 151 to 540, one slow cloud drift in the glass as the ambient loop, period 4.8 s). Board 'board': x 300 to 720, y 150 to 420, surface fill, ink frame, pen tray; its writing area is a Loom.slot (frame 'none') at x 330 to 690, y 180 to 390, so every change of words on it is a relabel or swap on the spoken word. Clock 'clock': Loom.obj clock (wall) at (1080, 180), size 90. Table 'table': top polygon, back edge y 640 from x 420 to 1620, front edge y 790 from x 320 to 1720 (surface2, ink outline), front panel y 790 to 840 (shadow token); drawn IN FRONT of the people so it hides them below the hips. People (ctx.character, scale 0.44, feet y 760 hidden by the table, so they read as seated): 'dana' rig tess x 560; 'p_date' (the fast yes) rig pip x 790; 'p_test' rig tess x 1020; 'p_support' rig pip x 1250; 'p_client' rig tess x 1480 (by the window). Vary skin and hair between them; tops in quiet tokens only (muted, shadow, field2, surface2): no saturated cloth, the accents are reserved. Dana standing = same x, raised 90 px. Bubbles (the four colleagues only, never Dana): 'bub_date', 'bub_test', 'bub_support', 'bub_client'. Folded: centred (owner x + 40, 330), about 80 x 60, the seed's wobble outline with a crease line and a thin red (accent) seam, two tail dots down to the head. Open: centred (owner x + 30, 270), about 180 x 150, holding the object (about 90 px) with its one-word tag under it. Objects 'obj_date', 'obj_test', 'obj_support', 'obj_client': a calendar page (Loom.obj calendar tearoff) with a red question mark; a half-ticked checklist (Loom.obj document clipboard, 2 of 4 boxes ticked, the empty boxes edged red); a headset (no Loom.obj kind: kit shapes, band arc, two ear cups, a mic boom with a red tip; an object, not a figure); a sealed envelope (Loom.obj envelope flap with a red wax seal). Plan sheet 'sheet': lying on the table, centre (1135, 750), about 220 x 80 in perspective, paper with ink lines and a small calendar glyph; header strip ochre (accent2) only while the plan is the named thing. In the first meeting it drifts to (1065, 750) in b04 and stays there until b12 slides it back. Note slots (sec2 and the payoff) 'note_date', 'note_test', 'note_support', 'note_client': on the table in front of each owner, centre (owner x, 666), card about 150 x 76, slight seeded tilt, surface paper, a red tape strip, the word lettered in the display face (label role, ink). Stamp 'stamp': 'Agreed' in accent2 ink, about 180 x 64, tilted minus 8 degrees, on the plan sheet. Colour meanings for the whole lesson: accent (brick red) = a doubt (seams, marks, failure, notes); accent2 (ochre) = the plan and the decision (goal, stamp, amended plan); accent3 (teal) = a habit (the critic tent card, the habit tags). Never more than two of them saturated in a settled frame. Hand-made time: Loom.stepped.on (hz 6) on the people and the drawn props, Loom.stepped.boil (hz 8, amp about 1.2) on outlines during holds; never on text, captions or the camera. No hands kit anywhere (placeholders): arms are the rigs' own stick limbs."
+   },
+   {
+    "id": "later",
+    "x": 2400,
+    "y": 0,
+    "note": "weeks later: the four doubt objects on a dark ink-paper field (b08); to the right of the room because it is later in time"
+   },
+   {
+    "id": "card",
+    "x": 2400,
+    "y": 1600,
+    "note": "the naming page on the paper field: the term card (b10) and the meeting's notes (b11); below the story because it is the idea under it"
+   },
+   {
+    "id": "quiz",
+    "x": 4800,
+    "y": 1600,
+    "note": "your turn: the quiz card (b18)"
+   },
+   {
+    "id": "week",
+    "x": 4800,
+    "y": 0,
+    "note": "the viewer's week as a wall planner (b20), Monday to Friday, blank meeting blocks; the Wednesday block at (760, 420, 400, 225) holds the nested station 'meet'"
+   },
+   {
+    "id": "meet",
+    "parent": "week",
+    "rect": {
+     "x": 760,
+     "y": 420,
+     "w": 400,
+     "h": 225
+    },
+    "note": "Dana's room again, nested in the week's Wednesday block (b19, b21); drawn with the 'room' set bible, same coordinates"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "beat": "b01",
+   "kind": "bespoke",
+   "scene": "b01",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "five people round one table, each with a folded private doubt",
+   "world": "Dana's meeting room",
+   "accent_on": "the four folded bubbles' red seams",
+   "motion_is": "content",
+   "register": "expressive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "establishing"
+   },
+   "story_role": "hook",
+   "design": {
+    "treatment": "The whole room, locked wide, built from the set bible; the place is present at frame 0 with no entrance (TED-Ed opens on a composed tableau; the picture speaks first). The five small outlined people settle into their seats behind one long table in stepped time (two drawings each, not a slide), the plan sheet gets its tag, and then the private doubts arrive: a folded wobble bubble above each of the four colleagues, one per step, each with one thin red seam, the only colour in the frame. Dana, at the left end under the board, has none. From 'Nobody says so' to the end, the bubbles' outlines boil gently so the held tableau is never frozen.",
+    "why_motion": "the hook is a change the viewer sees and the characters cannot: private doubts appearing over a table where nothing is said. The doubts arriving one by one IS the line 'each one doubts it'.",
+    "elements": [
+     "the five people behind the table (rigs tess and pip, seated)",
+     "the plan sheet with its tag 'one plan'",
+     "four folded bubbles, one red seam each",
+     "(world, not counted) the room: wall, board, clock, window with its cloud drift, table"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "five smart people meet",
+      "element": "the five people",
+      "action": "settle into their seats left to right, 0.12 s apart, two drawings each",
+      "motion": "settle, Loom.stepped.on hz 6"
+     },
+     {
+      "t_anchor": "one plan",
+      "element": "plan sheet tag",
+      "action": "a paper tag 'one plan' pins to the sheet's corner and is written on",
+      "motion": "settle + hand-lettered write-on"
+     },
+     {
+      "t_anchor": "Each one doubts it",
+      "element": "four folded bubbles",
+      "action": "pop above the four colleagues, left to right, one per step (0.17 s)",
+      "motion": "pop (small overshoot: small accents only), stepped"
+     },
+     {
+      "t_anchor": "Nobody says so",
+      "element": "people and bubbles",
+      "action": "every gaze returns to the front; the bubbles' outlines start a boil that runs to the end of the beat",
+      "motion": "rig look + Loom.stepped.boil hz 8"
+     }
+    ],
+    "continuity": "Builds the set by the set bible names. b02 holds everything (continue): set, board, clock, table, the five people, the four bubbles, the sheet.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md, family 'Wobbly hand outline over flat colour under grain or paper' (dot-eye figures, emotion from pose, labels on paper tags, state shown by colour swaps on an unchanged layout)",
+     "docs/references/places/office.md (a composed room: furniture in a readable view, one window light, contact shadows; words live on a prop in the set)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: static_camera_default, bubble_with_changing_content, minimal_face_posture_acting, ambient_life_on_holds"
+    ]
+   }
+  },
+  {
+   "beat": "b02",
+   "kind": "bespoke",
+   "scene": "b02",
+   "station": "room",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the vote: the Agreed stamp, then every hand going up",
+   "world": "Dana's meeting room",
+   "accent_on": "the Agreed stamp",
+   "motion_is": "content",
+   "register": "expressive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "hook",
+   "design": {
+    "treatment": "The same locked wide frame, everything held. Open on the result, then show it happening: on 'Agreed' the ochre stamp slams onto the plan sheet; on 'Every hand goes up' the five raise one arm each, one per step, left to right, Dana first, each arm pose HELD between steps rather than tweened (stepped hz 6; the rig's raised-arm pose, no wave gesture). On the two questions nothing moves except the four folded bubbles, which give one small stepped shiver, and the wall dims a touch so the stamp and the four seams are what reads.",
+    "why_motion": "the vote is a sequence in time, each hand after the last; stepped timing makes the agreement accumulate like drawn frames, and the result-first order sets up the rewind in b03",
+    "elements": [
+     "the Agreed stamp on the plan sheet",
+     "five raised arms, one per step",
+     "the four folded bubbles (held, shut)"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Agreed",
+      "element": "stamp",
+      "action": "slams onto the plan sheet from 1.3x, about 0.35 s, settles",
+      "motion": "stamp"
+     },
+     {
+      "t_anchor": "The plan passes",
+      "element": "plan sheet",
+      "action": "a two-drawing jolt under the stamp",
+      "motion": "stepped"
+     },
+     {
+      "t_anchor": "Every hand goes up",
+      "element": "the five people",
+      "action": "arms rise one per step, Dana first, the last landing on 'up'",
+      "motion": "pose steps, Loom.stepped.on hz 6"
+     },
+     {
+      "t_anchor": "How do smart people do that",
+      "element": "four folded bubbles",
+      "action": "a two-step shiver, still shut",
+      "motion": "stepped nudge"
+     },
+     {
+      "t_anchor": "what stops it",
+      "element": "wall veil",
+      "action": "the wall dims by about 12 percent; stamp and seams keep their colour",
+      "motion": "slow fade 0.8 s"
+     }
+    ],
+    "continuity": "Holds everything from b01. Keep the raised-arm state and 'stamp': b03 holds both and runs them backwards.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (open on the result, then rewind; bring the opening image back at the end; a black card at the turn)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: stamp_slam_on_verdict, state_steps_in_place, hard_cut_on_narration_beat"
+    ]
+   }
+  },
+  {
+   "beat": "b03",
+   "kind": "bespoke",
+   "scene": "b03",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "Dana stating what she wants, first, on the board",
+   "world": "Dana's meeting room",
+   "accent_on": "Dana's goal lettered on the board",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "medium",
+    "focus": [
+     200,
+     150,
+     1160,
+     652
+    ]
+   },
+   "story_role": "setup",
+   "design": {
+    "treatment": "Cut to the medium frame on Dana, the board and the plan sheet (the room is held through the cut: same station). First the meeting rewinds to its start: on 'Meet Dana' the stamp peels off and leaves, the arms come down in three stepped drawings and the clock's minute hand ticks back. A paper name tag 'Dana' pins beside her. She stands (two stepped drawings) and turns to the board, and her goal is lettered onto it as she says it, 'Launch:' then 'end of quarter' on a second line, in ochre. The colleagues in frame turn their eyes to the board one per step. She is warm and reasonable: an open, presenting pose, never a pointing one.",
+    "why_motion": "two changes in time carry the setup: the vote runs back to the start of the meeting (cause before effect), and the leader's view arrives first, on the board, before anyone else speaks (F8)",
+    "elements": [
+     "the stamp peeling off and the arms lowering (the rewind)",
+     "name tag 'Dana'",
+     "Dana standing at the board",
+     "the goal 'Launch: end of quarter' on the board",
+     "the colleagues' eyes turning to the board"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Meet Dana",
+      "element": "stamp and arms",
+      "action": "the stamp peels off the sheet and leaves upward; arms come down in three stepped drawings; the clock's hand ticks back",
+      "motion": "stepped rewind"
+     },
+     {
+      "t_anchor": "Dana",
+      "element": "name tag",
+      "action": "paper tag 'Dana' pins beside her shoulder, written on",
+      "motion": "settle + write-on"
+     },
+     {
+      "t_anchor": "She runs the team",
+      "element": "Dana",
+      "action": "stands up in two drawings and turns to the board (pose present)",
+      "motion": "stepped pose"
+     },
+     {
+      "t_anchor": "launch by the end of the quarter",
+      "element": "board slot",
+      "action": "'Launch:' then 'end of quarter' written on in ochre, left to right",
+      "motion": "Loom.slot relabel"
+     },
+     {
+      "t_anchor": "end of the quarter",
+      "element": "colleagues in frame",
+      "action": "eyes turn to the board, one per step",
+      "motion": "rig look, stepped"
+     }
+    ],
+    "continuity": "Holds the set and people (ctx.held after the cut). Leaves Dana standing, the goal in the board slot and the sheet in place; b04 holds them. The name tag leaves at the end of the beat.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (open on the result, then rewind; bring the opening image back at the end; a black card at the turn)",
+     "docs/references/places/office.md (a composed room: furniture in a readable view, one window light, contact shadows; words live on a prop in the set)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: hand_lettered_write_on, label_on_object_with_its_word, minimal_face_posture_acting"
+    ]
+   }
+  },
+  {
+   "beat": "b04",
+   "kind": "bespoke",
+   "scene": "b04",
+   "station": "room",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the fast yes agreeing, and the table tilting towards yes",
+   "world": "Dana's meeting room",
+   "accent_on": "the fast yes's speech bubble",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "medium",
+    "focus": [
+     200,
+     150,
+     1160,
+     652
+    ]
+   },
+   "story_role": "setup",
+   "design": {
+    "treatment": "The same medium frame. The colleague beside Dana leans in (pose explain, stepped) and a speech bubble in the seed's wobble treatment opens from him with 'Great, let's do it.' lettered in it. Then the whole table tilts towards yes: the plan sheet slides about 70 px towards the board in two stepped moves, and every person in frame leans a few degrees towards Dana (torso about minus 4 degrees, one person per step). Nobody else speaks.",
+    "why_motion": "the direction forming is a change over time: one early yes, then the room's posture and the plan drifting towards the leader's view",
+    "elements": [
+     "the fast yes leaning in",
+     "speech bubble 'Great, let's do it.'",
+     "the plan sheet sliding towards the board",
+     "the people leaning towards Dana"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "One colleague agrees, fast",
+      "element": "p_date",
+      "action": "leans in, pose explain, two drawings",
+      "motion": "stepped pose"
+     },
+     {
+      "t_anchor": "Great, let's do it",
+      "element": "speech bubble",
+      "action": "opens from him (seed bubble: wobble), words lettered in",
+      "motion": "pop + write-on"
+     },
+     {
+      "t_anchor": "The room now has a direction",
+      "element": "plan sheet",
+      "action": "slides about 70 px towards the board in two stepped moves",
+      "motion": "stepped travel"
+     },
+     {
+      "t_anchor": "a direction",
+      "element": "people in frame",
+      "action": "lean towards Dana, one per step",
+      "motion": "stepped pose"
+     }
+    ],
+    "continuity": "The speech bubble leaves before the cut to b05; the lean and the sheet's drifted place persist (held).",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md, family 'Wobbly hand outline over flat colour under grain or paper' (dot-eye figures, emotion from pose, labels on paper tags, state shown by colour swaps on an unchanged layout)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: gesture_lands_on_keyword, minimal_face_posture_acting, state_steps_in_place"
+    ]
+   }
+  },
+  {
+   "beat": "b05",
+   "kind": "bespoke",
+   "scene": "b05",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "four private doubts drawn as objects inside the bubbles",
+   "world": "Dana's meeting room: the private doubts",
+   "accent_on": "the red mark on each opened object",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "close",
+    "focus": [
+     680,
+     130,
+     1080,
+     608
+    ]
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "Cut closer, along the table, to the four colleagues and their bubbles (Dana is out of frame: the leader cannot see them either). Each folded bubble opens on its own words: its outline MORPHS from the folded shape to the open wobble bubble (Loom.morph.to, about 0.9 s, stepped at hz 8 so it reads drawn), then its object draws in (outline first, fill after) with its one-word tag lettered under it. The order follows the narration, not the seats: testing, support, client, and last the fast yes on the far left, the surprise 'even'. Each object carries one small red mark (the unticked boxes, the mic tip, the wax seal, the question mark). Nobody looks up: each person looks at the table or towards the board, never at a bubble.",
+    "why_motion": "what each person privately holds is the lesson's central picture, and it must arrive one doubt at a time, on its words (bubble_with_changing_content, externalised_inner_state)",
+    "elements": [
+     "half-ticked checklist, tag 'testing'",
+     "headset, tag 'support'",
+     "sealed envelope, tag 'client'",
+     "calendar page with a question mark, tag 'the date'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Inside each head, a doubt",
+      "element": "four folded bubbles",
+      "action": "swell together in two drawings, about to open",
+      "motion": "stepped scale 1.06"
+     },
+     {
+      "t_anchor": "Testing isn't done",
+      "element": "bub_test + obj_test",
+      "action": "the bubble morphs open, the checklist draws in, tag 'testing' written on",
+      "motion": "Loom.morph.to + m.draw + write-on"
+     },
+     {
+      "t_anchor": "Support isn't trained",
+      "element": "bub_support + obj_support",
+      "action": "opens, the headset draws in, tag 'support'",
+      "motion": "Loom.morph.to + m.draw + write-on"
+     },
+     {
+      "t_anchor": "The client hasn't seen it",
+      "element": "bub_client + obj_client",
+      "action": "opens, the sealed envelope draws in, tag 'client'",
+      "motion": "Loom.morph.to + m.draw + write-on"
+     },
+     {
+      "t_anchor": "Even the fast yes doubts the date",
+      "element": "bub_date + obj_date",
+      "action": "opens last, the calendar page with its question mark, tag 'the date'",
+      "motion": "Loom.morph.to + m.draw + write-on"
+     }
+    ],
+    "continuity": "The open bubbles and objects are held into b06 (continue). obj_date, obj_test, obj_support, obj_client are the lesson's four doubts: the same drawings fail in b08, hang in b09, glimpse in b12 and land on the table in b13 to b16.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md, family 'Wobbly hand outline over flat colour under grain or paper' (dot-eye figures, emotion from pose, labels on paper tags, state shown by colour swaps on an unchanged layout)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: bubble_with_changing_content, externalised_inner_state, morph_chain_in_place, draw_on_as_named, single_accent_on_muted_field"
+    ]
+   }
+  },
+  {
+   "beat": "b06",
+   "kind": "bespoke",
+   "scene": "b06",
+   "station": "room",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "each doubter deciding they are the only one",
+   "world": "Dana's meeting room: the private doubts",
+   "accent_on": "the bubbles' red seams as they fold shut",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "spotlight",
+   "shot": {
+    "size": "close",
+    "focus": [
+     680,
+     130,
+     1080,
+     608
+    ]
+   },
+   "story_role": "turn",
+   "design": {
+    "treatment": "The slowdown, on a held close frame. Each colleague's eyes glance left, then right, in stepped looks, one person after another: what each one sees is calm faces and the backs of bubbles they cannot read. On 'Calm faces' every face settles neutral and the light narrows: a soft veil darkens the wall and leaves four pools of light, one on each person (still inside the mid band). On 'I must be the only one' the four bubbles fold shut one after another: each outline morphs from open back to folded and swallows its object, leaving only the red seam. A small paper tag 'the only one?' hangs from the last bubble to fold, the fast yes's, and is written on as it is said.",
+    "why_motion": "the hinge of the lesson (F9, F16) is a decision each person makes alone and in turn: look, see calm, fold the doubt away. Slow stepped glances are the slowdown the pedagogy asks for",
+    "elements": [
+     "the colleagues' stepped glances",
+     "four pools of light",
+     "the bubbles folding shut, one by one",
+     "tag 'the only one?'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Each one looks around",
+      "element": "p_test, p_support, p_client, p_date",
+      "action": "eyes glance left then right, held between steps, one person after another",
+      "motion": "rig look, stepped hz 6"
+     },
+     {
+      "t_anchor": "Calm faces",
+      "element": "wall veil and light pools",
+      "action": "the wall darkens by about 25 percent around four soft pools on the people",
+      "motion": "slow fade 0.9 s"
+     },
+     {
+      "t_anchor": "I must be the only one",
+      "element": "four bubbles",
+      "action": "fold shut in turn, right to left, each object shrinking into the fold",
+      "motion": "Loom.morph.to open to folded, stepped"
+     },
+     {
+      "t_anchor": "the only one",
+      "element": "tag",
+      "action": "'the only one?' hangs from bub_date and is written on",
+      "motion": "drop + write-on"
+     }
+    ],
+    "continuity": "Leaves four folded bubbles (as in b01) for b07; the veil lifts at the cut.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/colour_and_tone.md (pale open, slightly richer middle, a lift at the close; one accent placed, not sized)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: externalised_inner_state, radial_wedge_spotlight, minimal_face_posture_acting"
+    ]
+   }
+  },
+  {
+   "beat": "b07",
+   "kind": "bespoke",
+   "scene": "b07",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "the vote again, now seen knowing the doubts",
+   "world": "Dana's meeting room",
+   "accent_on": "the tag 'silence = yes'",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "turn",
+   "intent": "callback",
+   "design": {
+    "treatment": "Cut back to the opening wide frame: a deliberate repeat of b02's composition (identical_frames_one_variable). This time we know what is folded above each head. On 'So nobody says it' nothing moves but the window's cloud: a held breath. On 'Silence starts to look like yes' a paper tag 'silence = yes' pins to the plan sheet's edge. On 'Hands go up' the arms rise one per step exactly as in b02, and as each colleague's arm goes up their folded bubble presses flat into a closed lid (Loom.morph.to folded to lid, stepped), sealing the doubt. The stamp lands a second time on the last step: the same stamp object as b02, a callback, not a new word.",
+    "why_motion": "the same accumulation as b02, now with its cause visible: each yes is also a doubt sealed. The repetition is the point",
+    "elements": [
+     "the held silence (ambient only)",
+     "tag 'silence = yes'",
+     "arms rising, one per step",
+     "bubbles pressing flat into lids",
+     "the Agreed stamp, again"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "So nobody says it",
+      "element": "whole frame",
+      "action": "hold: only the window's cloud drift moves",
+      "motion": "hold"
+     },
+     {
+      "t_anchor": "Silence starts to look like yes",
+      "element": "tag",
+      "action": "'silence = yes' pins to the sheet's edge, written on",
+      "motion": "settle + write-on"
+     },
+     {
+      "t_anchor": "Hands go up",
+      "element": "the five people and the four bubbles",
+      "action": "arms rise one per step; each colleague's bubble presses into a lid as their arm rises",
+      "motion": "pose steps + Loom.morph.to, stepped hz 6"
+     },
+     {
+      "t_anchor": "go up",
+      "element": "stamp",
+      "action": "lands on the sheet again on the last step",
+      "motion": "stamp"
+     }
+    ],
+    "continuity": "Holds the set through the cut (same station). Its end state (arms up, lids, stamp, Dana standing, goal on the board, sheet drifted) is the state b12 redraws and rewinds.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (open on the result, then rewind; bring the opening image back at the end; a black card at the turn)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: identical_frames_one_variable, stamp_slam_on_verdict, state_steps_in_place"
+    ]
+   }
+  },
+  {
+   "beat": "b08",
+   "kind": "bespoke",
+   "scene": "b08",
+   "station": "later",
+   "join_in": {
+    "type": "torn",
+    "dir": "right",
+    "meaning": "time",
+    "seed": 7
+   },
+   "subject": "the four doubts coming true on the same objects",
+   "world": "weeks later: the doubts come true",
+   "accent_on": "the red failure marks",
+   "motion_is": "content",
+   "register": "expressive",
+   "depth": "flat",
+   "light": "night",
+   "shot": {
+    "size": "close"
+   },
+   "story_role": "turn",
+   "design": {
+    "treatment": "A torn-paper wipe crosses left to right: the time jump, its torn edge read as a calendar page torn off. Behind it, a dark ink-paper field (the lesson's one dark break) with the four doubt objects in the seats' order, large, in a row at x 270, 730, 1190, 1650, y 520, each about 300 px, built as ONE motif group ctx.motif('doubts') so b09 can carry them back. On 'Weeks later' the calendar's pages tear off one per step (three pages, each falling away with a small turn). On 'the launch slips' the date on the last page is crossed out in red and a paper tag 'launch slips' pins to it. On 'Every one of those doubts comes true' the other three fail in seat order, one per half second: red crosses fill the checklist's empty boxes, the headset rings (red ring lines boil round it, the cups shake in two drawings), the envelope comes back with a red return arrow drawn round it. Every outline boils to the end of the beat.",
+    "why_motion": "the consequence is a sequence in time, and it must land on the SAME objects the viewer saw in the bubbles, so the failure is recognised rather than explained",
+    "elements": [
+     "calendar losing pages, the date crossed out",
+     "tag 'launch slips'",
+     "checklist filling with red crosses",
+     "headset ringing",
+     "envelope returned with a red arrow"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Weeks later",
+      "element": "obj_date (calendar)",
+      "action": "three pages tear off one per step and fall",
+      "motion": "stepped hz 6"
+     },
+     {
+      "t_anchor": "the launch slips",
+      "element": "calendar date + tag",
+      "action": "the date is crossed out in red; tag 'launch slips' pins on and is written on",
+      "motion": "m.draw stepped + write-on"
+     },
+     {
+      "t_anchor": "Every one of those doubts",
+      "element": "obj_test (checklist)",
+      "action": "red crosses fill the empty boxes, one per step",
+      "motion": "stepped draw"
+     },
+     {
+      "t_anchor": "comes true",
+      "element": "obj_support, obj_client",
+      "action": "the headset rings (boiling red ring lines, two-drawing shake); the envelope returns with a red arrow drawn round it",
+      "motion": "stepped + Loom.stepped.boil"
+     }
+    ],
+    "continuity": "The four objects form the motif 'doubts', laid out at 460 px spacing so a uniform scale of 0.5 maps them onto the hanging places of b09 (x 830, 1060, 1290, 1520; y 290). Keep their red failure marks: they travel.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/colour_and_tone.md (pale open, slightly richer middle, a lift at the close; one accent placed, not sized)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: dark_void_mode, subject_material_wipe, colour_swap_as_state, held_object_one_attribute_swap"
+    ]
+   }
+  },
+  {
+   "beat": "b09",
+   "kind": "bespoke",
+   "scene": "b09",
+   "station": "room",
+   "join_in": {
+    "type": "travel",
+    "via": "doubts"
+   },
+   "subject": "four right doubts hanging above a table they never reached",
+   "world": "Dana's meeting room, after",
+   "accent_on": "the four drop lines that stop short of the table",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "night",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "The camera travels back left to the room (travel join, carried by the doubts motif). The room is redrawn from the set bible at frame 0, with no entrance, under a dark veil: the dark band continues. The five sit as before, arms down, calm, no bubbles. The doubts motif flies in during the join and settles in a row above the four colleagues, each object hanging on a thin string from the top of the frame, still marked red. On 'Nobody in that room was foolish' nothing is added: calm faces, the strings sway slightly (a period-locked ambient loop, 4 s). On 'Every doubt was right' a paper strip 'every doubt was right' clips onto the middle string. On 'None of them reached the table' a dashed drop line draws down from each object towards the table and stops short, leaving a clear gap above the tabletop, one per step: the gap is the lesson.",
+    "why_motion": "the refutation (F4) is a held picture with one change: the doubts were present and correct, and the drawn gap shows they never landed",
+    "elements": [
+     "the five calm people",
+     "four hanging doubt objects",
+     "strip 'every doubt was right'",
+     "four dashed drop lines stopping short"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Nobody in that room was foolish",
+      "element": "whole frame",
+      "action": "rest: calm faces, strings sway",
+      "motion": "ambient only"
+     },
+     {
+      "t_anchor": "Every doubt was right",
+      "element": "strip",
+      "action": "'every doubt was right' clips onto the middle string, written on",
+      "motion": "drop + write-on"
+     },
+     {
+      "t_anchor": "None of them reached the table",
+      "element": "drop lines",
+      "action": "four dashed lines draw down and stop short of the table, one per step",
+      "motion": "m.draw, stepped"
+     }
+    ],
+    "continuity": "Redraws the set (the previous beat is on another station). Adopts the 'doubts' motif (ctx.adopt + ctx.travelTo during the join). Everything leaves at the dip to black.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/colour_and_tone.md (pale open, slightly richer middle, a lift at the close; one accent placed, not sized)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: camera_travel_as_join, recurring_token_thread, negate_in_place"
+    ]
+   }
+  },
+  {
+   "beat": "b10",
+   "kind": "template",
+   "template": "definition",
+   "station": "card",
+   "join_in": {
+    "type": "dip"
+   },
+   "props": {
+    "kicker": "Irving Janis",
+    "term": "Groupthink",
+    "say_term": "groupthink",
+    "definition": "The drive to agree, beating a hard look at the plan.",
+    "say_definition": "The drive to agree"
+   },
+   "subject": "the term groupthink",
+   "world": "the naming page",
+   "accent_on": "term",
+   "register": "productive",
+   "motion_is": "staging",
+   "story_role": "reveal",
+   "shot": {
+    "size": "insert"
+   },
+   "rationale": "The dip through black is the turn card; then a term card on the paper field (TED-Ed's bold term card on the spoken term). The name comes only after the failure and the refutation, the pedagogy's signature move. Template by allocation; Janis 'developed' the idea (F1, F2 caveat honoured)."
+  },
+  {
+   "beat": "b11",
+   "kind": "template",
+   "template": "document.page",
+   "station": "card",
+   "join_in": {
+    "type": "continue"
+   },
+   "props": {
+    "kind": "notes",
+    "title": "The evidence is mixed",
+    "say_title": "The evidence for it is mixed",
+    "lines": [
+     {
+      "text": "A pattern, not a law",
+      "say": "a pattern, not a law"
+     },
+     {
+      "text": "Leader first",
+      "say": "Leader first"
+     },
+     {
+      "text": "Doubts private",
+      "say": "Doubts private"
+     },
+     {
+      "text": "Silence as yes",
+      "say": "Silence as yes"
+     }
+    ],
+    "mode": "appear",
+    "side": "center"
+   },
+   "subject": "the pattern written down as the meeting's notes",
+   "world": "the naming page",
+   "accent_on": "each line as it is said",
+   "register": "productive",
+   "motion_is": "staging",
+   "story_role": "reveal",
+   "shot": {
+    "size": "insert"
+   },
+   "rationale": "The pattern written on a notes page (text on a thing; the design seed's notebook material), the evidence caveat (F17) as its title so it cannot be skipped. Template by allocation. The script's other picture (the room lit part by part) would need a bespoke scene the allocation does not give this beat; noted in RUN_LOG."
+  },
+  {
+   "beat": "b12",
+   "kind": "bespoke",
+   "scene": "b12",
+   "station": "room",
+   "join_in": {
+    "type": "torn",
+    "dir": "left",
+    "meaning": "time",
+    "seed": 11
+   },
+   "subject": "the first meeting running backwards",
+   "world": "Dana's meeting room",
+   "accent_on": "the four lids' glimpsed doubts",
+   "motion_is": "content",
+   "register": "expressive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "turn",
+   "design": {
+    "treatment": "A torn-paper wipe crosses right to left: time going back. Behind it the room is redrawn exactly as b07 left it (arms up, lids pressed flat, the Agreed stamp, Dana standing, her goal on the board, the sheet drifted). On 'Keep those four doubts in mind' all four lids show a faint glimpse of their objects at once (a ghost silhouette inside, one 0.5 s gesture, not one per step, because the beat is only about 3 s): the recall prompt. On 'Now, rewind' everything runs backwards in quick stepped drawings, like flipped pages (Loom.stepped.wrap, hz 8): the clock's hands spin back with a tag 'rewind' pinned to the clock, the stamp lifts off, arms come down, the lids spring back into folded bubbles, the goal un-writes from the board right to left, Dana sits, the sheet slides back to the middle. It ends on the opening state: a clear board and four folded bubbles waiting.",
+    "why_motion": "the rewind is time running backwards, and it sets up the replay: same people, same room, only the habit will change",
+    "elements": [
+     "the lids' glimpses of the four doubts",
+     "the clock spinning back, tag 'rewind'",
+     "the meeting undoing in stepped drawings",
+     "the board clearing"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "four doubts",
+      "element": "four lids",
+      "action": "a ghost glimpse of each object inside its lid, all four together",
+      "motion": "fade in and out 0.5 s"
+     },
+     {
+      "t_anchor": "Now, rewind",
+      "element": "clock + tag",
+      "action": "the hands spin back; tag 'rewind' pins to the clock",
+      "motion": "stepped rotate + settle"
+     },
+     {
+      "t_anchor": "rewind",
+      "element": "the whole meeting",
+      "action": "stamp off, arms down, lids to folded bubbles, goal un-written, Dana seated, sheet back: all in stepped drawings within about 1.6 s",
+      "motion": "Loom.stepped.wrap hz 8, the reverse of b02 to b07"
+     }
+    ],
+    "continuity": "Redraws the set in b07's end state, then leaves the opening state for b13 to b17 to hold: Dana seated, board clear, sheet at (1135, 750), four folded bubbles. Set bible names throughout.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (open on the result, then rewind; bring the opening image back at the end; a black card at the turn)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: subject_material_wipe, state_steps_in_place, recurring_home_station"
+    ]
+   }
+  },
+  {
+   "beat": "b13",
+   "kind": "bespoke",
+   "scene": "b13",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "Dana speaking last, and the date doubt landing on the table",
+   "world": "Dana's meeting room, rewound",
+   "accent_on": "the note 'the date'",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "medium",
+    "focus": [
+     200,
+     150,
+     1160,
+     652
+    ]
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "Cut to the same medium frame as b03 and b04: the same framing with one variable changed. Dana stays seated and leans back (stepped), the board stays blank, and a teal paper tag 'Leader speaks last' pins to the empty board's corner. With nothing to follow, the colleagues in frame look at each other, not at the board. Then the fast yes's folded bubble opens (morph), the calendar page with its question mark drops out onto the table in front of him in three stepped drawings, and as it lands its outline MORPHS into a note card (Loom.morph.to calendar outline to the note rect, about 1 s, inner detail fading in the first third); 'the date' is written on the note. His bubble is gone: the doubt has left his head.",
+    "why_motion": "the habit works as a change in time inside the same room: the leader's silence leaves a space, and the doubt we saw in b05 crosses from head to table",
+    "elements": [
+     "Dana leaning back, the board blank",
+     "tag 'Leader speaks last'",
+     "the fast yes's bubble opening",
+     "the calendar page becoming the note 'the date'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Dana speaks last",
+      "element": "dana + tag",
+      "action": "leans back in two drawings; tag 'Leader speaks last' pins to the board's corner, written on",
+      "motion": "stepped pose + settle + write-on"
+     },
+     {
+      "t_anchor": "With nothing to follow",
+      "element": "colleagues in frame",
+      "action": "look at each other, one per step",
+      "motion": "rig look, stepped"
+     },
+     {
+      "t_anchor": "asks about the date",
+      "element": "bub_date + obj_date",
+      "action": "bubble morphs open; the calendar page drops to the note slot in three drawings",
+      "motion": "Loom.morph.to + stepped drop"
+     },
+     {
+      "t_anchor": "the date",
+      "element": "note_date",
+      "action": "the calendar outline morphs into the note; 'the date' written on it",
+      "motion": "Loom.morph.to + write-on"
+     }
+    ],
+    "continuity": "Holds the set from b12. note_date stays on the table through b17.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: identical_frames_one_variable, morph_chain_in_place, object_becomes_next_frame, label_on_object_with_its_word"
+    ]
+   }
+  },
+  {
+   "beat": "b14",
+   "kind": "bespoke",
+   "scene": "b14",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "everyone writing a view first, and the testing doubt coming out",
+   "world": "Dana's meeting room, rewound",
+   "accent_on": "the note 'testing'",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "Cut to the wide frame. Five blank cards slide onto the table, one in front of each person, as one gesture (tight stagger, 0.08 s), and a teal tag 'Write before you talk' pins to the table's front edge. All five heads tilt down together and ink scribble lines appear on all five cards at once (stepped, the lines boil): everyone writing at the same moment. On 'Out comes' all five cards flip together; four show scribbles, the one in front of the testing colleague shows the half-ticked checklist with its red empty boxes. That card's outline morphs into the note 'testing' beside 'the date', the other four cards slide back, and the testing colleague's folded bubble shrinks to a point and is gone.",
+    "why_motion": "independent views (F14) are a timing claim: everyone writes at the same moment, so nobody follows anybody; the simultaneous flip IS the habit",
+    "elements": [
+     "five cards slid out together",
+     "tag 'Write before you talk'",
+     "heads down, writing at once",
+     "cards turned together, the checklist card",
+     "note 'testing'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "everyone writes a view first",
+      "element": "five cards + tag",
+      "action": "cards slide out as one gesture; tag 'Write before you talk' pins to the table edge",
+      "motion": "settle, stagger 0.08 s + write-on"
+     },
+     {
+      "t_anchor": "Before anyone talks",
+      "element": "five people + cards",
+      "action": "heads tilt down together; scribbles appear on every card at once",
+      "motion": "stepped pose + boil"
+     },
+     {
+      "t_anchor": "Out comes",
+      "element": "five cards",
+      "action": "all flip together; the testing card shows the checklist",
+      "motion": "flip, stepped"
+     },
+     {
+      "t_anchor": "testing isn't done",
+      "element": "note_test + bub_test",
+      "action": "the card morphs into the note 'testing'; the other cards slide back; the testing bubble shrinks away",
+      "motion": "Loom.morph.to + write-on"
+     }
+    ],
+    "continuity": "Holds the set and note_date. Adds note_test.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: state_steps_in_place, morph_chain_in_place, text_on_paper_backing"
+    ]
+   }
+  },
+  {
+   "beat": "b15",
+   "kind": "bespoke",
+   "scene": "b15",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "a named critic, and the support worry coming out",
+   "world": "Dana's meeting room, rewound",
+   "accent_on": "the note 'support'",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "medium",
+    "focus": [
+     700,
+     150,
+     1160,
+     652
+    ]
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "Cut to the medium frame on the right half of the table. A small folded tent card lettered 'A named critic', teal (the habits' colour), drops onto the table in front of the support colleague with a paper tap. On 'a job, not a risk' that colleague's posture straightens in two stepped drawings (shoulders up, head level) and nothing else changes: same person, same nerves, now with a job. Then their folded bubble opens (morph), the headset drops onto the table in three stepped drawings and its outline morphs into the note 'support'; the bubble is gone.",
+    "why_motion": "the critic's job (F12) changes what speaking costs, so the change is posture first, then the doubt crossing to the table",
+    "elements": [
+     "tent card 'A named critic'",
+     "the colleague straightening",
+     "the headset dropping",
+     "note 'support'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "one person is named the critic",
+      "element": "tent card",
+      "action": "drops in front of p_support, settles, lettering written on",
+      "motion": "drop + write-on"
+     },
+     {
+      "t_anchor": "a job, not a risk",
+      "element": "p_support",
+      "action": "straightens in two drawings",
+      "motion": "stepped pose"
+     },
+     {
+      "t_anchor": "Out comes the support worry",
+      "element": "bub_support + obj_support",
+      "action": "bubble morphs open; the headset drops to the note slot",
+      "motion": "Loom.morph.to + stepped drop"
+     },
+     {
+      "t_anchor": "support worry",
+      "element": "note_support",
+      "action": "the headset outline morphs into the note; 'support' written on",
+      "motion": "Loom.morph.to + write-on"
+     }
+    ],
+    "continuity": "Holds the set and the notes. Adds the tent card 'critic' and note_support; the tent card stays to b17.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: minimal_face_posture_acting, morph_chain_in_place, label_on_object_with_its_word"
+    ]
+   }
+  },
+  {
+   "beat": "b16",
+   "kind": "bespoke",
+   "scene": "b16",
+   "station": "room",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "a premortem on the board, and the client doubt coming out",
+   "world": "Dana's meeting room, rewound",
+   "accent_on": "the note 'client'",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "Cut to the wide frame. The board slot swaps to an imagined future page: a sheet with a dotted border, the sign of pretend. On 'a premortem' its header 'Premortem' is written on. On 'Imagine it has already failed' a small drawing of the plan sheet on that page gets a red cross and 'it failed.' is written beside it; on 'Why' the word 'why?' follows. The team turns to the board, then tilts their heads down as if thinking it through (stepped). On 'Out comes the client nobody asked' the folded bubble of the colleague by the window opens, the sealed envelope drops onto the table and its outline morphs into the note 'client'. Four notes now sit in a row on the table.",
+    "why_motion": "a premortem (F15) makes the failure imaginable before it happens: the pretend page fails on the board, and the last private doubt crosses to the table",
+    "elements": [
+     "the board's dotted future page 'Premortem'",
+     "'it failed. why?' written on it",
+     "the team thinking it through",
+     "the envelope becoming the note 'client'"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "a premortem",
+      "element": "board slot",
+      "action": "swaps to the dotted future page; 'Premortem' written on",
+      "motion": "Loom.slot swap + write-on"
+     },
+     {
+      "t_anchor": "Imagine it has already failed",
+      "element": "page drawing",
+      "action": "a red cross over the small plan drawing; 'it failed.' written",
+      "motion": "m.draw stepped + write-on"
+     },
+     {
+      "t_anchor": "Why",
+      "element": "page + team",
+      "action": "'why?' written; heads turn to the board, then tilt down",
+      "motion": "write-on + stepped pose"
+     },
+     {
+      "t_anchor": "the client nobody asked",
+      "element": "bub_client + obj_client + note_client",
+      "action": "bubble opens; the envelope drops and morphs into the note 'client'",
+      "motion": "Loom.morph.to + stepped drop + write-on"
+     }
+    ],
+    "continuity": "Holds everything. The future page stays on the board until b17 swaps it.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: held_object_one_attribute_swap, morph_chain_in_place, hand_lettered_write_on"
+    ]
+   }
+  },
+  {
+   "beat": "b17",
+   "kind": "bespoke",
+   "scene": "b17",
+   "station": "room",
+   "join_in": {
+    "type": "continue"
+   },
+   "subject": "the plan fixed, with the four doubts on the table",
+   "world": "Dana's meeting room, rewound",
+   "accent_on": "the amended plan",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "dawn",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "reveal",
+   "design": {
+    "treatment": "The same wide frame. On 'Nobody got braver' the future page slides off the board and 'Nobody got braver' is written there; the five keep the slightly hunched postures they had in b05 (no heroic poses, no cheering). On 'the expected thing' the four notes give one stepped settle together and the room's light lifts (the veil lightens: the value script's lift). On 'the plan gets fixed' the plan sheet MORPHS into the amended plan (Loom.morph.to: the sheet grows a second page, two new ink lines draw on, its small calendar glyph moves one column to the right, the date moved), and its header turns ochre.",
+    "why_motion": "the misconception 'the fix is braver people' is refuted by staging: the same postures, while the plan changes because the doubts are on the table (F12, F16)",
+    "elements": [
+     "'Nobody got braver' on the board",
+     "the same nervous postures",
+     "the four notes on the table",
+     "the plan sheet becoming the amended plan"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Nobody got braver",
+      "element": "board slot",
+      "action": "the future page slides off; 'Nobody got braver' written on",
+      "motion": "Loom.slot swap + write-on"
+     },
+     {
+      "t_anchor": "the expected thing",
+      "element": "four notes + wall veil",
+      "action": "notes settle together in two drawings; the wall lightens",
+      "motion": "stepped settle + slow fade 0.9 s"
+     },
+     {
+      "t_anchor": "the plan gets fixed",
+      "element": "sheet",
+      "action": "morphs into the amended plan; two lines draw on; the calendar glyph shifts right; header turns ochre",
+      "motion": "Loom.morph.to + m.draw + recolour"
+     },
+     {
+      "t_anchor": "before it ships",
+      "element": "whole frame",
+      "action": "rest on the finished frame",
+      "motion": "boil only"
+     }
+    ],
+    "continuity": "Last room beat before the quiz: everything leaves at the chapter cut. b21 redraws this end state (minus the board's words and the tent card).",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/colour_and_tone.md (pale open, slightly richer middle, a lift at the close; one accent placed, not sized)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: palette_shift_on_held_composition, in_place_model_morph, minimal_face_posture_acting"
+    ]
+   }
+  },
+  {
+   "beat": "b18",
+   "kind": "template",
+   "template": "quiz.question",
+   "station": "quiz",
+   "join_in": {
+    "type": "cut",
+    "meaning": "chapter"
+   },
+   "props": {
+    "kicker": "Your turn",
+    "question": "Dana said what she wants. Any objections? Silence. Which habit now?",
+    "say_question": "Next meeting, Dana says what she wants first",
+    "options": [
+     {
+      "text": "Speak last",
+      "say": "Speak last"
+     },
+     {
+      "text": "Write first",
+      "say": "write first"
+     },
+     {
+      "text": "A critic",
+      "say": "a critic"
+     },
+     {
+      "text": "A premortem",
+      "say": "a premortem"
+     }
+    ],
+    "pause_label": "Pause the video here and pick one habit"
+   },
+   "subject": "the check: which habit fits after the leader has spoken",
+   "world": "your turn",
+   "accent_on": "the four options",
+   "register": "productive",
+   "motion_is": "staging",
+   "story_role": "practice",
+   "rationale": "Chapter boundary, so a hard cut (D-112). The one stopping check, as a quiz card with its silent pause ring (pause_after_s 4). Template by allocation; the four options are peers and arrive as peers."
+  },
+  {
+   "beat": "b19",
+   "kind": "bespoke",
+   "scene": "b19",
+   "station": "meet",
+   "join_in": {
+    "type": "cut"
+   },
+   "subject": "the next meeting: everyone writing why it could fail, then reading at once",
+   "world": "Dana's meeting room, the next meeting",
+   "accent_on": "the five cards turned over together",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "practice",
+   "design": {
+    "treatment": "Cut into the room, redrawn from the set bible in station 'meet'. It is the next meeting: Dana stands at the board, which carries her view as ink scribble lines (the next plan is not named, so no words), no notes, no bubbles, a quiet room. On 'Speaking last is gone. She spoke.' the scribbled view greys out (recolour to muted) and a small teal tag 'speak last' beside it is crossed through. On 'Asking again asks someone to go first' one colleague's arm starts to rise alone, the light narrows onto them, a paper tag 'go first?' hangs above, and the arm comes back down (stepped): going first alone is the cost. On 'everyone writes why it could fail' Dana writes 'write: why could it fail?' on the board and five cards slide out together, heads down, scribbles appearing at once (the b14 device returning). On 'Then they read them out' all five cards flip at the same moment, several showing a small red mark: the doubts arrive together and nobody goes first.",
+    "why_motion": "the answer is a timing claim: writing first (F14) aimed like a premortem (F15) brings every doubt out at the same moment, while asking again asks one doubter to go first alone (F9, F16)",
+    "elements": [
+     "the board: her view greyed, then 'write: why could it fail?'",
+     "the lone rising arm and tag 'go first?'",
+     "five cards written at once",
+     "five cards turned over together"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "Speaking last is gone",
+      "element": "board + tag",
+      "action": "her scribbled view recolours to muted; tag 'speak last' crossed through",
+      "motion": "recolour + m.draw"
+     },
+     {
+      "t_anchor": "Asking again asks someone to go first",
+      "element": "one colleague + tag",
+      "action": "a lone arm half rises under a narrowing light, tag 'go first?' hangs above, the arm lowers",
+      "motion": "stepped pose + settle + write-on"
+     },
+     {
+      "t_anchor": "everyone writes why it could fail",
+      "element": "board slot + five cards",
+      "action": "'write: why could it fail?' written on; cards slide out together; heads down; scribbles at once",
+      "motion": "Loom.slot relabel + settle + boil"
+     },
+     {
+      "t_anchor": "Then they read them out",
+      "element": "five cards",
+      "action": "all flip at the same moment, several with a small red mark",
+      "motion": "flip, stepped"
+     }
+    ],
+    "continuity": "Redraws the set in 'meet' (nested in the week's Wednesday block, the same coordinates as 'room'). b20's camera join pulls out from this frame; leave the end state (cards face up, Dana at the board) for b20's miniature to copy.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: recurring_home_station, state_steps_in_place, radial_wedge_spotlight"
+    ]
+   }
+  },
+  {
+   "beat": "b20",
+   "kind": "bespoke",
+   "scene": "b20",
+   "station": "week",
+   "join_in": {
+    "type": "camera",
+    "dur": 2.4
+   },
+   "subject": "the viewer's own week, with one meeting chosen for a habit",
+   "world": "your week",
+   "accent_on": "the 'speak last' tag on the slot",
+   "motion_is": "content",
+   "register": "productive",
+   "depth": "flat",
+   "light": "even",
+   "shot": {
+    "size": "wide"
+   },
+   "story_role": "practice",
+   "design": {
+    "treatment": "The camera pulls out of Dana's room (camera join, about 2.4 s, under 'One said doubt can make the next easier'): the room shrinks into one meeting block of a wall planner showing the viewer's week, Monday to Friday, with a few blank meeting blocks (no names, no times, nothing invented). Draw the planner with no entrance, present from the first frame of the join, including a miniature of b19's final room inside the Wednesday block at (760, 420, 400, 225), so nothing pops when b19's own drawing switches off after the join. On 'So pick one decision this week' a paper tag 'one decision this week' pins to the Wednesday block. On 'Choose a habit before it starts' the four habits fan out beside the block as small drawn objects, one per step, the same objects as sec2 (a blank board, a card, the tent card, a dotted page; no words). On 'If you run it, speak last' a teal tag 'speak last' pins onto the block and the other three settle back.",
+    "why_motion": "the transfer is a change of scale: from Dana's table to the viewer's own week (pull_back_scale_reveal), with the habit placed on one real slot",
+    "elements": [
+     "the pull-out from Dana's room into the Wednesday block",
+     "the week planner (blank blocks)",
+     "tag 'one decision this week'",
+     "the four habit objects fanning out",
+     "tag 'speak last' on the block"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "One said doubt can make the next easier",
+      "element": "camera",
+      "action": "the pull-out lands on the week (the join)",
+      "motion": "camera join, editorial ease"
+     },
+     {
+      "t_anchor": "pick one decision this week",
+      "element": "tag",
+      "action": "'one decision this week' pins to the Wednesday block, written on",
+      "motion": "settle + write-on"
+     },
+     {
+      "t_anchor": "Choose a habit before it starts",
+      "element": "four habit objects",
+      "action": "fan out beside the block, one per step",
+      "motion": "pop, stepped"
+     },
+     {
+      "t_anchor": "speak last",
+      "element": "tag + objects",
+      "action": "'speak last' pins onto the block; the other three settle back",
+      "motion": "travel + settle"
+     }
+    ],
+    "continuity": "Station 'week' contains the nested station 'meet' at the Wednesday block (rect 760, 420, 400, 225). b21 zooms back in through that block: keep the block's frame and the miniature room in place to the end of the beat.",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: pull_back_scale_reveal, frame_within_frame, label_on_object_with_its_word"
+    ]
+   }
+  },
+  {
+   "beat": "b21",
+   "kind": "bespoke",
+   "scene": "b21",
+   "station": "meet",
+   "join_in": {
+    "type": "zoom",
+    "meaning": "into"
+   },
+   "subject": "five people round one table, each with a folded private doubt",
+   "world": "Dana's meeting room",
+   "accent_on": "the four notes on the table",
+   "motion_is": "content",
+   "register": "expressive",
+   "depth": "flat",
+   "light": "key",
+   "shot": {
+    "size": "establishing"
+   },
+   "story_role": "payoff",
+   "intent": "callback",
+   "design": {
+    "treatment": "The camera zooms back in through the Wednesday block and lands on the lesson's opening frame: same locked wide angle, same five people, same table, drawn at frame 0 so the zoom lands on a finished picture (callback_to_opening_image). The folded bubbles that were above their heads are gone; in front of each colleague sits their note, 'the date', 'testing', 'support', 'client', and the amended plan lies where the Agreed stamp was. Colour has been withheld for this: the four red-taped notes and the ochre plan are the only saturated things, in the lightest frame of the film. On 'the same four doubts are there' the four notes give one stepped settle, left to right. On 'on the table' a soft light pools on the tabletop. On 'The silence was never agreement' the sentence is written on the board in Dana's hand, and the frame rests: only the window's cloud and a slow boil on the outlines continue to the outro.",
+    "why_motion": "the payoff is the opening picture changed by what was learned: the same doubts, now on the table; one settle and one written line are the only changes, then rest",
+    "elements": [
+     "the five people (no bubbles)",
+     "four notes on the table",
+     "the amended plan",
+     "'The silence was never agreement.' on the board"
+    ],
+    "beat_sheet": [
+     {
+      "t_anchor": "the same four doubts are there",
+      "element": "four notes",
+      "action": "settle in two drawings, left to right",
+      "motion": "stepped settle"
+     },
+     {
+      "t_anchor": "on the table",
+      "element": "light pool",
+      "action": "a soft pool of light on the tabletop",
+      "motion": "slow fade 0.8 s"
+     },
+     {
+      "t_anchor": "The silence was never agreement",
+      "element": "board slot",
+      "action": "the sentence written on in Dana's hand; then rest",
+      "motion": "Loom.slot relabel + rest"
+     }
+    ],
+    "continuity": "Redraws the set in 'meet' in b17's end state, minus the board's words and the tent card. The last frame holds for the outro (subject kept identical to b01's for the bookend).",
+    "references": [
+     "docs/research/vision/2026-10-05-tedEd-full-conclusions.md s7 (a still camera on a moving drawing; hold the layout, change its state; joins from the material in the frame; people small and posed; hand-made time on fours)",
+     "docs/research/vision/tedEd_2026-10/colour_and_tone.md (pale open, slightly richer middle, a lift at the close; one accent placed, not sized)",
+     "docs/research/crayon/2026-10-01-crayon-capital-study.md (open on the result, then rewind; bring the opening image back at the end; a black card at the turn)",
+     "docs/research/vision/tedEd_2026-10/style_guide.md techniques: callback_to_opening_image, bookend_returning_set, zoom_through_portal, single_accent_on_muted_field"
+    ]
+   }
+  }
+ ]
+}

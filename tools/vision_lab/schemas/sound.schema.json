@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "sound",
+  "description": "What the soundtrack of one video does, heard by an audio-capable model together with the code's sound measurements (hits, levels, how often cuts and movements land on hits). Times are VIDEO seconds.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["video_id", "music", "sfx", "voice", "silence", "sound_picture_sync", "sound_rules", "loom_translation", "confidence"],
+  "properties": {
+    "video_id": {"type": "string"},
+    "music": {
+      "type": "object", "additionalProperties": false,
+      "required": ["presence", "mood", "instrumentation", "level_under_voice", "follows_structure", "changes"],
+      "properties": {
+        "presence": {"type": "string", "enum": ["none", "intro_outro_only", "segments", "bed_throughout"]},
+        "mood": {"type": "string"},
+        "instrumentation": {"type": "string", "description": "In general terms (sparse piano, plucked strings and soft pads, light percussion). No titles, no artists."},
+        "level_under_voice": {"type": "string", "enum": ["none", "very_low", "low", "medium", "high"]},
+        "follows_structure": {"type": "string", "description": "How the music changes with the film's segments (drops out at the turn, builds into the payoff), or 'it does not'."},
+        "changes": {"type": "array", "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["t", "what", "why"], "properties": {"t": {"type": "number"}, "what": {"type": "string"}, "why": {"type": "string"}}}}
+      }
+    },
+    "sfx": {
+      "type": "object", "additionalProperties": false,
+      "required": ["density", "kinds", "style", "examples"],
+      "properties": {
+        "density": {"type": "string", "enum": ["none", "rare", "regular", "frequent", "constant"]},
+        "kinds": {"type": "array", "maxItems": 10, "items": {"type": "string", "enum": ["whoosh", "pop", "click", "swoosh_transition", "impact", "rumble", "riser", "foley", "ui", "nature", "musical_sting", "texture_bed", "other"]}},
+        "style": {"type": "string", "description": "Realistic, cartoon, musical, minimal... and how loud against the voice."},
+        "examples": {"type": "array", "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["t", "sound", "picture_event"], "properties": {"t": {"type": "number"}, "sound": {"type": "string"}, "picture_event": {"type": "string"}}}}
+      }
+    },
+    "voice": {
+      "type": "object", "additionalProperties": false,
+      "required": ["delivery", "pace", "emphasis", "pauses_used_for"],
+      "properties": {
+        "delivery": {"type": "string", "description": "Tone and register (warm, conversational, measured...). No identification of the speaker."},
+        "pace": {"type": "string", "enum": ["slow", "measured", "brisk", "fast", "varies"]},
+        "emphasis": {"type": "string", "description": "How key words are stressed (pitch, a pause before, slowing down)."},
+        "pauses_used_for": {"type": "string"}
+      }
+    },
+    "silence": {"type": "string", "description": "Where the soundtrack goes quiet or drops out, and what that does."},
+    "sound_picture_sync": {"type": "string", "description": "Do sounds land on picture events (cuts, arrivals, impacts)? Use the code's cuts_on_hit_share and moves_on_hit_share."},
+    "sound_rules": {"type": "array", "maxItems": 8, "items": {"type": "string"}, "description": "Rules this soundtrack follows, testable where possible (e.g. 'music ducks at least 12 dB under the voice')."},
+    "loom_translation": {"type": "array", "maxItems": 6, "items": {"type": "string"}, "description": "What Loom's synthesised sound and music should do differently to match this, in adult corporate terms."},
+    "confidence": {"type": "object", "additionalProperties": false, "required": ["overall", "unsure_about"], "properties": {"overall": {"type": "string", "enum": ["high", "medium", "low"]}, "unsure_about": {"type": "array", "maxItems": 6, "items": {"type": "string"}}}}
+  }
+}

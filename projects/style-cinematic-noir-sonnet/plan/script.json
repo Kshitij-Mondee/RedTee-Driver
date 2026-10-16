@@ -1,0 +1,472 @@
+{
+  "title": "One Password, Every Door",
+  "wpm_target": 140,
+  "sections": [
+    {
+      "id": "open",
+      "title": "The login at two in the morning",
+      "role": "hook"
+    },
+    {
+      "id": "sec1",
+      "title": "Leaked and tried",
+      "role": "build"
+    },
+    {
+      "id": "sec2",
+      "title": "One login becomes many",
+      "role": "build"
+    },
+    {
+      "id": "sec3",
+      "title": "The doors that would have held",
+      "role": "build"
+    },
+    {
+      "id": "sec4",
+      "title": "This week",
+      "role": "apply"
+    },
+    {
+      "id": "close",
+      "title": "The same night, replayed",
+      "role": "payoff"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "open",
+      "job": "hook",
+      "narration": [
+        "Say it is two in the morning.",
+        "Dana's work login succeeds.",
+        "Right password.",
+        "Dana is asleep.",
+        "So who logged in?"
+      ],
+      "on_screen": [
+        "02:00",
+        "Login successful"
+      ],
+      "visual_intent": "Night, one key light on a lone work login screen in a dark office; the field fills, the screen answers 'Login successful'; slow push in. Dana seen asleep at home in silhouette, a cut away.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A fictional employee's account is logged into at night with her real password",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "low and unhurried; a beat of quiet before the question"
+    },
+    {
+      "id": "b02",
+      "section": "open",
+      "job": "orient",
+      "narration": [
+        "Nobody broke in.",
+        "Follow that one password through the night,",
+        "and the two habits that stop it."
+      ],
+      "on_screen": [],
+      "visual_intent": "The password becomes a physical object, a small lit key card, lifted out of the screen into the dark; the camera follows it toward a long corridor of closed doors.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The attacker used a valid password rather than forcing entry",
+          "fact": "F7"
+        },
+        {
+          "claim": "Two habits stop it: a unique password and MFA",
+          "fact": "F9"
+        },
+        {
+          "claim": "MFA stops a stolen password being enough",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "section": "sec1",
+      "job": "scenario",
+      "narration": [
+        "Months ago, Dana used one password twice.",
+        "Once on a shopping site.",
+        "Once at work."
+      ],
+      "on_screen": [
+        "Shop",
+        "Work"
+      ],
+      "visual_intent": "Rewind: daylight dimmed to evening; the same key card fits two doors side by side, one labelled Shop, one labelled Work. Plain, no blame.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Dana reused one password on a shopping site and at work",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "concepts": [
+        "password reuse"
+      ],
+      "delivery": "matter of fact, no judgement"
+    },
+    {
+      "id": "b04",
+      "section": "sec1",
+      "job": "sequence",
+      "narration": [
+        "Then the shopping site is breached.",
+        "Her company never controlled it.",
+        "The password lands in a list.",
+        "Lists get shared."
+      ],
+      "on_screen": [
+        "Shop: breached"
+      ],
+      "visual_intent": "The Shop door is forced in shadow off to the side; the key card is copied onto a long sheet of other cards, a list that slides from hand to hand in silhouette. The Work door stays in the dark, untouched.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Passwords leak when a third-party site is breached, outside the employer's control",
+          "fact": "F1"
+        },
+        {
+          "claim": "Leaked credentials are compiled into lists that are shared or traded",
+          "fact": "F2"
+        }
+      ],
+      "concepts": [
+        "third-party breach",
+        "leaked lists shared"
+      ],
+      "misconception": "a leak on an unrelated site only costs that one account"
+    },
+    {
+      "id": "b05",
+      "section": "sec1",
+      "job": "define",
+      "narration": [
+        "Software tries every leaked pair on other logins.",
+        "That is credential stuffing.",
+        "Nobody chose Dana."
+      ],
+      "on_screen": [
+        "credential stuffing"
+      ],
+      "visual_intent": "A machine-steady stream of key cards tried against a row of login doors, one after another, automated and indifferent; the term appears once as the stream runs.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Credential stuffing is automated trying of leaked pairs on other logins",
+          "fact": "F3"
+        },
+        {
+          "claim": "Because it is automated, a reused password does not need to be targeted by a person",
+          "fact": "F5"
+        }
+      ],
+      "concepts": [
+        "credential stuffing"
+      ],
+      "misconception": "nobody would bother targeting my password",
+      "delivery": "slower on the term"
+    },
+    {
+      "id": "b06",
+      "section": "sec1",
+      "job": "consolidate",
+      "narration": [
+        "It worked for one reason.",
+        "The password was reused."
+      ],
+      "on_screen": [
+        "reused"
+      ],
+      "visual_intent": "In the stream, Dana's card reaches the Work door and turns; the door opens a crack and light spills out. Hold on the open door.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Credential stuffing works because the same password is reused on more than one service",
+          "fact": "F4"
+        }
+      ],
+      "concepts": [
+        "password reuse"
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "sec2",
+      "job": "relate",
+      "narration": [
+        "Inside, the attacker looks like Dana.",
+        "A valid login can be harder to notice."
+      ],
+      "on_screen": [],
+      "visual_intent": "Inside the office at night, a silhouette at a desk is indistinguishable from an ordinary user; the security camera's view shows nothing unusual.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A valid account login can look like a normal user and be harder to notice than a forced break-in",
+          "fact": "F7"
+        }
+      ],
+      "concepts": [
+        "valid account looks normal"
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "sec2",
+      "job": "define",
+      "narration": [
+        "From one account, they reach other systems.",
+        "That is lateral movement.",
+        "They may hunt for more access."
+      ],
+      "on_screen": [
+        "lateral movement"
+      ],
+      "visual_intent": "From the first open door, a corridor: one door after another opens in sequence down the line, the light spreading; a last heavier door at the end is tried.",
+      "change_over_time": true,
+      "animate_score": 0.9,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "From one compromised account an attacker uses the foothold to reach other systems and accounts",
+          "fact": "F6"
+        },
+        {
+          "claim": "The attacker may look for higher-privilege accounts",
+          "fact": "F8"
+        }
+      ],
+      "concepts": [
+        "lateral movement",
+        "privilege escalation"
+      ]
+    },
+    {
+      "id": "b09",
+      "section": "sec2",
+      "job": "check",
+      "narration": [
+        "One password, many doors.",
+        "So which habit shuts which door?"
+      ],
+      "on_screen": [
+        "Leaked password at the login",
+        "Correct password, wrong person"
+      ],
+      "visual_intent": "Wide on the corridor of open doors, then the two places the night could have stopped are marked: the first login door, and the moment a correct password is used by someone else. Hold for the viewer to choose.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "One reused password led to many systems",
+          "fact": "F6"
+        }
+      ],
+      "pause_after_s": 2,
+      "recall": {
+        "kind": "quiz",
+        "prompt": "Which habit shuts which door?",
+        "answer": "a unique password keeps the leaked one from fitting; MFA makes a correct password alone not enough",
+        "tempting_wrong": "change the password every few months"
+      }
+    },
+    {
+      "id": "b10",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "First, a unique password for every account.",
+        "Then a leak opens only that site.",
+        "A password manager creates and remembers them."
+      ],
+      "on_screen": [
+        "unique password",
+        "password manager"
+      ],
+      "visual_intent": "Replay the leak with two different key cards: the Shop card is copied, tried at the Work door, and does not turn. A small password manager vault hands out a fresh card per door.",
+      "change_over_time": true,
+      "animate_score": 0.8,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A different password per account means a leak from one service does not unlock the others",
+          "fact": "F9"
+        },
+        {
+          "claim": "A password manager generates and stores unique passwords",
+          "fact": "F10"
+        }
+      ],
+      "concepts": [
+        "unique password per account",
+        "password manager"
+      ],
+      "misconception": "a complex password is safe even if reused"
+    },
+    {
+      "id": "b11",
+      "section": "sec3",
+      "job": "demonstrate",
+      "narration": [
+        "Second, multi-factor authentication, or MFA.",
+        "It asks for something more.",
+        "A stolen password alone is not enough."
+      ],
+      "on_screen": [
+        "MFA"
+      ],
+      "visual_intent": "The stolen card turns in the lock, but a second lock below it stays shut, waiting for a code on Dana's phone. The door holds.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "MFA asks for something beyond the password, so a stolen correct password alone is not enough",
+          "fact": "F11"
+        }
+      ],
+      "concepts": [
+        "multi-factor authentication"
+      ],
+      "delivery": "slower on the term"
+    },
+    {
+      "id": "b12",
+      "section": "sec3",
+      "job": "refute",
+      "narration": [
+        "But an attacker may send approval requests,",
+        "again and again.",
+        "One you did not start?",
+        "Deny it, and report it."
+      ],
+      "on_screen": [
+        "Approve?",
+        "Deny"
+      ],
+      "visual_intent": "On a bedside phone in the dark, approval requests light up one after another; the thumb presses Deny. The second lock stays shut.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "In MFA fatigue an attacker with the password sends repeated approval requests",
+          "fact": "F12"
+        },
+        {
+          "claim": "An MFA request you did not start should be denied and reported",
+          "fact": "F13"
+        }
+      ],
+      "concepts": [
+        "MFA fatigue",
+        "deny and report"
+      ],
+      "misconception": "any approval prompt is safe to accept",
+      "pause_after_s": 1,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "A request you did not start: what do you do?",
+        "answer": "deny it and report it"
+      }
+    },
+    {
+      "id": "b13",
+      "section": "sec4",
+      "job": "practice",
+      "narration": [
+        "This week, replace any work password used elsewhere.",
+        "Turn on MFA.",
+        "Report odd prompts or breach notices straight away."
+      ],
+      "on_screen": [
+        "Replace reused passwords",
+        "Turn on MFA",
+        "Report odd prompts"
+      ],
+      "visual_intent": "Morning light edges in: three plain actions appear as objects on Dana's desk, each picked up as it is named: a fresh key card, the phone with MFA on, a report sent to the security team.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Replace a reused password with a unique one",
+          "fact": "F9"
+        },
+        {
+          "claim": "Turn on MFA",
+          "fact": "F11"
+        },
+        {
+          "claim": "Report unexpected prompts or breach notices to the security team promptly",
+          "fact": "F14"
+        }
+      ],
+      "concepts": [
+        "check reuse",
+        "report to security team"
+      ],
+      "delivery": "plain and brisk"
+    },
+    {
+      "id": "b14",
+      "section": "close",
+      "job": "payoff",
+      "narration": [
+        "Replay the night.",
+        "The leaked password is tried.",
+        "It fits nothing.",
+        "A request arrives: denied, and reported.",
+        "Every door stays shut."
+      ],
+      "on_screen": [
+        "02:00",
+        "Access denied"
+      ],
+      "visual_intent": "The opening shot again, two in the morning, one key light: the leaked card is tried at the Work door and does not turn, the phone lights once, Deny; the corridor of doors stays dark and shut. Slow pull back.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "With a unique password the leaked one does not unlock the work account",
+          "fact": "F9"
+        },
+        {
+          "claim": "An unstarted request is denied and reported",
+          "fact": "F13"
+        },
+        {
+          "claim": "The replayed night is the same fictional case",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "delivery": "warm and quiet; let the last line land"
+    }
+  ]
+}

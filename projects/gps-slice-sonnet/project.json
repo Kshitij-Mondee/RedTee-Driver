@@ -1,0 +1,52 @@
+{
+  "id": "gps-slice-sonnet",
+  "engine": "loom",
+  "mode": "topic",
+  "topic": "How GPS knows where you are",
+  "sources": [],
+  "request": {
+    "audience": "corporate employees",
+    "genre": "explainer",
+    "length_min": 1.22,
+    "style": "flat-cosmos",
+    "persona": "mentor",
+    "voice": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 0.723,
+      "calibrated": true
+    },
+    "captions": true,
+    "avatar": {
+      "provider": "none",
+      "member": "woman"
+    },
+    "mix": "cinema",
+    "notes": "A Kurzgesagt-like explainer in the flat-cosmos style: the night field, Earth, satellites on their orbits. Show the mechanism running: each satellite broadcasting where it is and the exact time, the signal travelling to a phone, distance worked out from the travel time, circles and spheres intersecting to pin one point, a fourth satellite fixing the phone's cheap clock, and the satellites' own clocks running at a different rate in orbit (speed and gravity) and the correction that keeps a position from drifting. Real numbers only where the knowledge sheet grounds them. People only if the style has a designed character kit; otherwise none.",
+    "mix_as": "ceiling"
+  },
+  "models": {
+    "plan": "claude-opus-5-5",
+    "build": "claude-sonnet-5-5",
+    "tweak": "claude-haiku-4-5-20251001"
+  },
+  "isolated": true,
+  "sliced_from": {
+    "lesson": "gps-position",
+    "beats": [
+      "b08",
+      "b09",
+      "b10",
+      "b11",
+      "b12",
+      "b13",
+      "b14",
+      "b15",
+      "b16",
+      "b17",
+      "b18"
+    ],
+    "t0": 52.193,
+    "t1": 125.668
+  }
+}

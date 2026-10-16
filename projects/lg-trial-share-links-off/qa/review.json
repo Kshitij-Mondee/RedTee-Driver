@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "file": "scenes/b01.js",
+      "problem": "The marker hand is still drawing the label 'A stranger?' at the settled frame timestamp (8.18s), finishing just as the beat transitions to b02.",
+      "fix": "In scenes/b01.js, advance the drawing start cue or shorten the stroke duration for stranger_label by 0.3s so the text finishes before the phrase ends.",
+      "beat": "b01",
+      "severity": "minor"
+    },
+    {
+      "fix": "In scenes/b03.js, add three sequential label marks or bullet words beside the avatar circle timed to each spoken question.",
+      "problem": "The presenter frame displays the title 'Three quick choices' but omits the three narrated choices ('Who', 'What they can do', 'Until when') on the board beside the avatar.",
+      "file": "scenes/b03.js",
+      "severity": "minor",
+      "beat": "b03"
+    },
+    {
+      "problem": "The held budget page retains the orange edit strike from beat b10 while the narration shifts back to explaining view permissions.",
+      "beat": "b11",
+      "severity": "minor",
+      "fix": "In scenes/b11.js, clear the edit mark on the held page or fade it to ink so it does not compete with the new copy-proof emphasis.",
+      "file": "scenes/b11.js"
+    }
+  ],
+  "verdict": "ship"
+}

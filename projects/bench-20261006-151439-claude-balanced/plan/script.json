@@ -1,0 +1,1356 @@
+{
+  "title": "Feedback That Changes What Happens Next",
+  "wpm_target": 145,
+  "sections": [
+    {
+      "id": "bridge",
+      "title": "Kind but vague"
+    },
+    {
+      "id": "behaviour",
+      "title": "The camera test"
+    },
+    {
+      "id": "effect",
+      "title": "What it did"
+    },
+    {
+      "id": "request",
+      "title": "The request"
+    },
+    {
+      "id": "check",
+      "title": "Pick the version"
+    },
+    {
+      "id": "apply",
+      "title": "Your sentence"
+    },
+    {
+      "id": "payoff_scene",
+      "title": "Back to the meeting"
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "section": "bridge",
+      "job": "hook",
+      "narration": [
+        "Say this is Priya, and this is Dev.",
+        "Their meeting just ended, and it was tense."
+      ],
+      "on_screen": [
+        "Priya",
+        "Dev"
+      ],
+      "visual_intent": "A cartoon meeting room emptying, papers left on the table; two characters stay behind facing each other, a board on the wall behind them.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Priya and Dev are illustrative characters",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b02",
+      "section": "bridge",
+      "job": "hook",
+      "narration": [
+        "Priya wants to help, so she says it kindly.",
+        "Dev, you need to be more professional."
+      ],
+      "on_screen": [
+        "You need to be more professional"
+      ],
+      "visual_intent": "Priya smiles warmly; the sentence appears on the board behind her in plain letters, as a speech bubble from her.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Illustrative vague feedback line",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b03",
+      "section": "bridge",
+      "job": "hook",
+      "narration": [
+        "Dev nods warmly, and says, fair point.",
+        "Priya walks out feeling good about it."
+      ],
+      "on_screen": [],
+      "visual_intent": "Dev nods with a warm smile; Priya leaves with a small glow of satisfaction over her head.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Illustrative reaction",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b04",
+      "section": "bridge",
+      "job": "hook",
+      "narration": [
+        "Next meeting, it goes exactly the same way.",
+        "Same moment, same tension."
+      ],
+      "on_screen": [],
+      "visual_intent": "The tense meeting replays in the same room with the same seating, laid over a faded copy of the first one so the repeat is obvious.",
+      "change_over_time": false,
+      "animate_score": 0.35,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Illustrative repeat of the meeting",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b05",
+      "section": "bridge",
+      "job": "orient",
+      "narration": [
+        "By the end, you can rebuild that same sentence.",
+        "Dev can act on it.",
+        "And the kind tone was never the problem."
+      ],
+      "on_screen": [],
+      "visual_intent": "The presenter beside the board, the old sentence faint behind them, speaking straight to camera.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Tone shapes how it feels but is not sufficient, so tone was not the problem",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "section": "bridge",
+      "job": "relate",
+      "narration": [
+        "So what did Dev actually receive?",
+        "A judgement, and no action.",
+        "Nothing to repeat, stop, or change."
+      ],
+      "on_screen": [
+        "Judgement",
+        "No action"
+      ],
+      "visual_intent": "Dev holds a heavy card carrying the label; beside it an empty checklist with no lines to tick.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Vague feedback gives a judgement but no action to repeat, stop or change",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b07",
+      "section": "bridge",
+      "job": "relate",
+      "narration": [
+        "Be more professional, how?",
+        "Doing what, in which moment?",
+        "Dev is left to guess."
+      ],
+      "on_screen": [
+        "How?",
+        "Which moment?"
+      ],
+      "visual_intent": "Question marks float around Dev; the meeting timeline sits beneath, each question hovering over a different moment, none chosen.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A vague label leaves no action the listener can identify",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b08",
+      "section": "bridge",
+      "job": "refute",
+      "narration": [
+        "Here is where people slip.",
+        "A nod feels like understanding.",
+        "It is a weak sign anything will change."
+      ],
+      "on_screen": [
+        "Nod",
+        "Weak sign"
+      ],
+      "visual_intent": "Dev's nod shown large, with a thin faint arrow from it toward the next meeting that fades out.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A listener can nod and agree and still not know what to do; agreement is a weak sign of change",
+          "fact": "F4"
+        }
+      ],
+      "misconception": "If the tone is kind and the colleague nods and agrees, the feedback worked."
+    },
+    {
+      "id": "b09",
+      "section": "bridge",
+      "job": "distinguish",
+      "narration": [
+        "And the kind tone?",
+        "Tone shapes how it feels.",
+        "Content decides what Dev can change.",
+        "Tone still matters. It is just not enough."
+      ],
+      "on_screen": [
+        "Tone",
+        "Content"
+      ],
+      "visual_intent": "Two dials side by side: the tone dial turned to warm, the content slot beside it empty.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Tone shapes how feedback feels while content decides whether the listener knows what to change; tone is not sufficient",
+          "fact": "F14"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "section": "bridge",
+      "job": "relate",
+      "narration": [
+        "Worse, a label about who you are,",
+        "is often heard as an attack.",
+        "Not always. But often."
+      ],
+      "on_screen": [
+        "Label",
+        "Attack"
+      ],
+      "visual_intent": "The label is stamped onto Dev's chest; behind the polite smile Dev's shoulders tense.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Feedback about character is often easier to take as an attack than feedback about one action; reactions vary",
+          "fact": "F3"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "section": "bridge",
+      "job": "transition",
+      "narration": [
+        "So we rebuild the sentence.",
+        "Three parts, one at a time.",
+        "Start with the first."
+      ],
+      "on_screen": [],
+      "visual_intent": "The board: Priya's old sentence on top, three empty slots beneath, the first one lit.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Feedback can be built from three parts: behaviour, effect, request",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "section": "behaviour",
+      "job": "demonstrate",
+      "narration": [
+        "Picture a camera in that meeting room.",
+        "It records what was said, when, and to whom."
+      ],
+      "on_screen": [
+        "Camera"
+      ],
+      "visual_intent": "A camera in the corner of the room; its viewfinder frame shows the meeting with speech captions marked by who, to whom, and when.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Observable behaviour is what a camera would have seen or heard: what was said, when, to whom",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "section": "behaviour",
+      "job": "distinguish",
+      "narration": [
+        "The camera never records a dismissive attitude.",
+        "Attitude, motive, intent.",
+        "None of them are observations."
+      ],
+      "on_screen": [
+        "Attitude",
+        "Motive",
+        "Intent"
+      ],
+      "visual_intent": "Three thought bubbles labelled attitude, motive and intent drift out of the camera frame and fade.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Judgements about attitude, motive or intent are interpretations, not observations",
+          "fact": "F6"
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "section": "behaviour",
+      "job": "define",
+      "narration": [
+        "What the camera does catch has a name.",
+        "Observable behaviour.",
+        "We will call the check the camera test."
+      ],
+      "on_screen": [
+        "Observable behaviour",
+        "Camera test"
+      ],
+      "visual_intent": "The rule large on the board, alone, with the camera icon beside it.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Observable behaviour is what a camera or any person watching would have seen or heard",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b15",
+      "section": "behaviour",
+      "job": "refute",
+      "narration": [
+        "Here is where people slip.",
+        "Saying you were dismissive feels honest, and direct.",
+        "But it is a guess about motive.",
+        "And you can be wrong."
+      ],
+      "on_screen": [
+        "Dismissive",
+        "A guess"
+      ],
+      "visual_intent": "The word dismissive on the board wobbles and gains a question mark, drifting away from the solid camera frame.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Judgements like 'you were being dismissive' are interpretations the speaker can be wrong about",
+          "fact": "F6"
+        }
+      ],
+      "misconception": "Saying what you think of someone's attitude is honest, direct feedback."
+    },
+    {
+      "id": "b16",
+      "section": "behaviour",
+      "job": "check",
+      "narration": [
+        "Now you.",
+        "Be more professional. What would a camera see?",
+        "Say what was done, when, and to whom."
+      ],
+      "on_screen": [
+        "What would a camera see?"
+      ],
+      "visual_intent": "The board with slot one blinking empty; the camera viewfinder frame paused around the meeting room.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Observable behaviour covers what was done, when, and to whom",
+          "fact": "F5"
+        }
+      ],
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "pause_predict",
+        "prompt": "What would a camera have seen in that meeting? Say it as what was done, when, and to whom."
+      }
+    },
+    {
+      "id": "b17",
+      "section": "behaviour",
+      "job": "demonstrate",
+      "narration": [
+        "Here is one answer.",
+        "In today's meeting, you interrupted Sam twice,",
+        "while she was presenting."
+      ],
+      "on_screen": [
+        "Interrupted Sam twice",
+        "While she was presenting"
+      ],
+      "visual_intent": "Slot one fills word by word on the board as the camera frame shows Sam presenting and Dev cutting in twice.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "A specific moment, such as interrupting Sam twice while she was presenting, instead of a general label",
+          "fact": "F7"
+        },
+        {
+          "claim": "Sam and the wording are illustrative",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b18",
+      "section": "behaviour",
+      "job": "distinguish",
+      "narration": [
+        "Watch the old label fade,",
+        "while the specific moment stays.",
+        "Sam is named. The moment is named.",
+        "There is no verdict on Dev."
+      ],
+      "on_screen": [
+        "Specific moment"
+      ],
+      "visual_intent": "The old line, be more professional, fades out of the board while the specific sentence stays sharp and solid.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Good feedback names a specific moment instead of a general label",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b19",
+      "section": "behaviour",
+      "job": "consolidate",
+      "narration": [
+        "Pocket rule: describe what a camera would see."
+      ],
+      "on_screen": [
+        "Describe what a camera would see"
+      ],
+      "visual_intent": "The rule, large, alone on the board with the camera icon.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Describe observable behaviour, what a camera would see",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b20",
+      "section": "effect",
+      "job": "transition",
+      "narration": [
+        "Slot one is filled.",
+        "But Dev might still think, so what?",
+        "Why does it matter?"
+      ],
+      "on_screen": [
+        "So what?"
+      ],
+      "visual_intent": "The filled slot on the board; Dev shrugs with a so what bubble.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "The effect tells the listener why it matters beyond the speaker's opinion",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b21",
+      "section": "effect",
+      "job": "demonstrate",
+      "narration": [
+        "Look at the room after the second interruption.",
+        "Priya loses track of Sam's point.",
+        "What it did to the work is the effect."
+      ],
+      "on_screen": [
+        "Effect"
+      ],
+      "visual_intent": "A split frame of the same room: left, Sam presenting smoothly; right, Sam cut off mid-slide and Priya looking lost. The word effect lands on the right side.",
+      "change_over_time": false,
+      "animate_score": 0.4,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "Describing the effect of a behaviour on the team or work tells the listener why it matters",
+          "fact": "F8"
+        },
+        {
+          "claim": "Scene details are illustrative",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b22",
+      "section": "effect",
+      "job": "demonstrate",
+      "narration": [
+        "Priya says what she directly felt.",
+        "I lost track of her point.",
+        "That is honest, and hard to dispute."
+      ],
+      "on_screen": [
+        "I lost track of her point"
+      ],
+      "visual_intent": "A second clause attaches to the board sentence; Priya's thought thread untangles into the clause.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "Describing your own reaction, such as I lost track of the point, is more honest and harder to dispute",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b23",
+      "section": "effect",
+      "job": "refute",
+      "narration": [
+        "Here is the tricky part.",
+        "Do not guess what others think.",
+        "Say what happened, or what you felt."
+      ],
+      "on_screen": [
+        "What others think",
+        "What you felt"
+      ],
+      "visual_intent": "Two cards: what others think, crossed out; what you felt, ticked.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Describe effects that happened or that you directly felt; do not speculate about what others think",
+          "fact": "F8"
+        },
+        {
+          "claim": "Own reaction is harder to dispute than claims about what others felt",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b24",
+      "section": "effect",
+      "job": "check",
+      "narration": [
+        "Without looking back.",
+        "What is the camera test?",
+        "And which part of the sentence does it protect?"
+      ],
+      "on_screen": [
+        "Camera test"
+      ],
+      "visual_intent": "The board wiped to blank, the camera icon alone in the centre.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "The camera test is about observable behaviour",
+          "fact": "F5"
+        }
+      ],
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "recall_prompt",
+        "prompt": "What is the camera test, and which part of the sentence does it protect?"
+      }
+    },
+    {
+      "id": "b25",
+      "section": "effect",
+      "job": "consolidate",
+      "narration": [
+        "The camera test asks one thing.",
+        "What would anyone watching have seen or heard?",
+        "It protects part one."
+      ],
+      "on_screen": [
+        "Part one"
+      ],
+      "visual_intent": "The camera icon links back to the first slot on the restored board, which lights up.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Observable behaviour is what any person watching would have seen or heard",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b26",
+      "section": "effect",
+      "job": "consolidate",
+      "narration": [
+        "Pocket rule: say what happened, and what it did."
+      ],
+      "on_screen": [
+        "What happened",
+        "What it did"
+      ],
+      "visual_intent": "The rule large next to the first two filled slots on the board.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Name the behaviour and its effect on the work or team",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b27",
+      "section": "request",
+      "job": "transition",
+      "narration": [
+        "Dev knows what happened, and why it matters.",
+        "So what should Dev do next?",
+        "Here is where people slip."
+      ],
+      "on_screen": [],
+      "visual_intent": "The board with two filled slots and the third empty; Dev looks at the empty slot.",
+      "change_over_time": false,
+      "animate_score": 0.2,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Behaviour and effect alone do not give an action; a request is needed",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b28",
+      "section": "request",
+      "job": "refute",
+      "narration": [
+        "Priya says, stop interrupting.",
+        "That only says what to stop.",
+        "It leaves a gap."
+      ],
+      "on_screen": [
+        "Stop interrupting",
+        "A gap"
+      ],
+      "visual_intent": "The words stop interrupting in slot three, with a visible empty box next to them labelled as a gap.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Feedback that only says what to stop leaves a gap",
+          "fact": "F11"
+        }
+      ],
+      "misconception": "A request is enough if it only says what to stop."
+    },
+    {
+      "id": "b29",
+      "section": "request",
+      "job": "demonstrate",
+      "narration": [
+        "So fill the gap with what to do instead.",
+        "Next meeting, please let her finish before you respond."
+      ],
+      "on_screen": [
+        "Next meeting",
+        "Let her finish"
+      ],
+      "visual_intent": "The empty box fills with the action, written beside the next meeting marked on a calendar.",
+      "change_over_time": true,
+      "animate_score": 0.5,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "A clear request names a specific action for next time",
+          "fact": "F10"
+        },
+        {
+          "claim": "A request is stronger when it also says what to do instead",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b30",
+      "section": "request",
+      "job": "demonstrate",
+      "narration": [
+        "Then agree a way to check back.",
+        "A time, or a moment, when you talk again.",
+        "Say, let's talk after it.",
+        "More likely to be remembered, and noticed."
+      ],
+      "on_screen": [
+        "Check back"
+      ],
+      "visual_intent": "A second marker lands on the calendar right after the meeting, linked to the request by a thin line.",
+      "change_over_time": true,
+      "animate_score": 0.45,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "Agreeing a time or moment to talk again makes the request more likely to be remembered and noticed",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b31",
+      "section": "request",
+      "job": "relate",
+      "narration": [
+        "And when should Priya say all this?",
+        "Usually soon after, while you both remember.",
+        "Sometimes waiting for calm, or privacy, is wiser."
+      ],
+      "on_screen": [
+        "Soon after"
+      ],
+      "visual_intent": "A timeline from the meeting outward with the soon-after zone shaded, and a smaller marker for calm or privacy later.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Feedback is most useful soon after the event; occasionally waiting for calm or privacy is wiser",
+          "fact": "F15"
+        }
+      ]
+    },
+    {
+      "id": "b32",
+      "section": "request",
+      "job": "consolidate",
+      "narration": [
+        "Put the three parts together.",
+        "Behaviour. Effect. Request.",
+        "One sentence, built on the board."
+      ],
+      "on_screen": [
+        "Behaviour",
+        "Effect",
+        "Request"
+      ],
+      "visual_intent": "The three slots join into one sentence while the old be more professional line sits faded beside it for comparison.",
+      "change_over_time": true,
+      "animate_score": 0.6,
+      "treatment_hint": "hybrid",
+      "grounding": [
+        {
+          "claim": "Behaviour, effect and request is one common three-part structure",
+          "fact": "F13"
+        },
+        {
+          "claim": "Behaviour, effect and request elements",
+          "fact": "F7"
+        }
+      ]
+    },
+    {
+      "id": "b33",
+      "section": "request",
+      "job": "consolidate",
+      "narration": [
+        "Pocket rule: say what to do, not just what to stop."
+      ],
+      "on_screen": [
+        "What to do",
+        "What to stop"
+      ],
+      "visual_intent": "The rule large; what to do sits on a solid card, what to stop on a faded one.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A request is stronger when it says what to do instead of only what to stop",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b34",
+      "section": "check",
+      "job": "scenario",
+      "narration": [
+        "Now you. Same Dev, three versions Priya could say.",
+        "A: you are great, just be more careful.",
+        "B: you are rude, so stop interrupting."
+      ],
+      "on_screen": [],
+      "visual_intent": "Three cards slide onto the board one by one; first two are read and shown with their text on the cards.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Versions A and B are illustrative",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b35",
+      "section": "check",
+      "job": "check",
+      "narration": [
+        "Last one, C.",
+        "You interrupted Sam twice, and I lost track.",
+        "Next meeting, let her finish. Let's talk after.",
+        "A, B, or C? Which has all three parts?"
+      ],
+      "on_screen": [
+        "A",
+        "B",
+        "C"
+      ],
+      "visual_intent": "All three cards side by side, equal size, letters large, no answer shown.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Version C is illustrative and built from behaviour, effect and request",
+          "fact": "F7"
+        },
+        {
+          "claim": "Version C wording",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true,
+      "pause_after_s": 4,
+      "recall": {
+        "kind": "quiz",
+        "prompt": "Three versions for the same teammate. Which one names a behaviour, an effect and a request?",
+        "options": [
+          "A: you are great, just be more careful.",
+          "B: you are rude, so stop interrupting.",
+          "C: you interrupted Sam twice, and I lost track. Next meeting, let her finish. Let's talk after."
+        ]
+      }
+    },
+    {
+      "id": "b36",
+      "section": "check",
+      "job": "check",
+      "narration": [
+        "C.",
+        "Interrupted Sam twice is the behaviour.",
+        "I lost track is the effect.",
+        "Let her finish is the request."
+      ],
+      "on_screen": [
+        "Behaviour",
+        "Effect",
+        "Request"
+      ],
+      "visual_intent": "Card C lifts forward; three coloured highlights mark behaviour, effect and request in its text.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "C names a moment, an own reaction as effect, and a request",
+          "fact": "F7"
+        },
+        {
+          "claim": "The effect is stated as own reaction",
+          "fact": "F9"
+        },
+        {
+          "claim": "The request names an action for next time",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b37",
+      "section": "check",
+      "job": "refute",
+      "narration": [
+        "A is the tempting one.",
+        "It is warm, and warmth feels safe.",
+        "But warm is tone, and tone is not enough.",
+        "Dev still has nothing to do."
+      ],
+      "on_screen": [
+        "A",
+        "Tone"
+      ],
+      "visual_intent": "Card A fades while an empty action box stays beside it.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Kind tone alone does not make feedback effective",
+          "fact": "F14"
+        },
+        {
+          "claim": "Vague feedback leaves no action",
+          "fact": "F2"
+        }
+      ]
+    },
+    {
+      "id": "b38",
+      "section": "check",
+      "job": "refute",
+      "narration": [
+        "B fails differently.",
+        "Rude is a label, and a guess about Dev.",
+        "Stop is only half a request."
+      ],
+      "on_screen": [
+        "B",
+        "Label",
+        "Half a request"
+      ],
+      "visual_intent": "Card B with the word rude circled as a label; the stop part drawn as half of a complete request.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A character judgement is an interpretation and is often heard as an attack",
+          "fact": "F6"
+        },
+        {
+          "claim": "Only saying what to stop leaves a gap",
+          "fact": "F11"
+        }
+      ]
+    },
+    {
+      "id": "b39",
+      "section": "check",
+      "job": "consolidate",
+      "narration": [
+        "Pocket rule: check for all three parts."
+      ],
+      "on_screen": [
+        "All three parts"
+      ],
+      "visual_intent": "Three slots drawn large, all filled, as a checklist.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Behaviour, effect and request",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b40",
+      "section": "apply",
+      "job": "transition",
+      "narration": [
+        "Now yours.",
+        "Think of one conversation you have been putting off.",
+        "Just one."
+      ],
+      "on_screen": [],
+      "visual_intent": "A calm desk with a single sticky note, a name on it turned away from camera; the board waits empty.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "motion",
+      "grounding": [],
+      "pause_after_s": 2
+    },
+    {
+      "id": "b41",
+      "section": "apply",
+      "job": "orient",
+      "narration": [
+        "A quick note first.",
+        "This is one common shape.",
+        "Other models exist, and people use them too."
+      ],
+      "on_screen": [
+        "One common shape"
+      ],
+      "visual_intent": "The three-slot shape on the board, with other differently shaped outlines ghosted beside it.",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Behaviour, effect and request is one common structure; other models exist and are used",
+          "fact": "F13"
+        }
+      ]
+    },
+    {
+      "id": "b42",
+      "section": "apply",
+      "job": "practice",
+      "narration": [
+        "Slot one. Run the camera test.",
+        "What was said, when, and to whom?"
+      ],
+      "on_screen": [
+        "Camera test"
+      ],
+      "visual_intent": "Worksheet slot one highlighted, the viewfinder frame around it.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Observable behaviour is what was said, when, to whom",
+          "fact": "F5"
+        }
+      ]
+    },
+    {
+      "id": "b43",
+      "section": "apply",
+      "job": "practice",
+      "narration": [
+        "Slot two, the effect.",
+        "What did it do to the work?",
+        "Or what did you directly feel?"
+      ],
+      "on_screen": [
+        "Effect"
+      ],
+      "visual_intent": "Worksheet slot two highlighted next to slot one.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Describe effects that happened or that you directly felt",
+          "fact": "F8"
+        }
+      ]
+    },
+    {
+      "id": "b44",
+      "section": "apply",
+      "job": "practice",
+      "narration": [
+        "Slot three. What will they do next time?",
+        "Is it an action, not only a stop?",
+        "And when will you talk again?"
+      ],
+      "on_screen": [
+        "Action",
+        "Talk again"
+      ],
+      "visual_intent": "Worksheet slot three highlighted, with a small calendar marker next to it.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "A request names a specific action and says what to do instead",
+          "fact": "F11"
+        },
+        {
+          "claim": "Agree a way to check back",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b45",
+      "section": "apply",
+      "job": "practice",
+      "narration": [
+        "Pause, and write your opening line."
+      ],
+      "on_screen": [
+        "Your opening line"
+      ],
+      "visual_intent": "All three worksheet slots side by side with blinking cursors, the screen calm.",
+      "change_over_time": false,
+      "animate_score": 0.05,
+      "treatment_hint": "template",
+      "grounding": [],
+      "pause_after_s": 8
+    },
+    {
+      "id": "b46",
+      "section": "apply",
+      "job": "consolidate",
+      "narration": [
+        "Then say it this week.",
+        "Soon after the moment, if you can.",
+        "And agree when you will talk again."
+      ],
+      "on_screen": [
+        "This week"
+      ],
+      "visual_intent": "The sticky note from the desk gets a tick and a date-free calendar marker.",
+      "change_over_time": false,
+      "animate_score": 0.15,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Feedback is most useful soon after the event",
+          "fact": "F15"
+        },
+        {
+          "claim": "Agreeing when to talk again makes the request more likely to be noticed",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b47",
+      "section": "payoff_scene",
+      "job": "payoff",
+      "narration": [
+        "Back to Priya and Dev, in that same room.",
+        "Same tension. Different sentence."
+      ],
+      "on_screen": [],
+      "visual_intent": "The opening frame replayed; the board now carries the rebuilt sentence instead of the old one.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Return to the running scenario",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b48",
+      "section": "payoff_scene",
+      "job": "payoff",
+      "narration": [
+        "In today's meeting, you interrupted Sam twice,",
+        "while she was presenting.",
+        "I lost track of her point."
+      ],
+      "on_screen": [
+        "Interrupted Sam twice",
+        "I lost track"
+      ],
+      "visual_intent": "Priya speaks; the two parts appear in the speech bubble in the order spoken.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Specific moment and own reaction as effect",
+          "fact": "F7"
+        },
+        {
+          "claim": "Own reaction as effect",
+          "fact": "F9"
+        }
+      ]
+    },
+    {
+      "id": "b49",
+      "section": "payoff_scene",
+      "job": "payoff",
+      "narration": [
+        "Next meeting, please let her finish before you respond,",
+        "and let's talk after it."
+      ],
+      "on_screen": [
+        "Let her finish",
+        "Talk after"
+      ],
+      "visual_intent": "The request and the check-back appear in the bubble, each beside its calendar marker.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A clear request names a specific action for next time",
+          "fact": "F10"
+        },
+        {
+          "claim": "A moment to talk again",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b50",
+      "section": "payoff_scene",
+      "job": "payoff",
+      "narration": [
+        "Dev has something to do now.",
+        "Not a mood. An action."
+      ],
+      "on_screen": [
+        "Action"
+      ],
+      "visual_intent": "Dev writes the action in a notebook, a clear difference from the earlier empty nod.",
+      "change_over_time": false,
+      "animate_score": 0.25,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "A specific request gives the listener an action",
+          "fact": "F10"
+        }
+      ]
+    },
+    {
+      "id": "b51",
+      "section": "payoff_scene",
+      "job": "payoff",
+      "narration": [
+        "Next meeting, Sam presents.",
+        "Dev waits, and lets her finish.",
+        "Then Dev responds."
+      ],
+      "on_screen": [],
+      "visual_intent": "The same room and seating as the opening; Sam presents to the end, Dev holds back, then speaks. The tension in the room visibly lower than before.",
+      "change_over_time": true,
+      "animate_score": 0.7,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Illustrative outcome",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b52",
+      "section": "payoff_scene",
+      "job": "payoff",
+      "narration": [
+        "Afterwards, they talk, as agreed.",
+        "This time, the nod has something behind it."
+      ],
+      "on_screen": [],
+      "visual_intent": "Priya and Dev talk briefly in the empty room; Dev nods, now with a clear expression.",
+      "change_over_time": false,
+      "animate_score": 0.3,
+      "treatment_hint": "motion",
+      "grounding": [
+        {
+          "claim": "Agreed follow-up conversation",
+          "fact": "F12"
+        },
+        {
+          "claim": "Illustrative outcome",
+          "hypothetical": true
+        }
+      ],
+      "hypothetical": true
+    },
+    {
+      "id": "b53",
+      "section": "payoff_scene",
+      "job": "consolidate",
+      "narration": [
+        "No guarantee, of course.",
+        "The check back makes it more likely to be noticed.",
+        "And now there is something to notice."
+      ],
+      "on_screen": [
+        "No guarantee"
+      ],
+      "visual_intent": "The calendar marker beside the sentence on the board, plain and calm.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "template",
+      "grounding": [
+        {
+          "claim": "Agreeing a check back makes the request more likely to be remembered and noticed, not guaranteed",
+          "fact": "F12"
+        }
+      ]
+    },
+    {
+      "id": "b54",
+      "section": "payoff_scene",
+      "job": "consolidate",
+      "narration": [
+        "Priya was kind from the start.",
+        "Now she is kind, and useful.",
+        "Go and say yours."
+      ],
+      "on_screen": [],
+      "visual_intent": "The presenter to camera, the rebuilt sentence on the board behind them.",
+      "change_over_time": false,
+      "animate_score": 0.1,
+      "treatment_hint": "avatar",
+      "grounding": [
+        {
+          "claim": "Tone was never the problem; content was",
+          "fact": "F14"
+        }
+      ]
+    }
+  ]
+}
