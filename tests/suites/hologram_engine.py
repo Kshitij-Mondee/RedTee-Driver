@@ -793,8 +793,10 @@ def check_hologram_v2_hero3d_points_locks_at_the_rendered_parts():
     x, y = float(lk.group(1)), float(lk.group(2))
     assert abs(x - (500 + 150 - 12)) < 1.5 and abs(y - (60 + 100 - 12)) < 1.5, f"the lock is at {x},{y} (want 638,148: the part at t 0.5, interpolated)"
     _, rep2 = _frames(_head([1.5]) + _HERO3D % "", [1.5])
-    assert any(w.get("code") == "holo_hero_missing" for w in rep2.get("warnings", [])), "control: a missing hero did not warn"
-    return f"lock at {x:.0f},{y:.0f} from the anchors interpolated at 0.5 s; a missing hero warns"
+    # an error since D-194 (a hero with no rendered clip stops the lesson; it was a warning)
+    assert any(w.get("code") == "holo_hero_missing" for w in (rep2.get("errors") or []) + (rep2.get("preview_errors") or [])
+               if isinstance(w, dict)) or any("holo_hero_missing" in str(w) for w in (rep2.get("errors") or []) + (rep2.get("preview_errors") or [])),         f"control: a missing hero was not refused: {str(rep2.get('errors'))[:200]} {str(rep2.get('preview_errors'))[:200]}"
+    return f"lock at {x:.0f},{y:.0f} from the anchors interpolated at 0.5 s; a missing hero is refused"
 
 
 def check_hologram_v2_hero_renders_light_with_anchors_as_a_pure_function_of_time():

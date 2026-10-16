@@ -594,6 +594,8 @@ def check_storyboard(project):
     W += SB.carry_warnings(project, sb, beats)      # a new section carries little (D-182)
     from ..direction import storyboard_warnings as _direction_warnings
     W += _direction_warnings(project, sb)           # the style's strong calls planned for (D-189, L-474): notes, never rules
+    from ..direction import storyboard_errors as _direction_errors
+    fe += _direction_errors(project, sb)            # hologram: the heroes planned, few templates (D-194): before anything is built
     from ..essence import storyboard_warnings as _essence_warnings
     W += _essence_warnings(project, sb)             # a distinct style kept to its own vocabulary (D-192): a note, never a rule
     ve, vw = SB.variety_checks(sb, beats, alloc)

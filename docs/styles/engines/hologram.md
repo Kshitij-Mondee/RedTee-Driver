@@ -24,6 +24,11 @@ Four rules carry the style (each from a source, s2 of the research):
 | **briefing** (most beats, about 2 in 3) | explaining: a concept, a process, a rule, a number that matters, a verdict | a title, 2 or 3 cards (one read each) or one panel, ONE diagram (a flow, or a small mesh), generous space | at most 4 pieces; at most 1 status change a beat; no scanner, no globe spin, no camera move except a slow push on a section start |
 | **analysis** (at most 1 beat in 3, never two in a row longer than 40 s together) | the system has to be seen working: an incident, a trace, a health check, a model under drift | a scan across the system, a lock on one element, live readouts, a globe or mesh with traffic, panels in depth, evidence (a timeline, a wave, gauges) | at most 7 pieces; 1 lock at a time; 1 camera move at a time; at most 2 loops running at once |
 
+**Holograms first, panels last (D-194).** Every beat, briefing ones too, shows a hologram: the subject or its part as
+light (`H.hero3d`, `H.object`, `H.plane` sheets in depth, `H.globe`, `H.mesh`, `H.trace`, `H.tokens`). Cards, readouts and
+gauges are plates beside it, never the picture. The audit refuses `holo_ui_heavy` when under 75 % of the bespoke beats
+show a hologram, and the storyboard gate allows at most 10 % catalog templates.
+
 A lesson moves between them like an analyst at a console: brief, lean in, come back. Inside one beat the switch is
 `H.mode("analysis", ctx.cue("..."))`: the briefing pieces recede to 0.3 (nothing is redrawn), the analysis pieces boot.
 `H.mode("briefing", t)` brings them back. Across beats keep the HUD (`keep` / `ctx.held`) so the lesson is one console,
@@ -114,7 +119,8 @@ also works.
   timeline; events light as the head passes them.
 - `H.grid(name, {x, y, w, h, kind: "hex" | "dot", cell, opacity, at})`: a still texture, far layer, one pattern.
 
-**The hero moment** (one or two beats a lesson, analysis register; the briefing stays calm)
+**The hero moment** (the style's main carrier, D-194: at least one hero per 8 beats, a hero for each subject the lesson
+has; the storyboard gate refuses fewer, and the audit refuses a declared hero the scene never places)
 - `H.object(name, {model, cx, cy, size, at, pitch, dist, yaw, spin, spinFrom, spinTo, build: {at, dur} | false,
   explode: [{t, to, dur}], explodeMax, hot: [{part, t0, t1}], tone, lift})` -> `{part(id, t), anchor(id, t),
   explode(to, t, dur), turn(deg, t, dur), hot(part, t0, t1), yawAt(t), parts}`: a hero 3D wireframe drawn by the

@@ -1860,7 +1860,7 @@
       const rect = o.rect || (A && A.rect) || [410, 90, 1100, 900];
       const Hd = { E: null, t: t + 0.3, rect, asset: A || null, parts: A && A.anchors && A.anchors.length ? Object.keys(A.anchors[0][1]) : [] };
       if (!A) {
-        Loom.warn("holo_hero_missing", `${beat.id}: hero "${name}" has no rendered clip: declare it in the scene's hero3d and render it with the bridge (three_bridge.hero_lab_strip in the lab; a lesson's storyboard in compose)`);
+        Loom.error("holo_hero_missing", `${beat.id}: hero "${name}" has no rendered clip: declare it in the scene's hero3d and render it with the bridge (three_bridge.hero_lab_strip in the lab; a lesson's storyboard in compose)`);
       } else if (Loom.footage) {
         const E = Loom.footage(ctx, "hero3d_" + name, { src: A.src, x: rect[0], y: rect[1], w: rect[2], h: rect[3], trim: [0, A.dur], at: A.t0 || 0, fit: "contain", reveal: t });
         if (E && E.outer) { const L = layers[o.depth || "mid"].g; L.insertBefore(E.outer, L.firstChild); }
@@ -2206,12 +2206,50 @@
         setA(Lr.orb, "opacity", op.toFixed(3));
       }
     });
+    // what this beat draws, for the audit (D-194): holograms (light objects) or console UI (panels and plates). Kshitij:
+    // "The hologram style needs the holograms more than anything ... there has to be lesser normal corporate UI"
+    const U = ((Loom.report.holoUse = Loom.report.holoUse || {})[beat.id] = Loom.report.holoUse[beat.id] || { holo: [], ui: [], heroes: [] });
+    for (const k of Object.keys(H)) {
+      const f = H[k];
+      if (typeof f !== "function" || !(HOLO_CALLS.has(k) || UI_CALLS.has(k))) continue;
+      H[k] = function () {
+        (HOLO_CALLS.has(k) ? U.holo : U.ui).push(k);
+        if (k === "hero3d") U.heroes.push({ name: arguments[0], asset: !!(((Loom.assets || {}).hero3d || {})[beat.id + ":" + ((arguments[1] || {}).asset || arguments[0])]) });
+        return f.apply(this, arguments);
+      };
+    }
     return H;
+  }
+
+  // the light objects that ARE the style (the subject made of light) and the console furniture around them
+  const HOLO_CALLS = new Set(["hero3d", "object", "globe", "mesh", "plane", "orbit", "trace", "arcs", "wave", "scanner", "flow", "tokens", "dist"]);
+  const UI_CALLS = new Set(["panel", "card", "readout", "gauge", "gauges", "bars", "datum", "callout", "tag", "title"]);
+  const HOLO_SHARE = 0.75;   // of a hologram lesson's bespoke beats, at least this share show a hologram
+  /** the engine audit (boot, after every scene): every declared hero placed and rendered, a hero beat drawing a hologram,
+   *  and holograms, not console UI, carrying the lesson. Errors, sent to each beat's author. */
+  function audit(manifest) {
+    const use = Loom.report.holoUse || {}, beats = (manifest.scenes || []).filter((s) => s.kind === "bespoke" && s.beat);
+    if (!beats.length) return;
+    const uiOnly = [];
+    for (const s of beats) {
+      const u = use[s.beat] || { holo: [], ui: [], heroes: [] };
+      for (const name of Object.keys(s.hero3d || {})) {
+        const h = u.heroes.find((q) => q.name === name);
+        if (!h) Loom.error("holo_hero_unplaced", `${s.beat}: the storyboard's hero "${name}" is rendered but the scene never places it: call H.hero3d("${name}", ...) in ${s.beat}`, { beat: s.beat });
+      }
+      const d = s.design && typeof s.design === "object" ? s.design : {};
+      if (d.hero && !u.holo.length) Loom.error("holo_hero_not_drawn", `${s.beat}: design.hero says "${String(d.hero).slice(0, 60)}" but the scene draws no hologram (H.object, H.plane, H.globe, H.mesh, H.trace, H.hero3d ...)`, { beat: s.beat });
+      if (!u.holo.length) uiOnly.push(s.beat);
+    }
+    const share = 1 - uiOnly.length / beats.length;
+    if (beats.length >= 4 && share < HOLO_SHARE)
+      Loom.error("holo_ui_heavy", `${uiOnly.length} of ${beats.length} hologram beats show no hologram, only console UI or kit shapes (${uiOnly.join(", ")}): ` +
+        `the style is the subject made of light; give each of them a hologram (a hero, an object, a plane in depth, a globe, a mesh, a trace) and keep panels the minority`, { beat: uiOnly[0] });
   }
 
   Loom.engines.define("hologram", {
     version: "1",
     summary: "a calm operations HUD in light, with a hero moment (a 3D wireframe object in true perspective, scanned onto a projector pad on a dark stage, with HUD chrome and amber data plates): depth layers (far, mid, near) on the place camera with push-through and a 2.5D orbit; frames with corner brackets; panels that assemble rule by rule; briefing cards, a flow diagram that points the way the data moves and filled bars for rankings and odds; readouts that scroll; a radial scanner; target locks that close on any element; a wireframe globe with arcs and traffic; a network mesh with packets; a waveform with an anomaly; hex and dot grids; a timeline scrubber; gauges with thresholds (RED and USE); callouts; boot-up and power-down; status told twice; one clock; a WCAG flash ledger",
-    api: { hud },
+    api: { hud, audit },
   });
 })();

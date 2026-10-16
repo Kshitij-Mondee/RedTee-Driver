@@ -621,3 +621,37 @@ def record_caption_baseline(projects: list) -> dict:
         lessons[p.id] = {b: len(v) for b, v in sorted(short.items())}
     write_json(CAPTION_BASELINE, {"_note": old.get("_note") or "", "recorded": datetime.date.today().isoformat(), "lessons": lessons})
     return lessons
+
+
+def promise_checks(project, storyboard: dict, probe_rep: dict) -> tuple[list[str], dict]:
+    """D-194, Kshitij: "Nothing should be forgotten or not done. I want everything to happen as supposed." Every element a
+    bespoke beat's design promises (`design.elements`) is delivered: drawn in the beat, held from an earlier one, or named in
+    the beat's code (each word of its name: "url_callout" by A.callout("url", ...)). A promise nobody wrote is
+    `design_element_missing`, for the beat's author. (errors, stats)"""
+    import re as _re
+    order = [s.get("beat") for s in storyboard.get("scenes") or []]
+    drawn = {}
+    for e in (probe_rep or {}).get("elements") or []:
+        drawn.setdefault(e.get("beat"), set()).add(str(e.get("name") or "").lower())
+    E, n, missing = [], 0, 0
+    for i, s in enumerate(storyboard.get("scenes") or []):
+        if s.get("kind") != "bespoke":
+            continue
+        have = set().union(*[drawn.get(b, set()) for b in order[: i + 1]]) if order else set()
+        f = project.path(f"scenes/{s.get('scene') or s.get('beat')}.js")
+        code = f.read_text(encoding="utf-8").lower() if f.exists() else ""
+        lost = []
+        for el in ((s.get("design") or {}) if isinstance(s.get("design"), dict) else {}).get("elements") or []:
+            name = str((el.get("name") if isinstance(el, dict) else el) or "").lower().split(":")[0].strip()
+            if not name:
+                continue
+            n += 1
+            words = [w for w in _re.split(r"[_\s\-]+", name) if len(w) > 1]
+            if name in have or any(name in h for h in have if h) or (words and all(w in code or any(w in h for h in have) for w in words)):
+                continue
+            lost.append(name)
+        if lost:
+            missing += len(lost)
+            E.append(f"design_element_missing: {s['beat']}: the storyboard's design promises {', '.join(lost)}, and the beat neither draws, "
+                     f"holds nor names {'it' if len(lost) == 1 else 'them'}: build it (or patch the design if the plan changed)")
+    return E, {"promised": n, "missing": missing}

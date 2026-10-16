@@ -9,7 +9,7 @@ every gate, yet the hologram one had no hero (no `hero3d`, no `H.object`) and th
                (`direction_card`, first; the guide and engine guide last, so Shuttle's 64,000-character cut of a
                reply drops only their tail) carry the card; a lesson with the engine off, a style with no card and a
                session that does not plan (P7) do not
-  soft check   a hologram lesson with no hero beat warns `holo_no_hero` and a blueprint lesson with one station over
+  checks       a hologram lesson with too few hero beats is refused `holo_heroes_few` (D-194) and a blueprint lesson with one station over
                60 % of the narration warns `bp_one_layout`, through the storyboard gate as warnings, never errors;
                controls: a `hero3d` or a `design.hero` beat, sheets per section, the engine off and a short strip are
                quiet; the schema accepts a `hero3d` and refuses one without its params
@@ -119,11 +119,12 @@ def check_direction_card_reaches_relay_shuttle_p5_and_get_style_pack():
 
 
 def check_direction_soft_check_hologram_hero_and_blueprint_layout_with_controls():
-    # hologram: no hero beat warns; a hero3d beat, a design.hero beat, an H.object design, the engine off, a short strip
-    # are quiet
+    # hologram (D-194, superseding D-189's warning): too few hero beats is an ERROR before anything is built; a hero3d beat,
+    # a design.hero beat, an H.object design, the engine off and a short strip are clean
     with _lesson(_scenes(8), "hologram") as p:
-        W = D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json")))
-        assert _codes(W) == ["holo_no_hero"], W
+        sb = read_json(p.path("plan/storyboard.json"))
+        assert _codes(D.storyboard_errors(p, sb)) == ["holo_heroes_few"], D.storyboard_errors(p, sb)
+        assert "holo_no_hero" not in _codes(D.storyboard_warnings(p, sb)), "the old warning is gone (an error now)"
     hero = _scenes(8)
     hero[4]["hero3d"] = {"bike": {"rect": [500, 80, 920, 820], "dur": 6, "params": {"model": "bicycle"}}}
     svg = _scenes(8)
@@ -132,11 +133,20 @@ def check_direction_soft_check_hologram_hero_and_blueprint_layout_with_controls(
     obj[4]["design"]["elements"] = ["H.object(\"rack\", {model: \"rack\"}) on H.pad"]
     for name, sc in (("hero3d", hero), ("design.hero", svg), ("H.object", obj)):
         with _lesson(sc, "hologram") as p:
-            assert not D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json"))), f"control {name}: quiet"
+            assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), f"control {name}: clean"
+    many = _scenes(17)      # 17 beats need 3 heroes: one is not enough
+    many[4]["hero3d"] = hero[4]["hero3d"]
+    with _lesson(many, "hologram") as p:
+        assert _codes(D.storyboard_errors(p, read_json(p.path("plan/storyboard.json")))) == ["holo_heroes_few"], "one hero for 17 beats"
+    tpl = _scenes(8)
+    tpl[4]["hero3d"] = hero[4]["hero3d"]
+    tpl[1]["kind"] = tpl[2]["kind"] = "template"
+    with _lesson(tpl, "hologram") as p:
+        assert _codes(D.storyboard_errors(p, read_json(p.path("plan/storyboard.json")))) == ["holo_ui_templates"], "2 of 8 templates"
     with _lesson(_scenes(8), "hologram", engine="off") as p:
-        assert not D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json"))), "control: engine off is quiet"
+        assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), "control: engine off is clean"
     with _lesson(_scenes(D.MIN_BEATS - 1), "hologram") as p:
-        assert not D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json"))), "control: a short strip is quiet"
+        assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), "control: a short strip is clean"
     # blueprint: one sheet for most of the narration warns, measured by words, not beats
     one = _scenes(8, station=lambda i: "plant" if i < 6 else f"detail{i}")
     with _lesson(one, "blueprint") as p:
@@ -149,16 +159,16 @@ def check_direction_soft_check_hologram_hero_and_blueprint_layout_with_controls(
         assert not D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json"))), "control: a sheet per section is quiet"
     with _lesson(_scenes(8), "isometric") as p:
         assert not D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json"))), "control: isometric holds one board by design"
-    return "holo_no_hero and bp_one_layout warn; hero3d, design.hero, H.object, sheets per section, engine off, short, isometric are quiet"
+    return "holo_heroes_few and holo_ui_templates refuse, bp_one_layout warns; hero3d, design.hero, H.object, sheets per section, engine off, short, isometric are clean"
 
 
 def check_direction_soft_check_in_the_storyboard_gate_on_the_two_test_lessons():
-    """The real evidence through the real gate, on copies (the lessons themselves are never touched): st-holo-ai warns
-    holo_no_hero, st-bp-cooling warns bp_one_layout, both as warnings only; one hero3d beat quiets the hologram copy, and
-    the schema refuses a hero3d with no params."""
+    """The real evidence through the real gate, on copies (the lessons themselves are never touched): st-holo-ai is now
+    REFUSED holo_heroes_few (D-194: no hero for 22 beats; three hero3d beats clear it) and st-bp-cooling still warns
+    bp_one_layout, a warning only; the schema refuses a hero3d with no params."""
     from loom.checks import gates
     got = []
-    for pid, code in (("st-holo-ai", "holo_no_hero"), ("st-bp-cooling", "bp_one_layout")):
+    for pid, code in (("st-holo-ai", "holo_heroes_few"), ("st-bp-cooling", "bp_one_layout")):
         src = ROOT / "projects" / pid
         if not (src / "plan" / "storyboard.json").exists():
             got.append(f"{pid} skipped (its plan is not in this folder)")
@@ -171,21 +181,24 @@ def check_direction_soft_check_in_the_storyboard_gate_on_the_two_test_lessons():
                 shutil.copytree(src / "scenes", d / "scenes")
             p = Project(d)
             E, W = gates.check_storyboard(p)
-            assert code in _codes(W), f"{pid}: {code} not warned: {[w[:60] for w in W]}"
-            assert not [e for e in E if code in e], f"{pid}: {code} must never be an error"
-            if code == "holo_no_hero":
-                sb = read_json(p.path("plan/storyboard.json"))
-                sb2 = copy.deepcopy(sb)
-                sb2["scenes"][3]["hero3d"] = {"rack": {"rect": [560, 80, 800, 820], "dur": 6, "params": {"model": "server_rack"}}}
+            if code == "holo_heroes_few":
+                assert any(e.startswith(code) for e in E), f"{pid}: {code} not refused: {[e[:60] for e in E]}"
+                sb2 = copy.deepcopy(read_json(p.path("plan/storyboard.json")))
+                for i in (3, 9, 15):
+                    sb2["scenes"][i]["hero3d"] = {"rack": {"rect": [560, 80, 800, 820], "dur": 6, "params": {"model": "server_rack"}}}
                 write_json(p.path("plan/storyboard.json"), sb2)
-                E2, W2 = gates.check_storyboard(p)
-                assert "holo_no_hero" not in _codes(W2), "control: one hero3d beat is quiet"
-                assert not [e for e in E2 if "hero3d" in e], f"a valid hero3d is accepted by the schema: {E2[:3]}"
+                E2, _ = gates.check_storyboard(p)
+                assert not [e for e in E2 if e.startswith(code)], "control: three hero3d beats clear it"
+                assert not [e for e in E2 if "hero3d" in e and "params" in e], f"a valid hero3d is accepted by the schema: {E2[:3]}"
                 sb2["scenes"][3]["hero3d"] = {"rack": {"rect": [560, 80, 800, 820], "dur": 6}}
                 write_json(p.path("plan/storyboard.json"), sb2)
                 E3, _ = gates.check_storyboard(p)
                 assert any("params" in e for e in E3), f"the schema refuses a hero3d with no params: {E3[:3]}"
-            got.append(f"{pid} warns {code}")
+                got.append(f"{pid} refused {code}")
+            else:
+                assert code in _codes(W), f"{pid}: {code} not warned: {[w[:60] for w in W]}"
+                assert not [e for e in E if code in e], f"{pid}: {code} must never be an error"
+                got.append(f"{pid} warns {code}")
         finally:
             shutil.rmtree(d, ignore_errors=True)
     return "; ".join(got)

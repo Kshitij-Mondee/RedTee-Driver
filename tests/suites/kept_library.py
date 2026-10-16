@@ -147,7 +147,8 @@ def check_a_storyboard_reuses_only_its_own_styles_pieces_in_both_pipelines():
         built = p.path("build/scenes/_kept.js")
         assert built.exists() and 'Loom.lesson["board"]' in built.read_text(encoding="utf-8"), "compose writes the reused parts"
         html = p.path("build/index.html").read_text(encoding="utf-8") if p.path("build/index.html").exists() else ""
-        assert not html or html.find("_kept.js") < html.find("_kit.js") or "_kit.js" not in html, "reused parts load before the kit"
+        # the lesson kit is scenes/_kit.js (a component helper such as runtime/components/_app_kit.js also ends "_kit.js")
+        assert not html or html.find("scenes/_kept.js") < html.find("scenes/_kit.js") or "scenes/_kit.js" not in html, "reused parts load before the kit"
     return "gate refuses 4 bad reuses; kit-builder builds only 'frame'; library in Relay's storyboard task and get_style_pack; starting code under b10; compose loads _kept.js"
 
 

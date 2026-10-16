@@ -744,6 +744,9 @@ def check(project, sheets: bool = True, samples: int = 24, run_hf: bool = True) 
     sb_ = read_json(project.path("plan/storyboard.json"), {})
     te, tw, ts = FILM.screen_text_checks(pr, manifest.get("style"), sb_, lesson=project.id)
     E += te; W += tw; stats["screen_text"] = ts
+    # D-194: every element a beat's design promises is delivered (nothing forgotten)
+    pe_, ps_ = FILM.promise_checks(project, sb_, pr)
+    E += pe_; stats["promises"] = ps_
     # D-192: a distinct style's beat drawn from the shared kit alone (none of the style's own techniques)
     from .essence import scene_warnings as _off_style
     W += _off_style(project, sb_)

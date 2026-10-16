@@ -79,11 +79,7 @@ def storyboard_warnings(project, sb: dict) -> list[str]:
     if not enabled_for(project, style):
         return []
     W = []
-    if style == "hologram" and not _hero_beats(sb):
-        W.append(f"holo_no_hero: no beat of {len(scenes)} has a hero moment (a scene `hero3d`, a `design.hero`, or "
-                 f"{' or '.join(HERO_CALLS)} in its design). The style's strength is the lesson's subject made of light: a "
-                 "`hero3d` for a thing that reads better in 3D (a bicycle, the earth, a rack, a device), else a pushed-SVG "
-                 "hero declared in `design.hero` (packs/direction/hologram.md)")
+    # hologram's hero check is an error now (storyboard_errors: holo_heroes_few, D-194)
     if style == "blueprint":
         words = _narration_words(project)
         per, total = {}, 0
@@ -99,3 +95,46 @@ def storyboard_warnings(project, sb: dict) -> list[str]:
                      "schematic, a detail sheet) and change the sheet at a section boundary; a camera lean-in on one sheet "
                      f"is not a new layout (more than {BP_LAYOUT_SHARE:.0%} warns; packs/direction/blueprint.md)")
     return W
+
+
+HERO_EVERY = 8          # hologram: at least one hero beat per this many beats (D-194)
+HOLO_TEMPLATE_MAX = 0.1  # hologram: at most this share of beats on catalog templates (console UI restyled)
+
+
+def storyboard_errors(project, sb: dict) -> list[str]:
+    """The hard half for hologram (D-194, superseding D-189's warning). Kshitij: "make it so that the video is not made or
+    progresses until the hero hologram or holograms are made ... The hologram style needs the holograms more than anything.
+    There doesn't need to be just 1 hologram but there has to be lesser normal corporate UI." A hologram lesson (engine on,
+    MIN_BEATS beats or more) plans at least one hero beat per HERO_EVERY beats, each 3D hero names a model the library
+    has, and at most HOLO_TEMPLATE_MAX of its beats are catalog templates."""
+    if sb.get("style") != "hologram":
+        return []
+    scenes = [s for s in sb.get("scenes") or [] if s.get("beat")]
+    from .engines import enabled_for
+    if len(scenes) < MIN_BEATS or not enabled_for(project, "hologram"):
+        return []
+    E = []
+    heroes = _hero_beats(sb)
+    need = max(1, -(-len(scenes) // HERO_EVERY))
+    if len(heroes) < need:
+        E.append(f"holo_heroes_few: {len(heroes)} hero beat(s) for {len(scenes)} beats ({', '.join(heroes) or 'none'}); a hologram lesson needs "
+                 f"at least {need} (one per {HERO_EVERY} beats, more where the subject is seen working): a `hero3d` for a thing that reads "
+                 "better in 3D, else a pushed-SVG hero in `design.hero`. Nothing is narrated or built until they are planned "
+                 "(packs/direction/hologram.md)")
+    try:
+        from .models3d import LIB
+        known = {p.stem for p in LIB.glob("*.js")} if LIB.exists() else set()
+    except Exception:
+        known = set()
+    for s in scenes:
+        for name, spec in (s.get("hero3d") or {}).items():
+            m = ((spec or {}).get("params") or {}).get("model")
+            if known and m and m not in known:
+                E.append(f"holo_hero_model: {s['beat']}: hero \"{name}\" names model \"{m}\", which the model library does not have "
+                         f"(use_tool([\"three\"]) lists them)")
+    tpl = [s["beat"] for s in scenes if s.get("kind") in ("template", "blueprint")]
+    if len(tpl) > HOLO_TEMPLATE_MAX * len(scenes):
+        E.append(f"holo_ui_templates: {len(tpl)} of {len(scenes)} beats are catalog templates ({', '.join(tpl)}): console UI restyled cyan; at "
+                 f"most {HOLO_TEMPLATE_MAX:.0%} in a hologram lesson. Stage them as holograms (packs/essence/hologram.json)")
+    return E
+

@@ -4,7 +4,8 @@ A calm operations console in light, for the systems a learner cannot see: AI, da
 Most of the lesson briefs calmly; the moment that makes it worth watching is the HERO, and the plan must ask for it.
 
 ## Signature moves, and when each fits
-- **The hero moment** (1 or 2 beats a lesson, analysis register): the lesson's one subject, made of light.
+- **Holograms carry the film** (D-194: at least one hero per 8 beats, more where the subject is seen working; each
+  subject of the lesson may have its own): the subject and its parts made of light. Console panels are the minority.
   - A physical thing whose shape teaches (a bicycle, the earth, a server rack, a phone, a chip, a data hall): a 3D hero.
     Write `hero3d` on the storyboard scene (a library model, `use_tool(["three"])` lists them); the author locks and
     reads its parts with `H.hero3d`, `H.lock`, `H.reading`.
@@ -27,7 +28,8 @@ Most of the lesson briefs calmly; the moment that makes it worth watching is the
 - A hero kept for a second beat is declared on that beat too.
 
 ## Not this style
-- No hero on a briefing beat, no idle spin, at most 2 hero beats; every reading's value comes from the knowledge sheet.
+- No idle spin; no beat of console UI alone where a hologram can show it; at most 10 % templates; every reading's value
+  comes from the knowledge sheet.
 
 ## Motion in this style (D-190)
 - Light arrives in place: it draws on, scans, traces. A panel never flies across another, and words never shrink to fit:
@@ -39,5 +41,7 @@ Most of the lesson briefs calmly; the moment that makes it worth watching is the
 - Explainer: the hero mechanism runs end to end, then replays at the end in one move. No quiz panel.
 - Teaching: lock one part per step (`H.lock`), and the check is a real decision on the console.
 
-## The soft check
-The storyboard gate warns `holo_no_hero` when no scene has a `hero3d`, a `design.hero` or an `H.object`.
+## The checks
+The storyboard gate refuses (D-194) `holo_heroes_few` (fewer than one hero beat per 8), `holo_hero_model` and
+`holo_ui_templates`; the engine audit refuses `holo_hero_unplaced`, `holo_hero_missing`, `holo_hero_not_drawn` and
+`holo_ui_heavy` (under 75 % of beats showing a hologram).

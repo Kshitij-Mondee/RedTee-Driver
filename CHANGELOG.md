@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-16 - The holograms first; nothing promised left undone (D-194)
+- Storyboard gate: `holo_heroes_few`, `holo_hero_model`, `holo_ui_templates` (`loom/direction.py` `storyboard_errors`).
+- Hologram engine audit: `holo_hero_unplaced`, `holo_hero_not_drawn`, `holo_ui_heavy`; `holo_hero_missing` an error.
+- Check stage: `design_element_missing` (`loom/checks/film.py` `promise_checks`).
+- Hologram card, essence and engine guide: holograms carry every beat, several heroes, console UI the minority.
+
 ## 2026-10-16 - Components made for their own styles; batch-01 taken in (D-193)
 - `styles` on components: the gate renders only those, `catalog_search` filters by the lesson's style, `ctx.use`
   elsewhere is `component_off_style` (`runtime/components.js`, `loom/library.py`, `loom/agents/tools.py`,
