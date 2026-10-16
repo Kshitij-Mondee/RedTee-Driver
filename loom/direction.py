@@ -133,6 +133,7 @@ def storyboard_errors(project, sb: dict) -> list[str]:
         known = {p.stem for p in LIB.glob("*.js")} if LIB.exists() else set()
     except Exception:
         known = set()
+    E += subject_errors(sb, scenes, known)
     for s in scenes:
         for name, spec in (s.get("hero3d") or {}).items():
             m = ((spec or {}).get("params") or {}).get("model")
@@ -145,3 +146,40 @@ def storyboard_errors(project, sb: dict) -> list[str]:
                  f"most {HOLO_TEMPLATE_MAX:.0%} in a hologram lesson. Stage them as holograms (packs/essence/hologram.json)")
     return E
 
+
+
+def subject_errors(sb: dict, scenes: list, known: set) -> list[str]:
+    """D-200: the lesson's central subject reaches the screen as a real 3D hero when it is a physical thing. st-holo-emoto
+    (2026-10-16) planned an electric motorcycle; the library had no motorbike, the planner rightly refused the bicycle and
+    then drew the bike as a pushed-SVG kit part, which `holo_heroes_few` counted as a hero and Kshitij called "weird
+    looking and un-realistic". So a hologram storyboard declares `subject` ({what, physical, model}, or a list of them):
+      - none declared: `holo_subject_undeclared`;
+      - physical with no model, or one the library does not have: `holo_subject_model_missing`, naming the model to build.
+        The run stops here: a model is built to the @model contract and its sheet looked at before planning goes on (a
+        drawn stand-in never passes);
+      - physical with a library model that no beat's hero3d uses: `holo_subject_not_3d`.
+    An abstract subject (`physical: false`: a model, tokens, a pipeline) stays a pushed-SVG hero."""
+    raw = sb.get("subject")
+    subs = [x for x in (raw if isinstance(raw, list) else [raw]) if isinstance(x, dict) and x.get("what")]
+    if not subs:
+        return ["holo_subject_undeclared: the storyboard names no `subject`. Declare the lesson's central subject: "
+                "\"subject\": {\"what\": \"...\", \"physical\": true|false, \"model\": \"<library id>\"}; a physical thing (a vehicle, a "
+                "machine, a device, a planet) is a hero3d of its model, an abstract one a pushed-SVG hero (packs/direction/hologram.md)"]
+    used = {((spec or {}).get("params") or {}).get("model") for s in scenes for spec in (s.get("hero3d") or {}).values()}
+    E = []
+    for x in subs:
+        if not x.get("physical"):
+            continue
+        what, m = str(x["what"])[:60], x.get("model")
+        if not m or m not in known:
+            mid = m or "<id>"
+            E.append(f"holo_subject_model_missing: the subject \"{what}\" is a physical thing and the 3D model library has "
+                     f"{'no model named ' + repr(m) if m else 'no model named for it'}. A drawn SVG is not a stand-in, and a "
+                     f"near model (a bicycle for a motorbike) misleads. The run stops here until assets/models3d/{mid}.js is "
+                     f"built to the @model contract (real proportions, metres, its parts and keys; written like bicycle.js), "
+                     f"`py -m loom models check` passes and its sheet (`py -m loom models sheet {mid} --style hologram`) has "
+                     f"been looked at; then plan it as a hero3d. Do not declare it abstract to pass (use_tool([\"three\"]) lists the library)")
+        elif m not in used:
+            E.append(f"holo_subject_not_3d: the subject \"{what}\" has the library model \"{m}\" but no beat's hero3d uses it: "
+                     f"put it on screen as a 3D hero (hero3d with params.model \"{m}\") where it is first seen working")
+    return E

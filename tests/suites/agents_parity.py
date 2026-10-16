@@ -421,12 +421,18 @@ def agents_limits_never_cut_a_working_agent_short():
     with fresh_project() as p:
         _copy_demo(p, ("plan",))
         m = R.model("mock-strong")                                    # window 200k, max_out 32k
-        big = "x" * int((m["context"] - 20_000) * 3.6)               # leaves about 16k tokens of room
+        # the room is measured after the role's own system prompt (about 8k tokens for the storyboard by 2026-10-17, and
+        # it grows with every card and schema line), so the test checks the fitting, not the prompt's size
+        from loom.agents.runtime import role_system
+        from loom.genre import of as _kind_of
+        spec = AgentSpec("storyboard", "mock-strong", limits={"turns": 1})
+        sys_chars = sum(map(len, role_system("storyboard", spec.context, p.request.get("style"), _kind_of(p))))
+        big = "x" * int((m["context"] - 20_000) * 3.6 - sys_chars)  # leaves about 16k tokens of room
         ctx = T.ToolContext(p, "storyboard", "storyboard")
-        r = run_agent(AgentSpec("storyboard", "mock-strong", limits={"turns": 1}), ctx, big, Budget(50.0), provider=Rec())
+        r = run_agent(spec, ctx, big, Budget(50.0), provider=Rec())
         assert seen and 8000 <= seen[0] < m["max_out"], (seen, r.note)       # fitted, not refused
         seen.clear()
-        full = "x" * int((m["context"] - 2_000) * 3.6)
+        full = "x" * int((m["context"] - 2_000) * 3.6 - sys_chars)
         r2 = run_agent(AgentSpec("storyboard", "mock-strong", limits={"turns": 1}), T.ToolContext(p, "storyboard", "storyboard"), full, Budget(50.0), provider=Rec())
         assert not seen and r2.status == "error" and "window" in r2.note, (seen, r2.note)
     return "no task cap, full output by default; a long call fitted to the window; a full window stops; cache-aware guard"

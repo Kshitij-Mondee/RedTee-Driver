@@ -189,6 +189,16 @@ brackets-and-caps furniture for a hero moment.
     to its length.
   - New models: `bicycle` (real proportions: frame, fork, wheels with 32 spokes, drivetrain, saddle, bar) and `earth`
     (Natural Earth coastlines, graticule, pins as parts pin0..pinN, arcs that draw on).
+  - `electric_motorbike` (D-200; real proportions: twin-spar frame, a battery pack whose cover lifts on `open_pack` to
+    show its cell modules, a finned controller with high-voltage cables, a mid motor with stator coils and a magnet
+    rotor, a belt, swingarm and shock, USD fork, cast wheels, brake discs; keys spin, throttle, open_pack, explode).
+    Its own `explode` spreads past the assembled framing: give that clip `zoom` about 0.55.
+  - **The subject comes first (D-200).** The storyboard declares `"subject": {"what", "physical", "model"}` (or a
+    list). A physical subject (a vehicle, a machine, a device, a planet) must have its library model and a beat's
+    `hero3d` that uses it; the storyboard gate refuses `holo_subject_undeclared`, `holo_subject_model_missing` (it
+    names the model to build: the run stops until `assets/models3d/<id>.js` exists to the @model contract and its
+    sheet has been looked at) and `holo_subject_not_3d`. A drawn SVG stand-in for a physical subject never passes;
+    an abstract subject (`physical: false`) stays a pushed-SVG hero.
 - `H.plane(name, {x, y, w, h, top, side, lit, fill, tone, label, depth, blur, at})` -> `{box, quad}`: a translucent
   sheet of light in slight perspective (`top` narrows the top edge, `side` shortens one side), one lit edge that
   blooms, a fine scan texture, out of focus on the far layer (the sheet only, never its label). No corner brackets.

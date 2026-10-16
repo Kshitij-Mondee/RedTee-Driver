@@ -14,6 +14,38 @@ scenes, review), **tweak** (Haiku sub-agents via `loom tweak`).
 
 ---
 
+## A physical subject with no 3D model (2026-10-17, D-200, st-holo-emoto)
+
+- **L-489 A drawn stand-in passed as a hero because the gate counted heroes, not what the subject needed.** (plan,
+  storyboard gate; orchestrator)
+  - **What happened:** st-holo-emoto (how an electric motorcycle works) was stopped by Kshitij in P8 after $5.72. The 3D
+    library had no motorbike. The planner rightly refused the bicycle, then drew the bike as a pushed-SVG kit part
+    (`holo_bike`) on seven `design.hero` beats. Kshitij: "weird looking and un-realistic bike. Why can't the pipeline
+    use the web gl or three js ... to make a 3d bike ??"
+  - **Root cause:** `holo_hero_model` refused only a hero3d naming a missing model; a `design.hero` counted for
+    `holo_heroes_few` whatever the subject was; no stage built a missing model. The operator also launched the topic
+    without checking `assets/models3d` for it.
+  - **Action:** the storyboard declares `subject`; `direction.subject_errors` refuses a physical subject with no library
+    model (`holo_subject_model_missing`, naming the file to build), one whose model no hero3d uses
+    (`holo_subject_not_3d`) and an undeclared subject. `assets/models3d/electric_motorbike.js` built: frame, pack with
+    cells under a hinged cover, controller, phase cables, mid motor (stator coils, magnet rotor), belt, swingarm, shock,
+    fork, wheels, discs; keys spin, throttle, open_pack, explode.
+  - **Seen on the sheets:** the first pack cover slid out toward the camera and hid the cells it uncovered (now a lid
+    hinged on its top edge); the explode spread past the assembled framing in holo_hero (smaller offsets; the engine
+    guide says to give that clip `zoom` about 0.55).
+  - **Prevention:** DONE for the gate (`tests/suites/style_direction.py`
+    `check_direction_hologram_physical_subject_needs_its_3d_model`, red on the old gate). For an operator choosing a
+    hologram topic: check `py -m loom models` for the subject first. OPEN: a P7 model-builder role, so a run builds its
+    own missing model instead of stopping.
+
+- **L-491 A test that leaves a fixed margin after an unmeasured prompt breaks on the next line of prompt.** (orchestrator,
+  tests)
+  - **What happened:** `agents_limits_never_cut_a_working_agent_short` failed after the storyboard schema gained 319
+    characters (`subject`, D-200). It sent a message sized to leave 16k tokens and assumed the system prompt was small;
+    the storyboard prompt is about 8k tokens now, so 16k less 8k less the 4k safety fell under the 8k minimum output.
+  - **Action:** the test sizes its messages after the role's measured system prompt (`role_system`).
+  - **Prevention:** DONE (the test itself). The schema entry was also kept compact (one recursive `items`).
+
 ## Taste and use (2026-10-17, D-201)
 
 - **L-490 Taste is a gate too: a light form that saves time can look broken.** (orchestrator, template skins)

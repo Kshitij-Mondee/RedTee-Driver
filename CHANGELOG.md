@@ -16,6 +16,22 @@
 - scenario.dialogue: each bubble above its own speaker; they overlapped by 280 px in every style.
 - Tests: `check_hologram_and_isometric_keep_words_to_labels`, `check_whiteboard_never_draws_a_half_frame`.
 
+## 2026-10-17 - A hologram lesson's physical subject is a real 3D hero, or the storyboard stops for its model (D-200)
+- `assets/models3d/electric_motorbike.js` (new): a generic electric motorcycle at real proportions. It has a twin-spar
+  frame, a battery pack with cell modules under a hinged cover, a finned controller with high-voltage cables, a mid motor
+  (stator coils, magnet rotor), a belt drive, a swingarm and shock, an upside-down fork, 17 inch cast wheels and brake
+  discs. Keys: spin, throttle, open_pack, explode. Sheets in corporate-clean, dark-technical and hologram
+  (`docs/assets/models3d/electric_motorbike__*.jpg`).
+- Storyboard gate (`loom/direction.py` `subject_errors`): a hologram storyboard declares `subject` ({what, physical,
+  model}, or a list). It refuses `holo_subject_undeclared`, `holo_subject_model_missing` (it names the model file to
+  build) and `holo_subject_not_3d`.
+- Schema: storyboard `subject`. Direction card, hologram engine guide and the Shuttle director skill (P5) say it; the
+  card stays at 3400 bytes.
+- Tests: `check_direction_hologram_physical_subject_needs_its_3d_model` (red on the old gate); the direction fixtures
+  declare an abstract subject. `agents_limits_never_cut_a_working_agent_short` now measures the storyboard role's own
+  system prompt (about 8k tokens): it left a fixed 16k and failed on 90 more tokens of schema.
+- `runtime/capabilities.json|md` regenerated (`py -m loom catalog`) for the new model.
+
 ## 2026-10-16 - Template skins: each engine style draws the catalog templates its own way (D-198)
 - `runtime/skins.js` (new): `Loom.skins.define` / `build` / `schedule`. A template build under a skin records its parts
   and entrances, then the style performs them in time order; templates unchanged. Built at `world.js`'s one template site

@@ -712,6 +712,31 @@
         "classic"
       ],
       "description": "D-198: catalog templates drawn the style's own way (style: the whiteboard hand, the blueprint nib, a hologram scan, an isometric board, a screencast page; only for a style with an engine) or the classic way. Default: style for a lesson planned with skins."
+    },
+    "subject": {
+      "description": "Hologram (D-200): the central subject, or a list. physical: true needs its assets/models3d model as a hero3d",
+      "type": [
+        "object",
+        "array"
+      ],
+      "required": [
+        "what",
+        "physical"
+      ],
+      "properties": {
+        "what": {
+          "type": "string"
+        },
+        "physical": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": "string"
+        }
+      },
+      "items": {
+        "$ref": "#/properties/subject"
+      }
     }
   }
 }

@@ -63,8 +63,10 @@ order. A refusal is information, not an obstacle: do the step it names.
   while you say it). Length: about 8 beats a minute, the script within 1.3 times the request.
 - **P5:** first the style's DIRECTION CARD (in the start message, and `get_style_pack`'s `direction_card`; D-189): the
   style's strong calls and when each fits. Plan the ones the content calls for in the outline and stage them in the
-  storyboard (a hologram hero beat: `hero3d` on the scene, or `design.hero` for a pushed-SVG hero; a blueprint lesson: a
-  sheet per section, not one plant layout); the gate warns `holo_no_hero` and `bp_one_layout`. Then
+  storyboard (a hologram lesson: its `subject`, and hero beats, `hero3d` on the scene for a physical thing or `design.hero`
+  for a pushed-SVG hero; a blueprint lesson: a sheet per section, not one plant layout). The gate refuses a hologram
+  lesson with too few heroes and a physical subject the 3D library has no model for (`holo_subject_model_missing`, D-200:
+  the run stops and the model is built; never draw it instead), and warns `bp_one_layout`. Then
   `REFERENCE_FIRST`, `STORYBOARD_GUIDE` (devices, value script, accent_on, joins, kit), `lnd-visual-storyteller`,
   `lnd-motion-fit`, `lnd-character-design` (people come from kits, one look per person), the style guide
   (`get_style_pack`: guide_text, sections 2, 10, 11 and 13 first), `capabilities()`, the catalogue

@@ -50,16 +50,20 @@ def _card_errors(style: str, text: str) -> list[str]:
     return E
 
 
+ABSTRACT = {"what": "a test subject", "physical": False}
+
+
 @contextmanager
-def _lesson(scenes: list, style: str, words: dict | None = None, engine: str | None = None):
-    """a throwaway lesson folder: project.json, a script whose beats speak `words` words each, and a storyboard"""
+def _lesson(scenes: list, style: str, words: dict | None = None, engine: str | None = None, subject=ABSTRACT):
+    """a throwaway lesson folder: project.json, a script whose beats speak `words` words each, and a storyboard (a
+    hologram one declares an abstract `subject` unless told otherwise, D-200)"""
     d = Path(tempfile.mkdtemp(prefix="loom_direction_"))
     try:
         req = {"style": style, **({"engine": engine} if engine else {})}
         write_json(d / "project.json", {"id": "dir-test", "topic": "test", "mode": "topic", "request": req})
         write_json(d / "plan/script.json", {"beats": [{"id": s["beat"], "section": "s1",
                                                         "narration": [" ".join(["word"] * (words or {}).get(s["beat"], 10))]} for s in scenes]})
-        write_json(d / "plan/storyboard.json", {"style": style, "scenes": scenes})
+        write_json(d / "plan/storyboard.json", {"style": style, "scenes": scenes, **({"subject": subject} if subject is not None else {})})
         yield Project(d)
     finally:
         shutil.rmtree(d, ignore_errors=True)
@@ -160,6 +164,46 @@ def check_direction_soft_check_hologram_hero_and_blueprint_layout_with_controls(
     with _lesson(_scenes(8), "isometric") as p:
         assert not D.storyboard_warnings(p, read_json(p.path("plan/storyboard.json"))), "control: isometric holds one board by design"
     return "holo_heroes_few and holo_ui_templates refuse, bp_one_layout warns; hero3d, design.hero, H.object, sheets per section, engine off, short, isometric are clean"
+
+
+def check_direction_hologram_physical_subject_needs_its_3d_model():
+    """D-200: st-holo-emoto planned an electric motorcycle the 3D library did not have, refused the bicycle, and drew the
+    bike as pushed SVG; seven `design.hero` beats passed holo_heroes_few. A physical subject with no model is refused by
+    name before anything is narrated; with its model it must be a hero3d. Red on the old gate (no subject check)."""
+    svg = _scenes(16)
+    for i in (3, 9):
+        svg[i]["design"]["hero"] = "pushed SVG: the motorbike kit part (holo_bike) with its pack and motor"
+    drone = {"what": "a cargo drone", "physical": True, "model": "cargo_drone"}
+    with _lesson(svg, "hologram", subject=drone) as p:
+        E = D.storyboard_errors(p, read_json(p.path("plan/storyboard.json")))
+        assert _codes(E) == ["holo_subject_model_missing"], E
+        assert "cargo_drone" in E[0] and "assets/models3d/cargo_drone.js" in E[0], E[0]
+    with _lesson(svg, "hologram", subject={"what": "a cargo drone", "physical": True}) as p:
+        E = D.storyboard_errors(p, read_json(p.path("plan/storyboard.json")))
+        assert _codes(E) == ["holo_subject_model_missing"] and "no model named for it" in E[0], E
+    bike = {"what": "an electric motorcycle", "physical": True, "model": "electric_motorbike"}
+    with _lesson(svg, "hologram", subject=bike) as p:     # the model exists now, but the plan still draws it in SVG
+        assert _codes(D.storyboard_errors(p, read_json(p.path("plan/storyboard.json")))) == ["holo_subject_not_3d"]
+    hero = copy.deepcopy(svg)
+    hero[9]["hero3d"] = {"bike": {"rect": [480, 80, 960, 820], "dur": 8, "params": {"model": "electric_motorbike"}}}
+    with _lesson(hero, "hologram", subject=bike) as p:
+        assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), "control: the model as a hero3d is clean"
+    with _lesson(hero, "hologram", subject=[bike, {"what": "the energy path", "physical": False}]) as p:
+        assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), "control: a list with an abstract subject"
+    with _lesson(svg, "hologram") as p:
+        assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), "control: an abstract subject in SVG is clean"
+    with _lesson(svg, "hologram", subject=None) as p:
+        assert _codes(D.storyboard_errors(p, read_json(p.path("plan/storyboard.json")))) == ["holo_subject_undeclared"]
+    with _lesson(svg, "hologram", subject=drone, engine="off") as p:
+        assert not D.storyboard_errors(p, read_json(p.path("plan/storyboard.json"))), "control: engine off is the classic way"
+    from loom.agents.tools import schema_errors
+    sch = ROOT / "loom" / "schemas" / "storyboard.schema.json"
+    sb = {"style": "hologram", "world": {"stations": [{"id": "st"}]}, "scenes": [], "subject": drone}
+    bad = dict(sb, subject={"what": "a cargo drone", "physical": "yes"})
+    assert not [e for e in schema_errors(sb, sch) if e.startswith("subject")], "the schema takes a subject"
+    assert not [e for e in schema_errors(dict(sb, subject=[drone, ABSTRACT]), sch) if e.startswith("subject")], "and a list"
+    assert [e for e in schema_errors(bad, sch) if e.startswith("subject")], "the schema refuses a non-boolean physical"
+    return "a physical subject with no model is refused by name (holo_subject_model_missing), with one unused holo_subject_not_3d; hero3d, abstract, engine off are clean"
 
 
 def check_direction_soft_check_in_the_storyboard_gate_on_the_two_test_lessons():

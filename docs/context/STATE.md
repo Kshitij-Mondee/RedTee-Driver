@@ -54,7 +54,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 | Palette study (research) | `tools/palette_study.py`, `docs/research/palettes/` | the colours a video uses by role, accent pairs, per-shot palettes; scored against a known palette |
 | Video-note screening (research) | `tools/check_video_notes.py` | flags filler or mislabelled AI-written video notes before use (D-72) |
 | Video study (research) | `tools/video_study.py`, `tools/transcribe_videos.py`, `docs/research/*/` | cuts, motion, holds, audio gaps, palette, contact sheets, speech numbers; studies of 5 channels (D-73, D-76); `tools/explain_study.py` (explanation cues, word-aligned strips, `moments` for the animation worth a 0.5 s strip, L-134) and `tools/style_fingerprint.py` (what a look is made of, for references and Loom alike) (D-74) |
-| Tests | `tests/run_tests.py` | 593 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
+| Tests | `tests/run_tests.py` | 594 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
 | Context | `docs/context/`, `tools/context_check.py`, `tools/engine_hash.py` | this layer |
 
 ## Lessons made
@@ -139,6 +139,10 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 - **The holograms first (2026-10-16, D-194):** a hologram lesson is refused at the storyboard until it plans a hero per 8
   beats, and at the check until every hero is placed and most beats show a hologram; every promised design element is
   checked as delivered. Open: a new hologram lesson through the gates.
+- **A physical subject is a real 3D hero (2026-10-17, D-200):** a hologram storyboard declares its `subject`; a physical
+  one with no model in `assets/models3d` is refused by name (`holo_subject_model_missing`), so the run stops and the
+  model is built instead of drawn. `electric_motorbike` is built (the subject st-holo-emoto lacked; Kshitij stopped that run in P8). Open: a
+  model-builder role in P7 (a run that builds its own missing model); st-holo-emoto rerun only when Kshitij asks.
 - **Each style's essence and the style recommender (2026-10-16, D-192):** built and tested (`packs/essence/`,
   `loom/essence.py`, `py -m loom recommend-style`), with the borrowed storyboard techniques in the skills. Open: a new
   lesson in a distinct style to see the essence block change the picture; the recommender inside the interview UI.
