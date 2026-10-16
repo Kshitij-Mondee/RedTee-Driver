@@ -1,0 +1,5 @@
+{"cases": [
+  {"label": "latency in ms, ok", "params": {"name": "Search p95 latency", "unit": "ms", "series": [182, 175, 190, 204, 188, 179, 196, 185, 172, 181], "threshold": {"warn": 300, "crit": 450}, "at": 0.3}, "opts": {"x": 750, "y": 420}},
+  {"label": "error rate in percent, critical", "params": {"name": "Checkout errors", "unit": "%", "series": [0.2, 0.3, 0.2, 0.4, 0.9, 1.8, 3.6, 4.1], "threshold": {"warn": 1, "crit": 2.5}, "stateLabels": {"ok": "Healthy", "warn": "Degraded", "crit": "Critical"}, "w": 460}, "opts": {"x": 730, "y": 420}},
+  {"label": "maximum: saturation at the threshold, a long name, pushes", "params": {"name": "Order queue worker pool saturation across all regions", "unit": "percent", "series": [61, 64, 66, 70, 72, 75, 78, 79], "threshold": {"warn": 80, "crit": 95}, "stateLabels": {"ok": "Within limits", "warn": "Near capacity", "crit": "Saturated"}, "w": 520, "h": 280, "steps": [{"do": "push", "v": 80, "at": 1.0}, {"do": "push", "v": 83, "at": 2.2}]}, "opts": {"x": 700, "y": 400}}
+]}

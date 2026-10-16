@@ -1,0 +1,141 @@
+{
+ "cases": [
+  {
+   "label": "5 candidates at T=1, the top one sampled",
+   "params": {
+    "context": "Please confirm the meeting for",
+    "candidates": [
+     {
+      "token": " Monday",
+      "p": 0.42
+     },
+     {
+      "token": " tomorrow",
+      "p": 0.27
+     },
+     {
+      "token": " next",
+      "p": 0.14
+     },
+     {
+      "token": " the",
+      "p": 0.11
+     },
+     {
+      "token": " Friday",
+      "p": 0.06
+     }
+    ],
+    "pick": 0,
+    "at": 0.3
+   },
+   "opts": {
+    "x": 310,
+    "y": 250
+   }
+  },
+  {
+   "label": "T=0.2 sharpens",
+   "params": {
+    "context": "The capital of Portugal is",
+    "candidates": [
+     {
+      "token": " Lisbon",
+      "p": 0.71
+     },
+     {
+      "token": " a",
+      "p": 0.12
+     },
+     {
+      "token": " Porto",
+      "p": 0.09
+     },
+     {
+      "token": " the",
+      "p": 0.08
+     }
+    ],
+    "labels": {
+     "temperature": "temperature",
+     "topP": "top-p"
+    },
+    "steps": [
+     {
+      "do": "temperature",
+      "v": 0.2,
+      "at": 1.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 310,
+    "y": 280
+   }
+  },
+  {
+   "label": "maximum: top-p 0.9 with 8 candidates and a long context",
+   "params": {
+    "context": "Thank you for reporting the problem with your order. Our team has checked the delivery records and we can see that the parcel was",
+    "candidates": [
+     {
+      "token": " delivered",
+      "p": 0.34
+     },
+     {
+      "token": " returned",
+      "p": 0.21
+     },
+     {
+      "token": " delayed",
+      "p": 0.16
+     },
+     {
+      "token": " left",
+      "p": 0.1
+     },
+     {
+      "token": " scanned",
+      "p": 0.07
+     },
+     {
+      "token": " held",
+      "p": 0.05
+     },
+     {
+      "token": " sent",
+      "p": 0.04
+     },
+     {
+      "token": " misrouted",
+      "p": 0.03
+     }
+    ],
+    "temperature": 1.0,
+    "topP": 0.9,
+    "pick": 1,
+    "labels": {
+     "temperature": "temperature",
+     "topP": "top-p"
+    },
+    "w": 1500,
+    "steps": [
+     {
+      "do": "temperature",
+      "v": 1.4,
+      "at": 2.0
+     },
+     {
+      "do": "topP",
+      "v": 0.75,
+      "at": 3.4
+     }
+    ]
+   },
+   "opts": {
+    "x": 210,
+    "y": 100
+   }
+  }
+ ]
+}

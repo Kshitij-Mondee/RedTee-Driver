@@ -1,0 +1,84 @@
+{
+ "cases": [
+  {
+   "label": "canary at 5, 25 and 100 percent",
+   "params": {
+    "strategy": "canary",
+    "versions": [
+     "v2.3",
+     "v2.4"
+    ],
+    "steps": [
+     5,
+     25,
+     100
+    ],
+    "router": "gateway",
+    "instances": 5,
+    "at": 0.3,
+    "every": 1.5
+   },
+   "opts": {
+    "x": 210,
+    "y": 330
+   }
+  },
+  {
+   "label": "blue-green with a cut-over",
+   "params": {
+    "strategy": "bluegreen",
+    "versions": [
+     "blue: build 418",
+     "green: build 421"
+    ],
+    "steps": [
+     100
+    ],
+    "router": "load balancer",
+    "instances": 4,
+    "show": 0,
+    "script": []
+   },
+   "opts": {
+    "x": 260,
+    "y": 330
+   }
+  },
+  {
+   "label": "maximum: rolling over 8 instances, one fails, rollback",
+   "params": {
+    "strategy": "rolling",
+    "versions": [
+     "4.18.2",
+     "4.19.0"
+    ],
+    "steps": [
+     25,
+     50,
+     75
+    ],
+    "router": "traffic router",
+    "instances": 8,
+    "w": 1720,
+    "at": 0.2,
+    "every": 1.1,
+    "script": [
+     {
+      "do": "health",
+      "i": 4,
+      "state": "unhealthy",
+      "at": 3.4
+     },
+     {
+      "do": "rollback",
+      "at": 4.2
+     }
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 380
+   }
+  }
+ ]
+}

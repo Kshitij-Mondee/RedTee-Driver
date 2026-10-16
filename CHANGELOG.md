@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-17 - Batch-04 of the asset hand-off: eleven operations and AI components (D-193)
+- Operations: T-019 `ops_cluster_map`, T-020 `ops_rollout`, T-023 `ops_metric_tile`, T-024 `ops_alert_card`,
+  T-025 `ops_incident_timeline`, T-026 `ops_slo_budget`, T-030 `ops_cloud_architecture`. AI: T-035 `ai_context_window`,
+  T-036 `ai_token_distribution`, T-037 `ai_llm_console`, T-045 `ai_guardrails`. On the shared `_dev_kit.js` (its
+  additions came with the batch 03 quality pass). Screens for the nine screen and technical styles; the pure
+  explainers drop screencast and add chalk-lab; none for hologram, isometric or the illustrated styles.
+- From the friend's `assets/batch-04` (3c16b53), accepted here; three also rendered through their engines (the metric
+  tile and the LLM console in screencast, the rollout in whiteboard: 0 problems). Notes in docs/assets/batches/batch-04.md.
+  Open: the 14-event incident timeline still crowds its first ten minutes (`dev_incident_crowded`).
+
 ## 2026-10-17 - Batch-05 of the asset hand-off: three hologram hero models
 - `assets/models3d/holo_laptop.js` (T-137: base, keyboard deck, keys, trackpad, hinge, lid, screen, ports; lid and
   explode keys), `holo_gpu.js` (T-138: shroud, fans, heatsink, pcb, power, bracket, backplate; spin and explode) and

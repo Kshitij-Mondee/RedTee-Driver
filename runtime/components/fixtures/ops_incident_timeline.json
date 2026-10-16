@@ -1,0 +1,280 @@
+{
+ "cases": [
+  {
+   "label": "6 events",
+   "params": {
+    "phases": [
+     {
+      "from": 0,
+      "to": 6,
+      "label": "Detect"
+     },
+     {
+      "from": 6,
+      "to": 18,
+      "label": "Triage"
+     },
+     {
+      "from": 18,
+      "to": 41,
+      "label": "Mitigate"
+     },
+     {
+      "from": 41,
+      "to": 55,
+      "label": "Resolve"
+     }
+    ],
+    "events": [
+     {
+      "t": 0,
+      "time": "14:02",
+      "label": "Latency alert fires",
+      "kind": "alert"
+     },
+     {
+      "t": 6,
+      "time": "14:08",
+      "label": "On-call acknowledges",
+      "kind": "detect"
+     },
+     {
+      "t": 15,
+      "time": "14:17",
+      "label": "Status page updated",
+      "kind": "comms"
+     },
+     {
+      "t": 18,
+      "time": "14:20",
+      "label": "Bad deploy found",
+      "kind": "note"
+     },
+     {
+      "t": 27,
+      "time": "14:29",
+      "label": "Rollback started",
+      "kind": "action"
+     },
+     {
+      "t": 55,
+      "time": "14:57",
+      "label": "Latency normal",
+      "kind": "resolve"
+     }
+    ],
+    "brackets": [
+     {
+      "from": 0,
+      "to": 6,
+      "label": "Time to detect: 6 min"
+     },
+     {
+      "from": 0,
+      "to": 55,
+      "label": "Time to resolve: 55 min"
+     }
+    ],
+    "w": 1700,
+    "at": 0.3,
+    "gap": 0.3
+   },
+   "opts": {
+    "x": 110,
+    "y": 330
+   }
+  },
+  {
+   "label": "14 events, two close together",
+   "params": {
+    "phases": [
+     {
+      "from": 0,
+      "to": 4,
+      "label": "Detect"
+     },
+     {
+      "from": 4,
+      "to": 12,
+      "label": "Triage"
+     },
+     {
+      "from": 12,
+      "to": 65,
+      "label": "Mitigate"
+     },
+     {
+      "from": 65,
+      "to": 80,
+      "label": "Resolve"
+     }
+    ],
+    "events": [
+     {
+      "t": 0,
+      "time": "09:00",
+      "label": "Disk alert on db-2",
+      "kind": "alert"
+     },
+     {
+      "t": 1,
+      "time": "09:01",
+      "label": "Replica lag alert",
+      "kind": "alert"
+     },
+     {
+      "t": 4,
+      "time": "09:04",
+      "label": "Engineer paged",
+      "kind": "detect"
+     },
+     {
+      "t": 7,
+      "time": "09:07",
+      "label": "Incident channel opened",
+      "kind": "comms"
+     },
+     {
+      "t": 9,
+      "time": "09:09",
+      "label": "Writes failing",
+      "kind": "note"
+     },
+     {
+      "t": 12,
+      "time": "09:12",
+      "label": "Failover decided",
+      "kind": "action"
+     },
+     {
+      "t": 13,
+      "time": "09:13",
+      "label": "Failover started",
+      "kind": "action"
+     },
+     {
+      "t": 21,
+      "time": "09:21",
+      "label": "Customers notified",
+      "kind": "comms"
+     },
+     {
+      "t": 25,
+      "time": "09:25",
+      "label": "Read traffic restored",
+      "kind": "action"
+     },
+     {
+      "t": 31,
+      "time": "09:31",
+      "label": "Write traffic restored",
+      "kind": "action"
+     },
+     {
+      "t": 40,
+      "time": "09:40",
+      "label": "Backlog draining",
+      "kind": "note"
+     },
+     {
+      "t": 52,
+      "time": "09:52",
+      "label": "Old primary isolated",
+      "kind": "action"
+     },
+     {
+      "t": 65,
+      "time": "10:05",
+      "label": "All queues empty",
+      "kind": "resolve"
+     },
+     {
+      "t": 80,
+      "time": "10:20",
+      "label": "Incident closed",
+      "kind": "resolve"
+     }
+    ],
+    "w": 1720,
+    "steps": [
+     {
+      "do": "focus",
+      "i": 5,
+      "at": 1.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 110
+   }
+  },
+  {
+   "label": "maximum: an 8-hour gap, a long label",
+   "params": {
+    "phases": [
+     {
+      "from": 0,
+      "to": 20,
+      "label": "Detect"
+     },
+     {
+      "from": 20,
+      "to": 510,
+      "label": "Mitigate"
+     },
+     {
+      "from": 510,
+      "to": 530,
+      "label": "Review"
+     }
+    ],
+    "events": [
+     {
+      "t": 0,
+      "time": "Fri 23:40",
+      "label": "Nightly batch slows down",
+      "kind": "note"
+     },
+     {
+      "t": 20,
+      "time": "Sat 00:00",
+      "label": "Job timeout alert",
+      "kind": "alert"
+     },
+     {
+      "t": 505,
+      "time": "Sat 08:05",
+      "label": "First engineer online after the weekend handover failed",
+      "kind": "detect"
+     },
+     {
+      "t": 510,
+      "time": "Sat 08:10",
+      "label": "Batch restarted with more memory",
+      "kind": "action"
+     },
+     {
+      "t": 530,
+      "time": "Sat 08:30",
+      "label": "Reports delivered",
+      "kind": "resolve"
+     }
+    ],
+    "brackets": [
+     {
+      "from": 20,
+      "to": 505,
+      "label": "No one responded for 8 hours"
+     }
+    ],
+    "w": 1600,
+    "at": 0.2
+   },
+   "opts": {
+    "x": 160,
+    "y": 330
+   }
+  }
+ ]
+}

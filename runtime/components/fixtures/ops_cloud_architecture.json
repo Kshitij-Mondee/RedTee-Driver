@@ -1,0 +1,419 @@
+{
+ "cases": [
+  {
+   "label": "one region, 2 zones",
+   "params": {
+    "frames": {
+     "id": "cloud",
+     "kind": "cloud",
+     "label": "Cloud provider",
+     "children": [
+      {
+       "id": "r1",
+       "kind": "region",
+       "label": "Region: Europe North",
+       "children": [
+        {
+         "id": "za",
+         "kind": "zone",
+         "label": "Zone A"
+        },
+        {
+         "id": "zb",
+         "kind": "zone",
+         "label": "Zone B"
+        }
+       ]
+      }
+     ]
+    },
+    "nodes": [
+     {
+      "id": "lb",
+      "frame": "r1",
+      "icon": "globe",
+      "label": "load balancer"
+     },
+     {
+      "id": "a1",
+      "frame": "za",
+      "icon": "server",
+      "label": "web server"
+     },
+     {
+      "id": "d1",
+      "frame": "za",
+      "icon": "database",
+      "label": "primary database"
+     },
+     {
+      "id": "a2",
+      "frame": "zb",
+      "icon": "server",
+      "label": "web server"
+     },
+     {
+      "id": "d2",
+      "frame": "zb",
+      "icon": "database",
+      "label": "standby database"
+     }
+    ],
+    "links": [
+     [
+      "lb",
+      "a1"
+     ],
+     [
+      "lb",
+      "a2"
+     ],
+     [
+      "d1",
+      "d2",
+      "replication"
+     ]
+    ],
+    "w": 1500,
+    "h": 760,
+    "at": 0.3
+   },
+   "opts": {
+    "x": 210,
+    "y": 150
+   }
+  },
+  {
+   "label": "2 regions with replication, one down",
+   "params": {
+    "frames": {
+     "id": "cloud",
+     "kind": "cloud",
+     "label": "Cloud",
+     "children": [
+      {
+       "id": "eu",
+       "kind": "region",
+       "label": "Region: EU West",
+       "children": [
+        {
+         "id": "eun",
+         "kind": "network",
+         "label": "private network 10.1.0.0/16",
+         "children": [
+          {
+           "id": "eupub",
+           "kind": "subnet",
+           "public": true,
+           "label": "public subnet"
+          },
+          {
+           "id": "eupri",
+           "kind": "subnet",
+           "label": "private subnet"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "us",
+       "kind": "region",
+       "label": "Region: US East",
+       "children": [
+        {
+         "id": "usn",
+         "kind": "network",
+         "label": "private network 10.2.0.0/16",
+         "children": [
+          {
+           "id": "uspub",
+           "kind": "subnet",
+           "public": true,
+           "label": "public subnet"
+          },
+          {
+           "id": "uspri",
+           "kind": "subnet",
+           "label": "private subnet"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "nodes": [
+     {
+      "id": "e1",
+      "frame": "eupub",
+      "icon": "globe",
+      "label": "gateway"
+     },
+     {
+      "id": "e2",
+      "frame": "eupri",
+      "icon": "database",
+      "label": "orders store"
+     },
+     {
+      "id": "u1",
+      "frame": "uspub",
+      "icon": "globe",
+      "label": "gateway"
+     },
+     {
+      "id": "u2",
+      "frame": "uspri",
+      "icon": "database",
+      "label": "orders replica"
+     }
+    ],
+    "links": [
+     [
+      "e1",
+      "e2"
+     ],
+     [
+      "u1",
+      "u2"
+     ],
+     [
+      "e2",
+      "u2",
+      "async replication"
+     ]
+    ],
+    "w": 1600,
+    "h": 760,
+    "steps": [
+     {
+      "do": "outage",
+      "frame": "us",
+      "at": 1.0
+     },
+     {
+      "do": "flow",
+      "path": [
+       "e1",
+       "e2"
+      ],
+      "at": 2.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 160,
+    "y": 150
+   }
+  },
+  {
+   "label": "maximum: a 3-tier app across 3 zones",
+   "params": {
+    "frames": {
+     "id": "cloud",
+     "kind": "cloud",
+     "label": "Public cloud, provider neutral",
+     "children": [
+      {
+       "id": "reg",
+       "kind": "region",
+       "label": "Region: Asia Pacific South East",
+       "children": [
+        {
+         "id": "vpc",
+         "kind": "network",
+         "label": "production network 172.16.0.0/16",
+         "dir": "h",
+         "children": [
+          {
+           "id": "zA",
+           "kind": "zone",
+           "label": "Availability zone A",
+           "children": [
+            {
+             "id": "zApub",
+             "kind": "subnet",
+             "public": true,
+             "label": "public subnet"
+            },
+            {
+             "id": "zAapp",
+             "kind": "subnet",
+             "label": "application subnet"
+            },
+            {
+             "id": "zAdb",
+             "kind": "subnet",
+             "label": "data subnet"
+            }
+           ]
+          },
+          {
+           "id": "zB",
+           "kind": "zone",
+           "label": "Availability zone B",
+           "children": [
+            {
+             "id": "zBpub",
+             "kind": "subnet",
+             "public": true,
+             "label": "public subnet"
+            },
+            {
+             "id": "zBapp",
+             "kind": "subnet",
+             "label": "application subnet"
+            },
+            {
+             "id": "zBdb",
+             "kind": "subnet",
+             "label": "data subnet"
+            }
+           ]
+          },
+          {
+           "id": "zC",
+           "kind": "zone",
+           "label": "Availability zone C",
+           "children": [
+            {
+             "id": "zCpub",
+             "kind": "subnet",
+             "public": true,
+             "label": "public subnet"
+            },
+            {
+             "id": "zCapp",
+             "kind": "subnet",
+             "label": "application subnet"
+            },
+            {
+             "id": "zCdb",
+             "kind": "subnet",
+             "label": "data subnet"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "nodes": [
+     {
+      "id": "edge",
+      "frame": "vpc",
+      "icon": "shield",
+      "label": "web application firewall"
+     },
+     {
+      "id": "wA",
+      "frame": "zApub",
+      "icon": "globe",
+      "label": "web tier"
+     },
+     {
+      "id": "aA",
+      "frame": "zAapp",
+      "icon": "server",
+      "label": "application tier"
+     },
+     {
+      "id": "dA",
+      "frame": "zAdb",
+      "icon": "hard-drive",
+      "label": "database node"
+     },
+     {
+      "id": "wB",
+      "frame": "zBpub",
+      "icon": "globe",
+      "label": "web tier"
+     },
+     {
+      "id": "aB",
+      "frame": "zBapp",
+      "icon": "server",
+      "label": "application tier"
+     },
+     {
+      "id": "dB",
+      "frame": "zBdb",
+      "icon": "hard-drive",
+      "label": "database node"
+     },
+     {
+      "id": "wC",
+      "frame": "zCpub",
+      "icon": "globe",
+      "label": "web tier"
+     },
+     {
+      "id": "aC",
+      "frame": "zCapp",
+      "icon": "server",
+      "label": "application tier"
+     },
+     {
+      "id": "dC",
+      "frame": "zCdb",
+      "icon": "hard-drive",
+      "label": "database node"
+     }
+    ],
+    "links": [
+     [
+      "wA",
+      "aA"
+     ],
+     [
+      "aA",
+      "dA"
+     ],
+     [
+      "wB",
+      "aB"
+     ],
+     [
+      "aB",
+      "dB"
+     ],
+     [
+      "wC",
+      "aC"
+     ],
+     [
+      "aC",
+      "dC"
+     ],
+     [
+      "dA",
+      "dB",
+      "sync"
+     ],
+     [
+      "dB",
+      "dC",
+      "sync"
+     ]
+    ],
+    "w": 1720,
+    "h": 1040,
+    "at": 0.2,
+    "steps": [
+     {
+      "do": "outage",
+      "frame": "zB",
+      "at": 4.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 100,
+    "y": 30
+   }
+  }
+ ]
+}
