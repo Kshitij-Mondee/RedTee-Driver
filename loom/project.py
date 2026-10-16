@@ -22,7 +22,7 @@ DEFAULT_REQUEST = {
     "length_min": 4,
     "style": "flat-cosmos",
     "persona": None,
-    "voice": {"provider": "kokoro", "voice": "af_heart", "speed": 1.0},
+    "voice": {"provider": "kokoro", "voice": "af_heart", "speed": "auto"},   # auto: the kind of video's speed (D-196)
     "captions": True,
     "avatar": {"provider": "presenter", "member": "woman"},
     "mix": "auto",            # the style's native mix (loom/essence.py, D-192); "classic" or "cinema" by name, or shares

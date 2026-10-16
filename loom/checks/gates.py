@@ -334,6 +334,14 @@ def check_script(project):
                   "merge or cut beats")
     fe, fw = _ratchet(project, "script", fe)
     E += fe; W += fw
+    # the narrator's speed, when the script chooses one, sits inside its kind's range (D-197)
+    vs = s.get("voice_speed") if isinstance(s.get("voice_speed"), dict) else None
+    if vs and isinstance(vs.get("value"), (int, float)):
+        from ..narrate import kind_range as _speed_range, kind_of as _speed_kind
+        lo, hi = _speed_range(project)
+        if not lo - 1e-9 <= float(vs["value"]) <= hi + 1e-9:
+            E.append(f"voice_speed {vs['value']} is outside the {_speed_kind(project)} range {lo} to {hi}: choose inside it (slower for dense "
+                     "or new material, faster for plain and familiar) and say why")
     # the kind of video decides recall, quiz beats and questions put to the viewer (D-191); a lesson made before the rule
     # keeps the one it was approved under
     if _kind_legacy(project):

@@ -6,6 +6,9 @@
   "properties": {
     "title": {"type": "string"},
     "wpm_target": {"type": "number", "minimum": 110, "maximum": 175},
+    "voice_speed": {"type": "object", "required": ["value", "why"], "additionalProperties": false,
+      "description": "D-197: the narrator's speed, chosen inside the kind of video's range from the topic, how dense the narration is and who watches",
+      "properties": {"value": {"type": "number", "minimum": 0.7, "maximum": 1.1}, "why": {"type": "string", "minLength": 10}}},
     "sections": {"type": "array", "minItems": 2, "items": {"type": "object", "required": ["id", "title"],
       "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "role": {"type": "string"}}}},
     "beats": {"type": "array", "minItems": 4, "items": {"type": "object",

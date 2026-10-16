@@ -277,7 +277,7 @@ def _dispatch(args) -> int:
         serve(port=args.port); return 0
     if args.cmd == "new":
         req = {"audience": args.audience, "genre": args.genre, "length_min": args.length, "style": args.style,
-               "voice": {"provider": args.voice_provider, "voice": args.voice, "speed": 1.0}, "persona": args.persona,
+               "voice": {"provider": args.voice_provider, "voice": args.voice, "speed": "auto"}, "persona": args.persona,
                "notes": args.notes, "captions": not args.no_captions, "avatar": {"provider": args.avatar, "member": "woman"}}
         if args.mix:
             from .allocate import resolve_mix

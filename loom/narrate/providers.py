@@ -57,7 +57,10 @@ class Kokoro(Provider):
 
     def synth(self, text, voice):
         k = self._load()
-        audio, sr = k.create(text, voice=voice.get("voice") or "af_heart", speed=float(voice.get("speed") or 1.0), lang=voice.get("lang") or "en-us")
+        sp = voice.get("speed")
+        # "auto" is resolved by narrate (the kind's speed, D-196); a caller that skips narrate gets the middle speed
+        sp = float(sp) if isinstance(sp, (int, float)) or (isinstance(sp, str) and sp.replace(".", "", 1).isdigit()) else 0.85
+        audio, sr = k.create(text, voice=voice.get("voice") or "af_heart", speed=sp, lang=voice.get("lang") or "en-us")
         return np.asarray(audio, dtype=np.float32), sr, None
 
 
