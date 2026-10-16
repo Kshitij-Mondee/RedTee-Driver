@@ -39,6 +39,11 @@ Every kind of video can have a story. What changes is the form it usually takes:
 | explainer, change, vision | a governing metaphor, a scale journey, a mechanism shown running, a depth or 3D moment |
 
 ## 1. Find the one governing metaphor (the world), when one helps
+
+**Diverge before you choose (D-192).** Write three candidate pictures for the lesson's world, and three for each turn
+beat, before keeping one. Test each with the four questions below; keep the runners-up in the plan as alternatives the
+person can pick. The first picture that comes to mind is usually the one every video uses.
+
 When a picture would help, pick ONE the whole lesson lives inside, rather than a new one per beat. Test
 candidates against four questions:
 1. **Structural fit:** do the concept's parts map onto the picture's parts? (A release pipeline maps onto
@@ -94,6 +99,11 @@ things. Inside one idea, a held layout that changes is not a slideshow. (A swap-
 then use held elements on a `continue` join, never a hand-coded imitation.)
 
 ### Joins: where they go, and what a zoom means (every pack)
+- **Two more join meanings (D-192):** *slow* (moment to moment: the same picture a breath later, for a change that
+  must be watched happening) and *facets* (aspect to aspect: other parts of one place or one idea, no time passing, for
+  a mood or a whole seen in pieces). Use them where they mean that; the viewer fills the gap, so the gap must be small.
+- **Camera rhythm:** neighbouring moving beats change their move (a push, then a hold, then a pan), the payoff holds
+  still, and each section's line in the outline says its rhythm (for example "hold, push, hold, pull").
 - **Chapter boundaries are hard cuts or a card** (26 of 33 in one studied group); gradual joins live inside a topic.
 - **A zoom enters the object:** the destination is drawn inside the source (a monitor, a door), so the join means
   "into": a `zoom` into a nested station, `hero.portal` drawing the frame.
@@ -166,6 +176,11 @@ equal-scale specimens. Code never draws figures from imagination (D-102): use de
 pose or hands kit is missing, name the need and choose a non-figurative treatment.
 
 ## 7. The animatic, then the build
+
+**Read it with the sound off first (D-192).** Before the sound-on pass, every panel must say its point from the picture
+alone: cover the narration and ask what this beat teaches. A panel that needs its words to mean anything is a slide;
+fix the picture, not the caption.
+
 Before any scene is built, draw one panel per beat with its shot, depth, light, device, value and narration, timed
 to the voice, and watch it through once. Does the learning land? Does the picture hold? Do the shots help the
 learner follow? Do the devices return, and does tone break only for meaning? Fix the plan, then build.

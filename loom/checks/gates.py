@@ -64,6 +64,18 @@ def check_brief(project):
     for t in ids:
         if t.lower() in blob:
             E.append(f"brief names a template/blueprint ('{t}'): visual direction is kinds in plain words")
+    # the kind of video (D-191): a known one, the request's when it names one; an explainer's arc has no check
+    from ..genre import PROFILES as _KINDS
+    bg = str(b.get("genre") or "").strip().lower()
+    rq = str((project.request or {}).get("genre") or "auto").strip().lower()
+    if bg not in _KINDS:
+        E.append(f"brief.genre '{b.get('genre')}' is not a kind of video the engine plans for ({', '.join(sorted(_KINDS))})")
+    elif rq in _KINDS and bg != rq:
+        E.append(f"brief.genre '{bg}' but the request names '{rq}': the person's choice stands")
+    elif _KINDS[bg]["recall"] == "none":
+        roles = [str(seg.get("role") or "") for seg in b["arc_plan"]]
+        if any(r in ("check", "practice", "your turn", "quiz") for r in roles):
+            E.append(f"the arc of a {bg} has a check or practice role ({', '.join(roles)}): an explainer asks the viewer nothing")
     return E, W
 
 
@@ -161,8 +173,9 @@ def check_pedagogy(project):
     cap = 1 if dur <= 360 else 2 if dur <= 600 else 3 if dur <= 900 else 5 if dur <= 1500 else 6
     if len(stops) > cap:
         E.append(f"{len(stops)} stopping checks for {dur:.0f}s; the budget is {cap}")
-    if not p["pacing"]["recall_moments"]:
-        E.append("no recall moment at all")
+    # the kind of video decides the recall moments (D-191): a teaching film needs one, an explainer has none
+    from ..genre import plan_errors as _kind_plan, gagne_required as _kind_gagne
+    E += _kind_plan(project, p)
     for r in p["pacing"]["recall_moments"]:
         if r.get("after_section") not in ids:
             E.append(f"recall moment tied to unknown section {r.get('after_section')}")
@@ -176,7 +189,7 @@ def check_pedagogy(project):
         if carriers[i] == carriers[i - 1] == carriers[i - 2]:
             E.append(f"three consecutive sections share the carrier '{carriers[i]}'")
     fa = p["framework_audit"]
-    for key in ("attention", "recall_prior", "present", "guidance", "practice", "transfer"):
+    for key in _kind_gagne(project):
         if not (fa.get("gagne") or {}).get(key):
             E.append(f"framework_audit.gagne.{key} is missing (mandatory event)")
     path = [x.strip() for x in re.split(r"->|→|,", fa.get("bloom_path", "")) if x.strip()]
@@ -308,10 +321,9 @@ def check_script(project):
                   "merge or cut beats")
     fe, fw = _ratchet(project, "script", fe)
     E += fe; W += fw
-    stops = [b for b in s["beats"] if (b.get("recall") or {}).get("kind") in ("quiz", "pause_predict")]
-    if not any(b.get("recall") for b in s["beats"]):
-        E.append("no recall moment in the script")
-    del stops
+    # the kind of video decides recall, quiz beats and questions put to the viewer (D-191)
+    from ..genre import script_errors as _kind_script
+    E += _kind_script(project, s)
     return E, W
 
 
@@ -568,7 +580,8 @@ def check_storyboard(project):
             W.append(f"three consecutive beats use '{kinds_seq[i]}' ({beats[i - 2]}..{beats[i]})")
     from ..story import story_warnings          # visual storytelling: notes, never rules (D-62, D-64, D-67)
     brief = read_json(project.path("plan/brief.json"), {}) or {}
-    genre = brief.get("genre") or (project.request or {}).get("genre")
+    from ..genre import of as _kind_of   # the kind as the engine reads it ("auto" too, D-191)
+    genre = brief.get("genre") or _kind_of(project)
     W += story_warnings(sb, beats, genre=genre, look=brief.get("look"))
     from ..options import validate as _alts        # options: each alternative must be a real treatment (D-70)
     E += _alts(sb)
@@ -581,6 +594,8 @@ def check_storyboard(project):
     W += SB.carry_warnings(project, sb, beats)      # a new section carries little (D-182)
     from ..direction import storyboard_warnings as _direction_warnings
     W += _direction_warnings(project, sb)           # the style's strong calls planned for (D-189, L-474): notes, never rules
+    from ..essence import storyboard_warnings as _essence_warnings
+    W += _essence_warnings(project, sb)             # a distinct style kept to its own vocabulary (D-192): a note, never a rule
     ve, vw = SB.variety_checks(sb, beats, alloc)
     fe += ve; W += vw
     we, ww = SB.world_checks(sb, beats)            # one world (R-46)

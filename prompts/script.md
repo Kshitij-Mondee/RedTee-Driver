@@ -34,7 +34,8 @@ plan made them. You DO decide the words, and the visual INTENT of every beat.
 - No em or en dashes anywhere. Use commas, full stops, or ASCII hyphens.
 - Every digit said or shown must be in an approved fact (or the beat is hypothetical and framed).
 - Total length within ~20% of the plan's target at `wpm_target` (130-160).
-- At least one recall moment.
+- Recall by the kind of video (D-191): at least one recall moment in a teaching, policy or soft-skills film; none in an
+  explainer, and no question put to the viewer there (at most two of the narrator's own, each answered at once).
 
 ## Craft that makes Loom videos better than slides
 - Open on a concrete person or moment, not a definition. Name ideas only after the viewer has seen them.

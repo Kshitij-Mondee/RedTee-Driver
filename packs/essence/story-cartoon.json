@@ -1,0 +1,88 @@
+{
+  "id": "story-cartoon",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.1,
+    "motion": 0.9,
+    "min_score": 0.0
+  },
+  "essence": "A story with people you recognise. An outlined cartoon on warm paper where colleagues act out the situation and the idea happens to them.",
+  "explains_by": [
+    "A character in a situation: the viewer recognises the moment before the idea is named.",
+    "Show the wrong move, then the right one, with the same people.",
+    "Speech and thought carry the inner side: bubbles say what a person thinks.",
+    "One running example the whole film returns to."
+  ],
+  "techniques": [
+    {
+      "name": "acted scene",
+      "use": "the situation",
+      "how": "designed character rigs posing and gesturing in a set"
+    },
+    {
+      "name": "thought bubble",
+      "use": "what someone is thinking",
+      "how": "Loom.treat.bubble in the lesson's seeded form"
+    },
+    {
+      "name": "before and after",
+      "use": "the right move",
+      "how": "the same scene replayed with the change"
+    },
+    {
+      "name": "hand-made time",
+      "use": "lively drawings",
+      "how": "Loom.stepped on twos"
+    }
+  ],
+  "vocabulary": [
+    "ink outlines",
+    "warm paper",
+    "one cel shade",
+    "designed people",
+    "speech and thought bubbles"
+  ],
+  "avoid": [
+    "UI dashboards",
+    "technical diagrams",
+    "stock icons",
+    "faceless pictograms"
+  ],
+  "fits": {
+    "topics": [
+      "communication",
+      "feedback and conversations",
+      "teamwork",
+      "customer service",
+      "inclusion",
+      "everyday workplace situations"
+    ],
+    "kinds": {
+      "explainer": 0.4,
+      "teaching": 0.7,
+      "onboarding": 0.7,
+      "policy": 0.6,
+      "soft-skills": 0.95
+    }
+  },
+  "signals": [
+    "conversation",
+    "feedback",
+    "team",
+    "colleague",
+    "customer",
+    "manager",
+    "meeting",
+    "conflict",
+    "behaviour",
+    "situation"
+  ],
+  "calls": [
+    "ctx.character",
+    "Loom.treat.bubble",
+    "Loom.place",
+    "ctx.scenery",
+    "Loom.stepped"
+  ]
+}

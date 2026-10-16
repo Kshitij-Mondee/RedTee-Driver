@@ -125,6 +125,12 @@ One line each on WHEN to use it. Details: `get_api_section(<section>)`; template
 ## library
 
 - **components** (runtime/components.js; section: ctx): a small library element (a card, a chip) reused instead of redrawn; see catalog_search(query, "component"). Call: `ctx.use(id, params, {x, y, name})`
+- **component_list** (runtime/catalog.json; section: ctx): promoted small elements. Call: `ctx.use(id, params)`
+  - `app_calendar`: A calendar at work in week view: days across, hours down, events placed by their times, the guests' free and busy times in a booking form, walked through by a pointer that creates an event, drags one to reschedule it, opens one and invites a colleague.
+  - `app_chat_workspace`: A team chat workspace: channels and direct messages, a channel's conversation with mentions, reactions, file cards and threads, and a composer, walked through by a pointer that opens a channel, posts, reacts and opens a thread.
+  - `app_docs_editor`: A shared document editor: a page of headings, paragraphs and lists, suggested edits shown inline, comments in the margin, and a version history, walked through by a pointer that types, comments on a phrase, accepts a suggestion and restores an earlier version.
+  - `app_email`: An email client at work: folders, a thread list with unread and flagged mail, the open message in a reading pane, and a compose window, walked through by a pointer that opens, replies, flags, moves and searches.
+  - `app_lms_course`: An online course on a learning platform: the outline of modules and lessons with what is done, a lesson player, a quiz with feedback, the learner's progress and a certificate, walked through by a pointer that starts a lesson, answers, submits and completes the course.
 
 ## media
 

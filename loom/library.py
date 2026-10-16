@@ -504,8 +504,15 @@ def check_component(fid: str, sheet: bool = True) -> tuple[list[str], dict]:
     sig = {json.dumps({k: cs.get("params", {}).get(k) for k in content}, sort_keys=True) for cs in fixtures["cases"]}
     if len(sig) < 3:
         E.append("fixture cases must differ in their CONTENT params (3 distinct), to prove the component is general")
+    # a component made for some styles only (D-193) is rendered and judged in those, and they must be real packs
+    own = c.get("styles") or None
+    if own:
+        known = {p.stem for p in STYLE_PACKS.glob("*.json")}
+        bad = [x for x in own if x not in known]
+        if bad:
+            E.append(f"styles names packs that do not exist: {bad}")
     if sheet and not E:
-        rep = render_sheet(fid)
+        rep = render_sheet(fid, styles=own)
         info_ = rep
         for st, r in rep["styles"].items():
             for e in r["errors"]:
@@ -1061,8 +1068,26 @@ def accept(fid: str) -> list[str]:
                 harvest()
                 info(f"component {fid}: accepted; sheet {rep.get('sheet')}")
             return E
+        if not F and comp_file.exists():
+            # a commissioned component (the asset hand-off, docs/assets/HANDOFF_TEMPLATE_LIBRARY.md) has no lesson uses to
+            # be harvested from: check_component already accepts it by its `commissioned_by`, and accept had no route to it,
+            # so every item of the first batch failed "unknown form" (batch-01, 2026-10-16)
+            from .catalog import build_catalog
+            c = ((build_catalog().get("components") or {}).get(fid)) or {}
+            by = str(c.get("commissioned_by") or "").strip()
+            if by:
+                E, rep = check_component(fid)
+                if not E:
+                    decisions[fid] = {"decision": "promote", "status": "promoted", "commissioned_by": by,
+                                      "component": f"{fid}@{(_components().get(fid) or {}).get('version', 1)}",
+                                      "reason": f"commissioned ({by}); no lesson uses yet"}
+                    write_json(LIB / "decisions.json", decisions)
+                    harvest()
+                    info(f"component {fid} (commissioned): accepted; sheet {rep.get('sheet')}")
+                return E
         if not F:
-            return [f"unknown form {fid} (run `py -m loom library harvest` first)"]
+            return [f"unknown form {fid} (run `py -m loom library harvest` first; a commissioned component needs "
+                    f"`commissioned_by` in its Loom.component spec)"]
         if F["status"] not in ("candidate", "deferred", "rejected"):
             return [f"{fid} is {F['status']} ({F['count']} uses); nothing to accept yet"]
         E = check_assessment(fid)

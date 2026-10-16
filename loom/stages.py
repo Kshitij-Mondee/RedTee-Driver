@@ -84,10 +84,19 @@ def style_guide(style: str | None) -> str | None:
     return g if g and (ENGINE_ROOT / g).exists() else None
 
 
-def reading_list(stage: Stage, style: str | None = None) -> list[str]:
-    """The files a stage's author reads: its skills, then (storyboard and scenes) the lesson style's guide."""
+def reading_list(stage: Stage, style: str | None = None, kind: str | None = None) -> list[str]:
+    """The files a stage's author reads: the kind of video's lead craft for the stage first (D-191: an explainer's
+    pedagogy and script lead with lnd-explainer-craft), its skills, then (storyboard and scenes) the style's guide."""
     g = style_guide(style) if stage.name in GUIDED_STAGES else None
-    return list(stage.skills) + ([g] if g and g not in stage.skills else [])
+    out = list(stage.skills)
+    if kind:
+        from .genre import PROFILES
+        from .util import ENGINE_ROOT
+        lead = (PROFILES.get(kind) or {}).get("lead", {}).get(stage.name)
+        f = f"{LND}/{lead}/SKILL.md" if lead else None
+        if f and (ENGINE_ROOT / f).exists():
+            out = [f] + [x for x in out if x != f]
+    return out + ([g] if g and g not in out else [])
 
 
 def active(project) -> list[Stage]:

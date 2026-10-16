@@ -27,7 +27,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 | Compose + render | `loom/compose.py`, `loom/render.py` | HyperFrames project; resumable segmented render; `verify_render` checks the MP4 against the preview |
 | Canvas runtime (JS) | `runtime/*.js` | world, camera, joins, kit, motion vocabulary, captions, presenter, components registry |
 | Library of templates | `runtime/templates/`, `runtime/blueprints/` | 17 templates and 5 blueprints live (`runtime/catalog.md`) |
-| Element components | `runtime/components/` | 0 components (none has earned promotion yet) |
+| Element components | `runtime/components/` | 5 components (none has earned promotion yet) |
 | Element and design library | `loom/library.py`, `library/` | counting, assessment, promotion, blind selection, proofs |
 | Style packs | `packs/styles/` | 17 style packs: flat-cosmos, editorial-paper, whiteboard, corporate-clean, dark-technical, engineering, blueprint (D-178), line-art, cinematic-noir, cinematic-dawn, from the visual study (D-74) story-cartoon, presenter-pop, chalk-lab, glow-flat (D-78, Kurzgesagt-inspired), and isometric, hologram and screencast (D-185, each with an engine) |
 | Bridges | `loom/manim_bridge.py`, `loom/redtee_bridge.py` | Manim clips; RedTee SVG blueprints, **read-only** |
@@ -54,7 +54,7 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
 | Palette study (research) | `tools/palette_study.py`, `docs/research/palettes/` | the colours a video uses by role, accent pairs, per-shot palettes; scored against a known palette |
 | Video-note screening (research) | `tools/check_video_notes.py` | flags filler or mislabelled AI-written video notes before use (D-72) |
 | Video study (research) | `tools/video_study.py`, `tools/transcribe_videos.py`, `docs/research/*/` | cuts, motion, holds, audio gaps, palette, contact sheets, speech numbers; studies of 5 channels (D-73, D-76); `tools/explain_study.py` (explanation cues, word-aligned strips, `moments` for the animation worth a 0.5 s strip, L-134) and `tools/style_fingerprint.py` (what a look is made of, for references and Loom alike) (D-74) |
-| Tests | `tests/run_tests.py` | 560 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
+| Tests | `tests/run_tests.py` | 577 tests (run_tests.py plus tests/suites), offline (the Chrome ones find the browser through one shared check, `tests/browser_support.py`, as `loom doctor` does, and name their skip when there is none; so do the vision lab and cairo ones where OpenCV, symlinks or cairo are missing); each gate is proven able to fail; the 2026-10-07 film-defect suites and the 2026-10-08 style-system suite were each run red on the code before them (`docs/research/bench-fix/red_runs/`, `docs/research/style-system/`) |
 | Context | `docs/context/`, `tools/context_check.py`, `tools/engine_hash.py` | this layer |
 
 ## Lessons made
@@ -121,6 +121,13 @@ Loom is a pedagogy-first, code-rendered L&D video engine.
   (P-1 to P-3, pending Kshitij).
 
 ## Open work
+
+- **Clean joins, motion and the kind of video (2026-10-16, D-190, D-191, R-70):** built and tested; not yet seen on a new
+  lesson. Open: a new lesson per style to see the joins, the motion lines and the kind block on frames; the friend's
+  batch-01 (five app shells, T-149 to T-153) to take in once pushed or saved here.
+- **Each style's essence and the style recommender (2026-10-16, D-192):** built and tested (`packs/essence/`,
+  `loom/essence.py`, `py -m loom recommend-style`), with the borrowed storyboard techniques in the skills. Open: a new
+  lesson in a distinct style to see the essence block change the picture; the recommender inside the interview UI.
 
 - **Four style test lessons (2026-10-16, R-69, L-474):** done and accepted (st-bp-cooling, st-holo-ai, st-sc-2fa,
   st-iso-order; $50.22). Open: Kshitij's look at the films. The per-style direction cards they called for are built

@@ -21,7 +21,13 @@ Loom.scene("b25", {
     const tTrack = ctx.cue("track it to done");
     const fillDur = 0.7, stagger = 0.28, popGap = 0.09;
 
-    const CHIP_W = 176, CHIP_H = 46, GAP = 12, TRACK_H = 26, BOX = 44, BOX_GAP = 16;
+    // measure, then draw: the chip height comes from the "Owner" label (inset >= max(6, 0.2 x size) + 4 px
+    // slack), the width from its glyphs; the row is 128 px tall, so the gap shrinks to keep the block inside it
+    const ownFit = kit.fit("Owner", { role: "label", w: 110, maxLines: 1 });
+    const ownNeed = Math.max(6, 0.2 * ownFit.size);
+    const CHIP_W = Math.max(176, Math.ceil(54 + ownFit.width + ownNeed + 8));
+    const CHIP_H = Math.max(46, Math.ceil(ownFit.height + 2 * ownNeed + 4));
+    const GAP = 8, TRACK_H = 26, BOX = 44, BOX_GAP = 16;
     const BH = CHIP_H + GAP + BOX;             // block height (the checkbox row is the taller one)
 
     rows.forEach((row, i) => {

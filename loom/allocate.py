@@ -1,6 +1,7 @@
 """Treatment allocation (deterministic): which beats are avatar, template, motion or hybrid.
 
-Targets come from the request (default avatar 10%, template 50%, motion 40% of running time).
+Targets come from the request: "auto" (the default) is the style's native mix from its essence (D-192), "classic"
+is avatar 10%, template 50%, motion 40% of running time, "cinema" is mostly drawn world.
 Motion goes where the congruence principle says motion IS the content (change over time,
 process, causality, quantity), ranked by the script's animate_score. Rhythm rules stop the
 lesson from sagging into a slideshow: no run of more than three plain template beats.
@@ -18,14 +19,20 @@ MIXES = {
 }
 
 
-def resolve_mix(m) -> dict:
-    """a mix is a name from MIXES or a dict of shares; an unknown name is an error, never a silent default"""
+def resolve_mix(m, style: str | None = None) -> dict:
+    """a mix is a name from MIXES, "auto" (the style's native mix from its essence, D-192: a distinct style is mostly its
+    own techniques, not the shared templates; a simple style the classic mix) or a dict of shares; an unknown name is an
+    error, never a silent default"""
     if m is None:
         return dict(MIXES["classic"])
+    if m == "auto":
+        from .essence import native_mix
+        nm = native_mix(style)
+        return dict(nm, name="native") if nm else dict(MIXES["classic"], name="classic")
     if isinstance(m, str):
         if m not in MIXES:
             from .util import LoomError
-            raise LoomError(f"unknown mix '{m}' (known: {', '.join(MIXES)})")
+            raise LoomError(f"unknown mix '{m}' (known: auto, {', '.join(MIXES)})")
         return dict(MIXES[m], name=m)
     return dict(m)
 
@@ -41,9 +48,10 @@ def _dur(beat, wpm):
 def allocate(project) -> dict:
     s = read_json(project.path("plan/script.json"))
     req = project.request
-    mix = resolve_mix(req.get("mix"))
+    mix = resolve_mix(req.get("mix"), req.get("style"))
     min_score = float(mix.get("min_score", 0.45))
-    avatar_on = (req.get("avatar") or {}).get("provider", "presenter") != "none"
+    # a mix with no presenter share has no presenter beat (a native mix of a distinct style: the first beat is its world)
+    avatar_on = (req.get("avatar") or {}).get("provider", "presenter") != "none" and float(mix.get("avatar", 0.1)) > 0
     wpm = float(s.get("wpm_target") or 150)
     beats = s["beats"]
     D = {b["id"]: _dur(b, wpm) for b in beats}

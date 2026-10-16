@@ -54,14 +54,15 @@ It is rendered as a coarse animatic and judged as pictures before pass 2 writes 
     or technical packs.
 11. **D-114 primitives** are available: shape morph and fill join, stepped time (illustrated), swap slot, material
     joins (torn, page, scroll, motif: illustrated; handoff, fill: all), magnifier, data as objects. Name them as devices.
-12. **The style's strong calls (D-189):** with a direction card, plan the moves this lesson's content calls for
-    (hologram: the hero beat, 3D or pushed SVG; blueprint: a sheet per section, the detail, extrude and mechanism beats;
-    screencast: the region per chapter; isometric: the diorama beats and height cues; whiteboard: what each board
-    builds) and name them in the beat lines; say why a move is left out.
+12. **The style's strong calls (D-189):** with a direction card, plan the moves the content calls for (the card names
+    them: the hologram hero, blueprint sheets, screencast regions, isometric dioramas, whiteboard boards), name them in
+    the beat lines, and say why a move is left out.
 13. No facts beyond the script. No em or en dashes.
 
 ## 4. Method
-1. **Find the world.** Test a governing metaphor for structural fit, change, scale and safety. If none passes all
+0. **Kind and style first (D-191, D-192):** per the VIDEO KIND and STYLE ESSENCE blocks, name one of the style's own
+   techniques per section.
+1. **Find the world.** Three candidates first; keep the best, the rest as `alternatives`. Test a governing metaphor for structural fit, change, scale and safety. If none passes all
    four, use a neutral stage and say so; a forced metaphor is worse than none.
 2. **Map the arc onto it:**
    - hook: establishing, with something wrong;
@@ -76,7 +77,7 @@ It is rendered as a coarse animatic and judged as pictures before pass 2 writes 
    - treatment (builder family; depth and light only where they mean something);
    - accent and camera habit;
    - the entry join's meaning (into, time, era, meanwhile, shock, chapter).
-5. **One line per beat:**
+5. **One line per beat:** the question it answers (who, how much, where, when, how, why) and its picture;
    - station or world, subject, builder family, device;
    - `shot.size`, `story_role`, any `intent`;
    - join meaning, and `option` plus `alternatives` names.

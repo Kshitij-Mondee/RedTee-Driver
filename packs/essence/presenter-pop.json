@@ -1,0 +1,68 @@
+{
+  "id": "presenter-pop",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.15,
+    "template": 0.35,
+    "motion": 0.5
+  },
+  "essence": "A documentary host with big, bold diagrams. A presenter beside full-frame flat diagrams, direct and friendly.",
+  "explains_by": [
+    "A person explains to you: the presenter is the guide between diagrams.",
+    "One big diagram a beat, filling the frame.",
+    "Bold colour for the one thing named."
+  ],
+  "techniques": [
+    {
+      "name": "presenter beside",
+      "use": "orientation and payoff",
+      "how": "an avatar beat with a title or card"
+    },
+    {
+      "name": "full-frame diagram",
+      "use": "each idea",
+      "how": "a diagram that fills the frame and builds on the words"
+    },
+    {
+      "name": "the number on a prop",
+      "use": "a figure said aloud",
+      "how": "Loom.data stamp or counter, big, in the diagram's colour"
+    }
+  ],
+  "vocabulary": [
+    "pale sage ground",
+    "cobalt and orange",
+    "big flat diagrams",
+    "the presenter"
+  ],
+  "avoid": [
+    "tiny labels",
+    "dense dashboards"
+  ],
+  "fits": {
+    "topics": [
+      "announcements",
+      "introductions to a programme",
+      "overviews",
+      "company updates"
+    ],
+    "kinds": {
+      "explainer": 0.6,
+      "teaching": 0.6,
+      "onboarding": 0.8,
+      "policy": 0.6,
+      "soft-skills": 0.4
+    }
+  },
+  "signals": [
+    "update",
+    "announce",
+    "overview",
+    "introduce",
+    "programme"
+  ],
+  "calls": [
+    "Loom.data",
+    "ctx.use"
+  ]
+}

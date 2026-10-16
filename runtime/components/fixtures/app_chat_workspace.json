@@ -1,0 +1,53 @@
+{"cases": [
+ {"label": "incident channel: react and open a thread",
+  "params": {"title": "Team chat", "workspace": "Platform Team", "me": "Ravi Menon",
+   "labels": {"channels": "Channels", "dms": "Direct messages", "composer": "Message incident-room", "thread": "Thread"},
+   "channels": [
+    {"id": "inc", "label": "incident-room", "topic": "Live incidents only. Updates every 30 minutes.", "messages": [
+      {"author": "Nadia Rahman", "time": "14:02", "text": "Checkout errors are up to 4 percent since the 13:50 deploy."},
+      {"author": "Tom Becker", "time": "14:05", "text": "@Ravi can you roll back the payments service? I am checking the database.", "reactions": [{"icon": "eye", "count": 2}],
+       "thread": {"label": "3 replies", "replies": [{"author": "Ravi Menon", "time": "14:06", "text": "Rolling back now."}, {"author": "Tom Becker", "time": "14:11", "text": "Errors are back under 0.5 percent."}, {"author": "Nadia Rahman", "time": "14:12", "text": "Thanks both. I will write the summary."}]}},
+      {"author": "Nadia Rahman", "time": "14:14", "text": "Timeline so far is in the incident doc.", "file": {"name": "incident-timeline.docx", "size": "48 KB"}}]},
+    {"id": "dep", "label": "deploys", "unread": true},
+    {"id": "rel", "label": "release-notes", "kind": "private"},
+    {"id": "tb", "label": "Tom Becker", "kind": "dm", "mention": 1}],
+   "steps": [{"do": "react", "i": 2, "icon": "circle-check", "at": 1.0}, {"do": "thread", "i": 1, "at": 3.6}]},
+  "opts": {"x": 96, "y": 78}},
+ {"label": "onboarding: open a channel and post",
+  "params": {"workspace": "Greenleaf Retail", "me": "Ana Silva",
+   "labels": {"composer": "Write a message"},
+   "channels": [
+    {"id": "gen", "label": "general", "messages": [{"author": "Store Ops", "time": "08:00", "text": "Doors open at 09:00 today. Deliveries arrive at 07:30."}]},
+    {"id": "new", "label": "new-starters", "unread": true, "topic": "Questions from your first weeks", "messages": [
+      {"author": "Priya Shah", "time": "09:15", "text": "Welcome @Ana to the Leeds store team.", "reactions": [{"icon": "party-popper", "count": 5}, {"icon": "heart", "count": 2}]},
+      {"author": "Priya Shah", "time": "09:16", "text": "Your till training is on Wednesday at 10:00."}]}],
+   "steps": [{"do": "openChannel", "channel": "new", "at": 0.7}, {"do": "post", "text": "Thank you, see you Wednesday.", "at": 2.2}]},
+  "opts": {"x": 96, "y": 78}},
+ {"label": "max: long names, long messages, many channels",
+  "params": {"title": "Collaboration Hub for Regional Programme Delivery", "workspace": "International Programme Delivery Office", "me": "Oluwaseun Abernathy-Krishnamurthy",
+   "labels": {"channels": "Channels you belong to", "dms": "Direct conversations", "composer": "Write to programme-governance-and-assurance-board"},
+   "channels": [
+    {"id": "gov", "label": "programme-governance-and-assurance-board", "kind": "private", "topic": "Decisions, risks and assumptions for every workstream, reviewed each fortnight by the board", "messages": [
+      {"author": "Maximiliane Oyelaran-Whitford", "time": "Yesterday 23:59", "text": "@Oluwaseun the consolidated risk register now includes the counterparty exposure analysis, the revised mitigation owners and the escalation thresholds agreed with internal audit. Please confirm whether the board pack can circulate tonight or whether the treasury annex needs another review cycle before distribution.",
+       "file": {"name": "consolidated_risk_register_with_counterparty_exposure_and_mitigations.xlsx", "size": "12.8 MB"},
+       "reactions": [{"icon": "eye", "count": 14}, {"icon": "circle-check", "count": 9, "mine": true}, {"icon": "thumbs-up", "count": 21}, {"icon": "heart", "count": 3}],
+       "thread": {"label": "128 replies, last at 23:41", "replies": []}},
+      {"author": "Programme Management Office Automation", "time": "00:15", "text": "Reminder: the assurance attestation window closes at 17:00 for every workstream lead and deputy."}]},
+    {"id": "c2", "label": "workstream-finance-transformation-and-controls", "unread": true, "mention": 12},
+    {"id": "c3", "label": "workstream-people-change-and-communications", "unread": true},
+    {"id": "c4", "label": "supplier-onboarding-and-third-party-risk"},
+    {"id": "c5", "label": "Maximiliane Oyelaran-Whitford", "kind": "dm", "mention": 99},
+    {"id": "c6", "label": "Bartholomew Featherstonehaugh", "kind": "dm"}],
+   "steps": [{"do": "post", "text": "The board pack can circulate tonight once the treasury annex is attached.", "at": 0.6}], "cps": 30},
+  "opts": {"x": 96, "y": 78}},
+ {"label": "theme: compact, accent3, loading",
+  "params": {"workspace": "Platform Team", "labels": {"composer": "Message deploys"},
+   "channels": [{"id": "dep", "label": "deploys", "messages": [{"author": "Build Bot", "time": "10:00", "text": "Release 4.2 is live."}]}, {"id": "x", "label": "random"}],
+   "state": "loading", "theme": {"accent": "accent3", "sidebar": "field2", "radius": 4, "density": 0.88}},
+  "opts": {"x": 96, "y": 78}},
+ {"label": "theme: roomy, accent4, error",
+  "params": {"workspace": "Platform Team", "labels": {"composer": "Message deploys"},
+   "channels": [{"id": "dep", "label": "deploys", "messages": [{"author": "Build Bot", "time": "10:00", "text": "Release 4.2 is live."}]}, {"id": "x", "label": "random"}],
+   "state": "error", "notice": "Messages could not load. Reconnecting.", "theme": {"accent": "accent4", "sidebar": "surface", "page": "field", "radius": 18, "density": 1.2, "text": 1.1}},
+  "opts": {"x": 96, "y": 78}}
+]}

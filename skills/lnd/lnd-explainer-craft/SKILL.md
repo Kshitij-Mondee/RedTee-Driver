@@ -16,6 +16,17 @@ set of moves to choose from, not a checklist. The person making the video picks 
 be borrowed into any register, except those marked illustrated packs only.
 
 ## 1. Turn the concept into a picture (pick the move that fits the idea)
+
+**First, which question does the beat answer? (D-192)** Each kind of question has its own kind of picture. Name it in
+the beat, then draw that picture, in the style's own way (`packs/essence/<style>.json`):
+- **who or what:** a portrait of the thing (the object, the person, the part), close and named;
+- **how much:** a quantity you can see (a stack, a count, a fill, a bar), never a number alone;
+- **where:** a map or a place (stations on a board, rooms, a route);
+- **when:** a timeline or a before and after in the same frame;
+- **how:** the mechanism running, step by step, in one held layout;
+- **why:** cause and effect (this pushes that), the arrow drawn as the force it is.
+A beat whose picture answers a different question than its words is the commonest reason a frame reads as decoration.
+
 1. **Personify the abstraction, then reveal what it really is.** A risky loan drawn as something harmless,
    then shown as it is, with its three properties written beside it as they are said.
 2. **Label the claim on the object.** The pile gets a sign that says what people pretended it was. The gap
@@ -56,6 +67,10 @@ be borrowed into any register, except those marked illustrated packs only.
 14. **Annotate in place, not a cut to a chart.** Lay the value or line over the scene that enacts it
     (`Loom.data.barsOn`, `dipLine`, `tag`); a chart, if any, is a short summary after (rare in the films).
 15. **Recap by replay:** the lesson's own images return (`intent: "callback"`), never a recap slide.
+16. **One case, every case, back to one.** Run the mechanism once with one concrete case, then show many cases at once
+    (a grid, a swarm, a sweep of a value) so the pattern is visible, then return to the one case, now understood.
+17. **The analogy and where it breaks.** Lay the analogy beside the real thing part for part (this is that), then strike
+    the one line where it stops holding, on screen and in words. An analogy without its breaking point teaches the error.
 
 ### Illustrated packs only (look_family: illustrated: story-cartoon, flat-cosmos, glow-flat, whiteboard, cinematic-noir, cinematic-dawn)
 - **Personified agents:** one small character with a fixed silhouette, colour and prop does every step.

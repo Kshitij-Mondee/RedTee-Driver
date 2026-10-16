@@ -1,0 +1,96 @@
+{
+  "id": "cinematic-dawn",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.1,
+    "motion": 0.9,
+    "min_score": 0.0
+  },
+  "essence": "A hopeful film of a place and a person. Layered 2.5D light, landscapes in depth and a story told as scenes, for the why and the change ahead.",
+  "explains_by": [
+    "Tell it as a story in a place: a person, a moment, a change; the idea happens to someone.",
+    "Light carries meaning: dawn light for what becomes possible, a slow push for attention.",
+    "Few words on screen: the picture and the voice explain, text is a title or a single word.",
+    "Scenes, not slides: a camera moves through a world in depth instead of cutting between cards."
+  ],
+  "techniques": [
+    {
+      "name": "depth stage",
+      "use": "every scene",
+      "how": "ctx.depth with dolly, push and atmosphere; text kept out of the depth layers"
+    },
+    {
+      "name": "light as the turn",
+      "use": "the moment of change",
+      "how": "a god-ray cone or a light sweep (ctx.fxMoment light) on the payoff"
+    },
+    {
+      "name": "a person in the place",
+      "use": "the human stake",
+      "how": "a designed character rig acting in the scene"
+    },
+    {
+      "name": "hold and transform",
+      "use": "change without a cut",
+      "how": "Loom.hold.lift, heat or peel keeps the shot and changes it"
+    },
+    {
+      "name": "morph",
+      "use": "one thing becoming another",
+      "how": "Loom.morph turns the first shape into the next idea"
+    }
+  ],
+  "vocabulary": [
+    "layered hills and skies",
+    "light cones and bloom",
+    "silhouettes",
+    "a slow camera",
+    "title words in the sky"
+  ],
+  "avoid": [
+    "UI cards and panels",
+    "diagrams with pointer labels",
+    "dense text",
+    "stock icons",
+    "templates"
+  ],
+  "fits": {
+    "topics": [
+      "vision and change",
+      "values and culture",
+      "why a programme matters",
+      "wellbeing",
+      "leadership stories",
+      "a launch or a new beginning"
+    ],
+    "kinds": {
+      "explainer": 0.5,
+      "teaching": 0.3,
+      "onboarding": 0.8,
+      "policy": 0.3,
+      "soft-skills": 0.7
+    }
+  },
+  "signals": [
+    "vision",
+    "change",
+    "culture",
+    "values",
+    "welcome",
+    "journey",
+    "future",
+    "story",
+    "why we",
+    "purpose",
+    "wellbeing"
+  ],
+  "calls": [
+    "ctx.depth",
+    "Loom.hold",
+    "Loom.morph",
+    "fxMoment",
+    "ctx.character",
+    "Loom.place"
+  ]
+}

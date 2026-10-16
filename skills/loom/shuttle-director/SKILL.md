@@ -49,8 +49,13 @@ order. A refusal is information, not an obstacle: do the step it names.
 | P11 render | `render`; `request_approval('final')` | a person watched and approved |
 
 ### What to read, per phase (short; fetch the sections, not the files)
-- **P1:** `lnd-creative-director` sections on the Production Brief and the rubric; the genre craft file of the request
-  (`read_artifact('genre')`, `packs/genres/<genre>.md`), `lnd-explainer-craft` on the colleague's voice.
+- **The kind of video comes first (D-191).** The start message of P1, P3, P4, P5 and P10 carries a VIDEO KIND block:
+  teaching, explainer, onboarding, policy or soft-skills (the request's, or with "auto" read from the topic;
+  `read_artifact('genre')` gives the profile and the lead skill of each stage). It decides what the film asks of the
+  viewer. An **explainer** has no quiz, no recall, no "now you" and at most two questions of the narrator's own; its
+  lead craft in P3, P4 and P5 is `lnd-explainer-craft`, not the pedagogy skill's checks. The gates enforce it.
+- **P1:** `lnd-creative-director` sections on the Production Brief and the rubric; the genre craft file
+  (`read_artifact('genre')`), `lnd-explainer-craft` on the colleague's voice. Set `brief.genre` to the kind.
 - **P2:** nothing: the fact-finder reads. You read its summary, the skeptic's findings and the sheet
   (`read_artifact('knowledge')`) before you ask a person.
 - **P3:** `lnd-learning-pedagogy` (the teaching plan and its rubric).

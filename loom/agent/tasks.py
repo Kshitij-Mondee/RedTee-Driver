@@ -26,7 +26,8 @@ def write_task(project, stage_name: str, extra: str = "", suffix: str = "") -> P
              f"**Recommended model:** {TIER_TEXT.get(st.tier, st.tier)} - `{models.get(st.tier, '')}`  ",
              f"**What this stage does:** {st.desc}", ""]
     from ..stages import reading_list
-    read = reading_list(st, project.request.get("style"))
+    from ..genre import of as _kind
+    read = reading_list(st, project.request.get("style"), _kind(project))
     if read:
         lines += ["## 1. Read these skills first, in order (and the style's guide, for frames in this style)", ""]
         lines += [f"- `{ENGINE_ROOT / s}`" for s in read] + [""]

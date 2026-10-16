@@ -880,13 +880,17 @@
       k = clamp(k, o.min || 0.3, o.max || 4);
       // the safe area's centre is (960, 507): the bottom 150 px belong to the captions
       const to = { cx: r.x + r.w / 2 - (o.dx || 0) / k, cy: r.y + r.h / 2 + (33 - (o.dy || 0)) / k, k };
-      const dur = o.dur || clamp(0.9 + 0.35 * Math.abs(Math.log(to.k / from.k)) + Math.hypot(to.cx - from.cx, to.cy - from.cy) / 1600, 0.9, 2.6);
+      // dur 0 (or under a frame) is a cut to the framing at t: `o.dur || ...` read 0 as "no dur" and flew 0.9 s, and a
+      // 0.001 s move showed its start framing on the frame at t (st-iso-order b14: one frame of the whole board before
+      // the dock, D-190). A cut is a zero-length move, complete from t on.
+      const cut = o.dur != null && o.dur < 1 / 30;
+      const dur = cut ? 0 : (o.dur || clamp(0.9 + 0.35 * Math.abs(Math.log(to.k / from.k)) + Math.hypot(to.cx - from.cx, to.cy - from.cy) / 1600, 0.9, 2.6));
       const last = B.cams[B.cams.length - 1];
       if (last && t < last.t1 - 1e-6) Loom.warn("iso_cam_overlap", `${beatId()}: camera move at ${t.toFixed(2)}s starts before the previous one ends (${last.t1.toFixed(2)}s); it starts then`, { beat: beatId() });
       const t0 = last ? Math.max(t, last.t1) : t, ease = Loom.ease[o.ease || "editorial"] || E_().editorial;
       const mv = { t0, t1: t0 + dur, from, to, at: pathFn(from, to, o.fly ? "fly" : "log", ease) };
       B.cams.push(mv);
-      Loom.drive((e, p) => B.render(t0 + p * dur), t0, dur, "linear", { kind: "camera", beat: beatId(), name: name + ".camera", content: false, key: "isocam:" + B.worldId });
+      Loom.drive(SEEN, t0, dur, "linear", { kind: "camera", beat: beatId(), name: name + ".camera", content: false, key: "isocam:" + B.worldId });
       B.live = true;
       return t0 + dur;
     };
@@ -1294,7 +1298,7 @@
       if (m.turns) { for (let i = 0; i <= 40; i++) variant(it, DIRS[m.at(i / 40).dir]); }
       it.dynamic = true;
       B.live = true;
-      Loom.drive((e, p) => B.render(m.t0 + p * (m.t1 - m.t0)), m.t0, m.t1 - m.t0, "linear", { kind: "travel", beat: beatId(), name: it.id, content: true, key: "isomv:" + B.worldId + ":" + it.id });
+      Loom.drive(SEEN, m.t0, m.t1 - m.t0, "linear", { kind: "travel", beat: beatId(), name: it.id, content: true, key: "isomv:" + B.worldId + ":" + it.id });
     }
     // growth from the base: every point's height scaled by k (an exact isometric extrusion), the shadow with it
     function grow(it, k, shown) {
@@ -1489,7 +1493,7 @@
         for (let i = 0; i < n; i++) dots.push(svg("polygon", { points: "", fill: fcol, opacity: R.segs ? 0 : 1 }, fg));
         B.flows.push({ R, t0, t1, n, speed, dots, g: fg, sz: fo.size || 0.18 });
         B.live = true;
-        Loom.drive((e, p) => B.render(t0 + p * (t1 - t0)), t0, t1 - t0, "linear", { kind: "flow", beat: beatId(), name: rname + ".flow", content: true, key: "isoflow:" + B.worldId + ":" + rname + ":" + t0 });
+        Loom.drive(SEEN, t0, t1 - t0, "linear", { kind: "flow", beat: beatId(), name: rname + ".flow", content: true, key: "isoflow:" + B.worldId + ":" + rname + ":" + t0 });
         return t1;
       };
       B.routes.push(R);
@@ -1682,7 +1686,7 @@
       if (o.label) pn = B.pin(item, o.label, { at: at + 0.2, tok, until: o.until, side: o.side, sub: o.sub, follow: true, name: o.name });
       // the ring and its pin follow the subject on every frame (one drive registers the window with the report)
       const t1 = o.until == null ? (B.ctx.end || at + 10) : o.until;
-      Loom.drive((e, p) => B.render(at + p * (t1 - at)), at, Math.max(0.1, t1 - at), "linear", { kind: "track", beat: beatId(), name: item.id + ".track", content: false, key: "isotrack:" + B.worldId + ":" + item.id });
+      Loom.drive(SEEN, at, Math.max(0.1, t1 - at), "linear", { kind: "track", beat: beatId(), name: item.id + ".track", content: false, key: "isotrack:" + B.worldId + ":" + item.id });
       return { ring: g, pin: pn };
     };
 
@@ -2106,6 +2110,11 @@
     return B;
   }
 
+  // A move's drive is on the timeline only so the report sees the motion: the board's ONE clock draws every frame from t.
+  // The drives used to draw too, each at its own time, and a seek that jumped over several moves left the last one's
+  // picture up after the clock had drawn the right one: st-iso-order b05 showed the whole board for a frame at 31.8 s in
+  // a close-up, and a jump to 31.7 s showed a framing from earlier in the film (D-190). They draw nothing now.
+  const SEEN = () => {};
   // items get their methods from the board's prototype object (one per board, so `B` is in scope)
   const _put0 = board;
   function boardWithItems(ctx, opts) {

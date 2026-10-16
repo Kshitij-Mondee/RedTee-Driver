@@ -32,5 +32,15 @@ A drawing set has many sheets, each a different view; a lesson that stays on one
 - People are Lucide icons with a lettered role until a designed blueprint kit exists; no more than 7 parts and 4
   dimensions on a detail sheet.
 
+## Motion in this style (D-190)
+- Drafted, not animated: outline, then detail, then dimension, in reading order. Flow travels along the pipe it belongs
+  to; parts never bounce or slide on their own.
+- A sheet is changed like paper: the next sheet replaces it at a section boundary; the camera holds a sheet and moves
+  between sheets, never during a drawing.
+
+## By kind of video
+- Explainer: one plant, its mechanism running (`D.mechanism`), replayed on the last sheet.
+- Teaching: a detail sheet per step, and the check is a fault found on a sheet.
+
 ## The soft check
 The storyboard gate warns `bp_one_layout` when one station carries more than 60 % of the narration (6 beats or more).

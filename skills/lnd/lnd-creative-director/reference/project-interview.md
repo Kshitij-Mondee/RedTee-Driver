@@ -18,6 +18,7 @@ RECORDS as inferred (`provenance.inferred`).
 | `examples` | Should it use examples or scenarios? Real ones from the source only, or may it invent illustrative ones? Anything that would feel wrong for this audience? | example_posture; cross-checks grounding_posture | |
 | `visuals` | Anything you want to SEE in it - a diagram, a timeline, a comparison, real screenshots? Or anything you do not want on screen? | visual_direction | |
 | `look` | How should it look and feel? Plain and clear, some story and characters, or cinematic? If people appear, as warm illustrated faces, as characters who act things out, or not at all? "Show me options" is a fine answer. | visual_direction, `look` | |
+| `picture` | Is there a picture or comparison your team already uses for this ("it is like a relay race", "think of the inbox as a queue")? (D-192: a candidate world for the storyboard, tested like any other) | visual_direction | |
 | `voice` | Who should it sound like - a senior colleague, a storyteller, a precise analyst, someone else? Formal or relaxed? | persona choice, voice_note | |
 | `success` | How will you judge whether this video worked? | outcome, must_cover | |
 | `length_and_context` | Roughly how long, and where will people watch it - in a course, on the intranet, in a meeting? | voice_note, open_questions | |
@@ -26,6 +27,13 @@ RECORDS as inferred (`provenance.inferred`).
 policy PDF, the design doc, the deck. Everything in the video will be traced back to it. A video with no
 source can only carry what the requester states in the interview, and every such item is marked
 `from_user` in the brief. Never invent facts to fill the gap.
+
+**Recommend the style, then let them choose (D-192).** After the interview, run
+`py -m loom recommend-style --topic "<what_for and the topic>" --kind <kind>` (or `loom.essence.recommend`). It ranks the
+styles by how well each fits THIS video: the kind of video, the language of the topic, and what each style is made for,
+from each style's essence (`packs/essence/<style>.json`). Offer the top three, each with its one-line essence and why it
+fits ("hologram: the invisible system, reporting itself in light; fits an explainer about data and networks"). It is a fit
+for this video, never one style called better than another; the person picks, and any style stays possible.
 
 **Nothing is final until they have seen it.** Whatever they answer about the look, they will see sample frames
 before anything renders and can change any beat in one sentence ("use the illustrated faces for Maya").

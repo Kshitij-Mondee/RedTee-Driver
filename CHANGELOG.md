@@ -1,5 +1,34 @@
 # Changelog
 
+## 2026-10-16 - Components made for their own styles; batch-01 taken in (D-193)
+- `styles` on components: the gate renders only those, `catalog_search` filters by the lesson's style, `ctx.use`
+  elsewhere is `component_off_style` (`runtime/components.js`, `loom/library.py`, `loom/agents/tools.py`,
+  `tools/node/catalog.mjs`).
+- Batch-01 from the asset hand-off (T-149 to T-153: `app_email`, `app_chat_workspace`, `app_calendar`, `app_docs_editor`,
+  `app_lms_course`, the shared `_app_kit.js`), accepted here; its notes in `docs/assets/batches/batch-01.md`.
+  `_app_kit.js` never cuts a word to its letters (a size or two smaller, else an empty line): "Escalatio..." in hologram.
+
+## 2026-10-16 - Each style's essence, the style recommender, borrowed storyboard techniques (D-192)
+- `packs/essence/*.json` (17), `loom/essence.py`: the STYLE ESSENCE block in Relay and Shuttle, `get_style_pack` `essence`,
+  `mix: "auto"` (native mix), `style_borrowed`, `scene_off_style`, `recommend`, `py -m loom recommend-style`.
+- Skills: lnd-explainer-craft (question to picture, moves 16 and 17), lnd-visual-storyteller (three candidate worlds,
+  slow and facets joins, camera rhythm, sound-off read), lnd-learning-pedagogy (subgoal labels, takeaways traced, checks
+  adults respect), storyboard roles, the explainer genre's other shapes, the interview's `picture` question and style step.
+- Research: docs/research/2026-10-16-skills-comparison.md.
+
+## 2026-10-16 - Clean joins and motion, the kind of video in every stage (D-190, D-191, L-476)
+- Joins: held-then-exited elements released to the join; same-spot redraws swapped under their copy; cuts wait for the
+  new picture; canvas joins empty as the new drawing arrives (`runtime/world.js`, `runtime/motion.js`).
+- Isometric: `B.camera` dur 0 is a cut; only the board clock draws (`runtime/engines/isometric.js`).
+- Screencast: pointer hide ramps from its level; `sc_reset_at_join`, `sc_change_at_join`, `sc_ui_by_hand`,
+  `sc_second_pointer`, `sc_zoom_fast` (`runtime/engines/screencast.js`, its guide's "Joins and the held app").
+- The join pass in the check stage: `loom/checks/joins.py`, `tools/node/join_frames.mjs`, `loom/qa.py` `join_checks`.
+- The motion audit: `motion_two_at_once`, `motion_crosses`, `motion_shrinks_words`, `camera_restless`.
+- `loom/genre.py`: kind profiles, `auto` default, the VIDEO KIND block in Relay and Shuttle, kind-led reading lists, the
+  pedagogy, script and brief gates by kind.
+- Direction cards: motion and kind-of-video sections (CARD_MAX 3400). Scene-author skill: "Joins".
+- Hand-off: `library accept` takes commissioned components; `tools/cloud_setup.sh` installs optional packages one by one.
+
 ## 2026-10-16 - Direction cards per style for the planners, and a soft check on the signature moments (D-189, L-475)
 - `packs/direction/` holds one card for each of hologram, blueprint, screencast, isometric and whiteboard: the style's
   strong calls and when each fits, at most 2,600 bytes.

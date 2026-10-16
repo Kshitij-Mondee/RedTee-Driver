@@ -61,7 +61,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "definition": {
       "chrome": [],
@@ -107,7 +108,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "list.steps": {
       "chrome": [],
@@ -161,7 +163,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "compare.two": {
       "chrome": [
@@ -342,7 +345,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "process.flow": {
       "chrome": [],
@@ -403,7 +407,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "stat.hero": {
       "chrome": [],
@@ -449,7 +454,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "document.page": {
       "chrome": [
@@ -569,7 +575,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "calendar.plan": {
       "chrome": [],
@@ -632,7 +639,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "quiz.question": {
       "chrome": [],
@@ -681,7 +689,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "quiz.answer": {
       "chrome": [
@@ -774,7 +783,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "chart.bars": {
       "chrome": [],
@@ -834,7 +844,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "scenario.dialogue": {
       "chrome": [],
@@ -978,7 +989,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "recap": {
       "chrome": [],
@@ -1030,7 +1042,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "icon.grid": {
       "chrome": [],
@@ -1080,7 +1093,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "cycle": {
       "chrome": [],
@@ -1135,7 +1149,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "timeline": {
       "chrome": [],
@@ -1181,7 +1196,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "quote": {
       "chrome": [],
@@ -1213,7 +1229,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     }
   },
   "blueprints": {
@@ -1322,7 +1339,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "hero.character_moment": {
       "chrome": [],
@@ -1462,7 +1480,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "hero.journey": {
       "chrome": [],
@@ -1544,7 +1563,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "hero.hub": {
       "chrome": [],
@@ -1626,7 +1646,8 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     },
     "hero.portal": {
       "chrome": [],
@@ -1681,10 +1702,721 @@
         }
       },
       "defaults": {},
-      "example": null
+      "example": null,
+      "candidate": false
     }
   },
-  "components": {},
+  "components": {
+    "app_calendar": {
+      "version": 1,
+      "idea": "A calendar at work in week view: days across, hours down, events placed by their times, the guests' free and busy times in a booking form, walked through by a pointer that creates an event, drags one to reschedule it, opens one and invites a colleague.",
+      "outline": [
+        "window (or the screencast engine's app window)",
+        "toolbar: today, previous and next, the period, a new event button",
+        "optional sidebar of calendars",
+        "week grid: day headers, hour gutter, hour lines, a now line",
+        "event blocks in lanes, coloured by calendar",
+        "booking and event popovers: title, time, place, guests, availability strips",
+        "toast",
+        "pointer"
+      ],
+      "params": {
+        "days": {
+          "type": "list",
+          "content": true
+        },
+        "hours": {
+          "type": "list",
+          "content": true
+        },
+        "events": {
+          "type": "list",
+          "content": true
+        },
+        "startHour": {
+          "type": "number",
+          "default": 8
+        },
+        "period": {
+          "type": "str"
+        },
+        "today": {
+          "type": "int"
+        },
+        "now": {
+          "type": "number"
+        },
+        "calendars": {
+          "type": "list"
+        },
+        "people": {
+          "type": "list"
+        },
+        "clock": {
+          "type": "enum",
+          "choices": [
+            "24",
+            "12"
+          ],
+          "default": "24"
+        },
+        "title": {
+          "type": "str"
+        },
+        "labels": {
+          "type": "obj"
+        },
+        "state": {
+          "type": "enum",
+          "choices": [
+            "ready",
+            "loading",
+            "error"
+          ],
+          "default": "ready"
+        },
+        "notice": {
+          "type": "str"
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "theme": {
+          "type": "obj",
+          "default": {}
+        },
+        "layout": {
+          "type": "obj",
+          "default": {}
+        },
+        "w": {
+          "type": "number",
+          "default": 1728
+        },
+        "h": {
+          "type": "number",
+          "default": 856
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 14
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "host",
+        "toolbar",
+        "sidebar",
+        "grid",
+        "dayHeads",
+        "events",
+        "nowLine",
+        "popover",
+        "states",
+        "create({title, day, start, end, where, guests}, at)",
+        "drag(id, day, start, at)",
+        "open(id, at)",
+        "invite(id, name, at, {send})",
+        "close(at)",
+        "setState(name, at)",
+        "slot(day, hour)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-151)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop"
+      ],
+      "family": "ui",
+      "tags": [
+        "calendar",
+        "scheduling",
+        "meeting",
+        "booking",
+        "availability",
+        "week view",
+        "invite",
+        "time management",
+        "screencast",
+        "productivity"
+      ],
+      "example": "ctx.use(\"app_calendar\", { days: [\"Mon 3\", \"Tue 4\", \"Wed 5\", \"Thu 6\", \"Fri 7\"], hours: [\"9:00\", \"10:00\", \"11:00\", \"12:00\", \"13:00\", \"14:00\", \"15:00\", \"16:00\"], startHour: 9, events: [{ id: \"std\", title: \"Ward handover\", day: 0, start: 9, end: 9.5 }], labels: { newEvent: \"New event\", save: \"Save\" }, steps: [{ do: \"create\", event: { title: \"Fire safety refresher\", day: 2, start: 14, end: 15 }, at: ctx.cue(\"book the refresher\") }] }, { x: 96, y: 78, name: \"cal\" })",
+      "versions": [
+        "app_calendar@1"
+      ]
+    },
+    "app_chat_workspace": {
+      "version": 1,
+      "idea": "A team chat workspace: channels and direct messages, a channel's conversation with mentions, reactions, file cards and threads, and a composer, walked through by a pointer that opens a channel, posts, reacts and opens a thread.",
+      "outline": [
+        "window (or the screencast engine's app window)",
+        "sidebar: workspace name, channel and direct message lists with unread and mention counts",
+        "channel header: name and topic",
+        "messages: avatar, author, time, text with mentions, file card, reactions, thread link",
+        "composer",
+        "thread pane (opened by an action)",
+        "pointer"
+      ],
+      "params": {
+        "channels": {
+          "type": "list",
+          "content": true
+        },
+        "channel": {
+          "type": "str"
+        },
+        "workspace": {
+          "type": "str"
+        },
+        "me": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str"
+        },
+        "labels": {
+          "type": "obj"
+        },
+        "state": {
+          "type": "enum",
+          "choices": [
+            "ready",
+            "loading",
+            "empty",
+            "error"
+          ],
+          "default": "ready"
+        },
+        "notice": {
+          "type": "str"
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "theme": {
+          "type": "obj",
+          "default": {}
+        },
+        "layout": {
+          "type": "obj",
+          "default": {}
+        },
+        "w": {
+          "type": "number",
+          "default": 1728
+        },
+        "h": {
+          "type": "number",
+          "default": 856
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 14
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "host",
+        "sidebar",
+        "channelRows",
+        "views",
+        "messages",
+        "composer",
+        "threadPane",
+        "states",
+        "openChannel(id, at)",
+        "post(text, at)",
+        "react(i, icon, at)",
+        "thread(i, at)",
+        "setState(name, at)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-150)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop"
+      ],
+      "family": "ui",
+      "tags": [
+        "chat",
+        "team chat",
+        "messaging",
+        "channels",
+        "threads",
+        "mentions",
+        "reactions",
+        "collaboration",
+        "screencast",
+        "remote work"
+      ],
+      "example": "ctx.use(\"app_chat_workspace\", { workspace: \"Riverside Clinic\", me: \"Sam Lee\", channels: [{ id: \"rota\", label: \"night-rota\", topic: \"Shift swaps and cover\", messages: [{ author: \"Jo Park\", time: \"18:02\", text: \"@Sam Lee can you cover Thursday?\" }] }], labels: { composer: \"Message night-rota\" }, steps: [{ do: \"post\", text: \"Yes, I can cover it.\", at: ctx.cue(\"reply in the channel\") }] }, { x: 96, y: 78, name: \"chat\" })",
+      "versions": [
+        "app_chat_workspace@1"
+      ]
+    },
+    "app_docs_editor": {
+      "version": 1,
+      "idea": "A shared document editor: a page of headings, paragraphs and lists, suggested edits shown inline, comments in the margin, and a version history, walked through by a pointer that types, comments on a phrase, accepts a suggestion and restores an earlier version.",
+      "outline": [
+        "window (or the screencast engine's app window)",
+        "top bar: document title, collaborators, history, share",
+        "toolbar: undo, redo, text styles, comment, the editing mode",
+        "the page: headings, paragraphs, list items, with inline suggestions (struck and inserted text) and commented phrases",
+        "the margin: comment and suggestion cards beside their lines",
+        "version history panel (opened by an action)",
+        "toast",
+        "pointer"
+      ],
+      "params": {
+        "docTitle": {
+          "type": "str",
+          "content": true
+        },
+        "blocks": {
+          "type": "list",
+          "content": true
+        },
+        "suggestions": {
+          "type": "list"
+        },
+        "comments": {
+          "type": "list"
+        },
+        "versions": {
+          "type": "list"
+        },
+        "people": {
+          "type": "list"
+        },
+        "mode": {
+          "type": "enum",
+          "choices": [
+            "editing",
+            "suggesting",
+            "viewing"
+          ],
+          "default": "editing"
+        },
+        "me": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str"
+        },
+        "labels": {
+          "type": "obj"
+        },
+        "state": {
+          "type": "enum",
+          "choices": [
+            "ready",
+            "loading",
+            "error"
+          ],
+          "default": "ready"
+        },
+        "notice": {
+          "type": "str"
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "theme": {
+          "type": "obj",
+          "default": {}
+        },
+        "layout": {
+          "type": "obj",
+          "default": {}
+        },
+        "w": {
+          "type": "number",
+          "default": 1728
+        },
+        "h": {
+          "type": "number",
+          "default": 856
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 14
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "host",
+        "topbar",
+        "toolbar",
+        "page",
+        "blocks",
+        "cards",
+        "historyPanel",
+        "states",
+        "type(text, at, {block})",
+        "comment(block, anchor, text, at)",
+        "accept(id, at)",
+        "reject(id, at)",
+        "restore(i, at)",
+        "setState(name, at)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-152)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop"
+      ],
+      "family": "ui",
+      "tags": [
+        "document",
+        "word processor",
+        "docs",
+        "editor",
+        "track changes",
+        "suggestions",
+        "comments",
+        "version history",
+        "policy",
+        "collaboration"
+      ],
+      "example": "ctx.use(\"app_docs_editor\", { docTitle: \"Visitor policy\", blocks: [{ kind: \"h1\", text: \"Visitors\" }, { kind: \"p\", text: \"Visitors sign in at reception and wear a badge at all times.\" }], suggestions: [{ id: \"s1\", block: 1, del: \"at all times\", ins: \"while on site\", author: \"Mo Diaz\" }], labels: { accept: \"Accept\" }, steps: [{ do: \"accept\", id: \"s1\", at: ctx.cue(\"accept the change\") }] }, { x: 96, y: 78, name: \"doc\" })",
+      "versions": [
+        "app_docs_editor@1"
+      ]
+    },
+    "app_email": {
+      "version": 1,
+      "idea": "An email client at work: folders, a thread list with unread and flagged mail, the open message in a reading pane, and a compose window, walked through by a pointer that opens, replies, flags, moves and searches.",
+      "outline": [
+        "window (or the screencast engine's app window)",
+        "folder sidebar with a compose button and counts",
+        "thread list with a search field: unread dot, sender, time, subject, preview, flag and attachment marks",
+        "reading pane: toolbar, subject, sender, recipients, body, attachment",
+        "compose window and reply box (opened by actions)",
+        "toast",
+        "pointer"
+      ],
+      "params": {
+        "folders": {
+          "type": "list",
+          "content": true
+        },
+        "messages": {
+          "type": "list",
+          "content": true
+        },
+        "folder": {
+          "type": "str"
+        },
+        "open": {
+          "type": "str"
+        },
+        "title": {
+          "type": "str"
+        },
+        "user": {
+          "type": "str"
+        },
+        "labels": {
+          "type": "obj"
+        },
+        "state": {
+          "type": "enum",
+          "choices": [
+            "ready",
+            "loading",
+            "empty",
+            "error"
+          ],
+          "default": "ready"
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "theme": {
+          "type": "obj",
+          "default": {}
+        },
+        "layout": {
+          "type": "obj",
+          "default": {}
+        },
+        "w": {
+          "type": "number",
+          "default": 1728
+        },
+        "h": {
+          "type": "number",
+          "default": 856
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 14
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "host",
+        "sidebar",
+        "folders",
+        "list",
+        "rows",
+        "searchBox",
+        "pane",
+        "panes",
+        "toolbar",
+        "replyBox",
+        "composeWindow",
+        "states",
+        "open(i, at)",
+        "reply(text, at, {send})",
+        "flag(i, at)",
+        "move(i, folderId, at)",
+        "search(query, at)",
+        "compose({to, subject, body, send}, at)",
+        "setState(name, at)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-149)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop"
+      ],
+      "family": "ui",
+      "tags": [
+        "email",
+        "mail client",
+        "inbox",
+        "phishing",
+        "reply",
+        "compose",
+        "screencast",
+        "software training",
+        "outlook-like",
+        "communication"
+      ],
+      "example": "ctx.use(\"app_email\", { title: \"Mail\", folders: [{ id: \"in\", label: \"Inbox\", icon: \"inbox\", count: 3 }, { id: \"fin\", label: \"Finance\", icon: \"folder\" }], messages: [{ id: \"m1\", from: \"Payroll Team\", time: \"09:12\", subject: \"Your payslip is ready\", preview: \"Sign in to view your March payslip\", unread: true }], labels: { search: \"Search mail\", reply: \"Reply\" }, steps: [{ do: \"open\", i: 0, at: ctx.cue(\"open the message\") }] }, { x: 96, y: 78, name: \"mail\" })",
+      "versions": [
+        "app_email@1"
+      ]
+    },
+    "app_lms_course": {
+      "version": 1,
+      "idea": "An online course on a learning platform: the outline of modules and lessons with what is done, a lesson player, a quiz with feedback, the learner's progress and a certificate, walked through by a pointer that starts a lesson, answers, submits and completes the course.",
+      "outline": [
+        "window (or the screencast engine's app window)",
+        "outline sidebar: course title, progress bar, modules and lessons with done, current and kind marks",
+        "lesson header: title and kind",
+        "lesson player: picture area, play button, scrubber and times; mark complete and next buttons",
+        "quiz: question, options, submit, feedback",
+        "certificate",
+        "toast",
+        "pointer"
+      ],
+      "params": {
+        "course": {
+          "type": "str",
+          "content": true
+        },
+        "modules": {
+          "type": "list",
+          "content": true
+        },
+        "lesson": {
+          "type": "str"
+        },
+        "player": {
+          "type": "obj"
+        },
+        "quiz": {
+          "type": "obj"
+        },
+        "progress": {
+          "type": "obj"
+        },
+        "certificate": {
+          "type": "obj"
+        },
+        "view": {
+          "type": "enum",
+          "choices": [
+            "lesson",
+            "quiz",
+            "certificate"
+          ],
+          "default": "lesson"
+        },
+        "title": {
+          "type": "str"
+        },
+        "labels": {
+          "type": "obj"
+        },
+        "state": {
+          "type": "enum",
+          "choices": [
+            "ready",
+            "loading",
+            "error"
+          ],
+          "default": "ready"
+        },
+        "notice": {
+          "type": "str"
+        },
+        "steps": {
+          "type": "list",
+          "default": []
+        },
+        "theme": {
+          "type": "obj",
+          "default": {}
+        },
+        "layout": {
+          "type": "obj",
+          "default": {}
+        },
+        "w": {
+          "type": "number",
+          "default": 1728
+        },
+        "h": {
+          "type": "number",
+          "default": 856
+        },
+        "at": {
+          "type": "number",
+          "default": -1
+        },
+        "cps": {
+          "type": "number",
+          "default": 14
+        },
+        "engine": {
+          "type": "enum",
+          "choices": [
+            "auto",
+            "off"
+          ],
+          "default": "auto"
+        }
+      },
+      "slots": {},
+      "parts": [
+        "host",
+        "outline",
+        "lessonRows",
+        "progressBar",
+        "header",
+        "player",
+        "quizView",
+        "options",
+        "feedback",
+        "certificate",
+        "states",
+        "start(id, at)",
+        "play(at, {dur, to})",
+        "answer(i, at)",
+        "submit(at)",
+        "complete(at)",
+        "setState(name, at)"
+      ],
+      "promoted_from": [],
+      "commissioned_by": "Kshitij 2026-10-16 (hand-off sheet T-153)",
+      "styles": [
+        "screencast",
+        "corporate-clean",
+        "engineering",
+        "line-art",
+        "editorial-paper",
+        "presenter-pop"
+      ],
+      "family": "ui",
+      "tags": [
+        "learning platform",
+        "lms",
+        "e-learning",
+        "course",
+        "lesson",
+        "quiz",
+        "progress",
+        "certificate",
+        "compliance training",
+        "onboarding"
+      ],
+      "example": "ctx.use(\"app_lms_course\", { course: \"Food safety basics\", modules: [{ title: \"Module 1\", lessons: [{ id: \"l1\", title: \"Washing hands\", kind: \"video\", duration: \"3 min\", done: true }, { id: \"q1\", title: \"Check your understanding\", kind: \"quiz\" }] }], quiz: { question: \"How long should you wash your hands?\", options: [\"5 seconds\", \"20 seconds\"], correct: 1, right: \"Correct: at least 20 seconds.\" }, labels: { submit: \"Submit\" }, steps: [{ do: \"start\", id: \"q1\", at: ctx.cue(\"take the quiz\") }, { do: \"answer\", i: 1 }, { do: \"submit\" }] }, { x: 96, y: 78, name: \"lms\" })",
+      "versions": [
+        "app_lms_course@1"
+      ]
+    }
+  },
   "avatar": {
     "doc": "A code-drawn presenter in a disc beside a kicker and title; with `card`, up to three short lines (or one rule) fill the empty side and the disc steps back.",
     "props": {

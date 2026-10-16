@@ -3,6 +3,14 @@
 Newest first. Each run links to where its full trail lives. Never delete a run; add a correction below
 it if something here turns out wrong.
 
+## R-70 (2026-10-16): clean joins, motion, the kind of video (Claude Code; no paid API)
+- **Asked:** Kshitij: the joins flash the old beat and old elements flicker; motion is awkward; direction per style and
+  storyboarding that knows the kind of video; explainers ask questions they should not; fix the foundations, not the films.
+- **Done:** D-190 (joins, motion, the join pass, direction motion lines), D-191 (`loom/genre.py`, kind in every stage and
+  gate), the asset hand-off fixes (commissioned `library accept`, optional packages in `tools/cloud_setup.sh`). Tests:
+  `clean_joins.py`, `video_kind.py`, `handoff_accept.py`, new isometric and screencast checks.
+- **Not done / unverified:** no new lesson rendered with the fixes; the friend's batch-01 not taken in.
+
 ## R-69 (2026-10-16): the four style test lessons (Shuttle, API, preset opus-plan-sol-code)
 - **Asked:** Kshitij: a 3-minute lesson per upgraded style through the whole pipeline, topics he chose; GPT Sol for
   visual code, Opus for storyboarding and planning, Sonnet for the rest.

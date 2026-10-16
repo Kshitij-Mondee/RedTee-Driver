@@ -8,7 +8,8 @@ def stage_inputs(project, stage: str) -> list[tuple[str, str]]:
     P = lambda rel: str(project.path(rel))
     E = lambda rel: str(ENGINE_ROOT / rel)
     req = project.request
-    genre = E(f"packs/genres/{req.get('genre', 'teaching')}.md")
+    from ..genre import of as _kind     # the kind of video as the engine reads it ("auto" included, D-191)
+    genre = E(f"packs/genres/{_kind(project)}.md")
     src = [(P("source/digest.md"), "digest of the source documents (headings, captions, page anchors)"),
            (P("source/chunks.json"), "page-anchored source chunks (the only facts you may use)")] if project.mode == "source" else []
     kn = [(P("plan/knowledge.json"), "the APPROVED knowledge sheet: in topic mode this IS the source")] if project.mode == "topic" else []

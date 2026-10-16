@@ -508,3 +508,27 @@ def check_isometric_widen_opens_close_and_pulls_back():
     g, _ = _frames(_head(times, 7.5) + _WIDEN.replace("WIDEN", ""), times)
     assert _zoom(g[1.4]) == _zoom(g[6.9]) == 1.0, "control: without widen the camera moved"
     return f"zoom {z0:.2f} on the first station, {z1:.2f} with all three"
+
+
+_CUT = """Loom.scene("iso_test", { build(ctx) {
+  const W = ctx.engine, B = W.board(ctx, { name: "b", size: [8, 8], at: 0 });
+  const hall = B.put("box", { name: "hall", x: 1, y: 1, w: 2, d: 2, h: 2 });
+  B.put("box", { name: "shed", x: 5, y: 5, w: 1, d: 1, h: 1 });
+  B.camera(2.0, hall, { zoom: 3, dur: %s });
+}});
+"""
+
+
+def check_isometric_camera_dur_zero_is_a_cut_from_its_first_frame():
+    """B.camera(t, target, {dur: 0}) is a cut: the frame AT t already shows the new framing (st-iso-order b14 showed one
+    frame of the whole board before the dock, and dur 0 used to fly the default 0.9 s; D-190). Control: dur 0.6 is a move,
+    so the frame at t is still the old framing and the frame 0.3 s later is between the two."""
+    if not which("node"):
+        return "skipped (no node)"
+    times = [1.9, 2.0, 2.3, 3.0]
+    a, _ = _frames(_head(times, 4.0) + _CUT % "0", times)
+    assert a[2.0] != a[1.9], "control: the cut changed nothing"
+    assert a[2.0] == a[2.3] == a[3.0], "dur 0 is not a cut: the frame at its time (or after) still moves"
+    b, _ = _frames(_head(times, 4.0) + _CUT % "0.6", times)
+    assert b[2.0] == b[1.9] and b[2.3] != b[2.0] and b[2.3] != b[3.0], "control: a 0.6 s move must still move"
+    return "dur 0 framed at its own frame and held; dur 0.6 still moved"

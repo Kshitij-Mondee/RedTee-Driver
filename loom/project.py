@@ -18,14 +18,14 @@ DEFAULT_MODELS = {
 
 DEFAULT_REQUEST = {
     "audience": "",
-    "genre": "teaching",
+    "genre": "auto",          # the kind of video: auto reads it from the topic (loom/genre.py, D-191); a named kind wins
     "length_min": 4,
     "style": "flat-cosmos",
     "persona": None,
     "voice": {"provider": "kokoro", "voice": "af_heart", "speed": 1.0},
     "captions": True,
     "avatar": {"provider": "presenter", "member": "woman"},
-    "mix": {"avatar": 0.10, "template": 0.50, "motion": 0.40},
+    "mix": "auto",            # the style's native mix (loom/essence.py, D-192); "classic" or "cinema" by name, or shares
     "notes": "",
 }
 

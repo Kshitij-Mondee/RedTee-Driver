@@ -29,5 +29,15 @@ Most of the lesson briefs calmly; the moment that makes it worth watching is the
 ## Not this style
 - No hero on a briefing beat, no idle spin, at most 2 hero beats; every reading's value comes from the knowledge sheet.
 
+## Motion in this style (D-190)
+- Light arrives in place: it draws on, scans, traces. A panel never flies across another, and words never shrink to fit:
+  lean the camera in (`H.through`) or make room.
+- A moving thing is a signal on a path (`H.trace`, `H.arcs`), one at a time; the frame holds while the light works.
+- Joins: hold the stage (`H.stage`) across a section and change what is on it; a copy redrawn from nothing replays the beat.
+
+## By kind of video
+- Explainer: the hero mechanism runs end to end, then replays at the end in one move. No quiz panel.
+- Teaching: lock one part per step (`H.lock`), and the check is a real decision on the console.
+
 ## The soft check
 The storyboard gate warns `holo_no_hero` when no scene has a `hero3d`, a `design.hero` or an `H.object`.

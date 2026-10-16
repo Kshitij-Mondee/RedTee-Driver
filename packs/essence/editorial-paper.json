@@ -1,0 +1,78 @@
+{
+  "id": "editorial-paper",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.15,
+    "motion": 0.85,
+    "min_score": 0.0
+  },
+  "essence": "The argument laid out on paper. A warm editorial explainer where documents, charts and annotations build a case the viewer can follow.",
+  "explains_by": [
+    "Build the case: evidence arrives piece by piece and is annotated as it is read.",
+    "Real artefacts: the actual document, chart or headline, marked up.",
+    "Mark up, do not decorate: circles, underlines and arrows on the source itself."
+  ],
+  "techniques": [
+    {
+      "name": "annotated source",
+      "use": "evidence",
+      "how": "Loom.ui.doc or a document object with Loom.brush.markup"
+    },
+    {
+      "name": "chart that builds",
+      "use": "a trend",
+      "how": "Loom.data barsOn and dipLine on the words"
+    },
+    {
+      "name": "paper join",
+      "use": "a new section",
+      "how": "a torn or page material join"
+    }
+  ],
+  "vocabulary": [
+    "warm paper",
+    "near-black ink",
+    "one red accent",
+    "marker annotations",
+    "clipped documents"
+  ],
+  "avoid": [
+    "glowing UI",
+    "3D",
+    "cartoon people as the main carrier"
+  ],
+  "fits": {
+    "topics": [
+      "policy changes",
+      "market and industry context",
+      "history of a decision",
+      "research findings",
+      "news-like briefings"
+    ],
+    "kinds": {
+      "explainer": 0.8,
+      "teaching": 0.5,
+      "onboarding": 0.3,
+      "policy": 0.8,
+      "soft-skills": 0.2
+    }
+  },
+  "signals": [
+    "policy",
+    "report",
+    "research",
+    "trend",
+    "history",
+    "evidence",
+    "market",
+    "regulation",
+    "article"
+  ],
+  "calls": [
+    "Loom.ui.doc",
+    "Loom.brush",
+    "Loom.data",
+    "Loom.obj"
+  ]
+}

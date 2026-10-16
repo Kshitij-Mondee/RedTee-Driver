@@ -205,7 +205,8 @@ def run_agent_cc(spec, ctx, task: str, budget, images=None, resume=None, session
     import tempfile
     cwd = Path(tempfile.gettempdir()) / "loom_cc" / P.id
     cwd.mkdir(parents=True, exist_ok=True)
-    system = role_system(spec.role, spec.context, P.request.get("style") if P is not None else None)
+    from ..genre import of as _kind_of
+    system = role_system(spec.role, spec.context, P.request.get("style") if P is not None else None, _kind_of(P) if P is not None else None)
     tools = [t.name for t in T.specs(spec.role)]
     if spec.role == "brief" and P.mode == "topic":
         tools = [t for t in tools if t != "get_source_chunks"]   # as the API path: nothing to search before the facts

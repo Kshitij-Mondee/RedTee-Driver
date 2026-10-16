@@ -151,9 +151,10 @@ def _beats(n: int, dur: float = 4.0, words: dict | None = None) -> list[dict]:
 
 
 def _lesson(scenes_js: str, scenes: list[dict], stations: list[dict], n: int, dur: float = 4.0, words: dict | None = None,
-            style: "str | dict" = "corporate-clean", templates: bool = False) -> Path:
+            style: "str | dict" = "corporate-clean", templates: bool = False, engine: str | None = None) -> Path:
     """Write a lesson page into a temp dir (the real runtime in compose order, the style's fonts) and return it.
-    templates=True adds the catalog templates (runtime/templates/*.js), as compose does for a lesson that uses them."""
+    templates=True adds the catalog templates (runtime/templates/*.js), as compose does for a lesson that uses them;
+    engine="screencast" adds that style engine (runtime/engines/<name>.js) after the runtime, as compose does."""
     from loom.compose import RUNTIME_ORDER, load_style
     from loom.util import read_json
     rt = _runtime()
@@ -166,7 +167,10 @@ def _lesson(scenes_js: str, scenes: list[dict], stations: list[dict], n: int, du
         shutil.copy2(f, tmp / "fonts" / face["file"])
     # rough.js for a sketch pack, as compose and the lab page do (without it every sketch shape is a rough_missing error)
     rough = [nm / "roughjs/bundled/rough.js"] if (stl.get("shape") or {}).get("shading") == "sketch" else []
-    scripts = [nm / "gsap/dist/gsap.min.js"] + rough + [rt / x for x in RUNTIME_ORDER] + sorted((rt / "rigs").glob("*.js"))
+    order = [rt / x for x in RUNTIME_ORDER]
+    if engine:
+        order.append(rt / "engines" / f"{engine}.js")
+    scripts = [nm / "gsap/dist/gsap.min.js"] + rough + order + sorted((rt / "rigs").glob("*.js"))
     if templates:
         scripts += [rt / "templates" / "_helpers.js"] + sorted(q for q in (rt / "templates").glob("*.js") if not q.name.startswith("_"))
     tags = []
@@ -686,7 +690,9 @@ _VIS = r"""function () { const vis = (n) => { const e = document.querySelector('
 def primitive_runtime_a_continue_join_never_leaves_a_speaking_frame_empty():
     """on a continue join the outgoing beat's elements leave as the incoming beat's first element arrives (a short
     crossfade), so the frame is never empty while the voice speaks: the openai fork showed 3.4 % of its speaking time
-    as blank frames between template beats (2026-10-08). A cut keeps its clean break (control)"""
+    as blank frames between template beats (2026-10-08). A cut is still a clean break, made when the new picture starts
+    (D-190: a cut at the boundary to a beat that draws nothing for 0.6 s was an empty frame while the voice spoke, which
+    Kshitij named the worst of the 2026-10-16 films): the old element holds to the cut and is gone on it"""
     if not _browser():
         return _SKIP
     scenes = [{"kind": "bespoke"}, {"kind": "bespoke", "join_in": {"type": "continue"}}, {"kind": "bespoke", "join_in": {"type": "cut"}}]
@@ -696,7 +702,8 @@ def primitive_runtime_a_continue_join_never_leaves_a_speaking_frame_empty():
     blank = [t for t in (4.7, 4.9, 5.1, 5.6) if S_[t]["A"] + S_[t]["B"] < 0.3]
     assert not blank, f"speaking frames left empty on the continue join at {blank}: {S_}"
     assert S_[5.6]["A"] == 0 and S_[5.6]["B"] > 0.9, f"the outgoing element must be gone once the new one is in: {S_[5.6]}"
-    assert S_[8.7]["B"] == 0, f"control: a cut is a clean break (b2's element gone at the cut): {S_[8.7]}"
+    assert S_[8.7]["B"] > 0.9, f"a cut waits for the new picture (b2's element holds until 9.2 s): {S_[8.7]}"
+    assert S_[9.6]["B"] == 0, f"control: the cut is a clean break once made (b2's element gone): {S_[9.6]}"
     return f"continue join frames {[(t, S_[t]) for t in (4.7, 5.1, 5.6)]}"
 
 

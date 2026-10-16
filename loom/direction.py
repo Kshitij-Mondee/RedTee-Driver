@@ -20,7 +20,8 @@ from pathlib import Path
 from .util import ENGINE_ROOT
 
 CARDS_DIR = ENGINE_ROOT / "packs" / "direction"
-CARD_MAX = 2600            # bytes: the card is in the prompt every time; the engine guide stays on demand (D-163's budget)
+CARD_MAX = 3400            # bytes: the card is in the prompt every time; the engine guide stays on demand (D-163's budget);
+                           # 2600 until D-190 added each style's motion and its kind-of-video lines
 BP_LAYOUT_SHARE = 0.6      # blueprint: one station carrying more of the narration than this is "one layout"
 MIN_BEATS = 6              # the soft check judges a lesson of at least this many beats (a test strip is not a lesson)
 HERO_CALLS = ("H.object", "H.hero3d")

@@ -161,6 +161,15 @@ new skill. Name exactly how.
 
 ## 6. The teaching moves that make a video better than a summary
 
+**Subgoal labels (D-192).** Name each group of steps by what it achieves ("make the account recoverable"), not by the
+click ("open Settings"). The label goes on screen as the step pill or the section title; learners who see the subgoal
+keep the procedure when the screens change.
+
+**Takeaways traced to beats.** List 5 to 10 concrete statements the viewer should be able to say afterwards. Each names
+the beat that SHOWS it (`shown_in`) and, for a teaching film, the beat that brings it back (`recalled_in` or
+`checked_in`). A takeaway shown nowhere is not taught; a beat that carries no takeaway is a candidate to cut.
+
+
 These are the well-established effects from learning research that separate a video people can act on
 from one they merely watched. Plan where each lands; you do not need all of them in every video, but you
 must decide.
@@ -239,6 +248,18 @@ Working memory is the scarce resource every other choice spends. It holds only a
 ---
 
 ## 8. Retrieval and checks - placed where they pay
+
+**By the kind of video first (D-191, `loom/genre.py`).** Teaching, policy and soft-skills films carry recall moments as
+below. Onboarding: only where the plan needs one, never a quiz. An **explainer carries none**: no quiz, no
+pause-and-predict, no recall prompt, no "now you" or "your turn"; the narrator asks at most two questions of their
+own and answers each at once. An explainer earns understanding with the mechanism shown running, the one picture that
+builds and returns, and the ending that replays it (skill `lnd-explainer-craft`). The VIDEO KIND block in your task
+says which kind this film is.
+
+**Checks adults respect (D-192).** A short scenario whose consequence plays out, not a trivia question. A coaching line
+when the tempting option is chosen ("that is what most people do first; here is what it costs"), never "incorrect". A
+spot-the-fault check: a colleague's work with one mistake to find. One question per card, options drawn from the real
+misconceptions, and a later recall asks in a new form, not the same words.
 
 `recall_moments[]`: each tied to a section that has already taught what it asks (never test material taught
 later). Three kinds, and know how each is built:

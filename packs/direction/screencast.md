@@ -30,3 +30,13 @@ Its strength is that the screen IS the procedure; choose the region that shows t
 
 ## Not this style
 - No real product's logo, chrome or palette; no feature catalogue; no sign-in screen unless sign-in is the lesson.
+
+## Motion in this style (D-190)
+- The pointer leads, the product answers, the camera follows the answer. One action at a time, on a still frame.
+- A screen changes by a shown action (a click, a typed value), never by itself, and never on a beat's first frame.
+- Never a hand-drawn page, veil or pointer over the app: the app's pages, `A.dialog`, `A.focus` and its one pointer.
+
+## By kind of video
+- Name each group of steps by what it achieves (the subgoal on the chapter pill), not by the click.
+- Teaching (most software lessons): steps with pills, the finished state held 2 s, a real check in the product.
+- Explainer: a tour of how it works (`A.name`), no clicking along, no quiz.

@@ -610,9 +610,17 @@
           r.joinWindow = [t0, t1];
           Wd.covers.push({ kind: join, t0, t1, mid, def: r.def.join_in || {}, beat: beat.id });
         } else {
-          // cut / canvas / continue: camera jumps (or stays) at the boundary
-          Wd.camKeys.push({ t0: beat.start, t1: beat.start, from: cam, to: cam, ease: Loom.ease.linear });
-          r.joinWindow = [beat.start, beat.start];
+          // cut / canvas / continue: camera jumps (or stays) at the boundary.
+          // A cut happens when the new picture starts: cut at the boundary to a beat whose first drawing arrives later and
+          // the frame is empty in between (st-holo-ai b10, b12, b16, b21: 0.3 to 1.1 s of nothing while the voice went on,
+          // D-190). The cut waits for the new beat's first arrival (at most CUT_WAIT), and the old picture holds until then.
+          let tc = beat.start;
+          if (join === "cut") {
+            const nf = Wd.firstArrival(r);
+            if (nf != null && nf > beat.start + 0.1) tc = Math.min(nf, beat.start + Wd.CUT_WAIT);
+          }
+          Wd.camKeys.push({ t0: tc, t1: tc, from: cam, to: cam, ease: Loom.ease.linear });
+          r.joinWindow = [tc, tc];
         }
       }
       // one optional camera move INSIDE the scene (lnd-motion-craft: at most one per scene)
@@ -651,6 +659,7 @@
       for (const E of own) if (led.has(E) && !own.some((L) => !led.has(L) && partsOf(L).includes(E))) led.delete(E);
       return own.filter((E) => !led.has(E));
     };
+    Wd.resolveHeldExits(recs, SCREEN);
     // retiring elements: everything not claimed by the next scene leaves, in reading order
     recs.forEach((r, i) => {
       const next = recs[i + 1];
@@ -701,7 +710,27 @@
         hideAfter(own, mid + 0.02);
         return;
       }
-      // continue / cut / canvas: per-element exits in reading order, before the boundary
+      if (j === "cut") {
+        // a cut is one frame: the old picture holds to the cut (the new beat's first arrival, planJoins above) and is gone
+        // on it. Exiting in reading order before the boundary emptied the frame for the length of the exits (D-190)
+        const tc = next.joinWindow ? next.joinWindow[0] : until;
+        own.forEach((E) => { if (!E.motif) { E.exitT = tc; E.exitKind = "camera"; } });
+        hideAfter(own, tc);
+        return;
+      }
+      // continue / canvas: per-element exits in reading order, before the boundary.
+      // An old element the new beat draws AGAIN on the same spot (its own copy, not held) stays until the copy is in and
+      // then fades under it: leaving first emptied the place and the same picture rebuilt from nothing, which read as the
+      // old beat flashing back (st-sc-2fa b24 window, st-holo-ai b05 and b06 token rows; D-190)
+      const swapped = new Set();
+      for (const E of leaders) {
+        const N = Wd.redrawOf(E, next);
+        if (!N) continue;
+        swapped.add(E);
+        Loom.motion.exit(E, Math.max(until, N.revealT) + Wd.SWAP_HOLD, "fade", { dur: 0.2, planned: true });
+        (Loom.report.swaps = Loom.report.swaps || []).push({ beat: next.beat.id, old: E.name, new: N.name, how: "redrawn" });
+      }
+      if (swapped.size) leaders.splice(0, leaders.length, ...leaders.filter((E) => !swapped.has(E)));
       const n = leaders.length;
       const exitDur = S().dur("exit");
       let t0 = Math.max(speechEnd + 0.02, until - 0.28 - exitDur - n * 0.05);
@@ -715,6 +744,13 @@
         const arr = next.els.filter((E) => !(next.claimedFrom || []).includes(E) && E.name !== "template_backplate" && E.revealT != null);
         const nf = arr.length ? Math.min(...arr.map((E) => E.revealT)) : null;
         if (nf != null && nf > until) t0 = Math.max(t0, nf + 0.1 - exitDur - n * 0.05);
+      } else if (j === "canvas" && !holds) {
+        // a canvas join clears the board, but an empty board for a second reads as a dropped frame: the old picture
+        // sank 0.4 s before the boundary and the new one arrived 0.8 s after it (st-holo-ai b07 to b08, 1.2 s of nothing
+        // while the voice went on; D-190). The old one finishes sinking as the new one starts to arrive.
+        const arr = next.els.filter((E) => !(next.claimedFrom || []).includes(E) && E.name !== "template_backplate" && E.revealT != null);
+        const nf = arr.length ? Math.min(...arr.map((E) => E.revealT)) : null;
+        if (nf != null && nf > until) t0 = Math.max(t0, nf - exitDur - n * 0.05);
       }
       // exit "none" / "held" means "no exit while the story continues". Nobody holds it past THIS join, so it leaves
       // like everything else; before, Loom.motion.exit returned with no tween and it stayed under every later beat on
@@ -723,6 +759,158 @@
       leaders.forEach((E, k) => Loom.motion.exit(E, t0 + k * 0.05, kindOf(E)));
     });
     Wd.planLife(manifest);
+    Wd.auditMotion(manifest);
+  };
+
+  /* ---------------- the motion audit (D-190) ----------------
+   * Kshitij on the 2026-10-16 test films: "places where elements or things move - the motion is handled very awkwardly".
+   * What the frames showed, as warnings for the scene's author and the critic:
+   *  motion_two_at_once  two things travelling at once in one beat (st-holo-ai b22: a card in from the left while the
+   *                      policy page slid right): the eye follows one mover; stagger them, the second after the first lands
+   *  motion_crosses      an element sliding across another on its way (b21: the policy page through the chat window):
+   *                      route it around, or let the other step aside first
+   *  motion_shrinks_words a group with words shrunk below 70 % (b06: the token row squeezed until it could not be read):
+   *                      frame it with the camera, or make room, instead of shrinking the words
+   *  camera_restless     the camera moving for more than 60 % of a beat (st-iso-order b07, b17, b18 drifting across the
+   *                      board): hold the frame while things happen, move between ideas */
+  Wd.auditMotion = function (manifest) {
+    const T = (Wd.travels || []).filter((q) => q.E && q.E.outer && q.E.outer.isConnected && q.t1 - q.t0 > 0.05);
+    const said = new Set();
+    const warn = (code, beat, msg) => { const k = code + beat; if (said.has(k)) return; said.add(k); Loom.warn(code, `${beat}: ${msg}`, { beat }); };
+    const dist = (q) => Math.hypot(q.to.x - q.from.x, q.to.y - q.from.y);
+    const isTopEl = (E) => !!(E.outer && E.outer.parentNode && E.outer.parentNode.classList && E.outer.parentNode.classList.contains("lm-scene"));
+    const related = (a, b) => a === b || a.lead === b || b.lead === a || (a.followers || []).includes(b) || (b.followers || []).includes(a)
+      || (a.outer && b.outer && (a.outer.contains(b.outer) || b.outer.contains(a.outer)));
+    for (let i = 0; i < T.length; i++) {
+      const a = T[i];
+      if (dist(a) < 80 && Math.abs(a.to.s - a.from.s) < 0.1) continue;
+      for (let j = i + 1; j < T.length; j++) {
+        const b = T[j];
+        if (b.beat !== a.beat || related(a.E, b.E) || (dist(b) < 80 && Math.abs(b.to.s - b.from.s) < 0.1)) continue;
+        const ov = Math.min(a.t1, b.t1) - Math.max(a.t0, b.t0);
+        // two parts of ONE gesture (they start and land together: a pair splitting, a group carried) are one mover
+        if (Math.abs(a.t0 - b.t0) < 0.06 && Math.abs(a.t1 - b.t1) < 0.06) continue;
+        if (ov > 0.3) warn("motion_two_at_once", a.beat, `"${a.E.name}" and "${b.E.name}" travel at once (${Math.max(a.t0, b.t0).toFixed(2)} to ` +
+          `${Math.min(a.t1, b.t1).toFixed(2)} s): the eye follows one mover. Start the second as the first lands`);
+      }
+      if (a.to.s < 0.7 * a.from.s && a.E.inner && a.E.inner.querySelector("text"))
+        warn("motion_shrinks_words", a.beat, `"${a.E.name}" shrinks to ${Math.round(100 * a.to.s / a.from.s)} % with its words in it (${a.t0.toFixed(2)} s): ` +
+          "frame it with the camera or make room; never squeeze words to fit");
+      // crossing: the element's box swept along its path over another element of the same station on screen then
+      if (!isTopEl(a.E) || !(a.E.w > 0 && a.E.h > 0) || dist(a) < 120) continue;
+      const st = a.E.scene && a.E.scene.def && a.E.scene.def.station;
+      const boxAt = (u) => ({ x: a.E.x + a.from.x + (a.to.x - a.from.x) * u, y: a.E.y + a.from.y + (a.to.y - a.from.y) * u,
+        w: a.E.w * (a.from.s + (a.to.s - a.from.s) * u), h: a.E.h * (a.from.s + (a.to.s - a.from.s) * u) });
+      const over = (A, B) => Math.max(0, Math.min(A.x + A.w, B.x + B.w) - Math.max(A.x, B.x)) * Math.max(0, Math.min(A.y + A.h, B.y + B.h) - Math.max(A.y, B.y));
+      for (const r of Wd.sceneRecs) {
+        if (r.def.station !== st) continue;
+        for (const O of r.els) {
+          if (O === a.E || related(O, a.E) || !isTopEl(O) || !(O.w > 0 && O.h > 0) || O.kind === "scenery" || O.motif) continue;
+          const life = O.lifeT || [0, Infinity];
+          if (life[1] < a.t0 || life[0] > a.t1) continue;
+          const ob = O.matchBox && O.matchBox.w > 0 ? O.matchBox : O, area = Math.min(ob.w * ob.h, a.E.w * a.E.h * Math.min(a.from.s, a.to.s));
+          const s0 = over(boxAt(0), ob) / area, s1 = over(boxAt(1), ob) / area, mid = over(boxAt(0.5), ob) / area;
+          if (mid > 0.25 && s0 < 0.1 && s1 < 0.1) warn("motion_crosses", a.beat, `"${a.E.name}" slides across "${O.name}" on its way ` +
+            `(${a.t0.toFixed(2)} to ${a.t1.toFixed(2)} s): route it around, or let "${O.name}" step aside first`);
+        }
+      }
+    }
+    // the camera: world camera moves plus each engine's own camera moves, as a share of each beat
+    const camT = (Loom.report.tweens || []).filter((x) => x.kind === "camera" && x.t1 - x.t0 > 0.05);
+    const wcam = (Wd.camKeys || []).filter((k) => k.t1 - k.t0 > 0.05).map((k) => ({ t0: k.t0, t1: k.t1 }));
+    for (const b of manifest.beats || []) {
+      const len = b.end - b.start;
+      if (len < 4) continue;
+      const iv = camT.concat(wcam).map((x) => [Math.max(b.start, x.t0), Math.min(b.end, x.t1)]).filter(([u, v]) => v > u).sort((p, q) => p[0] - q[0]);
+      let busy = 0, cur = null;
+      for (const [u, v] of iv) { if (!cur || u > cur[1]) { if (cur) busy += cur[1] - cur[0]; cur = [u, v]; } else cur[1] = Math.max(cur[1], v); }
+      if (cur) busy += cur[1] - cur[0];
+      if (busy / len > 0.6) warn("camera_restless", b.id, `the camera moves for ${Math.round(100 * busy / len)} % of the beat: hold the frame while ` +
+        "things happen and move between ideas (a move is a sentence, not the whole paragraph)");
+    }
+  };
+
+  /* ---------------- held elements that their holder sends away (D-190) ----------------
+   * A scene that holds an element (storyboard keep or ctx.held) and exits it at once never needed it: the hold took it
+   * out of the join's exit. Under a screen join the cover closed on it, opened on it again and it left after
+   * (st-sc-2fa b14: seven surfaces of b13 back for 0.4 s); on a continue join it receded while the scene's own copy built
+   * from nothing (st-holo-ai b05, b06). Motion.exit defers such exits (rec.heldExits) and this resolves them:
+   *  - an exit later than the beat's opening (settled join + SWAP_EARLY) is the scene's choice and is placed as written;
+   *  - an earlier one RELEASES the hold, so the join retires the element as it retires everything else, except when the
+   *    beat draws its own copy on the same spot (Wd.redrawOf): then the old one stays until the copy is in and fades
+   *    under it (no empty frame, no rebuild from nothing). Under a screen join the cover is always the exit. */
+  Wd.CUT_WAIT = 1.2;     // s a cut may wait past the boundary for the new beat's first drawing
+  /** the time the beat's own first element (not held, not a backplate) starts to arrive, or null */
+  Wd.firstArrival = function (r) {
+    const own = r.els.filter((E) => !(r.claimedFrom || []).includes(E) && E.name !== "template_backplate" && E.revealT != null && !E.motif);
+    return own.length ? Math.min(...own.map((E) => E.revealT)) : null;
+  };
+  Wd.SWAP_EARLY = 0.8;   // s after the join settles (or the first words) that still counts as "at once"
+  Wd.SWAP_HOLD = 0.45;   // s the old drawing stays under its new copy after the copy starts to arrive
+  const kindBase = (E) => String(E.name || "").replace(/(_b\d+|_\d+|_new|_v\d+)$/i, "").toLowerCase();
+  const isTop = (E) => !!(E && E.outer && E.outer.parentNode && E.outer.parentNode.classList && E.outer.parentNode.classList.contains("lm-scene"));
+  /** the new beat's own element drawn on the place of old element E (same station, same kind or name, nearly the same
+   *  box, arriving at the join), or null */
+  // an element's own drawn place when its declared box is wider (a screencast app is full frame, its window is not)
+  const boxOf = (E) => (E.matchBox && E.matchBox.w > 0 ? E.matchBox : E);
+  // a copy, not a different thing in the same place: the same words (most of them), or with no words a drawing of about
+  // the same make. Two different texts on one spot kept the old under the new and printed words over words (the layout
+  // checker's planted cases, D-190)
+  const wordsOf = (E) => String((E.inner && E.inner.textContent) || "").toLowerCase().split(/\s+/).filter(Boolean);
+  function sameDrawing(E, N) {
+    const a = wordsOf(E), b = wordsOf(N);
+    if (a.length || b.length) {
+      if (!a.length || !b.length) return false;
+      const A = new Set(a), B = new Set(b);
+      let both = 0; for (const w of A) if (B.has(w)) both++;
+      return both / (A.size + B.size - both) >= 0.6;
+    }
+    const n = (X) => (X.inner ? X.inner.querySelectorAll("*").length : 0), na = n(E), nb = n(N);
+    return Math.max(na, nb) <= 1.5 * Math.max(1, Math.min(na, nb));
+  }
+  Wd.redrawOf = function (E, next) {
+    if (!next || !isTop(E) || E.motif || !(E.w > 0 && E.h > 0)) return null;
+    const P = boxOf(E);
+    const st = E.scene && E.scene.def && E.scene.def.station;
+    if (st !== next.def.station) return null;
+    const t0 = next.joinWindow ? next.joinWindow[0] : next.beat.start;
+    const t1 = Math.max(next.joinWindow ? next.joinWindow[1] : next.beat.start, next.beat.speech_start) + 1.5;
+    let best = null, bestOv = 0;
+    for (const N of next.els) {
+      if (N === E || (next.claimedFrom || []).includes(N) || !isTop(N) || N.revealT == null || !(N.w > 0 && N.h > 0)) continue;
+      if (N.revealT < t0 - 0.3 || N.revealT > t1) continue;
+      if (N.kind !== E.kind && kindBase(N) !== kindBase(E)) continue;
+      if (!sameDrawing(E, N)) continue;
+      const Q = boxOf(N);
+      const ix = Math.max(0, Math.min(P.x + P.w, Q.x + Q.w) - Math.max(P.x, Q.x));
+      const iy = Math.max(0, Math.min(P.y + P.h, Q.y + Q.h) - Math.max(P.y, Q.y));
+      const a = P.w * P.h, b = Q.w * Q.h, ov = (ix * iy) / Math.min(a, b);
+      if (ov >= 0.7 && Math.max(a, b) / Math.min(a, b) <= 2 && ov > bestOv) { best = N; bestOv = ov; }
+    }
+    return best;
+  };
+  Wd.resolveHeldExits = function (recs, SCREEN) {
+    for (const r of recs) {
+      const list = r.heldExits || [];
+      if (!list.length) continue;
+      const settled = Math.max(r.joinWindow ? r.joinWindow[1] : r.beat.start, r.beat.speech_start);
+      for (const h of list) {
+        const E = h.E;
+        E.exitT = null; E.exitKind = null;
+        if (h.t > settled + Wd.SWAP_EARLY) { Loom.motion.exit(E, h.t, h.k, Object.assign({}, h.o, { planned: true })); continue; }
+        const N = SCREEN[r.join] ? null : Wd.redrawOf(E, r);
+        if (N) {
+          Loom.motion.exit(E, Math.max(h.t, N.revealT) + Wd.SWAP_HOLD, "fade", { dur: 0.2, planned: true });
+          (Loom.report.swaps = Loom.report.swaps || []).push({ beat: r.beat.id, old: E.name, new: N.name, how: "held_redrawn" });
+          continue;
+        }
+        // released: no longer held by this beat, so the join retires it
+        r.claimedFrom = (r.claimedFrom || []).filter((X) => X !== E);
+        r.els = r.els.filter((X) => X !== E);
+        if (E.heldBy) E.heldBy = E.heldBy.filter((b) => b !== r.beat.id);
+        (Loom.report.swaps = Loom.report.swaps || []).push({ beat: r.beat.id, old: E.name, how: "released" });
+      }
+    }
   };
 
   /* ---------------- element life: every element exists only inside the beats that own it ----------------

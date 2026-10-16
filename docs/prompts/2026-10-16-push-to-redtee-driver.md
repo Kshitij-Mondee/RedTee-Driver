@@ -38,3 +38,10 @@ remote; push `main`. Report what went in and what was left out.
 - One commit (149e9fa) on `main`, pushed to https://github.com/Kshitij-Mondee/RedTee-Driver (private). Checked on GitHub's
   own tree: 6,652 files, none a video, audio, archive, blind key, secret, render folder or lesson image.
 - From now on the folder is a git repository; later work is not pushed until asked.
+
+## Second push (2026-10-16, after 16:00)
+- Kshitij: "Push now: commit today's engine and docs work, leave out the four running lessons (projects/st-*), follow
+  the push rules, and push main to RedTee-Driver. Commit the lessons after they finish."
+- No session busy: ListAgents showed only offline peers. Staged 18 files with no `projects/` entry, no media, no file
+  over 10 MB, no secret shape and no blind key. Commit f18c870 pushed to main.
+- Left for later: the four style test lessons (`projects/st-*`), to commit after they finish.

@@ -634,6 +634,37 @@ def contact_sheets(project, manifest) -> list[str]:
     return out
 
 
+def join_frames(project, manifest: dict) -> dict:
+    """The frames around every join (loom/checks/joins.py JOIN_OFFS), small, taken by seeking the build in time order
+    (tools/node/join_frames.mjs: under a minute where `hyperframes snapshot` would take many). Cached per build hash in
+    qa/join_frames. {t: path}"""
+    from .checks import joins as JN
+    from .render import browser_path
+    build = project.path("build")
+    fdir = project.path("qa/join_frames"); fdir.mkdir(parents=True, exist_ok=True)
+    bh = build_hash(build)
+    stamp = fdir / ".build"
+    times = JN.sample_times(manifest)
+    if not stamp.exists() or stamp.read_text() != bh:
+        for f in fdir.glob("*.jpg"):
+            f.unlink()
+        (fdir / "times.txt").write_text(" ".join(f"{t:.2f}" for t in times), encoding="utf-8")
+        bp = browser_path()
+        if not bp:
+            raise LoomError("no browser for the join frames (loom doctor)")
+        run([which("node"), str(ENGINE_ROOT / "tools/node/join_frames.mjs"), str(build / "index.html"), str(fdir / "times.txt"), str(fdir)],
+            env=dict(hf_env(), HYPERFRAMES_BROWSER_PATH=bp), timeout=900)
+        stamp.write_text(bh)
+    return {round(float(f.stem), 2): f for f in fdir.glob("*.jpg")}
+
+
+def join_checks(project, manifest: dict) -> tuple[list, list, dict]:
+    """D-190: the joins on frames (the old picture back, an empty frame, a one-frame pop), each error naming the beat the
+    join opens, for its author"""
+    from .checks import joins as JN
+    return JN.scan_frames(manifest, join_frames(project, manifest))
+
+
 def check(project, sheets: bool = True, samples: int = 24, run_hf: bool = True) -> dict:
     """The check stage. run_hf=False and sheets=False give the QUICK check used by restyle: the runtime probe,
     measured layout, sample-text audit and lints, without the HyperFrames sampling pass or contact sheets."""
@@ -713,6 +744,9 @@ def check(project, sheets: bool = True, samples: int = 24, run_hf: bool = True) 
     sb_ = read_json(project.path("plan/storyboard.json"), {})
     te, tw, ts = FILM.screen_text_checks(pr, manifest.get("style"), sb_, lesson=project.id)
     E += te; W += tw; stats["screen_text"] = ts
+    # D-192: a distinct style's beat drawn from the shared kit alone (none of the style's own techniques)
+    from .essence import scene_warnings as _off_style
+    W += _off_style(project, sb_)
     # 2026-10-07: another beat's pixels on screen (stuck or preshown elements) and the element life records
     fe_, fw_, fs_ = FILM.foreign_checks(pr, manifest.get("style"), sb_, manifest)
     E += fe_; W += fw_; stats["foreign"] = fs_
@@ -737,6 +771,11 @@ def check(project, sheets: bool = True, samples: int = 24, run_hf: bool = True) 
             E += fe; W += fw; stats["film"] = fs
         except Exception as ex:   # the measure must never pass silently: say it did not run
             W.append(f"film checks did not run ({ex})")
+        try:   # D-190: every join, on frames taken densely around it (Kshitij: "the transitions are the worst thing")
+            je, jw, js = join_checks(project, manifest)
+            E += je; W += jw; stats["joins"] = js
+        except Exception as ex:
+            W.append(f"join checks did not run ({ex})")
         try:   # D-112: tone as a plan (value script), accent discipline, and illustrated packs against their reference
             oe, ow, os_ = FILM.tone_checks(manifest, fr, read_json(project.path("plan/storyboard.json"), {}), manifest.get("style"))
             E += oe; W += ow; stats["tone"] = {k: v for k, v in os_.items() if k != "per_beat"}

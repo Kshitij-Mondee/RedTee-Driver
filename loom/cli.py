@@ -27,11 +27,11 @@ def main(argv=None) -> int:
 
     a = sub.add_parser("new", help="create a project")
     a.add_argument("id"); a.add_argument("--topic"); a.add_argument("--source", nargs="*")
-    a.add_argument("--audience"); a.add_argument("--genre", default="teaching"); a.add_argument("--length", type=float, default=4)
+    a.add_argument("--audience"); a.add_argument("--genre", default="auto", help="teaching, explainer, onboarding, policy, soft-skills, or auto (read from the topic)"); a.add_argument("--length", type=float, default=4)
     a.add_argument("--style", default="flat-cosmos"); a.add_argument("--voice", default="af_heart"); a.add_argument("--voice-provider", default="kokoro")
     a.add_argument("--persona"); a.add_argument("--notes", default=""); a.add_argument("--no-captions", action="store_true")
     a.add_argument("--avatar", default="presenter", help="presenter | file | heygen | none")
-    a.add_argument("--mix", default=None, help="classic (default: template 50 / motion 40 / avatar 10) | cinema (template 10 / motion 80 / avatar 10; D-91)")
+    a.add_argument("--mix", default=None, help="auto (default: the style's native mix, D-192) | classic (template 50 / motion 40 / avatar 10) | cinema (template 10 / motion 80 / avatar 10; D-91)")
     a.add_argument("--isolated", action="store_true",
                    help="a lesson no other lesson influences, and that influences none (comparisons): its design seed reads no "
                         "other lesson and no other lesson's seed reads it (L-324)")
@@ -43,6 +43,9 @@ def main(argv=None) -> int:
             s.add_argument("id")
 
     s = sub.add_parser("task", help="write the agent task file for a stage"); s.add_argument("id"); s.add_argument("stage")
+    s = sub.add_parser("recommend-style", help="the styles that fit a topic and kind of video, with reasons (D-192)")
+    s.add_argument("--topic", required=True); s.add_argument("--kind", default=None); s.add_argument("--notes", default="")
+    s.add_argument("-n", type=int, default=3)
     s = sub.add_parser("accept", help="validate a stage's artifact (agent mode)"); s.add_argument("id"); s.add_argument("stage")
     s = sub.add_parser("approve", help="human approval gate: knowledge (or facts), plan, final"); s.add_argument("id"); s.add_argument("stage")
     s.add_argument("--by", required=True); s.add_argument("--notes", help="what the person wants changed or kept (handed to the Shuttle lead on resume)")
@@ -293,6 +296,12 @@ def _dispatch(args) -> int:
             for f in args.source:
                 shutil.copy2(f, p.path("sources") / Path(f).name)
         info(f"created {p.root}\nnext: py -m loom go {args.id}")
+        return 0
+    if args.cmd == "recommend-style":
+        from .essence import recommend
+        for i, r in enumerate(recommend(args.topic, args.kind, args.notes, args.n), 1):
+            info(f"{i}. {r['style']} ({r['tier']}, fit {r['score']}): {r['essence']}")
+            info(f"   why: {'; '.join(r['why'])}")
         return 0
     if args.cmd == "doctor":
         from .doctor import doctor

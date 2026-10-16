@@ -442,4 +442,171 @@ Props (any other key is an error):
 Reuse these inside `scenes/<beat>.js` instead of redrawing them. The idea and outline are fixed;
 params, slots and the returned parts are yours to adjust. Content params never have defaults.
 
-(none promoted yet)
+### `app_calendar`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-151))
+
+A calendar at work in week view: days across, hours down, events placed by their times, the guests' free and busy times in a booking form, walked through by a pointer that creates an event, drags one to reschedule it, opens one and invites a colleague.
+
+Family: ui. Tags: calendar, scheduling, meeting, booking, availability, week view, invite, time management, screencast, productivity
+
+Outline: window (or the screencast engine's app window) -> toolbar: today, previous and next, the period, a new event button -> optional sidebar of calendars -> week grid: day headers, hour gutter, hour lines, a now line -> event blocks in lanes, coloured by calendar -> booking and event popovers: title, time, place, guests, availability strips -> toast -> pointer
+
+Params:
+- `days`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `hours`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `events`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `startHour`: number, default 8
+- `period`: str
+- `today`: int
+- `now`: number
+- `calendars`: list
+- `people`: list
+- `clock`: enum, one of 24/12, default "24"
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `toolbar`, `sidebar`, `grid`, `dayHeads`, `events`, `nowLine`, `popover`, `states`, `create({title, day, start, end, where, guests}, at)`, `drag(id, day, start, at)`, `open(id, at)`, `invite(id, name, at, {send})`, `close(at)`, `setState(name, at)`, `slot(day, hour)`
+Example:
+```js
+ctx.use("app_calendar", { days: ["Mon 3", "Tue 4", "Wed 5", "Thu 6", "Fri 7"], hours: ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00"], startHour: 9, events: [{ id: "std", title: "Ward handover", day: 0, start: 9, end: 9.5 }], labels: { newEvent: "New event", save: "Save" }, steps: [{ do: "create", event: { title: "Fire safety refresher", day: 2, start: 14, end: 15 }, at: ctx.cue("book the refresher") }] }, { x: 96, y: 78, name: "cal" })
+```
+
+### `app_chat_workspace`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-150))
+
+A team chat workspace: channels and direct messages, a channel's conversation with mentions, reactions, file cards and threads, and a composer, walked through by a pointer that opens a channel, posts, reacts and opens a thread.
+
+Family: ui. Tags: chat, team chat, messaging, channels, threads, mentions, reactions, collaboration, screencast, remote work
+
+Outline: window (or the screencast engine's app window) -> sidebar: workspace name, channel and direct message lists with unread and mention counts -> channel header: name and topic -> messages: avatar, author, time, text with mentions, file card, reactions, thread link -> composer -> thread pane (opened by an action) -> pointer
+
+Params:
+- `channels`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `channel`: str
+- `workspace`: str
+- `me`: str
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/empty/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `sidebar`, `channelRows`, `views`, `messages`, `composer`, `threadPane`, `states`, `openChannel(id, at)`, `post(text, at)`, `react(i, icon, at)`, `thread(i, at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_chat_workspace", { workspace: "Riverside Clinic", me: "Sam Lee", channels: [{ id: "rota", label: "night-rota", topic: "Shift swaps and cover", messages: [{ author: "Jo Park", time: "18:02", text: "@Sam Lee can you cover Thursday?" }] }], labels: { composer: "Message night-rota" }, steps: [{ do: "post", text: "Yes, I can cover it.", at: ctx.cue("reply in the channel") }] }, { x: 96, y: 78, name: "chat" })
+```
+
+### `app_docs_editor`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-152))
+
+A shared document editor: a page of headings, paragraphs and lists, suggested edits shown inline, comments in the margin, and a version history, walked through by a pointer that types, comments on a phrase, accepts a suggestion and restores an earlier version.
+
+Family: ui. Tags: document, word processor, docs, editor, track changes, suggestions, comments, version history, policy, collaboration
+
+Outline: window (or the screencast engine's app window) -> top bar: document title, collaborators, history, share -> toolbar: undo, redo, text styles, comment, the editing mode -> the page: headings, paragraphs, list items, with inline suggestions (struck and inserted text) and commented phrases -> the margin: comment and suggestion cards beside their lines -> version history panel (opened by an action) -> toast -> pointer
+
+Params:
+- `docTitle`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `blocks`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `suggestions`: list
+- `comments`: list
+- `versions`: list
+- `people`: list
+- `mode`: enum, one of editing/suggesting/viewing, default "editing"
+- `me`: str
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `topbar`, `toolbar`, `page`, `blocks`, `cards`, `historyPanel`, `states`, `type(text, at, {block})`, `comment(block, anchor, text, at)`, `accept(id, at)`, `reject(id, at)`, `restore(i, at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_docs_editor", { docTitle: "Visitor policy", blocks: [{ kind: "h1", text: "Visitors" }, { kind: "p", text: "Visitors sign in at reception and wear a badge at all times." }], suggestions: [{ id: "s1", block: 1, del: "at all times", ins: "while on site", author: "Mo Diaz" }], labels: { accept: "Accept" }, steps: [{ do: "accept", id: "s1", at: ctx.cue("accept the change") }] }, { x: 96, y: 78, name: "doc" })
+```
+
+### `app_email`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-149))
+
+An email client at work: folders, a thread list with unread and flagged mail, the open message in a reading pane, and a compose window, walked through by a pointer that opens, replies, flags, moves and searches.
+
+Family: ui. Tags: email, mail client, inbox, phishing, reply, compose, screencast, software training, outlook-like, communication
+
+Outline: window (or the screencast engine's app window) -> folder sidebar with a compose button and counts -> thread list with a search field: unread dot, sender, time, subject, preview, flag and attachment marks -> reading pane: toolbar, subject, sender, recipients, body, attachment -> compose window and reply box (opened by actions) -> toast -> pointer
+
+Params:
+- `folders`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `messages`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `folder`: str
+- `open`: str
+- `title`: str
+- `user`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/empty/error, default "ready"
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `sidebar`, `folders`, `list`, `rows`, `searchBox`, `pane`, `panes`, `toolbar`, `replyBox`, `composeWindow`, `states`, `open(i, at)`, `reply(text, at, {send})`, `flag(i, at)`, `move(i, folderId, at)`, `search(query, at)`, `compose({to, subject, body, send}, at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_email", { title: "Mail", folders: [{ id: "in", label: "Inbox", icon: "inbox", count: 3 }, { id: "fin", label: "Finance", icon: "folder" }], messages: [{ id: "m1", from: "Payroll Team", time: "09:12", subject: "Your payslip is ready", preview: "Sign in to view your March payslip", unread: true }], labels: { search: "Search mail", reply: "Reply" }, steps: [{ do: "open", i: 0, at: ctx.cue("open the message") }] }, { x: 96, y: 78, name: "mail" })
+```
+
+### `app_lms_course`  (v1; commissioned: Kshitij 2026-10-16 (hand-off sheet T-153))
+
+An online course on a learning platform: the outline of modules and lessons with what is done, a lesson player, a quiz with feedback, the learner's progress and a certificate, walked through by a pointer that starts a lesson, answers, submits and completes the course.
+
+Family: ui. Tags: learning platform, lms, e-learning, course, lesson, quiz, progress, certificate, compliance training, onboarding
+
+Outline: window (or the screencast engine's app window) -> outline sidebar: course title, progress bar, modules and lessons with done, current and kind marks -> lesson header: title and kind -> lesson player: picture area, play button, scrubber and times; mark complete and next buttons -> quiz: question, options, submit, feedback -> certificate -> toast -> pointer
+
+Params:
+- `course`: str, CONTENT (on-screen words: always pass it; never defaulted)
+- `modules`: list, CONTENT (on-screen words: always pass it; never defaulted)
+- `lesson`: str
+- `player`: obj
+- `quiz`: obj
+- `progress`: obj
+- `certificate`: obj
+- `view`: enum, one of lesson/quiz/certificate, default "lesson"
+- `title`: str
+- `labels`: obj
+- `state`: enum, one of ready/loading/error, default "ready"
+- `notice`: str
+- `steps`: list, default []
+- `theme`: obj, default {}
+- `layout`: obj, default {}
+- `w`: number, default 1728
+- `h`: number, default 856
+- `at`: number, default -1
+- `cps`: number, default 14
+- `engine`: enum, one of auto/off, default "auto"
+Parts returned: `host`, `outline`, `lessonRows`, `progressBar`, `header`, `player`, `quizView`, `options`, `feedback`, `certificate`, `states`, `start(id, at)`, `play(at, {dur, to})`, `answer(i, at)`, `submit(at)`, `complete(at)`, `setState(name, at)`
+Example:
+```js
+ctx.use("app_lms_course", { course: "Food safety basics", modules: [{ title: "Module 1", lessons: [{ id: "l1", title: "Washing hands", kind: "video", duration: "3 min", done: true }, { id: "q1", title: "Check your understanding", kind: "quiz" }] }], quiz: { question: "How long should you wash your hands?", options: ["5 seconds", "20 seconds"], correct: 1, right: "Correct: at least 20 seconds." }, labels: { submit: "Submit" }, steps: [{ do: "start", id: "q1", at: ctx.cue("take the quiz") }, { do: "answer", i: 1 }, { do: "submit" }] }, { x: 96, y: 78, name: "lms" })
+```

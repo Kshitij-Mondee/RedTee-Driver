@@ -265,7 +265,8 @@ def animatic(project, use_frames: bool = True) -> dict:
     cmd += ["-t", f"{sum(durs):.3f}", "-vf", "fps=24,format=yuv420p", "-c:v", "libx264", "-preset", "veryfast", "-crf", "24", str(mp4)]
     ok = subprocess.run(cmd).returncode == 0
     brief = read_json(project.path("plan/brief.json"), {}) or {}
-    genre = brief.get("genre") or (project.request or {}).get("genre")
+    from .genre import of as _kind_of   # the kind as the engine reads it ("auto" too, D-191)
+    genre = brief.get("genre") or _kind_of(project)
     W = story_warnings(sb, [b["id"] for b in beats], genre=genre, look=brief.get("look"))
     rep = {"panels": len(panels), "duration": round(sum(durs), 2), "sheet": str(sheet_path), "video": str(mp4) if ok else None,
            "timed_by": "narration" if timings else "estimate (2.6 words/s)", "warnings": W}

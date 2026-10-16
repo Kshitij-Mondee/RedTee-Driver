@@ -1,0 +1,89 @@
+{
+  "id": "cinematic-noir",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.1,
+    "motion": 0.9,
+    "min_score": 0.0
+  },
+  "essence": "A tense film where something is hidden. Night, one warm key light and silhouettes in depth, for risks, deceptions and the moment a person must decide.",
+  "explains_by": [
+    "A case, not a lecture: a scene in which something goes wrong, then what gave it away.",
+    "One light reveals: what the light falls on is what matters; the rest stays in shadow.",
+    "Tension then release: the risk builds, the clue is lit, the right move resolves it.",
+    "The viewer as the investigator: clues are placed before they are named."
+  ],
+  "techniques": [
+    {
+      "name": "one key light",
+      "use": "pointing without a pointer",
+      "how": "a spotlight fx moment on the clue, everything else dim"
+    },
+    {
+      "name": "depth stage at night",
+      "use": "every scene",
+      "how": "ctx.depth with haze and focus pulls"
+    },
+    {
+      "name": "the reveal",
+      "use": "the clue",
+      "how": "Loom.magnify on the detail, or a cutaway"
+    },
+    {
+      "name": "silhouette actors",
+      "use": "people in the case",
+      "how": "designed rigs in silhouette, one lit face at the decision"
+    }
+  ],
+  "vocabulary": [
+    "night blues",
+    "one warm key",
+    "silhouettes",
+    "haze",
+    "a serif title"
+  ],
+  "avoid": [
+    "bright UI cards",
+    "cheerful icons",
+    "flat diagrams",
+    "templates"
+  ],
+  "fits": {
+    "topics": [
+      "fraud and phishing",
+      "security incidents",
+      "ethics and misconduct",
+      "risk",
+      "investigations",
+      "compliance breaches as cases"
+    ],
+    "kinds": {
+      "explainer": 0.6,
+      "teaching": 0.5,
+      "onboarding": 0.05,
+      "policy": 0.7,
+      "soft-skills": 0.5
+    }
+  },
+  "signals": [
+    "phishing",
+    "fraud",
+    "scam",
+    "risk",
+    "breach",
+    "incident",
+    "ethics",
+    "misconduct",
+    "deception",
+    "threat",
+    "red flags"
+  ],
+  "calls": [
+    "ctx.depth",
+    "fxMoment",
+    "Loom.magnify",
+    "ctx.character",
+    "Loom.place"
+  ]
+}

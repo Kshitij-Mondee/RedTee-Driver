@@ -10,7 +10,15 @@ set -eu
 cd "$(dirname "$0")/.."
 PY=$(command -v python3 || command -v python)
 echo "== python: $($PY --version)  node: $(node --version 2>/dev/null || echo missing)"
-$PY -m pip install --quiet -r requirements.txt
+# the required packages first, then each optional one on its own: an optional package that cannot build here (manim
+# needs the system pangocairo, which a sandbox may lack) is skipped and said, never the end of the setup (batch-01, 2026-10-16)
+REQ=$(mktemp); OPT=$(mktemp)
+awk '/^# optional/{o=1; next} { sub(/#.*/, ""); gsub(/[ \t]+$/, ""); if ($0 != "") print > (o ? "'"$OPT"'" : "'"$REQ"'") }' requirements.txt
+$PY -m pip install --quiet -r "$REQ"
+while read -r pkg; do
+  $PY -m pip install --quiet "$pkg" || echo "== optional package $pkg could not be installed here (skipped; only lessons that use it need it)"
+done < "$OPT"
+rm -f "$REQ" "$OPT"
 npm ci --no-audit --no-fund
 # the Chrome that HyperFrames renders with, and every browser check finds (loom/render.py browser_path)
 npx --yes hyperframes browser ensure

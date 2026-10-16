@@ -1,0 +1,454 @@
+{
+ "cases": [
+  {
+   "label": "phishing check, open and flag",
+   "params": {
+    "title": "Mail",
+    "user": "Asha Kumar",
+    "folders": [
+     {
+      "id": "inbox",
+      "label": "Inbox",
+      "icon": "inbox",
+      "count": 4
+     },
+     {
+      "id": "sent",
+      "label": "Sent",
+      "icon": "send"
+     },
+     {
+      "id": "reported",
+      "label": "Reported",
+      "icon": "shield-alert",
+      "count": 2
+     },
+     {
+      "id": "archive",
+      "label": "Archive",
+      "icon": "archive"
+     }
+    ],
+    "messages": [
+     {
+      "id": "m1",
+      "from": "IT Service Desk",
+      "address": "servicedesk@company.example",
+      "time": "09:41",
+      "subject": "Planned maintenance on Saturday",
+      "preview": "The shared drives will be offline from 06:00 to 08:00.",
+      "body": [
+       "Hello team,",
+       "The shared drives will be offline from 06:00 to 08:00 on Saturday while we upgrade storage.",
+       "No action is needed."
+      ]
+     },
+     {
+      "id": "m2",
+      "from": "Payroll Update",
+      "address": "payroll-update@pay-secure.example",
+      "time": "09:12",
+      "subject": "Action required: confirm your bank details today",
+      "preview": "Your salary payment is on hold until you confirm your details.",
+      "unread": true,
+      "attach": {
+       "name": "confirm_details.html",
+       "size": "14 KB"
+      },
+      "body": [
+       "Dear employee,",
+       "Your salary payment is on hold. Confirm your bank details within 24 hours or the payment will be cancelled.",
+       "Open the attached form to continue."
+      ]
+     },
+     {
+      "id": "m3",
+      "from": "Dana Okafor",
+      "time": "Yesterday",
+      "subject": "Slides for the Thursday review",
+      "preview": "Here is the latest version with the budget page updated.",
+      "attach": {
+       "name": "review.pptx",
+       "size": "2.1 MB"
+      }
+     },
+     {
+      "id": "m4",
+      "from": "Facilities",
+      "time": "Mon",
+      "subject": "New badge readers on floor 3",
+      "preview": "From next week every door on floor 3 needs your badge.",
+      "unread": true
+     }
+    ],
+    "open": "m1",
+    "labels": {
+     "search": "Search mail",
+     "reply": "Reply",
+     "forward": "Forward",
+     "compose": "New mail"
+    },
+    "steps": [
+     {
+      "do": "open",
+      "i": 1,
+      "at": 0.8
+     },
+     {
+      "do": "flag",
+      "i": 1,
+      "at": 2.6
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "finance search and reply",
+   "params": {
+    "title": "Northwind Mail",
+    "folders": [
+     {
+      "id": "in",
+      "label": "Inbox",
+      "icon": "inbox",
+      "count": 2
+     },
+     {
+      "id": "ap",
+      "label": "Accounts payable",
+      "icon": "folder",
+      "count": 0
+     },
+     {
+      "id": "drafts",
+      "label": "Drafts",
+      "icon": "file-pen"
+     }
+    ],
+    "messages": [
+     {
+      "id": "a",
+      "from": "Lena Fischer",
+      "time": "11:05",
+      "subject": "Invoice 4471 approved",
+      "preview": "Approved for payment on the next run.",
+      "unread": true,
+      "body": [
+       "Approved for payment on the next run on the 28th."
+      ]
+     },
+     {
+      "id": "b",
+      "from": "Supplier Portal",
+      "time": "10:20",
+      "subject": "Statement for March",
+      "preview": "Your monthly statement is attached.",
+      "flagged": true
+     },
+     {
+      "id": "c",
+      "from": "Lena Fischer",
+      "time": "08:47",
+      "subject": "Invoice 4470 needs a purchase order",
+      "preview": "Please add the PO number before Friday.",
+      "body": [
+       "Please add the purchase order number before Friday so we can match it."
+      ]
+     }
+    ],
+    "labels": {
+     "search": "Search",
+     "reply": "Reply",
+     "send": "Send",
+     "sent": "Reply sent"
+    },
+    "steps": [
+     {
+      "do": "search",
+      "query": "invoice",
+      "at": 0.6
+     },
+     {
+      "do": "open",
+      "i": "c",
+      "at": 2.2
+     },
+     {
+      "do": "reply",
+      "text": "PO 88213 added.",
+      "at": 3.3,
+      "opts": {
+       "send": true
+      }
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "max: long words, many rows, compose",
+   "params": {
+    "title": "Correspondence and Notifications Centre",
+    "user": "Maximiliane Oyelaran-Whitford",
+    "folders": [
+     {
+      "id": "f1",
+      "label": "Inbox for regional compliance notifications",
+      "icon": "inbox",
+      "count": 1287
+     },
+     {
+      "id": "f2",
+      "label": "Escalations awaiting second-line review",
+      "icon": "folder",
+      "count": 54
+     },
+     {
+      "id": "f3",
+      "label": "Archived supplier correspondence 2019 to 2024",
+      "icon": "archive"
+     },
+     {
+      "id": "f4",
+      "label": "Sent",
+      "icon": "send"
+     },
+     {
+      "id": "f5",
+      "label": "Drafts",
+      "icon": "file-pen"
+     },
+     {
+      "id": "f6",
+      "label": "Junk",
+      "icon": "ban"
+     }
+    ],
+    "messages": [
+     {
+      "from": "Internationalisation Programme Office",
+      "time": "23:59",
+      "subject": "Reminder: quarterly attestation of segregation of duties for treasury operations",
+      "preview": "Each approver must attest before the close of the reporting window or access will be suspended automatically.",
+      "unread": true,
+      "flagged": true,
+      "attach": {
+       "name": "attestation_instructions_treasury_operations.pdf",
+       "size": "18.4 MB"
+      }
+     },
+     {
+      "from": "Procurement and Strategic Sourcing",
+      "time": "22:10",
+      "subject": "Counterparty onboarding questionnaire returned incomplete",
+      "preview": "Sections four, seven and eleven are missing signatures from an authorised representative.",
+      "unread": true
+     },
+     {
+      "from": "Chief Information Security Officer",
+      "time": "21:45",
+      "subject": "Mandatory: complete the incident response tabletop exercise",
+      "preview": "Teams that miss the exercise will be rescheduled by their department heads.",
+      "flagged": true
+     },
+     {
+      "from": "Payroll and Benefits Administration",
+      "time": "20:02",
+      "subject": "Changes to the pension contribution matching schedule",
+      "preview": "From the next tax year the employer match increases for every contribution band."
+     },
+     {
+      "from": "Workplace Experience",
+      "time": "19:30",
+      "subject": "Reconfiguration of the collaboration spaces on levels twelve to fifteen",
+      "preview": "Desks will be numbered again and the booking tool will show the new floor plans.",
+      "unread": true
+     },
+     {
+      "from": "Legal Operations",
+      "time": "18:15",
+      "subject": "Retention schedule update for contractual records",
+      "preview": "Records older than ten years move to the restricted archive."
+     },
+     {
+      "from": "Data Protection Officer",
+      "time": "17:40",
+      "subject": "Subject access requests: the new response template",
+      "preview": "Use the template for every request received from Monday."
+     },
+     {
+      "from": "Enterprise Architecture",
+      "time": "16:05",
+      "subject": "Decommissioning of the legacy reporting warehouse",
+      "preview": "Dashboards that still read from it will stop updating."
+     },
+     {
+      "from": "Learning and Development",
+      "time": "15:20",
+      "subject": "Your learning plan for the next quarter",
+      "preview": "Three courses were added by your manager."
+     },
+     {
+      "from": "Travel Desk",
+      "time": "14:00",
+      "subject": "Itinerary changed",
+      "preview": "Your return flight now departs two hours later."
+     },
+     {
+      "from": "Corporate Communications",
+      "time": "13:10",
+      "subject": "All-hands recording",
+      "preview": "The recording and the slides are on the intranet."
+     },
+     {
+      "from": "Health and Safety",
+      "time": "12:00",
+      "subject": "Fire drill on Wednesday",
+      "preview": "Leave by the nearest exit when the alarm sounds."
+     }
+    ],
+    "open": "m0",
+    "labels": {
+     "compose": "New message",
+     "search": "Search every folder and archive",
+     "reply": "Reply to everyone",
+     "forward": "Forward with attachments",
+     "send": "Send now",
+     "sent": "Your message is on its way to the escalation queue",
+     "to": "Recipients",
+     "subject": "Subject line"
+    },
+    "steps": [
+     {
+      "do": "compose",
+      "message": {
+       "to": "second-line.review@company.example",
+       "subject": "Attestation exceptions for treasury",
+       "body": "Three approvers are still outstanding.",
+       "send": true
+      },
+      "at": 0.5
+     }
+    ],
+    "cps": 45
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: dense, accent3, loading",
+   "params": {
+    "title": "Mail",
+    "folders": [
+     {
+      "id": "inbox",
+      "label": "Inbox",
+      "icon": "inbox",
+      "count": 4
+     },
+     {
+      "id": "sent",
+      "label": "Sent",
+      "icon": "send"
+     }
+    ],
+    "messages": [
+     {
+      "from": "IT Service Desk",
+      "time": "09:41",
+      "subject": "Planned maintenance on Saturday",
+      "preview": "The shared drives will be offline."
+     }
+    ],
+    "labels": {
+     "search": "Search mail"
+    },
+    "state": "loading",
+    "theme": {
+     "accent": "accent3",
+     "sidebar": "surface2",
+     "page": "surface",
+     "radius": 4,
+     "density": 0.88
+    }
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  },
+  {
+   "label": "theme: roomy, accent4, error then ready",
+   "params": {
+    "title": "Mail",
+    "folders": [
+     {
+      "id": "inbox",
+      "label": "Inbox",
+      "icon": "inbox",
+      "count": 4
+     },
+     {
+      "id": "sent",
+      "label": "Sent",
+      "icon": "send"
+     }
+    ],
+    "messages": [
+     {
+      "id": "x",
+      "from": "IT Service Desk",
+      "time": "09:41",
+      "subject": "Planned maintenance on Saturday",
+      "preview": "The shared drives will be offline.",
+      "unread": true
+     },
+     {
+      "from": "Dana Okafor",
+      "time": "Mon",
+      "subject": "Slides",
+      "preview": "Latest version attached."
+     }
+    ],
+    "labels": {
+     "search": "Search mail",
+     "error": "We could not refresh this folder. Check your connection."
+    },
+    "state": "error",
+    "theme": {
+     "accent": "accent4",
+     "card": "surface",
+     "page": "field",
+     "radius": 18,
+     "density": 1.2,
+     "text": 1.1
+    },
+    "steps": [
+     {
+      "do": "state",
+      "state": "ready",
+      "at": 2.0
+     },
+     {
+      "do": "open",
+      "i": "x",
+      "at": 3.0
+     }
+    ]
+   },
+   "opts": {
+    "x": 96,
+    "y": 78
+   }
+  }
+ ]
+}

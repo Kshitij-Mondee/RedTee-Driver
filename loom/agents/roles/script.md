@@ -30,7 +30,9 @@ decide the words and what each beat must show; the plan already made every pedag
    - a quiz is TWO beats: the question (options, NO answer, `pause_after_s` 3 to 5, at least 2 for the gate),
      then the answer (the answer, why, and why the tempting option is wrong);
    - `pause_predict` also needs `pause_after_s` >= 2;
-   - at least one recall in the script.
+   - recall by the kind of video (the VIDEO KIND block, D-191): at least one in a teaching, policy or soft-skills film;
+     none in an explainer, which also never puts a question to the viewer ("now you", "your turn", "which do you")
+     and asks at most two of its own, each answered at once.
 7. **Length:** words / wpm x 60 + 0.8 s per beat within about 20 % of the plan's target (under 0.6x or over 1.35x
    fails).
 8. No em or en dashes in narration, on_screen or visual_intent.

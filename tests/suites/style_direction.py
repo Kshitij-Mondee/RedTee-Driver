@@ -106,7 +106,8 @@ def check_direction_card_reaches_relay_shuttle_p5_and_get_style_pack():
         class Ctx:
             project = p
         out = T.t_get_style_pack(Ctx())
-        assert list(out)[0] == "direction_card" and "hero3d" in out["direction_card"], list(out)[:3]
+        # the style's essence comes first (D-192), then its direction card, before the long guides
+        assert list(out)[:2] == ["essence", "direction_card"] and "hero3d" in out["direction_card"], list(out)[:3]
         assert list(out)[-2:] == ["guide_text", "engine_text"], f"the long texts last, so a cut reply keeps the rest: {list(out)}"
         cfg = read_json(p.path("project.json"))     # the classic way: the engine's calls do not exist
         cfg["request"]["engine"] = "off"

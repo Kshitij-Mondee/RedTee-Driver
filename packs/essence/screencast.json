@@ -1,0 +1,103 @@
+{
+  "id": "screencast",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.1,
+    "motion": 0.9,
+    "min_score": 0.0
+  },
+  "essence": "The product in use, step by step. A believable application on a quiet desk, driven by one pointer, so the learner can do it straight after.",
+  "explains_by": [
+    "Show, then let them do: every step is an action in the product, never a description of one.",
+    "The pointer leads, the product answers, the camera follows the answer.",
+    "One shell for a chapter: the same app is held and changed, so the learner keeps their place.",
+    "Orientation before steps: a short tour names the regions, then the walkthrough uses them."
+  ],
+  "techniques": [
+    {
+      "name": "tour",
+      "use": "where things are",
+      "how": "A.name one or two regions a beat on the whole screen"
+    },
+    {
+      "name": "walkthrough",
+      "use": "each step",
+      "how": "a step pill, the pointer to the control, A.click with the camera framing it, the product's reaction"
+    },
+    {
+      "name": "typed value",
+      "use": "entering data",
+      "how": "A.type at a person's pace, the field framed"
+    },
+    {
+      "name": "real page",
+      "use": "a page from the product's own documentation",
+      "how": "a captured page region, its elements driven by selector"
+    },
+    {
+      "name": "code and terminal",
+      "use": "a change to a file or a command",
+      "how": "A.codeType in an editor region, A.run with streamed output"
+    },
+    {
+      "name": "finished state",
+      "use": "the end of a chapter",
+      "how": "held 2 s, A.spotlight once on the result"
+    }
+  ],
+  "vocabulary": [
+    "the app shell",
+    "one pointer",
+    "step pills",
+    "callouts",
+    "toasts",
+    "a quiet desk ground"
+  ],
+  "avoid": [
+    "hand-drawn panels over the app",
+    "a second pointer",
+    "slide templates",
+    "people on screen",
+    "pages that change by themselves"
+  ],
+  "fits": {
+    "topics": [
+      "software how-to",
+      "tool rollouts",
+      "settings and configuration",
+      "security setup",
+      "developer workflows",
+      "data entry and reports"
+    ],
+    "kinds": {
+      "explainer": 0.3,
+      "teaching": 0.95,
+      "onboarding": 0.7,
+      "policy": 0.3,
+      "soft-skills": 0.05
+    }
+  },
+  "signals": [
+    "set up",
+    "setting up",
+    "how to use",
+    "configure",
+    "turn on",
+    "app",
+    "software",
+    "tool",
+    "click",
+    "dashboard",
+    "login",
+    "sign in",
+    "password",
+    "spreadsheet",
+    "portal"
+  ],
+  "calls": [
+    "ctx.engine",
+    "W.app",
+    "W.resume"
+  ]
+}

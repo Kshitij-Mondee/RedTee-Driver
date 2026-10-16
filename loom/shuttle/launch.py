@@ -599,6 +599,18 @@ def start_message(project, group: tuple, notes: dict, retry: str | None = None, 
     except Exception as e:  # noqa: BLE001  (the status is a convenience here; the lead can still ask lesson_status)
         parts.append(f"(the status could not be read for this message: {type(e).__name__}; call lesson_status)")
     parts.append(notes_block(project))
+    # the kind of video (D-191): what it asks of the viewer and which craft leads, for each planning phase in this window
+    from ..genre import block as _kind
+    for lo, stage in (("P1", "brief"), ("P3", "pedagogy"), ("P4", "script"), ("P5", "storyboard"), ("P10", "critic")):
+        if _overlaps(group, lo, lo):
+            parts.append(_kind(project, stage))
+            break
+    # the style's essence (D-192): how this style explains and shows, for the script, the storyboard and the critic
+    from ..essence import block as _essence
+    for lo, stage in (("P4", "script"), ("P5", "storyboard"), ("P10", "critic")):
+        if _overlaps(group, lo, lo) and _essence(project, stage):
+            parts.append(_essence(project, stage))
+            break
     if _overlaps(group, "P5", "P5"):
         # the style's direction card (D-189, L-474): the strong calls the outline and the storyboard should plan for
         from ..direction import block as _direction

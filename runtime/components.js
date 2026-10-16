@@ -92,6 +92,12 @@
     opts = opts || {};
     const def = Loom.component.resolve(ref);
     if (!def) { Loom.error("component_unknown", `${ctx.beat ? ctx.beat.id + ": " : ""}unknown component ${ref}`); return null; }
+    // a component made for some styles only (D-193): an email client is a screencast or an editorial thing, not a hologram
+    // one. Used in another style, it is the shared vocabulary a distinct style must not borrow (packs/essence)
+    const sid = Loom.style && Loom.style.pack && Loom.style.pack.id;
+    if (Array.isArray(def.styles) && def.styles.length && sid && !def.styles.includes(sid))
+      Loom.error("component_off_style", `${ctx.beat ? ctx.beat.id + ": " : ""}${def.key} is made for ${def.styles.join(", ")}, not ${sid}: ` +
+        `show it in ${sid}'s own way (packs/essence/${sid}.json) instead`);
     const { p, errs } = resolveParams(def, params);
     for (const e of errs) Loom.error("component_params", `${ctx.beat ? ctx.beat.id + ": " : ""}${def.key}: ${e}`);
     const size = def.size ? def.size(p) : { w: p.w || 0, h: p.h || 0 };

@@ -156,6 +156,24 @@ Table and rules: `docs/SCENE_API.md`, "Primitives from the TED-Ed study"; full A
   `Loom.stepped.boil` for a living outline. Not on corporate or technical packs unless the storyboard asks.
 - **Material joins** are chosen in the storyboard (`join_in.type`: torn, page, scroll, motif, handoff, fill); a scene
   only leaves its frame ready for them.
+
+## Joins: the first second of your beat (D-190)
+Kshitij on the 2026-10-16 test films: the old beat flashed back at new beats and old elements flickered in; "the
+transitions are the worst thing". The engine now handles the causes below, and the check measures every join on frames
+(`join_flashback`, `join_blank`, `join_pop`, sent to the beat the join opens). Write so they never fire:
+- **Hold only what you keep.** `ctx.held(name)` (or the storyboard's `keep`) is for an element that stays and changes. To
+  get rid of the old beat's things, do nothing: the join retires them. Holding one only to `m.exit` it at your first
+  words takes it out of the join (the engine now releases it, and warns nothing; a hold you exit later is yours).
+- **Never redraw what is on screen.** If the old beat drew it and you need it, hold it and change it (its handle, a slot,
+  a new child revealed on your time). A copy drawn again on the same spot is swapped in under the old one by the
+  engine, but a copy that rebuilds from nothing still reads as the old beat replaying.
+- **Arrive at the join.** Your first element should start arriving within about 0.2 s of the beat's start. A cut waits
+  up to 1.2 s for it with the old picture held; a canvas join empties the board only as yours arrives; anything later
+  is an empty frame while the voice speaks (`join_blank`).
+- **Open on the state the last beat left.** No instant resets on your first frame: a cleared field, a toggle back, a
+  page switch, a camera jump. Show the change as an action after your first words (in a screencast the engine refuses a
+  cleared value on the cut: `sc_reset_at_join`).
+- **A camera framing at your start is a cut:** `dur: 0` (isometric `B.camera`) frames on the beat's first frame.
 - **Hands and footage:** `Loom.hands` shows only the PLACEHOLDER set until designed art is imported (the check
   warns), so do not use it in a lesson that ships; `Loom.footage` needs a consented clip declared in the storyboard.
 

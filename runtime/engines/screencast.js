@@ -438,6 +438,7 @@
     // ---- the window
     const win = Object.assign({}, FRAME, spec.frame || {});
     A.win = win;
+    E.matchBox = win;   // the app element is full frame; what it shows is its window (Loom.world.redrawOf matches on this)
     const R = cfg.radius + 4;
     const chromeKind = spec.chrome || "window";
     // chrome "terminal": a terminal window, dark from edge to edge (its content is one terminal region)
@@ -1261,6 +1262,7 @@
     A.projectRect = (r, t) => { const a = A.project(r.x, r.y, t); return { x: a.x, y: a.y, w: r.w * a.s, h: r.h * a.s, s: a.s }; };
 
     // ---- the pointer's pose at t
+    const visRamp = (a, t) => { const k = clamp((t - a.v.t0) / 0.2, 0, 1); return a.v.on ? a.s0 + (1 - a.s0) * k : a.s0 * (1 - k); };
     function pointerAt(t) {
       let p = P.start, shape = "arrow";
       for (const s of P.segs) {
@@ -1275,11 +1277,15 @@
         break;
       }
       for (const sh of P.shapes) { if (t < sh.t) break; shape = sh.shape; }
-      let vis = 0;
+      // each show or hide ramps from the level the pointer HAS when it starts: a hide used to ramp from 1, so
+      // pointerOut on a pointer already gone (every beat of st-sc-2fa opened with A.pointerOut(ctx.start)) flashed it at
+      // its last place, the nav, on the join frame (D-190)
+      let a = null;
       for (const v of P.vis) {
         if (t < v.t0) break;
-        vis = v.on ? clamp((t - v.t0) / 0.2, 0, 1) : 1 - clamp((t - v.t0) / 0.2, 0, 1);
+        a = { v, s0: a ? visRamp(a, v.t0) : 0 };
       }
+      const vis = a ? visRamp(a, t) : 0;
       let dip = 1;
       for (const d of P.dips) if (t >= d.t && t < d.t + 0.22) { const u = (t - d.t) / 0.22; dip = 1 - 0.14 * Math.sin(Math.PI * u); }
       return { p, shape, vis, dip };
@@ -1345,6 +1351,16 @@
     A.camTo = function (v, t0, dur, nm) {
       if (t0 < CAM.free - 1e-6) { A.warn("sc_camera_busy", `a camera move asked at ${t0.toFixed(2)} s waits for the one in flight (until ${CAM.free.toFixed(2)} s)`); t0 = CAM.free; }
       const from = targetAt(t0);
+      // a zoom a person can follow: at least 0.3 s, plus 0.18 s per doubling of scale and the pan at 4000 px/s on screen (at
+      // most 0.2 s of it), so the pack's own 0.8 s zooms and 0.7 s pull-backs pass. st-sc-2fa b17 framed a dialog at 2x in 0.35 s (a scene's
+      // ctx.style.dur("move")), which read as a snap (D-190)
+      const ratio = Math.abs(Math.log2((v.s || 1) / (from.s || 1)));
+      const pan = Math.hypot(((v.fx || 0) - (from.fx || 0)) * Math.max(v.s || 1, from.s || 1), ((v.fy || 0) - (from.fy || 0)) * Math.max(v.s || 1, from.s || 1));
+      const minDur = 0.3 + 0.18 * ratio + Math.min(0.2, pan / 4000);
+      if (ratio > 0.05 && dur < minDur - 1e-6) {
+        A.warn("sc_zoom_fast", `a ${nm || "camera"} move to ${(v.s || 1).toFixed(2)}x in ${dur.toFixed(2)} s is faster than the eye follows: stretched to ${minDur.toFixed(2)} s`);
+        dur = minDur;
+      }
       const t1 = t0 + dur;
       for (const a of A.actions) if (a.t1 > t0 + 0.02 && a.t0 < t1 - 0.02) A.warn("sc_camera_during_action", `the camera moves (${t0.toFixed(2)} to ${t1.toFixed(2)} s) while "${a.what}" happens (${a.t0.toFixed(2)} to ${a.t1.toFixed(2)} s): act on a still frame`);
       CAM.moves.push({ t0, t1, from, to: v });
@@ -1778,9 +1794,22 @@
       }
     };
 
+    // ---- a held app changed by the system as a later beat opens (D-190): the picture the last beat ended on jumps at the
+    // join. st-sc-2fa b06 cleared the password b05 had typed at its first frame (to type it again), and the field emptied
+    // on the cut. A value cleared there is an error; any other system change there (a toggle, a page, a selection) a warning
+    const atJoin = (what, t, undo) => {
+      const b = Loom.ctxBeat;
+      if (!b || !A.E || A.E.beat === b.id || !(t >= b.start - 0.2 && t <= b.start + 0.4)) return;
+      const msg = `${what} at ${t.toFixed(2)} s, as ${b.id} opens on the app "${A.id}" it holds: the picture the beat before ended on ` +
+        `jumps at the join. End the beat before on this state, or show the change as an action after the first words ` +
+        `(the pointer clears the field, a click turns the page)`;
+      if (undo) Loom.error("sc_reset_at_join", `${b.id}: ${msg}`, { beat: b.id });
+      else A.warn("sc_change_at_join", msg);
+    };
     // ---- a value set by the system (not typed): a quick cross-fade in the field or select
     A.setValue = function (id, str, t) {
       const p = part(id);
+      atJoin(`"${id}" set to ${str === "" ? "nothing" : `"${String(str).slice(0, 24)}"`}`, t, str === "" && !!p.value);
       const old = p.value || p.placeholder;
       if (old) Loom.tween(old, { opacity: 1 }, { opacity: 0, duration: 0.12 }, t, A.meta("state", p.id));
       const nv = text(p.g, p.password ? "•".repeat(String(str).length) : str, { x: p.x + (p.pad || 18), y: p.y, w: p.w - 2 * (p.pad || 18) - (p.right || 0), h: p.multiline ? 52 : p.h, size: cfg.ui_text, tag: "value" });
@@ -1802,6 +1831,7 @@
     A.toggle = function (id, on, t) {
       const p = part(id), c = p.ctl;
       if (!c || !c.knob) throw new Error(`screencast app "${A.id}": "${id}" is not a toggle`);
+      if (!!c.state !== !!on) atJoin(`the toggle "${id}" turned ${on ? "on" : "off"}`, t, !on);
       const from = c.state ? 1 : 0, to = on ? 1 : 0;
       c.state = !!on;
       Loom.drive((e) => {
@@ -1896,6 +1926,7 @@
       const cur = pageOf(t);
       if (!A.pages[pid]) throw new Error(`screencast app "${A.id}": no page "${pid}" (have: ${Object.keys(A.pages).join(", ")})`);
       if (cur === pid) return t;
+      atJoin(`the page changed from "${cur}" to "${pid}"`, t, false);
       Loom.tween(A.pages[cur].g, { opacity: 1 }, { opacity: 0, duration: 0.16 }, t, A.meta("exit", "page." + cur));
       Loom.tween(A.pages[pid].g, { opacity: 0 }, { opacity: 1, duration: 0.24, ease: Loom.ease.enter }, t + 0.1, A.meta("reveal", "page." + pid));
       // the new page arrives with a short slide (24 px, eased out), the old one drifts the other way as it fades; at rest
@@ -2594,8 +2625,49 @@
         reactions: A.reactions.length, max_zoom: Math.max(1, ...A.camSched.moves.map((m) => m.to.s)), smooth: sm, warnings: A.warnings.map((w) => w.code) });
     }
     crowding();
+    byHand(out);
     R.screencast = out;
     return out;
+  }
+
+  // ---- the product is the app's, the pointer is the app's (D-190). st-sc-2fa b07 drew a "plain settings page" and its own
+  // arrow over the held browser, b12 a backup-codes panel: hand-drawn layers that do not zoom, scroll or answer with the app,
+  // and come and go on their own at the joins (the old page dropping out, two pointers, content rebuilt from nothing).
+  // A beat that shows an app may not draw a second pointer, nor a product surface of its own over the app's window; the
+  // teaching layer (callouts, pills, names, rings) is the app's own calls. Errors, sent to the beat's author.
+  const SMALL = { text: 1, label: 1, tag: 1, mark: 1, icon: 1, token: 1, value: 1, chip: 1, bubble: 1, stamp: 1, connector: 1, chapter: 1, motif: 1 };
+  function byHand(out) {
+    const W = Loom.world;
+    if (!W || !W.sceneRecs) return;
+    const hits = [];
+    for (const r of W.sceneRecs) {
+      const apps = r.els.filter((E) => E.sc && E.outer && E.outer.isConnected);
+      if (!apps.length) continue;
+      const appEls = new Set(apps);
+      const isPart = (E) => { for (let o = E.outer && E.outer.parentNode; o; o = o.parentNode) if (o.__E && appEls.has(o.__E)) return true; return false; };
+      for (const E of r.els) {
+        if (appEls.has(E) || (r.claimedFrom || []).includes(E) || !E.outer || isPart(E)) continue;
+        if (/(^|_)(pointer|cursor|mouse|arrow_cursor)(_|$)/i.test(E.name)) {
+          hits.push(E.name);
+          Loom.error("sc_second_pointer", `${r.beat.id}: "${E.name}" is a pointer drawn by hand while the app "${apps[0].sc.id}" is on screen: ` +
+            `the app's own pointer is the only one (A.pointer, A.move, A.click, A.type; it zooms and settles with the app). Remove it`, { beat: r.beat.id });
+          continue;
+        }
+        if (SMALL[E.kind] || !(E.w > 0 && E.h > 0)) continue;
+        for (const Ap of apps) {
+          const w = Ap.sc.win, ix = Math.max(0, Math.min(E.x + E.w, w.x + w.w) - Math.max(E.x, w.x)), iy = Math.max(0, Math.min(E.y + E.h, w.y + w.h) - Math.max(E.y, w.y));
+          const inside = (ix * iy) / (E.w * E.h), share = (E.w * E.h) / (w.w * w.h);
+          if (inside >= 0.6 && share >= 0.12) {
+            hits.push(E.name);
+            Loom.error("sc_ui_by_hand", `${r.beat.id}: "${E.name}" (${E.kind}, ${Math.round(share * 100)} % of the window) is drawn by hand over the app ` +
+              `"${Ap.sc.id}": the product's screens are the app's pages (spec.pages, A.go, A.dialog, A.cell, A.setValue), so they zoom, scroll and ` +
+              `answer with it and stay put across joins. Move it into the app; teaching marks are A.callout, A.spotlight, A.chapters`, { beat: r.beat.id });
+            break;
+          }
+        }
+      }
+    }
+    out.by_hand = hits;
   }
 
   // ---- smoothness, measured: the camera (three points of the window on screen) and the pointer sampled at 60 fps over

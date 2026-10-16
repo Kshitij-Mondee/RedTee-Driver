@@ -29,7 +29,14 @@ Loom.scene("b13", {
 
     // ------------------------------------------------------------------ hindsight_card
     // resting position: above the right end of the spine ("now"), x 1400-1720, y 200-290
-    const CX = 1400, CY = 190, CW = 320, CH = 76;   // CH 76 (was 90) buys a 24 px gap above the term without touching frame 3
+    // measure, then draw: the card is sized from its words so the label has an inset in every style
+    // (inset >= max(6, 0.2 x size) plus 4 px of slack). Its BOTTOM stays at y 266 (20 px above the term,
+    // clear of frame 3), so any extra height grows upward into the free space under the header.
+    const CX = 1400, CW = 320;
+    const cardFit = kit.fit("Obvious now", { role: "lead", w: 222, maxLines: 1 });
+    const cardNeed = Math.max(6, 0.2 * cardFit.size);
+    const CH = Math.max(76, Math.ceil(cardFit.height + 2 * cardNeed + 4));
+    const CY = 266 - CH;
     // @form ghost_card: a grey dashed card carrying a hypothetical idea that is not real
     const card = ctx.el("hindsight_card", { x: CX, y: CY, w: CW, h: CH, kind: "card", exit: "recede" });
     const r = 16, x0 = 2, y0 = 2, x1 = CW - 2, y1 = CH - 2;
@@ -74,17 +81,22 @@ Loom.scene("b13", {
     // the card dips over each screen and lifts away with nothing landed.)
 
     // ------------------------------------------------------------------ term: printed under the card
-    // card bottom is y 266; term box starts at 290 (24 px clear), glyphs end ~y 364, frame 3 top is 380
-    const term = ctx.el("term", { x: 1400, y: 290, w: 400, h: 84, kind: "text", exit: "wipe" });
-    kit.text(term.inner, "hindsight bias", { role: "title", x: 0, y: 0, w: 400, h: 84, maxLines: 1, color: "accent" });
+    // card bottom is y 266; term box starts at 286 (20 px clear), glyphs end ~y 378, frame 3 top is 380
+    const term = ctx.el("term", { x: 1400, y: 286, w: 400, h: 92, kind: "text", exit: "wipe" });
+    kit.text(term.inner, "hindsight bias", { role: "title", x: 0, y: 0, w: 400, h: 92, maxLines: 1, color: "accent" });
     m.unmask(term, ctx.cue("hindsight bias"));
 
     // ------------------------------------------------------------------ outcome: the bad ending, stamped at the spine's end
     // sits ON the spine line, ending flush with the arrowhead (chevron starts x 1690): x 1460-1680, ends 240 px from the right edge
     // @form verdict_stamp: a short label stamped as a pill or tilted note, coloured to carry its valence
-    const out = ctx.el("outcome", { x: 1460, y: 612, w: 220, h: 56, kind: "stamp", exit: "recede" });
-    kit.pill(out.inner, 0, 0, 220, 56, { fill: "neg", crisp: true, shadow: false });
-    kit.text(out.inner, "Orders stopped", { role: "label", x: 10, y: 0, w: 200, h: 56, maxLines: 1, align: "center", valign: "middle", weight: 800, color: S.pickTokenOn("neg") });
+    // measure, then draw: the pill height comes from the label (inset >= max(6, 0.2 x size) + 4 px slack);
+    // it stays centred on the spine line (y 640), so extra height grows both ways
+    const pillFit = kit.fit("Orders stopped", { role: "label", w: 200, maxLines: 1, weight: 800 });
+    const pillNeed = Math.max(6, 0.2 * pillFit.size);
+    const OH = Math.max(56, Math.ceil(pillFit.height + 2 * pillNeed + 4));
+    const out = ctx.el("outcome", { x: 1460, y: 640 - OH / 2, w: 220, h: OH, kind: "stamp", exit: "recede" });
+    kit.pill(out.inner, 0, 0, 220, OH, { fill: "neg", crisp: true, shadow: false });
+    kit.text(out.inner, "Orders stopped", { role: "label", x: 10, y: 0, w: 200, h: OH, maxLines: 1, align: "center", valign: "middle", weight: 800, color: S.pickTokenOn("neg") });
     m.stamp(out, ctx.cue("a bad ending"));
 
     // ------------------------------------------------------------------ the ONE emphasis: the held sense ticks pulse once, left to right

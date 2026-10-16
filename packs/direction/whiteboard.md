@@ -23,3 +23,11 @@ Its strength is watching the idea being built on the word; plan what each sectio
 
 ## Not this style
 - Never two hands; two faces only (the marker hand and the display face); no line through a word.
+
+## Motion in this style (D-190)
+- The hand draws everything, one stroke at a time; nothing slides or pops on its own.
+- The board is wiped between sections; within one it grows, and what is kept never moves.
+
+## By kind of video
+- Explainer: one drawing that builds and is read back at the end. No quiz.
+- Teaching: the framework drawn step by step, the check written as a question the hand answers after the pause.

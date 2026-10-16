@@ -27,3 +27,12 @@ a cloud region. One board is its grammar: hold it, and let the camera and the bo
 ## Not this style
 - People are Isotype pictograms in roles, never a person the story follows, until a designed isometric kit exists;
   at most 12 objects in a close view and 7 pins.
+
+## Motion in this style (D-190)
+- Things move on routes (`it.travel` on a `B.route`), one mover at a time; nothing flies over the board.
+- The camera holds a station while it works and moves between stations; a framing at a beat's start is a cut
+  (`B.camera` with dur 0).
+
+## By kind of video
+- Explainer: one order (or parcel) followed station to station, then the scale reveal (`B.reveal`) as the replay.
+- Teaching: one station per step, the decision made at the station, the check a fault on the board.

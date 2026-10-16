@@ -26,7 +26,10 @@ You design HOW the lesson teaches and produce ONE teaching plan (`plan/teaching_
    levels joined by " -> ".
 3. **Energy:** at least one `rest` over 180 s; never `peak` then `peak`; the last section is never `peak`.
 4. **Pacing:** `words_per_minute` 130 to 160.
-5. **Recall:** at least one recall moment, each `after_section` a real id that already taught what it asks.
+5. **Recall, by the kind of video** (the VIDEO KIND block, D-191): a teaching, policy or soft-skills film needs at least
+   one recall moment; onboarding only where the plan needs one; an explainer NONE (`recall_moments: []`, and its
+   mandatory Gagne events are attention, present and guidance). Each `after_section` is a real id that already taught
+   what it asks.
    - Stopping checks (quiz plus pause_predict): at most 1 up to 360 s, 2 up to 600, 3 up to 900, 5 up to 1500,
      else 6.
    - A quiz needs `answer` and `tempting_wrong`.

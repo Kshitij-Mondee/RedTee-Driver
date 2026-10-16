@@ -2355,6 +2355,28 @@ He chose: feedback that lands, and spot and report phishing; one plain lesson (`
 
 ---
 
+## Run 86: clean joins, motion and the kind of video (2026-10-16, D-190, D-191, R-70)
+
+- **L-476 Every gate passed films whose joins flashed: a join is only seen on frames taken densely around it.** (engine)
+  The check sampled frames every few seconds; the flashes lived in 0.1 to 1 s around the joins. Measured on the four
+  test films: screencast b14 (the old beat back after a cover), a pointer flash at nearly every screencast join, empty
+  frames at hologram cuts and canvas joins, a one-frame wrong framing in isometric b05 and b14.
+  - Why: holds that only exit, redraws from nothing, cuts and canvases that empty before the next picture, camera drives
+    that drew at their own time, a pointer hide that ramped from 1; nothing measured a join.
+  - DONE: the engine fixes (D-190) and the join pass in the check stage (`join_flashback`, `join_blank`, `join_pop`, about
+    25 s a film), each proven red on the old runtime (`tests/suites/clean_joins.py`; the isometric seek test does not
+    reproduce on a small board, the real build does: frames at 31.70 to 31.93 s changed by 30.8 and 42.6 grey levels before,
+    under 0.5 after).
+- **L-477 Screencast authors drew the product by hand over the app.** (scene) 13 surfaces in st-sc-2fa (a plain
+  settings page, a dimming veil, a codes panel) and a second pointer: they do not zoom or answer with the app and come and
+  go on their own at joins. Now errors (`sc_ui_by_hand`, `sc_second_pointer`), and the guide says it.
+- **L-478 The kind of video reached one stage of eleven.** (planning, D-191) Three explainers were planned as teaching
+  (the default) and quizzed their viewers. A profile per kind now reaches every planning stage and the gates.
+- **L-479 A style was a palette until it had its own way of explaining.** (planning, D-192) Nothing told the planners how a hologram, an isometric board or a cinematic scene explains differently, so distinct styles borrowed the same templates and kit; the default mix put half of every film on shared templates. Each style now has an essence the planners read, a native mix, and two soft checks; the recommender reads the same cards.
+- Known flake (not fixed): `check_render_segments_carry_the_build_hash_and_stale_ones_are_dropped` fails about one run in three on Windows: its two same-size writes land in one clock tick, and `build_hash` caches on size and mtime, so the edit reads as the same build. Passes on rerun and on the committed code; a real edit is never that fast.
+- OPEN: the friend's batch-01 (five app shells) is not in this checkout (push refused, 403); a new lesson per style to see
+  the joins, the motion lines and the kind block on frames.
+
 ## Run 85: per-style direction cards for the planners (2026-10-16, D-189)
 
 - **L-475 A planner uses a style's strong calls only when it is told when they fit, early and short.** (planning,

@@ -16,7 +16,8 @@
    invalid.
 6. **GENRE HONESTY.** If a third or more of the substance is numeric or formulaic, the genre is `quantitative`
    or `mixed`.
-7. **RETRIEVAL IS PRESENT, TIED AND BUILDABLE.** At least one recall moment in any video; each is tied to a
+7. **RETRIEVAL IS PRESENT, TIED AND BUILDABLE.** At least one recall moment in a teaching, policy or soft-skills video
+   (an explainer has none and asks the viewer nothing: `loom/genre.py`, D-191); each is tied to a
    section that already taught what it asks, and never tests later material. `quiz` needs a statable answer and
    an explanation of why the most tempting wrong option is wrong; `pause_predict` needs a genuine predictable
    fork; `recall_prompt` is spoken reinforcement only. A quiz whose honest answer is "it depends" is invalid.

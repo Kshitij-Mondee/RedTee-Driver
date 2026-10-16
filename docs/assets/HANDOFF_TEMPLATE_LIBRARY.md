@@ -260,6 +260,14 @@ structure and the size budget.
 
 **`family`, and `commissioned_by`:** `"Kshitij 2026-10-16 (hand-off sheet T-<n>)"`.
 
+**`styles` (2026-10-16, D-193):** the styles the item is made for, as pack ids. A style is its own way of showing
+(`packs/essence/<style>.json`): an email client belongs to the styles that show products as screens (screencast,
+corporate-clean, engineering, line-art, editorial-paper, presenter-pop), never to hologram, isometric, cinematic or
+flat-cosmos, which show the same subject in their own way. `library accept` renders and judges the item only in its
+`styles`, a lesson in another style is never offered it, and using it there is an error (`component_off_style`). Leave
+`styles` out only for an item every style can carry in its own look (a counter, a timeline, a simple card). When a
+distinct style needs the same subject, that is a separate item made in that style.
+
 **`example`:** one working `ctx.use(...)` line with realistic content (for a different topic than the fixtures).
 
 **Parts and state functions:** listed in `parts` and named for what they are.

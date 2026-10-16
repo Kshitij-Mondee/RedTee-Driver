@@ -717,3 +717,26 @@ def check_screencast_screenshot_theme_reads_the_look_and_the_shell_takes_it():
     assert th["palette"]["sideInk"].lower() in f1[1.0].lower(), "the sidebar's words are not in the theme's side ink"
     assert "#C0177A" in f1[1.0], "the teaching layer (a callout) lost the pack's signal colour under a theme"
     return f"sidebar {m['sidebar_px']} px {th['tone']['side']}, accent {th['palette']['accent']}, ink {th['palette']['ink']}, rows {m['row_px']} px, radius {m['radius_px']} px; the themed shell draws in them and the callout stays accent2"
+
+
+_ZFAST = """Loom.scene("sc_test", { build(ctx) {""" + _APP + """
+  A.zoom("sec.twostep", { at: 2.0, dur: %s, scale: 2 });
+  A.zoomOut({ at: 6.0 });
+}});
+"""
+
+
+def check_screencast_a_snap_zoom_is_stretched_to_a_followable_move():
+    """A.zoom to 2x in 0.2 s (a scene passing its style's move time) warns sc_zoom_fast and is stretched (st-sc-2fa b17's
+    2x in 0.35 s read as a snap, D-190): half-way through the asked 0.2 s the camera has not arrived. Control: the pack's
+    own 0.8 s zoom does not warn."""
+    if not which("node"):
+        return "skipped (no node)"
+    times = [2.2, 3.4]
+    a, rep = _frames(_head(times) + _ZFAST % "0.2", times)
+    assert "sc_zoom_fast" in _warn_codes(rep), _warn_codes(rep)
+    s_mid, s_end = _cam(a[2.2])[2], _cam(a[3.4])[2]
+    assert s_mid < s_end - 0.15, f"the camera reached its scale too fast (at 2.2 s {s_mid:.2f}x, settled {s_end:.2f}x)"
+    _, rep2 = _frames(_head(times) + _ZFAST % "0.8", times)
+    assert "sc_zoom_fast" not in _warn_codes(rep2), "control: the pack's 0.8 s zoom warned"
+    return f"0.2 s zoom stretched (at 2.2 s {s_mid:.2f}x of {s_end:.2f}x) and warned; 0.8 s quiet"

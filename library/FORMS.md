@@ -7,60 +7,2623 @@ Scene authors: REUSE an existing id when your element or design has the same ide
 
 | form | uses | lessons | status | idea |
 |---|---|---|---|---|
+| `gps_satellite` | 10 [10] | 1 | candidate | satellites idle on their rings |
+| `verdict_stamp` | 10 [10] | 4 | candidate | a short label stamped as a pill or tilted note, coloured to carry its valence |
+| `path_board` | 9 [9] | 4 | candidate | browser, path with watcher, server on one light board |
+| `clock_face` | 8 [8] | 1 | candidate | the atomic clock on the body |
+| `desk_line` | 8 [8] | 4 | candidate | the shared desk surface |
+| `tilted_note` | 8 [8] | 3 | candidate | a tilted outlined note pinned to a surface, naming one fact |
+| `watcher_label` | 8 [8] | 2 | candidate | named pill on a muted leader |
+| `strike_out_stroke` | 7 [7] | 5 | candidate | one hand-drawn stroke struck across an item to cancel it |
+| `login_packet` | 6 [6] | 2 | candidate | plain card, readable, rides above the line |
+| `pocket_rule` | 6 [6] | 4 | candidate | the completed boundaries become a choice criterion |
+| `range_circles` | 6 [6] | 1 | candidate | satellite B's sphere grows out from B to pass through the phone point |
+| `speech_bubble` | 6 [6] | 3 | candidate | a rounded bubble with a tail carrying one spoken or recalled line |
+| `steps` | 6 [6] | 3 | candidate | two outlined levels showing the safer direction of classification |
+| `watcher` | 6 [6] | 2 | candidate | the eye disc on node 2 |
+| `key_slots` | 5 [5] | 5 | candidate | blue shared keys in both end slots |
+| `keycard` | 5 [5] | 2 | candidate | the password becomes the sole amber travelling object |
+| `night_city` | 5 [5] | 1 | candidate | the night city from above, lights low |
+| `padlock` | 5 [5] | 4 | candidate | open, then closed named, then closed held |
+| `pause_ring` | 5 [5] | 4 | candidate | countdown |
+| `readable_packet` | 5 [5] | 2 | candidate | login rows lifted as one travelling card |
+| `step_bar` | 5 [7] | 2 | candidate | three tiles, one named at a time |
+| `baseline` | 4 [4] | 2 | candidate | one long ink line the items stand on |
+| `browser_window` | 4 [4] | 1 | candidate | the login form with its http address |
+| `calendar_marker` | 4 [4] | 2 | candidate | second flag marker |
+| `clock` | 4 [4] | 3 | candidate | the top bar time region of the monitor |
+| `corner_checklist` | 4 [4] | 2 | candidate | three moves remain visible as a reference |
+| `figure_from_behind` | 4 [4] | 2 | candidate | an unnamed person drawn from behind in muted tokens (back of head, neck, shoulders) |
+| `login_screen` | 4 [4] | 2 | candidate | intact sign-in under its own lamp |
+| `network_path` | 4 [4] | 1 | candidate | four nodes, first labelled Shared wifi |
+| `night_office` | 4 [4] | 2 | candidate | a quiet depth room surrounds the evidence |
+| `owner_chip` | 4 [4] | 2 | candidate | a small pill chip with a person icon and a role word |
+| `packet` | 4 [4] | 3 | candidate | the form packet, readable then morphing then scrambled |
+| `packet_morph` | 4 [4] | 1 | candidate | the readable form packet, same object every crossing |
+| `phone_dot` | 4 [4] | 1 | candidate | the teal dot pulsing into place on the map |
+| `request_arrow` | 4 [4] | 4 | candidate | the question runs from the browser to the server |
+| `server_box` | 4 [4] | 1 | candidate | idle rack with its name pill |
+| `shared_key_label` | 4 [4] | 4 | candidate | a pill naming the slot both ends must fill, with dashed links to each slot |
+| `thought_bubble` | 4 [4] | 4 | candidate | unobservable inner state |
+| `whiteboard_panel` | 4 [4] | 2 | candidate | a face-on whiteboard with an inner frame and a marker tray |
+| `written_line_on_rule` | 4 [4] | 1 | candidate | a prompt typed on a ruled line while a pen tip follows it |
+| `accent_question_mark` | 3 [3] | 3 | candidate | one large accent question over an empty seat |
+| `board_camera` | 3 [3] | 2 | candidate | the held board remains the world while the camera pushes toward the watcher |
+| `cert_card` | 3 [3] | 2 | candidate | the server's certificate, emerges from the server and slides back mid-path |
+| `certificate_card` | 3 [3] | 2 | candidate | small, then in_panel with three blank rows |
+| `checklist` | 3 [3] | 2 | candidate | a calm recap card over the held application |
+| `checklist_card` | 3 [4] | 2 | candidate | a card with a header strip, a kicker and an empty checkbox holding one written item |
+| `clock_tag` | 3 [3] | 2 | candidate | tag hanging by the clock |
+| `company_boundary` | 3 [3] | 2 | candidate | a closer boundary requires membership |
+| `copied_packet` | 3 [3] | 2 | candidate | identical readable card held in the watcher tray |
+| `copy_a` | 3 [3] | 1 | candidate | first small report file travelling from the laptop to its backup position |
+| `copy_b` | 3 [3] | 1 | candidate | second small report file travelling from the laptop to the end of the backup row |
+| `customer_list` | 3 [3] | 2 | candidate | the hook's attachment page, large, dashed grey until the harm question decides it |
+| `desk` | 3 [3] | 2 | candidate | one hand-drawn meeting desk line |
+| `desk_plane` | 3 [3] | 3 | candidate | callback desk surface matching opening geometry |
+| `door_wall` | 3 [3] | 1 | candidate | the dusk corridor field behind both system doors |
+| `earth_arc` | 3 [3] | 1 | candidate | Earth's curved surface seen from the side, crest under the phone |
+| `earth_disc` | 3 [3] | 1 | candidate | the planet, night side |
+| `ext_drive` | 3 [3] | 1 | candidate | second physical storage device |
+| `label_ca` | 3 [3] | 3 | candidate | pill naming the seal's owner |
+| `label_cert` | 3 [3] | 3 | candidate | pill naming the card |
+| `laptop` | 3 [3] | 1 | candidate | the one neutral device that holds the only copy |
+| `leo_bust` | 3 [3] | 1 | candidate | Leo, neutral throughout, nods then sinks (E.mover carries the gesture) |
+| `named_region_box` | 3 [3] | 1 | candidate | an element with the true box of a region that a kit part draws, so a storyboard can keep it by name |
+| `object_to_note_card` | 3 [3] | 1 | candidate | a named object drops to a surface and its outline morphs into a small card |
+| `opened_page` | 3 [3] | 3 | candidate | opening does not need another grant |
+| `orbit_rings` | 3 [3] | 1 | candidate | tilted rings round the planet |
+| `owner_circle` | 3 [3] | 2 | candidate | the single marker emphasis follows the existing pictogram's measured centre |
+| `phone` | 3 [3] | 2 | candidate | a dark phone whose screen lights with the map |
+| `question` | 3 [3] | 3 | candidate | the accent line |
+| `question_underline` | 3 [3] | 3 | candidate | the question is the one marked focal point |
+| `range_circle` | 3 [3] | 2 | candidate | the sphere around A drawn flat, a circle in accent that passes through the phone point |
+| `report_main` | 3 [3] | 1 | candidate | the only Report, placed directly in the laptop's document slot |
+| `sam` | 3 [3] | 2 | candidate | Sam explains from the left side of the board |
+| `same_place_boundary` | 3 [3] | 1 | candidate | dashed place drawn round the desk objects |
+| `sealed_envelope` | 3 [3] | 1 | candidate | a closed envelope with a red wax seal on its flap |
+| `signal_pulse` | 3 [3] | 2 | candidate | one pulse travelling from a satellite to the phone point |
+| `speed_streaks` | 3 [3] | 2 | candidate | three gold lines trailing the wavefront |
+| `stopped_forward` | 3 [3] | 2 | candidate | forward reaches the closed door, never the team |
+| `tag` | 3 [3] | 3 | candidate | dev's remark |
+| `token_chip` | 3 [4] | 1 | candidate | a small labelled chip that travels on a line, carrying one credential |
+| `you_bust` | 3 [3] | 1 | candidate | You, neutral then explaining as the verdict lands |
 | `icon_label_card` | 4 [5] | 1 | deferred | a rounded card pairing an icon with a short label naming one item |
-| `outcome_tick` | 5 [5] | 2 | rejected | a tick or cross mark landing on an item to show its result |
+| `outcome_tick` | 7 [7] | 4 | rejected | a tick or cross mark landing on an item to show its result |
 | `arrow_into_target` | 3 [3] | 1 | rejected | an arrow drawn from a source into a target, its head landing as the stroke arrives |
+| `accent_underline` | 2 [2] | 1 | counting | the one marker colour, on the name that starts the story |
+| `acknowledgement_mark` | 2 [2] | 2 | counting | neutral confirmation badge acknowledging receipt without action |
+| `action_marker` | 2 [2] | 2 | counting | dynamic underline emphasizing requested behavior |
+| `address_https` | 2 [2] | 2 | counting | the address reads https:// (the browser's own https address swaps in for the http one, no second copy) |
+| `analogy_heading` | 2 [2] | 2 | counting | words name the visual analogy |
+| `assumption_underline` | 2 [2] | 2 | counting | calm qualification signal under the attached note |
+| `attached_term` | 2 [2] | 2 | counting | the readable label belongs to the travelling source |
+| `balance` | 2 [2] | 2 | counting | a balance with a central pivot and two pans |
+| `bedroom_inset` | 2 [2] | 2 | counting | a temporary corner view of the second factor, with readable kit text |
+| `behaviour_confirm_fill` | 2 [3] | 1 | counting | the confirmed row's accent background |
+| `behaviour_confirm_text` | 2 [3] | 1 | counting | the confirmed label, same words, now on the accent |
+| `bias_label_banner` | 2 [2] | 2 | counting | title banner identifying fundamental attribution bias |
+| `board` | 2 [2] | 1 | counting | held path board with a watcher-centred camera push |
+| `board_goal_lines` | 2 [2] | 1 | counting | two hand-lettered lines written onto a held board, the second after the first |
+| `boundary` | 2 [2] | 1 | counting | shared-place event boundary |
+| `boxed_check` | 2 [2] | 2 | counting | square border with drawn tick |
+| `bubbles` | 2 [2] | 1 | counting | four different recollections, each aligned to its owner's existing seat |
+| `budget_emphasis` | 2 [2] | 2 | counting | single accent circle around the unticked budget box |
+| `calendar_bay` | 2 [2] | 2 | counting | background office calendar grid on bay wall representing unresolved schedule |
+| `card_budget` | 2 [2] | 2 | counting | high-impact work with a larger effort |
+| `card_deck` | 2 [2] | 2 | counting | small slow task |
+| `card_expenses` | 2 [2] | 2 | counting | small quick task |
+| `cert` | 2 [2] | 2 | counting | the certificate card travels from the named server to the browser-side landing position |
+| `certificate_continuity` | 2 [2] | 1 | counting | the compact certificate remains as prior evidence |
+| `chair_push` | 2 [2] | 2 | counting | replayed pushed-back chair |
+| `character_colleague` | 2 [2] | 2 | counting | adult bust in speaking-then-listening posture |
+| `character_jordan` | 2 [2] | 2 | counting | adult bust oriented toward shared work artifact |
+| `checked_door` | 2 [2] | 1 | counting | the coloured stroke is scene-owned and will not be held |
+| `checklist_rows` | 2 [2] | 1 | counting | a clipboard of tick rows where the empty rows are the open risk |
+| `clock_dial` | 2 [2] | 2 | counting | a wall clock whose hands can be moved to show time passing or rewinding |
+| `close_tick` | 2 [2] | 2 | counting | the single green mark in the film, arriving only as the close is named |
+| `closed_doors_row` | 2 [2] | 1 | counting | systems as shut doors receding into the dark |
+| `cloud` | 2 [2] | 1 | counting | the remote destination keeps the offsite Report copy |
+| `cloud_holder` | 2 [2] | 1 | counting | offsite storage holding a copy |
+| `colleague_figure` | 2 [2] | 2 | counting | neutral adult colleague standing on left of desk |
+| `colleague_rig` | 2 [2] | 2 | counting | seated adult dialogue partner |
+| `commitment_tab` | 2 [2] | 2 | counting | stepped-time anchor slip traveling from habit to calendar leaf |
+| `compliment_bracket` | 2 [2] | 2 | counting | annotation bracket identifying superficial praise phrase |
+| `compliment_slip_bottom` | 2 [2] | 2 | counting | lower praise layer covering feedback |
+| `compliment_slip_top` | 2 [2] | 2 | counting | upper praise layer covering feedback |
+| `consequence_strip` | 2 [2] | 2 | counting | feedback strip card with type pill and work consequence |
+| `constraint_frame` | 2 [2] | 2 | counting | boundary defining active work area for disclosed constraints |
+| `conversation_slots_rail` | 2 [2] | 2 | counting | four physical planning slots unmasked across the rail |
+| `copy` | 2 [2] | 2 | counting | the watcher's tray copy, same card as b02 but noise |
+| `copy_label` | 2 [2] | 2 | counting | pill naming the card retained by the tray |
+| `copy_whole` | 2 [2] | 1 | counting | a copy on the drive |
+| `correction_note` | 2 [2] | 2 | counting | a brief chance to amend before leaving |
+| `corrective_slip` | 2 [2] | 2 | counting | central feedback paper slip held at right anchor |
+| `dark_stage` | 2 [2] | 1 | counting | one unchanging model space |
+| `dashed_threat_route` | 2 [2] | 1 | counting | a dashed route in the threat colour from a far device into the gate |
+| `deadline_mark` | 2 [2] | 2 | counting | small flag carried by the nearer-deadline pan |
+| `decided_word` | 2 [2] | 2 | counting | the first missing answer, written above the left empty chairs |
+| `decision_line` | 2 [2] | 2 | counting | the written decision |
+| `decision_list` | 2 [2] | 2 | counting | the specific outcome written on the table's clear front |
+| `deliberate_settings` | 2 [2] | 2 | counting | three choices resolved in ink |
+| `delivery_arrows` | 2 [2] | 2 | counting | four open-headed hand arrows end above each face, never through it |
+| `demand_slip` | 2 [2] | 2 | counting | directive note demanding earlier submission |
+| `desk_boundary` | 2 [2] | 1 | counting | a quiet reminder of shared location |
+| `desk_lamp` | 2 [2] | 2 | counting | a visible warm-white source with its bulb attached to its shade |
+| `desk_rule` | 2 [2] | 1 | counting | the two local devices share one baseline |
+| `device_screen_portal` | 2 [2] | 1 | counting | a device whose screen opening is where a nested picture shows through |
+| `diagram_push` | 2 [2] | 2 | counting | slow push toward the phone point, then a fast zoom into it |
+| `dir_arrow` | 2 [2] | 2 | counting | a direction arrow that is offered, then struck out |
+| `direct_underline` | 2 [2] | 2 | counting | rust emphasis line under exposed message |
+| `dock_subject` | 2 [2] | 1 | counting | the tracked parcel is still inside the hub |
+| `document_ruled_lines` | 2 [2] | 2 | counting | physical office paper planning lines |
+| `document_window_bars` | 2 [2] | 1 | counting | a document window drawn as a title bar and grey text bars, no words |
+| `draft_sheet` | 2 [2] | 2 | counting | feedback draft sheet on right |
+| `drive_holder` | 2 [2] | 1 | counting | the drive holding a copy |
+| `dusk_skyline` | 2 [2] | 1 | counting | far buildings in silhouette with a few lit windows twinkling, so the empty sky has life |
+| `elapsed_time_leaf` | 2 [2] | 2 | counting | calendar leaf establishing elapsed time |
+| `empty_file_underline` | 2 [2] | 2 | counting | attention moves to the existing omission without moving the object |
+| `empty_target` | 2 [2] | 1 | counting | the next piece has not yet been written |
+| `envelope` | 2 [2] | 2 | counting | a message |
+| `evaluated_slip` | 2 [2] | 2 | counting | paper speech slip retaining evaluated phrasing |
+| `external_copy` | 2 [2] | 1 | counting | one intact local backup, not a new copy |
+| `failure_chip` | 2 [2] | 2 | counting | a quiet status pill, its icon names the active cause |
+| `failure_device` | 2 [2] | 1 | counting | the only storage location |
+| `failure_tag` | 2 [2] | 1 | counting | a short outcome attached to the drive fault |
+| `far_door_four` | 2 [2] | 1 | counting | a small shut door recedes into the coming corridor |
+| `far_door_one` | 2 [2] | 1 | counting | a small shut door recedes into the coming corridor |
+| `far_door_three` | 2 [2] | 1 | counting | a small shut door recedes into the coming corridor |
+| `far_door_two` | 2 [2] | 1 | counting | a small shut door recedes into the coming corridor |
+| `far_doors` | 2 [2] | 1 | counting | closed systems at a distant wall, deliberately unlabelled |
+| `file_type_badge` | 2 [2] | 2 | counting | a small outline badge standing for the file type |
+| `filter_mesh_disc` | 2 [2] | 1 | counting | a disc of crossing strands across a throat, with a glow layer held back for later |
+| `fold_crease_bottom` | 2 [2] | 2 | counting | crease mark on praise slip |
+| `fold_crease_top` | 2 [2] | 2 | counting | crease mark on praise slip |
+| `folded_doubt_bubble` | 2 [2] | 1 | counting | a small folded thought bubble with a crease and one red seam, two tail dots to the head |
+| `folded_page` | 2 [2] | 2 | counting | the shared draft |
+| `folder_outline` | 2 [2] | 2 | counting | a folder outline for where the file is kept |
+| `friday_label` | 2 [2] | 2 | counting | handwritten end-of-week label |
+| `gap_span` | 2 [2] | 2 | counting | highlighted placeholder in the update message for the omitted date |
 | `gaze_lines` | 2 [2] | 1 | counting | dashed lines converging from several heads onto one focus |
-| `owner_chip` | 2 [2] | 1 | counting | a small pill chip with a person icon and a role word |
-| `speech_bubble` | 2 [2] | 2 | counting | a rounded bubble with a tail carrying one spoken or recalled line |
-| `strike_out_stroke` | 2 [2] | 1 | counting | one hand-drawn stroke struck across an item to cancel it |
-| `tilted_note` | 2 [2] | 1 | counting | a tilted outlined note pinned to a surface, naming one fact |
+| `ghost_chair` | 2 [2] | 2 | counting | pushed-back chair of the first meeting |
+| `glass_funnel` | 2 [2] | 1 | counting | a translucent cone with a dark mouth whose outline draws itself from the rim down |
+| `gloss_effort` | 2 [2] | 2 | counting | muted clarification beneath the second question |
+| `gloss_impact` | 2 [2] | 2 | counting | muted clarification beneath the first question |
+| `glow` | 2 [2] | 2 | counting | pale halo |
+| `go_higher` | 2 [2] | 2 | counting | the rule printed in the class colour |
+| `habit_calendar_scaffold` | 2 [2] | 2 | counting | blank planning surface for habit and calendar checkpoints |
+| `half_ticked_checklist` | 2 [2] | 1 | counting | a clipboard with four boxes, two ticked, the two empty ones edged red |
+| `harm_question` | 2 [2] | 2 | counting | a decision mark belongs to the tentative page, not the owner |
+| `headset_object` | 2 [2] | 1 | counting | a headset drawn as an object (band, two ear cups, a mic boom with a red tip) |
+| `headset_prop` | 2 [2] | 1 | counting | a headset drawn as an object (band arc, two cups, a boom mic) |
+| `held_question` | 2 [2] | 2 | counting | typing finishes before the silence and then nothing moves |
+| `identity_list` | 2 [2] | 2 | counting | three listed holders, no invented names |
+| `illustrative_note` | 2 [2] | 1 | counting | this is an example of weights rather than a numerical measurement |
+| `imagined_information_note` | 2 [2] | 2 | counting | qualified assumption attached beside the held page |
+| `impact_underline` | 2 [2] | 2 | counting | single accent emphasis under the impact question |
+| `inner_boundary` | 2 [2] | 1 | counting | the narrowest opening |
+| `inspection_heading` | 2 [2] | 2 | counting | a zone heading above the inspected page |
+| `jordan_figure` | 2 [2] | 2 | counting | neutral adult collaborator Jordan standing on right of desk |
+| `jordan_rig` | 2 [2] | 2 | counting | seated adult dialogue partner facing inward |
+| `key_slot_browser` | 2 [2] | 2 | counting | an empty dashed slot at the browser |
+| `key_slot_server` | 2 [2] | 2 | counting | an empty dashed slot at the server |
+| `label_https` | 2 [2] | 2 | counting | pill naming the protected tube |
+| `label_matters` | 2 [2] | 2 | counting | the importance question |
+| `label_noise` | 2 [2] | 2 | counting | pill naming what the tray holds |
+| `label_pill` | 2 [2] | 1 | counting | the Watcher tag on a leader |
+| `label_pinned_to_part` | 2 [2] | 1 | counting | a saturated pill label with a pointer to the part it names |
+| `label_scrambled` | 2 [2] | 2 | counting | pill naming the result |
+| `label_soon` | 2 [2] | 2 | counting | the time question |
+| `label_stamp` | 2 [2] | 2 | counting | a label about who you are |
+| `label_unscrambled` | 2 [2] | 2 | counting | pill naming the readable result |
+| `label_watcher2` | 2 [2] | 2 | counting | pill naming the box, above it and clear of the tube label |
+| `laptop_detail` | 2 [2] | 2 | counting | origin of the connected fault |
+| `laptop_email` | 2 [2] | 1 | counting | monoline laptop with the email, attachment and Send |
+| `laptop_holder` | 2 [2] | 1 | counting | the laptop holding the Report |
+| `leader_note` | 2 [2] | 2 | counting | a short muted caption beside a group, joined to it by a thin leader ending in a dot |
+| `list_title` | 2 [2] | 2 | counting | handwritten list heading |
+| `listening_desk` | 2 [2] | 2 | counting | table anchor for two interlocutors |
+| `login_packet_copy` | 2 [2] | 1 | counting | the copy, a second plain packet |
+| `login_status` | 2 [2] | 1 | counting | the successful verdict region of the monitor |
+| `mail_laptop` | 2 [2] | 1 | counting | the email decision surface |
+| `maya` | 2 [2] | 1 | counting | Maya stands at the path start, then opens her palm toward the choices |
+| `maya_reaction` | 2 [2] | 1 | counting | Maya considers what she sees from behind the desk edge |
+| `meeting_table` | 2 [2] | 2 | counting | the table line, four chairs, four people, two scribble bubbles |
+| `meeting_table_surface` | 2 [2] | 2 | counting | shared wooden work surface spanning the meeting area |
+| `missing_tag` | 2 [2] | 2 | counting | the risk verdict hangs above its tile clear of all rail labels |
+| `motive_assumption_slip` | 2 [2] | 2 | counting | observer note with presumed internal motive |
+| `motive_gap` | 2 [2] | 2 | counting | unconnected dashed boundary card representing absent motive |
+| `name_cross` | 2 [2] | 2 | counting | the Name row mark turns to a cross |
+| `named_boundary` | 2 [2] | 1 | counting | the closest boundary surrounds the shared object |
+| `named_sender` | 2 [2] | 1 | counting | a semantic held anchor for the existing kit name tag |
+| `named_team` | 2 [2] | 2 | counting | exactly three teammates inside the small ring |
+| `neg_cross` | 2 [2] | 2 | counting | the cross at the server edge |
+| `neutral_work_papers` | 2 [2] | 2 | counting | stacked document and task list on the desk |
+| `next_week_checkpoint` | 2 [2] | 2 | counting | calendar leaf card with accent header and verification slot |
+| `night_wall` | 2 [2] | 1 | counting | the inside room stays unlit around the evidence |
+| `noise_packet` | 2 [2] | 1 | counting | the login after the key, only glyphs |
+| `note_card_upright` | 2 [2] | 1 | counting | a small card turned up on a table, two scribbled lines and an optional red mark |
+| `notes` | 2 [2] | 1 | counting | meeting-notes document awaiting its internal class |
+| `notification_card` | 2 [2] | 2 | counting | a system prompt card with a title, one question and two buttons, a tail to its device |
+| `occasion_marker` | 2 [2] | 2 | counting | hand-drawn bounding box highlighting temporal context |
+| `office_desk` | 2 [2] | 2 | counting | wooden work desk surface anchoring the collaboration space |
+| `office_layers` | 2 [2] | 1 | counting | wall, colleague, and near desk establish the workplace |
+| `offline_label` | 2 [2] | 2 | counting | the isolated branch alone takes the accent |
+| `offsite_copy` | 2 [2] | 1 | counting | intact copy beyond the local boundary |
+| `old_line_ghost` | 2 [2] | 2 | counting | grey bars standing for the vague remark |
+| `old_link_review` | 2 [2] | 2 | counting | one old link is marked off |
+| `omission_link` | 2 [2] | 2 | counting | directional connector targeting the unnoted gap in the update |
+| `omission_tag` | 2 [2] | 2 | counting | badge identifying the gap as an omission rather than character |
+| `on_time_release` | 2 [2] | 2 | counting | deliverable document receiving on-time stamp |
+| `onboarding_schedule_doc` | 2 [2] | 2 | counting | delayed deliverable timeline document |
+| `open_arc` | 2 [2] | 2 | counting | an open gateway on the baseline, the way out of the sheet |
+| `open_question_panel` | 2 [2] | 2 | counting | unfolded question card beside unfilled listening slot |
+| `original_slot_trace` | 2 [2] | 2 | counting | the original occupancy outline remains after the transfer |
+| `owner_arrow` | 2 [2] | 2 | counting | the one action, an arrow from the item to the owner |
+| `packet_readable` | 2 [2] | 2 | counting | readable form packet inside the inset (same object as earlier beats) |
+| `padlock_between` | 2 [2] | 2 | counting | an ink lock between the address and the name |
+| `padlock_label` | 2 [2] | 2 | counting | pill names the open padlock beside its body |
+| `padlock_open` | 2 [2] | 2 | counting | the promised outcome, open, slate |
+| `padlock_ring` | 2 [2] | 1 | counting | one soft accent ring pulse round the closing lock |
+| `parked_name` | 2 [2] | 2 | counting | the accountable name sits beside the item in the parking lot |
+| `parking_lot` | 2 [2] | 2 | counting | a rough corner box turns the side topic into a parked item |
+| `people_row` | 2 [2] | 2 | counting | real people who could be harmed |
+| `perspective_table` | 2 [2] | 1 | counting | a long table top in simple perspective with a front panel, legs and a floor shadow |
+| `pillow_edge` | 2 [2] | 2 | counting | a dark pillow corner at the lower left, the only hint of a bed |
+| `pinned_paper_tag` | 2 [2] | 1 | counting | a paper tag on a string pinned to one point of an object, its word written on |
+| `plain_marker` | 2 [2] | 2 | counting | calendar flag with no date |
+| `plain_packet` | 2 [2] | 1 | counting | the login packet, readable user and password, the one accent |
+| `planning_note` | 2 [2] | 2 | counting | memo card prop on desk representing concrete work plan |
+| `policy_page` | 2 [2] | 2 | counting | a small outline document grounds the decision beneath its owner |
+| `presenter_slide` | 2 [2] | 2 | counting | the slide Sam presents |
+| `press_button` | 2 [2] | 2 | counting | a round icon button that presses down and springs back |
+| `priya` | 2 [2] | 2 | counting | the named decision owner, placed on the existing desk line |
+| `priya_circle` | 2 [2] | 2 | counting | one marker-colour loop makes the caller unmistakable |
+| `priya_words` | 2 [2] | 2 | counting | the decision rule written beneath the owner |
+| `protected_channel` | 2 [2] | 2 | counting | a padlocked line connects the classified page to its recipient |
+| `q_effort` | 2 [2] | 2 | counting | future horizontal-axis question |
+| `q_impact` | 2 [2] | 2 | counting | future vertical-axis question |
+| `qmark` | 2 [2] | 2 | counting | the harm question as one line question mark |
+| `quantity_as_things` | 2 [2] | 1 | counting | a grid with exactly as many small objects as the quantity, landing in order |
+| `question_card` | 2 [2] | 2 | counting | the one question the frame waits on |
+| `question_connector` | 2 [2] | 1 | counting | the short link from impact down to the closing question |
+| `question_fill` | 2 [2] | 1 | counting | the closing row's accent background, outlined for the card's strongest emphasis |
+| `question_mark` | 2 [2] | 2 | counting | a large ink question mark where the key would be |
+| `question_marks` | 2 [2] | 2 | counting | the only marker-colour emphasis, occupying two of the empty chairs |
+| `question_slip` | 2 [2] | 1 | counting | a small paper note with an offset shadow carrying one short question, and a box for a tick |
+| `question_text` | 2 [2] | 1 | counting | the closing question, in Priya's words |
+| `quickwin_underline` | 2 [2] | 2 | counting | the scene's one accent marker underline |
+| `rail` | 2 [2] | 1 | counting | continuing three-tile check rail |
+| `rail_slot` | 2 [2] | 2 | counting | empty physical planning pocket on the conversation rail |
+| `range_line` | 2 [2] | 2 | counting | a straight length from satellite to phone |
+| `readable_label` | 2 [2] | 2 | counting | pill attached beneath the readable packet |
+| `readout_timer` | 2 [2] | 1 | counting | the phone's running timer, about 0.07 s |
+| `recipient` | 2 [2] | 2 | counting | the one named person (pip rig) with a name tag |
+| `recipient_label` | 2 [2] | 2 | counting | words follow the expected recipient group |
+| `removal_list` | 2 [2] | 2 | counting | a name no longer has access |
+| `reply_30` | 2 [2] | 1 | counting | the first assured answer in the shared question's first well |
+| `reply_60` | 2 [2] | 1 | counting | the equally bright second answer, not a correction or a verdict |
+| `report_whole` | 2 [2] | 1 | counting | the one Report, whole |
+| `resolved_schedule` | 2 [2] | 2 | counting | resolved schedule timeline with milestone blocks |
+| `resort_title` | 2 [2] | 2 | counting | callback heading on the first board |
+| `returned_key` | 2 [2] | 2 | counting | key disabled independently of its base |
+| `returning_desk` | 2 [2] | 2 | counting | office desk surface and legs |
+| `returning_forward` | 2 [2] | 2 | counting | route from manager into the identity gate |
+| `review_heading` | 2 [2] | 2 | counting | shared items are reviewed |
+| `review_token` | 2 [2] | 2 | counting | one outlined scheduling token retains its identity throughout |
+| `ring` | 2 [2] | 2 | counting | brush circle round the vague word |
+| `room_screen` | 2 [2] | 2 | counting | the slide screen on the wall |
+| `room_table` | 2 [2] | 2 | counting | the shared meeting table |
+| `route` | 2 [2] | 2 | counting | dashed accent route along the path, wiped in left to right, under the board cards and the packet |
+| `route_nodes` | 2 [2] | 1 | counting | four nodes on a line, the first named Shared wifi |
+| `row_notes` | 2 [2] | 2 | counting | muted scheduling notes beside the sorted rows |
+| `rule_family` | 2 [2] | 1 | counting | simultaneous colour change makes one consolidated principle |
+| `rule_rail` | 2 [2] | 1 | counting | the completed 3-2-1 rule is readable as three equal tiles |
+| `rule_tiles` | 2 [2] | 1 | counting | the 3-2-1 rail |
+| `same_key_pill` | 2 [2] | 2 | counting | tie between the two blue keys |
+| `schedule_link` | 2 [2] | 2 | counting | connector linking deliverable into resolved schedule |
+| `seated_back_figure` | 2 [2] | 1 | counting | a seated person seen from behind as a head, neck and jacket in muted tokens, no face |
+| `seated_jordan` | 2 [2] | 2 | counting | jordan sitting silently at desk |
+| `seated_observer` | 2 [2] | 2 | counting | adult observer figure observing from desk side |
+| `sender_icon` | 2 [2] | 2 | counting | owner receives the link back |
+| `sent_today` | 2 [2] | 2 | counting | the only emphasis marks the written follow-through |
+| `server_stack` | 2 [2] | 1 | counting | a server box with a name label and a data store |
+| `shared_deliverable_page` | 2 [2] | 2 | counting | consequence document resting between interlocutors |
+| `shared_goal_panel` | 2 [2] | 2 | counting | collaborative alignment card turning friction into mutual problem solving |
+| `shared_surface` | 2 [2] | 1 | counting | four cast members discuss behind a persistent line and chairs |
+| `shredder` | 2 [2] | 2 | counting | a paper copy feeds in and leaves as strips |
+| `side_bubble` | 2 [2] | 2 | counting | the side topic arrives near the current question |
+| `signin_page` | 2 [3] | 1 | counting | a product-neutral sign-in page with an address line, a title, one field and a button |
+| `situation_strip` | 2 [4] | 2 | counting | unfolding strip presenting situation and omission clauses |
+| `speaker_listener` | 2 [2] | 2 | counting | two people in the feed |
+| `speaking_cue_burst` | 2 [2] | 2 | counting | acoustic sound wave indicator retiring on pause |
+| `split_arrows` | 2 [2] | 2 | counting | open headed hand-drawn question split |
+| `split_seam` | 2 [2] | 2 | counting | one vertical line drawn top to bottom that divides the frame into two panels of the same set |
+| `stamp_chip` | 2 [2] | 2 | counting | the sending time, docked in the readout |
+| `start_line` | 2 [2] | 2 | counting | closing action written below the sorted list |
+| `station_pins` | 2 [2] | 1 | counting | the five stops named in narration order |
+| `step_indicator` | 2 [2] | 2 | counting | sequential slot marker within the workflow rail |
+| `step_tile` | 2 [2] | 1 | counting | tile 1 of the held step bar, lit on its own overlay |
+| `sticky_note_back` | 2 [2] | 2 | counting | blank paper square, name turned away |
+| `stolen_token` | 2 [2] | 2 | counting | the same copied credential attempts entry |
+| `stopped_reach` | 2 [2] | 2 | counting | an open hand cannot alter the source |
+| `subject_annotation` | 2 [2] | 2 | counting | the diagnosis sits beside the existing words |
+| `subject_circle` | 2 [2] | 2 | counting | the only marker-colour emphasis, measured from the kit title box |
+| `subject_note` | 2 [2] | 2 | counting | a muted diagnosis sits immediately beside the circled title |
+| `system_board` | 2 [2] | 1 | counting | one bounded workstation holds the local copies and the offsite copy sits apart |
+| `table` | 2 [2] | 2 | counting | the callback meeting table, freshly drawn at this station |
+| `table_top` | 2 [2] | 2 | counting | the meeting table |
+| `tag_failed` | 2 [2] | 1 | counting | a short red status tag hung from the laptop's fault mark |
+| `tally_cell` | 2 [2] | 1 | counting | one cell of a running scoreboard, holding a run's name until its verdict is stamped in |
+| `team_at_table` | 2 [2] | 1 | counting | the meeting |
+| `team_pictograms` | 2 [2] | 1 | counting | three existing holders within the innermost future boundary |
+| `tearoff_pad_pages` | 2 [2] | 1 | counting | a tear-off pad whose top page carries a mark |
+| `tearoff_with_question` | 2 [2] | 1 | counting | a tear-off calendar page with one red question mark on its day |
+| `tent_card_role` | 2 [2] | 1 | counting | a folded tent card standing on a table, lettered with a role, in the habit colour |
+| `thread_connector` | 2 [2] | 2 | counting | connector line drawing into target planning note |
+| `threat_device_outline` | 2 [2] | 1 | counting | a smaller device drawn only as an outline in the threat colour, far from yours |
+| `three_checks_label` | 2 [2] | 2 | counting | a compact named pill under the expanded certificate badge |
+| `tick_row` | 2 [2] | 2 | counting | the pass mark on one certificate row |
+| `tick_stroke` | 2 [2] | 2 | counting | hand-drawn commitment tick |
+| `time_stamp_chip` | 2 [2] | 2 | counting | a tiny clock on a chip, no words |
+| `time_strip` | 2 [2] | 1 | counting | a hairline axis of the hours with short ticks, a marker on it and the end of the run named at the right |
+| `timeline_strip` | 2 [2] | 2 | counting | a line with ticks for moments of a meeting |
+| `token_a` | 2 [2] | 2 | counting | browser temporary value travelling to the server slot |
+| `token_b` | 2 [2] | 2 | counting | server temporary value travelling to the browser slot |
+| `tower_block_lit` | 2 [2] | 1 | counting | a tall office tower drawn as an object with warm lit windows and a door |
+| `tray_values` | 2 [2] | 2 | counting | the watcher keeps two small copies rather than a key |
+| `trip_band` | 2 [2] | 2 | counting | a solid ink band either side of the watcher's disc |
+| `trust_connector` | 2 [2] | 2 | counting | a quiet line from the completed checks into the browser key |
 | `turning_head` | 2 [2] | 1 | counting | a top-down head with shoulders and a nose tick that rotates to face a target |
-| `verdict_stamp` | 2 [2] | 2 | counting | a short label stamped as a pill or tilted note, coloured to carry its valence |
-| `whiteboard_panel` | 2 [2] | 1 | counting | a face-on whiteboard with an inner frame and a marker tray |
+| `underline` | 2 [2] | 2 | counting | marks Sam |
+| `unknown_ring` | 2 [2] | 2 | counting | a dashed ring with a question mark marking something not yet known |
+| `unresolved_document` | 2 [2] | 2 | counting | unchanged work queue sheet remaining in incomplete state |
+| `unsure_item` | 2 [2] | 2 | counting | a dashed grey page that has no class yet |
+| `update_message` | 2 [2] | 2 | counting | colleague project update card on left |
+| `urgent_tags` | 2 [2] | 2 | counting | four arrival-order urgency labels |
+| `vendor_approval_cluster` | 2 [2] | 2 | counting | grouped container uniting three stuck vendor dependencies |
+| `vendor_approval_paper` | 2 [2] | 2 | counting | individual paper token showing blocked vendor dependency |
+| `verification_label` | 2 [2] | 2 | counting | section header tag for follow-up checkpoints |
+| `vulnerable_file` | 2 [2] | 1 | counting | the work file inside the device |
+| `wait_glyph` | 2 [2] | 1 | counting | three ink bars on a white tile with a dashed outline, no words |
+| `wall_of_empty_slots` | 2 [2] | 1 | counting | a framed wall of small empty trays waiting to be filled |
+| `wall_veil` | 2 [2] | 1 | counting | a dark veil laid over the back wall only, so the props in front keep their colour |
+| `warm_sheet` | 2 [2] | 1 | counting | the confidential station has a quiet mid-value ground |
+| `watcher_panel` | 2 [2] | 2 | counting | the panel that will show only noise |
+| `watcher_tray` | 2 [2] | 1 | counting | the copy, identical and readable, is made at the watcher box and drops into the tray |
+| `weighted_connections` | 2 [2] | 1 | counting | every earlier piece contributes, three links gain prominence |
+| `who_word` | 2 [2] | 2 | counting | the second missing answer, written above the right empty chairs |
+| `widest_ring` | 2 [2] | 2 | counting | the broadest access boundary |
+| `window_cloud_drift` | 2 [2] | 1 | counting | a soft cloud drifting slowly inside a clipped window pane, the room's ambient loop |
+| `window_dust` | 2 [2] | 2 | counting | slow motes drifting up through a shaft of window light |
+| `window_light_pool` | 2 [2] | 1 | counting | a soft pale wash falling from a window across a wall as the light lifts |
+| `word_urgent` | 2 [2] | 2 | counting | the bundled priority signal |
+| `work_door` | 2 [2] | 1 | counting | the second calm shut system door |
+| `absent_document` | 1 [1] | 1 | counting | retain the outline inside its unchanged device |
+| `absorbed` | 1 [1] | 1 | counting | the pulse spent at the phone point |
+| `accelerating_backlog` | 1 [1] | 1 | counting | neutral parcels arrive at shortening intervals beside packing |
+| `accent_edge` | 1 [1] | 1 | counting | Priya's completed bubble |
+| `accent_outline` | 1 [1] | 1 | counting | the single blue outline naming the noise packet |
+| `accent_ring` | 1 [1] | 1 | counting | the watcher is named, so it takes the one accent |
+| `accent_underlines` | 1 [1] | 1 | counting | the existing decision is marked, never copied |
+| `acceptance_ring` | 1 [1] | 1 | counting | one teaching halo names the accepted action |
+| `access_label` | 1 [1] | 1 | counting | label attached to locked folder |
+| `account_list` | 1 [1] | 1 | counting | unlettered rows stand for the accounts explicitly added |
+| `accumulating_output` | 1 [1] | 1 | counting | the shared heat vocabulary rises above both racks |
+| `accumulating_reply` | 1 [1] | 1 | counting | one measured word at a time, wrapping within the held band |
+| `action_report` | 1 [1] | 1 | counting | report note moves toward the security side of the desk |
+| `action_rim` | 1 [1] | 1 | counting | one amber emphasis frames the refusal already drawn by the kit |
+| `actions_gauge` | 1 [1] | 1 | counting | round paper gauge, label only, its needle is the separate actions_needle el |
+| `actions_needle_mark` | 1 [1] | 1 | counting | the needle that does not move; the scene's one accent |
+| `active_failure_mark` | 1 [1] | 1 | counting | the blue icon disc is the one active failure at a time |
+| `active_spare` | 1 [1] | 1 | counting | a single cyan outline locates the starting reserve |
+| `added_block_frame` | 1 [1] | 1 | counting | an accent outline round the one block that was added to a held stack |
+| `address_bar` | 1 [1] | 1 | counting | a wide generic address bar, plain, with the domain |
+| `address_chip` | 1 [1] | 1 | counting | the address as typed |
+| `address_line` | 1 [1] | 1 | counting | an address in label type, set directly under another so the two compare letter by letter |
+| `affected_people` | 1 [1] | 1 | counting | personal details belong to actual people |
+| `agenda_card` | 1 [1] | 1 | counting | a blank agenda card, measured at the kit's natural size |
+| `air_handler_row` | 1 [1] | 1 | counting | already running cabinets retain their shared geometry. |
+| `aisle_boundaries` | 1 [1] | 1 | counting | three empty outlined spaces distinguish the passages |
+| `aisle_name` | 1 [1] | 1 | counting | the term sits above the arrowheads, inside the common passage |
+| `aisle_role` | 1 [1] | 1 | counting | staff walks one grid axis, with no held marker |
+| `aisle_wash` | 1 [1] | 1 | counting | a faint tint on each side of a cutaway marks the cold side and the hot side, no words |
+| `alarm_panel` | 1 [1] | 1 | counting | the failed pump stays the alarm source |
+| `alarm_route` | 1 [1] | 1 | counting | a leader reaches the failed pump without crossing rack labels |
+| `all_flows` | 1 [1] | 1 | counting | independent routes make the full machine visibly continuous |
+| `answer_loop` | 1 [1] | 1 | counting | ink ring and tick select the narrowest workable option |
+| `answer_tray` | 1 [1] | 1 | counting | a shallow tray holding several small answered notes, labelled with the time they are answered |
+| `anyone_boundary` | 1 [1] | 1 | counting | the widest boundary added without redrawing the held company ring |
+| `approval_pills` | 1 [1] | 1 | counting | each outcome sits beside its corresponding row |
+| `approved_document` | 1 [1] | 1 | counting | the kit page carries approval and its own class |
+| `arrival_marks` | 1 [1] | 1 | counting | a mark placed on each member of an array at the moment a spreading front reaches it |
+| `ascending_heat` | 1 [1] | 1 | counting | amber marks climb the existing riser, not a new pipe. |
+| `aside_bubble` | 1 [1] | 1 | counting | a temporary interruption near the main question |
+| `ask_card` | 1 [1] | 1 | counting | a small card standing for one message, an avatar, a name bar, text bars and an attachment chip (no words) |
+| `assembled_thread` | 1 [1] | 1 | counting | the question stays above the reply while each numbered step arrives on its words |
+| `attached_observer` | 1 [1] | 1 | counting | one neutral name belongs to the aperture box |
+| `attached_promise_name` | 1 [1] | 1 | counting | the name sits alongside the open object and clear of the watcher label |
+| `attachment_chip` | 1 [1] | 1 | counting | a file chip of a drawn document, a name bar and a paperclip, standing for an attachment |
+| `attempted_bearing` | 1 [1] | 1 | counting | a neutral arrow points back toward the established source |
+| `authenticator_device` | 1 [1] | 1 | counting | the companion device opens before its camera is used |
+| `authenticator_phone` | 1 [1] | 1 | counting | the physical source of the additional proof |
+| `authorisation_note` | 1 [1] | 1 | counting | the payment check remains beside the order |
+| `automatic_fill` | 1 [1] | 1 | counting | simultaneous product values, no pointer movement or keystrokes |
+| `axis_effort` | 1 [1] | 1 | counting | horizontal effort arrow |
+| `axis_impact` | 1 [1] | 1 | counting | vertical impact arrow |
+| `back_wall` | 1 [1] | 1 | counting | the unlit interior makes the pane a physical source of evidence |
+| `backup_code_entry` | 1 [1] | 1 | counting | a masked illustrative backup value is entered in the recovery form |
+| `backup_code_panel` | 1 [1] | 1 | counting | a stable product surface held for the storage decision |
+| `bag` | 1 [1] | 1 | counting | the continuing cutaway container, including every copy it carries |
+| `bag_boundary` | 1 [1] | 1 | counting | a neutral shared-location boundary |
+| `bag_ground` | 1 [1] | 1 | counting | pale station field behind the check |
+| `batch_bracket` | 1 [1] | 1 | counting | bracket and Friday slot around expenses |
+| `batch_divider` | 1 [1] | 1 | counting | the queue has a visible closing boundary |
+| `batch_slot` | 1 [1] | 1 | counting | a card in the margin that gathers several small items into one agreed place, its label rewritten in place |
+| `bead_stream` | 1 [1] | 1 | counting | small beads travelling along a path, a front revealing them and a colour that follows position |
+| `bedroom_set` | 1 [1] | 1 | counting | restrained night bedroom framing around the phone |
+| `bedside_device` | 1 [1] | 1 | counting | the kit owns every screen layer and all its words |
+| `bedside_phone` | 1 [1] | 1 | counting | one request is denied and reported on the dark nightstand |
+| `before_tick` | 1 [1] | 1 | counting | the completed move is acknowledged in the checklist's existing box |
+| `behaviour_detail_text` | 1 [1] | 1 | counting | the concrete detail from Priya's actual update |
+| `behaviour_fill` | 1 [1] | 1 | counting | covers the dim placeholder row with the concrete read's plain background |
+| `belief_stamp` | 1 [1] | 1 | counting | the positive words carry the single teaching accent |
+| `belief_words` | 1 [1] | 1 | counting | the named standard stamps in as the notice settles |
+| `bent_forward` | 1 [1] | 1 | counting | same marker route on each setting |
+| `big_address` | 1 [1] | 1 | counting | the page's address repeated large, the one different word in red |
 | `big_number_stamp` | 1 [1] | 1 | counting | a large display number stamped as the anchor of a point |
-| `checklist_card` | 1 [1] | 1 | counting | a card with a header strip, a kicker and an empty checkbox holding one written item |
+| `blank_meeting_block` | 1 [1] | 1 | counting | a blank rounded block in a planner column standing for one meeting |
+| `blind_bars` | 1 [1] | 1 | counting | hard shadow bars on the distant wall |
+| `blocked_transmission` | 1 [1] | 1 | counting | upward transmission arrow stalled and struck through |
+| `board_checklist` | 1 [1] | 1 | counting | persistent three moves |
+| `board_continuity` | 1 [1] | 1 | counting | the existing path board remains the fixed world while the camera pushes toward its browser end |
+| `board_ground` | 1 [1] | 1 | counting | quiet surface under the device system |
+| `board_heading` | 1 [1] | 1 | counting | a new board for a practical pause |
+| `board_widen` | 1 [1] | 1 | counting | camera frame that makes room beyond the desk boundary |
+| `board_word` | 1 [1] | 1 | counting | marker lettering on the whiteboard |
+| `board_written_line` | 1 [1] | 1 | counting | a short plain sentence hand-lettered onto a held board on its spoken words |
+| `boundary_bag` | 1 [1] | 1 | counting | continuing shared-location boundary |
+| `boundary_label` | 1 [1] | 1 | counting | a label sits beyond every boundary |
+| `boundary_note` | 1 [1] | 1 | counting | the cyan term stays on the new roof boundary |
+| `bounded_team` | 1 [1] | 1 | counting | a bracket groups the three holders and leads into their selected row |
+| `bounded_window` | 1 [1] | 1 | counting | one bracketed space, three readable bands |
+| `box_ring` | 1 [1] | 1 | counting | a thin ink box drawn round a run of units to single it out before it changes |
+| `boxed_word_tab` | 1 [1] | 1 | counting | one word in a ruled box on the corner of a note, written in by hand |
+| `branch_a` | 1 [1] | 1 | counting | the first draw travels from the shared slot into the upper answer |
+| `branch_b` | 1 [1] | 1 | counting | the second draw has equal weight and light |
+| `branching_delivery` | 1 [1] | 1 | counting | four open hand arrows land above each recipient's response without crossing heads |
+| `breach_annotation` | 1 [1] | 1 | counting | danger names the broken receiver, not the person |
+| `breach_tag` | 1 [1] | 1 | counting | danger label connected to the compromised shopping door |
+| `break_question` | 1 [1] | 1 | counting | accented lead question held for the reflective pause |
+| `broad_crowd` | 1 [1] | 1 | counting | holders throughout the widest band |
+| `broad_label` | 1 [1] | 1 | counting | explicit generic setting name beside the boundary |
+| `browser_https` | 1 [1] | 1 | counting | the browser window at the https address with the login form |
+| `browser_key_lens` | 1 [1] | 1 | counting | the held browser key gains its lens exactly as it becomes the transformation point |
+| `browser_login` | 1 [1] | 1 | counting | a browser window showing a login form at http |
+| `browser_shell` | 1 [1] | 1 | counting | one persistent company account shell |
+| `browser_signin` | 1 [1] | 1 | counting | a browser window with an address bar over a plain sign-in page whose states cut |
+| `browser_warning` | 1 [1] | 1 | counting | the browser window's own warning panel over its content |
+| `browser_window_lookalike` | 1 [1] | 1 | counting | the address bar over the held window, host login-example.co |
+| `budget_block` | 1 [1] | 1 | counting | clean outlined budget report time block |
+| `budget_box` | 1 [1] | 1 | counting | accent circle around empty budget box |
+| `budget_document` | 1 [1] | 1 | counting | the shared document persists on the board |
+| `budget_link` | 1 [1] | 1 | counting | hand arrow from budget report to its block |
+| `budget_scraps` | 1 [1] | 1 | counting | scattered budget scraps |
+| `building_section` | 1 [1] | 1 | counting | the quiet shared architectural reference |
+| `button_lights_with_label` | 1 [1] | 1 | counting | a muted silhouette button that takes the accent colour as its label prints |
+| `cabinet_name` | 1 [1] | 1 | counting | an annotation clear of the cabinet's own identifier |
+| `cabinet_section` | 1 [1] | 1 | counting | the enlarged open cabinet establishes the air path |
+| `cable_route` | 1 [1] | 1 | counting | invisible guide offsets the carrier origin so its centre follows the kit cable |
+| `call_tile` | 1 [1] | 1 | counting | video call with empty agenda slot |
+| `callback_chain` | 1 [1] | 1 | counting | one named link and its corresponding machine are a single highlighted family. |
+| `callback_mail` | 1 [1] | 1 | counting | the familiar email returns with its class carried by the attachment outline |
+| `caller_emphasis` | 1 [1] | 1 | counting | one marker circle separates authority from input |
+| `caller_words` | 1 [1] | 1 | counting | the rule remains readable beneath the person |
+| `callout_flag_on_part` | 1 [1] | 1 | counting | a small flag planted on the part of a shown object that the narration names |
+| `cancellation` | 1 [1] | 1 | counting | error colour crosses the incomplete return, not the receiving point |
+| `candidate_point` | 1 [1] | 1 | counting | a gold disc with a soft halo, the far candidate |
+| `caption_plaque` | 1 [1] | 1 | counting | the one-line verdict sign, appears once both needles have spoken |
+| `card_new` | 1 [1] | 1 | counting | unplaced new analysis request |
+| `card_reply` | 1 [1] | 1 | counting | client reply card in the top-left slot |
+| `card_reply_accent` | 1 [1] | 1 | counting | one marker underline makes the placed request the focal point |
+| `card_stream` | 1 [1] | 1 | counting | copies queue at rest after their indifferent attempts |
+| `carried_forward_ink` | 1 [1] | 1 | counting | the previous emphasis becomes ordinary ink |
+| `carried_line` | 1 [1] | 1 | counting | a thin line drawn from one page into another, carrying a small object along it as it draws |
+| `carried_subject` | 1 [1] | 1 | counting | the same lamp moves along grid axes to the bench |
+| `cast_presenter` | 1 [1] | 1 | counting | same Sam as the opening table |
+| `causal_caption` | 1 [1] | 1 | counting | the path carries the explanation, words confirm it |
+| `caveat_note_card` | 1 [1] | 1 | counting | a white card pinned beside a picture that says what the picture does not show, with a cross on its corner |
+| `caveat_tag` | 1 [1] | 1 | counting | a small solid tag that says what a number is about, set on the picture it qualifies |
+| `cell_ring` | 1 [1] | 1 | counting | an accent ring drawn around one cell of a held table to call it back |
+| `cert_outline` | 1 [1] | 1 | counting | the accent ring on the travelling small card |
+| `cert_rows` | 1 [1] | 1 | counting | the large certificate with its three check rows |
+| `chain_foot` | 1 [1] | 1 | counting | four quiet links remain as the route's index |
+| `chain_pulse` | 1 [1] | 1 | counting | a single amber heat mark passes above the labels and disappears at the far end. |
+| `challenge_chip` | 1 [2] | 1 | counting | a small outlined pill holding a row of dots of varying size, named by a word above it |
+| `change_password_form` | 1 [1] | 1 | counting | an account field and manager action within the held application |
+| `changed_block_ring` | 1 [1] | 1 | counting | an amber ring on the glyph block that was swapped |
+| `channel` | 1 [1] | 1 | counting | one protected line from the list to the recipient, a copy travels it |
+| `channel_label` | 1 [1] | 1 | counting | label attached to locked channel |
+| `check_ground` | 1 [1] | 1 | counting | a quiet chapter field |
+| `check_line` | 1 [1] | 1 | counting | a dashed line from a device to what it checks, ending in a tick or a cross |
+| `check_panel` | 1 [1] | 1 | counting | the browser's checking panel, an empty tray the card is lifted into |
+| `check_panel_slot` | 1 [1] | 1 | counting | the browser's check panel, a quiet dashed slot the card lands in |
+| `check_question` | 1 [1] | 1 | counting | only saturated focal point in the held setup |
+| `check_verdict` | 1 [1] | 1 | counting | correct counts stay neutral while the absent criterion is outlined |
+| `checked_doorway` | 1 [1] | 1 | counting | identity rather than token possession is checked |
+| `checked_list` | 1 [1] | 1 | counting | identity rows next to the gate |
+| `checked_receipt` | 1 [1] | 1 | counting | the checked card becomes a small retained badge |
+| `checked_reply` | 1 [1] | 1 | counting | a single reply with abstract lines becomes matched. |
+| `checklist_heading` | 1 [1] | 1 | counting | heading anchors the shared board |
+| `checklist_row` | 1 [1] | 1 | counting | one readable commitment beside its completion mark |
+| `chip_deleted` | 1 [1] | 1 | counting | the deletion cause lands below the laptop at left |
+| `chip_drive` | 1 [1] | 1 | counting | the drive cause lands beside the laptop's upper left |
+| `chip_gravity` | 1 [1] | 1 | counting | the gravity effect, the one accent |
+| `chip_net` | 1 [1] | 1 | counting | the net gain, the one accent |
+| `chip_ransom` | 1 [1] | 1 | counting | the locked final cause lands beside the lower right of the laptop |
+| `chip_slot` | 1 [1] | 1 | counting | an empty slot for the error, filled in later beats |
+| `chip_speed` | 1 [1] | 1 | counting | the speed cost in microseconds |
+| `chip_stolen` | 1 [1] | 1 | counting | the theft cause lands at the right of the laptop |
+| `choice_question` | 1 [1] | 1 | counting | narration-led choice prompt on dark field |
+| `choice_rows` | 1 [1] | 1 | counting | identical unmarked letter rings preserve the decision |
+| `chosen_lane` | 1 [1] | 1 | counting | a single branch takes the marked parcel to its outbound dock |
+| `chosen_option` | 1 [1] | 1 | counting | an ink tick states the verdict and one accent loop focuses the third row |
+| `circle_a` | 1 [1] | 1 | counting | satellite-centred range sphere in cross-section |
+| `circle_b` | 1 [1] | 1 | counting | second satellite range sphere through the phone point |
+| `circle_c_growth` | 1 [1] | 1 | counting | a third satellite-centred sphere reaches the phone point |
+| `circular_boundary` | 1 [1] | 1 | counting | company scope |
+| `class_trays` | 1 [1] | 1 | counting | three outlined destinations form the scaffold |
+| `classified_page` | 1 [1] | 1 | counting | a single page whose perimeter becomes its class |
+| `cleared_responses` | 1 [1] | 1 | counting | the spoken agreement gives way to the permanent record |
 | `clipped_corner_tag` | 1 [1] | 1 | counting | a small icon tag clipped onto the corner of a card |
-| `clock_dial` | 1 [1] | 1 | counting | a dial whose hand sweeps a full turn to show time passing |
+| `clipped_strip` | 1 [1] | 1 | counting | a paper strip clipped across hanging strings, its words written on |
+| `clock_tick` | 1 [1] | 1 | counting | a small clock chip, the tick of one microsecond |
+| `close_complete` | 1 [1] | 1 | counting | the sole green mark completes the held checklist |
+| `close_office` | 1 [1] | 1 | counting | the same wall and papers frame a reaction-sized face |
+| `closed_air_loop` | 1 [1] | 1 | counting | the return runs across the ceiling into the cabinet top |
+| `closed_boundary` | 1 [1] | 1 | counting | the kit panels close the route that previously crossed |
+| `closed_loop` | 1 [1] | 1 | counting | cool supply and warm return keep travelling through the plant. |
+| `closed_loop_pipe` | 1 [1] | 1 | counting | a closed pipe loop drawn in two halves that meet at its far end, with beads inside |
+| `closed_refrigerant` | 1 [1] | 1 | counting | connected pipes and a compressor establish a closed circuit |
+| `closing_checklist` | 1 [1] | 1 | counting | prior moves complete while the close remains active |
+| `cloud_destination` | 1 [1] | 1 | counting | offsite storage outside the bounded desk |
+| `cloud_storage` | 1 [1] | 1 | counting | the offsite home |
+| `code_annotation` | 1 [1] | 1 | counting | the held device supplies the digits, not a duplicate |
+| `code_counterpart` | 1 [1] | 1 | counting | the authenticator is the independent second step |
+| `coil_leader` | 1 [1] | 1 | counting | the coil name stays clear of all moving routes |
+| `cold_return_direction` | 1 [1] | 1 | counting | the outlet travels back toward the hall |
+| `colleague_heads` | 1 [1] | 1 | counting | three plain line heads, the people it is meant for |
+| `colleagues` | 1 [1] | 1 | counting | three colleagues represented by simple line heads |
+| `coloured_question_slot` | 1 [1] | 1 | counting | the only marker colour invites a decision question |
+| `common_copies` | 1 [1] | 1 | counting | repeated sheets gain the identical correction |
+| `common_loss` | 1 [1] | 1 | counting | one outcome on the shared perimeter |
+| `common_place` | 1 [1] | 1 | counting | the enclosure is created after every object it covers |
+| `company_constraint` | 1 [1] | 1 | counting | local guidance remains a separate secondary note |
+| `company_explanation` | 1 [1] | 1 | counting | route from the tempting row into a separate note below |
+| `company_holders` | 1 [1] | 1 | counting | membership is not limited to the nearby team |
+| `company_label` | 1 [1] | 1 | counting | the second boundary's label, stacked below the first |
+| `company_reminder` | 1 [1] | 1 | counting | company rules remain a separate muted note |
+| `company_scope_label` | 1 [1] | 1 | counting | the scope is wider than one team |
+| `comparison_browser` | 1 [1] | 1 | counting | identical sign-in pages differ in their saved-address match |
+| `completed_scaffold` | 1 [1] | 1 | counting | the two completed moves and the current closing move |
+| `completion_signal` | 1 [1] | 1 | counting | the sole green mark completes the third box |
+| `conclusion_note` | 1 [1] | 1 | counting | the result is lettered clear of the heat route |
+| `condenser_coil` | 1 [1] | 1 | counting | the single cyan part carries heat to the room |
+| `conditional_edit` | 1 [1] | 1 | counting | edit remains available for a deliberate need |
+| `conditional_glow` | 1 [1] | 1 | counting | one small hesitation in the existing receiver glow |
+| `conditional_tracing` | 1 [1] | 1 | counting | a removable sheet distinguishes the hypothetical loss |
+| `confirming_ticks` | 1 [1] | 1 | counting | one ink tick per question |
+| `connected_branch` | 1 [1] | 1 | counting | a cable carries the same locked state to the upper copy |
+| `connected_cable` | 1 [1] | 1 | counting | the cable is its own true box, kept under the connected drive and token |
+| `connected_copy` | 1 [1] | 1 | counting | the connected backup copy above its drive |
+| `connected_drive` | 1 [1] | 1 | counting | the upper drive has a live cable back to the laptop |
+| `consequence_annotation` | 1 [1] | 1 | counting | the danger tag names reuse, with a lead to the successful token |
+| `contained_backup` | 1 [1] | 1 | counting | a second storage object inside the same bag |
+| `contained_laptop` | 1 [1] | 1 | counting | the first source stays inside the shared enclosure |
+| `containment_outline` | 1 [1] | 1 | counting | the aisle enclosure persists as a distinct held layer. |
+| `context_shell` | 1 [1] | 1 | counting | the empty reply belongs to the same context as the question |
+| `continued_board` | 1 [1] | 1 | counting | preserve the exact preceding drawing |
+| `continued_front` | 1 [1] | 1 | counting | the existing pulse translates from world 607,424 to 784,618 |
+| `continued_numbered_path` | 1 [1] | 1 | counting | only the two new rows join the existing recovery path |
+| `continued_wall` | 1 [1] | 1 | counting | retained scenery is never copied |
+| `continuing_water` | 1 [1] | 1 | counting | warm return and cool supply continue on the existing pipe geometry |
+| `continuous_written_statement` | 1 [1] | 1 | counting | each field stays on the same baseline and receives its own read-back signal |
+| `control_chip_tapped` | 1 [1] | 1 | counting | a small labelled control the pointer travels to and taps, with a tag naming each act |
+| `convergent_arrows` | 1 [1] | 1 | counting | hearing the group supplies input to the caller |
+| `converging_inputs` | 1 [1] | 1 | counting | open marker arrows point from group to the owner, staying below the question |
+| `converging_loads` | 1 [1] | 1 | counting | other delivery carriers arrive with amber parcels |
+| `converging_pulses` | 1 [1] | 1 | counting | real kit wavefronts travel only toward the receiver |
+| `copied_card` | 1 [1] | 1 | counting | a duller copy of the Shop card, same notches |
+| `copied_shop_card` | 1 [1] | 1 | counting | the dull copied Shop card, visibly different from Work's fresh card |
+| `copied_values` | 1 [1] | 1 | counting | two legible copies stack within the existing tray |
+| `copy_branch` | 1 [1] | 1 | counting | the source remains as a second sheet is possible |
+| `copy_caution` | 1 [1] | 1 | counting | protection of the source is not prevention of copies |
+| `copy_file` | 1 [1] | 1 | counting | a smaller Report copy |
+| `copy_flight` | 1 [1] | 1 | counting | a small copy of one thing flies in an arc from where it was to where it will be re-formed |
+| `copy_path` | 1 [1] | 1 | counting | the viewed source can yield another sheet |
+| `copy_readable` | 1 [1] | 1 | counting | the watcher's tray copy, the same card and ring as the original, hidden until the copy is made |
+| `copy_restore` | 1 [1] | 1 | counting | a fresh document visibly leaves the drive while its stored copy remains behind |
+| `copy_travelling` | 1 [1] | 1 | counting | a backup copy carried to the laptop |
+| `copy_usb` | 1 [1] | 1 | counting | continuing Report copy beside the USB |
+| `correct_note` | 1 [1] | 1 | counting | a muted correction prompt points back to the decision before the room moves on |
+| `correction_anchor` | 1 [1] | 1 | counting | kept geometry anchor, painted accent is an unkept sibling |
+| `correction_arrow` | 1 [1] | 1 | counting | a short hand arrow links the correction prompt to the deadline |
+| `correction_return` | 1 [1] | 1 | counting | a muted note leads into the existing written statement, not into a new branch |
+| `correction_route` | 1 [1] | 1 | counting | muted arrow points into the written line, away from resting labels |
+| `corridor_planes` | 1 [1] | 1 | counting | hard-edged dusk light gives the receivers a shared physical wall |
+| `counted_rule` | 1 [1] | 1 | counting | the active count belongs to the persistent rail |
 | `cover_sheet` | 1 [1] | 1 | counting | a sheet that slides across content to hide it |
+| `credential_label` | 1 [1] | 1 | counting | name the arriving object only after it appears |
+| `cross_boundary_flow` | 1 [1] | 1 | counting | cool intake meets amber exhaust in each rack |
+| `crossed_day_calendar` | 1 [1] | 1 | counting | a wall calendar whose passed days carry a cross |
+| `crossing_leak` | 1 [1] | 1 | counting | amber crosses the rack tops without crossing the slots |
+| `crossing_mark` | 1 [1] | 1 | counting | the place the two spheres meet, lit |
+| `cubicle_panel` | 1 [1] | 1 | counting | a low fabric screen between aisle and desks that hides a walker below the hip |
+| `current_code_dialog` | 1 [1] | 1 | counting | plain product elements avoid a bundled close icon. |
+| `curved_ground` | 1 [1] | 1 | counting | shared curved surface establishes the receiver station |
+| `cutaway_aisle` | 1 [1] | 1 | counting | a fresh detail register inside the warehouse |
+| `cutaway_shell` | 1 [1] | 1 | counting | the enlarged machine contains the heat exchange |
+| `danger_shadow_passing` | 1 [1] | 1 | counting | a large dark silhouette with lit eyes sliding behind foreground grass |
+| `dark_model_space` | 1 [1] | 1 | counting | a softly lifted field behind the single question |
+| `dart` | 1 [1] | 1 | counting | an accent dart with an ink shaft, stuck in the bullseye |
+| `dashed_frame_drawn` | 1 [1] | 1 | counting | a dashed outline that draws itself round a group of things to say these ones |
+| `dashed_item` | 1 [1] | 1 | counting | an unclassified document, grey dashed outline |
+| `dashed_page` | 1 [1] | 1 | counting | the undecided item is the central reference |
+| `dashed_pin_ring` | 1 [1] | 1 | counting | an empty ring made of dashed arcs that draw round, waiting to be filled |
+| `dashed_reserved_run` | 1 [1] | 1 | counting | an empty dashed outline holding the place of a run of units still to come |
+| `dashed_route` | 1 [1] | 1 | counting | the request's path from browser to server, wiped in |
+| `dashed_slot` | 1 [1] | 1 | counting | the watcher's empty key slot, dashed because nothing is there |
+| `data_store_outline` | 1 [1] | 1 | counting | dashed muted outline, not covered |
+| `data_store_outlined` | 1 [1] | 1 | counting | not covered |
+| `date_check` | 1 [1] | 1 | counting | validity row completes the sequence and fills its kit bar |
+| `date_check_label` | 1 [1] | 1 | counting | outcome label beside date row |
+| `date_swaps` | 1 [1] | 1 | counting | elapsed days beside an unchanged destination |
+| `day_dial` | 1 [1] | 1 | counting | a 24 hour dial sweeping once round |
+| `daylight_desk` | 1 [1] | 1 | counting | the desk receives one broad crisp daylight plane |
 | `decay_curve` | 1 [2] | 1 | counting | an illustrative curve that drops steeply then levels off |
+| `deciding_question` | 1 [1] | 1 | counting | a single accent above the undecided page |
+| `decision` | 1 [1] | 1 | counting | the three-part written decision is read from left to right |
+| `decision_caller` | 1 [1] | 1 | counting | same Priya as at the opening table |
+| `decision_question` | 1 [1] | 1 | counting | the reference remains above the talk |
+| `default_choice` | 1 [1] | 1 | counting | the read-only option is the starting point |
+| `default_decision` | 1 [1] | 1 | counting | mark the default without deleting the alternative |
+| `denied_forward` | 1 [1] | 1 | counting | identity is not forwarded |
+| `deny_button` | 1 [1] | 1 | counting | the kit's amber deny control becomes the sole emphasis at the move |
+| `departure_rows` | 1 [1] | 1 | counting | one screen is the schedule for the dock |
+| `desk_and_evidence` | 1 [1] | 1 | counting | desk edge, laptop, phone and matching receipts |
+| `desk_calendar_day_mark` | 1 [1] | 1 | counting | a small desk calendar with today marked by a disc, the day that does not change |
+| `desk_callback` | 1 [1] | 1 | counting | the original desk returns without the warning ring |
+| `desk_foreground` | 1 [1] | 1 | counting | the near desk edge creates depth and covers Maya below the waist. |
+| `desk_front` | 1 [1] | 1 | counting | a plain desk seen from the front, its panel hiding the person behind it below the chest |
+| `desk_front_panel` | 1 [1] | 1 | counting | a desk seen from the front, a solid panel that hides the legs |
+| `desk_magnifier` | 1 [1] | 1 | counting | the investigation tool settles by the duplicate receipts |
+| `desk_prop_laptop` | 1 [1] | 1 | counting | a laptop drawn as a quiet prop beside the work surface |
+| `desk_prop_mug` | 1 [1] | 1 | counting | a mug seen from above, as a small prop beside the work surface |
+| `desk_prop_notebook` | 1 [1] | 1 | counting | a closed notebook with a spine and an elastic band, turned a little on the surface |
+| `desk_props_close` | 1 [1] | 1 | counting | keyboard, mug with steam, papers and a pen laid on a desk top, seen from above-behind |
+| `desk_question_pad` | 1 [1] | 1 | counting | a paper notepad sits on the open desk space beside the receipts |
+| `desk_rebuild` | 1 [1] | 1 | counting | sticky lands, tab pops, strike draws, three empty coloured slots pop under it |
+| `desk_reference` | 1 [1] | 1 | counting | one shared baseline for the conversation |
+| `desk_row_array` | 1 [1] | 1 | counting | a row of seeded desks with a lit screen each, receding by scale, as a place's population |
+| `detail_annotation` | 1 [1] | 1 | counting | the enlarged view has a quiet drafting note |
+| `detail_frame` | 1 [1] | 1 | counting | the enlarged drawing has its own quiet register |
+| `detail_register` | 1 [1] | 1 | counting | a quiet drawing note marks this as an enlarged view |
+| `dev_bubble` | 1 [1] | 1 | counting | Dev's reply bubble with the word context |
+| `device_control_chip` | 1 [1] | 1 | counting | a small labelled control drawn onto the device the narration names |
+| `device_name` | 1 [1] | 1 | counting | labels stay attached to their devices and clear of the tile rail |
+| `dial` | 1 [1] | 1 | counting | a qualitative setting with no invented numerical scale |
+| `digital_disposal` | 1 [1] | 1 | counting | the electronic file erases, leaves a ghost, then disappears |
+| `digital_record` | 1 [1] | 1 | counting | a compact product record on the left |
+| `dim_air` | 1 [1] | 1 | counting | the quiet flow belongs to the darker failure chapter |
+| `dim_channel_path` | 1 [1] | 1 | counting | the established kit corridor carries the twist without a new metaphor |
+| `dim_veil` | 1 [1] | 1 | counting | a station-wide veil of the field colour that fades up over a held shot, leaving one element above it |
+| `direct_handoff` | 1 [1] | 1 | counting | the accent belongs only to the route from the higher item to the owner |
+| `disagreement` | 1 [1] | 1 | counting | the record does not establish physical availability |
+| `discrete_trail` | 1 [1] | 1 | counting | a compact status card without any live position |
+| `dispatch_mark` | 1 [1] | 1 | counting | the only accent underlines the dispatch timing |
+| `disposal_label` | 1 [1] | 1 | counting | label linking shred and delete endpoints |
+| `distance_line` | 1 [1] | 1 | counting | the long line the multiplication makes, aimed at satellite A |
+| `distance_tag` | 1 [1] | 1 | counting | a label sitting on the middle of the line |
+| `distant_source` | 1 [1] | 1 | counting | a dim sheet is physically separated from both claims, with no connecting mark |
+| `distinct_hold_sites` | 1 [1] | 1 | counting | four independent markers with separated readable labels |
+| `distinct_holds` | 1 [1] | 1 | counting | three separated rings identify locations rather than staff |
+| `distribution_arrows` | 1 [1] | 1 | counting | the record reaches every seated colleague |
+| `divergent_bubbles` | 1 [1] | 1 | counting | four distinct responses belong to the same meeting |
+| `diverted_parcels` | 1 [1] | 1 | counting | neutral parcels take separate grid-aligned lanes and stop |
+| `divider_h` | 1 [1] | 1 | counting | horizontal matrix divider |
+| `divider_v` | 1 [1] | 1 | counting | vertical matrix divider |
+| `document_on_screen` | 1 [1] | 1 | counting | a page of ink bars on a screen that can be recoloured to fade it |
+| `door_compliance` | 1 [1] | 1 | counting | the next channel stands in the established path |
+| `door_hr` | 1 [1] | 1 | counting | a third door completes the spoken pair |
+| `door_line` | 1 [1] | 1 | counting | the final doorway arrives with its clear label |
+| `door_manager` | 1 [1] | 1 | counting | first doorway offers the easiest start |
+| `door_other` | 1 [1] | 1 | counting | the alternative manager follows without competing for emphasis |
+| `door_pair` | 1 [1] | 1 | counting | two separate systems, two doors with name plates |
+| `door_row` | 1 [1] | 1 | counting | additional login doors extend the corridor's test targets |
+| `door_shop` | 1 [1] | 1 | counting | the shopping system door |
+| `door_sign` | 1 [1] | 1 | counting | sign hung on the closed door |
+| `door_work` | 1 [1] | 1 | counting | the work system door |
+| `dotted_future_page` | 1 [1] | 1 | counting | a page with a dotted border, the sign of an imagined future, holding a small plan drawing |
+| `dotted_pretend_page` | 1 [1] | 1 | counting | a page with a dotted border standing for an imagined future |
+| `draw_marker` | 1 [1] | 1 | counting | selection scans the ranking then rests before branching |
+| `drift_tag` | 1 [1] | 1 | counting | the label that names the drift |
+| `drift_trail` | 1 [1] | 1 | counting | a thin dashed trail the dot leaves behind |
+| `driver_role` | 1 [1] | 1 | counting | an engine staff pictogram steps from the stopped van to the door |
+| `drop_line_short` | 1 [1] | 1 | counting | a dashed line falling from an item towards a surface and stopping short of it |
+| `durable_outcome` | 1 [1] | 1 | counting | two written lines occupy the free front of the held surface |
+| `earlier_picture_card` | 1 [1] | 1 | counting | a small card that returns an earlier picture beside the current one |
+| `earth_point` | 1 [1] | 1 | counting | where the phone stands on the surface |
+| `earth_surface` | 1 [1] | 1 | counting | curved ground arc representing planetary boundary |
+| `earth_well` | 1 [1] | 1 | counting | side view of Earth's gravity well, deep at the surface, flat high up |
+| `edge_stop` | 1 [1] | 1 | counting | the company boundary blocks this forward |
+| `edit_heading` | 1 [1] | 1 | counting | permission heading aligned with View |
+| `edit_pencil` | 1 [1] | 1 | counting | the second permission adds alteration |
+| `edit_row` | 1 [1] | 1 | counting | a pencil names the second permission |
+| `email` | 1 [1] | 1 | counting | the three-part decision written above the table, then folded into an envelope |
+| `email_row` | 1 [1] | 1 | counting | the arriving message |
+| `emerging_length` | 1 [1] | 1 | counting | a thin unheaded line grows from the instrument towards the established source |
+| `empty_dock_pause` | 1 [1] | 1 | counting | the missed hand-off belongs to the empty door |
 | `empty_frame` | 1 [1] | 1 | counting | an empty dashed frame waiting for content |
+| `empty_number` | 1 [1] | 1 | counting | an outlined gap, not an answer |
+| `empty_outline` | 1 [1] | 1 | counting | a dashed outline of a thing that is missing, drawn where it would have to be |
+| `empty_report` | 1 [1] | 1 | counting | hold the missing content inside the failed laptop from b02 |
+| `empty_ruled_card` | 1 [1] | 1 | counting | a familiar artefact is now the viewer's blank agenda |
+| `empty_slot` | 1 [1] | 1 | counting | the answer has not been written yet |
+| `empty_slot_outline` | 1 [1] | 1 | counting | a thin dashed accent outline around a place where something would be, and is not |
 | `empty_slot_row` | 1 [1] | 1 | counting | a blank filled row where a recalled answer will appear |
+| `empty_sockets` | 1 [1] | 1 | counting | only the two endpoints can hold the shared secret |
+| `empty_thought_outline` | 1 [1] | 1 | counting | a faint dashed thought outline with trailing puffs that stays empty, naming what is not being thought |
+| `enclosing_boundary` | 1 [1] | 1 | counting | the roof and walls surround the retained page with an open right edge |
+| `end_marker` | 1 [1] | 1 | counting | a small terminal closes the written line |
+| `entering_source` | 1 [1] | 1 | counting | readable source sheet crosses the input boundary |
+| `equal_claim_left` | 1 [1] | 1 | counting | the first assertion has no source connection |
+| `equal_claim_right` | 1 [1] | 1 | counting | the conflicting assertion has exactly the same light and scale |
+| `equal_radius_locus` | 1 [1] | 1 | counting | the kit traces every endpoint of one fixed length |
+| `equals_badge` | 1 [1] | 1 | counting | a round badge on a divider saying two things are the same, with its reason under it |
+| `established_section` | 1 [1] | 1 | counting | the whole system remains the spatial reference. |
+| `evidence_instrument` | 1 [1] | 1 | counting | one handheld card records alternative kinds of proof |
+| `evidence_leader` | 1 [1] | 1 | counting | connect the record to the magnified shelf |
+| `evidence_ring` | 1 [1] | 1 | counting | the held evidence ring draws again around the duplicate |
+| `excluded_option` | 1 [1] | 1 | counting | a quiet cross beside the box rejects the overbroad editing choice |
+| `excluded_sheet` | 1 [1] | 1 | counting | the missing source remains separated by clear field |
+| `exclusion_edge` | 1 [1] | 1 | counting | the outside holder stops at company scope |
+| `exhaust_puff` | 1 [1] | 1 | counting | a few soft discs growing along a short diagonal, one gust of warm air leaving a vent |
+| `exhaust_stream` | 1 [1] | 1 | counting | a short bead stream that crosses a gap from one thing's back into the next thing's front |
+| `expanded_term` | 1 [1] | 1 | counting | serif abbreviation and its plain spoken expansion on quiet dark field |
+| `expected_recipients` | 1 [1] | 1 | counting | three equal pictograms, drawn in sequence |
+| `expected_route` | 1 [1] | 1 | counting | dashed visible spans trace the existing path without drawing over objects |
+| `expiry_calendar` | 1 [1] | 1 | counting | an optional time boundary |
 | `expression_swap_character` | 1 [1] | 1 | counting | a character whose expression swaps at the instant the outcome lands |
+| `facilitator_bust` | 1 [1] | 1 | counting | Sam uses the shared cast look |
+| `facilitator_desk` | 1 [1] | 1 | counting | ground the bust on a single marker stroke |
 | `fade_out_card_grid` | 1 [1] | 1 | counting | a peer grid of cards where a subset fades blank to show loss |
+| `failed_device` | 1 [1] | 1 | counting | retain the exact device drawn by the previous beat |
+| `failed_laptop` | 1 [1] | 1 | counting | hold the failed local home of the only report from b02 |
+| `failure_note` | 1 [1] | 1 | counting | a coral leader makes the stopped cabinet unambiguous |
+| `failure_term` | 1 [1] | 1 | counting | amber term label attached to the empty report |
+| `familiar_budget` | 1 [1] | 1 | counting | same page at the centre of the safe group |
+| `familiar_signin` | 1 [1] | 1 | counting | a neutral browser carries the login into account settings |
+| `fan_of_cards` | 1 [1] | 1 | counting | items spread from one pivot in a seeded arc, then fold back to a stack and leave |
+| `fault_pointer` | 1 [1] | 1 | counting | a persistent named handle preserves the alarm leader for the next beat |
+| `feelings_gauge` | 1 [1] | 1 | counting | round paper gauge, its own needle, starts neutral (pointing up) |
+| `figure_register` | 1 [1] | 1 | counting | a technical figure note beneath the object |
+| `file_delete` | 1 [1] | 1 | counting | file turns to dashed ghost and disappears |
+| `file_icon` | 1 [1] | 1 | counting | a file that erases to a ghost, then gone |
+| `file_inspection` | 1 [1] | 1 | counting | the same budget page is examined, not replaced |
+| `filing_records` | 1 [1] | 1 | counting | a cabinet of drawers with a binder beside it, the organisation's own records |
+| `fill_level_vessel` | 1 [1] | 1 | counting | a clear vessel whose warm level rises by a set step for each unit that drops in |
+| `final_approach` | 1 [1] | 1 | counting | the retained delivery vehicle stops alongside the destination |
+| `final_rule` | 1 [1] | 1 | counting | the selected row becomes a compact practical rule |
+| `final_underline` | 1 [1] | 1 | counting | the list question receives the single accent |
+| `first_backup` | 1 [1] | 1 | counting | a distinct whole copy travels from the original |
+| `first_line_question` | 1 [1] | 1 | counting | a single hand-drawn accent question in the kit's reserved first-line slot |
+| `first_report` | 1 [1] | 1 | counting | intact file on the laptop screen |
+| `first_stopping_point_tag` | 1 [1] | 1 | counting | numbered mark leading to the first lock |
+| `fixed_chapter_strip` | 1 [2] | 1 | counting | screen-space chapter navigation remains unchanged across the walkthrough |
+| `fixed_route` | 1 [1] | 1 | counting | the browser, open path, aperture, empty tray and destination stay in one layout |
+| `flag_name` | 1 [1] | 1 | counting | label above the bar |
 | `flatline_trace` | 1 [1] | 1 | counting | a steady ticking value line that drops and runs flat, with a pen dot |
+| `floating_question` | 1 [1] | 1 | counting | the unchanged question on one readable baseline |
+| `floor_light_continuation` | 1 [1] | 1 | counting | the kit's open crack casts a matching hard plane farther across the floor |
+| `floor_reference` | 1 [1] | 1 | counting | the existing floor remains fixed through the enclosure draw |
+| `floor_section` | 1 [1] | 1 | counting | cool air returns beneath the floor |
+| `floor_standing_cabinet` | 1 [1] | 1 | counting | a tall white cabinet with a top intake grille, a cutaway window onto its inner part and low louvres |
+| `focus_outline` | 1 [1] | 1 | counting | a thin accent outline that marks the control the narration names, then lets go |
+| `focus_ring` | 1 [1] | 1 | counting | accent ring held on the orbit clock |
+| `folded_envelope` | 1 [1] | 1 | counting | a written decision folds into a rough ink envelope |
+| `folded_record` | 1 [1] | 1 | counting | the written record is read before it folds into the envelope |
+| `folder` | 1 [1] | 1 | counting | limited access, the list slides in and the lock closes |
+| `folder_ghost` | 1 [1] | 1 | counting | faint retained folder form |
+| `folder_label` | 1 [1] | 1 | counting | caption below the retained folder form |
+| `fork` | 1 [1] | 1 | counting | one origin feeds both alternatives |
+| `form_packet` | 1 [1] | 1 | counting | readable fields lift from the browser and travel through the key before becoming slate blocks |
+| `format_labels` | 1 [1] | 1 | counting | each label stays with its historical position |
+| `forward_path` | 1 [1] | 1 | counting | a bent marker handoff above the holders |
+| `forwarding_note` | 1 [1] | 1 | counting | a leader links the company row to its wider reach |
+| `frame_with_open_slots` | 1 [1] | 1 | counting | an empty frame whose slots are drawn as outlines one after another, waiting to be filled |
+| `framed_panel` | 1 [1] | 1 | counting | a bordered panel holding a small scene, drawn first so the viewer sees the two slots |
 | `framed_person_portrait` | 1 [1] | 1 | counting | a sketch-framed person portrait with a name label beneath |
+| `fresh_card` | 1 [1] | 1 | counting | a unique card rests in the morning light |
+| `fresh_key_card` | 1 [1] | 1 | counting | one new card per door, its own notch pattern |
+| `fridge_reminder` | 1 [1] | 1 | counting | a small muted back coil recalls the earlier household mechanism |
+| `frosted_pane` | 1 [1] | 1 | counting | a clear sheet between two people, a barrier that does not hide faces |
+| `full_comment` | 1 [1] | 1 | counting | the complete three-row comment, large |
+| `full_rim_mark` | 1 [1] | 1 | counting | a thick warm line drawn along a vessel's rim when it is full |
+| `gauge_alarm_to_calm` | 1 [1] | 1 | counting | a vertical track whose marker slides from an alarm icon to a calm icon |
+| `generate_press` | 1 [1] | 1 | counting | native pointer and accent2 press ring signal the one action |
+| `generic_scan_square` | 1 [1] | 1 | counting | the illustrative kit square appears only after selection |
 | `ghost_card` | 1 [1] | 1 | counting | a grey dashed card carrying a hypothetical idea that is not real |
 | `ghost_curve` | 1 [2] | 1 | counting | a faint dashed curve drawn alongside the main one as a baseline or variant |
+| `ghost_glimpse` | 1 [1] | 1 | counting | a faint silhouette of a hidden object shown for a moment over the thing that hides it |
+| `ghost_outline` | 1 [1] | 1 | counting | a dashed, half-strength outline of something from an earlier run, at its old place |
+| `ghost_vague` | 1 [1] | 1 | counting | the vague comment as a faint ghost |
+| `gives_way` | 1 [1] | 1 | counting | the single accented question beside the arrow |
+| `giveway_arrow` | 1 [1] | 1 | counting | hand arrow from the placed project toward the competing work |
+| `glowing_core` | 1 [1] | 1 | counting | a bright diamond core with a soft glow that pulses |
+| `glowing_envelope` | 1 [1] | 1 | counting | an envelope prop with a soft glow, carrying a label pill |
+| `glyph_rejected` | 1 [1] | 1 | counting | a small cross on the waiting glyph |
+| `goal_label` | 1 [1] | 1 | counting | the name is adjacent to its still vacant socket |
+| `ground` | 1 [1] | 1 | counting | night cross-section and curved earth surface |
+| `ground_glow` | 1 [1] | 1 | counting | a gold glow with a small teal core, the point that is you |
+| `ground_point` | 1 [1] | 1 | counting | the gold ground point sinking into the teal one |
+| `grounded_action_labels` | 1 [1] | 1 | counting | sharp plain labels on a quiet desk-front band |
+| `grounded_presenter` | 1 [1] | 1 | counting | a designed cast bust on one hand line |
+| `group` | 1 [1] | 1 | counting | three compact voices below the held question |
+| `group_arrow` | 1 [1] | 1 | counting | a hand-drawn route from one group voice to Priya |
+| `group_arrow_bottom` | 1 [1] | 1 | counting | a hand arrow carries one voice into Priya |
+| `group_arrow_middle` | 1 [1] | 1 | counting | a hand arrow carries one voice into Priya |
+| `group_arrow_top` | 1 [1] | 1 | counting | a hand arrow carries one voice into Priya |
+| `group_bracket` | 1 [1] | 1 | counting | a thin bracket under a run of neighbours with one word that names the group |
+| `group_inputs` | 1 [1] | 1 | counting | pictograms represent contributions, not new cast members |
+| `group_member` | 1 [1] | 1 | counting | a teammate's voice in the group |
+| `habit_tag` | 1 [1] | 1 | counting | a teal paper tag lettered with a habit, pinned on the thing that does it |
+| `hall_architecture` | 1 [1] | 1 | counting | dark converging walls and floor lines |
+| `hall_planes` | 1 [1] | 1 | counting | converging wall and floor establish distance |
+| `hand_arrow` | 1 [1] | 1 | counting | an ink connector with an open head |
+| `hand_envelope` | 1 [1] | 1 | counting | the written summary, sent |
+| `handoff_arrow` | 1 [1] | 1 | counting | permission can reach another holder |
+| `handshake_label` | 1 [1] | 1 | counting | Handshake first |
+| `handshake_lane` | 1 [1] | 1 | counting | a thin dashed lane for the chips |
+| `handwritten_question` | 1 [1] | 1 | counting | the reference kept above the discussion |
+| `hanging_name` | 1 [1] | 1 | counting | a white pill identifies the aperture only after its shape is visible |
+| `hanging_question` | 1 [1] | 1 | counting | paper on the hook carries the only teaching accent |
+| `hanging_question_sign` | 1 [1] | 1 | counting | a sign on a hook that asks where she goes |
+| `hanging_string` | 1 [1] | 1 | counting | a thin string from the top of the frame that an object hangs on |
+| `hard_light_plane` | 1 [1] | 1 | counting | lamp light lands behind the pane rather than becoming an amber wash |
+| `hard_swap_cover` | 1 [1] | 1 | counting | the alternative content drawn over a held region and toggled with it by hard cuts, never both visible |
+| `harm_glyph` | 1 [1] | 1 | counting | a question above the people connects disclosure to harm |
+| `harm_mark` | 1 [1] | 1 | counting | hovering question asks about consequences |
+| `harm_question_mark` | 1 [1] | 1 | counting | the line question that chooses the class |
+| `hatch_fill` | 1 [1] | 1 | counting | freed space refilled with a hatched version of the same colour, so the total stays while its form changes |
+| `hatched_block` | 1 [1] | 1 | counting | a block of a time axis shaded in ink hatch and lettered, a protected stretch of time |
+| `have_annotation` | 1 [1] | 1 | counting | teaching label tied to the second device |
 | `header_bar` | 1 [1] | 1 | counting | a slim outlined bar holding a standing rule as a persistent header |
+| `heads_up_sign` | 1 [1] | 1 | counting | a small paper sign naming the day the warning now comes on |
+| `heart_badge` | 1 [1] | 1 | counting | a small warm badge that says the comment felt kind |
+| `heat_across_wall` | 1 [1] | 1 | counting | small warm chevrons that cross a wall from the hot side to the cool side |
+| `heat_crossing` | 1 [1] | 1 | counting | shared vocabulary shows air giving its heat to water |
+| `heat_flood` | 1 [1] | 1 | counting | a warm field grows out of the back of an object and spreads across the space behind it |
+| `heavy_final_door` | 1 [1] | 1 | counting | the refused banded door at the hall end |
+| `held_boundary` | 1 [1] | 1 | counting | the existing Work door receives another lock without opening |
+| `held_checklist` | 1 [1] | 1 | counting | the current phase stays in view |
+| `held_emphasis` | 1 [1] | 1 | counting | only the final commitment receives colour |
+| `held_invite` | 1 [1] | 1 | counting | the existing subject becomes an answerable question |
+| `held_job_advert` | 1 [1] | 1 | counting | the existing job advert drops into the Public tray |
+| `held_location` | 1 [1] | 1 | counting | the delay belongs to a location, never a person |
+| `held_org_chart` | 1 [1] | 1 | counting | the existing org chart hesitates before the Internal tray |
+| `held_payroll` | 1 [1] | 1 | counting | the existing payroll file drops into the Confidential tray |
+| `held_sorting_trays` | 1 [1] | 1 | counting | the three destinations continue from the practice setup |
+| `held_spot` | 1 [1] | 1 | counting | a pause belongs to the waiting parcel, not a worker |
+| `held_verdict` | 1 [1] | 1 | counting | the second boundary holding is visibly the safe result |
+| `hello_chip` | 1 [1] | 1 | counting | a small Hello chip |
+| `hello_chips` | 1 [1] | 1 | counting | two Hello chips cross the path while the packet waits |
+| `hesitation` | 1 [1] | 1 | counting | a reaching pose becomes a guarded hand and uneasy face |
+| `hidden_note` | 1 [1] | 1 | counting | a dashed note rejects making cold |
+| `hidden_places` | 1 [1] | 1 | counting | three short tabs written beside the page on their words |
+| `higher_label` | 1 [1] | 1 | counting | the first action is named above its landing point |
+| `hinged_door` | 1 [1] | 1 | counting | a door in thin strokes whose leaf swings open on its hinge to show a lit doorway |
+| `hold_location` | 1 [1] | 1 | counting | a pause belongs to a place, never to a person |
+| `holder_group` | 1 [1] | 1 | counting | three teammates inside the narrow scope |
+| `holder_pictogram` | 1 [1] | 1 | counting | a generic holder, not a cast character |
+| `host_underline` | 1 [1] | 1 | counting | the sole accent identifies the meeting's host |
+| `https_label` | 1 [1] | 1 | counting | the held channel label stays attached to the protected route |
+| `https_label_continuity` | 1 [1] | 1 | counting | the held protected-channel label remains on its route |
+| `hung_pill_label` | 1 [1] | 1 | counting | a white pill label on a thin leader hung from the thing it names, turning accent while named |
+| `id_tags` | 1 [1] | 1 | counting | each held piece has an illustrative numeric identifier |
+| `identical_log_row` | 1 [1] | 1 | counting | all times, users and outcomes share identical ink and spacing |
+| `identity_door` | 1 [1] | 1 | counting | closed gate is the single emphasis |
+| `identity_flag` | 1 [1] | 1 | counting | the second point is just beyond that opening |
+| `idle_traffic` | 1 [1] | 1 | counting | three small muted dots drifting along the lane |
+| `illustrative_annotation` | 1 [1] | 1 | counting | a quiet caveat beneath the seam |
+| `illustrative_plate` | 1 [1] | 1 | counting | the ranking is a demonstration, not measured output |
+| `impact_connector` | 1 [2] | 1 | counting | the short link from behaviour down to impact |
+| `impact_fill` | 1 [2] | 1 | counting | the new row's accent background, same treatment as behaviour's |
+| `impact_text` | 1 [2] | 1 | counting | the concrete impact, in Priya's words |
+| `impression_label` | 1 [1] | 1 | counting | underline label under the cloud |
+| `inbox_row_array` | 1 [1] | 1 | counting | a full list of seeded rows (unread dot, sender bar, subject bar, time bar) as the ordinary background of a day |
+| `inbox_row_stack` | 1 [1] | 1 | counting | a stack of mail rows as grey bars (avatar disc, sender, subject, time) standing for a full inbox |
+| `incoming` | 1 [1] | 1 | counting | three warm pulses travel only from satellite to phone |
+| `incoming_broadcasts` | 1 [1] | 1 | counting | inbound radio pulses converging on receiver |
+| `incoming_question` | 1 [1] | 1 | counting | the incoming thread stays beside, not over, the desk |
+| `incompatible_answers` | 1 [1] | 1 | counting | outline then words, four different memories of one event |
+| `independent_holds` | 1 [1] | 1 | counting | separate pins keep the two causes distinct |
+| `independent_storage` | 1 [1] | 1 | counting | the second storage kind rests on the same baseline |
+| `index_card_turned` | 1 [1] | 1 | counting | a small paper card that is written on, then turned over together with its peers |
+| `indexed_fragments` | 1 [1] | 1 | counting | pieces retain their order on a shared baseline |
+| `ink_baseline` | 1 [1] | 1 | counting | the ground line the items stand on |
+| `ink_correction` | 1 [1] | 1 | counting | retain the correction without retaining its emphasis colour |
+| `ink_door` | 1 [1] | 1 | counting | a fresh ink-only overlay replaces the previous unkept accent |
+| `ink_paper_field` | 1 [1] | 1 | counting | a dark paper ground with a sparse seeded speckle, for a night or consequence break |
+| `input_group` | 1 [1] | 1 | counting | three neutral pictograms represent the group, not new cast members |
+| `input_note` | 1 [1] | 1 | counting | leader kept clear of the floor structure |
+| `inspection_page` | 1 [1] | 1 | counting | the same budget page beside the held checklist |
+| `inspection_symbol` | 1 [1] | 1 | counting | Lucide search marks looking inside without changing the file |
+| `intake_face` | 1 [1] | 1 | counting | slots and grille locate the measured air at the server front |
+| `intended_audience` | 1 [1] | 1 | counting | the colleagues sit beneath the page, clear of its label |
+| `intermediate_holder` | 1 [1] | 1 | counting | another ordinary holder between sender and reader |
+| `internal_checks` | 1 [1] | 1 | counting | three things inside the file to inspect |
+| `internal_settle` | 1 [1] | 1 | counting | the org chart crosses to Internal only when the correction is spoken |
+| `invitation_container` | 1 [1] | 1 | counting | scaffold first, with room reserved for later guests and envelope |
+| `invite` | 1 [1] | 1 | counting | the one artefact under discussion, kept into the rewrite beat |
+| `invite_artefact` | 1 [1] | 1 | counting | the meeting's existing subject line |
+| `isolated_branch` | 1 [1] | 1 | counting | intact copy with no cable and an unlit drive port |
+| `isolated_candidates` | 1 [1] | 1 | counting | schematic surface and sky candidates survive the ring |
+| `issued_card` | 1 [1] | 1 | counting | a vault issues the fresh neutral card, never the leaked amber card |
+| `issuing_pair` | 1 [1] | 1 | counting | one manager supplies a separately seeded card per account |
+| `it_message` | 1 [1] | 1 | counting | the native message dialog belongs to the held app, with a handoff handle |
+| `job_advert` | 1 [1] | 1 | counting | dashed job advert awaiting classification |
+| `joined_floor_light` | 1 [1] | 1 | counting | hard-edged spill links the opened thresholds |
+| `key_badge` | 1 [1] | 1 | counting | a key in a round badge sitting on a device, the secret it holds |
+| `key_end_browser` | 1 [1] | 1 | counting | the browser's slot, own mark and key |
+| `key_end_server` | 1 [1] | 1 | counting | the server's slot, own mark and the identical key |
+| `key_exchange` | 1 [1] | 1 | counting | the browser end, key held (ink) |
+| `key_halo` | 1 [1] | 1 | counting | the ring that says this key is working now |
+| `key_held_browser` | 1 [1] | 1 | counting | the matching key, ink, at the browser's slot |
+| `key_held_server` | 1 [1] | 1 | counting | the matching key, ink, at the server's slot |
+| `key_ink` | 1 [1] | 1 | counting | the same key and its frame, in ink, laid over the blue ones at one end |
+| `key_light_cone` | 1 [1] | 1 | counting | one warm light from above, the only source in the room |
+| `key_light_wall` | 1 [1] | 1 | counting | a dark wall with soft stacked discs of one warm light and a cool spill, no filters |
+| `key_slot_watcher` | 1 [1] | 1 | counting | empty slot by the watcher |
+| `key_slots_continuity` | 1 [1] | 1 | counting | both end keys stay filled while the watcher has none |
+| `key_slots_server_lens` | 1 [1] | 1 | counting | the existing server key becomes the lens for the reverse transformation |
+| `key_tie` | 1 [1] | 1 | counting | an ink arrow from the packet's end down into the server key slot |
+| `kicker` | 1 [1] | 1 | counting | Now you |
+| `know_annotation` | 1 [1] | 1 | counting | teaching label tied to the password row |
+| `knowledge_threads` | 1 [1] | 1 | counting | thin threads drawn from one source out to several people and back, with small dots travelling toward the target |
+| `label_accepted` | 1 [1] | 1 | counting | second pill; its leader goes round the left so it never crosses a word |
+| `label_board_strips` | 1 [1] | 1 | counting | a rail of numbered strips on a wall that light in order as each is named |
+| `label_copy` | 1 [1] | 1 | counting | pill naming the tray content |
+| `label_drive` | 1 [1] | 1 | counting | name of the external drive |
+| `label_encrypted` | 1 [1] | 1 | counting | teal-edged pill, leader straight up to the padlock |
+| `label_identification` | 1 [1] | 1 | counting | the kit's white parcel label is named clear of the bench |
+| `label_laptop` | 1 [1] | 1 | counting | device name adjacent to laptop |
+| `label_loop` | 1 [1] | 1 | counting | the route named clear of the pipes |
+| `label_not_after` | 1 [1] | 1 | counting | second slate pill |
+| `label_not_honest` | 1 [1] | 1 | counting | slate-edged white pill, mirrors the teal pills |
+| `label_note` | 1 [1] | 1 | counting | muted body line under the first pill |
+| `label_padlock` | 1 [1] | 1 | counting | pill naming the promise |
+| `label_pump` | 1 [1] | 1 | counting | leader ends at the hub |
+| `label_readable` | 1 [1] | 1 | counting | pill naming what the packet is |
+| `label_same` | 1 [1] | 1 | counting | pill names the identical keys without covering the watcher or its empty slot |
+| `label_sign` | 1 [1] | 1 | counting | names what the tag is, beside the tag, clear of the face |
+| `label_watcher` | 1 [1] | 1 | counting | placeholder holder b06 keeps (storyboard keep); draws nothing |
 | `labelled_axes` | 1 [2] | 1 | counting | plain-language axes with titles and no tick values |
+| `laid_aside_tool` | 1 [1] | 1 | counting | only the missing prop is added to the held set |
+| `lamp_cone_wash` | 1 [1] | 1 | counting | faint stacked discs of warm light spilling over a screen from an off-frame lamp, breathing slowly |
+| `lamp_off` | 1 [1] | 1 | counting | lamp silhouette, visibly unlit |
+| `laptop_b` | 1 [1] | 1 | counting | continuing laptop inside the shared bag |
+| `laptop_back` | 1 [1] | 1 | counting | the back of an open laptop lid on a desk, seen from the front |
+| `laptop_bag` | 1 [1] | 1 | counting | cutaway container holding every vulnerable copy |
+| `laptop_base` | 1 [1] | 1 | counting | the keyboard base |
+| `laptop_frame` | 1 [1] | 1 | counting | a laptop seen straight on, a dark bezel round the screen and a thin base below |
+| `laptop_in_bag` | 1 [1] | 1 | counting | laptop positioned in the bag's laptop spot |
+| `laptop_lid` | 1 [1] | 1 | counting | the screen's frame |
+| `laptop_notch` | 1 [1] | 1 | counting | the thumb notch |
+| `laptop_schematic` | 1 [1] | 1 | counting | a front-facing laptop drawn in thin grey strokes, its deck in shallow perspective |
+| `laptop_screen` | 1 [1] | 1 | counting | the paper screen |
+| `laptop_screen_portal` | 1 [1] | 1 | counting | a laptop whose screen is an exact rect, so a nested station can be entered through it |
+| `laptop_shut` | 1 [1] | 1 | counting | the bench laptop with its lid closed flat on the deck, so nobody is signing in on it |
+| `laptop_source` | 1 [1] | 1 | counting | whole source at rest |
+| `last_stretch` | 1 [1] | 1 | counting | continue the existing front, never draw another travelling pulse |
+| `late_arrival` | 1 [1] | 1 | counting | the subject reaches the edge without boarding |
+| `late_order` | 1 [1] | 1 | counting | a neutral arrival slips into the following group |
+| `later_tag` | 1 [1] | 1 | counting | later marker on deck redesign |
+| `launch_arc` | 1 [1] | 1 | counting | the climb to orbit |
+| `lead_arc` | 1 [1] | 1 | counting | how far ahead the orbit clock now reads |
+| `leader_to_note` | 1 [1] | 1 | counting | a thin line from the thing a caveat qualifies to the card that carries the caveat |
+| `leak_copy` | 1 [1] | 1 | counting | a matching copy leaves the original rather than replacing it |
+| `leaked_inventory` | 1 [1] | 1 | counting | muted matching cards on a long sheet make a list without invented account data |
+| `ledger_unit` | 1 [1] | 1 | counting | one flat square cell stamped into a ledger column, a run is several in a row |
+| `length_tag` | 1 [1] | 1 | counting | one measured word names the span after the line appears |
+| `leo_close_bust` | 1 [1] | 1 | counting | Leo, neutral then surprised when the fix lands |
+| `lettered_word_tag` | 1 [1] | 1 | counting | one hand-lettered word written on under a drawn object |
+| `lifted_slot_frame` | 1 [1] | 1 | counting | one slot of a schedule lifted above its neighbours, framed, holding a picture |
+| `light_pool_on_surface` | 1 [1] | 1 | counting | a soft pale ellipse of light opening on a surface where the point now lies |
+| `light_pools_veil` | 1 [1] | 1 | counting | a dark veil over the back wall with soft round holes, one pool of light per person |
+| `light_tag` | 1 [1] | 1 | counting | the speed of light as a tag with a beam |
+| `lights_on_one_route` | 1 [1] | 1 | counting | many small lights following one curved route in a staggered line, each leaving from its own origin |
+| `limited_access` | 1 [1] | 1 | counting | locked folder receives a confidential list |
+| `line_tag` | 1 [1] | 1 | counting | the hanging tag appears only when anonymity is named |
+| `linked_readout` | 1 [1] | 1 | counting | a quiet thin line ends at the panel, anchored at the receiver |
+| `linked_route` | 1 [1] | 1 | counting | the fourth existing link signals the destination first. |
+| `list_emphasis` | 1 [1] | 1 | counting | the named list is the final check |
+| `list_sheet` | 1 [1] | 1 | counting | dark evidence sheet carrying copies of the card |
+| `lit_door` | 1 [1] | 1 | counting | a door ajar with warm honey light on the path |
+| `lit_mark` | 1 [1] | 1 | counting | one accent bar under the card being named (rail at 460,760,1000,120; cards 300 wide at x 460, 810, 1160) |
+| `lit_room_cutaway` | 1 [1] | 1 | counting | a small lit room cut away from a building, a desk, two people and a lamp |
+| `load_sequence` | 1 [1] | 1 | counting | the existing teal van receives amber parcels one by one |
+| `loaded_vehicle` | 1 [1] | 1 | counting | a second vehicle exposes the finite parcel space |
+| `local_timekeeper` | 1 [1] | 1 | counting | a quartz instrument sits beside the established receiver |
+| `lock_carrier` | 1 [1] | 1 | counting | a neutral padlock travels only on the physical connection |
+| `lock_plate` | 1 [1] | 1 | counting | a plate with a padlock whose shackle lifts when the right proof arrives, labelled with that proof |
+| `lock_token` | 1 [1] | 1 | counting | the risk token is a real lock, travelling on the live cable into the upper copy |
+| `locked_storage` | 1 [1] | 1 | counting | the original held list slides behind the folder face |
+| `locus_label` | 1 [1] | 1 | counting | spoken words identify the shared curved surface |
+| `log_pane` | 1 [1] | 1 | counting | a wide sign-in log, sharp and outside the depth stage for readable evidence |
+| `log_plane` | 1 [1] | 1 | counting | the hard pool behind the pane keeps the evidence from floating in the void |
+| `log_title` | 1 [1] | 1 | counting | evidence uses sans serif rather than a story headline |
+| `login_flag` | 1 [1] | 1 | counting | a numbered intervention point leads into the first lock |
+| `lookalike` | 1 [1] | 1 | counting | ghost name struck through |
+| `lookalike_address` | 1 [1] | 1 | counting | address host swaps |
+| `lookalike_door_box` | 1 [1] | 1 | counting | a replica of the site's door with a near-identical address plate, spliced into a line |
+| `looking_glass` | 1 [1] | 1 | counting | one accent shows looking inside |
+| `loop_end_rack` | 1 [1] | 1 | counting | a slim cabinet of server bars that a pipe runs through |
+| `loop_flow` | 1 [1] | 1 | counting | two exact pipe routes, warm return and cool supply |
+| `mail_client_chrome` | 1 [1] | 1 | counting | an app screen of a title bar with a search pill, a folder column with one unread badge and a list header |
+| `mail_screen` | 1 [1] | 1 | counting | one fixed laptop composition, shared visually with the closing callback |
+| `manager_bubble` | 1 [1] | 1 | counting | question bubble from the manager |
+| `manager_label` | 1 [1] | 1 | counting | label and lead for the vault |
+| `manager_lead` | 1 [1] | 1 | counting | the term points to the source rather than to the rejected card |
+| `manager_offer` | 1 [1] | 1 | counting | the manager owns this confirmation, not the site |
+| `manager_sign` | 1 [1] | 1 | counting | the first sign is the one named now |
+| `manager_window` | 1 [1] | 1 | counting | a persistent generic window with unlock and saved-login pages |
+| `margin_note` | 1 [1] | 1 | counting | a short printed aside in the page margin that frames the numbers beside it |
+| `margin_notes` | 1 [1] | 1 | counting | setting then event |
+| `margin_principle` | 1 [1] | 1 | counting | the permission travels with the link |
+| `mark_slot` | 1 [1] | 1 | counting | an empty ring waiting for its tick |
+| `mark_struck` | 1 [1] | 1 | counting | small red failure cross over the original laptop report |
+| `mark_together` | 1 [1] | 1 | counting | shared-loss cross |
+| `master_field` | 1 [1] | 1 | counting | semantic field anchor retained with the window for the next beat |
+| `match_line` | 1 [1] | 1 | counting | the thin line from the Name row up to the address |
+| `match_ring` | 1 [1] | 1 | counting | a thin ink ring round the address |
+| `matching_domain_flash` | 1 [1] | 1 | counting | paired outlines make the address and certificate domain visibly agree |
+| `matching_key_pulse` | 1 [1] | 1 | counting | both already-filled end slots pulse together to show the one shared key |
+| `matching_receipts` | 1 [1] | 1 | counting | the two dinner receipts remain at the lower frame edge as the reason for her unease. |
+| `matching_responses` | 1 [1] | 1 | counting | four people now recall the same written result |
+| `matching_stops` | 1 [1] | 1 | counting | the same chip patterns recur at the three house approaches |
+| `matrix_board` | 1 [1] | 1 | counting | the quiet scaffold that turns the two held questions into axes |
+| `matrix_dividers` | 1 [1] | 1 | counting | two quiet strokes split the existing board |
+| `maya_decision` | 1 [1] | 1 | counting | Maya gives one firm, decided emphasis |
+| `maya_relaxed` | 1 [1] | 1 | counting | Maya is calm at her familiar desk |
+| `measured_span` | 1 [1] | 1 | counting | the ranging kit owns the length from the established broadcaster to the point |
+| `meeting_invite` | 1 [1] | 1 | counting | a roomy card that preserves clear separation from the checklist |
+| `meeting_notes_item` | 1 [1] | 1 | counting | the team's notes page, grey dashed until Internal |
+| `message_line_printed` | 1 [1] | 1 | counting | one line of a message body that prints left to right on the words it carries |
+| `message_with_link` | 1 [1] | 1 | counting | a plain message window whose one button is the link |
+| `metadata_badge` | 1 [1] | 1 | counting | file type is visible but cannot decide the class |
+| `meter_track` | 1 [1] | 1 | counting | a slim vertical instrument track whose fill rises from its base to a measured reading |
+| `method_dialog` | 1 [1] | 1 | counting | the selected method and its response share one bounded surface |
 | `metric_panel` | 1 [1] | 1 | counting | a card with an icon and title header and plot axes framing a live value |
+| `metronomic_trials` | 1 [1] | 1 | counting | copy cards arrive at locks with equal intervals and finish in a resting queue |
+| `mfa_term` | 1 [1] | 1 | counting | the term kept sharp on the dark field |
+| `migrating_code` | 1 [1] | 1 | counting | the value takes a high arc, clear of the resting form's words |
 | `mini_screen_card` | 1 [1] | 1 | counting | a small sketch screen with window chrome, placeholder lines, a caption and one telling mark |
-| `press_button` | 1 [1] | 1 | counting | a round icon button that presses down and springs back |
+| `mini_whiteboard` | 1 [1] | 1 | counting | a small face-on whiteboard with a tray, no words |
+| `miniature_triptych` | 1 [1] | 1 | counting | neutral desk tiles give each failure a concrete scene |
+| `mismatch_flag` | 1 [1] | 1 | counting | teaching ring identifies the changed letter, warning points to the empty fields |
+| `mismatched_identity` | 1 [1] | 1 | counting | unlike stripe patterns compare a house plate with the parcel label |
+| `missed_carrier` | 1 [1] | 1 | counting | the departing vehicle visibly separates from the waiting parcel |
+| `missing_phone_outline` | 1 [1] | 1 | counting | the same phone kit exposes only its absence state |
+| `monitor_frame` | 1 [1] | 1 | counting | a desktop monitor seen straight on, bezel, neck and foot |
+| `monitoring_alarm` | 1 [1] | 1 | counting | the failed cabinet is identified by its monitoring row |
+| `morning_desk` | 1 [1] | 1 | counting | hard-lit desk plane, the morning station |
+| `morning_room` | 1 [1] | 1 | counting | daylight is a hard plane, not an amber wash |
+| `morph_item` | 1 [1] | 1 | counting | the confidential document that travels and changes container |
+| `move_fill` | 1 [1] | 1 | counting | fill-ins action |
+| `move_major` | 1 [1] | 1 | counting | major projects action |
+| `move_quick` | 1 [1] | 1 | counting | quick wins action |
+| `move_thankless` | 1 [1] | 1 | counting | thankless tasks action |
+| `moving_masked_inventory` | 1 [1] | 1 | counting | a clipped mono list moves through a long leaked sheet |
+| `moving_route` | 1 [1] | 1 | counting | amber follows the heat from the room through coils and pipes |
+| `name_check` | 1 [1] | 1 | counting | matching domain is checked second in both browser and certificate |
+| `name_chip` | 1 [1] | 1 | counting | the verified name, ink outline, ink tick |
+| `name_heat_halo` | 1 [1] | 1 | counting | a sender's name recoloured to the accent with a stacked-disc halo round its avatar and an underline, tagged |
+| `name_match_label` | 1 [1] | 1 | counting | outcome label beside domain row |
+| `name_plate_tag` | 1 [1] | 1 | counting | a tag hung above a thing, naming it by its address |
+| `name_row_flag` | 1 [1] | 1 | counting | a red outline round the one failing row |
+| `name_tag_on_figure` | 1 [1] | 1 | counting | a solid tag that wipes in beside a person the narration names, then wipes out before the camera moves |
+| `named_annotation` | 1 [1] | 1 | counting | words follow the inner boundary before the next drawing |
+| `named_corner_box` | 1 [1] | 1 | counting | the distraction has a place and a responsible name |
+| `named_fault` | 1 [1] | 1 | counting | the term arrives only after the visual fault has completed |
+| `named_host` | 1 [1] | 1 | counting | identify the recurring colleague without adding a heading |
+| `named_leader` | 1 [1] | 1 | counting | connects the new inner boundary to its label without crossing any words |
+| `named_mark` | 1 [1] | 1 | counting | a ring that marks the satellite just added |
+| `named_mechanism` | 1 [1] | 1 | counting | the only title appears while the automated trials continue |
+| `named_owner` | 1 [1] | 1 | counting | only the assigned name spends the marker colour |
+| `named_recipient` | 1 [1] | 1 | counting | the cast member is the one person at the route's destination |
+| `named_ring` | 1 [1] | 1 | counting | accent edge round satellite A, the other two dimmed |
+| `named_runner` | 1 [1] | 1 | counting | identify the person whose shared setting is being revisited |
+| `named_scope_label` | 1 [1] | 1 | counting | the narrowest generic setting |
+| `native_click_controller` | 1 [1] | 1 | counting | the app owns the finite press rings so there is no duplicate teaching mark |
+| `near_tie` | 1 [1] | 1 | counting | illustrative ranks have no numerical scale or score labels |
+| `necessary_exception` | 1 [1] | 1 | counting | editing remains a deliberate alternative |
+| `needed_input` | 1 [1] | 1 | counting | the second retained member is labelled, without spending another colour |
+| `needed_input_label` | 1 [1] | 1 | counting | handwritten label below the second decision-critical guest |
+| `neg_tag` | 1 [1] | 1 | counting | Tampering detected |
+| `nested_boundaries` | 1 [1] | 1 | counting | the narrow boundary is the active one |
+| `neutral_cross` | 1 [1] | 1 | counting | the taken-back key is now context |
+| `neutral_door` | 1 [1] | 1 | counting | the checked opening stays visible without competing with the rule |
+| `neutral_gate` | 1 [1] | 1 | counting | new ink-only overlay replaces the unkept accent overlay at the join |
+| `neutral_key` | 1 [1] | 1 | counting | retain the token in ink as the underline takes emphasis |
+| `neutral_log_pane` | 1 [1] | 1 | counting | the software register has no alarm or verdict treatment |
+| `new_message_row` | 1 [1] | 1 | counting | one highlighted list row with an accent edge, a bright sender bar and a round avatar, sliding into the top slot |
+| `new_notes` | 1 [1] | 1 | counting | muted impact and duration notes |
+| `next_step_sign` | 1 [1] | 1 | counting | the agreed next step, written down |
+| `night_dock` | 1 [1] | 1 | counting | a fresh board marks the change in time |
+| `night_moon` | 1 [1] | 1 | counting | it is night |
+| `night_veil` | 1 [1] | 1 | counting | a translucent dark layer that carries a dark break into a held set |
+| `nightstand_plane` | 1 [1] | 1 | counting | hard-edged bedside surface beneath the phone |
+| `no_edge_note` | 1 [1] | 1 | counting | short words clear of the route |
+| `noise_copy` | 1 [1] | 1 | counting | the copied scrambled blocks land in the existing watcher tray |
+| `noise_frame` | 1 [1] | 1 | counting | the one blue ring on the noise packet |
+| `noise_label` | 1 [1] | 1 | counting | the tray label names what the copied bytes amount to |
+| `note_card_flat` | 1 [1] | 1 | counting | a blank card lying flat on a table in perspective, written on with scribbles |
+| `note_flag` | 1 [1] | 1 | counting | a short flag planted on the thing it describes, naming what the viewer is watching change |
+| `notes_route` | 1 [1] | 1 | counting | crosses accumulate rather than erase, then a hand arrow carries the alternative |
+| `number_family` | 1 [1] | 1 | counting | the three promises occupy one rail, clear of the failed device and captions |
+| `numeric_column` | 1 [1] | 1 | counting | faint illustrative digits unfold downward |
+| `numeric_tag` | 1 [1] | 1 | counting | an identifier flips into view under its reference piece |
+| `object_names` | 1 [1] | 1 | counting | labels stay close to their devices |
+| `obsolete_device_table` | 1 [1] | 1 | counting | the old entry and other sessions have separate explicit controls |
+| `off_labels` | 1 [1] | 1 | counting | two ways of reducing reach |
+| `offered_alternatives` | 1 [1] | 1 | counting | front-view pose and open palm point toward the available doors |
+| `office_bookend` | 1 [1] | 1 | counting | the original wall, cast and front desk retain their depth order |
+| `office_building` | 1 [1] | 1 | counting | building front outline, doorway lower right, threshold line |
+| `office_callback` | 1 [1] | 1 | counting | the same warm office wall and window as the opening desk shot |
+| `office_close` | 1 [1] | 1 | counting | the office wall frames a close reaction without competing with the receipt. |
+| `office_door` | 1 [1] | 1 | counting | building outline enclosing the internal notes |
+| `office_floor_array` | 1 [1] | 1 | counting | a small cutaway of an open office as a seeded grid of desks with grey seated people, a few ringed as known |
+| `office_return` | 1 [1] | 1 | counting | a fresh colour board establishes the colleague's workplace after the cut |
+| `office_wall` | 1 [1] | 1 | counting | Maya's warm paper office wall and window |
+| `offline_copy` | 1 [1] | 1 | counting | the whole copy stays above the unplugged drive |
+| `offline_drive` | 1 [1] | 1 | counting | the lower drive is deliberately unplugged |
+| `offset_interval` | 1 [1] | 1 | counting | the dimension sits clear of the scale, not over its ticks |
+| `one_key_many_accounts` | 1 [1] | 1 | counting | the same kit chip fans into three opening sign-in windows |
+| `one_table_four_answers` | 1 [1] | 1 | counting | the marks this beat adds on the held table's board space |
+| `onward_holder` | 1 [1] | 1 | counting | one intermediate holder makes the causal chain visible |
+| `onward_route` | 1 [1] | 1 | counting | same bent forward continues beyond the drawing |
+| `open_access_emphasis` | 1 [1] | 1 | counting | one accent emphasizes the broadest option |
+| `open_boundary` | 1 [1] | 1 | counting | a gap rather than a closed barrier at the sharing edge |
+| `open_door_row` | 1 [1] | 1 | counting | a receding row of cracked doors |
+| `open_promise` | 1 [1] | 1 | counting | a generic open shackle is the sole new focal object, not an encryption claim yet |
+| `open_release` | 1 [1] | 1 | counting | the kit's heat drawing is retained under its contractual name. |
+| `open_route` | 1 [1] | 1 | counting | a thick threat-coloured line drawn from a gate back to the one it now serves |
+| `opening_token` | 1 [1] | 1 | counting | one transferable key |
+| `operand_into_row` | 1 [1] | 1 | counting | the received stamp moves into the sending-time row without crossing its label |
+| `operation_pin` | 1 [1] | 1 | counting | name the completed action, clear of the staff role |
+| `operator_call` | 1 [1] | 1 | counting | the alarm reaches the role marker |
+| `operator_role` | 1 [1] | 1 | counting | a role marker, not a new cast member |
+| `option_card` | 1 [1] | 1 | counting | three equal peers |
+| `option_cards` | 1 [1] | 1 | counting | four possible actions, none picked |
+| `option_date` | 1 [1] | 1 | counting | first offered date in a rough box |
+| `option_flag` | 1 [1] | 1 | counting | one answer option as a flat pill |
+| `option_smaller` | 1 [1] | 1 | counting | smaller alternative in a rough box |
+| `optional_expiry` | 1 [1] | 1 | counting | calendar is an option, not a promise |
+| `ordered_labels` | 1 [1] | 1 | counting | one downward arrow reads the three existing labels in order |
+| `ordered_scope` | 1 [1] | 1 | counting | one downward arrow relates the three existing labels |
+| `ordinary_attachment_row` | 1 [1] | 1 | counting | a short seeded row of grey document chips standing for the ordinary, expected files |
+| `org_chart` | 1 [1] | 1 | counting | dashed organisation chart awaiting classification |
+| `origin_callout` | 1 [1] | 1 | counting | the address receives the only sustained teaching emphasis |
+| `original_change_label` | 1 [1] | 1 | counting | the action affects the common original |
+| `original_copy` | 1 [1] | 1 | counting | the original is restored, lost, and recovered in place |
+| `original_page` | 1 [1] | 1 | counting | a stable original is the reference |
+| `outdoor_condenser` | 1 [1] | 1 | counting | a tall cabinet with louvre slots and a flat fan on its top, a generic outdoor unit |
+| `outdoor_endpoint` | 1 [1] | 1 | counting | the roof unit is the sole named cyan part. |
+| `outer_aisle_note` | 1 [1] | 1 | counting | the named outer region carries the single cyan accent |
+| `outer_holders` | 1 [1] | 1 | counting | equal pictograms scattered in the widest band |
+| `outline_steps` | 1 [1] | 1 | counting | two class-coloured resting ledges give the climb its reference |
+| `outlined_route` | 1 [1] | 1 | counting | four links reserve a path for the explanation |
+| `output_note` | 1 [1] | 1 | counting | neutral words identify the amber heat vocabulary |
+| `outside_holder` | 1 [1] | 1 | counting | a person outside this permission area |
+| `outside_leader` | 1 [1] | 1 | counting | the note ends on the actual roof cooler |
+| `outsider_frame` | 1 [1] | 1 | counting | one further reader, separated from the intended group |
+| `outsider_label` | 1 [1] | 1 | counting | the question resolves into a named unknown |
+| `outsider_question` | 1 [1] | 1 | counting | the only coloured mark raises the hook |
+| `outsider_stop` | 1 [1] | 1 | counting | a single short accent on the company edge beside the outer holder |
+| `outward_heat` | 1 [1] | 1 | counting | amber waves travel from the compartment through the back coil |
+| `overlap_ring` | 1 [1] | 1 | counting | the circle where the two spheres meet, seen as a thin tilted ellipse |
+| `overlap_ring_fades` | 1 [1] | 1 | counting | the old circle of intersections yields to its cuts |
+| `owner` | 1 [1] | 1 | counting | the named decision owner, large enough to receive the question |
+| `owner_cast` | 1 [1] | 1 | counting | the named owner is the fixed tess rig, never an improvised figure |
+| `owner_label` | 1 [1] | 1 | counting | handwritten ownership label directly below the first kept guest |
+| `owner_person` | 1 [1] | 1 | counting | the list's owner, the cast rig tess |
+| `owner_signal` | 1 [1] | 1 | counting | the one accent marks the role that owns the decision |
+| `owner_statement` | 1 [1] | 1 | counting | the decision rule is written directly below the owner |
+| `owner_underline` | 1 [1] | 1 | counting | a thin accent line drawn under the name of who measured a number |
+| `packing_detail` | 1 [1] | 1 | counting | the retained hall slides to its work surface |
+| `pad_ticks` | 1 [1] | 1 | counting | three positive marks land beside the completed questions |
+| `padlock_closed` | 1 [1] | 1 | counting | the lock that closes beside the address |
+| `padlock_large` | 1 [1] | 1 | counting | the same lock at 96 px settling below the form, the one accent |
+| `page_collects_password` | 1 [1] | 1 | counting | a look-alike form sends its masked entry into a net |
+| `page_grows_second_page` | 1 [1] | 1 | counting | a lying sheet grows a second page out from under itself |
+| `page_on_screen` | 1 [1] | 1 | counting | the information remains visible in its latest container |
+| `page_outline` | 1 [1] | 1 | counting | the same attachment is enlarged without changing its look |
+| `page_verdict_marks` | 1 [1] | 1 | counting | the kit adds only the missing ticks, never another page |
+| `paired_backs` | 1 [1] | 1 | counting | outer edges have quieter leaders outside the slots |
+| `paired_doors` | 1 [1] | 1 | counting | two accounts keep distinct locks |
+| `paired_fractures` | 1 [1] | 1 | counting | both assertions retain the same steady rim while a fault draws through each |
+| `paired_fronts` | 1 [1] | 1 | counting | inward edges and arrows identify a common passage |
+| `paired_papers` | 1 [1] | 1 | counting | matching receipts land before the second total is circled |
+| `paired_question_marks` | 1 [1] | 1 | counting | the single accent is uncertainty above the empty chairs |
+| `paired_receivers` | 1 [1] | 1 | counting | equal sized doors make the same token's fit directly comparable |
+| `paired_signin` | 1 [1] | 1 | counting | the same neutral form in two separate browser windows |
+| `panel_label` | 1 [1] | 1 | counting | the name of what is in the panel |
+| `paper_disposal` | 1 [1] | 1 | counting | the paper copy feeds into a shredder and becomes strips |
+| `paper_doubts` | 1 [1] | 1 | counting | measured paper thoughts connect the words to the colleague |
+| `paper_ghost` | 1 [1] | 1 | counting | faint retained paper form |
+| `paper_label` | 1 [1] | 1 | counting | caption below the retained paper form |
+| `paper_note_on_surface` | 1 [1] | 1 | counting | a small tilted note with a few lines, lying on a table |
+| `paper_sign` | 1 [1] | 1 | counting | a hand-lettered paper sign with an ink outline |
+| `paper_thought_bubble` | 1 [1] | 1 | counting | a paper thought held over the desk |
+| `parallel_feeds` | 1 [1] | 1 | counting | connectors terminate at both rack bases |
+| `parked_counterpart` | 1 [1] | 1 | counting | the other order diverts into a side tray |
+| `parking_corner` | 1 [1] | 1 | counting | the aside is retained without displacing the question |
+| `passers_by` | 1 [1] | 1 | counting | grey background figures that walk across behind glass while the main action holds |
+| `passing_trace` | 1 [1] | 1 | counting | a faint underline sweeps once and vanishes, never a warning |
+| `password_identity` | 1 [1] | 1 | counting | one unchanged masked token shared by both sign-ins |
+| `password_vault` | 1 [1] | 1 | counting | a small safe that issues the distinct cards |
+| `path_kerb` | 1 [1] | 1 | counting | foreground kerb keeps Maya's feet behind the path edge |
+| `path_line` | 1 [1] | 1 | counting | the paper route starts at the desk corner and draws toward the doors |
+| `path_set` | 1 [1] | 1 | counting | the office wall and floor that make the path a real place |
+| `path_station` | 1 [1] | 1 | counting | literal kit names preserve the return layout and three depth layers |
+| `pause_circle` | 1 [1] | 1 | counting | the only accent invites a decision without giving the answer |
+| `pause_clock` | 1 [1] | 1 | counting | the marker circles the time reserved for thinking |
+| `payroll` | 1 [1] | 1 | counting | dashed payroll document awaiting classification |
+| `pen_that_travels` | 1 [1] | 1 | counting | a pen drawn from above whose tip travels to the line being written |
+| `pennant` | 1 [1] | 1 | counting | hanging pennant with the word calm |
+| `permission_note` | 1 [1] | 1 | counting | the link grants access without a new request |
+| `persistent_device` | 1 [1] | 1 | counting | the same device and slot, never redrawn |
+| `persistent_token` | 1 [1] | 1 | counting | identical notches remain visible throughout the two attempts |
+| `person_bust` | 1 [1] | 1 | counting | Sam, listening, left |
+| `person_disc` | 1 [1] | 1 | counting | a person shown from above as an icon on a gloss disc |
+| `phone_clock` | 1 [1] | 1 | counting | quartz clock badge, positioned above-right of the phone point |
+| `phone_flicker` | 1 [1] | 1 | counting | one restrained hesitation in the confirmation glow |
+| `phone_glow` | 1 [1] | 1 | counting | teal confirmation halo around the held phone point |
+| `phone_halo` | 1 [1] | 1 | counting | the soft uncertainty halo round the dot |
+| `phone_mfa` | 1 [1] | 1 | counting | phone holds the MFA-on state in daylight |
+| `phone_mini` | 1 [1] | 1 | counting | the phone's map, the dot drifted, then home |
+| `phone_point` | 1 [1] | 1 | counting | the phone as one glowing teal point |
+| `phone_point_glow` | 1 [1] | 1 | counting | a soft teal halo centered on the held phone point, not a replacement for it. |
+| `phone_pt` | 1 [1] | 1 | counting | teal listening point fixed at the earth crest |
+| `phone_quartz` | 1 [1] | 1 | counting | the phone with its quartz clock, hand wobbling |
+| `phone_readout` | 1 [1] | 1 | counting | the timer and three operation rows |
+| `phone_schematic` | 1 [1] | 1 | counting | an upright phone slab in thin grey strokes whose dark screen can light with a code |
+| `phone_screens` | 1 [1] | 1 | counting | a phone seen straight on whose screen cuts between a few real states |
+| `phone_terminal` | 1 [1] | 1 | counting | passive receiver dot on the ground crest |
+| `phone_time_flicker` | 1 [1] | 1 | counting | a teal halo over the held phone point, flickering when its time assumption breaks |
+| `picture_bubble` | 1 [1] | 1 | counting | a speech bubble that holds a small drawing and a pointer instead of words |
+| `pile_of_small_items` | 1 [1] | 1 | counting | rows of small items filling a vessel from the bottom in random order, each one slightly turned |
+| `pill_button_press` | 1 [1] | 1 | counting | a small pill button with an icon and one word, pressed once to show where an action happens |
+| `pill_exact_domain` | 1 [1] | 1 | counting | white teal-edged pill above the bar |
+| `pinned_notice` | 1 [1] | 1 | counting | a paper title is attached to the free wall |
+| `pinned_rule_card` | 1 [1] | 1 | counting | a paper notice belongs to the free wall, not a floating panel |
+| `pinned_rule_note` | 1 [1] | 1 | counting | the rule is a physical notice on the free left wall |
+| `pinned_wall_note` | 1 [1] | 1 | counting | a hand-lettered paper note names Maya's observation |
+| `pipe_note` | 1 [1] | 1 | counting | a short leader ends on the long unobstructed return run |
+| `place_boundary` | 1 [1] | 1 | counting | a faint boundary marks the copies sharing the desk |
+| `plain_document` | 1 [1] | 1 | counting | the unclassified item awaiting one deciding question |
+| `plan_page` | 1 [1] | 1 | counting | a dark notes page with a coloured header band, an icon and a title, and body lines in the light colour |
+| `plan_sheet_flat` | 1 [1] | 1 | counting | a paper sheet lying on a table in perspective, with ruled lines, a header strip and a small calendar glyph |
+| `plan_sheet_perspective` | 1 [1] | 1 | counting | a sheet lying on a table in perspective, ink lines and a small calendar glyph |
+| `plant_connections` | 1 [1] | 1 | counting | pipes link the cabinet coils to the plant |
+| `plate_stack` | 1 [1] | 1 | counting | a body of thin parallel plates with a plain strip down its middle |
+| `pocket_rules` | 1 [1] | 1 | counting | two readable plates, with the caption band left empty. |
+| `pointer_over_group` | 1 [1] | 1 | counting | one pointer glyph hovering over part of a lit group, standing for an action by some of them |
+| `pointer_settles_on_target` | 1 [1] | 1 | counting | a pointer travels in two eased legs and rests on the thing the sentence names |
+| `pointer_taps_row` | 1 [1] | 1 | counting | a pointer glides to a list row and taps it, the row presses and a ripple marks the spot |
+| `pointing_underline` | 1 [1] | 1 | counting | one stroke drawn under a line of text to point at it |
+| `policy_alternative` | 1 [1] | 1 | counting | the second valid storage route stays beside the manager rather than replacing it |
+| `policy_note` | 1 [1] | 1 | counting | a small page note, separated below the owner |
+| `policy_outside` | 1 [1] | 1 | counting | a source beyond the model's current reach |
+| `portable_codes` | 1 [1] | 1 | counting | the lifted set is represented as a compact labelled card, not tiny unreadable digits |
+| `pos_ring` | 1 [1] | 1 | counting | a pos outline drawn on round the chosen card |
+| `practice_invitation` | 1 [1] | 1 | counting | a quiet plate identifies the viewer's turn |
+| `presenter_at_line` | 1 [1] | 1 | counting | a consistent cast bust sits on one marker stroke |
+| `press_release` | 1 [1] | 1 | counting | published document whose outline carries its class |
+| `previous_folder` | 1 [1] | 1 | counting | a faint record of the second format |
+| `previous_paper` | 1 [1] | 1 | counting | a faint record of the first format |
+| `prior_example` | 1 [1] | 1 | counting | preserve the public page as the comparison |
+| `prior_ranges_hold` | 1 [1] | 1 | counting | prior range geometry remains as the reference |
+| `privileged_threshold` | 1 [1] | 1 | counting | a heavier last opening resists the attempt |
+| `priya_desk` | 1 [1] | 1 | counting | a short desk line gives Priya her own clear place on the board |
+| `proactive_tag` | 1 [1] | 1 | counting | starts as the word inside the bubble, kept by b06 |
+| `product_line` | 1 [1] | 1 | counting | a light path from the readout toward satellite A |
+| `product_path` | 1 [1] | 1 | counting | a thin route begins at the completed calculation and reaches satellite A |
+| `progress_checklist` | 1 [1] | 1 | counting | the board's established scaffold |
 | `progress_track` | 1 [1] | 1 | counting | an empty pill track whose fill grows left to right to show completion |
+| `projected_chat` | 1 [1] | 1 | counting | the single artefact followed through the film |
+| `promise_card` | 1 [1] | 1 | counting | a concrete purchase and its promised arrival |
+| `promise_padlock` | 1 [1] | 1 | counting | generic open lock, placed above the watcher for the later payoff |
+| `prompt_rows` | 1 [1] | 1 | counting | four rough boxes beside their written questions |
+| `prompt_stack` | 1 [1] | 1 | counting | the kit's three stacked prompt states, timed to each spoken repetition |
+| `proof_object` | 1 [1] | 1 | counting | one real thing standing for a kind of proof, lifted when named, its kind written under it |
+| `proof_word` | 1 [1] | 1 | counting | proof is a lower standard, visibly crossed out |
+| `protected_channel_label` | 1 [1] | 1 | counting | a pill names the double line only after it begins to draw |
+| `protection_switch` | 1 [1] | 1 | counting | the generic security row remains on after a rejected off action |
+| `public_item` | 1 [1] | 1 | counting | the press release, outline already public blue |
+| `public_press_release` | 1 [1] | 1 | counting | approved public document held from b04 |
+| `pulse` | 1 [1] | 1 | counting | bright radio pulse travelling from satellite A toward the phone point |
+| `pulse_fallback` | 1 [1] | 1 | counting | visible travelling wavefront while the kit pulse is repaired |
+| `pump_a` | 1 [1] | 1 | counting | cyan focus ring on the driving hub |
+| `push_ahead` | 1 [1] | 1 | counting | the long push driving the clock ahead (gravity effect) |
+| `push_back` | 1 [1] | 1 | counting | the short push pulling the clock back (speed effect) |
+| `q_where` | 1 [1] | 1 | counting | large decision prompt, the scene's one accent |
+| `qualified_copy_warning` | 1 [1] | 1 | counting | the caveat is a single underlined conclusion |
+| `qualified_warning` | 1 [1] | 1 | counting | an empty autofill is a clue, never proof |
+| `quartz_badge` | 1 [1] | 1 | counting | a small plain quartz clock face, separated from the teal phone point. |
+| `question_card_pause` | 1 [1] | 1 | counting | a question pinned to the thing it is about, with a bar that fills through the silence |
+| `question_in_ink` | 1 [1] | 1 | counting | the question remains while the travelling line becomes the emphasis |
+| `question_notepad` | 1 [1] | 1 | counting | fixed kit children ride their shared physical page |
+| `question_pad` | 1 [1] | 1 | counting | a paper notepad of three questions lying on the desk beside the receipts |
+| `question_recollection` | 1 [1] | 1 | counting | a title-size question mark placed in the kit bubble after its outline |
+| `question_restatement` | 1 [1] | 1 | counting | the unknown reader is now secondary to the route |
+| `question_sign` | 1 [1] | 1 | counting | a paper notice hangs from the path hook and gives the fork its spoken question |
+| `question_signal` | 1 [1] | 1 | counting | the one marker emphasis sits under the rewritten question |
+| `question_terminal` | 1 [1] | 1 | counting | lettering follows the unfinished route |
+| `question_word` | 1 [1] | 1 | counting | a written question above the empty seats |
+| `questions` | 1 [1] | 1 | counting | a single cyan note frame contains the two closing checks |
+| `quick_zone` | 1 [1] | 1 | counting | accent name and muted action identify the first move |
+| `quiet_air` | 1 [1] | 1 | counting | the earlier links remain in motion without a new emphasis |
+| `quiet_array` | 1 [1] | 1 | counting | three fixed overhead broadcasters remain unchanged |
+| `quiet_door` | 1 [1] | 1 | counting | previous emphasis becomes ink |
+| `quiet_duplicate` | 1 [1] | 1 | counting | the existing ring child yields emphasis without taking a missing held name |
+| `quiet_flow` | 1 [1] | 1 | counting | the system continues at low contrast behind the take-away |
+| `quiet_map` | 1 [1] | 1 | counting | an unchanged dotted route is not a moving location |
+| `quiet_pause_bar` | 1 [1] | 1 | counting | measured hold after the question |
+| `quiet_scope_recall` | 1 [1] | 1 | counting | a small familiar diagram recalls the three choices |
+| `quiet_term` | 1 [1] | 1 | counting | a definition above the physical evidence |
+| `quiet_time_marker` | 1 [1] | 1 | counting | a warm paper kicker locates the earlier moment without blaming anyone |
+| `quiz_heading` | 1 [1] | 1 | counting | an invitation rather than a verdict |
+| `quoted_phrase` | 1 [1] | 1 | counting | the vague feedback phrase that will read two ways |
+| `rack_consequences` | 1 [1] | 1 | counting | two short coral notes sit above the affected rack outlines |
+| `range_arm` | 1 [1] | 1 | counting | the range line from the satellite, rotating about it |
+| `ranked_candidates` | 1 [1] | 1 | counting | scores are illustrative lengths, never reported measurements |
+| `reachable_source` | 1 [1] | 1 | counting | weight arcs terminate inside the document band, not on a label |
+| `read_only_label` | 1 [1] | 1 | counting | explicit consequence of view |
+| `read_only_underline` | 1 [1] | 1 | counting | the one accent stresses the unchanged original |
+| `readable_carrier` | 1 [1] | 1 | counting | the same two-row card lifts out of the form and travels toward the aperture |
+| `readable_loop` | 1 [1] | 1 | counting | all three words stay readable while a signal cycles faster |
+| `readable_rule` | 1 [1] | 1 | counting | enlarge the retained rail and its labels together, above captions. |
+| `readback_line` | 1 [1] | 1 | counting | one decision, written left to right |
+| `reading_eye` | 1 [1] | 1 | counting | reading without alteration |
+| `reading_row` | 1 [1] | 1 | counting | the eye identifies the read-only option |
+| `readout` | 1 [1] | 1 | counting | compact phone timing panel beside the receiver |
+| `readout_link` | 1 [1] | 1 | counting | fine receiver link leading from the phone point into its timing display |
+| `readout_rows` | 1 [1] | 1 | counting | three calculation steps inside the phone readout |
+| `readout_shell` | 1 [1] | 1 | counting | the phone kit's readout body opens beside the receiver |
+| `recall_connector` | 1 [1] | 1 | counting | a thin elbow line wiring the badge to the browser key |
+| `recall_label` | 1 [1] | 1 | counting | pill naming the three checks, beside the badge (clear of the browser card) |
+| `recalled_boundaries` | 1 [1] | 1 | counting | all access choices remain visible |
+| `recalled_checks` | 1 [1] | 1 | counting | adjacent pill avoids the held browser's address and login rows |
+| `recalled_connection` | 1 [1] | 1 | counting | route outside the browser card, then into the key slot |
+| `recalled_document` | 1 [1] | 1 | counting | the same budget page |
+| `recap_card` | 1 [1] | 1 | counting | a small white card holding a reduced copy of an earlier picture, for a callback |
+| `receding_door_row` | 1 [1] | 1 | counting | the same threshold at progressively smaller scales |
+| `receding_receivers` | 1 [1] | 1 | counting | secondary nameless login doors extend the wall without changing the two established doors |
+| `receipt_ring` | 1 [1] | 1 | counting | the circle is carried by the receipt kit drawing, the frame's only teaching accent. |
+| `received_stamp` | 1 [1] | 1 | counting | replace the retired riding chip with the same kit chip after its exit |
+| `receiving_holder` | 1 [1] | 1 | counting | the recipient is defined by possession |
+| `receiving_point` | 1 [1] | 1 | counting | the kit's existing teal point is owned separately for continuity |
+| `recessed_wall` | 1 [1] | 1 | counting | unlit surroundings establish the small screen as the only source |
+| `recipient_pictogram` | 1 [1] | 1 | counting | another holder inside the boundary |
+| `recipient_trio` | 1 [1] | 1 | counting | three equal intended readers |
+| `recovered_air` | 1 [1] | 1 | counting | the reserve restores the floor supply on the same sheet |
+| `recovered_verdict` | 1 [1] | 1 | counting | an outcome pill sits below the rack and above the recovered rows |
+| `recovery_carrier` | 1 [1] | 1 | counting | a ghost leaves a surviving copy while the survivor stays whole |
+| `recovery_path` | 1 [1] | 1 | counting | fixed geometry leaves two equal slots for the following beat |
+| `recovery_transfer` | 1 [1] | 1 | counting | a travelling copy leaves the surviving source intact |
+| `refill_ghost` | 1 [1] | 1 | counting | a temporary document that travels back from the first backup to the laptop |
+| `refused_arrow` | 1 [1] | 1 | counting | the upward arrow that never completes |
+| `rejected_action` | 1 [1] | 1 | counting | a cross distinguishes the tempting move from the protected state |
+| `rejected_bearing` | 1 [1] | 1 | counting | the error mark cancels only the directional claim |
+| `rejected_candidate` | 1 [1] | 1 | counting | animate b16's actual marker, never a copied point. |
+| `rejected_choices` | 1 [1] | 1 | counting | short crosses sit left of the letter circles, clear of all words |
+| `rejected_copy` | 1 [1] | 1 | counting | matching Shop teeth travel toward Work without opening it |
+| `rejected_requirement` | 1 [1] | 1 | counting | the unnecessary word is struck before it dims |
+| `relay_pulse` | 1 [1] | 1 | counting | the subject follows the existing road and waits at each hand-off |
+| `relocated_copies` | 1 [1] | 1 | counting | retain both real backup cards, move each into its measured slot |
+| `remote_store` | 1 [1] | 1 | counting | a new storage location outside the common event |
+| `renewal_annotation` | 1 [1] | 1 | counting | the small product clock is the one focus, with an illustrative refresh from 482193 to 731604 |
+| `renewed_ranking` | 1 [1] | 1 | counting | the same held instrument changes, not a second set of bars |
+| `repeated_copies` | 1 [1] | 1 | counting | spaced sheets share the correction |
+| `replacement_confirmed` | 1 [1] | 1 | counting | success attaches to the destination, not to disabling protection |
+| `replacement_scan` | 1 [1] | 1 | counting | an independent phone fills the vacancy using the shared kit |
+| `replay_framing` | 1 [1] | 1 | counting | preserve the original composition before a restrained closing pull back |
+| `replay_login` | 1 [1] | 1 | counting | a sign-in dialog reuses the existing account window for the callback |
+| `replica_gate` | 1 [1] | 1 | counting | a grey replica of a gate, the same drawing in greys with one character changed on its plate |
+| `reply_emphasis` | 1 [1] | 1 | counting | accent underline below client reply |
+| `reply_in_hand` | 1 [1] | 1 | counting | a concrete answer replaces an unexplained tracking gap |
+| `reply_line` | 1 [1] | 1 | counting | priority sentence with the single accent underline |
+| `reply_link` | 1 [1] | 1 | counting | hand arrow from the budget card into the priority sentence |
+| `reply_note` | 1 [1] | 1 | counting | rough reply note under the week strip |
+| `reply_outline` | 1 [1] | 1 | counting | a single outline lift holds attention on absence |
+| `reply_tick` | 1 [1] | 1 | counting | a hand tick confirms the immediate client reply |
+| `report_b` | 1 [1] | 1 | counting | continuing Report copy on the laptop |
+| `report_by_usb` | 1 [1] | 1 | counting | second report copy beside the USB stick |
+| `report_detail` | 1 [1] | 1 | counting | the original Report sits inside the laptop screen |
+| `report_note` | 1 [1] | 1 | counting | a practical report note, headed toward security |
+| `report_on_laptop` | 1 [1] | 1 | counting | report copy seated in the laptop screen slot |
+| `reported` | 1 [1] | 1 | counting | the kit's green reported verdict clears the prompts at the move |
+| `request_line` | 1 [1] | 1 | counting | the browser requests an identity before a card is returned |
+| `request_route` | 1 [1] | 1 | counting | dashed expected route, wiped into the server direction |
+| `reserve_count` | 1 [1] | 1 | counting | one cyan count is the sole focal accent |
+| `reserve_flow` | 1 [1] | 1 | counting | cool supply and warm return keep moving as stored water is used |
+| `reserve_leader` | 1 [1] | 1 | counting | the additional unit is identified without covering its name |
+| `reserved_amount` | 1 [1] | 1 | counting | reservation is paused money rather than money taken |
 | `reset_jump` | 1 [1] | 1 | counting | a vertical jump with a dot and label showing a value reset to its maximum |
+| `reset_laptop` | 1 [1] | 1 | counting | the held laptop returns to its usable state before the four tests |
+| `reset_report` | 1 [1] | 1 | counting | the held Report refills before each failure can take it away |
+| `residue_ghost` | 1 [1] | 1 | counting | a faint copy of the interruption left printed over the work it interrupted |
+| `resolved_gathering` | 1 [1] | 1 | counting | the existing cast remains seated at the existing surface |
+| `resting_planes` | 1 [1] | 1 | counting | pillow and mattress recede into darkness with no occupant |
+| `restored_air_route` | 1 [1] | 1 | counting | the spare's output joins the common floor plenum |
+| `restored_evidence` | 1 [1] | 1 | counting | the original ring returns to full strength without replacing its shared drawing |
+| `restored_verdict` | 1 [1] | 1 | counting | positive outcome belongs to the refilled Report |
+| `resumed_subject` | 1 [1] | 1 | counting | the parcel is loaded and travels above the delivery vehicle |
+| `retained_check_rows` | 1 [1] | 1 | counting | new rows occupy the existing card on this beat's clock |
+| `retained_choices` | 1 [1] | 1 | counting | the same five places remain available without signalling an answer |
+| `retained_corridor` | 1 [1] | 1 | counting | all teaching props are the single originals from the question beat |
+| `retained_diorama` | 1 [1] | 1 | counting | the destination exists before the order |
+| `retained_disabled_key` | 1 [1] | 1 | counting | the previous emphasis becomes ink |
+| `retained_night_dock` | 1 [1] | 1 | counting | the same night dock holds the hand-off |
+| `retained_noise` | 1 [1] | 1 | counting | the copied pattern branches downward into the same tray |
+| `retained_outline` | 1 [1] | 1 | counting | the existing page retains its classification without an approval mark |
+| `retained_rows` | 1 [1] | 1 | counting | continuity owner for the existing kit rows, not a second drawing |
+| `retained_sorter` | 1 [1] | 1 | counting | the same board moves from the dock to the working lanes |
+| `retained_station` | 1 [1] | 1 | counting | context stays grey while one station becomes the answer |
+| `retained_system` | 1 [1] | 1 | counting | one unchanged device and card carry every failure |
+| `retained_twin` | 1 [1] | 1 | counting | an exact readable twin drops into the empty tray |
+| `retired_phone` | 1 [1] | 1 | counting | independent source instance is visibly crossed, never a copy of the held destination |
+| `return_arrow` | 1 [1] | 1 | counting | a curved arrow drawn round an object to say it came back |
+| `return_key` | 1 [1] | 1 | counting | a reusable link token |
+| `return_path` | 1 [1] | 1 | counting | direction back to origin |
+| `returned_key_callback` | 1 [1] | 1 | counting | key rests beside its sender |
+| `returning_card` | 1 [1] | 1 | counting | the neutral credential emerges from the far end and returns to the requester |
+| `returning_console` | 1 [1] | 1 | counting | the opening chat returns unchanged in scale |
+| `returning_masked_token` | 1 [1] | 1 | counting | the same kit token stays visible as it reaches the code barrier |
+| `returning_question` | 1 [1] | 1 | counting | held semantic anchor for the kit question |
+| `returning_scaffold` | 1 [1] | 1 | counting | the hall is the reference for the added services |
+| `reused_tag` | 1 [1] | 1 | counting | danger label leads from the card to the cause |
+| `rewind_tag` | 1 [1] | 1 | counting | quiet time marker on clear dark field |
+| `rewound_reply` | 1 [1] | 1 | counting | the same set returns already written up to the number |
+| `ride_through_note` | 1 [1] | 1 | counting | the term points to the stored reserve rather than to the failed unit |
+| `riding_clock` | 1 [1] | 1 | counting | the kit's own time chip rides the same wavefront |
+| `riding_speed` | 1 [1] | 1 | counting | the single speed emphasis belongs to the travelling front |
 | `ring_bound_page` | 1 [1] | 1 | counting | a page card with binding rings and a kicker heading |
+| `rising_route` | 1 [1] | 1 | counting | narrow line-tone marks connect the cabinet bases to the perforated floor |
+| `roof_destination` | 1 [1] | 1 | counting | the outdoor unit completes the building |
+| `roof_route` | 1 [1] | 1 | counting | the extracted heat has an onward destination |
+| `rotating_fan` | 1 [1] | 1 | counting | one mechanical rotor drives the cabinet air |
+| `round_portrait` | 1 [1] | 1 | counting | a character's head and shoulders cropped into a circle, a name tag for a screen |
+| `route_before_thresholds` | 1 [1] | 1 | counting | the route supplies a spatial reference before the options |
+| `route_line_ticks` | 1 [1] | 1 | counting | a thin route line with small direction ticks and a junction dot |
+| `row_0200` | 1 [1] | 1 | counting | an amber attention mark appears only when the late row is named, then leaves no warning behind |
+| `row_grows_into_window` | 1 [1] | 1 | counting | a window frame scaled up out of the list row it belongs to, its contents printing after it has grown |
+| `row_label` | 1 [1] | 1 | counting | the expanded representation is named after appearing |
+| `row_outlines` | 1 [1] | 1 | counting | neutral row attention precedes the three outcomes |
+| `rows_bracket` | 1 [1] | 1 | counting | a thin bracket gathering the three rows |
+| `rule_choices` | 1 [1] | 1 | counting | familiar neutral alternatives remain available |
+| `rule_comma_one` | 1 [1] | 1 | counting | an ink separator that joins the written phrases |
+| `rule_comma_two` | 1 [1] | 1 | counting | the second ink separator |
+| `rule_emphasis` | 1 [1] | 1 | counting | the sole accent is an underline, not a second category |
+| `rule_flag` | 1 [1] | 1 | counting | a short flag planted on the thing it names, stating the rule in the lesson's own words |
+| `rule_line` | 1 [1] | 1 | counting | a short line printed in the title role over a finished picture |
+| `rule_name` | 1 [1] | 1 | counting | the first phrase of the pocket rule, written under the agenda |
+| `rule_rail_home` | 1 [1] | 1 | counting | the held rule rail recedes to its bottom home while remaining unlit |
+| `rule_read` | 1 [1] | 1 | counting | the final phrase, completed early enough for a calm rest |
+| `rule_steer` | 1 [1] | 1 | counting | the second phrase of the pocket rule |
+| `rule_underline` | 1 [1] | 1 | counting | the single coloured takeaway |
+| `ruled_numbered_card` | 1 [1] | 1 | counting | a paper card with a header rule and numbered ruled lines, blank until filled |
+| `ruler_300m` | 1 [1] | 1 | counting | a ruler laid along the street, 360 px long |
+| `ruler_tag` | 1 [1] | 1 | counting | the label that names the ruler |
+| `running_air` | 1 [1] | 1 | counting | supply and return stay on opposite sides of the racks |
+| `running_section` | 1 [1] | 1 | counting | the complete sheet remains quietly in operation through recall, with renewed route clocks. |
+| `safe_verdict` | 1 [1] | 1 | counting | the intact boundary is the good outcome |
+| `sam_bust` | 1 [1] | 1 | counting | Sam listens beside the written decision |
+| `sam_tag` | 1 [1] | 1 | counting | Sam's name on the existing table front |
+| `sam_tag_underline` | 1 [1] | 1 | counting | the one accent mark, below Sam's written name |
+| `sam_underline` | 1 [1] | 1 | counting | the one marker-colour emphasis, directly under Sam's written tag |
+| `same_bag_boundary` | 1 [1] | 1 | counting | dashed shared-place boundary drawn after its contents |
+| `same_key_label` | 1 [1] | 1 | counting | a pill names the shared result directly above the path |
+| `same_key_leader_left` | 1 [1] | 1 | counting | thin leader connects the shared-key label to the browser key |
+| `same_key_leader_right` | 1 [1] | 1 | counting | thin leader connects the shared-key label to the server key |
+| `same_key_leaders` | 1 [1] | 1 | counting | thin neutral leaders connect one compact label to both matching keys |
+| `same_size_bracket` | 1 [1] | 1 | counting | a bracket under each of two things of equal width with an equals sign between them |
+| `sampling_term` | 1 [1] | 1 | counting | name the already visible branching choice |
+| `satellite_array` | 1 [1] | 1 | counting | constellation transmitters in orbit positions |
+| `satellite_c_named` | 1 [1] | 1 | counting | the third satellite becomes the active reference |
+| `satellite_emphasis` | 1 [1] | 1 | counting | focus highlight on transmitter A while dimming other transmitters |
+| `sats` | 1 [1] | 1 | counting | three idle GPS satellites held in the sky diagram |
+| `scan_marks` | 1 [1] | 1 | counting | each stationary scan creates exactly one status record |
+| `scan_signal` | 1 [1] | 1 | counting | a teaching outline distinguishes the camera's active region |
+| `scanner_detail` | 1 [1] | 1 | counting | the scanner's live circular location view |
+| `scanning_pass` | 1 [1] | 1 | counting | a short scanning stroke crosses the subject then clears |
+| `scenario_page` | 1 [1] | 1 | counting | the same budget in miniature |
+| `scheduled_vehicles` | 1 [1] | 1 | counting | three retained vehicles correspond to the display rows |
+| `scope_note` | 1 [1] | 1 | counting | no edge is the point |
+| `scope_recall` | 1 [1] | 1 | counting | the earlier three boundaries return without labels |
+| `score_edge` | 1 [1] | 1 | counting | one emphasis identifies the leading candidate |
+| `scrambled_packet` | 1 [1] | 1 | counting | the same packet leaves the browser lens as slate blocks and passes the watcher |
+| `scrambled_packet_label` | 1 [1] | 1 | counting | the outcome label lands under the six blocks after the readable rows have gone |
+| `scrap_strikes` | 1 [1] | 1 | counting | strike-throughs on scraps |
+| `screen_ghost` | 1 [1] | 1 | counting | faint retained screen form |
+| `screen_interior` | 1 [1] | 1 | counting | the inside of a monitor, bezel at the edges, a calm desktop with a taskbar and file icons |
+| `screen_label` | 1 [1] | 1 | counting | caption below the retained screen form |
+| `screen_spill` | 1 [1] | 1 | counting | hard cool light lands on the adjoining surface, not across the room |
+| `scribble_bubble_dev` | 1 [1] | 1 | counting | the second voice, same scribble |
+| `scribble_bubble_sam` | 1 [1] | 1 | counting | an hour of talk, no words in it |
+| `scribble_view` | 1 [1] | 1 | counting | ink scribble lines standing for an opinion whose words are not the point |
+| `seal_mark` | 1 [1] | 1 | counting | a round seal pressed onto a chip, its rim and a tick |
+| `sealed_compartment` | 1 [1] | 1 | counting | a small double-walled compartment holding one key that never leaves it |
+| `seated_back_view` | 1 [1] | 1 | counting | a person seen from behind (hair, neck, shoulders) at a desk, no face, in muted tones |
+| `seated_team` | 1 [1] | 1 | counting | return to the same four colleagues and table |
+| `second_backup` | 1 [1] | 1 | counting | the second backup completes the three-copy row |
+| `second_block` | 1 [1] | 1 | counting | a second solid work block over Thursday and Friday |
+| `second_factor_phone` | 1 [1] | 1 | counting | only the morning phone, no duplicated bedroom furniture |
+| `second_forward` | 1 [1] | 1 | counting | the new forward reaches only the boundary |
+| `second_lock_light` | 1 [1] | 1 | counting | the accent outlines the waiting second plate, not a second drawing of the lock |
+| `second_range_circle` | 1 [1] | 1 | counting | circle B grows from its satellite to the phone point |
+| `second_report` | 1 [1] | 1 | counting | the same intact file beside the USB stick |
+| `second_route` | 1 [1] | 1 | counting | route ends on company scope |
+| `second_shell` | 1 [1] | 1 | counting | a second equal range closes around its source |
+| `second_stopping_point_tag` | 1 [1] | 1 | counting | numbered mark leading to the next door |
+| `section_cabinet` | 1 [1] | 1 | counting | an insulated box with shelves and a closed door |
+| `security_desk` | 1 [1] | 1 | counting | a hard-lit physical desk grounds the digital log in the room |
+| `seeded_desk_array` | 1 [1] | 1 | counting | one desk drawn many times, each with its own seeded person, inbox rows and unread dot |
+| `seeded_skyline` | 1 [1] | 1 | counting | a row of blocks of seeded height with a few lit windows, as the many that surround one |
+| `selection_press` | 1 [1] | 1 | counting | a finite teaching ring marks the method, never a product state |
+| `sender_block` | 1 [1] | 1 | counting | the sender's name in bold with a muted address bar beneath and two small action icons at the far edge |
+| `sent_label` | 1 [1] | 1 | counting | a plain label with the scene's only accent underline |
+| `sent_report` | 1 [1] | 1 | counting | a plain report envelope travels out while its action label stays readable |
+| `sent_today_underline` | 1 [1] | 1 | counting | accent underline is the focal point |
+| `separate_cards` | 1 [1] | 1 | counting | visibly different teeth remain at the two named doors |
+| `sequential_underlines` | 1 [1] | 1 | counting | the single accent treatment is shared across all three parts |
+| `server_focus` | 1 [1] | 1 | counting | the server-side board area where unreadable blocks become the original form |
+| `server_inset` | 1 [1] | 1 | counting | the server end of the path, with the form readable again |
+| `server_lens` | 1 [1] | 1 | counting | the blue server key acts as the lens for the reverse transformation |
+| `server_packet_reverse_morph` | 1 [1] | 1 | counting | the same slate packet passes the server key, moves into the inbox and returns to readable rows |
+| `server_receiving` | 1 [1] | 1 | counting | the top unit with its dots lit ink |
+| `service_row` | 1 [1] | 1 | counting | new cabinets draft into the same coordinates as the hall |
+| `settings_preview` | 1 [1] | 1 | counting | two real settings rows inside the held browser |
+| `setup_region` | 1 [1] | 1 | counting | a QR region sits inside the held application rather than replacing its shell |
+| `shape_monogram_avatar` | 1 [1] | 1 | counting | a round avatar disc whose initial is drawn as a ring and a tail, so no name or letter is implied |
+| `shared_bag` | 1 [1] | 1 | counting | one parent carries both sources at the next beat |
+| `shared_departure` | 1 [1] | 1 | counting | the parent carries both files and their storage together |
+| `shared_desk` | 1 [1] | 1 | counting | one quiet baseline establishes the desk without making a room |
+| `shared_email` | 1 [1] | 1 | counting | one written decision becomes one distributed record |
+| `shared_flow_vocabulary` | 1 [1] | 1 | counting | warm water enters, heat crosses and cold water returns |
+| `shared_items` | 1 [1] | 1 | counting | page marks distinguish shared files from people |
+| `shared_key` | 1 [1] | 1 | counting | the identical notched key, formed at the end |
+| `shared_key_pulse` | 1 [1] | 1 | counting | both matching endpoint keys pulse once to show that the same secret works at each end |
+| `shared_keys` | 1 [1] | 1 | counting | the two end slots fill as a single blue family, with no key at the watcher |
+| `shared_locus` | 1 [1] | 1 | counting | the two surfaces share a schematic ring |
+| `shared_page_list` | 1 [1] | 1 | counting | a generic shared-file inventory |
+| `shared_reference` | 1 [1] | 1 | counting | preserve the shelf line without adding a duplicate |
+| `shared_responses` | 1 [1] | 1 | counting | each short response uses the kit's own bubble, grouped for the next beat |
+| `shared_rule` | 1 [1] | 1 | counting | one thin rule drawn through two pictures at once to mark the same boundary in both |
+| `shared_scaffold` | 1 [1] | 1 | counting | retain the line and chairs without drawing them again |
+| `shared_section` | 1 [1] | 1 | counting | equipment returns already drafted in one coordinate system |
+| `shared_sheet` | 1 [1] | 1 | counting | all equipment occupies the same section coordinates |
+| `shared_shells` | 1 [1] | 1 | counting | continuity anchor for the held pair |
+| `shared_speech` | 1 [1] | 1 | counting | four matching speech bubbles show one version of the meeting |
+| `shared_table` | 1 [1] | 1 | counting | the same physical meeting remains after its people leave |
+| `sheet_note` | 1 [1] | 1 | counting | a small held identification below the section |
+| `sheet_on_table` | 1 [2] | 1 | counting | a single document drawn in perspective on a tabletop, ink bars on paper |
+| `shelf_baseline` | 1 [1] | 1 | counting | the shared sheet's resting edge |
+| `shelf_evidence` | 1 [1] | 1 | counting | a live magnification of the physical shelf |
+| `shelf_subject` | 1 [1] | 1 | counting | the single reserved subject rests on the shelf deck |
+| `shop_door` | 1 [1] | 1 | counting | the first calm shut system door |
+| `shop_fresh_card` | 1 [1] | 1 | counting | a fresh password card for Shop |
+| `short_arrow_to_side` | 1 [1] | 1 | counting | a short line arrow leaving a tag toward where the reader should go next |
+| `short_handoff` | 1 [1] | 1 | counting | an opening token can pass to another holder |
+| `shortened_sequence` | 1 [1] | 1 | counting | only the trailing rows change, not the card or its earlier scans |
+| `shoulder_note` | 1 [1] | 1 | counting | a page can still be shown by its trusted holder |
+| `showing_on` | 1 [1] | 1 | counting | a listed holder can show the content to another |
+| `side_lane_pause` | 1 [1] | 1 | counting | the label's hold is marked at the box |
+| `side_tag` | 1 [1] | 1 | counting | a solid tag that wipes in beside the thing it names |
+| `sign_flag_to_ring` | 1 [1] | 1 | counting | a flag planted on a part of the picture with a lead to an empty ring that then fills, counting the signs off |
+| `sign_marks_row` | 1 [1] | 1 | counting | three small round marks (pressure, request, attachment) that stay the same while their container changes |
+| `signal_amber` | 1 [1] | 1 | counting | the server's signal chip |
+| `signal_beam` | 1 [1] | 1 | counting | a long gold beam of light |
+| `signal_bend` | 1 [1] | 1 | counting | a gold signal bending crossing the air band |
+| `signal_bounce` | 1 [1] | 1 | counting | a gold signal bouncing off the tall tower |
+| `signal_chip` | 1 [1] | 1 | counting | a recorded copy of one signal, slate for the browser's and amber for the server's |
+| `signal_pulse_tagged` | 1 [1] | 1 | counting | one pulse with a position pin and a time stamp riding its wavefront |
+| `signal_rings` | 1 [1] | 1 | counting | gold rings pulsing out from each satellite |
+| `signal_slate` | 1 [1] | 1 | counting | the browser's signal chip |
+| `signal_streaks` | 1 [1] | 1 | counting | warm trailing marks make the pulse's speed visible |
+| `signature_contact_chips` | 1 [1] | 1 | counting | two quiet contact chips, a link and a phone number, drawn as an icon and a bar with no words |
+| `signed_answer` | 1 [1] | 1 | counting | a small card that says it is a signed answer and carries the address it was made for |
+| `signed_in_holders` | 1 [1] | 1 | counting | pictograms lie between inner and company boundaries |
+| `signed_thresholds` | 1 [1] | 1 | counting | separate door landings and lettering keep the shape ahead of its label |
+| `signer_check` | 1 [1] | 1 | counting | authority row receives its teal outcome mark first |
+| `signer_label` | 1 [1] | 1 | counting | a nearby term points to the stamped seal |
+| `signer_trust_label` | 1 [1] | 1 | counting | outcome label beside authority row |
+| `signin_row` | 1 [1] | 1 | counting | each record is deliberately identical in treatment and result |
+| `silence_progress` | 1 [1] | 1 | counting | a quiet bar measures the reflection pause |
+| `simplification_note` | 1 [1] | 1 | counting | a qualification outside the working map |
+| `simultaneous_output` | 1 [1] | 1 | counting | identical heat marks above each rack |
+| `single_code_outline` | 1 [1] | 1 | counting | the teaching signal selects one code, never a product state |
+| `single_owner` | 1 [1] | 1 | counting | the approved cast bust sits on the existing desk line |
+| `single_rule_emphasis` | 1 [1] | 1 | counting | the minimum sufficient scope is the sole accent |
+| `single_scope_emphasis` | 1 [1] | 1 | counting | the unrestricted label is the only accent |
+| `single_use_callout` | 1 [1] | 1 | counting | the once-only limit is explicit at the spoken hedge |
+| `slip_pile` | 1 [1] | 1 | counting | paper slips stacked a little askew in a margin, a running count sitting on the top slip |
+| `slot_marks` | 1 [1] | 1 | counting | accent corner frame round each empty slot, the one named thing |
+| `slot_tick` | 1 [1] | 1 | counting | a filled slot disc with a tick, in the slot colour |
+| `slow_attention_push` | 1 [1] | 1 | counting | one mild push keeps the established wall and every travelling child coherent |
+| `slow_tag` | 1 [1] | 1 | counting | set slow before launch |
+| `small_folded_page` | 1 [1] | 1 | counting | the object that later boundaries surround |
+| `small_ledger_page` | 1 [1] | 1 | counting | a small paper page holding one row of time units for the other party's work |
+| `sorted_rows` | 1 [1] | 1 | counting | cards travel one at a time into the work order |
+| `sorter_cutaway` | 1 [1] | 1 | counting | the retained hall reveals its scanner and three outbound belts |
+| `source_console` | 1 [1] | 1 | counting | the question and its attached source persist in one console. |
+| `source_correction` | 1 [1] | 1 | counting | the sole accent belongs to the original |
+| `source_match` | 1 [1] | 1 | counting | the connector reaches the left socket, never crossing the reply's words. |
+| `source_page` | 1 [1] | 1 | counting | abstract rules make the source visible without inventing a deadline. |
+| `space_candidate` | 1 [1] | 1 | counting | a small gold candidate marker in the sky, fading and drifting away. |
+| `space_point` | 1 [1] | 1 | counting | the far point fading out of the field |
+| `space_pt` | 1 [1] | 1 | counting | distant candidate point fading into the night field |
+| `spare_outlines` | 1 [1] | 1 | counting | the existing dashed reserve states receive the closing emphasis |
+| `speed_tag` | 1 [1] | 1 | counting | the speed written on the moving thing |
+| `sphere_intersection_ring` | 1 [1] | 1 | counting | the shared locus is an ellipse through the circle crossings |
+| `split_desks` | 1 [1] | 1 | counting | the frame cut in two, a warm side for Maya and a cooler side for the other desk |
+| `split_line` | 1 [1] | 1 | counting | before and after |
+| `spoken_checklist` | 1 [1] | 1 | counting | four compact rows build in speech order |
+| `spread_gutter` | 1 [1] | 1 | counting | a fold line with a soft shadow band down the middle of a two-page spread |
+| `stacked_prompt` | 1 [1] | 1 | counting | a repeated request drawn as one more card on a pile |
+| `stalled_return` | 1 [1] | 1 | counting | an intentionally short upward arrow is cancelled before it reaches any satellite |
+| `stamp` | 1 [1] | 1 | counting | a wordless clock chip riding beside the travelling pulse |
+| `stand_legs` | 1 [1] | 1 | counting | two legs under a flat object, standing on the floor line |
+| `standby_note` | 1 [1] | 1 | counting | the healthy replacement is named in empty space above the plant |
+| `star` | 1 [1] | 1 | counting | quiet night reference point |
+| `state_badge` | 1 [1] | 1 | counting | a small pill pinned across the edge of a run, its word rewritten in place when the state changes |
+| `status_slot_label` | 1 [1] | 1 | counting | a short label under a status slot, arriving with its switch-off |
+| `step_instruction` | 1 [1] | 1 | counting | one stable instruction above the application |
+| `step_ladder` | 1 [1] | 1 | counting | two steps of colour, internal low and confidential high |
+| `step_list` | 1 [1] | 1 | counting | the completed three-step meeting checklist |
+| `step_pills_in_turn` | 1 [1] | 1 | counting | short step labels that light one per spoken word |
+| `step_slots` | 1 [1] | 1 | counting | three dashed empty slots where the tiles will land |
+| `step_tile_lit` | 1 [1] | 1 | counting | tile 1 Prove who turns blue, laid over the held tile |
+| `stepped_slide` | 1 [1] | 1 | counting | an object slides along the table in held drawings rather than a smooth glide |
+| `stock_allocation` | 1 [1] | 1 | counting | a compact temporary note replaces the completed check |
+| `stolen_card` | 1 [1] | 1 | counting | the copied credential aimed at the first lock |
+| `stopped_condition` | 1 [1] | 1 | counting | the stopped member and its condition remain for the answer |
+| `stopped_count` | 1 [1] | 1 | counting | the kit's own running text has a separate continuity owner |
+| `stopped_packet` | 1 [1] | 1 | counting | the waiting packet, stopped and marked rejected |
+| `stopped_screen` | 1 [1] | 1 | counting | the other desk's screen, small, reduced to the one thing it says |
+| `storage_destination` | 1 [1] | 1 | counting | a product-neutral vault surface receives the code card |
+| `storage_folder` | 1 [1] | 1 | counting | the storage location is equally secondary |
+| `storage_workspace` | 1 [1] | 1 | counting | the held shell remains while a quiet workspace covers the completed form |
+| `stored_value_return` | 1 [1] | 1 | counting | Save commits the generated account-specific value |
+| `stored_water_note` | 1 [1] | 1 | counting | a note reaches the loop through the clear service gap |
+| `stranger_question` | 1 [1] | 1 | counting | the only accent identifies the unexpected reader |
+| `strength` | 1 [1] | 1 | counting | the teaching signal grows with the longer masked entry |
+| `struck_icon_tag` | 1 [1] | 1 | counting | a small card pairing an icon struck through with the short claim it cancels |
+| `struck_original` | 1 [1] | 1 | counting | one small outcome mark, not a failed whole system |
+| `subject_carrier` | 1 [1] | 1 | counting | the same marked box rides a teal road carrier |
+| `subject_loop` | 1 [1] | 1 | counting | the one coloured marker hugs the measured title |
+| `subject_signal` | 1 [1] | 1 | counting | one marker loop distinguishes subject from decision |
 | `summary_tag` | 1 [1] | 1 | counting | a pill naming what a group of items adds up to |
+| `table_front_occluder` | 1 [1] | 1 | counting | the near face of a table redrawn over a figure behind it so the figure reads as seated |
+| `table_on_floor` | 1 [1] | 1 | counting | a thin top on two legs standing on the floor line |
+| `tag_missing` | 1 [1] | 1 | counting | negative offsite verdict hanging from the missing tile |
+| `tag_pill` | 1 [1] | 1 | counting | a small tag sitting on the thing it measures |
+| `tag_restored` | 1 [1] | 1 | counting | the positive result hangs from the refilled Report |
+| `tag_speed` | 1 [1] | 1 | counting | speed label and radiant streaks travelling beside the pulse |
+| `tag_stem` | 1 [1] | 1 | counting | tag hangs from the tile |
+| `takeover_note` | 1 [1] | 1 | counting | a healthy verdict sits above the spare clear of the counting bracket |
+| `tamper_packet` | 1 [1] | 1 | counting | one glyph block changed in transit, then rejected with a cross |
+| `target_board` | 1 [1] | 1 | counting | concentric rings with an ink outline, an empty aim point |
+| `task_card` | 1 [1] | 1 | counting | the named client request, placed in the high-impact, low-effort slot |
+| `temperature_column` | 1 [1] | 1 | counting | a numberless amber measure rises toward a warning line |
+| `temporary_carrier` | 1 [1] | 1 | counting | slate values remain distinct on two travel lanes |
+| `temporary_side_topic` | 1 [1] | 1 | counting | a spoken distraction that leaves as it is parked |
+| `term` | 1 [1] | 1 | counting | definition title above the automated rhythm |
+| `text_caret` | 1 [1] | 1 | counting | a thin upright bar at the end of a written line, blinking where the writing stopped |
+| `thermometer_scale` | 1 [1] | 1 | counting | an unnumbered scale until the bounds are named |
+| `third_shell` | 1 [1] | 1 | counting | one more range restricts the shared locus |
+| `thought_aside_lines` | 1 [1] | 1 | counting | a thought bubble whose lines type in one at a time, in the order of the thinking |
+| `thought_bubble_printed` | 1 [1] | 1 | counting | a thought cloud that opens from a head and prints its line in two breaths on the words |
+| `thought_cloud` | 1 [1] | 1 | counting | a paper cloud above and left of Leo with two small puffs trailing toward him |
+| `three_number_rail` | 1 [1] | 1 | counting | a single blue family that promises the rule |
+| `tick_mark` | 1 [1] | 1 | counting | teal disc with a white check, 56 px |
+| `tick_name` | 1 [1] | 1 | counting | teal tick after the name |
+| `tick_on_box` | 1 [1] | 1 | counting | a tick drawn into an empty box beside a ruled line, on the word that names the line |
+| `tick_reply` | 1 [1] | 1 | counting | positive tick on client reply |
+| `tick_warning` | 1 [1] | 1 | counting | teal tick by the empty slot |
+| `ticks` | 1 [1] | 1 | counting | product-success marks arrive on the three spoken commitments |
+| `tiled_floor_row` | 1 [1] | 1 | counting | a perspective tile floor under a row of look-alike cabinets, the row dimmed away from the subject |
+| `time_bar` | 1 [1] | 1 | counting | the span between two times, the travel time |
+| `time_chip` | 1 [1] | 1 | counting | a pill with a tiny clock, the phone's arrival time |
+| `time_heading` | 1 [1] | 1 | counting | the final choice |
 | `timeline_marker` | 1 [1] | 1 | counting | a tick with a disc marking one moment, popping as the spine passes |
 | `timeline_spine` | 1 [1] | 1 | counting | a hand-wobbled arrow line drawn left to right as an axis of order |
-| `unknown_ring` | 1 [1] | 1 | counting | a dashed ring with a question mark marking something not yet known |
+| `timer` | 1 [1] | 1 | counting | the running travel-time value inside the phone timing panel |
+| `timestamp_chip` | 1 [1] | 1 | counting | hardware clock stamp attached to propagating wavefront |
+| `tls_halo` | 1 [1] | 1 | counting | a soft accent field behind the packet, the protective outline's body |
+| `tls_label` | 1 [1] | 1 | counting | HTTPS = HTTP inside TLS |
+| `token_baseline` | 1 [1] | 1 | counting | the question remains in indexed pieces |
+| `token_label` | 1 [1] | 1 | counting | one piece receives its plain-language name |
+| `torn_off_page` | 1 [1] | 1 | counting | the top page of a desk calendar tears away and falls, showing the next day under it |
+| `tracked_order` | 1 [1] | 1 | counting | one retained subject lands on the order plate |
+| `trailing_streaks` | 1 [1] | 1 | counting | three short parallel gold traces sit behind the moving wavefront |
+| `transfer_trace` | 1 [1] | 1 | counting | the connection is used once, then removed |
+| `transformation_name` | 1 [1] | 1 | counting | the result is labelled directly under the waiting blocks |
+| `travel_chip` | 1 [1] | 1 | counting | a pill carrying one thing (a password, a code) from one screen to another |
+| `travel_note` | 1 [1] | 1 | counting | concise notes outside the ring |
+| `travelled_caption` | 1 [1] | 1 | counting | the causal reading is written beneath the route |
+| `travelling_boundary` | 1 [1] | 1 | counting | the same outline moves between formats |
+| `travelling_form` | 1 [1] | 1 | counting | one packet retains its identity through the gate |
+| `travelling_front` | 1 [1] | 1 | counting | one warm wavefront leaves the established broadcaster |
+| `travelling_key` | 1 [1] | 1 | counting | a reusable permission beside the shared object |
+| `travelling_path` | 1 [1] | 1 | counting | one accent route, revealed holder to holder |
+| `travelling_pulse` | 1 [1] | 1 | counting | one coloured pill with a fading tail that rides a path; the carrier of a value |
+| `tray_copy` | 1 [1] | 1 | counting | small slate value copies in the tray |
+| `tray_label` | 1 [1] | 1 | counting | the retained card is named beside, not over, its identical rows |
+| `tray_row` | 1 [1] | 1 | counting | three open trays in class colours across the bottom |
+| `trays` | 1 [1] | 1 | counting | three coloured but empty classification destinations |
+| `trip_band_blue` | 1 [1] | 1 | counting | the private trip lit in the one blue |
+| `tube_name` | 1 [1] | 1 | counting | a neutral pill sits above the protected route, not over its travelling contents |
+| `tue_alert` | 1 [1] | 1 | counting | the one accent, the alert that lands at the Tuesday pin |
+| `tuesday_square` | 1 [1] | 1 | counting | empty calendar day headed Tuesday |
+| `turn_heading` | 1 [1] | 1 | counting | a fresh practice board |
+| `twin_leaders` | 1 [1] | 1 | counting | two neutral leaders end at the two slots and avoid the watcher. |
+| `two_candidate_points` | 1 [1] | 1 | counting | only the two intersections remain bright |
+| `two_column_ledger` | 1 [1] | 1 | counting | a header rule and a column rule drawn, two serif column heads dropped above them, each with a short rule under it |
+| `two_hop_forward` | 1 [1] | 1 | counting | one bent marker line continues from holder to holder |
+| `two_part_question` | 1 [1] | 1 | counting | one question above three unmarked choices |
+| `typed_question` | 1 [1] | 1 | counting | a semantic held anchor for the existing kit question line |
+| `unanswered_heading` | 1 [1] | 1 | counting | an unanswered decision written above the vacant table |
+| `unanswered_labels` | 1 [1] | 1 | counting | the questions are written above the empty surface in spoken order |
+| `unanswered_marks` | 1 [1] | 1 | counting | the single accent group replaces the absent answers, above chair backs |
+| `unanswered_owner` | 1 [1] | 1 | counting | responsibility is unresolved too |
+| `unanswered_prompt` | 1 [1] | 1 | counting | a still question occupies clear paper above the system |
+| `unbounded_forward` | 1 [1] | 1 | counting | a short route past the outer ring, below the words |
+| `unexpected_recipient` | 1 [1] | 1 | counting | a separate fourth holder outside the team |
+| `unique_password_label` | 1 [1] | 1 | counting | label for the one-card-per-account rule |
+| `unique_tag` | 1 [1] | 1 | counting | the habit names the paired cards |
+| `unit_cell` | 1 [1] | 1 | counting | a square time unit, a muted outline when free and a flat colour once stamped with what filled it |
+| `unknown_tile` | 1 [1] | 1 | counting | one unknown, icon and word |
+| `unreadable_verdict` | 1 [1] | 1 | counting | the label sits at the tray rim, above its retained pattern |
+| `unresolved_route` | 1 [1] | 1 | counting | a hidden route leads right without claiming a destination |
+| `unscrambled_pill` | 1 [1] | 1 | counting | the pill sits under the readable packet, inside the card |
+| `unsure_page` | 1 [1] | 1 | counting | the same dashed item moves onto the more protective ledge |
+| `until_heading` | 1 [1] | 1 | counting | third choice |
+| `unused_route` | 1 [1] | 1 | counting | nothing crosses the route when the absence is named |
+| `up_arrow` | 1 [1] | 1 | counting | upward route begins, stops, then is crossed out |
+| `upper_slot_warning` | 1 [1] | 1 | counting | only the upper server slots carry the heat warning |
+| `url_lenses` | 1 [1] | 1 | counting | enlarged addresses keep the changed character readable without losing the empty form |
+| `usb` | 1 [1] | 1 | counting | continuing USB backup in the same bag |
+| `usb_in_bag` | 1 [1] | 1 | counting | slate USB backup in the bag's USB spot |
+| `vacant_shelf` | 1 [1] | 1 | counting | a short empty rack exposes its bare decks |
+| `validity_bar` | 1 [1] | 1 | counting | a thin bar on a token that drains as its time runs out, never shown empty here |
+| `value_bars` | 1 [1] | 1 | counting | plain vertical bars on one baseline, each named under it and valued over it |
+| `value_on_a_limit_line` | 1 [1] | 1 | counting | the single spoken value sits beside the part, then moves to label the limit line |
+| `value_token` | 1 [1] | 1 | counting | slate pill carrying the temporary value |
+| `vault` | 1 [1] | 1 | counting | password manager produces the fresh card |
+| `vault_tint_band` | 1 [1] | 1 | counting | warm station field |
+| `vectors` | 1 [1] | 1 | counting | numeric columns unfold from the same identifiers |
+| `verdict_bubble_return` | 1 [1] | 1 | counting | You's verdict, tail toward You off screen left |
+| `verdict_strike` | 1 [1] | 1 | counting | the strike line across the wrong reading |
+| `verdict_wrong_overlay` | 1 [1] | 1 | counting | fades in to show this reading is the wrong one |
+| `verification_result` | 1 [1] | 1 | counting | a product success tick appears only after the press. |
+| `verified_chip` | 1 [1] | 1 | counting | the name the site proved |
+| `verify_press` | 1 [1] | 1 | counting | a finite teaching ring marks the product button press. |
+| `view_heading` | 1 [1] | 1 | counting | permission heading follows its icon |
+| `view_not_edit` | 1 [1] | 1 | counting | reading is allowed and alteration is not |
+| `viewer_bubble` | 1 [1] | 1 | counting | empty speech bubble asking the viewer |
+| `viewer_turn` | 1 [1] | 1 | counting | unease releases into a steady front-facing look and small nod |
+| `wait_packet` | 1 [1] | 1 | counting | a text-free packet glyph with a dashed TLS outline |
+| `waiting_batch` | 1 [1] | 1 | counting | the hold belongs to the next group, never to staff |
+| `waiting_code_surface` | 1 [1] | 1 | counting | the familiar sign-in shell waits at its second step |
+| `waiting_page` | 1 [1] | 1 | counting | an unclassified page waits clear of its destination |
+| `waiting_phone_mark` | 1 [1] | 1 | counting | a lead that points to the phone glyph in the lower lock |
+| `waiting_proof` | 1 [1] | 1 | counting | semantic anchor for the app's uncompleted second step |
+| `walker_behind_screen` | 1 [1] | 1 | counting | a character crosses behind a low screen so only the upper body reads, with a step bob |
+| `wall_and_desk_edge` | 1 [1] | 1 | counting | a plain wall with the near edge of a desk along the bottom, a mug and a pen on it |
+| `wall_and_floor` | 1 [1] | 1 | counting | a dark wall behind the doors, a lit-edged floor under them |
+| `wall_calendar_crossed` | 1 [1] | 1 | counting | a wall calendar whose gone days are struck through one by one |
+| `wall_calendar_crosses` | 1 [1] | 1 | counting | a wall calendar whose days are struck through as time passes |
+| `wall_clock` | 1 [1] | 1 | counting | a small clock beside it, its minute hand ticking |
+| `wall_clock_state` | 1 [1] | 1 | counting | a wall clock set to a time of day, its hands held for a later sweep |
+| `wall_in_section` | 1 [1] | 1 | counting | a slim slate slab standing from the floor, the edge between inside and outside |
+| `wall_planner_week` | 1 [1] | 1 | counting | a paper week planner on a wall, ring binding, one column per day, faint hour lines |
+| `wall_reminder` | 1 [1] | 1 | counting | one paper note in the free wall space holds all three accent words |
+| `warm_return` | 1 [1] | 1 | counting | the existing pipe changes emphasis beneath travelling amber marks |
+| `warning_note` | 1 [1] | 1 | counting | a coral leader identifies the affected upper slots |
+| `warning_tag` | 1 [1] | 1 | counting | the neg tag naming what happened |
+| `watcher_copy` | 1 [1] | 1 | counting | readable tray copy held as the exposure evidence |
+| `watcher_noise_copy` | 1 [1] | 1 | counting | the held noise remains in the watcher tray while its label retires |
+| `watcher_noise_panel` | 1 [1] | 1 | counting | what the watcher holds is unreadable noise |
+| `watcher_pulse` | 1 [1] | 1 | counting | one ring swells off the eye disc on the words |
+| `watcher_ring` | 1 [1] | 1 | counting | the one loud blue ring that names the watcher |
+| `watcher_signals` | 1 [1] | 1 | counting | the two recorded signal chips, a dashed key slot and an ink question mark |
+| `watcher_values` | 1 [1] | 1 | counting | the inherited copied values dim into neutral unreadable blocks. |
+| `water_coil` | 1 [1] | 1 | counting | a folded pipe is the one named cyan part |
+| `water_heat_exchanger` | 1 [1] | 1 | counting | water gives up heat without joining the inner circuit |
+| `weather_over_road` | 1 [1] | 1 | counting | suspended cloud and dashed rain identify an environmental obstruction |
+| `wedge_spotlight` | 1 [1] | 1 | counting | the room dims except a wedge of light falling on one person |
+| `week_strip` | 1 [1] | 1 | counting | weekday cells |
+| `which_action_title` | 1 [1] | 1 | counting | the one accent, stamped on the cloud |
+| `wider_scope` | 1 [1] | 1 | counting | outer boundary is not a restriction on a holder |
+| `window_fill` | 1 [1] | 1 | counting | cool night plane, kept away from readable phone screen |
+| `window_fracture` | 1 [1] | 1 | counting | source failure above the original screen |
+| `window_light` | 1 [1] | 1 | counting | a hard cool wedge from an unseen window, the room's only fill |
+| `work_fresh_card` | 1 [1] | 1 | counting | a different fresh password card for Work |
+| `work_queue` | 1 [1] | 1 | counting | small grey order cards wait beside the arriving subject |
+| `working_window` | 1 [1] | 1 | counting | a small diagram confirms the source is now in reach |
+| `worried_colleague` | 1 [1] | 1 | counting | one fixed rig reacts with posture as well as expression |
+| `written_payoff` | 1 [1] | 1 | counting | decisions and parked work remain visible on the table front |
+| `written_pocket_rule` | 1 [1] | 1 | counting | three short clauses appear in spoken order, without a container |
+| `written_question` | 1 [1] | 1 | counting | scenario followed by the decision |
+| `written_question_left` | 1 [1] | 1 | counting | what |
+| `written_question_right` | 1 [1] | 1 | counting | who |
+| `wrong_load` | 1 [1] | 1 | counting | a neutral handling vehicle carries a differently shaped parcel |
+| `zone_fill` | 1 [1] | 1 | counting | fill-ins quadrant heading |
+| `zone_major` | 1 [1] | 1 | counting | major projects quadrant heading |
+| `zone_quick` | 1 [1] | 1 | counting | quick wins quadrant heading |
+| `zone_thankless` | 1 [1] | 1 | counting | thankless tasks quadrant heading |
 
 ## Beat designs (templates; assessed at 2 uses)
 
 | design | uses | lessons | status | idea |
 |---|---|---|---|---|
+| `fade_and_stay` | 4 [4] | 2 | candidate | three thought bubbles drift out of a solid frame and fade, the frame stays |
+| `identity_arrives` | 3 [3] | 3 | candidate | a card travels from one end back to the other and gets vouched for by a seal |
+| `absence_after_talk` | 2 [2] | 2 | candidate | people drawn in at a table, then gone; the empty chairs get the questions nobody can answer |
+| `afterwards_talk` | 2 [2] | 2 | candidate | the room empties, two people talk, the agreed marker lands, the nod now means something |
+| `blank_agenda_question` | 2 [2] | 2 | candidate | a hand-drawn agenda waits for its first line to become a question, then a pocket rule settles beneath it |
+| `blocked_dependencies_into_shared_focus` | 2 [2] | 2 | candidate | undisclosed dependencies enter the shared work frame as physical blocker tokens so participants resolve them collaboratively |
+| `calendar_fill` | 2 [2] | 2 | candidate | the empty request slot fills with an action pinned to the next meeting on a wall calendar |
+| `camera_feed_record` | 2 [2] | 2 | candidate | a corner camera whose viewfinder shows only who spoke, what, when and to whom |
+| `camera_fills_sentence` | 2 [2] | 2 | candidate | a viewfinder inset replays the meeting while the first slot of the board sentence fills word by word |
+| `certificate_return` | 2 [2] | 2 | candidate | a neutral request line gives way to one blue certificate travelling from the server to the browser |
+| `commitment_lands` | 2 [2] | 2 | candidate | a tick and a date-free marker land beside a note on a quiet desk |
+| `copy_on_path` | 2 [2] | 2 | candidate | a box beside the path duplicates a readable packet into its tray |
+| `demand_slip_stalled_work` | 2 [2] | 2 | candidate | authoritative order dropped on desk with surface acknowledgement while core work remains stalled |
+| `desk_callback_resolution` | 2 [2] | 2 | candidate | returning to opening desk to resolve schedule tension with an on-time release and shared collaborative orientation |
+| `divergent_recollections` | 2 [2] | 2 | candidate | one shared setting refills, then four incompatible responses accumulate |
+| `emptied_room_two_stay` | 2 [2] | 2 | candidate | a crowd leaves a room and two people stay, stiff, facing each other |
+| `false_success_signal` | 2 [2] | 2 | candidate | a warm nod and a glowing exit that read as it worked |
+| `guessing_with_no_pick` | 2 [2] | 2 | candidate | question marks hover over different moments of a timeline and never land |
+| `held_slot_answer_reveal` | 2 [2] | 2 | candidate | mark target item, dim non-chosen items, bracket tempting distractor, and restore single focus |
+| `holder_chain` | 2 [2] | 2 | candidate | two short hops explain how an outsider receives access |
+| `label_received_as_attack` | 2 [2] | 2 | candidate | a stamp lands on Dev's chest and his shoulders tense behind a polite smile |
+| `layered_slips_reveal` | 2 [2] | 2 | candidate | layered outer covers obscure central record until folded away for direct focus |
+| `middle_boundary` | 2 [2] | 2 | candidate | membership excludes holders beyond a closer boundary |
+| `objection_beside_done` | 2 [2] | 2 | candidate | a calm finished board, a shrug, a bubble that asks why |
+| `observer_assumption_withdrawal` | 2 [2] | 2 | candidate | an observer presumes an internal motive which is named and then withdrawn leaving the situation unchanged |
+| `open_question_listening_space` | 2 [2] | 2 | candidate | neutral figures yield speaking turn to an open question leaving reply space unfilled |
+| `outlined_slot_transfer` | 2 [2] | 2 | candidate | one occupied position becomes empty while the same token occupies a later position |
+| `paper_morph_to_rail` | 2 [2] | 2 | candidate | expanding an evaluated single slip into a wide planning surface with unpopulated slots |
+| `promise_route` | 2 [2] | 2 | candidate | a dashed route leads to an open padlock above the watcher |
+| `quiet_desk_single_note` | 2 [2] | 2 | candidate | one note alone on a calm desk, its name turned away, an empty board waiting |
+| `read_back_underlined_by_part` | 2 [2] | 2 | candidate | the written line is read aloud and each part is underlined and named as it is spoken, then a muted note invites correction |
+| `reasoning_drawn_in_speech_order` | 2 [2] | 2 | candidate | a weak line circled inside an accumulating board |
+| `repeat_over_ghost` | 2 [2] | 2 | candidate | the same tense meeting replays exactly over a faded grey copy of the first |
+| `replayed_frame_one_change` | 2 [2] | 2 | candidate | the opening room returns unchanged except the board sentence |
+| `request_and_check_back` | 2 [2] | 2 | candidate | two clauses each land beside a calendar marker so the ask and its follow-up read as two objects |
+| `same_place_event` | 2 [2] | 2 | candidate | one dashed place drawn round the objects, one event fills it and empties everything inside together |
+| `same_room_two_outcomes` | 2 [2] | 2 | candidate | one room split in two, the same seating, only the flow differs |
+| `second_marker_linked` | 2 [2] | 2 | candidate | a second marker lands after the first and a thin line joins them |
+| `sentence_performed` | 2 [2] | 2 | candidate | the speaker's bubble prints the lesson sentence in the order spoken |
+| `sentence_said_kindly` | 2 [2] | 2 | candidate | a vague sentence is spoken warmly and printed on the board in plain ink |
+| `shared_table_setup` | 2 [2] | 2 | candidate | establish two participants across a work table with central document and sequential scaffold |
+| `slot_swap_revision` | 2 [2] | 2 | candidate | replacing broad clause with concrete omission linked to evidence gap |
+| `snake_id` | 2 [2] | 1 | candidate | two_candidates_resolve_on_the_surface |
+| `stepped_lateral_placement` | 2 [2] | 2 | candidate | travel a commitment anchor into a calendar leaf while the source holds |
+| `strike_and_replace` | 2 [2] | 2 | candidate | a held item is struck out, a better version is written beside it, and an arrow from each drops into what it yields |
+| `temporary_values_cross` | 2 [2] | 2 | candidate | two copied values cross an open path while the watcher remains without a key. |
+| `thought_untangles` | 2 [2] | 2 | candidate | a tangled feeling straightens into a statable effect clause |
+| `three_checks_in_turn` | 2 [2] | 2 | candidate | one document is read row by row, each row named, matched against what is on screen, then ticked |
+| `three_checks_stamped` | 2 [2] | 2 | candidate | one official object is checked on three separate rows, each pass stamped with a teal tick |
+| `three_parts_join` | 2 [2] | 2 | candidate | three slots slide together into one sentence while the faded old line stays grey beside it |
+| `two_spheres_meet` | 2 [2] | 2 | candidate | a second range circle grows from its satellite until it crosses the first, and a thin tilted ring lights through the two crossings |
+| `unfold_and_mark_slot` | 2 [2] | 2 | candidate | slot unfolds into empty tier and marks bind to spans |
+| `waiting_then_answering` | 2 [2] | 2 | candidate | the same room, calmer, one person holds back and then speaks |
+| `watcher_noise_copy` | 2 [2] | 2 | candidate | scrambled blocks pass the watcher, whose duplicate becomes equally unreadable noise |
+| `widest_boundary` | 2 [2] | 2 | candidate | possession opens the largest possible audience |
+| `written_action_stays` | 2 [2] | 2 | candidate | a faint mood scribble fades while the written action stays |
 | `attention_converges` | 2 [2] | 1 | deferred | a group of figures turn one by one to face a single focus while dashed sight lines converge on it |
+| `absence_after_exchange` | 1 [1] | 1 | counting | a lively shared surface empties, unanswered marks occupy the vacant space |
+| `absent_counterpart` | 1 [1] | 1 | counting | a waiting surface faces an empty outline and holds the unanswered question |
+| `accumulating_loop` | 1 [1] | 1 | counting | a selected piece travels into a growing line, then the same steps run faster |
+| `acting_line_effect_on_listener` | 1 [1] | 1 | counting | a speaker's line opens in a bubble while the listener's posture eases, the effect of the move shown on the person |
+| `added_line_on_held_board` | 1 [1] | 1 | counting | one board gains a second line while the first dims |
+| `agreed_step_completes_board` | 1 [1] | 1 | counting | two marker ticks sign off the step, then the last line completes a three-line board |
+| `agreed_step_row` | 1 [1] | 1 | counting | the third slot of the held bubble fills with the step, then a pos tick lands as both faces turn happy |
+| `alarm_fires_at_desk` | 1 [1] | 1 | counting | a worker at a desk; an item arrives and an alarm bursts behind her |
+| `alarm_fires_at_desk_resolved` | 1 [1] | 1 | counting | the opening desk again, calm; three steps light in turn |
+| `alone_with_the_doubt` | 1 [1] | 1 | counting | on a held row of people with open private thoughts, each one glances around, sees only calm faces, and folds their thought shut in turn under narrowing light |
+| `analogy_then_section` | 1 [1] | 1 | counting | a familiar object shows the behaviour first (a laptop's warm puff), then the same behaviour in the formal side view with the air coloured by temperature |
 | `answer_carried_back` | 1 [1] | 1 | counting | a hypothetical answer is carried backward along a held timeline, dips over each moment and finds nothing to land on |
+| `arrival_checked` | 1 [1] | 1 | counting | a tracked token lands at a station beside a two-stage verification note |
+| `arrival_order_failure` | 1 [1] | 1 | counting | a completed top-to-bottom list leaves the bottom task unticked as Friday arrives |
+| `ascending_release` | 1 [1] | 1 | counting | a closed route climbs to an open endpoint and disperses. |
+| `ask_then_listen_corner` | 1 [1] | 1 | counting | a short private moment where one person asks, the other talks, and a shared note is rewritten together |
+| `assembled_reply` | 1 [1] | 1 | counting | a question gains one actionable row at a time beside its workplace |
+| `attempt_stops_at_wall` | 1 [1] | 1 | counting | the same attempt runs again and stops at a step only the owner can pass |
+| `b08_listening_sky` | 1 [1] | 1 | counting | three overhead broadcasters send downward while an upward path fails |
+| `b08_matching_keys_at_two_ends` | 1 [1] | 1 | counting | paired blue endpoints establish one shared secret |
+| `b08_offsite_copy` | 1 [1] | 1 | counting | a report travels beyond the same-place boundary and remains intact |
+| `b09_trust_link` | 1 [1] | 1 | counting | verified checks visibly connect to the shared browser key |
+| `b10_sorting_hesitation` | 1 [1] | 1 | counting | three document outlines find their coloured trays, with one pause correcting the tempting choice. |
+| `b10_system_at_rest` | 1 [1] | 1 | counting | finished copies occupy independent places while the rule resolves as one family |
+| `b12` | 1 [1] | 1 | counting | operations resolve a measured interval into range |
+| `b12_missing_offsite` | 1 [1] | 1 | counting | a checked rule rail exposes one absent safeguard before its shared bag leaves |
+| `b17_resolve_candidate_points` | 1 [1] | 1 | counting | one candidate fades into distance while the ground candidate resolves into the phone glow |
+| `b18_clock_assumption_break` | 1 [1] | 1 | counting | a steady quartz clock beside the resolved phone point jumps out of step |
+| `backup_failure_to_rule_promise` | 1 [1] | 1 | counting | a failed device anchors a named risk while a three-tile rule arrives as the remedy |
+| `backup_triplet` | 1 [1] | 1 | counting | one document becomes three separate copies, and two remain after one is struck |
+| `bag_check` | 1 [1] | 1 | counting | one shared container makes two backup copies vulnerable |
+| `batch_boundary` | 1 [1] | 1 | counting | a boundary separates the moving group from an arrival that must wait |
+| `behaviour_impact_question_held_whole` | 1 [1] | 1 | counting | the camera returns once more to find the three-part card complete, the lesson's own device shown whole and at rest |
+| `belief_not_proof_card` | 1 [1] | 1 | counting | a desk-side magnifier lands as a wall notice distinguishes honest belief from proof |
+| `blank_card_handover` | 1 [1] | 1 | counting | the notes clear from the desk and an empty four-slot card lands in the centre, each slot lighting as its word is said, then waits to be filled |
+| `blank_page_waits` | 1 [1] | 1 | counting | a blank ruled card hands its first line to the viewer, who writes one question; a hand-lettered three-part rule sits under it |
+| `blank_prompt_card` | 1 [1] | 1 | counting | an empty form whose first line waits for a question, with the rule written beneath it |
+| `blank_slot_handoff` | 1 [1] | 1 | counting | an empty ruled frame gains one coloured prompt, then a written pocket rule rests beneath it |
+| `blocked_door_question` | 1 [1] | 1 | counting | a dim corridor closes one route while a hanging question gives the viewer space to choose |
+| `blocked_manager_fork` | 1 [1] | 1 | counting | a greyed door turns a familiar path into an open question |
+| `body_lit_from_inside` | 1 [1] | 1 | counting | a figure lit from inside, named parts pinned to it as they are said |
+| `borrowed_key` | 1 [1] | 1 | counting | one copied token opens a second door |
+| `bounded_field` | 1 [1] | 1 | counting | a lit enclosure makes an absent sheet consequential |
+| `bounded_forward` | 1 [1] | 1 | counting | a travelling mark stays within a drawn boundary |
+| `bounded_intake` | 1 [1] | 1 | counting | a measured interval beside a receiving face |
+| `bounded_return` | 1 [1] | 1 | counting | a forward reaches a shut boundary beside three deliberate choices |
+| `breach_becomes_traveling_list` | 1 [1] | 1 | counting | a fault elsewhere forces one door while the card is copied onto a long sheet that slides away, duplicated, the other door untouched |
+| `breached_receiver_shared_inventory` | 1 [1] | 1 | counting | an unrelated broken receiver releases matching tokens into a travelling inventory |
+| `breached_shop_becomes_shared_list` | 1 [1] | 1 | counting | a forced Shop door and copied password list show a breach elsewhere travelling onward |
+| `broken_assumption` | 1 [1] | 1 | counting | a steady instrument beside a fixed point slips out of agreement |
+| `callback_annotate_same_object` | 1 [1] | 1 | counting | an object from the opening returns, grows out of its screen to fill the frame, and is annotated part by part in step with the words |
+| `callback_bookend_calm_note` | 1 [1] | 1 | counting | the opening shot returns with the same desk and person, but the pull is gone: a note is sent and a rule is stuck on the wall |
+| `callback_limit_pair` | 1 [1] | 1 | counting | the earlier picture returns changed, with the earlier idea beside it, and one rule links the two |
+| `callback_opening_changed` | 1 [1] | 1 | counting | the opening frame returns unchanged in layout but changed in state, what was hidden now lies in the open, and one plain line is written before the frame rests |
+| `callback_repeats` | 1 [1] | 1 | counting | the same weekly event returns, landing as surprise the second time |
+| `calm_desk_bookend` | 1 [1] | 1 | counting | a familiar work surface returns, a message is sent and a paper reminder settles beside a relaxed figure |
+| `calm_note_callback` | 1 [1] | 1 | counting | Maya returns to her desk, sends a note, and pins a concise rule to the wall |
+| `card_missing_step` | 1 [1] | 1 | counting | a card of three parts, two ticked, the vague one circled and the third disc left empty |
+| `card_on_desk_filled_in_steps` | 1 [1] | 1 | counting | a blank ruled card lies on a desk seen from above; later beats write into it one line at a time |
+| `cards_written_and_turned_at_once` | 1 [1] | 1 | counting | everyone writes on a card at the same moment and all cards turn together, one card's content becoming a note on the table |
+| `carried_outline` | 1 [1] | 1 | counting | one outline keeps its colour while its form changes and moves on, leaving faint ghosts with labels |
+| `carried_token` | 1 [1] | 1 | counting | one emitted mark gains a clock and follows one route |
+| `carried_velocity` | 1 [1] | 1 | counting | a moving front gains a speed label that shares its displacement |
 | `cause_convergence` | 1 [1] | 1 | counting | several conditions land over their open slots and each draws an arrow into one failure |
+| `certificate_check_sequence` | 1 [1] | 1 | counting | three outcome marks progress across one verified record |
+| `certificate_checks` | 1 [1] | 1 | counting | a focused certificate receives three sequential teal confirmation marks |
+| `certificate_to_key_slots` | 1 [1] | 1 | counting | a verified certificate reduces to a compact badge, making room for three empty places where a shared secret will belong |
+| `chain_replayed_fast` | 1 [1] | 1 | counting | the cross-section replays its own images one step at a time, a tag riding the object being named |
+| `channel_path_doors_arrive_in_sequence` | 1 [1] | 1 | counting | a colleague presents the work channels as doors opening along a paper path |
+| `checked_boundary` | 1 [1] | 1 | counting | a returning path stops at a closed identity gate |
+| `checked_inner_boundary` | 1 [1] | 1 | counting | the smallest opening checks identity against a list |
+| `checklist_closure` | 1 [1] | 1 | counting | three commitments resolve into a still completed list |
+| `checklist_lights_then_draft` | 1 [1] | 1 | counting | a checklist lights line by line as each item is named while an open box stays empty, then a thought types the line that is about to go wrong |
+| `checks_link` | 1 [1] | 1 | counting | a recalled approval grows and connects to the object it validates |
+| `choose_scope_and_power` | 1 [1] | 1 | counting | an unchanged sheet and three holders frame a two-part choice |
+| `class_line` | 1 [1] | 1 | counting | a page outline changes from dashed grey to blue, then travels to an open sharing arc |
+| `clocks_beside_snapped_diagram` | 1 [1] | 1 | counting | a second fix joins the first in the same picture, two clocks tick in step beside a quiet diagram |
+| `clocks_rest_on_top` | 1 [1] | 1 | counting | the eye climbs from the settled ground clock to the satellite's clock, which is held in focus |
+| `close_candidates` | 1 [1] | 1 | counting | two almost equal lengths invite a choice before the branching result |
+| `closed_air_loop` | 1 [1] | 1 | counting | a moving stream is followed to the device that changes its temperature, then back to where it started, closing a loop |
+| `closed_boundary_callback` | 1 [1] | 1 | counting | an incoming forward stops at a shut inner boundary while a returned token rests outside |
+| `complete_recovery_path` | 1 [1] | 1 | counting | two remaining actions fill an absence and retire the obsolete entry |
+| `confirmed_behaviour_replaces_verdict` | 1 [1] | 1 | counting | the struck verdict fades as the lower row fills with the concrete, confirmed behaviour |
+| `connection_spread` | 1 [1] | 1 | counting | a linked branch inherits a fault while an isolated branch remains intact |
+| `consequence_as_props_on_table` | 1 [1] | 1 | counting | a consequence told as plain objects arriving on a shared table (a reply lands, a calendar loses a day), with a checklist ticking in the corner |
+| `converging_hand_arrows` | 1 [1] | 1 | counting | three voices visibly converge on one decision owner |
+| `converging_inputs_one_owner` | 1 [1] | 1 | counting | multiple inputs converge on one circled figure |
+| `converging_routes` | 1 [1] | 1 | counting | several carriers converge before one marked unit branches into a lane |
+| `copied_token_stalled` | 1 [1] | 1 | counting | the returning token reaches a second barrier instead of opening the waiting surface |
+| `copy_branch` | 1 [1] | 1 | counting | a protected source can still branch into a second sheet |
+| `copy_count_by_survival` | 1 [1] | 1 | counting | one thing is copied twice, then one copy is struck and the others carry on |
+| `copy_is_noise` | 1 [1] | 1 | counting | the same copy action as before, but what drops into the tray is an unreadable pattern |
+| `copy_leaves_the_place` | 1 [1] | 1 | counting | one copy leaves the dashed place for a far home, and the event fills the place but stops at its edge |
+| `copy_noise` | 1 [1] | 1 | counting | the same copy action as before, now the tray gets unreadable blocks and a server name |
+| `correction_by_accumulation` | 1 [1] | 1 | counting | a crossed line remains above a newly written question, with one underline directing attention |
+| `correction_by_strike` | 1 [1] | 1 | counting | a wrong line is struck through and the right one written beneath, never erased |
+| `cost_changes_form` | 1 [1] | 1 | counting | labelled runs on a held unit grid squeeze to half, the freed cells refill in a hatched form of the same colour, and each label is rewritten in place |
+| `count_is_the_trip` | 1 [1] | 1 | counting | a readout beside the point counts while one pulse covers the last stretch, and both stop together when the pulse lands |
+| `counted_arrival` | 1 [1] | 1 | counting | a moving front and a rising value stop together at one receiving point |
+| `counted_reserve` | 1 [1] | 1 | counting | a stopped member stays visible while a counted reserve explains the remaining capacity |
+| `counted_survival` | 1 [1] | 1 | counting | duplicate a whole card, strike one, then recover it from a survivor |
 | `cover_and_recall` | 1 [1] | 1 | counting | a source is covered and an attempt to bring it back from memory returns empty slots |
+| `cursor_settles_then_freeze` | 1 [1] | 1 | counting | inside a screen, a pointer drifts to one target and settles; the whole frame then freezes and grades down |
+| `cutaway_leak_loop` | 1 [1] | 1 | counting | a cutaway where a stream slips through a gap and re-enters the intake, the term landing on the stream |
+| `cutaway_spread` | 1 [1] | 1 | counting | a building whose front lifts away to show many desks, then a calm ring spreads from one desk and marks every desk it reaches |
+| `daylight_action_row` | 1 [1] | 1 | counting | a hard lit work plane holds three practical objects that become readable in spoken order, then the last object travels outward |
+| `decision_critical_guest_row` | 1 [1] | 1 | counting | retain the decision owner and essential input, then route everyone else to the notes |
+| `decision_needed_guest_row` | 1 [1] | 1 | counting | keep the decision owner and needed input, route everyone else to notes |
+| `decision_readback_anchors` | 1 [1] | 1 | counting | one written decision becomes actionable as its what, owner and deadline are underlined |
+| `decision_readback_marked_part_by_part` | 1 [1] | 1 | counting | a written decision is read across, each accountable part gaining its marker underline |
+| `decision_rule_drawn` | 1 [1] | 1 | counting | many voices point at one person, who is circled and named |
+| `decision_rule_made_visible` | 1 [1] | 1 | counting | several voices drawn as small figures, arrows converge on the one person who is circled |
+| `decision_ticks` | 1 [1] | 1 | counting | three settled ticks turn Maya's desk questions into a clear reason to speak up |
+| `default_then_exception` | 1 [1] | 1 | counting | mark the starting choice and leave the other available |
+| `defined_on_object` | 1 [1] | 1 | counting | a generic marker is defined by two plain labels attached to the very marker they describe |
+| `delayed_choice` | 1 [1] | 1 | counting | a written challenge grows into three unmarked alternatives |
+| `descending_scope_rule` | 1 [1] | 1 | counting | nested boundaries resolve into a practical minimum |
+| `diagnostic_close` | 1 [1] | 1 | counting | two prompts sit above a complete machine while its quiet motion continues |
+| `dim_all_but_one` | 1 [1] | 1 | counting | the whole held room recedes a step so the one thing the caution is about stays at full strength, then the camera leans toward it |
+| `direction_then_limit` | 1 [1] | 1 | counting | an arrow reads the order across the bars, then one plain line says what it does not mean |
+| `discrete_reports` | 1 [1] | 1 | counting | a still route gains records only at separate checkpoints |
+| `distance_not_direction` | 1 [1] | 1 | counting | a measured line gets a length tag; a direction arrow is offered and struck out, only the length stays |
+| `distinct_tokens_hold_boundary` | 1 [1] | 1 | counting | distinct issued shapes cross separate thresholds, a copied shape reaches the other boundary and stops |
+| `distributed_stops` | 1 [1] | 1 | counting | four faults accumulate at distinct physical sites along one retained route |
+| `diverted_units` | 1 [1] | 1 | counting | two moving units leave their intended stream and stop separately |
+| `doors_along_a_path` | 1 [1] | 1 | counting | five options arrive one at a time as doors standing along a path, in the order she would meet them |
+| `doors_along_paper_path` | 1 [1] | 1 | counting | a route opens from a familiar corner and successive labelled thresholds make the choices visible |
+| `doorway_nod_then_same_slide` | 1 [1] | 1 | counting | a warm nod, a week flips, the same slide is read again |
+| `doubt_drops_to_note` | 1 [1] | 1 | counting | a held room changes one variable (a habit on a tag), and a private doubt drops from its bubble to the table, its outline becoming a note card with one word |
+| `doubt_zoom` | 1 [1] | 1 | counting | a steady reading flickers, then the view pushes through it into the thing that feeds it |
+| `doubts_come_true_in_place` | 1 [1] | 1 | counting | the same held objects that carried private doubts each take a failure mark, in order, on a dark field |
+| `draft_waiting` | 1 [1] | 1 | counting | an empty card on the viewer's own desk, a cursor waiting in the first slot |
+| `draw_then_flag_the_weak_line` | 1 [1] | 1 | counting | a card drawn line by line so the eye lands on its one weak line, flagged by one marker circle and a muted note |
+| `drawn_system_funnel` | 1 [1] | 1 | counting | a pipeline drawn as a funnel over the building it feeds, left empty and ready before anything pours into it |
+| `drawn_system_funnel_recalled` | 1 [1] | 1 | counting | the remembered picture returns whole, with the one part this section is about lit, then a chapter title dims it |
+| `driven_closed_path` | 1 [1] | 1 | counting | one moving hub drives two opposing routes |
+| `duplicate_and_retreat` | 1 [1] | 1 | counting | two matching papers arrive, one is marked, and an offered hand retreats |
+| `duplicate_receipt_hesitation` | 1 [1] | 1 | counting | matching receipts expose a duplicate while a colleague reaches then retreats |
+| `email_reroute` | 1 [1] | 1 | counting | a familiar outline email whose cursor takes a safer route |
+| `emptied_nod_two_shot` | 1 [1] | 1 | counting | the same easy moment returns frozen; the friendly line loses its words and is left an empty outline, and a small tag names what the nod was |
+| `empty_chairs_after_good_talk` | 1 [1] | 1 | counting | a meeting table fills with discussion, then the empty chairs carry the unanswered questions |
+| `empty_destination` | 1 [1] | 1 | counting | a promise advances through days while the receiving place stays empty |
+| `empty_endpoints` | 1 [1] | 1 | counting | a verified document contracts into a receipt while vacant sockets mark a secret that does not travel |
+| `empty_hands_flat_line` | 1 [1] | 1 | counting | a warm feeling held in open hands beside an empty slot and a line that stays flat |
+| `empty_places` | 1 [1] | 1 | counting | empty dashed places drawn before the thing that will fill them |
+| `empty_places_set` | 1 [1] | 1 | counting | a verified identity shrinks to a badge while empty slots appear at both ends of an empty path |
+| `empty_slots_for_unsent_key` | 1 [1] | 1 | counting | a big checked card shrinks to a badge while empty dashed slots mark where a key will sit |
+| `ends_only_shared_key` | 1 [1] | 1 | counting | two matching blue keys occupy the end slots while the watcher remains empty |
+| `error_accumulates_as_drift` | 1 [1] | 1 | counting | a steady clock sweeps round a day while a marker slides away from where it belongs, leaving a dashed trail and a tag |
+| `even_choice_column` | 1 [1] | 1 | counting | one call scene on the left, three equal peer options in one column on the right |
+| `evidence_board_insert_on_the_words` | 1 [1] | 1 | counting | the held board; the camera pushes in on one line of the message and the comparison is lettered under it |
+| `evidence_board_real_message` | 1 [1] | 1 | counting | one real, readable message on the left; evidence cards on the right that fill on cue, each joined by a lead to the words it came from |
+| `evidence_then_rule` | 1 [1] | 1 | counting | a lit source line connects to a checked reply, then two durable instructions rest. |
+| `exchange_bench` | 1 [1] | 1 | counting | two ends joined by one line; what one end sends travels the line and a gate on the far end opens for it |
+| `exchange_not_the_key` | 1 [1] | 1 | counting | each end keeps a mark at home, two signals cross a watched lane in separate lanes, and the shared secret forms only at the ends |
+| `exchange_without_access` | 1 [1] | 1 | counting | two crossing carriers leave copies while a third receptacle stays empty |
+| `excluded_vector` | 1 [1] | 1 | counting | a measured length remains while an attempted bearing is cancelled |
+| `exhaust_chain` | 1 [1] | 1 | counting | each unit of a line breathes what the one before it gave off, one shade warmer at every step |
+| `expanding_secret` | 1 [1] | 1 | counting | a compact entry grows while its consequence stays visible |
+| `exposed_in_transit` | 1 [1] | 1 | counting | a copy peels off a moving packet into an onlooker's panel, readable |
+| `exposed_journey` | 1 [1] | 1 | counting | a readable bundle leaves its origin along an open path and stops short of the thing that watches the path |
+| `exposed_journey_resolved` | 1 [1] | 1 | counting | the opening journey returns, but what the watcher copies is noise and the lock closes |
+| `exposed_login_packet` | 1 [1] | 1 | counting | a readable login packet leaves a form and crosses an open path toward a watcher |
+| `exposed_packet_copy` | 1 [1] | 1 | counting | a watcher duplicates a readable card into its tray while the original continues |
+| `exposure_journey` | 1 [1] | 1 | counting | a readable packet leaves a form and travels toward a watcher on an open path |
+| `facing_rows` | 1 [1] | 1 | counting | mirrored edges define a shared passage |
+| `failed_check_answer` | 1 [1] | 1 | counting | the name row fails in red, the safe choice lights and the others dim, then the gap that remains is shown as a question over the far end |
+| `failed_check_feedback` | 1 [1] | 1 | counting | a card's red row lights one option |
+| `failed_check_warning` | 1 [1] | 1 | counting | one of three checks fails, the checker raises a warning and the carrier stops |
+| `failure_survived` | 1 [1] | 1 | counting | the same loss replayed on a board that holds other whole copies, so the emptied thing refills from one of them |
+| `far_point_fades_near_point_glows` | 1 [1] | 1 | counting | the far candidate dims and drifts into the void while the one on the ground warms into a glow, dips once, and holds |
+| `fast_yes_tilts_room` | 1 [1] | 1 | counting | one early yes is spoken aloud, then the whole held tableau (the shared object and every posture) drifts one step at a time towards the leader |
+| `feeling_then_target` | 1 [1] | 1 | counting | a vague warm cloud on one side, an empty aim point on the other, and a dart that gives the aim point its purpose |
+| `feelings_moved_actions_did_not` | 1 [1] | 1 | counting | a close on Leo while two gauges show the gap between what changed and what didn't |
 | `fix_leaves_causes_standing` | 1 [1] | 1 | counting | a proposed fix is written, struck out and dimmed while the problems it should address stand untouched at full strength beside it |
+| `fix_sent_up_slow` | 1 [1] | 1 | counting | a clock is turned back on the ground, rides a rocket up, and in orbit falls into step with the ground clock |
+| `fixed_radius` | 1 [1] | 1 | counting | a pivot preserves separation while tracing every allowed location |
+| `flicker_is_switching` | 1 [1] | 1 | counting | a held slot hard-swaps between two contents and never holds both, each swap booking one unit in the hidden column of a ledger beside it |
+| `fourth_witness_rises` | 1 [1] | 1 | counting | one more object climbs in and its ring grows to the same swollen size as the others |
+| `framed_control_path` | 1 [1] | 1 | counting | one persistent surface is entered through a menu and narrowed to one action |
+| `fresh_cards_keep_each_door_separate` | 1 [1] | 1 | counting | a vault issues distinct cards to two calm shut doors, then a copied Shop card fails at Work |
+| `full_structure_lit` | 1 [1] | 1 | counting | the complete three-part comment is the thing, lit one part at a time, with the vague one fading behind it |
+| `gap_fills_with_effect` | 1 [1] | 1 | counting | the empty slot prints the effect while the speaker's own point breaks off |
+| `gap_in_a_complete_looking_row` | 1 [1] | 1 | counting | the same cards stay put while the missing third slot of one is circled, so the gap is shown where it is |
+| `gps_readout_chain` | 1 [1] | 1 | counting | a live calculation turns a timestamp into a measured path |
+| `greyed_door_at_fork` | 1 [1] | 1 | counting | the one door she would try first goes dim, and she is left at a fork under a hanging question |
+| `group_voice_converges_on_one_owner` | 1 [1] | 1 | counting | three group marks and hand arrows make one person's decision authority visible |
+| `guest_row_trimmed_by_need` | 1 [1] | 1 | counting | of six people on a card, one is circled as the owner, one is kept as needed, the rest are crossed and sent to an envelope |
+| `habit_checklist_on_object` | 1 [1] | 1 | counting | two plain checks are ticked directly on the marker they inspect, the name read letter by letter, the warning slot shown empty |
+| `handling_route` | 1 [1] | 1 | counting | confidential outline moves through four controlled endpoints |
+| `hanging_doubts_gap` | 1 [1] | 1 | counting | held objects hang above a group on strings while drop lines fall towards the shared surface and stop short of it |
+| `harm_decides_outline` | 1 [1] | 1 | counting | question mark turns a page outline magenta |
+| `harm_question_sort` | 1 [1] | 1 | counting | one hovering question disqualifies two nearby filing cues |
+| `heat_extraction_detail` | 1 [1] | 1 | counting | a closed inner circuit carries warmth away from a returning stream |
+| `heat_handoff_detail` | 1 [1] | 1 | counting | a cutaway makes the transfer between two moving streams visible |
+| `height_flattens_well` | 1 [1] | 1 | counting | a curved grid dipping deep near the surface and flattening with height, a marker sliding up it |
+| `held_comment_gap` | 1 [1] | 1 | counting | the comment holds its shape and the next part is an empty dashed slot |
+| `held_floor_plan` | 1 [1] | 1 | counting | a room built from above, structure first, then the direction each row faces stamped on its front edge |
+| `held_frame_returns_changed` | 1 [1] | 1 | counting | the establishing schematic returns at the same coordinates with one state changed, and a stack that grows on the spoken repetition carries the warning sign |
+| `held_overview_choice` | 1 [1] | 1 | counting | a wide finished frame of many open doors, two numbered tags on the two places it could have stopped, a question left on dark field with a quiet draining bar |
+| `held_page_returns_changed` | 1 [1] | 1 | counting | the opening page comes back set the same way, now carrying the habit on its time strip and the batched cost in its ledger |
+| `held_place_forgetting` | 1 [1] | 1 | counting | one place seen again from a new angle while a single object fades, so forgetting is drawn as change over time |
+| `held_place_label_board` | 1 [1] | 1 | counting | a held place whose wall board lights one strip per named step while the camera pans along it |
+| `held_place_time_passes` | 1 [1] | 1 | counting | the held room while one object shows time passing and another marks the day that stays the same |
+| `held_question` | 1 [1] | 1 | counting | the whole picture stands still while one question arrives beside it and waits |
+| `held_rerun_one_change` | 1 [1] | 1 | counting | the same held schematic re-runs with one change, a lens on the detail that decides it, and the verdict stamped into a running tally |
+| `held_room_private_doubts` | 1 [1] | 1 | counting | a locked wide room of small seated people, each private doubt a folded bubble only the viewer sees, arriving one per step over a silent table |
+| `held_set_rewind` | 1 [1] | 1 | counting | a held place shown in its last state runs its changes backwards in stepped drawings back to its opening state |
+| `held_work_against_running_time` | 1 [1] | 1 | counting | one piece of work sits still in a held slot while a time strip runs to its end; an interruption lands on the work, is answered, and the work has not moved |
+| `hidden_assumption_breaks` | 1 [1] | 1 | counting | a small clock badge appears beside the point, ticks steadily, then its hands jump off and the point flickers while the view pushes in |
+| `higher_class_owner` | 1 [1] | 1 | counting | an uncertain document climbs a colour ladder, then reaches its decision owner |
+| `higher_then_handoff` | 1 [1] | 1 | counting | a tentative outline climbs one step before a clear route reaches a person |
+| `hold_on_unchanged_artifact` | 1 [1] | 1 | counting | the camera holds on a document that did not change and settles on the one soft line |
+| `hush_after_the_update` | 1 [1] | 1 | counting | a kind sentence lands in a room, and the listener smiles at nothing |
+| `identical_entries` | 1 [1] | 1 | counting | a quiet lit register gives every entry the same visual weight, then a passing trace disappears |
+| `identity_gate` | 1 [1] | 1 | counting | the returning route meets a door checked against a list |
+| `identity_stays` | 1 [1] | 1 | counting | a shared page can move while an identity cannot |
+| `impact_grows_under_confirmed_behaviour` | 1 [1] | 1 | counting | the card is restated with its confirmed behaviour row, then a new impact row grows below it, joined by a short arrow, in the same accent system |
+| `impact_lands_late` | 1 [1] | 1 | counting | the second fact settles in slowly while two people behind the table hurry out late; the listener's face turns from shock to thought |
+| `impact_pushes_a_call` | 1 [1] | 1 | counting | the second mark lands and a card physically slides off its day |
+| `inbox_new_row_turn` | 1 [1] | 1 | counting | a hard cut to a familiar list view, one new row slides in on top, a chapter sting names the turn over it |
+| `indifferent_card_stream_tests_login_doors` | 1 [1] | 1 | counting | an even automated stream tries copied credentials until Dana's amber card reaches Work |
+| `indifferent_repeated_trials` | 1 [1] | 1 | counting | an evenly spaced series of matching tokens fails before an ordinary token approaches the final receiver |
+| `inside_to_outside` | 1 [1] | 1 | counting | travelling warmth refutes an apparent source |
+| `instrument_on_the_gate` | 1 [1] | 1 | counting | a meter mounted beside the gate fills to a measured reduction; a lens shows the gap that remains |
+| `internal_door_threshold` | 1 [1] | 1 | counting | an amber outlined note travels to a doorway and stops before crossing |
+| `intersecting_shells` | 1 [1] | 1 | counting | a second outline creates a shared closed locus |
+| `invite_correction` | 1 [1] | 1 | counting | a crossed-out subject becomes a question with the answer window underlined |
+| `inward_question` | 1 [1] | 1 | counting | one line leaves its enclosing frame and becomes the subject of a deeper space |
+| `key_from_crossing` | 1 [1] | 1 | counting | two different marks cross a watched path, and an identical thing forms at each end |
+| `key_gate_transit` | 1 [1] | 1 | counting | a readable card is swept to noise over one key, carried across, and swept back to readable over the matching key |
+| `key_inside_device` | 1 [1] | 1 | counting | a secret shown as a key that settles inside the device that keeps it, and the ways the device is opened |
+| `key_slots` | 1 [1] | 1 | counting | a certificate folds into proof while three empty destinations define a secret that does not travel |
+| `key_to_holder` | 1 [1] | 1 | counting | a familiar object gains a transferable opening token |
+| `key_transform` | 1 [1] | 1 | counting | a readable bundle lifts out, crosses a lit key on a doubled channel and leaves as unreadable blocks |
+| `kind_and_specific_share_a_counter` | 1 [1] | 1 | counting | a heart note lands on the three-line sheet between two relaxed people |
+| `known_name_flows_into_message` | 1 [1] | 1 | counting | a familiar name glows, threads run from it out to a small office floor and what it knows flows back into the message, then empty rings ask the viewer to find the signs |
+| `label_becomes_mark` | 1 [1] | 1 | counting | the name tag peels away and the first mark takes its place |
+| `label_becomes_observed_fact` | 1 [1] | 1 | counting | a stuck-on label falls away and the same moment is replayed as what actually happened |
+| `label_marked_then_empty_day` | 1 [1] | 1 | counting | a vague word is ringed and named an impression, then Dev's question mark turns into an empty day he cannot fill |
+| `label_slap` | 1 [1] | 1 | counting | a sticky word flies across the room onto one person, who shrinks back as a clear wall rises between them |
+| `label_to_behaviour` | 1 [1] | 1 | counting | a label peels off a person and the comment swaps word by word into what he did |
+| `leader_speaks_first` | 1 [1] | 1 | counting | the result rewinds to the start of the meeting, then the leader stands and her goal is written on the shared board before anyone else speaks |
+| `lens_on_held_detail` | 1 [1] | 1 | counting | a lens on a leader line opens over a detail of the held picture, lettered with what the detail shows and tagged with its source |
+| `lens_over_lines` | 1 [1] | 1 | counting | a message is rebuilt and a lens passes over each line looking for a flaw; finding none, every line is marked clean |
+| `lens_transform` | 1 [1] | 1 | counting | a readable object crosses a narrow gate and becomes opaque blocks |
+| `lift_one_and_fill_its_parts` | 1 [1] | 1 | counting | the chosen card steps forward and its three empty slots fill in turn |
+| `light_past_the_closed_one` | 1 [1] | 1 | counting | light travels along the path past the one grey thing and lights every other option in turn |
+| `light_spreading_door_to_door` | 1 [1] | 1 | counting | a long hall of doors receding from the first open door, light joining floor wedges door by door, a heavier last door tried |
+| `limit_note_pinned` | 1 [1] | 1 | counting | the held picture gets one caveat pinned beside it on a leader, and the camera pulls back so picture and caveat read as one frame |
+| `limit_reached_then_left` | 1 [1] | 1 | counting | a stack falls onto its floor line and the one value is read there, then a little returns above it |
+| `limits_beside_meaning` | 1 [1] | 1 | counting | slate 'does not show' labels sit opposite the teal meaning labels on the same marker |
+| `limits_beside_proof` | 1 [1] | 1 | counting | slate limits set opposite the teal proofs, plus the form still readable at the server |
+| `line_art_class_contrast` | 1 [1] | 1 | counting | two document outlines share one baseline while outline colour carries access |
+| `line_decides_class` | 1 [1] | 1 | counting | a grey dashed page on a long ink line takes its colour from one spoken word, then slides to an open arc |
+| `line_to_question` | 1 [1] | 1 | counting | a quiet console opens and one line becomes the focal point |
+| `listen_only_diagram` | 1 [1] | 1 | counting | signals arrive at a point, an arrow toward the sky draws, stalls, is struck out; the sources stay quiet |
+| `listening_not_sending` | 1 [1] | 1 | counting | the sky transmits inward; a rejected arrow turns back |
+| `listening_only_cross_section` | 1 [1] | 1 | counting | signals converge on a still point from above; an arrow that tries to leave it stalls, is struck out and fades |
+| `lit_object_follows_dark` | 1 [1] | 1 | counting | a dark room lit by one lamp on a screen that already says yes; the thing typed into it lifts out as a lit object and drifts toward a far row of closed doors while the camera slowly pushes the same way |
+| `lit_screen_in_dark_field` | 1 [1] | 1 | counting | a dark city plan fades up, a dark phone settles, its screen lights, one teal dot pulses on it |
+| `lit_screen_in_dark_room` | 1 [1] | 1 | counting | a dark room where one cool screen asks the same question again and again, and one amber button is the only answer |
+| `lit_token_departure` | 1 [1] | 1 | counting | one small light leaves an intact object and points toward distant closed thresholds |
 | `live_flow_halts` | 1 [1] | 1 | counting | a steady running measure stops the instant a trigger is pressed, a person reacts, and a stamped note names the consequence |
+| `load_matches_path` | 1 [1] | 1 | counting | sequential units enter a vehicle and their chips recur along the destination path |
+| `located_pause` | 1 [1] | 1 | counting | a single destination regains colour as the view closes on two waiting places |
+| `lock_closes_on_a_named_trip` | 1 [1] | 1 | counting | a small lock drops shut beside a name, the route becomes one solid band, and the name is shown twice side by side |
+| `lock_turns_door_holds` | 1 [1] | 1 | counting | a stolen card turns the first lock while a second lock, with a phone glyph waiting, keeps the door shut |
+| `lock_turns_door_opens` | 1 [1] | 1 | counting | a push in on one door as a lit card turns its lock and a hard wedge of light spills across the floor, one tag naming the cause |
+| `lone_point_on_planet` | 1 [1] | 1 | counting | a single glowing point on a dark planet, the camera easing back to show how small it is |
+| `lookalike_with_address` | 1 [1] | 1 | counting | a message, a look-alike page that is the same in every pixel but one word of its address, that word shown large |
+| `loss_reversed` | 1 [1] | 1 | counting | an emptied card is replenished by a surviving copy |
+| `mail_pause` | 1 [1] | 1 | counting | an outline email where a cursor stops before commitment |
+| `many_inputs_one_caller` | 1 [1] | 1 | counting | several inputs converge on a single clearly marked decision caller |
+| `many_to_one_step` | 1 [1] | 1 | counting | a long list collapses to a single line that slides into the third slot while two colleagues lean in to agree |
+| `marks_resolve_the_choice` | 1 [1] | 1 | counting | three marks settle beside the completed page while the circled evidence regains strength |
+| `matched_ends` | 1 [1] | 1 | counting | identical blue keys appear at the two ends of a watched path while the watcher's own slot stays empty |
+| `matched_entry` | 1 [1] | 1 | counting | a value on one surface is entered unchanged on another |
+| `matching_keys_at_ends` | 1 [1] | 1 | counting | identical blue keys drop into both end slots, the watcher's slot stays empty |
+| `matrix_axes_card` | 1 [1] | 1 | counting | two questions become a coordinate frame, then the first card proves the placement |
+| `matrix_bottom_moves` | 1 [1] | 1 | counting | bottom quadrants gain a named action, while one bounded card is assigned and one is deferred |
+| `matrix_questions` | 1 [1] | 1 | counting | two written prompts reserve the board's future axes |
+| `matrix_quick_wins` | 1 [1] | 1 | counting | one quadrant becomes the first action |
+| `matrix_week_block` | 1 [1] | 1 | counting | one solid scheduled block replaces scattered work fragments |
+| `measured_range_not_direction` | 1 [1] | 1 | counting | a luminous satellite-to-phone span persists while a proposed pointing arrow is crossed away |
+| `meeting_question_parking` | 1 [1] | 1 | counting | a facilitator keeps one question visible while a side topic is given a named corner |
+| `misconception_breaks_into_path` | 1 [1] | 1 | counting | the expected idea is shown and struck, then the separate pieces light as one continuous path |
+| `mismatch_pair` | 1 [1] | 1 | counting | matching surfaces diverge when the address changes |
+| `missed_connection` | 1 [1] | 1 | counting | a departing carrier leaves one arriving unit behind |
+| `missing_part_then_theft` | 1 [1] | 1 | counting | a rule with one mark missing, then the single container holding every copy is carried away |
+| `moment_a_nice_line_lands` | 1 [1] | 1 | counting | a manager leans to a colleague, a vague compliment drops in over him, he beams and nods while another gathers half-written notes |
+| `morning_desk_actions` | 1 [1] | 1 | counting | a hard morning pool reveals three protective desk actions in spoken order |
+| `morning_desk_three_actions` | 1 [1] | 1 | counting | a lifted morning plane across a desk; three plain objects arrive in a row, each lit as it is named, the last one settling on the desk |
+| `named_gap_and_number_family` | 1 [1] | 1 | counting | name the absence, then stage a three-part promise beside it |
+| `named_stops` | 1 [1] | 1 | counting | a quiet model becomes a readable key in travel order |
+| `narrow_choice_confirmed` | 1 [1] | 1 | counting | a marked choice links a small group to its bounded permission |
+| `narrowed_choice` | 1 [1] | 1 | counting | a correct alternative remains while wider alternatives are marked aside |
+| `narrowing_locus` | 1 [1] | 1 | counting | a closed path reduces to two isolated candidates |
+| `nested_boundary_check` | 1 [1] | 1 | counting | a smaller boundary asks for identity rather than possession |
+| `nested_boundary_rule` | 1 [1] | 1 | counting | the ordering of three boundaries becomes a practical choice |
+| `no_action_named` | 1 [1] | 1 | counting | the label names no action, so four possible actions float in a thought cloud and none is picked |
+| `noise_on_the_path` | 1 [1] | 1 | counting | two signal paths, one bent by the air and one bounced off a tower, leave the dot ringed by a soft halo |
+| `noise_seen_change_refused` | 1 [1] | 1 | counting | a scrambled card crosses a watched node and stays unreadable, then a second card changed on the way is stopped at the far edge |
+| `nothing_to_relay` | 1 [1] | 1 | counting | the same trap, but the device checks the address and gives the page nothing; the other screen waits |
+| `numbered_recovery` | 1 [1] | 1 | counting | two ordered actions accumulate beside the surface where each is completed |
+| `numbers_on_things` | 1 [1] | 1 | counting | the figures sit as small pills on the swarm, the height line and the loop they measure |
+| `occupied_then_unanswered` | 1 [1] | 1 | counting | an occupied line drawing empties, leaving two unresolved questions over the absent participants |
+| `offer_to_record` | 1 [1] | 1 | counting | an accepted offer becomes a durable entry |
+| `offline_backup_path` | 1 [1] | 1 | counting | one connected copy inherits a lock while an unplugged copy stays whole |
+| `one_becomes_many_then_few` | 1 [1] | 1 | counting | a single item joins a full list (many), a fan of generic items spreads and folds away, and what is left is a few empty slots |
+| `one_becomes_three` | 1 [1] | 1 | counting | one piece of content is carried into three different containers while its signs stay put and line up across all of them |
+| `one_copy_fails` | 1 [1] | 1 | counting | a single laptop loses its only visible document, leaving an empty outline |
+| `one_copy_four_losses` | 1 [1] | 1 | counting | four distinct failure signals land around one report and each demonstrates the same loss |
+| `one_failed_check_stops_the_trip` | 1 [1] | 1 | counting | one row of a checked list turns to a cross, a warning covers the page and the waiting message is stopped |
+| `one_failure_survived` | 1 [1] | 1 | counting | the laptop repeats its drive failure, then a backup document restores the empty report |
+| `one_flow_split_into_bins` | 1 [1] | 1 | counting | one stream of units pours from a pipe and lands in named bins; the fullest overhead bin takes the accent |
+| `one_key_per_lock` | 1 [1] | 1 | counting | a vault hands out a different card for each door, so a copy of one card turns only its own lock |
+| `one_key_two_locks` | 1 [1] | 1 | counting | a lit wall with two doors side by side and one small bright object that is shown fitting both of them in turn |
+| `one_lit_card_opens_two_system_doors` | 1 [1] | 1 | counting | a warm dusk corridor proves password reuse as the same physical card fitting Shop and Work |
+| `one_pulse_leaves_a` | 1 [1] | 1 | counting | one stamped pulse leaves a named source and heads off down a long straight route |
+| `one_question_sorts` | 1 [1] | 1 | counting | a single dashed item under a drawn question while its type and place fade back |
+| `one_range_no_bearing` | 1 [1] | 1 | counting | a measured length remains while its tempting direction disappears |
+| `one_shared_correction` | 1 [1] | 1 | counting | four unknowns light in turn, then one equal shrink snaps every sphere to one point and the clock hand steps into place |
+| `one_side_acts` | 1 [1] | 1 | counting | the other side of the split steps back while one side shows a step |
+| `one_signal_heads_for_phone` | 1 [1] | 1 | counting | a single timed pulse carries a stamp into the phone's direction |
+| `one_success_after_repetition` | 1 [1] | 1 | counting | the ordinary token turns one receiver and releases a hard wedge of light |
+| `one_table_four_answers` | 1 [1] | 1 | counting | a held table refills with four people, four speech bubbles above them disagree, one accent underline under a single name |
+| `one_thing_four_threats` | 1 [1] | 1 | counting | the same single object is emptied by four different causes, each a chip that lands and takes the accent |
+| `one_token_two_locks` | 1 [1] | 1 | counting | one unchanged token fits two separate receivers in sequence |
+| `one_trip_is_a_count` | 1 [1] | 1 | counting | pair the pulse's last flight with the phone's stopped timer |
+| `onward_route` | 1 [1] | 1 | counting | a moving trace carries a signal from one enclosure to the next |
+| `opaque_duplicate` | 1 [1] | 1 | counting | the same branching motion now leaves an unreadable retained twin |
+| `open_doors_path` | 1 [1] | 1 | counting | a greyed first door gives way to a bright route of alternatives |
+| `open_path_copy` | 1 [1] | 1 | counting | a copy drops into a tray while the original packet carries on, nothing stopping it |
+| `open_path_exposure` | 1 [1] | 1 | counting | a submitted form travels readable along an open path toward a watcher box |
+| `open_promise_above_route` | 1 [1] | 1 | counting | a single unlocked object arrives above an unchanged journey as a future-state promise |
+| `open_route_carrier` | 1 [1] | 1 | counting | a readable card leaves its origin and stops before an observing aperture |
+| `opposing_pushes_net_gain` | 1 [1] | 1 | counting | two pushes of unequal size on one clock face, the larger wins and the margin is written beside it |
+| `opposite_exchange` | 1 [1] | 1 | counting | two small values cross a watched path in opposite directions, the watcher copies both and its own slot stays empty |
+| `ordinary_signin_log` | 1 [1] | 1 | counting | a dark security desk frames a lit sign-in record whose identical successful rows make the late entry visually ordinary |
+| `origin_bound_fill` | 1 [1] | 1 | counting | a stored value returns only within its matching address |
+| `origin_scene_danger_passes` | 1 [1] | 1 | counting | long ago, a figure in tall grass as a large danger passes behind |
+| `outline_decides` | 1 [1] | 1 | counting | a dashed page becomes a classified outline, then makes room for its route |
+| `outline_permission` | 1 [1] | 1 | counting | a dashed outline becomes continuous, then travels without losing its identity |
+| `outside_survives` | 1 [1] | 1 | counting | a card crosses a bounded field and remains whole when the field fills |
+| `outsider_after_trio` | 1 [1] | 1 | counting | a small familiar group gains an unexpected reader |
+| `over_shoulder_question` | 1 [1] | 1 | counting | one person asks an open question across a table while the other is seen only from behind, then a held silence |
+| `over_the_shoulder_thought` | 1 [1] | 1 | counting | the viewer sits behind a person at their desk and a quiet aside fills one line at a time |
+| `overhead_clock_tags` | 1 [1] | 1 | counting | rings and satellites fade in around the planet, then three clock tags light one by one as the verbs land |
+| `overhead_trip_timer` | 1 [1] | 1 | counting | a descending signal resolves into one stopped travel-time readout at the receiver |
+| `own_desk_pause` | 1 [1] | 1 | counting | an empty desk at a slow push; a sticky of praise sits above a dashed space where the action would be |
+| `own_rebuild_open` | 1 [1] | 1 | counting | the viewer's own rebuild, set up and left open on the same desk |
+| `own_seat_push` | 1 [1] | 1 | counting | an empty everyday desk where the same kind, empty comment lands, and a slow push brings the viewer into the seat |
 | `owned_progress_rows` | 1 [1] | 1 | counting | held list rows each gain an owner chip and a progress track that fills, ticking when full |
+| `packet_through_key` | 1 [1] | 1 | counting | readable card crosses a blue lens and resolves into slate noise |
+| `padlock_defined_by_labels` | 1 [1] | 1 | counting | an object that carries its own meaning flags |
+| `padlock_not_verdict` | 1 [1] | 1 | counting | the closed lock stays shut on a look-alike name; the private trip is highlighted, what lies beyond it is dashed as not covered |
+| `paired_claims` | 1 [1] | 1 | counting | a second equally bright card contradicts the first under one shared question |
+| `paired_outlines` | 1 [1] | 1 | counting | neighbouring outlines retain different colours after a shared reference decides them |
+| `paired_reveal` | 1 [1] | 1 | counting | matching secrets land only at the two ends, with an empty third slot. |
+| `paired_scan` | 1 [1] | 1 | counting | a second device frames the first device's pattern |
+| `paired_switches` | 1 [1] | 1 | counting | two small changes make a stronger boundary |
+| `paper_thoughts_release` | 1 [1] | 1 | counting | three rising doubts gather beside a figure, then fade as the figure regains composure |
+| `passed_and_parked` | 1 [1] | 1 | counting | one subject proceeds while a neutral counterpart stops beside the same gate |
+| `passive_reception` | 1 [1] | 1 | counting | incoming pulses arrive at a passive terminal while an outgoing transmission attempt stalls and is struck through |
+| `path_exposure` | 1 [1] | 1 | counting | a readable request travels from a login form toward a watcher |
+| `pause_before_commit` | 1 [1] | 1 | counting | an ink-line laptop email whose cursor glides to the commit button and stops, one slow push in |
+| `pause_new_request` | 1 [1] | 1 | counting | a new request waits beside the completed matrix for the viewer to place it |
+| `payoff_back_in_place` | 1 [1] | 1 | counting | the opening shot returns, now handled, with the one line the lesson leaves |
+| `payoff_same_journey` | 1 [1] | 1 | counting | the opening board returns, the same packet now crosses scrambled and the lock shuts |
+| `permission_default` | 1 [1] | 1 | counting | two alternatives remain while one receives the default mark |
+| `persistent_outline` | 1 [1] | 1 | counting | one coloured boundary changes its container while retaining its identity |
+| `phrase_splits_into_two_reads` | 1 [1] | 1 | counting | a vague verdict phrase splits into a wrong character judgment and a still-empty specific-behaviour slot |
+| `pipe_through_wall` | 1 [1] | 1 | counting | the heat leaves the building along a pipe that crosses the wall; a pulse rides the pipe and the warm air lifts away outside |
+| `place_push_into_screen` | 1 [1] | 1 | counting | a lived-in place at a changing hour, a new item lands on a screen, and the camera pushes in until it can be read there |
+| `place_push_to_work` | 1 [1] | 1 | counting | a lived-in place with the lead character in front, a calendar that turns, and a slow push from her to the work |
+| `place_witness` | 1 [1] | 1 | counting | one small event staged inside a drawn room, with the room carrying on around it |
+| `plain_praise_vs_tied_note` | 1 [1] | 1 | counting | two notes at one desk, the empty polite one goes quiet while the one tied to an action by a line takes the accent |
+| `plain_trip` | 1 [1] | 1 | counting | a readable message leaves its sender and crosses an open route to a receiver |
+| `plain_trip_across_shared_link` | 1 [1] | 1 | counting | one readable card leaves a window, rides a drawn line past a labelled node and lands at a rack |
+| `point_at_cause` | 1 [1] | 1 | counting | two rings point at the thing that felt safe and the act that gave it away |
+| `poised_action` | 1 [1] | 1 | counting | a pointer approaches a consequential control and holds without committing |
+| `portable_rule` | 1 [1] | 1 | counting | the route persists but identity stays attached to a holder |
+| `predict_before_reveal` | 1 [1] | 1 | counting | the action runs up to the moment of truth, a question holds the frame in silence |
+| `preserve_and_transfer` | 1 [1] | 1 | counting | reject the destructive switch and carry the working value to its replacement |
+| `pressures_close_in` | 1 [1] | 1 | counting | from above, a person at the centre while named pressures orbit and close in |
+| `pretend_page_fails_on_shared_board` | 1 [1] | 1 | counting | a held shared surface swaps to an imagined future page where the plan fails, and the last private doubt drops to the table as a note |
+| `private_doubts_opened` | 1 [1] | 1 | counting | held thought bubbles over a row of quiet people open one at a time, each turning into the object its owner privately worries about, with a one-word tag |
+| `private_trip_pair` | 1 [1] | 1 | counting | a lock closes beside a name, a solid band grows between the ends, and the address and the verified name sit either side of the lock |
+| `promise_as_links` | 1 [1] | 1 | counting | an unfilled route becomes a left to right sequence |
+| `promise_before_proof` | 1 [1] | 1 | counting | a dashed route is traced along the path, then an open lock appears above the point where it will later close |
+| `promise_lock` | 1 [1] | 1 | counting | an open lock appears over the junction where it will later close |
+| `promise_on_board_then_open_question` | 1 [1] | 1 | counting | the held room gets two lettered words on the board, then an empty bubble that asks the viewer |
+| `promise_padlock` | 1 [1] | 1 | counting | the same board holds while a dashed route traces the request and an open padlock appears where the outcome will close |
+| `prompts_pile_up` | 1 [1] | 1 | counting | one device receives the same request again and again while the other screen waits for a tap |
+| `proof_handed_across` | 1 [1] | 1 | counting | a small credential leaves one end, rides a clear lane to the other end and opens into a large panel where it can be read |
+| `proof_handed_over` | 1 [1] | 1 | counting | a small card leaves the sender, crosses the route and is lifted by the receiver into a checking panel |
+| `protected_channel_morph` | 1 [1] | 1 | counting | a readable request enters a blue key lens and becomes slate noise inside a double-line route |
+| `protected_route` | 1 [1] | 1 | counting | one coloured page travels through a protected handoff, a lock and two disposal modes |
+| `pull_back_into_own_schedule` | 1 [1] | 1 | counting | the story's room shrinks into one slot of the viewer's own week, one slot is chosen and the practice is pinned on it |
+| `pulse_in_flight` | 1 [1] | 1 | counting | the one pulse keeps travelling down its line, streaks trail the wavefront, a speed tag rides beside it |
+| `pulse_in_flight_with_speed_tag` | 1 [1] | 1 | counting | a wavefront keeps travelling a steady line, gold streaks behind it, its speed written beside it |
+| `push_to_one_emitter` | 1 [1] | 1 | counting | the camera pushes in from the whole constellation to one satellite that swells to a close-up; its clock ticks, then signal rings pulse from it and every other satellite |
+| `question_completes_the_shape` | 1 [1] | 1 | counting | a third row grows under impact, the closing question that finishes the three-part card |
+| `question_list_written_live` | 1 [1] | 1 | counting | a paper list on the desk fills line by line as each question is asked, while the old mark dims so the list carries the accent |
+| `question_over_metadata` | 1 [1] | 1 | counting | one question remains while two irrelevant attributes fade |
+| `question_parking_corner` | 1 [1] | 1 | counting | a meeting board turns a drifting side topic into a named parking-lot entry |
+| `questions_on_desk` | 1 [1] | 1 | counting | a paper pad lands beside the duplicated receipts and writes three weighing questions |
+| `quick_verdict_lands` | 1 [1] | 1 | counting | a teammate's honest update gets a verdict that leaves him deflated |
+| `quiet_reasons_rise` | 1 [1] | 1 | counting | three paper thoughts rise beside a colleague, then fade as she straightens |
+| `quiet_sheet` | 1 [1] | 1 | counting | an empty sheet becomes a place through ordered drafting |
+| `quiet_surface_repeated_interruptions` | 1 [1] | 1 | counting | repeated layers accumulate on a single lit object, then one deliberate refusal clears them |
+| `rack_section_swap_flood` | 1 [1] | 1 | counting | the same cutaway changes state, its parts swap one by one and the warm band floods wide |
+| `range_ring` | 1 [1] | 1 | counting | two distance spheres share a luminous intersection ring |
+| `range_sweep` | 1 [1] | 1 | counting | one measured radius leaves every point on a sphere possible |
+| `ranked_light` | 1 [1] | 1 | counting | unequal lengths make the next choice visible |
+| `reach_and_retreat` | 1 [1] | 1 | counting | a person at a desk finds two identical papers, reaches for the phone and pulls her hand back |
+| `reach_stops_at_edge` | 1 [1] | 1 | counting | a reaching gesture stops while the source stays unchanged |
+| `reaching_beyond_group` | 1 [1] | 1 | counting | an expected cluster gains an unexpected outsider |
+| `reaction_close_look_up` | 1 [1] | 1 | counting | a close on a face that looks down at the evidence, then lifts to meet the viewer |
+| `read_then_verify` | 1 [1] | 1 | counting | highlight a name letter by letter, then an empty warning slot, then a look-alike struck out |
+| `readable_to_scrambled` | 1 [1] | 1 | counting | a card of readable rows slides through a lit lens and leaves as slate blocks inside a doubled tube |
+| `reasons_rise_then_fade` | 1 [1] | 1 | counting | three paper thought bubbles rise one by one over a still person, then lose their hold as she straightens |
+| `recall_by_connection` | 1 [1] | 1 | counting | a small ticked summary object is enlarged and wired to the thing it justifies, then its marks re-light in turn |
+| `recall_tie` | 1 [1] | 1 | counting | a badge re-lights its three ticks while a line ties it to the key |
+| `recap_cards_into_stack` | 1 [1] | 1 | counting | two images from earlier drift in, shrink and drop into the held picture, which grows by exactly what they were |
+| `receding_thresholds` | 1 [1] | 1 | counting | a small opening propagates through a dark row, then meets resistance |
+| `record_reality_split` | 1 [1] | 1 | counting | a positive record faces a visibly vacant physical location |
+| `recorded_but_keyless` | 1 [1] | 1 | counting | a listener's panel fills with everything it recorded, and the one slot that matters stays an unanswered question while the two ends keep the real thing |
+| `recorded_but_no_key` | 1 [1] | 1 | counting | a held panel shows what an onlooker copied, against the keys the two ends hold |
+| `recorded_handover` | 1 [1] | 1 | counting | a travelling role stops at a destination while one instrument cycles through evidence |
+| `reflow_answer_in_place` | 1 [1] | 1 | counting | the answer to a prediction is played on the held unit grid itself, its cells travelling to new reading-order places so the counts can be checked by eye |
+| `refuse_and_close` | 1 [1] | 1 | counting | the owner refuses on her device and the other screen reads the refusal |
+| `relative_bars_inside_caveat` | 1 [1] | 1 | counting | two thin bars grow from one baseline under the held picture, the longer one marked as a relative difference and the caveat tagged on the bars |
+| `relay_across_split` | 1 [1] | 1 | counting | what one side types crosses the divider and lands in the other side's real page |
+| `relay_resumes` | 1 [1] | 1 | counting | a still subject rejoins the route as the whole system returns to view |
+| `relay_reveal` | 1 [1] | 1 | counting | a single signal crosses a connected landscape after the view widens |
+| `relay_under_lens` | 1 [1] | 1 | counting | a lens on a middleman shows each item entering one side and leaving the other while it still works, then the gate opens for someone else |
+| `relit_badge_tie` | 1 [1] | 1 | counting | the enlarged ticked badge is tied by a thin line to the shared key it vouches for, then its ticks light one by one |
+| `renewal_clock` | 1 [1] | 1 | counting | one transfer becomes a changing value beside a clock |
+| `repeated_approval_prompts_on_nightstand` | 1 [1] | 1 | counting | a dark bedside phone receives three approval prompts, then a denial resolves to a reported verdict |
+| `repeated_single_loss` | 1 [1] | 1 | counting | four causes converge on the same vulnerable card |
+| `replace_label_with_observation` | 1 [1] | 1 | counting | a vague label shrinks into a ruled line, then the thing a camera would catch is written on it |
+| `replayed_scene_calm` | 1 [1] | 1 | counting | the same conversation reopened in a quiet room, one document on the table, the working card waiting in the corner |
+| `reply_priority_note` | 1 [1] | 1 | counting | a written reply points back to work already scheduled |
+| `report_lights_rise_to_team` | 1 [1] | 1 | counting | small lights lift off the lit items, travel one curved route past a barrier to a desk, and a lamp comes on as the first one arrives |
+| `report_then_options` | 1 [1] | 1 | counting | one message arrives on a screen, the screen steps back, and three answers are laid out in turn |
+| `reread_lights_parts` | 1 [1] | 1 | counting | a complete comment is read aloud and each of its three parts lights in turn, then settles |
+| `rerun_one_change` | 1 [1] | 1 | counting | a held exchange re-runs with one change, and its verdict is stamped on the gate and into a running tally |
+| `reserve_answer` | 1 [1] | 1 | counting | a failed branch remains marked while a spare and stored flow sustain the shared route |
+| `resolve_two_points` | 1 [1] | 1 | counting | of two candidate points one drifts out of the field and is gone, the other merges into the glowing marker, which hesitates once |
+| `resolved_candidate` | 1 [1] | 1 | counting | a remote alternative recedes while the grounded point brightens and hesitates |
+| `resolved_return` | 1 [1] | 1 | counting | the same setting ends with a shared record and a completed checklist |
+| `retrieve_from_slot` | 1 [1] | 1 | counting | a location becomes a walk and a lift |
+| `return_and_remove` | 1 [1] | 1 | counting | a disabled token points back to its owner while one entry is struck |
+| `return_over_edge` | 1 [1] | 1 | counting | a rising route closes back into its source |
+| `return_room_changed` | 1 [1] | 1 | counting | the opening room comes back brighter, a rebuilt comment, a calendar flip, a different audience |
+| `return_route` | 1 [1] | 1 | counting | a familiar pointer chooses a protected path instead of the obvious button |
+| `return_trip` | 1 [1] | 1 | counting | a scrambled row turns readable at the far end, then a reply makes the same trip back |
+| `returning_credential` | 1 [1] | 1 | counting | a request travels one way and a signed card returns to its origin |
+| `returning_dot_lands` | 1 [1] | 1 | counting | the opening image returns, a pulse tightens onto one dot, then the night widens and warms under slow passing lights |
+| `returning_token` | 1 [1] | 1 | counting | a crossed token points back to its origin beside a reduced list |
+| `reused_card_opens_work_door` | 1 [1] | 1 | counting | the same amber card turns Work's lock and one hard crack of light makes the consequence visible |
+| `reverse_gate` | 1 [1] | 1 | counting | an opaque carrier crosses the matching gate and becomes readable again |
+| `reverse_packet_lens` | 1 [1] | 1 | counting | scrambled information crosses the server lens and returns as readable rows |
+| `reverse_transform_at_far_end` | 1 [1] | 1 | counting | blocks pass a lit lens at the far end and turn back into the readable card inside the receiving box |
+| `reversible_consequence` | 1 [1] | 1 | counting | a conditional loss dims a working system before the reserve restores it |
+| `review_old_entries` | 1 [1] | 1 | counting | a retained disabled token anchors a review of earlier entries |
+| `review_tokens` | 1 [1] | 1 | counting | a returned token stays while an old entry is marked in a review list |
+| `ring_collapses_to_two` | 1 [1] | 1 | counting | a third circle sweeps out and cuts the ring; the ring fades and only its two cut points stay |
+| `ring_then_beam` | 1 [1] | 1 | counting | one satellite runs a ring that draws bright behind it, then a gold beam streaks across the field above the planet |
+| `rising_supply` | 1 [1] | 1 | counting | a low route rises into the passage defined by inward faces |
+| `road_return` | 1 [1] | 1 | counting | a question crosses the model and lands beside the recipient's desk |
+| `role_object_changes_posture` | 1 [1] | 1 | counting | an object naming a role lands in front of one person, their posture changes and nothing else, then their private doubt drops to the table as a note |
+| `room_through_window` | 1 [1] | 1 | counting | a side window opens on the board and the audience drops to phones beside the tile that names it |
+| `route_around_the_source` | 1 [1] | 1 | counting | a separate path is drawn from the organisation's own records to the destination, going around the message that made the ask |
+| `route_of_a_protected_item` | 1 [1] | 1 | counting | the item travels left to right through its handling stops, each stop said as it is reached |
+| `route_promise` | 1 [1] | 1 | counting | a faint dashed route drawn left to right across a real place; the two ends are named, the middle stays unlit and unlabelled |
+| `route_relit` | 1 [1] | 1 | counting | the opening map returns and its first lane is lit stage by stage, each hand-off named on its word while the camera walks the lane once |
+| `route_rule_rest` | 1 [1] | 1 | counting | the finished map holds as the rule is printed over it, and two closed marks settle on the places where the leaks were |
+| `row_opens_into_message` | 1 [1] | 1 | counting | a held list row is tapped and grows into a full message window that is then read line by line |
+| `running_system` | 1 [1] | 1 | counting | the whole chain moves while reserve members wait visibly outside the duty path |
+| `safe_storage_transfer` | 1 [1] | 1 | counting | a loose set leaves an excluded device and settles in one of two supported places |
+| `same_bag_check` | 1 [1] | 1 | counting | two copies of one file shown inside one container, to be judged against three unlit marks |
+| `same_copy_new_result` | 1 [1] | 1 | counting | the same copy action as before, but the packet is scrambled, so the copy is unreadable noise |
+| `same_email_new_path` | 1 [1] | 1 | counting | the opening email redrawn, its attachment outline takes the class colour and the cursor leaves Send for a safer option |
+| `same_ink_log` | 1 [1] | 1 | counting | a lit table of identical rows where the one that matters looks exactly like the rest; a faint warm mark crosses it and fades, nothing alarms |
+| `same_key_reverse` | 1 [1] | 1 | counting | the unreadable blocks cross the far-end key and turn readable inside the receiving card |
+| `same_people_changed_plan` | 1 [1] | 1 | counting | a held room keeps its people exactly as they were while the shared plan changes, refuting the idea that the fix is braver people |
+| `same_question_decides_the_file` | 1 [1] | 1 | counting | the one harm question hovers over the hook's list, people appear, outline redraws in its class colour |
+| `same_room_changed` | 1 [1] | 1 | counting | the opening frame returns, the vague cloud leaves and a clear voice takes its place |
+| `same_room_decision_first` | 1 [1] | 1 | counting | the opening room again, now the decision lands first and the clock sits early |
+| `same_room_different_memories` | 1 [1] | 1 | counting | the same four seated people, each answering the same question with a different bubble |
+| `same_room_time_passes` | 1 [1] | 1 | counting | the same two people and wall, a week on, where one wall clock and one stack of cards show the repeat running over |
+| `same_scene_refilled_then_diverging` | 1 [1] | 1 | counting | the emptied scene fills again and each person answers differently |
+| `same_scene_resolved` | 1 [1] | 1 | counting | the hook's table returns, the noise leaves, and what remains is a written decision and a ticked box |
+| `same_screen_two_people` | 1 [1] | 1 | counting | two different people, two identical screens, one sign between them |
+| `same_shot_nothing_opens` | 1 [1] | 1 | counting | the opening shot again with the same lit object, but every lock refuses it and the room stays dark; a small second lit window answers once and goes out |
+| `same_trip_changed` | 1 [1] | 1 | counting | the opening journey replayed on the same stage, now unreadable to the onlooker, with the three moves ticked off and one closed lock |
+| `same_trip_now_private` | 1 [1] | 1 | counting | the opening route replayed, the carried card now unreadable to the onlooker, three moves ticked, one lock settling |
+| `sbi_parts_then_gap` | 1 [1] | 1 | counting | the finished card gets its parts named on its own lines, one small heading writes in once, then the empty third slot pulses open as the one accent |
+| `scramble_in_transit` | 1 [1] | 1 | counting | a readable card slides through a key at one end, rides the line as a block of noise, and reads again through the matching key at the other |
+| `screen_beside_person` | 1 [1] | 1 | counting | a person at her desk in a real place, and what she sees shown large beside her |
+| `seal_and_identify` | 1 [1] | 1 | counting | a carried object becomes a sealed shipment at a work surface |
+| `sealed_signer_cutaway` | 1 [1] | 1 | counting | a window opens in a device to show a sealed key that answers a challenge without moving, while everything else travels |
+| `seat_switch_spread` | 1 [1] | 1 | counting | the held picture travels aside and shrinks into one page of a two-page spread, the other party's small page settles opposite, and one thin line carries the exchange across the fold to where its cost lands |
+| `second_boundary_holds` | 1 [1] | 1 | counting | a first latch accepts a token while a second latch remains closed |
+| `second_lock_holds_after_first_turns` | 1 [1] | 1 | counting | a stolen card turns the upper lock on Work while the lower phone lock keeps the door shut |
+| `second_nod_with_plan` | 1 [1] | 1 | counting | the same room; a third line fills the open slot, a paper plan slides onto the table, its boxes fill row by row, the listener nods and a tick lands |
+| `second_screen_proof` | 1 [1] | 1 | counting | a second device supplies the proof that a copied secret cannot supply |
+| `selection_reveals_key` | 1 [1] | 1 | counting | a chosen control resolves into a square to scan |
+| `sentence_fracture` | 1 [1] | 1 | counting | one continuous line separates into indexed pieces, with one internal seam opening last |
+| `separate_passages` | 1 [1] | 1 | counting | a returning path is blocked by a closing boundary |
+| `separated_storage_survival` | 1 [1] | 1 | counting | two cards change location, then one device fails without touching the other |
+| `sequential_callback` | 1 [1] | 1 | counting | a longer chain reconnects familiar parts, then one mark crosses the whole. |
+| `sequential_checks` | 1 [1] | 1 | counting | four prompts accumulate with a confirming stroke |
+| `sequential_operation` | 1 [1] | 1 | counting | three retained rows signal an ordered calculation before a length begins |
+| `sequential_paper_questions` | 1 [1] | 1 | counting | a desk page lands before three measured lines appear in spoken order |
+| `sequential_readback_marks` | 1 [1] | 1 | counting | one written line gains three spoken signals, then a correction route |
+| `sequential_validation` | 1 [1] | 1 | counting | three approvals accumulate on one held document |
+| `server_key_reverse_morph` | 1 [1] | 1 | counting | slate blocks pass the far blue key and resolve into the two readable request rows |
+| `set_down_and_keep_belief` | 1 [1] | 1 | counting | a tool is laid aside while the useful words remain on a pinned note |
+| `set_down_the_tool` | 1 [1] | 1 | counting | a person puts down the checking tool while a note on the wall crosses out the demand and keeps the belief |
+| `shape_as_one_row` | 1 [1] | 1 | counting | the rail is named card by card with one accent bar walking under it, then the Tuesday pin pulses as the agreed step |
+| `shared_change` | 1 [1] | 1 | counting | one correction becomes the same correction on every sheet |
+| `shared_container_check` | 1 [1] | 1 | counting | two intact sources sit within one enclosure above a neutral test rail |
+| `shared_correction` | 1 [1] | 1 | counting | one correction propagates to every reader's sheet |
+| `shared_enclosure_loss` | 1 [1] | 1 | counting | one wash takes all cards within one enclosure |
+| `shared_failure_family` | 1 [1] | 1 | counting | an unchanged system resolves into one highlighted rule family |
+| `shared_key_bridge` | 1 [1] | 1 | counting | one token connects two independent containers |
+| `shared_key_reveal` | 1 [1] | 1 | counting | matching marks appear at both ends of a path and nowhere else |
+| `shared_loss_verdict` | 1 [1] | 1 | counting | a missing criterion remains while one enclosure carries both intact sources away |
+| `shared_offset_swell` | 1 [1] | 1 | counting | every ring grows by the same amount and the one crossing smears into a soft red patch |
+| `shared_record` | 1 [1] | 1 | counting | a written record distributes to four seats and aligns their responses |
+| `shared_record_converges` | 1 [1] | 1 | counting | a single written record folds into a message and branches toward four identical responses |
+| `shared_surface_resolved` | 1 [1] | 1 | counting | the same gathering holds a durable outcome, one completion mark closes the loop |
+| `shared_table_memory_split` | 1 [1] | 1 | counting | a held meeting table fills again as four incompatible recollections appear overhead |
+| `signal_to_receiver` | 1 [1] | 1 | counting | a single luminous pulse carries a time mark down from one satellite toward the listening point |
+| `signed_answer_roundtrip` | 1 [1] | 1 | counting | a question goes to the device, an answer comes back stamped with where it was asked, the secret never moves |
+| `signs_mark_themselves_in_order` | 1 [1] | 1 | counting | three empty rings fill one by one as the narration finds each sign, each with a flag planted on the part of the message it names |
+| `silent_failure_question` | 1 [1] | 1 | counting | a failed member is held beside an unanswered prompt |
+| `simultaneous_conversion` | 1 [1] | 1 | counting | parallel inputs become rising output across a held structure |
+| `single_copy_loss` | 1 [1] | 1 | counting | one object on a bare field loses its only holder, and the thing it held empties to an outline |
+| `single_key_reveal` | 1 [1] | 1 | counting | one protected entry opens a collection of separate records |
+| `single_point_of_failure` | 1 [1] | 1 | counting | one empty thing is named as the weak point, then the fix appears as three blank slots |
+| `single_use_signal` | 1 [1] | 1 | counting | a stored set resolves into one bounded item with one-use signalling |
+| `slipping_on_the_wall_calendar` | 1 [1] | 1 | counting | a dated card on a wall calendar slides one column on while the second slot of a note fills with the same fact |
+| `solitary_loss` | 1 [1] | 1 | counting | a solid card becomes an outline inside a darkened device |
+| `sort_and_correct` | 1 [1] | 1 | counting | each grey item falls into the tray of its class and takes that outline colour; the harmless-looking one pauses over the wrong tray, then corrects |
+| `sort_pause` | 1 [1] | 1 | counting | three unresolved documents hold above colour-coded destinations |
+| `sorted_list_payoff` | 1 [1] | 1 | counting | arrival-order cards travel into a practical first-to-last plan |
+| `source_crosses_boundary` | 1 [1] | 1 | counting | a sheet enters the working field and gains connections |
+| `source_stays_copy_leaves` | 1 [1] | 1 | counting | a separate sheet appears without altering the source |
+| `spare_path_restored` | 1 [1] | 1 | counting | an idle parallel source starts and restores the interrupted route |
+| `speed_lag` | 1 [1] | 1 | counting | a fast mover whose own clock slips behind a steady reference by a growing angle |
+| `speed_rides_the_wave` | 1 [1] | 1 | counting | a travelling wave carries the measure of its speed |
+| `sphere_range` | 1 [1] | 1 | counting | one radius sweeping around a fixed centre |
+| `spliced_middleman` | 1 [1] | 1 | counting | a look-alike of the gate is spliced into the line while the person's actions stay exactly the same |
+| `split_and_step` | 1 [1] | 1 | counting | the same room twice, the old vague comment greyed beside the complete one, then one page flips and the room arrives in colour |
+| `split_futures` | 1 [1] | 1 | counting | one moment divides down a seam into two panels of the same room, one lit and one waiting |
+| `split_resolves` | 1 [1] | 1 | counting | one half folds away to the seam and the other widens into the whole frame, the day carrying on |
+| `split_two_desks` | 1 [1] | 1 | counting | the frame cut in two, the same sign-in page on both desks, so the outcome is read on the other screen |
+| `split_warming_routes` | 1 [1] | 1 | counting | paired paths change temperature while crossing a shared boundary |
+| `spoken_checks` | 1 [1] | 1 | counting | an accumulating checklist makes a deliberate pause visible |
+| `spread_along_link` | 1 [1] | 1 | counting | damage travels along a live connection; the unconnected copy is untouched |
+| `spread_control` | 1 [1] | 1 | counting | one control tightens and opens two shared paths |
+| `spreading_light_through_receding_doors` | 1 [1] | 1 | counting | a dark hall reveals the reach of one access as doors crack open in a line, ending at a resistant heavy door |
 | `staged_curve` | 1 [2] | 1 | counting | an illustrative curve on plain axes with no values is drawn in narrated stages, with faint dashed variants alongside |
-| `strike_and_replace` | 1 [1] | 1 | counting | a held item is struck out, a better version is written beside it, and an arrow from each drops into what it yields |
+| `stalled_ascent` | 1 [1] | 1 | counting | three arrivals meet a point while an attempted return is cancelled |
+| `stalled_threshold` | 1 [1] | 1 | counting | a copied token reaches a gate and cannot complete the next empty proof |
+| `stamped_signal_leaves` | 1 [1] | 1 | counting | transmitter is highlighted while others dim and a stamped wave pulse begins its journey toward the receiver |
+| `stamped_trip` | 1 [1] | 1 | counting | one stamped pulse leaves the first of three overhead points and starts down the one line to the ground point; held scenery is only restated, never re-entered |
+| `status_jobs_switch_off` | 1 [1] | 1 | counting | a status panel of named jobs; each switches off on its word |
+| `steady_hands_at_many_locks` | 1 [1] | 1 | counting | a row of locks and an even stream of identical tokens tried one after another, refused without pause, until one marked token arrives like the rest |
+| `steady_light_fracture` | 1 [1] | 1 | counting | a confident surface reveals a hidden fault before its name appears |
+| `steer_and_assign` | 1 [1] | 1 | counting | a question stays central while a distraction is contained with a named owner |
+| `steering_a_talk_with_a_parking_corner` | 1 [1] | 1 | counting | the question stays on the board while an off-topic remark is lifted out and written into a corner box with an owner |
+| `steering_by_parking` | 1 [1] | 1 | counting | the one who runs the room restates the question and moves stray topics to a named corner |
+| `stepped_vote_result` | 1 [1] | 1 | counting | the decision shown first as a result, a stamp slamming on the plan, then every hand rising one drawing at a time over the unopened doubts |
+| `stopped_perimeter` | 1 [1] | 1 | counting | an enclosing outline lets a travelling outline reach its boundary but not cross it |
+| `stopped_screen_and_bar` | 1 [1] | 1 | counting | the stopped attempt kept small at one side, the measured risk drawn as two bars beside it |
+| `stopped_sequence` | 1 [1] | 1 | counting | a visible sequence ends before the waiting choices resolve |
+| `stopping_check_peers` | 1 [1] | 1 | counting | a gap in a handed-over note is shown, then three equal answers arrive side by side and the room goes still |
+| `stops_at_threshold` | 1 [1] | 1 | counting | a building outline draws around a page, the page glides right and halts on the doorway line, a label prints on the wall |
+| `stored_reserve` | 1 [1] | 1 | counting | an alarm identifies the failed source while a slowly falling reserve sustains the route |
+| `strike_and_rewrite_the_line` | 1 [1] | 1 | counting | the weak topic is struck in ink, never erased, and the question is written under it with one marker underline |
+| `struck_direction` | 1 [1] | 1 | counting | a straight length is drawn and labelled, then the direction offered beside it is crossed out |
+| `subject_is_not_a_decision` | 1 [1] | 1 | counting | a single invite title is circled to show that it names a topic, not a choice |
 | `subset_lost_over_time` | 1 [1] | 1 | counting | a set of peer items is shown, time passes on a dial, then a subset fades blank and the survivors are ticked |
+| `sum_on_readout` | 1 [1] | 1 | counting | three working rows light in turn on the panel that already holds the measured time, the stamp slides into its row, and the product reaches back up towards its source |
+| `suspended_choices` | 1 [1] | 1 | counting | neutral outlines wait above coloured destinations |
+| `swap_and_ledger_cost` | 1 [1] | 1 | counting | a held slot swaps its work for the interruption while a two-column ledger beside it books the visible part and stamps the hidden part as units, named last |
+| `sweep_to_ring` | 1 [1] | 1 | counting | one arm pivots on a fixed point and sweeps a full turn, the track it leaves behind is every place at that reach |
+| `sweep_to_sphere` | 1 [1] | 1 | counting | a single measured length pivots about its anchor and traces every point at that distance, a full circle |
+| `system_at_rest` | 1 [1] | 1 | counting | a finished board of whole copies held still while the rule beneath it changes colour as one family |
+| `table_note_built_line_by_line` | 1 [1] | 1 | counting | the camera drops onto the table and a blank note is written one line per phrase as the agreement is spoken |
+| `tagged_pulse` | 1 [1] | 1 | counting | one pulse leaves a source and carries two labelled tags on its wavefront |
+| `task_cards_land_in_quadrants` | 1 [1] | 1 | counting | three named requests complete the impact-effort map |
 | `tempting_cause_retracted` | 1 [1] | 1 | counting | one tempting cause is drawn as an arrow into an outcome, judged too thin, then un-drawn, leaving dashed question slots where the real causes will land |
+| `the_answer_and_the_pin` | 1 [1] | 1 | counting | Leo's bubble answers, a pin drops on Tuesday, both nod |
+| `the_third_mark_and_the_question` | 1 [1] | 1 | counting | mark 3 completes the rail, You asks instead of tells |
+| `third_cut_two_points` | 1 [1] | 1 | counting | a third circle sweeps round, the thin overlap ring dissolves, and only its two cut points remain, both bright |
+| `third_sphere_narrows_ring` | 1 [1] | 1 | counting | a warm third range circle cuts a cool overlap ring into two points |
+| `third_sphere_narrows_the_ring` | 1 [1] | 1 | counting | three treatments: a static ring with two highlighted intersections; a ring dissolving into points; a third circle sweeping across the held ring. Choose the growing third circle and narrowing ring, because motion makes the intersection legible. |
+| `three_bars_one_order` | 1 [1] | 1 | counting | three plain bars rising one per phrase, the strongest drawn full and named in words |
+| `three_checks` | 1 [1] | 1 | counting | a card gets stamped with one outcome mark per row, each named as it lands |
+| `three_failure_tiles` | 1 [1] | 1 | counting | one copied token branches, is captured, then joins a moving inventory |
+| `three_fields_read_back` | 1 [1] | 1 | counting | one written line accumulates three matched signals, then a correction points back to it |
+| `three_into_one` | 1 [1] | 1 | counting | separate pieces slide edge to edge and lock into one speech bubble, flooded in order |
+| `three_moves_named` | 1 [1] | 1 | counting | three labelled tiles arrive in spoken order under a system that stays put |
+| `three_named_steps` | 1 [1] | 1 | counting | a row of three empty slots along the bottom fills one tile at a time, each lit while it is named |
+| `three_outcomes_side_by_side` | 1 [1] | 1 | counting | the three things from the story in a row, each showing what happens to it |
+| `three_proofs_on_a_desk` | 1 [1] | 1 | counting | the kinds of proof drawn as the real things on the owner's desk, each named as it is said |
+| `three_to_sort` | 1 [1] | 1 | counting | three grey dashed items wait above three coloured trays while a ring counts the learner's turn |
+| `tick_unrolls_to_distance` | 1 [1] | 1 | counting | a tiny clock tick beside a dot unrolls into a long ruler laid across the street plan, then a tag lands on it |
+| `ticks_against_the_evidence` | 1 [1] | 1 | counting | three ticks land beside the written questions while the highlighted evidence is traced once more at full strength |
+| `time_sum_bar` | 1 [1] | 1 | counting | two time chips sit on a time axis, a bar between them is their difference, it shortens into the travel time and stretches into a long line towards the satellite as the speed of light multiplies it |
+| `timed_departure` | 1 [1] | 1 | counting | a waiting lane meets a departure that does not wait |
 | `timeline_scaffold` | 1 [1] | 1 | counting | an axis of order is drawn first, markers pop as the stroke passes them, then empty dashed frames print above for the views to come |
+| `timer_stops_on_arrival` | 1 [1] | 1 | counting | a running clock and a travelling pulse share one clock, and both stop at the same instant |
+| `tradeoff_visible` | 1 [1] | 1 | counting | the added major project fills the week and points toward the work that must move |
+| `travel_class_outline` | 1 [1] | 1 | counting | one magenta outline keeps its identity while changing from page to folder to screen |
+| `travelling_boundary` | 1 [1] | 1 | counting | a handoff stays inside a drawn boundary |
+| `travelling_token` | 1 [1] | 1 | counting | a small object becomes a transferable permission |
+| `trim_the_row_to_who_the_decision_needs` | 1 [1] | 1 | counting | two guests are named, the rest are crossed and sent the notes, one marker circle on the owner |
+| `trip_not_verdict` | 1 [1] | 1 | counting | the same system, one band lit blue for the private trip while a look-alike address and a dashed data store sit outside its promise |
+| `trouble_at_stations` | 1 [1] | 1 | counting | three interruptions occupy separate locations while the subject waits |
+| `trusted_key_recall` | 1 [1] | 1 | counting | a re-lit certificate badge connects its completed checks to the browser's shared key |
+| `tube_morph` | 1 [1] | 1 | counting | a readable card passes a lens and becomes scrambled blocks inside a doubled path |
+| `turn_passes_between_two_seated` | 1 [1] | 1 | counting | a calm room with three lettered cues, then a question bubble shrinks as the other speaker's bubble opens |
+| `two_clocks_one_line` | 1 [1] | 1 | counting | a steady clock high above and a wobbling clock low on the ground, tied by one line each to its owner |
+| `two_empty_slots` | 1 [1] | 1 | counting | the same empty slot opens at both ends while an open eye sits between them |
+| `two_empty_slots_one_watcher` | 1 [1] | 1 | counting | the same secret is needed at both ends, two empty dashed slots wait while the open eye sits between them |
+| `two_empty_slots_wait` | 1 [1] | 1 | counting | a calm room holds still while two dashed empty slots pulse and a hand-lettered question mark stamps in beside them |
+| `two_equal_vessels_fill` | 1 [1] | 1 | counting | two identical vessels take the same units; one reaches its brim after a few, the other is still far from full |
+| `two_homes_one_fault` | 1 [1] | 1 | counting | a second kind of home takes the copies, so a fault on one leaves the other whole |
+| `two_items_two_colours` | 1 [1] | 1 | counting | a second item joins the first on one baseline and its outline takes a different colour |
+| `two_loops_exchanger` | 1 [1] | 1 | counting | two closed loops meet only at a plate stack; heat crosses it while each fluid stays in its own loop |
+| `two_names_one_moment` | 1 [1] | 1 | counting | the same overrun is named twice, once pinned on the person and once as what the clock shows, and the listener's face answers each differently |
+| `two_people_reply_sequence_payoff` | 1 [1] | 1 | counting | three replies land in turn across the gap between two colleagues, then the listener leans in, relieved |
+| `two_reaches_one_overlap` | 1 [1] | 1 | counting | a second reach grows from a new centre until it crosses the first at two places, and a thin tilted loop lights through both |
+| `two_scenes_compared_one_greys` | 1 [1] | 1 | counting | two framed rooms side by side; one drains of colour, the other keeps it and is tagged |
+| `two_stopping_points_in_open_hall` | 1 [1] | 1 | counting | a pulled-back hall of opened doors becomes a calm choice frame, with two numbered marks locating the two moments that could stop the chain |
+| `two_storage_kinds` | 1 [1] | 1 | counting | one failed device leaves a separate storage device intact |
+| `two_values_cross_unread` | 1 [1] | 1 | counting | two small values cross a shared path in opposite lanes, a middle observer copies both, yet its own slot stays empty |
+| `two_values_one_empty_slot` | 1 [1] | 1 | counting | two values cross and are copied, the watcher's slot stays empty |
+| `unbounded_forward` | 1 [1] | 1 | counting | a route passes beyond every boundary |
+| `uneasy_look_turns_resolved` | 1 [1] | 1 | counting | a close desk reaction moves from the circled receipt to a steady look at the viewer |
+| `uneasy_to_resolved` | 1 [1] | 1 | counting | a large face turns from a marked paper to meet the viewer, then gives a small nod |
+| `unfolding_identifiers` | 1 [1] | 1 | counting | the same pieces acquire identifiers and deeper numeric representations |
+| `unguarded_duplicate` | 1 [1] | 1 | counting | a moving readable card branches into an identical retained card while the source continues |
+| `unit_grid_ledger` | 1 [1] | 1 | counting | a span of time drawn as a grid of unit cells read like a page, each event stamped into the next free cells in reading order, its count riding a pile in the margin |
+| `unlinked_verdict` | 1 [1] | 1 | counting | equal claims stand apart from their absent source |
+| `unresolved_escape` | 1 [1] | 1 | counting | rising output gathers beneath a boundary while an unfinished route asks where it can leave |
+| `unsure_step_up` | 1 [1] | 1 | counting | a doubtful thing climbs one step of colour, then a line leads to the person who decides |
+| `untouched_sheet` | 1 [1] | 1 | counting | an unchanged sheet contrasts reading with alteration |
+| `urgent_split` | 1 [1] | 1 | counting | one urgent label branches into timing and importance, then a deadline-weighted balance |
+| `vague_nod_two_shot` | 1 [1] | 1 | counting | a light, friendly line is said across a table and answered with a nod; both people look at ease |
+| `value_replacement` | 1 [1] | 1 | counting | a reused value gives way to an account-specific generated value |
+| `value_settles_over_time` | 1 [1] | 1 | counting | a gauge marker slides from alarm to calm while a glow softens |
+| `verdicts_in_order` | 1 [1] | 1 | counting | three candidate lines are judged one after another on the same desk, the good one stamped and its parts underlined, the hollow one dimmed, the personal one crossed out |
+| `walk_up_mark_and_tag` | 1 [1] | 1 | counting | the camera walks up to one object in a row of look-alikes, outlines the odd one out and hangs a tag on it |
+| `warm_remark_fades` | 1 [1] | 1 | counting | a good feeling arrives and drains while the vague cloud over him just hangs |
+| `warning_arrives_with_room_to_act` | 1 [1] | 1 | counting | the same desk and the same pair, but this time the warning lands early and there is time to spare |
+| `watched_route` | 1 [1] | 1 | counting | a silent observer on the route peels a copy off a message passing by and reads it plainly |
+| `watcher_copy` | 1 [1] | 1 | counting | readable request enters a watcher and leaves an identical card in its tray |
+| `watcher_noise_tamper` | 1 [1] | 1 | counting | a copy of the trip shows the watcher only noise; a changed block is caught at the server end |
+| `wave_speed` | 1 [1] | 1 | counting | a luminous radio pulse advances with warm streaks and carries its speed beside it |
+| `weak_line_circled` | 1 [1] | 1 | counting | a card drawn with only a topic line, the one weak line ringed in the marker colour |
+| `weak_line_signalled` | 1 [1] | 1 | counting | a drawn container accumulates its short line, then one marker loop distinguishes the line from the purpose it lacks |
+| `weak_topic_exposed_by_one_circle` | 1 [1] | 1 | counting | a sparse workshop board makes the invite's vague topic the only focal point |
+| `week_later_overrun` | 1 [1] | 1 | counting | the same room a week on; a paper tag drops by the clock, the hand sweeps past the end mark while the face of the listener falls |
+| `week_on_ends_on_time` | 1 [1] | 1 | counting | the same room a week on; the pinned agenda sits by the clock, the hand reaches the end mark and stops, the guests leave on time, a specific line is said and both faces ease |
+| `weighted_convergence` | 1 [1] | 1 | counting | a quiet field of links gains unequal weight toward one empty destination |
+| `weighted_fork` | 1 [1] | 1 | counting | one shared path separates into equally lit outcomes |
+| `whole_chain_return` | 1 [1] | 1 | counting | a familiar outline expands into one connected route to the open air |
+| `whole_console_empty_band` | 1 [1] | 1 | counting | a complete weighted field leaves its output visibly empty |
+| `word_becomes_label` | 1 [1] | 1 | counting | the verdict's key word leaves the bubble and sticks on Leo as a name tag |
+| `work_handover` | 1 [1] | 1 | counting | one coloured token moves from a cleared check to a short neutral waiting row |
+| `wrap_then_greet` | 1 [1] | 1 | counting | a message is sealed in a protective outline, then two sides greet before it moves |
+| `wrap_then_hello` | 1 [1] | 1 | counting | a plain message is sealed in an outline, then two short greetings cross the line before anything is sent |
+| `write_first_read_together` | 1 [1] | 1 | counting | in the held room, the old habit is greyed and struck, one person going first alone is shown and withdrawn, then everyone writes at once and all turn their cards together |
+| `written_summary_converges` | 1 [1] | 1 | counting | a decision folds into one envelope, reaches four colleagues, and their four bubbles resolve to the same line |
+| `written_summary_converges_team_voice` | 1 [1] | 1 | counting | a folded decision line sends one shared message to every person at the meeting table |
+| `written_summary_unifies` | 1 [1] | 1 | counting | one written line is sealed, sent to each seat, and four different bubbles become one |
+| `wrong_name_check` | 1 [1] | 1 | counting | a certificate arrives at a familiar board carrying another site's name, and the choices wait unmarked |
+
+Possible duplicates (same idea, different names?): `accent_question_mark` / `harm_question_mark`; `accent_question_mark` / `question_mark`; `accent_ring` / `ring`; `accent_underline` / `underline`; `acceptance_ring` / `ring`; `access_label` / `label_ca`; `accumulating_reply` / `reply_30`; `accumulating_reply` / `reply_60`; `action_report` / `report_b`; `alarm_route` / `route`; `anyone_boundary` / `boundary`; `assumption_underline` / `underline`; `attached_term` / `term`; `authenticator_phone` / `phone`; `authenticator_phone` / `phone_pt`; `axis_effort` / `q_effort`; `axis_impact` / `q_impact`; `backup_code_entry` / `backup_code_panel`; `bag` / `bag_boundary`; `bag` / `bag_ground`; `bag` / `boundary_bag`; `bag` / `laptop_bag`; `bag` / `laptop_in_bag`; `bag` / `shared_bag`; `bag` / `usb_in_bag`; `bag_boundary` / `boundary`; `bag_boundary` / `boundary_bag`; `bag_boundary` / `same_bag_boundary`; `bag_ground` / `ground`; `baseline` / `ink_baseline`; `baseline` / `shelf_baseline`; `baseline` / `token_baseline`; `batch_divider` / `divider_h`; `batch_divider` / `divider_v`; `bedside_phone` / `phone`; `bedside_phone` / `phone_pt`; `behaviour_confirm_fill` / `behaviour_confirm_text`; `behaviour_confirm_fill` / `behaviour_fill`; `behaviour_confirm_text` / `behaviour_detail_text`; `belief_stamp` / `stamp`; `board` / `board_camera`; `board` / `board_checklist`; `board` / `board_continuity`; `board` / `board_ground`; `board` / `board_heading`; `board` / `board_widen`; `board` / `board_word`; `board` / `continued_board`; `board` / `matrix_board`; `board` / `path_board`; `board` / `system_board`; `board` / `target_board`; `board_checklist` / `checklist`; `board_ground` / `ground`; `board_written_line` / `written_line_on_rule`; `boundary` / `boundary_bag`; `boundary` / `boundary_label`; `boundary` / `boundary_note`; `boundary` / `circular_boundary`; `boundary` / `closed_boundary`; `boundary` / `company_boundary`; `boundary` / `desk_boundary`; `boundary` / `enclosing_boundary`; `boundary` / `held_boundary`; `boundary` / `inner_boundary`; `boundary` / `named_boundary`; `boundary` / `open_boundary`; `boundary` / `place_boundary`; `boundary` / `travelling_boundary`; `boundary_bag` / `same_bag_boundary`; `boundary_label` / `label_ca`; `box_ring` / `ring`; `branch_a` / `branch_b`; `branch_a` / `connected_branch`; `branch_a` / `copy_branch`; `branch_a` / `isolated_branch`; `branch_b` / `connected_branch`; `branch_b` / `copy_branch`; `branch_b` / `isolated_branch`; `breach_tag` / `tag`; `break_question` / `question`; `broad_label` / `label_ca`; `browser_key_lens` / `key_end_browser`; `browser_key_lens` / `key_held_browser`; `browser_key_lens` / `key_slot_browser`; `browser_window` / `browser_window_lookalike`; `bubbles` / `divergent_bubbles`; `cabinet_section` / `section_cabinet`; `cable_route` / `route`; `card_reply` / `card_reply_accent`; `card_reply` / `reply_30`; `card_reply` / `reply_60`; `caveat_note_card` / `note_card_flat`; `caveat_note_card` / `note_card_upright`; `caveat_note_card` / `object_to_note_card`; `caveat_tag` / `tag`; `cell_ring` / `ring`; `cert` / `cert_card`; `cert` / `cert_outline`; `cert` / `cert_rows`; `cert` / `label_cert`; `chain_pulse` / `pulse`; `channel` / `channel_label`; `channel` / `protected_channel`; `channel_label` / `label_ca`; `channel_label` / `protected_channel_label`; `check_ground` / `ground`; `check_panel` / `check_panel_slot`; `check_question` / `question`; `checked_door` / `door_hr`; `checked_reply` / `reply_30`; `checked_reply` / `reply_60`; `checklist` / `checklist_card`; `checklist` / `checklist_heading`; `checklist` / `checklist_row`; `checklist` / `checklist_rows`; `checklist` / `closing_checklist`; `checklist` / `corner_checklist`; `checklist` / `held_checklist`; `checklist` / `progress_checklist`; `checklist` / `spoken_checklist`; `choice_question` / `question`; `circle_a` / `circle_b`; `circle_a` / `circle_c_growth`; `circle_a` / `owner_circle`; `circle_a` / `pause_circle`; `circle_a` / `priya_circle`; `circle_a` / `range_circle`; `circle_a` / `subject_circle`; `circle_b` / `circle_c_growth`; `circle_b` / `owner_circle`; `circle_b` / `pause_circle`; `circle_b` / `priya_circle`; `circle_b` / `range_circle`; `circle_b` / `subject_circle`; `class_trays` / `trays`; `clock` / `clock_dial`; `clock` / `clock_face`; `clock` / `clock_tag`; `clock` / `clock_tick`; `clock` / `pause_clock`; `clock` / `phone_clock`; `clock` / `riding_clock`; `clock` / `wall_clock`; `clock_dial` / `dial`; `clock_tag` / `tag`; `close_office` / `office_close`; `closed_air_loop` / `closed_loop`; `closed_air_loop` / `closed_loop_pipe`; `closed_loop` / `closed_loop_pipe`; `cloud` / `cloud_destination`; `cloud` / `cloud_holder`; `cloud` / `cloud_storage`; `cloud` / `thought_cloud`; `company_label` / `company_scope_label`; `company_label` / `label_ca`; `company_scope_label` / `named_scope_label`; `compliment_slip_bottom` / `compliment_slip_top`; `conditional_glow` / `glow`; `confirming_ticks` / `ticks`; `connected_copy` / `copy`; `connected_copy` / `copy_a`; `connected_copy` / `copy_b`; `contained_laptop` / `laptop`; `contained_laptop` / `laptop_b`; `control_chip_tapped` / `device_control_chip`; `copied_card` / `copied_shop_card`; `copied_packet` / `packet`; `copied_shop_card` / `shop_fresh_card`; `copy` / `copy_a`; `copy` / `copy_b`; `copy` / `copy_branch`; `copy` / `copy_caution`; `copy` / `copy_file`; `copy` / `copy_flight`; `copy` / `copy_label`; `copy` / `copy_path`; `copy` / `copy_readable`; `copy` / `copy_restore`; `copy` / `copy_travelling`; `copy` / `copy_usb`; `copy` / `copy_whole`; `copy` / `external_copy`; `copy` / `label_copy`; `copy` / `leak_copy`; `copy` / `noise_copy`; `copy` / `offline_copy`; `copy` / `offsite_copy`; `copy` / `original_copy`; `copy` / `rejected_copy`; `copy` / `tray_copy`; `copy` / `watcher_copy`; `copy_a` / `copy_b`; `copy_a` / `copy_branch`; `copy_a` / `copy_caution`; `copy_a` / `copy_file`; `copy_a` / `copy_flight`; `copy_a` / `copy_label`; `copy_a` / `copy_path`; `copy_a` / `copy_readable`; `copy_a` / `copy_restore`; `copy_a` / `copy_travelling`; `copy_a` / `copy_usb`; `copy_a` / `copy_whole`; `copy_a` / `external_copy`; `copy_a` / `label_copy`; `copy_a` / `leak_copy`; `copy_a` / `noise_copy`; `copy_a` / `offline_copy`; `copy_a` / `offsite_copy`; `copy_a` / `original_copy`; `copy_a` / `rejected_copy`; `copy_a` / `tray_copy`; `copy_a` / `watcher_copy`; `copy_b` / `copy_branch`; `copy_b` / `copy_caution`; `copy_b` / `copy_file`; `copy_b` / `copy_flight`; `copy_b` / `copy_label`; `copy_b` / `copy_path`; `copy_b` / `copy_readable`; `copy_b` / `copy_restore`; `copy_b` / `copy_travelling`; `copy_b` / `copy_usb`; `copy_b` / `copy_whole`; `copy_b` / `external_copy`; `copy_b` / `label_copy`; `copy_b` / `leak_copy`; `copy_b` / `noise_copy`; `copy_b` / `offline_copy`; `copy_b` / `offsite_copy`; `copy_b` / `original_copy`; `copy_b` / `rejected_copy`; `copy_b` / `tray_copy`; `copy_b` / `watcher_copy`; `copy_label` / `label_ca`; `copy_label` / `label_copy`; `copy_usb` / `usb`; `correction_arrow` / `up_arrow`; `correction_route` / `route`; `credential_label` / `label_ca`; `crossed_day_calendar` / `wall_calendar_crossed`; `curved_ground` / `ground`; `dashed_route` / `dashed_threat_route`; `dashed_route` / `route`; `data_store_outline` / `data_store_outlined`; `date_check` / `date_check_label`; `day_dial` / `dial`; `daylight_desk` / `desk`; `deciding_question` / `question`; `decision` / `decision_caller`; `decision` / `decision_line`; `decision` / `decision_list`; `decision` / `decision_question`; `decision` / `default_decision`; `decision` / `maya_decision`; `decision_question` / `question`; `desk` / `desk_boundary`; `desk` / `desk_callback`; `desk` / `desk_foreground`; `desk` / `desk_front`; `desk` / `desk_lamp`; `desk` / `desk_line`; `desk` / `desk_magnifier`; `desk` / `desk_plane`; `desk` / `desk_rebuild`; `desk` / `desk_reference`; `desk` / `desk_rule`; `desk` / `facilitator_desk`; `desk` / `listening_desk`; `desk` / `morning_desk`; `desk` / `office_desk`; `desk` / `priya_desk`; `desk` / `returning_desk`; `desk` / `security_desk`; `desk` / `shared_desk`; `desk_front` / `desk_front_panel`; `desk_prop_laptop` / `desk_prop_mug`; `desk_prop_laptop` / `desk_prop_notebook`; `desk_prop_mug` / `desk_prop_notebook`; `desk_question_pad` / `question_pad`; `desk_row_array` / `inbox_row_array`; `desk_row_array` / `seeded_desk_array`; `dev_bubble` / `scribble_bubble_dev`; `device_screen_portal` / `laptop_screen_portal`; `dir_arrow` / `up_arrow`; `direct_underline` / `underline`; `disposal_label` / `label_ca`; `distance_tag` / `tag`; `divider_h` / `divider_v`; `door_compliance` / `door_hr`; `door_hr` / `door_line`; `door_hr` / `door_manager`; `door_hr` / `door_other`; `door_hr` / `door_pair`; `door_hr` / `door_row`; `door_hr` / `door_shop`; `door_hr` / `door_sign`; `door_hr` / `door_wall`; `door_hr` / `door_work`; `door_hr` / `hinged_door`; `door_hr` / `identity_door`; `door_hr` / `ink_door`; `door_hr` / `lit_door`; `door_hr` / `neutral_door`; `door_hr` / `office_door`; `door_hr` / `quiet_door`; `door_hr` / `shop_door`; `door_hr` / `work_door`; `door_row` / `open_door_row`; `door_row` / `receding_door_row`; `door_shop` / `shop_door`; `door_work` / `work_door`; `dotted_future_page` / `dotted_pretend_page`; `drift_tag` / `tag`; `email` / `email_row`; `email` / `laptop_email`; `email` / `shared_email`; `empty_outline` / `empty_slot_outline`; `empty_outline` / `empty_thought_outline`; `empty_report` / `report_b`; `empty_ruled_card` / `ruled_numbered_card`; `empty_slot` / `empty_slot_outline`; `empty_slot` / `empty_slot_row`; `empty_slot_outline` / `empty_slot_row`; `empty_slot_outline` / `empty_thought_outline`; `envelope` / `folded_envelope`; `envelope` / `glowing_envelope`; `envelope` / `hand_envelope`; `envelope` / `sealed_envelope`; `equal_claim_left` / `equal_claim_right`; `evidence_ring` / `ring`; `expanded_term` / `term`; `expected_route` / `route`; `failed_laptop` / `laptop`; `failed_laptop` / `laptop_b`; `failure_tag` / `tag`; `failure_term` / `term`; `far_door_four` / `far_door_one`; `far_door_four` / `far_door_three`; `far_door_four` / `far_door_two`; `far_door_one` / `far_door_three`; `far_door_one` / `far_door_two`; `far_door_three` / `far_door_two`; `final_underline` / `underline`; `first_report` / `report_b`; `first_stopping_point_tag` / `second_stopping_point_tag`; `fixed_route` / `route`; `flag_name` / `name_row_flag`; `floating_question` / `question`; `floor_light_continuation` / `joined_floor_light`; `focus_ring` / `ring`; `fold_crease_bottom` / `fold_crease_top`; `folded_page` / `small_folded_page`; `folder` / `folder_ghost`; `folder` / `folder_label`; `folder` / `folder_outline`; `folder` / `previous_folder`; `folder` / `storage_folder`; `folder_label` / `label_ca`; `form_packet` / `packet`; `fresh_card` / `fresh_key_card`; `fresh_card` / `shop_fresh_card`; `fresh_card` / `work_fresh_card`; `fresh_key_card` / `shop_fresh_card`; `fresh_key_card` / `work_fresh_card`; `friday_label` / `label_ca`; `giveway_arrow` / `up_arrow`; `gloss_effort` / `q_effort`; `gloss_impact` / `q_impact`; `glow` / `ground_glow`; `glow` / `phone_glow`; `go_higher` / `higher_label`; `goal_label` / `label_ca`; `ground` / `ground_glow`; `ground` / `ground_point`; `group` / `group_arrow`; `group` / `group_bracket`; `group` / `group_inputs`; `group` / `group_member`; `group` / `holder_group`; `group` / `input_group`; `group_arrow` / `group_arrow_bottom`; `group_arrow` / `group_arrow_middle`; `group_arrow` / `group_arrow_top`; `group_arrow` / `up_arrow`; `group_arrow_bottom` / `group_arrow_middle`; `group_arrow_bottom` / `group_arrow_top`; `group_arrow_middle` / `group_arrow_top`; `habit_tag` / `tag`; `hand_arrow` / `up_arrow`; `handoff_arrow` / `up_arrow`; `handshake_label` / `label_ca`; `handwritten_question` / `question`; `hanging_question` / `hanging_question_sign`; `hanging_question` / `question`; `hanging_question_sign` / `question_sign`; `harm_mark` / `harm_question_mark`; `harm_question` / `harm_question_mark`; `harm_question` / `question`; `harm_question_mark` / `question_mark`; `held_invite` / `invite`; `held_job_advert` / `job_advert`; `held_org_chart` / `org_chart`; `held_payroll` / `payroll`; `held_question` / `question`; `higher_label` / `label_ca`; `host_underline` / `underline`; `https_label` / `https_label_continuity`; `https_label` / `label_ca`; `https_label` / `label_https`; `https_label_continuity` / `label_https`; `hung_pill_label` / `label_pill`; `id_tags` / `urgent_tags`; `impact_connector` / `q_impact`; `impact_fill` / `q_impact`; `impact_text` / `q_impact`; `impact_underline` / `q_impact`; `impact_underline` / `underline`; `impression_label` / `label_ca`; `inbox_row_array` / `inbox_row_stack`; `incoming` / `incoming_broadcasts`; `incoming` / `incoming_question`; `incoming_question` / `question`; `invite` / `invite_artefact`; `invite` / `meeting_invite`; `it_message` / `update_message`; `key_end_browser` / `key_end_server`; `key_end_browser` / `key_held_browser`; `key_end_browser` / `key_slot_browser`; `key_end_server` / `key_held_server`; `key_end_server` / `key_slot_server`; `key_held_browser` / `key_held_server`; `key_held_browser` / `key_slot_browser`; `key_held_server` / `key_slot_server`; `key_light_cone` / `key_light_wall`; `key_slot_browser` / `key_slot_server`; `key_slot_browser` / `key_slot_watcher`; `key_slot_server` / `key_slot_watcher`; `key_slots` / `key_slots_continuity`; `key_slots` / `key_slots_server_lens`; `key_slots_server_lens` / `server_lens`; `label_accepted` / `label_ca`; `label_ca` / `label_cert`; `label_ca` / `label_copy`; `label_ca` / `label_drive`; `label_ca` / `label_encrypted`; `label_ca` / `label_https`; `label_ca` / `label_identification`; `label_ca` / `label_laptop`; `label_ca` / `label_loop`; `label_ca` / `label_matters`; `label_ca` / `label_noise`; `label_ca` / `label_note`; `label_ca` / `label_padlock`; `label_ca` / `label_pill`; `label_ca` / `label_pump`; `label_ca` / `label_readable`; `label_ca` / `label_same`; `label_ca` / `label_scrambled`; `label_ca` / `label_sign`; `label_ca` / `label_soon`; `label_ca` / `label_stamp`; `label_ca` / `label_unscrambled`; `label_ca` / `label_watcher`; `label_ca` / `label_watcher2`; `label_ca` / `locus_label`; `label_ca` / `manager_label`; `label_ca` / `noise_label`; `label_ca` / `offline_label`; `label_ca` / `outsider_label`; `label_ca` / `owner_label`; `label_ca` / `padlock_label`; `label_ca` / `panel_label`; `label_ca` / `paper_label`; `label_ca` / `readable_label`; `label_ca` / `recall_label`; `label_ca` / `recipient_label`; `label_ca` / `row_label`; `label_ca` / `screen_label`; `label_ca` / `sent_label`; `label_ca` / `signer_label`; `label_ca` / `tls_label`; `label_ca` / `token_label`; `label_ca` / `tray_label`; `label_ca` / `verification_label`; `label_ca` / `watcher_label`; `label_laptop` / `laptop`; `label_laptop` / `laptop_b`; `label_noise` / `noise_label`; `label_not_after` / `label_not_honest`; `label_padlock` / `padlock`; `label_padlock` / `padlock_label`; `label_pump` / `pump_a`; `label_readable` / `readable_label`; `label_same` / `same_key_label`; `label_scrambled` / `scrambled_packet_label`; `label_stamp` / `stamp`; `label_watcher` / `watcher`; `label_watcher` / `watcher_label`; `laptop` / `laptop_b`; `laptop` / `laptop_back`; `laptop` / `laptop_bag`; `laptop` / `laptop_base`; `laptop` / `laptop_detail`; `laptop` / `laptop_email`; `laptop` / `laptop_frame`; `laptop` / `laptop_holder`; `laptop` / `laptop_in_bag`; `laptop` / `laptop_lid`; `laptop` / `laptop_notch`; `laptop` / `laptop_schematic`; `laptop` / `laptop_screen`; `laptop` / `laptop_shut`; `laptop` / `laptop_source`; `laptop` / `mail_laptop`; `laptop` / `report_on_laptop`; `laptop` / `reset_laptop`; `laptop_b` / `laptop_back`; `laptop_b` / `laptop_bag`; `laptop_b` / `laptop_base`; `laptop_b` / `laptop_detail`; `laptop_b` / `laptop_email`; `laptop_b` / `laptop_frame`; `laptop_b` / `laptop_holder`; `laptop_b` / `laptop_in_bag`; `laptop_b` / `laptop_lid`; `laptop_b` / `laptop_notch`; `laptop_b` / `laptop_schematic`; `laptop_b` / `laptop_screen`; `laptop_b` / `laptop_shut`; `laptop_b` / `laptop_source`; `laptop_b` / `mail_laptop`; `laptop_b` / `report_on_laptop`; `laptop_b` / `reset_laptop`; `laptop_bag` / `laptop_in_bag`; `laptop_screen` / `laptop_screen_portal`; `later_tag` / `tag`; `leader_note` / `leader_to_note`; `length_tag` / `tag`; `leo_bust` / `leo_close_bust`; `light_pool_on_surface` / `window_light_pool`; `light_tag` / `tag`; `line_tag` / `tag`; `linked_readout` / `readout`; `linked_route` / `route`; `lock_token` / `token_a`; `lock_token` / `token_b`; `log_pane` / `neutral_log_pane`; `login_packet` / `login_packet_copy`; `login_packet` / `packet`; `lookalike` / `lookalike_address`; `margin_notes` / `notes`; `match_ring` / `ring`; `matching_key_pulse` / `shared_key_pulse`; `maya` / `maya_decision`; `maya` / `maya_reaction`; `maya` / `maya_relaxed`; `meeting_table` / `meeting_table_surface`; `meeting_table` / `table`; `mfa_term` / `term`; `missing_tag` / `tag`; `missing_tag` / `tag_missing`; `moving_route` / `route`; `name_plate_tag` / `name_tag_on_figure`; `named_corner_box` / `named_region_box`; `named_owner` / `owner`; `named_recipient` / `recipient`; `named_ring` / `ring`; `needed_input` / `needed_input_label`; `neg_tag` / `tag`; `new_notes` / `notes`; `night_dock` / `retained_night_dock`; `noise_copy` / `watcher_noise_copy`; `noise_packet` / `packet`; `note_card_flat` / `note_card_upright`; `note_card_flat` / `object_to_note_card`; `note_card_upright` / `object_to_note_card`; `notes` / `notes_route`; `notes` / `row_notes`; `notes_route` / `route`; `numeric_tag` / `tag`; `omission_tag` / `tag`; `onward_route` / `route`; `open_door_row` / `receding_door_row`; `open_route` / `route`; `opening_token` / `token_a`; `opening_token` / `token_b`; `outline_steps` / `steps`; `outlined_route` / `route`; `outsider_question` / `question`; `overlap_ring` / `overlap_ring_fades`; `overlap_ring` / `ring`; `owner` / `owner_arrow`; `owner` / `owner_cast`; `owner` / `owner_chip`; `owner` / `owner_circle`; `owner` / `owner_label`; `owner` / `owner_person`; `owner` / `owner_signal`; `owner` / `owner_statement`; `owner` / `owner_underline`; `owner` / `single_owner`; `owner` / `unanswered_owner`; `owner_arrow` / `up_arrow`; `owner_underline` / `underline`; `packet` / `packet_morph`; `packet` / `packet_readable`; `packet` / `plain_packet`; `packet` / `readable_packet`; `packet` / `scrambled_packet`; `packet` / `stopped_packet`; `packet` / `tamper_packet`; `packet` / `wait_packet`; `packet_morph` / `server_packet_reverse_morph`; `packet_readable` / `readable_packet`; `pad_ticks` / `ticks`; `padlock` / `padlock_between`; `padlock` / `padlock_closed`; `padlock` / `padlock_label`; `padlock` / `padlock_large`; `padlock` / `padlock_open`; `padlock` / `padlock_ring`; `padlock` / `promise_padlock`; `padlock_ring` / `ring`; `paired_question_marks` / `question_marks`; `paper_thought_bubble` / `thought_bubble`; `paper_thought_bubble` / `thought_bubble_printed`; `password_vault` / `vault`; `pause_ring` / `ring`; `persistent_token` / `token_a`; `persistent_token` / `token_b`; `perspective_table` / `table`; `phone` / `phone_clock`; `phone` / `phone_dot`; `phone` / `phone_flicker`; `phone` / `phone_glow`; `phone` / `phone_halo`; `phone` / `phone_mfa`; `phone` / `phone_mini`; `phone` / `phone_point`; `phone` / `phone_pt`; `phone` / `phone_quartz`; `phone` / `phone_readout`; `phone` / `phone_schematic`; `phone` / `phone_screens`; `phone` / `phone_terminal`; `phone` / `retired_phone`; `phone_clock` / `phone_pt`; `phone_dot` / `phone_pt`; `phone_flicker` / `phone_pt`; `phone_flicker` / `phone_time_flicker`; `phone_glow` / `phone_point_glow`; `phone_glow` / `phone_pt`; `phone_halo` / `phone_pt`; `phone_mfa` / `phone_pt`; `phone_mini` / `phone_pt`; `phone_point` / `phone_point_glow`; `phone_point` / `phone_pt`; `phone_pt` / `phone_quartz`; `phone_pt` / `phone_readout`; `phone_pt` / `phone_schematic`; `phone_pt` / `phone_screens`; `phone_pt` / `phone_terminal`; `phone_pt` / `retired_phone`; `phone_readout` / `readout`; `pill_button_press` / `press_button`; `pinned_rule_card` / `pinned_rule_note`; `pinned_rule_note` / `pinned_wall_note`; `place_boundary` / `same_place_boundary`; `plan_sheet_flat` / `plan_sheet_perspective`; `pocket_rule` / `written_pocket_rule`; `pointing_underline` / `underline`; `pos_ring` / `ring`; `press_release` / `public_press_release`; `priya` / `priya_circle`; `priya` / `priya_desk`; `priya` / `priya_words`; `proactive_tag` / `tag`; `protected_channel` / `protected_channel_label`; `pulse` / `pulse_fallback`; `pulse` / `relay_pulse`; `pulse` / `signal_pulse`; `pulse` / `travelling_pulse`; `pulse` / `watcher_pulse`; `qualified_copy_warning` / `qualified_warning`; `question` / `question_card`; `question` / `question_connector`; `question` / `question_fill`; `question` / `question_in_ink`; `question` / `question_mark`; `question` / `question_marks`; `question` / `question_notepad`; `question` / `question_pad`; `question` / `question_recollection`; `question` / `question_restatement`; `question` / `question_sign`; `question` / `question_signal`; `question` / `question_slip`; `question` / `question_terminal`; `question` / `question_text`; `question` / `question_underline`; `question` / `question_word`; `question` / `returning_question`; `question` / `stranger_question`; `question` / `typed_question`; `question` / `written_question`; `question_card` / `question_card_pause`; `question_underline` / `underline`; `quick_zone` / `zone_quick`; `quickwin_underline` / `underline`; `quiet_scope_recall` / `scope_recall`; `quiet_term` / `term`; `rail` / `rail_slot`; `rail` / `rule_rail`; `range_circle` / `second_range_circle`; `read_only_label` / `read_only_underline`; `readout` / `readout_link`; `readout` / `readout_rows`; `readout` / `readout_shell`; `readout` / `readout_timer`; `readout_timer` / `timer`; `receipt_ring` / `ring`; `received_stamp` / `stamp`; `recipient` / `recipient_label`; `recipient` / `recipient_pictogram`; `recipient` / `recipient_trio`; `recipient` / `unexpected_recipient`; `refused_arrow` / `up_arrow`; `reply_30` / `reply_60`; `reply_30` / `reply_emphasis`; `reply_30` / `reply_in_hand`; `reply_30` / `reply_line`; `reply_30` / `reply_link`; `reply_30` / `reply_note`; `reply_30` / `reply_outline`; `reply_30` / `reply_tick`; `reply_30` / `rewound_reply`; `reply_30` / `tick_reply`; `reply_60` / `reply_emphasis`; `reply_60` / `reply_in_hand`; `reply_60` / `reply_line`; `reply_60` / `reply_link`; `reply_60` / `reply_note`; `reply_60` / `reply_outline`; `reply_60` / `reply_tick`; `reply_60` / `rewound_reply`; `reply_60` / `tick_reply`; `reply_tick` / `tick_reply`; `report_b` / `report_by_usb`; `report_b` / `report_detail`; `report_b` / `report_main`; `report_b` / `report_note`; `report_b` / `report_on_laptop`; `report_b` / `report_whole`; `report_b` / `reset_report`; `report_b` / `second_report`; `report_b` / `sent_report`; `report_by_usb` / `usb`; `request_arrow` / `up_arrow`; `request_route` / `route`; `retained_check_rows` / `retained_rows`; `return_arrow` / `up_arrow`; `returned_key` / `returned_key_callback`; `reused_tag` / `tag`; `review_token` / `token_a`; `review_token` / `token_b`; `rewind_tag` / `tag`; `ring` / `unknown_ring`; `ring` / `watcher_ring`; `ring` / `widest_ring`; `rising_route` / `route`; `roof_route` / `route`; `room_table` / `table`; `route` / `route_nodes`; `route` / `second_route`; `route` / `unresolved_route`; `route` / `unused_route`; `rule_comma_one` / `rule_comma_two`; `rule_emphasis` / `single_rule_emphasis`; `rule_line` / `written_line_on_rule`; `rule_rail` / `rule_rail_home`; `rule_underline` / `underline`; `ruler_tag` / `tag`; `sam` / `sam_bust`; `sam` / `sam_tag`; `sam` / `sam_underline`; `sam_tag` / `sam_tag_underline`; `sam_tag` / `tag`; `sam_tag_underline` / `sam_underline`; `sam_underline` / `underline`; `same_bag_boundary` / `same_place_boundary`; `same_key_label` / `same_key_leaders`; `same_key_label` / `same_key_pill`; `same_key_label` / `shared_key_label`; `same_key_leader_left` / `same_key_leader_right`; `same_key_leaders` / `same_key_pill`; `sampling_term` / `term`; `scrambled_packet` / `scrambled_packet_label`; `scribble_bubble_dev` / `scribble_bubble_sam`; `seated_back_figure` / `seated_back_view`; `sent_today` / `sent_today_underline`; `shared_deliverable_page` / `shared_page_list`; `shared_key` / `shared_key_label`; `shared_key` / `shared_key_pulse`; `shared_key_label` / `shared_key_pulse`; `shared_table` / `table`; `sheet_on_table` / `table`; `shop_fresh_card` / `work_fresh_card`; `side_tag` / `tag`; `signal_pulse` / `signal_pulse_tagged`; `signer_label` / `signer_trust_label`; `single_rule_emphasis` / `single_scope_emphasis`; `slow_tag` / `tag`; `small_folded_page` / `small_ledger_page`; `space_candidate` / `space_pt`; `space_point` / `space_pt`; `speed_tag` / `tag`; `speed_tag` / `tag_speed`; `stamp` / `stamp_chip`; `stamp` / `verdict_stamp`; `stamp_chip` / `time_stamp_chip`; `step_tile` / `step_tile_lit`; `stolen_token` / `token_a`; `stolen_token` / `token_b`; `summary_tag` / `tag`; `table` / `table_on_floor`; `table` / `table_top`; `table` / `team_at_table`; `tag` / `tag_failed`; `tag` / `tag_missing`; `tag` / `tag_pill`; `tag` / `tag_restored`; `tag` / `tag_speed`; `tag` / `tag_stem`; `tag` / `unique_tag`; `tag` / `warning_tag`; `thought_bubble` / `thought_bubble_printed`; `time_chip` / `time_stamp_chip`; `token_a` / `token_b`; `token_a` / `token_baseline`; `token_a` / `token_chip`; `token_a` / `token_label`; `token_a` / `value_token`; `token_b` / `token_baseline`; `token_b` / `token_chip`; `token_b` / `token_label`; `token_b` / `value_token`; `trip_band` / `trip_band_blue`; `usb` / `usb_in_bag`; `vendor_approval_cluster` / `vendor_approval_paper`; `wall_calendar_crossed` / `wall_calendar_crosses`; `wall_clock` / `wall_clock_state`; `watcher` / `watcher_copy`; `watcher` / `watcher_label`; `watcher` / `watcher_panel`; `watcher` / `watcher_pulse`; `watcher` / `watcher_ring`; `watcher` / `watcher_signals`; `watcher` / `watcher_tray`; `watcher` / `watcher_values`; `watcher_copy` / `watcher_noise_copy`; `watcher_noise_copy` / `watcher_noise_panel`; `watcher_noise_panel` / `watcher_panel`; `window_light` / `window_light_pool`; `written_line_on_rule` / `written_pocket_rule`; `written_question` / `written_question_left`; `written_question` / `written_question_right`; `written_question_left` / `written_question_right`; `absence_after_exchange` / `absence_after_talk`; `alarm_fires_at_desk` / `alarm_fires_at_desk_resolved`; `b08_matching_keys_at_two_ends` / `matching_keys_at_ends`; `b10_system_at_rest` / `system_at_rest`; `bag_check` / `same_bag_check`; `blank_card_handover` / `blank_prompt_card`; `callback_bookend_calm_note` / `calm_note_callback`; `certificate_to_key_slots` / `key_slots`; `checked_boundary` / `checked_inner_boundary`; `class_line` / `line_art_class_contrast`; `class_line` / `line_decides_class`; `copy_is_noise` / `copy_noise`; `copy_is_noise` / `watcher_noise_copy`; `copy_noise` / `watcher_noise_copy`; `copy_on_path` / `open_path_copy`; `count_is_the_trip` / `one_trip_is_a_count`; `decision_critical_guest_row` / `decision_needed_guest_row`; `doors_along_a_path` / `doors_along_paper_path`; `doors_along_a_path` / `open_doors_path`; `drawn_system_funnel` / `drawn_system_funnel_recalled`; `duplicate_and_retreat` / `reach_and_retreat`; `emptied_nod_two_shot` / `vague_nod_two_shot`; `empty_places` / `empty_places_set`; `exposed_journey` / `exposed_journey_resolved`; `exposed_login_packet` / `exposed_packet_copy`; `failed_check_answer` / `failed_check_feedback`; `failed_check_answer` / `failed_check_warning`; `failed_check_feedback` / `failed_check_warning`; `failure_survived` / `one_failure_survived`; `harm_decides_outline` / `outline_decides`; `heat_extraction_detail` / `heat_handoff_detail`; `held_frame_returns_changed` / `held_page_returns_changed`; `held_rerun_one_change` / `rerun_one_change`; `label_becomes_mark` / `word_becomes_label`; `limits_beside_meaning` / `limits_beside_proof`; `lit_screen_in_dark_field` / `lit_screen_in_dark_room`; `lock_turns_door_holds` / `lock_turns_door_opens`; `meeting_question_parking` / `question_parking_corner`; `morning_desk_actions` / `morning_desk_three_actions`; `nested_boundary_check` / `nested_boundary_rule`; `one_becomes_three` / `three_into_one`; `one_key_two_locks` / `one_token_two_locks`; `one_shared_correction` / `shared_correction`; `open_doors_path` / `open_path_copy`; `open_doors_path` / `open_path_exposure`; `open_path_copy` / `open_path_exposure`; `open_path_exposure` / `path_exposure`; `open_promise_above_route` / `promise_route`; `open_promise_above_route` / `route_promise`; `over_shoulder_question` / `question_over_metadata`; `padlock_not_verdict` / `trip_not_verdict`; `promise_route` / `route_promise`; `proof_handed_across` / `proof_handed_over`; `protected_route` / `route_of_a_protected_item`; `recorded_but_keyless` / `recorded_but_no_key`; `repeated_single_loss` / `single_copy_loss`; `return_room_changed` / `same_room_changed`; `same_room_changed` / `same_trip_changed`; `shared_enclosure_loss` / `shared_loss_verdict`; `shared_key_bridge` / `shared_key_reveal`; `shared_key_reveal` / `single_key_reveal`; `shared_record` / `shared_record_converges`; `speed_rides_the_wave` / `wave_speed`; `third_sphere_narrows_ring` / `third_sphere_narrows_the_ring`; `three_checks` / `three_checks_in_turn`; `three_checks` / `three_checks_stamped`; `three_checks_in_turn` / `three_checks_stamped`; `three_moves_named` / `three_named_steps`; `two_empty_slots` / `two_empty_slots_one_watcher`; `two_empty_slots` / `two_empty_slots_wait`; `two_empty_slots_one_watcher` / `two_empty_slots_wait`; `uneasy_look_turns_resolved` / `uneasy_to_resolved`; `watcher_copy` / `watcher_noise_copy`; `watcher_noise_copy` / `watcher_noise_tamper`; `weak_line_circled` / `weak_line_signalled`; `wrap_then_greet` / `wrap_then_hello`; `written_summary_converges` / `written_summary_converges_team_voice`; `written_summary_converges` / `written_summary_unifies`
 
 ## Decisions
 

@@ -234,7 +234,10 @@ def t_catalog_search(ctx, query: str, kind: str | None = None):
     for k in ("templates", "blueprints", "components"):
         if kind and not k.startswith(kind.rstrip("s")):
             continue
+        sid = (getattr(getattr(ctx, "project", None), "request", None) or {}).get("style")
         for cid, e in (_catalog().get(k) or {}).items():
+            if k == "components" and e.get("styles") and sid and sid not in e["styles"]:
+                continue            # made for other styles (D-193): not this lesson's vocabulary
             hay = " ".join([cid, e.get("doc", ""), " ".join(e.get("job") or []), " ".join(e.get("best_for") or [] if isinstance(e.get("best_for"), list) else [str(e.get("best_for") or "")])])
             score = sum(1 for w in _words(hay) if w in q) + (3 if any(w in cid for w in q) else 0)
             if score:
@@ -257,7 +260,10 @@ def t_get_style_pack(ctx):
     keep = ("id", "name", "reads_as", "look_family", "palette", "type", "shape", "motion", "pace", "tone_reference", "characters", "join_default", "fx",
             "roles", "materials", "guide")
     out = {}
-    from ..direction import card_for as _direction   # first: the style's strong calls and when each fits (D-189)
+    from ..essence import load as _essence     # first: the style's essence, how it explains and shows (D-192)
+    if _essence(sid):
+        out["essence"] = _essence(sid)
+    from ..direction import card_for as _direction   # then: the style's strong calls and when each fits (D-189)
     if hasattr(ctx.project, "path") and _direction(ctx.project):
         out["direction_card"] = _direction(ctx.project)
     out.update({k: pk[k] for k in keep if k in pk})

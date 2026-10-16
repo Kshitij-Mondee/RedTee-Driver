@@ -16,6 +16,16 @@ results. Drawn art still goes through Claude Design, as the sheet says.
    It installs the Python and Node packages and the headless Chrome, then runs `python3 -m loom doctor`. On Linux the
    commands are `python3 -m loom ...` where the docs write `py -m loom ...`.
 
+**Fixed after batch 01 (2026-10-16, D-190):** `python3 -m loom library accept <id>` now accepts a commissioned
+component (it said "unknown form ... run harvest first" for all five shells, though `check_component` passed them);
+`tools/cloud_setup.sh` installs the optional packages one by one, so `manim` failing for want of the system pangocairo
+no longer stops the setup. `loom doctor` flagging the kokoro voice model is expected: narration needs it, components do
+not, and downloads wait for Kshitij's approval.
+
+**If the push is refused (403, "Claude doesn't have GitHub access"):** the Claude GitHub App must be installed on
+`Kshitij-Mondee/RedTee-Driver` for the account running the session (https://claude.ai/connect-github, then the app's
+repository access). Until then, send the batch as a zip or a git bundle; Kshitij's session takes it in from the folder.
+
 ## Each batch
 
 - One session per batch of 5 to 8 items from one family, on its own branch: `assets/batch-01`, `assets/batch-02` and so

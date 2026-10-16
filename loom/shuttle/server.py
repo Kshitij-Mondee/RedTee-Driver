@@ -363,11 +363,14 @@ class Server:
         """One of the lesson's files, whole (capped): a plan artifact, the report, the notes, the kit, scene:<beat>,
         brief:<token> (a delegation brief), approval:<kind>."""
         if name == "genre":
-            g = self.p.request.get("genre") or "teaching"
+            # the kind of video as the engine reads it (D-191: the request's, or with "auto" the brief's or the topic's)
+            from ..genre import resolve as _kind, PROFILES as _KINDS
+            g, why = _kind(self.p)
             f = ENGINE_ROOT / "packs" / "genres" / f"{g}.md"
             if not f.exists():
                 return {"error": f"no genre craft file packs/genres/{g}.md", "have": sorted(x.stem for x in (ENGINE_ROOT / "packs/genres").glob("*.md"))}
-            return {"file": f"packs/genres/{g}.md", "text": f.read_text(encoding="utf-8")[:MAX_TEXT]}
+            return {"file": f"packs/genres/{g}.md", "genre": g, "why": why, "profile": {k: v for k, v in _KINDS[g].items() if k != "lead"},
+                    "lead_skills": _KINDS[g]["lead"], "text": f.read_text(encoding="utf-8")[:MAX_TEXT]}
         if name == "kit_preview":
             kp = self.rails.load().get("kit_preview") or {}
             if not kp.get("image") or not Path(kp["image"]).exists():

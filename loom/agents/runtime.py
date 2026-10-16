@@ -65,14 +65,14 @@ You work through tools instead:
 Your role card comes after the reading. It is the contract for this API path: where they differ, the card wins."""
 
 
-def parity_files(role: str, style: str | None = None) -> list[str]:
+def parity_files(role: str, style: str | None = None, kind: str | None = None) -> list[str]:
     """The stage's Cowork reading list; for the storyboard and scene roles, plus the lesson style's guide (one cached
     prefix per style)."""
     from ..stages import BY_NAME, reading_list
     st = BY_NAME.get(PARITY_STAGE.get(role, ""))
     if not st:
         return []
-    return [f for f in reading_list(st, style) + ([st.prompt] if st.prompt else []) if (ENGINE_ROOT / f).exists()]
+    return [f for f in reading_list(st, style, kind) + ([st.prompt] if st.prompt else []) if (ENGINE_ROOT / f).exists()]
 
 
 MENU_ROLES = ("storyboard_outline", "storyboard", "scene", "clip", "kit", "tweak")
@@ -127,7 +127,7 @@ def craft_notes(role: str, style: str | None) -> str:
             "again; other sections come with get_skill_section)\n\n" + "\n\n".join(out))
 
 
-def role_system(role: str, context: str = "cards", style: str | None = None) -> list[str]:
+def role_system(role: str, context: str = "cards", style: str | None = None, kind: str | None = None) -> list[str]:
     """The stable, cacheable prefix: shared rules + the role card (+ in parity, the stage's whole Cowork reading list),
     then the artifact's shape (+ the catalogue index for the storyboard roles). Identical for every task of the role,
     so providers cache it."""
@@ -135,7 +135,7 @@ def role_system(role: str, context: str = "cards", style: str | None = None) -> 
         raise ValueError(f"context must be one of {CONTEXTS}, not {context!r}")
     shared = (T.ROLES / "_shared.md").read_text(encoding="utf-8")
     card = (T.ROLES / f"{role}.md").read_text(encoding="utf-8")
-    files = parity_files(role, style) if context == "parity" else []
+    files = parity_files(role, style, kind) if context == "parity" else []
     if files:
         # block 1 is the reading alone, identical for every role of the same stage (the outline and the storyboard
         # read the same 181 KB): written to the cache once per lesson, read by the next role at a tenth of the price.
@@ -284,7 +284,8 @@ def _run_agent(spec: AgentSpec, ctx: T.ToolContext, task: str, budget: Budget, i
     tr = open(trace, "a", encoding="utf-8")
     log = lambda **kv: tr.write(json.dumps(dict(kv, t=round(time.monotonic() - t0, 2)), ensure_ascii=False) + "\n") or tr.flush()
     t0 = time.monotonic()
-    system = role_system(spec.role, spec.context, P.request.get("style") if P is not None else None)
+    from ..genre import of as _kind_of   # the kind of video leads the reading (D-191)
+    system = role_system(spec.role, spec.context, P.request.get("style") if P is not None else None, _kind_of(P) if P is not None else None)
     tools = T.specs(spec.role)
     if spec.role == "brief" and P.mode == "topic":
         tools = [t for t in tools if t.name != "get_source_chunks"]   # nothing to search before the knowledge sheet (bench 2026-10-06)

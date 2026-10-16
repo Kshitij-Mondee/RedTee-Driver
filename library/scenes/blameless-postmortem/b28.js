@@ -56,7 +56,11 @@ Loom.scene("b28", {
       { key: "staging", icon: "sliders-horizontal", label: "staging setting" },
       { key: "alert", icon: "bell-off", label: "alert to on-call" },
     ];
-    const RX = 1250, RW = 560, RH = 146, RY0 = 292, RGAP = 8;
+    const RX = 1250, RW = 560, RH = 154, RY0 = 284, RGAP = 6;   // rows 146 -> 154 (gap 8 -> 6, top 292 -> 284) so the owner chip fits inside its row
+    // measure, then draw: the chip is sized from its "Owner" label (inset >= max(6, 0.2 x size) + 4 px slack)
+    const ownFit = kit.fit("Owner", { role: "label", w: 146, maxLines: 1, weight: 700, size: 30 });
+    const ownNeed = Math.max(6, 0.2 * ownFit.size);
+    const CHIP = { x: 22, y: 86, w: Math.max(210, Math.ceil(54 + ownFit.width + ownNeed + 8)), h: Math.ceil(ownFit.height + 2 * ownNeed + 4) };
 
     // ---------------------------------------------------------------- timing (speech + style only)
     const tRoom = ctx.cue("Same room", 0.25);          // the walls lead the words a little: canvas leads content
@@ -207,9 +211,9 @@ Loom.scene("b28", {
       kit.text(R.inner, F.label, { role: "body", x: 108, y: 6, w: RW - 108 - 16, h: 80, maxLines: 1, valign: "middle", weight: 700, size: 40 });
       // @form owner_chip: a small pill chip with a person icon and a role word
       // owner chip lives on its row
-      kit.rect(R.inner, 22, 92, 210, 42, { fill: "surface2", r: 21, sw: 2.6 });
-      kit.icon(R.inner, "user-round", { x: 50, y: 113, size: 28, color: "ink" });
-      kit.text(R.inner, "Owner", { role: "label", x: 76, y: 92, w: 146, h: 42, maxLines: 1, valign: "middle", weight: 700, size: 32 });
+      kit.rect(R.inner, CHIP.x, CHIP.y, CHIP.w, CHIP.h, { fill: "surface2", r: CHIP.h / 2, sw: 2.6 });
+      kit.icon(R.inner, "user-round", { x: CHIP.x + 28, y: CHIP.y + CHIP.h / 2, size: 28, color: "ink" });
+      kit.text(R.inner, "Owner", { role: "label", x: CHIP.x + 54, y: CHIP.y, w: 146, h: CHIP.h, maxLines: 1, valign: "middle", weight: 700, size: ownFit.size });
       m.unmask(R, tRows + i * S.dur("stagger") * 1.3, { dur: S.dur("enter") * 0.9 });
     });
 
@@ -221,7 +225,7 @@ Loom.scene("b28", {
     // ---------------------------------------------------------------- ticks: one group of peers, on the word "owner"
     // @form outcome_tick: a tick or cross mark landing on an item to show its result
     const ticks = ctx.el("fix_ticks", { x: RX, y: RY0, w: RW, h: 3 * RH + 2 * RGAP, kind: "mark", exit: "recede" });
-    FIXES.forEach((F, i) => kit.mark(ticks.inner, "yes", RW - 52, i * (RH + RGAP) + 113, 52));
+    FIXES.forEach((F, i) => kit.mark(ticks.inner, "yes", RW - 52, i * (RH + RGAP) + CHIP.y + CHIP.h / 2, 52));
     m.settle(ticks, tOwn, { dy: 8 });
   },
 });

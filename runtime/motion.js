@@ -249,6 +249,8 @@
     }, t, dur, ease, Object.assign(meta(E, "travel", o.content), { key: "travel:" + (E.__travelKey = E.__travelKey || Loom.uid("tr")) }));
     // the drive key (style guides s15, "M.travel drive key", 2026-10-08): a SECOND travel of one element no longer
     // renders its start state at load (it showed the element at the second leg's start from frame 0)
+    // every travel on record for the motion audit (Loom.world.auditMotion, D-190): who moved, when, from where to where
+    if (Loom.world) (Loom.world.travels = Loom.world.travels || []).push({ E, t0: t, t1: t + dur, from: cur, to, beat: Loom.ctxBeat ? Loom.ctxBeat.id : E.beat });
     E.__pos = to;
     return t + dur;
   };
@@ -283,6 +285,16 @@
     o = o || {};
     const d = o.dur || S().dur("exit");
     const k = kind || E.exit || "recede";
+    // An element a beat HOLDS and then sends away is decided at the joins, not here (D-190): held only to be removed at
+    // its first words, it was kept out of the join's own exit, so a cover opened on the old picture again and it left
+    // 0.35 s later (st-sc-2fa b14: seven held surfaces flashed back after the handoff), or it receded while the same
+    // drawing rebuilt from nothing (st-holo-ai b05, b06 tokens). Loom.world.planJoins resolves it (Wd.resolveHeldExits).
+    const R = Loom.ctxScene;
+    if (R && !o.planned && !E.motif && k !== "none" && k !== "held" && (R.claimedFrom || []).includes(E)) {
+      (R.heldExits = R.heldExits || []).push({ E, t, k, o });
+      E.exitT = t; E.exitKind = k;
+      return;
+    }
     E.exitT = t; E.exitKind = k;
     // parts drawn as their own elements (a label's lead line, declared followers) leave with their owner: an
     // explicit exit used to take the tag and leave its line pointing at nothing (D-100)
@@ -291,6 +303,8 @@
     const m = { kind: "exit", beat: E.beat, name: E.name };
     if (k === "none" || k === "held") return;
     if (k === "recede") return Loom.tween(n, { opacity: 1, scale: 1, transformOrigin: "50% 50%" }, { opacity: 0, scale: 0.92, duration: d, ease: E_().exit }, t, m);
+    // fade: opacity only, in place (an element giving way to a new drawing of the same thing on the same spot, D-190)
+    if (k === "fade") return Loom.tween(n, { opacity: 1 }, { opacity: 0, duration: d, ease: E_().exit }, t, m);
     if (k === "displace") return Loom.tween(n, { opacity: 1, x: 0 }, { opacity: 0, x: -160, duration: d * 1.2, ease: E_().exit }, t, m);
     if (k === "advance") return Loom.tween(n, { opacity: 1, scale: 1, transformOrigin: "50% 50%" }, { opacity: 0, scale: 1.25, duration: d * 1.4, ease: E_().exit }, t, m);
     if (k === "collapse") return Loom.tween(n, { scaleY: 1, transformOrigin: "50% 100%" }, { scaleY: 0, duration: d, ease: E_().exit }, t, m);

@@ -264,3 +264,23 @@ what must be read when the target is a rect or holds more than the words (`A.cli
 - UI text at video sizes (21 px base, 20 px floor), overlays 24 to 28 px in screen space, words to be read at 32 px or
   more on screen (`sc_zoom_small_text` when a zoom does not get there).
 - Sound: a click on each press, every third key while typing, a soft success on a toast; nothing else.
+
+## Joins and the held app (D-190)
+
+What made the 2026-10-16 test lesson (st-sc-2fa) flicker at almost every join, and what the engine now does about it:
+
+- **One pointer, the app's.** A beat that hides the pointer (`A.pointerOut`) when it is already hidden used to flash it
+  at its last place for 0.2 s: every show and hide now ramps from the level the pointer has. A pointer drawn by hand
+  (`ctx.el("..._pointer")`, `cursor`, `mouse`) while an app is on screen is an error, `sc_second_pointer`.
+- **The product is the app's pages.** A panel, card or "plain page" drawn by hand over the app's window (12 % of it or
+  more) is an error, `sc_ui_by_hand`: it does not zoom, scroll or answer with the app, and it comes and goes on its own
+  at the joins. Put the screen in `spec.pages` and change it with `A.go`, `A.dialog`, `A.cell`, `A.setValue`; teach with
+  `A.callout`, `A.spotlight`, `A.chapters`. Small labels beside the app are fine.
+- **Open on the picture the last beat left.** A held app changed by the system on a beat's first 0.4 s jumps at the
+  join: a value cleared there is an error (`sc_reset_at_join`, b06 cleared the typed password to type it again), a page
+  switch or a toggle there warns (`sc_change_at_join`). End the beat before on the state you need, or show the change as
+  an action after the first words.
+- **Do not hide the pointer and zoom out on every beat's first frame.** If the beat before left the camera framed in,
+  pull out on the first words, as a move the learner can follow.
+- Held then exited at once, redrawn in place, empty frames at cuts: the world handles these for every style (see the
+  scene author skill, "Joins").

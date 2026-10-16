@@ -1,0 +1,98 @@
+{
+  "id": "isometric",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.15,
+    "motion": 0.85,
+    "min_score": 0.0
+  },
+  "essence": "A working miniature of the whole system. An isometric board where a process can be followed from end to end, with every place on one map.",
+  "explains_by": [
+    "Show the whole system as one map, then follow one thing through it.",
+    "Place is meaning: each station is a stage of the process, the route between them is the order.",
+    "Height and count are amounts: stacks, bars and tallies on the board are the numbers.",
+    "Open close, widen out: start at one station, reveal the scale once the parts are known."
+  ],
+  "techniques": [
+    {
+      "name": "follow one through",
+      "use": "a process with stages",
+      "how": "one parcel, order or request travels station to station on B.route with it.travel; the camera holds each station"
+    },
+    {
+      "name": "cutaway",
+      "use": "what happens inside a building",
+      "how": "it.cut opens the wall, the inside works"
+    },
+    {
+      "name": "tracked subject",
+      "use": "keeping the eye on the thing",
+      "how": "B.track follows it between stations"
+    },
+    {
+      "name": "isotype tally",
+      "use": "a number said aloud",
+      "how": "B.tally counts units with the key"
+    },
+    {
+      "name": "scale reveal",
+      "use": "the payoff",
+      "how": "B.reveal or B.widen pulls back to the whole network once its parts are known"
+    },
+    {
+      "name": "where it breaks",
+      "use": "a delay or a fault",
+      "how": "the route turns warn at the station that fails, a queue builds as a stack"
+    }
+  ],
+  "vocabulary": [
+    "three-tone solids on a true 30 degree grid",
+    "routes and lanes",
+    "stations with roles",
+    "vehicles and parcels",
+    "stacks and tallies",
+    "cutaways"
+  ],
+  "avoid": [
+    "flat cards floating over the board",
+    "icons flying across the map",
+    "slide templates",
+    "isometric decoration with no process"
+  ],
+  "fits": {
+    "topics": [
+      "logistics and supply chains",
+      "operations and workflows",
+      "how an organisation works",
+      "infrastructure",
+      "cities and facilities",
+      "manufacturing"
+    ],
+    "kinds": {
+      "explainer": 0.9,
+      "teaching": 0.6,
+      "onboarding": 0.6,
+      "policy": 0.3,
+      "soft-skills": 0.05
+    }
+  },
+  "signals": [
+    "order",
+    "delivery",
+    "warehouse",
+    "supply",
+    "process",
+    "workflow",
+    "pipeline",
+    "station",
+    "logistics",
+    "network of",
+    "end to end",
+    "journey of"
+  ],
+  "calls": [
+    "ctx.engine",
+    "B."
+  ]
+}

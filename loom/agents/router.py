@@ -40,6 +40,9 @@ STORYBOARD_CODES = {"shot_framing_ignored", "station_size_ignored", "avatar_prop
 # own layout for bespoke ones (the default kind rule below does exactly that)
 FRAMING_CODES = {"rows.off", "element_off_frame", "figure_cropped", "words_cut"}
 KNOWN_CODES = ENGINE_CODES | {"shot_framing_ignored", "station_size_ignored", "avatar_props_unknown"} | FRAMING_CODES | {"scene_threw", "tween_threw"}
+# the joins measured on frames (loom/checks/joins.py, D-190): the beat the join opens owns it (its author decides what it
+# holds, redraws and shows first; a template beat's join is the storyboard's)
+KNOWN_CODES |= {"join_flashback", "join_blank", "join_pop"}
 # the scene's own code threw: always its author's (a template that throws is the engine's)
 THROW_CODES = {"scene_threw", "tween_threw"}
 # a beat that removed, at load, what an earlier beat drew in an element it holds (runtime/world.js auditHeld, L-372)

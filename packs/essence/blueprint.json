@@ -1,0 +1,93 @@
+{
+  "id": "blueprint",
+  "tier": "distinct",
+  "mix": {
+    "avatar": 0.0,
+    "template": 0.15,
+    "motion": 0.85,
+    "min_score": 0.0
+  },
+  "essence": "The design drafted live. A cyanotype drawing set where a machine or a system is drawn, measured and taken apart, sheet by sheet.",
+  "explains_by": [
+    "Draw it to understand it: the drawing appears in drafting order, outline, detail, dimension.",
+    "A sheet per question: a plan, a section, a detail sheet, each answering one thing.",
+    "Measure what matters: a dimension or a reading only when the value is the point.",
+    "Take it apart: an exploded view or a section shows what is inside and how parts work together."
+  ],
+  "techniques": [
+    {
+      "name": "drafted live",
+      "use": "every drawing",
+      "how": "the engine drafts in reading order; flow travels along its pipe"
+    },
+    {
+      "name": "detail sheet",
+      "use": "one part enlarged",
+      "how": "DETAIL A on its own sheet, D.section, D.dim, D.balloon"
+    },
+    {
+      "name": "mechanism",
+      "use": "a cause that turns or repeats",
+      "how": "D.mechanism and D.step"
+    },
+    {
+      "name": "exploded view",
+      "use": "what is inside",
+      "how": "D.explode with a D.fig rewrite"
+    },
+    {
+      "name": "extrude",
+      "use": "from plan to object",
+      "how": "D.extrude once or twice a lesson"
+    }
+  ],
+  "vocabulary": [
+    "cyanotype blue",
+    "drafting grid",
+    "title block",
+    "dimensions and balloons",
+    "section hatching",
+    "detail sheets"
+  ],
+  "avoid": [
+    "UI cards",
+    "people",
+    "templates",
+    "one plant layout for the whole film"
+  ],
+  "fits": {
+    "topics": [
+      "machines and equipment",
+      "facilities and plants",
+      "engineering systems",
+      "hardware",
+      "how a building works",
+      "safety of equipment"
+    ],
+    "kinds": {
+      "explainer": 0.9,
+      "teaching": 0.7,
+      "onboarding": 0.2,
+      "policy": 0.4,
+      "soft-skills": 0.0
+    }
+  },
+  "signals": [
+    "machine",
+    "pump",
+    "cooling",
+    "engine",
+    "equipment",
+    "plant",
+    "hardware",
+    "mechanical",
+    "design",
+    "building",
+    "circuit",
+    "how it is built"
+  ],
+  "calls": [
+    "ctx.engine",
+    "D."
+  ]
+}

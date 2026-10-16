@@ -70,7 +70,7 @@ with the world, stations, camera, joins, continuity, and exactly one scene spec 
    (`"tools": ["physics"]`); its worker is handed the tool's section. `use_tool` shows you a tool's detail first.
 5. **Joins:** `join_in.type` and `meaning`; sort every element into held, travelling, retiring or incoming.
 6. **Per scene:** `accent_on`, `register`, `motion_is`, `shot.size`, `story_role`, depth and light only where meant.
-7. **Look:** after the gate passes you get the animatic (one panel per beat). Patch the beats that do not show their
+7. **Look:** after the gate passes you get the animatic; read it sound off first (D-192). Patch the beats that do not show their
    line (`patch_storyboard`), or call `storyboard_stands({note})`. One round.
 
 ## 5. Skill sections worth pulling
