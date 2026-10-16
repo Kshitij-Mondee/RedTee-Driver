@@ -60,7 +60,40 @@
   };
   /** the warning tone: accent2 (measures and warnings, the contract), except in screencast, where accent2 is the
    *  teaching layer's signal and the product's own warning is accent4 (the engine's terminal colours it so) */
-  DK.warnTok = () => ((S().pack && S().pack.id) === "screencast" ? "accent4" : "accent2");
+  // which accent reads as a warning differs per pack (whiteboard's accent2 is a blue): the one closest to amber, never
+  // the success or failure tone; in screencast accent2 is the teaching layer's signal, so the product's accent4
+  const hueOf = (hex) => {
+    const h = String(hex).replace("#", ""), r = parseInt(h.slice(0, 2), 16) / 255, g = parseInt(h.slice(2, 4), 16) / 255, b = parseInt(h.slice(4, 6), 16) / 255;
+    const mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn;
+    if (!d) return { h: 0, s: 0 };
+    const hh = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+    return { h: (hh * 60 + 360) % 360, s: d / (1 - Math.abs(mx + mn - 1) || 1) };
+  };
+  const warnCache = {};
+  DK.warnTok = function () {
+    const pk = S().pack || {}, id = pk.id || "";
+    if (id === "screencast") return "accent4";
+    if (warnCache[id]) return warnCache[id];
+    const pal = pk.palette || {}, avoid = [pal.pos, pal.neg].map((x) => String(x || "").toLowerCase());
+    const cands = ["accent2", "accent4", "accent", "accent3"].filter((t) => t in pal && !avoid.includes(String(pal[t]).toLowerCase()));
+    const dist = (t) => { const q = hueOf(pal[t]); const dh = Math.min(Math.abs(q.h - 38), 360 - Math.abs(q.h - 38)); return dh + (q.s < 0.35 ? 90 : 0); };
+    warnCache[id] = cands.sort((a, b) => dist(a) - dist(b))[0] || "accent2";
+    return warnCache[id];
+  };
+  /** tokens for categories (lanes, segments, phases) that look distinct in this pack: packs give the same colour to
+   *  two tokens (pos and accent4, neg and accent3), so a list that repeats a hex would give two lanes one colour */
+  DK.tones = function (n) {
+    const pal = (S().pack || {}).palette || {}, out = [], seen = [];
+    const close = (a, b) => { const A = hueOf(a), B = hueOf(b); return Math.min(Math.abs(A.h - B.h), 360 - Math.abs(A.h - B.h)) < 14 && Math.abs(A.s - B.s) < 0.25; };
+    for (const t of ["accent", "accent3", "pos", DK.warnTok(), "accent2", "accent4", "neg"]) {
+      if (!(t in pal) || out.includes(t)) continue;
+      const hex = String(pal[t]).toLowerCase();
+      if (seen.some((h) => h === hex || close(h, hex))) continue;
+      out.push(t); seen.push(hex);
+    }
+    out.push("muted");
+    return n ? Array.from({ length: n }, (_, i) => out[i % out.length]) : out;
+  };
   /** the body of a code surface. scheme: "dark" (the pack's darkest neutral), "light" (surface) or "pack" (surface2).
    *  In the outlined styles (line, sketch) a solid dark block would bury the line work, so every scheme is the pack's. */
   DK.scheme = function (scheme) {
@@ -100,13 +133,15 @@
   };
 
   /** one line of left-aligned UI text whose first glyph may hang left of its origin: when it does, the box hugs the word
-   *  and the word is centred in it, so the overhang stays inside the box (the text checks measure the drawn glyphs) */
+   *  and the word is centred in it, so the overhang stays inside the box (the text checks measure the drawn glyphs). The
+   *  box starts hang + 3 left of x so the word's origin stays at x: a column of words keeps one left edge whatever their
+   *  first letters (it had drifted right by the hang, "Tomas" and "Yuki" sat in from "Mara" in dev_db_table) */
   DK.textL = function (g, str, o) {
     const role = o.role || "caption", size = o.size, wt = o.weight || 400, s = String(str);
     const hang = DK.leftHang(s, role, size, wt) + 1;
     const adv = AK().measure(s, role, size, wt);
     if (hang <= 1 || adv + 2 * hang + 6 > o.w) return AK().T(g, s, o);
-    return AK().T(g, s, Object.assign({}, o, { w: adv + 2 * hang + 6, x: o.x, align: "center" }));
+    return AK().T(g, s, Object.assign({}, o, { w: adv + 2 * hang + 6, x: (o.x || 0) - hang - 3, align: "center" }));
   };
 
   // ------------------------------------------------------------------ the tokenizer
@@ -202,6 +237,9 @@
       const t = tok in pal ? tok : DK.SYN_DEFAULT[k] || "ink";
       if (!(tok in pal)) Loom.error("component_params", `colors.${k} = "${tok}" is not a style token`);
       out[k] = t === "ink" ? text : t === "muted" ? DK.legible(S().mix(text, bg, 0.42), bg, text, 3.2) : DK.legible(t, bg, text);
+      // a default colour that is nearly grey in this pack (corporate-clean's accent3) would read as faded, like
+      // punctuation: function names and flags then take the text colour
+      if (!(colors && colors[k]) && (k === "fn" || k === "flag" || k === "attr") && hueOf(pal[t] || "#000000").s < 0.3) out[k] = text;
     }
     return out;
   };
@@ -224,7 +262,8 @@
     if (!P) {
       // the kit draws the frame in the pack's shape language (sketch, line, toon, gloss...), then the body and the bar
       K().rect(fg, 0, 0, w, h, { fill: "surface", r: R, stroke: "line", sw: 1.5, shadow: true });
-      if (!outlined) svg("rect", { x: 1, y: barH, width: w - 2, height: h - barH - 1, rx: 0, fill: o.bodyFill || S().c("surface") }, fg);
+      // the body follows the frame's rounded bottom corners (a square body poked out of them on a dark terminal)
+      if (!outlined) svg("path", { d: `M1 ${barH} L${w - 1} ${barH} L${w - 1} ${h - R} Q${w - 1} ${h - 1} ${w - R} ${h - 1} L${R} ${h - 1} Q1 ${h - 1} 1 ${h - R} Z`, fill: o.bodyFill || S().c("surface") }, fg);
       if (!outlined) svg("path", { d: `M1 ${barH} L1 ${R} Q1 1 ${R} 1 L${w - R} 1 Q${w - 1} 1 ${w - 1} ${R} L${w - 1} ${barH} Z`, fill: o.barFill || S().mix(S().c("surface2"), S().c("field2"), 0.5) }, fg);
       if (!outlined && o.bodyFill) svg("path", { d: `M1 ${h - R} Q1 ${h - 1} ${R} ${h - 1} L${w - R} ${h - 1} Q${w - 1} ${h - 1} ${w - 1} ${h - R} L${w - 1} ${barH} L1 ${barH} Z`, fill: o.bodyFill }, fg);
       if (outlined) K().line(fg, 0, barH, w, barH, { stroke: "line", sw: 1.5 });
@@ -271,16 +310,20 @@
         let bx = o.x || 0, bw = o.w, bh = o.h, ml = o.maxLines || 1;
         const fits = (w, h, m) => { try { return o.eng.W.text(String(str), { x: 0, y: 0, w, h, role, maxLines: m }).fits; } catch (e) { return true; } };
         const room = o.room == null ? 0 : o.room;   // extra width only where the caller says the row has it
-        const tries = [[o.w, o.h, ml], [o.w + room, o.h, ml], [o.w, Math.max(o.h, o.h * 1.9), 2], [o.w + room, Math.max(o.h, o.h * 1.9), 2]];
+        const tries = [[o.w, o.h, ml], [o.w + room, o.h, ml], [o.w, Math.max(o.h, o.h * 1.9), Math.max(2, ml)], [o.w + room, Math.max(o.h, o.h * 1.9), Math.max(2, ml)],
+          [o.w, o.h * (ml + 1) / ml + 4, ml + 1], [o.w, o.h * (ml + 2) / ml + 8, ml + 2]];
         for (const [w, h, m] of tries) { if (fits(w, h, m)) { bw = w; bh = h; ml = m; break; } }
         if (bw > o.w && o.align === "right") bx -= bw - o.w;
-        if (bh > o.h) Loom.warn("dev_engine_box", `"${String(str).slice(0, 30)}" is lettered on two lines by the ${o.eng.id} engine (its hand is wider than the box)`);
+        if (bh > o.h + 1) Loom.warn("dev_engine_box", `"${String(str).slice(0, 30)}" is lettered on two lines by the ${o.eng.id} engine (its hand is wider than the box)`);
         const sub = ctx.el(`${E.name}.${o.name || "word"}`, { parent: o.parentG || E.inner, x: ox + bx, y: oy + (o.y || 0), w: bw, h: bh, kind: o.kind || "label" });
         // one hand (one pen): each word starts when the last one ended, never earlier than asked
         const at = Math.max(o.at != null && o.at >= 0 ? o.at : ctx.start || 0, P.free == null ? -1 : P.free + 0.05);
         const opt = { role, align: o.align || "left", valign: o.valign || "middle", maxLines: ml, at, pen: o.tone || "ink" };
         if (o.by != null) opt.by = o.by;
-        else if (!(o.at != null && o.at >= 0)) opt.dur = 0.12;
+        // a still: written quickly as the beat begins, but at a pace a hand can keep (about 22 characters a second, and
+        // never under 0.3 s: the engines' window checks ask 0.08 s x sqrt(strokes) for the hand, 0.06 s for the pen, and
+        // a 7-letter word at 0.03 s a letter sat just under, wb_window_tight on "gateway", 2026-10-16)
+        else if (!(o.at != null && o.at >= 0)) opt.dur = Math.max(0.3, String(str).length * 0.045);
         if (P.kind === "bp") opt.quick = true;
         const end = P.kind === "wb" ? P.B.write(sub, String(str), opt) : P.D.letter(sub, String(str), opt);
         P.free = Math.max(P.free == null ? -1 : P.free, end);
@@ -288,8 +331,10 @@
       } catch (e) { Loom.warn("dev_engine", `"${String(str).slice(0, 30)}" not written by the engine (${e && e.message}); set with the kit`); }
     }
     const t = o.maxLines > 1
-      ? AK().P(g, str, { x: o.x, y: o.y, w: o.w, size: o.size, weight: o.weight, color: o.color || "ink", fill: o.fill, align: o.align, role: o.role || "caption", maxLines: o.maxLines })
+      ? DK.para(g, str, o)
       : AK().T(g, str, { x: o.x, y: o.y, w: o.w, h: o.h, size: o.size, weight: o.weight, color: o.color || "ink", fill: o.fill, align: o.align, role: o.role || "caption" });
+    // a word with no room at all is dropped by the kit (never cut to letters): say so, so a lost label is never silent
+    if (String(str).trim() && t && !(t.textContent || "").trim()) Loom.warn("dev_word_dropped", `"${String(str).slice(0, 40)}" has no room in its ${Math.round(o.w)} px box and is not drawn (widen the component or shorten it)`);
     if (t && o.at != null && o.at >= 0) AK().show(t, o.at, 0.25);
     return t;
   };
@@ -306,6 +351,37 @@
       pen.free = Math.max(pen.free == null ? -1 : pen.free, end);
       return end;
     } catch (e) { Loom.warn("dev_engine", `not drawn by the engine (${e && e.message}); drawn with the kit`); return null; }
+  };
+
+  /** fade out a word DK.word drew (a kit <text>, or the element the engine wrote it in) at t */
+  DK.fadeOut = function (w, t, dur) {
+    if (!w) return t;
+    const node = w.el ? w.el.inner : w.nodeType ? w : null;
+    if (!node) return t;
+    Loom.tween(node, { opacity: 1 }, { opacity: 0, duration: dur || 0.2 }, t, DK.meta("state", "dev.word"));
+    return t + (dur || 0.2);
+  };
+  /** a value that changes: the old word leaves and the new one is written (by the engine) or fades in (the kit) at t.
+   *  holder: {w} as returned by DK.word; o as for DK.word. Returns the new word. */
+  DK.swapWord = function (ctx, g, holder, str, o, t) {
+    DK.fadeOut(holder.w, t);
+    const nw = DK.word(ctx, g, str, Object.assign({}, o, { at: t + 0.15, name: (o.name || "word") + "_" + Math.round(t * 100) }));
+    holder.w = nw;
+    return nw;
+  };
+
+  /** a clamped paragraph drawn line by line: the lines appKit.clampText chose, each set on its own (one wrap, so the
+   *  ellipsised last line can never re-wrap to one line more). Returns a <g> standing for the paragraph. */
+  DK.para = function (g, str, o) {
+    const role = o.role || "caption", size = o.size || S().size(role, 21), wt = o.weight || 400;
+    const c = AK().clampText(String(str), { role, size, w: o.w, maxLines: o.maxLines || 3, weight: wt });
+    const pg = Loom.svg("g", {}, g), lh = size * 1.36;
+    c.lines.forEach((ln, i) => {
+      const t = K().text(pg, ln, { role, size, x: o.x || 0, y: (o.y || 0) + i * lh, w: o.w, h: AK().lineH(size, role, wt), maxLines: 1, valign: "top", align: o.align || "left", weight: wt, color: o.color || "ink" });
+      if (o.fill) t.setAttribute("fill", o.fill);
+    });
+    pg.__h = c.h; pg.__cut = c.cut;
+    return pg;
   };
 
   // ------------------------------------------------------------------ code lines

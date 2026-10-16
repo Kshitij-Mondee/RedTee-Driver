@@ -151,7 +151,8 @@ Loom.devKit.httpLayout = function (p) {
   const bq = bodyOf(p.request), bs = bodyOf(p.response);
   const hOf = (B, b) => 18 + badgeH + 14 + ((B && B.headers) || []).length * LH + (b.lines.length ? 6 + 8 + b.lines.length * LH + 8 : 0) + 22;
   const hq = hOf(p.request, bq), hs = hOf(p.response, bs);
-  const cards = side ? { req: { x: 0, y: 0, w: cw, h: Math.max(hq, hs) }, res: { x: cw + gap, y: 0, w: cw, h: Math.max(hq, hs) } }
+  // side by side, each card hugs its own content (top aligned, the arrow at the header's level)
+  const cards = side ? { req: { x: 0, y: 0, w: cw, h: hq }, res: { x: cw + gap, y: 0, w: cw, h: hs } }
     : { req: { x: 0, y: 0, w: cw, h: hq }, res: { x: 0, y: hq + gap, w: cw, h: hs } };
   const ay = 18 + badgeH / 2;
   const arrow = side ? { x1: cw + 14, y1: ay, x2: cw + gap - 14, y2: ay, lx: cw + 6, ly: ay - lhS - 10, lw: gap - 12 }
