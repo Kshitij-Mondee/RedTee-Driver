@@ -1,0 +1,184 @@
+{
+ "cases": [
+  {
+   "label": "one hunk, 3 removed and 4 added",
+   "params": {
+    "file": "src/auth/session.ts",
+    "lang": "ts",
+    "w": 1300,
+    "rows": 11,
+    "at": 0.4,
+    "hunks": [
+     {
+      "header": "@@ -21,7 +21,8 @@ export function createSession(user: User) {",
+      "lines": [
+       {
+        "op": " ",
+        "text": "  const now = clock.now();"
+       },
+       {
+        "op": "-",
+        "text": "  const token = Math.random().toString(36);"
+       },
+       {
+        "op": "-",
+        "text": "  const expires = now + 365 * DAY;"
+       },
+       {
+        "op": "-",
+        "text": "  cookies.set(\"sid\", token);"
+       },
+       {
+        "op": "+",
+        "text": "  const token = randomBytes(32).toString(\"hex\");"
+       },
+       {
+        "op": "+",
+        "text": "  const expires = now + 14 * DAY;"
+       },
+       {
+        "op": "+",
+        "text": "  cookies.set(\"sid\", token, { httpOnly: true,"
+       },
+       {
+        "op": "+",
+        "text": "    secure: true, sameSite: \"strict\" });"
+       },
+       {
+        "op": " ",
+        "text": "  return { token, expires };"
+       }
+      ]
+     }
+    ],
+    "steps": [
+     {
+      "do": "comment",
+      "row": 5,
+      "text": "Good: a session now lasts two weeks, not a year.",
+      "at": 3.2
+     }
+    ]
+   },
+   "opts": {
+    "x": 300,
+    "y": 200
+   }
+  },
+  {
+   "label": "split, two hunks",
+   "params": {
+    "file": "deploy/values.yaml",
+    "lang": "yaml",
+    "mode": "split",
+    "w": 1500,
+    "rows": 10,
+    "hunks": [
+     {
+      "header": "@@ -4,3 +4,3 @@",
+      "lines": [
+       {
+        "op": " ",
+        "text": "replicaCount: 2"
+       },
+       {
+        "op": "-",
+        "text": "image: shop-api:1.4.0"
+       },
+       {
+        "op": "+",
+        "text": "image: shop-api:1.5.0"
+       },
+       {
+        "op": " ",
+        "text": "pullPolicy: IfNotPresent"
+       }
+      ]
+     },
+     {
+      "header": "@@ -18,4 +18,4 @@",
+      "lines": [
+       {
+        "op": " ",
+        "text": "resources:"
+       },
+       {
+        "op": "-",
+        "text": "  memory: 256Mi"
+       },
+       {
+        "op": "-",
+        "text": "  cpu: 250m"
+       },
+       {
+        "op": "+",
+        "text": "  memory: 512Mi"
+       },
+       {
+        "op": "+",
+        "text": "  cpu: 500m"
+       }
+      ]
+     }
+    ]
+   },
+   "opts": {
+    "x": 210,
+    "y": 220
+   }
+  },
+  {
+   "label": "maximum: the longest lines, wrapped",
+   "params": {
+    "file": "services/notifications/templates/reminder_email_builder.py",
+    "lang": "py",
+    "w": 1300,
+    "rows": 16,
+    "at": 0.2,
+    "hunks": [
+     {
+      "header": "@@ -102,6 +102,9 @@ def build_reminder(customer, invoice, locale):",
+      "lines": [
+       {
+        "op": " ",
+        "text": "    subject = translate(\"invoice_reminder_subject\", locale)"
+       },
+       {
+        "op": "-",
+        "text": "    body = f\"Dear {customer.full_name}, your invoice {invoice.number} for {invoice.total} is overdue, please pay now or call us\""
+       },
+       {
+        "op": "+",
+        "text": "    body = render_template(\"reminder.txt\", name=customer.first_name, number=invoice.number, total=format_money(invoice.total, locale))"
+       },
+       {
+        "op": "+",
+        "text": "    # never put the full name or the account number in a subject line that shows on a locked phone screen"
+       },
+       {
+        "op": "+",
+        "text": "    log.info(\"reminder built\", extra={\"invoice\": invoice.number, \"locale\": locale})"
+       },
+       {
+        "op": " ",
+        "text": "    return Email(to=customer.email, subject=subject, body=body)"
+       }
+      ]
+     }
+    ],
+    "steps": [
+     {
+      "do": "comment",
+      "row": 4,
+      "text": "The subject line shows on locked screens, so it must never carry personal details such as names or account numbers.",
+      "at": 3.6
+     }
+    ]
+   },
+   "opts": {
+    "x": 300,
+    "y": 140
+   }
+  }
+ ]
+}

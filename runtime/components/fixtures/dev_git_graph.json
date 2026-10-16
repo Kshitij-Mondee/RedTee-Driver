@@ -1,0 +1,439 @@
+{
+ "cases": [
+  {
+   "label": "main plus feature, merged",
+   "params": {
+    "w": 1300,
+    "at": 0.3,
+    "head": "m3",
+    "headLabel": "HEAD",
+    "branches": [
+     {
+      "id": "main",
+      "label": "main"
+     },
+     {
+      "id": "feat",
+      "label": "feature/checkout"
+     }
+    ],
+    "commits": [
+     {
+      "id": "m1",
+      "branch": "main",
+      "parents": [],
+      "label": "init"
+     },
+     {
+      "id": "m2",
+      "branch": "main",
+      "parents": [
+       "m1"
+      ],
+      "label": "docs"
+     },
+     {
+      "id": "f1",
+      "branch": "feat",
+      "parents": [
+       "m2"
+      ],
+      "label": "cart"
+     },
+     {
+      "id": "f2",
+      "branch": "feat",
+      "parents": [
+       "f1"
+      ],
+      "label": "pay"
+     },
+     {
+      "id": "f3",
+      "branch": "feat",
+      "parents": [
+       "f2"
+      ],
+      "label": "tests"
+     },
+     {
+      "id": "m3",
+      "branch": "main",
+      "parents": [
+       "m2",
+       "f3"
+      ],
+      "label": "merge",
+      "tag": "v1.4.0"
+     }
+    ]
+   },
+   "opts": {
+    "x": 300,
+    "y": 330
+   }
+  },
+  {
+   "label": "main, develop and release with a hotfix",
+   "params": {
+    "w": 1500,
+    "head": "h1",
+    "branches": [
+     {
+      "id": "main",
+      "label": "main"
+     },
+     {
+      "id": "hot",
+      "label": "hotfix/2.1.1"
+     },
+     {
+      "id": "rel",
+      "label": "release/2.2"
+     },
+     {
+      "id": "dev",
+      "label": "develop"
+     }
+    ],
+    "commits": [
+     {
+      "id": "a",
+      "branch": "main",
+      "parents": [],
+      "tag": "v2.1.0"
+     },
+     {
+      "id": "b",
+      "branch": "dev",
+      "parents": [
+       "a"
+      ]
+     },
+     {
+      "id": "c",
+      "branch": "dev",
+      "parents": [
+       "b"
+      ]
+     },
+     {
+      "id": "h0",
+      "branch": "hot",
+      "parents": [
+       "a"
+      ],
+      "label": "fix"
+     },
+     {
+      "id": "r0",
+      "branch": "rel",
+      "parents": [
+       "c"
+      ]
+     },
+     {
+      "id": "h1",
+      "branch": "main",
+      "parents": [
+       "a",
+       "h0"
+      ],
+      "tag": "v2.1.1"
+     },
+     {
+      "id": "d",
+      "branch": "dev",
+      "parents": [
+       "c",
+       "h0"
+      ]
+     },
+     {
+      "id": "r1",
+      "branch": "rel",
+      "parents": [
+       "r0"
+      ],
+      "label": "bump"
+     },
+     {
+      "id": "e",
+      "branch": "dev",
+      "parents": [
+       "d"
+      ]
+     }
+    ],
+    "steps": [
+     {
+      "do": "focus",
+      "branch": "hot",
+      "at": 1.2
+     },
+     {
+      "do": "moveHead",
+      "id": "h1",
+      "at": 1.8
+     }
+    ]
+   },
+   "opts": {
+    "x": 210,
+    "y": 290
+   }
+  },
+  {
+   "label": "maximum: 5 branches, 30 commits",
+   "params": {
+    "w": 1600,
+    "at": 0.2,
+    "gap": 0.12,
+    "head": "m2",
+    "branches": [
+     {
+      "id": "main",
+      "label": "main"
+     },
+     {
+      "id": "dev",
+      "label": "develop"
+     },
+     {
+      "id": "f1",
+      "label": "feature/search"
+     },
+     {
+      "id": "f2",
+      "label": "feature/export-csv"
+     },
+     {
+      "id": "rel",
+      "label": "release/3.2"
+     }
+    ],
+    "commits": [
+     {
+      "id": "m0",
+      "branch": "main",
+      "parents": []
+     },
+     {
+      "id": "d0",
+      "branch": "dev",
+      "parents": [
+       "m0"
+      ]
+     },
+     {
+      "id": "s0",
+      "branch": "f1",
+      "parents": [
+       "d0"
+      ]
+     },
+     {
+      "id": "s1",
+      "branch": "f1",
+      "parents": [
+       "s0"
+      ]
+     },
+     {
+      "id": "d1",
+      "branch": "dev",
+      "parents": [
+       "d0"
+      ]
+     },
+     {
+      "id": "e0",
+      "branch": "f2",
+      "parents": [
+       "d1"
+      ]
+     },
+     {
+      "id": "s2",
+      "branch": "f1",
+      "parents": [
+       "s1"
+      ]
+     },
+     {
+      "id": "e1",
+      "branch": "f2",
+      "parents": [
+       "e0"
+      ]
+     },
+     {
+      "id": "d2",
+      "branch": "dev",
+      "parents": [
+       "d1",
+       "s2"
+      ]
+     },
+     {
+      "id": "e2",
+      "branch": "f2",
+      "parents": [
+       "e1"
+      ]
+     },
+     {
+      "id": "s3",
+      "branch": "f1",
+      "parents": [
+       "s2"
+      ]
+     },
+     {
+      "id": "d3",
+      "branch": "dev",
+      "parents": [
+       "d2"
+      ]
+     },
+     {
+      "id": "e3",
+      "branch": "f2",
+      "parents": [
+       "e2"
+      ]
+     },
+     {
+      "id": "d4",
+      "branch": "dev",
+      "parents": [
+       "d3",
+       "e3"
+      ]
+     },
+     {
+      "id": "r0",
+      "branch": "rel",
+      "parents": [
+       "d4"
+      ]
+     },
+     {
+      "id": "s4",
+      "branch": "f1",
+      "parents": [
+       "s3"
+      ]
+     },
+     {
+      "id": "r1",
+      "branch": "rel",
+      "parents": [
+       "r0"
+      ]
+     },
+     {
+      "id": "d5",
+      "branch": "dev",
+      "parents": [
+       "d4"
+      ]
+     },
+     {
+      "id": "r2",
+      "branch": "rel",
+      "parents": [
+       "r1"
+      ]
+     },
+     {
+      "id": "m1",
+      "branch": "main",
+      "parents": [
+       "m0",
+       "r2"
+      ],
+      "tag": "v3.2.0"
+     },
+     {
+      "id": "d6",
+      "branch": "dev",
+      "parents": [
+       "d5",
+       "r2"
+      ]
+     },
+     {
+      "id": "s5",
+      "branch": "f1",
+      "parents": [
+       "s4"
+      ]
+     },
+     {
+      "id": "d7",
+      "branch": "dev",
+      "parents": [
+       "d6"
+      ]
+     },
+     {
+      "id": "s6",
+      "branch": "f1",
+      "parents": [
+       "s5"
+      ]
+     },
+     {
+      "id": "d8",
+      "branch": "dev",
+      "parents": [
+       "d7",
+       "s6"
+      ]
+     },
+     {
+      "id": "e4",
+      "branch": "f2",
+      "parents": [
+       "e3"
+      ]
+     },
+     {
+      "id": "d9",
+      "branch": "dev",
+      "parents": [
+       "d8"
+      ]
+     },
+     {
+      "id": "e5",
+      "branch": "f2",
+      "parents": [
+       "e4"
+      ]
+     },
+     {
+      "id": "d10",
+      "branch": "dev",
+      "parents": [
+       "d9",
+       "e5"
+      ]
+     },
+     {
+      "id": "m2",
+      "branch": "main",
+      "parents": [
+       "m1"
+      ]
+     }
+    ]
+   },
+   "opts": {
+    "x": 160,
+    "y": 230
+   }
+  }
+ ]
+}
