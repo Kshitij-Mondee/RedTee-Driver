@@ -33,7 +33,7 @@ Loom.component("dev_git_graph", {
     const animated = p.at != null && p.at >= 0;
     const eng = DK.engine(ctx, g, p), pen = DK.pen(ctx, eng);
     const outlined = S.outlined();
-    const TONES = ["accent", "accent3", "pos", DK.warnTok(), "accent4", "neg"];
+    const TONES = DK.tones();
     const field = S.c("field");
     const laneTok = {}, laneCol = {};
     L.branches.forEach((b, i) => { const t = b.tone && b.tone in S.pack.palette ? b.tone : TONES[i % TONES.length]; laneTok[b.id] = t; laneCol[b.id] = DK.legible(t, field, S.c("ink"), 3); });
